@@ -111,143 +111,143 @@ export const SERVICES: Service[] = [
 export const SERVICE_IMAGES: Record<string, string[]> = {
     // نقل عفش (Furniture Moving)
     'furniture-moving': [
-        '/images/نقل عفش/furniture-movers-saudi-truck-loading-sofa.jpg',
-        '/images/نقل عفش/professional-packers-movers-riyadh-wrapped-chair.jpg',
-        '/images/نقل عفش/villa-furniture-moving-company-saudi-truck-packing.jpg',
-        '/images/نقل عفش/affordable-furniture-moving-company-riyadh-living-room-sofa.jpg',
-        '/images/نقل عفش/best-furniture-moving-company-jeddah-box-packing.jpg',
+        '/images/furniture-moving/furniture-movers-saudi-truck-loading-sofa.jpg',
+        '/images/furniture-moving/professional-packers-movers-riyadh-wrapped-chair.jpg',
+        '/images/furniture-moving/villa-furniture-moving-company-saudi-truck-packing.jpg',
+        '/images/furniture-moving/affordable-furniture-moving-company-riyadh-living-room-sofa.jpg',
+        '/images/furniture-moving/best-furniture-moving-company-jeddah-box-packing.jpg',
     ],
     'furniture-storage': [
-        '/images/نقل عفش/furniture-moving-storage-riyadh-cabinets-chairs.jpg',
-        '/images/نقل عفش/moving-storage-company-riyadh-boxes-chairs-lighting.jpg',
+        '/images/furniture-moving/furniture-moving-storage-riyadh-cabinets-chairs.jpg',
+        '/images/furniture-moving/moving-storage-company-riyadh-boxes-chairs-lighting.jpg',
     ],
     'dyna': [
-        '/images/نقل عفش/cheap-furniture-moving-riyadh-sofa-truck-loading.jpg',
-        '/images/نقل عفش/truck-rental-furniture-moving-jeddah-carpet-packing.jpg',
+        '/images/furniture-moving/cheap-furniture-moving-riyadh-sofa-truck-loading.jpg',
+        '/images/furniture-moving/truck-rental-furniture-moving-jeddah-carpet-packing.jpg',
     ],
     'moving-out': [
-        '/images/نقل عفش/intercity-furniture-moving-saudi-boxes-sofa.jpg',
-        '/images/نقل عفش/long-distance-furniture-moving-saudi-living-room.jpg',
-        '/images/نقل عفش/international-moving-saudi-gray-sofa-boxes.jpg',
+        '/images/furniture-moving/intercity-furniture-moving-saudi-boxes-sofa.jpg',
+        '/images/furniture-moving/long-distance-furniture-moving-saudi-living-room.jpg',
+        '/images/furniture-moving/international-moving-saudi-gray-sofa-boxes.jpg',
     ],
     'dabab': [
-        '/images/نقل عفش/same-day-furniture-moving-jeddah-box-packing.jpg',
+        '/images/furniture-moving/same-day-furniture-moving-jeddah-box-packing.jpg',
     ],
 
     // تنظيف (Cleaning)
     'cleaning': [
-        '/images/النظافه/home_cleaning_services_riyadh.jpg',
-        '/images/النظافه/house_deep_cleaning_jeddah.jpg',
-        '/images/النظافه/cleaning_services_company_provider.jpg',
-        '/images/النظافه/professional_cleaning_company_saudi.jpg',
+        '/images/cleaning/home_cleaning_services_riyadh.jpg',
+        '/images/cleaning/house_deep_cleaning_jeddah.jpg',
+        '/images/cleaning/cleaning_services_company_provider.jpg',
+        '/images/cleaning/professional_cleaning_company_saudi.jpg',
     ],
     'tanks-cleaning': [
-        '/images/النظافه/water_tank_cleaning_saudi_arabia.jpg',
+        '/images/cleaning/water_tank_cleaning_saudi_arabia.jpg',
     ],
     'sofa-cleaning': [
-        '/images/النظافه/sofa_cleaning_services_jeddah.jpg',
-        '/images/النظافه/deep_sofa_cleaning_services.jpg',
-        '/images/النظافه/sofa_shampoo_cleaning_services.jpg',
-        '/images/النظافه/steam_sofa_cleaning_jeddah.jpg',
+        '/images/cleaning/sofa_cleaning_services_jeddah.jpg',
+        '/images/cleaning/deep_sofa_cleaning_services.jpg',
+        '/images/cleaning/sofa_shampoo_cleaning_services.jpg',
+        '/images/cleaning/steam_sofa_cleaning_jeddah.jpg',
     ],
     'carpet-cleaning': [
-        '/images/النظافه/carpet_cleaning_company_riyadh.jpg',
-        '/images/النظافه/carpet_cleaning_services_dammam.jpg',
-        '/images/النظافه/steam_carpet_washing.jpg',
-        '/images/النظافه/shampoo_carpet_washing.jpg',
+        '/images/cleaning/carpet_cleaning_company_riyadh.jpg',
+        '/images/cleaning/carpet_cleaning_services_dammam.jpg',
+        '/images/cleaning/steam_carpet_washing.jpg',
+        '/images/cleaning/shampoo_carpet_washing.jpg',
     ],
     'steam-cleaning': [
-        '/images/النظافه/steam_carpet_washing.jpg',
-        '/images/النظافه/steam_sofa_cleaning_jeddah.jpg',
-        '/images/النظافه/steam_wall_cleaning_services.jpg',
+        '/images/cleaning/steam_carpet_washing.jpg',
+        '/images/cleaning/steam_sofa_cleaning_jeddah.jpg',
+        '/images/cleaning/steam_wall_cleaning_services.jpg',
     ],
     'sanitization': [
-        '/images/النظافه/comprehensive_sterilization_services.jpg',
-        '/images/النظافه/home_sterilization_company_riyadh.jpg',
-        '/images/النظافه/disinfection_and_sanitization_services.jpg',
+        '/images/cleaning/comprehensive_sterilization_services.jpg',
+        '/images/cleaning/home_sterilization_company_riyadh.jpg',
+        '/images/cleaning/disinfection_and_sanitization_services.jpg',
     ],
     'air-conditioner-cleaning': [
-        '/images/النظافه/ac_cleaning_and_maintenance_services.jpg',
+        '/images/cleaning/ac_cleaning_and_maintenance_services.jpg',
     ],
     'glass-facades-cleaning': [
-        '/images/النظافه/glass_facade_cleaning_riyadh.jpg',
-        '/images/النظافه/building_facade_washing.jpg',
-        '/images/النظافه/high_rise_facade_cleaning.jpg',
-        '/images/النظافه/building_glass_cleaning.jpg',
+        '/images/cleaning/glass_facade_cleaning_riyadh.jpg',
+        '/images/cleaning/building_facade_washing.jpg',
+        '/images/cleaning/high_rise_facade_cleaning.jpg',
+        '/images/cleaning/building_glass_cleaning.jpg',
     ],
     'floor-cleaning': [
-        '/images/النظافه/floor_cleaning_and_polishing_service.jpg',
-        '/images/النظافه/floor_mopping_services_riyadh.jpg',
+        '/images/cleaning/floor_cleaning_and_polishing_service.jpg',
+        '/images/cleaning/floor_mopping_services_riyadh.jpg',
     ],
     'floor-polishing': [
-        '/images/النظافه/tile_polishing_services_riyadh.jpg',
-        '/images/النظافه/tile_and_ceramic_polishing.jpg',
-        '/images/النظافه/shop_floor_tile_polishing.jpg',
+        '/images/cleaning/tile_polishing_services_riyadh.jpg',
+        '/images/cleaning/tile_and_ceramic_polishing.jpg',
+        '/images/cleaning/shop_floor_tile_polishing.jpg',
     ],
     'marble-polishing': [
-        '/images/النظافه/marble_floor_polishing_services.jpg',
-        '/images/النظافه/marble_polishing_and_grinding_riyadh.jpg',
-        '/images/النظافه/marble_polishing_machine.jpg',
-        '/images/النظافه/kitchen_marble_polishing.jpg',
+        '/images/cleaning/marble_floor_polishing_services.jpg',
+        '/images/cleaning/marble_polishing_and_grinding_riyadh.jpg',
+        '/images/cleaning/marble_polishing_machine.jpg',
+        '/images/cleaning/kitchen_marble_polishing.jpg',
     ],
     'villas-cleaning': [
-        '/images/النظافه/villa_cleaning_services_riyadh.jpg',
-        '/images/النظافه/villa_cleaning_team_riyadh.jpg',
+        '/images/cleaning/villa_cleaning_services_riyadh.jpg',
+        '/images/cleaning/villa_cleaning_team_riyadh.jpg',
     ],
     'apartments-cleaning': [
-        '/images/النظافه/apartment_cleaning_services_riyadh.jpg',
-        '/images/النظافه/residential_apartment_cleaning.jpg',
+        '/images/cleaning/apartment_cleaning_services_riyadh.jpg',
+        '/images/cleaning/residential_apartment_cleaning.jpg',
     ],
     'palaces-cleaning': [
-        '/images/النظافه/villa_cleaning_team_riyadh.jpg',
+        '/images/cleaning/villa_cleaning_team_riyadh.jpg',
     ],
     'shops-cleaning': [
-        '/images/النظافه/commercial_cleaning_services_saudi.jpg',
-        '/images/النظافه/shop_floor_tile_polishing.jpg',
+        '/images/cleaning/commercial_cleaning_services_saudi.jpg',
+        '/images/cleaning/shop_floor_tile_polishing.jpg',
     ],
     'office-cleaning': [
-        '/images/النظافه/office_cleaning_services_saudi_arabia.jpg',
-        '/images/النظافه/corporate_office_cleaning_services.jpg',
-        '/images/النظافه/office_cleaner_worker.jpg',
+        '/images/cleaning/office_cleaning_services_saudi_arabia.jpg',
+        '/images/cleaning/corporate_office_cleaning_services.jpg',
+        '/images/cleaning/office_cleaner_worker.jpg',
     ],
     'furniture-cleaning': [
-        '/images/النظافه/deep_sofa_cleaning_services.jpg',
+        '/images/cleaning/deep_sofa_cleaning_services.jpg',
     ],
     'kitchen-cleaning': [
-        '/images/النظافه/kitchen_deep_cleaning_service.jpg',
-        '/images/النظافه/kitchen_cleaning_maid_riyadh.jpg',
+        '/images/cleaning/kitchen_deep_cleaning_service.jpg',
+        '/images/cleaning/kitchen_cleaning_maid_riyadh.jpg',
     ],
     'swimming-pool-cleaning': [
-        '/images/النظافه/swimming_pool_cleaning.jpg',
+        '/images/cleaning/swimming_pool_cleaning.jpg',
     ],
     'councils-cleaning': [
-        '/images/النظافه/arabic_majlis_cleaning.jpg',
+        '/images/cleaning/arabic_majlis_cleaning.jpg',
     ],
     'hourly-cleaning': [
-        '/images/النظافه/hourly_cleaning_maids.jpg',
-        '/images/النظافه/hourly_maid_services_riyadh.jpg',
+        '/images/cleaning/hourly_cleaning_maids.jpg',
+        '/images/cleaning/hourly_maid_services_riyadh.jpg',
     ],
     'oven-cleaning': [
-        '/images/النظافه/gas_oven_cleaning_services.jpg',
-        '/images/النظافه/oven_grease_removal_cleaning.jpg',
+        '/images/cleaning/gas_oven_cleaning_services.jpg',
+        '/images/cleaning/oven_grease_removal_cleaning.jpg',
     ],
     'restaurant-chimney-cleaning': [
-        '/images/النظافه/restaurant_kitchen_cleaning_hygiene.jpg',
-        '/images/النظافه/restaurant_cleaning_services_riyadh.jpg',
+        '/images/cleaning/restaurant_kitchen_cleaning_hygiene.jpg',
+        '/images/cleaning/restaurant_cleaning_services_riyadh.jpg',
     ],
 
     // مجاري (Sewage)
     'sewer-cleaning': [
-        '/images/النظافه/bathroom_deep_cleaning_riyadh.jpg',
+        '/images/cleaning/bathroom_deep_cleaning_riyadh.jpg',
     ],
     'sewage-pumping': [
-        '/images/النظافه/bathroom_deep_cleaning_riyadh.jpg',
+        '/images/cleaning/bathroom_deep_cleaning_riyadh.jpg',
     ],
     'sewer-suction-trucks': [
-        '/images/النظافه/bathroom_deep_cleaning_riyadh.jpg',
+        '/images/cleaning/bathroom_deep_cleaning_riyadh.jpg',
     ],
     'sewage-compressor': [
-        '/images/النظافه/bathroom_deep_cleaning_riyadh.jpg',
+        '/images/cleaning/bathroom_deep_cleaning_riyadh.jpg',
     ],
 
     // مكافحة حشرات (Pest Control)
@@ -369,7 +369,7 @@ export function getServiceImage(serviceSlug: string, index: number = 0): string 
         return images[index % images.length];
     }
     // Fallback to a general image
-    return '/images/النظافه/professional_cleaning_company_saudi.jpg';
+    return '/images/cleaning/professional_cleaning_company_saudi.jpg';
 }
 
 // Get multiple images for a service
@@ -379,7 +379,7 @@ export function getServiceImages(serviceSlug: string, count: number = 4): string
         // Return up to 'count' images, cycling if needed
         return Array.from({ length: Math.min(count, images.length) }, (_, i) => images[i]);
     }
-    return ['/images/النظافه/professional_cleaning_company_saudi.jpg'];
+    return ['/images/cleaning/professional_cleaning_company_saudi.jpg'];
 }
 
 // Get a city-specific image if available

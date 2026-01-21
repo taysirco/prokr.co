@@ -87,10 +87,10 @@ function getMockAdvertiserByCode(code: string): Advertiser | null {
 • مكافحة الحشرات
 • كشف التسربات`,
         gallery: [
-            '/images/نقل عفش/affordable-furniture-moving-company-riyadh-living-room-sofa.jpg',
-            '/images/نقل عفش/best-furniture-moving-company-jeddah-box-packing.jpg',
-            '/images/نقل عفش/furniture-movers-saudi-truck-loading-sofa.jpg',
-            '/images/نقل عفش/professional-packers-movers-riyadh-wrapped-chair.jpg',
+            '/images/furniture-moving/affordable-furniture-moving-company-riyadh-living-room-sofa.jpg',
+            '/images/furniture-moving/best-furniture-moving-company-jeddah-box-packing.jpg',
+            '/images/furniture-moving/furniture-movers-saudi-truck-loading-sofa.jpg',
+            '/images/furniture-moving/professional-packers-movers-riyadh-wrapped-chair.jpg',
         ],
         reviews: [
             { id: '1', user: 'أحمد محمد', rating: 5, comment: 'خدمة ممتازة وفريق عمل محترف. أنصح بالتعامل معهم بشدة.', date: new Date('2024-01-15') },
