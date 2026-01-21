@@ -1,0 +1,42 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Static data (cities, services) - public read
+    match /static_data/{document=**} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+    
+    // Advertisers - public read, authenticated write
+    match /advertisers/{advertiserId} {
+      // Anyone can read advertiser data
+      allow read: if true;
+      
+      // Authenticated users can create (for admin dashboard)
+      // In production, add more restrictions based on custom claims
+      allow create: if request.auth != null;
+      
+      // Only document owner or admin can update/delete
+      allow update, delete: if request.auth != null;
+    }
+    
+    // Reviews - public read, authenticated write
+    match /advertisers/{advertiserId}/reviews/{reviewId} {
+      allow read: if true;
+      allow create: if request.auth != null;
+      allow update, delete: if request.auth != null && request.auth.uid == resource.data.user_id;
+    }
+    
+    // Contact form submissions - anyone can create, only authenticated reads
+    match /contact_submissions/{submissionId} {
+      allow create: if true;
+      allow read, update, delete: if request.auth != null;
+    }
+    
+    // Admin-only data
+    match /admin/{document=**} {
+      allow read, write: if request.auth != null;
+    }
+  }
+}

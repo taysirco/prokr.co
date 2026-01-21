@@ -1,26 +1,232 @@
 @import "tailwindcss";
 
+/* RTL-first Arabic styling */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Saudi Green Palette */
+  --color-saudi-green: #006C35;
+  --color-saudi-green-light: #00a651;
+  --color-saudi-green-dark: #004d26;
+  
+  /* Gold Premium */
+  --color-gold: #f59e0b;
+  --color-gold-light: #fbbf24;
+  --color-gold-dark: #d97706;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Font configuration */
+body {
+  font-family: var(--font-ibm-plex-arabic), "Segoe UI", Tahoma, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* RTL-aware text alignment */
+.text-start {
+  text-align: right;
+}
+
+.text-end {
+  text-align: left;
+}
+
+/* RTL-aware margins and paddings */
+.ms-auto {
+  margin-inline-start: auto;
+}
+
+.me-auto {
+  margin-inline-end: auto;
+}
+
+/* Premium gold border animation */
+@keyframes gold-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.gold-border {
+  border: 2px solid transparent;
+  background: 
+    linear-gradient(white, white) padding-box,
+    linear-gradient(90deg, #f59e0b, #fbbf24, #f59e0b) border-box;
+  background-size: 200% 100%;
+  animation: gold-shimmer 3s linear infinite;
+}
+
+/* Verified badge glow */
+.verified-badge {
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
+}
+
+/* Phone number LTR in RTL context */
+[dir="ltr"] {
+  direction: ltr;
+  unicode-bidi: embed;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles */
+*:focus-visible {
+  outline: 2px solid var(--color-saudi-green);
+  outline-offset: 2px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}
+
+/* Line clamp utilities */
+.line-clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Prose styling for SEO content */
+.prose h2 {
+  color: #111827;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.prose h3 {
+  color: #374151;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose p {
+  color: #4b5563;
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+.prose ul {
+  list-style: none;
+  padding: 0;
+}
+
+.prose ul li {
+  padding-right: 1.5rem;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.prose ul li::before {
+  content: "✓";
+  position: absolute;
+  right: 0;
+  color: #10b981;
+  font-weight: bold;
+}
+
+/* Animation utilities */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-from-top {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-in {
+  animation-duration: 200ms;
+  animation-fill-mode: forwards;
+}
+
+.fade-in {
+  animation-name: fade-in;
+}
+
+.slide-in-from-top-2 {
+  animation-name: slide-in-from-top;
+}
+
+/* Sticky CTA shadow */
+.sticky-cta-shadow {
+  box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Button press effect */
+.btn-press:active {
+  transform: scale(0.98);
+}
+
+/* Loading skeleton */
+@keyframes skeleton-loading {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
 }

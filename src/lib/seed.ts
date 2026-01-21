@@ -1,0 +1,432 @@
+import type { City, Service } from '@/types';
+
+// ============================================
+// Complete Saudi Cities Data (Based on Roadmap)
+// ============================================
+export const CITIES: City[] = [
+    // Central Region (الوسطى)
+    { slug: 'riyadh', name_ar: 'الرياض', name_en: 'Riyadh', region: 'central' },
+    { slug: 'al-kharj', name_ar: 'الخرج', name_en: 'Al Kharj', region: 'central' },
+    { slug: 'qassim', name_ar: 'القصيم', name_en: 'Al Qassim', region: 'central' },
+    { slug: 'buraidah', name_ar: 'بريدة', name_en: 'Buraidah', region: 'central' },
+    { slug: 'onizah', name_ar: 'عنيزة', name_en: 'Onizah', region: 'central' },
+
+    // Western Region (الغربية)
+    { slug: 'jeddah', name_ar: 'جدة', name_en: 'Jeddah', region: 'western' },
+    { slug: 'makkah', name_ar: 'مكة المكرمة', name_en: 'Makkah', region: 'western' },
+    { slug: 'madinah', name_ar: 'المدينة المنورة', name_en: 'Madinah', region: 'western' },
+    { slug: 'taif', name_ar: 'الطائف', name_en: 'Taif', region: 'western' },
+    { slug: 'yanbu', name_ar: 'ينبع', name_en: 'Yanbu', region: 'western' },
+
+    // Eastern Region (الشرقية)
+    { slug: 'dammam', name_ar: 'الدمام', name_en: 'Dammam', region: 'eastern' },
+    { slug: 'al-khobar', name_ar: 'الخبر', name_en: 'Al Khobar', region: 'eastern' },
+    { slug: 'dhahran', name_ar: 'الظهران', name_en: 'Dhahran', region: 'eastern' },
+    { slug: 'jubail', name_ar: 'الجبيل', name_en: 'Jubail', region: 'eastern' },
+    { slug: 'al-ahsa', name_ar: 'الاحساء', name_en: 'Al Ahsa', region: 'eastern' },
+    { slug: 'qatif', name_ar: 'القطيف', name_en: 'Qatif', region: 'eastern' },
+    { slug: 'hafr-albatin', name_ar: 'حفر الباطن', name_en: 'Hafr Al Batin', region: 'eastern' },
+
+    // Northern Region (الشمالية)
+    { slug: 'tabuk', name_ar: 'تبوك', name_en: 'Tabuk', region: 'northern' },
+    { slug: 'hail', name_ar: 'حائل', name_en: 'Hail', region: 'northern' },
+
+    // Southern Region (الجنوبية)
+    { slug: 'abha', name_ar: 'أبها', name_en: 'Abha', region: 'southern' },
+    { slug: 'khamis-mushait', name_ar: 'خميس مشيط', name_en: 'Khamis Mushait', region: 'southern' },
+    { slug: 'najran', name_ar: 'نجران', name_en: 'Najran', region: 'southern' },
+    { slug: 'jazan', name_ar: 'جازان', name_en: 'Jazan', region: 'southern' },
+    { slug: 'al-baha', name_ar: 'الباحة', name_en: 'Al Baha', region: 'southern' },
+];
+
+// ============================================
+// Complete Services Data (Based on Roadmap)
+// ============================================
+export const SERVICES: Service[] = [
+    // نقل (Moving)
+    { slug: 'furniture-moving', name_ar: 'نقل عفش', name_en: 'Furniture Moving', category: 'moving' },
+    { slug: 'furniture-storage', name_ar: 'تخزين اثاث', name_en: 'Furniture Storage', category: 'moving' },
+    { slug: 'dyna', name_ar: 'دينات نقل', name_en: 'Dyna Moving', category: 'moving' },
+    { slug: 'moving-out', name_ar: 'نقل عفش بين المدن', name_en: 'Intercity Moving', category: 'moving' },
+    { slug: 'dabab', name_ar: 'دباب نقل عفش', name_en: 'Dabab Moving', category: 'moving' },
+
+    // تنظيف (Cleaning)
+    { slug: 'cleaning', name_ar: 'تنظيف منازل', name_en: 'Home Cleaning', category: 'cleaning' },
+    { slug: 'tanks-cleaning', name_ar: 'تنظيف خزانات', name_en: 'Tank Cleaning', category: 'cleaning' },
+    { slug: 'sofa-cleaning', name_ar: 'تنظيف كنب', name_en: 'Sofa Cleaning', category: 'cleaning' },
+    { slug: 'carpet-cleaning', name_ar: 'تنظيف سجاد', name_en: 'Carpet Cleaning', category: 'cleaning' },
+    { slug: 'steam-cleaning', name_ar: 'تنظيف بالبخار', name_en: 'Steam Cleaning', category: 'cleaning' },
+    { slug: 'sanitization', name_ar: 'تعقيم', name_en: 'Sanitization', category: 'cleaning' },
+    { slug: 'air-conditioner-cleaning', name_ar: 'تنظيف مكيفات', name_en: 'AC Cleaning', category: 'cleaning' },
+    { slug: 'glass-facades-cleaning', name_ar: 'تنظيف واجهات زجاج', name_en: 'Glass Facades Cleaning', category: 'cleaning' },
+    { slug: 'floor-cleaning', name_ar: 'تنظيف ارضيات', name_en: 'Floor Cleaning', category: 'cleaning' },
+    { slug: 'floor-polishing', name_ar: 'جلي بلاط', name_en: 'Floor Polishing', category: 'cleaning' },
+    { slug: 'marble-polishing', name_ar: 'جلي رخام', name_en: 'Marble Polishing', category: 'cleaning' },
+    { slug: 'villas-cleaning', name_ar: 'تنظيف فلل', name_en: 'Villa Cleaning', category: 'cleaning' },
+    { slug: 'apartments-cleaning', name_ar: 'تنظيف شقق', name_en: 'Apartment Cleaning', category: 'cleaning' },
+    { slug: 'palaces-cleaning', name_ar: 'تنظيف قصور', name_en: 'Palace Cleaning', category: 'cleaning' },
+    { slug: 'shops-cleaning', name_ar: 'تنظيف محلات', name_en: 'Shop Cleaning', category: 'cleaning' },
+    { slug: 'office-cleaning', name_ar: 'تنظيف مكاتب', name_en: 'Office Cleaning', category: 'cleaning' },
+    { slug: 'furniture-cleaning', name_ar: 'تنظيف اثاث', name_en: 'Furniture Cleaning', category: 'cleaning' },
+    { slug: 'kitchen-cleaning', name_ar: 'تنظيف مطابخ', name_en: 'Kitchen Cleaning', category: 'cleaning' },
+    { slug: 'swimming-pool-cleaning', name_ar: 'تنظيف مسابح', name_en: 'Pool Cleaning', category: 'cleaning' },
+    { slug: 'auto-cleaning', name_ar: 'تنظيف سيارات', name_en: 'Car Cleaning', category: 'cleaning' },
+    { slug: 'oven-cleaning', name_ar: 'تنظيف افران', name_en: 'Oven Cleaning', category: 'cleaning' },
+    { slug: 'councils-cleaning', name_ar: 'تنظيف مجالس', name_en: 'Majlis Cleaning', category: 'cleaning' },
+    { slug: 'hourly-cleaning', name_ar: 'تنظيف بالساعة', name_en: 'Hourly Cleaning', category: 'cleaning' },
+    { slug: 'restaurant-chimney-cleaning', name_ar: 'تنظيف مداخن مطاعم', name_en: 'Restaurant Chimney Cleaning', category: 'cleaning' },
+
+    // مجاري (Sewage)
+    { slug: 'sewer-cleaning', name_ar: 'تسليك مجاري', name_en: 'Sewer Cleaning', category: 'sewage' },
+    { slug: 'sewage-pumping', name_ar: 'شفط بيارات', name_en: 'Sewage Pumping', category: 'sewage' },
+    { slug: 'sewer-suction-trucks', name_ar: 'وايت شفط', name_en: 'Suction Trucks', category: 'sewage' },
+    { slug: 'sewage-compressor', name_ar: 'كمبروسر مجاري', name_en: 'Sewage Compressor', category: 'sewage' },
+
+    // مكافحة حشرات (Pest Control)
+    { slug: 'pest-control', name_ar: 'مكافحة حشرات', name_en: 'Pest Control', category: 'pest-control' },
+    { slug: 'pesticide-spraying', name_ar: 'رش مبيدات', name_en: 'Pesticide Spraying', category: 'pest-control' },
+    { slug: 'insects-spraying', name_ar: 'رش حشرات', name_en: 'Insect Spraying', category: 'pest-control' },
+    { slug: 'termite-control', name_ar: 'مكافحة النمل الابيض', name_en: 'Termite Control', category: 'pest-control' },
+    { slug: 'cockroach-control', name_ar: 'مكافحة الصراصير', name_en: 'Cockroach Control', category: 'pest-control' },
+    { slug: 'bedbugs-control', name_ar: 'مكافحة البق', name_en: 'Bedbug Control', category: 'pest-control' },
+    { slug: 'rodent-control', name_ar: 'مكافحة الفئران', name_en: 'Rodent Control', category: 'pest-control' },
+    { slug: 'ants-control', name_ar: 'مكافحة النمل', name_en: 'Ant Control', category: 'pest-control' },
+    { slug: 'bird-control', name_ar: 'مكافحة الحمام', name_en: 'Bird Control', category: 'pest-control' },
+    { slug: 'snakes-control', name_ar: 'مكافحة الثعابين', name_en: 'Snake Control', category: 'pest-control' },
+
+    // كشف تسربات وعزل (Leak Detection & Insulation)
+    { slug: 'water-leak-detection', name_ar: 'كشف تسربات المياه', name_en: 'Water Leak Detection', category: 'leak-detection' },
+    { slug: 'tank-leak-detection', name_ar: 'كشف تسربات الخزانات', name_en: 'Tank Leak Detection', category: 'leak-detection' },
+    { slug: 'bathroom-leak-detection', name_ar: 'كشف تسربات الحمامات', name_en: 'Bathroom Leak Detection', category: 'leak-detection' },
+    { slug: 'tank-insulation', name_ar: 'عزل خزانات', name_en: 'Tank Insulation', category: 'insulation' },
+    { slug: 'roof-insulation', name_ar: 'عزل اسطح', name_en: 'Roof Insulation', category: 'insulation' },
+    { slug: 'foam-insulation', name_ar: 'عزل فوم', name_en: 'Foam Insulation', category: 'insulation' },
+    { slug: 'water-insulation', name_ar: 'عزل مائي', name_en: 'Water Insulation', category: 'insulation' },
+    { slug: 'thermal-insulation', name_ar: 'عزل حراري', name_en: 'Thermal Insulation', category: 'insulation' },
+];
+
+// ============================================
+// Image Mapping for Services
+// ============================================
+export const SERVICE_IMAGES: Record<string, string[]> = {
+    // نقل عفش (Furniture Moving)
+    'furniture-moving': [
+        '/images/نقل عفش/furniture-movers-saudi-truck-loading-sofa.jpg',
+        '/images/نقل عفش/professional-packers-movers-riyadh-wrapped-chair.jpg',
+        '/images/نقل عفش/villa-furniture-moving-company-saudi-truck-packing.jpg',
+        '/images/نقل عفش/affordable-furniture-moving-company-riyadh-living-room-sofa.jpg',
+        '/images/نقل عفش/best-furniture-moving-company-jeddah-box-packing.jpg',
+    ],
+    'furniture-storage': [
+        '/images/نقل عفش/furniture-moving-storage-riyadh-cabinets-chairs.jpg',
+        '/images/نقل عفش/moving-storage-company-riyadh-boxes-chairs-lighting.jpg',
+    ],
+    'dyna': [
+        '/images/نقل عفش/cheap-furniture-moving-riyadh-sofa-truck-loading.jpg',
+        '/images/نقل عفش/truck-rental-furniture-moving-jeddah-carpet-packing.jpg',
+    ],
+    'moving-out': [
+        '/images/نقل عفش/intercity-furniture-moving-saudi-boxes-sofa.jpg',
+        '/images/نقل عفش/long-distance-furniture-moving-saudi-living-room.jpg',
+        '/images/نقل عفش/international-moving-saudi-gray-sofa-boxes.jpg',
+    ],
+    'dabab': [
+        '/images/نقل عفش/same-day-furniture-moving-jeddah-box-packing.jpg',
+    ],
+
+    // تنظيف (Cleaning)
+    'cleaning': [
+        '/images/النظافه/home_cleaning_services_riyadh.jpg',
+        '/images/النظافه/house_deep_cleaning_jeddah.jpg',
+        '/images/النظافه/cleaning_services_company_provider.jpg',
+        '/images/النظافه/professional_cleaning_company_saudi.jpg',
+    ],
+    'tanks-cleaning': [
+        '/images/النظافه/water_tank_cleaning_saudi_arabia.jpg',
+    ],
+    'sofa-cleaning': [
+        '/images/النظافه/sofa_cleaning_services_jeddah.jpg',
+        '/images/النظافه/deep_sofa_cleaning_services.jpg',
+        '/images/النظافه/sofa_shampoo_cleaning_services.jpg',
+        '/images/النظافه/steam_sofa_cleaning_jeddah.jpg',
+    ],
+    'carpet-cleaning': [
+        '/images/النظافه/carpet_cleaning_company_riyadh.jpg',
+        '/images/النظافه/carpet_cleaning_services_dammam.jpg',
+        '/images/النظافه/steam_carpet_washing.jpg',
+        '/images/النظافه/shampoo_carpet_washing.jpg',
+    ],
+    'steam-cleaning': [
+        '/images/النظافه/steam_carpet_washing.jpg',
+        '/images/النظافه/steam_sofa_cleaning_jeddah.jpg',
+        '/images/النظافه/steam_wall_cleaning_services.jpg',
+    ],
+    'sanitization': [
+        '/images/النظافه/comprehensive_sterilization_services.jpg',
+        '/images/النظافه/home_sterilization_company_riyadh.jpg',
+        '/images/النظافه/disinfection_and_sanitization_services.jpg',
+    ],
+    'air-conditioner-cleaning': [
+        '/images/النظافه/ac_cleaning_and_maintenance_services.jpg',
+    ],
+    'glass-facades-cleaning': [
+        '/images/النظافه/glass_facade_cleaning_riyadh.jpg',
+        '/images/النظافه/building_facade_washing.jpg',
+        '/images/النظافه/high_rise_facade_cleaning.jpg',
+        '/images/النظافه/building_glass_cleaning.jpg',
+    ],
+    'floor-cleaning': [
+        '/images/النظافه/floor_cleaning_and_polishing_service.jpg',
+        '/images/النظافه/floor_mopping_services_riyadh.jpg',
+    ],
+    'floor-polishing': [
+        '/images/النظافه/tile_polishing_services_riyadh.jpg',
+        '/images/النظافه/tile_and_ceramic_polishing.jpg',
+        '/images/النظافه/shop_floor_tile_polishing.jpg',
+    ],
+    'marble-polishing': [
+        '/images/النظافه/marble_floor_polishing_services.jpg',
+        '/images/النظافه/marble_polishing_and_grinding_riyadh.jpg',
+        '/images/النظافه/marble_polishing_machine.jpg',
+        '/images/النظافه/kitchen_marble_polishing.jpg',
+    ],
+    'villas-cleaning': [
+        '/images/النظافه/villa_cleaning_services_riyadh.jpg',
+        '/images/النظافه/villa_cleaning_team_riyadh.jpg',
+    ],
+    'apartments-cleaning': [
+        '/images/النظافه/apartment_cleaning_services_riyadh.jpg',
+        '/images/النظافه/residential_apartment_cleaning.jpg',
+    ],
+    'palaces-cleaning': [
+        '/images/النظافه/villa_cleaning_team_riyadh.jpg',
+    ],
+    'shops-cleaning': [
+        '/images/النظافه/commercial_cleaning_services_saudi.jpg',
+        '/images/النظافه/shop_floor_tile_polishing.jpg',
+    ],
+    'office-cleaning': [
+        '/images/النظافه/office_cleaning_services_saudi_arabia.jpg',
+        '/images/النظافه/corporate_office_cleaning_services.jpg',
+        '/images/النظافه/office_cleaner_worker.jpg',
+    ],
+    'furniture-cleaning': [
+        '/images/النظافه/deep_sofa_cleaning_services.jpg',
+    ],
+    'kitchen-cleaning': [
+        '/images/النظافه/kitchen_deep_cleaning_service.jpg',
+        '/images/النظافه/kitchen_cleaning_maid_riyadh.jpg',
+    ],
+    'swimming-pool-cleaning': [
+        '/images/النظافه/swimming_pool_cleaning.jpg',
+    ],
+    'councils-cleaning': [
+        '/images/النظافه/arabic_majlis_cleaning.jpg',
+    ],
+    'hourly-cleaning': [
+        '/images/النظافه/hourly_cleaning_maids.jpg',
+        '/images/النظافه/hourly_maid_services_riyadh.jpg',
+    ],
+    'oven-cleaning': [
+        '/images/النظافه/gas_oven_cleaning_services.jpg',
+        '/images/النظافه/oven_grease_removal_cleaning.jpg',
+    ],
+    'restaurant-chimney-cleaning': [
+        '/images/النظافه/restaurant_kitchen_cleaning_hygiene.jpg',
+        '/images/النظافه/restaurant_cleaning_services_riyadh.jpg',
+    ],
+
+    // مجاري (Sewage)
+    'sewer-cleaning': [
+        '/images/النظافه/bathroom_deep_cleaning_riyadh.jpg',
+    ],
+    'sewage-pumping': [
+        '/images/النظافه/bathroom_deep_cleaning_riyadh.jpg',
+    ],
+    'sewer-suction-trucks': [
+        '/images/النظافه/bathroom_deep_cleaning_riyadh.jpg',
+    ],
+    'sewage-compressor': [
+        '/images/النظافه/bathroom_deep_cleaning_riyadh.jpg',
+    ],
+
+    // مكافحة حشرات (Pest Control)
+    'pest-control': [
+        '/images/مكفاحه الحشرات/pest-control-saudi-arabia.jpg',
+        '/images/مكفاحه الحشرات/pest-control-riyadh.jpg',
+        '/images/مكفاحه الحشرات/pest-control-jeddah.jpg',
+        '/images/مكفاحه الحشرات/pest-control-company-saudi-arabia-best.jpg',
+    ],
+    'pesticide-spraying': [
+        '/images/مكفاحه الحشرات/fumigation-services-ksa.jpg',
+        '/images/مكفاحه الحشرات/fumigation-company-riyadh.jpg',
+        '/images/مكفاحه الحشرات/pest-spray-technician-riyadh.jpg',
+    ],
+    'insects-spraying': [
+        '/images/مكفاحه الحشرات/insect-spraying-riyadh-baseboard.jpg',
+        '/images/مكفاحه الحشرات/insect-spraying-jeddah-home.jpg',
+    ],
+    'termite-control': [
+        '/images/مكفاحه الحشرات/termite-control-riyadh.jpg',
+        '/images/مكفاحه الحشرات/termite-treatment-saudi-arabia.jpg',
+        '/images/مكفاحه الحشرات/white-ants-treatment-saudi.jpg',
+    ],
+    'cockroach-control': [
+        '/images/مكفاحه الحشرات/cockroach-control-saudi-wall.jpg',
+        '/images/مكفاحه الحشرات/cockroach-extermination-riyadh.jpg',
+        '/images/مكفاحه الحشرات/cockroach-treatment-jeddah-kitchen.jpg',
+    ],
+    'bedbugs-control': [
+        '/images/مكفاحه الحشرات/bed-bug-removal-jeddah.jpg',
+        '/images/مكفاحه الحشرات/furniture-fumigation-saudi-bedroom.jpg',
+    ],
+    'rodent-control': [
+        '/images/مكفاحه الحشرات/rodent-removal-saudi-arabia.jpg',
+        '/images/مكفاحه الحشرات/rodent-proofing-service-saudi.jpg',
+    ],
+    'ants-control': [
+        '/images/مكفاحه الحشرات/ant-control-service-saudi-arabia.jpg',
+    ],
+    'bird-control': [
+        '/images/مكفاحه الحشرات/pest-prevention-saudi-arabia.jpg',
+    ],
+    'snakes-control': [
+        '/images/مكفاحه الحشرات/snake-scorpion-removal-saudi.jpg',
+    ],
+
+    // كشف تسربات (Leak Detection)
+    'water-leak-detection': [
+        '/images/كشف التسربات/Riyadh water leak detection Saudi Arabia.jpg',
+        '/images/كشف التسربات/Jeddah water leak detection Saudi Arabia.jpg',
+        '/images/كشف التسربات/Dammam water leak detection Saudi Arabia.jpg',
+        '/images/كشف التسربات/Saudi Arabia leak detection services near me.jpg',
+    ],
+    'tank-leak-detection': [
+        '/images/كشف التسربات/Khobar water tank leak detection Saudi Arabia.jpg',
+    ],
+    'bathroom-leak-detection': [
+        '/images/كشف التسربات/Jeddah bathroom drain pipe repair Saudi Arabia.jpg',
+    ],
+
+    // عزل (Insulation)
+    'tank-insulation': [
+        '/images/كشف التسربات/Khobar water tank leak detection Saudi Arabia.jpg',
+    ],
+    'roof-insulation': [
+        '/images/كشف التسربات/Dammam roof leak repair Saudi Arabia.jpg',
+    ],
+    'foam-insulation': [
+        '/images/كشف التسربات/Dammam roof leak repair Saudi Arabia.jpg',
+    ],
+    'water-insulation': [
+        '/images/كشف التسربات/Dammam wall moisture detection mold Saudi Arabia.jpg',
+    ],
+    'thermal-insulation': [
+        '/images/كشف التسربات/Riyadh thermal leak inspection Saudi Arabia.jpg',
+    ],
+};
+
+// ============================================
+// Helper Functions
+// ============================================
+
+// Get city by slug
+export function getCityBySlug(slug: string): City | undefined {
+    return CITIES.find(city => city.slug === slug);
+}
+
+// Get service by slug
+export function getServiceBySlug(slug: string): Service | undefined {
+    return SERVICES.find(service => service.slug === slug);
+}
+
+// Get cities grouped by region
+export function getCitiesByRegion(): Record<string, City[]> {
+    return CITIES.reduce((acc, city) => {
+        if (!acc[city.region]) {
+            acc[city.region] = [];
+        }
+        acc[city.region].push(city);
+        return acc;
+    }, {} as Record<string, City[]>);
+}
+
+// Get services grouped by category
+export function getServicesByCategory(): Record<string, Service[]> {
+    return SERVICES.reduce((acc, service) => {
+        if (!acc[service.category]) {
+            acc[service.category] = [];
+        }
+        acc[service.category].push(service);
+        return acc;
+    }, {} as Record<string, Service[]>);
+}
+
+// Get a relevant image for a service (smart selection)
+export function getServiceImage(serviceSlug: string, index: number = 0): string {
+    const images = SERVICE_IMAGES[serviceSlug];
+    if (images && images.length > 0) {
+        return images[index % images.length];
+    }
+    // Fallback to a general image
+    return '/images/النظافه/professional_cleaning_company_saudi.jpg';
+}
+
+// Get multiple images for a service
+export function getServiceImages(serviceSlug: string, count: number = 4): string[] {
+    const images = SERVICE_IMAGES[serviceSlug];
+    if (images && images.length > 0) {
+        // Return up to 'count' images, cycling if needed
+        return Array.from({ length: Math.min(count, images.length) }, (_, i) => images[i]);
+    }
+    return ['/images/النظافه/professional_cleaning_company_saudi.jpg'];
+}
+
+// Get a city-specific image if available
+export function getCityServiceImage(citySlug: string, serviceSlug: string): string {
+    // For leak detection, we have city-specific images
+    if (serviceSlug === 'water-leak-detection') {
+        const cityImageMap: Record<string, string> = {
+            'riyadh': '/images/كشف التسربات/Riyadh water leak detection Saudi Arabia.jpg',
+            'jeddah': '/images/كشف التسربات/Jeddah water leak detection Saudi Arabia.jpg',
+            'dammam': '/images/كشف التسربات/Dammam water leak detection Saudi Arabia.jpg',
+            'makkah': '/images/كشف التسربات/Makkah water leak detection Saudi Arabia.jpg',
+            'madinah': '/images/كشف التسربات/Madinah water leak detection Saudi Arabia.jpg',
+            'taif': '/images/كشف التسربات/Taif water leak detection Saudi Arabia.jpg',
+            'al-khobar': '/images/كشف التسربات/Khobar water leak detection Saudi Arabia.jpg',
+            'abha': '/images/كشف التسربات/Abha water leak detection Saudi Arabia.jpg',
+            'hail': '/images/كشف التسربات/Hail water leak detection Saudi Arabia.jpg',
+            'jazan': '/images/كشف التسربات/Jazan water leak detection Saudi Arabia.jpg',
+            'najran': '/images/كشف التسربات/Najran water leak detection Saudi Arabia.jpg',
+            'tabuk': '/images/كشف التسربات/Tabuk water leak detection Saudi Arabia.jpg',
+            'khamis-mushait': '/images/كشف التسربات/Khamis Mushait water leak detection Saudi Arabia.jpg',
+            'qassim': '/images/كشف التسربات/Qassim water leak detection Saudi Arabia.jpg',
+            'al-ahsa': '/images/كشف التسربات/Al Ahsa water leak detection Saudi Arabia.jpg',
+            'jubail': '/images/كشف التسربات/Jubail sink drain repair plumber Saudi Arabia.jpg',
+            'yanbu': '/images/كشف التسربات/Yanbu acoustic leak detector equipment Saudi Arabia.jpg',
+        };
+        return cityImageMap[citySlug] || getServiceImage(serviceSlug);
+    }
+
+    // For other services, return generic service image
+    return getServiceImage(serviceSlug);
+}
+
+// Region names in Arabic
+export const REGION_NAMES: Record<string, string> = {
+    'central': 'المنطقة الوسطى',
+    'western': 'المنطقة الغربية',
+    'eastern': 'المنطقة الشرقية',
+    'northern': 'المنطقة الشمالية',
+    'southern': 'المنطقة الجنوبية',
+};
+
+// Category names in Arabic
+export const CATEGORY_NAMES: Record<string, string> = {
+    'moving': 'نقل',
+    'cleaning': 'تنظيف',
+    'sewage': 'صرف صحي',
+    'pest-control': 'مكافحة حشرات',
+    'leak-detection': 'كشف تسربات',
+    'insulation': 'عزل',
+};
