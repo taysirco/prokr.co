@@ -1,5 +1,10 @@
 import React from 'react';
-import { PricingTableItem } from '@/data/pricing';
+
+export interface PricingTableItem {
+    serviceType: string;
+    priceRange: string;
+    timeEstimate: string;
+}
 
 interface PricingTableProps {
     title: string;
