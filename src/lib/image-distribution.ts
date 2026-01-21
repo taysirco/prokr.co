@@ -112,9 +112,10 @@ export const CLEANING_IMAGES = {
         '/images/cleaning/hospital_bed_sterilization_services.jpg',
         '/images/cleaning/hospital_cleaning_cart.jpg',
     ],
-    // Pool Cleaning
+    // Pool Cleaning (using outdoor images as fallback)
     pool: [
-        '/images/cleaning/swimming_pool_cleaning.jpg',
+        '/images/cleaning/courtyard_cleaning_services_riyadh.jpg',
+        '/images/cleaning/pressure_washing_courtyards.jpg',
     ],
     // Majlis/Council Cleaning
     majlis: [
@@ -439,29 +440,46 @@ export const LEAK_DETECTION_IMAGES = {
     ],
 };
 
-// City Hero Images (39 total)
+// City Hero Images - Using actual existing landmark/skyline images
 export const CITY_IMAGES: Record<string, string[]> = {
     riyadh: [
-        '/images/cities/riyadh/riyadh-furniture-moving-company-truck-loading.jpg',
-        '/images/cities/riyadh/riyadh-pest-control-team-spraying.jpg',
-        '/images/cities/riyadh/riyadh-cleaning-services-team.jpg',
+        '/images/cities/riyadh/riyadh-skyline-kingdom-tower-king-fahd-road-saudi-arabia.jpg',
+        '/images/cities/riyadh/riyadh-kafd-financial-district-aerial-view-clouds-saudi-arabia.jpg',
+        '/images/cities/riyadh/riyadh-downtown-night-lights-modern-buildings-saudi-arabia.jpg',
     ],
     jeddah: [
-        '/images/cities/jeddah/jeddah-furniture-moving-professional-team.jpg',
-        '/images/cities/jeddah/jeddah-cleaning-services-home.jpg',
-        '/images/cities/jeddah/jeddah-pest-control-residential.jpg',
+        '/images/cities/jeddah/jeddah-corniche-red-sea-coast-palm-trees-towers-saudi-arabia.jpg',
+        '/images/cities/jeddah/jeddah-waterfront-night-view-modern-skyline-saudi-arabia.jpg',
+        '/images/cities/jeddah/jeddah-welcome-sign-sunset-palm-trees-corniche-saudi-arabia.jpg',
     ],
     makkah: [
-        '/images/cities/makkah/makkah-furniture-moving-services.jpg',
-        '/images/cities/makkah/makkah-cleaning-company.jpg',
+        '/images/cities/makkah/makkah-masjid-haram-aerial-view-expansion-project-saudi-arabia.jpg',
+        '/images/cities/makkah/makkah-kaaba-clock-tower-abraj-al-bait-night-pilgrims-saudi-arabia.jpg',
     ],
     madinah: [
-        '/images/cities/madinah/madinah-moving-services-team.jpg',
-        '/images/cities/madinah/madinah-cleaning-services.jpg',
+        '/images/cities/madinah/madinah-masjid-nabawi-panoramic-view-blue-sky-saudi-arabia.jpg',
+        '/images/cities/madinah/madinah-prophets-mosque-green-dome-minarets-sunset-saudi-arabia.jpg',
     ],
     taif: [
-        '/images/cities/taif/taif-furniture-moving-truck.jpg',
-        '/images/cities/taif/taif-cleaning-team.jpg',
+        '/images/cities/taif/taif-rose-garden-mountains-panoramic-view-saudi-arabia.jpg',
+        '/images/cities/taif/taif-flower-festival-colorful-gardens-tourism-saudi-arabia.jpg',
+    ],
+    dammam: [
+        '/images/cities/other-cities/dammam-heritage-village-waterfront-island-view-saudi-arabia.jpg',
+        '/images/cities/other-cities/dammam-roundabout-night-view-highway-city-lights-saudi-arabia.jpg',
+    ],
+    'al-khobar': [
+        '/images/cities/other-cities/khobar-city-skyline-highway-night-view-towers-saudi-arabia.jpg',
+        '/images/cities/other-cities/khobar-water-tower-landmark-sunset-corniche-saudi-arabia.jpg',
+    ],
+    tabuk: [
+        '/images/cities/other-cities/tabuk-old-castle-saudi-flag-historical-landmark-saudi-arabia.jpg',
+    ],
+    yanbu: [
+        '/images/cities/other-cities/yanbu-city-coastal-aerial-view-red-sea-saudi-arabia.jpg',
+    ],
+    hail: [
+        '/images/cities/other-cities/hail-city-panoramic-view-water-tower-urban-saudi-arabia.jpg',
     ],
 };
 
@@ -683,8 +701,8 @@ export function getCityHeroImage(citySlug: string, index: number = 0): string {
     if (cityImages && cityImages.length > 0) {
         return cityImages[index % cityImages.length];
     }
-    // Fallback to other-cities
-    return '/images/cities/other-cities/saudi-services-professional-team.jpg';
+    // Fallback to a generic city skyline image
+    return '/images/cities/other-cities/dammam-heritage-village-waterfront-island-view-saudi-arabia.jpg';
 }
 
 /**
