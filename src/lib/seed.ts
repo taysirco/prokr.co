@@ -1,6 +1,16 @@
 import type { City, Service } from '@/types';
 
-// ============================================
+// Re-export image distribution functions
+export {
+    getUniquePageImages,
+    getCityHeroImage,
+    getServicePrimaryImage,
+    CLEANING_IMAGES,
+    FURNITURE_MOVING_IMAGES,
+    PEST_CONTROL_IMAGES,
+    LEAK_DETECTION_IMAGES,
+} from './image-distribution';
+
 // Complete Saudi Cities Data (Based on Roadmap)
 // ============================================
 export const CITIES: City[] = [

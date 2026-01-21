@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Home, ChevronLeft, Star, Phone, MessageCircle, BadgeCheck, MapPin, Clock, Shield } from 'lucide-react';
-import { getCityBySlug, getServiceBySlug, getCityServiceImage, getServiceImages, CITIES, SERVICES } from '@/lib/seed';
+import { getCityBySlug, getServiceBySlug, getUniquePageImages, CITIES, SERVICES } from '@/lib/seed';
 import { ServiceJsonLd, BreadcrumbJsonLd } from '@/components/JsonLd';
 import { SeoContentSection, FaqJsonLd, ServiceOfferJsonLd, generateSeoContent } from '@/lib/seo-content';
 import { getCityContext } from '@/lib/city-context';
@@ -204,11 +204,12 @@ export default async function SiloPage({ params }: SiloPageProps) {
                             <div className="hidden lg:block relative">
                                 <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
                                     <Image
-                                        src={getCityServiceImage(resolvedParams.city, resolvedParams.service)}
+                                        src={getUniquePageImages(resolvedParams.city, resolvedParams.service, service.category, 1)[0]}
                                         alt={`${service.name_ar} في ${city.name_ar}`}
                                         fill
                                         className="object-cover"
                                         priority
+                                        sizes="(max-width: 768px) 100vw, 50vw"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/50 to-transparent"></div>
                                 </div>
