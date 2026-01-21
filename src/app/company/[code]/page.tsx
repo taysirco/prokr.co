@@ -98,6 +98,7 @@ function getMockAdvertiserByCode(code: string): Advertiser | null {
             { id: '3', user: 'محمد أحمد', rating: 4, comment: 'خدمة جيدة جداً والأسعار مناسبة. سأتعامل معهم مرة أخرى.', date: new Date('2024-01-05') },
             { id: '4', user: 'فاطمة سعيد', rating: 5, comment: 'أفضل شركة تعاملت معها. شكراً لكم على الخدمة المميزة.', date: new Date('2023-12-28') },
         ],
+        is_active: true,
         created_at: new Date(),
         updated_at: new Date(),
     };

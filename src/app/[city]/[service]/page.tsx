@@ -89,6 +89,7 @@ function getMockAdvertisers(citySlug: string, serviceSlug: string): { premium: A
             { id: '1', user: 'أحمد', rating: 5, comment: 'خدمة ممتازة', date: new Date() },
             { id: '2', user: 'محمد', rating: 4, comment: 'جيد جداً', date: new Date() },
         ] : [],
+        is_active: true,
         created_at: new Date(),
         updated_at: new Date(),
     });

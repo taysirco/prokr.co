@@ -4,6 +4,8 @@ import {
     getDoc,
     getDocs,
     setDoc,
+    updateDoc,
+    deleteDoc,
     query,
     where,
     orderBy,
@@ -188,6 +190,7 @@ export async function createAdvertiser(data: AdvertiserFormData): Promise<Advert
         description: data.description,
         gallery: data.gallery || [],
         reviews: [],
+        is_active: true,
         created_at: now,
         updated_at: now,
     };
@@ -220,3 +223,80 @@ export async function getCitiesForService(serviceSlug: string, excludeCity?: str
     const cities = await getCities();
     return cities.filter(city => city.slug !== excludeCity);
 }
+
+// ============================================
+// Admin CRUD Functions
+// ============================================
+
+/**
+ * Get all advertisers with optional filters
+ */
+export async function getAllAdvertisers(): Promise<Advertiser[]> {
+    const advertisersRef = collection(db, ADVERTISERS_COLLECTION);
+    const q = query(advertisersRef, orderBy('created_at', 'desc'));
+    const querySnap = await getDocs(q);
+
+    return querySnap.docs.map(doc => {
+        const data = doc.data();
+        return {
+            id: doc.id,
+            ...data,
+            created_at: data.created_at?.toDate() || new Date(),
+            updated_at: data.updated_at?.toDate() || new Date(),
+            subscription_expiry: data.subscription_expiry?.toDate() || null,
+        } as Advertiser;
+    });
+}
+
+/**
+ * Update an existing advertiser
+ */
+export async function updateAdvertiser(
+    id: string,
+    updates: Partial<AdvertiserFormData> & { is_active?: boolean }
+): Promise<void> {
+    const docRef = doc(db, ADVERTISERS_COLLECTION, id);
+
+    const updateData: Record<string, unknown> = {
+        ...updates,
+        updated_at: Timestamp.fromDate(new Date()),
+    };
+
+    // Convert dates to Timestamps
+    if (updates.subscription_expiry) {
+        updateData.subscription_expiry = Timestamp.fromDate(updates.subscription_expiry);
+    }
+
+    await updateDoc(docRef, updateData);
+}
+
+/**
+ * Delete an advertiser
+ */
+export async function deleteAdvertiser(id: string): Promise<void> {
+    const docRef = doc(db, ADVERTISERS_COLLECTION, id);
+    await deleteDoc(docRef);
+}
+
+/**
+ * Toggle advertiser premium status
+ */
+export async function toggleAdvertiserPremium(id: string, isPremium: boolean): Promise<void> {
+    const docRef = doc(db, ADVERTISERS_COLLECTION, id);
+    await updateDoc(docRef, {
+        is_premium: isPremium,
+        updated_at: Timestamp.fromDate(new Date()),
+    });
+}
+
+/**
+ * Toggle advertiser active status
+ */
+export async function toggleAdvertiserActive(id: string, isActive: boolean): Promise<void> {
+    const docRef = doc(db, ADVERTISERS_COLLECTION, id);
+    await updateDoc(docRef, {
+        is_active: isActive,
+        updated_at: Timestamp.fromDate(new Date()),
+    });
+}
+

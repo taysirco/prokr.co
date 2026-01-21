@@ -42,6 +42,7 @@ export interface Advertiser {
   description: string;
   gallery: string[]; // Array of image URLs
   reviews: Review[];
+  is_active: boolean; // Whether the advertiser is visible
   created_at: Date;
   updated_at: Date;
 }
