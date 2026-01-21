@@ -1,0 +1,21 @@
+# Firebase App Hosting configuration
+# https://firebase.google.com/docs/app-hosting
+
+runConfig:
+  cpu: 1
+  memoryMiB: 512
+  concurrency: 80
+  
+env:
+  - variable: NEXT_PUBLIC_FIREBASE_API_KEY
+    secret: FIREBASE_API_KEY
+  - variable: NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN
+    value: prokr-84ca8.firebaseapp.com
+  - variable: NEXT_PUBLIC_FIREBASE_PROJECT_ID
+    value: prokr-84ca8
+  - variable: NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET
+    value: prokr-84ca8.firebasestorage.app
+  - variable: NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID
+    secret: FIREBASE_MESSAGING_SENDER_ID
+  - variable: NEXT_PUBLIC_FIREBASE_APP_ID
+    secret: FIREBASE_APP_ID
