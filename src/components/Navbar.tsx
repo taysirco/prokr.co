@@ -66,8 +66,8 @@ export default function Navbar() {
 
             {/* Main Navbar */}
             <nav className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled
-                    ? 'bg-white shadow-lg'
-                    : 'bg-white/95 backdrop-blur-md border-b border-gray-100'
+                ? 'bg-white shadow-lg'
+                : 'bg-white/95 backdrop-blur-md border-b border-gray-100'
                 }`}>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-center h-20">
@@ -100,13 +100,15 @@ export default function Navbar() {
                             </Link>
 
                             {/* Mega Menu - Services */}
-                            <div className="relative group">
+                            <div
+                                className="relative"
+                                onMouseEnter={() => setIsServicesOpen(true)}
+                                onMouseLeave={() => setIsServicesOpen(false)}
+                            >
                                 <button
-                                    onMouseEnter={() => setIsServicesOpen(true)}
-                                    onMouseLeave={() => setIsServicesOpen(false)}
                                     className={`flex items-center gap-2 px-4 py-2.5 font-medium transition-all rounded-xl ${isServicesOpen
-                                            ? 'text-emerald-600 bg-emerald-50'
-                                            : 'text-gray-700 hover:text-emerald-600 hover:bg-emerald-50'
+                                        ? 'text-emerald-600 bg-emerald-50'
+                                        : 'text-gray-700 hover:text-emerald-600 hover:bg-emerald-50'
                                         }`}
                                 >
                                     <Wrench className="w-4 h-4" />
@@ -116,64 +118,66 @@ export default function Navbar() {
 
                                 {/* Mega Menu Dropdown */}
                                 <div
-                                    className={`absolute right-0 mt-2 w-[700px] bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden transition-all duration-200 origin-top ${isServicesOpen ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
+                                    className={`absolute right-0 pt-2 w-[700px] transition-all duration-200 origin-top ${isServicesOpen ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
                                         }`}
-                                    onMouseEnter={() => setIsServicesOpen(true)}
-                                    onMouseLeave={() => setIsServicesOpen(false)}
                                 >
-                                    <div className="p-6">
-                                        <div className="grid grid-cols-3 gap-6">
-                                            {Object.entries(servicesByCategory).slice(0, 3).map(([category, services]) => (
-                                                <div key={category}>
-                                                    <div className="flex items-center gap-2 mb-4 pb-2 border-b border-gray-100">
-                                                        <div className="w-8 h-8 bg-emerald-100 rounded-lg flex items-center justify-center text-emerald-600">
-                                                            {categoryIcons[category] || <Wrench className="w-4 h-4" />}
+                                    <div className="bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden">
+                                        <div className="p-6">
+                                            <div className="grid grid-cols-3 gap-6">
+                                                {Object.entries(servicesByCategory).slice(0, 3).map(([category, services]) => (
+                                                    <div key={category}>
+                                                        <div className="flex items-center gap-2 mb-4 pb-2 border-b border-gray-100">
+                                                            <div className="w-8 h-8 bg-emerald-100 rounded-lg flex items-center justify-center text-emerald-600">
+                                                                {categoryIcons[category] || <Wrench className="w-4 h-4" />}
+                                                            </div>
+                                                            <h4 className="font-bold text-gray-900">
+                                                                {CATEGORY_NAMES[category] || category}
+                                                            </h4>
                                                         </div>
-                                                        <h4 className="font-bold text-gray-900">
-                                                            {CATEGORY_NAMES[category] || category}
-                                                        </h4>
+                                                        <div className="space-y-1">
+                                                            {services.slice(0, 6).map(service => (
+                                                                <Link
+                                                                    key={service.slug}
+                                                                    href={`/services/${service.slug}`}
+                                                                    className="block px-3 py-2 text-gray-600 hover:bg-emerald-50 hover:text-emerald-700 rounded-lg transition-all text-sm"
+                                                                >
+                                                                    {service.name_ar}
+                                                                </Link>
+                                                            ))}
+                                                        </div>
                                                     </div>
-                                                    <div className="space-y-1">
-                                                        {services.slice(0, 6).map(service => (
-                                                            <Link
-                                                                key={service.slug}
-                                                                href={`/services/${service.slug}`}
-                                                                className="block px-3 py-2 text-gray-600 hover:bg-emerald-50 hover:text-emerald-700 rounded-lg transition-all text-sm"
-                                                            >
-                                                                {service.name_ar}
-                                                            </Link>
-                                                        ))}
-                                                    </div>
-                                                </div>
-                                            ))}
-                                        </div>
-                                    </div>
-                                    {/* Footer of dropdown */}
-                                    <div className="bg-gradient-to-l from-emerald-50 to-white px-6 py-4 border-t border-gray-100">
-                                        <div className="flex items-center justify-between">
-                                            <div>
-                                                <p className="font-bold text-gray-900">أكثر من 50 خدمة</p>
-                                                <p className="text-sm text-gray-500">تصفح جميع الخدمات المتاحة</p>
+                                                ))}
                                             </div>
-                                            <Link
-                                                href="/services"
-                                                className="px-5 py-2.5 bg-emerald-600 text-white font-medium rounded-xl hover:bg-emerald-700 transition-colors shadow-lg shadow-emerald-500/30"
-                                            >
-                                                عرض الكل ←
-                                            </Link>
+                                        </div>
+                                        {/* Footer of dropdown */}
+                                        <div className="bg-gradient-to-l from-emerald-50 to-white px-6 py-4 border-t border-gray-100">
+                                            <div className="flex items-center justify-between">
+                                                <div>
+                                                    <p className="font-bold text-gray-900">أكثر من 50 خدمة</p>
+                                                    <p className="text-sm text-gray-500">تصفح جميع الخدمات المتاحة</p>
+                                                </div>
+                                                <Link
+                                                    href="/services"
+                                                    className="px-5 py-2.5 bg-emerald-600 text-white font-medium rounded-xl hover:bg-emerald-700 transition-colors shadow-lg shadow-emerald-500/30"
+                                                >
+                                                    عرض الكل ←
+                                                </Link>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
                             {/* Mega Menu - Cities */}
-                            <div className="relative group">
+                            <div
+                                className="relative"
+                                onMouseEnter={() => setIsCitiesOpen(true)}
+                                onMouseLeave={() => setIsCitiesOpen(false)}
+                            >
                                 <button
-                                    onMouseEnter={() => setIsCitiesOpen(true)}
-                                    onMouseLeave={() => setIsCitiesOpen(false)}
                                     className={`flex items-center gap-2 px-4 py-2.5 font-medium transition-all rounded-xl ${isCitiesOpen
-                                            ? 'text-emerald-600 bg-emerald-50'
-                                            : 'text-gray-700 hover:text-emerald-600 hover:bg-emerald-50'
+                                        ? 'text-emerald-600 bg-emerald-50'
+                                        : 'text-gray-700 hover:text-emerald-600 hover:bg-emerald-50'
                                         }`}
                                 >
                                     <MapPin className="w-4 h-4" />
@@ -183,46 +187,46 @@ export default function Navbar() {
 
                                 {/* Cities Mega Menu */}
                                 <div
-                                    className={`absolute right-0 mt-2 w-[600px] bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden transition-all duration-200 origin-top ${isCitiesOpen ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
+                                    className={`absolute right-0 pt-2 w-[600px] transition-all duration-200 origin-top ${isCitiesOpen ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
                                         }`}
-                                    onMouseEnter={() => setIsCitiesOpen(true)}
-                                    onMouseLeave={() => setIsCitiesOpen(false)}
                                 >
-                                    <div className="p-6">
-                                        <div className="grid grid-cols-3 gap-4">
-                                            {Object.entries(citiesByRegion).slice(0, 3).map(([region, cities]) => (
-                                                <div key={region}>
-                                                    <h4 className="font-bold text-gray-900 mb-3 text-sm flex items-center gap-2">
-                                                        <MapPin className="w-4 h-4 text-emerald-500" />
-                                                        {regionNames[region]}
-                                                    </h4>
-                                                    <div className="space-y-1">
-                                                        {cities.slice(0, 5).map(city => (
-                                                            <Link
-                                                                key={city.slug}
-                                                                href={`/${city.slug}`}
-                                                                className="block px-3 py-2 text-gray-600 hover:bg-emerald-50 hover:text-emerald-700 rounded-lg transition-all text-sm"
-                                                            >
-                                                                {city.name_ar}
-                                                            </Link>
-                                                        ))}
+                                    <div className="bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden">
+                                        <div className="p-6">
+                                            <div className="grid grid-cols-3 gap-4">
+                                                {Object.entries(citiesByRegion).slice(0, 3).map(([region, cities]) => (
+                                                    <div key={region}>
+                                                        <h4 className="font-bold text-gray-900 mb-3 text-sm flex items-center gap-2">
+                                                            <MapPin className="w-4 h-4 text-emerald-500" />
+                                                            {regionNames[region]}
+                                                        </h4>
+                                                        <div className="space-y-1">
+                                                            {cities.slice(0, 5).map(city => (
+                                                                <Link
+                                                                    key={city.slug}
+                                                                    href={`/${city.slug}`}
+                                                                    className="block px-3 py-2 text-gray-600 hover:bg-emerald-50 hover:text-emerald-700 rounded-lg transition-all text-sm"
+                                                                >
+                                                                    {city.name_ar}
+                                                                </Link>
+                                                            ))}
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            ))}
-                                        </div>
-                                    </div>
-                                    <div className="bg-gradient-to-l from-purple-50 to-white px-6 py-4 border-t border-gray-100">
-                                        <div className="flex items-center justify-between">
-                                            <div>
-                                                <p className="font-bold text-gray-900">24 مدينة سعودية</p>
-                                                <p className="text-sm text-gray-500">تغطية شاملة للمملكة</p>
+                                                ))}
                                             </div>
-                                            <Link
-                                                href="/locations"
-                                                className="px-5 py-2.5 bg-purple-600 text-white font-medium rounded-xl hover:bg-purple-700 transition-colors shadow-lg shadow-purple-500/30"
-                                            >
-                                                جميع المدن ←
-                                            </Link>
+                                        </div>
+                                        <div className="bg-gradient-to-l from-purple-50 to-white px-6 py-4 border-t border-gray-100">
+                                            <div className="flex items-center justify-between">
+                                                <div>
+                                                    <p className="font-bold text-gray-900">24 مدينة سعودية</p>
+                                                    <p className="text-sm text-gray-500">تغطية شاملة للمملكة</p>
+                                                </div>
+                                                <Link
+                                                    href="/locations"
+                                                    className="px-5 py-2.5 bg-purple-600 text-white font-medium rounded-xl hover:bg-purple-700 transition-colors shadow-lg shadow-purple-500/30"
+                                                >
+                                                    جميع المدن ←
+                                                </Link>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
