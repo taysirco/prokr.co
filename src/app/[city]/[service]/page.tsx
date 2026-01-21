@@ -5,7 +5,8 @@ import Image from 'next/image';
 import { Home, ChevronLeft, Star, Phone, MessageCircle, BadgeCheck, MapPin, Clock, Shield } from 'lucide-react';
 import { getCityBySlug, getServiceBySlug, getCityServiceImage, getServiceImages, CITIES, SERVICES } from '@/lib/seed';
 import { ServiceJsonLd, BreadcrumbJsonLd } from '@/components/JsonLd';
-import { SeoContentSection, FaqJsonLd } from '@/lib/seo-content';
+import { SeoContentSection, FaqJsonLd, ServiceOfferJsonLd, generateSeoContent } from '@/lib/seo-content';
+import { getCityContext } from '@/lib/city-context';
 import Footer from '@/components/Footer';
 import type { Advertiser } from '@/types';
 
@@ -42,8 +43,18 @@ export async function generateMetadata({ params }: SiloPageProps): Promise<Metad
         return { title: 'صفحة غير موجودة' };
     }
 
-    const title = `أفضل 15 شركة ${service.name_ar} في ${city.name_ar} | بروكر`;
-    const description = `اكتشف أفضل شركات ${service.name_ar} في ${city.name_ar}. مقارنة الأسعار، التقييمات، والتواصل المباشر مع الشركات المعتمدة.`;
+    // Get city context for enhanced metadata
+    const cityContext = getCityContext(city.slug);
+    const priceModifier = cityContext?.priceModifier || 1.0;
+    const baseMinPrice = 300; // Base starting price
+    const adjustedMinPrice = Math.round(baseMinPrice * priceModifier);
+    const neighborhoods = cityContext?.neighborhoods.slice(0, 3).map(n => n.name_ar).join(' و') || '';
+
+    // Enhanced meta title with numbers and year for higher CTR
+    const title = `أفضل 15 شركة ${service.name_ar} في ${city.name_ar} | أسعار 2026 وضمان شامل - بروكر`;
+
+    // Enhanced description answering the user's question
+    const description = `هل تبحث عن ${service.name_ar} في ${city.name_ar}؟ قائمة بأفضل 15 شركة موثوقة مع أسعار تبدأ من ${adjustedMinPrice} ريال. خدمة احترافية مع ضمان.${neighborhoods ? ` نغطي ${neighborhoods}.` : ''}`;
 
     return {
         title,
@@ -126,6 +137,8 @@ export default async function SiloPage({ params }: SiloPageProps) {
             {/* JSON-LD Schemas */}
             <ServiceJsonLd service={service} city={city} advertisers={allAdvertisers} />
             <BreadcrumbJsonLd items={breadcrumbs} />
+            <FaqJsonLd city={city} service={service} />
+            <ServiceOfferJsonLd city={city} service={service} />
 
             <main className="min-h-screen bg-gray-50">
                 {/* Hero Section with Image */}
