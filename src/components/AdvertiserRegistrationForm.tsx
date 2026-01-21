@@ -17,7 +17,7 @@ import {
     Image as ImageIcon,
 } from 'lucide-react';
 import { CITIES, SERVICES, getCitiesByRegion, getServicesByCategory, CATEGORY_NAMES } from '@/lib/seed';
-import { uploadLogo, uploadGallery, validateFile } from '@/lib/storage';
+import { uploadPublicLogo, uploadPublicGallery, validateFile, generateShortCode } from '@/lib/storage';
 import { createAdvertiserRequest } from '@/lib/db-actions';
 
 // Region names
@@ -103,7 +103,7 @@ export default function AdvertiserRegistrationForm({
 
     const handleGalleryUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
         const files = Array.from(e.target.files || []);
-        const maxFiles = form.selected_plan === 'premium' ? 10 : 3;
+        const maxFiles = 11; // Maximum 11 images for all plans
 
         for (const file of files) {
             const validation = validateFile(file);
@@ -150,15 +150,18 @@ export default function AdvertiserRegistrationForm({
                 throw new Error('يرجى اختيار المنطقة');
             }
 
-            // Upload files
+            // Generate unique request ID for file uploads
+            const requestId = generateShortCode(8);
+
+            // Upload files to public folder
             let logoUrl = '';
             if (logoFile) {
-                logoUrl = await uploadLogo(logoFile, form.business_name);
+                logoUrl = await uploadPublicLogo(logoFile, requestId);
             }
 
             let galleryUrls: string[] = [];
             if (galleryFiles.length > 0) {
-                galleryUrls = await uploadGallery(galleryFiles, form.business_name);
+                galleryUrls = await uploadPublicGallery(galleryFiles, requestId);
             }
 
             // Create the request
@@ -219,8 +222,8 @@ export default function AdvertiserRegistrationForm({
                         type="button"
                         onClick={() => setForm(prev => ({ ...prev, selected_plan: 'free' }))}
                         className={`p-4 rounded-xl border-2 text-right transition-all ${form.selected_plan === 'free'
-                                ? 'border-emerald-500 bg-emerald-50'
-                                : 'border-gray-200 hover:border-gray-300'
+                            ? 'border-emerald-500 bg-emerald-50'
+                            : 'border-gray-200 hover:border-gray-300'
                             }`}
                     >
                         <div className="flex items-center justify-between mb-2">
@@ -238,8 +241,8 @@ export default function AdvertiserRegistrationForm({
                         type="button"
                         onClick={() => setForm(prev => ({ ...prev, selected_plan: 'premium' }))}
                         className={`relative p-4 rounded-xl border-2 text-right transition-all ${form.selected_plan === 'premium'
-                                ? 'border-amber-400 bg-amber-50'
-                                : 'border-gray-200 hover:border-amber-300'
+                            ? 'border-amber-400 bg-amber-50'
+                            : 'border-gray-200 hover:border-amber-300'
                             }`}
                     >
                         <div className="absolute -top-2 left-2 bg-amber-400 text-amber-900 text-xs font-bold px-2 py-0.5 rounded">
@@ -371,8 +374,8 @@ export default function AdvertiserRegistrationForm({
                                     type="button"
                                     onClick={() => handleRegionChange(key)}
                                     className={`px-4 py-3 rounded-xl text-sm font-medium transition-all ${form.region === key
-                                            ? 'bg-emerald-600 text-white'
-                                            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                                        ? 'bg-emerald-600 text-white'
+                                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                                         }`}
                                 >
                                     {name}
@@ -397,8 +400,8 @@ export default function AdvertiserRegistrationForm({
                                         type="button"
                                         onClick={() => handleCityToggle(city.slug)}
                                         className={`px-4 py-2 rounded-lg text-sm transition-all ${form.targeted_cities.includes(city.slug)
-                                                ? 'bg-emerald-100 text-emerald-700 border-2 border-emerald-500'
-                                                : 'bg-gray-100 text-gray-600 border-2 border-transparent hover:bg-gray-200'
+                                            ? 'bg-emerald-100 text-emerald-700 border-2 border-emerald-500'
+                                            : 'bg-gray-100 text-gray-600 border-2 border-transparent hover:bg-gray-200'
                                             }`}
                                     >
                                         {city.name_ar}
@@ -433,8 +436,8 @@ export default function AdvertiserRegistrationForm({
                                         type="button"
                                         onClick={() => handleServiceToggle(service.slug)}
                                         className={`px-3 py-1.5 rounded-lg text-sm transition-all ${form.targeted_services.includes(service.slug)
-                                                ? 'bg-blue-100 text-blue-700 border-2 border-blue-500'
-                                                : 'bg-gray-100 text-gray-600 border-2 border-transparent hover:bg-gray-200'
+                                            ? 'bg-blue-100 text-blue-700 border-2 border-blue-500'
+                                            : 'bg-gray-100 text-gray-600 border-2 border-transparent hover:bg-gray-200'
                                             }`}
                                     >
                                         {service.name_ar}
@@ -459,7 +462,7 @@ export default function AdvertiserRegistrationForm({
                         <label className="block text-sm font-medium text-gray-700 mb-2">
                             شعار الشركة (اللوجو)
                         </label>
-                        <div className="border-2 border-dashed border-gray-300 rounded-xl p-6 text-center hover:border-emerald-400 transition-colors">
+                        <div className="relative border-2 border-dashed border-gray-300 rounded-xl p-6 text-center hover:border-emerald-400 transition-colors">
                             {logoFile ? (
                                 <div className="relative inline-block">
                                     <img
@@ -476,16 +479,17 @@ export default function AdvertiserRegistrationForm({
                                     </button>
                                 </div>
                             ) : (
-                                <>
+                                <label className="cursor-pointer block">
                                     <Upload className="w-10 h-10 text-gray-400 mx-auto mb-2" />
                                     <p className="text-sm text-gray-500 mb-2">اضغط لرفع اللوجو</p>
+                                    <p className="text-xs text-gray-400">حد أقصى 5 ميجابايت</p>
                                     <input
                                         type="file"
                                         accept="image/*"
                                         onChange={handleLogoUpload}
-                                        className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+                                        className="hidden"
                                     />
-                                </>
+                                </label>
                             )}
                         </div>
                     </div>
@@ -495,7 +499,7 @@ export default function AdvertiserRegistrationForm({
                         <label className="block text-sm font-medium text-gray-700 mb-2">
                             صور النشاط
                             <span className="text-gray-400 text-xs mr-2">
-                                (حتى {form.selected_plan === 'premium' ? 10 : 3} صور)
+                                (حتى 11 صورة · حد أقصى 5 ميجابايت للصورة)
                             </span>
                         </label>
                         <div className="border-2 border-dashed border-gray-300 rounded-xl p-4 hover:border-emerald-400 transition-colors">
@@ -517,10 +521,10 @@ export default function AdvertiserRegistrationForm({
                                     </div>
                                 ))}
                             </div>
-                            {galleryFiles.length < (form.selected_plan === 'premium' ? 10 : 3) && (
+                            {galleryFiles.length < 11 && (
                                 <label className="flex items-center justify-center gap-2 p-4 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100 transition-colors">
                                     <Upload className="w-5 h-5 text-gray-400" />
-                                    <span className="text-sm text-gray-500">إضافة صور</span>
+                                    <span className="text-sm text-gray-500">إضافة صور ({galleryFiles.length}/11)</span>
                                     <input
                                         type="file"
                                         accept="image/*"

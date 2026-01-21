@@ -16,7 +16,7 @@ export function generateShortCode(length = 6): string {
 }
 
 /**
- * Upload a file to Firebase Storage
+ * Upload a file to Firebase Storage (for authenticated users)
  * @param file The file to upload
  * @param path The storage path (e.g., 'logos/company-name')
  * @returns Download URL of the uploaded file
@@ -45,7 +45,37 @@ export async function uploadFile(file: File, path: string): Promise<string> {
 }
 
 /**
- * Upload a logo to Firebase Storage
+ * Upload a file to public requests folder (no auth required)
+ * @param file The file to upload
+ * @param requestId Unique identifier for the request
+ * @param index File index (for gallery images)
+ * @returns Download URL of the uploaded file
+ */
+export async function uploadPublicFile(file: File, requestId: string, index: number = 0): Promise<string> {
+    try {
+        // Create a unique filename with timestamp
+        const timestamp = Date.now();
+        const extension = file.name.split('.').pop() || 'jpg';
+        const filename = `${requestId}/${index}-${timestamp}.${extension}`;
+
+        // Create storage reference in requests folder (public)
+        const storageRef = ref(storage, `requests/${filename}`);
+
+        // Upload the file
+        const snapshot = await uploadBytes(storageRef, file);
+
+        // Get the download URL
+        const downloadURL = await getDownloadURL(snapshot.ref);
+
+        return downloadURL;
+    } catch (error) {
+        console.error('Error uploading file:', error);
+        throw new Error('فشل رفع الملف. يرجى المحاولة مرة أخرى.');
+    }
+}
+
+/**
+ * Upload a logo to Firebase Storage (authenticated)
  * @param file The logo file
  * @param businessName The business name for path generation
  * @returns Download URL of the uploaded logo
@@ -56,7 +86,17 @@ export async function uploadLogo(file: File, businessName: string): Promise<stri
 }
 
 /**
- * Upload multiple gallery images
+ * Upload a logo to public requests folder (no auth required)
+ * @param file The logo file
+ * @param requestId Unique identifier for the request
+ * @returns Download URL of the uploaded logo
+ */
+export async function uploadPublicLogo(file: File, requestId: string): Promise<string> {
+    return uploadPublicFile(file, requestId, 0);
+}
+
+/**
+ * Upload multiple gallery images (authenticated)
  * @param files Array of files to upload
  * @param businessName The business name for path generation
  * @returns Array of download URLs
@@ -65,6 +105,19 @@ export async function uploadGallery(files: File[], businessName: string): Promis
     const safeName = businessName.replace(/[^a-zA-Z0-9\u0600-\u06FF]/g, '-').substring(0, 50);
     const uploadPromises = files.map((file, index) =>
         uploadFile(file, `gallery/${safeName}/${index}`)
+    );
+    return Promise.all(uploadPromises);
+}
+
+/**
+ * Upload multiple gallery images to public requests folder (no auth required)
+ * @param files Array of files to upload
+ * @param requestId Unique identifier for the request
+ * @returns Array of download URLs
+ */
+export async function uploadPublicGallery(files: File[], requestId: string): Promise<string[]> {
+    const uploadPromises = files.map((file, index) =>
+        uploadPublicFile(file, requestId, index + 1) // Start from 1 (0 is logo)
     );
     return Promise.all(uploadPromises);
 }
@@ -93,3 +146,4 @@ export function validateFile(
 
     return { valid: true };
 }
+
