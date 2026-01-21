@@ -252,77 +252,77 @@ export const SERVICE_IMAGES: Record<string, string[]> = {
 
     // مكافحة حشرات (Pest Control)
     'pest-control': [
-        '/images/مكفاحه الحشرات/pest-control-saudi-arabia.jpg',
-        '/images/مكفاحه الحشرات/pest-control-riyadh.jpg',
-        '/images/مكفاحه الحشرات/pest-control-jeddah.jpg',
-        '/images/مكفاحه الحشرات/pest-control-company-saudi-arabia-best.jpg',
+        '/images/pest-control/pest-control-saudi-arabia.jpg',
+        '/images/pest-control/pest-control-riyadh.jpg',
+        '/images/pest-control/pest-control-jeddah.jpg',
+        '/images/pest-control/pest-control-company-saudi-arabia-best.jpg',
     ],
     'pesticide-spraying': [
-        '/images/مكفاحه الحشرات/fumigation-services-ksa.jpg',
-        '/images/مكفاحه الحشرات/fumigation-company-riyadh.jpg',
-        '/images/مكفاحه الحشرات/pest-spray-technician-riyadh.jpg',
+        '/images/pest-control/fumigation-services-ksa.jpg',
+        '/images/pest-control/fumigation-company-riyadh.jpg',
+        '/images/pest-control/pest-spray-technician-riyadh.jpg',
     ],
     'insects-spraying': [
-        '/images/مكفاحه الحشرات/insect-spraying-riyadh-baseboard.jpg',
-        '/images/مكفاحه الحشرات/insect-spraying-jeddah-home.jpg',
+        '/images/pest-control/insect-spraying-riyadh-baseboard.jpg',
+        '/images/pest-control/insect-spraying-jeddah-home.jpg',
     ],
     'termite-control': [
-        '/images/مكفاحه الحشرات/termite-control-riyadh.jpg',
-        '/images/مكفاحه الحشرات/termite-treatment-saudi-arabia.jpg',
-        '/images/مكفاحه الحشرات/white-ants-treatment-saudi.jpg',
+        '/images/pest-control/termite-control-riyadh.jpg',
+        '/images/pest-control/termite-treatment-saudi-arabia.jpg',
+        '/images/pest-control/white-ants-treatment-saudi.jpg',
     ],
     'cockroach-control': [
-        '/images/مكفاحه الحشرات/cockroach-control-saudi-wall.jpg',
-        '/images/مكفاحه الحشرات/cockroach-extermination-riyadh.jpg',
-        '/images/مكفاحه الحشرات/cockroach-treatment-jeddah-kitchen.jpg',
+        '/images/pest-control/cockroach-control-saudi-wall.jpg',
+        '/images/pest-control/cockroach-extermination-riyadh.jpg',
+        '/images/pest-control/cockroach-treatment-jeddah-kitchen.jpg',
     ],
     'bedbugs-control': [
-        '/images/مكفاحه الحشرات/bed-bug-removal-jeddah.jpg',
-        '/images/مكفاحه الحشرات/furniture-fumigation-saudi-bedroom.jpg',
+        '/images/pest-control/bed-bug-removal-jeddah.jpg',
+        '/images/pest-control/furniture-fumigation-saudi-bedroom.jpg',
     ],
     'rodent-control': [
-        '/images/مكفاحه الحشرات/rodent-removal-saudi-arabia.jpg',
-        '/images/مكفاحه الحشرات/rodent-proofing-service-saudi.jpg',
+        '/images/pest-control/rodent-removal-saudi-arabia.jpg',
+        '/images/pest-control/rodent-proofing-service-saudi.jpg',
     ],
     'ants-control': [
-        '/images/مكفاحه الحشرات/ant-control-service-saudi-arabia.jpg',
+        '/images/pest-control/ant-control-service-saudi-arabia.jpg',
     ],
     'bird-control': [
-        '/images/مكفاحه الحشرات/pest-prevention-saudi-arabia.jpg',
+        '/images/pest-control/pest-prevention-saudi-arabia.jpg',
     ],
     'snakes-control': [
-        '/images/مكفاحه الحشرات/snake-scorpion-removal-saudi.jpg',
+        '/images/pest-control/snake-scorpion-removal-saudi.jpg',
     ],
 
     // كشف تسربات (Leak Detection)
     'water-leak-detection': [
-        '/images/كشف التسربات/Riyadh water leak detection Saudi Arabia.jpg',
-        '/images/كشف التسربات/Jeddah water leak detection Saudi Arabia.jpg',
-        '/images/كشف التسربات/Dammam water leak detection Saudi Arabia.jpg',
-        '/images/كشف التسربات/Saudi Arabia leak detection services near me.jpg',
+        '/images/leak-detection/Riyadh water leak detection Saudi Arabia.jpg',
+        '/images/leak-detection/Jeddah water leak detection Saudi Arabia.jpg',
+        '/images/leak-detection/Dammam water leak detection Saudi Arabia.jpg',
+        '/images/leak-detection/Saudi Arabia leak detection services near me.jpg',
     ],
     'tank-leak-detection': [
-        '/images/كشف التسربات/Khobar water tank leak detection Saudi Arabia.jpg',
+        '/images/leak-detection/Khobar water tank leak detection Saudi Arabia.jpg',
     ],
     'bathroom-leak-detection': [
-        '/images/كشف التسربات/Jeddah bathroom drain pipe repair Saudi Arabia.jpg',
+        '/images/leak-detection/Jeddah bathroom drain pipe repair Saudi Arabia.jpg',
     ],
 
     // عزل (Insulation)
     'tank-insulation': [
-        '/images/كشف التسربات/Khobar water tank leak detection Saudi Arabia.jpg',
+        '/images/leak-detection/Khobar water tank leak detection Saudi Arabia.jpg',
     ],
     'roof-insulation': [
-        '/images/كشف التسربات/Dammam roof leak repair Saudi Arabia.jpg',
+        '/images/leak-detection/Dammam roof leak repair Saudi Arabia.jpg',
     ],
     'foam-insulation': [
-        '/images/كشف التسربات/Dammam roof leak repair Saudi Arabia.jpg',
+        '/images/leak-detection/Dammam roof leak repair Saudi Arabia.jpg',
     ],
     'water-insulation': [
-        '/images/كشف التسربات/Dammam wall moisture detection mold Saudi Arabia.jpg',
+        '/images/leak-detection/Dammam wall moisture detection mold Saudi Arabia.jpg',
     ],
     'thermal-insulation': [
-        '/images/كشف التسربات/Riyadh thermal leak inspection Saudi Arabia.jpg',
+        '/images/leak-detection/Riyadh thermal leak inspection Saudi Arabia.jpg',
     ],
 };
 
@@ -387,23 +387,23 @@ export function getCityServiceImage(citySlug: string, serviceSlug: string): stri
     // For leak detection, we have city-specific images
     if (serviceSlug === 'water-leak-detection') {
         const cityImageMap: Record<string, string> = {
-            'riyadh': '/images/كشف التسربات/Riyadh water leak detection Saudi Arabia.jpg',
-            'jeddah': '/images/كشف التسربات/Jeddah water leak detection Saudi Arabia.jpg',
-            'dammam': '/images/كشف التسربات/Dammam water leak detection Saudi Arabia.jpg',
-            'makkah': '/images/كشف التسربات/Makkah water leak detection Saudi Arabia.jpg',
-            'madinah': '/images/كشف التسربات/Madinah water leak detection Saudi Arabia.jpg',
-            'taif': '/images/كشف التسربات/Taif water leak detection Saudi Arabia.jpg',
-            'al-khobar': '/images/كشف التسربات/Khobar water leak detection Saudi Arabia.jpg',
-            'abha': '/images/كشف التسربات/Abha water leak detection Saudi Arabia.jpg',
-            'hail': '/images/كشف التسربات/Hail water leak detection Saudi Arabia.jpg',
-            'jazan': '/images/كشف التسربات/Jazan water leak detection Saudi Arabia.jpg',
-            'najran': '/images/كشف التسربات/Najran water leak detection Saudi Arabia.jpg',
-            'tabuk': '/images/كشف التسربات/Tabuk water leak detection Saudi Arabia.jpg',
-            'khamis-mushait': '/images/كشف التسربات/Khamis Mushait water leak detection Saudi Arabia.jpg',
-            'qassim': '/images/كشف التسربات/Qassim water leak detection Saudi Arabia.jpg',
-            'al-ahsa': '/images/كشف التسربات/Al Ahsa water leak detection Saudi Arabia.jpg',
-            'jubail': '/images/كشف التسربات/Jubail sink drain repair plumber Saudi Arabia.jpg',
-            'yanbu': '/images/كشف التسربات/Yanbu acoustic leak detector equipment Saudi Arabia.jpg',
+            'riyadh': '/images/leak-detection/Riyadh water leak detection Saudi Arabia.jpg',
+            'jeddah': '/images/leak-detection/Jeddah water leak detection Saudi Arabia.jpg',
+            'dammam': '/images/leak-detection/Dammam water leak detection Saudi Arabia.jpg',
+            'makkah': '/images/leak-detection/Makkah water leak detection Saudi Arabia.jpg',
+            'madinah': '/images/leak-detection/Madinah water leak detection Saudi Arabia.jpg',
+            'taif': '/images/leak-detection/Taif water leak detection Saudi Arabia.jpg',
+            'al-khobar': '/images/leak-detection/Khobar water leak detection Saudi Arabia.jpg',
+            'abha': '/images/leak-detection/Abha water leak detection Saudi Arabia.jpg',
+            'hail': '/images/leak-detection/Hail water leak detection Saudi Arabia.jpg',
+            'jazan': '/images/leak-detection/Jazan water leak detection Saudi Arabia.jpg',
+            'najran': '/images/leak-detection/Najran water leak detection Saudi Arabia.jpg',
+            'tabuk': '/images/leak-detection/Tabuk water leak detection Saudi Arabia.jpg',
+            'khamis-mushait': '/images/leak-detection/Khamis Mushait water leak detection Saudi Arabia.jpg',
+            'qassim': '/images/leak-detection/Qassim water leak detection Saudi Arabia.jpg',
+            'al-ahsa': '/images/leak-detection/Al Ahsa water leak detection Saudi Arabia.jpg',
+            'jubail': '/images/leak-detection/Jubail sink drain repair plumber Saudi Arabia.jpg',
+            'yanbu': '/images/leak-detection/Yanbu acoustic leak detector equipment Saudi Arabia.jpg',
         };
         return cityImageMap[citySlug] || getServiceImage(serviceSlug);
     }
