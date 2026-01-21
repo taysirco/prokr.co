@@ -2,8 +2,9 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Home, ChevronLeft, CheckCircle, Star, Phone, Shield, Users, Zap, ArrowLeft } from 'lucide-react';
+import { Home, ChevronLeft, CheckCircle, Star, Phone, Shield, Users, Zap, ArrowLeft, ArrowDown } from 'lucide-react';
 import Footer from '@/components/Footer';
+import AdvertiserRegistrationForm from '@/components/AdvertiserRegistrationForm';
 
 export default function AdvertisePage() {
     const [selectedPlan, setSelectedPlan] = useState<'free' | 'premium'>('premium');
@@ -110,8 +111,8 @@ export default function AdvertisePage() {
                         {/* Free Plan */}
                         <div
                             className={`bg-white rounded-2xl p-8 border-2 transition-all cursor-pointer ${selectedPlan === 'free'
-                                    ? 'border-emerald-500 shadow-lg'
-                                    : 'border-gray-200 hover:border-gray-300'
+                                ? 'border-emerald-500 shadow-lg'
+                                : 'border-gray-200 hover:border-gray-300'
                                 }`}
                             onClick={() => setSelectedPlan('free')}
                         >
@@ -155,8 +156,8 @@ export default function AdvertisePage() {
                         {/* Premium Plan */}
                         <div
                             className={`relative bg-white rounded-2xl p-8 border-2 transition-all cursor-pointer ${selectedPlan === 'premium'
-                                    ? 'border-amber-400 shadow-xl'
-                                    : 'border-gray-200 hover:border-amber-300'
+                                ? 'border-amber-400 shadow-xl'
+                                : 'border-gray-200 hover:border-amber-300'
                                 }`}
                             onClick={() => setSelectedPlan('premium')}
                         >
@@ -212,13 +213,13 @@ export default function AdvertisePage() {
 
                     {/* CTA Button */}
                     <div className="text-center mt-12">
-                        <Link
-                            href="/admin"
+                        <a
+                            href="#registration-form"
                             className="inline-flex items-center gap-2 px-10 py-4 bg-gradient-to-l from-emerald-500 to-emerald-600 text-white font-bold text-lg rounded-xl hover:from-emerald-600 hover:to-emerald-700 shadow-xl shadow-emerald-500/30 transition-all"
                         >
                             ابدأ الآن
-                            <ArrowLeft className="w-5 h-5" />
-                        </Link>
+                            <ArrowDown className="w-5 h-5" />
+                        </a>
                         <p className="text-sm text-gray-500 mt-4">
                             التسجيل يستغرق أقل من 5 دقائق
                         </p>
@@ -271,23 +272,18 @@ export default function AdvertisePage() {
                 </div>
             </section>
 
-            {/* Final CTA */}
-            <section className="bg-gradient-to-l from-emerald-600 to-emerald-700 py-16 text-white text-center">
-                <div className="max-w-3xl mx-auto px-4">
-                    <h2 className="text-2xl sm:text-3xl font-bold mb-4">
-                        جاهز للحصول على عملاء جدد؟
+            {/* Registration Form Section */}
+            <section id="registration-form" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div className="text-center mb-12">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+                        سجل شركتك الآن
                     </h2>
-                    <p className="text-emerald-100 mb-8">
-                        انضم الآن وابدأ باستقبال طلبات العملاء اليوم
+                    <p className="text-gray-600">
+                        املأ النموذج التالي وسيتم مراجعة طلبك خلال 24 ساعة
                     </p>
-                    <Link
-                        href="/admin"
-                        className="inline-flex items-center gap-2 px-10 py-4 bg-white text-emerald-700 font-bold rounded-xl hover:bg-emerald-50 shadow-xl transition-all"
-                    >
-                        سجل شركتك مجاناً
-                        <ArrowLeft className="w-5 h-5" />
-                    </Link>
                 </div>
+
+                <AdvertiserRegistrationForm initialPlan={selectedPlan} />
             </section>
 
             <Footer />

@@ -29,7 +29,12 @@ import {
     Users,
     ChevronDown,
     RefreshCw,
-    ExternalLink
+    ExternalLink,
+    ClipboardList,
+    CheckCircle,
+    XCircle,
+    User as UserIcon,
+    Calendar
 } from 'lucide-react';
 import { CITIES, SERVICES, getCitiesByRegion, getServicesByCategory, CATEGORY_NAMES } from '@/lib/seed';
 import { uploadLogo, uploadGallery, validateFile } from '@/lib/storage';
@@ -39,11 +44,15 @@ import {
     updateAdvertiser,
     deleteAdvertiser,
     toggleAdvertiserPremium,
-    toggleAdvertiserActive
+    toggleAdvertiserActive,
+    getPendingRequests,
+    approveRequest,
+    rejectRequest,
+    deleteRequest
 } from '@/lib/db-actions';
 import { auth } from '@/lib/firebase';
 import { signInWithEmailAndPassword, signOut, onAuthStateChanged, User } from 'firebase/auth';
-import type { Advertiser } from '@/types';
+import type { Advertiser, AdvertiserRequest } from '@/types';
 
 interface AdvertiserForm {
     business_name: string;
@@ -79,7 +88,7 @@ const regionNames: Record<string, string> = {
 export default function AdminDashboard() {
     const [user, setUser] = useState<User | null>(null);
     const [authLoading, setAuthLoading] = useState(true);
-    const [activeTab, setActiveTab] = useState<'list' | 'add'>('list');
+    const [activeTab, setActiveTab] = useState<'list' | 'add' | 'requests'>('list');
 
     // Form states
     const [isLoading, setIsLoading] = useState(false);
@@ -104,6 +113,10 @@ export default function AdminDashboard() {
     const [loginError, setLoginError] = useState('');
     const [loginLoading, setLoginLoading] = useState(false);
 
+    // Requests states
+    const [requests, setRequests] = useState<AdvertiserRequest[]>([]);
+    const [requestsLoading, setRequestsLoading] = useState(false);
+
     const citiesByRegion = getCitiesByRegion();
     const servicesByCategory = getServicesByCategory();
 
@@ -120,6 +133,7 @@ export default function AdminDashboard() {
     useEffect(() => {
         if (user) {
             loadAdvertisers();
+            loadRequests();
         }
     }, [user]);
 
@@ -169,6 +183,60 @@ export default function AdminDashboard() {
             console.error('Error loading advertisers:', error);
         } finally {
             setListLoading(false);
+        }
+    };
+
+    const loadRequests = async () => {
+        setRequestsLoading(true);
+        try {
+            const data = await getPendingRequests();
+            setRequests(data);
+        } catch (error) {
+            console.error('Error loading requests:', error);
+        } finally {
+            setRequestsLoading(false);
+        }
+    };
+
+    const handleApproveRequest = async (requestId: string) => {
+        if (!confirm('هل تريد الموافقة على هذا الطلب وتحويله لمعلن؟')) return;
+
+        try {
+            const advertiser = await approveRequest(requestId);
+            setSuccessMessage(`تمت الموافقة على الطلب! كود المعلن: ${advertiser.short_code}`);
+            loadRequests();
+            loadAdvertisers();
+            setTimeout(() => setSuccessMessage(''), 5000);
+        } catch (error) {
+            console.error('Error approving request:', error);
+            alert('حدث خطأ أثناء الموافقة على الطلب');
+        }
+    };
+
+    const handleRejectRequest = async (requestId: string) => {
+        const reason = prompt('سبب الرفض (اختياري):');
+        if (reason === null) return; // User cancelled
+
+        try {
+            await rejectRequest(requestId, reason);
+            setSuccessMessage('تم رفض الطلب');
+            loadRequests();
+            setTimeout(() => setSuccessMessage(''), 5000);
+        } catch (error) {
+            console.error('Error rejecting request:', error);
+            alert('حدث خطأ أثناء رفض الطلب');
+        }
+    };
+
+    const handleDeleteRequest = async (requestId: string, businessName: string) => {
+        if (!confirm(`هل تريد حذف طلب "${businessName}"؟`)) return;
+
+        try {
+            await deleteRequest(requestId);
+            loadRequests();
+        } catch (error) {
+            console.error('Error deleting request:', error);
+            alert('حدث خطأ أثناء حذف الطلب');
         }
     };
 
@@ -541,18 +609,33 @@ export default function AdminDashboard() {
                         <button
                             onClick={() => { setActiveTab('list'); cancelEdit(); }}
                             className={`px-6 py-4 font-medium transition-all border-b-2 ${activeTab === 'list'
-                                    ? 'text-emerald-600 border-emerald-600 bg-emerald-50'
-                                    : 'text-gray-600 border-transparent hover:text-gray-900 hover:bg-gray-50'
+                                ? 'text-emerald-600 border-emerald-600 bg-emerald-50'
+                                : 'text-gray-600 border-transparent hover:text-gray-900 hover:bg-gray-50'
                                 }`}
                         >
                             <Users className="w-5 h-5 inline ml-2" />
                             إدارة المعلنين
                         </button>
                         <button
+                            onClick={() => { setActiveTab('requests'); cancelEdit(); }}
+                            className={`px-6 py-4 font-medium transition-all border-b-2 relative ${activeTab === 'requests'
+                                ? 'text-amber-600 border-amber-600 bg-amber-50'
+                                : 'text-gray-600 border-transparent hover:text-gray-900 hover:bg-gray-50'
+                                }`}
+                        >
+                            <ClipboardList className="w-5 h-5 inline ml-2" />
+                            طلبات التسجيل
+                            {requests.length > 0 && (
+                                <span className="absolute -top-1 -left-1 w-5 h-5 bg-red-500 text-white text-xs font-bold rounded-full flex items-center justify-center">
+                                    {requests.length}
+                                </span>
+                            )}
+                        </button>
+                        <button
                             onClick={() => { setActiveTab('add'); cancelEdit(); }}
                             className={`px-6 py-4 font-medium transition-all border-b-2 ${activeTab === 'add'
-                                    ? 'text-emerald-600 border-emerald-600 bg-emerald-50'
-                                    : 'text-gray-600 border-transparent hover:text-gray-900 hover:bg-gray-50'
+                                ? 'text-emerald-600 border-emerald-600 bg-emerald-50'
+                                : 'text-gray-600 border-transparent hover:text-gray-900 hover:bg-gray-50'
                                 }`}
                         >
                             <Plus className="w-5 h-5 inline ml-2" />
@@ -707,8 +790,8 @@ export default function AdminDashboard() {
                                                         <button
                                                             onClick={() => handleTogglePremium(advertiser.id, advertiser.is_premium)}
                                                             className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-all ${advertiser.is_premium
-                                                                    ? 'bg-amber-100 text-amber-700 hover:bg-amber-200'
-                                                                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                                                                ? 'bg-amber-100 text-amber-700 hover:bg-amber-200'
+                                                                : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                                                                 }`}
                                                         >
                                                             {advertiser.is_premium ? (
@@ -723,8 +806,8 @@ export default function AdminDashboard() {
                                                         <button
                                                             onClick={() => handleToggleActive(advertiser.id, advertiser.is_active !== false)}
                                                             className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-all ${advertiser.is_active !== false
-                                                                    ? 'bg-emerald-100 text-emerald-700 hover:bg-emerald-200'
-                                                                    : 'bg-red-100 text-red-700 hover:bg-red-200'
+                                                                ? 'bg-emerald-100 text-emerald-700 hover:bg-emerald-200'
+                                                                : 'bg-red-100 text-red-700 hover:bg-red-200'
                                                                 }`}
                                                         >
                                                             {advertiser.is_active !== false ? (
@@ -770,6 +853,156 @@ export default function AdminDashboard() {
                                             ))}
                                         </tbody>
                                     </table>
+                                </div>
+                            )}
+                        </div>
+                    </div>
+                )}
+
+                {/* Requests Tab */}
+                {activeTab === 'requests' && (
+                    <div className="space-y-6">
+                        {/* Header */}
+                        <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-4">
+                            <div className="flex items-center justify-between">
+                                <div>
+                                    <h2 className="text-lg font-bold text-gray-900">طلبات التسجيل الجديدة</h2>
+                                    <p className="text-sm text-gray-500">
+                                        {requests.length} طلب معلق بانتظار المراجعة
+                                    </p>
+                                </div>
+                                <button
+                                    onClick={loadRequests}
+                                    disabled={requestsLoading}
+                                    className="flex items-center gap-2 text-amber-600 hover:text-amber-700 font-medium text-sm"
+                                >
+                                    <RefreshCw className={`w-4 h-4 ${requestsLoading ? 'animate-spin' : ''}`} />
+                                    تحديث
+                                </button>
+                            </div>
+                        </div>
+
+                        {/* Requests Table */}
+                        <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
+                            {requestsLoading ? (
+                                <div className="flex items-center justify-center py-20">
+                                    <Loader2 className="w-8 h-8 animate-spin text-amber-600" />
+                                </div>
+                            ) : requests.length === 0 ? (
+                                <div className="text-center py-20">
+                                    <ClipboardList className="w-16 h-16 text-gray-300 mx-auto mb-4" />
+                                    <p className="text-gray-500 font-medium">لا توجد طلبات معلقة</p>
+                                    <p className="text-gray-400 text-sm">ستظهر هنا طلبات التسجيل الجديدة</p>
+                                </div>
+                            ) : (
+                                <div className="divide-y divide-gray-100">
+                                    {requests.map(request => (
+                                        <div key={request.id} className="p-6 hover:bg-gray-50 transition-colors">
+                                            <div className="flex items-start justify-between gap-6">
+                                                {/* Request Info */}
+                                                <div className="flex-1 space-y-4">
+                                                    <div className="flex items-center gap-4">
+                                                        {request.logo_url ? (
+                                                            <img
+                                                                src={request.logo_url}
+                                                                alt=""
+                                                                className="w-16 h-16 rounded-xl object-cover"
+                                                            />
+                                                        ) : (
+                                                            <div className="w-16 h-16 bg-gray-100 rounded-xl flex items-center justify-center">
+                                                                <Building2 className="w-8 h-8 text-gray-400" />
+                                                            </div>
+                                                        )}
+                                                        <div>
+                                                            <h3 className="font-bold text-gray-900 text-lg">{request.business_name}</h3>
+                                                            <div className="flex items-center gap-4 text-sm text-gray-500 mt-1">
+                                                                <span className="flex items-center gap-1">
+                                                                    <UserIcon className="w-4 h-4" />
+                                                                    {request.contact_name}
+                                                                </span>
+                                                                <span className="flex items-center gap-1" dir="ltr">
+                                                                    <Phone className="w-4 h-4" />
+                                                                    {request.phone_number}
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <span className={`px-3 py-1 rounded-lg text-sm font-medium ${request.selected_plan === 'premium'
+                                                                ? 'bg-amber-100 text-amber-700'
+                                                                : 'bg-gray-100 text-gray-600'
+                                                            }`}>
+                                                            {request.selected_plan === 'premium' ? (
+                                                                <>
+                                                                    <Crown className="w-4 h-4 inline ml-1" />
+                                                                    مميز
+                                                                </>
+                                                            ) : 'مجاني'}
+                                                        </span>
+                                                    </div>
+
+                                                    <p className="text-gray-600 text-sm line-clamp-2">{request.description}</p>
+
+                                                    <div className="flex flex-wrap gap-4 text-sm text-gray-500">
+                                                        <span className="flex items-center gap-1">
+                                                            <MapPin className="w-4 h-4" />
+                                                            {request.targeted_cities.length} مدينة
+                                                        </span>
+                                                        <span className="flex items-center gap-1">
+                                                            <Wrench className="w-4 h-4" />
+                                                            {request.targeted_services.length} خدمة
+                                                        </span>
+                                                        <span className="flex items-center gap-1">
+                                                            <Calendar className="w-4 h-4" />
+                                                            {new Date(request.created_at).toLocaleDateString('ar-SA')}
+                                                        </span>
+                                                    </div>
+
+                                                    {/* Gallery Preview */}
+                                                    {request.gallery && request.gallery.length > 0 && (
+                                                        <div className="flex gap-2 flex-wrap">
+                                                            {request.gallery.slice(0, 5).map((img, idx) => (
+                                                                <img
+                                                                    key={idx}
+                                                                    src={img}
+                                                                    alt=""
+                                                                    className="w-16 h-16 rounded-lg object-cover"
+                                                                />
+                                                            ))}
+                                                            {request.gallery.length > 5 && (
+                                                                <div className="w-16 h-16 rounded-lg bg-gray-100 flex items-center justify-center text-gray-500 text-sm">
+                                                                    +{request.gallery.length - 5}
+                                                                </div>
+                                                            )}
+                                                        </div>
+                                                    )}
+                                                </div>
+
+                                                {/* Actions */}
+                                                <div className="flex flex-col gap-2">
+                                                    <button
+                                                        onClick={() => handleApproveRequest(request.id)}
+                                                        className="flex items-center gap-2 px-4 py-2 bg-emerald-600 text-white font-medium rounded-lg hover:bg-emerald-700 transition-colors"
+                                                    >
+                                                        <CheckCircle className="w-4 h-4" />
+                                                        موافقة
+                                                    </button>
+                                                    <button
+                                                        onClick={() => handleRejectRequest(request.id)}
+                                                        className="flex items-center gap-2 px-4 py-2 bg-red-100 text-red-700 font-medium rounded-lg hover:bg-red-200 transition-colors"
+                                                    >
+                                                        <XCircle className="w-4 h-4" />
+                                                        رفض
+                                                    </button>
+                                                    <button
+                                                        onClick={() => handleDeleteRequest(request.id, request.business_name)}
+                                                        className="flex items-center gap-2 px-4 py-2 text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded-lg transition-colors"
+                                                    >
+                                                        <Trash2 className="w-4 h-4" />
+                                                        حذف
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ))}
                                 </div>
                             )}
                         </div>

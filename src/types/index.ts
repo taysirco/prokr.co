@@ -121,3 +121,36 @@ export interface ServiceSchema {
     name: string;
   }[];
 }
+
+// Advertiser Registration Request interface
+export interface AdvertiserRequest {
+  id: string;
+  business_name: string;
+  contact_name: string;
+  phone_number: string;
+  whatsapp_number: string;
+  description: string;
+  logo_url: string;
+  gallery: string[];
+  targeted_cities: string[];
+  targeted_services: string[];
+  region: string;
+  selected_plan: 'free' | 'premium';
+  status: 'pending' | 'approved' | 'rejected';
+  rejection_reason?: string;
+  created_at: Date;
+  updated_at: Date;
+}
+
+// Form data for advertiser registration
+export interface AdvertiserRequestFormData {
+  business_name: string;
+  contact_name: string;
+  phone_number: string;
+  whatsapp_number: string;
+  description: string;
+  targeted_cities: string[];
+  targeted_services: string[];
+  region: string;
+  selected_plan: 'free' | 'premium';
+}
