@@ -6,8 +6,9 @@ interface LocalBusinessJsonLdProps {
 }
 
 export function LocalBusinessJsonLd({ advertiser, city }: LocalBusinessJsonLdProps) {
-    const avgRating = advertiser.reviews.length > 0
-        ? advertiser.reviews.reduce((sum, r) => sum + r.rating, 0) / advertiser.reviews.length
+    const reviews = advertiser.reviews || [];
+    const avgRating = reviews.length > 0
+        ? reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.length
         : undefined;
 
     const schema: LocalBusinessSchema = {
@@ -25,7 +26,7 @@ export function LocalBusinessJsonLd({ advertiser, city }: LocalBusinessJsonLdPro
             aggregateRating: {
                 '@type': 'AggregateRating',
                 ratingValue: Math.round(avgRating * 10) / 10,
-                reviewCount: advertiser.reviews.length,
+                reviewCount: reviews.length,
             },
         }),
     };

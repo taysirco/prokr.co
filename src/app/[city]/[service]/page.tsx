@@ -11,27 +11,16 @@ import { getCityContext } from '@/lib/city-context';
 import Footer from '@/components/Footer';
 import type { Advertiser } from '@/types';
 
+// Disable static generation, use ISR instead
+// Pages will be generated on first request and cached for 60 seconds
+export const dynamic = 'force-dynamic';
+export const revalidate = 60;
+
 interface SiloPageProps {
     params: Promise<{
         city: string;
         service: string;
     }>;
-}
-
-// Generate static params for all city/service combinations
-export async function generateStaticParams() {
-    const params: { city: string; service: string }[] = [];
-
-    for (const city of CITIES) {
-        for (const service of SERVICES) {
-            params.push({
-                city: city.slug,
-                service: service.slug,
-            });
-        }
-    }
-
-    return params;
 }
 
 // Generate metadata for SEO
