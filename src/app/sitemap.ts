@@ -15,12 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
             changeFrequency: 'daily',
             priority: 1.0,
         },
-        {
-            url: `${BASE_URL}/services`,
-            lastModified: now,
-            changeFrequency: 'weekly',
-            priority: 0.9,
-        },
+        // Note: /services page removed - services are now at root level
         {
             url: `${BASE_URL}/locations`,
             lastModified: now,
@@ -69,7 +64,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // Service hub pages
     const servicePages: MetadataRoute.Sitemap = SERVICES.map(service => ({
-        url: `${BASE_URL}/services/${service.slug}`,
+        url: `${BASE_URL}/${service.slug}`,
         lastModified: now,
         changeFrequency: 'weekly' as const,
         priority: 0.8,

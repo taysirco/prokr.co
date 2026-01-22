@@ -92,7 +92,7 @@ export default function ServicesPage() {
                                 {services.map(service => (
                                     <Link
                                         key={service.slug}
-                                        href={`/services/${service.slug}`}
+                                        href={`/${service.slug}`}
                                         className="group relative bg-white rounded-xl border border-gray-200 hover:border-emerald-300 hover:shadow-lg transition-all overflow-hidden"
                                     >
                                         <div className="relative aspect-[4/3] bg-gray-100">

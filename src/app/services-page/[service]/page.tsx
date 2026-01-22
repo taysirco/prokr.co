@@ -49,7 +49,7 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
             type: 'website',
         },
         alternates: {
-            canonical: `https://prokr.co/services/${resolvedParams.service}`,
+            canonical: `https://prokr.co/${resolvedParams.service}`,
         },
     };
 }
@@ -68,8 +68,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
     // Breadcrumb items
     const breadcrumbs = [
         { name: 'الرئيسية', url: 'https://prokr.co' },
-        { name: 'الخدمات', url: 'https://prokr.co/services' },
-        { name: service.name_ar, url: `https://prokr.co/services/${service.slug}` },
+        { name: service.name_ar, url: `https://prokr.co/${service.slug}` },
     ];
 
     return (
@@ -93,10 +92,6 @@ export default async function ServicePage({ params }: ServicePageProps) {
                                     <Link href="/" className="hover:text-white transition-colors flex items-center gap-1">
                                         <Home className="w-4 h-4" />
                                         الرئيسية
-                                    </Link>
-                                    <ChevronLeft className="w-4 h-4" />
-                                    <Link href="/services" className="hover:text-white transition-colors">
-                                        الخدمات
                                     </Link>
                                     <ChevronLeft className="w-4 h-4" />
                                     <span className="text-white font-medium">{service.name_ar}</span>
@@ -205,7 +200,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                             {SERVICES.filter(s => s.slug !== service.slug).slice(0, 12).map(otherService => (
                                 <Link
                                     key={otherService.slug}
-                                    href={`/services/${otherService.slug}`}
+                                    href={`/${otherService.slug}`}
                                     className="px-4 py-2 bg-white border border-gray-200 rounded-lg hover:border-emerald-300 hover:shadow-md transition-all text-gray-700 hover:text-emerald-700"
                                 >
                                     {otherService.name_ar}

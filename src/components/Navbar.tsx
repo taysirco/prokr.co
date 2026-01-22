@@ -138,7 +138,7 @@ export default function Navbar() {
                                                             {services.slice(0, 6).map(service => (
                                                                 <Link
                                                                     key={service.slug}
-                                                                    href={`/services/${service.slug}`}
+                                                                    href={`/${service.slug}`}
                                                                     className="block px-3 py-2 text-gray-600 hover:bg-emerald-50 hover:text-emerald-700 rounded-lg transition-all text-sm"
                                                                 >
                                                                     {service.name_ar}
@@ -345,7 +345,7 @@ export default function Navbar() {
                                 {SERVICES.slice(0, 6).map(service => (
                                     <Link
                                         key={service.slug}
-                                        href={`/services/${service.slug}`}
+                                        href={`/${service.slug}`}
                                         className="px-4 py-3 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 rounded-xl transition-all"
                                     >
                                         {service.name_ar}

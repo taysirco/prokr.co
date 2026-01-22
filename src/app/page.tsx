@@ -251,7 +251,7 @@ export default function HomePage() {
             {featuredServices.map((service, index) => (
               <Link
                 key={service.slug}
-                href={`/services/${service.slug}`}
+                href={`/${service.slug}`}
                 className={`group relative p-6 bg-white rounded-3xl border-2 border-gray-100 hover:border-emerald-400 hover:shadow-2xl hover:shadow-emerald-500/10 transition-all duration-300 overflow-hidden ${index === 0 ? 'md:col-span-2 md:row-span-2' : ''
                   }`}
               >
