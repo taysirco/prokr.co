@@ -24,6 +24,10 @@ import { LocalBusinessJsonLd, BreadcrumbJsonLd } from '@/components/JsonLd';
 import Footer from '@/components/Footer';
 import type { Advertiser, Review } from '@/types';
 
+// Force dynamic rendering - no caching
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 interface CompanyPageProps {
     params: Promise<{
         code: string;
