@@ -19,6 +19,7 @@ import {
     CheckCircle
 } from 'lucide-react';
 import { getCityBySlug, getServiceBySlug, CITIES, SERVICES } from '@/lib/seed';
+import { getAdvertiserByCode } from '@/lib/db-actions';
 import { LocalBusinessJsonLd, BreadcrumbJsonLd } from '@/components/JsonLd';
 import Footer from '@/components/Footer';
 import type { Advertiser, Review } from '@/types';
@@ -32,7 +33,7 @@ interface CompanyPageProps {
 // Generate metadata for SEO
 export async function generateMetadata({ params }: CompanyPageProps): Promise<Metadata> {
     const resolvedParams = await params;
-    const advertiser = getMockAdvertiserByCode(resolvedParams.code);
+    const advertiser = await getAdvertiserByCode(resolvedParams.code);
 
     if (!advertiser) {
         return { title: 'الشركة غير موجودة' };
@@ -60,53 +61,9 @@ export async function generateMetadata({ params }: CompanyPageProps): Promise<Me
     };
 }
 
-// Mock function to get advertiser by code (replace with Firestore)
-function getMockAdvertiserByCode(code: string): Advertiser | null {
-    // Generate consistent mock data based on code
-    const isPremium = code.length > 0 && code.charCodeAt(0) % 2 === 0;
-
-    return {
-        id: `ad-${code}`,
-        short_code: code,
-        business_name: `شركة النخبة للخدمات المنزلية`,
-        phone_number: '+966501234567',
-        whatsapp_number: '+966501234567',
-        logo_url: '',
-        is_premium: isPremium,
-        priority_score: 95,
-        subscription_expiry: null,
-        targeted_cities: ['riyadh', 'jeddah', 'dammam'],
-        targeted_services: ['furniture-moving', 'cleaning', 'pest-control'],
-        description: `شركة النخبة للخدمات المنزلية هي إحدى الشركات الرائدة في مجال تقديم الخدمات المنزلية في المملكة العربية السعودية. نقدم خدماتنا بأعلى مستويات الجودة والاحترافية، مع ضمان رضا العملاء التام.
-
-نتميز بفريق عمل مدرب ومؤهل، وأحدث المعدات والتقنيات، وأسعار تنافسية. نعمل على مدار الساعة لتلبية احتياجاتكم.
-
-خدماتنا تشمل:
-• نقل العفش والأثاث
-• التنظيف الشامل
-• مكافحة الحشرات
-• كشف التسربات`,
-        gallery: [
-            '/images/furniture-moving/affordable-furniture-moving-company-riyadh-living-room-sofa.jpg',
-            '/images/furniture-moving/best-furniture-moving-company-jeddah-box-packing.jpg',
-            '/images/furniture-moving/furniture-movers-saudi-truck-loading-sofa.jpg',
-            '/images/furniture-moving/professional-packers-movers-riyadh-wrapped-chair.jpg',
-        ],
-        reviews: [
-            { id: '1', user: 'أحمد محمد', rating: 5, comment: 'خدمة ممتازة وفريق عمل محترف. أنصح بالتعامل معهم بشدة.', date: new Date('2024-01-15') },
-            { id: '2', user: 'سارة علي', rating: 5, comment: 'تجربة رائعة، التزام بالمواعيد وجودة عالية في العمل.', date: new Date('2024-01-10') },
-            { id: '3', user: 'محمد أحمد', rating: 4, comment: 'خدمة جيدة جداً والأسعار مناسبة. سأتعامل معهم مرة أخرى.', date: new Date('2024-01-05') },
-            { id: '4', user: 'فاطمة سعيد', rating: 5, comment: 'أفضل شركة تعاملت معها. شكراً لكم على الخدمة المميزة.', date: new Date('2023-12-28') },
-        ],
-        is_active: true,
-        created_at: new Date(),
-        updated_at: new Date(),
-    };
-}
-
 export default async function CompanyPage({ params }: CompanyPageProps) {
     const resolvedParams = await params;
-    const advertiser = getMockAdvertiserByCode(resolvedParams.code);
+    const advertiser = await getAdvertiserByCode(resolvedParams.code);
 
     if (!advertiser) {
         notFound();
@@ -115,9 +72,12 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
     const mainCity = getCityBySlug(advertiser.targeted_cities[0]);
     const mainService = getServiceBySlug(advertiser.targeted_services[0]);
 
+    // Get reviews (use empty array if not available)
+    const reviews = advertiser.reviews || [];
+
     // Calculate average rating
-    const avgRating = advertiser.reviews.length > 0
-        ? advertiser.reviews.reduce((sum, r) => sum + r.rating, 0) / advertiser.reviews.length
+    const avgRating = reviews.length > 0
+        ? reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.length
         : 0;
 
     // Links
@@ -228,7 +188,7 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                                                 ))}
                                             </div>
                                             <span className="text-sm font-medium">
-                                                {avgRating.toFixed(1)} ({advertiser.reviews.length} تقييم)
+                                                {avgRating.toFixed(1)} ({reviews.length} تقييم)
                                             </span>
                                         </div>
                                     )}
@@ -329,7 +289,7 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                             <section className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
                                 <h2 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
                                     <Star className="w-5 h-5 text-amber-500" />
-                                    تقييمات العملاء ({advertiser.reviews.length})
+                                    تقييمات العملاء ({reviews.length})
                                 </h2>
 
                                 {/* Average Rating */}
@@ -348,7 +308,7 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                                                 ))}
                                             </div>
                                             <p className="text-sm text-amber-700">
-                                                بناءً على {advertiser.reviews.length} تقييم
+                                                بناءً على {reviews.length} تقييم
                                             </p>
                                         </div>
                                     </div>
@@ -356,7 +316,7 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
 
                                 {/* Review List */}
                                 <div className="space-y-4">
-                                    {advertiser.reviews.map(review => (
+                                    {reviews.map(review => (
                                         <ReviewCard key={review.id} review={review} />
                                     ))}
                                 </div>
