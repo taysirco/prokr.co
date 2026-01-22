@@ -13,6 +13,24 @@
                     "order": "DESCENDING"
                 }
             ]
+        },
+        {
+            "collectionGroup": "advertisers",
+            "queryScope": "COLLECTION",
+            "fields": [
+                {
+                    "fieldPath": "targeted_cities",
+                    "arrayConfig": "CONTAINS"
+                },
+                {
+                    "fieldPath": "is_premium",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "priority_score",
+                    "order": "DESCENDING"
+                }
+            ]
         }
     ],
     "fieldOverrides": []

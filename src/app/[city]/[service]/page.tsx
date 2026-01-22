@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Home, ChevronLeft, Star, Phone, MessageCircle, BadgeCheck, MapPin, Clock, Shield } from 'lucide-react';
 import { getCityBySlug, getServiceBySlug, getUniquePageImages, CITIES, SERVICES } from '@/lib/seed';
+import { getAdvertisersBySilo } from '@/lib/db-actions';
 import { ServiceJsonLd, BreadcrumbJsonLd } from '@/components/JsonLd';
 import { SeoContentSection, FaqJsonLd, ServiceOfferJsonLd, generateSeoContent } from '@/lib/seo-content';
 import { getCityContext } from '@/lib/city-context';
@@ -78,39 +79,6 @@ export async function generateMetadata({ params }: SiloPageProps): Promise<Metad
     };
 }
 
-// Mock data for advertisers (replace with Firestore queries)
-function getMockAdvertisers(citySlug: string, serviceSlug: string): { premium: Advertiser[]; standard: Advertiser[] } {
-    const generateMockAdvertiser = (index: number, isPremium: boolean): Advertiser => ({
-        id: `ad-${index}`,
-        short_code: `${Math.random().toString(36).substring(2, 8).toUpperCase()}`,
-        business_name: isPremium
-            ? `شركة ${['النخبة', 'الأمان', 'الثقة', 'الإتقان', 'الريادة'][index % 5]} للخدمات`
-            : `مؤسسة ${['السعادة', 'النجاح', 'الأمل', 'الخير', 'البركة'][index % 5]}`,
-        phone_number: `+9665${Math.floor(10000000 + Math.random() * 90000000)}`,
-        whatsapp_number: `+9665${Math.floor(10000000 + Math.random() * 90000000)}`,
-        logo_url: '',
-        is_premium: isPremium,
-        priority_score: isPremium ? 100 - index * 5 : 50 - index,
-        subscription_expiry: null,
-        targeted_cities: [citySlug],
-        targeted_services: [serviceSlug],
-        description: 'شركة متخصصة في تقديم أفضل الخدمات بأعلى مستويات الجودة والاحترافية. نضمن لك رضاك التام.',
-        gallery: [],
-        reviews: isPremium ? [
-            { id: '1', user: 'أحمد', rating: 5, comment: 'خدمة ممتازة', date: new Date() },
-            { id: '2', user: 'محمد', rating: 4, comment: 'جيد جداً', date: new Date() },
-        ] : [],
-        is_active: true,
-        created_at: new Date(),
-        updated_at: new Date(),
-    });
-
-    return {
-        premium: Array.from({ length: 6 }, (_, i) => generateMockAdvertiser(i, true)),
-        standard: Array.from({ length: 10 }, (_, i) => generateMockAdvertiser(i, false)),
-    };
-}
-
 export default async function SiloPage({ params }: SiloPageProps) {
     const resolvedParams = await params;
     const city = getCityBySlug(resolvedParams.city);
@@ -121,8 +89,19 @@ export default async function SiloPage({ params }: SiloPageProps) {
         notFound();
     }
 
-    // Get advertisers (mock for now, replace with Firestore)
-    const { premium, standard } = getMockAdvertisers(resolvedParams.city, resolvedParams.service);
+    // Get advertisers from Firestore (real data) with error handling
+    let premium: Advertiser[] = [];
+    let standard: Advertiser[] = [];
+
+    try {
+        const result = await getAdvertisersBySilo(resolvedParams.city, resolvedParams.service);
+        premium = result.premium;
+        standard = result.standard;
+    } catch (error) {
+        console.error('Error fetching advertisers:', error);
+        // Continue with empty arrays if index is not ready
+    }
+
     const allAdvertisers = [...premium, ...standard];
 
     // Breadcrumb items
