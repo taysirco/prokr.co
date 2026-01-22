@@ -240,8 +240,9 @@ export default async function SiloPage({ params }: SiloPageProps) {
 
 // Premium Card Component
 function PremiumCard({ advertiser }: { advertiser: Advertiser }) {
-    const avgRating = advertiser.reviews.length > 0
-        ? advertiser.reviews.reduce((sum, r) => sum + r.rating, 0) / advertiser.reviews.length
+    const reviews = advertiser.reviews || [];
+    const avgRating = reviews.length > 0
+        ? reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.length
         : 0;
 
     const whatsappLink = `https://wa.me/${advertiser.whatsapp_number.replace(/\D/g, '')}`;
@@ -261,11 +262,20 @@ function PremiumCard({ advertiser }: { advertiser: Advertiser }) {
             <div className="p-6">
                 <div className="flex items-start gap-4">
                     <div className="relative w-20 h-20 flex-shrink-0">
-                        <div className="w-full h-full bg-gradient-to-br from-emerald-100 to-emerald-200 rounded-xl flex items-center justify-center border-2 border-amber-200">
-                            <span className="text-2xl font-bold text-emerald-600">
-                                {advertiser.business_name.charAt(0)}
-                            </span>
-                        </div>
+                        {advertiser.logo_url ? (
+                            <Image
+                                src={advertiser.logo_url}
+                                alt={advertiser.business_name}
+                                fill
+                                className="object-cover rounded-xl border-2 border-amber-200"
+                            />
+                        ) : (
+                            <div className="w-full h-full bg-gradient-to-br from-emerald-100 to-emerald-200 rounded-xl flex items-center justify-center border-2 border-amber-200">
+                                <span className="text-2xl font-bold text-emerald-600">
+                                    {advertiser.business_name.charAt(0)}
+                                </span>
+                            </div>
+                        )}
                     </div>
 
                     <div className="flex-1 min-w-0">
@@ -342,11 +352,20 @@ function StandardRow({ advertiser }: { advertiser: Advertiser }) {
     return (
         <div className="flex items-center gap-4 p-4 bg-white rounded-xl border border-gray-200 hover:border-emerald-300 hover:shadow-md transition-all">
             <div className="relative w-12 h-12 flex-shrink-0">
-                <div className="w-full h-full bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg flex items-center justify-center">
-                    <span className="text-lg font-bold text-gray-500">
-                        {advertiser.business_name.charAt(0)}
-                    </span>
-                </div>
+                {advertiser.logo_url ? (
+                    <Image
+                        src={advertiser.logo_url}
+                        alt={advertiser.business_name}
+                        fill
+                        className="object-cover rounded-lg"
+                    />
+                ) : (
+                    <div className="w-full h-full bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg flex items-center justify-center">
+                        <span className="text-lg font-bold text-gray-500">
+                            {advertiser.business_name.charAt(0)}
+                        </span>
+                    </div>
+                )}
             </div>
 
             <div className="flex-1 min-w-0">
