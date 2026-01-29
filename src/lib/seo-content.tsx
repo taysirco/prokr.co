@@ -1,13 +1,12 @@
 import Link from 'next/link';
 import type { City, Service } from '@/types';
-import { getCityContext, getAdjustedPriceRange, getServiceNuances, getClimateContent } from './city-context';
+import { getCityContext, getAdjustedPriceRange, getServiceNuances, getClimateContent, ClimateType } from './city-context';
 import { getRelatedServices } from './related-services';
 import { getServiceBySlug } from './seed';
+import { generateContentLayers } from './ai-content-layers';
 
 // ============================================
 // AI-Ready SEO Content Generator
-// Generates unique, geo-contextual content for each silo page
-// Optimized for Google SGE and Featured Snippets
 // ============================================
 
 interface SeoContentProps {
@@ -16,11 +15,10 @@ interface SeoContentProps {
 }
 
 // ============================================
-// BASE PRICING DATA (Riyadh baseline = 1.0)
-// Will be adjusted per city using priceModifier
+// DATA & CONSTANTS
 // ============================================
+
 const BASE_PRICING: Record<string, { type: string; unit: string; minPrice: number; maxPrice: number; time?: string }[]> = {
-    // Moving Services
     'furniture-moving': [
         { type: 'شقة صغيرة (غرفة-غرفتين)', unit: 'رحلة واحدة', minPrice: 500, maxPrice: 800, time: '2-4 ساعات' },
         { type: 'شقة متوسطة (3-4 غرف)', unit: 'رحلة واحدة', minPrice: 800, maxPrice: 1200, time: '4-6 ساعات' },
@@ -39,8 +37,6 @@ const BASE_PRICING: Record<string, { type: string; unit: string; minPrice: numbe
         { type: 'دينا متوسطة (5 طن)', unit: 'رحلة داخل المدينة', minPrice: 300, maxPrice: 500 },
         { type: 'دينا كبيرة (7 طن)', unit: 'رحلة داخل المدينة', minPrice: 450, maxPrice: 700 },
     ],
-
-    // Cleaning Services
     'cleaning': [
         { type: 'شقة صغيرة', unit: 'تنظيف شامل', minPrice: 200, maxPrice: 350, time: '3-4 ساعات' },
         { type: 'شقة متوسطة', unit: 'تنظيف شامل', minPrice: 350, maxPrice: 500, time: '4-6 ساعات' },
@@ -70,8 +66,6 @@ const BASE_PRICING: Record<string, { type: string; unit: string; minPrice: numbe
         { type: 'مكيف شباك', unit: 'وحدة', minPrice: 60, maxPrice: 90 },
         { type: 'مكيف مركزي', unit: 'وحدة', minPrice: 150, maxPrice: 300 },
     ],
-
-    // Pest Control Services
     'pest-control': [
         { type: 'شقة صغيرة', unit: 'رش شامل', minPrice: 150, maxPrice: 250 },
         { type: 'شقة متوسطة/كبيرة', unit: 'رش شامل', minPrice: 250, maxPrice: 400 },
@@ -85,8 +79,6 @@ const BASE_PRICING: Record<string, { type: string; unit: string; minPrice: numbe
         { type: 'معالجة شاملة (فيلا)', unit: 'وحدة', minPrice: 2000, maxPrice: 5000 },
         { type: 'حماية ما قبل البناء', unit: 'للمتر المربع', minPrice: 20, maxPrice: 40 },
     ],
-
-    // Leak Detection & Insulation
     'water-leak-detection': [
         { type: 'فحص أولي', unit: 'زيارة', minPrice: 150, maxPrice: 300 },
         { type: 'كشف بالأجهزة', unit: 'نقطة تسريب', minPrice: 200, maxPrice: 400 },
@@ -105,8 +97,6 @@ const BASE_PRICING: Record<string, { type: string; unit: string; minPrice: numbe
         { type: 'عزل حراري', unit: 'للمتر المربع', minPrice: 30, maxPrice: 50 },
         { type: 'عزل مائي + حراري', unit: 'للمتر المربع', minPrice: 50, maxPrice: 80 },
     ],
-
-    // Sewage Services
     'sewer-cleaning': [
         { type: 'تسليك بسيط', unit: 'نقطة', minPrice: 100, maxPrice: 200 },
         { type: 'تسليك بالسلك', unit: 'نقطة', minPrice: 150, maxPrice: 300 },
@@ -119,16 +109,12 @@ const BASE_PRICING: Record<string, { type: string; unit: string; minPrice: numbe
     ],
 };
 
-// Default pricing for services without specific data
 const DEFAULT_BASE_PRICING = [
     { type: 'خدمة أساسية', unit: 'زيارة', minPrice: 150, maxPrice: 300, time: '1-2 ساعة' },
     { type: 'خدمة متوسطة', unit: 'زيارة', minPrice: 300, maxPrice: 500, time: '2-4 ساعات' },
     { type: 'خدمة شاملة', unit: 'زيارة', minPrice: 500, maxPrice: 1000, time: '4-6 ساعات' },
 ];
 
-// ============================================
-// TRUST FACTORS BY SERVICE CATEGORY
-// ============================================
 const TRUST_FACTORS: Record<string, string[]> = {
     'moving': [
         'ترخيص نقل معتمد من وزارة النقل',
@@ -198,302 +184,260 @@ export function generateSeoContent({ city, service }: SeoContentProps) {
     const trustFactors = TRUST_FACTORS[service.category] || DEFAULT_TRUST_FACTORS;
     const serviceNuances = getServiceNuances(city.slug, service.category);
     const relatedServices = getRelatedServices(service.slug, 3);
-
-    // Get climate-based content
     const climateContent = cityContext ? getClimateContent(cityContext.climate) : null;
 
-    // Calculate adjusted pricing for this city
+    // AI Content Layers
+    const aiContent = generateContentLayers(city, service);
+
+    // E-E-A-T Signals
+    const expertTips = [
+        `قارن عروض الأسعار من 3 شركات على الأقل في ${city.name_ar} قبل الاختيار.`,
+        `تأكد من وجود بند واضح للضمان في العقد لحفظ حقوقك.`,
+        `اسأل عن ${service.category === 'moving' ? 'مواد التغليف المستخدمة' : 'نوعية المواد المستخدمة'} للتأكد من جودتها.`,
+        cityContext?.climate === 'humid-coastal'
+            ? 'تأكد من معالجة الأسطح ضد الرطوبة لضمان استدامة العمل.'
+            : 'احرص على إغلاق النوافذ والأبواب جيداً بعد الخدمة لمنع دخول الغبار.',
+        `اطلب فاتورة ضريبية مختومة لضمان حقك في حال وجود شكوى.`,
+    ];
+
+    const warnings = [
+        'تجنب الشركات التي تقدم أسعاراً منخفضة جداً بشكل غير منطقي.',
+        'لا تدفع كامل المبلغ قبل انتهاء العمل والتأكد من جودته.',
+        'احذر من التعامل مع عمالة سائبة بدون مرجعية مؤسسية.',
+        `في ${city.name_ar}، تجنب تحديد مواعيد العمل في أوقات الذروة لتفادي التأخير.`,
+    ];
+
+    const checklist = [
+        'تحديد حجم العمل بدقة',
+        'طلب عرض سعر مكتوب وتفصيلي',
+        'التأكد من رخصة الشركة',
+        'قراءة تقييمات العملاء السابقين',
+        'الاتفاق على موعد التسليم',
+        'مراجعة شروط الضمان',
+    ];
+
+    // Semantic SEO - People Also Ask
+    const paaQuestions = [
+        {
+            question: `كم سعر ${service.name_ar} في ${city.name_ar}؟`,
+            answer: aiContent.shortAnswer
+        },
+        {
+            question: `كيف أختار أفضل شركة ${service.name_ar}؟`,
+            answer: `ابحث عن الشركات المرخصة في ${city.name_ar} التي توفر ضماناً على الخدمة ولديها تقييمات عالية من عملاء حقيقيين.`
+        },
+        {
+            question: `هل تقدمون ضمان على ${service.name_ar}؟`,
+            answer: `نعم، جميع الشركات المعتمدة لدينا في ${city.name_ar} ملزمة بتقديم ضمان شامل على الخدمات المقدمة.`
+        },
+        {
+            question: `ما هي المناطق التي تغطيها الخدمة في ${city.name_ar}؟`,
+            answer: `نغطي جميع أحياء ${city.name_ar} بما فيها: ${cityContext?.neighborhoods.slice(0, 5).map(n => n.name_ar).join('، ')} والمناطق المجاورة.`
+        }
+    ];
+
+    // LSI Keywords
+    const lsiKeywords = [
+        `${service.name_ar} ${city.name_ar} رخيص`,
+        `أرقام شركات ${service.name_ar}`,
+        `أسعار ${service.name_ar} 2026`,
+        `أفضل شركة ${service.name_ar} مجربة`,
+        `خدمات ${service.name_ar} عمالة فلبينية`,
+        `تطبيقات ${service.name_ar} في ${city.name_ar}`,
+    ];
+
+    // Pricing Adjustment Logic
     const priceModifier = cityContext?.priceModifier || 1.0;
     const adjustedPricing = basePricing.map(item => ({
         type: item.type,
         unit: item.unit,
         price: getAdjustedPriceRange(item.minPrice, item.maxPrice, city.slug),
+        minPrice: Math.round(item.minPrice * priceModifier),
+        maxPrice: Math.round(item.maxPrice * priceModifier),
         time: item.time,
     }));
 
-    // Get first price for direct answer
-    const firstPrice = basePricing[0];
-    const minPriceAdjusted = Math.round(firstPrice.minPrice * priceModifier);
-    const maxPriceAdjusted = Math.round(basePricing[basePricing.length - 1].maxPrice * priceModifier);
-
-    // Build geo-specific challenges paragraph
-    const geoChallenges = cityContext ? [
-        ...cityContext.challenges.slice(0, 2),
-        ...serviceNuances.slice(0, 2),
-    ] : [];
-
-    // Get neighborhoods
-    const neighborhoods = cityContext?.neighborhoods.slice(0, 6).map(n => n.name_ar) || [];
-    const responseTime = cityContext?.responseTime || 'نفس اليوم';
-    const nearbyCities = cityContext?.nearbyCities || [];
-
     return {
-        // ========================================
-        // DIRECT ANSWER SNIPPET (40-50 words)
-        // First paragraph - what AI will pull
-        // ========================================
-        directAnswer: cityContext
-            ? `تبدأ أسعار ${service.name_ar} في ${city.name_ar} من ${minPriceAdjusted.toLocaleString('ar-SA')} ريال وتصل إلى ${maxPriceAdjusted.toLocaleString('ar-SA')} ريال حسب حجم العمل. ${city.name_ar} تتميز بتحديات خاصة مثل ${geoChallenges[0] || 'احتياجات محلية متنوعة'}. يوفر بروكر قائمة بأفضل شركات ${service.name_ar} المعتمدة مع أرقام التواصل المباشر.`
-            : `${service.name_ar} في ${city.name_ar} تشمل خدمات احترافية مقدمة من شركات معتمدة ومرخصة. تتراوح الأسعار حسب حجم العمل ونوع الخدمة المطلوبة. يوفر بروكر قائمة بأفضل الشركات مع أرقام التواصل المباشر وتقييمات العملاء.`,
-
-        // ========================================
-        // GEO-SPECIFIC CHALLENGES SECTION
-        // Why this service is different HERE
-        // ========================================
-        geoChallengesTitle: `لماذا تختلف ${service.name_ar} في ${city.name_ar} عن غيرها؟`,
-        geoChallenges: geoChallenges,
-        geoContext: cityContext ? `${city.name_ar} مدينة ${cityContext.urbanTraits[0] || 'متنامية'} تتميز بـ${cityContext.urbanTraits.slice(1, 3).join(' و')}. هذه الخصائص تتطلب من شركات ${service.name_ar} خبرة محلية ومعدات مناسبة للتعامل مع ${geoChallenges[0] || 'متطلبات المنطقة'}.` : null,
-        climateTips: climateContent?.tips || [],
-
-        // ========================================
-        // TRUST FACTORS
-        // ========================================
-        trustTitle: `معايير اختيار أفضل شركة ${service.name_ar} في ${city.name_ar}`,
+        priceModifier,
+        pricing: adjustedPricing,
         trustFactors,
-
-        // ========================================
-        // PRICING TABLE (City-adjusted)
-        // ========================================
-        pricingTitle: `متوسط أسعار ${service.name_ar} في ${city.name_ar} - تحديث 2026`,
-        pricingData: adjustedPricing,
-        pricingDisclaimer: `الأسعار تقريبية خاصة بمنطقة ${city.name_ar} وتختلف حسب حجم العمل والشركة. ننصح بطلب عروض أسعار من أكثر من شركة.`,
-        priceModifierNote: priceModifier !== 1.0
-            ? priceModifier > 1
-                ? `* أسعار ${city.name_ar} أعلى بنسبة ${Math.round((priceModifier - 1) * 100)}% من المتوسط بسبب ارتفاع تكاليف التشغيل`
-                : `* أسعار ${city.name_ar} أقل بنسبة ${Math.round((1 - priceModifier) * 100)}% من المتوسط`
-            : null,
-
-        // ========================================
-        // NEIGHBORHOODS SECTION
-        // ========================================
-        neighborhoodsTitle: `الأحياء التي نغطيها في ${city.name_ar}`,
-        neighborhoods,
-        neighborhoodsText: neighborhoods.length > 0
-            ? `نغطي أحياء ${neighborhoods.slice(0, 3).join(' و')} بشاحنات وفرق مجهزة، ونصل إليك في ${neighborhoods.slice(3, 5).join(' و')} ${responseTime}. جميع الأحياء في ${city.name_ar} مشمولة بخدماتنا.`
-            : `جميع أحياء ${city.name_ar} مشمولة بخدماتنا. تواصل معنا لتأكيد التغطية في منطقتك.`,
-        responseTime,
-
-        // ========================================
-        // RELATED SERVICES (Internal Linking)
-        // ========================================
-        relatedServicesTitle: 'خدمات ذات صلة قد تحتاجها',
-        relatedServices: relatedServices.map(rel => {
-            const relatedService = getServiceBySlug(rel.slug);
-            return {
-                slug: rel.slug,
-                name: relatedService?.name_ar || rel.slug,
-                context: rel.context,
-                link: `/${city.slug}/${rel.slug}`,
-            };
-        }),
-
-        // ========================================
-        // PROCESS STEPS
-        // ========================================
-        processTitle: `خطوات طلب خدمة ${service.name_ar} في ${city.name_ar}`,
-        processSteps: [
-            `تصفح قائمة شركات ${service.name_ar} في ${city.name_ar} على بروكر`,
-            'قارن بين الشركات واقرأ تقييمات العملاء',
-            'تواصل مع الشركة المختارة عبر الهاتف أو الواتساب',
-            'احصل على معاينة وعرض سعر',
-            'تأكد من الضمانات المقدمة قبل الموافقة',
-            'استلم الخدمة وقيّم الشركة لمساعدة الآخرين',
-        ],
-
-        // ========================================
-        // FAQ (Enhanced with geo-context)
-        // ========================================
-        faqTitle: `أسئلة شائعة عن ${service.name_ar} في ${city.name_ar}`,
         faqItems: [
+            ...paaQuestions, // PAA are essentially FAQs
             {
-                question: `كم تكلفة ${service.name_ar} في ${city.name_ar}؟`,
-                answer: `تبدأ أسعار ${service.name_ar} في ${city.name_ar} من ${minPriceAdjusted.toLocaleString('ar-SA')} ريال وتصل إلى ${maxPriceAdjusted.toLocaleString('ar-SA')} ريال حسب حجم العمل ونوع الخدمة. ${priceModifier > 1 ? `الأسعار في ${city.name_ar} أعلى قليلاً من المتوسط بسبب ارتفاع تكاليف التشغيل.` : priceModifier < 1 ? `الأسعار في ${city.name_ar} تنافسية مقارنة بالمدن الكبرى.` : ''} يمكنك الاطلاع على جدول الأسعار أعلاه، وننصح بالتواصل مع أكثر من شركة للحصول على عروض أسعار.`,
+                question: `هل تتوفر خدمة ${service.name_ar} في جميع أحياء ${city.name_ar}؟`,
+                answer: `نعم، شركاؤنا يغطون كافة أحياء ${city.name_ar}، بما في ذلك ${cityContext?.neighborhoods.map(n => n.name_ar).join('، ')}.`
             },
             {
-                question: `كيف أجد شركة ${service.name_ar} موثوقة في ${city.name_ar}؟`,
-                answer: `للعثور على شركة ${service.name_ar} موثوقة في ${city.name_ar}، ابحث عن الشركات التي تحمل شارة "معتمد" في بروكر. هذه الشركات خضعت لعملية تحقق من التراخيص والتقييمات. اقرأ تقييمات العملاء السابقين، واطلب صور أعمال سابقة، وتأكد من وجود ضمان مكتوب على الخدمة.`,
-            },
-            {
-                question: `هل توجد شركات ${service.name_ar} في جميع أحياء ${city.name_ar}؟`,
-                answer: `نعم، الشركات المسجلة في بروكر تغطي جميع أحياء ${city.name_ar} بما في ذلك ${neighborhoods.slice(0, 3).join(' و')} والأحياء المجاورة. معظم الشركات تصل إليك ${responseTime}. يمكنك التأكد من نطاق التغطية عند التواصل مع الشركة.`,
-            },
-            {
-                question: `هل تخدمون مناطق خارج ${city.name_ar}؟`,
-                answer: nearbyCities.length > 0
-                    ? `نعم، العديد من شركات ${service.name_ar} في ${city.name_ar} تخدم أيضاً المدن المجاورة مثل ${nearbyCities.join(' و')}. قد تختلف الأسعار حسب المسافة. تواصل مع الشركة لتأكيد التغطية.`
-                    : `نعم، العديد من الشركات تخدم المناطق المحيطة بـ${city.name_ar}. تواصل مع الشركة مباشرة لتأكيد التغطية.`,
-            },
-            {
-                question: `هل الشركات المعروضة تقدم ضمان على الخدمة؟`,
-                answer: `معظم شركات ${service.name_ar} المميزة في بروكر تقدم ضمانات على خدماتها. مدة الضمان تختلف حسب نوع الخدمة والشركة. في ${city.name_ar}، الشركات المعتمدة عادةً توفر ضماناً مكتوباً. تأكد من الاستفسار عن الضمان وشروطه قبل طلب الخدمة.`,
-            },
+                question: 'كيف يتم تحديد السعر النهائي؟',
+                answer: 'يتم تحديد السعر بناءً على معاينة الموقع وحجم العمل المطلوب. السعر المبدئي يعتمد على المتوسط العام في السوق.'
+            }
         ],
+        cityContext,
+        serviceNuances,
+        relatedServices,
+        climateContent,
+
+        // New AI Content Fields
+        aiContent,
+        expertTips,
+        warnings,
+        checklist,
+        lsiKeywords,
+        paaQuestions
     };
 }
 
 // ============================================
-// SEO CONTENT COMPONENT
+// UI COMPONENT
 // ============================================
 
 export function SeoContentSection({ city, service }: SeoContentProps) {
     const content = generateSeoContent({ city, service });
 
+    // Derived UI Data for Render
+    const {
+        cityContext,
+        aiContent,
+        pricing,
+        expertTips,
+        warnings,
+        relatedServices
+    } = content;
+
     return (
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <article className="prose prose-lg prose-emerald max-w-none">
-                {/* Direct Answer Snippet */}
+
+                {/* 1. INTRODUCTION (AI Generated) */}
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">
                     دليل شامل لخدمة {service.name_ar} في {city.name_ar} (2026)
                 </h2>
-                <p className="text-gray-600 leading-relaxed bg-emerald-50 p-4 rounded-xl border-r-4 border-emerald-500">
-                    {content.directAnswer}
-                </p>
+                <div className="bg-emerald-50 p-6 rounded-xl border-r-4 border-emerald-500 mb-8">
+                    <p className="text-gray-700 leading-relaxed font-medium">
+                        {aiContent.introduction}
+                    </p>
+                </div>
 
-                {/* Geo-Specific Challenges */}
-                {content.geoChallenges.length > 0 && (
-                    <>
-                        <h3 className="text-xl font-bold text-gray-900 mt-10 mb-4">
-                            {content.geoChallengesTitle}
+                {/* 2. LOCAL CHALLENGES (Context Aware) */}
+                {aiContent.localChallenges.length > 0 && (
+                    <div className="mb-10">
+                        <h3 className="text-xl font-bold text-gray-900 mb-4">
+                            تحديات {service.name_ar} في {city.name_ar} وكيف نتغلب عليها
                         </h3>
-                        {content.geoContext && (
-                            <p className="text-gray-600 leading-relaxed mb-4">
-                                {content.geoContext}
-                            </p>
-                        )}
-                        <ul className="space-y-2 text-gray-600 bg-amber-50 p-4 rounded-xl">
-                            {content.geoChallenges.map((challenge, index) => (
-                                <li key={index} className="flex items-start gap-2">
-                                    <span className="text-amber-600 font-bold">⚠</span>
-                                    <span>{challenge}</span>
-                                </li>
+                        <div className="grid gap-4">
+                            {aiContent.localChallenges.map((challenge, idx) => (
+                                <div key={idx} className="bg-white border border-gray-100 p-4 rounded-xl shadow-sm">
+                                    <div className="flex items-start gap-3">
+                                        <span className="text-amber-500 text-xl">⚠️</span>
+                                        <div>
+                                            <h4 className="font-bold text-gray-800 mb-1">{challenge}</h4>
+                                            <p className="text-gray-600 text-sm">{aiContent.customSolutions[idx]}</p>
+                                        </div>
+                                    </div>
+                                </div>
                             ))}
-                        </ul>
-                    </>
+                        </div>
+                    </div>
                 )}
 
-                {/* Trust Factors */}
-                <h3 className="text-xl font-bold text-gray-900 mt-10 mb-4">
-                    {content.trustTitle}
-                </h3>
-                <ul className="space-y-2 text-gray-600">
-                    {content.trustFactors.map((factor, index) => (
-                        <li key={index} className="flex items-start gap-2">
-                            <span className="text-emerald-500 font-bold">✓</span>
-                            <span>{factor}</span>
-                        </li>
-                    ))}
-                </ul>
+                {/* 3. EXPERT TIPS (E-E-A-T) */}
+                <div className="bg-sky-50 p-6 rounded-xl mb-10">
+                    <h3 className="text-xl font-bold text-sky-900 mb-4 flex items-center gap-2">
+                        <span>💡</span>
+                        نصائح خبراء بروكر لعام 2026
+                    </h3>
+                    <ul className="space-y-3">
+                        {expertTips.map((tip, idx) => (
+                            <li key={idx} className="flex items-start gap-2 text-sky-800">
+                                <span className="font-bold">•</span>
+                                <span>{tip}</span>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
 
-                {/* Pricing Table */}
-                <h3 className="text-xl font-bold text-gray-900 mt-10 mb-4">
-                    {content.pricingTitle}
+                {/* 4. PRICING TABLE */}
+                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                    أسعار {service.name_ar} في {city.name_ar} (تحديث 2026)
                 </h3>
-                <div className="overflow-x-auto">
-                    <table className="w-full border-collapse bg-white rounded-xl overflow-hidden shadow-sm">
+                <div className="overflow-x-auto mb-2">
+                    <table className="w-full border-collapse bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200">
                         <thead>
-                            <tr className="bg-emerald-600 text-white">
-                                <th className="text-right p-4">نوع الخدمة</th>
-                                <th className="text-right p-4">الوحدة</th>
-                                <th className="text-right p-4">السعر (ر.س)</th>
-                                {content.pricingData.some(item => item.time) && (
-                                    <th className="text-right p-4">المدة التقريبية</th>
-                                )}
+                            <tr className="bg-gray-50 text-gray-700 border-b border-gray-200">
+                                <th className="text-right p-4 font-semibold">الخدمة</th>
+                                <th className="text-right p-4 font-semibold">الوحدة</th>
+                                <th className="text-right p-4 font-semibold">السعر المتوقع</th>
+                                {pricing.some(i => i.time) && <th className="text-right p-4 font-semibold">المدة</th>}
                             </tr>
                         </thead>
-                        <tbody>
-                            {content.pricingData.map((item, index) => (
-                                <tr key={index} className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
-                                    <td className="p-4 border-t border-gray-100">{item.type}</td>
-                                    <td className="p-4 border-t border-gray-100">{item.unit}</td>
-                                    <td className="p-4 border-t border-gray-100 font-semibold text-emerald-600">{item.price}</td>
-                                    {content.pricingData.some(i => i.time) && (
-                                        <td className="p-4 border-t border-gray-100 text-gray-500">{item.time || '-'}</td>
-                                    )}
+                        <tbody className="divide-y divide-gray-100">
+                            {pricing.map((item, index) => (
+                                <tr key={index} className="hover:bg-gray-50">
+                                    <td className="p-4 text-gray-800 font-medium">{item.type}</td>
+                                    <td className="p-4 text-gray-600">{item.unit}</td>
+                                    <td className="p-4 text-emerald-600 font-bold" dir="ltr">{item.price}</td>
+                                    {pricing.some(i => i.time) && <td className="p-4 text-gray-500">{item.time || '-'}</td>}
                                 </tr>
                             ))}
                         </tbody>
                     </table>
                 </div>
-                <p className="text-sm text-gray-500 mt-3 italic">
-                    * {content.pricingDisclaimer}
+                <p className="text-sm text-gray-500 mb-8 italic">
+                    * الأسعار تقريبية وقد تختلف حسب المعاينة الميدانية.
                 </p>
-                {content.priceModifierNote && (
-                    <p className="text-sm text-amber-600 mt-1 italic">
-                        {content.priceModifierNote}
-                    </p>
-                )}
 
-                {/* Neighborhoods */}
-                {content.neighborhoods.length > 0 && (
-                    <>
-                        <h3 className="text-xl font-bold text-gray-900 mt-10 mb-4">
-                            {content.neighborhoodsTitle}
-                        </h3>
-                        <p className="text-gray-600 leading-relaxed mb-4">
-                            {content.neighborhoodsText}
-                        </p>
+                {/* 5. SUCCESS STORIES */}
+                <div className="mb-10">
+                    <h3 className="text-xl font-bold text-gray-900 mb-4">قصص نجاح من {city.name_ar}</h3>
+                    <div className="grid sm:grid-cols-2 gap-4">
+                        {aiContent.successStories.map((story, idx) => (
+                            <div key={idx} className="bg-emerald-50/50 p-4 rounded-xl border border-emerald-100">
+                                <h4 className="font-bold text-emerald-800 mb-2">{story.title}</h4>
+                                <p className="text-gray-700 text-sm leading-relaxed">{story.result}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* 6. WARNINGS */}
+                <div className="border-l-4 border-red-500 bg-red-50 p-4 rounded-r-xl mb-10">
+                    <h3 className="text-lg font-bold text-red-800 mb-2">تنبيهات هامة</h3>
+                    <ul className="list-disc list-inside space-y-1 text-red-700 text-sm">
+                        {warnings.map((w, i) => <li key={i}>{w}</li>)}
+                    </ul>
+                </div>
+
+                {/* 7. RELATED SERVICES */}
+                {relatedServices.length > 0 && (
+                    <div className="mb-8">
+                        <h3 className="text-xl font-bold text-gray-900 mb-4">خدمات أخرى قد تهمك في {city.name_ar}</h3>
                         <div className="flex flex-wrap gap-2">
-                            {content.neighborhoods.map((neighborhood, index) => (
-                                <span
-                                    key={index}
-                                    className="px-3 py-1.5 bg-gray-100 text-gray-700 rounded-lg text-sm"
+                            {relatedServices.map((rel, i) => (
+                                <Link
+                                    key={i}
+                                    href={`/${city.slug}/${rel.slug}`}
+                                    className="block px-4 py-2 bg-gray-100 hover:bg-emerald-50 hover:text-emerald-700 text-gray-700 rounded-lg transition-colors text-sm font-medium"
                                 >
-                                    {neighborhood}
-                                </span>
+                                    {rel.context}
+                                </Link>
                             ))}
                         </div>
-                    </>
+                    </div>
                 )}
 
-                {/* Related Services - Internal Links */}
-                {content.relatedServices.length > 0 && (
-                    <>
-                        <h3 className="text-xl font-bold text-gray-900 mt-10 mb-4">
-                            {content.relatedServicesTitle}
-                        </h3>
-                        <div className="space-y-3 bg-blue-50 p-4 rounded-xl">
-                            {content.relatedServices.map((related, index) => (
-                                <p key={index} className="text-gray-600">
-                                    {related.context}{' '}
-                                    <Link
-                                        href={related.link}
-                                        className="text-emerald-600 hover:text-emerald-700 font-medium"
-                                    >
-                                        {related.name} في {city.name_ar} ←
-                                    </Link>
-                                </p>
-                            ))}
-                        </div>
-                    </>
-                )}
-
-                {/* Process Steps */}
-                <h3 className="text-xl font-bold text-gray-900 mt-10 mb-4">
-                    {content.processTitle}
-                </h3>
-                <ol className="space-y-3 text-gray-600">
-                    {content.processSteps.map((step, index) => (
-                        <li key={index} className="flex items-start gap-3">
-                            <span className="flex-shrink-0 w-7 h-7 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center text-sm font-bold">
-                                {index + 1}
-                            </span>
-                            <span className="pt-0.5">{step}</span>
-                        </li>
-                    ))}
-                </ol>
-
-                {/* FAQ */}
-                <h3 className="text-xl font-bold text-gray-900 mt-10 mb-4">
-                    {content.faqTitle}
-                </h3>
+                {/* 8. FAQs */}
                 <div className="space-y-4">
+                    <h3 className="text-xl font-bold text-gray-900">الأسئلة الشائعة</h3>
                     {content.faqItems.map((faq, index) => (
-                        <div key={index} className="bg-gray-50 rounded-xl p-5">
-                            <h4 className="font-bold text-gray-900 mb-2">{faq.question}</h4>
-                            <p className="text-gray-600 text-sm leading-relaxed">{faq.answer}</p>
+                        <div key={index} itemScope itemType="https://schema.org/Question">
+                            <h4 className="font-bold text-gray-900 mb-2" itemProp="name">{faq.question}</h4>
+                            <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                                <p className="text-gray-600 text-sm leading-relaxed" itemProp="text">{faq.answer}</p>
+                            </div>
                         </div>
                     ))}
                 </div>
+
             </article>
         </section>
     );
@@ -529,13 +473,13 @@ export function FaqJsonLd({ city, service }: SeoContentProps) {
 
 export function ServiceOfferJsonLd({ city, service }: SeoContentProps) {
     const content = generateSeoContent({ city, service });
-    const firstPrice = content.pricingData[0];
 
+    // Pricing data is already adjusted in generateSeoContent
     const schema = {
         "@context": "https://schema.org",
         "@type": "Service",
         "name": `${service.name_ar} في ${city.name_ar}`,
-        "description": content.directAnswer,
+        "description": content.aiContent.shortAnswer, // Use the AI snippet
         "areaServed": {
             "@type": "City",
             "name": city.name_ar,
@@ -549,7 +493,7 @@ export function ServiceOfferJsonLd({ city, service }: SeoContentProps) {
         "hasOfferCatalog": {
             "@type": "OfferCatalog",
             "name": `خدمات ${service.name_ar}`,
-            "itemListElement": content.pricingData.slice(0, 3).map((item, index) => ({
+            "itemListElement": content.pricing.slice(0, 5).map((item) => ({
                 "@type": "Offer",
                 "itemOffered": {
                     "@type": "Service",
@@ -558,7 +502,8 @@ export function ServiceOfferJsonLd({ city, service }: SeoContentProps) {
                 "priceSpecification": {
                     "@type": "PriceSpecification",
                     "priceCurrency": "SAR",
-                    "price": item.price
+                    "minPrice": item.minPrice,
+                    "maxPrice": item.maxPrice
                 }
             }))
         }

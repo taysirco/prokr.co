@@ -8,6 +8,7 @@ import { getAdvertisersBySilo } from '@/lib/db-actions';
 import { ServiceJsonLd, BreadcrumbJsonLd, ItemListJsonLd } from '@/components/JsonLd';
 import { SeoContentSection, FaqJsonLd, ServiceOfferJsonLd, generateSeoContent } from '@/lib/seo-content';
 import { getCityContext } from '@/lib/city-context';
+import { generateContentLayers } from '@/lib/ai-content-layers';
 import Footer from '@/components/Footer';
 import type { Advertiser } from '@/types';
 
@@ -40,11 +41,15 @@ export async function generateMetadata({ params }: SiloPageProps): Promise<Metad
     const adjustedMinPrice = Math.round(baseMinPrice * priceModifier);
     const neighborhoods = cityContext?.neighborhoods.slice(0, 3).map(n => n.name_ar).join(' و') || '';
 
+    // Generate AI content for unique description
+    const aiContent = generateContentLayers(city, service);
+
     // Enhanced meta title with numbers and year for higher CTR
     const title = `أفضل 15 شركة ${service.name_ar} في ${city.name_ar} | أسعار 2026 وضمان شامل - بروكر`;
 
-    // Enhanced description answering the user's question
-    const description = `هل تبحث عن ${service.name_ar} في ${city.name_ar}؟ قائمة بأفضل 15 شركة موثوقة مع أسعار تبدأ من ${adjustedMinPrice} ريال. خدمة احترافية مع ضمان.${neighborhoods ? ` نغطي ${neighborhoods}.` : ''}`;
+    // Enhanced description answering the user's question using AI generated snippet
+    // We combine the AI short answer with the neighborhood info for maximum relevance
+    const description = `${aiContent.shortAnswer} ${neighborhoods ? `نغطي أحياء ${neighborhoods} والمناطق المجاورة.` : ''}`;
 
     return {
         title,
@@ -55,6 +60,7 @@ export async function generateMetadata({ params }: SiloPageProps): Promise<Metad
             `${service.name_ar} رخيص`,
             `أفضل ${service.name_ar}`,
             city.name_ar,
+            ...(cityContext?.neighborhoods.slice(0, 5).map(n => `${service.name_ar} حي ${n.name_ar}`) || [])
         ],
         openGraph: {
             title,
