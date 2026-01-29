@@ -45,7 +45,7 @@ export async function generateMetadata({ params }: SiloPageProps): Promise<Metad
     const aiContent = generateContentLayers(city, service);
 
     // Enhanced meta title with numbers and year for higher CTR
-    const title = `أفضل 15 شركة ${service.name_ar} في ${city.name_ar} | أسعار 2026 وضمان شامل - بروكر`;
+    const title = aiContent.metaTitle;
 
     // Enhanced description answering the user's question using AI generated snippet
     // We combine the AI short answer with the neighborhood info for maximum relevance
@@ -98,6 +98,9 @@ export default async function SiloPage({ params }: SiloPageProps) {
     }
 
     const allAdvertisers = [...premium, ...standard];
+
+    // Generate AI content for H1
+    const aiContent = generateContentLayers(city, service);
 
     // Breadcrumb items
     const breadcrumbs = [
@@ -153,7 +156,7 @@ export default async function SiloPage({ params }: SiloPageProps) {
 
                                 {/* Main Title */}
                                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-                                    أفضل 15 شركة {service.name_ar} في {city.name_ar}
+                                    {aiContent.h1}
                                 </h1>
                                 <p className="text-lg text-emerald-100 max-w-xl">
                                     قارن بين أفضل شركات {service.name_ar} المعتمدة في {city.name_ar}.

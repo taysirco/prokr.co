@@ -9,6 +9,8 @@ export interface ContentLayers {
     customSolutions: string[];
     successStories: { title: string; result: string }[];
     shortAnswer: string; // For Google Featured Snippets
+    metaTitle: string;
+    h1: string;
 }
 
 // Helper to pick random item from array based on seed (city+service)
@@ -145,6 +147,79 @@ export function generateContentLayers(city: City, service: Service): ContentLaye
         localChallenges: challenges,
         customSolutions: solutions,
         successStories: generateSuccessStories(city, service, context),
-        shortAnswer: generateShortAnswer(city, service, Math.round(baseMin))
+        shortAnswer: generateShortAnswer(city, service, Math.round(baseMin)),
+        metaTitle: generateMetaTitle(city, service, Math.round(baseMin)),
+        h1: generateH1(city, service)
+    };
+}
+
+// ==========================================
+// 6. DYNAMIC TITLES & H1s
+// ==========================================
+
+export function generateMetaTitle(city: City, service: Service, minPrice: number): string {
+    const templates = [
+        `أفضل ${service.name_ar} في ${city.name_ar} | خصم 30% وضمان شامل`,
+        `أرخص شركة ${service.name_ar} في ${city.name_ar} (تبدأ من ${minPrice} ريال)`,
+        `خدمات ${service.name_ar} في ${city.name_ar} - مقارنة أسعار 2026`,
+        `دليل شركات ${service.name_ar} في ${city.name_ar}: الأفضل والأقرب لك`,
+        `هل تبحث عن ${service.name_ar}؟ أفضل 15 شركة في ${city.name_ar} هنا`,
+        `${service.name_ar} بأسعار منافسة في ${city.name_ar} - احجز الآن`,
+    ];
+    return getStableRandomItem(templates, `${city.slug}-${service.slug}-title`);
+}
+
+export function generateH1(city: City, service: Service): string {
+    const templates = [
+        `دليل خدمات ${service.name_ar} في ${city.name_ar} لعام 2026`,
+        `أفضل شركات ${service.name_ar} المعتمدة في ${city.name_ar}`,
+        `كل ما تحتاج معرفته عن ${service.name_ar} في ${city.name_ar}`,
+        `خدمات ${service.name_ar} في ${city.name_ar} (أسعار وتفاصيل)`,
+        `قارن أفضل مقدمي خدمة ${service.name_ar} في ${city.name_ar}`,
+    ];
+    return getStableRandomItem(templates, `${city.slug}-${service.slug}-h1`);
+}
+
+// For Page: /[city]
+export function generateCityMeta(city: City): { title: string; h1: string } {
+    const titles = [
+        `خدمات منزلية في ${city.name_ar} | تنظيف، نقل، مكافحة حشرات وأكثر`,
+        `دليل الخدمات الشامل في ${city.name_ar} - بروكر السعودية`,
+        `أفضل شركات الخدمات في ${city.name_ar} (تحديث 2026)`,
+        `ابحث عن أي خدمة في ${city.name_ar} - سباكة، كهرباء، تنظيف`,
+    ];
+
+    const h1s = [
+        `بوابتك لأفضل الخدمات المنزلية في ${city.name_ar}`,
+        `دليل شركات ${city.name_ar} الموثوقة`,
+        `جميع الخدمات التي تحتاجها في ${city.name_ar} في مكان واحد`,
+        `خدمات ${city.name_ar} - جودة، سرعة، وضمان`,
+    ];
+
+    return {
+        title: getStableRandomItem(titles, `${city.slug}-city-title`),
+        h1: getStableRandomItem(h1s, `${city.slug}-city-h1`),
+    };
+}
+
+// For Page: /services-page/[service]
+export function generateServiceCategoryMeta(service: Service): { title: string; h1: string } {
+    const titles = [
+        `أفضل شركات ${service.name_ar} في السعودية | تغطية شاملة لكافة المدن`,
+        `دليل ${service.name_ar} الشامل - الرياض، جدة، الدمام وكافة المناطق`,
+        `خدمات ${service.name_ar} - أسعار وتقييمات من عملاء حقيقيين`,
+        `ابحث عن شركة ${service.name_ar} في مدينتك - بروكر`,
+    ];
+
+    const h1s = [
+        `خدمات ${service.name_ar} في المملكة العربية السعودية`,
+        `الدليل الوطني الشامل لشركات ${service.name_ar}`,
+        `قارن أسعار ${service.name_ar} في جميع مدن المملكة`,
+        `اختر مدينتك لطلب خدمة ${service.name_ar}`,
+    ];
+
+    return {
+        title: getStableRandomItem(titles, `${service.slug}-cat-title`),
+        h1: getStableRandomItem(h1s, `${service.slug}-cat-h1`),
     };
 }

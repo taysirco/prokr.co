@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Home, ChevronLeft, MapPin, Truck, Sparkles, Bug, Droplet, Wrench } from 'lucide-react';
 import { getServiceBySlug, getServiceImage, CITIES, SERVICES, REGION_NAMES, getCitiesByRegion } from '@/lib/seed';
+import { generateServiceCategoryMeta } from '@/lib/ai-content-layers';
 import { BreadcrumbJsonLd, ServiceJsonLd, ItemListJsonLd, WebPageJsonLd } from '@/components/JsonLd';
 import Footer from '@/components/Footer';
 
@@ -29,7 +30,8 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
         return { title: 'صفحة غير موجودة' };
     }
 
-    const title = `${service.name_ar} في السعودية | بروكر`;
+    const aiContent = generateServiceCategoryMeta(service);
+    const title = aiContent.title;
     const description = `اكتشف أفضل شركات ${service.name_ar} في جميع مدن المملكة العربية السعودية. الرياض، جدة، الدمام والمزيد.`;
 
     return {
@@ -64,6 +66,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
 
     const citiesByRegion = getCitiesByRegion();
     const heroImage = getServiceImage(resolvedParams.service);
+    const aiContent = generateServiceCategoryMeta(service);
 
     // Breadcrumb items
     const breadcrumbs = [
@@ -119,7 +122,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                                 </nav>
 
                                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-                                    {service.name_ar} في السعودية
+                                    {aiContent.h1}
                                 </h1>
                                 <p className="text-lg text-emerald-100 max-w-xl">
                                     اكتشف أفضل شركات {service.name_ar} في جميع مدن المملكة.

@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { Home, ChevronLeft, MapPin, Truck, Sparkles, Bug, Droplet, Wrench, Building2, Navigation } from 'lucide-react';
 import { getCityBySlug, getServiceBySlug, getServiceImage, CITIES, SERVICES, CATEGORY_NAMES, getServicesByCategory } from '@/lib/seed';
 import { getSubRegionsByCity } from '@/lib/sub-regions';
+import { generateCityMeta } from '@/lib/ai-content-layers';
 import { BreadcrumbJsonLd, ItemListJsonLd, WebPageJsonLd } from '@/components/JsonLd';
 import Footer from '@/components/Footer';
 
@@ -30,7 +31,8 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
         return { title: 'صفحة غير موجودة' };
     }
 
-    const title = `جميع الخدمات في ${city.name_ar} | بروكر`;
+    const aiContent = generateCityMeta(city);
+    const title = aiContent.title;
     const description = `اكتشف أفضل شركات الخدمات في ${city.name_ar}. نقل عفش، تنظيف، مكافحة حشرات، كشف تسربات وأكثر.`;
 
     return {
@@ -75,6 +77,7 @@ export default async function CityPage({ params }: CityPageProps) {
 
     const servicesByCategory = getServicesByCategory();
     const subRegions = getSubRegionsByCity(resolvedParams.city);
+    const aiContent = generateCityMeta(city);
 
     // Breadcrumb items
     const breadcrumbs = [
@@ -128,7 +131,7 @@ export default async function CityPage({ params }: CityPageProps) {
                             </div>
                             <div>
                                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
-                                    خدمات {city.name_ar}
+                                    {aiContent.h1}
                                 </h1>
                                 <p className="text-emerald-100 mt-1">{city.name_en}</p>
                             </div>
