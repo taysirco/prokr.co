@@ -92,18 +92,25 @@ export interface SeoContent {
 export interface LocalBusinessSchema {
   '@context': 'https://schema.org';
   '@type': 'LocalBusiness';
+  '@id'?: string;
   name: string;
   telephone: string;
+  url?: string;
+  description?: string;
   image: string;
+  priceRange?: string;
   address: {
     '@type': 'PostalAddress';
     addressCountry: 'SA';
     addressRegion: string;
+    addressLocality?: string;
   };
   aggregateRating?: {
     '@type': 'AggregateRating';
     ratingValue: number;
     reviewCount: number;
+    bestRating?: number;
+    worstRating?: number;
   };
 }
 
@@ -119,6 +126,93 @@ export interface ServiceSchema {
   provider: {
     '@type': 'Organization';
     name: string;
+  }[];
+}
+
+// Organization Schema for company pages
+export interface OrganizationSchema {
+  '@context': 'https://schema.org';
+  '@type': 'Organization';
+  '@id': string;
+  name: string;
+  url: string;
+  logo?: string;
+  description?: string;
+  telephone?: string;
+  areaServed?: {
+    '@type': 'Country' | 'City';
+    name: string;
+  }[];
+  hasOfferCatalog?: {
+    '@type': 'OfferCatalog';
+    name: string;
+    itemListElement: {
+      '@type': 'OfferCatalog';
+      name: string;
+    }[];
+  };
+  contactPoint?: {
+    '@type': 'ContactPoint';
+    telephone: string;
+    contactType: string;
+    areaServed: string;
+    availableLanguage: string;
+  };
+}
+
+// ItemList Schema for listing pages
+export interface ItemListSchema {
+  '@context': 'https://schema.org';
+  '@type': 'ItemList';
+  name: string;
+  description?: string;
+  numberOfItems: number;
+  itemListElement: {
+    '@type': 'ListItem';
+    position: number;
+    name: string;
+    url: string;
+  }[];
+}
+
+// WebPage Schema for category pages
+export interface WebPageSchema {
+  '@context': 'https://schema.org';
+  '@type': 'WebPage';
+  '@id': string;
+  name: string;
+  description: string;
+  url: string;
+  isPartOf: {
+    '@type': 'WebSite';
+    '@id': string;
+    name: string;
+    url: string;
+  };
+  breadcrumb?: {
+    '@type': 'BreadcrumbList';
+    itemListElement: {
+      '@type': 'ListItem';
+      position: number;
+      name: string;
+      item: string;
+    }[];
+  };
+}
+
+// ServiceCatalog Schema for services listing
+export interface ServiceCatalogSchema {
+  '@context': 'https://schema.org';
+  '@type': 'OfferCatalog';
+  name: string;
+  description: string;
+  itemListElement: {
+    '@type': 'Offer';
+    itemOffered: {
+      '@type': 'Service';
+      name: string;
+      url: string;
+    };
   }[];
 }
 

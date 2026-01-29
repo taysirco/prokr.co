@@ -1,5 +1,19 @@
-import type { Advertiser, City, Service, LocalBusinessSchema, ServiceSchema } from '@/types';
+import type {
+    Advertiser,
+    City,
+    Service,
+    LocalBusinessSchema,
+    ServiceSchema,
+    OrganizationSchema,
+    ItemListSchema,
+    WebPageSchema,
+    ServiceCatalogSchema
+} from '@/types';
 
+// ============================================
+// ENHANCED LOCAL BUSINESS SCHEMA
+// For individual company pages
+// ============================================
 interface LocalBusinessJsonLdProps {
     advertiser: Advertiser;
     city?: City;
@@ -11,22 +25,170 @@ export function LocalBusinessJsonLd({ advertiser, city }: LocalBusinessJsonLdPro
         ? reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.length
         : undefined;
 
-    const schema: LocalBusinessSchema = {
+    const schema: LocalBusinessSchema & Record<string, unknown> = {
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
+        '@id': `https://prokr.co/company/${advertiser.short_code}#business`,
         name: advertiser.business_name,
         telephone: advertiser.phone_number,
+        url: `https://prokr.co/company/${advertiser.short_code}`,
+        description: advertiser.description,
         image: advertiser.logo_url || '',
+        priceRange: 'SAR',
         address: {
             '@type': 'PostalAddress',
             addressCountry: 'SA',
             addressRegion: city?.name_ar || 'المملكة العربية السعودية',
+            addressLocality: city?.name_ar,
+        },
+        openingHoursSpecification: {
+            '@type': 'OpeningHoursSpecification',
+            dayOfWeek: ['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday'],
+            opens: '09:00',
+            closes: '18:00',
+        },
+        contactPoint: {
+            '@type': 'ContactPoint',
+            telephone: advertiser.phone_number,
+            contactType: 'customer service',
+            areaServed: 'SA',
+            availableLanguage: 'Arabic',
         },
         ...(avgRating && {
             aggregateRating: {
                 '@type': 'AggregateRating',
                 ratingValue: Math.round(avgRating * 10) / 10,
                 reviewCount: reviews.length,
+                bestRating: 5,
+                worstRating: 1,
+            },
+        }),
+        ...(reviews.length > 0 && {
+            review: reviews.slice(0, 5).map(r => ({
+                '@type': 'Review',
+                author: {
+                    '@type': 'Person',
+                    name: r.user,
+                },
+                reviewRating: {
+                    '@type': 'Rating',
+                    ratingValue: r.rating,
+                    bestRating: 5,
+                    worstRating: 1,
+                },
+                reviewBody: r.comment,
+                datePublished: new Date(r.date).toISOString().split('T')[0],
+            })),
+        }),
+        ...(advertiser.gallery.length > 0 && {
+            photo: advertiser.gallery.map(img => ({
+                '@type': 'ImageObject',
+                url: img,
+            })),
+        }),
+    };
+
+    return (
+        <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+    );
+}
+
+// ============================================
+// ORGANIZATION SCHEMA
+// Additional schema for company pages
+// ============================================
+interface OrganizationJsonLdProps {
+    advertiser: Advertiser;
+    services?: Service[];
+    cities?: City[];
+}
+
+export function OrganizationJsonLd({ advertiser, services, cities }: OrganizationJsonLdProps) {
+    const schema: OrganizationSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        '@id': `https://prokr.co/company/${advertiser.short_code}#organization`,
+        name: advertiser.business_name,
+        url: `https://prokr.co/company/${advertiser.short_code}`,
+        logo: advertiser.logo_url || undefined,
+        description: advertiser.description,
+        telephone: advertiser.phone_number,
+        areaServed: cities?.map(c => ({
+            '@type': 'City' as const,
+            name: c.name_ar,
+        })),
+        hasOfferCatalog: services && services.length > 0 ? {
+            '@type': 'OfferCatalog',
+            name: `خدمات ${advertiser.business_name}`,
+            itemListElement: services.map(s => ({
+                '@type': 'OfferCatalog' as const,
+                name: s.name_ar,
+            })),
+        } : undefined,
+        contactPoint: {
+            '@type': 'ContactPoint',
+            telephone: advertiser.phone_number,
+            contactType: 'customer service',
+            areaServed: 'SA',
+            availableLanguage: 'Arabic',
+        },
+    };
+
+    return (
+        <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+    );
+}
+
+// ============================================
+// SERVICE SCHEMA
+// For service pages
+// ============================================
+interface ServiceJsonLdProps {
+    service: Service;
+    city?: City;
+    advertisers: Advertiser[];
+    national?: boolean;
+}
+
+export function ServiceJsonLd({ service, city, advertisers, national }: ServiceJsonLdProps) {
+    const schema: ServiceSchema & Record<string, unknown> = {
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        name: national
+            ? `${service.name_ar} في السعودية`
+            : `${service.name_ar} في ${city?.name_ar}`,
+        description: national
+            ? `أفضل شركات ${service.name_ar} في جميع مدن المملكة العربية السعودية.`
+            : `أفضل شركات ${service.name_ar} في ${city?.name_ar}. احصل على أفضل الخدمات بأسعار منافسة.`,
+        areaServed: {
+            '@type': 'City',
+            name: national ? 'المملكة العربية السعودية' : (city?.name_ar || ''),
+        },
+        provider: advertisers.slice(0, 10).map(ad => ({
+            '@type': 'Organization',
+            name: ad.business_name,
+            url: `https://prokr.co/company/${ad.short_code}`,
+        })),
+        serviceType: service.name_ar,
+        ...(city && {
+            availableChannel: {
+                '@type': 'ServiceChannel',
+                serviceUrl: `https://prokr.co/${city.slug}/${service.slug}`,
+                serviceLocation: {
+                    '@type': 'Place',
+                    name: city.name_ar,
+                    address: {
+                        '@type': 'PostalAddress',
+                        addressLocality: city.name_ar,
+                        addressCountry: 'SA',
+                    },
+                },
             },
         }),
     };
@@ -39,25 +201,35 @@ export function LocalBusinessJsonLd({ advertiser, city }: LocalBusinessJsonLdPro
     );
 }
 
-interface ServiceJsonLdProps {
-    service: Service;
-    city: City;
-    advertisers: Advertiser[];
+// ============================================
+// ITEM LIST SCHEMA
+// For listing pages (companies/services/cities)
+// ============================================
+interface ItemListJsonLdProps {
+    type: 'companies' | 'services' | 'cities';
+    items: { name: string; url: string }[];
+    listName?: string;
+    description?: string;
 }
 
-export function ServiceJsonLd({ service, city, advertisers }: ServiceJsonLdProps) {
-    const schema: ServiceSchema = {
+export function ItemListJsonLd({ type, items, listName, description }: ItemListJsonLdProps) {
+    const defaultNames = {
+        companies: 'قائمة الشركات',
+        services: 'قائمة الخدمات',
+        cities: 'قائمة المدن',
+    };
+
+    const schema: ItemListSchema = {
         '@context': 'https://schema.org',
-        '@type': 'Service',
-        name: `${service.name_ar} في ${city.name_ar}`,
-        description: `أفضل شركات ${service.name_ar} في ${city.name_ar}. احصل على أفضل الخدمات بأسعار منافسة.`,
-        areaServed: {
-            '@type': 'City',
-            name: city.name_ar,
-        },
-        provider: advertisers.slice(0, 10).map(ad => ({
-            '@type': 'Organization',
-            name: ad.business_name,
+        '@type': 'ItemList',
+        name: listName || defaultNames[type],
+        description,
+        numberOfItems: items.length,
+        itemListElement: items.map((item, index) => ({
+            '@type': 'ListItem',
+            position: index + 1,
+            name: item.name,
+            url: item.url,
         })),
     };
 
@@ -69,6 +241,88 @@ export function ServiceJsonLd({ service, city, advertisers }: ServiceJsonLdProps
     );
 }
 
+// ============================================
+// WEB PAGE SCHEMA
+// For category/section pages
+// ============================================
+interface WebPageJsonLdProps {
+    title: string;
+    description: string;
+    url: string;
+    breadcrumbs?: { name: string; url: string }[];
+}
+
+export function WebPageJsonLd({ title, description, url, breadcrumbs }: WebPageJsonLdProps) {
+    const schema: WebPageSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        '@id': `${url}#webpage`,
+        name: title,
+        description,
+        url,
+        isPartOf: {
+            '@type': 'WebSite',
+            '@id': 'https://prokr.co#website',
+            name: 'بروكر',
+            url: 'https://prokr.co',
+        },
+        ...(breadcrumbs && {
+            breadcrumb: {
+                '@type': 'BreadcrumbList',
+                itemListElement: breadcrumbs.map((item, index) => ({
+                    '@type': 'ListItem',
+                    position: index + 1,
+                    name: item.name,
+                    item: item.url,
+                })),
+            },
+        }),
+    };
+
+    return (
+        <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+    );
+}
+
+// ============================================
+// SERVICE CATALOG SCHEMA
+// For main services listing page
+// ============================================
+interface ServiceCatalogJsonLdProps {
+    services: Service[];
+    baseUrl?: string;
+}
+
+export function ServiceCatalogJsonLd({ services, baseUrl = 'https://prokr.co' }: ServiceCatalogJsonLdProps) {
+    const schema: ServiceCatalogSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'OfferCatalog',
+        name: 'دليل خدمات بروكر',
+        description: 'جميع الخدمات المتوفرة في المملكة العربية السعودية',
+        itemListElement: services.map(s => ({
+            '@type': 'Offer',
+            itemOffered: {
+                '@type': 'Service',
+                name: s.name_ar,
+                url: `${baseUrl}/${s.slug}`,
+            },
+        })),
+    };
+
+    return (
+        <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+    );
+}
+
+// ============================================
+// BREADCRUMB SCHEMA
+// ============================================
 interface BreadcrumbJsonLdProps {
     items: { name: string; url: string }[];
 }
@@ -93,6 +347,9 @@ export function BreadcrumbJsonLd({ items }: BreadcrumbJsonLdProps) {
     );
 }
 
+// ============================================
+// WEBSITE SCHEMA
+// ============================================
 interface WebsiteJsonLdProps {
     url: string;
     name: string;
@@ -103,9 +360,16 @@ export function WebsiteJsonLd({ url, name, description }: WebsiteJsonLdProps) {
     const schema = {
         '@context': 'https://schema.org',
         '@type': 'WebSite',
+        '@id': `${url}#website`,
         url,
         name,
         description,
+        inLanguage: 'ar',
+        publisher: {
+            '@type': 'Organization',
+            name: 'بروكر',
+            url: 'https://prokr.co',
+        },
         potentialAction: {
             '@type': 'SearchAction',
             target: {
@@ -123,3 +387,4 @@ export function WebsiteJsonLd({ url, name, description }: WebsiteJsonLdProps) {
         />
     );
 }
+

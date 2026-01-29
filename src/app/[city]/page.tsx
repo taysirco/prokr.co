@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { Home, ChevronLeft, MapPin, Truck, Sparkles, Bug, Droplet, Wrench, Building2, Navigation } from 'lucide-react';
 import { getCityBySlug, getServiceBySlug, getServiceImage, CITIES, SERVICES, CATEGORY_NAMES, getServicesByCategory } from '@/lib/seed';
 import { getSubRegionsByCity } from '@/lib/sub-regions';
-import { BreadcrumbJsonLd } from '@/components/JsonLd';
+import { BreadcrumbJsonLd, ItemListJsonLd, WebPageJsonLd } from '@/components/JsonLd';
 import Footer from '@/components/Footer';
 
 interface CityPageProps {
@@ -84,7 +84,23 @@ export default async function CityPage({ params }: CityPageProps) {
 
     return (
         <>
+            {/* JSON-LD Schema - City Services List */}
             <BreadcrumbJsonLd items={breadcrumbs} />
+            <WebPageJsonLd
+                title={`خدمات ${city.name_ar}`}
+                description={`جميع الخدمات المتاحة في ${city.name_ar} - نقل عفش، تنظيف، مكافحة حشرات، كشف تسربات والمزيد`}
+                url={`https://prokr.co/${city.slug}`}
+                breadcrumbs={breadcrumbs}
+            />
+            <ItemListJsonLd
+                type="services"
+                listName={`خدمات ${city.name_ar}`}
+                description={`قائمة الخدمات المتاحة في ${city.name_ar}`}
+                items={SERVICES.map(s => ({
+                    name: s.name_ar,
+                    url: `https://prokr.co/${city.slug}/${s.slug}`
+                }))}
+            />
 
             <main className="min-h-screen bg-gray-50">
                 {/* Hero Section */}

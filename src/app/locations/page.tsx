@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Home, ChevronLeft, MapPin } from 'lucide-react';
 import { CITIES, REGION_NAMES, getCitiesByRegion } from '@/lib/seed';
-import { BreadcrumbJsonLd } from '@/components/JsonLd';
+import { BreadcrumbJsonLd, ItemListJsonLd, WebPageJsonLd } from '@/components/JsonLd';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
@@ -31,7 +31,23 @@ export default function LocationsPage() {
 
     return (
         <>
+            {/* JSON-LD Schema - Cities/Locations List */}
             <BreadcrumbJsonLd items={breadcrumbs} />
+            <WebPageJsonLd
+                title="مناطق الخدمة"
+                description={`تصفح جميع المدن والمناطق التي تغطيها خدمات بروكر - ${CITIES.length} مدينة في المملكة`}
+                url="https://prokr.co/locations"
+                breadcrumbs={breadcrumbs}
+            />
+            <ItemListJsonLd
+                type="cities"
+                listName="مدن ومناطق الخدمة"
+                description="قائمة جميع المدن التي تغطيها خدمات بروكر في السعودية"
+                items={CITIES.map(c => ({
+                    name: c.name_ar,
+                    url: `https://prokr.co/${c.slug}`
+                }))}
+            />
 
             <main className="min-h-screen bg-gray-50">
                 {/* Hero Section */}

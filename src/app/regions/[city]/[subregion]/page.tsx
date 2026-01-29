@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { Home, ChevronLeft, MapPin, Truck, Sparkles, Bug, Droplet, Wrench, Building2 } from 'lucide-react';
 import { getCityBySlug, getServiceBySlug, getServiceImage, CATEGORY_NAMES } from '@/lib/seed';
 import { getSubRegion, getSubRegionsByCity, SUB_REGIONS } from '@/lib/sub-regions';
-import { BreadcrumbJsonLd } from '@/components/JsonLd';
+import { BreadcrumbJsonLd, ItemListJsonLd, WebPageJsonLd } from '@/components/JsonLd';
 import Footer from '@/components/Footer';
 
 interface SubRegionPageProps {
@@ -95,7 +95,23 @@ export default async function SubRegionPage({ params }: SubRegionPageProps) {
 
     return (
         <>
+            {/* JSON-LD Schema - Subregion Services List */}
             <BreadcrumbJsonLd items={breadcrumbs} />
+            <WebPageJsonLd
+                title={`خدمات ${subRegion.name_ar}`}
+                description={`خدمات ${subRegion.name_ar} في ${city.name_ar} - ${availableServices.length} خدمة متوفرة`}
+                url={`https://prokr.co/regions/${city.slug}/${subRegion.slug}`}
+                breadcrumbs={breadcrumbs}
+            />
+            <ItemListJsonLd
+                type="services"
+                listName={`خدمات ${subRegion.name_ar}`}
+                description={`قائمة الخدمات المتوفرة في ${subRegion.name_ar} - ${city.name_ar}`}
+                items={availableServices.filter(Boolean).map(service => ({
+                    name: service!.name_ar,
+                    url: `https://prokr.co/${city.slug}/${service!.slug}`
+                }))}
+            />
 
             <main className="min-h-screen bg-gray-50">
                 {/* Hero */}

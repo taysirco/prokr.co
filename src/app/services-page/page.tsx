@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Home, ChevronLeft, Truck, Sparkles, Bug, Droplet, Wrench, Building2 } from 'lucide-react';
 import { SERVICES, CATEGORY_NAMES, getServicesByCategory, getServiceImage } from '@/lib/seed';
-import { BreadcrumbJsonLd } from '@/components/JsonLd';
+import { BreadcrumbJsonLd, ServiceCatalogJsonLd, WebPageJsonLd } from '@/components/JsonLd';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
@@ -41,7 +41,15 @@ export default function ServicesPage() {
 
     return (
         <>
+            {/* JSON-LD Schema - All Services Catalog */}
             <BreadcrumbJsonLd items={breadcrumbs} />
+            <WebPageJsonLd
+                title="جميع الخدمات"
+                description="دليل شامل لجميع خدمات بروكر في المملكة العربية السعودية"
+                url="https://prokr.co/services"
+                breadcrumbs={breadcrumbs}
+            />
+            <ServiceCatalogJsonLd services={SERVICES} />
 
             <main className="min-h-screen bg-gray-50">
                 {/* Hero Section */}

@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { Home, ChevronLeft, Star, Phone, MessageCircle, BadgeCheck, MapPin, Clock, Shield } from 'lucide-react';
 import { getCityBySlug, getServiceBySlug, getUniquePageImages, CITIES, SERVICES } from '@/lib/seed';
 import { getAdvertisersBySilo } from '@/lib/db-actions';
-import { ServiceJsonLd, BreadcrumbJsonLd } from '@/components/JsonLd';
+import { ServiceJsonLd, BreadcrumbJsonLd, ItemListJsonLd } from '@/components/JsonLd';
 import { SeoContentSection, FaqJsonLd, ServiceOfferJsonLd, generateSeoContent } from '@/lib/seo-content';
 import { getCityContext } from '@/lib/city-context';
 import Footer from '@/components/Footer';
@@ -102,9 +102,18 @@ export default async function SiloPage({ params }: SiloPageProps) {
 
     return (
         <>
-            {/* JSON-LD Schemas */}
+            {/* JSON-LD Schemas - Companies Links Only (full data on company page) */}
             <ServiceJsonLd service={service} city={city} advertisers={allAdvertisers} />
             <BreadcrumbJsonLd items={breadcrumbs} />
+            <ItemListJsonLd
+                type="companies"
+                listName={`شركات ${service.name_ar} في ${city.name_ar}`}
+                description={`قائمة أفضل شركات ${service.name_ar} المعتمدة في ${city.name_ar}`}
+                items={allAdvertisers.map(ad => ({
+                    name: ad.business_name,
+                    url: `https://prokr.co/company/${ad.short_code}`
+                }))}
+            />
             <FaqJsonLd city={city} service={service} />
             <ServiceOfferJsonLd city={city} service={service} />
 

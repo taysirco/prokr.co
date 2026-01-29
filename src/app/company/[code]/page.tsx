@@ -20,9 +20,9 @@ import {
 } from 'lucide-react';
 import { getCityBySlug, getServiceBySlug, CITIES, SERVICES } from '@/lib/seed';
 import { getAdvertiserByCode } from '@/lib/db-actions';
-import { LocalBusinessJsonLd, BreadcrumbJsonLd } from '@/components/JsonLd';
+import { LocalBusinessJsonLd, BreadcrumbJsonLd, OrganizationJsonLd } from '@/components/JsonLd';
 import Footer from '@/components/Footer';
-import type { Advertiser, Review } from '@/types';
+import type { Advertiser, Review, City, Service } from '@/types';
 
 // Force dynamic rendering - no caching
 export const dynamic = 'force-dynamic';
@@ -76,6 +76,15 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
     const mainCity = getCityBySlug(advertiser.targeted_cities[0]);
     const mainService = getServiceBySlug(advertiser.targeted_services[0]);
 
+    // Get all targeted cities and services for schema
+    const targetedCities: City[] = advertiser.targeted_cities
+        .map(citySlug => getCityBySlug(citySlug))
+        .filter((city): city is City => city !== undefined);
+
+    const targetedServices: Service[] = advertiser.targeted_services
+        .map(serviceSlug => getServiceBySlug(serviceSlug))
+        .filter((service): service is Service => service !== undefined);
+
     // Get reviews (use empty array if not available)
     const reviews = advertiser.reviews || [];
 
@@ -98,8 +107,13 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
 
     return (
         <>
-            {/* JSON-LD Schema */}
+            {/* JSON-LD Schema - Company Full Data */}
             <LocalBusinessJsonLd advertiser={advertiser} city={mainCity || undefined} />
+            <OrganizationJsonLd
+                advertiser={advertiser}
+                services={targetedServices}
+                cities={targetedCities}
+            />
             <BreadcrumbJsonLd items={breadcrumbs} />
 
             <main className="min-h-screen bg-gray-50">

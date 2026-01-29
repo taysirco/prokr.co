@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Home, ChevronLeft, MapPin, Truck, Sparkles, Bug, Droplet, Wrench } from 'lucide-react';
 import { getServiceBySlug, getServiceImage, CITIES, SERVICES, REGION_NAMES, getCitiesByRegion } from '@/lib/seed';
-import { BreadcrumbJsonLd } from '@/components/JsonLd';
+import { BreadcrumbJsonLd, ServiceJsonLd, ItemListJsonLd, WebPageJsonLd } from '@/components/JsonLd';
 import Footer from '@/components/Footer';
 
 interface ServicePageProps {
@@ -73,7 +73,28 @@ export default async function ServicePage({ params }: ServicePageProps) {
 
     return (
         <>
+            {/* JSON-LD Schema - National Service with Cities List */}
             <BreadcrumbJsonLd items={breadcrumbs} />
+            <WebPageJsonLd
+                title={`${service.name_ar} في السعودية`}
+                description={`اكتشف أفضل شركات ${service.name_ar} في جميع مدن المملكة العربية السعودية`}
+                url={`https://prokr.co/${service.slug}`}
+                breadcrumbs={breadcrumbs}
+            />
+            <ServiceJsonLd
+                service={service}
+                advertisers={[]}
+                national={true}
+            />
+            <ItemListJsonLd
+                type="cities"
+                listName={`${service.name_ar} في مدن السعودية`}
+                description={`قائمة المدن التي تتوفر فيها خدمة ${service.name_ar}`}
+                items={CITIES.map(c => ({
+                    name: c.name_ar,
+                    url: `https://prokr.co/${c.slug}/${service.slug}`
+                }))}
+            />
 
             <main className="min-h-screen bg-gray-50">
                 {/* Hero Section with Image */}
