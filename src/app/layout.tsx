@@ -18,15 +18,22 @@ export const metadata: Metadata = {
   },
   description: "دليل شامل لأفضل شركات الخدمات في المملكة العربية السعودية. نقل عفش، تنظيف، مكافحة حشرات، صيانة وأكثر.",
   keywords: [
-    "دليل خدمات",
-    "السعودية",
+    "دليل خدمات السعودية",
+    "شركات خدمات منزلية",
+    "أفضل شركات نقل عفش",
+    "بروكر خدمات",
+    "خدمات منزلية الرياض جدة",
     "نقل عفش",
-    "تنظيف",
+    "تنظيف منازل",
     "مكافحة حشرات",
+    "كشف تسربات",
+    "عزل خزانات",
     "صيانة",
     "الرياض",
     "جدة",
     "الدمام",
+    "مكة",
+    "المدينة",
   ],
   authors: [{ name: "Prokr" }],
   creator: "Prokr",
@@ -39,6 +46,10 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://prokr.co"),
   alternates: {
     canonical: "/",
+    languages: {
+      'ar': '/',
+      'x-default': '/',
+    },
   },
   openGraph: {
     title: "بروكر - دليل الخدمات السعودي الشامل",
@@ -74,6 +85,10 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl" className={ibmPlexArabic.variable}>
       <head>
+        {/* Preconnect for Core Web Vitals */}
+        <link rel="preconnect" href="https://firebasestorage.googleapis.com" />
+        <link rel="preconnect" href="https://prokr-84ca8.firebasestorage.app" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         {/* Google Analytics 4 */}
         <script
           async

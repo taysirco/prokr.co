@@ -1,15 +1,45 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { Home, ChevronLeft } from 'lucide-react';
+import { BreadcrumbJsonLd, WebPageJsonLd } from '@/components/JsonLd';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-    title: 'الشروط والأحكام | بروكر',
-    description: 'الشروط والأحكام الخاصة باستخدام موقع بروكر - دليل الخدمات السعودي',
+    title: 'الشروط والأحكام | بروكر - دليل الخدمات السعودي',
+    description: 'الشروط والأحكام الخاصة باستخدام موقع بروكر. تعرف على حقوقك والتزاماتك عند استخدام منصة بروكر لخدمات النقل والتنظيف والصيانة.',
+    openGraph: {
+        title: 'الشروط والأحكام | بروكر',
+        description: 'الشروط والأحكام الخاصة باستخدام موقع بروكر',
+        locale: 'ar_SA',
+        type: 'website',
+        siteName: 'بروكر',
+        url: 'https://prokr.co/terms-of-service',
+    },
+    twitter: {
+        card: 'summary',
+        title: 'الشروط والأحكام | بروكر',
+        description: 'شروط وأحكام استخدام منصة بروكر',
+    },
+    alternates: {
+        canonical: 'https://prokr.co/terms-of-service',
+    },
 };
 
 export default function TermsOfServicePage() {
+    const breadcrumbs = [
+        { name: 'الرئيسية', url: 'https://prokr.co' },
+        { name: 'الشروط والأحكام', url: 'https://prokr.co/terms-of-service' },
+    ];
+
     return (
+        <>
+        <BreadcrumbJsonLd items={breadcrumbs} />
+        <WebPageJsonLd
+            title="الشروط والأحكام"
+            description="الشروط والأحكام الخاصة باستخدام بروكر"
+            url="https://prokr.co/terms-of-service"
+            breadcrumbs={breadcrumbs}
+        />
         <main className="min-h-screen bg-gray-50">
             {/* Hero */}
             <section className="bg-gradient-to-bl from-emerald-600 via-emerald-700 to-emerald-900 text-white py-16">
@@ -93,5 +123,6 @@ export default function TermsOfServicePage() {
 
             <Footer />
         </main>
+        </>
     );
 }

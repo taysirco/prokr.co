@@ -7,14 +7,36 @@ import { BreadcrumbJsonLd, ServiceCatalogJsonLd, WebPageJsonLd } from '@/compone
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-    title: 'جميع الخدمات | بروكر - دليل الخدمات السعودي',
-    description: 'تصفح جميع خدمات بروكر: نقل عفش، تنظيف، مكافحة حشرات، كشف تسربات، عزل، وأكثر في جميع مدن المملكة.',
-    keywords: ['خدمات السعودية', 'نقل عفش', 'تنظيف', 'مكافحة حشرات', 'كشف تسربات'],
+    title: 'جميع الخدمات المنزلية في السعودية | 51 خدمة - بروكر',
+    description: 'تصفح جميع خدمات بروكر: نقل عفش، تنظيف منازل، مكافحة حشرات، كشف تسربات، عزل خزانات، صرف صحي وأكثر. 51 خدمة في 24 مدينة سعودية مع شركات معتمدة.',
+    keywords: [
+        'خدمات منزلية السعودية',
+        'شركات خدمات',
+        'نقل عفش في السعودية',
+        'أفضل شركة نقل عفش',
+        'نقل عفش رخيص',
+        'تنظيف منازل',
+        'مكافحة حشرات',
+        'كشف تسربات المياه',
+        'عزل خزانات',
+        'صرف صحي',
+        'تنظيف كنب',
+        'تنظيف سجاد',
+        'رش مبيدات',
+        'أسعار نقل عفش',
+    ],
     openGraph: {
-        title: 'جميع الخدمات | بروكر',
-        description: 'تصفح جميع خدمات بروكر في المملكة العربية السعودية',
+        title: 'جميع الخدمات المنزلية في السعودية | بروكر',
+        description: '51 خدمة منزلية في 24 مدينة سعودية - شركات معتمدة وأسعار تنافسية',
         locale: 'ar_SA',
         type: 'website',
+        siteName: 'بروكر',
+        url: 'https://prokr.co/services',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'جميع الخدمات المنزلية في السعودية | بروكر',
+        description: '51 خدمة في 24 مدينة - شركات معتمدة',
     },
     alternates: {
         canonical: 'https://prokr.co/services',
@@ -106,9 +128,10 @@ export default function ServicesPage() {
                                         <div className="relative aspect-[4/3] bg-gray-100">
                                             <Image
                                                 src={getServiceImage(service.slug)}
-                                                alt={service.name_ar}
+                                                alt={`${service.name_ar} - أفضل شركات ${service.name_ar} في السعودية`}
                                                 fill
                                                 className="object-cover group-hover:scale-105 transition-transform duration-300"
+                                                sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
                                             />
                                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                                         </div>
@@ -123,6 +146,53 @@ export default function ServicesPage() {
                             </div>
                         </div>
                     ))}
+                </section>
+
+                {/* SEO Content Section */}
+                <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-gray-200">
+                    <article className="prose prose-lg max-w-none">
+                        <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                            دليل الخدمات المنزلية الشامل في السعودية
+                        </h2>
+                        <p className="text-gray-700 leading-relaxed mb-4">
+                            يقدم بروكر أكثر من {SERVICES.length} خدمة منزلية وتجارية تغطي 24 مدينة سعودية.
+                            تشمل خدماتنا نقل العفش بجميع أنواعه، تنظيف المنازل والفلل والشقق،
+                            مكافحة الحشرات ورش المبيدات، كشف تسربات المياه، عزل الخزانات والأسطح، وخدمات الصرف الصحي.
+                        </p>
+                        <p className="text-gray-700 leading-relaxed">
+                            جميع الشركات المدرجة في بروكر معتمدة ومرخصة، وتقدم ضماناً على الخدمات المقدمة.
+                            اختر الخدمة التي تحتاجها، ثم اختر مدينتك، وقارن بين الشركات المتاحة من حيث التقييمات والأسعار.
+                        </p>
+                    </article>
+
+                    {/* Services FAQ */}
+                    <div className="mt-8 space-y-4 not-prose" itemScope itemType="https://schema.org/FAQPage">
+                        <h3 className="text-xl font-bold text-gray-900 mb-4">أسئلة شائعة عن الخدمات</h3>
+                        <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
+                            <h4 className="font-bold text-gray-800 mb-2" itemProp="name">كم عدد الخدمات المتوفرة في بروكر؟</h4>
+                            <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                                <p className="text-gray-600" itemProp="text">يوفر بروكر أكثر من {SERVICES.length} خدمة منزلية وتجارية تشمل نقل العفش، التنظيف بجميع أنواعه، مكافحة الحشرات، كشف تسربات المياه، عزل الخزانات والأسطح، وخدمات الصرف الصحي.</p>
+                            </div>
+                        </div>
+                        <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
+                            <h4 className="font-bold text-gray-800 mb-2" itemProp="name">كيف أجد شركة لخدمة معينة؟</h4>
+                            <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                                <p className="text-gray-600" itemProp="text">اختر الخدمة المطلوبة من القائمة أعلاه، ثم حدد مدينتك، وستظهر لك جميع الشركات المعتمدة التي تقدم هذه الخدمة في منطقتك مع التقييمات والأسعار.</p>
+                            </div>
+                        </div>
+                        <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
+                            <h4 className="font-bold text-gray-800 mb-2" itemProp="name">هل جميع الخدمات متوفرة في كل المدن؟</h4>
+                            <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                                <p className="text-gray-600" itemProp="text">نعم، جميع الخدمات الأساسية متوفرة في كل المدن الـ 24 التي يغطيها بروكر. بعض الخدمات المتخصصة قد تكون متاحة في المدن الكبرى فقط مثل الرياض وجدة والدمام.</p>
+                            </div>
+                        </div>
+                        <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
+                            <h4 className="font-bold text-gray-800 mb-2" itemProp="name">هل يمكنني مقارنة الأسعار بين الشركات؟</h4>
+                            <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                                <p className="text-gray-600" itemProp="text">نعم، يتيح بروكر مقارنة الأسعار والتقييمات بين الشركات المختلفة. كل شركة تعرض أسعارها التقريبية وتقييمات العملاء السابقين لمساعدتك في اتخاذ القرار الأفضل.</p>
+                            </div>
+                        </div>
+                    </div>
                 </section>
 
                 <Footer />

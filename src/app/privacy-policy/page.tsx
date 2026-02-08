@@ -1,15 +1,45 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { Home, ChevronLeft } from 'lucide-react';
+import { BreadcrumbJsonLd, WebPageJsonLd } from '@/components/JsonLd';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-    title: 'سياسة الخصوصية | بروكر',
-    description: 'سياسة الخصوصية الخاصة بموقع بروكر - دليل الخدمات السعودي',
+    title: 'سياسة الخصوصية | بروكر - دليل الخدمات السعودي',
+    description: 'سياسة الخصوصية وحماية البيانات الخاصة بموقع بروكر. نلتزم بحماية بياناتك الشخصية وفقاً لأعلى معايير الأمان.',
+    openGraph: {
+        title: 'سياسة الخصوصية | بروكر',
+        description: 'سياسة الخصوصية وحماية البيانات الخاصة بموقع بروكر',
+        locale: 'ar_SA',
+        type: 'website',
+        siteName: 'بروكر',
+        url: 'https://prokr.co/privacy-policy',
+    },
+    twitter: {
+        card: 'summary',
+        title: 'سياسة الخصوصية | بروكر',
+        description: 'سياسة حماية البيانات الشخصية في بروكر',
+    },
+    alternates: {
+        canonical: 'https://prokr.co/privacy-policy',
+    },
 };
 
 export default function PrivacyPolicyPage() {
+    const breadcrumbs = [
+        { name: 'الرئيسية', url: 'https://prokr.co' },
+        { name: 'سياسة الخصوصية', url: 'https://prokr.co/privacy-policy' },
+    ];
+
     return (
+        <>
+        <BreadcrumbJsonLd items={breadcrumbs} />
+        <WebPageJsonLd
+            title="سياسة الخصوصية"
+            description="سياسة الخصوصية وحماية البيانات في بروكر"
+            url="https://prokr.co/privacy-policy"
+            breadcrumbs={breadcrumbs}
+        />
         <main className="min-h-screen bg-gray-50">
             {/* Hero */}
             <section className="bg-gradient-to-bl from-emerald-600 via-emerald-700 to-emerald-900 text-white py-16">
@@ -86,5 +116,6 @@ export default function PrivacyPolicyPage() {
 
             <Footer />
         </main>
+        </>
     );
 }

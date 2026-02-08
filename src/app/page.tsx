@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import {
   Truck,
   Sparkles,
@@ -14,21 +13,16 @@ import {
   MapPin,
   ChevronLeft,
   Search,
-  CheckCircle2,
-  Users,
   Building2,
   Award,
-  TrendingUp,
   Zap,
-  HeartHandshake,
   BadgeCheck,
   MessageCircle,
   ThumbsUp,
-  Target
 } from 'lucide-react';
-import { CITIES, SERVICES, getCitiesByRegion, getServicesByCategory } from '@/lib/seed';
+import { CITIES, SERVICES, getCitiesByRegion } from '@/lib/seed';
 import Footer from '@/components/Footer';
-import { WebsiteJsonLd } from '@/components/JsonLd';
+import { WebsiteJsonLd, ProkrOrganizationJsonLd, BreadcrumbJsonLd } from '@/components/JsonLd';
 
 // Service icons mapping
 const serviceIcons: Record<string, React.ReactNode> = {
@@ -55,7 +49,6 @@ const regionNames: Record<string, string> = {
 
 export default function HomePage() {
   const citiesByRegion = getCitiesByRegion();
-  const servicesByCategory = getServicesByCategory();
 
   // Featured services (most popular)
   const featuredServices = SERVICES.slice(0, 8);
@@ -72,6 +65,8 @@ export default function HomePage() {
         name="بروكر - دليل الخدمات السعودي"
         description="دليل شامل لأفضل شركات الخدمات في المملكة العربية السعودية"
       />
+      <ProkrOrganizationJsonLd />
+      <BreadcrumbJsonLd items={[{ name: 'الرئيسية', url: 'https://prokr.co' }]} />
 
       <main className="min-h-screen">
         {/* Hero Section - Premium Design */}
@@ -100,11 +95,11 @@ export default function HomePage() {
                 </div>
 
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                  اعثر على أفضل
+                  بروكر - أكبر دليل
                   <span className="block bg-gradient-to-l from-amber-300 to-amber-400 bg-clip-text text-transparent">
-                    شركات الخدمات
+                    خدمات منزلية
                   </span>
-                  <span className="block text-emerald-100">في مدينتك</span>
+                  <span className="block text-emerald-100">في المملكة العربية السعودية</span>
                 </h1>
 
                 <p className="text-xl text-emerald-100/90 mb-8 max-w-xl mx-auto lg:mx-0 lg:mr-0">
@@ -240,7 +235,7 @@ export default function HomePage() {
               خدماتنا المميزة
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              أكثر من 50 خدمة تغطي جميع احتياجاتك
+              أبرز الخدمات المتاحة في السعودية
             </h2>
             <p className="text-gray-500 max-w-2xl mx-auto">
               نوفر لك الوصول لأفضل مقدمي الخدمات في المملكة العربية السعودية بكل سهولة وأمان
@@ -298,7 +293,7 @@ export default function HomePage() {
                 كيف يعمل بروكر؟
               </span>
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-                ثلاث خطوات بسيطة
+                كيف تعمل منصة بروكر
               </h2>
               <p className="text-gray-500 max-w-2xl mx-auto">
                 اعثر على أفضل مقدم خدمة في دقائق معدودة
@@ -355,7 +350,7 @@ export default function HomePage() {
                 التغطية الجغرافية
               </span>
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-                نغطي جميع مناطق المملكة
+                المدن التي نغطيها في السعودية
               </h2>
               <p className="text-gray-500 max-w-2xl mx-auto">
                 24 مدينة سعودية في 5 مناطق رئيسية
@@ -406,7 +401,7 @@ export default function HomePage() {
                 آراء عملائنا
               </span>
               <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-                ماذا يقول عملاؤنا؟
+                لماذا يثق العملاء ببروكر؟
               </h2>
               <p className="text-emerald-200 max-w-2xl mx-auto">
                 آلاف العملاء وثقوا ببروكر للوصول لأفضل الخدمات
@@ -475,6 +470,46 @@ export default function HomePage() {
                     <p className="text-emerald-300 text-sm">الدمام</p>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Homepage FAQ */}
+        <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-3">الأسئلة الشائعة عن بروكر</h2>
+            <p className="text-gray-500">أجوبة على أكثر الأسئلة شيوعاً من عملائنا</p>
+          </div>
+          <div className="space-y-4" itemScope itemType="https://schema.org/FAQPage">
+            <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm" itemScope itemType="https://schema.org/Question">
+              <h3 className="font-bold text-gray-900 mb-2" itemProp="name">ما هو بروكر؟</h3>
+              <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                <p className="text-gray-600" itemProp="text">بروكر هو أكبر دليل إلكتروني للخدمات المنزلية في المملكة العربية السعودية. يربط بين أكثر من 500 شركة معتمدة والعملاء في 24 مدينة سعودية، ويوفر خدمات نقل العفش، التنظيف، مكافحة الحشرات، كشف التسربات والمزيد.</p>
+              </div>
+            </div>
+            <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm" itemScope itemType="https://schema.org/Question">
+              <h3 className="font-bold text-gray-900 mb-2" itemProp="name">هل استخدام بروكر مجاني؟</h3>
+              <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                <p className="text-gray-600" itemProp="text">نعم، استخدام بروكر مجاني تماماً للعملاء. يمكنك تصفح الشركات، مقارنة الأسعار، وقراءة التقييمات والتواصل مع الشركات مباشرة بدون أي رسوم.</p>
+              </div>
+            </div>
+            <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm" itemScope itemType="https://schema.org/Question">
+              <h3 className="font-bold text-gray-900 mb-2" itemProp="name">كيف أختار الشركة المناسبة؟</h3>
+              <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                <p className="text-gray-600" itemProp="text">اختر مدينتك والخدمة المطلوبة، ثم قارن بين الشركات المتاحة من حيث التقييمات والأسعار. ننصح بالتواصل مع 3 شركات على الأقل للحصول على أفضل عرض، والتأكد من وجود ضمان مكتوب.</p>
+              </div>
+            </div>
+            <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm" itemScope itemType="https://schema.org/Question">
+              <h3 className="font-bold text-gray-900 mb-2" itemProp="name">هل الشركات في بروكر معتمدة؟</h3>
+              <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                <p className="text-gray-600" itemProp="text">نعم، جميع الشركات المعروضة على بروكر تم التحقق من تراخيصها وجودة خدماتها. الشركات المميزة (Premium) حصلت على شارة التوثيق بعد اجتيازها معايير صارمة تشمل الترخيص والتأمين وتقييمات العملاء.</p>
+              </div>
+            </div>
+            <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm" itemScope itemType="https://schema.org/Question">
+              <h3 className="font-bold text-gray-900 mb-2" itemProp="name">ما المدن التي يغطيها بروكر؟</h3>
+              <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                <p className="text-gray-600" itemProp="text">يغطي بروكر 24 مدينة سعودية تشمل الرياض، جدة، الدمام، مكة، المدينة، الطائف، الخبر، الأحساء، تبوك، حائل، أبها، خميس مشيط، نجران، جازان، الباحة، القصيم، وغيرها. نتوسع باستمرار لتغطية مدن جديدة.</p>
               </div>
             </div>
           </div>

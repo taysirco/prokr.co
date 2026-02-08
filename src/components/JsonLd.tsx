@@ -9,6 +9,7 @@ import type {
     WebPageSchema,
     ServiceCatalogSchema
 } from '@/types';
+import { getServiceKeywordProfile, getCityKeyword } from '@/lib/keyword-strategy';
 
 // ============================================
 // ENHANCED LOCAL BUSINESS SCHEMA
@@ -162,10 +163,10 @@ export function ServiceJsonLd({ service, city, advertisers, national }: ServiceJ
         '@type': 'Service',
         name: national
             ? `${service.name_ar} في السعودية`
-            : `${service.name_ar} في ${city?.name_ar}`,
+            : `${service.name_ar} ${city ? getCityKeyword(city.name_ar, getServiceKeywordProfile(service.slug).cityPrefixPattern) : ''}`,
         description: national
             ? `أفضل شركات ${service.name_ar} في جميع مدن المملكة العربية السعودية.`
-            : `أفضل شركات ${service.name_ar} في ${city?.name_ar}. احصل على أفضل الخدمات بأسعار منافسة.`,
+            : `أفضل شركات ${service.name_ar} ${city ? getCityKeyword(city.name_ar, getServiceKeywordProfile(service.slug).cityPrefixPattern) : ''}. احصل على أفضل الخدمات بأسعار منافسة.`,
         areaServed: {
             '@type': 'City',
             name: national ? 'المملكة العربية السعودية' : (city?.name_ar || ''),
@@ -190,6 +191,175 @@ export function ServiceJsonLd({ service, city, advertisers, national }: ServiceJ
                     },
                 },
             },
+        }),
+    };
+
+    return (
+        <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+    );
+}
+
+// ============================================
+// SERVICE AREA SCHEMA WITH GEO COORDINATES
+// For city+service silo pages (Local SEO)
+// ============================================
+interface ServiceAreaJsonLdProps {
+    service: Service;
+    city: City;
+    coordinates: { lat: number; lng: number };
+    neighborhoods?: string[];
+}
+
+export function ServiceAreaJsonLd({ service, city, coordinates, neighborhoods }: ServiceAreaJsonLdProps) {
+    const kwProfile = getServiceKeywordProfile(service.slug);
+    const cityKw = getCityKeyword(city.name_ar, kwProfile.cityPrefixPattern);
+    const schema = {
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        '@id': `https://prokr.co/${city.slug}/${service.slug}#service`,
+        name: `${service.name_ar} ${cityKw}`,
+        serviceType: service.name_ar,
+        areaServed: {
+            '@type': 'City',
+            name: city.name_ar,
+            geo: {
+                '@type': 'GeoCoordinates',
+                latitude: coordinates.lat,
+                longitude: coordinates.lng,
+            },
+            containedInPlace: {
+                '@type': 'Country',
+                name: 'المملكة العربية السعودية',
+            },
+        },
+        provider: {
+            '@type': 'Organization',
+            name: 'بروكر',
+            url: 'https://prokr.co',
+        },
+        ...(neighborhoods && neighborhoods.length > 0 && {
+            spatialCoverage: neighborhoods.map(n => ({
+                '@type': 'Place',
+                name: `حي ${n}، ${city.name_ar}`,
+            })),
+        }),
+    };
+
+    return (
+        <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+    );
+}
+
+// ============================================
+// HOWTO SCHEMA
+// For service selection guidance on silo pages
+// ============================================
+interface HowToJsonLdProps {
+    service: Service;
+    city: City;
+}
+
+export function HowToJsonLd({ service, city }: HowToJsonLdProps) {
+    const kwProfile = getServiceKeywordProfile(service.slug);
+    const cityKw = getCityKeyword(city.name_ar, kwProfile.cityPrefixPattern);
+    const schema = {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: `كيف تختار أفضل شركة ${service.name_ar} ${cityKw}`,
+        description: `دليل خطوة بخطوة لاختيار شركة ${service.name_ar} موثوقة ${cityKw}`,
+        step: [
+            {
+                '@type': 'HowToStep',
+                position: 1,
+                name: 'حدد احتياجاتك بدقة',
+                text: `حدد نوع الخدمة المطلوبة وحجم العمل قبل التواصل مع شركات ${service.name_ar} ${cityKw}.`,
+            },
+            {
+                '@type': 'HowToStep',
+                position: 2,
+                name: 'قارن بين العروض',
+                text: `احصل على عروض أسعار من 3 شركات ${service.name_ar} على الأقل ${cityKw} وقارن بينها.`,
+            },
+            {
+                '@type': 'HowToStep',
+                position: 3,
+                name: 'تحقق من الترخيص',
+                text: 'تأكد من أن الشركة مرخصة ومعتمدة رسمياً من الجهات المختصة.',
+            },
+            {
+                '@type': 'HowToStep',
+                position: 4,
+                name: 'اقرأ تقييمات العملاء',
+                text: 'راجع تقييمات وتجارب العملاء السابقين للتأكد من جودة الخدمة.',
+            },
+            {
+                '@type': 'HowToStep',
+                position: 5,
+                name: 'احجز الخدمة',
+                text: `تواصل مع الشركة المختارة واتفق على الموعد والسعر النهائي لخدمة ${service.name_ar}.`,
+            },
+        ],
+    };
+
+    return (
+        <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+    );
+}
+
+// ============================================
+// SPEAKABLE WEB PAGE SCHEMA
+// For voice search and AI engine optimization
+// ============================================
+interface SpeakableWebPageJsonLdProps {
+    title: string;
+    description: string;
+    url: string;
+    speakableSelectors: string[];
+    dateModified?: string;
+    about?: { name: string; type: string };
+    mentions?: { name: string; type: string }[];
+}
+
+export function SpeakableWebPageJsonLd({ title, description, url, speakableSelectors, dateModified, about, mentions }: SpeakableWebPageJsonLdProps) {
+    const schema = {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        '@id': `${url}#webpage`,
+        name: title,
+        description,
+        url,
+        inLanguage: 'ar',
+        isPartOf: {
+            '@type': 'WebSite',
+            '@id': 'https://prokr.co#website',
+            name: 'بروكر',
+            url: 'https://prokr.co',
+        },
+        speakable: {
+            '@type': 'SpeakableSpecification',
+            cssSelector: speakableSelectors,
+        },
+        ...(dateModified && { dateModified }),
+        ...(about && {
+            about: {
+                '@type': about.type,
+                name: about.name,
+            },
+        }),
+        ...(mentions && mentions.length > 0 && {
+            mentions: mentions.map(m => ({
+                '@type': m.type,
+                name: m.name,
+            })),
         }),
     };
 
@@ -365,10 +535,31 @@ export function WebsiteJsonLd({ url, name, description }: WebsiteJsonLdProps) {
         name,
         description,
         inLanguage: 'ar',
+        about: {
+            '@type': 'Thing',
+            name: 'دليل الخدمات المنزلية',
+            description: 'دليل شامل لخدمات النقل والتنظيف ومكافحة الحشرات وكشف التسربات والعزل في المملكة العربية السعودية',
+        },
         publisher: {
             '@type': 'Organization',
             name: 'بروكر',
             url: 'https://prokr.co',
+            logo: {
+                '@type': 'ImageObject',
+                url: 'https://prokr.co/logo.png',
+            },
+            sameAs: [
+                'https://twitter.com/prokr_sa',
+                'https://www.instagram.com/prokr_sa',
+                'https://www.facebook.com/prokr.sa',
+            ],
+            contactPoint: {
+                '@type': 'ContactPoint',
+                telephone: '+966500000000',
+                contactType: 'customer service',
+                areaServed: 'SA',
+                availableLanguage: 'Arabic',
+            },
         },
         potentialAction: {
             '@type': 'SearchAction',
@@ -388,3 +579,151 @@ export function WebsiteJsonLd({ url, name, description }: WebsiteJsonLdProps) {
     );
 }
 
+// ============================================
+// PROKR ORGANIZATION SCHEMA (Homepage)
+// Brand-level schema for the website owner
+// ============================================
+export function ProkrOrganizationJsonLd() {
+    const schema = {
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        '@id': 'https://prokr.co/#organization',
+        name: 'بروكر',
+        alternateName: 'Prokr',
+        url: 'https://prokr.co',
+        logo: {
+            '@type': 'ImageObject',
+            url: 'https://prokr.co/logo.png',
+            width: 512,
+            height: 512,
+        },
+        description: 'أكبر دليل شامل لخدمات النقل والتنظيف ومكافحة الحشرات وكشف التسربات في المملكة العربية السعودية. يغطي 24 مدينة مع أكثر من 500 شركة معتمدة.',
+        foundingDate: '2024',
+        areaServed: {
+            '@type': 'Country',
+            name: 'المملكة العربية السعودية',
+            sameAs: 'https://en.wikipedia.org/wiki/Saudi_Arabia',
+        },
+        sameAs: [
+            'https://twitter.com/prokr_sa',
+            'https://www.instagram.com/prokr_sa',
+            'https://www.facebook.com/prokr.sa',
+        ],
+        contactPoint: {
+            '@type': 'ContactPoint',
+            telephone: '+966500000000',
+            contactType: 'customer service',
+            areaServed: 'SA',
+            availableLanguage: ['Arabic'],
+        },
+        knowsAbout: [
+            'نقل عفش',
+            'تنظيف منازل',
+            'مكافحة حشرات',
+            'كشف تسربات المياه',
+            'عزل خزانات',
+            'صرف صحي',
+        ],
+    };
+
+    return (
+        <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+    );
+}
+
+// ============================================
+// IMAGE OBJECT SCHEMA
+// For silo pages - main service images
+// ============================================
+interface ImageObjectJsonLdProps {
+    imageUrl: string;
+    service: Service;
+    city: City;
+}
+
+export function ImageObjectJsonLd({ imageUrl, service, city }: ImageObjectJsonLdProps) {
+    const kwProfile = getServiceKeywordProfile(service.slug);
+    const cityKw = getCityKeyword(city.name_ar, kwProfile.cityPrefixPattern);
+    const schema = {
+        '@context': 'https://schema.org',
+        '@type': 'ImageObject',
+        '@id': `https://prokr.co/${city.slug}/${service.slug}#primaryImage`,
+        url: imageUrl,
+        name: `${service.name_ar} ${cityKw}`,
+        description: `صورة توضيحية لخدمة ${service.name_ar} ${cityKw} - أفضل الشركات المعتمدة عبر بروكر`,
+        width: 1200,
+        height: 800,
+        contentLocation: {
+            '@type': 'Place',
+            name: `${city.name_ar}، المملكة العربية السعودية`,
+        },
+        creator: {
+            '@type': 'Organization',
+            name: 'بروكر',
+            url: 'https://prokr.co',
+        },
+    };
+
+    return (
+        <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+    );
+}
+
+// ============================================
+// AGGREGATE RATING SCHEMA
+// For silo pages (city+service) with multiple advertisers
+// ============================================
+interface AggregateRatingJsonLdProps {
+    service: Service;
+    city: City;
+    advertisers: Advertiser[];
+}
+
+export function AggregateRatingJsonLd({ service, city, advertisers }: AggregateRatingJsonLdProps) {
+    const allReviews = advertisers.flatMap(ad => ad.reviews || []);
+    if (allReviews.length === 0) return null;
+
+    const avgRating = allReviews.reduce((sum, r) => sum + r.rating, 0) / allReviews.length;
+    const kwProfile = getServiceKeywordProfile(service.slug);
+    const cityKw = getCityKeyword(city.name_ar, kwProfile.cityPrefixPattern);
+
+    const schema = {
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        '@id': `https://prokr.co/${city.slug}/${service.slug}#aggregateRating`,
+        name: `${service.name_ar} ${cityKw}`,
+        aggregateRating: {
+            '@type': 'AggregateRating',
+            ratingValue: Math.round(avgRating * 10) / 10,
+            reviewCount: allReviews.length,
+            bestRating: 5,
+            worstRating: 1,
+        },
+        ...(allReviews.length > 0 && {
+            review: allReviews.slice(0, 3).map(r => ({
+                '@type': 'Review',
+                author: { '@type': 'Person', name: r.user },
+                reviewRating: {
+                    '@type': 'Rating',
+                    ratingValue: r.rating,
+                    bestRating: 5,
+                },
+                reviewBody: r.comment,
+                datePublished: new Date(r.date).toISOString().split('T')[0],
+            })),
+        }),
+    };
+
+    return (
+        <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+    );
+}

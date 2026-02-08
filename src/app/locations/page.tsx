@@ -1,20 +1,39 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import Image from 'next/image';
 import { Home, ChevronLeft, MapPin } from 'lucide-react';
-import { CITIES, REGION_NAMES, getCitiesByRegion } from '@/lib/seed';
+import { CITIES, SERVICES, REGION_NAMES, getCitiesByRegion } from '@/lib/seed';
 import { BreadcrumbJsonLd, ItemListJsonLd, WebPageJsonLd } from '@/components/JsonLd';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-    title: 'مناطق الخدمة | بروكر - دليل الخدمات السعودي',
-    description: 'تصفح جميع المدن والمناطق التي تغطيها خدمات بروكر في المملكة العربية السعودية. 24 مدينة في 5 مناطق.',
-    keywords: ['مناطق الخدمة', 'مدن السعودية', 'الرياض', 'جدة', 'الدمام', 'مكة', 'المدينة'],
+    title: 'مناطق الخدمة في السعودية | 24 مدينة - بروكر',
+    description: 'تصفح جميع المدن والمناطق التي تغطيها خدمات بروكر في المملكة العربية السعودية. 24 مدينة في 5 مناطق تشمل الرياض، جدة، الدمام، مكة، المدينة وأكثر. شركات معتمدة في كل مدينة.',
+    keywords: [
+        'مناطق الخدمة السعودية',
+        'مدن بروكر',
+        'خدمات الرياض',
+        'خدمات جدة',
+        'خدمات الدمام',
+        'خدمات مكة',
+        'خدمات المدينة',
+        'شركات خدمات منزلية',
+        'دليل مدن السعودية',
+        'نقل عفش السعودية',
+        'تنظيف السعودية',
+        'مكافحة حشرات السعودية',
+    ],
     openGraph: {
-        title: 'مناطق الخدمة | بروكر',
-        description: 'تصفح جميع المدن والمناطق التي تغطيها خدمات بروكر',
+        title: 'مناطق الخدمة في السعودية | بروكر',
+        description: 'تصفح جميع المدن والمناطق التي تغطيها خدمات بروكر - 24 مدينة في المملكة',
         locale: 'ar_SA',
         type: 'website',
+        siteName: 'بروكر',
+        url: 'https://prokr.co/locations',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'مناطق الخدمة في السعودية | بروكر',
+        description: '24 مدينة سعودية مع شركات خدمات معتمدة',
     },
     alternates: {
         canonical: 'https://prokr.co/locations',
@@ -140,6 +159,53 @@ export default function LocationsPage() {
                             <div className="bg-white rounded-xl p-6 shadow-sm">
                                 <p className="text-3xl font-bold text-emerald-600">+50</p>
                                 <p className="text-gray-600">خدمة متوفرة</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* SEO Content Section */}
+                <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                    <article className="prose prose-lg max-w-none">
+                        <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                            تغطية بروكر الشاملة في المملكة العربية السعودية
+                        </h2>
+                        <p className="text-gray-700 leading-relaxed mb-4">
+                            يغطي بروكر {CITIES.length} مدينة سعودية موزعة على 5 مناطق رئيسية:
+                            المنطقة الوسطى (الرياض، الخرج، القصيم)، المنطقة الغربية (جدة، مكة، المدينة)، المنطقة الشرقية (الدمام، الخبر، الأحساء)،
+                            المنطقة الشمالية (حائل، تبوك) والمنطقة الجنوبية (أبها، جازان، نجران).
+                        </p>
+                        <p className="text-gray-700 leading-relaxed">
+                            في كل مدينة ستجد شركات معتمدة تقدم خدمات نقل العفش، تنظيف المنازل، مكافحة الحشرات، كشف تسربات المياه، عزل خزانات، وخدمات الصرف الصحي.
+                            جميع الشركات مرخصة وتقدم ضماناً على خدماتها مع أسعار تنافسية.
+                        </p>
+                    </article>
+
+                    {/* Locations FAQ */}
+                    <div className="mt-8 space-y-4 not-prose" itemScope itemType="https://schema.org/FAQPage">
+                        <h3 className="text-xl font-bold text-gray-900 mb-4">أسئلة شائعة عن مناطق الخدمة</h3>
+                        <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
+                            <h4 className="font-bold text-gray-800 mb-2" itemProp="name">كم مدينة يغطيها بروكر؟</h4>
+                            <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                                <p className="text-gray-600" itemProp="text">يغطي بروكر {CITIES.length} مدينة سعودية موزعة على 5 مناطق رئيسية تشمل المنطقة الوسطى والغربية والشرقية والشمالية والجنوبية.</p>
+                            </div>
+                        </div>
+                        <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
+                            <h4 className="font-bold text-gray-800 mb-2" itemProp="name">هل تغطون جميع أحياء المدينة؟</h4>
+                            <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                                <p className="text-gray-600" itemProp="text">نعم، الشركات المسجلة في بروكر تغطي جميع أحياء ومناطق كل مدينة. يمكنك اختيار المدينة ثم الخدمة المطلوبة للعثور على أقرب شركة لموقعك.</p>
+                            </div>
+                        </div>
+                        <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
+                            <h4 className="font-bold text-gray-800 mb-2" itemProp="name">ما الخدمات المتوفرة في كل مدينة؟</h4>
+                            <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                                <p className="text-gray-600" itemProp="text">يوفر بروكر أكثر من {SERVICES.length} خدمة في كل مدينة تشمل نقل العفش، التنظيف، مكافحة الحشرات، كشف تسربات المياه، عزل الخزانات والأسطح، وخدمات الصرف الصحي.</p>
+                            </div>
+                        </div>
+                        <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
+                            <h4 className="font-bold text-gray-800 mb-2" itemProp="name">هل الأسعار تختلف بين المدن؟</h4>
+                            <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                                <p className="text-gray-600" itemProp="text">نعم، تختلف الأسعار بين المدن حسب تكلفة المعيشة والطلب. الأسعار في الرياض وجدة أعلى بنسبة 10-20% مقارنة بالمدن الأصغر. يمكنك مقارنة الأسعار عبر بروكر.</p>
                             </div>
                         </div>
                     </div>

@@ -16,6 +16,8 @@ export interface Neighborhood {
 export interface CityContext {
     slug: string;
     name_ar: string;
+    // Geo coordinates for Local SEO Schema
+    coordinates: { lat: number; lng: number };
     // Environmental factors
     climate: ClimateType;
     challenges: string[];
@@ -50,6 +52,7 @@ export const CITY_CONTEXT: Record<string, CityContext> = {
     'riyadh': {
         slug: 'riyadh',
         name_ar: 'الرياض',
+        coordinates: { lat: 24.7136, lng: 46.6753 },
         climate: 'dry-hot',
         challenges: [
             'العواصف الرملية المتكررة (الغبرة) تتطلب تنظيفاً دورياً',
@@ -98,6 +101,7 @@ export const CITY_CONTEXT: Record<string, CityContext> = {
     'al-kharj': {
         slug: 'al-kharj',
         name_ar: 'الخرج',
+        coordinates: { lat: 24.1556, lng: 47.3126 },
         climate: 'dry-hot',
         challenges: [
             'منطقة زراعية تجذب الحشرات الموسمية',
@@ -129,6 +133,7 @@ export const CITY_CONTEXT: Record<string, CityContext> = {
     'qassim': {
         slug: 'qassim',
         name_ar: 'القصيم',
+        coordinates: { lat: 26.3260, lng: 43.9750 },
         climate: 'dry-hot',
         challenges: [
             'بُعد نسبي عن العاصمة',
@@ -154,6 +159,7 @@ export const CITY_CONTEXT: Record<string, CityContext> = {
     'buraidah': {
         slug: 'buraidah',
         name_ar: 'بريدة',
+        coordinates: { lat: 26.3292, lng: 43.9610 },
         climate: 'dry-hot',
         challenges: [
             'الرياح الباردة شتاءً تتطلب عزلاً جيداً',
@@ -184,6 +190,7 @@ export const CITY_CONTEXT: Record<string, CityContext> = {
     'onizah': {
         slug: 'onizah',
         name_ar: 'عنيزة',
+        coordinates: { lat: 26.0842, lng: 43.9932 },
         climate: 'dry-hot',
         challenges: [
             'مدينة صغيرة نسبياً',
@@ -210,6 +217,7 @@ export const CITY_CONTEXT: Record<string, CityContext> = {
     'jeddah': {
         slug: 'jeddah',
         name_ar: 'جدة',
+        coordinates: { lat: 21.4858, lng: 39.1925 },
         climate: 'humid-coastal',
         challenges: [
             'الرطوبة العالية تسبب صدأ المعادن وتلف الأثاث',
@@ -261,6 +269,7 @@ export const CITY_CONTEXT: Record<string, CityContext> = {
     'makkah': {
         slug: 'makkah',
         name_ar: 'مكة المكرمة',
+        coordinates: { lat: 21.3891, lng: 39.8579 },
         climate: 'dry-hot',
         challenges: [
             'الشوارع الضيقة في الأحياء القديمة',
@@ -300,6 +309,7 @@ export const CITY_CONTEXT: Record<string, CityContext> = {
     'madinah': {
         slug: 'madinah',
         name_ar: 'المدينة المنورة',
+        coordinates: { lat: 24.4539, lng: 39.6142 },
         climate: 'dry-hot',
         challenges: [
             'الازدحام في المواسم الدينية',
@@ -331,6 +341,7 @@ export const CITY_CONTEXT: Record<string, CityContext> = {
     'taif': {
         slug: 'taif',
         name_ar: 'الطائف',
+        coordinates: { lat: 21.2703, lng: 40.4158 },
         climate: 'mountain',
         challenges: [
             'الطرق الجبلية المتعرجة',
@@ -369,6 +380,7 @@ export const CITY_CONTEXT: Record<string, CityContext> = {
     'yanbu': {
         slug: 'yanbu',
         name_ar: 'ينبع',
+        coordinates: { lat: 24.0895, lng: 38.0618 },
         climate: 'humid-coastal',
         challenges: [
             'الرطوبة الساحلية العالية',
@@ -405,6 +417,7 @@ export const CITY_CONTEXT: Record<string, CityContext> = {
     'dammam': {
         slug: 'dammam',
         name_ar: 'الدمام',
+        coordinates: { lat: 26.4207, lng: 50.0888 },
         climate: 'humid-coastal',
         challenges: [
             'الرطوبة العالية من الخليج',
@@ -446,6 +459,7 @@ export const CITY_CONTEXT: Record<string, CityContext> = {
     'al-khobar': {
         slug: 'al-khobar',
         name_ar: 'الخبر',
+        coordinates: { lat: 26.2172, lng: 50.1971 },
         climate: 'humid-coastal',
         challenges: [
             'الرطوبة الساحلية',
@@ -481,6 +495,7 @@ export const CITY_CONTEXT: Record<string, CityContext> = {
     'dhahran': {
         slug: 'dhahran',
         name_ar: 'الظهران',
+        coordinates: { lat: 26.2361, lng: 50.1150 },
         climate: 'humid-coastal',
         challenges: [
             'منطقة أمنية (قرب أرامكو)',
@@ -510,6 +525,7 @@ export const CITY_CONTEXT: Record<string, CityContext> = {
     'jubail': {
         slug: 'jubail',
         name_ar: 'الجبيل',
+        coordinates: { lat: 27.0046, lng: 49.6225 },
         climate: 'humid-coastal',
         challenges: [
             'مدينة صناعية',
@@ -540,6 +556,7 @@ export const CITY_CONTEXT: Record<string, CityContext> = {
     'al-ahsa': {
         slug: 'al-ahsa',
         name_ar: 'الاحساء',
+        coordinates: { lat: 25.3648, lng: 49.5889 },
         climate: 'dry-hot',
         challenges: [
             'واحة زراعية كبيرة',
@@ -572,6 +589,7 @@ export const CITY_CONTEXT: Record<string, CityContext> = {
     'qatif': {
         slug: 'qatif',
         name_ar: 'القطيف',
+        coordinates: { lat: 26.5196, lng: 50.0115 },
         climate: 'humid-coastal',
         challenges: [
             'رطوبة ساحلية',
@@ -602,6 +620,7 @@ export const CITY_CONTEXT: Record<string, CityContext> = {
     'hafr-albatin': {
         slug: 'hafr-albatin',
         name_ar: 'حفر الباطن',
+        coordinates: { lat: 28.4328, lng: 45.9708 },
         climate: 'desert',
         challenges: [
             'قريبة من الحدود',
@@ -637,6 +656,7 @@ export const CITY_CONTEXT: Record<string, CityContext> = {
     'tabuk': {
         slug: 'tabuk',
         name_ar: 'تبوك',
+        coordinates: { lat: 28.3838, lng: 36.5550 },
         climate: 'desert',
         challenges: [
             'برودة شتوية شديدة',
@@ -671,6 +691,7 @@ export const CITY_CONTEXT: Record<string, CityContext> = {
     'hail': {
         slug: 'hail',
         name_ar: 'حائل',
+        coordinates: { lat: 27.5114, lng: 41.7208 },
         climate: 'desert',
         challenges: [
             'برودة شتوية قارسة',
@@ -705,6 +726,7 @@ export const CITY_CONTEXT: Record<string, CityContext> = {
     'abha': {
         slug: 'abha',
         name_ar: 'أبها',
+        coordinates: { lat: 18.2164, lng: 42.5053 },
         climate: 'mountain',
         challenges: [
             'طرق جبلية صعبة',
@@ -748,6 +770,7 @@ export const CITY_CONTEXT: Record<string, CityContext> = {
     'khamis-mushait': {
         slug: 'khamis-mushait',
         name_ar: 'خميس مشيط',
+        coordinates: { lat: 18.3066, lng: 42.7283 },
         climate: 'mountain',
         challenges: [
             'مناخ جبلي بارد',
@@ -777,6 +800,7 @@ export const CITY_CONTEXT: Record<string, CityContext> = {
     'najran': {
         slug: 'najran',
         name_ar: 'نجران',
+        coordinates: { lat: 17.4933, lng: 44.1277 },
         climate: 'dry-hot',
         challenges: [
             'منطقة حدودية',
@@ -801,6 +825,7 @@ export const CITY_CONTEXT: Record<string, CityContext> = {
     'jazan': {
         slug: 'jazan',
         name_ar: 'جازان',
+        coordinates: { lat: 16.8892, lng: 42.5511 },
         climate: 'humid-coastal',
         challenges: [
             'رطوبة ساحلية عالية جداً',
@@ -836,6 +861,7 @@ export const CITY_CONTEXT: Record<string, CityContext> = {
     'al-baha': {
         slug: 'al-baha',
         name_ar: 'الباحة',
+        coordinates: { lat: 20.0000, lng: 41.4667 },
         climate: 'mountain',
         challenges: [
             'طرق جبلية ضيقة',

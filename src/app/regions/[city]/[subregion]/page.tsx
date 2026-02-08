@@ -5,7 +5,9 @@ import Image from 'next/image';
 import { Home, ChevronLeft, MapPin, Truck, Sparkles, Bug, Droplet, Wrench, Building2 } from 'lucide-react';
 import { getCityBySlug, getServiceBySlug, getServiceImage, CATEGORY_NAMES } from '@/lib/seed';
 import { getSubRegion, getSubRegionsByCity, SUB_REGIONS } from '@/lib/sub-regions';
-import { BreadcrumbJsonLd, ItemListJsonLd, WebPageJsonLd } from '@/components/JsonLd';
+import { BreadcrumbJsonLd, ItemListJsonLd, WebPageJsonLd, ServiceAreaJsonLd } from '@/components/JsonLd';
+import { getCityContext } from '@/lib/city-context';
+import { getCityKeyword } from '@/lib/keyword-strategy';
 import Footer from '@/components/Footer';
 
 interface SubRegionPageProps {
@@ -41,12 +43,33 @@ export async function generateMetadata({ params }: SubRegionPageProps): Promise<
         return { title: 'صفحة غير موجودة' };
     }
 
-    const title = `خدمات ${subRegion.name_ar} | بروكر`;
-    const description = `اكتشف أفضل شركات الخدمات في ${subRegion.name_ar}. نقل عفش، تنظيف، مكافحة حشرات.`;
+    const title = `خدمات ${subRegion.name_ar}، ${city.name_ar} | شركات معتمدة - بروكر`;
+    const description = `اكتشف أفضل شركات الخدمات في ${subRegion.name_ar}، ${city.name_ar}. نقل عفش، تنظيف منازل، مكافحة حشرات، كشف تسربات وأكثر. شركات معتمدة بأسعار تنافسية.`;
 
     return {
         title,
         description,
+        keywords: [
+            `خدمات ${subRegion.name_ar}`,
+            `شركات ${subRegion.name_ar}`,
+            `نقل عفش ${subRegion.name_ar}`,
+            `تنظيف ${subRegion.name_ar}`,
+            `مكافحة حشرات ${subRegion.name_ar}`,
+            `خدمات ${subRegion.name_ar} ${city.name_ar}`,
+        ],
+        openGraph: {
+            title,
+            description,
+            locale: 'ar_SA',
+            type: 'website',
+            siteName: 'بروكر',
+            url: `https://prokr.co/regions/${resolvedParams.city}/${resolvedParams.subregion}`,
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title,
+            description,
+        },
         alternates: {
             canonical: `https://prokr.co/regions/${resolvedParams.city}/${resolvedParams.subregion}`,
         },
@@ -87,6 +110,8 @@ export default async function SubRegionPage({ params }: SubRegionPageProps) {
     const otherSubRegions = getSubRegionsByCity(resolvedParams.city)
         .filter(sr => sr.slug !== subRegion.slug);
 
+    const cityContext = getCityContext(resolvedParams.city);
+
     const breadcrumbs = [
         { name: 'الرئيسية', url: 'https://prokr.co' },
         { name: city.name_ar, url: `https://prokr.co/${city.slug}` },
@@ -99,7 +124,7 @@ export default async function SubRegionPage({ params }: SubRegionPageProps) {
             <BreadcrumbJsonLd items={breadcrumbs} />
             <WebPageJsonLd
                 title={`خدمات ${subRegion.name_ar}`}
-                description={`خدمات ${subRegion.name_ar} في ${city.name_ar} - ${availableServices.length} خدمة متوفرة`}
+                description={`خدمات ${subRegion.name_ar} ${getCityKeyword(city.name_ar, 'ba')} - ${availableServices.length} خدمة متوفرة`}
                 url={`https://prokr.co/regions/${city.slug}/${subRegion.slug}`}
                 breadcrumbs={breadcrumbs}
             />
@@ -112,6 +137,15 @@ export default async function SubRegionPage({ params }: SubRegionPageProps) {
                     url: `https://prokr.co/${city.slug}/${service!.slug}`
                 }))}
             />
+            {/* ServiceArea Schema with GeoCoordinates for Local SEO */}
+            {cityContext?.coordinates && availableServices[0] && (
+                <ServiceAreaJsonLd
+                    service={availableServices[0]!}
+                    city={city}
+                    coordinates={cityContext.coordinates}
+                    neighborhoods={[subRegion.name_ar]}
+                />
+            )}
 
             <main className="min-h-screen bg-gray-50">
                 {/* Hero */}
@@ -163,7 +197,7 @@ export default async function SubRegionPage({ params }: SubRegionPageProps) {
                                     {categoryIcons[category] || <Wrench className="w-5 h-5" />}
                                 </div>
                                 <h2 className="text-xl font-bold text-gray-900">
-                                    {CATEGORY_NAMES[category] || category}
+                                    {CATEGORY_NAMES[category] || category} في {subRegion.name_ar}
                                 </h2>
                             </div>
 
@@ -177,9 +211,10 @@ export default async function SubRegionPage({ params }: SubRegionPageProps) {
                                         <div className="relative aspect-[4/3] bg-gray-100">
                                             <Image
                                                 src={getServiceImage(service.slug)}
-                                                alt={`${service.name_ar} ${subRegion.name_ar}`}
+                                                alt={`شركة ${service.name_ar} في ${subRegion.name_ar}، ${city.name_ar} - أفضل الأسعار من بروكر`}
                                                 fill
                                                 className="object-cover group-hover:scale-105 transition-transform duration-300"
+                                                sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, 25vw"
                                             />
                                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                                         </div>
@@ -195,11 +230,60 @@ export default async function SubRegionPage({ params }: SubRegionPageProps) {
                     ))}
                 </section>
 
+                {/* SEO Content Section */}
+                <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                    <article className="prose prose-lg max-w-none">
+                        <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                            دليل الخدمات في {subRegion.name_ar}، {city.name_ar}
+                        </h2>
+                        <p className="text-gray-700 leading-relaxed mb-6">
+                            يوفر بروكر في منطقة {subRegion.name_ar} بـ{city.name_ar} مجموعة شاملة من الخدمات المنزلية والتجارية تشمل {availableServices.slice(0, 4).map(s => s?.name_ar).filter(Boolean).join('، ')} والمزيد.
+                            جميع الشركات المدرجة لدينا معتمدة ومرخصة، وتقدم ضماناً على خدماتها مع أسعار تنافسية تناسب سكان {subRegion.name_ar}.
+                        </p>
+
+                        <h3 className="text-xl font-bold text-gray-900 mb-3">الأسئلة الشائعة عن خدمات {subRegion.name_ar}</h3>
+                        <div className="space-y-4 not-prose" itemScope itemType="https://schema.org/FAQPage">
+                            <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
+                                <h4 className="font-bold text-gray-800 mb-2" itemProp="name">ما الخدمات المتوفرة في {subRegion.name_ar}؟</h4>
+                                <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                                    <p className="text-gray-600 text-sm" itemProp="text">
+                                        تتوفر في {subRegion.name_ar} {availableServices.length} خدمة تشمل {availableServices.slice(0, 5).map(s => s?.name_ar).filter(Boolean).join('، ')}. جميع الشركات معتمدة ومرخصة.
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
+                                <h4 className="font-bold text-gray-800 mb-2" itemProp="name">كيف أختار شركة خدمات في {subRegion.name_ar}؟</h4>
+                                <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                                    <p className="text-gray-600 text-sm" itemProp="text">
+                                        قارن بين الشركات المتاحة في {subRegion.name_ar} من حيث التقييمات والأسعار والضمان. ننصح بطلب عرض سعر من 3 شركات على الأقل قبل الاختيار.
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
+                                <h4 className="font-bold text-gray-800 mb-2" itemProp="name">هل تغطي الشركات جميع أحياء {subRegion.name_ar}؟</h4>
+                                <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                                    <p className="text-gray-600 text-sm" itemProp="text">
+                                        نعم، الشركات المسجلة لدينا تغطي كافة أحياء {subRegion.name_ar} و{city.name_ar}. فرق العمل موزعة لتغطية المنطقة بأسرع وقت ممكن.
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
+                                <h4 className="font-bold text-gray-800 mb-2" itemProp="name">كم تكلفة الخدمات في {subRegion.name_ar}؟</h4>
+                                <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                                    <p className="text-gray-600 text-sm" itemProp="text">
+                                        تختلف الأسعار حسب نوع الخدمة وحجم العمل. يمكنك مقارنة الأسعار بين الشركات المتاحة في {subRegion.name_ar} عبر بروكر والحصول على عروض أسعار مجانية.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+
                 {/* Other Sub-Regions */}
                 {otherSubRegions.length > 0 && (
                     <section className="bg-gray-100 py-12">
                         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                            <h2 className="text-xl font-bold text-gray-900 mb-6">مناطق أخرى في {city.name_ar}</h2>
+                            <h2 className="text-xl font-bold text-gray-900 mb-6">خدمات في مناطق أخرى بـ{city.name_ar}</h2>
                             <div className="flex flex-wrap gap-3">
                                 {otherSubRegions.map(sr => (
                                     <Link

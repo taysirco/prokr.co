@@ -2,13 +2,15 @@ import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Home, ChevronLeft, Star, Phone, MessageCircle, BadgeCheck, MapPin, Clock, Shield } from 'lucide-react';
-import { getCityBySlug, getServiceBySlug, getUniquePageImages, CITIES, SERVICES } from '@/lib/seed';
+import { Home, ChevronLeft, Star, Phone, MessageCircle, BadgeCheck, MapPin, Shield } from 'lucide-react';
+import { getCityBySlug, getServiceBySlug, getUniquePageImages } from '@/lib/seed';
 import { getAdvertisersBySilo } from '@/lib/db-actions';
-import { ServiceJsonLd, BreadcrumbJsonLd, ItemListJsonLd } from '@/components/JsonLd';
-import { SeoContentSection, FaqJsonLd, ServiceOfferJsonLd, generateSeoContent } from '@/lib/seo-content';
+import { ServiceJsonLd, BreadcrumbJsonLd, ItemListJsonLd, ServiceAreaJsonLd, HowToJsonLd, SpeakableWebPageJsonLd, AggregateRatingJsonLd, ImageObjectJsonLd } from '@/components/JsonLd';
+import { DirectAnswer } from '@/components/seo/DirectAnswer';
+import { SeoContentSection, FaqJsonLd, ServiceOfferJsonLd } from '@/lib/seo-content';
 import { getCityContext } from '@/lib/city-context';
 import { generateContentLayers } from '@/lib/ai-content-layers';
+import { getServiceKeywordProfile, getCityKeyword, resolveKeywordTemplate } from '@/lib/keyword-strategy';
 import Footer from '@/components/Footer';
 import type { Advertiser } from '@/types';
 
@@ -34,39 +36,68 @@ export async function generateMetadata({ params }: SiloPageProps): Promise<Metad
         return { title: 'صفحة غير موجودة' };
     }
 
-    // Get city context for enhanced metadata
+    // Keyword strategy
+    const profile = getServiceKeywordProfile(service.slug);
+    const cityKw = getCityKeyword(city.name_ar, profile.cityPrefixPattern);
     const cityContext = getCityContext(city.slug);
-    const priceModifier = cityContext?.priceModifier || 1.0;
-    const baseMinPrice = 300; // Base starting price
-    const adjustedMinPrice = Math.round(baseMinPrice * priceModifier);
-    const neighborhoods = cityContext?.neighborhoods.slice(0, 3).map(n => n.name_ar).join(' و') || '';
+    const neighborhoods = cityContext?.neighborhoods || [];
+    const neighborhoodNames = neighborhoods.slice(0, 3).map(n => n.name_ar).join(' و');
+    const companiesCount = Math.floor(30 * (cityContext?.priceModifier || 1));
 
-    // Generate AI content for unique description
+    // AI content for snippet and title
     const aiContent = generateContentLayers(city, service);
-
-    // Enhanced meta title with numbers and year for higher CTR
     const title = aiContent.metaTitle;
 
-    // Enhanced description answering the user's question using AI generated snippet
-    // We combine the AI short answer with the neighborhood info for maximum relevance
-    const description = `${aiContent.shortAnswer} ${neighborhoods ? `نغطي أحياء ${neighborhoods} والمناطق المجاورة.` : ''}`;
+    // Keyword-optimized description with CTR triggers
+    const resolvedDesc = resolveKeywordTemplate(profile.metaDescription, {
+        city: cityKw,
+        cityName: city.name_ar,
+        serviceName: service.name_ar,
+        count: companiesCount,
+    });
+    const description = `${resolvedDesc} ${neighborhoodNames ? `نغطي أحياء ${neighborhoodNames} والمناطق المجاورة.` : ''}`;
+
+    // Build keyword-rich meta keywords from profile
+    const resolveKw = (kw: string) => resolveKeywordTemplate(kw, {
+        city: cityKw,
+        cityName: city.name_ar,
+        serviceName: service.name_ar,
+        neighborhood: neighborhoods[0]?.name_ar || '',
+    });
 
     return {
         title,
         description,
         keywords: [
-            `${service.name_ar} ${city.name_ar}`,
-            `شركة ${service.name_ar}`,
-            `${service.name_ar} رخيص`,
-            `أفضل ${service.name_ar}`,
-            city.name_ar,
-            ...(cityContext?.neighborhoods.slice(0, 5).map(n => `${service.name_ar} حي ${n.name_ar}`) || [])
+            // Primary keyword (highest volume)
+            resolveKw(profile.primaryKeyword),
+            // Synonyms with city (cover alternative search terms)
+            ...profile.synonyms.map(s => `${s} ${cityKw}`),
+            // Secondary keywords
+            ...profile.secondaryKeywords.map(resolveKw),
+            // Long-tail (neighborhoods + intent)
+            ...profile.longTailKeywords.slice(0, 4).map(resolveKw),
+            // Year keyword
+            `${service.name_ar} ${city.name_ar} 2026`,
         ],
         openGraph: {
             title,
             description,
             locale: 'ar_SA',
             type: 'website',
+            url: `https://prokr.co/${resolvedParams.city}/${resolvedParams.service}`,
+            siteName: 'بروكر',
+            images: [{
+                url: `https://prokr.co/${resolvedParams.city}/${resolvedParams.service}/opengraph-image`,
+                width: 1200,
+                height: 630,
+                alt: `أفضل شركات ${service.name_ar} ${cityKw} - بروكر`,
+            }],
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title,
+            description,
         },
         alternates: {
             canonical: `https://prokr.co/${resolvedParams.city}/${resolvedParams.service}`,
@@ -102,6 +133,16 @@ export default async function SiloPage({ params }: SiloPageProps) {
     // Generate AI content for H1
     const aiContent = generateContentLayers(city, service);
 
+    // Keyword strategy for بـ prefix
+    const kwProfile = getServiceKeywordProfile(service.slug);
+    const cityKw = getCityKeyword(city.name_ar, kwProfile.cityPrefixPattern);
+
+    // Get city context for Local SEO schemas
+    const cityContext = getCityContext(city.slug);
+
+    // Hero image URL for ImageObject schema
+    const heroImageUrl = getUniquePageImages(resolvedParams.city, resolvedParams.service, service.category, 1)[0];
+
     // Breadcrumb items
     const breadcrumbs = [
         { name: 'الرئيسية', url: 'https://prokr.co' },
@@ -116,8 +157,8 @@ export default async function SiloPage({ params }: SiloPageProps) {
             <BreadcrumbJsonLd items={breadcrumbs} />
             <ItemListJsonLd
                 type="companies"
-                listName={`شركات ${service.name_ar} في ${city.name_ar}`}
-                description={`قائمة أفضل شركات ${service.name_ar} المعتمدة في ${city.name_ar}`}
+                listName={`شركات ${service.name_ar} ${cityKw}`}
+                description={`قائمة أفضل شركات ${service.name_ar} المعتمدة ${cityKw}`}
                 items={allAdvertisers.map(ad => ({
                     name: ad.business_name,
                     url: `https://prokr.co/company/${ad.short_code}`
@@ -125,6 +166,34 @@ export default async function SiloPage({ params }: SiloPageProps) {
             />
             <FaqJsonLd city={city} service={service} />
             <ServiceOfferJsonLd city={city} service={service} />
+            {/* Local SEO: ServiceArea with GeoCoordinates */}
+            {cityContext?.coordinates && (
+                <ServiceAreaJsonLd
+                    service={service}
+                    city={city}
+                    coordinates={cityContext.coordinates}
+                    neighborhoods={cityContext.neighborhoods.map(n => n.name_ar)}
+                />
+            )}
+            {/* HowTo Schema for rich snippets */}
+            <HowToJsonLd service={service} city={city} />
+            {/* Speakable + Entity Markup for AEO/GEO */}
+            <SpeakableWebPageJsonLd
+                title={aiContent.metaTitle}
+                description={aiContent.shortAnswer}
+                url={`https://prokr.co/${resolvedParams.city}/${resolvedParams.service}`}
+                speakableSelectors={['.direct-answer', 'h1', '.seo-introduction']}
+                dateModified={new Date().toISOString()}
+                about={{ name: service.name_ar, type: 'Service' }}
+                mentions={[
+                    { name: city.name_ar, type: 'City' },
+                    { name: 'المملكة العربية السعودية', type: 'Country' },
+                ]}
+            />
+            {/* AggregateRating from all advertisers' reviews */}
+            <AggregateRatingJsonLd service={service} city={city} advertisers={allAdvertisers} />
+            {/* ImageObject Schema for hero image */}
+            <ImageObjectJsonLd imageUrl={heroImageUrl} service={service} city={city} />
 
             <main className="min-h-screen bg-gray-50">
                 {/* Hero Section with Image */}
@@ -159,7 +228,7 @@ export default async function SiloPage({ params }: SiloPageProps) {
                                     {aiContent.h1}
                                 </h1>
                                 <p className="text-lg text-emerald-100 max-w-xl">
-                                    قارن بين أفضل شركات {service.name_ar} المعتمدة في {city.name_ar}.
+                                    قارن بين أفضل شركات {service.name_ar} المعتمدة {cityKw}.
                                     احصل على أسعار تنافسية وخدمة احترافية.
                                 </p>
 
@@ -190,12 +259,14 @@ export default async function SiloPage({ params }: SiloPageProps) {
                             <div className="hidden lg:block relative">
                                 <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
                                     <Image
-                                        src={getUniquePageImages(resolvedParams.city, resolvedParams.service, service.category, 1)[0]}
-                                        alt={`${service.name_ar} في ${city.name_ar}`}
+                                        src={heroImageUrl}
+                                        alt={`أفضل شركة ${service.name_ar} ${cityKw} - خدمات احترافية ومعتمدة 2026`}
                                         fill
                                         className="object-cover"
                                         priority
-                                        sizes="(max-width: 768px) 100vw, 50vw"
+                                        fetchPriority="high"
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                                        quality={90}
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/50 to-transparent"></div>
                                 </div>
@@ -212,6 +283,15 @@ export default async function SiloPage({ params }: SiloPageProps) {
                             </div>
                         </div>
                     </div>
+                </section>
+
+                {/* Direct Answer for AEO - Featured Snippet Optimization */}
+                <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+                    <DirectAnswer
+                        city={city.name_ar}
+                        service={service.name_ar}
+                        answer={aiContent.shortAnswer}
+                    />
                 </section>
 
                 {/* Premium Advertisers Grid */}

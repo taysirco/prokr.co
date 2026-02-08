@@ -14,15 +14,15 @@ import {
     Shield,
     Share2,
     Heart,
-    ExternalLink,
     Camera,
     CheckCircle
 } from 'lucide-react';
-import { getCityBySlug, getServiceBySlug, CITIES, SERVICES } from '@/lib/seed';
+import { getCityBySlug, getServiceBySlug } from '@/lib/seed';
+import { getCityKeyword } from '@/lib/keyword-strategy';
 import { getAdvertiserByCode } from '@/lib/db-actions';
-import { LocalBusinessJsonLd, BreadcrumbJsonLd, OrganizationJsonLd } from '@/components/JsonLd';
+import { LocalBusinessJsonLd, BreadcrumbJsonLd, OrganizationJsonLd, WebPageJsonLd } from '@/components/JsonLd';
 import Footer from '@/components/Footer';
-import type { Advertiser, Review, City, Service } from '@/types';
+import type { Review, City, Service } from '@/types';
 
 // Force dynamic rendering - no caching
 export const dynamic = 'force-dynamic';
@@ -46,18 +46,35 @@ export async function generateMetadata({ params }: CompanyPageProps): Promise<Me
     const mainService = advertiser.targeted_services[0];
     const service = getServiceBySlug(mainService);
 
-    const title = `${advertiser.business_name} - ${service?.name_ar || 'خدمات'} | بروكر`;
-    const description = `${advertiser.business_name} - ${advertiser.description.slice(0, 150)}...`;
+    const mainCity = getCityBySlug(advertiser.targeted_cities[0]);
+    const cityKw = mainCity ? getCityKeyword(mainCity.name_ar, 'ba') : '';
+    const title = `${advertiser.business_name} - ${service?.name_ar || 'خدمات'}${cityKw ? ` ${cityKw}` : ''} | بروكر`;
+    const description = `${advertiser.business_name} - ${advertiser.description.slice(0, 120)}. شركة معتمدة ومرخصة${cityKw ? ` ${cityKw}` : ''}.`;
 
     return {
         title,
         description,
+        keywords: [
+            advertiser.business_name,
+            `${advertiser.business_name} ${service?.name_ar || ''}`,
+            `تقييم ${advertiser.business_name}`,
+            `رقم ${advertiser.business_name}`,
+            ...(mainCity ? [`${service?.name_ar || 'خدمات'} ${mainCity.name_ar}`] : []),
+            ...(service ? [`شركة ${service.name_ar}`] : []),
+        ],
         openGraph: {
             title,
             description,
             images: advertiser.logo_url ? [advertiser.logo_url] : [],
             locale: 'ar_SA',
             type: 'website',
+            siteName: 'بروكر',
+            url: `https://prokr.co/company/${resolvedParams.code}`,
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title,
+            description,
         },
         alternates: {
             canonical: `https://prokr.co/company/${resolvedParams.code}`,
@@ -115,6 +132,12 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                 cities={targetedCities}
             />
             <BreadcrumbJsonLd items={breadcrumbs} />
+            <WebPageJsonLd
+                title={advertiser.business_name}
+                description={`${advertiser.business_name} - ${advertiser.description.slice(0, 100)}`}
+                url={`https://prokr.co/company/${advertiser.short_code}`}
+                breadcrumbs={breadcrumbs}
+            />
 
             <main className="min-h-screen bg-gray-50">
                 {/* Hero Cover */}
@@ -150,9 +173,10 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                                     {advertiser.logo_url ? (
                                         <Image
                                             src={advertiser.logo_url}
-                                            alt={advertiser.business_name}
+                                            alt={`شعار ${advertiser.business_name} - شركة ${mainService?.name_ar || 'خدمات'} معتمدة`}
                                             fill
                                             className="object-cover rounded-xl"
+                                            sizes="128px"
                                         />
                                     ) : (
                                         <span className="text-4xl font-bold text-emerald-600">
@@ -293,9 +317,10 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                                             <div key={index} className="relative aspect-video rounded-xl overflow-hidden bg-gray-100">
                                                 <Image
                                                     src={img}
-                                                    alt={`${advertiser.business_name} - صورة ${index + 1}`}
+                                                    alt={`${advertiser.business_name} - ${mainService?.name_ar || 'خدمات'} - صورة ${index + 1}`}
                                                     fill
                                                     className="object-cover hover:scale-105 transition-transform duration-300"
+                                                    sizes="(max-width: 768px) 50vw, 33vw"
                                                 />
                                             </div>
                                         ))}
@@ -426,6 +451,67 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                         </div>
                     </div>
                 </div>
+
+                {/* SEO Content Section */}
+                <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-gray-200">
+                    <article className="prose prose-lg max-w-none">
+                        <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                            عن {advertiser.business_name}
+                        </h2>
+                        <div className="bg-emerald-50 p-6 rounded-xl border-r-4 border-emerald-500 mb-6">
+                            <p className="text-gray-700 leading-relaxed">
+                                {advertiser.business_name} هي شركة {advertiser.is_premium ? 'معتمدة وموثقة' : 'مسجلة'} في منصة بروكر،
+                                تقدم خدمات {targetedServices.map(s => s.name_ar).join(' و')} في {targetedCities.map(c => c.name_ar).join(' و')}.
+                                {avgRating > 0 ? ` حاصلة على تقييم ${avgRating.toFixed(1)} من 5 بناءً على ${reviews.length} تقييم من عملاء حقيقيين.` : ''}
+                            </p>
+                        </div>
+
+                        <h3 className="text-xl font-bold text-gray-900 mb-3">الخدمات المقدمة</h3>
+                        <ul className="text-gray-600 space-y-1 mb-6">
+                            {targetedServices.map(s => (
+                                <li key={s.slug}>✓ <Link href={`/${advertiser.targeted_cities[0]}/${s.slug}`} className="text-emerald-700 hover:underline">{s.name_ar}</Link></li>
+                            ))}
+                        </ul>
+
+                        <h3 className="text-xl font-bold text-gray-900 mb-3">مناطق التغطية</h3>
+                        <div className="flex flex-wrap gap-2 mb-8 not-prose">
+                            {targetedCities.map(c => (
+                                <Link key={c.slug} href={`/${c.slug}`} className="px-3 py-1.5 bg-emerald-50 text-emerald-700 rounded-lg text-sm hover:bg-emerald-100 transition-colors">{c.name_ar}</Link>
+                            ))}
+                        </div>
+
+                        {/* Company FAQ */}
+                        <h3 className="text-xl font-bold text-gray-900 mb-4">أسئلة شائعة عن {advertiser.business_name}</h3>
+                        <div className="space-y-4 not-prose" itemScope itemType="https://schema.org/FAQPage">
+                            <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
+                                <h4 className="font-bold text-gray-800 mb-2" itemProp="name">ما هي الخدمات التي تقدمها {advertiser.business_name}؟</h4>
+                                <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                                    <p className="text-gray-600" itemProp="text">تقدم {advertiser.business_name} خدمات {targetedServices.map(s => s.name_ar).join(' و')} في {targetedCities.map(c => c.name_ar).join(' و')}. جميع الخدمات مضمونة ومرخصة.</p>
+                                </div>
+                            </div>
+                            <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
+                                <h4 className="font-bold text-gray-800 mb-2" itemProp="name">كيف أتواصل مع {advertiser.business_name}؟</h4>
+                                <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                                    <p className="text-gray-600" itemProp="text">يمكنك التواصل مع {advertiser.business_name} عبر الهاتف أو واتساب مباشرة من صفحة الشركة على بروكر. الخدمة متاحة على مدار الساعة.</p>
+                                </div>
+                            </div>
+                            <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
+                                <h4 className="font-bold text-gray-800 mb-2" itemProp="name">هل {advertiser.business_name} شركة معتمدة؟</h4>
+                                <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                                    <p className="text-gray-600" itemProp="text">{advertiser.is_premium ? `نعم، ${advertiser.business_name} شركة معتمدة وموثقة في منصة بروكر. تم التحقق من تراخيصها وجودة خدماتها.` : `${advertiser.business_name} شركة مسجلة في منصة بروكر. ننصح بالتحقق من التراخيص والضمانات قبل التعاقد.`}</p>
+                                </div>
+                            </div>
+                            {avgRating > 0 && (
+                                <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
+                                    <h4 className="font-bold text-gray-800 mb-2" itemProp="name">ما تقييم {advertiser.business_name}؟</h4>
+                                    <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                                        <p className="text-gray-600" itemProp="text">حصلت {advertiser.business_name} على تقييم {avgRating.toFixed(1)} من 5 نجوم بناءً على {reviews.length} تقييم من عملاء حقيقيين على منصة بروكر.</p>
+                                    </div>
+                                </div>
+                            )}
+                        </div>
+                    </article>
+                </section>
 
                 {/* Footer */}
                 <Footer

@@ -1,18 +1,25 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { Home, ChevronLeft, Shield, Users, Target, Award, CheckCircle } from 'lucide-react';
-import { BreadcrumbJsonLd } from '@/components/JsonLd';
+import { BreadcrumbJsonLd, WebPageJsonLd } from '@/components/JsonLd';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-    title: 'من نحن | بروكر - دليل الخدمات السعودي',
-    description: 'تعرف على بروكر، دليل الخدمات السعودي الشامل الذي يربط بين مقدمي الخدمات والعملاء في جميع أنحاء المملكة.',
-    keywords: ['عن بروكر', 'دليل الخدمات', 'السعودية', 'نقل عفش', 'تنظيف', 'مكافحة حشرات'],
+    title: 'من نحن | بروكر - أكبر دليل خدمات في السعودية',
+    description: 'تعرف على بروكر، أكبر دليل للخدمات المنزلية في المملكة العربية السعودية. نربط بين أكثر من 500 شركة معتمدة والعملاء في 24 مدينة سعودية.',
+    keywords: ['عن بروكر', 'من نحن بروكر', 'دليل الخدمات السعودية', 'منصة خدمات منزلية', 'شركات خدمات معتمدة'],
     openGraph: {
         title: 'من نحن | بروكر',
-        description: 'تعرف على بروكر، دليل الخدمات السعودي الشامل',
+        description: 'تعرف على بروكر - أكبر دليل للخدمات المنزلية في السعودية',
         locale: 'ar_SA',
         type: 'website',
+        siteName: 'بروكر',
+        url: 'https://prokr.co/about-us',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'من نحن | بروكر',
+        description: 'أكبر دليل للخدمات المنزلية في السعودية',
     },
     alternates: {
         canonical: 'https://prokr.co/about-us',
@@ -28,6 +35,12 @@ export default function AboutPage() {
     return (
         <>
             <BreadcrumbJsonLd items={breadcrumbs} />
+            <WebPageJsonLd
+                title="من نحن - بروكر"
+                description="تعرف على بروكر، أكبر دليل للخدمات المنزلية في المملكة العربية السعودية"
+                url="https://prokr.co/about-us"
+                breadcrumbs={breadcrumbs}
+            />
 
             <main className="min-h-screen bg-gray-50">
                 {/* Hero Section */}
@@ -145,6 +158,31 @@ export default function AboutPage() {
                             <div>
                                 <p className="text-4xl font-bold">+10K</p>
                                 <p className="text-emerald-200">عميل راضٍ</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* About FAQ */}
+                <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                    <h2 className="text-2xl font-bold text-gray-900 mb-6">أسئلة شائعة عن بروكر</h2>
+                    <div className="space-y-4" itemScope itemType="https://schema.org/FAQPage">
+                        <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
+                            <h3 className="font-bold text-gray-800 mb-2" itemProp="name">متى تأسس بروكر؟</h3>
+                            <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                                <p className="text-gray-600" itemProp="text">تأسس بروكر عام 2024 كأكبر دليل إلكتروني للخدمات المنزلية في المملكة العربية السعودية. يهدف إلى ربط العملاء بأفضل الشركات المعتمدة في 24 مدينة سعودية.</p>
+                            </div>
+                        </div>
+                        <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
+                            <h3 className="font-bold text-gray-800 mb-2" itemProp="name">كيف يتم اختيار الشركات في بروكر؟</h3>
+                            <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                                <p className="text-gray-600" itemProp="text">يتم التحقق من كل شركة وفقاً لمعايير صارمة تشمل الترخيص من وزارة التجارة، جودة الخدمة، تقييمات العملاء الحقيقيين، والالتزام بتقديم ضمان مكتوب على الخدمات.</p>
+                            </div>
+                        </div>
+                        <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
+                            <h3 className="font-bold text-gray-800 mb-2" itemProp="name">هل بروكر مرتبط بأي شركة خدمات؟</h3>
+                            <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                                <p className="text-gray-600" itemProp="text">لا، بروكر منصة مستقلة ومحايدة. لا نقدم خدمات مباشرة ولسنا مرتبطين بأي شركة. نحن دليل إلكتروني يسهل التواصل بين العملاء ومقدمي الخدمات المعتمدين.</p>
                             </div>
                         </div>
                     </div>
