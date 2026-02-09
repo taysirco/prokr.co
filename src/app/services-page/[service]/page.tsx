@@ -2,12 +2,13 @@ import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Home, ChevronLeft, MapPin } from 'lucide-react';
+import { Home, ChevronLeft, MapPin, Clock, ArrowLeft } from 'lucide-react';
 import { getServiceBySlug, getServiceImage, CITIES, SERVICES, REGION_NAMES, getCitiesByRegion } from '@/lib/seed';
 import { generateServiceCategoryMeta } from '@/lib/ai-content-layers';
 import { BreadcrumbJsonLd, ServiceJsonLd, ItemListJsonLd, WebPageJsonLd } from '@/components/JsonLd';
 import { getCityContext, getAdjustedPriceRange } from '@/lib/city-context';
 import { getServiceKeywordProfile } from '@/lib/keyword-strategy';
+import { BLOG_ARTICLES } from '@/lib/blog-data';
 import Footer from '@/components/Footer';
 
 // Major cities for price comparison
@@ -336,6 +337,30 @@ export default async function ServicePage({ params }: ServicePageProps) {
                         </div>
                     </article>
                 </section>
+
+                {/* Related Blog Articles */}
+                {(() => {
+                    const related = BLOG_ARTICLES.filter(a => a.relatedServices.includes(service.slug) || a.category === service.category).slice(0, 3);
+                    if (related.length === 0) return null;
+                    return (
+                        <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                            <h2 className="text-xl font-bold text-gray-900 mb-6">مقالات ذات صلة بـ{service.name_ar}</h2>
+                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                                {related.map(article => (
+                                    <Link key={article.slug} href={`/blog/${article.slug}`} className="group bg-white border border-gray-200 rounded-xl p-4 hover:border-emerald-300 hover:shadow-md transition-all">
+                                        <span className="text-xs text-emerald-600 font-medium">{article.categoryLabel}</span>
+                                        <h3 className="font-bold text-gray-900 text-sm mt-1 group-hover:text-emerald-700 transition-colors line-clamp-2">{article.title}</h3>
+                                        <div className="flex items-center gap-1 mt-2 text-xs text-gray-400">
+                                            <Clock className="w-3 h-3" />
+                                            <span>{article.readTime} دقائق</span>
+                                            <ArrowLeft className="w-3 h-3 mr-auto text-emerald-500 opacity-0 group-hover:opacity-100 transition-opacity" />
+                                        </div>
+                                    </Link>
+                                ))}
+                            </div>
+                        </section>
+                    );
+                })()}
 
                 {/* Other Services */}
                 <section className="bg-gray-100 py-12">

@@ -24,9 +24,8 @@ import { LocalBusinessJsonLd, BreadcrumbJsonLd, OrganizationJsonLd, WebPageJsonL
 import Footer from '@/components/Footer';
 import type { Review, City, Service } from '@/types';
 
-// Force dynamic rendering - no caching
-export const dynamic = 'force-dynamic';
-export const revalidate = 0;
+// ISR: revalidate every hour for fresh data + fast TTFB
+export const revalidate = 3600;
 
 interface CompanyPageProps {
     params: Promise<{

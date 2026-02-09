@@ -183,6 +183,9 @@ export interface WebPageSchema {
   name: string;
   description: string;
   url: string;
+  inLanguage?: string;
+  datePublished?: string;
+  dateModified?: string;
   isPartOf: {
     '@type': 'WebSite';
     '@id': string;

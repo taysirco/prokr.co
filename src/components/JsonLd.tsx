@@ -420,9 +420,11 @@ interface WebPageJsonLdProps {
     description: string;
     url: string;
     breadcrumbs?: { name: string; url: string }[];
+    datePublished?: string;
+    dateModified?: string;
 }
 
-export function WebPageJsonLd({ title, description, url, breadcrumbs }: WebPageJsonLdProps) {
+export function WebPageJsonLd({ title, description, url, breadcrumbs, datePublished, dateModified }: WebPageJsonLdProps) {
     const schema: WebPageSchema = {
         '@context': 'https://schema.org',
         '@type': 'WebPage',
@@ -430,6 +432,9 @@ export function WebPageJsonLd({ title, description, url, breadcrumbs }: WebPageJ
         name: title,
         description,
         url,
+        inLanguage: 'ar',
+        datePublished: datePublished || '2025-01-01',
+        dateModified: dateModified || new Date().toISOString().split('T')[0],
         isPartOf: {
             '@type': 'WebSite',
             '@id': 'https://prokr.co#website',

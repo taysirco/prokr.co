@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next';
 import { CITIES, SERVICES } from '@/lib/seed';
 import { SUB_REGIONS } from '@/lib/sub-regions';
+import { BLOG_ARTICLES } from '@/lib/blog-data';
 
 const BASE_URL = 'https://prokr.co';
 
@@ -23,6 +24,7 @@ export async function generateSitemaps() {
         { id: 4 },  // silo: leak + insulation
         { id: 5 },  // silo: sewage + uncategorized
         { id: 6 },  // sub-regions
+        { id: 7 },  // blog articles
     ];
 }
 
@@ -99,6 +101,20 @@ export default async function sitemap({ id }: { id: number }): Promise<MetadataR
             }
         }
         return subRegionPages;
+    }
+
+    // ── Sitemap 7: Blog articles ──
+    if (id === 7) {
+        const blogIndex: MetadataRoute.Sitemap = [
+            { url: `${BASE_URL}/blog`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
+        ];
+        const blogPages: MetadataRoute.Sitemap = BLOG_ARTICLES.map(article => ({
+            url: `${BASE_URL}/blog/${article.slug}`,
+            lastModified: new Date(article.updateDate),
+            changeFrequency: 'monthly' as const,
+            priority: 0.7,
+        }));
+        return [...blogIndex, ...blogPages];
     }
 
     return [];

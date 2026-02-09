@@ -21,6 +21,9 @@ export function middleware(request: NextRequest) {
         pathname.startsWith('/terms-of-service') ||
         pathname.startsWith('/locations') ||
         pathname.startsWith('/regions') ||
+        pathname.startsWith('/search') ||
+        pathname.startsWith('/blog') ||
+        pathname.startsWith('/services-page') ||
         pathname.includes('.') ||  // Static files like .css, .js, .ico
         pathname === '/'
     ) {
@@ -34,6 +37,13 @@ export function middleware(request: NextRequest) {
     // If it's a city slug, continue normally (handled by /[city])
     if (citySlugs.has(firstSegment)) {
         return NextResponse.next();
+    }
+
+    // /services → /services-page (sitemap compatibility)
+    if (firstSegment === 'services' && segments.length === 1) {
+        const url = request.nextUrl.clone();
+        url.pathname = '/services-page';
+        return NextResponse.rewrite(url);
     }
 
     // If it's a service slug at root level, rewrite to /services-page/[service]

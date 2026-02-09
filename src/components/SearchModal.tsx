@@ -1,9 +1,10 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useMemo } from 'react';
 import Link from 'next/link';
-import { Search, X, MapPin, Briefcase, Loader2 } from 'lucide-react';
+import { Search, X, MapPin, Briefcase, BookOpen } from 'lucide-react';
 import { CITIES, SERVICES } from '@/lib/seed';
+import { BLOG_ARTICLES } from '@/lib/blog-data';
 
 interface SearchModalProps {
     isOpen: boolean;
@@ -12,10 +13,6 @@ interface SearchModalProps {
 
 export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
     const [query, setQuery] = useState('');
-    const [results, setResults] = useState<{
-        cities: typeof CITIES;
-        services: typeof SERVICES;
-    }>({ cities: [], services: [] });
     const inputRef = useRef<HTMLInputElement>(null);
 
     // Focus input when modal opens
@@ -42,11 +39,10 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
         };
     }, [isOpen, onClose]);
 
-    // Search logic
-    useEffect(() => {
+    // Search logic (useMemo to avoid setState in effect)
+    const results = useMemo(() => {
         if (!query.trim()) {
-            setResults({ cities: [], services: [] });
-            return;
+            return { cities: [] as typeof CITIES, services: [] as typeof SERVICES, articles: [] as typeof BLOG_ARTICLES };
         }
 
         const q = query.toLowerCase();
@@ -59,7 +55,11 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
             service => service.name_ar.includes(query) || service.name_en.toLowerCase().includes(q) || service.slug.includes(q)
         ).slice(0, 8);
 
-        setResults({ cities: matchedCities, services: matchedServices });
+        const matchedArticles = BLOG_ARTICLES.filter(
+            article => article.title.includes(query) || article.tags.some(t => t.includes(query)) || article.categoryLabel.includes(query)
+        ).slice(0, 3);
+
+        return { cities: matchedCities, services: matchedServices, articles: matchedArticles };
     }, [query]);
 
     if (!isOpen) return null;
@@ -101,9 +101,9 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
                             <Search className="w-12 h-12 mx-auto mb-4 opacity-30" />
                             <p>اكتب للبحث عن خدمة أو مدينة</p>
                         </div>
-                    ) : results.cities.length === 0 && results.services.length === 0 ? (
+                    ) : results.cities.length === 0 && results.services.length === 0 && results.articles.length === 0 ? (
                         <div className="p-8 text-center text-gray-500">
-                            <p>لا توجد نتائج لـ "{query}"</p>
+                            <p>لا توجد نتائج لـ &quot;{query}&quot;</p>
                         </div>
                     ) : (
                         <div className="py-4">
@@ -134,14 +134,14 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
 
                             {/* Services */}
                             {results.services.length > 0 && (
-                                <div>
+                                <div className="mb-4">
                                     <h3 className="px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">
                                         الخدمات
                                     </h3>
                                     {results.services.map(service => (
                                         <Link
                                             key={service.slug}
-                                            href={`/riyadh/${service.slug}`}
+                                            href={`/${service.slug}`}
                                             onClick={onClose}
                                             className="flex items-center gap-3 px-4 py-3 hover:bg-emerald-50 transition-colors"
                                         >
@@ -151,6 +151,31 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
                                             <div>
                                                 <p className="font-medium text-gray-900">{service.name_ar}</p>
                                                 <p className="text-sm text-gray-500">{service.name_en}</p>
+                                            </div>
+                                        </Link>
+                                    ))}
+                                </div>
+                            )}
+
+                            {/* Blog Articles */}
+                            {results.articles.length > 0 && (
+                                <div>
+                                    <h3 className="px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">
+                                        مقالات
+                                    </h3>
+                                    {results.articles.map(article => (
+                                        <Link
+                                            key={article.slug}
+                                            href={`/blog/${article.slug}`}
+                                            onClick={onClose}
+                                            className="flex items-center gap-3 px-4 py-3 hover:bg-amber-50 transition-colors"
+                                        >
+                                            <div className="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center text-amber-600">
+                                                <BookOpen className="w-5 h-5" />
+                                            </div>
+                                            <div>
+                                                <p className="font-medium text-gray-900 line-clamp-1">{article.title}</p>
+                                                <p className="text-sm text-gray-500">{article.categoryLabel} · {article.readTime} دقائق</p>
                                             </div>
                                         </Link>
                                     ))}

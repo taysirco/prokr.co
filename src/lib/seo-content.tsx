@@ -5,6 +5,7 @@ import { getRelatedServices } from './related-services';
 import { getServiceBySlug, getCityBySlug } from './seed';
 import { generateContentLayers } from './ai-content-layers';
 import { getServiceKeywordProfile, getCityKeyword, resolveKeywordTemplate } from './keyword-strategy';
+import { BLOG_ARTICLES } from './blog-data';
 
 // ============================================
 // AI-Ready SEO Content Generator
@@ -636,7 +637,42 @@ export function SeoContentSection({ city, service }: SeoContentProps) {
                     </div>
                 )}
 
-                {/* 8. FAQs */}
+                {/* 8.5 RELATED BLOG ARTICLES (Topical Authority Cross-Linking) */}
+                {(() => {
+                    const categoryMap: Record<string, string> = {
+                        moving: 'moving', cleaning: 'cleaning', 'pest-control': 'pest-control',
+                        'leak-detection': 'leak-detection', insulation: 'insulation', sewage: 'sewage',
+                    };
+                    const blogCategory = categoryMap[service.category] || 'general';
+                    const relatedArticles = BLOG_ARTICLES
+                        .filter(a => a.category === blogCategory || a.relatedServices.includes(service.slug))
+                        .slice(0, 3);
+                    if (relatedArticles.length === 0) return null;
+                    return (
+                        <div className="mb-10 bg-gradient-to-bl from-amber-50 to-orange-50 p-6 rounded-xl border border-amber-200">
+                            <h3 className="text-xl font-bold text-gray-900 mb-4">📖 مقالات ذات صلة بـ{service.name_ar}</h3>
+                            <p className="text-gray-600 text-sm mb-4">اقرأ أدلتنا الشاملة للحصول على معلومات أكثر عن {service.name_ar}:</p>
+                            <div className="grid gap-3">
+                                {relatedArticles.map((article, i) => (
+                                    <Link
+                                        key={i}
+                                        href={`/blog/${article.slug}`}
+                                        className="flex items-center justify-between p-3 bg-white rounded-lg border border-amber-100 hover:border-amber-300 hover:shadow-md transition-all group"
+                                    >
+                                        <div>
+                                            <span className="text-xs text-amber-600 font-medium">{article.categoryLabel}</span>
+                                            <h4 className="font-bold text-gray-800 text-sm group-hover:text-amber-700 transition-colors">{article.title}</h4>
+                                            <span className="text-xs text-gray-500">{article.readTime} دقائق قراءة</span>
+                                        </div>
+                                        <span className="text-amber-500 text-lg">←</span>
+                                    </Link>
+                                ))}
+                            </div>
+                        </div>
+                    );
+                })()}
+
+                {/* 9. FAQs */}
                 <div className="space-y-4" itemScope itemType="https://schema.org/FAQPage">
                     <h3 className="text-xl font-bold text-gray-900">الأسئلة الشائعة عن {service.name_ar} {cityKw}</h3>
                     {content.faqItems.map((faq, index) => (

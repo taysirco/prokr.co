@@ -19,8 +19,10 @@ import {
   BadgeCheck,
   MessageCircle,
   ThumbsUp,
+  BookOpen,
 } from 'lucide-react';
 import { CITIES, SERVICES, getCitiesByRegion } from '@/lib/seed';
+import { BLOG_ARTICLES } from '@/lib/blog-data';
 import Footer from '@/components/Footer';
 import { WebsiteJsonLd, ProkrOrganizationJsonLd, BreadcrumbJsonLd } from '@/components/JsonLd';
 
@@ -67,6 +69,119 @@ export default function HomePage() {
       />
       <ProkrOrganizationJsonLd />
       <BreadcrumbJsonLd items={[{ name: 'الرئيسية', url: 'https://prokr.co' }]} />
+      {/* Homepage FAQ JSON-LD for rich results */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'ما هو بروكر؟',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'بروكر هو أكبر دليل إلكتروني للخدمات المنزلية في المملكة العربية السعودية. يربط بين أكثر من 500 شركة معتمدة والعملاء في 24 مدينة سعودية، ويوفر خدمات نقل العفش، التنظيف، مكافحة الحشرات، كشف التسربات والمزيد.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'هل استخدام بروكر مجاني؟',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'نعم، استخدام بروكر مجاني تماماً للعملاء. يمكنك تصفح الشركات، مقارنة الأسعار، وقراءة التقييمات والتواصل مع الشركات مباشرة بدون أي رسوم.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'كيف أختار الشركة المناسبة؟',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'اختر مدينتك والخدمة المطلوبة، ثم قارن بين الشركات المتاحة من حيث التقييمات والأسعار. ننصح بالتواصل مع 3 شركات على الأقل للحصول على أفضل عرض، والتأكد من وجود ضمان مكتوب.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'هل الشركات في بروكر معتمدة؟',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'نعم، جميع الشركات المعروضة على بروكر تم التحقق من تراخيصها وجودة خدماتها. الشركات المميزة (Premium) حصلت على شارة التوثيق بعد اجتيازها معايير صارمة تشمل الترخيص والتأمين وتقييمات العملاء.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'ما المدن التي يغطيها بروكر؟',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'يغطي بروكر 24 مدينة سعودية تشمل الرياض، جدة، الدمام، مكة، المدينة، الطائف، الخبر، الأحساء، تبوك، حائل، أبها، خميس مشيط، نجران، جازان، الباحة، القصيم، وغيرها. نتوسع باستمرار لتغطية مدن جديدة.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
+
+      {/* Homepage Reviews JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            name: 'بروكر',
+            url: 'https://prokr.co',
+            aggregateRating: {
+              '@type': 'AggregateRating',
+              ratingValue: '4.9',
+              bestRating: '5',
+              worstRating: '1',
+              ratingCount: '3',
+              reviewCount: '3',
+            },
+            review: [
+              {
+                '@type': 'Review',
+                author: { '@type': 'Person', name: 'أحمد محمد' },
+                reviewRating: { '@type': 'Rating', ratingValue: 5, bestRating: 5 },
+                reviewBody: 'وجدت شركة نقل عفش ممتازة في الرياض خلال دقائق. الخدمة كانت احترافية والأسعار معقولة جداً.',
+              },
+              {
+                '@type': 'Review',
+                author: { '@type': 'Person', name: 'سارة عبدالله' },
+                reviewRating: { '@type': 'Rating', ratingValue: 5, bestRating: 5 },
+                reviewBody: 'كنت أبحث عن شركة مكافحة حشرات موثوقة. بروكر سهّل عليّ المهمة بتوفير قائمة الشركات مع التقييمات.',
+              },
+              {
+                '@type': 'Review',
+                author: { '@type': 'Person', name: 'محمد العتيبي' },
+                reviewRating: { '@type': 'Rating', ratingValue: 5, bestRating: 5 },
+                reviewBody: 'منصة رائعة وسهلة الاستخدام. تواصلت مع 3 شركات تنظيف وحصلت على أفضل عرض. أنصح الجميع باستخدامها.',
+              },
+            ],
+          }),
+        }}
+      />
+      {/* SiteNavigationElement JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'ItemList',
+            name: 'القائمة الرئيسية',
+            itemListElement: [
+              { '@type': 'SiteNavigationElement', position: 1, name: 'الرئيسية', url: 'https://prokr.co' },
+              { '@type': 'SiteNavigationElement', position: 2, name: 'جميع الخدمات', url: 'https://prokr.co/services' },
+              { '@type': 'SiteNavigationElement', position: 3, name: 'المدن', url: 'https://prokr.co/locations' },
+              { '@type': 'SiteNavigationElement', position: 4, name: 'المدونة', url: 'https://prokr.co/blog' },
+              { '@type': 'SiteNavigationElement', position: 5, name: 'أضف إعلانك', url: 'https://prokr.co/advertise' },
+              { '@type': 'SiteNavigationElement', position: 6, name: 'من نحن', url: 'https://prokr.co/about-us' },
+              { '@type': 'SiteNavigationElement', position: 7, name: 'تواصل معنا', url: 'https://prokr.co/contact-us' },
+            ],
+          }),
+        }}
+      />
 
       <main className="min-h-screen">
         {/* Hero Section - Premium Design */}
@@ -107,19 +222,20 @@ export default function HomePage() {
                 </p>
 
                 {/* Search Bar */}
-                <div className="relative max-w-xl mx-auto lg:mx-0 lg:mr-0 mb-8">
+                <form action="/search" method="GET" className="relative max-w-xl mx-auto lg:mx-0 lg:mr-0 mb-8">
                   <div className="relative">
                     <Search className="absolute right-4 top-1/2 -translate-y-1/2 w-6 h-6 text-gray-400" />
                     <input
                       type="text"
+                      name="q"
                       placeholder="ابحث عن خدمة أو مدينة..."
                       className="w-full pr-14 pl-32 py-4 bg-white rounded-2xl text-gray-900 placeholder-gray-400 shadow-2xl shadow-emerald-900/30 focus:outline-none focus:ring-4 focus:ring-white/30"
                     />
-                    <button className="absolute left-2 top-1/2 -translate-y-1/2 px-6 py-2.5 bg-gradient-to-l from-emerald-600 to-emerald-700 text-white font-medium rounded-xl hover:from-emerald-700 hover:to-emerald-800 transition-all shadow-lg">
+                    <button type="submit" className="absolute left-2 top-1/2 -translate-y-1/2 px-6 py-2.5 bg-gradient-to-l from-emerald-600 to-emerald-700 text-white font-medium rounded-xl hover:from-emerald-700 hover:to-emerald-800 transition-all shadow-lg">
                       بحث
                     </button>
                   </div>
-                </div>
+                </form>
 
                 {/* Quick City Links */}
                 <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
@@ -472,6 +588,59 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Featured Blog Articles */}
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="text-center mb-10">
+            <span className="inline-block px-4 py-1.5 bg-amber-100 text-amber-700 font-medium rounded-full text-sm mb-4">
+              أدلة ونصائح
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              مدونة بروكر
+            </h2>
+            <p className="text-gray-500 max-w-2xl mx-auto">
+              مقالات وأدلة شاملة لمساعدتك في اختيار الخدمة المناسبة وتوفير الوقت والمال
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {BLOG_ARTICLES.slice(0, 6).map(article => (
+              <Link
+                key={article.slug}
+                href={`/blog/${article.slug}`}
+                className="group bg-white rounded-2xl border border-gray-200 overflow-hidden hover:border-emerald-300 hover:shadow-xl transition-all"
+              >
+                <div className="p-6">
+                  <span className="inline-block px-3 py-1 bg-emerald-50 text-emerald-700 rounded-full text-xs font-medium mb-3">
+                    {article.categoryLabel}
+                  </span>
+                  <h3 className="font-bold text-gray-900 mb-2 group-hover:text-emerald-700 transition-colors line-clamp-2">
+                    {article.title}
+                  </h3>
+                  <p className="text-gray-500 text-sm line-clamp-2 mb-4">{article.excerpt}</p>
+                  <div className="flex items-center justify-between text-xs text-gray-400">
+                    <span className="flex items-center gap-1">
+                      <Clock className="w-3.5 h-3.5" />
+                      {article.readTime} دقائق
+                    </span>
+                    <span className="text-emerald-600 font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
+                      اقرأ المقال
+                      <ArrowLeft className="w-3.5 h-3.5" />
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+          <div className="text-center mt-8">
+            <Link
+              href="/blog"
+              className="inline-flex items-center gap-2 px-8 py-3 bg-gray-900 text-white font-bold rounded-2xl hover:bg-gray-800 transition-colors shadow-lg"
+            >
+              <BookOpen className="w-5 h-5" />
+              تصفح جميع المقالات
+            </Link>
           </div>
         </section>
 

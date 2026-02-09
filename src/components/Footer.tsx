@@ -103,6 +103,11 @@ export default function Footer({ currentCity, currentService }: FooterProps) {
                                     جميع الخدمات
                                 </Link>
                             </li>
+                            <li>
+                                <Link href="/blog" className="hover:text-emerald-400 transition-colors text-sm">
+                                    المدونة
+                                </Link>
+                            </li>
                         </ul>
                     </div>
 

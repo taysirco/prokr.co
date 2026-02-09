@@ -1,0 +1,22 @@
+{
+  "name": "بروكر - دليل الخدمات السعودي",
+  "short_name": "بروكر",
+  "description": "أكبر دليل إلكتروني للخدمات المنزلية في المملكة العربية السعودية",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#059669",
+  "dir": "rtl",
+  "lang": "ar",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "utilities"],
+  "screenshots": [],
+  "prefer_related_applications": false
+}

@@ -2,13 +2,14 @@ import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Home, ChevronLeft, MapPin, Truck, Sparkles, Bug, Droplet, Wrench, Building2, Navigation } from 'lucide-react';
+import { Home, ChevronLeft, MapPin, Truck, Sparkles, Bug, Droplet, Wrench, Building2, Navigation, Clock, ArrowLeft } from 'lucide-react';
 import { getCityBySlug, getServiceImage, CITIES, SERVICES, CATEGORY_NAMES, getServicesByCategory } from '@/lib/seed';
 import { getSubRegionsByCity } from '@/lib/sub-regions';
 import { generateCityMeta } from '@/lib/ai-content-layers';
 import { BreadcrumbJsonLd, ItemListJsonLd, SpeakableWebPageJsonLd, WebPageJsonLd } from '@/components/JsonLd';
 import { getCityContext } from '@/lib/city-context';
 import { getCityKeyword } from '@/lib/keyword-strategy';
+import { BLOG_ARTICLES } from '@/lib/blog-data';
 import Footer from '@/components/Footer';
 
 interface CityPageProps {
@@ -344,6 +345,24 @@ export default async function CityPage({ params }: CityPageProps) {
                             </div>
                         </div>
                     </article>
+                </section>
+
+                {/* Related Blog Articles */}
+                <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                    <h2 className="text-xl font-bold text-gray-900 mb-6">مقالات وأدلة مفيدة</h2>
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        {BLOG_ARTICLES.slice(0, 3).map(article => (
+                            <Link key={article.slug} href={`/blog/${article.slug}`} className="group bg-white border border-gray-200 rounded-xl p-4 hover:border-emerald-300 hover:shadow-md transition-all">
+                                <span className="text-xs text-emerald-600 font-medium">{article.categoryLabel}</span>
+                                <h3 className="font-bold text-gray-900 text-sm mt-1 group-hover:text-emerald-700 transition-colors line-clamp-2">{article.title}</h3>
+                                <div className="flex items-center gap-1 mt-2 text-xs text-gray-400">
+                                    <Clock className="w-3 h-3" />
+                                    <span>{article.readTime} دقائق</span>
+                                    <ArrowLeft className="w-3 h-3 mr-auto text-emerald-500 opacity-0 group-hover:opacity-100 transition-opacity" />
+                                </div>
+                            </Link>
+                        ))}
+                    </div>
                 </section>
 
                 {/* Other Cities */}

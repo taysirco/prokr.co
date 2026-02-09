@@ -2,8 +2,8 @@
 
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import { Menu, X, ChevronDown, MapPin, Search, Phone, Sparkles, Truck, Bug, Droplet, Wrench, Building2, Shield, Home, Info, Mail, FileText } from 'lucide-react';
-import { SERVICES, getServicesByCategory, CATEGORY_NAMES, CITIES, getCitiesByRegion } from '@/lib/seed';
+import { Menu, X, ChevronDown, MapPin, Search, Phone, Sparkles, Truck, Bug, Droplet, Wrench, Building2, Shield, Home, Info, Mail, BookOpen } from 'lucide-react';
+import { SERVICES, getServicesByCategory, CATEGORY_NAMES, getCitiesByRegion } from '@/lib/seed';
 import SearchModal from './SearchModal';
 
 // Category icons
@@ -232,6 +232,15 @@ export default function Navbar() {
                                 </div>
                             </div>
 
+                            {/* Blog */}
+                            <Link
+                                href="/blog"
+                                className="flex items-center gap-2 px-4 py-2.5 text-gray-700 hover:text-emerald-600 hover:bg-emerald-50 rounded-xl font-medium transition-all"
+                            >
+                                <BookOpen className="w-4 h-4" />
+                                <span>المدونة</span>
+                            </Link>
+
                             {/* About */}
                             <Link
                                 href="/about-us"
@@ -328,13 +337,13 @@ export default function Navbar() {
                                 <span className="font-medium text-gray-900">المدن</span>
                             </Link>
                             <Link
-                                href="/about-us"
+                                href="/blog"
                                 className="flex items-center gap-3 p-4 bg-gray-50 hover:bg-emerald-50 rounded-2xl transition-all"
                             >
                                 <div className="w-10 h-10 bg-amber-100 rounded-xl flex items-center justify-center text-amber-600">
-                                    <Info className="w-5 h-5" />
+                                    <BookOpen className="w-5 h-5" />
                                 </div>
-                                <span className="font-medium text-gray-900">من نحن</span>
+                                <span className="font-medium text-gray-900">المدونة</span>
                             </Link>
                         </div>
 
