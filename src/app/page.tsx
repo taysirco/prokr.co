@@ -21,7 +21,7 @@ import {
   ThumbsUp,
   BookOpen,
 } from 'lucide-react';
-import { CITIES, SERVICES, getCitiesByRegion } from '@/lib/seed';
+import { CITIES, SERVICES, getCitiesByRegion, REGION_NAMES } from '@/lib/seed';
 import { BLOG_ARTICLES } from '@/lib/blog-data';
 import Footer from '@/components/Footer';
 import { WebsiteJsonLd, ProkrOrganizationJsonLd, BreadcrumbJsonLd } from '@/components/JsonLd';
@@ -40,14 +40,7 @@ const serviceIcons: Record<string, React.ReactNode> = {
   'sofa-cleaning': <Sparkles className="w-7 h-7" />,
 };
 
-// Region names in Arabic
-const regionNames: Record<string, string> = {
-  central: 'المنطقة الوسطى',
-  western: 'المنطقة الغربية',
-  eastern: 'المنطقة الشرقية',
-  northern: 'المنطقة الشمالية',
-  southern: 'المنطقة الجنوبية',
-};
+
 
 export default function HomePage() {
   const citiesByRegion = getCitiesByRegion();
@@ -481,7 +474,7 @@ export default function HomePage() {
                       <MapPin className="w-6 h-6" />
                     </div>
                     <h3 className="font-bold text-xl text-gray-900">
-                      {regionNames[region]}
+                      {REGION_NAMES[region]}
                     </h3>
                   </div>
                   <div className="space-y-1">

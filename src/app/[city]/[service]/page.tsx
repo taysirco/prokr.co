@@ -7,10 +7,11 @@ import { getCityBySlug, getServiceBySlug, getUniquePageImages } from '@/lib/seed
 import { getAdvertisersBySilo } from '@/lib/db-actions';
 import { ServiceJsonLd, BreadcrumbJsonLd, ItemListJsonLd, ServiceAreaJsonLd, HowToJsonLd, SpeakableWebPageJsonLd, AggregateRatingJsonLd, ImageObjectJsonLd } from '@/components/JsonLd';
 import { DirectAnswer } from '@/components/seo/DirectAnswer';
-import { SeoContentSection, FaqJsonLd, ServiceOfferJsonLd } from '@/lib/seo-content';
+import { SeoContentSection } from '@/lib/seo-content';
+import { FaqJsonLd, ServiceOfferJsonLd } from '@/components/schema';
 import { getCityContext } from '@/lib/city-context';
-import { generateContentLayers } from '@/lib/ai-content-layers';
-import { getServiceKeywordProfile, getCityKeyword, resolveKeywordTemplate } from '@/lib/keyword-strategy';
+import { getServiceKeywordProfile, getCityKeyword } from '@/lib/keyword-strategy';
+import { resolveContentLayers, resolveMetadata } from '@/lib/overrides';
 import Footer from '@/components/Footer';
 import type { Advertiser } from '@/types';
 
@@ -36,68 +37,31 @@ export async function generateMetadata({ params }: SiloPageProps): Promise<Metad
         return { title: 'صفحة غير موجودة' };
     }
 
-    // Keyword strategy
-    const profile = getServiceKeywordProfile(service.slug);
-    const cityKw = getCityKeyword(city.name_ar, profile.cityPrefixPattern);
-    const cityContext = getCityContext(city.slug);
-    const neighborhoods = cityContext?.neighborhoods || [];
-    const neighborhoodNames = neighborhoods.slice(0, 3).map(n => n.name_ar).join(' و');
-    const companiesCount = Math.floor(30 * (cityContext?.priceModifier || 1));
-
-    // AI content for snippet and title
-    const aiContent = generateContentLayers(city, service);
-    const title = aiContent.metaTitle;
-
-    // Keyword-optimized description with CTR triggers
-    const resolvedDesc = resolveKeywordTemplate(profile.metaDescription, {
-        city: cityKw,
-        cityName: city.name_ar,
-        serviceName: service.name_ar,
-        count: companiesCount,
-    });
-    const description = `${resolvedDesc} ${neighborhoodNames ? `نغطي أحياء ${neighborhoodNames} والمناطق المجاورة.` : ''}`;
-
-    // Build keyword-rich meta keywords from profile
-    const resolveKw = (kw: string) => resolveKeywordTemplate(kw, {
-        city: cityKw,
-        cityName: city.name_ar,
-        serviceName: service.name_ar,
-        neighborhood: neighborhoods[0]?.name_ar || '',
-    });
+    // Use the override-aware resolver
+    const meta = resolveMetadata(city, service);
 
     return {
-        title,
-        description,
-        keywords: [
-            // Primary keyword (highest volume)
-            resolveKw(profile.primaryKeyword),
-            // Synonyms with city (cover alternative search terms)
-            ...profile.synonyms.map(s => `${s} ${cityKw}`),
-            // Secondary keywords
-            ...profile.secondaryKeywords.map(resolveKw),
-            // Long-tail (neighborhoods + intent)
-            ...profile.longTailKeywords.slice(0, 4).map(resolveKw),
-            // Year keyword
-            `${service.name_ar} ${city.name_ar} 2026`,
-        ],
+        title: meta.title,
+        description: meta.description,
+        keywords: meta.keywords,
         openGraph: {
-            title,
-            description,
+            title: meta.ogTitle,
+            description: meta.ogDescription,
             locale: 'ar_SA',
             type: 'website',
             url: `https://prokr.co/${resolvedParams.city}/${resolvedParams.service}`,
             siteName: 'بروكر',
             images: [{
-                url: `https://prokr.co/${resolvedParams.city}/${resolvedParams.service}/opengraph-image`,
+                url: meta.ogImage || `https://prokr.co/${resolvedParams.city}/${resolvedParams.service}/opengraph-image`,
                 width: 1200,
                 height: 630,
-                alt: `أفضل شركات ${service.name_ar} ${cityKw} - بروكر`,
+                alt: `أفضل شركات ${service.name_ar} ${city.name_ar} - بروكر`,
             }],
         },
         twitter: {
             card: 'summary_large_image',
-            title,
-            description,
+            title: meta.ogTitle,
+            description: meta.ogDescription,
         },
         alternates: {
             canonical: `https://prokr.co/${resolvedParams.city}/${resolvedParams.service}`,
@@ -130,8 +94,8 @@ export default async function SiloPage({ params }: SiloPageProps) {
 
     const allAdvertisers = [...premium, ...standard];
 
-    // Generate AI content for H1
-    const aiContent = generateContentLayers(city, service);
+    // Generate AI content — override-aware
+    const aiContent = resolveContentLayers(city, service);
 
     // Keyword strategy for بـ prefix
     const kwProfile = getServiceKeywordProfile(service.slug);

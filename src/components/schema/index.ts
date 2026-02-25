@@ -1,0 +1,17 @@
+// Schema Components - Barrel Export
+export { LocalBusinessJsonLd } from './LocalBusinessJsonLd';
+export { OrganizationJsonLd } from './OrganizationJsonLd';
+export { ServiceJsonLd } from './ServiceJsonLd';
+export { ServiceAreaJsonLd } from './ServiceAreaJsonLd';
+export { HowToJsonLd } from './HowToJsonLd';
+export { SpeakableWebPageJsonLd } from './SpeakableWebPageJsonLd';
+export { ItemListJsonLd } from './ItemListJsonLd';
+export { WebPageJsonLd } from './WebPageJsonLd';
+export { ServiceCatalogJsonLd } from './ServiceCatalogJsonLd';
+export { BreadcrumbJsonLd } from './BreadcrumbJsonLd';
+export { WebsiteJsonLd } from './WebsiteJsonLd';
+export { ProkrOrganizationJsonLd } from './ProkrOrganizationJsonLd';
+export { ImageObjectJsonLd } from './ImageObjectJsonLd';
+export { AggregateRatingJsonLd } from './AggregateRatingJsonLd';
+export { FaqJsonLd } from './FaqJsonLd';
+export { ServiceOfferJsonLd } from './ServiceOfferJsonLd';

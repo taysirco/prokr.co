@@ -6,6 +6,7 @@ import { getServiceBySlug, getCityBySlug } from './seed';
 import { generateContentLayers } from './ai-content-layers';
 import { getServiceKeywordProfile, getCityKeyword, resolveKeywordTemplate } from './keyword-strategy';
 import { BLOG_ARTICLES } from './blog-data';
+import { resolveSeoContent } from './overrides';
 
 // ============================================
 // AI-Ready SEO Content Generator
@@ -19,153 +20,14 @@ interface SeoContentProps {
 // ============================================
 // DATA & CONSTANTS
 // ============================================
-
-const BASE_PRICING: Record<string, { type: string; unit: string; minPrice: number; maxPrice: number; time?: string }[]> = {
-    'furniture-moving': [
-        { type: 'شقة صغيرة (غرفة-غرفتين)', unit: 'رحلة واحدة', minPrice: 500, maxPrice: 800, time: '2-4 ساعات' },
-        { type: 'شقة متوسطة (3-4 غرف)', unit: 'رحلة واحدة', minPrice: 800, maxPrice: 1200, time: '4-6 ساعات' },
-        { type: 'شقة كبيرة (5+ غرف)', unit: 'رحلة واحدة', minPrice: 1200, maxPrice: 2000, time: '6-8 ساعات' },
-        { type: 'فيلا صغيرة', unit: 'رحلة واحدة', minPrice: 2000, maxPrice: 3500, time: 'يوم كامل' },
-        { type: 'فيلا كبيرة / قصر', unit: 'رحلة واحدة', minPrice: 3500, maxPrice: 7000, time: '1-2 يوم' },
-    ],
-    'furniture-storage': [
-        { type: 'غرفة واحدة', unit: 'شهرياً', minPrice: 200, maxPrice: 400 },
-        { type: 'شقة صغيرة', unit: 'شهرياً', minPrice: 400, maxPrice: 700 },
-        { type: 'شقة متوسطة', unit: 'شهرياً', minPrice: 700, maxPrice: 1200 },
-        { type: 'فيلا', unit: 'شهرياً', minPrice: 1200, maxPrice: 2500 },
-    ],
-    'dyna': [
-        { type: 'دينا صغيرة (3 طن)', unit: 'رحلة داخل المدينة', minPrice: 200, maxPrice: 350 },
-        { type: 'دينا متوسطة (5 طن)', unit: 'رحلة داخل المدينة', minPrice: 300, maxPrice: 500 },
-        { type: 'دينا كبيرة (7 طن)', unit: 'رحلة داخل المدينة', minPrice: 450, maxPrice: 700 },
-    ],
-    'cleaning': [
-        { type: 'شقة صغيرة', unit: 'تنظيف شامل', minPrice: 200, maxPrice: 350, time: '3-4 ساعات' },
-        { type: 'شقة متوسطة', unit: 'تنظيف شامل', minPrice: 350, maxPrice: 500, time: '4-6 ساعات' },
-        { type: 'فيلا صغيرة', unit: 'تنظيف شامل', minPrice: 500, maxPrice: 800, time: '6-8 ساعات' },
-        { type: 'فيلا كبيرة', unit: 'تنظيف شامل', minPrice: 800, maxPrice: 1500, time: 'يوم كامل' },
-        { type: 'تنظيف بالساعة', unit: 'ساعة واحدة', minPrice: 35, maxPrice: 50 },
-    ],
-    'tanks-cleaning': [
-        { type: 'خزان صغير (1-3 طن)', unit: 'تنظيف + تعقيم', minPrice: 150, maxPrice: 250 },
-        { type: 'خزان متوسط (4-8 طن)', unit: 'تنظيف + تعقيم', minPrice: 250, maxPrice: 400 },
-        { type: 'خزان كبير (10+ طن)', unit: 'تنظيف + تعقيم', minPrice: 400, maxPrice: 700 },
-    ],
-    'sofa-cleaning': [
-        { type: 'كنبة 3 مقاعد', unit: 'قطعة', minPrice: 80, maxPrice: 120 },
-        { type: 'كنبة 4 مقاعد', unit: 'قطعة', minPrice: 100, maxPrice: 150 },
-        { type: 'طقم كنب كامل', unit: 'طقم', minPrice: 300, maxPrice: 500 },
-        { type: 'مجلس عربي', unit: 'للمتر الطولي', minPrice: 30, maxPrice: 50 },
-    ],
-    'carpet-cleaning': [
-        { type: 'سجادة صغيرة (2×3 م)', unit: 'قطعة', minPrice: 50, maxPrice: 80 },
-        { type: 'سجادة متوسطة (3×4 م)', unit: 'قطعة', minPrice: 80, maxPrice: 120 },
-        { type: 'سجادة كبيرة (4×6 م)', unit: 'قطعة', minPrice: 120, maxPrice: 180 },
-        { type: 'موكيت', unit: 'للمتر المربع', minPrice: 8, maxPrice: 15 },
-    ],
-    'air-conditioner-cleaning': [
-        { type: 'مكيف سبليت', unit: 'وحدة', minPrice: 80, maxPrice: 120 },
-        { type: 'مكيف شباك', unit: 'وحدة', minPrice: 60, maxPrice: 90 },
-        { type: 'مكيف مركزي', unit: 'وحدة', minPrice: 150, maxPrice: 300 },
-    ],
-    'pest-control': [
-        { type: 'شقة صغيرة', unit: 'رش شامل', minPrice: 150, maxPrice: 250 },
-        { type: 'شقة متوسطة/كبيرة', unit: 'رش شامل', minPrice: 250, maxPrice: 400 },
-        { type: 'فيلا', unit: 'رش شامل', minPrice: 400, maxPrice: 700 },
-        { type: 'مكافحة النمل الأبيض', unit: 'للمتر المربع', minPrice: 15, maxPrice: 25 },
-        { type: 'عقد سنوي', unit: '4 زيارات', minPrice: 800, maxPrice: 1500 },
-    ],
-    'termite-control': [
-        { type: 'معالجة موضعية', unit: 'نقطة', minPrice: 300, maxPrice: 500 },
-        { type: 'معالجة شاملة (شقة)', unit: 'وحدة', minPrice: 1000, maxPrice: 2000 },
-        { type: 'معالجة شاملة (فيلا)', unit: 'وحدة', minPrice: 2000, maxPrice: 5000 },
-        { type: 'حماية ما قبل البناء', unit: 'للمتر المربع', minPrice: 20, maxPrice: 40 },
-    ],
-    'water-leak-detection': [
-        { type: 'فحص أولي', unit: 'زيارة', minPrice: 150, maxPrice: 300 },
-        { type: 'كشف بالأجهزة', unit: 'نقطة تسريب', minPrice: 200, maxPrice: 400 },
-        { type: 'إصلاح تسريب بسيط', unit: 'نقطة', minPrice: 300, maxPrice: 500 },
-        { type: 'إصلاح تسريب معقد', unit: 'نقطة', minPrice: 500, maxPrice: 1500 },
-        { type: 'فحص شامل للمبنى', unit: 'فحص كامل', minPrice: 500, maxPrice: 1000 },
-    ],
-    'tank-insulation': [
-        { type: 'خزان صغير (1-3 طن)', unit: 'عزل كامل', minPrice: 500, maxPrice: 800 },
-        { type: 'خزان متوسط (4-8 طن)', unit: 'عزل كامل', minPrice: 800, maxPrice: 1200 },
-        { type: 'خزان كبير (10+ طن)', unit: 'عزل كامل', minPrice: 1200, maxPrice: 2000 },
-        { type: 'عزل أرضي', unit: 'للخزان', minPrice: 1500, maxPrice: 3000 },
-    ],
-    'roof-insulation': [
-        { type: 'عزل مائي', unit: 'للمتر المربع', minPrice: 25, maxPrice: 45 },
-        { type: 'عزل حراري', unit: 'للمتر المربع', minPrice: 30, maxPrice: 50 },
-        { type: 'عزل مائي + حراري', unit: 'للمتر المربع', minPrice: 50, maxPrice: 80 },
-    ],
-    'sewer-cleaning': [
-        { type: 'تسليك بسيط', unit: 'نقطة', minPrice: 100, maxPrice: 200 },
-        { type: 'تسليك بالسلك', unit: 'نقطة', minPrice: 150, maxPrice: 300 },
-        { type: 'تسليك بالكمبروسر', unit: 'نقطة', minPrice: 250, maxPrice: 500 },
-    ],
-    'sewage-pumping': [
-        { type: 'وايت صغير (10 طن)', unit: 'رحلة', minPrice: 150, maxPrice: 250 },
-        { type: 'وايت كبير (20 طن)', unit: 'رحلة', minPrice: 250, maxPrice: 400 },
-        { type: 'شفط طوارئ', unit: 'رحلة', minPrice: 300, maxPrice: 500 },
-    ],
-};
+import { BASE_PRICING, TRUST_FACTORS, EXPERT_TIPS, WARNINGS, CHECKLISTS, SEMANTIC_DATA } from './services';
+import type { ServiceSemanticData } from './services';
 
 const DEFAULT_BASE_PRICING = [
     { type: 'خدمة أساسية', unit: 'زيارة', minPrice: 150, maxPrice: 300, time: '1-2 ساعة' },
     { type: 'خدمة متوسطة', unit: 'زيارة', minPrice: 300, maxPrice: 500, time: '2-4 ساعات' },
     { type: 'خدمة شاملة', unit: 'زيارة', minPrice: 500, maxPrice: 1000, time: '4-6 ساعات' },
 ];
-
-const TRUST_FACTORS: Record<string, string[]> = {
-    'moving': [
-        'ترخيص نقل معتمد من وزارة النقل',
-        'تأمين شامل على المنقولات',
-        'عمالة مدربة ومحترفة',
-        'سيارات نقل حديثة ومجهزة',
-        'مواد تغليف عالية الجودة',
-        'ضمان وصول الأثاث سليماً',
-    ],
-    'cleaning': [
-        'استخدام مواد تنظيف آمنة ومعتمدة',
-        'عمالة مدربة على أحدث التقنيات',
-        'معدات تنظيف حديثة',
-        'ضمان جودة الخدمة',
-        'أسعار شفافة بدون رسوم مخفية',
-        'مرونة في المواعيد',
-    ],
-    'pest-control': [
-        'مبيدات آمنة ومعتمدة من هيئة الغذاء والدواء',
-        'فنيين معتمدين ومرخصين',
-        'ضمان على الخدمة لمدة محددة',
-        'تقرير فني مفصل',
-        'متابعة دورية مجانية',
-        'سرية تامة للعميل',
-    ],
-    'leak-detection': [
-        'أجهزة كشف حديثة ودقيقة',
-        'خبرة في جميع أنواع المباني',
-        'تقرير فني معتمد',
-        'ضمان على الإصلاحات',
-        'عمل بدون تكسير إن أمكن',
-        'سرعة في التنفيذ',
-    ],
-    'insulation': [
-        'مواد عزل معتمدة ومطابقة للمواصفات',
-        'ضمان طويل الأمد (5-10 سنوات)',
-        'فريق عمل متخصص',
-        'شهادة إتمام العمل',
-        'فحص ما بعد التطبيق',
-        'أسعار تنافسية',
-    ],
-    'sewage': [
-        'سيارات شفط حديثة',
-        'خدمة 24 ساعة',
-        'أسعار ثابتة ومعلنة',
-        'سرعة في الاستجابة',
-        'تنظيف شامل للموقع',
-    ],
-};
 
 const DEFAULT_TRUST_FACTORS = [
     'شركة مرخصة ومعتمدة',
@@ -195,144 +57,15 @@ export function generateSeoContent({ city, service }: SeoContentProps) {
     const kwProfile = getServiceKeywordProfile(service.slug);
     const cityKw = getCityKeyword(city.name_ar, kwProfile.cityPrefixPattern);
 
-    // E-E-A-T Signals — Category-specific expert tips
-    const categoryTips: Record<string, string[]> = {
-        'moving': [
-            `قارن بين 3 عروض نقل على الأقل ${cityKw} وتأكد أن العرض يشمل الفك والتركيب والتغليف.`,
-            'صوّر أثاثك قبل النقل كإثبات لحالته — خاصة القطع الثمينة والإلكترونيات.',
-            'اسأل عن نوع التغليف (بابل راب، كرتون، ستريتش) ولا تقبل التغليف بالبطانيات فقط.',
-            'تأكد من وجود تأمين شامل على الأثاث ضد الكسر والخدش مكتوب في العقد.',
-            `اطلب فاتورة ضريبية مختومة وعقد يوضح تاريخ وساعة النقل ${cityKw}.`,
-        ],
-        'cleaning': [
-            `قارن بين 3 شركات تنظيف ${cityKw} واسأل عن نوع أجهزة التنظيف المستخدمة.`,
-            'تأكد أن مواد التنظيف معتمدة وآمنة — خاصة إذا كان لديك أطفال أو حيوانات أليفة.',
-            'حدد نوع الأسطح في منزلك (رخام، سيراميك، باركيه) لأن كل نوع يحتاج مواد مختلفة.',
-            'اسأل عن ضمان إعادة التنظيف مجاناً في حال عدم الرضا عن النتيجة.',
-            `اطلب فاتورة ضريبية مع تفاصيل الخدمات المقدمة والمواد المستخدمة.`,
-        ],
-        'pest-control': [
-            `قارن بين 3 شركات مكافحة ${cityKw} واسأل عن نوع المبيدات ومدة الضمان.`,
-            'تأكد أن المبيدات معتمدة من هيئة الغذاء والدواء وآمنة على الأطفال والحوامل.',
-            'اسأل عن خطة المتابعة الدورية — المكافحة الفعالة تحتاج أكثر من جلسة واحدة.',
-            'تحقق من ترخيص الشركة لممارسة نشاط مكافحة الآفات من البلدية.',
-            'لا تغسل الأرضيات بعد الرش لمدة 48 ساعة على الأقل لضمان فعالية المبيد.',
-        ],
-        'sewage': [
-            `اطلب كشف بالكاميرا قبل التسليك ${cityKw} لمعرفة سبب الانسداد الحقيقي.`,
-            'تأكد من أن السعر المتفق عليه ثابت ولا يتغير بعد بدء العمل.',
-            'اسأل عن نوع المعدات المستخدمة (كمبروسر، سلك، ضغط مائي) حسب حالتك.',
-            'اطلب ضماناً مكتوباً على عدم تكرار الانسداد لمدة محددة.',
-            'الصيانة الدورية كل 6 أشهر تمنع 80% من مشاكل الصرف المفاجئة.',
-        ],
-        'leak-detection': [
-            `تأكد أن الشركة تستخدم أجهزة كشف إلكترونية حديثة ${cityKw} وليس طرقاً تقليدية.`,
-            'اطلب تقريراً فنياً معتمداً يمكن تقديمه لشركة المياه لتصحيح الفاتورة.',
-            'الكشف المبكر يوفر عليك تكاليف إصلاح قد تصل 10 أضعاف تكلفة الفحص.',
-            'تأكد أن الفحص يشمل جميع الشبكة (حمامات، مطبخ، خزان، سطح) وليس نقطة واحدة.',
-            'اسأل عن ضمان الإصلاح بعد الكشف — الشركات المحترفة تقدم ضماناً على العمل.',
-        ],
-        'insulation': [
-            `قارن بين أنواع مواد العزل (فوم، إيبوكسي، رولات) ${cityKw} واختر الأنسب لمبناك.`,
-            'تأكد من أن المواد معتمدة من هيئة المواصفات السعودية (SASO) مع شهادة جودة.',
-            'اطلب ضماناً مكتوباً لا يقل عن 5 سنوات — الشركات المحترفة تقدم ضمان 10 سنوات.',
-            'العزل الحراري يقلل فاتورة الكهرباء حتى 40% — اطلب قياس الحرارة قبل وبعد.',
-            'تأكد من معالجة جميع الفواصل والتشققات قبل تطبيق العزل لضمان فعاليته.',
-        ],
-    };
-    const expertTips = categoryTips[service.category] || categoryTips['cleaning'];
+    // E-E-A-T Signals — Category-specific
+    const expertTipsTemplate = EXPERT_TIPS[service.category] || EXPERT_TIPS['cleaning'] || [];
+    const expertTips = expertTipsTemplate.map(t => t.replace(/\{cityKw\}/g, cityKw));
 
-    const categoryWarnings: Record<string, string[]> = {
-        'moving': [
-            'لا تنقل مع شركة بدون عقد مكتوب يوضح المسؤوليات والتعويضات.',
-            'احذر من العمالة السائبة — خطر على أثاثك ولا ضمان ولا تأمين.',
-            `${cityKw}، تجنب النقل في أوقات الذروة (نهاية الشهر) لأن الأسعار ترتفع والتأخير يزداد.`,
-            'لا تدفع كامل المبلغ قبل التأكد من وصول جميع القطع وتركيبها بشكل سليم.',
-        ],
-        'cleaning': [
-            'لا تقبل مواد تنظيف مجهولة المصدر — قد تتلف الأسطح أو تسبب حساسية.',
-            'احذر من العمالة غير المدربة التي تستخدم مواد كاشطة على الرخام والباركيه.',
-            `${cityKw}، تجنب التنظيف بالماء الكثير على الباركيه والأرضيات الخشبية.`,
-            'لا تدفع كامل المبلغ قبل فحص جميع الغرف والتأكد من جودة التنظيف.',
-        ],
-        'pest-control': [
-            'لا تستخدم مبيدات من السوبرماركت — قد تنشر الحشرات بدل القضاء عليها.',
-            'احذر من شركات بدون ترخيص بلدي — المبيدات غير المعتمدة خطر على الصحة.',
-            'لا تبقَ في المنزل أثناء الرش إذا كان لديك أطفال أقل من سنتين أو حوامل.',
-            `${cityKw}، تجنب الرش في الأيام شديدة الحرارة لأن المبيد يتبخر بسرعة ويفقد فعاليته.`,
-        ],
-        'sewage': [
-            'لا تستخدم مواد كيميائية لفتح الانسداد بنفسك — قد تتلف المواسير.',
-            'احذر من الشركات التي تزيد السعر بعد بدء العمل بحجة صعوبة الحالة.',
-            'لا تتجاهل بطء تصريف المياه — هذه علامة مبكرة على انسداد قادم.',
-            `${cityKw}، تأكد من أن سيارة الشفط مرخصة لتفريغ المخلفات في الأماكن المخصصة.`,
-        ],
-        'leak-detection': [
-            'لا تتجاهل ارتفاع فاتورة المياه — قد يكون مؤشراً على تسريب مخفي.',
-            'احذر من الشركات التي تقترح التكسير مباشرة بدون فحص إلكتروني.',
-            'لا توافق على إصلاح بدون تقرير مكتوب يحدد موقع وسبب التسريب بدقة.',
-            `${cityKw}، راقب ظهور بقع رطبة أو تقشر الدهان — علامات تسريب واضحة.`,
-        ],
-        'insulation': [
-            'لا تقبل عزل بدون تنظيف وتجهيز السطح أولاً — العزل على سطح متسخ يفشل.',
-            'احذر من المواد الرخيصة مجهولة المصدر — تتلف بعد موسم واحد.',
-            'لا توافق على عزل بدون ضمان مكتوب — الحد الأدنى المقبول 5 سنوات.',
-            `${cityKw}، تأكد من عزل جميع الفواصل والزوايا وليس فقط السطح المكشوف.`,
-        ],
-    };
-    const warnings = categoryWarnings[service.category] || categoryWarnings['cleaning'];
+    const warningsTemplate = WARNINGS[service.category] || WARNINGS['cleaning'] || [];
+    const warnings = warningsTemplate.map(w => w.replace(/\{cityKw\}/g, cityKw));
 
-    const categoryChecklist: Record<string, string[]> = {
-        'moving': [
-            'جرد جميع قطع الأثاث والأجهزة قبل النقل',
-            'التقاط صور للقطع الثمينة كإثبات',
-            'التأكد من رخصة الشركة والتأمين',
-            'الاتفاق على السعر الشامل كتابياً',
-            'تحديد موعد الوصول والتسليم بدقة',
-            'فحص جميع القطع بعد التركيب',
-        ],
-        'cleaning': [
-            'تحديد نوع التنظيف المطلوب (عميق/عادي/بعد بناء)',
-            'إبلاغ الشركة بنوع الأسطح والأقمشة',
-            'التأكد من سلامة مواد التنظيف المستخدمة',
-            'طلب عرض سعر شامل جميع الغرف',
-            'الاتفاق على وقت الإنجاز المتوقع',
-            'فحص النتيجة قبل مغادرة الفريق',
-        ],
-        'pest-control': [
-            'تحديد نوع الحشرة ودرجة الإصابة',
-            'السؤال عن نوع المبيد ومدى أمانه',
-            'التأكد من ترخيص الشركة البلدي',
-            'الاتفاق على عدد الجلسات ومدة الضمان',
-            'تجهيز المنزل قبل الرش (تغطية الطعام والأواني)',
-            'مراجعة تعليمات ما بعد الرش',
-        ],
-        'sewage': [
-            'وصف المشكلة بدقة (انسداد كلي/جزئي/طفح)',
-            'السؤال عن المعدات المستخدمة والسعر الثابت',
-            'التأكد من توفر خدمة الطوارئ 24 ساعة',
-            'طلب فحص بالكاميرا لتحديد المشكلة',
-            'الاتفاق على ضمان عدم تكرار المشكلة',
-            'التأكد من تنظيف الموقع بعد الانتهاء',
-        ],
-        'leak-detection': [
-            'ملاحظة علامات التسريب (بقع، رطوبة، فاتورة مرتفعة)',
-            'السؤال عن نوع أجهزة الكشف المستخدمة',
-            'التأكد من أن الفحص بدون تكسير',
-            'طلب تقرير فني معتمد ومفصل',
-            'الاتفاق على إصلاح فوري بعد الكشف',
-            'مراجعة الضمان على أعمال الإصلاح',
-        ],
-        'insulation': [
-            'تحديد نوع العزل المطلوب (مائي/حراري/مزدوج)',
-            'فحص حالة السطح أو الخزان قبل العزل',
-            'السؤال عن نوع المادة وشهادة الجودة',
-            'التأكد من تنظيف وتجهيز السطح قبل التطبيق',
-            'الاتفاق على مدة الضمان المكتوب',
-            'طلب قياس الحرارة قبل وبعد (للعزل الحراري)',
-        ],
-    };
-    const checklist = categoryChecklist[service.category] || categoryChecklist['cleaning'];
+    const checklistTemplate = CHECKLISTS[service.category] || CHECKLISTS['cleaning'] || [];
+    const checklist = checklistTemplate.map(c => c.replace(/\{cityKw\}/g, cityKw));
 
     // Service-specific PAA questions from keyword strategy
     const resolveQ = (q: string) => resolveKeywordTemplate(q, { city: cityKw, cityName: city.name_ar, serviceName: service.name_ar });
@@ -463,7 +196,10 @@ export function generateSeoContent({ city, service }: SeoContentProps) {
         paaQuestions,
         geoSignals,
         nearbyCityLinks,
-        complementaryLinks
+        complementaryLinks,
+
+        // Blueprint: Per-slug semantic data
+        semanticData: SEMANTIC_DATA[service.slug] || null,
     };
 }
 
@@ -472,7 +208,7 @@ export function generateSeoContent({ city, service }: SeoContentProps) {
 // ============================================
 
 export function SeoContentSection({ city, service }: SeoContentProps) {
-    const content = generateSeoContent({ city, service });
+    const content = resolveSeoContent(city, service);
     const kwProfile = getServiceKeywordProfile(service.slug);
     const cityKw = getCityKeyword(city.name_ar, kwProfile.cityPrefixPattern);
 
@@ -672,6 +408,71 @@ export function SeoContentSection({ city, service }: SeoContentProps) {
                     );
                 })()}
 
+                {/* ── Blueprint: Hidden Objections ── */}
+                {content.semanticData?.hiddenObjections && content.semanticData.hiddenObjections.length > 0 && (
+                    <div className="mb-10">
+                        <h3 className="text-xl font-bold text-gray-900 mb-4">⚠️ ما يجب أن تعرفه قبل حجز {service.name_ar} {cityKw}</h3>
+                        <div className="space-y-4">
+                            {content.semanticData.hiddenObjections.map((obj, i) => (
+                                <div key={i} className="bg-gradient-to-l from-red-50 to-orange-50 border border-red-100 rounded-xl p-5">
+                                    <p className="font-bold text-red-800 text-sm mb-2">❓ {obj.fear}</p>
+                                    <p className="text-gray-700 text-sm leading-relaxed">✅ {obj.solution}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                )}
+
+                {/* ── Blueprint: Counter-Narratives ── */}
+                {content.semanticData?.counterNarratives && content.semanticData.counterNarratives.length > 0 && (
+                    <div className="mb-10">
+                        <h3 className="text-xl font-bold text-gray-900 mb-4">🔍 صحّح معلوماتك عن {service.name_ar}</h3>
+                        <div className="space-y-4">
+                            {content.semanticData.counterNarratives.map((cn, i) => (
+                                <div key={i} className="bg-gradient-to-l from-blue-50 to-indigo-50 border border-blue-100 rounded-xl p-5">
+                                    <p className="text-red-700 text-sm mb-2 line-through opacity-80">❌ {cn.myth}</p>
+                                    <p className="text-emerald-800 text-sm font-medium leading-relaxed">✅ {cn.truth}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                )}
+
+                {/* ── Blueprint: Technical Equipment ── */}
+                {content.semanticData?.equipment && content.semanticData.equipment.length > 0 && (
+                    <div className="mb-10 bg-gradient-to-bl from-slate-50 to-gray-50 p-6 rounded-xl border border-gray-200">
+                        <h3 className="text-xl font-bold text-gray-900 mb-4">🔧 المعدات والتقنيات المستخدمة في {service.name_ar}</h3>
+                        <div className="overflow-x-auto">
+                            <table className="w-full text-sm">
+                                <thead>
+                                    <tr className="border-b border-gray-300">
+                                        <th className="text-right py-3 px-4 font-bold text-gray-700">المعدة / التقنية</th>
+                                        <th className="text-right py-3 px-4 font-bold text-gray-700">الاستخدام</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {content.semanticData.equipment.map((eq, i) => (
+                                        <tr key={i} className="border-b border-gray-100 hover:bg-gray-50">
+                                            <td className="py-3 px-4 font-medium text-gray-900">{eq.name}</td>
+                                            <td className="py-3 px-4 text-gray-600">{eq.use}</td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
+                        {content.semanticData.govReferences && content.semanticData.govReferences.length > 0 && (
+                            <div className="mt-4 pt-4 border-t border-gray-200">
+                                <p className="text-xs text-gray-500 font-medium mb-2">📋 التراخيص والمعايير المعتمدة:</p>
+                                <ul className="text-xs text-gray-500 space-y-1">
+                                    {content.semanticData.govReferences.map((ref, i) => (
+                                        <li key={i}>• {ref}</li>
+                                    ))}
+                                </ul>
+                            </div>
+                        )}
+                    </div>
+                )}
+
                 {/* 9. FAQs */}
                 <div className="space-y-4" itemScope itemType="https://schema.org/FAQPage">
                     <h3 className="text-xl font-bold text-gray-900">الأسئلة الشائعة عن {service.name_ar} {cityKw}</h3>
@@ -690,76 +491,3 @@ export function SeoContentSection({ city, service }: SeoContentProps) {
     );
 }
 
-// ============================================
-// ENHANCED JSON-LD SCHEMAS
-// ============================================
-
-export function FaqJsonLd({ city, service }: SeoContentProps) {
-    const content = generateSeoContent({ city, service });
-
-    const schema = {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": content.faqItems.map(faq => ({
-            "@type": "Question",
-            "name": faq.question,
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": faq.answer
-            }
-        }))
-    };
-
-    return (
-        <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-        />
-    );
-}
-
-export function ServiceOfferJsonLd({ city, service }: SeoContentProps) {
-    const content = generateSeoContent({ city, service });
-
-    // Pricing data is already adjusted in generateSeoContent
-    const schema = {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "name": `${service.name_ar} ${getCityKeyword(city.name_ar, getServiceKeywordProfile(service.slug).cityPrefixPattern)}`,
-        "description": content.aiContent.shortAnswer, // Use the AI snippet
-        "areaServed": {
-            "@type": "City",
-            "name": city.name_ar,
-            "addressCountry": "SA"
-        },
-        "provider": {
-            "@type": "Organization",
-            "name": "بروكر",
-            "url": "https://prokr.co"
-        },
-        "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": `خدمات ${service.name_ar}`,
-            "itemListElement": content.pricing.slice(0, 5).map((item) => ({
-                "@type": "Offer",
-                "itemOffered": {
-                    "@type": "Service",
-                    "name": item.type
-                },
-                "priceSpecification": {
-                    "@type": "PriceSpecification",
-                    "priceCurrency": "SAR",
-                    "minPrice": item.minPrice,
-                    "maxPrice": item.maxPrice
-                }
-            }))
-        }
-    };
-
-    return (
-        <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-        />
-    );
-}

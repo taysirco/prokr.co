@@ -16,18 +16,11 @@ import {
     Star,
     Image as ImageIcon,
 } from 'lucide-react';
-import { CITIES, SERVICES, getCitiesByRegion, getServicesByCategory, CATEGORY_NAMES } from '@/lib/seed';
+import { CITIES, SERVICES, getCitiesByRegion, getServicesByCategory, CATEGORY_NAMES, REGION_NAMES } from '@/lib/seed';
 import { uploadPublicLogo, uploadPublicGallery, validateFile, generateShortCode } from '@/lib/storage';
 import { createAdvertiserRequest } from '@/lib/db-actions';
 
-// Region names
-const regionNames: Record<string, string> = {
-    central: 'المنطقة الوسطى',
-    western: 'المنطقة الغربية',
-    eastern: 'المنطقة الشرقية',
-    northern: 'المنطقة الشمالية',
-    southern: 'المنطقة الجنوبية',
-};
+
 
 interface AdvertiserRegistrationFormProps {
     initialPlan?: 'free' | 'premium';
@@ -368,7 +361,7 @@ export default function AdvertiserRegistrationForm({
                             اختر المنطقة <span className="text-red-500">*</span>
                         </label>
                         <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
-                            {Object.entries(regionNames).map(([key, name]) => (
+                            {Object.entries(REGION_NAMES).map(([key, name]) => (
                                 <button
                                     key={key}
                                     type="button"

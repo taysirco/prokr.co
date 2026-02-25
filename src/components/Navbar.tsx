@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown, MapPin, Search, Phone, Sparkles, Truck, Bug, Droplet, Wrench, Building2, Shield, Home, Info, Mail, BookOpen } from 'lucide-react';
-import { SERVICES, getServicesByCategory, CATEGORY_NAMES, getCitiesByRegion } from '@/lib/seed';
+import { SERVICES, getServicesByCategory, CATEGORY_NAMES, getCitiesByRegion, REGION_NAMES } from '@/lib/seed';
 import SearchModal from './SearchModal';
 
 // Category icons
@@ -15,14 +15,7 @@ const categoryIcons: Record<string, React.ReactNode> = {
     insulation: <Shield className="w-5 h-5" />,
 };
 
-// Region names
-const regionNames: Record<string, string> = {
-    central: 'المنطقة الوسطى',
-    western: 'المنطقة الغربية',
-    eastern: 'المنطقة الشرقية',
-    northern: 'المنطقة الشمالية',
-    southern: 'المنطقة الجنوبية',
-};
+
 
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -197,7 +190,7 @@ export default function Navbar() {
                                                     <div key={region}>
                                                         <h4 className="font-bold text-gray-900 mb-3 text-sm flex items-center gap-2">
                                                             <MapPin className="w-4 h-4 text-emerald-500" />
-                                                            {regionNames[region]}
+                                                            {REGION_NAMES[region]}
                                                         </h4>
                                                         <div className="space-y-1">
                                                             {cities.slice(0, 5).map(city => (

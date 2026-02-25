@@ -36,7 +36,7 @@ import {
     User as UserIcon,
     Calendar
 } from 'lucide-react';
-import { CITIES, SERVICES, getCitiesByRegion, getServicesByCategory, CATEGORY_NAMES } from '@/lib/seed';
+import { CITIES, SERVICES, getCitiesByRegion, getServicesByCategory, CATEGORY_NAMES, REGION_NAMES } from '@/lib/seed';
 import { uploadLogo, uploadGallery, validateFile } from '@/lib/storage';
 import {
     createAdvertiser,
@@ -76,14 +76,7 @@ const initialForm: AdvertiserForm = {
     description: '',
 };
 
-// Region names mapping
-const regionNames: Record<string, string> = {
-    central: 'المنطقة الوسطى',
-    western: 'المنطقة الغربية',
-    eastern: 'المنطقة الشرقية',
-    northern: 'المنطقة الشمالية',
-    southern: 'المنطقة الجنوبية',
-};
+
 
 export default function AdminDashboard() {
     const [user, setUser] = useState<User | null>(null);
@@ -927,8 +920,8 @@ export default function AdminDashboard() {
                                                             </div>
                                                         </div>
                                                         <span className={`px-3 py-1 rounded-lg text-sm font-medium ${request.selected_plan === 'premium'
-                                                                ? 'bg-amber-100 text-amber-700'
-                                                                : 'bg-gray-100 text-gray-600'
+                                                            ? 'bg-amber-100 text-amber-700'
+                                                            : 'bg-gray-100 text-gray-600'
                                                             }`}>
                                                             {request.selected_plan === 'premium' ? (
                                                                 <>
@@ -1170,7 +1163,7 @@ export default function AdminDashboard() {
                                 {Object.entries(citiesByRegion).map(([region, cities]) => (
                                     <div key={region} className="space-y-2">
                                         <h4 className="text-sm font-semibold text-gray-500 uppercase">
-                                            {regionNames[region]}
+                                            {REGION_NAMES[region]}
                                         </h4>
                                         <div className="space-y-1 bg-gray-50 rounded-xl p-3">
                                             {cities.map(city => (
