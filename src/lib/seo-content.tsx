@@ -47,7 +47,7 @@ export function generateSeoContent({ city, service }: SeoContentProps) {
     const basePricing = BASE_PRICING[service.slug] || DEFAULT_BASE_PRICING;
     const trustFactors = TRUST_FACTORS[service.category] || DEFAULT_TRUST_FACTORS;
     const serviceNuances = getServiceNuances(city.slug, service.category);
-    const relatedServices = getRelatedServices(service.slug, 3);
+    const relatedServices = getRelatedServices(service.slug, 11);
     const climateContent = cityContext ? getClimateContent(cityContext.climate) : null;
 
     // AI Content Layers
@@ -334,7 +334,7 @@ export function SeoContentSection({ city, service }: SeoContentProps) {
                     <div className="mb-10">
                         <h3 className="text-xl font-bold text-gray-900 mb-4">خدمات مكملة قد تحتاجها {cityKw}</h3>
                         <div className="grid sm:grid-cols-2 gap-3">
-                            {complementaryLinks.map((link, i) => (
+                            {complementaryLinks.filter((l): l is NonNullable<typeof l> => Boolean(l)).map((link, i) => (
                                 <Link
                                     key={i}
                                     href={link.url}

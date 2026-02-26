@@ -131,6 +131,25 @@ export function resolveSeoContent(city: City, service: Service) {
         }))
         : auto.pricing;
 
+    // Blueprint Rule #13: Resolve related services (7-11) from override or auto
+    const resolvedRelated = override.relatedServices
+        ? override.relatedServices.sort((a, b) => a.priority - b.priority)
+        : auto.relatedServices;
+
+    // Build complementaryLinks from override relatedServices
+    const { getServiceBySlug } = require('../seed');
+    const resolvedComplementaryLinks = override.relatedServices
+        ? override.relatedServices.sort((a, b) => a.priority - b.priority).map((rel: RelatedService) => {
+            const relService = getServiceBySlug(rel.slug.replace(`${city.slug}-`, ''));
+            return relService ? {
+                name_ar: relService.name_ar,
+                slug: relService.slug,
+                url: `/${city.slug}/${relService.slug}`,
+                context: rel.context,
+            } : null;
+        }).filter(Boolean)
+        : auto.complementaryLinks;
+
     return {
         ...auto,
         pricing: resolvedPricing,
@@ -139,6 +158,9 @@ export function resolveSeoContent(city: City, service: Service) {
         warnings: override.warnings ?? auto.warnings,
         checklist: override.checklist ?? auto.checklist,
         trustFactors: override.trustFactors ?? auto.trustFactors,
+        // Blueprint Rule #13: Related Services 7-11
+        relatedServices: resolvedRelated,
+        complementaryLinks: resolvedComplementaryLinks,
         // AI content layer overrides
         aiContent: {
             ...auto.aiContent,
@@ -167,7 +189,7 @@ export function resolveSeoContent(city: City, service: Service) {
 /**
  * Resolves related services: full replacement if override exists.
  */
-export function resolveRelatedServices(serviceSlug: string, citySlug: string, limit: number = 3): RelatedService[] {
+export function resolveRelatedServices(serviceSlug: string, citySlug: string, limit: number = 11): RelatedService[] {
     const override = getPageOverride(citySlug, serviceSlug);
 
     if (override?.relatedServices) {

@@ -8,6 +8,7 @@ export const cleaningServices: Service[] = [
     { slug: 'steam-cleaning', name_ar: 'تنظيف بالبخار', name_en: 'Steam Cleaning', category: 'cleaning' },
     { slug: 'sanitization', name_ar: 'تعقيم', name_en: 'Sanitization', category: 'cleaning' },
     { slug: 'air-conditioner-cleaning', name_ar: 'تنظيف مكيفات', name_en: 'AC Cleaning', category: 'cleaning' },
+    { slug: 'mattress-cleaning', name_ar: 'تنظيف مراتب', name_en: 'Mattress Cleaning', category: 'cleaning' },
     { slug: 'glass-facades-cleaning', name_ar: 'تنظيف واجهات زجاج', name_en: 'Glass Facades Cleaning', category: 'cleaning' },
     { slug: 'floor-cleaning', name_ar: 'تنظيف ارضيات', name_en: 'Floor Cleaning', category: 'cleaning' },
     { slug: 'floor-polishing', name_ar: 'جلي بلاط', name_en: 'Floor Polishing', category: 'cleaning' },
@@ -61,6 +62,9 @@ export const cleaningImages: Record<string, string[]> = {
     ],
     'air-conditioner-cleaning': [
         '/images/cleaning/ac_cleaning_and_maintenance_services.jpg',
+    ],
+    'mattress-cleaning': [
+        '/images/cleaning/mattress_cleaning_services_jeddah.jpg',
     ],
     'glass-facades-cleaning': [
         '/images/cleaning/glass_facade_cleaning_riyadh.jpg',
