@@ -132,6 +132,30 @@ export interface PageOverride {
         context: string;
         priority: number;
     }[];
+
+    // ─── Entity Intersection (NLP Signals) ───
+    /**
+     * كيانات علمية + مناخية محقونة في المحتوى.
+     * تُستخدم لبناء Entity Intersection = محتوى فريد لكل مدينة.
+     */
+    entityContext?: {
+        /** أسماء الكيانات العلمية المُستخدمة في هذه الصفحة */
+        sectorEntities?: string[];
+        /** التحديات المناخية الخاصة بالمدينة لهذا القطاع */
+        climateChallenges?: string[];
+        /** فقرة Entity Intersection جاهزة — تقاطع القطاع × المناخ */
+        intersectionParagraph?: string;
+
+        // ─── NLP Engine Signals ───
+        /** مصطلحات دارجة من العميل للربط الدلالي */
+        slangTerms?: string[];
+        /** أفعال مسار قوي للتحليل النحوي */
+        activeVerbs?: string[];
+        /** أخطاء المنافسين للتأطير التناقضي (Negative Entities) */
+        wrongPractices?: { name: string; use: string }[];
+        /** البرومبت الهندسي المعماري المخصص لهذه المدينة والخدمة */
+        architectPrompt?: string;
+    };
 }
 
 /**

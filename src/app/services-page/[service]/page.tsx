@@ -8,6 +8,7 @@ import { generateServiceCategoryMeta } from '@/lib/ai-content-layers';
 import { BreadcrumbJsonLd, ServiceJsonLd, ItemListJsonLd, WebPageJsonLd } from '@/components/JsonLd';
 import { getCityContext, getAdjustedPriceRange } from '@/lib/city-context';
 import { getServiceKeywordProfile } from '@/lib/keyword-strategy';
+import { hasPageOverride } from '@/lib/overrides/registry';
 import Footer from '@/components/Footer';
 
 // Major cities for price comparison
@@ -129,7 +130,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                 type="cities"
                 listName={`${service.name_ar} في مدن السعودية`}
                 description={`قائمة المدن التي تتوفر فيها خدمة ${service.name_ar}`}
-                items={CITIES.map(c => ({
+                items={CITIES.filter(c => hasPageOverride(c.slug, service.slug)).map(c => ({
                     name: c.name_ar,
                     url: `https://prokr.co/${c.slug}/${service.slug}`
                 }))}
@@ -213,7 +214,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                                     {REGION_NAMES[region] || region}
                                 </h3>
                                 <div className="space-y-2">
-                                    {cities.map(city => (
+                                    {cities.filter(city => hasPageOverride(city.slug, service.slug)).map(city => (
                                         <Link
                                             key={city.slug}
                                             href={`/${city.slug}/${service.slug}`}
@@ -269,7 +270,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                                             </tr>
                                         </thead>
                                         <tbody className="divide-y divide-gray-100">
-                                            {COMPARISON_CITIES.map(citySlug => {
+                                            {COMPARISON_CITIES.filter(cs => hasPageOverride(cs, service.slug)).map(citySlug => {
                                                 const ctx = getCityContext(citySlug);
                                                 if (!ctx) return null;
                                                 return (

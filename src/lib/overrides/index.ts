@@ -18,3 +18,17 @@ export {
     isSchemaDisabled,
     getOverrideForPage,
 } from './resolver';
+
+// Entity Database
+export { getServiceEntities, getServiceSectorCategory, SECTOR_ENTITIES } from './entities';
+export type { EntityItem, SectorEntities, ServiceCategory } from './entities';
+
+// City Climate Profiles
+export { getCityClimate, getEntityIntersection, getClimateChallenges, CITY_CLIMATE } from './city-climate';
+export type { ClimateZone, CityClimateProfile } from './city-climate';
+
+// Trust Anchors (including geographic amanas)
+export { GOV, EXPERTS, REGULATIONS, AMANA, getAmanaForCity } from './trust-anchors';
+
+// NLP Prompts (Master Compiler for Content Writers & AI)
+export { MASTER_NLP_PROMPT, ARCHITECT_EQUATION_PROMPT } from './nlp-prompts';

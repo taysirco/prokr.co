@@ -2,6 +2,7 @@ import { MetadataRoute } from 'next';
 import { CITIES, SERVICES } from '@/lib/seed';
 import { SUB_REGIONS } from '@/lib/sub-regions';
 import { BLOG_ARTICLES } from '@/lib/blog-data';
+import { hasPageOverride } from '@/lib/overrides/registry';
 
 const BASE_URL = 'https://prokr.co';
 
@@ -76,12 +77,14 @@ export default async function sitemap({ id }: { id: number }): Promise<MetadataR
         const pages: MetadataRoute.Sitemap = [];
         for (const city of CITIES) {
             for (const serviceSlug of slugsForThisSitemap) {
-                pages.push({
-                    url: `${BASE_URL}/${city.slug}/${serviceSlug}`,
-                    lastModified: now,
-                    changeFrequency: 'weekly',
-                    priority: 0.9,
-                });
+                if (hasPageOverride(city.slug, serviceSlug)) {
+                    pages.push({
+                        url: `${BASE_URL}/${city.slug}/${serviceSlug}`,
+                        lastModified: now,
+                        changeFrequency: 'weekly',
+                        priority: 0.9,
+                    });
+                }
             }
         }
         return pages;

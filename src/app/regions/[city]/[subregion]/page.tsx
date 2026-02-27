@@ -8,6 +8,7 @@ import { getSubRegion, getSubRegionsByCity, SUB_REGIONS } from '@/lib/sub-region
 import { BreadcrumbJsonLd, ItemListJsonLd, WebPageJsonLd, ServiceAreaJsonLd } from '@/components/JsonLd';
 import { getCityContext } from '@/lib/city-context';
 import { getCityKeyword } from '@/lib/keyword-strategy';
+import { hasPageOverride } from '@/lib/overrides/registry';
 import Footer from '@/components/Footer';
 
 interface SubRegionPageProps {
@@ -96,7 +97,8 @@ export default async function SubRegionPage({ params }: SubRegionPageProps) {
 
     const availableServices = subRegion.services
         .map(slug => getServiceBySlug(slug))
-        .filter(Boolean);
+        .filter(Boolean)
+        .filter(service => service && hasPageOverride(city.slug, service.slug));
 
     const servicesByCategory = availableServices.reduce((acc, service) => {
         if (!service) return acc;

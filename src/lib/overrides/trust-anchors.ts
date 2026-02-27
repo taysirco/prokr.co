@@ -238,3 +238,49 @@ export const REGULATIONS = {
         url: 'https://balady.gov.sa',
     },
 } as const;
+
+
+// ─────────────────────────────────────────
+// 5. الأمانات الجغرافية (Geographic Trust Anchors)
+// ─────────────────────────────────────────
+
+export const AMANA = {
+    // ═══ المنطقة الوسطى ═══
+    RIYADH: { entity: 'أمانة منطقة الرياض', url: 'https://www.alriyadh.gov.sa/', cities: ['riyadh', 'al-kharj'] },
+    QASSIM: { entity: 'أمانة منطقة القصيم', url: 'https://www.qassim.gov.sa/', cities: ['qassim', 'buraidah', 'onizah'] },
+
+    // ═══ المنطقة الغربية ═══
+    JEDDAH: { entity: 'أمانة محافظة جدة', url: 'https://www.jeddah.gov.sa/', cities: ['jeddah'] },
+    MAKKAH: { entity: 'أمانة العاصمة المقدسة', url: 'https://holymakkah.gov.sa/', cities: ['makkah'] },
+    MADINAH: { entity: 'أمانة منطقة المدينة المنورة', url: 'https://www.amana-md.gov.sa/', cities: ['madinah', 'yanbu'] },
+    TAIF: { entity: 'أمانة محافظة الطائف', url: 'https://www.taifcity.gov.sa/', cities: ['taif'] },
+
+    // ═══ المنطقة الشرقية ═══
+    SHARQIA: { entity: 'أمانة المنطقة الشرقية', url: 'https://www.eamana.gov.sa/', cities: ['dammam', 'al-khobar', 'dhahran', 'jubail', 'qatif'] },
+    AHSA: { entity: 'أمانة محافظة الأحساء', url: 'https://www.alhasa.gov.sa/', cities: ['al-ahsa'] },
+    HAFR: { entity: 'أمانة محافظة حفر الباطن', url: 'https://www.hafr.gov.sa/', cities: ['hafr-albatin'] },
+
+    // ═══ المنطقة الشمالية ═══
+    TABUK: { entity: 'أمانة منطقة تبوك', url: 'https://www.tabukm.gov.sa/', cities: ['tabuk'] },
+    HAIL: { entity: 'أمانة منطقة حائل', url: 'https://www.amanathail.gov.sa/', cities: ['hail'] },
+
+    // ═══ المنطقة الجنوبية ═══
+    ASIR: { entity: 'أمانة منطقة عسير', url: 'https://ars.gov.sa/', cities: ['abha', 'khamis-mushait'] },
+    NAJRAN: { entity: 'أمانة منطقة نجران', url: 'https://www.najran.gov.sa/', cities: ['najran'] },
+    JAZAN: { entity: 'أمانة منطقة جازان', url: 'https://www.jazan.gov.sa/', cities: ['jazan'] },
+    BAHA: { entity: 'أمانة منطقة الباحة', url: 'https://www.albaham.gov.sa/', cities: ['al-baha'] },
+} as const;
+
+
+/**
+ * Get the Amana trust anchor for a specific city
+ */
+export function getAmanaForCity(citySlug: string): { entity: string; url: string } | null {
+    for (const amana of Object.values(AMANA)) {
+        if ((amana.cities as readonly string[]).includes(citySlug)) {
+            return { entity: amana.entity, url: amana.url };
+        }
+    }
+    return null;
+}
+

@@ -1,6 +1,7 @@
 // ============================================
 // Page Override Resolver
 // Merges per-page overrides with auto-generated content
+// + Entity Intersection auto-injection
 // ============================================
 
 import type { City, Service } from '@/types';
@@ -11,6 +12,9 @@ import { generateSeoContent } from '../seo-content';
 import { getServiceKeywordProfile, getCityKeyword, resolveKeywordTemplate } from '../keyword-strategy';
 import { getCityContext, getAdjustedPriceRange } from '../city-context';
 import { getRelatedServices, type RelatedService } from '../related-services';
+import { getServiceEntities, getServiceSectorCategory } from './entities';
+import { getClimateChallenges, getEntityIntersection } from './city-climate';
+import { ARCHITECT_EQUATION_PROMPT } from './nlp-prompts';
 
 // ============================================
 // CONTENT LAYERS RESOLVER
@@ -21,12 +25,27 @@ import { getRelatedServices, type RelatedService } from '../related-services';
  */
 export function resolveContentLayers(city: City, service: Service): ContentLayers & {
     heroSubtitle?: string;
+    entityIntersection?: string;
 } {
     const auto = generateContentLayers(city, service);
     const override = getPageOverride(city.slug, service.slug);
 
+    // Resolve entity intersection from override or auto-generate from city-climate
+    const sectorCategory = getServiceSectorCategory(service.slug);
+    const autoEntityIntersection = sectorCategory
+        ? getEntityIntersection(city.slug, sectorCategory) ?? undefined
+        : undefined;
+    const autoChallenges = sectorCategory
+        ? getClimateChallenges(city.slug, sectorCategory)
+        : [];
+
     if (!override?.content) {
-        return auto;
+        return {
+            ...auto,
+            // Auto-inject climate challenges if auto content is generic
+            localChallenges: autoChallenges.length > 0 ? autoChallenges : auto.localChallenges,
+            entityIntersection: autoEntityIntersection,
+        };
     }
 
     const c = override.content;
@@ -34,12 +53,13 @@ export function resolveContentLayers(city: City, service: Service): ContentLayer
         introduction: c.introduction ?? auto.introduction,
         shortAnswer: c.shortAnswer ?? auto.shortAnswer,
         whyUs: c.whyUs ?? auto.whyUs,
-        localChallenges: c.localChallenges ?? auto.localChallenges,
+        localChallenges: c.localChallenges ?? (autoChallenges.length > 0 ? autoChallenges : auto.localChallenges),
         customSolutions: c.customSolutions ?? auto.customSolutions,
         successStories: c.successStories ?? auto.successStories,
         metaTitle: override.meta?.title ?? auto.metaTitle,
         h1: override.meta?.h1 ?? auto.h1,
         heroSubtitle: c.heroSubtitle,
+        entityIntersection: override.entityContext?.intersectionParagraph ?? autoEntityIntersection,
     };
 }
 
@@ -119,8 +139,57 @@ export function resolveSeoContent(city: City, service: Service) {
     const auto = generateSeoContent({ city, service });
     const override = getPageOverride(city.slug, service.slug);
 
+    // Auto-generate entity data from central databases
+    const sectorCategory = getServiceSectorCategory(service.slug);
+    const autoEntities = getServiceEntities(service.slug);
+    const autoChallenges = sectorCategory
+        ? getClimateChallenges(city.slug, sectorCategory)
+        : [];
+    const autoIntersection = sectorCategory
+        ? getEntityIntersection(city.slug, sectorCategory)
+        : null;
+
+    // Auto-generate equipment from sector entities if override doesn't have custom equipment
+    const autoEquipment = autoEntities?.tools?.slice(0, 4).map(t => ({
+        name: `${t.name} (${t.nameEn})`,
+        use: t.use,
+    })) ?? [];
+
+    // Compile the Architectural NLP Prompt
+    const compiledPrompt = ARCHITECT_EQUATION_PROMPT
+        .replace(/\[اسم الخدمة\]/g, service.name_ar)
+        .replace(/\[اسم المدينة\]/g, city.name_ar)
+        .replace(/\[تحديات المناخ في المدينة\]/g, autoChallenges.join(' و '))
+        .replace(/\[الممارسات الخاطئة\]/g, autoEntities?.wrongPractices?.map(w => w.name).join(' أو ') || '')
+        .replace(/\[كيانات الأدوات والمواد\]/g, [...(autoEntities?.tools || []), ...(autoEntities?.materials || [])].slice(0, 3).map(e => e.name).join(' و '))
+        .replace(/\[الأفعال النشطة \+ الأدوات\]/g, autoEntities?.activeVerbs?.slice(0, 2).join(' و ') || '')
+        .replace(/\[الأعراض والكيانات الفيزيائية\]/g, [...(autoEntities?.symptoms || []), ...(autoEntities?.physics || [])].slice(0, 2).map(e => e.name).join(' و '));
+
+    // Base Entity Context Object
+    const baseEntityContext = {
+        intersectionParagraph: autoIntersection || undefined,
+        climateChallenges: autoChallenges,
+        sectorEntities: autoEntities ? [...(autoEntities.tools || []), ...(autoEntities.materials || [])].map(e => e.name) : undefined,
+        slangTerms: autoEntities?.slangTerms,
+        activeVerbs: autoEntities?.activeVerbs,
+        wrongPractices: autoEntities?.wrongPractices?.map(w => ({ name: w.name, use: w.use })),
+        architectPrompt: compiledPrompt,
+    };
+
     if (!override) {
-        return auto;
+        return {
+            ...auto,
+            // Inject entity-enriched data into auto-generated content
+            aiContent: {
+                ...auto.aiContent,
+                localChallenges: autoChallenges.length > 0 ? autoChallenges : auto.aiContent.localChallenges,
+            },
+            semanticData: auto.semanticData ? {
+                ...auto.semanticData,
+                equipment: autoEquipment.length > 0 ? autoEquipment : auto.semanticData.equipment,
+            } : null,
+            entityContext: baseEntityContext,
+        };
     }
 
     // If override has custom pricing, compute the display price string
@@ -150,6 +219,9 @@ export function resolveSeoContent(city: City, service: Service) {
         }).filter(Boolean)
         : auto.complementaryLinks;
 
+    // Resolve equipment: override > auto-entities > auto-generated
+    const resolvedEquipment = override.equipment ?? (autoEquipment.length > 0 ? autoEquipment : undefined);
+
     return {
         ...auto,
         pricing: resolvedPricing,
@@ -161,24 +233,29 @@ export function resolveSeoContent(city: City, service: Service) {
         // Blueprint Rule #13: Related Services 7-11
         relatedServices: resolvedRelated,
         complementaryLinks: resolvedComplementaryLinks,
-        // AI content layer overrides
+        // AI content layer overrides + entity injection
         aiContent: {
             ...auto.aiContent,
             introduction: override.content?.introduction ?? auto.aiContent.introduction,
             shortAnswer: override.content?.shortAnswer ?? auto.aiContent.shortAnswer,
             whyUs: override.content?.whyUs ?? auto.aiContent.whyUs,
-            localChallenges: override.content?.localChallenges ?? auto.aiContent.localChallenges,
+            localChallenges: override.content?.localChallenges ?? (autoChallenges.length > 0 ? autoChallenges : auto.aiContent.localChallenges),
             customSolutions: override.content?.customSolutions ?? auto.aiContent.customSolutions,
             successStories: override.content?.successStories ?? auto.aiContent.successStories,
         },
-        // Blueprint: Semantic data overrides
+        // Blueprint: Semantic data overrides + entity equipment
         semanticData: auto.semanticData ? {
             ...auto.semanticData,
             ...(override.hiddenObjections && { hiddenObjections: override.hiddenObjections }),
             ...(override.counterNarratives && { counterNarratives: override.counterNarratives }),
-            ...(override.equipment && { equipment: override.equipment }),
+            ...(resolvedEquipment && { equipment: resolvedEquipment }),
             ...(override.govReferences && { govReferences: override.govReferences }),
         } : null,
+        // Entity Intersection context (Merge custom override with auto base NLP context)
+        entityContext: override.entityContext ? {
+            ...baseEntityContext,
+            ...override.entityContext,
+        } : baseEntityContext,
     };
 }
 

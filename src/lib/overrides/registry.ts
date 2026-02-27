@@ -69,26 +69,18 @@ import { override as riyadhSewageSuction } from './pages/riyadh/sewage-suction';
 import { override as alKharjFurnitureMoving } from './pages/al-kharj/furniture-moving';
 import { override as alKharjFurnitureStorage } from './pages/al-kharj/furniture-storage';
 import { override as alKharjDyna } from './pages/al-kharj/dyna';
-import { override as alKharjMovingOut } from './pages/al-kharj/moving-out';
 import { override as alKharjDabab } from './pages/al-kharj/dabab';
 import { override as alKharjCleaning } from './pages/al-kharj/cleaning';
 import { override as alKharjTanksCleaning } from './pages/al-kharj/tanks-cleaning';
 import { override as alKharjSofaCleaning } from './pages/al-kharj/sofa-cleaning';
 import { override as alKharjCarpetCleaning } from './pages/al-kharj/carpet-cleaning';
 import { override as alKharjSteamCleaning } from './pages/al-kharj/steam-cleaning';
-import { override as alKharjSanitization } from './pages/al-kharj/sanitization';
 import { override as alKharjAirConditionerCleaning } from './pages/al-kharj/air-conditioner-cleaning';
-import { override as alKharjMattressCleaning } from './pages/al-kharj/mattress-cleaning';
 import { override as alKharjSwimmingPoolCleaning } from './pages/al-kharj/swimming-pool-cleaning';
-import { override as alKharjKitchenCleaning } from './pages/al-kharj/kitchen-cleaning';
 import { override as alKharjGlassFacadesCleaning } from './pages/al-kharj/glass-facades-cleaning';
-import { override as alKharjFloorCleaning } from './pages/al-kharj/floor-cleaning';
-import { override as alKharjFloorPolishing } from './pages/al-kharj/floor-polishing';
 import { override as alKharjMarblePolishing } from './pages/al-kharj/marble-polishing';
 import { override as alKharjVillasCleaning } from './pages/al-kharj/villas-cleaning';
 import { override as alKharjApartmentsCleaning } from './pages/al-kharj/apartments-cleaning';
-import { override as alKharjPalacesCleaning } from './pages/al-kharj/palaces-cleaning';
-import { override as alKharjShopsCleaning } from './pages/al-kharj/shops-cleaning';
 import { override as alKharjOfficeCleaning } from './pages/al-kharj/office-cleaning';
 import { override as alKharjFurnitureCleaning } from './pages/al-kharj/furniture-cleaning';
 import { override as alKharjAutoCleaning } from './pages/al-kharj/auto-cleaning';
@@ -98,14 +90,9 @@ import { override as alKharjHourlyCleaning } from './pages/al-kharj/hourly-clean
 import { override as alKharjRestaurantChimneyCleaning } from './pages/al-kharj/restaurant-chimney-cleaning';
 import { override as alKharjPestControl } from './pages/al-kharj/pest-control';
 import { override as alKharjPesticideSpraying } from './pages/al-kharj/pesticide-spraying';
-import { override as alKharjInsectsSpraying } from './pages/al-kharj/insects-spraying';
 import { override as alKharjTermiteControl } from './pages/al-kharj/termite-control';
-import { override as alKharjCockroachControl } from './pages/al-kharj/cockroach-control';
 import { override as alKharjBedbugsControl } from './pages/al-kharj/bedbugs-control';
-import { override as alKharjRodentControl } from './pages/al-kharj/rodent-control';
-import { override as alKharjAntsControl } from './pages/al-kharj/ants-control';
 import { override as alKharjBirdControl } from './pages/al-kharj/bird-control';
-import { override as alKharjSnakesControl } from './pages/al-kharj/snakes-control';
 import { override as alKharjWaterLeakDetection } from './pages/al-kharj/water-leak-detection';
 import { override as alKharjTankLeakDetection } from './pages/al-kharj/tank-leak-detection';
 import { override as alKharjBathroomLeakDetection } from './pages/al-kharj/bathroom-leak-detection';
@@ -121,26 +108,18 @@ import { override as alKharjSewageSuction } from './pages/al-kharj/sewage-suctio
 import { override as qassimFurnitureMoving } from './pages/qassim/furniture-moving';
 import { override as qassimFurnitureStorage } from './pages/qassim/furniture-storage';
 import { override as qassimDyna } from './pages/qassim/dyna';
-import { override as qassimMovingOut } from './pages/qassim/moving-out';
 import { override as qassimDabab } from './pages/qassim/dabab';
 import { override as qassimCleaning } from './pages/qassim/cleaning';
 import { override as qassimTanksCleaning } from './pages/qassim/tanks-cleaning';
 import { override as qassimSofaCleaning } from './pages/qassim/sofa-cleaning';
 import { override as qassimCarpetCleaning } from './pages/qassim/carpet-cleaning';
 import { override as qassimSteamCleaning } from './pages/qassim/steam-cleaning';
-import { override as qassimSanitization } from './pages/qassim/sanitization';
 import { override as qassimAirConditionerCleaning } from './pages/qassim/air-conditioner-cleaning';
-import { override as qassimMattressCleaning } from './pages/qassim/mattress-cleaning';
 import { override as qassimSwimmingPoolCleaning } from './pages/qassim/swimming-pool-cleaning';
-import { override as qassimKitchenCleaning } from './pages/qassim/kitchen-cleaning';
 import { override as qassimGlassFacadesCleaning } from './pages/qassim/glass-facades-cleaning';
-import { override as qassimFloorCleaning } from './pages/qassim/floor-cleaning';
-import { override as qassimFloorPolishing } from './pages/qassim/floor-polishing';
 import { override as qassimMarblePolishing } from './pages/qassim/marble-polishing';
 import { override as qassimVillasCleaning } from './pages/qassim/villas-cleaning';
 import { override as qassimApartmentsCleaning } from './pages/qassim/apartments-cleaning';
-import { override as qassimPalacesCleaning } from './pages/qassim/palaces-cleaning';
-import { override as qassimShopsCleaning } from './pages/qassim/shops-cleaning';
 import { override as qassimOfficeCleaning } from './pages/qassim/office-cleaning';
 import { override as qassimFurnitureCleaning } from './pages/qassim/furniture-cleaning';
 import { override as qassimAutoCleaning } from './pages/qassim/auto-cleaning';
@@ -150,14 +129,9 @@ import { override as qassimHourlyCleaning } from './pages/qassim/hourly-cleaning
 import { override as qassimRestaurantChimneyCleaning } from './pages/qassim/restaurant-chimney-cleaning';
 import { override as qassimPestControl } from './pages/qassim/pest-control';
 import { override as qassimPesticideSpraying } from './pages/qassim/pesticide-spraying';
-import { override as qassimInsectsSpraying } from './pages/qassim/insects-spraying';
 import { override as qassimTermiteControl } from './pages/qassim/termite-control';
-import { override as qassimCockroachControl } from './pages/qassim/cockroach-control';
 import { override as qassimBedbugsControl } from './pages/qassim/bedbugs-control';
-import { override as qassimRodentControl } from './pages/qassim/rodent-control';
-import { override as qassimAntsControl } from './pages/qassim/ants-control';
 import { override as qassimBirdControl } from './pages/qassim/bird-control';
-import { override as qassimSnakesControl } from './pages/qassim/snakes-control';
 import { override as qassimWaterLeakDetection } from './pages/qassim/water-leak-detection';
 import { override as qassimTankLeakDetection } from './pages/qassim/tank-leak-detection';
 import { override as qassimBathroomLeakDetection } from './pages/qassim/bathroom-leak-detection';
@@ -173,26 +147,18 @@ import { override as qassimSewageSuction } from './pages/qassim/sewage-suction';
 import { override as buraidahFurnitureMoving } from './pages/buraidah/furniture-moving';
 import { override as buraidahFurnitureStorage } from './pages/buraidah/furniture-storage';
 import { override as buraidahDyna } from './pages/buraidah/dyna';
-import { override as buraidahMovingOut } from './pages/buraidah/moving-out';
 import { override as buraidahDabab } from './pages/buraidah/dabab';
 import { override as buraidahCleaning } from './pages/buraidah/cleaning';
 import { override as buraidahTanksCleaning } from './pages/buraidah/tanks-cleaning';
 import { override as buraidahSofaCleaning } from './pages/buraidah/sofa-cleaning';
 import { override as buraidahCarpetCleaning } from './pages/buraidah/carpet-cleaning';
 import { override as buraidahSteamCleaning } from './pages/buraidah/steam-cleaning';
-import { override as buraidahSanitization } from './pages/buraidah/sanitization';
 import { override as buraidahAirConditionerCleaning } from './pages/buraidah/air-conditioner-cleaning';
-import { override as buraidahMattressCleaning } from './pages/buraidah/mattress-cleaning';
 import { override as buraidahSwimmingPoolCleaning } from './pages/buraidah/swimming-pool-cleaning';
-import { override as buraidahKitchenCleaning } from './pages/buraidah/kitchen-cleaning';
 import { override as buraidahGlassFacadesCleaning } from './pages/buraidah/glass-facades-cleaning';
-import { override as buraidahFloorCleaning } from './pages/buraidah/floor-cleaning';
-import { override as buraidahFloorPolishing } from './pages/buraidah/floor-polishing';
 import { override as buraidahMarblePolishing } from './pages/buraidah/marble-polishing';
 import { override as buraidahVillasCleaning } from './pages/buraidah/villas-cleaning';
 import { override as buraidahApartmentsCleaning } from './pages/buraidah/apartments-cleaning';
-import { override as buraidahPalacesCleaning } from './pages/buraidah/palaces-cleaning';
-import { override as buraidahShopsCleaning } from './pages/buraidah/shops-cleaning';
 import { override as buraidahOfficeCleaning } from './pages/buraidah/office-cleaning';
 import { override as buraidahFurnitureCleaning } from './pages/buraidah/furniture-cleaning';
 import { override as buraidahAutoCleaning } from './pages/buraidah/auto-cleaning';
@@ -202,14 +168,9 @@ import { override as buraidahHourlyCleaning } from './pages/buraidah/hourly-clea
 import { override as buraidahRestaurantChimneyCleaning } from './pages/buraidah/restaurant-chimney-cleaning';
 import { override as buraidahPestControl } from './pages/buraidah/pest-control';
 import { override as buraidahPesticideSpraying } from './pages/buraidah/pesticide-spraying';
-import { override as buraidahInsectsSpraying } from './pages/buraidah/insects-spraying';
 import { override as buraidahTermiteControl } from './pages/buraidah/termite-control';
-import { override as buraidahCockroachControl } from './pages/buraidah/cockroach-control';
 import { override as buraidahBedbugsControl } from './pages/buraidah/bedbugs-control';
-import { override as buraidahRodentControl } from './pages/buraidah/rodent-control';
-import { override as buraidahAntsControl } from './pages/buraidah/ants-control';
 import { override as buraidahBirdControl } from './pages/buraidah/bird-control';
-import { override as buraidahSnakesControl } from './pages/buraidah/snakes-control';
 import { override as buraidahWaterLeakDetection } from './pages/buraidah/water-leak-detection';
 import { override as buraidahTankLeakDetection } from './pages/buraidah/tank-leak-detection';
 import { override as buraidahBathroomLeakDetection } from './pages/buraidah/bathroom-leak-detection';
@@ -225,26 +186,18 @@ import { override as buraidahSewageSuction } from './pages/buraidah/sewage-sucti
 import { override as onizahFurnitureMoving } from './pages/onizah/furniture-moving';
 import { override as onizahFurnitureStorage } from './pages/onizah/furniture-storage';
 import { override as onizahDyna } from './pages/onizah/dyna';
-import { override as onizahMovingOut } from './pages/onizah/moving-out';
 import { override as onizahDabab } from './pages/onizah/dabab';
 import { override as onizahCleaning } from './pages/onizah/cleaning';
 import { override as onizahTanksCleaning } from './pages/onizah/tanks-cleaning';
 import { override as onizahSofaCleaning } from './pages/onizah/sofa-cleaning';
 import { override as onizahCarpetCleaning } from './pages/onizah/carpet-cleaning';
 import { override as onizahSteamCleaning } from './pages/onizah/steam-cleaning';
-import { override as onizahSanitization } from './pages/onizah/sanitization';
 import { override as onizahAirConditionerCleaning } from './pages/onizah/air-conditioner-cleaning';
-import { override as onizahMattressCleaning } from './pages/onizah/mattress-cleaning';
 import { override as onizahSwimmingPoolCleaning } from './pages/onizah/swimming-pool-cleaning';
-import { override as onizahKitchenCleaning } from './pages/onizah/kitchen-cleaning';
 import { override as onizahGlassFacadesCleaning } from './pages/onizah/glass-facades-cleaning';
-import { override as onizahFloorCleaning } from './pages/onizah/floor-cleaning';
-import { override as onizahFloorPolishing } from './pages/onizah/floor-polishing';
 import { override as onizahMarblePolishing } from './pages/onizah/marble-polishing';
 import { override as onizahVillasCleaning } from './pages/onizah/villas-cleaning';
 import { override as onizahApartmentsCleaning } from './pages/onizah/apartments-cleaning';
-import { override as onizahPalacesCleaning } from './pages/onizah/palaces-cleaning';
-import { override as onizahShopsCleaning } from './pages/onizah/shops-cleaning';
 import { override as onizahOfficeCleaning } from './pages/onizah/office-cleaning';
 import { override as onizahFurnitureCleaning } from './pages/onizah/furniture-cleaning';
 import { override as onizahAutoCleaning } from './pages/onizah/auto-cleaning';
@@ -254,14 +207,9 @@ import { override as onizahHourlyCleaning } from './pages/onizah/hourly-cleaning
 import { override as onizahRestaurantChimneyCleaning } from './pages/onizah/restaurant-chimney-cleaning';
 import { override as onizahPestControl } from './pages/onizah/pest-control';
 import { override as onizahPesticideSpraying } from './pages/onizah/pesticide-spraying';
-import { override as onizahInsectsSpraying } from './pages/onizah/insects-spraying';
 import { override as onizahTermiteControl } from './pages/onizah/termite-control';
-import { override as onizahCockroachControl } from './pages/onizah/cockroach-control';
 import { override as onizahBedbugsControl } from './pages/onizah/bedbugs-control';
-import { override as onizahRodentControl } from './pages/onizah/rodent-control';
-import { override as onizahAntsControl } from './pages/onizah/ants-control';
 import { override as onizahBirdControl } from './pages/onizah/bird-control';
-import { override as onizahSnakesControl } from './pages/onizah/snakes-control';
 import { override as onizahWaterLeakDetection } from './pages/onizah/water-leak-detection';
 import { override as onizahTankLeakDetection } from './pages/onizah/tank-leak-detection';
 import { override as onizahBathroomLeakDetection } from './pages/onizah/bathroom-leak-detection';
@@ -331,26 +279,19 @@ import { override as jeddahSewageSuction } from './pages/jeddah/sewage-suction';
 import { override as makkahFurnitureMoving } from './pages/makkah/furniture-moving';
 import { override as makkahFurnitureStorage } from './pages/makkah/furniture-storage';
 import { override as makkahDyna } from './pages/makkah/dyna';
-import { override as makkahMovingOut } from './pages/makkah/moving-out';
+import { override as makkahSharaiaMovers } from './pages/makkah/sharaia/movers';
 import { override as makkahDabab } from './pages/makkah/dabab';
 import { override as makkahCleaning } from './pages/makkah/cleaning';
 import { override as makkahTanksCleaning } from './pages/makkah/tanks-cleaning';
 import { override as makkahSofaCleaning } from './pages/makkah/sofa-cleaning';
 import { override as makkahCarpetCleaning } from './pages/makkah/carpet-cleaning';
 import { override as makkahSteamCleaning } from './pages/makkah/steam-cleaning';
-import { override as makkahSanitization } from './pages/makkah/sanitization';
 import { override as makkahAirConditionerCleaning } from './pages/makkah/air-conditioner-cleaning';
-import { override as makkahMattressCleaning } from './pages/makkah/mattress-cleaning';
 import { override as makkahSwimmingPoolCleaning } from './pages/makkah/swimming-pool-cleaning';
-import { override as makkahKitchenCleaning } from './pages/makkah/kitchen-cleaning';
 import { override as makkahGlassFacadesCleaning } from './pages/makkah/glass-facades-cleaning';
-import { override as makkahFloorCleaning } from './pages/makkah/floor-cleaning';
-import { override as makkahFloorPolishing } from './pages/makkah/floor-polishing';
 import { override as makkahMarblePolishing } from './pages/makkah/marble-polishing';
 import { override as makkahVillasCleaning } from './pages/makkah/villas-cleaning';
 import { override as makkahApartmentsCleaning } from './pages/makkah/apartments-cleaning';
-import { override as makkahPalacesCleaning } from './pages/makkah/palaces-cleaning';
-import { override as makkahShopsCleaning } from './pages/makkah/shops-cleaning';
 import { override as makkahOfficeCleaning } from './pages/makkah/office-cleaning';
 import { override as makkahFurnitureCleaning } from './pages/makkah/furniture-cleaning';
 import { override as makkahAutoCleaning } from './pages/makkah/auto-cleaning';
@@ -360,14 +301,9 @@ import { override as makkahHourlyCleaning } from './pages/makkah/hourly-cleaning
 import { override as makkahRestaurantChimneyCleaning } from './pages/makkah/restaurant-chimney-cleaning';
 import { override as makkahPestControl } from './pages/makkah/pest-control';
 import { override as makkahPesticideSpraying } from './pages/makkah/pesticide-spraying';
-import { override as makkahInsectsSpraying } from './pages/makkah/insects-spraying';
 import { override as makkahTermiteControl } from './pages/makkah/termite-control';
-import { override as makkahCockroachControl } from './pages/makkah/cockroach-control';
 import { override as makkahBedbugsControl } from './pages/makkah/bedbugs-control';
-import { override as makkahRodentControl } from './pages/makkah/rodent-control';
-import { override as makkahAntsControl } from './pages/makkah/ants-control';
 import { override as makkahBirdControl } from './pages/makkah/bird-control';
-import { override as makkahSnakesControl } from './pages/makkah/snakes-control';
 import { override as makkahWaterLeakDetection } from './pages/makkah/water-leak-detection';
 import { override as makkahTankLeakDetection } from './pages/makkah/tank-leak-detection';
 import { override as makkahBathroomLeakDetection } from './pages/makkah/bathroom-leak-detection';
@@ -378,31 +314,26 @@ import { override as makkahWaterInsulation } from './pages/makkah/water-insulati
 import { override as makkahThermalInsulation } from './pages/makkah/thermal-insulation';
 import { override as makkahSewageUnblocking } from './pages/makkah/sewage-unblocking';
 import { override as makkahSewageSuction } from './pages/makkah/sewage-suction';
+import { override as makkahEpoxyCoating } from './pages/makkah/epoxy-coating';
+import { override as makkahAcMaintenance } from './pages/makkah/ac-maintenance';
+import { override as makkahAcInstallation } from './pages/makkah/ac-installation';
 
 // ─── MADINAH (50) ───
 import { override as madinahFurnitureMoving } from './pages/madinah/furniture-moving';
 import { override as madinahFurnitureStorage } from './pages/madinah/furniture-storage';
 import { override as madinahDyna } from './pages/madinah/dyna';
-import { override as madinahMovingOut } from './pages/madinah/moving-out';
 import { override as madinahDabab } from './pages/madinah/dabab';
 import { override as madinahCleaning } from './pages/madinah/cleaning';
 import { override as madinahTanksCleaning } from './pages/madinah/tanks-cleaning';
 import { override as madinahSofaCleaning } from './pages/madinah/sofa-cleaning';
 import { override as madinahCarpetCleaning } from './pages/madinah/carpet-cleaning';
 import { override as madinahSteamCleaning } from './pages/madinah/steam-cleaning';
-import { override as madinahSanitization } from './pages/madinah/sanitization';
 import { override as madinahAirConditionerCleaning } from './pages/madinah/air-conditioner-cleaning';
-import { override as madinahMattressCleaning } from './pages/madinah/mattress-cleaning';
 import { override as madinahSwimmingPoolCleaning } from './pages/madinah/swimming-pool-cleaning';
-import { override as madinahKitchenCleaning } from './pages/madinah/kitchen-cleaning';
 import { override as madinahGlassFacadesCleaning } from './pages/madinah/glass-facades-cleaning';
-import { override as madinahFloorCleaning } from './pages/madinah/floor-cleaning';
-import { override as madinahFloorPolishing } from './pages/madinah/floor-polishing';
 import { override as madinahMarblePolishing } from './pages/madinah/marble-polishing';
 import { override as madinahVillasCleaning } from './pages/madinah/villas-cleaning';
 import { override as madinahApartmentsCleaning } from './pages/madinah/apartments-cleaning';
-import { override as madinahPalacesCleaning } from './pages/madinah/palaces-cleaning';
-import { override as madinahShopsCleaning } from './pages/madinah/shops-cleaning';
 import { override as madinahOfficeCleaning } from './pages/madinah/office-cleaning';
 import { override as madinahFurnitureCleaning } from './pages/madinah/furniture-cleaning';
 import { override as madinahAutoCleaning } from './pages/madinah/auto-cleaning';
@@ -412,14 +343,9 @@ import { override as madinahHourlyCleaning } from './pages/madinah/hourly-cleani
 import { override as madinahRestaurantChimneyCleaning } from './pages/madinah/restaurant-chimney-cleaning';
 import { override as madinahPestControl } from './pages/madinah/pest-control';
 import { override as madinahPesticideSpraying } from './pages/madinah/pesticide-spraying';
-import { override as madinahInsectsSpraying } from './pages/madinah/insects-spraying';
 import { override as madinahTermiteControl } from './pages/madinah/termite-control';
-import { override as madinahCockroachControl } from './pages/madinah/cockroach-control';
 import { override as madinahBedbugsControl } from './pages/madinah/bedbugs-control';
-import { override as madinahRodentControl } from './pages/madinah/rodent-control';
-import { override as madinahAntsControl } from './pages/madinah/ants-control';
 import { override as madinahBirdControl } from './pages/madinah/bird-control';
-import { override as madinahSnakesControl } from './pages/madinah/snakes-control';
 import { override as madinahWaterLeakDetection } from './pages/madinah/water-leak-detection';
 import { override as madinahTankLeakDetection } from './pages/madinah/tank-leak-detection';
 import { override as madinahBathroomLeakDetection } from './pages/madinah/bathroom-leak-detection';
@@ -435,26 +361,18 @@ import { override as madinahSewageSuction } from './pages/madinah/sewage-suction
 import { override as taifFurnitureMoving } from './pages/taif/furniture-moving';
 import { override as taifFurnitureStorage } from './pages/taif/furniture-storage';
 import { override as taifDyna } from './pages/taif/dyna';
-import { override as taifMovingOut } from './pages/taif/moving-out';
 import { override as taifDabab } from './pages/taif/dabab';
 import { override as taifCleaning } from './pages/taif/cleaning';
 import { override as taifTanksCleaning } from './pages/taif/tanks-cleaning';
 import { override as taifSofaCleaning } from './pages/taif/sofa-cleaning';
 import { override as taifCarpetCleaning } from './pages/taif/carpet-cleaning';
 import { override as taifSteamCleaning } from './pages/taif/steam-cleaning';
-import { override as taifSanitization } from './pages/taif/sanitization';
 import { override as taifAirConditionerCleaning } from './pages/taif/air-conditioner-cleaning';
-import { override as taifMattressCleaning } from './pages/taif/mattress-cleaning';
 import { override as taifSwimmingPoolCleaning } from './pages/taif/swimming-pool-cleaning';
-import { override as taifKitchenCleaning } from './pages/taif/kitchen-cleaning';
 import { override as taifGlassFacadesCleaning } from './pages/taif/glass-facades-cleaning';
-import { override as taifFloorCleaning } from './pages/taif/floor-cleaning';
-import { override as taifFloorPolishing } from './pages/taif/floor-polishing';
 import { override as taifMarblePolishing } from './pages/taif/marble-polishing';
 import { override as taifVillasCleaning } from './pages/taif/villas-cleaning';
 import { override as taifApartmentsCleaning } from './pages/taif/apartments-cleaning';
-import { override as taifPalacesCleaning } from './pages/taif/palaces-cleaning';
-import { override as taifShopsCleaning } from './pages/taif/shops-cleaning';
 import { override as taifOfficeCleaning } from './pages/taif/office-cleaning';
 import { override as taifFurnitureCleaning } from './pages/taif/furniture-cleaning';
 import { override as taifAutoCleaning } from './pages/taif/auto-cleaning';
@@ -464,14 +382,9 @@ import { override as taifHourlyCleaning } from './pages/taif/hourly-cleaning';
 import { override as taifRestaurantChimneyCleaning } from './pages/taif/restaurant-chimney-cleaning';
 import { override as taifPestControl } from './pages/taif/pest-control';
 import { override as taifPesticideSpraying } from './pages/taif/pesticide-spraying';
-import { override as taifInsectsSpraying } from './pages/taif/insects-spraying';
 import { override as taifTermiteControl } from './pages/taif/termite-control';
-import { override as taifCockroachControl } from './pages/taif/cockroach-control';
 import { override as taifBedbugsControl } from './pages/taif/bedbugs-control';
-import { override as taifRodentControl } from './pages/taif/rodent-control';
-import { override as taifAntsControl } from './pages/taif/ants-control';
 import { override as taifBirdControl } from './pages/taif/bird-control';
-import { override as taifSnakesControl } from './pages/taif/snakes-control';
 import { override as taifWaterLeakDetection } from './pages/taif/water-leak-detection';
 import { override as taifTankLeakDetection } from './pages/taif/tank-leak-detection';
 import { override as taifBathroomLeakDetection } from './pages/taif/bathroom-leak-detection';
@@ -487,26 +400,18 @@ import { override as taifSewageSuction } from './pages/taif/sewage-suction';
 import { override as yanbuFurnitureMoving } from './pages/yanbu/furniture-moving';
 import { override as yanbuFurnitureStorage } from './pages/yanbu/furniture-storage';
 import { override as yanbuDyna } from './pages/yanbu/dyna';
-import { override as yanbuMovingOut } from './pages/yanbu/moving-out';
 import { override as yanbuDabab } from './pages/yanbu/dabab';
 import { override as yanbuCleaning } from './pages/yanbu/cleaning';
 import { override as yanbuTanksCleaning } from './pages/yanbu/tanks-cleaning';
 import { override as yanbuSofaCleaning } from './pages/yanbu/sofa-cleaning';
 import { override as yanbuCarpetCleaning } from './pages/yanbu/carpet-cleaning';
 import { override as yanbuSteamCleaning } from './pages/yanbu/steam-cleaning';
-import { override as yanbuSanitization } from './pages/yanbu/sanitization';
 import { override as yanbuAirConditionerCleaning } from './pages/yanbu/air-conditioner-cleaning';
-import { override as yanbuMattressCleaning } from './pages/yanbu/mattress-cleaning';
 import { override as yanbuSwimmingPoolCleaning } from './pages/yanbu/swimming-pool-cleaning';
-import { override as yanbuKitchenCleaning } from './pages/yanbu/kitchen-cleaning';
 import { override as yanbuGlassFacadesCleaning } from './pages/yanbu/glass-facades-cleaning';
-import { override as yanbuFloorCleaning } from './pages/yanbu/floor-cleaning';
-import { override as yanbuFloorPolishing } from './pages/yanbu/floor-polishing';
 import { override as yanbuMarblePolishing } from './pages/yanbu/marble-polishing';
 import { override as yanbuVillasCleaning } from './pages/yanbu/villas-cleaning';
 import { override as yanbuApartmentsCleaning } from './pages/yanbu/apartments-cleaning';
-import { override as yanbuPalacesCleaning } from './pages/yanbu/palaces-cleaning';
-import { override as yanbuShopsCleaning } from './pages/yanbu/shops-cleaning';
 import { override as yanbuOfficeCleaning } from './pages/yanbu/office-cleaning';
 import { override as yanbuFurnitureCleaning } from './pages/yanbu/furniture-cleaning';
 import { override as yanbuAutoCleaning } from './pages/yanbu/auto-cleaning';
@@ -516,14 +421,9 @@ import { override as yanbuHourlyCleaning } from './pages/yanbu/hourly-cleaning';
 import { override as yanbuRestaurantChimneyCleaning } from './pages/yanbu/restaurant-chimney-cleaning';
 import { override as yanbuPestControl } from './pages/yanbu/pest-control';
 import { override as yanbuPesticideSpraying } from './pages/yanbu/pesticide-spraying';
-import { override as yanbuInsectsSpraying } from './pages/yanbu/insects-spraying';
 import { override as yanbuTermiteControl } from './pages/yanbu/termite-control';
-import { override as yanbuCockroachControl } from './pages/yanbu/cockroach-control';
 import { override as yanbuBedbugsControl } from './pages/yanbu/bedbugs-control';
-import { override as yanbuRodentControl } from './pages/yanbu/rodent-control';
-import { override as yanbuAntsControl } from './pages/yanbu/ants-control';
 import { override as yanbuBirdControl } from './pages/yanbu/bird-control';
-import { override as yanbuSnakesControl } from './pages/yanbu/snakes-control';
 import { override as yanbuWaterLeakDetection } from './pages/yanbu/water-leak-detection';
 import { override as yanbuTankLeakDetection } from './pages/yanbu/tank-leak-detection';
 import { override as yanbuBathroomLeakDetection } from './pages/yanbu/bathroom-leak-detection';
@@ -541,26 +441,18 @@ import { override as yanbuSewageSuction } from './pages/yanbu/sewage-suction';
 import { override as dammamFurnitureMoving } from './pages/dammam/furniture-moving';
 import { override as dammamFurnitureStorage } from './pages/dammam/furniture-storage';
 import { override as dammamDyna } from './pages/dammam/dyna';
-import { override as dammamMovingOut } from './pages/dammam/moving-out';
 import { override as dammamDabab } from './pages/dammam/dabab';
 import { override as dammamCleaning } from './pages/dammam/cleaning';
 import { override as dammamTanksCleaning } from './pages/dammam/tanks-cleaning';
 import { override as dammamSofaCleaning } from './pages/dammam/sofa-cleaning';
 import { override as dammamCarpetCleaning } from './pages/dammam/carpet-cleaning';
 import { override as dammamSteamCleaning } from './pages/dammam/steam-cleaning';
-import { override as dammamSanitization } from './pages/dammam/sanitization';
 import { override as dammamAirConditionerCleaning } from './pages/dammam/air-conditioner-cleaning';
-import { override as dammamMattressCleaning } from './pages/dammam/mattress-cleaning';
 import { override as dammamSwimmingPoolCleaning } from './pages/dammam/swimming-pool-cleaning';
-import { override as dammamKitchenCleaning } from './pages/dammam/kitchen-cleaning';
 import { override as dammamGlassFacadesCleaning } from './pages/dammam/glass-facades-cleaning';
-import { override as dammamFloorCleaning } from './pages/dammam/floor-cleaning';
-import { override as dammamFloorPolishing } from './pages/dammam/floor-polishing';
 import { override as dammamMarblePolishing } from './pages/dammam/marble-polishing';
 import { override as dammamVillasCleaning } from './pages/dammam/villas-cleaning';
 import { override as dammamApartmentsCleaning } from './pages/dammam/apartments-cleaning';
-import { override as dammamPalacesCleaning } from './pages/dammam/palaces-cleaning';
-import { override as dammamShopsCleaning } from './pages/dammam/shops-cleaning';
 import { override as dammamOfficeCleaning } from './pages/dammam/office-cleaning';
 import { override as dammamFurnitureCleaning } from './pages/dammam/furniture-cleaning';
 import { override as dammamAutoCleaning } from './pages/dammam/auto-cleaning';
@@ -570,14 +462,9 @@ import { override as dammamHourlyCleaning } from './pages/dammam/hourly-cleaning
 import { override as dammamRestaurantChimneyCleaning } from './pages/dammam/restaurant-chimney-cleaning';
 import { override as dammamPestControl } from './pages/dammam/pest-control';
 import { override as dammamPesticideSpraying } from './pages/dammam/pesticide-spraying';
-import { override as dammamInsectsSpraying } from './pages/dammam/insects-spraying';
 import { override as dammamTermiteControl } from './pages/dammam/termite-control';
-import { override as dammamCockroachControl } from './pages/dammam/cockroach-control';
 import { override as dammamBedbugsControl } from './pages/dammam/bedbugs-control';
-import { override as dammamRodentControl } from './pages/dammam/rodent-control';
-import { override as dammamAntsControl } from './pages/dammam/ants-control';
 import { override as dammamBirdControl } from './pages/dammam/bird-control';
-import { override as dammamSnakesControl } from './pages/dammam/snakes-control';
 import { override as dammamWaterLeakDetection } from './pages/dammam/water-leak-detection';
 import { override as dammamTankLeakDetection } from './pages/dammam/tank-leak-detection';
 import { override as dammamBathroomLeakDetection } from './pages/dammam/bathroom-leak-detection';
@@ -593,26 +480,18 @@ import { override as dammamSewageSuction } from './pages/dammam/sewage-suction';
 import { override as alKhobarFurnitureMoving } from './pages/al-khobar/furniture-moving';
 import { override as alKhobarFurnitureStorage } from './pages/al-khobar/furniture-storage';
 import { override as alKhobarDyna } from './pages/al-khobar/dyna';
-import { override as alKhobarMovingOut } from './pages/al-khobar/moving-out';
 import { override as alKhobarDabab } from './pages/al-khobar/dabab';
 import { override as alKhobarCleaning } from './pages/al-khobar/cleaning';
 import { override as alKhobarTanksCleaning } from './pages/al-khobar/tanks-cleaning';
 import { override as alKhobarSofaCleaning } from './pages/al-khobar/sofa-cleaning';
 import { override as alKhobarCarpetCleaning } from './pages/al-khobar/carpet-cleaning';
 import { override as alKhobarSteamCleaning } from './pages/al-khobar/steam-cleaning';
-import { override as alKhobarSanitization } from './pages/al-khobar/sanitization';
 import { override as alKhobarAirConditionerCleaning } from './pages/al-khobar/air-conditioner-cleaning';
-import { override as alKhobarMattressCleaning } from './pages/al-khobar/mattress-cleaning';
 import { override as alKhobarSwimmingPoolCleaning } from './pages/al-khobar/swimming-pool-cleaning';
-import { override as alKhobarKitchenCleaning } from './pages/al-khobar/kitchen-cleaning';
 import { override as alKhobarGlassFacadesCleaning } from './pages/al-khobar/glass-facades-cleaning';
-import { override as alKhobarFloorCleaning } from './pages/al-khobar/floor-cleaning';
-import { override as alKhobarFloorPolishing } from './pages/al-khobar/floor-polishing';
 import { override as alKhobarMarblePolishing } from './pages/al-khobar/marble-polishing';
 import { override as alKhobarVillasCleaning } from './pages/al-khobar/villas-cleaning';
 import { override as alKhobarApartmentsCleaning } from './pages/al-khobar/apartments-cleaning';
-import { override as alKhobarPalacesCleaning } from './pages/al-khobar/palaces-cleaning';
-import { override as alKhobarShopsCleaning } from './pages/al-khobar/shops-cleaning';
 import { override as alKhobarOfficeCleaning } from './pages/al-khobar/office-cleaning';
 import { override as alKhobarFurnitureCleaning } from './pages/al-khobar/furniture-cleaning';
 import { override as alKhobarAutoCleaning } from './pages/al-khobar/auto-cleaning';
@@ -622,14 +501,9 @@ import { override as alKhobarHourlyCleaning } from './pages/al-khobar/hourly-cle
 import { override as alKhobarRestaurantChimneyCleaning } from './pages/al-khobar/restaurant-chimney-cleaning';
 import { override as alKhobarPestControl } from './pages/al-khobar/pest-control';
 import { override as alKhobarPesticideSpraying } from './pages/al-khobar/pesticide-spraying';
-import { override as alKhobarInsectsSpraying } from './pages/al-khobar/insects-spraying';
 import { override as alKhobarTermiteControl } from './pages/al-khobar/termite-control';
-import { override as alKhobarCockroachControl } from './pages/al-khobar/cockroach-control';
 import { override as alKhobarBedbugsControl } from './pages/al-khobar/bedbugs-control';
-import { override as alKhobarRodentControl } from './pages/al-khobar/rodent-control';
-import { override as alKhobarAntsControl } from './pages/al-khobar/ants-control';
 import { override as alKhobarBirdControl } from './pages/al-khobar/bird-control';
-import { override as alKhobarSnakesControl } from './pages/al-khobar/snakes-control';
 import { override as alKhobarWaterLeakDetection } from './pages/al-khobar/water-leak-detection';
 import { override as alKhobarTankLeakDetection } from './pages/al-khobar/tank-leak-detection';
 import { override as alKhobarBathroomLeakDetection } from './pages/al-khobar/bathroom-leak-detection';
@@ -645,26 +519,18 @@ import { override as alKhobarSewageSuction } from './pages/al-khobar/sewage-suct
 import { override as dhahranFurnitureMoving } from './pages/dhahran/furniture-moving';
 import { override as dhahranFurnitureStorage } from './pages/dhahran/furniture-storage';
 import { override as dhahranDyna } from './pages/dhahran/dyna';
-import { override as dhahranMovingOut } from './pages/dhahran/moving-out';
 import { override as dhahranDabab } from './pages/dhahran/dabab';
 import { override as dhahranCleaning } from './pages/dhahran/cleaning';
 import { override as dhahranTanksCleaning } from './pages/dhahran/tanks-cleaning';
 import { override as dhahranSofaCleaning } from './pages/dhahran/sofa-cleaning';
 import { override as dhahranCarpetCleaning } from './pages/dhahran/carpet-cleaning';
 import { override as dhahranSteamCleaning } from './pages/dhahran/steam-cleaning';
-import { override as dhahranSanitization } from './pages/dhahran/sanitization';
 import { override as dhahranAirConditionerCleaning } from './pages/dhahran/air-conditioner-cleaning';
-import { override as dhahranMattressCleaning } from './pages/dhahran/mattress-cleaning';
 import { override as dhahranSwimmingPoolCleaning } from './pages/dhahran/swimming-pool-cleaning';
-import { override as dhahranKitchenCleaning } from './pages/dhahran/kitchen-cleaning';
 import { override as dhahranGlassFacadesCleaning } from './pages/dhahran/glass-facades-cleaning';
-import { override as dhahranFloorCleaning } from './pages/dhahran/floor-cleaning';
-import { override as dhahranFloorPolishing } from './pages/dhahran/floor-polishing';
 import { override as dhahranMarblePolishing } from './pages/dhahran/marble-polishing';
 import { override as dhahranVillasCleaning } from './pages/dhahran/villas-cleaning';
 import { override as dhahranApartmentsCleaning } from './pages/dhahran/apartments-cleaning';
-import { override as dhahranPalacesCleaning } from './pages/dhahran/palaces-cleaning';
-import { override as dhahranShopsCleaning } from './pages/dhahran/shops-cleaning';
 import { override as dhahranOfficeCleaning } from './pages/dhahran/office-cleaning';
 import { override as dhahranFurnitureCleaning } from './pages/dhahran/furniture-cleaning';
 import { override as dhahranAutoCleaning } from './pages/dhahran/auto-cleaning';
@@ -674,14 +540,9 @@ import { override as dhahranHourlyCleaning } from './pages/dhahran/hourly-cleani
 import { override as dhahranRestaurantChimneyCleaning } from './pages/dhahran/restaurant-chimney-cleaning';
 import { override as dhahranPestControl } from './pages/dhahran/pest-control';
 import { override as dhahranPesticideSpraying } from './pages/dhahran/pesticide-spraying';
-import { override as dhahranInsectsSpraying } from './pages/dhahran/insects-spraying';
 import { override as dhahranTermiteControl } from './pages/dhahran/termite-control';
-import { override as dhahranCockroachControl } from './pages/dhahran/cockroach-control';
 import { override as dhahranBedbugsControl } from './pages/dhahran/bedbugs-control';
-import { override as dhahranRodentControl } from './pages/dhahran/rodent-control';
-import { override as dhahranAntsControl } from './pages/dhahran/ants-control';
 import { override as dhahranBirdControl } from './pages/dhahran/bird-control';
-import { override as dhahranSnakesControl } from './pages/dhahran/snakes-control';
 import { override as dhahranWaterLeakDetection } from './pages/dhahran/water-leak-detection';
 import { override as dhahranTankLeakDetection } from './pages/dhahran/tank-leak-detection';
 import { override as dhahranBathroomLeakDetection } from './pages/dhahran/bathroom-leak-detection';
@@ -697,26 +558,18 @@ import { override as dhahranSewageSuction } from './pages/dhahran/sewage-suction
 import { override as jubailFurnitureMoving } from './pages/jubail/furniture-moving';
 import { override as jubailFurnitureStorage } from './pages/jubail/furniture-storage';
 import { override as jubailDyna } from './pages/jubail/dyna';
-import { override as jubailMovingOut } from './pages/jubail/moving-out';
 import { override as jubailDabab } from './pages/jubail/dabab';
 import { override as jubailCleaning } from './pages/jubail/cleaning';
 import { override as jubailTanksCleaning } from './pages/jubail/tanks-cleaning';
 import { override as jubailSofaCleaning } from './pages/jubail/sofa-cleaning';
 import { override as jubailCarpetCleaning } from './pages/jubail/carpet-cleaning';
 import { override as jubailSteamCleaning } from './pages/jubail/steam-cleaning';
-import { override as jubailSanitization } from './pages/jubail/sanitization';
 import { override as jubailAirConditionerCleaning } from './pages/jubail/air-conditioner-cleaning';
-import { override as jubailMattressCleaning } from './pages/jubail/mattress-cleaning';
 import { override as jubailSwimmingPoolCleaning } from './pages/jubail/swimming-pool-cleaning';
-import { override as jubailKitchenCleaning } from './pages/jubail/kitchen-cleaning';
 import { override as jubailGlassFacadesCleaning } from './pages/jubail/glass-facades-cleaning';
-import { override as jubailFloorCleaning } from './pages/jubail/floor-cleaning';
-import { override as jubailFloorPolishing } from './pages/jubail/floor-polishing';
 import { override as jubailMarblePolishing } from './pages/jubail/marble-polishing';
 import { override as jubailVillasCleaning } from './pages/jubail/villas-cleaning';
 import { override as jubailApartmentsCleaning } from './pages/jubail/apartments-cleaning';
-import { override as jubailPalacesCleaning } from './pages/jubail/palaces-cleaning';
-import { override as jubailShopsCleaning } from './pages/jubail/shops-cleaning';
 import { override as jubailOfficeCleaning } from './pages/jubail/office-cleaning';
 import { override as jubailFurnitureCleaning } from './pages/jubail/furniture-cleaning';
 import { override as jubailAutoCleaning } from './pages/jubail/auto-cleaning';
@@ -726,14 +579,9 @@ import { override as jubailHourlyCleaning } from './pages/jubail/hourly-cleaning
 import { override as jubailRestaurantChimneyCleaning } from './pages/jubail/restaurant-chimney-cleaning';
 import { override as jubailPestControl } from './pages/jubail/pest-control';
 import { override as jubailPesticideSpraying } from './pages/jubail/pesticide-spraying';
-import { override as jubailInsectsSpraying } from './pages/jubail/insects-spraying';
 import { override as jubailTermiteControl } from './pages/jubail/termite-control';
-import { override as jubailCockroachControl } from './pages/jubail/cockroach-control';
 import { override as jubailBedbugsControl } from './pages/jubail/bedbugs-control';
-import { override as jubailRodentControl } from './pages/jubail/rodent-control';
-import { override as jubailAntsControl } from './pages/jubail/ants-control';
 import { override as jubailBirdControl } from './pages/jubail/bird-control';
-import { override as jubailSnakesControl } from './pages/jubail/snakes-control';
 import { override as jubailWaterLeakDetection } from './pages/jubail/water-leak-detection';
 import { override as jubailTankLeakDetection } from './pages/jubail/tank-leak-detection';
 import { override as jubailBathroomLeakDetection } from './pages/jubail/bathroom-leak-detection';
@@ -749,26 +597,18 @@ import { override as jubailSewageSuction } from './pages/jubail/sewage-suction';
 import { override as alAhsaFurnitureMoving } from './pages/al-ahsa/furniture-moving';
 import { override as alAhsaFurnitureStorage } from './pages/al-ahsa/furniture-storage';
 import { override as alAhsaDyna } from './pages/al-ahsa/dyna';
-import { override as alAhsaMovingOut } from './pages/al-ahsa/moving-out';
 import { override as alAhsaDabab } from './pages/al-ahsa/dabab';
 import { override as alAhsaCleaning } from './pages/al-ahsa/cleaning';
 import { override as alAhsaTanksCleaning } from './pages/al-ahsa/tanks-cleaning';
 import { override as alAhsaSofaCleaning } from './pages/al-ahsa/sofa-cleaning';
 import { override as alAhsaCarpetCleaning } from './pages/al-ahsa/carpet-cleaning';
 import { override as alAhsaSteamCleaning } from './pages/al-ahsa/steam-cleaning';
-import { override as alAhsaSanitization } from './pages/al-ahsa/sanitization';
 import { override as alAhsaAirConditionerCleaning } from './pages/al-ahsa/air-conditioner-cleaning';
-import { override as alAhsaMattressCleaning } from './pages/al-ahsa/mattress-cleaning';
 import { override as alAhsaSwimmingPoolCleaning } from './pages/al-ahsa/swimming-pool-cleaning';
-import { override as alAhsaKitchenCleaning } from './pages/al-ahsa/kitchen-cleaning';
 import { override as alAhsaGlassFacadesCleaning } from './pages/al-ahsa/glass-facades-cleaning';
-import { override as alAhsaFloorCleaning } from './pages/al-ahsa/floor-cleaning';
-import { override as alAhsaFloorPolishing } from './pages/al-ahsa/floor-polishing';
 import { override as alAhsaMarblePolishing } from './pages/al-ahsa/marble-polishing';
 import { override as alAhsaVillasCleaning } from './pages/al-ahsa/villas-cleaning';
 import { override as alAhsaApartmentsCleaning } from './pages/al-ahsa/apartments-cleaning';
-import { override as alAhsaPalacesCleaning } from './pages/al-ahsa/palaces-cleaning';
-import { override as alAhsaShopsCleaning } from './pages/al-ahsa/shops-cleaning';
 import { override as alAhsaOfficeCleaning } from './pages/al-ahsa/office-cleaning';
 import { override as alAhsaFurnitureCleaning } from './pages/al-ahsa/furniture-cleaning';
 import { override as alAhsaAutoCleaning } from './pages/al-ahsa/auto-cleaning';
@@ -778,14 +618,9 @@ import { override as alAhsaHourlyCleaning } from './pages/al-ahsa/hourly-cleanin
 import { override as alAhsaRestaurantChimneyCleaning } from './pages/al-ahsa/restaurant-chimney-cleaning';
 import { override as alAhsaPestControl } from './pages/al-ahsa/pest-control';
 import { override as alAhsaPesticideSpraying } from './pages/al-ahsa/pesticide-spraying';
-import { override as alAhsaInsectsSpraying } from './pages/al-ahsa/insects-spraying';
 import { override as alAhsaTermiteControl } from './pages/al-ahsa/termite-control';
-import { override as alAhsaCockroachControl } from './pages/al-ahsa/cockroach-control';
 import { override as alAhsaBedbugsControl } from './pages/al-ahsa/bedbugs-control';
-import { override as alAhsaRodentControl } from './pages/al-ahsa/rodent-control';
-import { override as alAhsaAntsControl } from './pages/al-ahsa/ants-control';
 import { override as alAhsaBirdControl } from './pages/al-ahsa/bird-control';
-import { override as alAhsaSnakesControl } from './pages/al-ahsa/snakes-control';
 import { override as alAhsaWaterLeakDetection } from './pages/al-ahsa/water-leak-detection';
 import { override as alAhsaTankLeakDetection } from './pages/al-ahsa/tank-leak-detection';
 import { override as alAhsaBathroomLeakDetection } from './pages/al-ahsa/bathroom-leak-detection';
@@ -801,26 +636,18 @@ import { override as alAhsaSewageSuction } from './pages/al-ahsa/sewage-suction'
 import { override as qatifFurnitureMoving } from './pages/qatif/furniture-moving';
 import { override as qatifFurnitureStorage } from './pages/qatif/furniture-storage';
 import { override as qatifDyna } from './pages/qatif/dyna';
-import { override as qatifMovingOut } from './pages/qatif/moving-out';
 import { override as qatifDabab } from './pages/qatif/dabab';
 import { override as qatifCleaning } from './pages/qatif/cleaning';
 import { override as qatifTanksCleaning } from './pages/qatif/tanks-cleaning';
 import { override as qatifSofaCleaning } from './pages/qatif/sofa-cleaning';
 import { override as qatifCarpetCleaning } from './pages/qatif/carpet-cleaning';
 import { override as qatifSteamCleaning } from './pages/qatif/steam-cleaning';
-import { override as qatifSanitization } from './pages/qatif/sanitization';
 import { override as qatifAirConditionerCleaning } from './pages/qatif/air-conditioner-cleaning';
-import { override as qatifMattressCleaning } from './pages/qatif/mattress-cleaning';
 import { override as qatifSwimmingPoolCleaning } from './pages/qatif/swimming-pool-cleaning';
-import { override as qatifKitchenCleaning } from './pages/qatif/kitchen-cleaning';
 import { override as qatifGlassFacadesCleaning } from './pages/qatif/glass-facades-cleaning';
-import { override as qatifFloorCleaning } from './pages/qatif/floor-cleaning';
-import { override as qatifFloorPolishing } from './pages/qatif/floor-polishing';
 import { override as qatifMarblePolishing } from './pages/qatif/marble-polishing';
 import { override as qatifVillasCleaning } from './pages/qatif/villas-cleaning';
 import { override as qatifApartmentsCleaning } from './pages/qatif/apartments-cleaning';
-import { override as qatifPalacesCleaning } from './pages/qatif/palaces-cleaning';
-import { override as qatifShopsCleaning } from './pages/qatif/shops-cleaning';
 import { override as qatifOfficeCleaning } from './pages/qatif/office-cleaning';
 import { override as qatifFurnitureCleaning } from './pages/qatif/furniture-cleaning';
 import { override as qatifAutoCleaning } from './pages/qatif/auto-cleaning';
@@ -830,14 +657,9 @@ import { override as qatifHourlyCleaning } from './pages/qatif/hourly-cleaning';
 import { override as qatifRestaurantChimneyCleaning } from './pages/qatif/restaurant-chimney-cleaning';
 import { override as qatifPestControl } from './pages/qatif/pest-control';
 import { override as qatifPesticideSpraying } from './pages/qatif/pesticide-spraying';
-import { override as qatifInsectsSpraying } from './pages/qatif/insects-spraying';
 import { override as qatifTermiteControl } from './pages/qatif/termite-control';
-import { override as qatifCockroachControl } from './pages/qatif/cockroach-control';
 import { override as qatifBedbugsControl } from './pages/qatif/bedbugs-control';
-import { override as qatifRodentControl } from './pages/qatif/rodent-control';
-import { override as qatifAntsControl } from './pages/qatif/ants-control';
 import { override as qatifBirdControl } from './pages/qatif/bird-control';
-import { override as qatifSnakesControl } from './pages/qatif/snakes-control';
 import { override as qatifWaterLeakDetection } from './pages/qatif/water-leak-detection';
 import { override as qatifTankLeakDetection } from './pages/qatif/tank-leak-detection';
 import { override as qatifBathroomLeakDetection } from './pages/qatif/bathroom-leak-detection';
@@ -853,26 +675,18 @@ import { override as qatifSewageSuction } from './pages/qatif/sewage-suction';
 import { override as hafrAlbatinFurnitureMoving } from './pages/hafr-albatin/furniture-moving';
 import { override as hafrAlbatinFurnitureStorage } from './pages/hafr-albatin/furniture-storage';
 import { override as hafrAlbatinDyna } from './pages/hafr-albatin/dyna';
-import { override as hafrAlbatinMovingOut } from './pages/hafr-albatin/moving-out';
 import { override as hafrAlbatinDabab } from './pages/hafr-albatin/dabab';
 import { override as hafrAlbatinCleaning } from './pages/hafr-albatin/cleaning';
 import { override as hafrAlbatinTanksCleaning } from './pages/hafr-albatin/tanks-cleaning';
 import { override as hafrAlbatinSofaCleaning } from './pages/hafr-albatin/sofa-cleaning';
 import { override as hafrAlbatinCarpetCleaning } from './pages/hafr-albatin/carpet-cleaning';
 import { override as hafrAlbatinSteamCleaning } from './pages/hafr-albatin/steam-cleaning';
-import { override as hafrAlbatinSanitization } from './pages/hafr-albatin/sanitization';
 import { override as hafrAlbatinAirConditionerCleaning } from './pages/hafr-albatin/air-conditioner-cleaning';
-import { override as hafrAlbatinMattressCleaning } from './pages/hafr-albatin/mattress-cleaning';
 import { override as hafrAlbatinSwimmingPoolCleaning } from './pages/hafr-albatin/swimming-pool-cleaning';
-import { override as hafrAlbatinKitchenCleaning } from './pages/hafr-albatin/kitchen-cleaning';
 import { override as hafrAlbatinGlassFacadesCleaning } from './pages/hafr-albatin/glass-facades-cleaning';
-import { override as hafrAlbatinFloorCleaning } from './pages/hafr-albatin/floor-cleaning';
-import { override as hafrAlbatinFloorPolishing } from './pages/hafr-albatin/floor-polishing';
 import { override as hafrAlbatinMarblePolishing } from './pages/hafr-albatin/marble-polishing';
 import { override as hafrAlbatinVillasCleaning } from './pages/hafr-albatin/villas-cleaning';
 import { override as hafrAlbatinApartmentsCleaning } from './pages/hafr-albatin/apartments-cleaning';
-import { override as hafrAlbatinPalacesCleaning } from './pages/hafr-albatin/palaces-cleaning';
-import { override as hafrAlbatinShopsCleaning } from './pages/hafr-albatin/shops-cleaning';
 import { override as hafrAlbatinOfficeCleaning } from './pages/hafr-albatin/office-cleaning';
 import { override as hafrAlbatinFurnitureCleaning } from './pages/hafr-albatin/furniture-cleaning';
 import { override as hafrAlbatinAutoCleaning } from './pages/hafr-albatin/auto-cleaning';
@@ -882,14 +696,9 @@ import { override as hafrAlbatinHourlyCleaning } from './pages/hafr-albatin/hour
 import { override as hafrAlbatinRestaurantChimneyCleaning } from './pages/hafr-albatin/restaurant-chimney-cleaning';
 import { override as hafrAlbatinPestControl } from './pages/hafr-albatin/pest-control';
 import { override as hafrAlbatinPesticideSpraying } from './pages/hafr-albatin/pesticide-spraying';
-import { override as hafrAlbatinInsectsSpraying } from './pages/hafr-albatin/insects-spraying';
 import { override as hafrAlbatinTermiteControl } from './pages/hafr-albatin/termite-control';
-import { override as hafrAlbatinCockroachControl } from './pages/hafr-albatin/cockroach-control';
 import { override as hafrAlbatinBedbugsControl } from './pages/hafr-albatin/bedbugs-control';
-import { override as hafrAlbatinRodentControl } from './pages/hafr-albatin/rodent-control';
-import { override as hafrAlbatinAntsControl } from './pages/hafr-albatin/ants-control';
 import { override as hafrAlbatinBirdControl } from './pages/hafr-albatin/bird-control';
-import { override as hafrAlbatinSnakesControl } from './pages/hafr-albatin/snakes-control';
 import { override as hafrAlbatinWaterLeakDetection } from './pages/hafr-albatin/water-leak-detection';
 import { override as hafrAlbatinTankLeakDetection } from './pages/hafr-albatin/tank-leak-detection';
 import { override as hafrAlbatinBathroomLeakDetection } from './pages/hafr-albatin/bathroom-leak-detection';
@@ -907,26 +716,18 @@ import { override as hafrAlbatinSewageSuction } from './pages/hafr-albatin/sewag
 import { override as tabukFurnitureMoving } from './pages/tabuk/furniture-moving';
 import { override as tabukFurnitureStorage } from './pages/tabuk/furniture-storage';
 import { override as tabukDyna } from './pages/tabuk/dyna';
-import { override as tabukMovingOut } from './pages/tabuk/moving-out';
 import { override as tabukDabab } from './pages/tabuk/dabab';
 import { override as tabukCleaning } from './pages/tabuk/cleaning';
 import { override as tabukTanksCleaning } from './pages/tabuk/tanks-cleaning';
 import { override as tabukSofaCleaning } from './pages/tabuk/sofa-cleaning';
 import { override as tabukCarpetCleaning } from './pages/tabuk/carpet-cleaning';
 import { override as tabukSteamCleaning } from './pages/tabuk/steam-cleaning';
-import { override as tabukSanitization } from './pages/tabuk/sanitization';
 import { override as tabukAirConditionerCleaning } from './pages/tabuk/air-conditioner-cleaning';
-import { override as tabukMattressCleaning } from './pages/tabuk/mattress-cleaning';
 import { override as tabukSwimmingPoolCleaning } from './pages/tabuk/swimming-pool-cleaning';
-import { override as tabukKitchenCleaning } from './pages/tabuk/kitchen-cleaning';
 import { override as tabukGlassFacadesCleaning } from './pages/tabuk/glass-facades-cleaning';
-import { override as tabukFloorCleaning } from './pages/tabuk/floor-cleaning';
-import { override as tabukFloorPolishing } from './pages/tabuk/floor-polishing';
 import { override as tabukMarblePolishing } from './pages/tabuk/marble-polishing';
 import { override as tabukVillasCleaning } from './pages/tabuk/villas-cleaning';
 import { override as tabukApartmentsCleaning } from './pages/tabuk/apartments-cleaning';
-import { override as tabukPalacesCleaning } from './pages/tabuk/palaces-cleaning';
-import { override as tabukShopsCleaning } from './pages/tabuk/shops-cleaning';
 import { override as tabukOfficeCleaning } from './pages/tabuk/office-cleaning';
 import { override as tabukFurnitureCleaning } from './pages/tabuk/furniture-cleaning';
 import { override as tabukAutoCleaning } from './pages/tabuk/auto-cleaning';
@@ -936,14 +737,9 @@ import { override as tabukHourlyCleaning } from './pages/tabuk/hourly-cleaning';
 import { override as tabukRestaurantChimneyCleaning } from './pages/tabuk/restaurant-chimney-cleaning';
 import { override as tabukPestControl } from './pages/tabuk/pest-control';
 import { override as tabukPesticideSpraying } from './pages/tabuk/pesticide-spraying';
-import { override as tabukInsectsSpraying } from './pages/tabuk/insects-spraying';
 import { override as tabukTermiteControl } from './pages/tabuk/termite-control';
-import { override as tabukCockroachControl } from './pages/tabuk/cockroach-control';
 import { override as tabukBedbugsControl } from './pages/tabuk/bedbugs-control';
-import { override as tabukRodentControl } from './pages/tabuk/rodent-control';
-import { override as tabukAntsControl } from './pages/tabuk/ants-control';
 import { override as tabukBirdControl } from './pages/tabuk/bird-control';
-import { override as tabukSnakesControl } from './pages/tabuk/snakes-control';
 import { override as tabukWaterLeakDetection } from './pages/tabuk/water-leak-detection';
 import { override as tabukTankLeakDetection } from './pages/tabuk/tank-leak-detection';
 import { override as tabukBathroomLeakDetection } from './pages/tabuk/bathroom-leak-detection';
@@ -959,26 +755,18 @@ import { override as tabukSewageSuction } from './pages/tabuk/sewage-suction';
 import { override as hailFurnitureMoving } from './pages/hail/furniture-moving';
 import { override as hailFurnitureStorage } from './pages/hail/furniture-storage';
 import { override as hailDyna } from './pages/hail/dyna';
-import { override as hailMovingOut } from './pages/hail/moving-out';
 import { override as hailDabab } from './pages/hail/dabab';
 import { override as hailCleaning } from './pages/hail/cleaning';
 import { override as hailTanksCleaning } from './pages/hail/tanks-cleaning';
 import { override as hailSofaCleaning } from './pages/hail/sofa-cleaning';
 import { override as hailCarpetCleaning } from './pages/hail/carpet-cleaning';
 import { override as hailSteamCleaning } from './pages/hail/steam-cleaning';
-import { override as hailSanitization } from './pages/hail/sanitization';
 import { override as hailAirConditionerCleaning } from './pages/hail/air-conditioner-cleaning';
-import { override as hailMattressCleaning } from './pages/hail/mattress-cleaning';
 import { override as hailSwimmingPoolCleaning } from './pages/hail/swimming-pool-cleaning';
-import { override as hailKitchenCleaning } from './pages/hail/kitchen-cleaning';
 import { override as hailGlassFacadesCleaning } from './pages/hail/glass-facades-cleaning';
-import { override as hailFloorCleaning } from './pages/hail/floor-cleaning';
-import { override as hailFloorPolishing } from './pages/hail/floor-polishing';
 import { override as hailMarblePolishing } from './pages/hail/marble-polishing';
 import { override as hailVillasCleaning } from './pages/hail/villas-cleaning';
 import { override as hailApartmentsCleaning } from './pages/hail/apartments-cleaning';
-import { override as hailPalacesCleaning } from './pages/hail/palaces-cleaning';
-import { override as hailShopsCleaning } from './pages/hail/shops-cleaning';
 import { override as hailOfficeCleaning } from './pages/hail/office-cleaning';
 import { override as hailFurnitureCleaning } from './pages/hail/furniture-cleaning';
 import { override as hailAutoCleaning } from './pages/hail/auto-cleaning';
@@ -988,14 +776,9 @@ import { override as hailHourlyCleaning } from './pages/hail/hourly-cleaning';
 import { override as hailRestaurantChimneyCleaning } from './pages/hail/restaurant-chimney-cleaning';
 import { override as hailPestControl } from './pages/hail/pest-control';
 import { override as hailPesticideSpraying } from './pages/hail/pesticide-spraying';
-import { override as hailInsectsSpraying } from './pages/hail/insects-spraying';
 import { override as hailTermiteControl } from './pages/hail/termite-control';
-import { override as hailCockroachControl } from './pages/hail/cockroach-control';
 import { override as hailBedbugsControl } from './pages/hail/bedbugs-control';
-import { override as hailRodentControl } from './pages/hail/rodent-control';
-import { override as hailAntsControl } from './pages/hail/ants-control';
 import { override as hailBirdControl } from './pages/hail/bird-control';
-import { override as hailSnakesControl } from './pages/hail/snakes-control';
 import { override as hailWaterLeakDetection } from './pages/hail/water-leak-detection';
 import { override as hailTankLeakDetection } from './pages/hail/tank-leak-detection';
 import { override as hailBathroomLeakDetection } from './pages/hail/bathroom-leak-detection';
@@ -1013,26 +796,18 @@ import { override as hailSewageSuction } from './pages/hail/sewage-suction';
 import { override as abhaFurnitureMoving } from './pages/abha/furniture-moving';
 import { override as abhaFurnitureStorage } from './pages/abha/furniture-storage';
 import { override as abhaDyna } from './pages/abha/dyna';
-import { override as abhaMovingOut } from './pages/abha/moving-out';
 import { override as abhaDabab } from './pages/abha/dabab';
 import { override as abhaCleaning } from './pages/abha/cleaning';
 import { override as abhaTanksCleaning } from './pages/abha/tanks-cleaning';
 import { override as abhaSofaCleaning } from './pages/abha/sofa-cleaning';
 import { override as abhaCarpetCleaning } from './pages/abha/carpet-cleaning';
 import { override as abhaSteamCleaning } from './pages/abha/steam-cleaning';
-import { override as abhaSanitization } from './pages/abha/sanitization';
 import { override as abhaAirConditionerCleaning } from './pages/abha/air-conditioner-cleaning';
-import { override as abhaMattressCleaning } from './pages/abha/mattress-cleaning';
 import { override as abhaSwimmingPoolCleaning } from './pages/abha/swimming-pool-cleaning';
-import { override as abhaKitchenCleaning } from './pages/abha/kitchen-cleaning';
 import { override as abhaGlassFacadesCleaning } from './pages/abha/glass-facades-cleaning';
-import { override as abhaFloorCleaning } from './pages/abha/floor-cleaning';
-import { override as abhaFloorPolishing } from './pages/abha/floor-polishing';
 import { override as abhaMarblePolishing } from './pages/abha/marble-polishing';
 import { override as abhaVillasCleaning } from './pages/abha/villas-cleaning';
 import { override as abhaApartmentsCleaning } from './pages/abha/apartments-cleaning';
-import { override as abhaPalacesCleaning } from './pages/abha/palaces-cleaning';
-import { override as abhaShopsCleaning } from './pages/abha/shops-cleaning';
 import { override as abhaOfficeCleaning } from './pages/abha/office-cleaning';
 import { override as abhaFurnitureCleaning } from './pages/abha/furniture-cleaning';
 import { override as abhaAutoCleaning } from './pages/abha/auto-cleaning';
@@ -1042,14 +817,9 @@ import { override as abhaHourlyCleaning } from './pages/abha/hourly-cleaning';
 import { override as abhaRestaurantChimneyCleaning } from './pages/abha/restaurant-chimney-cleaning';
 import { override as abhaPestControl } from './pages/abha/pest-control';
 import { override as abhaPesticideSpraying } from './pages/abha/pesticide-spraying';
-import { override as abhaInsectsSpraying } from './pages/abha/insects-spraying';
 import { override as abhaTermiteControl } from './pages/abha/termite-control';
-import { override as abhaCockroachControl } from './pages/abha/cockroach-control';
 import { override as abhaBedbugsControl } from './pages/abha/bedbugs-control';
-import { override as abhaRodentControl } from './pages/abha/rodent-control';
-import { override as abhaAntsControl } from './pages/abha/ants-control';
 import { override as abhaBirdControl } from './pages/abha/bird-control';
-import { override as abhaSnakesControl } from './pages/abha/snakes-control';
 import { override as abhaWaterLeakDetection } from './pages/abha/water-leak-detection';
 import { override as abhaTankLeakDetection } from './pages/abha/tank-leak-detection';
 import { override as abhaBathroomLeakDetection } from './pages/abha/bathroom-leak-detection';
@@ -1065,26 +835,18 @@ import { override as abhaSewageSuction } from './pages/abha/sewage-suction';
 import { override as khamisMushaitFurnitureMoving } from './pages/khamis-mushait/furniture-moving';
 import { override as khamisMushaitFurnitureStorage } from './pages/khamis-mushait/furniture-storage';
 import { override as khamisMushaitDyna } from './pages/khamis-mushait/dyna';
-import { override as khamisMushaitMovingOut } from './pages/khamis-mushait/moving-out';
 import { override as khamisMushaitDabab } from './pages/khamis-mushait/dabab';
 import { override as khamisMushaitCleaning } from './pages/khamis-mushait/cleaning';
 import { override as khamisMushaitTanksCleaning } from './pages/khamis-mushait/tanks-cleaning';
 import { override as khamisMushaitSofaCleaning } from './pages/khamis-mushait/sofa-cleaning';
 import { override as khamisMushaitCarpetCleaning } from './pages/khamis-mushait/carpet-cleaning';
 import { override as khamisMushaitSteamCleaning } from './pages/khamis-mushait/steam-cleaning';
-import { override as khamisMushaitSanitization } from './pages/khamis-mushait/sanitization';
 import { override as khamisMushaitAirConditionerCleaning } from './pages/khamis-mushait/air-conditioner-cleaning';
-import { override as khamisMushaitMattressCleaning } from './pages/khamis-mushait/mattress-cleaning';
 import { override as khamisMushaitSwimmingPoolCleaning } from './pages/khamis-mushait/swimming-pool-cleaning';
-import { override as khamisMushaitKitchenCleaning } from './pages/khamis-mushait/kitchen-cleaning';
 import { override as khamisMushaitGlassFacadesCleaning } from './pages/khamis-mushait/glass-facades-cleaning';
-import { override as khamisMushaitFloorCleaning } from './pages/khamis-mushait/floor-cleaning';
-import { override as khamisMushaitFloorPolishing } from './pages/khamis-mushait/floor-polishing';
 import { override as khamisMushaitMarblePolishing } from './pages/khamis-mushait/marble-polishing';
 import { override as khamisMushaitVillasCleaning } from './pages/khamis-mushait/villas-cleaning';
 import { override as khamisMushaitApartmentsCleaning } from './pages/khamis-mushait/apartments-cleaning';
-import { override as khamisMushaitPalacesCleaning } from './pages/khamis-mushait/palaces-cleaning';
-import { override as khamisMushaitShopsCleaning } from './pages/khamis-mushait/shops-cleaning';
 import { override as khamisMushaitOfficeCleaning } from './pages/khamis-mushait/office-cleaning';
 import { override as khamisMushaitFurnitureCleaning } from './pages/khamis-mushait/furniture-cleaning';
 import { override as khamisMushaitAutoCleaning } from './pages/khamis-mushait/auto-cleaning';
@@ -1094,14 +856,9 @@ import { override as khamisMushaitHourlyCleaning } from './pages/khamis-mushait/
 import { override as khamisMushaitRestaurantChimneyCleaning } from './pages/khamis-mushait/restaurant-chimney-cleaning';
 import { override as khamisMushaitPestControl } from './pages/khamis-mushait/pest-control';
 import { override as khamisMushaitPesticideSpraying } from './pages/khamis-mushait/pesticide-spraying';
-import { override as khamisMushaitInsectsSpraying } from './pages/khamis-mushait/insects-spraying';
 import { override as khamisMushaitTermiteControl } from './pages/khamis-mushait/termite-control';
-import { override as khamisMushaitCockroachControl } from './pages/khamis-mushait/cockroach-control';
 import { override as khamisMushaitBedbugsControl } from './pages/khamis-mushait/bedbugs-control';
-import { override as khamisMushaitRodentControl } from './pages/khamis-mushait/rodent-control';
-import { override as khamisMushaitAntsControl } from './pages/khamis-mushait/ants-control';
 import { override as khamisMushaitBirdControl } from './pages/khamis-mushait/bird-control';
-import { override as khamisMushaitSnakesControl } from './pages/khamis-mushait/snakes-control';
 import { override as khamisMushaitWaterLeakDetection } from './pages/khamis-mushait/water-leak-detection';
 import { override as khamisMushaitTankLeakDetection } from './pages/khamis-mushait/tank-leak-detection';
 import { override as khamisMushaitBathroomLeakDetection } from './pages/khamis-mushait/bathroom-leak-detection';
@@ -1117,26 +874,18 @@ import { override as khamisMushaitSewageSuction } from './pages/khamis-mushait/s
 import { override as najranFurnitureMoving } from './pages/najran/furniture-moving';
 import { override as najranFurnitureStorage } from './pages/najran/furniture-storage';
 import { override as najranDyna } from './pages/najran/dyna';
-import { override as najranMovingOut } from './pages/najran/moving-out';
 import { override as najranDabab } from './pages/najran/dabab';
 import { override as najranCleaning } from './pages/najran/cleaning';
 import { override as najranTanksCleaning } from './pages/najran/tanks-cleaning';
 import { override as najranSofaCleaning } from './pages/najran/sofa-cleaning';
 import { override as najranCarpetCleaning } from './pages/najran/carpet-cleaning';
 import { override as najranSteamCleaning } from './pages/najran/steam-cleaning';
-import { override as najranSanitization } from './pages/najran/sanitization';
 import { override as najranAirConditionerCleaning } from './pages/najran/air-conditioner-cleaning';
-import { override as najranMattressCleaning } from './pages/najran/mattress-cleaning';
 import { override as najranSwimmingPoolCleaning } from './pages/najran/swimming-pool-cleaning';
-import { override as najranKitchenCleaning } from './pages/najran/kitchen-cleaning';
 import { override as najranGlassFacadesCleaning } from './pages/najran/glass-facades-cleaning';
-import { override as najranFloorCleaning } from './pages/najran/floor-cleaning';
-import { override as najranFloorPolishing } from './pages/najran/floor-polishing';
 import { override as najranMarblePolishing } from './pages/najran/marble-polishing';
 import { override as najranVillasCleaning } from './pages/najran/villas-cleaning';
 import { override as najranApartmentsCleaning } from './pages/najran/apartments-cleaning';
-import { override as najranPalacesCleaning } from './pages/najran/palaces-cleaning';
-import { override as najranShopsCleaning } from './pages/najran/shops-cleaning';
 import { override as najranOfficeCleaning } from './pages/najran/office-cleaning';
 import { override as najranFurnitureCleaning } from './pages/najran/furniture-cleaning';
 import { override as najranAutoCleaning } from './pages/najran/auto-cleaning';
@@ -1146,14 +895,9 @@ import { override as najranHourlyCleaning } from './pages/najran/hourly-cleaning
 import { override as najranRestaurantChimneyCleaning } from './pages/najran/restaurant-chimney-cleaning';
 import { override as najranPestControl } from './pages/najran/pest-control';
 import { override as najranPesticideSpraying } from './pages/najran/pesticide-spraying';
-import { override as najranInsectsSpraying } from './pages/najran/insects-spraying';
 import { override as najranTermiteControl } from './pages/najran/termite-control';
-import { override as najranCockroachControl } from './pages/najran/cockroach-control';
 import { override as najranBedbugsControl } from './pages/najran/bedbugs-control';
-import { override as najranRodentControl } from './pages/najran/rodent-control';
-import { override as najranAntsControl } from './pages/najran/ants-control';
 import { override as najranBirdControl } from './pages/najran/bird-control';
-import { override as najranSnakesControl } from './pages/najran/snakes-control';
 import { override as najranWaterLeakDetection } from './pages/najran/water-leak-detection';
 import { override as najranTankLeakDetection } from './pages/najran/tank-leak-detection';
 import { override as najranBathroomLeakDetection } from './pages/najran/bathroom-leak-detection';
@@ -1169,26 +913,18 @@ import { override as najranSewageSuction } from './pages/najran/sewage-suction';
 import { override as jazanFurnitureMoving } from './pages/jazan/furniture-moving';
 import { override as jazanFurnitureStorage } from './pages/jazan/furniture-storage';
 import { override as jazanDyna } from './pages/jazan/dyna';
-import { override as jazanMovingOut } from './pages/jazan/moving-out';
 import { override as jazanDabab } from './pages/jazan/dabab';
 import { override as jazanCleaning } from './pages/jazan/cleaning';
 import { override as jazanTanksCleaning } from './pages/jazan/tanks-cleaning';
 import { override as jazanSofaCleaning } from './pages/jazan/sofa-cleaning';
 import { override as jazanCarpetCleaning } from './pages/jazan/carpet-cleaning';
 import { override as jazanSteamCleaning } from './pages/jazan/steam-cleaning';
-import { override as jazanSanitization } from './pages/jazan/sanitization';
 import { override as jazanAirConditionerCleaning } from './pages/jazan/air-conditioner-cleaning';
-import { override as jazanMattressCleaning } from './pages/jazan/mattress-cleaning';
 import { override as jazanSwimmingPoolCleaning } from './pages/jazan/swimming-pool-cleaning';
-import { override as jazanKitchenCleaning } from './pages/jazan/kitchen-cleaning';
 import { override as jazanGlassFacadesCleaning } from './pages/jazan/glass-facades-cleaning';
-import { override as jazanFloorCleaning } from './pages/jazan/floor-cleaning';
-import { override as jazanFloorPolishing } from './pages/jazan/floor-polishing';
 import { override as jazanMarblePolishing } from './pages/jazan/marble-polishing';
 import { override as jazanVillasCleaning } from './pages/jazan/villas-cleaning';
 import { override as jazanApartmentsCleaning } from './pages/jazan/apartments-cleaning';
-import { override as jazanPalacesCleaning } from './pages/jazan/palaces-cleaning';
-import { override as jazanShopsCleaning } from './pages/jazan/shops-cleaning';
 import { override as jazanOfficeCleaning } from './pages/jazan/office-cleaning';
 import { override as jazanFurnitureCleaning } from './pages/jazan/furniture-cleaning';
 import { override as jazanAutoCleaning } from './pages/jazan/auto-cleaning';
@@ -1198,14 +934,9 @@ import { override as jazanHourlyCleaning } from './pages/jazan/hourly-cleaning';
 import { override as jazanRestaurantChimneyCleaning } from './pages/jazan/restaurant-chimney-cleaning';
 import { override as jazanPestControl } from './pages/jazan/pest-control';
 import { override as jazanPesticideSpraying } from './pages/jazan/pesticide-spraying';
-import { override as jazanInsectsSpraying } from './pages/jazan/insects-spraying';
 import { override as jazanTermiteControl } from './pages/jazan/termite-control';
-import { override as jazanCockroachControl } from './pages/jazan/cockroach-control';
 import { override as jazanBedbugsControl } from './pages/jazan/bedbugs-control';
-import { override as jazanRodentControl } from './pages/jazan/rodent-control';
-import { override as jazanAntsControl } from './pages/jazan/ants-control';
 import { override as jazanBirdControl } from './pages/jazan/bird-control';
-import { override as jazanSnakesControl } from './pages/jazan/snakes-control';
 import { override as jazanWaterLeakDetection } from './pages/jazan/water-leak-detection';
 import { override as jazanTankLeakDetection } from './pages/jazan/tank-leak-detection';
 import { override as jazanBathroomLeakDetection } from './pages/jazan/bathroom-leak-detection';
@@ -1221,26 +952,18 @@ import { override as jazanSewageSuction } from './pages/jazan/sewage-suction';
 import { override as alBahaFurnitureMoving } from './pages/al-baha/furniture-moving';
 import { override as alBahaFurnitureStorage } from './pages/al-baha/furniture-storage';
 import { override as alBahaDyna } from './pages/al-baha/dyna';
-import { override as alBahaMovingOut } from './pages/al-baha/moving-out';
 import { override as alBahaDabab } from './pages/al-baha/dabab';
 import { override as alBahaCleaning } from './pages/al-baha/cleaning';
 import { override as alBahaTanksCleaning } from './pages/al-baha/tanks-cleaning';
 import { override as alBahaSofaCleaning } from './pages/al-baha/sofa-cleaning';
 import { override as alBahaCarpetCleaning } from './pages/al-baha/carpet-cleaning';
 import { override as alBahaSteamCleaning } from './pages/al-baha/steam-cleaning';
-import { override as alBahaSanitization } from './pages/al-baha/sanitization';
 import { override as alBahaAirConditionerCleaning } from './pages/al-baha/air-conditioner-cleaning';
-import { override as alBahaMattressCleaning } from './pages/al-baha/mattress-cleaning';
 import { override as alBahaSwimmingPoolCleaning } from './pages/al-baha/swimming-pool-cleaning';
-import { override as alBahaKitchenCleaning } from './pages/al-baha/kitchen-cleaning';
 import { override as alBahaGlassFacadesCleaning } from './pages/al-baha/glass-facades-cleaning';
-import { override as alBahaFloorCleaning } from './pages/al-baha/floor-cleaning';
-import { override as alBahaFloorPolishing } from './pages/al-baha/floor-polishing';
 import { override as alBahaMarblePolishing } from './pages/al-baha/marble-polishing';
 import { override as alBahaVillasCleaning } from './pages/al-baha/villas-cleaning';
 import { override as alBahaApartmentsCleaning } from './pages/al-baha/apartments-cleaning';
-import { override as alBahaPalacesCleaning } from './pages/al-baha/palaces-cleaning';
-import { override as alBahaShopsCleaning } from './pages/al-baha/shops-cleaning';
 import { override as alBahaOfficeCleaning } from './pages/al-baha/office-cleaning';
 import { override as alBahaFurnitureCleaning } from './pages/al-baha/furniture-cleaning';
 import { override as alBahaAutoCleaning } from './pages/al-baha/auto-cleaning';
@@ -1250,14 +973,9 @@ import { override as alBahaHourlyCleaning } from './pages/al-baha/hourly-cleanin
 import { override as alBahaRestaurantChimneyCleaning } from './pages/al-baha/restaurant-chimney-cleaning';
 import { override as alBahaPestControl } from './pages/al-baha/pest-control';
 import { override as alBahaPesticideSpraying } from './pages/al-baha/pesticide-spraying';
-import { override as alBahaInsectsSpraying } from './pages/al-baha/insects-spraying';
 import { override as alBahaTermiteControl } from './pages/al-baha/termite-control';
-import { override as alBahaCockroachControl } from './pages/al-baha/cockroach-control';
 import { override as alBahaBedbugsControl } from './pages/al-baha/bedbugs-control';
-import { override as alBahaRodentControl } from './pages/al-baha/rodent-control';
-import { override as alBahaAntsControl } from './pages/al-baha/ants-control';
 import { override as alBahaBirdControl } from './pages/al-baha/bird-control';
-import { override as alBahaSnakesControl } from './pages/al-baha/snakes-control';
 import { override as alBahaWaterLeakDetection } from './pages/al-baha/water-leak-detection';
 import { override as alBahaTankLeakDetection } from './pages/al-baha/tank-leak-detection';
 import { override as alBahaBathroomLeakDetection } from './pages/al-baha/bathroom-leak-detection';
@@ -1333,26 +1051,18 @@ const PAGE_OVERRIDES: Record<OverrideKey, PageOverride> = {
     [makeOverrideKey('al-kharj', 'furniture-moving')]: alKharjFurnitureMoving,
     [makeOverrideKey('al-kharj', 'furniture-storage')]: alKharjFurnitureStorage,
     [makeOverrideKey('al-kharj', 'dyna')]: alKharjDyna,
-    [makeOverrideKey('al-kharj', 'moving-out')]: alKharjMovingOut,
     [makeOverrideKey('al-kharj', 'dabab')]: alKharjDabab,
     [makeOverrideKey('al-kharj', 'cleaning')]: alKharjCleaning,
     [makeOverrideKey('al-kharj', 'tanks-cleaning')]: alKharjTanksCleaning,
     [makeOverrideKey('al-kharj', 'sofa-cleaning')]: alKharjSofaCleaning,
     [makeOverrideKey('al-kharj', 'carpet-cleaning')]: alKharjCarpetCleaning,
     [makeOverrideKey('al-kharj', 'steam-cleaning')]: alKharjSteamCleaning,
-    [makeOverrideKey('al-kharj', 'sanitization')]: alKharjSanitization,
     [makeOverrideKey('al-kharj', 'air-conditioner-cleaning')]: alKharjAirConditionerCleaning,
-    [makeOverrideKey('al-kharj', 'mattress-cleaning')]: alKharjMattressCleaning,
     [makeOverrideKey('al-kharj', 'swimming-pool-cleaning')]: alKharjSwimmingPoolCleaning,
-    [makeOverrideKey('al-kharj', 'kitchen-cleaning')]: alKharjKitchenCleaning,
     [makeOverrideKey('al-kharj', 'glass-facades-cleaning')]: alKharjGlassFacadesCleaning,
-    [makeOverrideKey('al-kharj', 'floor-cleaning')]: alKharjFloorCleaning,
-    [makeOverrideKey('al-kharj', 'floor-polishing')]: alKharjFloorPolishing,
     [makeOverrideKey('al-kharj', 'marble-polishing')]: alKharjMarblePolishing,
     [makeOverrideKey('al-kharj', 'villas-cleaning')]: alKharjVillasCleaning,
     [makeOverrideKey('al-kharj', 'apartments-cleaning')]: alKharjApartmentsCleaning,
-    [makeOverrideKey('al-kharj', 'palaces-cleaning')]: alKharjPalacesCleaning,
-    [makeOverrideKey('al-kharj', 'shops-cleaning')]: alKharjShopsCleaning,
     [makeOverrideKey('al-kharj', 'office-cleaning')]: alKharjOfficeCleaning,
     [makeOverrideKey('al-kharj', 'furniture-cleaning')]: alKharjFurnitureCleaning,
     [makeOverrideKey('al-kharj', 'auto-cleaning')]: alKharjAutoCleaning,
@@ -1362,14 +1072,9 @@ const PAGE_OVERRIDES: Record<OverrideKey, PageOverride> = {
     [makeOverrideKey('al-kharj', 'restaurant-chimney-cleaning')]: alKharjRestaurantChimneyCleaning,
     [makeOverrideKey('al-kharj', 'pest-control')]: alKharjPestControl,
     [makeOverrideKey('al-kharj', 'pesticide-spraying')]: alKharjPesticideSpraying,
-    [makeOverrideKey('al-kharj', 'insects-spraying')]: alKharjInsectsSpraying,
     [makeOverrideKey('al-kharj', 'termite-control')]: alKharjTermiteControl,
-    [makeOverrideKey('al-kharj', 'cockroach-control')]: alKharjCockroachControl,
     [makeOverrideKey('al-kharj', 'bedbugs-control')]: alKharjBedbugsControl,
-    [makeOverrideKey('al-kharj', 'rodent-control')]: alKharjRodentControl,
-    [makeOverrideKey('al-kharj', 'ants-control')]: alKharjAntsControl,
     [makeOverrideKey('al-kharj', 'bird-control')]: alKharjBirdControl,
-    [makeOverrideKey('al-kharj', 'snakes-control')]: alKharjSnakesControl,
     [makeOverrideKey('al-kharj', 'water-leak-detection')]: alKharjWaterLeakDetection,
     [makeOverrideKey('al-kharj', 'tank-leak-detection')]: alKharjTankLeakDetection,
     [makeOverrideKey('al-kharj', 'bathroom-leak-detection')]: alKharjBathroomLeakDetection,
@@ -1385,26 +1090,18 @@ const PAGE_OVERRIDES: Record<OverrideKey, PageOverride> = {
     [makeOverrideKey('qassim', 'furniture-moving')]: qassimFurnitureMoving,
     [makeOverrideKey('qassim', 'furniture-storage')]: qassimFurnitureStorage,
     [makeOverrideKey('qassim', 'dyna')]: qassimDyna,
-    [makeOverrideKey('qassim', 'moving-out')]: qassimMovingOut,
     [makeOverrideKey('qassim', 'dabab')]: qassimDabab,
     [makeOverrideKey('qassim', 'cleaning')]: qassimCleaning,
     [makeOverrideKey('qassim', 'tanks-cleaning')]: qassimTanksCleaning,
     [makeOverrideKey('qassim', 'sofa-cleaning')]: qassimSofaCleaning,
     [makeOverrideKey('qassim', 'carpet-cleaning')]: qassimCarpetCleaning,
     [makeOverrideKey('qassim', 'steam-cleaning')]: qassimSteamCleaning,
-    [makeOverrideKey('qassim', 'sanitization')]: qassimSanitization,
     [makeOverrideKey('qassim', 'air-conditioner-cleaning')]: qassimAirConditionerCleaning,
-    [makeOverrideKey('qassim', 'mattress-cleaning')]: qassimMattressCleaning,
     [makeOverrideKey('qassim', 'swimming-pool-cleaning')]: qassimSwimmingPoolCleaning,
-    [makeOverrideKey('qassim', 'kitchen-cleaning')]: qassimKitchenCleaning,
     [makeOverrideKey('qassim', 'glass-facades-cleaning')]: qassimGlassFacadesCleaning,
-    [makeOverrideKey('qassim', 'floor-cleaning')]: qassimFloorCleaning,
-    [makeOverrideKey('qassim', 'floor-polishing')]: qassimFloorPolishing,
     [makeOverrideKey('qassim', 'marble-polishing')]: qassimMarblePolishing,
     [makeOverrideKey('qassim', 'villas-cleaning')]: qassimVillasCleaning,
     [makeOverrideKey('qassim', 'apartments-cleaning')]: qassimApartmentsCleaning,
-    [makeOverrideKey('qassim', 'palaces-cleaning')]: qassimPalacesCleaning,
-    [makeOverrideKey('qassim', 'shops-cleaning')]: qassimShopsCleaning,
     [makeOverrideKey('qassim', 'office-cleaning')]: qassimOfficeCleaning,
     [makeOverrideKey('qassim', 'furniture-cleaning')]: qassimFurnitureCleaning,
     [makeOverrideKey('qassim', 'auto-cleaning')]: qassimAutoCleaning,
@@ -1414,14 +1111,9 @@ const PAGE_OVERRIDES: Record<OverrideKey, PageOverride> = {
     [makeOverrideKey('qassim', 'restaurant-chimney-cleaning')]: qassimRestaurantChimneyCleaning,
     [makeOverrideKey('qassim', 'pest-control')]: qassimPestControl,
     [makeOverrideKey('qassim', 'pesticide-spraying')]: qassimPesticideSpraying,
-    [makeOverrideKey('qassim', 'insects-spraying')]: qassimInsectsSpraying,
     [makeOverrideKey('qassim', 'termite-control')]: qassimTermiteControl,
-    [makeOverrideKey('qassim', 'cockroach-control')]: qassimCockroachControl,
     [makeOverrideKey('qassim', 'bedbugs-control')]: qassimBedbugsControl,
-    [makeOverrideKey('qassim', 'rodent-control')]: qassimRodentControl,
-    [makeOverrideKey('qassim', 'ants-control')]: qassimAntsControl,
     [makeOverrideKey('qassim', 'bird-control')]: qassimBirdControl,
-    [makeOverrideKey('qassim', 'snakes-control')]: qassimSnakesControl,
     [makeOverrideKey('qassim', 'water-leak-detection')]: qassimWaterLeakDetection,
     [makeOverrideKey('qassim', 'tank-leak-detection')]: qassimTankLeakDetection,
     [makeOverrideKey('qassim', 'bathroom-leak-detection')]: qassimBathroomLeakDetection,
@@ -1437,26 +1129,18 @@ const PAGE_OVERRIDES: Record<OverrideKey, PageOverride> = {
     [makeOverrideKey('buraidah', 'furniture-moving')]: buraidahFurnitureMoving,
     [makeOverrideKey('buraidah', 'furniture-storage')]: buraidahFurnitureStorage,
     [makeOverrideKey('buraidah', 'dyna')]: buraidahDyna,
-    [makeOverrideKey('buraidah', 'moving-out')]: buraidahMovingOut,
     [makeOverrideKey('buraidah', 'dabab')]: buraidahDabab,
     [makeOverrideKey('buraidah', 'cleaning')]: buraidahCleaning,
     [makeOverrideKey('buraidah', 'tanks-cleaning')]: buraidahTanksCleaning,
     [makeOverrideKey('buraidah', 'sofa-cleaning')]: buraidahSofaCleaning,
     [makeOverrideKey('buraidah', 'carpet-cleaning')]: buraidahCarpetCleaning,
     [makeOverrideKey('buraidah', 'steam-cleaning')]: buraidahSteamCleaning,
-    [makeOverrideKey('buraidah', 'sanitization')]: buraidahSanitization,
     [makeOverrideKey('buraidah', 'air-conditioner-cleaning')]: buraidahAirConditionerCleaning,
-    [makeOverrideKey('buraidah', 'mattress-cleaning')]: buraidahMattressCleaning,
     [makeOverrideKey('buraidah', 'swimming-pool-cleaning')]: buraidahSwimmingPoolCleaning,
-    [makeOverrideKey('buraidah', 'kitchen-cleaning')]: buraidahKitchenCleaning,
     [makeOverrideKey('buraidah', 'glass-facades-cleaning')]: buraidahGlassFacadesCleaning,
-    [makeOverrideKey('buraidah', 'floor-cleaning')]: buraidahFloorCleaning,
-    [makeOverrideKey('buraidah', 'floor-polishing')]: buraidahFloorPolishing,
     [makeOverrideKey('buraidah', 'marble-polishing')]: buraidahMarblePolishing,
     [makeOverrideKey('buraidah', 'villas-cleaning')]: buraidahVillasCleaning,
     [makeOverrideKey('buraidah', 'apartments-cleaning')]: buraidahApartmentsCleaning,
-    [makeOverrideKey('buraidah', 'palaces-cleaning')]: buraidahPalacesCleaning,
-    [makeOverrideKey('buraidah', 'shops-cleaning')]: buraidahShopsCleaning,
     [makeOverrideKey('buraidah', 'office-cleaning')]: buraidahOfficeCleaning,
     [makeOverrideKey('buraidah', 'furniture-cleaning')]: buraidahFurnitureCleaning,
     [makeOverrideKey('buraidah', 'auto-cleaning')]: buraidahAutoCleaning,
@@ -1466,14 +1150,9 @@ const PAGE_OVERRIDES: Record<OverrideKey, PageOverride> = {
     [makeOverrideKey('buraidah', 'restaurant-chimney-cleaning')]: buraidahRestaurantChimneyCleaning,
     [makeOverrideKey('buraidah', 'pest-control')]: buraidahPestControl,
     [makeOverrideKey('buraidah', 'pesticide-spraying')]: buraidahPesticideSpraying,
-    [makeOverrideKey('buraidah', 'insects-spraying')]: buraidahInsectsSpraying,
     [makeOverrideKey('buraidah', 'termite-control')]: buraidahTermiteControl,
-    [makeOverrideKey('buraidah', 'cockroach-control')]: buraidahCockroachControl,
     [makeOverrideKey('buraidah', 'bedbugs-control')]: buraidahBedbugsControl,
-    [makeOverrideKey('buraidah', 'rodent-control')]: buraidahRodentControl,
-    [makeOverrideKey('buraidah', 'ants-control')]: buraidahAntsControl,
     [makeOverrideKey('buraidah', 'bird-control')]: buraidahBirdControl,
-    [makeOverrideKey('buraidah', 'snakes-control')]: buraidahSnakesControl,
     [makeOverrideKey('buraidah', 'water-leak-detection')]: buraidahWaterLeakDetection,
     [makeOverrideKey('buraidah', 'tank-leak-detection')]: buraidahTankLeakDetection,
     [makeOverrideKey('buraidah', 'bathroom-leak-detection')]: buraidahBathroomLeakDetection,
@@ -1489,26 +1168,18 @@ const PAGE_OVERRIDES: Record<OverrideKey, PageOverride> = {
     [makeOverrideKey('onizah', 'furniture-moving')]: onizahFurnitureMoving,
     [makeOverrideKey('onizah', 'furniture-storage')]: onizahFurnitureStorage,
     [makeOverrideKey('onizah', 'dyna')]: onizahDyna,
-    [makeOverrideKey('onizah', 'moving-out')]: onizahMovingOut,
     [makeOverrideKey('onizah', 'dabab')]: onizahDabab,
     [makeOverrideKey('onizah', 'cleaning')]: onizahCleaning,
     [makeOverrideKey('onizah', 'tanks-cleaning')]: onizahTanksCleaning,
     [makeOverrideKey('onizah', 'sofa-cleaning')]: onizahSofaCleaning,
     [makeOverrideKey('onizah', 'carpet-cleaning')]: onizahCarpetCleaning,
     [makeOverrideKey('onizah', 'steam-cleaning')]: onizahSteamCleaning,
-    [makeOverrideKey('onizah', 'sanitization')]: onizahSanitization,
     [makeOverrideKey('onizah', 'air-conditioner-cleaning')]: onizahAirConditionerCleaning,
-    [makeOverrideKey('onizah', 'mattress-cleaning')]: onizahMattressCleaning,
     [makeOverrideKey('onizah', 'swimming-pool-cleaning')]: onizahSwimmingPoolCleaning,
-    [makeOverrideKey('onizah', 'kitchen-cleaning')]: onizahKitchenCleaning,
     [makeOverrideKey('onizah', 'glass-facades-cleaning')]: onizahGlassFacadesCleaning,
-    [makeOverrideKey('onizah', 'floor-cleaning')]: onizahFloorCleaning,
-    [makeOverrideKey('onizah', 'floor-polishing')]: onizahFloorPolishing,
     [makeOverrideKey('onizah', 'marble-polishing')]: onizahMarblePolishing,
     [makeOverrideKey('onizah', 'villas-cleaning')]: onizahVillasCleaning,
     [makeOverrideKey('onizah', 'apartments-cleaning')]: onizahApartmentsCleaning,
-    [makeOverrideKey('onizah', 'palaces-cleaning')]: onizahPalacesCleaning,
-    [makeOverrideKey('onizah', 'shops-cleaning')]: onizahShopsCleaning,
     [makeOverrideKey('onizah', 'office-cleaning')]: onizahOfficeCleaning,
     [makeOverrideKey('onizah', 'furniture-cleaning')]: onizahFurnitureCleaning,
     [makeOverrideKey('onizah', 'auto-cleaning')]: onizahAutoCleaning,
@@ -1518,14 +1189,9 @@ const PAGE_OVERRIDES: Record<OverrideKey, PageOverride> = {
     [makeOverrideKey('onizah', 'restaurant-chimney-cleaning')]: onizahRestaurantChimneyCleaning,
     [makeOverrideKey('onizah', 'pest-control')]: onizahPestControl,
     [makeOverrideKey('onizah', 'pesticide-spraying')]: onizahPesticideSpraying,
-    [makeOverrideKey('onizah', 'insects-spraying')]: onizahInsectsSpraying,
     [makeOverrideKey('onizah', 'termite-control')]: onizahTermiteControl,
-    [makeOverrideKey('onizah', 'cockroach-control')]: onizahCockroachControl,
     [makeOverrideKey('onizah', 'bedbugs-control')]: onizahBedbugsControl,
-    [makeOverrideKey('onizah', 'rodent-control')]: onizahRodentControl,
-    [makeOverrideKey('onizah', 'ants-control')]: onizahAntsControl,
     [makeOverrideKey('onizah', 'bird-control')]: onizahBirdControl,
-    [makeOverrideKey('onizah', 'snakes-control')]: onizahSnakesControl,
     [makeOverrideKey('onizah', 'water-leak-detection')]: onizahWaterLeakDetection,
     [makeOverrideKey('onizah', 'tank-leak-detection')]: onizahTankLeakDetection,
     [makeOverrideKey('onizah', 'bathroom-leak-detection')]: onizahBathroomLeakDetection,
@@ -1591,30 +1257,23 @@ const PAGE_OVERRIDES: Record<OverrideKey, PageOverride> = {
     [makeOverrideKey('jeddah', 'sewage-unblocking')]: jeddahSewageUnblocking,
     [makeOverrideKey('jeddah', 'sewage-suction')]: jeddahSewageSuction,
 
-    // ─── makkah (50) ───
+    // ─── makkah (42) ───
     [makeOverrideKey('makkah', 'furniture-moving')]: makkahFurnitureMoving,
     [makeOverrideKey('makkah', 'furniture-storage')]: makkahFurnitureStorage,
     [makeOverrideKey('makkah', 'dyna')]: makkahDyna,
-    [makeOverrideKey('makkah', 'moving-out')]: makkahMovingOut,
+    [makeOverrideKey('makkah/sharaia', 'movers')]: makkahSharaiaMovers,
     [makeOverrideKey('makkah', 'dabab')]: makkahDabab,
     [makeOverrideKey('makkah', 'cleaning')]: makkahCleaning,
     [makeOverrideKey('makkah', 'tanks-cleaning')]: makkahTanksCleaning,
     [makeOverrideKey('makkah', 'sofa-cleaning')]: makkahSofaCleaning,
     [makeOverrideKey('makkah', 'carpet-cleaning')]: makkahCarpetCleaning,
     [makeOverrideKey('makkah', 'steam-cleaning')]: makkahSteamCleaning,
-    [makeOverrideKey('makkah', 'sanitization')]: makkahSanitization,
     [makeOverrideKey('makkah', 'air-conditioner-cleaning')]: makkahAirConditionerCleaning,
-    [makeOverrideKey('makkah', 'mattress-cleaning')]: makkahMattressCleaning,
     [makeOverrideKey('makkah', 'swimming-pool-cleaning')]: makkahSwimmingPoolCleaning,
-    [makeOverrideKey('makkah', 'kitchen-cleaning')]: makkahKitchenCleaning,
     [makeOverrideKey('makkah', 'glass-facades-cleaning')]: makkahGlassFacadesCleaning,
-    [makeOverrideKey('makkah', 'floor-cleaning')]: makkahFloorCleaning,
-    [makeOverrideKey('makkah', 'floor-polishing')]: makkahFloorPolishing,
     [makeOverrideKey('makkah', 'marble-polishing')]: makkahMarblePolishing,
     [makeOverrideKey('makkah', 'villas-cleaning')]: makkahVillasCleaning,
     [makeOverrideKey('makkah', 'apartments-cleaning')]: makkahApartmentsCleaning,
-    [makeOverrideKey('makkah', 'palaces-cleaning')]: makkahPalacesCleaning,
-    [makeOverrideKey('makkah', 'shops-cleaning')]: makkahShopsCleaning,
     [makeOverrideKey('makkah', 'office-cleaning')]: makkahOfficeCleaning,
     [makeOverrideKey('makkah', 'furniture-cleaning')]: makkahFurnitureCleaning,
     [makeOverrideKey('makkah', 'auto-cleaning')]: makkahAutoCleaning,
@@ -1624,14 +1283,9 @@ const PAGE_OVERRIDES: Record<OverrideKey, PageOverride> = {
     [makeOverrideKey('makkah', 'restaurant-chimney-cleaning')]: makkahRestaurantChimneyCleaning,
     [makeOverrideKey('makkah', 'pest-control')]: makkahPestControl,
     [makeOverrideKey('makkah', 'pesticide-spraying')]: makkahPesticideSpraying,
-    [makeOverrideKey('makkah', 'insects-spraying')]: makkahInsectsSpraying,
     [makeOverrideKey('makkah', 'termite-control')]: makkahTermiteControl,
-    [makeOverrideKey('makkah', 'cockroach-control')]: makkahCockroachControl,
     [makeOverrideKey('makkah', 'bedbugs-control')]: makkahBedbugsControl,
-    [makeOverrideKey('makkah', 'rodent-control')]: makkahRodentControl,
-    [makeOverrideKey('makkah', 'ants-control')]: makkahAntsControl,
     [makeOverrideKey('makkah', 'bird-control')]: makkahBirdControl,
-    [makeOverrideKey('makkah', 'snakes-control')]: makkahSnakesControl,
     [makeOverrideKey('makkah', 'water-leak-detection')]: makkahWaterLeakDetection,
     [makeOverrideKey('makkah', 'tank-leak-detection')]: makkahTankLeakDetection,
     [makeOverrideKey('makkah', 'bathroom-leak-detection')]: makkahBathroomLeakDetection,
@@ -1642,31 +1296,26 @@ const PAGE_OVERRIDES: Record<OverrideKey, PageOverride> = {
     [makeOverrideKey('makkah', 'thermal-insulation')]: makkahThermalInsulation,
     [makeOverrideKey('makkah', 'sewage-unblocking')]: makkahSewageUnblocking,
     [makeOverrideKey('makkah', 'sewage-suction')]: makkahSewageSuction,
+    [makeOverrideKey('makkah', 'epoxy-coating')]: makkahEpoxyCoating,
+    [makeOverrideKey('makkah', 'ac-maintenance')]: makkahAcMaintenance,
+    [makeOverrideKey('makkah', 'ac-installation')]: makkahAcInstallation,
 
     // ─── madinah (50) ───
     [makeOverrideKey('madinah', 'furniture-moving')]: madinahFurnitureMoving,
     [makeOverrideKey('madinah', 'furniture-storage')]: madinahFurnitureStorage,
     [makeOverrideKey('madinah', 'dyna')]: madinahDyna,
-    [makeOverrideKey('madinah', 'moving-out')]: madinahMovingOut,
     [makeOverrideKey('madinah', 'dabab')]: madinahDabab,
     [makeOverrideKey('madinah', 'cleaning')]: madinahCleaning,
     [makeOverrideKey('madinah', 'tanks-cleaning')]: madinahTanksCleaning,
     [makeOverrideKey('madinah', 'sofa-cleaning')]: madinahSofaCleaning,
     [makeOverrideKey('madinah', 'carpet-cleaning')]: madinahCarpetCleaning,
     [makeOverrideKey('madinah', 'steam-cleaning')]: madinahSteamCleaning,
-    [makeOverrideKey('madinah', 'sanitization')]: madinahSanitization,
     [makeOverrideKey('madinah', 'air-conditioner-cleaning')]: madinahAirConditionerCleaning,
-    [makeOverrideKey('madinah', 'mattress-cleaning')]: madinahMattressCleaning,
     [makeOverrideKey('madinah', 'swimming-pool-cleaning')]: madinahSwimmingPoolCleaning,
-    [makeOverrideKey('madinah', 'kitchen-cleaning')]: madinahKitchenCleaning,
     [makeOverrideKey('madinah', 'glass-facades-cleaning')]: madinahGlassFacadesCleaning,
-    [makeOverrideKey('madinah', 'floor-cleaning')]: madinahFloorCleaning,
-    [makeOverrideKey('madinah', 'floor-polishing')]: madinahFloorPolishing,
     [makeOverrideKey('madinah', 'marble-polishing')]: madinahMarblePolishing,
     [makeOverrideKey('madinah', 'villas-cleaning')]: madinahVillasCleaning,
     [makeOverrideKey('madinah', 'apartments-cleaning')]: madinahApartmentsCleaning,
-    [makeOverrideKey('madinah', 'palaces-cleaning')]: madinahPalacesCleaning,
-    [makeOverrideKey('madinah', 'shops-cleaning')]: madinahShopsCleaning,
     [makeOverrideKey('madinah', 'office-cleaning')]: madinahOfficeCleaning,
     [makeOverrideKey('madinah', 'furniture-cleaning')]: madinahFurnitureCleaning,
     [makeOverrideKey('madinah', 'auto-cleaning')]: madinahAutoCleaning,
@@ -1676,14 +1325,9 @@ const PAGE_OVERRIDES: Record<OverrideKey, PageOverride> = {
     [makeOverrideKey('madinah', 'restaurant-chimney-cleaning')]: madinahRestaurantChimneyCleaning,
     [makeOverrideKey('madinah', 'pest-control')]: madinahPestControl,
     [makeOverrideKey('madinah', 'pesticide-spraying')]: madinahPesticideSpraying,
-    [makeOverrideKey('madinah', 'insects-spraying')]: madinahInsectsSpraying,
     [makeOverrideKey('madinah', 'termite-control')]: madinahTermiteControl,
-    [makeOverrideKey('madinah', 'cockroach-control')]: madinahCockroachControl,
     [makeOverrideKey('madinah', 'bedbugs-control')]: madinahBedbugsControl,
-    [makeOverrideKey('madinah', 'rodent-control')]: madinahRodentControl,
-    [makeOverrideKey('madinah', 'ants-control')]: madinahAntsControl,
     [makeOverrideKey('madinah', 'bird-control')]: madinahBirdControl,
-    [makeOverrideKey('madinah', 'snakes-control')]: madinahSnakesControl,
     [makeOverrideKey('madinah', 'water-leak-detection')]: madinahWaterLeakDetection,
     [makeOverrideKey('madinah', 'tank-leak-detection')]: madinahTankLeakDetection,
     [makeOverrideKey('madinah', 'bathroom-leak-detection')]: madinahBathroomLeakDetection,
@@ -1699,26 +1343,18 @@ const PAGE_OVERRIDES: Record<OverrideKey, PageOverride> = {
     [makeOverrideKey('taif', 'furniture-moving')]: taifFurnitureMoving,
     [makeOverrideKey('taif', 'furniture-storage')]: taifFurnitureStorage,
     [makeOverrideKey('taif', 'dyna')]: taifDyna,
-    [makeOverrideKey('taif', 'moving-out')]: taifMovingOut,
     [makeOverrideKey('taif', 'dabab')]: taifDabab,
     [makeOverrideKey('taif', 'cleaning')]: taifCleaning,
     [makeOverrideKey('taif', 'tanks-cleaning')]: taifTanksCleaning,
     [makeOverrideKey('taif', 'sofa-cleaning')]: taifSofaCleaning,
     [makeOverrideKey('taif', 'carpet-cleaning')]: taifCarpetCleaning,
     [makeOverrideKey('taif', 'steam-cleaning')]: taifSteamCleaning,
-    [makeOverrideKey('taif', 'sanitization')]: taifSanitization,
     [makeOverrideKey('taif', 'air-conditioner-cleaning')]: taifAirConditionerCleaning,
-    [makeOverrideKey('taif', 'mattress-cleaning')]: taifMattressCleaning,
     [makeOverrideKey('taif', 'swimming-pool-cleaning')]: taifSwimmingPoolCleaning,
-    [makeOverrideKey('taif', 'kitchen-cleaning')]: taifKitchenCleaning,
     [makeOverrideKey('taif', 'glass-facades-cleaning')]: taifGlassFacadesCleaning,
-    [makeOverrideKey('taif', 'floor-cleaning')]: taifFloorCleaning,
-    [makeOverrideKey('taif', 'floor-polishing')]: taifFloorPolishing,
     [makeOverrideKey('taif', 'marble-polishing')]: taifMarblePolishing,
     [makeOverrideKey('taif', 'villas-cleaning')]: taifVillasCleaning,
     [makeOverrideKey('taif', 'apartments-cleaning')]: taifApartmentsCleaning,
-    [makeOverrideKey('taif', 'palaces-cleaning')]: taifPalacesCleaning,
-    [makeOverrideKey('taif', 'shops-cleaning')]: taifShopsCleaning,
     [makeOverrideKey('taif', 'office-cleaning')]: taifOfficeCleaning,
     [makeOverrideKey('taif', 'furniture-cleaning')]: taifFurnitureCleaning,
     [makeOverrideKey('taif', 'auto-cleaning')]: taifAutoCleaning,
@@ -1728,14 +1364,9 @@ const PAGE_OVERRIDES: Record<OverrideKey, PageOverride> = {
     [makeOverrideKey('taif', 'restaurant-chimney-cleaning')]: taifRestaurantChimneyCleaning,
     [makeOverrideKey('taif', 'pest-control')]: taifPestControl,
     [makeOverrideKey('taif', 'pesticide-spraying')]: taifPesticideSpraying,
-    [makeOverrideKey('taif', 'insects-spraying')]: taifInsectsSpraying,
     [makeOverrideKey('taif', 'termite-control')]: taifTermiteControl,
-    [makeOverrideKey('taif', 'cockroach-control')]: taifCockroachControl,
     [makeOverrideKey('taif', 'bedbugs-control')]: taifBedbugsControl,
-    [makeOverrideKey('taif', 'rodent-control')]: taifRodentControl,
-    [makeOverrideKey('taif', 'ants-control')]: taifAntsControl,
     [makeOverrideKey('taif', 'bird-control')]: taifBirdControl,
-    [makeOverrideKey('taif', 'snakes-control')]: taifSnakesControl,
     [makeOverrideKey('taif', 'water-leak-detection')]: taifWaterLeakDetection,
     [makeOverrideKey('taif', 'tank-leak-detection')]: taifTankLeakDetection,
     [makeOverrideKey('taif', 'bathroom-leak-detection')]: taifBathroomLeakDetection,
@@ -1751,26 +1382,18 @@ const PAGE_OVERRIDES: Record<OverrideKey, PageOverride> = {
     [makeOverrideKey('yanbu', 'furniture-moving')]: yanbuFurnitureMoving,
     [makeOverrideKey('yanbu', 'furniture-storage')]: yanbuFurnitureStorage,
     [makeOverrideKey('yanbu', 'dyna')]: yanbuDyna,
-    [makeOverrideKey('yanbu', 'moving-out')]: yanbuMovingOut,
     [makeOverrideKey('yanbu', 'dabab')]: yanbuDabab,
     [makeOverrideKey('yanbu', 'cleaning')]: yanbuCleaning,
     [makeOverrideKey('yanbu', 'tanks-cleaning')]: yanbuTanksCleaning,
     [makeOverrideKey('yanbu', 'sofa-cleaning')]: yanbuSofaCleaning,
     [makeOverrideKey('yanbu', 'carpet-cleaning')]: yanbuCarpetCleaning,
     [makeOverrideKey('yanbu', 'steam-cleaning')]: yanbuSteamCleaning,
-    [makeOverrideKey('yanbu', 'sanitization')]: yanbuSanitization,
     [makeOverrideKey('yanbu', 'air-conditioner-cleaning')]: yanbuAirConditionerCleaning,
-    [makeOverrideKey('yanbu', 'mattress-cleaning')]: yanbuMattressCleaning,
     [makeOverrideKey('yanbu', 'swimming-pool-cleaning')]: yanbuSwimmingPoolCleaning,
-    [makeOverrideKey('yanbu', 'kitchen-cleaning')]: yanbuKitchenCleaning,
     [makeOverrideKey('yanbu', 'glass-facades-cleaning')]: yanbuGlassFacadesCleaning,
-    [makeOverrideKey('yanbu', 'floor-cleaning')]: yanbuFloorCleaning,
-    [makeOverrideKey('yanbu', 'floor-polishing')]: yanbuFloorPolishing,
     [makeOverrideKey('yanbu', 'marble-polishing')]: yanbuMarblePolishing,
     [makeOverrideKey('yanbu', 'villas-cleaning')]: yanbuVillasCleaning,
     [makeOverrideKey('yanbu', 'apartments-cleaning')]: yanbuApartmentsCleaning,
-    [makeOverrideKey('yanbu', 'palaces-cleaning')]: yanbuPalacesCleaning,
-    [makeOverrideKey('yanbu', 'shops-cleaning')]: yanbuShopsCleaning,
     [makeOverrideKey('yanbu', 'office-cleaning')]: yanbuOfficeCleaning,
     [makeOverrideKey('yanbu', 'furniture-cleaning')]: yanbuFurnitureCleaning,
     [makeOverrideKey('yanbu', 'auto-cleaning')]: yanbuAutoCleaning,
@@ -1780,14 +1403,9 @@ const PAGE_OVERRIDES: Record<OverrideKey, PageOverride> = {
     [makeOverrideKey('yanbu', 'restaurant-chimney-cleaning')]: yanbuRestaurantChimneyCleaning,
     [makeOverrideKey('yanbu', 'pest-control')]: yanbuPestControl,
     [makeOverrideKey('yanbu', 'pesticide-spraying')]: yanbuPesticideSpraying,
-    [makeOverrideKey('yanbu', 'insects-spraying')]: yanbuInsectsSpraying,
     [makeOverrideKey('yanbu', 'termite-control')]: yanbuTermiteControl,
-    [makeOverrideKey('yanbu', 'cockroach-control')]: yanbuCockroachControl,
     [makeOverrideKey('yanbu', 'bedbugs-control')]: yanbuBedbugsControl,
-    [makeOverrideKey('yanbu', 'rodent-control')]: yanbuRodentControl,
-    [makeOverrideKey('yanbu', 'ants-control')]: yanbuAntsControl,
     [makeOverrideKey('yanbu', 'bird-control')]: yanbuBirdControl,
-    [makeOverrideKey('yanbu', 'snakes-control')]: yanbuSnakesControl,
     [makeOverrideKey('yanbu', 'water-leak-detection')]: yanbuWaterLeakDetection,
     [makeOverrideKey('yanbu', 'tank-leak-detection')]: yanbuTankLeakDetection,
     [makeOverrideKey('yanbu', 'bathroom-leak-detection')]: yanbuBathroomLeakDetection,
@@ -1805,26 +1423,18 @@ const PAGE_OVERRIDES: Record<OverrideKey, PageOverride> = {
     [makeOverrideKey('dammam', 'furniture-moving')]: dammamFurnitureMoving,
     [makeOverrideKey('dammam', 'furniture-storage')]: dammamFurnitureStorage,
     [makeOverrideKey('dammam', 'dyna')]: dammamDyna,
-    [makeOverrideKey('dammam', 'moving-out')]: dammamMovingOut,
     [makeOverrideKey('dammam', 'dabab')]: dammamDabab,
     [makeOverrideKey('dammam', 'cleaning')]: dammamCleaning,
     [makeOverrideKey('dammam', 'tanks-cleaning')]: dammamTanksCleaning,
     [makeOverrideKey('dammam', 'sofa-cleaning')]: dammamSofaCleaning,
     [makeOverrideKey('dammam', 'carpet-cleaning')]: dammamCarpetCleaning,
     [makeOverrideKey('dammam', 'steam-cleaning')]: dammamSteamCleaning,
-    [makeOverrideKey('dammam', 'sanitization')]: dammamSanitization,
     [makeOverrideKey('dammam', 'air-conditioner-cleaning')]: dammamAirConditionerCleaning,
-    [makeOverrideKey('dammam', 'mattress-cleaning')]: dammamMattressCleaning,
     [makeOverrideKey('dammam', 'swimming-pool-cleaning')]: dammamSwimmingPoolCleaning,
-    [makeOverrideKey('dammam', 'kitchen-cleaning')]: dammamKitchenCleaning,
     [makeOverrideKey('dammam', 'glass-facades-cleaning')]: dammamGlassFacadesCleaning,
-    [makeOverrideKey('dammam', 'floor-cleaning')]: dammamFloorCleaning,
-    [makeOverrideKey('dammam', 'floor-polishing')]: dammamFloorPolishing,
     [makeOverrideKey('dammam', 'marble-polishing')]: dammamMarblePolishing,
     [makeOverrideKey('dammam', 'villas-cleaning')]: dammamVillasCleaning,
     [makeOverrideKey('dammam', 'apartments-cleaning')]: dammamApartmentsCleaning,
-    [makeOverrideKey('dammam', 'palaces-cleaning')]: dammamPalacesCleaning,
-    [makeOverrideKey('dammam', 'shops-cleaning')]: dammamShopsCleaning,
     [makeOverrideKey('dammam', 'office-cleaning')]: dammamOfficeCleaning,
     [makeOverrideKey('dammam', 'furniture-cleaning')]: dammamFurnitureCleaning,
     [makeOverrideKey('dammam', 'auto-cleaning')]: dammamAutoCleaning,
@@ -1834,14 +1444,9 @@ const PAGE_OVERRIDES: Record<OverrideKey, PageOverride> = {
     [makeOverrideKey('dammam', 'restaurant-chimney-cleaning')]: dammamRestaurantChimneyCleaning,
     [makeOverrideKey('dammam', 'pest-control')]: dammamPestControl,
     [makeOverrideKey('dammam', 'pesticide-spraying')]: dammamPesticideSpraying,
-    [makeOverrideKey('dammam', 'insects-spraying')]: dammamInsectsSpraying,
     [makeOverrideKey('dammam', 'termite-control')]: dammamTermiteControl,
-    [makeOverrideKey('dammam', 'cockroach-control')]: dammamCockroachControl,
     [makeOverrideKey('dammam', 'bedbugs-control')]: dammamBedbugsControl,
-    [makeOverrideKey('dammam', 'rodent-control')]: dammamRodentControl,
-    [makeOverrideKey('dammam', 'ants-control')]: dammamAntsControl,
     [makeOverrideKey('dammam', 'bird-control')]: dammamBirdControl,
-    [makeOverrideKey('dammam', 'snakes-control')]: dammamSnakesControl,
     [makeOverrideKey('dammam', 'water-leak-detection')]: dammamWaterLeakDetection,
     [makeOverrideKey('dammam', 'tank-leak-detection')]: dammamTankLeakDetection,
     [makeOverrideKey('dammam', 'bathroom-leak-detection')]: dammamBathroomLeakDetection,
@@ -1857,26 +1462,18 @@ const PAGE_OVERRIDES: Record<OverrideKey, PageOverride> = {
     [makeOverrideKey('al-khobar', 'furniture-moving')]: alKhobarFurnitureMoving,
     [makeOverrideKey('al-khobar', 'furniture-storage')]: alKhobarFurnitureStorage,
     [makeOverrideKey('al-khobar', 'dyna')]: alKhobarDyna,
-    [makeOverrideKey('al-khobar', 'moving-out')]: alKhobarMovingOut,
     [makeOverrideKey('al-khobar', 'dabab')]: alKhobarDabab,
     [makeOverrideKey('al-khobar', 'cleaning')]: alKhobarCleaning,
     [makeOverrideKey('al-khobar', 'tanks-cleaning')]: alKhobarTanksCleaning,
     [makeOverrideKey('al-khobar', 'sofa-cleaning')]: alKhobarSofaCleaning,
     [makeOverrideKey('al-khobar', 'carpet-cleaning')]: alKhobarCarpetCleaning,
     [makeOverrideKey('al-khobar', 'steam-cleaning')]: alKhobarSteamCleaning,
-    [makeOverrideKey('al-khobar', 'sanitization')]: alKhobarSanitization,
     [makeOverrideKey('al-khobar', 'air-conditioner-cleaning')]: alKhobarAirConditionerCleaning,
-    [makeOverrideKey('al-khobar', 'mattress-cleaning')]: alKhobarMattressCleaning,
     [makeOverrideKey('al-khobar', 'swimming-pool-cleaning')]: alKhobarSwimmingPoolCleaning,
-    [makeOverrideKey('al-khobar', 'kitchen-cleaning')]: alKhobarKitchenCleaning,
     [makeOverrideKey('al-khobar', 'glass-facades-cleaning')]: alKhobarGlassFacadesCleaning,
-    [makeOverrideKey('al-khobar', 'floor-cleaning')]: alKhobarFloorCleaning,
-    [makeOverrideKey('al-khobar', 'floor-polishing')]: alKhobarFloorPolishing,
     [makeOverrideKey('al-khobar', 'marble-polishing')]: alKhobarMarblePolishing,
     [makeOverrideKey('al-khobar', 'villas-cleaning')]: alKhobarVillasCleaning,
     [makeOverrideKey('al-khobar', 'apartments-cleaning')]: alKhobarApartmentsCleaning,
-    [makeOverrideKey('al-khobar', 'palaces-cleaning')]: alKhobarPalacesCleaning,
-    [makeOverrideKey('al-khobar', 'shops-cleaning')]: alKhobarShopsCleaning,
     [makeOverrideKey('al-khobar', 'office-cleaning')]: alKhobarOfficeCleaning,
     [makeOverrideKey('al-khobar', 'furniture-cleaning')]: alKhobarFurnitureCleaning,
     [makeOverrideKey('al-khobar', 'auto-cleaning')]: alKhobarAutoCleaning,
@@ -1886,14 +1483,9 @@ const PAGE_OVERRIDES: Record<OverrideKey, PageOverride> = {
     [makeOverrideKey('al-khobar', 'restaurant-chimney-cleaning')]: alKhobarRestaurantChimneyCleaning,
     [makeOverrideKey('al-khobar', 'pest-control')]: alKhobarPestControl,
     [makeOverrideKey('al-khobar', 'pesticide-spraying')]: alKhobarPesticideSpraying,
-    [makeOverrideKey('al-khobar', 'insects-spraying')]: alKhobarInsectsSpraying,
     [makeOverrideKey('al-khobar', 'termite-control')]: alKhobarTermiteControl,
-    [makeOverrideKey('al-khobar', 'cockroach-control')]: alKhobarCockroachControl,
     [makeOverrideKey('al-khobar', 'bedbugs-control')]: alKhobarBedbugsControl,
-    [makeOverrideKey('al-khobar', 'rodent-control')]: alKhobarRodentControl,
-    [makeOverrideKey('al-khobar', 'ants-control')]: alKhobarAntsControl,
     [makeOverrideKey('al-khobar', 'bird-control')]: alKhobarBirdControl,
-    [makeOverrideKey('al-khobar', 'snakes-control')]: alKhobarSnakesControl,
     [makeOverrideKey('al-khobar', 'water-leak-detection')]: alKhobarWaterLeakDetection,
     [makeOverrideKey('al-khobar', 'tank-leak-detection')]: alKhobarTankLeakDetection,
     [makeOverrideKey('al-khobar', 'bathroom-leak-detection')]: alKhobarBathroomLeakDetection,
@@ -1909,26 +1501,18 @@ const PAGE_OVERRIDES: Record<OverrideKey, PageOverride> = {
     [makeOverrideKey('dhahran', 'furniture-moving')]: dhahranFurnitureMoving,
     [makeOverrideKey('dhahran', 'furniture-storage')]: dhahranFurnitureStorage,
     [makeOverrideKey('dhahran', 'dyna')]: dhahranDyna,
-    [makeOverrideKey('dhahran', 'moving-out')]: dhahranMovingOut,
     [makeOverrideKey('dhahran', 'dabab')]: dhahranDabab,
     [makeOverrideKey('dhahran', 'cleaning')]: dhahranCleaning,
     [makeOverrideKey('dhahran', 'tanks-cleaning')]: dhahranTanksCleaning,
     [makeOverrideKey('dhahran', 'sofa-cleaning')]: dhahranSofaCleaning,
     [makeOverrideKey('dhahran', 'carpet-cleaning')]: dhahranCarpetCleaning,
     [makeOverrideKey('dhahran', 'steam-cleaning')]: dhahranSteamCleaning,
-    [makeOverrideKey('dhahran', 'sanitization')]: dhahranSanitization,
     [makeOverrideKey('dhahran', 'air-conditioner-cleaning')]: dhahranAirConditionerCleaning,
-    [makeOverrideKey('dhahran', 'mattress-cleaning')]: dhahranMattressCleaning,
     [makeOverrideKey('dhahran', 'swimming-pool-cleaning')]: dhahranSwimmingPoolCleaning,
-    [makeOverrideKey('dhahran', 'kitchen-cleaning')]: dhahranKitchenCleaning,
     [makeOverrideKey('dhahran', 'glass-facades-cleaning')]: dhahranGlassFacadesCleaning,
-    [makeOverrideKey('dhahran', 'floor-cleaning')]: dhahranFloorCleaning,
-    [makeOverrideKey('dhahran', 'floor-polishing')]: dhahranFloorPolishing,
     [makeOverrideKey('dhahran', 'marble-polishing')]: dhahranMarblePolishing,
     [makeOverrideKey('dhahran', 'villas-cleaning')]: dhahranVillasCleaning,
     [makeOverrideKey('dhahran', 'apartments-cleaning')]: dhahranApartmentsCleaning,
-    [makeOverrideKey('dhahran', 'palaces-cleaning')]: dhahranPalacesCleaning,
-    [makeOverrideKey('dhahran', 'shops-cleaning')]: dhahranShopsCleaning,
     [makeOverrideKey('dhahran', 'office-cleaning')]: dhahranOfficeCleaning,
     [makeOverrideKey('dhahran', 'furniture-cleaning')]: dhahranFurnitureCleaning,
     [makeOverrideKey('dhahran', 'auto-cleaning')]: dhahranAutoCleaning,
@@ -1938,14 +1522,9 @@ const PAGE_OVERRIDES: Record<OverrideKey, PageOverride> = {
     [makeOverrideKey('dhahran', 'restaurant-chimney-cleaning')]: dhahranRestaurantChimneyCleaning,
     [makeOverrideKey('dhahran', 'pest-control')]: dhahranPestControl,
     [makeOverrideKey('dhahran', 'pesticide-spraying')]: dhahranPesticideSpraying,
-    [makeOverrideKey('dhahran', 'insects-spraying')]: dhahranInsectsSpraying,
     [makeOverrideKey('dhahran', 'termite-control')]: dhahranTermiteControl,
-    [makeOverrideKey('dhahran', 'cockroach-control')]: dhahranCockroachControl,
     [makeOverrideKey('dhahran', 'bedbugs-control')]: dhahranBedbugsControl,
-    [makeOverrideKey('dhahran', 'rodent-control')]: dhahranRodentControl,
-    [makeOverrideKey('dhahran', 'ants-control')]: dhahranAntsControl,
     [makeOverrideKey('dhahran', 'bird-control')]: dhahranBirdControl,
-    [makeOverrideKey('dhahran', 'snakes-control')]: dhahranSnakesControl,
     [makeOverrideKey('dhahran', 'water-leak-detection')]: dhahranWaterLeakDetection,
     [makeOverrideKey('dhahran', 'tank-leak-detection')]: dhahranTankLeakDetection,
     [makeOverrideKey('dhahran', 'bathroom-leak-detection')]: dhahranBathroomLeakDetection,
@@ -1961,26 +1540,18 @@ const PAGE_OVERRIDES: Record<OverrideKey, PageOverride> = {
     [makeOverrideKey('jubail', 'furniture-moving')]: jubailFurnitureMoving,
     [makeOverrideKey('jubail', 'furniture-storage')]: jubailFurnitureStorage,
     [makeOverrideKey('jubail', 'dyna')]: jubailDyna,
-    [makeOverrideKey('jubail', 'moving-out')]: jubailMovingOut,
     [makeOverrideKey('jubail', 'dabab')]: jubailDabab,
     [makeOverrideKey('jubail', 'cleaning')]: jubailCleaning,
     [makeOverrideKey('jubail', 'tanks-cleaning')]: jubailTanksCleaning,
     [makeOverrideKey('jubail', 'sofa-cleaning')]: jubailSofaCleaning,
     [makeOverrideKey('jubail', 'carpet-cleaning')]: jubailCarpetCleaning,
     [makeOverrideKey('jubail', 'steam-cleaning')]: jubailSteamCleaning,
-    [makeOverrideKey('jubail', 'sanitization')]: jubailSanitization,
     [makeOverrideKey('jubail', 'air-conditioner-cleaning')]: jubailAirConditionerCleaning,
-    [makeOverrideKey('jubail', 'mattress-cleaning')]: jubailMattressCleaning,
     [makeOverrideKey('jubail', 'swimming-pool-cleaning')]: jubailSwimmingPoolCleaning,
-    [makeOverrideKey('jubail', 'kitchen-cleaning')]: jubailKitchenCleaning,
     [makeOverrideKey('jubail', 'glass-facades-cleaning')]: jubailGlassFacadesCleaning,
-    [makeOverrideKey('jubail', 'floor-cleaning')]: jubailFloorCleaning,
-    [makeOverrideKey('jubail', 'floor-polishing')]: jubailFloorPolishing,
     [makeOverrideKey('jubail', 'marble-polishing')]: jubailMarblePolishing,
     [makeOverrideKey('jubail', 'villas-cleaning')]: jubailVillasCleaning,
     [makeOverrideKey('jubail', 'apartments-cleaning')]: jubailApartmentsCleaning,
-    [makeOverrideKey('jubail', 'palaces-cleaning')]: jubailPalacesCleaning,
-    [makeOverrideKey('jubail', 'shops-cleaning')]: jubailShopsCleaning,
     [makeOverrideKey('jubail', 'office-cleaning')]: jubailOfficeCleaning,
     [makeOverrideKey('jubail', 'furniture-cleaning')]: jubailFurnitureCleaning,
     [makeOverrideKey('jubail', 'auto-cleaning')]: jubailAutoCleaning,
@@ -1990,14 +1561,9 @@ const PAGE_OVERRIDES: Record<OverrideKey, PageOverride> = {
     [makeOverrideKey('jubail', 'restaurant-chimney-cleaning')]: jubailRestaurantChimneyCleaning,
     [makeOverrideKey('jubail', 'pest-control')]: jubailPestControl,
     [makeOverrideKey('jubail', 'pesticide-spraying')]: jubailPesticideSpraying,
-    [makeOverrideKey('jubail', 'insects-spraying')]: jubailInsectsSpraying,
     [makeOverrideKey('jubail', 'termite-control')]: jubailTermiteControl,
-    [makeOverrideKey('jubail', 'cockroach-control')]: jubailCockroachControl,
     [makeOverrideKey('jubail', 'bedbugs-control')]: jubailBedbugsControl,
-    [makeOverrideKey('jubail', 'rodent-control')]: jubailRodentControl,
-    [makeOverrideKey('jubail', 'ants-control')]: jubailAntsControl,
     [makeOverrideKey('jubail', 'bird-control')]: jubailBirdControl,
-    [makeOverrideKey('jubail', 'snakes-control')]: jubailSnakesControl,
     [makeOverrideKey('jubail', 'water-leak-detection')]: jubailWaterLeakDetection,
     [makeOverrideKey('jubail', 'tank-leak-detection')]: jubailTankLeakDetection,
     [makeOverrideKey('jubail', 'bathroom-leak-detection')]: jubailBathroomLeakDetection,
@@ -2013,26 +1579,18 @@ const PAGE_OVERRIDES: Record<OverrideKey, PageOverride> = {
     [makeOverrideKey('al-ahsa', 'furniture-moving')]: alAhsaFurnitureMoving,
     [makeOverrideKey('al-ahsa', 'furniture-storage')]: alAhsaFurnitureStorage,
     [makeOverrideKey('al-ahsa', 'dyna')]: alAhsaDyna,
-    [makeOverrideKey('al-ahsa', 'moving-out')]: alAhsaMovingOut,
     [makeOverrideKey('al-ahsa', 'dabab')]: alAhsaDabab,
     [makeOverrideKey('al-ahsa', 'cleaning')]: alAhsaCleaning,
     [makeOverrideKey('al-ahsa', 'tanks-cleaning')]: alAhsaTanksCleaning,
     [makeOverrideKey('al-ahsa', 'sofa-cleaning')]: alAhsaSofaCleaning,
     [makeOverrideKey('al-ahsa', 'carpet-cleaning')]: alAhsaCarpetCleaning,
     [makeOverrideKey('al-ahsa', 'steam-cleaning')]: alAhsaSteamCleaning,
-    [makeOverrideKey('al-ahsa', 'sanitization')]: alAhsaSanitization,
     [makeOverrideKey('al-ahsa', 'air-conditioner-cleaning')]: alAhsaAirConditionerCleaning,
-    [makeOverrideKey('al-ahsa', 'mattress-cleaning')]: alAhsaMattressCleaning,
     [makeOverrideKey('al-ahsa', 'swimming-pool-cleaning')]: alAhsaSwimmingPoolCleaning,
-    [makeOverrideKey('al-ahsa', 'kitchen-cleaning')]: alAhsaKitchenCleaning,
     [makeOverrideKey('al-ahsa', 'glass-facades-cleaning')]: alAhsaGlassFacadesCleaning,
-    [makeOverrideKey('al-ahsa', 'floor-cleaning')]: alAhsaFloorCleaning,
-    [makeOverrideKey('al-ahsa', 'floor-polishing')]: alAhsaFloorPolishing,
     [makeOverrideKey('al-ahsa', 'marble-polishing')]: alAhsaMarblePolishing,
     [makeOverrideKey('al-ahsa', 'villas-cleaning')]: alAhsaVillasCleaning,
     [makeOverrideKey('al-ahsa', 'apartments-cleaning')]: alAhsaApartmentsCleaning,
-    [makeOverrideKey('al-ahsa', 'palaces-cleaning')]: alAhsaPalacesCleaning,
-    [makeOverrideKey('al-ahsa', 'shops-cleaning')]: alAhsaShopsCleaning,
     [makeOverrideKey('al-ahsa', 'office-cleaning')]: alAhsaOfficeCleaning,
     [makeOverrideKey('al-ahsa', 'furniture-cleaning')]: alAhsaFurnitureCleaning,
     [makeOverrideKey('al-ahsa', 'auto-cleaning')]: alAhsaAutoCleaning,
@@ -2042,14 +1600,9 @@ const PAGE_OVERRIDES: Record<OverrideKey, PageOverride> = {
     [makeOverrideKey('al-ahsa', 'restaurant-chimney-cleaning')]: alAhsaRestaurantChimneyCleaning,
     [makeOverrideKey('al-ahsa', 'pest-control')]: alAhsaPestControl,
     [makeOverrideKey('al-ahsa', 'pesticide-spraying')]: alAhsaPesticideSpraying,
-    [makeOverrideKey('al-ahsa', 'insects-spraying')]: alAhsaInsectsSpraying,
     [makeOverrideKey('al-ahsa', 'termite-control')]: alAhsaTermiteControl,
-    [makeOverrideKey('al-ahsa', 'cockroach-control')]: alAhsaCockroachControl,
     [makeOverrideKey('al-ahsa', 'bedbugs-control')]: alAhsaBedbugsControl,
-    [makeOverrideKey('al-ahsa', 'rodent-control')]: alAhsaRodentControl,
-    [makeOverrideKey('al-ahsa', 'ants-control')]: alAhsaAntsControl,
     [makeOverrideKey('al-ahsa', 'bird-control')]: alAhsaBirdControl,
-    [makeOverrideKey('al-ahsa', 'snakes-control')]: alAhsaSnakesControl,
     [makeOverrideKey('al-ahsa', 'water-leak-detection')]: alAhsaWaterLeakDetection,
     [makeOverrideKey('al-ahsa', 'tank-leak-detection')]: alAhsaTankLeakDetection,
     [makeOverrideKey('al-ahsa', 'bathroom-leak-detection')]: alAhsaBathroomLeakDetection,
@@ -2065,26 +1618,18 @@ const PAGE_OVERRIDES: Record<OverrideKey, PageOverride> = {
     [makeOverrideKey('qatif', 'furniture-moving')]: qatifFurnitureMoving,
     [makeOverrideKey('qatif', 'furniture-storage')]: qatifFurnitureStorage,
     [makeOverrideKey('qatif', 'dyna')]: qatifDyna,
-    [makeOverrideKey('qatif', 'moving-out')]: qatifMovingOut,
     [makeOverrideKey('qatif', 'dabab')]: qatifDabab,
     [makeOverrideKey('qatif', 'cleaning')]: qatifCleaning,
     [makeOverrideKey('qatif', 'tanks-cleaning')]: qatifTanksCleaning,
     [makeOverrideKey('qatif', 'sofa-cleaning')]: qatifSofaCleaning,
     [makeOverrideKey('qatif', 'carpet-cleaning')]: qatifCarpetCleaning,
     [makeOverrideKey('qatif', 'steam-cleaning')]: qatifSteamCleaning,
-    [makeOverrideKey('qatif', 'sanitization')]: qatifSanitization,
     [makeOverrideKey('qatif', 'air-conditioner-cleaning')]: qatifAirConditionerCleaning,
-    [makeOverrideKey('qatif', 'mattress-cleaning')]: qatifMattressCleaning,
     [makeOverrideKey('qatif', 'swimming-pool-cleaning')]: qatifSwimmingPoolCleaning,
-    [makeOverrideKey('qatif', 'kitchen-cleaning')]: qatifKitchenCleaning,
     [makeOverrideKey('qatif', 'glass-facades-cleaning')]: qatifGlassFacadesCleaning,
-    [makeOverrideKey('qatif', 'floor-cleaning')]: qatifFloorCleaning,
-    [makeOverrideKey('qatif', 'floor-polishing')]: qatifFloorPolishing,
     [makeOverrideKey('qatif', 'marble-polishing')]: qatifMarblePolishing,
     [makeOverrideKey('qatif', 'villas-cleaning')]: qatifVillasCleaning,
     [makeOverrideKey('qatif', 'apartments-cleaning')]: qatifApartmentsCleaning,
-    [makeOverrideKey('qatif', 'palaces-cleaning')]: qatifPalacesCleaning,
-    [makeOverrideKey('qatif', 'shops-cleaning')]: qatifShopsCleaning,
     [makeOverrideKey('qatif', 'office-cleaning')]: qatifOfficeCleaning,
     [makeOverrideKey('qatif', 'furniture-cleaning')]: qatifFurnitureCleaning,
     [makeOverrideKey('qatif', 'auto-cleaning')]: qatifAutoCleaning,
@@ -2094,14 +1639,9 @@ const PAGE_OVERRIDES: Record<OverrideKey, PageOverride> = {
     [makeOverrideKey('qatif', 'restaurant-chimney-cleaning')]: qatifRestaurantChimneyCleaning,
     [makeOverrideKey('qatif', 'pest-control')]: qatifPestControl,
     [makeOverrideKey('qatif', 'pesticide-spraying')]: qatifPesticideSpraying,
-    [makeOverrideKey('qatif', 'insects-spraying')]: qatifInsectsSpraying,
     [makeOverrideKey('qatif', 'termite-control')]: qatifTermiteControl,
-    [makeOverrideKey('qatif', 'cockroach-control')]: qatifCockroachControl,
     [makeOverrideKey('qatif', 'bedbugs-control')]: qatifBedbugsControl,
-    [makeOverrideKey('qatif', 'rodent-control')]: qatifRodentControl,
-    [makeOverrideKey('qatif', 'ants-control')]: qatifAntsControl,
     [makeOverrideKey('qatif', 'bird-control')]: qatifBirdControl,
-    [makeOverrideKey('qatif', 'snakes-control')]: qatifSnakesControl,
     [makeOverrideKey('qatif', 'water-leak-detection')]: qatifWaterLeakDetection,
     [makeOverrideKey('qatif', 'tank-leak-detection')]: qatifTankLeakDetection,
     [makeOverrideKey('qatif', 'bathroom-leak-detection')]: qatifBathroomLeakDetection,
@@ -2117,26 +1657,18 @@ const PAGE_OVERRIDES: Record<OverrideKey, PageOverride> = {
     [makeOverrideKey('hafr-albatin', 'furniture-moving')]: hafrAlbatinFurnitureMoving,
     [makeOverrideKey('hafr-albatin', 'furniture-storage')]: hafrAlbatinFurnitureStorage,
     [makeOverrideKey('hafr-albatin', 'dyna')]: hafrAlbatinDyna,
-    [makeOverrideKey('hafr-albatin', 'moving-out')]: hafrAlbatinMovingOut,
     [makeOverrideKey('hafr-albatin', 'dabab')]: hafrAlbatinDabab,
     [makeOverrideKey('hafr-albatin', 'cleaning')]: hafrAlbatinCleaning,
     [makeOverrideKey('hafr-albatin', 'tanks-cleaning')]: hafrAlbatinTanksCleaning,
     [makeOverrideKey('hafr-albatin', 'sofa-cleaning')]: hafrAlbatinSofaCleaning,
     [makeOverrideKey('hafr-albatin', 'carpet-cleaning')]: hafrAlbatinCarpetCleaning,
     [makeOverrideKey('hafr-albatin', 'steam-cleaning')]: hafrAlbatinSteamCleaning,
-    [makeOverrideKey('hafr-albatin', 'sanitization')]: hafrAlbatinSanitization,
     [makeOverrideKey('hafr-albatin', 'air-conditioner-cleaning')]: hafrAlbatinAirConditionerCleaning,
-    [makeOverrideKey('hafr-albatin', 'mattress-cleaning')]: hafrAlbatinMattressCleaning,
     [makeOverrideKey('hafr-albatin', 'swimming-pool-cleaning')]: hafrAlbatinSwimmingPoolCleaning,
-    [makeOverrideKey('hafr-albatin', 'kitchen-cleaning')]: hafrAlbatinKitchenCleaning,
     [makeOverrideKey('hafr-albatin', 'glass-facades-cleaning')]: hafrAlbatinGlassFacadesCleaning,
-    [makeOverrideKey('hafr-albatin', 'floor-cleaning')]: hafrAlbatinFloorCleaning,
-    [makeOverrideKey('hafr-albatin', 'floor-polishing')]: hafrAlbatinFloorPolishing,
     [makeOverrideKey('hafr-albatin', 'marble-polishing')]: hafrAlbatinMarblePolishing,
     [makeOverrideKey('hafr-albatin', 'villas-cleaning')]: hafrAlbatinVillasCleaning,
     [makeOverrideKey('hafr-albatin', 'apartments-cleaning')]: hafrAlbatinApartmentsCleaning,
-    [makeOverrideKey('hafr-albatin', 'palaces-cleaning')]: hafrAlbatinPalacesCleaning,
-    [makeOverrideKey('hafr-albatin', 'shops-cleaning')]: hafrAlbatinShopsCleaning,
     [makeOverrideKey('hafr-albatin', 'office-cleaning')]: hafrAlbatinOfficeCleaning,
     [makeOverrideKey('hafr-albatin', 'furniture-cleaning')]: hafrAlbatinFurnitureCleaning,
     [makeOverrideKey('hafr-albatin', 'auto-cleaning')]: hafrAlbatinAutoCleaning,
@@ -2146,14 +1678,9 @@ const PAGE_OVERRIDES: Record<OverrideKey, PageOverride> = {
     [makeOverrideKey('hafr-albatin', 'restaurant-chimney-cleaning')]: hafrAlbatinRestaurantChimneyCleaning,
     [makeOverrideKey('hafr-albatin', 'pest-control')]: hafrAlbatinPestControl,
     [makeOverrideKey('hafr-albatin', 'pesticide-spraying')]: hafrAlbatinPesticideSpraying,
-    [makeOverrideKey('hafr-albatin', 'insects-spraying')]: hafrAlbatinInsectsSpraying,
     [makeOverrideKey('hafr-albatin', 'termite-control')]: hafrAlbatinTermiteControl,
-    [makeOverrideKey('hafr-albatin', 'cockroach-control')]: hafrAlbatinCockroachControl,
     [makeOverrideKey('hafr-albatin', 'bedbugs-control')]: hafrAlbatinBedbugsControl,
-    [makeOverrideKey('hafr-albatin', 'rodent-control')]: hafrAlbatinRodentControl,
-    [makeOverrideKey('hafr-albatin', 'ants-control')]: hafrAlbatinAntsControl,
     [makeOverrideKey('hafr-albatin', 'bird-control')]: hafrAlbatinBirdControl,
-    [makeOverrideKey('hafr-albatin', 'snakes-control')]: hafrAlbatinSnakesControl,
     [makeOverrideKey('hafr-albatin', 'water-leak-detection')]: hafrAlbatinWaterLeakDetection,
     [makeOverrideKey('hafr-albatin', 'tank-leak-detection')]: hafrAlbatinTankLeakDetection,
     [makeOverrideKey('hafr-albatin', 'bathroom-leak-detection')]: hafrAlbatinBathroomLeakDetection,
@@ -2171,26 +1698,18 @@ const PAGE_OVERRIDES: Record<OverrideKey, PageOverride> = {
     [makeOverrideKey('tabuk', 'furniture-moving')]: tabukFurnitureMoving,
     [makeOverrideKey('tabuk', 'furniture-storage')]: tabukFurnitureStorage,
     [makeOverrideKey('tabuk', 'dyna')]: tabukDyna,
-    [makeOverrideKey('tabuk', 'moving-out')]: tabukMovingOut,
     [makeOverrideKey('tabuk', 'dabab')]: tabukDabab,
     [makeOverrideKey('tabuk', 'cleaning')]: tabukCleaning,
     [makeOverrideKey('tabuk', 'tanks-cleaning')]: tabukTanksCleaning,
     [makeOverrideKey('tabuk', 'sofa-cleaning')]: tabukSofaCleaning,
     [makeOverrideKey('tabuk', 'carpet-cleaning')]: tabukCarpetCleaning,
     [makeOverrideKey('tabuk', 'steam-cleaning')]: tabukSteamCleaning,
-    [makeOverrideKey('tabuk', 'sanitization')]: tabukSanitization,
     [makeOverrideKey('tabuk', 'air-conditioner-cleaning')]: tabukAirConditionerCleaning,
-    [makeOverrideKey('tabuk', 'mattress-cleaning')]: tabukMattressCleaning,
     [makeOverrideKey('tabuk', 'swimming-pool-cleaning')]: tabukSwimmingPoolCleaning,
-    [makeOverrideKey('tabuk', 'kitchen-cleaning')]: tabukKitchenCleaning,
     [makeOverrideKey('tabuk', 'glass-facades-cleaning')]: tabukGlassFacadesCleaning,
-    [makeOverrideKey('tabuk', 'floor-cleaning')]: tabukFloorCleaning,
-    [makeOverrideKey('tabuk', 'floor-polishing')]: tabukFloorPolishing,
     [makeOverrideKey('tabuk', 'marble-polishing')]: tabukMarblePolishing,
     [makeOverrideKey('tabuk', 'villas-cleaning')]: tabukVillasCleaning,
     [makeOverrideKey('tabuk', 'apartments-cleaning')]: tabukApartmentsCleaning,
-    [makeOverrideKey('tabuk', 'palaces-cleaning')]: tabukPalacesCleaning,
-    [makeOverrideKey('tabuk', 'shops-cleaning')]: tabukShopsCleaning,
     [makeOverrideKey('tabuk', 'office-cleaning')]: tabukOfficeCleaning,
     [makeOverrideKey('tabuk', 'furniture-cleaning')]: tabukFurnitureCleaning,
     [makeOverrideKey('tabuk', 'auto-cleaning')]: tabukAutoCleaning,
@@ -2200,14 +1719,9 @@ const PAGE_OVERRIDES: Record<OverrideKey, PageOverride> = {
     [makeOverrideKey('tabuk', 'restaurant-chimney-cleaning')]: tabukRestaurantChimneyCleaning,
     [makeOverrideKey('tabuk', 'pest-control')]: tabukPestControl,
     [makeOverrideKey('tabuk', 'pesticide-spraying')]: tabukPesticideSpraying,
-    [makeOverrideKey('tabuk', 'insects-spraying')]: tabukInsectsSpraying,
     [makeOverrideKey('tabuk', 'termite-control')]: tabukTermiteControl,
-    [makeOverrideKey('tabuk', 'cockroach-control')]: tabukCockroachControl,
     [makeOverrideKey('tabuk', 'bedbugs-control')]: tabukBedbugsControl,
-    [makeOverrideKey('tabuk', 'rodent-control')]: tabukRodentControl,
-    [makeOverrideKey('tabuk', 'ants-control')]: tabukAntsControl,
     [makeOverrideKey('tabuk', 'bird-control')]: tabukBirdControl,
-    [makeOverrideKey('tabuk', 'snakes-control')]: tabukSnakesControl,
     [makeOverrideKey('tabuk', 'water-leak-detection')]: tabukWaterLeakDetection,
     [makeOverrideKey('tabuk', 'tank-leak-detection')]: tabukTankLeakDetection,
     [makeOverrideKey('tabuk', 'bathroom-leak-detection')]: tabukBathroomLeakDetection,
@@ -2223,26 +1737,18 @@ const PAGE_OVERRIDES: Record<OverrideKey, PageOverride> = {
     [makeOverrideKey('hail', 'furniture-moving')]: hailFurnitureMoving,
     [makeOverrideKey('hail', 'furniture-storage')]: hailFurnitureStorage,
     [makeOverrideKey('hail', 'dyna')]: hailDyna,
-    [makeOverrideKey('hail', 'moving-out')]: hailMovingOut,
     [makeOverrideKey('hail', 'dabab')]: hailDabab,
     [makeOverrideKey('hail', 'cleaning')]: hailCleaning,
     [makeOverrideKey('hail', 'tanks-cleaning')]: hailTanksCleaning,
     [makeOverrideKey('hail', 'sofa-cleaning')]: hailSofaCleaning,
     [makeOverrideKey('hail', 'carpet-cleaning')]: hailCarpetCleaning,
     [makeOverrideKey('hail', 'steam-cleaning')]: hailSteamCleaning,
-    [makeOverrideKey('hail', 'sanitization')]: hailSanitization,
     [makeOverrideKey('hail', 'air-conditioner-cleaning')]: hailAirConditionerCleaning,
-    [makeOverrideKey('hail', 'mattress-cleaning')]: hailMattressCleaning,
     [makeOverrideKey('hail', 'swimming-pool-cleaning')]: hailSwimmingPoolCleaning,
-    [makeOverrideKey('hail', 'kitchen-cleaning')]: hailKitchenCleaning,
     [makeOverrideKey('hail', 'glass-facades-cleaning')]: hailGlassFacadesCleaning,
-    [makeOverrideKey('hail', 'floor-cleaning')]: hailFloorCleaning,
-    [makeOverrideKey('hail', 'floor-polishing')]: hailFloorPolishing,
     [makeOverrideKey('hail', 'marble-polishing')]: hailMarblePolishing,
     [makeOverrideKey('hail', 'villas-cleaning')]: hailVillasCleaning,
     [makeOverrideKey('hail', 'apartments-cleaning')]: hailApartmentsCleaning,
-    [makeOverrideKey('hail', 'palaces-cleaning')]: hailPalacesCleaning,
-    [makeOverrideKey('hail', 'shops-cleaning')]: hailShopsCleaning,
     [makeOverrideKey('hail', 'office-cleaning')]: hailOfficeCleaning,
     [makeOverrideKey('hail', 'furniture-cleaning')]: hailFurnitureCleaning,
     [makeOverrideKey('hail', 'auto-cleaning')]: hailAutoCleaning,
@@ -2252,14 +1758,9 @@ const PAGE_OVERRIDES: Record<OverrideKey, PageOverride> = {
     [makeOverrideKey('hail', 'restaurant-chimney-cleaning')]: hailRestaurantChimneyCleaning,
     [makeOverrideKey('hail', 'pest-control')]: hailPestControl,
     [makeOverrideKey('hail', 'pesticide-spraying')]: hailPesticideSpraying,
-    [makeOverrideKey('hail', 'insects-spraying')]: hailInsectsSpraying,
     [makeOverrideKey('hail', 'termite-control')]: hailTermiteControl,
-    [makeOverrideKey('hail', 'cockroach-control')]: hailCockroachControl,
     [makeOverrideKey('hail', 'bedbugs-control')]: hailBedbugsControl,
-    [makeOverrideKey('hail', 'rodent-control')]: hailRodentControl,
-    [makeOverrideKey('hail', 'ants-control')]: hailAntsControl,
     [makeOverrideKey('hail', 'bird-control')]: hailBirdControl,
-    [makeOverrideKey('hail', 'snakes-control')]: hailSnakesControl,
     [makeOverrideKey('hail', 'water-leak-detection')]: hailWaterLeakDetection,
     [makeOverrideKey('hail', 'tank-leak-detection')]: hailTankLeakDetection,
     [makeOverrideKey('hail', 'bathroom-leak-detection')]: hailBathroomLeakDetection,
@@ -2277,26 +1778,18 @@ const PAGE_OVERRIDES: Record<OverrideKey, PageOverride> = {
     [makeOverrideKey('abha', 'furniture-moving')]: abhaFurnitureMoving,
     [makeOverrideKey('abha', 'furniture-storage')]: abhaFurnitureStorage,
     [makeOverrideKey('abha', 'dyna')]: abhaDyna,
-    [makeOverrideKey('abha', 'moving-out')]: abhaMovingOut,
     [makeOverrideKey('abha', 'dabab')]: abhaDabab,
     [makeOverrideKey('abha', 'cleaning')]: abhaCleaning,
     [makeOverrideKey('abha', 'tanks-cleaning')]: abhaTanksCleaning,
     [makeOverrideKey('abha', 'sofa-cleaning')]: abhaSofaCleaning,
     [makeOverrideKey('abha', 'carpet-cleaning')]: abhaCarpetCleaning,
     [makeOverrideKey('abha', 'steam-cleaning')]: abhaSteamCleaning,
-    [makeOverrideKey('abha', 'sanitization')]: abhaSanitization,
     [makeOverrideKey('abha', 'air-conditioner-cleaning')]: abhaAirConditionerCleaning,
-    [makeOverrideKey('abha', 'mattress-cleaning')]: abhaMattressCleaning,
     [makeOverrideKey('abha', 'swimming-pool-cleaning')]: abhaSwimmingPoolCleaning,
-    [makeOverrideKey('abha', 'kitchen-cleaning')]: abhaKitchenCleaning,
     [makeOverrideKey('abha', 'glass-facades-cleaning')]: abhaGlassFacadesCleaning,
-    [makeOverrideKey('abha', 'floor-cleaning')]: abhaFloorCleaning,
-    [makeOverrideKey('abha', 'floor-polishing')]: abhaFloorPolishing,
     [makeOverrideKey('abha', 'marble-polishing')]: abhaMarblePolishing,
     [makeOverrideKey('abha', 'villas-cleaning')]: abhaVillasCleaning,
     [makeOverrideKey('abha', 'apartments-cleaning')]: abhaApartmentsCleaning,
-    [makeOverrideKey('abha', 'palaces-cleaning')]: abhaPalacesCleaning,
-    [makeOverrideKey('abha', 'shops-cleaning')]: abhaShopsCleaning,
     [makeOverrideKey('abha', 'office-cleaning')]: abhaOfficeCleaning,
     [makeOverrideKey('abha', 'furniture-cleaning')]: abhaFurnitureCleaning,
     [makeOverrideKey('abha', 'auto-cleaning')]: abhaAutoCleaning,
@@ -2306,14 +1799,9 @@ const PAGE_OVERRIDES: Record<OverrideKey, PageOverride> = {
     [makeOverrideKey('abha', 'restaurant-chimney-cleaning')]: abhaRestaurantChimneyCleaning,
     [makeOverrideKey('abha', 'pest-control')]: abhaPestControl,
     [makeOverrideKey('abha', 'pesticide-spraying')]: abhaPesticideSpraying,
-    [makeOverrideKey('abha', 'insects-spraying')]: abhaInsectsSpraying,
     [makeOverrideKey('abha', 'termite-control')]: abhaTermiteControl,
-    [makeOverrideKey('abha', 'cockroach-control')]: abhaCockroachControl,
     [makeOverrideKey('abha', 'bedbugs-control')]: abhaBedbugsControl,
-    [makeOverrideKey('abha', 'rodent-control')]: abhaRodentControl,
-    [makeOverrideKey('abha', 'ants-control')]: abhaAntsControl,
     [makeOverrideKey('abha', 'bird-control')]: abhaBirdControl,
-    [makeOverrideKey('abha', 'snakes-control')]: abhaSnakesControl,
     [makeOverrideKey('abha', 'water-leak-detection')]: abhaWaterLeakDetection,
     [makeOverrideKey('abha', 'tank-leak-detection')]: abhaTankLeakDetection,
     [makeOverrideKey('abha', 'bathroom-leak-detection')]: abhaBathroomLeakDetection,
@@ -2329,26 +1817,18 @@ const PAGE_OVERRIDES: Record<OverrideKey, PageOverride> = {
     [makeOverrideKey('khamis-mushait', 'furniture-moving')]: khamisMushaitFurnitureMoving,
     [makeOverrideKey('khamis-mushait', 'furniture-storage')]: khamisMushaitFurnitureStorage,
     [makeOverrideKey('khamis-mushait', 'dyna')]: khamisMushaitDyna,
-    [makeOverrideKey('khamis-mushait', 'moving-out')]: khamisMushaitMovingOut,
     [makeOverrideKey('khamis-mushait', 'dabab')]: khamisMushaitDabab,
     [makeOverrideKey('khamis-mushait', 'cleaning')]: khamisMushaitCleaning,
     [makeOverrideKey('khamis-mushait', 'tanks-cleaning')]: khamisMushaitTanksCleaning,
     [makeOverrideKey('khamis-mushait', 'sofa-cleaning')]: khamisMushaitSofaCleaning,
     [makeOverrideKey('khamis-mushait', 'carpet-cleaning')]: khamisMushaitCarpetCleaning,
     [makeOverrideKey('khamis-mushait', 'steam-cleaning')]: khamisMushaitSteamCleaning,
-    [makeOverrideKey('khamis-mushait', 'sanitization')]: khamisMushaitSanitization,
     [makeOverrideKey('khamis-mushait', 'air-conditioner-cleaning')]: khamisMushaitAirConditionerCleaning,
-    [makeOverrideKey('khamis-mushait', 'mattress-cleaning')]: khamisMushaitMattressCleaning,
     [makeOverrideKey('khamis-mushait', 'swimming-pool-cleaning')]: khamisMushaitSwimmingPoolCleaning,
-    [makeOverrideKey('khamis-mushait', 'kitchen-cleaning')]: khamisMushaitKitchenCleaning,
     [makeOverrideKey('khamis-mushait', 'glass-facades-cleaning')]: khamisMushaitGlassFacadesCleaning,
-    [makeOverrideKey('khamis-mushait', 'floor-cleaning')]: khamisMushaitFloorCleaning,
-    [makeOverrideKey('khamis-mushait', 'floor-polishing')]: khamisMushaitFloorPolishing,
     [makeOverrideKey('khamis-mushait', 'marble-polishing')]: khamisMushaitMarblePolishing,
     [makeOverrideKey('khamis-mushait', 'villas-cleaning')]: khamisMushaitVillasCleaning,
     [makeOverrideKey('khamis-mushait', 'apartments-cleaning')]: khamisMushaitApartmentsCleaning,
-    [makeOverrideKey('khamis-mushait', 'palaces-cleaning')]: khamisMushaitPalacesCleaning,
-    [makeOverrideKey('khamis-mushait', 'shops-cleaning')]: khamisMushaitShopsCleaning,
     [makeOverrideKey('khamis-mushait', 'office-cleaning')]: khamisMushaitOfficeCleaning,
     [makeOverrideKey('khamis-mushait', 'furniture-cleaning')]: khamisMushaitFurnitureCleaning,
     [makeOverrideKey('khamis-mushait', 'auto-cleaning')]: khamisMushaitAutoCleaning,
@@ -2358,14 +1838,9 @@ const PAGE_OVERRIDES: Record<OverrideKey, PageOverride> = {
     [makeOverrideKey('khamis-mushait', 'restaurant-chimney-cleaning')]: khamisMushaitRestaurantChimneyCleaning,
     [makeOverrideKey('khamis-mushait', 'pest-control')]: khamisMushaitPestControl,
     [makeOverrideKey('khamis-mushait', 'pesticide-spraying')]: khamisMushaitPesticideSpraying,
-    [makeOverrideKey('khamis-mushait', 'insects-spraying')]: khamisMushaitInsectsSpraying,
     [makeOverrideKey('khamis-mushait', 'termite-control')]: khamisMushaitTermiteControl,
-    [makeOverrideKey('khamis-mushait', 'cockroach-control')]: khamisMushaitCockroachControl,
     [makeOverrideKey('khamis-mushait', 'bedbugs-control')]: khamisMushaitBedbugsControl,
-    [makeOverrideKey('khamis-mushait', 'rodent-control')]: khamisMushaitRodentControl,
-    [makeOverrideKey('khamis-mushait', 'ants-control')]: khamisMushaitAntsControl,
     [makeOverrideKey('khamis-mushait', 'bird-control')]: khamisMushaitBirdControl,
-    [makeOverrideKey('khamis-mushait', 'snakes-control')]: khamisMushaitSnakesControl,
     [makeOverrideKey('khamis-mushait', 'water-leak-detection')]: khamisMushaitWaterLeakDetection,
     [makeOverrideKey('khamis-mushait', 'tank-leak-detection')]: khamisMushaitTankLeakDetection,
     [makeOverrideKey('khamis-mushait', 'bathroom-leak-detection')]: khamisMushaitBathroomLeakDetection,
@@ -2381,26 +1856,18 @@ const PAGE_OVERRIDES: Record<OverrideKey, PageOverride> = {
     [makeOverrideKey('najran', 'furniture-moving')]: najranFurnitureMoving,
     [makeOverrideKey('najran', 'furniture-storage')]: najranFurnitureStorage,
     [makeOverrideKey('najran', 'dyna')]: najranDyna,
-    [makeOverrideKey('najran', 'moving-out')]: najranMovingOut,
     [makeOverrideKey('najran', 'dabab')]: najranDabab,
     [makeOverrideKey('najran', 'cleaning')]: najranCleaning,
     [makeOverrideKey('najran', 'tanks-cleaning')]: najranTanksCleaning,
     [makeOverrideKey('najran', 'sofa-cleaning')]: najranSofaCleaning,
     [makeOverrideKey('najran', 'carpet-cleaning')]: najranCarpetCleaning,
     [makeOverrideKey('najran', 'steam-cleaning')]: najranSteamCleaning,
-    [makeOverrideKey('najran', 'sanitization')]: najranSanitization,
     [makeOverrideKey('najran', 'air-conditioner-cleaning')]: najranAirConditionerCleaning,
-    [makeOverrideKey('najran', 'mattress-cleaning')]: najranMattressCleaning,
     [makeOverrideKey('najran', 'swimming-pool-cleaning')]: najranSwimmingPoolCleaning,
-    [makeOverrideKey('najran', 'kitchen-cleaning')]: najranKitchenCleaning,
     [makeOverrideKey('najran', 'glass-facades-cleaning')]: najranGlassFacadesCleaning,
-    [makeOverrideKey('najran', 'floor-cleaning')]: najranFloorCleaning,
-    [makeOverrideKey('najran', 'floor-polishing')]: najranFloorPolishing,
     [makeOverrideKey('najran', 'marble-polishing')]: najranMarblePolishing,
     [makeOverrideKey('najran', 'villas-cleaning')]: najranVillasCleaning,
     [makeOverrideKey('najran', 'apartments-cleaning')]: najranApartmentsCleaning,
-    [makeOverrideKey('najran', 'palaces-cleaning')]: najranPalacesCleaning,
-    [makeOverrideKey('najran', 'shops-cleaning')]: najranShopsCleaning,
     [makeOverrideKey('najran', 'office-cleaning')]: najranOfficeCleaning,
     [makeOverrideKey('najran', 'furniture-cleaning')]: najranFurnitureCleaning,
     [makeOverrideKey('najran', 'auto-cleaning')]: najranAutoCleaning,
@@ -2410,14 +1877,9 @@ const PAGE_OVERRIDES: Record<OverrideKey, PageOverride> = {
     [makeOverrideKey('najran', 'restaurant-chimney-cleaning')]: najranRestaurantChimneyCleaning,
     [makeOverrideKey('najran', 'pest-control')]: najranPestControl,
     [makeOverrideKey('najran', 'pesticide-spraying')]: najranPesticideSpraying,
-    [makeOverrideKey('najran', 'insects-spraying')]: najranInsectsSpraying,
     [makeOverrideKey('najran', 'termite-control')]: najranTermiteControl,
-    [makeOverrideKey('najran', 'cockroach-control')]: najranCockroachControl,
     [makeOverrideKey('najran', 'bedbugs-control')]: najranBedbugsControl,
-    [makeOverrideKey('najran', 'rodent-control')]: najranRodentControl,
-    [makeOverrideKey('najran', 'ants-control')]: najranAntsControl,
     [makeOverrideKey('najran', 'bird-control')]: najranBirdControl,
-    [makeOverrideKey('najran', 'snakes-control')]: najranSnakesControl,
     [makeOverrideKey('najran', 'water-leak-detection')]: najranWaterLeakDetection,
     [makeOverrideKey('najran', 'tank-leak-detection')]: najranTankLeakDetection,
     [makeOverrideKey('najran', 'bathroom-leak-detection')]: najranBathroomLeakDetection,
@@ -2433,26 +1895,18 @@ const PAGE_OVERRIDES: Record<OverrideKey, PageOverride> = {
     [makeOverrideKey('jazan', 'furniture-moving')]: jazanFurnitureMoving,
     [makeOverrideKey('jazan', 'furniture-storage')]: jazanFurnitureStorage,
     [makeOverrideKey('jazan', 'dyna')]: jazanDyna,
-    [makeOverrideKey('jazan', 'moving-out')]: jazanMovingOut,
     [makeOverrideKey('jazan', 'dabab')]: jazanDabab,
     [makeOverrideKey('jazan', 'cleaning')]: jazanCleaning,
     [makeOverrideKey('jazan', 'tanks-cleaning')]: jazanTanksCleaning,
     [makeOverrideKey('jazan', 'sofa-cleaning')]: jazanSofaCleaning,
     [makeOverrideKey('jazan', 'carpet-cleaning')]: jazanCarpetCleaning,
     [makeOverrideKey('jazan', 'steam-cleaning')]: jazanSteamCleaning,
-    [makeOverrideKey('jazan', 'sanitization')]: jazanSanitization,
     [makeOverrideKey('jazan', 'air-conditioner-cleaning')]: jazanAirConditionerCleaning,
-    [makeOverrideKey('jazan', 'mattress-cleaning')]: jazanMattressCleaning,
     [makeOverrideKey('jazan', 'swimming-pool-cleaning')]: jazanSwimmingPoolCleaning,
-    [makeOverrideKey('jazan', 'kitchen-cleaning')]: jazanKitchenCleaning,
     [makeOverrideKey('jazan', 'glass-facades-cleaning')]: jazanGlassFacadesCleaning,
-    [makeOverrideKey('jazan', 'floor-cleaning')]: jazanFloorCleaning,
-    [makeOverrideKey('jazan', 'floor-polishing')]: jazanFloorPolishing,
     [makeOverrideKey('jazan', 'marble-polishing')]: jazanMarblePolishing,
     [makeOverrideKey('jazan', 'villas-cleaning')]: jazanVillasCleaning,
     [makeOverrideKey('jazan', 'apartments-cleaning')]: jazanApartmentsCleaning,
-    [makeOverrideKey('jazan', 'palaces-cleaning')]: jazanPalacesCleaning,
-    [makeOverrideKey('jazan', 'shops-cleaning')]: jazanShopsCleaning,
     [makeOverrideKey('jazan', 'office-cleaning')]: jazanOfficeCleaning,
     [makeOverrideKey('jazan', 'furniture-cleaning')]: jazanFurnitureCleaning,
     [makeOverrideKey('jazan', 'auto-cleaning')]: jazanAutoCleaning,
@@ -2462,14 +1916,9 @@ const PAGE_OVERRIDES: Record<OverrideKey, PageOverride> = {
     [makeOverrideKey('jazan', 'restaurant-chimney-cleaning')]: jazanRestaurantChimneyCleaning,
     [makeOverrideKey('jazan', 'pest-control')]: jazanPestControl,
     [makeOverrideKey('jazan', 'pesticide-spraying')]: jazanPesticideSpraying,
-    [makeOverrideKey('jazan', 'insects-spraying')]: jazanInsectsSpraying,
     [makeOverrideKey('jazan', 'termite-control')]: jazanTermiteControl,
-    [makeOverrideKey('jazan', 'cockroach-control')]: jazanCockroachControl,
     [makeOverrideKey('jazan', 'bedbugs-control')]: jazanBedbugsControl,
-    [makeOverrideKey('jazan', 'rodent-control')]: jazanRodentControl,
-    [makeOverrideKey('jazan', 'ants-control')]: jazanAntsControl,
     [makeOverrideKey('jazan', 'bird-control')]: jazanBirdControl,
-    [makeOverrideKey('jazan', 'snakes-control')]: jazanSnakesControl,
     [makeOverrideKey('jazan', 'water-leak-detection')]: jazanWaterLeakDetection,
     [makeOverrideKey('jazan', 'tank-leak-detection')]: jazanTankLeakDetection,
     [makeOverrideKey('jazan', 'bathroom-leak-detection')]: jazanBathroomLeakDetection,
@@ -2485,26 +1934,18 @@ const PAGE_OVERRIDES: Record<OverrideKey, PageOverride> = {
     [makeOverrideKey('al-baha', 'furniture-moving')]: alBahaFurnitureMoving,
     [makeOverrideKey('al-baha', 'furniture-storage')]: alBahaFurnitureStorage,
     [makeOverrideKey('al-baha', 'dyna')]: alBahaDyna,
-    [makeOverrideKey('al-baha', 'moving-out')]: alBahaMovingOut,
     [makeOverrideKey('al-baha', 'dabab')]: alBahaDabab,
     [makeOverrideKey('al-baha', 'cleaning')]: alBahaCleaning,
     [makeOverrideKey('al-baha', 'tanks-cleaning')]: alBahaTanksCleaning,
     [makeOverrideKey('al-baha', 'sofa-cleaning')]: alBahaSofaCleaning,
     [makeOverrideKey('al-baha', 'carpet-cleaning')]: alBahaCarpetCleaning,
     [makeOverrideKey('al-baha', 'steam-cleaning')]: alBahaSteamCleaning,
-    [makeOverrideKey('al-baha', 'sanitization')]: alBahaSanitization,
     [makeOverrideKey('al-baha', 'air-conditioner-cleaning')]: alBahaAirConditionerCleaning,
-    [makeOverrideKey('al-baha', 'mattress-cleaning')]: alBahaMattressCleaning,
     [makeOverrideKey('al-baha', 'swimming-pool-cleaning')]: alBahaSwimmingPoolCleaning,
-    [makeOverrideKey('al-baha', 'kitchen-cleaning')]: alBahaKitchenCleaning,
     [makeOverrideKey('al-baha', 'glass-facades-cleaning')]: alBahaGlassFacadesCleaning,
-    [makeOverrideKey('al-baha', 'floor-cleaning')]: alBahaFloorCleaning,
-    [makeOverrideKey('al-baha', 'floor-polishing')]: alBahaFloorPolishing,
     [makeOverrideKey('al-baha', 'marble-polishing')]: alBahaMarblePolishing,
     [makeOverrideKey('al-baha', 'villas-cleaning')]: alBahaVillasCleaning,
     [makeOverrideKey('al-baha', 'apartments-cleaning')]: alBahaApartmentsCleaning,
-    [makeOverrideKey('al-baha', 'palaces-cleaning')]: alBahaPalacesCleaning,
-    [makeOverrideKey('al-baha', 'shops-cleaning')]: alBahaShopsCleaning,
     [makeOverrideKey('al-baha', 'office-cleaning')]: alBahaOfficeCleaning,
     [makeOverrideKey('al-baha', 'furniture-cleaning')]: alBahaFurnitureCleaning,
     [makeOverrideKey('al-baha', 'auto-cleaning')]: alBahaAutoCleaning,
@@ -2514,14 +1955,9 @@ const PAGE_OVERRIDES: Record<OverrideKey, PageOverride> = {
     [makeOverrideKey('al-baha', 'restaurant-chimney-cleaning')]: alBahaRestaurantChimneyCleaning,
     [makeOverrideKey('al-baha', 'pest-control')]: alBahaPestControl,
     [makeOverrideKey('al-baha', 'pesticide-spraying')]: alBahaPesticideSpraying,
-    [makeOverrideKey('al-baha', 'insects-spraying')]: alBahaInsectsSpraying,
     [makeOverrideKey('al-baha', 'termite-control')]: alBahaTermiteControl,
-    [makeOverrideKey('al-baha', 'cockroach-control')]: alBahaCockroachControl,
     [makeOverrideKey('al-baha', 'bedbugs-control')]: alBahaBedbugsControl,
-    [makeOverrideKey('al-baha', 'rodent-control')]: alBahaRodentControl,
-    [makeOverrideKey('al-baha', 'ants-control')]: alBahaAntsControl,
     [makeOverrideKey('al-baha', 'bird-control')]: alBahaBirdControl,
-    [makeOverrideKey('al-baha', 'snakes-control')]: alBahaSnakesControl,
     [makeOverrideKey('al-baha', 'water-leak-detection')]: alBahaWaterLeakDetection,
     [makeOverrideKey('al-baha', 'tank-leak-detection')]: alBahaTankLeakDetection,
     [makeOverrideKey('al-baha', 'bathroom-leak-detection')]: alBahaBathroomLeakDetection,

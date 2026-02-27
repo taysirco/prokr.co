@@ -6,6 +6,7 @@ export const insulationServices: Service[] = [
     { slug: 'foam-insulation', name_ar: 'عزل فوم', name_en: 'Foam Insulation', category: 'insulation' },
     { slug: 'water-insulation', name_ar: 'عزل مائي', name_en: 'Water Insulation', category: 'insulation' },
     { slug: 'thermal-insulation', name_ar: 'عزل حراري', name_en: 'Thermal Insulation', category: 'insulation' },
+    { slug: 'epoxy-coating', name_ar: 'دهان ايبوكسي', name_en: 'Epoxy Coating', category: 'insulation' },
 ];
 
 export const insulationImages: Record<string, string[]> = {
@@ -23,5 +24,8 @@ export const insulationImages: Record<string, string[]> = {
     ],
     'thermal-insulation': [
         '/images/leak-detection/Riyadh thermal leak inspection Saudi Arabia.jpg',
+    ],
+    'epoxy-coating': [
+        '/images/leak-detection/Dammam wall moisture detection mold Saudi Arabia.jpg',
     ],
 };

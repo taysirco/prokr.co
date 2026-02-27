@@ -11,7 +11,7 @@ import { SeoContentSection } from '@/lib/seo-content';
 import { FaqJsonLd, ServiceOfferJsonLd } from '@/components/schema';
 import { getCityContext } from '@/lib/city-context';
 import { getServiceKeywordProfile, getCityKeyword } from '@/lib/keyword-strategy';
-import { resolveContentLayers, resolveMetadata } from '@/lib/overrides';
+import { resolveContentLayers, resolveMetadata, getOverrideForPage } from '@/lib/overrides';
 import Footer from '@/components/Footer';
 import type { Advertiser } from '@/types';
 
@@ -76,6 +76,12 @@ export default async function SiloPage({ params }: SiloPageProps) {
 
     // Validate city and service exist
     if (!city || !service) {
+        notFound();
+    }
+
+    // ENFORCE STRICT URL PERMUTATIONS (Return 404 if no deep E-E-A-T override exists)
+    const override = getOverrideForPage(city.slug, service.slug);
+    if (!override) {
         notFound();
     }
 

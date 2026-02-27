@@ -3,6 +3,7 @@ import { Phone, Mail, MapPin, Facebook, Twitter, Instagram } from 'lucide-react'
 import { CITIES, SERVICES, getCityBySlug, getServiceBySlug } from '@/lib/seed';
 import { NAP } from '@/lib/nap';
 import { getCityKeyword } from '@/lib/keyword-strategy';
+import { hasPageOverride } from '@/lib/overrides/registry';
 
 interface FooterProps {
     currentCity?: string;
@@ -14,9 +15,18 @@ export default function Footer({ currentCity, currentService }: FooterProps) {
     const city = currentCity ? getCityBySlug(currentCity) : null;
     const service = currentService ? getServiceBySlug(currentService) : null;
 
-    // Show ALL services and ALL cities for maximum SEO internal linking
-    const allServices = SERVICES.filter(s => s.slug !== currentService);
-    const allCities = CITIES.filter(c => c.slug !== currentCity);
+    // Show services and cities that actually have valid E-E-A-T pages
+    const currentValidCity = currentCity || 'riyadh';
+    const currentValidService = currentService || 'furniture-moving';
+
+    const allServices = SERVICES.filter(s =>
+        s.slug !== currentService &&
+        hasPageOverride(currentValidCity, s.slug)
+    );
+    const allCities = CITIES.filter(c =>
+        c.slug !== currentCity &&
+        hasPageOverride(c.slug, currentValidService)
+    );
 
     return (
         <footer className="bg-gradient-to-b from-gray-900 to-gray-950 text-gray-300">
@@ -31,7 +41,7 @@ export default function Footer({ currentCity, currentService }: FooterProps) {
                         {allServices.map(s => (
                             <Link
                                 key={s.slug}
-                                href={`/${currentCity || 'riyadh'}/${s.slug}`}
+                                href={`/${currentValidCity}/${s.slug}`}
                                 className="hover:text-emerald-400 transition-colors text-sm"
                             >
                                 {s.name_ar}
@@ -52,7 +62,7 @@ export default function Footer({ currentCity, currentService }: FooterProps) {
                         {allCities.map(c => (
                             <Link
                                 key={c.slug}
-                                href={`/${c.slug}/${currentService || 'furniture-moving'}`}
+                                href={`/${c.slug}/${currentValidService}`}
                                 className="hover:text-emerald-400 transition-colors text-sm"
                             >
                                 {c.name_ar}

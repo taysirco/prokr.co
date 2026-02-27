@@ -10,6 +10,7 @@ import { BreadcrumbJsonLd, ItemListJsonLd, SpeakableWebPageJsonLd, WebPageJsonLd
 import { getCityContext } from '@/lib/city-context';
 import { getCityKeyword } from '@/lib/keyword-strategy';
 import { BLOG_ARTICLES } from '@/lib/blog-data';
+import { hasPageOverride } from '@/lib/overrides/registry';
 import Footer from '@/components/Footer';
 
 interface CityPageProps {
@@ -125,7 +126,7 @@ export default async function CityPage({ params }: CityPageProps) {
                 type="services"
                 listName={`خدمات ${city.name_ar}`}
                 description={`قائمة الخدمات المتاحة ${cityKw}`}
-                items={SERVICES.map(s => ({
+                items={SERVICES.filter(s => hasPageOverride(city.slug, s.slug)).map(s => ({
                     name: s.name_ar,
                     url: `https://prokr.co/${city.slug}/${s.slug}`
                 }))}
@@ -178,47 +179,52 @@ export default async function CityPage({ params }: CityPageProps) {
 
                 {/* Services by Category */}
                 <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-                    {Object.entries(servicesByCategory).map(([category, services]) => (
-                        <div key={category} className="mb-12">
-                            <div className="flex items-center gap-3 mb-6">
-                                <div className="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center text-emerald-600">
-                                    {categoryIcons[category] || <Wrench className="w-5 h-5" />}
+                    {Object.entries(servicesByCategory).map(([category, services]) => {
+                        const validServices = services.filter(service => hasPageOverride(city.slug, service.slug));
+                        if (validServices.length === 0) return null;
+
+                        return (
+                            <div key={category} className="mb-12">
+                                <div className="flex items-center gap-3 mb-6">
+                                    <div className="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center text-emerald-600">
+                                        {categoryIcons[category] || <Wrench className="w-5 h-5" />}
+                                    </div>
+                                    <h2 className="text-xl font-bold text-gray-900">
+                                        {CATEGORY_NAMES[category] || category} في {city.name_ar}
+                                    </h2>
                                 </div>
-                                <h2 className="text-xl font-bold text-gray-900">
-                                    {CATEGORY_NAMES[category] || category} في {city.name_ar}
-                                </h2>
-                            </div>
 
-                            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-                                {services.map(service => (
-                                    <Link
-                                        key={service.slug}
-                                        href={`/${city.slug}/${service.slug}`}
-                                        className="group relative bg-white rounded-xl border border-gray-200 hover:border-emerald-300 hover:shadow-lg transition-all overflow-hidden"
-                                    >
-                                        {/* Image */}
-                                        <div className="relative aspect-[4/3] bg-gray-100">
-                                            <Image
-                                                src={getServiceImage(service.slug)}
-                                                alt={`شركة ${service.name_ar} ${cityKw} - أفضل الأسعار والشركات المعتمدة من بروكر`}
-                                                fill
-                                                className="object-cover group-hover:scale-105 transition-transform duration-300"
-                                                sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
-                                            />
-                                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                                        </div>
+                                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                                    {validServices.map(service => (
+                                        <Link
+                                            key={service.slug}
+                                            href={`/${city.slug}/${service.slug}`}
+                                            className="group relative bg-white rounded-xl border border-gray-200 hover:border-emerald-300 hover:shadow-lg transition-all overflow-hidden"
+                                        >
+                                            {/* Image */}
+                                            <div className="relative aspect-[4/3] bg-gray-100">
+                                                <Image
+                                                    src={getServiceImage(service.slug)}
+                                                    alt={`شركة ${service.name_ar} ${cityKw} - أفضل الأسعار والشركات المعتمدة من بروكر`}
+                                                    fill
+                                                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                                                    sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
+                                                />
+                                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                                            </div>
 
-                                        {/* Title */}
-                                        <div className="absolute bottom-0 left-0 right-0 p-3">
-                                            <h3 className="font-semibold text-white text-sm">
-                                                {service.name_ar}
-                                            </h3>
-                                        </div>
-                                    </Link>
-                                ))}
+                                            {/* Title */}
+                                            <div className="absolute bottom-0 left-0 right-0 p-3">
+                                                <h3 className="font-semibold text-white text-sm">
+                                                    {service.name_ar}
+                                                </h3>
+                                            </div>
+                                        </Link>
+                                    ))}
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        )
+                    })}
                 </section>
 
                 {/* Sub-Regions / Neighborhoods */}
@@ -268,8 +274,8 @@ export default async function CityPage({ params }: CityPageProps) {
                         <div className="city-seo-intro bg-emerald-50 p-6 rounded-xl border-r-4 border-emerald-500 mb-6">
                             <p className="text-gray-700 leading-relaxed">
                                 {cityContext
-                                    ? `تعد ${city.name_ar} من أهم المدن السعودية التي تتميز بـ${cityContext.urbanTraits.slice(0, 2).join(' و')}. يقدم بروكر دليلاً شاملاً لأفضل ${SERVICES.length}+ خدمة متوفرة في جميع أحياء ${city.name_ar}، من نقل العفش إلى التنظيف ومكافحة الحشرات وكشف التسربات والعزل. جميع الشركات مرخصة ومعتمدة وفقاً لاشتراطات وزارة التجارة السعودية.`
-                                    : `يقدم بروكر دليلاً شاملاً لأفضل شركات الخدمات ${cityKw}. اكتشف أكثر من ${SERVICES.length} خدمة متوفرة مع شركات معتمدة وأسعار تنافسية.`
+                                    ? `تعد ${city.name_ar} من أهم المدن السعودية التي تتميز بـ${cityContext.urbanTraits.slice(0, 2).join(' و')}. يقدم بروكر دليلاً شاملاً لأفضل الخدمات المتوفرة في جميع أحياء ${city.name_ar}، من نقل العفش إلى التنظيف ومكافحة الحشرات وكشف التسربات والعزل. جميع الشركات مرخصة ومعتمدة وفقاً لاشتراطات وزارة التجارة السعودية.`
+                                    : `يقدم بروكر دليلاً شاملاً لأفضل شركات الخدمات ${cityKw}. اكتشف أهم الخدمات المتوفرة مع شركات معتمدة وأأسعار تنافسية.`
                                 }
                             </p>
                         </div>
@@ -319,7 +325,7 @@ export default async function CityPage({ params }: CityPageProps) {
                                 <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
                                     <h4 className="font-bold text-gray-800 mb-2" itemProp="name">ما هي الخدمات المتوفرة في {city.name_ar}؟</h4>
                                     <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
-                                        <p className="text-gray-600" itemProp="text">يوفر بروكر أكثر من {SERVICES.length} خدمة في {city.name_ar} تشمل نقل العفش، التنظيف، مكافحة الحشرات، كشف التسربات، العزل، وخدمات الصرف الصحي. جميع الشركات مرخصة ومعتمدة.</p>
+                                        <p className="text-gray-600" itemProp="text">يوفر بروكر أهم الخدمات المنزلية والتجارية المتنوعة في {city.name_ar} تشمل نقل العفش، التنظيف، مكافحة الحشرات، كشف التسربات، العزل، وخدمات الصرف الصحي. جميع الشركات مرخصة ومعتمدة.</p>
                                     </div>
                                 </div>
                                 <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
