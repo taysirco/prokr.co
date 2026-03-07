@@ -1,4 +1,3 @@
-// تنظيف كنب بالطائف — Override (E-E-A-T) | خريطة 2.4: المسند → بلدي
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -35,9 +34,12 @@ export const override: PageOverride = {
         'تنظيف كنب بالماء بدون تجفيف صناعي في شتاء الطائف = عفن خلال 48 ساعة. الرطوبة العالية تمنع التجفيف الطبيعي.',
         'رائحة "خنقة" من الكنب = عفن فطري ← أبواغ تُسبب حساسية تنفسية. لا تتجاهلها — عالجها.',
     ],
-    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات التنظيف المنزلي — اشتراطات الجودة والسلامة' }],
-    expertReviewer: { name: EXPERTS.ALMISNID.name, title: EXPERTS.ALMISNID.title, credential: EXPERTS.ALMISNID.credential, profileUrl: EXPERTS.ALMISNID.profileUrl },
-    expertCitations: [{ expert: EXPERTS.ALMISNID.name, quote: 'الإسفنج الداخلي للكنب في بيوت الطائف يمتص رطوبة الضباب الشتوي فعلياً — درجة الحرارة الداخلية (18-22°م) + الرطوبة الممتصة = مزرعة عث غبار. تنظيف عميق بالاستخراج الساخن + تجفيف صناعي = الحل الوحيد الذي يصل الداخل.', source: EXPERTS.ALMISNID.title, url: EXPERTS.ALMISNID.profileUrl }],
+    trustAnchors: [
+{ ...{ ...GOV.BALADI, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
+ role: 'ترخيص شركات التنظيف المنزلي — اشتراطات الجودة والسلامة' }    ],
+    expertReviewer: EXPERTS.ALMISNID,
+    expertCitations: [{ expert: EXPERTS.ALMISNID.name, quote: 'الإسفنج الداخلي للكنب في بيوت الطائف يمتص رطوبة الضباب الشتوي فعلياً — درجة الحرارة الداخلية (18-22°م) + الرطوبة الممتصة = مزرعة عث غبار. تنظيف عميق بالاستخراج الساخن + تجفيف صناعي = الحل الوحيد الذي يصل الداخل.',
+            source: EXPERTS.ALMISNID.title }],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
     verificationBadges: [{ badge: '✔️ استخراج ساخن 70°م', authority: 'Hot Water Extraction', icon: 'shield-check' }, { badge: '✔️ تجفيف صناعي', authority: 'ضد عفن إعادة النمو', icon: 'badge-check' }],
     equipment: [
@@ -45,12 +47,18 @@ export const override: PageOverride = {
         { name: 'مكنسة شفط HEPA', use: 'تسحب عث الغبار وفضلاته من سطح القماش — قبل الغسيل الرطب.' },
         { name: 'مراوح تجفيف + مزيل رطوبة', use: 'يسرّع تجفيف الكنب من 18 ساعة إلى 4-5 ساعات — ضروري في رطوبة الطائف لمنع عودة العفن.' },
     ],
-    hiddenObjections: [{ fear: 'أشمّس الكنب على السطح — يكفي.', solution: 'الشمس تجفف السطح ← الإسفنج الداخلي يبقى رطباً. + الأشعة فوق البنفسجية تُبهت ألوان القماش. + حمل الكنب للسطح ونزوله = خطر تلف وإصابات. الاستخراج الساخن + التجفيف الصناعي = تنظيف وتجفيف بدون نقل الكنب.' }],
+    hiddenObjections: [
+        { fear: 'أشمّس الكنب على السطح — يكفي.', solution: 'الشمس تجفف السطح ← الإسفنج الداخلي يبقى رطباً. + الأشعة فوق البنفسجية تُبهت ألوان القماش. + حمل الكنب للسطح ونزوله = خطر تلف وإصابات. الاستخراج الساخن + التجفيف الصناعي = تنظيف وتجفيف بدون نقل الكنب.' },
+        { fear: 'الخدمة أغلى من المدن الأخرى.', solution: 'مناخ الطائف يفرض معالجات إضافية (مضاد تكثف + تجفيف + حماية أخشاب ورود). التكلفة الإضافية استثمار يحمي ممتلكاتك من تلف الرطوبة والحشرات الموسمية.' },
+    ],
     counterNarratives: [{ myth: 'مناخ الطائف بارد — ما فيه عث غبار.', truth: 'عث الغبار يحب 18-24°م + رطوبة 70%+ = مناخ المنزل الدافئ في شتاء الطائف بالضبط. الخارج بارد لكن الداخل دافئ ورطب = بيئة مثالية. عث الغبار يعيش داخل بيتك وليس خارجه.' }],
     relatedServices: [
-        { slug: 'taif-carpet-cleaning', context: 'السجاد يعاني من نفس مشكلة الرطوبة — تنظيفهما معاً أوفر.', priority: 1 },
-        { slug: 'taif-councils-cleaning', context: 'تنظيف مجالس مع الكنب — باقة متكاملة.', priority: 2 },
-        { slug: 'taif-cleaning', context: 'تنظيف منزل شامل مع الكنب.', priority: 3 },
-        { slug: 'taif-steam-cleaning', context: 'بخار عميق لكل المفروشات + الأسطح.', priority: 4 },
+        { slug: 'carpet-cleaning', context: 'السجاد يعاني من نفس مشكلة الرطوبة — تنظيفهما معاً أوفر.', priority: 1 },
+        { slug: 'councils-cleaning', context: 'تنظيف مجالس مع الكنب — باقة متكاملة.', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف منزل شامل مع الكنب.', priority: 3 },
+        { slug: 'steam-cleaning', context: 'بخار عميق لكل المفروشات + الأسطح.', priority: 4 },
+        { slug: 'air-conditioner-cleaning', context: 'تنظيف مكيفات تعمل تبريد/تدفئة طوال السنة في مناخ الطائف المتقلب.', priority: 5 },
+        { slug: 'pest-control', context: 'مكافحة حشرات تتكاثر في رطوبة الطائف الشتوية والزراعة المحيطة.', priority: 6 },
+        { slug: 'steam-cleaning', context: 'تعقيم بالبخار لقتل العث والفطريات في مفروشات الطائف الرطبة.', priority: 7 },
     ],
 };

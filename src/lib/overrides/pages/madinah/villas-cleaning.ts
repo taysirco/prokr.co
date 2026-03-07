@@ -74,12 +74,7 @@ export const override: PageOverride = {
         { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'الرقابة على معايير خدمات النظافة في القطاع السكني', acronym: 'أمانة المدينة' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMISNID.name,
-        title: EXPERTS.ALMISNID.title,
-        credential: EXPERTS.ALMISNID.credential,
-        profileUrl: EXPERTS.ALMISNID.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMISNID,
 
     expertCitations: [
         {
@@ -116,12 +111,12 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'madinah-sofa-cleaning', context: 'غسيل كنب الفيلا بالبخار — ضمن باقة التنظيف الشامل.', priority: 1 },
-        { slug: 'madinah-carpet-cleaning', context: 'غسيل سجاد من غبار الحرات — يتكامل مع تنظيف الفيلا.', priority: 2 },
-        { slug: 'madinah-marble-polishing', context: 'جلي رخام أرضيات الفيلا — استثمر في لمعان يدوم.', priority: 3 },
-        { slug: 'madinah-air-conditioner-cleaning', context: 'غسيل مكيفات الفيلا — هواء نظيف وتوفير كهرباء.', priority: 4 },
-        { slug: 'madinah-pest-control', context: 'رش وقائي بعد التنظيف العميق — حماية شاملة.', priority: 5 },
-        { slug: 'madinah-glass-facades-cleaning', context: 'تنظيف واجهات الفيلا الزجاجية من الغبار البركاني.', priority: 6 },
-        { slug: 'madinah-swimming-pool-cleaning', context: 'صيانة مسبح الفيلا — أكمل نظافة المجمع.', priority: 7 },
+        { slug: 'sofa-cleaning', context: 'غسيل كنب الفيلا بالبخار — ضمن باقة التنظيف الشامل.', priority: 1 },
+        { slug: 'carpet-cleaning', context: 'غسيل سجاد من غبار الحرات — يتكامل مع تنظيف الفيلا.', priority: 2 },
+        { slug: 'marble-polishing', context: 'جلي رخام أرضيات الفيلا — استثمر في لمعان يدوم.', priority: 3 },
+        { slug: 'air-conditioner-cleaning', context: 'غسيل مكيفات الفيلا — هواء نظيف وتوفير كهرباء.', priority: 4 },
+        { slug: 'pest-control', context: 'رش وقائي بعد التنظيف العميق — حماية شاملة.', priority: 5 },
+        { slug: 'glass-facades-cleaning', context: 'تنظيف واجهات الفيلا الزجاجية من الغبار البركاني.', priority: 6 },
+        { slug: 'swimming-pool-cleaning', context: 'صيانة مسبح الفيلا — أكمل نظافة المجمع.', priority: 7 },
     ],
 };

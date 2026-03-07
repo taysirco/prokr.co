@@ -1,12 +1,3 @@
-// ══════════════════════════════════════════════════════════════
-// عزل مائي بالدمام — Override (E-E-A-T)
-// صفحة: /dammam/water-insulation
-// قطاع YMYL: مالي + هيكلي (حماية حديد التسليح)
-// خريطة 2.4: المحيميد → SBC 602 + بلدي + أمانة الشرقية
-// الزاوية: ثلاثي مائي — رطوبة بحرية 60-90%
-//   + مياه جوفية ضاغطة 1-3م + أملاح تأكل حديد التسليح
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -76,19 +67,13 @@ export const override: PageOverride = {
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'الرقابة على تطبيق اشتراطات العزل المائي بالدمام', acronym: 'أمانة الشرقية' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
             expert: 'م. ماجد المحيميد',
             quote: 'الدمام تُهاجَم بالمياه من كل اتجاه — بحر ورطوبة من فوق، ومياه جوفية من تحت، وأملاح تتسلل عبر كل شق. العزل المائي الشامل (سطح + حمامات + أساسات) ليس خياراً — بل شرط بقاء المبنى ساحلياً',
             source: 'خبير جودة البناء والتشطيبات',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
 
@@ -115,9 +100,9 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'dammam-roof-insulation', context: 'عزل مائي + حراري للسطح = حماية كاملة', priority: 1 },
-        { slug: 'dammam-bathroom-leak-detection', context: 'كشف تسرب الحمام قبل إعادة العزل', priority: 2 },
-        { slug: 'dammam-foam-insulation', context: 'Closed-Cell فوم يعزل حرارياً ومائياً — حل مزدوج', priority: 3 },
-        { slug: 'dammam-tank-insulation', context: 'عزل خزان مائي بإيبوكسي بحري يحمي من الملوحة', priority: 4 },
+        { slug: 'roof-insulation', context: 'عزل مائي + حراري للسطح = حماية كاملة', priority: 1 },
+        { slug: 'bathroom-leak-detection', context: 'كشف تسرب الحمام قبل إعادة العزل', priority: 2 },
+        { slug: 'foam-insulation', context: 'Closed-Cell فوم يعزل حرارياً ومائياً — حل مزدوج', priority: 3 },
+        { slug: 'tank-insulation', context: 'عزل خزان مائي بإيبوكسي بحري يحمي من الملوحة', priority: 4 },
     ],
 };

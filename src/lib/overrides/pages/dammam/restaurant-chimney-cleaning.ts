@@ -1,11 +1,3 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف مداخن مطاعم بالدمام — Override مخصص (E-E-A-T Grade)
-// صفحة: /dammam/restaurant-chimney-cleaning
-// قطاع YMYL: سلامة (حريق Class F — الدفاع المدني 998) + صحة (VOCs)
-// خريطة 2.4: المسند + المحيميد (مداخن/بناء) → 998 + بلدي + CIVILDEFENSE
-// NLP: دهون تجارية ثقيلة، رطوبة خليجية، مداخن شوايات، أمانة الشرقية
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
 
@@ -81,25 +73,18 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'شهادة تنظيف مداخن ضمن متطلبات الترخيص التجاري للمطاعم' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
             expert: 'م. ماجد المحيميد',
             quote: 'مدخنة مطعم في مناخ الدمام الرطب تتراكم عليها دهون لزجة أسرع 2-3 مرات من الرياض. كل 3 أشهر بدون تنظيف = وقود حريق Class F جاهز. التنظيف ربع سنوي ليس اختياراً — بل أمان + ترخيص + بقاء العمل',
             source: 'خبير جودة البناء والتشطيبات',
-            url: 'https://x.com/majedalmohaimed',
         },
         {
             expert: 'أ.د. عبدالله المسند',
             quote: 'دهون بيئة ساحلية خليجية لا تجف ولا تتقشر — تبقى لزجة وقابلة للاشتعال طوال العام',
             source: 'أستاذ جغرافيا المناخ — جامعة القصيم',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -130,14 +115,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'dammam-kitchen-cleaning', context: 'تنظيف مطبخ مطعم شامل — يتضمن الأرضيات والمعدات', priority: 1 },
-        { slug: 'dammam-oven-cleaning', context: 'أفران المطعم — نفس مخاطر الدهون والحريق', priority: 2 },
-        { slug: 'dammam-sanitization', context: 'تعقيم مطبخ مطعم — اشتراط صحي بلدي', priority: 3 },
-        { slug: 'dammam-pest-control', context: 'دهون مدخنة مهملة = صراصير وفئران = بلاغ بلدي', priority: 4 },
-        { slug: 'dammam-cleaning', context: 'تنظيف عام للمطعم', priority: 5 },
-        { slug: 'dammam-air-conditioner-cleaning', context: 'مكيف المطعم يمتص الدهون — نظفه مع المدخنة', priority: 6 },
-        { slug: 'dammam-glass-facades-cleaning', context: 'واجهة المطعم — دهون + ملوحة', priority: 7 },
-        { slug: 'dammam-floor-cleaning', context: 'أرضية المطبخ — دهون ثقيلة', priority: 8 },
-        { slug: 'dammam-shops-cleaning', context: 'صالة المطعم الأمامية — تنظيف تجاري', priority: 9 },
+        { slug: 'kitchen-cleaning', context: 'تنظيف مطبخ مطعم شامل — يتضمن الأرضيات والمعدات', priority: 1 },
+        { slug: 'oven-cleaning', context: 'أفران المطعم — نفس مخاطر الدهون والحريق', priority: 2 },
+        { slug: 'sanitization', context: 'تعقيم مطبخ مطعم — اشتراط صحي بلدي', priority: 3 },
+        { slug: 'pest-control', context: 'دهون مدخنة مهملة = صراصير وفئران = بلاغ بلدي', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف عام للمطعم', priority: 5 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف المطعم يمتص الدهون — نظفه مع المدخنة', priority: 6 },
+        { slug: 'glass-facades-cleaning', context: 'واجهة المطعم — دهون + ملوحة', priority: 7 },
+        { slug: 'floor-cleaning', context: 'أرضية المطبخ — دهون ثقيلة', priority: 8 },
+        { slug: 'shops-cleaning', context: 'صالة المطعم الأمامية — تنظيف تجاري', priority: 9 },
     ],
 };

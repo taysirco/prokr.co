@@ -1,11 +1,3 @@
-// ══════════════════════════════════════════════════════════════
-// غسيل سيارات بالدمام — Override مخصص (E-E-A-T Grade)
-// صفحة: /dammam/auto-cleaning
-// قطاع YMYL: مالي (سيارة 80,000-500,000+ ريال — حماية طلاء)
-// خريطة 2.4: المسند (مناخ) → بلدي
-// NLP: ملوحة خليجية تأكل الطلاء، PM2.5 يخدش Clear Coat، رمل
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
 
@@ -80,19 +72,13 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص مغاسل السيارات — اشتراطات بيئية ومياه' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMISNID.name,
-        title: EXPERTS.ALMISNID.title,
-        credential: EXPERTS.ALMISNID.credential,
-        profileUrl: EXPERTS.ALMISNID.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMISNID,
 
     expertCitations: [
         {
             expert: 'أ.د. عبدالله المسند',
             quote: 'السيارات في المنطقة الشرقية تفقد لمعان الطلاء 3-4 مرات أسرع من الرياض. السبب ليس الشمس وحدها — بل الملوحة + PM2.5 القاسي + دورة التكثف-الجفاف اليومية. الغسيل بالطريقة الخاطئة يُسرّع التلف',
             source: 'أستاذ جغرافيا المناخ — جامعة القصيم',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -121,14 +107,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'dammam-steam-cleaning', context: 'بخار داخلي للسيارة — كنب ومقاعد', priority: 1 },
-        { slug: 'dammam-sanitization', context: 'تعقيم سيارة — بعد مريض أو مسافر', priority: 2 },
-        { slug: 'dammam-carpet-cleaning', context: 'فرش أرضية السيارة — سجاد صغير', priority: 3 },
-        { slug: 'dammam-glass-facades-cleaning', context: 'نفس تحديات الملوحة على الأسطح الملساء', priority: 4 },
-        { slug: 'dammam-cleaning', context: 'تنظيف عام', priority: 5 },
-        { slug: 'dammam-sofa-cleaning', context: 'مقاعد السيارة الجلدية — نفس تقنية الجلد', priority: 6 },
-        { slug: 'dammam-furniture-cleaning', context: 'أثاث جلد — نفس Leather Care Kit', priority: 7 },
-        { slug: 'dammam-water-leak-detection', context: 'تسرب في جراج السيارة = رطوبة + صدأ', priority: 8 },
-        { slug: 'dammam-marble-polishing', context: 'أرضية الجراج — حماية الرخام من زيوت السيارة', priority: 9 },
+        { slug: 'steam-cleaning', context: 'بخار داخلي للسيارة — كنب ومقاعد', priority: 1 },
+        { slug: 'sanitization', context: 'تعقيم سيارة — بعد مريض أو مسافر', priority: 2 },
+        { slug: 'carpet-cleaning', context: 'فرش أرضية السيارة — سجاد صغير', priority: 3 },
+        { slug: 'glass-facades-cleaning', context: 'نفس تحديات الملوحة على الأسطح الملساء', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف عام', priority: 5 },
+        { slug: 'sofa-cleaning', context: 'مقاعد السيارة الجلدية — نفس تقنية الجلد', priority: 6 },
+        { slug: 'furniture-cleaning', context: 'أثاث جلد — نفس Leather Care Kit', priority: 7 },
+        { slug: 'water-leak-detection', context: 'تسرب في جراج السيارة = رطوبة + صدأ', priority: 8 },
+        { slug: 'marble-polishing', context: 'أرضية الجراج — حماية الرخام من زيوت السيارة', priority: 9 },
     ],
 };

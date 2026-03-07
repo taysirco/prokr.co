@@ -4,6 +4,7 @@
 // ============================================
 
 import type { PageOverride } from '../../types';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -94,12 +95,7 @@ export const override: PageOverride = {
         { entity: 'بوابة النقل — منصة لوجستي', acronym: 'لوجستي', url: 'https://logisti.sa', role: 'بيان حمولة رسمي للنقل بين المدن' },
     ],
 
-    expertReviewer: {
-        name: 'م. ماجد المحيميد',
-        title: 'خبير جودة تشطيبات وعزل',
-        credential: 'مهندس جودة تشطيبات — المرجع الأول في جودة البناء',
-        profileUrl: 'https://x.com/majedalmohaimed',
-    },
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         { expert: 'أ. صالح الزويد', quote: 'أي نقل بري بين المدن بدون بيان حمولة رسمي من منصة لوجستي = مخالفة قانونية. البيان يحمي حقوق العميل في حال تلف الأثاث', source: 'هيئة النقل', url: 'https://x.com/SalehAlZuwayed' },
@@ -107,7 +103,6 @@ export const override: PageOverride = {
             expert: 'م. ماجد المحيميد',
             quote: 'الدينا المغلقة حماية مزدوجة في جدة: تمنع شمس 50°م من تلف الأثاث + تمنع ملح الهواء الساحلي من التصلب على الأسطح أثناء النقل',
             source: 'خبير جودة تشطيبات',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
 
@@ -116,14 +111,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'jeddah-dabab', context: 'دباب للنقل الخفيف', priority: 1 },
-        { slug: 'jeddah-furniture-moving', context: 'نقل عفش كامل', priority: 2 },
-        { slug: 'jeddah-furniture-storage', context: 'تخزين', priority: 3 },
-        { slug: 'jeddah-moving-out', context: 'تنظيف بعد التحميل', priority: 4 },
-        { slug: 'jeddah-cleaning', context: 'تنظيف البيت الجديد', priority: 5 },
-        { slug: 'jeddah-pest-control', context: 'رش البيت الجديد', priority: 6 },
-        { slug: 'jeddah-furniture-cleaning', context: 'تنظيف بعد النقل', priority: 7 },
-        { slug: 'jeddah-sanitization', context: 'تعقيم', priority: 8 },
-        { slug: 'jeddah-air-conditioner-cleaning', context: 'فك وتركيب مكيفات', priority: 9 },
+        { slug: 'dabab', context: 'دباب للنقل الخفيف', priority: 1 },
+        { slug: 'furniture-moving', context: 'نقل عفش كامل', priority: 2 },
+        { slug: 'furniture-storage', context: 'تخزين', priority: 3 },
+        { slug: 'moving-out', context: 'تنظيف بعد التحميل', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف البيت الجديد', priority: 5 },
+        { slug: 'pest-control', context: 'رش البيت الجديد', priority: 6 },
+        { slug: 'furniture-cleaning', context: 'تنظيف بعد النقل', priority: 7 },
+        { slug: 'sanitization', context: 'تعقيم', priority: 8 },
+        { slug: 'air-conditioner-cleaning', context: 'فك وتركيب مكيفات', priority: 9 },
     ],
 };

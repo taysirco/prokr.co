@@ -1,94 +1,20 @@
-// ══════════════════════════════════════════════════════════════
-// مكافحة نمل أبيض بالباحة — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-baha/termite-control
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
 
 export const override: PageOverride = {
-    meta: {
-        title: 'مكافحة نمل أبيض بالباحة — خدمة احترافية معتمدة (2026)',
-        description: 'مكافحة نمل أبيض بالباحة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'مكافحة نمل أبيض بالباحة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['مكافحة نمل أبيض بالباحة', 'مكافحة نمل أبيض الباحة', 'شركة مكافحة نمل أبيض بالباحة', 'أفضل مكافحة نمل أبيض بالباحة'],
-    },
-
-    content: {
-        introduction: 'مكافحة نمل أبيض بالباحة — خدمة متخصصة تراعي الظروف المناخية والبيئية في الباحة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'مكافحة نمل أبيض بالباحة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'مكافحة نمل أبيض بالباحة. خدمة احترافية. ضمان.',
-    },
-
-    pricing: [
-        { type: 'مكافحة نمل أبيض — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'مكافحة نمل أبيض — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
-    ],
-
-    faq: [
-        { question: 'كم تكلفة مكافحة نمل أبيض بالباحة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق مكافحة نمل أبيض؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على مكافحة نمل أبيض؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
-    ],
-
-    expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
-    ],
-
-    warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
-    ],
-
-    trustAnchors: [
-        { ...GOV.SFDA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
-    ],
-
-    expertReviewer: {
-        name: EXPERTS.ALKHODAIRY.name,
-        title: EXPERTS.ALKHODAIRY.title,
-        credential: EXPERTS.ALKHODAIRY.credential,
-        profileUrl: EXPERTS.ALKHODAIRY.profileUrl,
-    },
-
-    expertCitations: [
-        {
-            expert: EXPERTS.ALKHODAIRY.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALKHODAIRY.title,
-            url: EXPERTS.ALKHODAIRY.profileUrl,
-        },
-    ],
-
+    meta: { title: 'مكافحة نمل أبيض بالباحة — غابة عرعر سليلوز + ضباب رطوبة + أبنية حجرية تراثية + 5°م تبطئ (2026)', description: 'مكافحة نمل أبيض الباحة. غابة عرعر = سليلوز وفير. ضباب 80% = رطوبة تربة. أبنية حجرية (ذي عين) = شقوق. 5°م تُبطئ لا تقتل. Fipronil + Bait.', h1: 'مكافحة نمل أبيض بالباحة — غابة سليلوز + ضباب + حجر + برودة', keywords: ['مكافحة نمل أبيض بالباحة', 'مكافحة ارضة الباحة', 'شركة مكافحة نمل ابيض بالباحة'] },
+    content: { introduction: 'الباحة = بيئة نمل أبيض فريدة: (1) غابة العرعر = سليلوز وفير (جذوع + أوراق + جذور). المستعمرات كبيرة. (2) ضباب 80% = رطوبة تربة عالية 3-4 أشهر = نشاط مُسرّع موسمياً. (3) أبنية حجرية تراثية (ذي عين + قرى بلجرشي) = شقوق بين الأحجار = مداخل. حقن + سد الشقوق. (4) 5°م شتاءً: النمل يتباطأ لكن لا يموت (ليس -2°م كتبوك). يعود بقوة في الربيع.', shortAnswer: 'غابة سليلوز + ضباب رطوبة + حجر شقوق + 5°م تبطئ. Fipronil + Bait + سد.', heroSubtitle: 'غابة تُغذي + ضباب يُنشّط + حجر يُسهّل — والبرودة لا تقتل' },
+    pricing: [{ type: 'فحص + معالجة', unit: 'خدمة', minPrice: 450, maxPrice: 900, time: '2-4 ساعات' }, { type: 'مبنى حجري تراثي', unit: 'خدمة', minPrice: 700, maxPrice: 1800, time: '4-8 ساعات' }, { type: 'Bait Stations سنوية', unit: 'سنة', minPrice: 900, maxPrice: 2000, time: '12 فحص' }],
+    faq: [{ question: '5°م يقتل النمل؟', answer: 'لا — يتباطأ. يعيش حتى 5°م. يعود بقوة في الربيع. Bait Stations = مراقبة مستمرة.' }, { question: 'قرى حجرية — كيف؟', answer: 'شقوق بين الأحجار = مداخل. سد + حقن Fipronil. الحجر أصلب من الطين لكن الشقوق = مداخل.' }],
+    expertTips: ['Bait Stations سنوية — 5°م لا تقتل.', 'فحص ربيعي (مارس) = بعد البرودة ← نشاط.', 'سد شقوق الأبنية الحجرية.'],
+    warnings: ['غابة عرعر = سليلوز لا ينتهي. بدون Bait Stations = مستعمرات كبيرة.'],
+    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات مكافحة الآفات' }, { ...GOV.WEQAA, role: 'تسجيل المبيدات' }],
+    expertReviewer: EXPERTS.ALKHODAIRY,
+    expertCitations: [{ expert: EXPERTS.ALKHODAIRY.name, quote: 'الباحة: غابة عرعر = سليلوز + ضباب = رطوبة. 5°م تُبطئ لا تقتل. Bait Stations سنوية.', source: 'أبحاث حشرات — النمل الأبيض في الغابات الجبلية' }],
     saudiRegulations: [REGULATIONS.GHAD_SYSTEM],
-
-    verificationBadges: [
-        { badge: '✔️ مبيدات معتمدة من SFDA', authority: 'هيئة الغذاء والدواء', icon: 'shield-check' },
-    ],
-
-    equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
-    ],
-
-    hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
-    ],
-
-    counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
-    ],
-
-    relatedServices: [
-        { slug: 'al-baha-furniture-moving', context: 'نقل عفش بالباحة', priority: 1 },
-        { slug: 'al-baha-furniture-storage', context: 'تخزين عفش بالباحة', priority: 2 },
-        { slug: 'al-baha-dyna', context: 'دينا نقل بالباحة', priority: 3 },
-        { slug: 'al-baha-moving-out', context: 'نقل عفش خروج بالباحة', priority: 4 },
-        { slug: 'al-baha-dabab', context: 'دباب نقل بالباحة', priority: 5 },
-        { slug: 'al-baha-cleaning', context: 'تنظيف منازل بالباحة', priority: 6 },
-        { slug: 'al-baha-tanks-cleaning', context: 'تنظيف خزانات بالباحة', priority: 7 },
-        { slug: 'al-baha-sofa-cleaning', context: 'تنظيف كنب بالباحة', priority: 8 },
-        { slug: 'al-baha-carpet-cleaning', context: 'تنظيف سجاد بالباحة', priority: 9 },
-    ],
+    verificationBadges: [{ badge: '✔️ مكافحة مرخصة', authority: 'بلدي + وقاء', icon: 'shield-check' }],
+    equipment: [{ name: 'Fipronil 0.06%', use: 'Cascading Kill' }, { name: 'Bait Stations', use: 'مراقبة سنوية' }, { name: 'سد شقوق', use: 'أبنية حجرية' }],
+    hiddenObjections: [{ fear: 'الشتاء يكفي.', solution: '5°م ≠ -2°م. لا يقتل = يعود.' }],
+    counterNarratives: [{ myth: 'الباحة باردة = لا نمل.', truth: 'غابة + ضباب = بيئة مثالية 8 أشهر.' }],
+    relatedServices: [{ slug: 'pest-control', context: 'حشرات', priority: 1 }, { slug: 'water-insulation', context: 'عزل', priority: 2 }],
 };

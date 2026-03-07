@@ -91,13 +91,11 @@ export const override: PageOverride = {
             expert: 'أ.د. فهد الخضيري',
             quote: 'أقراص الفوسفين لإبادة البق = جريمة صحية. هذا الغاز يقتل البشر قبل الحشرات — يتسرب عبر المكيفات والشقوق للشقق المجاورة. إبادة البق يجب أن تتم بمبيدات آمنة معتمدة من SFDA فقط',
             source: 'عالم أبحاث طبي — متخصص في السموم والمسرطنات',
-            url: 'https://x.com/DrAlkhodairy',
         },
         {
             expert: 'أ.د. عبدالله المسند',
             quote: 'حرارة مكة المرتفعة تُسرّع دورة حياة بق الفراش — البيض يفقس أسرع والأجيال تتعاقب بوتيرة أعلى. لذلك: العلاج المتعدد الجلسات ضروري في مكة أكثر من المدن الباردة',
             source: 'أستاذ المناخ والبيئة',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -128,12 +126,12 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'makkah-pest-control', context: 'مكافحة شاملة لكل الحشرات — صراصير ونمل وبعوض مع البق', priority: 1 },
-        { slug: 'makkah-pesticide-spraying', context: 'رش وقائي دوري بعد علاج البق — يمنع عودة الحشرات', priority: 2 },
-        { slug: 'makkah-sofa-cleaning', context: 'تنظيف وتعقيم كنب ومجالس بالبخار بعد إبادة البق', priority: 3 },
-        { slug: 'makkah-steam-cleaning', context: 'تعقيم بالبخار للمراتب والستائر — إزالة بقايا البق والبيض', priority: 4 },
-        { slug: 'makkah-carpet-cleaning', context: 'غسيل سجاد بالبخار — البق يختبئ في ألياف السجاد القريب من السرير', priority: 5 },
-        { slug: 'makkah-furniture-cleaning', context: 'تنظيف أثاث مستعمل بالبخار قبل إدخاله المنزل — وقاية', priority: 6 },
-        { slug: 'makkah-cleaning', context: 'تنظيف عميق للمنزل بعد إبادة البق — إزالة الفضلات والبقع', priority: 7 },
+        { slug: 'pest-control', context: 'مكافحة شاملة لكل الحشرات — صراصير ونمل وبعوض مع البق', priority: 1 },
+        { slug: 'pesticide-spraying', context: 'رش وقائي دوري بعد علاج البق — يمنع عودة الحشرات', priority: 2 },
+        { slug: 'sofa-cleaning', context: 'تنظيف وتعقيم كنب ومجالس بالبخار بعد إبادة البق', priority: 3 },
+        { slug: 'steam-cleaning', context: 'تعقيم بالبخار للمراتب والستائر — إزالة بقايا البق والبيض', priority: 4 },
+        { slug: 'carpet-cleaning', context: 'غسيل سجاد بالبخار — البق يختبئ في ألياف السجاد القريب من السرير', priority: 5 },
+        { slug: 'furniture-cleaning', context: 'تنظيف أثاث مستعمل بالبخار قبل إدخاله المنزل — وقاية', priority: 6 },
+        { slug: 'cleaning', context: 'تنظيف عميق للمنزل بعد إبادة البق — إزالة الفضلات والبقع', priority: 7 },
     ],
 };

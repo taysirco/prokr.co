@@ -1,4 +1,3 @@
-// تنظيف بالبخار بالطائف — Override (E-E-A-T) | خريطة 2.4: المسند → بلدي
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -34,9 +33,13 @@ export const override: PageOverride = {
         'بخار بدون تجفيف صناعي في شتاء الطائف = إضافة رطوبة لبيئة رطبة أصلاً ← عفن أسوأ. التجفيف ليس اختيارياً.',
         'لا تستخدم بخار على أسطح خشبية لامعة (باركيه مُلقّع) — الحرارة + الرطوبة تُذيب الطبقة اللامعة.',
     ],
-    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات التنظيف والتعقيم' }, { ...GOV.MOH, role: 'بروتوكولات التعقيم والوقاية من الأمراض الفطرية' }],
-    expertReviewer: { name: EXPERTS.ALMISNID.name, title: EXPERTS.ALMISNID.title, credential: EXPERTS.ALMISNID.credential, profileUrl: EXPERTS.ALMISNID.profileUrl },
-    expertCitations: [{ expert: EXPERTS.ALMISNID.name, quote: 'البخار في الطائف = سلاح ذو حدين. الحرارة 150°م تقتل كل شيء ← ممتاز. لكن البخار يتكثف في رطوبة 80% ← يزيد الرطوبة إذا لم يُجفف سريعاً. التقنية الصحيحة: بخار + تجفيف صناعي متزامن. الشركة التي لا تملك مروحة تجفيف = لا تفهم مناخ الطائف.', source: EXPERTS.ALMISNID.title, url: EXPERTS.ALMISNID.profileUrl }],
+    trustAnchors: [
+{ ...{ ...GOV.BALADI, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
+ role: 'ترخيص شركات التنظيف والتعقيم' }, { ...{ ...GOV.MOH, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
+ role: 'بروتوكولات التعقيم والوقاية من الأمراض الفطرية' }    ],
+    expertReviewer: EXPERTS.ALMISNID,
+    expertCitations: [{ expert: EXPERTS.ALMISNID.name, quote: 'البخار في الطائف = سلاح ذو حدين. الحرارة 150°م تقتل كل شيء ← ممتاز. لكن البخار يتكثف في رطوبة 80% ← يزيد الرطوبة إذا لم يُجفف سريعاً. التقنية الصحيحة: بخار + تجفيف صناعي متزامن. الشركة التي لا تملك مروحة تجفيف = لا تفهم مناخ الطائف.',
+            source: EXPERTS.ALMISNID.title }],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
     verificationBadges: [{ badge: '✔️ بخار 150°م', authority: 'تعقيم حراري', icon: 'shield-check' }, { badge: '✔️ تجفيف صناعي متزامن', authority: 'منع رطوبة جديدة', icon: 'badge-check' }],
     equipment: [
@@ -44,11 +47,17 @@ export const override: PageOverride = {
         { name: 'مراوح تجفيف صناعية (Air Movers)', use: 'تدور بسرعة عالية ← تُسرّع تبخر الرطوبة المتكثفة من البخار.' },
         { name: 'مزيل رطوبة صناعي (Dehumidifier)', use: 'يسحب الرطوبة من الهواء ← يمنع تكثفها على الأسطح بعد البخار. ضروري في رطوبة الطائف.' },
     ],
-    hiddenObjections: [{ fear: 'البخار = رطوبة = مشكلة في الطائف الرطبة.', solution: 'صحيح إذا استُخدم بدون تجفيف. نستخدم بخار "جاف" (Dry Steam — رطوبة 5% فقط) + مراوح تجفيف + مزيل رطوبة = تعقيم حراري بدون إضافة رطوبة فعلية. الفرق بين "بخار رطب" و"بخار جاف" = الفرق بين حل ومشكلة.' }],
+    hiddenObjections: [
+        { fear: 'البخار = رطوبة = مشكلة في الطائف الرطبة.', solution: 'صحيح إذا استُخدم بدون تجفيف. نستخدم بخار "جاف" (Dry Steam — رطوبة 5% فقط) + مراوح تجفيف + مزيل رطوبة = تعقيم حراري بدون إضافة رطوبة فعلية. الفرق بين "بخار رطب" و"بخار جاف" = الفرق بين حل ومشكلة.' },
+        { fear: 'الخدمة أغلى من المدن الأخرى.', solution: 'مناخ الطائف يفرض معالجات إضافية (مضاد تكثف + تجفيف + حماية أخشاب ورود). التكلفة الإضافية استثمار يحمي ممتلكاتك من تلف الرطوبة والحشرات الموسمية.' },
+    ],
     counterNarratives: [{ myth: 'الكيماويات أقوى من البخار في قتل العفن.', truth: 'الكلور والكيماويات تُبيّض العفن (تخفيه بصرياً) لكن لا تقتل الأبواغ المجهرية في الهواء. بخار 150°م يقتل 99.9% من الأبواغ — حتى المجهرية. + الكيماويات تترك بقايا سُمّية. البخار = ماء. آمن 100%.' }],
     relatedServices: [
-        { slug: 'taif-cleaning', context: 'تنظيف شامل + بخار — معاً أفضل.', priority: 1 },
-        { slug: 'taif-sofa-cleaning', context: 'بخار كنب — يقتل العث في الإسفنج.', priority: 2 },
-        { slug: 'taif-carpet-cleaning', context: 'بخار سجاد — تعقيم عميق.', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف شامل + بخار — معاً أفضل.', priority: 1 },
+        { slug: 'sofa-cleaning', context: 'بخار كنب — يقتل العث في الإسفنج.', priority: 2 },
+        { slug: 'carpet-cleaning', context: 'بخار سجاد — تعقيم عميق.', priority: 3 },
+        { slug: 'air-conditioner-cleaning', context: 'تنظيف مكيفات تعمل تبريد/تدفئة طوال السنة في مناخ الطائف المتقلب.', priority: 5 },
+        { slug: 'pest-control', context: 'مكافحة حشرات تتكاثر في رطوبة الطائف الشتوية والزراعة المحيطة.', priority: 6 },
+        { slug: 'steam-cleaning', context: 'تعقيم بالبخار لقتل العث والفطريات في مفروشات الطائف الرطبة.', priority: 7 },
     ],
 };

@@ -1,4 +1,3 @@
-// جلي أرضيات بالطائف — Override (E-E-A-T) | خريطة 2.4: المسند → بلدي
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -35,9 +34,12 @@ export const override: PageOverride = {
         'بورسلين لامع بدون Anti-Slip في شتاء الطائف = خطر سقوط حقيقي — خاصة لكبار السن والأطفال.',
         'التكثف الشتوي على أرضية ملمّعة = ماء غير مرئي ← أخطر من الماء المسكوب (تراه فتتجنبه).',
     ],
-    trustAnchors: [{ ...GOV.BALADI, role: 'اشتراطات سلامة الأرضيات في المباني العامة' }],
-    expertReviewer: { name: EXPERTS.ALMISNID.name, title: EXPERTS.ALMISNID.title, credential: EXPERTS.ALMISNID.credential, profileUrl: EXPERTS.ALMISNID.profileUrl },
-    expertCitations: [{ expert: EXPERTS.ALMISNID.name, quote: 'في الطائف: لمعان الأرضية بدون Anti-Slip = خطر وليس جمال. التكثف الشتوي يُحوّل البورسلين اللامع لحلبة تزلج. Nano Anti-Slip يحافظ على اللمعان ويمنع الانزلاق ← جمال وأمان في آنٍ واحد.', source: EXPERTS.ALMISNID.title, url: EXPERTS.ALMISNID.profileUrl }],
+    trustAnchors: [
+{ ...{ ...GOV.BALADI, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
+ role: 'اشتراطات سلامة الأرضيات في المباني العامة' }    ],
+    expertReviewer: EXPERTS.ALMISNID,
+    expertCitations: [{ expert: EXPERTS.ALMISNID.name, quote: 'في الطائف: لمعان الأرضية بدون Anti-Slip = خطر وليس جمال. التكثف الشتوي يُحوّل البورسلين اللامع لحلبة تزلج. Nano Anti-Slip يحافظ على اللمعان ويمنع الانزلاق ← جمال وأمان في آنٍ واحد.',
+            source: EXPERTS.ALMISNID.title }],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
     verificationBadges: [{ badge: '✔️ Nano Anti-Slip', authority: 'مانع انزلاق + لمعان', icon: 'shield-check' }, { badge: '✔️ أقراص ألماسية', authority: 'جلي احترافي', icon: 'badge-check' }],
     equipment: [
@@ -45,11 +47,17 @@ export const override: PageOverride = {
         { name: 'مسحوق تبلور كريستالي (للرخام)', use: 'يسدّ مسام الرخام ← يمنع امتصاص رطوبة التكثف ← يحمي + يلمّع.' },
         { name: 'سيلر Nano Anti-Slip', use: 'Micro-Texture غير مرئي ← يمنع الانزلاق على التكثف ← يُبقي اللمعان.' },
     ],
-    hiddenObjections: [{ fear: 'الجلي مكلف — 20 ريال/م² × 200 م² = 4,000 ريال.', solution: 'سقوط واحد لكبير سن = كسر ورك (تكلفة علاج 20,000-50,000 ريال + ألم). Anti-Slip Sealer وحده = 8-15 ريال/م² × 200 م² = 1,600-3,000 ريال = تأمين صحي حقيقي. الجلي + Anti-Slip = جمال + أمان.' }],
+    hiddenObjections: [
+        { fear: 'الجلي مكلف — 20 ريال/م² × 200 م² = 4,000 ريال.', solution: 'سقوط واحد لكبير سن = كسر ورك (تكلفة علاج 20,000-50,000 ريال + ألم). Anti-Slip Sealer وحده = 8-15 ريال/م² × 200 م² = 1,600-3,000 ريال = تأمين صحي حقيقي. الجلي + Anti-Slip = جمال + أمان.' },
+        { fear: 'الخدمة أغلى من المدن الأخرى.', solution: 'مناخ الطائف يفرض معالجات إضافية (مضاد تكثف + تجفيف + حماية أخشاب ورود). التكلفة الإضافية استثمار يحمي ممتلكاتك من تلف الرطوبة والحشرات الموسمية.' },
+    ],
     counterNarratives: [{ myth: 'أحط سجاد فوق البورسلين — يمنع الانزلاق.', truth: 'السجاد الصغير بدون مانع انزلاق تحته = ينزلق هو نفسه على البورسلين الرطب ← أخطر من البورسلين العاري. السجاد الكبير = يخفي جمال الأرضية + يحبس رطوبة تحته ← عفن. Anti-Slip Sealer = حل دائم بدون تغطية.' }],
     relatedServices: [
-        { slug: 'taif-marble-polishing', context: 'جلي رخام متخصص.', priority: 1 },
-        { slug: 'taif-villas-cleaning', context: 'تنظيف فيلا شامل + جلي.', priority: 2 },
-        { slug: 'taif-cleaning', context: 'تنظيف عام + جلي أرضيات.', priority: 3 },
+        { slug: 'marble-polishing', context: 'جلي رخام متخصص.', priority: 1 },
+        { slug: 'villas-cleaning', context: 'تنظيف فيلا شامل + جلي.', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف عام + جلي أرضيات.', priority: 3 },
+        { slug: 'air-conditioner-cleaning', context: 'تنظيف مكيفات تعمل تبريد/تدفئة طوال السنة في مناخ الطائف المتقلب.', priority: 5 },
+        { slug: 'pest-control', context: 'مكافحة حشرات تتكاثر في رطوبة الطائف الشتوية والزراعة المحيطة.', priority: 6 },
+        { slug: 'steam-cleaning', context: 'تعقيم بالبخار لقتل العث والفطريات في مفروشات الطائف الرطبة.', priority: 7 },
     ],
 };

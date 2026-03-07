@@ -1,10 +1,3 @@
-// ══════════════════════════════════════════════════════════════
-// مكافحة حمام بالمدينة المنورة — Override مخصص (E-E-A-T Grade)
-// صفحة: /madinah/bird-control
-// قطاع YMYL: صحي (أمراض زونوز) + بيئي + عقاري
-// خريطة 2.4: المسند → بلدي + وقاء
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -25,7 +18,7 @@ export const override: PageOverride = {
 
     content: {
         introduction: 'الحمام البري (Rock Pigeon — Columba livia) يُشكّل مشكلة حقيقية في المدينة المنورة وليس مجرد إزعاج صوتي. فضلات الحمام شديدة الحموضة (pH 3-4) تُذيب طلاء السيارات (Clear Coat) خلال 48 ساعة إذا لم تُزل ← بقع دائمة. على أسطح المباني والمكيفات: الفضلات تتراكم وتسدّ مجاري التصريف ← تسرب مياه أمطار. صحياً: فضلات الحمام تحمل 60+ مرض قابل للانتقال للإنسان (Zoonotic Diseases) أبرزها: المكورات الخفية (Cryptococcosis) الفطرية التي تُصيب الرئتين، والكلاميديا الطيرية (Psittacosis) التي تسبب التهاباً رئوياً حاداً. الفضلات الجافة في حرارة المدينة (48°م) تتحول لغبار ناعم يتطاير مع الهواء ← يُستنشق ← عدوى تنفسية. في المدينة المنورة تحديداً، الحمام يتجمع بكثافة في أسطح المباني القريبة من المسجد النبوي ومنطقة المطاعم بسبب توفر الطعام والمأوى. بروتوكولنا إنساني 100%: لا قتل ولا سم — بل تركيب موانع فيزيائية (أشواك + شبك + جل) تُغيّر بيئة الأسطح لتصبح غير مُرحّبة ← الحمام ينتقل طبيعياً.',
-        shortAnswer: 'على عكس محاولات الطرد المؤقتة (تخويف صوتي أو دمى) التي يعتاد عليها الحمام خلال أيام، نعتمد حلولاً فيزيائية دائمة: أشواك ستانلس ستيل + شبك بولي إيثيلين + جل طرد. فضلات الحمام الحمضية (pH 3-4) تُذيب طلاء السيارات وتنقل 60+ مرض. حماية إنسانية دائمة. من 50 ريال/متر.',
+        shortAnswer: 'على عكس [طرد صوتي أو دمى بلاستيكية يعتادها الحمام خلال 3-5 أيام + Homing Instinct يُعيده] الذي يفشل دائماً، يعتمد بروتوكولنا الهندسي في خدمة [مكافحة الحمام] بمدينة [المدينة المنورة] على [أشواك ستانلس 316 + شبك UV-Stabilized + جل بصري]. ففي ظل [فضلات pH 3-4 تُذيب الطلاء + 60+ مرض Zoonotic + غبار فطري Cryptococcus في 48°م]، تتفاقم ظاهرة [تآكل + عدوى + انسداد تصريف]. لذا؛ يتدخل خبراؤنا عبر [تمنع الأشواك الوقوف ← يسد الشبك الفتحات ← يطرد الجل بصرياً]. إنساني 100%. من 50 ريال/متر.',
         heroSubtitle: 'مكافحة حمام بالمدينة. أشواك + شبك. حلول إنسانية. حماية دائمة.',
     },
 
@@ -75,19 +68,13 @@ export const override: PageOverride = {
         { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'الرقابة على نظافة المباني والمنشآت من فضلات الطيور', acronym: 'أمانة المدينة' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMISNID.name,
-        title: EXPERTS.ALMISNID.title,
-        credential: EXPERTS.ALMISNID.credential,
-        profileUrl: EXPERTS.ALMISNID.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMISNID,
 
     expertCitations: [
         {
             expert: EXPERTS.ALMISNID.name,
             quote: 'في مناخ المدينة المنورة الجاف، فضلات الحمام تجف وتتحول لغبار ميكروسكوبي يتطاير مع أي تيار هواء — يحمل أبواغ فطرية Cryptococcus تسبب عدوى رئوية. التنظيف الجاف بالمكنسة = خطأ شائع يزيد التطاير. الترطيب أولاً ← ثم الكشط = البروتوكول الصحيح.',
-            source: EXPERTS.ALMISNID.title,
-            url: EXPERTS.ALMISNID.profileUrl,
+            source: 'أبحاث مناخ وصحة بيئية',
         },
     ],
 
@@ -117,10 +104,10 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'madinah-pest-control', context: 'عث طيور (Bird Mites) ينتقل من أعشاش الحمام للمنزل — مكافحة ضرورية.', priority: 1 },
-        { slug: 'madinah-cleaning', context: 'تنظيف أسطح المبنى من فضلات الحمام مع تركيب الحماية.', priority: 2 },
-        { slug: 'madinah-roof-insulation', context: 'فضلات الحمام تُتلف العزل المائي — أصلح العزل مع مكافحة الحمام.', priority: 3 },
-        { slug: 'madinah-glass-facades-cleaning', context: 'تنظيف واجهات زجاجية من فضلات الحمام الحمضية.', priority: 4 },
-        { slug: 'madinah-air-conditioner-cleaning', context: 'الحمام يعشش فوق وحدات التكييف — نظّفها بعد طرده.', priority: 5 },
+        { slug: 'pest-control', context: 'عث طيور (Bird Mites) ينتقل من أعشاش الحمام للمنزل — مكافحة ضرورية.', priority: 1 },
+        { slug: 'cleaning', context: 'تنظيف أسطح المبنى من فضلات الحمام مع تركيب الحماية.', priority: 2 },
+        { slug: 'roof-insulation', context: 'فضلات الحمام تُتلف العزل المائي — أصلح العزل مع مكافحة الحمام.', priority: 3 },
+        { slug: 'glass-facades-cleaning', context: 'تنظيف واجهات زجاجية من فضلات الحمام الحمضية.', priority: 4 },
+        { slug: 'air-conditioner-cleaning', context: 'الحمام يعشش فوق وحدات التكييف — نظّفها بعد طرده.', priority: 5 },
     ],
 };

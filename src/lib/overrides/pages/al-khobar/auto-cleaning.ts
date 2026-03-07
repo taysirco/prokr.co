@@ -1,94 +1,77 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف سيارات بالخبر — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-khobar/auto-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف سيارات بالخبر — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف سيارات بالخبر. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف سيارات بالخبر — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف سيارات بالخبر', 'تنظيف سيارات الخبر', 'شركة تنظيف سيارات بالخبر', 'أفضل تنظيف سيارات بالخبر'],
+        title: 'غسيل سيارات بالخبر — NaCl Undercarriage صدأ + 85-95% بقع ماء + Sabkha ملح + UV Clear Coat (2026)',
+        description: 'غسيل سيارات الخبر. NaCl رذاذ بحري يُصدّئ Undercarriage. 85-95% رطوبة Water Spots. Sabkha ملحية تلتصق. UV يُؤكسد Clear Coat. Underbody Wash + Deionized + Ceramic 9H.',
+        h1: 'غسيل سيارات بالخبر — الخليج يُصدّئ والرطوبة تُبقّع والملح يلتصق',
+        keywords: ['غسيل سيارات بالخبر', 'غسيل سيارة الخبر', 'شركة غسيل سيارات بالخبر'],
     },
-
     content: {
-        introduction: 'تنظيف سيارات بالخبر — خدمة متخصصة تراعي الظروف المناخية والبيئية في الخبر. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف سيارات بالخبر: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف سيارات بالخبر. خدمة احترافية. ضمان.',
+        introduction: 'غسيل السيارة في الخبر يختلف جذرياً لأن الأوساخ ساحلية — ليست صحراوية. المشكلة الأولى — NaCl Undercarriage صدأ: رذاذ بحري + ماء مطر مالح يترسب تحت السيارة ← Undercarriage (شاسيه + أنابيب عادم + مسامير) = صدأ مُسرّع. Underbody Pressure Wash + Anti-Rust Wax كل 6 أشهر. المشكلة الثانية — 85-95% Water Spots: رطوبة عالية = الماء لا يجف بسرعة ← NaCl + أملاح تتبلور ← Water Spots دائمة. Deionized Rinse + تجفيف فوري Chamois. المشكلة الثالثة — Sabkha ملحية: تربة الخبر ملحية تلتصق بالجوانب والعتلات. أكثر تآكلاً من رمل الرياض. Pre-Wash + Touchless. المشكلة الرابعة — UV + NaCl = Photo-Oxidation + تآكل مُزدوج: Clear Coat يتأكسد + NaCl يخترق ← تقشّر أسرع. Ceramic 9H = حماية مُزدوجة.',
+        shortAnswer: 'على عكس [غسيل بالإسفنجة + ماء عادي] الذي يخدش بالملح ويترك بقعاً، يعتمد بروتوكولنا في خدمة [غسيل السيارات] بمدينة [الخبر] على [Underbody Wash + Deionized + Touchless + Ceramic 9H]. ففي ظل [NaCl + 85-95% + Sabkha + UV]، تتفاقم ظاهرة [صدأ + بقع + التصاق + أكسدة]. لذا؛ يتدخل خبراؤنا عبر [بروتوكول غسيل ساحلي].',
+        heroSubtitle: 'NaCl صدأ Undercarriage + رطوبة Water Spots + Sabkha تآكل + UV أكسدة',
     },
-
     pricing: [
-        { type: 'تنظيف سيارات — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف سيارات — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'غسيل خارجي Touchless + Deionized', unit: 'سيارة', minPrice: 45, maxPrice: 90, time: '20-30 دقيقة' },
+        { type: 'غسيل شامل + Underbody', unit: 'سيارة', minPrice: 90, maxPrice: 180, time: '45-60 دقيقة' },
+        { type: 'تلميع + Ceramic 9H', unit: 'سيارة', minPrice: 350, maxPrice: 900, time: '3-5 ساعات' },
+        { type: 'اشتراك شهري (4 غسلات + Underbody)', unit: 'شهر', minPrice: 150, maxPrice: 300, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف سيارات بالخبر؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف سيارات؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف سيارات؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'NaCl يصل تحت السيارة — كيف؟', answer: 'رذاذ بحري + أمطار ← ماء ملحي على الطريق ← تتطاير للـ Undercarriage. كورنيش = أكثر. + مواقف قريبة من البحر = رذاذ مباشر. Underbody Wash يُزيل + Anti-Rust Wax يحمي 6 أشهر.' },
+        { question: 'Water Spots — من الغسل نفسه؟', answer: 'ماء الخبر = NaCl + أملاح. يغسل ← يجف ببطء (85-95%) ← أملاح تتبلور = Water Spots دائمة. Deionized Rinse = صفر أملاح. + تجفيف Chamois فوري.' },
+        { question: 'Ceramic أهم من Wax في الخبر؟', answer: 'Wax يذوب في 45°م + NaCl يخترقه = يبقى 2-4 أسابيع. Ceramic 9H = طبقة صلبة لا تتأثر بحرارة ولا NaCl = 2-3 سنوات. في الخبر: Ceramic >> Wax.' },
+        { question: 'Sabkha أسوأ من رمل؟', answer: 'رمل (SiO₂) = يخدش لكن لا يتآكل. Sabkha = NaCl + MgCl₂ + CaSO₄ = يتآكل + يخدش. تآكل كيميائي + فيزيائي = أسوأ من رمل بكثير.' },
+        { question: 'أسبوعي أو شهري؟', answer: 'NaCl يومي + Sabkha يومية + رطوبة 24/7. أسبوعي = الأمثل (يُزيل قبل التآكل). Underbody: كل أسبوعين أو شهري. Anti-Rust Wax: كل 6 أشهر.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Underbody Wash كل غسلة — NaCl تحت السيارة = أخطر من فوقها. صدأ Undercarriage = خطر هيكلي.',
+        'Deionized Rinse — ماء الخبر يترك بقع. حتى ماء RO قد لا يكفي. Deionized = صفر أملاح.',
+        'Ceramic 9H على كل سيارة — NaCl + UV = تآكل Clear Coat. Ceramic = حاجز مُزدوج. Wax = لا يكفي.',
+        'تجفيف Chamois فوري — 85-95% = الماء لا يجف طبيعياً. كل ثانية = Water Spot محتمل.',
+        'Anti-Rust Wax على Undercarriage كل 6 أشهر — يحمي الشاسيه + العادم + المسامير.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'Undercarriage بدون غسل 6 أشهر = NaCl صدأ. مسار عادم يتآكل (500-2,000 ريال). مسامير شاسيه تضعف = خطر.',
+        'إسفنجة + ملح NaCl = Micro-Swirls أول غسلة. NaCl أكثر خدشاً من SiO₂. Touchless = إلزامي في الخبر.',
+        'Clear Coat بدون Ceramic في NaCl + UV = يتقشر خلال 1-2 سنوات. إعادة طلاء = 3,000-8,000 ريال.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص مراكز الغسيل' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات البيئة بالمنطقة الشرقية' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALZUWAYED,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALZUWAYED.name, quote: 'سيارة الخبر = ساحلية: NaCl يُصدّئ Undercarriage + 85-95% Water Spots + Sabkha تتآكل + UV يُؤكسد. Underbody + Deionized + Ceramic = بروتوكول ساحلي لا يُشبه أي مدينة داخلية.', source: 'هيئة النقل — العناية بالمركبات في البيئات الساحلية' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
     verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
+        { badge: '✔️ غسيل سيارات مرخص', authority: 'منصة بلدي', icon: 'shield-check' },
     ],
-
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Underbody Pressure Wash', use: 'يُزيل NaCl من Undercarriage — يمنع صدأ الشاسيه' },
+        { name: 'Deionized Water Rinse', use: 'يمنع Water Spots — ماء بصفر أملاح' },
+        { name: 'Ceramic Coating 9H', use: 'يحمي Clear Coat من NaCl + UV — فعّال 2-3 سنوات' },
+        { name: 'Anti-Rust Underbody Wax', use: 'يحمي Undercarriage — فعّال 6 أشهر' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'غسلة 45 ريال أغلى من 15.', solution: '15 = إسفنجة + ماء ملحي = خدوش + بقع + بدون Underbody. بعد سنة: Polish + صدأ = 1,000-5,000 ريال.' },
+        { fear: 'Ceramic غالي.', solution: '350-900 ريال ÷ 2-3 سنوات. إعادة طلاء في NaCl = 3,000-8,000 ريال. Ceramic = 5-10%.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'غبار الخبر عادي.', truth: 'NaCl ≠ SiO₂. ملحي ≠ رملي. يتآكل ≠ يخدش فقط. فرق كيميائي = حلول مختلفة.' },
+        { myth: 'إسفنجة ناعمة.', truth: 'الإسفنجة + NaCl تحتها = خدوش أقوى من رمل. NaCl بلوري = حاد. Touchless = صفر تلامس.' },
+        { myth: 'ماء الخبر نظيف.', truth: 'ماء الخبر = NaCl + أملاح = Water Spots بعد كل غسلة. Deionized = الحل.' },
     ],
-
     relatedServices: [
-        { slug: 'al-khobar-furniture-moving', context: 'نقل عفش بالخبر', priority: 1 },
-        { slug: 'al-khobar-furniture-storage', context: 'تخزين عفش بالخبر', priority: 2 },
-        { slug: 'al-khobar-dyna', context: 'دينا نقل بالخبر', priority: 3 },
-        { slug: 'al-khobar-moving-out', context: 'نقل عفش خروج بالخبر', priority: 4 },
-        { slug: 'al-khobar-dabab', context: 'دباب نقل بالخبر', priority: 5 },
-        { slug: 'al-khobar-cleaning', context: 'تنظيف منازل بالخبر', priority: 6 },
-        { slug: 'al-khobar-tanks-cleaning', context: 'تنظيف خزانات بالخبر', priority: 7 },
-        { slug: 'al-khobar-sofa-cleaning', context: 'تنظيف كنب بالخبر', priority: 8 },
-        { slug: 'al-khobar-carpet-cleaning', context: 'تنظيف سجاد بالخبر', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف — بروتوكول ساحلي', priority: 1 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات — نفس NaCl', priority: 2 },
+        { slug: 'dabab', context: 'دباب — غسيل بعد النقل', priority: 3 },
+        { slug: 'dyna', context: 'دينا — غسيل بعد التحميل', priority: 4 },
+        { slug: 'furniture-moving', context: 'نقل — حماية NaCl', priority: 5 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف — NaCl يسد', priority: 6 },
+        { slug: 'marble-polishing', context: 'رخام — NaCl المرآب', priority: 7 },
     ],
 };

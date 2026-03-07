@@ -1,9 +1,3 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف منازل بالطائف — Override مخصص (E-E-A-T Grade)
-// صفحة: /taif/cleaning
-// قطاع YMYL: صحة (غبار + فطريات الشتاء + حبوب لقاح الورد)
-// خريطة 2.4: المسند → بلدي
-// ══════════════════════════════════════════════════════════════
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -45,11 +39,15 @@ export const override: PageOverride = {
         'تنظيف شاليه مُغلق 6 أشهر بدون قفازات وكمامة = استنشاق أبواغ فطرية مركزة ← حساسية حادة.',
     ],
     trustAnchors: [
-        { ...GOV.BALADI, role: 'ترخيص شركات التنظيف — اشتراطات صحية وجودة' },
-        { ...GOV.MOH, role: 'بروتوكولات التعقيم والوقاية من الأمراض الفطرية التنفسية' },
-    ],
-    expertReviewer: { name: EXPERTS.ALMISNID.name, title: EXPERTS.ALMISNID.title, credential: EXPERTS.ALMISNID.credential, profileUrl: EXPERTS.ALMISNID.profileUrl },
-    expertCitations: [{ expert: EXPERTS.ALMISNID.name, quote: 'الطائف على ارتفاع 1,800 متر: ضباب الشتاء يرفع الرطوبة الداخلية لمستويات تُنبت العفن خلال أسابيع. المنازل بدون عزل حراري وتهوية = مشكلة عفن مزمنة كل شتاء. المعالجة الوقائية قبل الشتاء = أذكى استثمار.', source: EXPERTS.ALMISNID.title, url: EXPERTS.ALMISNID.profileUrl }],
+
+        { ...{ ...GOV.BALADI, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
+ role: 'ترخيص شركات التنظيف — اشتراطات صحية وجودة' },
+        { ...{ ...GOV.MOH, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
+ role: 'بروتوكولات التعقيم والوقاية من الأمراض الفطرية التنفسية' },
+        ],
+    expertReviewer: EXPERTS.ALMISNID,
+    expertCitations: [{ expert: EXPERTS.ALMISNID.name, quote: 'الطائف على ارتفاع 1,800 متر: ضباب الشتاء يرفع الرطوبة الداخلية لمستويات تُنبت العفن خلال أسابيع. المنازل بدون عزل حراري وتهوية = مشكلة عفن مزمنة كل شتاء. المعالجة الوقائية قبل الشتاء = أذكى استثمار.',
+            source: EXPERTS.ALMISNID.title }],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
     verificationBadges: [{ badge: '✔️ شركة مرخصة من بلدي', authority: 'وزارة البلديات', icon: 'shield-check' }, { badge: '✔️ تعقيم مضاد للعفن', authority: 'Antifungal Treatment', icon: 'badge-check' }],
     equipment: [
@@ -60,15 +58,20 @@ export const override: PageOverride = {
     ],
     hiddenObjections: [
         { fear: 'مناخ الطائف معتدل — ما يحتاج تنظيف عميق.', solution: '"معتدل" = أخطر على المنازل. المدن الحارة (48°م) لا ينمو فيها عفن. الطائف (15°م + ضباب 85% رطوبة) = مناخ مثالي للعفن والفطريات. "المعتدل" يعني مشاكل مختلفة وليس مشاكل أقل.' },
+        { fear: 'الخدمة أغلى من المدن الأخرى.', solution: 'مناخ الطائف يفرض معالجات إضافية (مضاد تكثف + تجفيف + حماية أخشاب ورود). التكلفة الإضافية استثمار يحمي ممتلكاتك من تلف الرطوبة والحشرات الموسمية.' },
     ],
     counterNarratives: [
         { myth: 'العفن بس في المباني القديمة — بيتي جديد.', truth: 'العفن لا يفرّق بين قديم وجديد — يحتاج رطوبة 65%+ وسطح بارد فقط. بيت جديد بدون عزل حراري + شتاء الطائف = عفن في أول سنة. الجديد = أقل تهوية (نوافذ مُحكمة) = رطوبة أعلى داخلياً.' },
+        { myth: 'الطائف معتدلة — ما تحتاج معالجة خاصة.', truth: 'الطائف (1,700م) = برودة شتوية + أمطار 200mm + رطوبة 70% = تكاثف على الأسطح الباردة + عفن في الزوايا المعتمة. المناخ "المعتدل" يخفي تحديات حقيقية لا تظهر إلا في الشتاء.' },
+        { myth: 'المكيف يكفي لتجفيف المنزل.', truth: 'المكيف يُبرد/يسخن الهواء لكن لا يسحب الرطوبة العميقة من الأقمشة والجدران. في الطائف الشتوية (تكثف 70%) يحتاج البيت تهوية نهارية + مزيل رطوبة في الغرف المغلقة.' },
     ],
     relatedServices: [
-        { slug: 'taif-steam-cleaning', context: 'بخار عميق — الأفضل ضد عفن الطائف الشتوي.', priority: 1 },
-        { slug: 'taif-carpet-cleaning', context: 'السجاد يمتص رطوبة الضباب — غسيل عميق ضروري.', priority: 2 },
-        { slug: 'taif-sofa-cleaning', context: 'الكنب يتعفن في رطوبة الشتاء — تنظيف وقائي.', priority: 3 },
-        { slug: 'taif-air-conditioner-cleaning', context: 'المكيفات تنشر أبواغ العفن — تنظيف دوري.', priority: 4 },
-        { slug: 'taif-pest-control', context: 'الرطوبة تجذب الحشرات — مكافحة مع التنظيف.', priority: 5 },
+        { slug: 'steam-cleaning', context: 'بخار عميق — الأفضل ضد عفن الطائف الشتوي.', priority: 1 },
+        { slug: 'carpet-cleaning', context: 'السجاد يمتص رطوبة الضباب — غسيل عميق ضروري.', priority: 2 },
+        { slug: 'sofa-cleaning', context: 'الكنب يتعفن في رطوبة الشتاء — تنظيف وقائي.', priority: 3 },
+        { slug: 'air-conditioner-cleaning', context: 'المكيفات تنشر أبواغ العفن — تنظيف دوري.', priority: 4 },
+        { slug: 'pest-control', context: 'الرطوبة تجذب الحشرات — مكافحة مع التنظيف.', priority: 5 },
+        { slug: 'air-conditioner-cleaning', context: 'تنظيف مكيفات تعمل تبريد/تدفئة طوال السنة في مناخ الطائف المتقلب.', priority: 5 },
+        { slug: 'pest-control', context: 'مكافحة حشرات تتكاثر في رطوبة الطائف الشتوية والزراعة المحيطة.', priority: 6 },
     ],
 };

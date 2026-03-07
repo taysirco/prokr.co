@@ -79,7 +79,6 @@ export const override: PageOverride = {
             expert: 'أ.د. عبدالله المسند',
             quote: 'المحلات المفتوحة على الشارع في الرياض تتلقى ضعف الحمل الغباري عن المولات المغلقة. Air Curtain = أفضل استثمار لمحل تجاري في مناخ الرياض',
             source: 'أستاذ جغرافيا المناخ',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -106,14 +105,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'riyadh-sanitization', context: 'شهادة تعقيم إلزامية', priority: 1 },
-        { slug: 'riyadh-glass-facades-cleaning', context: 'واجهة المحل', priority: 2 },
-        { slug: 'riyadh-cleaning', context: 'تنظيف شامل', priority: 3 },
-        { slug: 'riyadh-floor-polishing', context: 'تلميع أرضيات المحل', priority: 4 },
-        { slug: 'riyadh-air-conditioner-cleaning', context: 'مكيف المحل', priority: 5 },
-        { slug: 'riyadh-pest-control', context: 'رش وقائي', priority: 6 },
-        { slug: 'riyadh-steam-cleaning', context: 'بخار أرضيات وكراسي', priority: 7 },
-        { slug: 'riyadh-office-cleaning', context: 'مكتب المحل الإداري', priority: 8 },
-        { slug: 'riyadh-marble-polishing', context: 'جلي رخام المحل', priority: 9 },
+        { slug: 'sanitization', context: 'شهادة تعقيم إلزامية', priority: 1 },
+        { slug: 'glass-facades-cleaning', context: 'واجهة المحل', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف شامل', priority: 3 },
+        { slug: 'floor-polishing', context: 'تلميع أرضيات المحل', priority: 4 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف المحل', priority: 5 },
+        { slug: 'pest-control', context: 'رش وقائي', priority: 6 },
+        { slug: 'steam-cleaning', context: 'بخار أرضيات وكراسي', priority: 7 },
+        { slug: 'office-cleaning', context: 'مكتب المحل الإداري', priority: 8 },
+        { slug: 'marble-polishing', context: 'جلي رخام المحل', priority: 9 },
     ],
 };

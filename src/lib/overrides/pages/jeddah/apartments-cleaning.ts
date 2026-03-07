@@ -6,6 +6,7 @@
 // ══════════════════════════════════════════════════════════════
 
 import type { PageOverride } from '../../types';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -82,19 +83,13 @@ export const override: PageOverride = {
         { entity: 'الهيئة السعودية للمواصفات والمقاييس', acronym: 'SASO', url: 'https://www.saso.gov.sa', role: 'اعتماد مواد التنظيف الآمنة' },
     ],
 
-    expertReviewer: {
-        name: 'أ.د. عبدالله المسند',
-        title: 'أستاذ جغرافيا المناخ',
-        credential: 'أستاذ جغرافيا المناخ — جامعة القصيم',
-        profileUrl: 'https://x.com/ALMISNID',
-    },
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
             expert: 'أ.د. عبدالله المسند',
             quote: 'المدن الساحلية الرطبة تحتاج تنظيف احترافي ضعف المدن الجافة — الملح والرطوبة يحولان أي سطح متسخ لبؤرة صحية خلال 48 ساعة',
             source: 'تحليل مناخي — جامعة القصيم',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -104,14 +99,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'jeddah-cleaning', context: 'تنظيف شامل — منزل كامل', priority: 1 },
-        { slug: 'jeddah-steam-cleaning', context: 'بخار للشقة كاملة', priority: 2 },
-        { slug: 'jeddah-mattress-cleaning', context: 'مراتب — عث الغبار', priority: 3 },
-        { slug: 'jeddah-sofa-cleaning', context: 'كنب الشقة', priority: 4 },
-        { slug: 'jeddah-carpet-cleaning', context: 'سجاد وموكيت', priority: 5 },
-        { slug: 'jeddah-kitchen-cleaning', context: 'مطبخ — دهون ورطوبة', priority: 6 },
-        { slug: 'jeddah-air-conditioner-cleaning', context: 'مكيفات — عفن الدكت', priority: 7 },
-        { slug: 'jeddah-sanitization', context: 'تعقيم بعد التنظيف', priority: 8 },
-        { slug: 'jeddah-moving-out', context: 'تنظيف إخلاء — تسليم الشقة', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف شامل — منزل كامل', priority: 1 },
+        { slug: 'steam-cleaning', context: 'بخار للشقة كاملة', priority: 2 },
+        { slug: 'mattress-cleaning', context: 'مراتب — عث الغبار', priority: 3 },
+        { slug: 'sofa-cleaning', context: 'كنب الشقة', priority: 4 },
+        { slug: 'carpet-cleaning', context: 'سجاد وموكيت', priority: 5 },
+        { slug: 'kitchen-cleaning', context: 'مطبخ — دهون ورطوبة', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيفات — عفن الدكت', priority: 7 },
+        { slug: 'sanitization', context: 'تعقيم بعد التنظيف', priority: 8 },
+        { slug: 'moving-out', context: 'تنظيف إخلاء — تسليم الشقة', priority: 9 },
     ],
 };

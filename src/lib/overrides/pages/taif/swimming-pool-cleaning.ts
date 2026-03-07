@@ -1,4 +1,3 @@
-// تنظيف مسابح بالطائف — Override (E-E-A-T) | خريطة 2.4: المحيميد → بلدي + مائي
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -35,11 +34,15 @@ export const override: PageOverride = {
         'مسبح مُغلق 5 أشهر بدون Winterization = طحالب متحجرة + ضرر في المضخة والفلتر (إصلاح 3,000-8,000 ريال).',
     ],
     trustAnchors: [
-        { ...GOV.BALADI, role: 'اشتراطات سلامة المسابح الخاصة والتجارية' },
-        { ...GOV.MAWAI, role: 'ترشيد استخدام المياه في المسابح' },
-    ],
-    expertReviewer: { name: EXPERTS.ALMOHAIMED.name, title: EXPERTS.ALMOHAIMED.title, credential: EXPERTS.ALMOHAIMED.credential, profileUrl: EXPERTS.ALMOHAIMED.profileUrl },
-    expertCitations: [{ expert: EXPERTS.ALMOHAIMED.name, quote: 'مسابح الطائف تحتاج Winterization — وهو مفهوم غير مألوف في المدن الحارة. المسبح المُغلق بدون معالجة = طحالب متحجرة + صدأ مضخة + تلف فلتر. 300 ريال Winterization تحمي من 5,000 ريال إصلاحات.', source: EXPERTS.ALMOHAIMED.title, url: EXPERTS.ALMOHAIMED.profileUrl }],
+
+        { ...{ ...GOV.BALADI, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
+ role: 'اشتراطات سلامة المسابح الخاصة والتجارية' },
+        { ...{ ...GOV.MAWAI, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
+ role: 'ترشيد استخدام المياه في المسابح' },
+        ],
+    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertCitations: [{ expert: EXPERTS.ALMOHAIMED.name, quote: 'مسابح الطائف تحتاج Winterization — وهو مفهوم غير مألوف في المدن الحارة. المسبح المُغلق بدون معالجة = طحالب متحجرة + صدأ مضخة + تلف فلتر. 300 ريال Winterization تحمي من 5,000 ريال إصلاحات.',
+            source: EXPERTS.ALMOHAIMED.title }],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
     verificationBadges: [{ badge: '✔️ معالجة كيميائية متوازنة', authority: 'pH + Cl + Algaecide', icon: 'shield-check' }, { badge: '✔️ Winterization شتوي', authority: 'حماية الإغلاق', icon: 'badge-check' }],
     equipment: [
@@ -47,10 +50,16 @@ export const override: PageOverride = {
         { name: 'مكنسة مسبح آلية (Robotic Pool Cleaner)', use: 'تكنس الأرضية والجدران — تزيل الأوراق المتحللة والترسبات.' },
         { name: 'غطاء مسبح شتوي (Winter Pool Cover)', use: 'يمنع الأوساخ والأوراق ويحافظ على الكيماويات أثناء الإغلاق الموسمي.' },
     ],
-    hiddenObjections: [{ fear: 'المسبح للصيف بس — 5 أشهر فقط. ما يستاهل عقد سنوي.', solution: 'بدون Winterization: فتح المسبح صيفاً يكلف 2,000-5,000 ريال (تنظيف متحجر + إصلاح مضخة). مع Winterization (300 ريال) + فتح موسمي (500 ريال) = 800 ريال/سنة. التوفير: 1,200-4,200 ريال سنوياً.' }],
+    hiddenObjections: [
+        { fear: 'المسبح للصيف بس — 5 أشهر فقط. ما يستاهل عقد سنوي.', solution: 'بدون Winterization: فتح المسبح صيفاً يكلف 2,000-5,000 ريال (تنظيف متحجر + إصلاح مضخة). مع Winterization (300 ريال) + فتح موسمي (500 ريال) = 800 ريال/سنة. التوفير: 1,200-4,200 ريال سنوياً.' },
+        { fear: 'الخدمة أغلى من المدن الأخرى.', solution: 'مناخ الطائف يفرض معالجات إضافية (مضاد تكثف + تجفيف + حماية أخشاب ورود). التكلفة الإضافية استثمار يحمي ممتلكاتك من تلف الرطوبة والحشرات الموسمية.' },
+    ],
     counterNarratives: [{ myth: 'في الشتاء المسبح ما يتوسخ — البرد يقتل الطحالب.', truth: 'الطحالب تتباطأ لكنها لا تموت في 5-15°م. + الأوراق تتراكم وتتحلل ← تُغذي نمو طحالب بطيء. + المضخة الراكدة تصدأ. "البرد يحمي" = خرافة مكلفة.' }],
     relatedServices: [
-        { slug: 'taif-cleaning', context: 'تنظيف منزل/استراحة مع المسبح — باقة صيفية.', priority: 1 },
-        { slug: 'taif-pest-control', context: 'مياه راكدة تجذب بعوض — رش مع التنظيف.', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف منزل/استراحة مع المسبح — باقة صيفية.', priority: 1 },
+        { slug: 'pest-control', context: 'مياه راكدة تجذب بعوض — رش مع التنظيف.', priority: 2 },
+        { slug: 'air-conditioner-cleaning', context: 'تنظيف مكيفات تعمل تبريد/تدفئة طوال السنة في مناخ الطائف المتقلب.', priority: 5 },
+        { slug: 'pest-control', context: 'مكافحة حشرات تتكاثر في رطوبة الطائف الشتوية والزراعة المحيطة.', priority: 6 },
+        { slug: 'steam-cleaning', context: 'تعقيم بالبخار لقتل العث والفطريات في مفروشات الطائف الرطبة.', priority: 7 },
     ],
 };

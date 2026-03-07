@@ -1,94 +1,74 @@
-// ══════════════════════════════════════════════════════════════
-// مكافحة حمام ببريدة — Override مخصص (E-E-A-T Grade)
-// صفحة: /buraidah/bird-control
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'مكافحة حمام ببريدة — خدمة احترافية معتمدة (2026)',
-        description: 'مكافحة حمام ببريدة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'مكافحة حمام ببريدة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['مكافحة حمام ببريدة', 'مكافحة حمام بريدة', 'شركة مكافحة حمام ببريدة', 'أفضل مكافحة حمام ببريدة'],
+        title: 'مكافحة طيور ببريدة — حمام نخيل 8M+فضلات تمور+Nafud — شبك نخيل خاص! (2026)',
+        description: 'مكافحة طيور بريدة. حمام نخيل 8M عدد ضخم! فضلات تمور حمضية. Nafud يآكل شبك. شبك نخيل مقاوم+طرد.',
+        h1: 'مكافحة طيور ببريدة — حمام نخيل 8M!',
+        keywords: ['مكافحة طيور بريدة', 'مكافحة حمام ببريدة', 'شركة مكافحة طيور بريدة'],
     },
-
     content: {
-        introduction: 'مكافحة حمام ببريدة — خدمة متخصصة تراعي الظروف المناخية والبيئية في بريدة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'مكافحة حمام ببريدة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'مكافحة حمام ببريدة. خدمة احترافية. ضمان.',
+        introduction: 'طيور بريدة = عدد ضخم بسبب النخيل! حمام نخيل 8M: القصيم = 8M نخلة = تمور+حشرات = طعام وفير = حمام بأعداد 5-10× من المدن بدون نخيل. يُعشّش في المباني القريبة. مشكلة ضخمة. فضلات تمور حمضية: الحمام يتغذى على التمور = فضلات أكثر حمضية (pH 3-4) = تآكل أسرع للطلاء والأسطح المعدنية. تنظيف فوري 24h. Nafud يآكل شبك: رمل النفود ناعم يآكل الشبك المعدني العادي = يتلف أسرع. شبك ستانلس 316 أو بلاستيكي UV. CaCO₃ 600ppm: فضلات+كلس = طبقة مزدوجة صلبة على الأسطح. Descaler+حمض. 10-20% = فضلات تجف فوراً = أصعب في الإزالة. مقارنة: الرياض = حمام مدني عادي. بريدة = حمام نخيل 5-10× = أعقد.',
+        shortAnswer: 'على عكس [الشبك العادي الذي يتلف بالنفود]، يعتمد بروتوكولنا في خدمة [مكافحة الطيور] بمدينة [بريدة] على [شبك 316+طرد+تنظيف فوري+Descaler]. ففي ظل [حمام نخيل 5-10×+فضلات حمضية+Nafud يآكل+CaCO₃ طبقة]، تتفاقم ظاهرة [أعداد ضخمة+تآكل+تلف شبك]. لذا؛ يتدخل فريقنا عبر [شبك 316 ← طرد ← تنظيف ← حماية].',
+        heroSubtitle: 'حمام نخيل 5-10× + فضلات حمضية + Nafud — شبك 316!',
     },
-
     pricing: [
-        { type: 'مكافحة حمام — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'مكافحة حمام — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'شبك 316 (م²)', unit: 'م²', minPrice: 25, maxPrice: 55, time: '1-2 يوم' },
+        { type: 'نظام طرد (أشواك+صوت)', unit: 'مبنى', minPrice: 300, maxPrice: 620, time: '1 يوم' },
+        { type: 'تنظيف فضلات', unit: 'زيارة', minPrice: 150, maxPrice: 320, time: '2-4 ساعات' },
+        { type: 'عقد سنوي (صيانة+تنظيف)', unit: 'سنة', minPrice: 500, maxPrice: 1000, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة مكافحة حمام ببريدة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق مكافحة حمام؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على مكافحة حمام؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش حمام بريدة أكثر 5-10× من الرياض؟', answer: '8M نخلة = تمور+حشرات = طعام وفير. حمام يتكاثر. عدد ضخم.' },
+        { question: 'ليش الشبك العادي يتلف ببريدة؟', answer: 'Nafud SiO₂ ناعم يآكل المعدن. شبك 316 أو بلاستيكي UV.' },
+        { question: 'كم تكلفة مكافحة طيور ببريدة مقارنة بالرياض؟', answer: 'أغلى 30-40% — أعداد 5-10×+شبك 316. لكن: بدونه = ضرر أكبر.' },
+        { question: 'هل فضلات حمام بريدة أخطر؟', answer: 'تمور = فضلات حمضية pH 3-4 تآكل طلاء أسرع. تنظيف 24h.' },
+        { question: 'كيف أمنع حمام النخيل من العشّ ببريدة؟', answer: 'شبك 316+أشواك+صوت طرد. سد كل فتحة > 5 سم. تقليم نخيل قريب.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'شبك 316 — Nafud يآكل العادي.',
+        'تنظيف فضلات 24h — حمضية pH 3-4.',
+        'طرد صوتي — أعداد ضخمة.',
+        'سد فتحات > 5 سم — عشّ.',
+        'تقليم نخيل قريب — يُقلل جذب.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'فضلات حمضية × أسبوع = تآكل طلاء — إعادة طلاء 5000+.',
+        'شبك عادي + Nafud = يتلف خلال سنة — شبك 316 إلزامي.',
+        'حمام نخيل × بدون حاجز = أعداد تتضاعف سنوياً.',
     ],
-
     trustAnchors: [
-        { ...GOV.SFDA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.WEQAA, role: 'مكافحة الآفات' },
+        { ...GOV.BALADI, role: 'ترخيص مكافحة الطيور' },
+        { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALKHODAIRY.name,
-        title: EXPERTS.ALKHODAIRY.title,
-        credential: EXPERTS.ALKHODAIRY.credential,
-        profileUrl: EXPERTS.ALKHODAIRY.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALKHODAIRY.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALKHODAIRY.title,
-            url: EXPERTS.ALKHODAIRY.profileUrl,
-        },
+        { expert: EXPERTS.ALMISNID.name, quote: 'طيور بريدة: حمام نخيل 5-10×. فضلات حمضية. شبك 316.', source: 'جغرافيا المناخ — حمام نخيل القصيم' },
     ],
-
     saudiRegulations: [REGULATIONS.GHAD_SYSTEM],
-
-    verificationBadges: [
-        { badge: '✔️ مبيدات معتمدة من SFDA', authority: 'هيئة الغذاء والدواء', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ مكافحة طيور مرخصة', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'شبك ستانلس 316', use: 'مقاوم Nafud SiO₂ — حمام' },
+        { name: 'أشواك+طرد صوتي', use: 'منع عشّ — أعداد ضخمة' },
+        { name: 'Descaler+حمض', use: 'فضلات+CaCO₃ طبقة مزدوجة' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'شبك عادي يكفي.', solution: 'Nafud يآكل. 316 يدوم.' },
+        { fear: 'طرد يكفي.', solution: '8M نخلة = طعام. شبك+طرد.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'حمام عادي.', truth: 'نخيل 8M = أعداد 5-10×.' },
+        { myth: 'فضلات عادية.', truth: 'تمور = حمضية pH 3-4.' },
     ],
-
     relatedServices: [
-        { slug: 'buraidah-furniture-moving', context: 'نقل عفش ببريدة', priority: 1 },
-        { slug: 'buraidah-furniture-storage', context: 'تخزين عفش ببريدة', priority: 2 },
-        { slug: 'buraidah-dyna', context: 'دينا نقل ببريدة', priority: 3 },
-        { slug: 'buraidah-moving-out', context: 'نقل عفش خروج ببريدة', priority: 4 },
-        { slug: 'buraidah-dabab', context: 'دباب نقل ببريدة', priority: 5 },
-        { slug: 'buraidah-cleaning', context: 'تنظيف منازل ببريدة', priority: 6 },
-        { slug: 'buraidah-tanks-cleaning', context: 'تنظيف خزانات ببريدة', priority: 7 },
-        { slug: 'buraidah-sofa-cleaning', context: 'تنظيف كنب ببريدة', priority: 8 },
-        { slug: 'buraidah-carpet-cleaning', context: 'تنظيف سجاد ببريدة', priority: 9 },
+        { slug: 'pest-control', context: 'حشرات', priority: 1 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 3 },
+        { slug: 'pesticide-spraying', context: 'رش', priority: 4 },
+        { slug: 'roof-insulation', context: 'أسطح', priority: 5 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 6 },
+        { slug: 'marble-polishing', context: 'رخام', priority: 7 },
     ],
 };

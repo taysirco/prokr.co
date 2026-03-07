@@ -1,8 +1,3 @@
-// ══════════════════════════════════════════════════════════════
-// مكافحة حمام بنجران — Override مخصص (E-E-A-T Grade)
-// صفحة: /najran/bird-control
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
 
@@ -46,12 +41,7 @@ export const override: PageOverride = {
         { ...GOV.SFDA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALKHODAIRY.name,
-        title: EXPERTS.ALKHODAIRY.title,
-        credential: EXPERTS.ALKHODAIRY.credential,
-        profileUrl: EXPERTS.ALKHODAIRY.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALKHODAIRY,
 
     expertCitations: [
         {
@@ -74,21 +64,24 @@ export const override: PageOverride = {
 
     hiddenObjections: [
         { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'السعر أعلى من المتوقع.', solution: 'السعر يشمل معدات صناعية متخصصة + مواد احترافية + عمالة مدربة + ضمان مكتوب. المقارنة العادلة ليست مع عامل عشوائي بل مع تكلفة إصلاح الأضرار الناتجة عن العمل غير المتخصص.' },
     ],
 
     counterNarratives: [
         { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'أي شركة تنظيف/صيانة نتيجتها واحدة.', truth: 'الفرق بين شركة مرخصة ومُعتمدة وأخرى عشوائية = الفرق بين معالجة جذرية وإخفاء مؤقت. المعدات المتخصصة والبروتوكولات العلمية تحل المشكلة من جذرها — التنظيف العشوائي يُعيدها أسوأ خلال أسابيع.' },
+        { myth: 'أوفر وأسوي الشغل بنفسي.', truth: 'التوفير الظاهري يتحول لتكلفة مضاعفة: أدوات منزلية لا تصل للعمق المطلوب + مواد غير مناسبة قد تُتلف الأسطح + وقت وجهد بلا ضمان نتيجة. الاحتراف = ضمان + توفير حقيقي على المدى الطويل.' },
     ],
 
     relatedServices: [
-        { slug: 'najran-furniture-moving', context: 'نقل عفش بنجران', priority: 1 },
-        { slug: 'najran-furniture-storage', context: 'تخزين عفش بنجران', priority: 2 },
-        { slug: 'najran-dyna', context: 'دينا نقل بنجران', priority: 3 },
-        { slug: 'najran-moving-out', context: 'نقل عفش خروج بنجران', priority: 4 },
-        { slug: 'najran-dabab', context: 'دباب نقل بنجران', priority: 5 },
-        { slug: 'najran-cleaning', context: 'تنظيف منازل بنجران', priority: 6 },
-        { slug: 'najran-tanks-cleaning', context: 'تنظيف خزانات بنجران', priority: 7 },
-        { slug: 'najran-sofa-cleaning', context: 'تنظيف كنب بنجران', priority: 8 },
-        { slug: 'najran-carpet-cleaning', context: 'تنظيف سجاد بنجران', priority: 9 },
+        { slug: 'furniture-moving', context: 'نقل عفش بنجران', priority: 1 },
+        { slug: 'furniture-storage', context: 'تخزين عفش بنجران', priority: 2 },
+        { slug: 'dyna', context: 'دينا نقل بنجران', priority: 3 },
+        { slug: 'moving-out', context: 'نقل عفش خروج بنجران', priority: 4 },
+        { slug: 'dabab', context: 'دباب نقل بنجران', priority: 5 },
+        { slug: 'cleaning', context: 'تنظيف منازل بنجران', priority: 6 },
+        { slug: 'tanks-cleaning', context: 'تنظيف خزانات بنجران', priority: 7 },
+        { slug: 'sofa-cleaning', context: 'تنظيف كنب بنجران', priority: 8 },
+        { slug: 'carpet-cleaning', context: 'تنظيف سجاد بنجران', priority: 9 },
     ],
 };

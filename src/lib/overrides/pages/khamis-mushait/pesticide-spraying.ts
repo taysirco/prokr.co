@@ -1,94 +1,74 @@
-// ══════════════════════════════════════════════════════════════
-// رش مبيدات بخميس مشيط — Override مخصص (E-E-A-T Grade)
-// صفحة: /khamis-mushait/pesticide-spraying
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'رش مبيدات بخميس مشيط — خدمة احترافية معتمدة (2026)',
-        description: 'رش مبيدات بخميس مشيط. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'رش مبيدات بخميس مشيط — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['رش مبيدات بخميس مشيط', 'رش مبيدات خميس مشيط', 'شركة رش مبيدات بخميس مشيط', 'أفضل رش مبيدات بخميس مشيط'],
+        title: 'رش مبيدات بخميس مشيط — 60-85% المبيد لا يجف! Dehumidifier بعد الرش — SFDA غد (2026)',
+        description: 'رش مبيدات خميس مشيط. 60-85% المبيد لا يجف! Dehumidifier بعد الرش. SFDA نظام غد. IPM جبلي. تكاثر 2×.',
+        h1: 'رش مبيدات بخميس مشيط — الرطوبة تُبطئ الجفاف',
+        keywords: ['رش مبيدات خميس مشيط', 'رش مبيدات بخميس مشيط', 'شركة رش مبيدات خميس مشيط'],
     },
-
     content: {
-        introduction: 'رش مبيدات بخميس مشيط — خدمة متخصصة تراعي الظروف المناخية والبيئية في خميس مشيط. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'رش مبيدات بخميس مشيط: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'رش مبيدات بخميس مشيط. خدمة احترافية. ضمان.',
+        introduction: 'رش المبيدات في خميس مشيط يحتاج بروتوكولاً مختلفاً عن الصحراء! 60-85% = المبيد لا يجف بسرعة: في عنيزة (15-25%) المبيد يجف خلال 30-60 دقيقة. في خميس: 2-4 ساعات! هذا يعني: الحشرات تتحرك فوق مبيد رطب = فعالية أقل. Dehumidifier بعد الرش يُسرّع الجفاف = فعالية أعلى. IPM جبلي: التشخيص قبل الرش — ليس كل حشرة نفسها. بعوض (تصريف)+صراصير (Gel)+نمل (طُعم) = حلول مختلفة. تكاثر 2× أسرع: دورات حياة أقصر = يحتاج رش أكثر تكراراً. ربع سنوي بدل نصف سنوي. مبيد SFDA فقط: نظام غد = تتبع كل عبوة. مبيدات غير مسجلة = غرامة 10000+ ريال + خطر صحي.',
+        shortAnswer: 'على عكس [الرش بدون Dehumidifier حيث المبيد لا يجف]، يعتمد بروتوكولنا في خدمة [رش المبيدات] بمدينة [خميس مشيط] على [IPM+مبيد SFDA+Dehumidifier+تصريف]. ففي ظل [60-85%+تكاثر 2×+مبيد بطيء الجفاف+بعوض أمطار]، تتفاقم ظاهرة [فعالية أقل+تكاثر سريع+مقاومة]. لذا؛ يتدخل فريقنا عبر [تشخيص ← رش ← تجفيف ← وقاية].',
+        heroSubtitle: '60-85% المبيد لا يجف! Dehumidifier+IPM — SFDA غد!',
     },
-
     pricing: [
-        { type: 'رش مبيدات — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'رش مبيدات — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'شقة', unit: 'شقة', minPrice: 80, maxPrice: 180, time: '1-2 ساعة + تجفيف 2-4h' },
+        { type: 'فيلا', unit: 'فيلا', minPrice: 160, maxPrice: 350, time: '2-3h + تجفيف' },
+        { type: 'حديقة + خارجي', unit: 'خدمة', minPrice: 120, maxPrice: 260, time: '1-2 ساعة' },
+        { type: 'ربع سنوي (4 رشات)', unit: 'سنة', minPrice: 250, maxPrice: 540, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة رش مبيدات بخميس مشيط؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق رش مبيدات؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على رش مبيدات؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش المبيد أقل فعالية بخميس من عنيزة؟', answer: '60-85% = المبيد لا يجف (2-4h مقابل 30-60 دقيقة). الحشرات تتحرك فوق مبيد رطب = فعالية أقل.' },
+        { question: 'كيف يُحسّن Dehumidifier فعالية المبيد بخميس؟', answer: 'يُسرّع جفاف المبيد = طبقة جافة فعّالة أسرع. بدونه = 2-4 ساعات رطوبة.' },
+        { question: 'كم مرة يحتاج رش بخميس مشيط سنوياً؟', answer: 'ربع سنوي (4 مرات) — تكاثر 2× أسرع. عنيزة: نصف سنوي يكفي.' },
+        { question: 'هل مبيد غير SFDA خطير؟', answer: 'خطر صحي + غرامة 10000+ ريال. نظام غد يتتبع كل عبوة. SFDA فقط.' },
+        { question: 'كم تكلفة رش مبيدات بخميس مقارنة بعنيزة؟', answer: 'أغلى 20% — Dehumidifier+ربع سنوي+IPM. 80-350 مقابل 65-290.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Dehumidifier بعد الرش — يُسرّع جفاف المبيد.',
+        'IPM — تشخيص قبل رش عشوائي.',
+        'SFDA نظام غد — مبيدات مسجلة فقط.',
+        'ربع سنوي — تكاثر 2× بالرطوبة.',
+        'تصريف بِرك — بعوض أمطار.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'مبيد بدون Dehumidifier + 60-85% = فعالية 50% فقط — هدر مال.',
+        'مبيد غير SFDA = خطر صحي + غرامة 10000+ ريال.',
+        'نصف سنوي بخميس = تكاثر بين الرشات — ربع سنوي إلزامي.',
     ],
-
     trustAnchors: [
-        { ...GOV.SFDA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.SFDA, role: 'تسجيل المبيدات — نظام غد' },
+        { ...GOV.BALADI, role: 'ترخيص شركات المكافحة' },
+        { entity: AMANA.ASIR.entity, url: AMANA.ASIR.url, role: 'اشتراطات أمانة عسير' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALKHODAIRY.name,
-        title: EXPERTS.ALKHODAIRY.title,
-        credential: EXPERTS.ALKHODAIRY.credential,
-        profileUrl: EXPERTS.ALKHODAIRY.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALKHODAIRY,
     expertCitations: [
-        {
-            expert: EXPERTS.ALKHODAIRY.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALKHODAIRY.title,
-            url: EXPERTS.ALKHODAIRY.profileUrl,
-        },
+        { expert: EXPERTS.ALKHODAIRY.name, quote: 'رش خميس: الرطوبة تُبطئ جفاف المبيد. Dehumidifier يُحسّن الفعالية. IPM أولاً.', source: 'أبحاث سموم — مبيدات جبلية' },
     ],
-
     saudiRegulations: [REGULATIONS.GHAD_SYSTEM],
-
-    verificationBadges: [
-        { badge: '✔️ مبيدات معتمدة من SFDA', authority: 'هيئة الغذاء والدواء', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ رش مرخص SFDA', authority: 'بلدي + SFDA', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'مبيد SFDA مسجل', use: 'نظام غد — مسجل وآمن' },
+        { name: 'Dehumidifier', use: 'يُسرّع جفاف المبيد — 60-85%' },
+        { name: 'جهاز ULV', use: 'رش ضبابي دقيق — تغطية أفضل' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'رش عادي يكفي.', solution: 'بدون Dehumidifier = فعالية 50%. IPM أولاً.' },
+        { fear: 'مثل عنيزة.', solution: 'المبيد لا يجف + تكاثر 2× = بروتوكول مختلف.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'نصف سنوي يكفي بخميس.', truth: 'تكاثر 2× = ربع سنوي إلزامي.' },
+        { myth: 'أي مبيد يعمل.', truth: 'SFDA نظام غد فقط. غيره = غرامة+خطر.' },
     ],
-
     relatedServices: [
-        { slug: 'khamis-mushait-furniture-moving', context: 'نقل عفش بخميس مشيط', priority: 1 },
-        { slug: 'khamis-mushait-furniture-storage', context: 'تخزين عفش بخميس مشيط', priority: 2 },
-        { slug: 'khamis-mushait-dyna', context: 'دينا نقل بخميس مشيط', priority: 3 },
-        { slug: 'khamis-mushait-moving-out', context: 'نقل عفش خروج بخميس مشيط', priority: 4 },
-        { slug: 'khamis-mushait-dabab', context: 'دباب نقل بخميس مشيط', priority: 5 },
-        { slug: 'khamis-mushait-cleaning', context: 'تنظيف منازل بخميس مشيط', priority: 6 },
-        { slug: 'khamis-mushait-tanks-cleaning', context: 'تنظيف خزانات بخميس مشيط', priority: 7 },
-        { slug: 'khamis-mushait-sofa-cleaning', context: 'تنظيف كنب بخميس مشيط', priority: 8 },
-        { slug: 'khamis-mushait-carpet-cleaning', context: 'تنظيف سجاد بخميس مشيط', priority: 9 },
+        { slug: 'pest-control', context: 'مكافحة حشرات', priority: 1 },
+        { slug: 'bedbugs-control', context: 'بق فراش', priority: 2 },
+        { slug: 'termite-control', context: 'نمل أبيض', priority: 3 },
+        { slug: 'bird-control', context: 'طيور', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 5 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 6 },
+        { slug: 'sewage-suction', context: 'صرف صحي', priority: 7 },
     ],
 };

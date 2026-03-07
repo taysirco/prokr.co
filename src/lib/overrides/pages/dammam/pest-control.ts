@@ -1,11 +1,3 @@
-// ══════════════════════════════════════════════════════════════
-// مكافحة حشرات بالدمام — Override مخصص (E-E-A-T Grade)
-// صفحة: /dammam/pest-control
-// قطاع YMYL: صحة (أمراض منقولة بالحشرات) + سلامة (لدغات/سموم)
-// خريطة 2.4: الخضيري (سموم/صحة) + المسند (مواسم) → SFDA + وقاء + بلدي
-// NLP: ميناء الدمام = بوابة حشرات، رطوبة خليجية، أرامكو، الراكة
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
 
@@ -82,25 +74,18 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات مكافحة الحشرات — الشهادة الصحية' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALKHODAIRY.name,
-        title: EXPERTS.ALKHODAIRY.title,
-        credential: EXPERTS.ALKHODAIRY.credential,
-        profileUrl: EXPERTS.ALKHODAIRY.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALKHODAIRY,
 
     expertCitations: [
         {
             expert: 'أ.د. فهد الخضيري',
             quote: 'المبيدات غير المسجلة بنظام غد SFDA = خطر صحي على الأسرة أكبر من الحشرات نفسها. مبيدات الأرصفة تحتوي مواد حُظرت دولياً تسبب تلف عصبي تراكمي — خاصة للأطفال. اطلب شهادة تسجيل المبيد قبل الرش — حقك القانوني',
             source: 'عالم أبحاث طبي — متخصص في السموم والصحة العامة',
-            url: 'https://x.com/DrAlkhodairy',
         },
         {
             expert: 'أ.د. عبدالله المسند',
             quote: 'الدمام = بوابة بحرية + رطوبة استوائية + حرارة عالية = ثلاثي مثالي لتكاثر الحشرات 12 شهراً بلا انقطاع. مواسم الذروة: مارس-مايو + سبتمبر-نوفمبر',
             source: 'أستاذ جغرافيا المناخ — جامعة القصيم',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -131,14 +116,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'dammam-cockroach-control', context: 'صراصير — الحشرة #1 بالدمام', priority: 1 },
-        { slug: 'dammam-bedbugs-control', context: 'بق الفراش — يحتاج معالجة حرارية متخصصة', priority: 2 },
-        { slug: 'dammam-ants-control', context: 'نمل عادي وناري — لدغات وتلف', priority: 3 },
-        { slug: 'dammam-termite-control', context: 'نمل أبيض — يأكل هيكل البيت', priority: 4 },
-        { slug: 'dammam-insects-spraying', context: 'رش وقائي شامل — كل أنواع الحشرات', priority: 5 },
-        { slug: 'dammam-pesticide-spraying', context: 'رش مبيدات احترافي — مبيدات SFDA', priority: 6 },
-        { slug: 'dammam-rodent-control', context: 'فئران — غالباً مع حشرات', priority: 7 },
-        { slug: 'dammam-snakes-control', context: 'ثعابين — تتبع فرائسها (قوارض)', priority: 8 },
-        { slug: 'dammam-bird-control', context: 'حمام — يجذب حشرات بفضلاته', priority: 9 },
+        { slug: 'cockroach-control', context: 'صراصير — الحشرة #1 بالدمام', priority: 1 },
+        { slug: 'bedbugs-control', context: 'بق الفراش — يحتاج معالجة حرارية متخصصة', priority: 2 },
+        { slug: 'ants-control', context: 'نمل عادي وناري — لدغات وتلف', priority: 3 },
+        { slug: 'termite-control', context: 'نمل أبيض — يأكل هيكل البيت', priority: 4 },
+        { slug: 'insects-spraying', context: 'رش وقائي شامل — كل أنواع الحشرات', priority: 5 },
+        { slug: 'pesticide-spraying', context: 'رش مبيدات احترافي — مبيدات SFDA', priority: 6 },
+        { slug: 'rodent-control', context: 'فئران — غالباً مع حشرات', priority: 7 },
+        { slug: 'snakes-control', context: 'ثعابين — تتبع فرائسها (قوارض)', priority: 8 },
+        { slug: 'bird-control', context: 'حمام — يجذب حشرات بفضلاته', priority: 9 },
     ],
 };

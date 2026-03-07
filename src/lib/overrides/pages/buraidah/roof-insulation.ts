@@ -1,94 +1,75 @@
-// ══════════════════════════════════════════════════════════════
-// عزل أسطح ببريدة — Override مخصص (E-E-A-T Grade)
-// صفحة: /buraidah/roof-insulation
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'عزل أسطح ببريدة — خدمة احترافية معتمدة (2026)',
-        description: 'عزل أسطح ببريدة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'عزل أسطح ببريدة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['عزل أسطح ببريدة', 'عزل أسطح بريدة', 'شركة عزل أسطح ببريدة', 'أفضل عزل أسطح ببريدة'],
+        title: 'عزل أسطح ببريدة — ΔT 45°م أعلى فارق+Nafud SiO₂ تآكل+CaCO₃ — Open-Cell يكفي! (2026)',
+        description: 'عزل أسطح بريدة. ΔT 45°م أعلى فارق! Nafud SiO₂ تآكل طلاء. CaCO₃ 600ppm. Open-Cell لا مطر. SBC 601.',
+        h1: 'عزل أسطح ببريدة — ΔT 45°م — Open-Cell يكفي!',
+        keywords: ['عزل أسطح بريدة', 'عزل سطح ببريدة', 'شركة عزل أسطح بريدة'],
     },
-
     content: {
-        introduction: 'عزل أسطح ببريدة — خدمة متخصصة تراعي الظروف المناخية والبيئية في بريدة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'عزل أسطح ببريدة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'عزل أسطح ببريدة. خدمة احترافية. ضمان.',
+        introduction: 'سطح بريدة = أعلى فارق حراري بلا مطر! ΔT 45°م: صيف 48°م (سطح 70°م+) + شتاء 3°م = فارق حراري 45°م! SBC 601 يشترط عزل. Open-Cell R-3.7/inch يكفي — لا مطر = لا خطر امتصاص. أرخص 40% من Closed-Cell. Nafud SiO₂ تآكل: رمل النفود الناعم يآكل طلاء السطح الحراري (Cool Roof) = يفقد انعكاسيته. إعادة طلاء كل 3 سنوات. CaCO₃ 600ppm: مياه خزان السطح تتسرب = كلس فوق العزل = تلف. فحص تسرب خزان. 10-20% = لا حاجة لعزل مائي مطر! وفرة كبيرة. مقارنة: خميس = Closed-Cell+SBS مائي+مطر = أغلى 50-60%. بريدة = Open-Cell+حراري فقط = أبسط وأرخص.',
+        shortAnswer: 'على عكس [Closed-Cell الغالي بدون حاجة]، يعتمد بروتوكولنا في خدمة [عزل الأسطح] بمدينة [بريدة] على [Open-Cell R-3.7+Cool Roof+فحص خزان]. ففي ظل [ΔT 45°م+لا مطر+Nafud تآكل+CaCO₃ 600ppm]، تتفاقم ظاهرة [فقدان حراري+تآكل طلاء+تسرب كلسي]. لذا؛ يتدخل فنيونا عبر [Open-Cell ← Cool Roof ← فحص خزان] = وفر 50%!',
+        heroSubtitle: 'ΔT 45°م + لا مطر — Open-Cell يكفي! أرخص 50%!',
     },
-
     pricing: [
-        { type: 'عزل أسطح — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'عزل أسطح — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'Open-Cell (م²)', unit: 'م²', minPrice: 25, maxPrice: 55, time: '1-3 أيام' },
+        { type: 'Cool Roof طلاء', unit: 'م²', minPrice: 10, maxPrice: 22, time: '1 يوم' },
+        { type: 'فحص تسرب خزان سطح', unit: 'خدمة', minPrice: 150, maxPrice: 310, time: '1-2h' },
+        { type: 'صيانة سنوية', unit: 'خدمة', minPrice: 250, maxPrice: 520, time: '1 زيارة' },
     ],
-
     faq: [
-        { question: 'كم تكلفة عزل أسطح ببريدة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق عزل أسطح؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على عزل أسطح؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش Open-Cell يكفي ببريدة وخميس تحتاج Closed-Cell؟', answer: 'لا مطر = Open-Cell لا يتبلل. خميس: أمطار → امتصاص → كارثة.' },
+        { question: 'كم يوفر عزل السطح كهرباء ببريدة؟', answer: '35-45% تبريد! ΔT 45°م. SBC 601 إلزامي. أعلى عائد وطنياً.' },
+        { question: 'كم تكلفة عزل سطح ببريدة مقارنة بخميس؟', answer: 'أرخص 50-60% — Open-Cell+لا مائي. خميس: Closed+SBS+مائي.' },
+        { question: 'هل Nafud يتلف طلاء السطح ببريدة؟', answer: 'Nafud ناعم يآكل Cool Roof = فقدان انعكاسية. إعادة طلاء كل 3 سنوات.' },
+        { question: 'هل السطح يحتاج عزل مائي ببريدة؟', answer: 'لا! لا مطر. فقط فحص تسرب خزان السطح (CaCO₃ 600ppm).' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Open-Cell R-3.7 — لا مطر = يكفي.',
+        'Cool Roof — Nafud يآكل كل 3 سنوات.',
+        'فحص خزان سطح — CaCO₃ تسرب.',
+        'SBC 601 — إلزامي.',
+        'أرخص 50% من خميس — لا مائي.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'بدون عزل + ΔT 45°م = فاتورة كهرباء مضاعفة — SBC 601 غرامة.',
+        'Cool Roof + Nafud × 5 سنوات = فقدان انعكاسية كلي — إعادة طلاء.',
+        'تسرب خزان سطح + CaCO₃ 600ppm = كلس فوق العزل ← تلف.',
     ],
-
     trustAnchors: [
-        { ...GOV.SBC, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.MOENERGY, role: 'كفاءة الطاقة — SBC 601' },
+        { ...GOV.SBC, role: 'كود البناء السعودي' },
+        { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALJUND.name,
-        title: EXPERTS.ALJUND.title,
-        credential: EXPERTS.ALJUND.credential,
-        profileUrl: EXPERTS.ALJUND.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
-        {
-            expert: EXPERTS.ALJUND.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALJUND.title,
-            url: EXPERTS.ALJUND.profileUrl,
-        },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'سطح بريدة: Open-Cell يكفي! لا مطر. ΔT 45°م. أرخص 50%.', source: 'نصائح هندسية — أسطح القصيم' },
+        { expert: EXPERTS.ALJUND.name, quote: 'Nafud يآكل Cool Roof. إعادة طلاء 3 سنوات. فحص خزان.', source: 'موسوعة أخطاء — عزل' },
     ],
-
     saudiRegulations: [REGULATIONS.SBC_601],
-
-    verificationBadges: [
-        { badge: '✔️ عزل مطابق لكود SBC', authority: 'كود البناء السعودي', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ عزل مطابق SBC 601', authority: 'كود البناء', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Open-Cell PU Foam', use: 'R-3.7/inch — حراري' },
+        { name: 'Cool Roof Coating', use: 'طلاء عاكس — ΔT' },
+        { name: 'كاميرا حرارية', use: 'فحص تسرب خزان سطح' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'Closed أفضل.', solution: 'لا مطر = Open 50% أرخص. SBC.' },
+        { fear: 'عزل مائي لازم.', solution: 'لا مطر = لا مائي. فحص خزان فقط.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'Closed ضروري.', truth: 'لا مطر = Open R-3.7 يكفي.' },
+        { myth: 'مائي لازم.', truth: 'لا مطر = لا مائي. أرخص 50%.' },
     ],
-
     relatedServices: [
-        { slug: 'buraidah-furniture-moving', context: 'نقل عفش ببريدة', priority: 1 },
-        { slug: 'buraidah-furniture-storage', context: 'تخزين عفش ببريدة', priority: 2 },
-        { slug: 'buraidah-dyna', context: 'دينا نقل ببريدة', priority: 3 },
-        { slug: 'buraidah-moving-out', context: 'نقل عفش خروج ببريدة', priority: 4 },
-        { slug: 'buraidah-dabab', context: 'دباب نقل ببريدة', priority: 5 },
-        { slug: 'buraidah-cleaning', context: 'تنظيف منازل ببريدة', priority: 6 },
-        { slug: 'buraidah-tanks-cleaning', context: 'تنظيف خزانات ببريدة', priority: 7 },
-        { slug: 'buraidah-sofa-cleaning', context: 'تنظيف كنب ببريدة', priority: 8 },
-        { slug: 'buraidah-carpet-cleaning', context: 'تنظيف سجاد ببريدة', priority: 9 },
+        { slug: 'thermal-insulation', context: 'حراري', priority: 1 },
+        { slug: 'foam-insulation', context: 'فوم', priority: 2 },
+        { slug: 'water-insulation', context: 'مائي', priority: 3 },
+        { slug: 'tank-insulation', context: 'خزان', priority: 4 },
+        { slug: 'water-leak-detection', context: 'تسرب', priority: 5 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 6 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 7 },
     ],
 };

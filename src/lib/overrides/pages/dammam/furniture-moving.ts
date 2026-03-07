@@ -1,9 +1,3 @@
-// ══════════════════════════════════════════════════════════════
-// نقل عفش بالدمام — Override مخصص (E-E-A-T Grade)
-// صفحة: /dammam/furniture-moving
-// قطاع YMYL: مالي (حماية أثاث) + لوجستي
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
 
@@ -97,12 +91,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'الرخصة التجارية وضمان جودة الخدمة' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALZUWAYED.name,
-        title: EXPERTS.ALZUWAYED.title,
-        credential: EXPERTS.ALZUWAYED.credential,
-        profileUrl: EXPERTS.ALZUWAYED.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALZUWAYED,
 
     expertCitations: [
         {

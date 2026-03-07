@@ -80,7 +80,6 @@ export const override: PageOverride = {
             expert: 'م. ماجد المحيميد',
             quote: 'الدباب عبقري لتجاوز زحمة الرياض — لكن احترم حدوده. في الصيف: حتى 20 دقيقة في 50°م كافية لإتلاف بضائع حساسة',
             source: 'خبير جودة البناء والتشطيبات',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
 
@@ -106,14 +105,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'riyadh-dyna', context: 'دينا للنقل الثقيل', priority: 1 },
-        { slug: 'riyadh-furniture-moving', context: 'نقل عفش كامل', priority: 2 },
-        { slug: 'riyadh-furniture-storage', context: 'تخزين مع النقل', priority: 3 },
-        { slug: 'riyadh-moving-out', context: 'تنظيف بعد النقل', priority: 4 },
-        { slug: 'riyadh-cleaning', context: 'تنظيف البيت الجديد', priority: 5 },
-        { slug: 'riyadh-pest-control', context: 'رش البيت الجديد', priority: 6 },
-        { slug: 'riyadh-furniture-cleaning', context: 'تنظيف بعد النقل', priority: 7 },
-        { slug: 'riyadh-sanitization', context: 'تعقيم', priority: 8 },
-        { slug: 'riyadh-air-conditioner-cleaning', context: 'فحص مكيفات', priority: 9 },
+        { slug: 'dyna', context: 'دينا للنقل الثقيل', priority: 1 },
+        { slug: 'furniture-moving', context: 'نقل عفش كامل', priority: 2 },
+        { slug: 'furniture-storage', context: 'تخزين مع النقل', priority: 3 },
+        { slug: 'moving-out', context: 'تنظيف بعد النقل', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف البيت الجديد', priority: 5 },
+        { slug: 'pest-control', context: 'رش البيت الجديد', priority: 6 },
+        { slug: 'furniture-cleaning', context: 'تنظيف بعد النقل', priority: 7 },
+        { slug: 'sanitization', context: 'تعقيم', priority: 8 },
+        { slug: 'air-conditioner-cleaning', context: 'فحص مكيفات', priority: 9 },
     ],
 };

@@ -84,7 +84,6 @@ export const override: PageOverride = {
             expert: 'أ.د. فهد الخضيري',
             quote: 'رش المبيدات العادية على بق الفراش ينقله لغرف ثانية ولا يقتل البيض. المعالجة الحرارية هي الحل الوحيد المضمون علمياً',
             source: 'عالم أبحاث طبي — سموم ومسرطنات',
-            url: 'https://x.com/DrAlkhodairy',
         },
     ],
 
@@ -111,14 +110,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'jeddah-mattress-cleaning', context: 'تنظيف المراتب بالبخار بعد معالجة البق — يزيل الجثث والفضلات', priority: 1 },
-        { slug: 'jeddah-sofa-cleaning', context: 'البق يختبئ في الكنب — تنظيف بخار بعد المعالجة', priority: 2 },
-        { slug: 'jeddah-pest-control', context: 'مكافحة شاملة — البق قد يكون مع حشرات أخرى', priority: 3 },
-        { slug: 'jeddah-sanitization', context: 'تعقيم الغرفة بعد المعالجة الحرارية — نظافة كاملة', priority: 4 },
-        { slug: 'jeddah-steam-cleaning', context: 'بخار 100°م على المراتب والأثاث يقتل أي بق متبقي', priority: 5 },
-        { slug: 'jeddah-carpet-cleaning', context: 'البق يختبئ في حواف السجاد — غسيل عميق', priority: 6 },
-        { slug: 'jeddah-furniture-cleaning', context: 'تنظيف أثاث مستعمل قبل إدخاله البيت يمنع العدوى', priority: 7 },
-        { slug: 'jeddah-cleaning', context: 'تنظيف شامل بعد المعالجة — بيئة نظيفة تمنع العودة', priority: 8 },
-        { slug: 'jeddah-furniture-moving', context: 'نقل أثاث مصاب يحتاج احتياطات — لا ينقل البق', priority: 9 },
+        { slug: 'mattress-cleaning', context: 'تنظيف المراتب بالبخار بعد معالجة البق — يزيل الجثث والفضلات', priority: 1 },
+        { slug: 'sofa-cleaning', context: 'البق يختبئ في الكنب — تنظيف بخار بعد المعالجة', priority: 2 },
+        { slug: 'pest-control', context: 'مكافحة شاملة — البق قد يكون مع حشرات أخرى', priority: 3 },
+        { slug: 'sanitization', context: 'تعقيم الغرفة بعد المعالجة الحرارية — نظافة كاملة', priority: 4 },
+        { slug: 'steam-cleaning', context: 'بخار 100°م على المراتب والأثاث يقتل أي بق متبقي', priority: 5 },
+        { slug: 'carpet-cleaning', context: 'البق يختبئ في حواف السجاد — غسيل عميق', priority: 6 },
+        { slug: 'furniture-cleaning', context: 'تنظيف أثاث مستعمل قبل إدخاله البيت يمنع العدوى', priority: 7 },
+        { slug: 'cleaning', context: 'تنظيف شامل بعد المعالجة — بيئة نظيفة تمنع العودة', priority: 8 },
+        { slug: 'furniture-moving', context: 'نقل أثاث مصاب يحتاج احتياطات — لا ينقل البق', priority: 9 },
     ],
 };

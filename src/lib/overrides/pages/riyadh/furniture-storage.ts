@@ -88,7 +88,6 @@ export const override: PageOverride = {
             expert: 'م. ماجد المحيميد',
             quote: 'المستودع الآمن الوحيد في الرياض هو Climate Controlled — حرارة 20-25°م ورطوبة 40-50% طوال السنة. أي مستودع بدون تكييف = فرن طبخ صيفاً وبرّاد شتاءً',
             source: 'خبير جودة البناء والتشطيبات',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
 
@@ -116,14 +115,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'riyadh-furniture-moving', context: 'نقل + تخزين', priority: 1 },
-        { slug: 'riyadh-furniture-cleaning', context: 'تنظيف قبل التخزين', priority: 2 },
-        { slug: 'riyadh-pest-control', context: 'رش المستودع', priority: 3 },
-        { slug: 'riyadh-termite-control', context: 'فحص نمل أبيض', priority: 4 },
-        { slug: 'riyadh-cleaning', context: 'تنظيف البيت الجديد', priority: 5 },
-        { slug: 'riyadh-moving-out', context: 'تنظيف الشقة القديمة', priority: 6 },
-        { slug: 'riyadh-sanitization', context: 'تعقيم بعد التخزين', priority: 7 },
-        { slug: 'riyadh-sofa-cleaning', context: 'كنب بعد التخزين', priority: 8 },
-        { slug: 'riyadh-mattress-cleaning', context: 'مراتب بعد التخزين', priority: 9 },
+        { slug: 'furniture-moving', context: 'نقل + تخزين', priority: 1 },
+        { slug: 'furniture-cleaning', context: 'تنظيف قبل التخزين', priority: 2 },
+        { slug: 'pest-control', context: 'رش المستودع', priority: 3 },
+        { slug: 'termite-control', context: 'فحص نمل أبيض', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف البيت الجديد', priority: 5 },
+        { slug: 'moving-out', context: 'تنظيف الشقة القديمة', priority: 6 },
+        { slug: 'sanitization', context: 'تعقيم بعد التخزين', priority: 7 },
+        { slug: 'sofa-cleaning', context: 'كنب بعد التخزين', priority: 8 },
+        { slug: 'mattress-cleaning', context: 'مراتب بعد التخزين', priority: 9 },
     ],
 };

@@ -80,12 +80,7 @@ export const override: PageOverride = {
         { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'الإشراف على الاشتراطات البيئية والصحية لمنشآت الغسيل في المنطقة', acronym: 'أمانة المدينة' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMISNID.name,
-        title: EXPERTS.ALMISNID.title,
-        credential: EXPERTS.ALMISNID.credential,
-        profileUrl: EXPERTS.ALMISNID.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMISNID,
 
     expertCitations: [
         {
@@ -123,11 +118,11 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'madinah-sofa-cleaning', context: 'اغسل الكنب مع السجاد في نفس الزيارة — طقم نظيف متكامل بخصم.', priority: 1 },
-        { slug: 'madinah-steam-cleaning', context: 'تعقيم المراتب والستائر بالبخار — يُكمل نظافة الغرفة بعد غسيل السجاد.', priority: 2 },
-        { slug: 'madinah-councils-cleaning', context: 'تنظيف فرش المجالس الأرضية العربية — أقمشة خاصة تحتاج عناية.', priority: 3 },
-        { slug: 'madinah-cleaning', context: 'تنظيف شامل للمنزل مع غسيل السجاد — باقة متكاملة.', priority: 4 },
-        { slug: 'madinah-pest-control', context: 'مكافحة عث الغبار = حماية وقائية تُكمل تنظيف السجاد العميق.', priority: 5 },
-        { slug: 'madinah-furniture-cleaning', context: 'تلميع الأثاث الخشبي من الغبار البركاني مع السجاد.', priority: 6 },
+        { slug: 'sofa-cleaning', context: 'اغسل الكنب مع السجاد في نفس الزيارة — طقم نظيف متكامل بخصم.', priority: 1 },
+        { slug: 'steam-cleaning', context: 'تعقيم المراتب والستائر بالبخار — يُكمل نظافة الغرفة بعد غسيل السجاد.', priority: 2 },
+        { slug: 'councils-cleaning', context: 'تنظيف فرش المجالس الأرضية العربية — أقمشة خاصة تحتاج عناية.', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف شامل للمنزل مع غسيل السجاد — باقة متكاملة.', priority: 4 },
+        { slug: 'pest-control', context: 'مكافحة عث الغبار = حماية وقائية تُكمل تنظيف السجاد العميق.', priority: 5 },
+        { slug: 'furniture-cleaning', context: 'تلميع الأثاث الخشبي من الغبار البركاني مع السجاد.', priority: 6 },
     ],
 };

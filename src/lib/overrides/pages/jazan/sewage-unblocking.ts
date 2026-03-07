@@ -1,7 +1,3 @@
-// تسليك مجاري بجازان — Override (E-E-A-T)
-// الزاوية: رطوبة تُسرّع التحلل + H₂S أقوى
-//   + حشرات مدارية 12 شهر تعيش بالمجاري
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -57,19 +53,13 @@ export const override: PageOverride = {
         { entity: AMANA.JAZAN.entity, url: AMANA.JAZAN.url, role: 'الرقابة على شبكات الصرف بجازان', acronym: 'أمانة جازان' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
             expert: 'م. عبدالغني الجند',
             quote: 'مجاري جازان = حاضنة بيولوجية. التحلل أسرع والرائحة أقوى وH₂S أعلى والحشرات 12 شهر. صيانة وقائية كل 3 أشهر = الفرق بين إدارة ذكية وكارثة صحية',
             source: 'موسوعة "أخطاء في البناء"',
-            url: 'https://x.com/ssrrr22',
         },
     ],
 
@@ -88,19 +78,22 @@ export const override: PageOverride = {
 
     hiddenObjections: [
         { fear: 'صيانة وقائية كل 3 أشهر غالية', solution: 'طوارئ فيضان (خصوصاً موسم أمطار) = 2,000-5,000 ريال + تلوث + حشرات. وقائية 400 × 4 = 1,600/سنة = أرخص + أأمن + بلا مفاجآت' },
+        { fear: 'السعر أعلى من المتوقع.', solution: 'السعر يشمل معدات صناعية متخصصة + مواد احترافية + عمالة مدربة + ضمان مكتوب. المقارنة العادلة ليست مع عامل عشوائي بل مع تكلفة إصلاح الأضرار الناتجة عن العمل غير المتخصص.' },
     ],
 
     counterNarratives: [
         { myth: 'المجاري مجاري — ما تفرق المدينة', truth: 'تفرق. بجازان: التحلل ×2-3 أسرع + حشرات 12 شهر + أمطار تُغرق. وقاية كل 3 أشهر بدل 6 = الفرق بين مدينة جافة واستوائية' },
+        { myth: 'أي شركة تنظيف/صيانة نتيجتها واحدة.', truth: 'الفرق بين شركة مرخصة ومُعتمدة وأخرى عشوائية = الفرق بين معالجة جذرية وإخفاء مؤقت. المعدات المتخصصة والبروتوكولات العلمية تحل المشكلة من جذرها — التنظيف العشوائي يُعيدها أسوأ خلال أسابيع.' },
+        { myth: 'أوفر وأسوي الشغل بنفسي.', truth: 'التوفير الظاهري يتحول لتكلفة مضاعفة: أدوات منزلية لا تصل للعمق المطلوب + مواد غير مناسبة قد تُتلف الأسطح + وقت وجهد بلا ضمان نتيجة. الاحتراف = ضمان + توفير حقيقي على المدى الطويل.' },
     ],
 
     relatedServices: [
-        { slug: 'jazan-sewage-suction', context: 'شفط بيارة — إذا طفحت', priority: 1 },
-        { slug: 'jazan-pest-control', context: 'مكافحة حشرات صرف مدارية', priority: 2 },
-        { slug: 'jazan-water-leak-detection', context: 'كشف تسربات — انسداد يُراكم رطوبة', priority: 3 },
-        { slug: 'jazan-bathroom-leak-detection', context: 'فحص حمام — انسداد حمام = رطوبة + عفن', priority: 4 },
-        { slug: 'jazan-water-insulation', context: 'عزل مائي — يمنع تسلل مياه الصرف', priority: 5 },
-        { slug: 'jazan-bird-control', context: 'طرد حمام — فضلاته تسد المصارف', priority: 6 },
-        { slug: 'jazan-tanks-cleaning', context: 'تنظيف خزان — الصرف السليم يحمي المياه', priority: 7 },
+        { slug: 'sewage-suction', context: 'شفط بيارة — إذا طفحت', priority: 1 },
+        { slug: 'pest-control', context: 'مكافحة حشرات صرف مدارية', priority: 2 },
+        { slug: 'water-leak-detection', context: 'كشف تسربات — انسداد يُراكم رطوبة', priority: 3 },
+        { slug: 'bathroom-leak-detection', context: 'فحص حمام — انسداد حمام = رطوبة + عفن', priority: 4 },
+        { slug: 'water-insulation', context: 'عزل مائي — يمنع تسلل مياه الصرف', priority: 5 },
+        { slug: 'bird-control', context: 'طرد حمام — فضلاته تسد المصارف', priority: 6 },
+        { slug: 'tanks-cleaning', context: 'تنظيف خزان — الصرف السليم يحمي المياه', priority: 7 },
     ],
 };

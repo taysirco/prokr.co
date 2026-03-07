@@ -1,10 +1,3 @@
-// ══════════════════════════════════════════════════════════════
-// رش مبيدات بجازان — Override (E-E-A-T)
-// الزاوية: أخطر بيئة حشرات بالسعودية:
-//   بعوض ملاريا + نمل أبيض مداري + صراصير أمريكية 12 شهر
-//   + المبيدات تتحلل أسرع بالرطوبة
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -63,19 +56,13 @@ export const override: PageOverride = {
         { entity: AMANA.JAZAN.entity, url: AMANA.JAZAN.url, role: 'ترخيص شركات المكافحة بجازان', acronym: 'أمانة جازان' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALKHODAIRY.name,
-        title: EXPERTS.ALKHODAIRY.title,
-        credential: EXPERTS.ALKHODAIRY.credential,
-        profileUrl: EXPERTS.ALKHODAIRY.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALKHODAIRY,
 
     expertCitations: [
         {
             expert: 'د. فهد الخضيري',
             quote: 'جازان = أخطر بيئة حشرات بالسعودية. بعوض ملاريا + نمل أبيض استوائي + صراصير 12 شهر + مبيدات تتحلل ×2 أسرع. المكافحة هنا ليست اختيارية — إنها ضرورة صحية بالمعنى الحرفي',
             source: 'مكافحة حشرات وآفات',
-            url: 'https://x.com/DrAlkhodairy',
         },
     ],
 
@@ -96,20 +83,23 @@ export const override: PageOverride = {
 
     hiddenObjections: [
         { fear: 'رش كل 6-8 أسابيع مكلف', solution: 'علاج ملاريا (آلاف) + إصلاح ضرر نمل أبيض (5,000-20,000) + صحة العائلة = لا يُقارن. عقد سنوي (1,500-3,000) = تأمين صحي وهيكلي. بجازان: المكافحة ليست رفاهية' },
+        { fear: 'السعر أعلى من المتوقع.', solution: 'السعر يشمل معدات صناعية متخصصة + مواد احترافية + عمالة مدربة + ضمان مكتوب. المقارنة العادلة ليست مع عامل عشوائي بل مع تكلفة إصلاح الأضرار الناتجة عن العمل غير المتخصص.' },
     ],
 
     counterNarratives: [
         { myth: 'حشرات جازان عادية — زي أي مدينة', truth: 'بعوض ملاريا (38% من حالات السعودية تاريخياً) + أعلى كثافة نمل أبيض + صراصير 12 شهر + مبيدات تتحلل ×2 أسرع. ليست \"عادية\" — أخطر بيئة حشرات في المملكة' },
+        { myth: 'أي شركة تنظيف/صيانة نتيجتها واحدة.', truth: 'الفرق بين شركة مرخصة ومُعتمدة وأخرى عشوائية = الفرق بين معالجة جذرية وإخفاء مؤقت. المعدات المتخصصة والبروتوكولات العلمية تحل المشكلة من جذرها — التنظيف العشوائي يُعيدها أسوأ خلال أسابيع.' },
+        { myth: 'أوفر وأسوي الشغل بنفسي.', truth: 'التوفير الظاهري يتحول لتكلفة مضاعفة: أدوات منزلية لا تصل للعمق المطلوب + مواد غير مناسبة قد تُتلف الأسطح + وقت وجهد بلا ضمان نتيجة. الاحتراف = ضمان + توفير حقيقي على المدى الطويل.' },
     ],
 
     relatedServices: [
-        { slug: 'jazan-termite-control', context: 'مكافحة نمل أبيض متخصصة — حاجز كيميائي', priority: 1 },
-        { slug: 'jazan-bird-control', context: 'طرد حمام — فضلاته تجذب حشرات', priority: 2 },
-        { slug: 'jazan-sewage-unblocking', context: 'تسليك مجاري — صراصير الصرف المدارية', priority: 3 },
-        { slug: 'jazan-tanks-cleaning', context: 'تنظيف خزان — البعوض يتكاثر بالخزانات', priority: 4 },
-        { slug: 'jazan-water-leak-detection', context: 'كشف تسربات — الرطوبة تجذب النمل الأبيض', priority: 5 },
-        { slug: 'jazan-water-insulation', context: 'عزل مائي — يمنع رطوبة تجذب حشرات', priority: 6 },
-        { slug: 'jazan-roof-insulation', context: 'عزل سطح — يمنع رطوبة وحشرات', priority: 7 },
-        { slug: 'jazan-bathroom-leak-detection', context: 'فحص حمام — رطوبة الحمام تجذب صراصير', priority: 8 },
+        { slug: 'termite-control', context: 'مكافحة نمل أبيض متخصصة — حاجز كيميائي', priority: 1 },
+        { slug: 'bird-control', context: 'طرد حمام — فضلاته تجذب حشرات', priority: 2 },
+        { slug: 'sewage-unblocking', context: 'تسليك مجاري — صراصير الصرف المدارية', priority: 3 },
+        { slug: 'tanks-cleaning', context: 'تنظيف خزان — البعوض يتكاثر بالخزانات', priority: 4 },
+        { slug: 'water-leak-detection', context: 'كشف تسربات — الرطوبة تجذب النمل الأبيض', priority: 5 },
+        { slug: 'water-insulation', context: 'عزل مائي — يمنع رطوبة تجذب حشرات', priority: 6 },
+        { slug: 'roof-insulation', context: 'عزل سطح — يمنع رطوبة وحشرات', priority: 7 },
+        { slug: 'bathroom-leak-detection', context: 'فحص حمام — رطوبة الحمام تجذب صراصير', priority: 8 },
     ],
 };

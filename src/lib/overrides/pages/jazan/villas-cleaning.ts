@@ -1,94 +1,56 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف فلل بجازان — Override مخصص (E-E-A-T Grade)
-// صفحة: /jazan/villas-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف فلل بجازان — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف فلل بجازان. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف فلل بجازان — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف فلل بجازان', 'تنظيف فلل جازان', 'شركة تنظيف فلل بجازان', 'أفضل تنظيف فلل بجازان'],
+        title: 'تنظيف فلل بجازان — حديقة استوائية + مسبح طحالب + عفن 20+ نقطة + بعوض حديقة (2026)',
+        description: 'تنظيف فلل جازان. حديقة استوائية = بعوض + حشرات + عفن أشجار. مسبح طحالب 12/12. عفن 20+ نقطة. حديقة = مصنع حشرات. Zone-Based استوائي.',
+        h1: 'تنظيف فلل بجازان — الحديقة مصنع حشرات والمسبح مزرعة طحالب',
+        keywords: ['تنظيف فلل بجازان', 'تنظيف فيلا جازان', 'شركة تنظيف فلل بجازان'],
     },
-
     content: {
-        introduction: 'تنظيف فلل بجازان — خدمة متخصصة تراعي الظروف المناخية والبيئية في جازان. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف فلل بجازان: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف فلل بجازان. خدمة احترافية. ضمان.',
+        introduction: 'الفيلا في جازان = أصعب فيلا من حيث البيولوجيا — كل شيء ينمو. الحديقة الاستوائية = مصنع حشرات (بعوض Aedes في ماء الري + صراصير تحت الأوراق + نمل في التربة الرطبة). المسبح = طحالب 12/12 + بعوض. 20+ نقطة عفن داخلياً (80% = كل زاوية عُرضة). البروتوكول: Zone-Based استوائي = فريق مُقسّم: حديقة (مكافحة) + مسبح (Algaecide) + داخل (Anti-Fungal + بخار + Dehumidifier).',
+        shortAnswer: 'حديقة استوائية (مصنع حشرات) + مسبح (طحالب 12/12) + داخل (عفن 20+ نقطة). Zone-Based استوائي = الحل.',
+        heroSubtitle: 'الحديقة مصنع حشرات + المسبح مزرعة طحالب + الداخل مستعمرة عفن',
     },
-
     pricing: [
-        { type: 'تنظيف فلل — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف فلل — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'تنظيف فيلا — Zone-Based استوائي', unit: 'فيلا', minPrice: 800, maxPrice: 1500, time: '6-10 ساعات' },
+        { type: 'تنظيف + مكافحة حديقة + مسبح', unit: 'فيلا', minPrice: 1200, maxPrice: 2500, time: '8-12 ساعة' },
+        { type: 'عقد شهري شامل', unit: 'شهر', minPrice: 1000, maxPrice: 2500, time: 'زيارة/شهر' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف فلل بجازان؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف فلل؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف فلل؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'الحديقة تلوّث الداخل — كيف؟', answer: 'حديقة استوائية: بعوض + صراصير + نمل + أوراق رطبة + لقاح = كلها تدخل. + الري يُنتج ماء راكد = Aedes. الحديقة = Zone مكافحة مُنفصل.' },
+        { question: 'عفن في 20+ نقطة — فعلاً؟', answer: '80% رطوبة = كل زاوية + حول كل نافذة + خلف كل خزانة + كل حمام = عُرضة. فيلا 400-800 م² = 20-30 نقطة. بخار شهرياً + Anti-Fungal.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Zone-Based: حديقة ← مسبح ← داخل. كل zone بأداته.',
+        'إفراغ ماء ري راكد يومياً — Aedes يتكاثر في 7 أيام.',
+        'Anti-Fungal 20+ نقطة شهرياً.',
+        'Algaecide المسبح أسبوعياً.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'حديقة + ماء ري = بعوض Aedes = حمى الضنك. إفراغ يومي.',
+        'فيلا بدون Anti-Fungal شهري = عفن أسود واسع.',
     ],
-
-    trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
-    ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات التنظيف' }],
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMISNID.name, quote: 'فيلا جازان: الحديقة مصنع حشرات + المسبح مزرعة طحالب + الداخل مستعمرة عفن. Zone-Based استوائي = الحل الوحيد العملي.', source: 'جغرافيا المناخ — استراتيجيات التنظيف في فلل المناخ الاستوائي' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف فلل مرخص', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'مكافحة حديقة (Larvicide + Gel Bait)', use: 'Zone حديقة — بعوض + صراصير + نمل' },
+        { name: 'Algaecide + CYA', use: 'Zone مسبح — طحالب 12/12' },
+        { name: 'بخار + Dehumidifier + Anti-Fungal', use: 'Zone داخل — عفن 20+ نقطة' },
     ],
-
-    hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
-    ],
-
-    counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
-    ],
-
+    hiddenObjections: [{ fear: '800-2,500 ريال — غالي.', solution: 'فيلا 1-5 مليون. عفن واسع + بعوض ضنك + طحالب = تدهور. 1-2% من القيمة/سنة = صيانة.' }],
+    counterNarratives: [{ myth: 'الحديقة الخضراء جميلة فقط.', truth: 'في 80%: الحديقة = مصنع حشرات + بعوض + عفن. جميلة + خطيرة بدون مكافحة.' }],
     relatedServices: [
-        { slug: 'jazan-furniture-moving', context: 'نقل عفش بجازان', priority: 1 },
-        { slug: 'jazan-furniture-storage', context: 'تخزين عفش بجازان', priority: 2 },
-        { slug: 'jazan-dyna', context: 'دينا نقل بجازان', priority: 3 },
-        { slug: 'jazan-moving-out', context: 'نقل عفش خروج بجازان', priority: 4 },
-        { slug: 'jazan-dabab', context: 'دباب نقل بجازان', priority: 5 },
-        { slug: 'jazan-cleaning', context: 'تنظيف منازل بجازان', priority: 6 },
-        { slug: 'jazan-tanks-cleaning', context: 'تنظيف خزانات بجازان', priority: 7 },
-        { slug: 'jazan-sofa-cleaning', context: 'تنظيف كنب بجازان', priority: 8 },
-        { slug: 'jazan-carpet-cleaning', context: 'تنظيف سجاد بجازان', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف — البروتوكول الاستوائي', priority: 1 },
+        { slug: 'swimming-pool-cleaning', context: 'مسابح — طحالب 12/12', priority: 2 },
+        { slug: 'pest-control', context: 'حشرات — حديقة + مسبح', priority: 3 },
+        { slug: 'marble-polishing', context: 'رخام — عفن + ملح', priority: 4 },
+        { slug: 'steam-cleaning', context: 'بخار — تعقيم', priority: 5 },
     ],
 };

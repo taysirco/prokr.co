@@ -89,7 +89,6 @@ export const override: PageOverride = {
             expert: 'أ.د. عبدالله المسند',
             quote: 'كل عاصفة غبارية تودع ملليغرامات سيليكا (Mohs 7) على كل سنتيمتر مربع. على رخام عادي: خدوش تجميلية. على Calacatta أو Statuario: خسارة مالية حقيقية',
             source: 'أستاذ جغرافيا المناخ',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -116,14 +115,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'riyadh-villas-cleaning', context: 'فلل وقصور', priority: 1 },
-        { slug: 'riyadh-glass-facades-cleaning', context: 'واجهات القصر', priority: 2 },
-        { slug: 'riyadh-swimming-pool-cleaning', context: 'مسابح القصر', priority: 3 },
-        { slug: 'riyadh-marble-polishing', context: 'جلي رخام القصر', priority: 4 },
-        { slug: 'riyadh-carpet-cleaning', context: 'سجاد فاخر', priority: 5 },
-        { slug: 'riyadh-sofa-cleaning', context: 'مجالس القصر', priority: 6 },
-        { slug: 'riyadh-air-conditioner-cleaning', context: 'مكيفات مركزية', priority: 7 },
-        { slug: 'riyadh-sanitization', context: 'تعقيم بعد المناسبات', priority: 8 },
-        { slug: 'riyadh-tanks-cleaning', context: 'خزانات كبيرة', priority: 9 },
+        { slug: 'villas-cleaning', context: 'فلل وقصور', priority: 1 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات القصر', priority: 2 },
+        { slug: 'swimming-pool-cleaning', context: 'مسابح القصر', priority: 3 },
+        { slug: 'marble-polishing', context: 'جلي رخام القصر', priority: 4 },
+        { slug: 'carpet-cleaning', context: 'سجاد فاخر', priority: 5 },
+        { slug: 'sofa-cleaning', context: 'مجالس القصر', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيفات مركزية', priority: 7 },
+        { slug: 'sanitization', context: 'تعقيم بعد المناسبات', priority: 8 },
+        { slug: 'tanks-cleaning', context: 'خزانات كبيرة', priority: 9 },
     ],
 };

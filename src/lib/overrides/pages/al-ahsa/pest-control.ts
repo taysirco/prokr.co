@@ -1,94 +1,47 @@
-// ══════════════════════════════════════════════════════════════
-// مكافحة حشرات بالاحساء — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-ahsa/pest-control
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'مكافحة حشرات بالاحساء — خدمة احترافية معتمدة (2026)',
-        description: 'مكافحة حشرات بالاحساء. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'مكافحة حشرات بالاحساء — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['مكافحة حشرات بالاحساء', 'مكافحة حشرات الاحساء', 'شركة مكافحة حشرات بالاحساء', 'أفضل مكافحة حشرات بالاحساء'],
+        title: 'مكافحة حشرات بالأحساء — أكبر واحة في العالم + 2.5M نخلة + عيون + زراعة + RPW (2026)',
+        description: 'مكافحة حشرات الأحساء. أكبر واحة عالمياً. 2.5 مليون نخلة. عيون = بعوض. سوسة حمراء RPW. ذباب زراعي. فيرومون + BTI + IGR.',
+        h1: 'مكافحة حشرات بالأحساء — واحة 2.5M نخلة + عيون + RPW',
+        keywords: ['مكافحة حشرات بالأحساء', 'مكافحة حشرات الاحساء', 'شركة مكافحة حشرات بالأحساء'],
     },
-
     content: {
-        introduction: 'مكافحة حشرات بالاحساء — خدمة متخصصة تراعي الظروف المناخية والبيئية في الاحساء. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'مكافحة حشرات بالاحساء: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'مكافحة حشرات بالاحساء. خدمة احترافية. ضمان.',
+        introduction: 'الأحساء = أكبر واحة عالمياً (UNESCO). 5 مصادر فريدة لم تتكرر: (1) 2.5 مليون نخلة: سوسة حمراء RPW (أخطر آفة نخيل) + حفّار ساق + ذباب فاكهة + نيماتودا. فيرومون RPW + مصائد ضوئية. (2) عيون الأحساء (العيون الحارة + عين نجم): مياه سطحية دائمة = بعوض Culex/Aedes + ذباب. BTI أسبوعي. (3) زراعة (أرز + خضار): حشرات زراعية متنوعة. (4) رطوبة مُتذبذبة 30-70% (واحة 60-70% / صحراء 30-40%): Residual 5-8 أيام (أفضل من ساحلي!). (5) 48°م + 8°م = دورة حرارية واسعة (حشرات تختبئ شتاءً ← تنفجر صيفاً). IGR + فيرومون + BTI + مصائد.',
+        shortAnswer: 'على عكس [رش عام]، يعتمد بروتوكولنا على [فيرومون RPW + BTI عيون + IGR واحة + مصائد زراعية]. ففي [أكبر واحة + 2.5M نخلة + عيون]، المكافحة زراعية مُتخصصة.',
+        heroSubtitle: 'أكبر واحة عالمياً + 2.5M نخلة + عيون بعوض + RPW + زراعة',
     },
-
     pricing: [
-        { type: 'مكافحة حشرات — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'مكافحة حشرات — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'مكافحة شاملة — شقة', unit: 'شقة', minPrice: 140, maxPrice: 310, time: '2-3 ساعات' },
+        { type: 'واحة — فيلا + حديقة نخيل', unit: 'فيلا', minPrice: 400, maxPrice: 950, time: '4-6 ساعات' },
+        { type: 'عقد 16-يومي', unit: 'سنة', minPrice: 850, maxPrice: 1800, time: '22 زيارة' },
     ],
-
     faq: [
-        { question: 'كم تكلفة مكافحة حشرات بالاحساء؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق مكافحة حشرات؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على مكافحة حشرات؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'Residual 5-8 أيام؟', answer: '30-70% مُتذبذب. أفضل من ساحلي (2-5 أيام) لكن أسوأ من صحراوي (12-15 يوم).' },
+        { question: 'RPW؟', answer: 'سوسة حمراء. أخطر آفة نخيل. فيرومون مصائد + فحص جذوع.' },
+        { question: 'عيون بعوض؟', answer: 'مياه سطحية دائمة. BTI أسبوعي. عين نجم/العيون الحارة = أكثر.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'فيرومون RPW — فحص كل نخلة.',
+        'BTI عيون أسبوعي.',
+        'IGR 30-70%.',
+        'مصائد زراعية ذباب فاكهة.',
+        'فحص شتوي — حشرات مختبئة.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'RPW = تدمير نخلة كاملة.',
+        'عيون = بعوض دائم.',
+        'صيف = انفجار بعد سبات شتوي.',
     ],
-
-    trustAnchors: [
-        { ...GOV.SFDA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
-    ],
-
-    expertReviewer: {
-        name: EXPERTS.ALKHODAIRY.name,
-        title: EXPERTS.ALKHODAIRY.title,
-        credential: EXPERTS.ALKHODAIRY.credential,
-        profileUrl: EXPERTS.ALKHODAIRY.profileUrl,
-    },
-
-    expertCitations: [
-        {
-            expert: EXPERTS.ALKHODAIRY.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALKHODAIRY.title,
-            url: EXPERTS.ALKHODAIRY.profileUrl,
-        },
-    ],
-
+    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص' }, { ...GOV.WEQAA, role: 'مبيدات' }],
+    expertReviewer: EXPERTS.ALKHODAIRY,
+    expertCitations: [{ expert: EXPERTS.ALKHODAIRY.name, quote: 'الأحساء: أكبر واحة = أكبر تحدي زراعي. RPW + بعوض عيون + 2.5M نخلة. مكافحة زراعية مُتخصصة — ليست حضرية فقط.', source: 'أبحاث حشرات — واحات الشرقية' }],
     saudiRegulations: [REGULATIONS.GHAD_SYSTEM],
-
-    verificationBadges: [
-        { badge: '✔️ مبيدات معتمدة من SFDA', authority: 'هيئة الغذاء والدواء', icon: 'shield-check' },
-    ],
-
-    equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
-    ],
-
-    hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
-    ],
-
-    counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
-    ],
-
-    relatedServices: [
-        { slug: 'al-ahsa-furniture-moving', context: 'نقل عفش بالاحساء', priority: 1 },
-        { slug: 'al-ahsa-furniture-storage', context: 'تخزين عفش بالاحساء', priority: 2 },
-        { slug: 'al-ahsa-dyna', context: 'دينا نقل بالاحساء', priority: 3 },
-        { slug: 'al-ahsa-moving-out', context: 'نقل عفش خروج بالاحساء', priority: 4 },
-        { slug: 'al-ahsa-dabab', context: 'دباب نقل بالاحساء', priority: 5 },
-        { slug: 'al-ahsa-cleaning', context: 'تنظيف منازل بالاحساء', priority: 6 },
-        { slug: 'al-ahsa-tanks-cleaning', context: 'تنظيف خزانات بالاحساء', priority: 7 },
-        { slug: 'al-ahsa-sofa-cleaning', context: 'تنظيف كنب بالاحساء', priority: 8 },
-        { slug: 'al-ahsa-carpet-cleaning', context: 'تنظيف سجاد بالاحساء', priority: 9 },
-    ],
+    verificationBadges: [{ badge: '✔️ مرخصة', authority: 'بلدي + وقاء', icon: 'shield-check' }],
+    equipment: [{ name: 'فيرومون RPW', use: 'نخيل' }, { name: 'BTI', use: 'عيون' }, { name: 'IGR', use: '30-70%' }, { name: 'مصائد ضوئية', use: 'زراعة' }],
+    hiddenObjections: [{ fear: 'رش شهري.', solution: '16-يومي + فيرومون + BTI.' }],
+    counterNarratives: [{ myth: 'مثل القطيف.', truth: 'واحة زراعية — لا ساحلي. CaSO₄ — لا NaCl.' }],
+    relatedServices: [{ slug: 'termite-control', context: 'نمل — نخيل', priority: 1 }, { slug: 'bedbugs-control', context: 'بق', priority: 2 }, { slug: 'tanks-cleaning', context: 'خزانات', priority: 3 }],
 };

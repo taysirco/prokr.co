@@ -1,7 +1,3 @@
-// عزل حراري بجازان — Override (E-E-A-T)
-// الزاوية: Heat Index (حرارة+رطوبة) = 50°م+ محسوسة
-//   + رطوبة تُجبر التكييف على عمل مزدوج (تبريد+تجفيف)
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -58,19 +54,13 @@ export const override: PageOverride = {
         { entity: AMANA.JAZAN.entity, url: AMANA.JAZAN.url, role: 'تطبيق كود البناء بجازان', acronym: 'أمانة جازان' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
             expert: 'م. ماجد المحيميد',
             quote: 'جازان = أعلى Heat Index بالسعودية (حرارة+رطوبة). التكييف يعمل مزدوج = فاتورة مضاعفة. العزل يقطع الحمل الحراري ← التكييف يركز على تجفيف = وفر 25-35%. Closed-Cell وصوف صخري فقط — كل شيء آخر يمتص ويتعفن',
             source: 'خبير جودة البناء والتشطيبات',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
 
@@ -89,20 +79,23 @@ export const override: PageOverride = {
 
     hiddenObjections: [
         { fear: 'فاتورة الكهرباء بجازان ما تنزل حتى مع عزل', solution: 'العزل يقطع الحمل الحراري (60% من استهلاك التكييف). حمل التجفيف يبقى — لكنه أخف بكثير. مزيل رطوبة يُكمل العزل = 40% إضافية من وفر التجفيف' },
+        { fear: 'السعر أعلى من المتوقع.', solution: 'السعر يشمل معدات صناعية متخصصة + مواد احترافية + عمالة مدربة + ضمان مكتوب. المقارنة العادلة ليست مع عامل عشوائي بل مع تكلفة إصلاح الأضرار الناتجة عن العمل غير المتخصص.' },
     ],
 
     counterNarratives: [
         { myth: 'جازان ما فيها حر شديد — ما تحتاج عزل', truth: 'Heat Index = 50°م+ (أعلى من الرياض أحياناً). والفاتورة أعلى بسبب التجفيف. العزل = أهم مما تظن بجازان' },
+        { myth: 'أي شركة تنظيف/صيانة نتيجتها واحدة.', truth: 'الفرق بين شركة مرخصة ومُعتمدة وأخرى عشوائية = الفرق بين معالجة جذرية وإخفاء مؤقت. المعدات المتخصصة والبروتوكولات العلمية تحل المشكلة من جذرها — التنظيف العشوائي يُعيدها أسوأ خلال أسابيع.' },
+        { myth: 'أوفر وأسوي الشغل بنفسي.', truth: 'التوفير الظاهري يتحول لتكلفة مضاعفة: أدوات منزلية لا تصل للعمق المطلوب + مواد غير مناسبة قد تُتلف الأسطح + وقت وجهد بلا ضمان نتيجة. الاحتراف = ضمان + توفير حقيقي على المدى الطويل.' },
     ],
 
     relatedServices: [
-        { slug: 'jazan-roof-insulation', context: 'عزل سطح = أول 60% من الحماية', priority: 1 },
-        { slug: 'jazan-foam-insulation', context: 'فوم Closed-Cell — أقوى مادة مقاومة رطوبة', priority: 2 },
-        { slug: 'jazan-water-insulation', context: 'عزل مائي = الأولوية الأولى بجازان', priority: 3 },
-        { slug: 'jazan-water-leak-detection', context: 'كشف تسربات — العزل يمنع التكثف', priority: 4 },
-        { slug: 'jazan-tank-insulation', context: 'عزل خزان — يحمي مياه الشرب', priority: 5 },
-        { slug: 'jazan-bird-control', context: 'طرد حمام — ذرقه يأكل العزل', priority: 6 },
-        { slug: 'jazan-pest-control', context: 'مكافحة حشرات — عزل سليم يمنع رطوبة', priority: 7 },
-        { slug: 'jazan-sewage-unblocking', context: 'تسليك مجاري — المبنى المعزول يحتاج صرف سليم', priority: 8 },
+        { slug: 'roof-insulation', context: 'عزل سطح = أول 60% من الحماية', priority: 1 },
+        { slug: 'foam-insulation', context: 'فوم Closed-Cell — أقوى مادة مقاومة رطوبة', priority: 2 },
+        { slug: 'water-insulation', context: 'عزل مائي = الأولوية الأولى بجازان', priority: 3 },
+        { slug: 'water-leak-detection', context: 'كشف تسربات — العزل يمنع التكثف', priority: 4 },
+        { slug: 'tank-insulation', context: 'عزل خزان — يحمي مياه الشرب', priority: 5 },
+        { slug: 'bird-control', context: 'طرد حمام — ذرقه يأكل العزل', priority: 6 },
+        { slug: 'pest-control', context: 'مكافحة حشرات — عزل سليم يمنع رطوبة', priority: 7 },
+        { slug: 'sewage-unblocking', context: 'تسليك مجاري — المبنى المعزول يحتاج صرف سليم', priority: 8 },
     ],
 };

@@ -6,6 +6,7 @@
 // ══════════════════════════════════════════════════════════════
 
 import type { PageOverride } from '../../types';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -82,19 +83,13 @@ export const override: PageOverride = {
         { entity: 'الهيئة السعودية للمواصفات والمقاييس', acronym: 'SASO', url: 'https://www.saso.gov.sa', role: 'مواصفات مواد تنظيف وترطيب الأثاث — سلامة المواد' },
     ],
 
-    expertReviewer: {
-        name: 'أ.د. عبدالله المسند',
-        title: 'أستاذ جغرافيا المناخ',
-        credential: 'أستاذ جغرافيا المناخ — جامعة القصيم',
-        profileUrl: 'https://x.com/ALMISNID',
-    },
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
             expert: 'م. عبدالغني الجند',
             quote: 'فحص الأثاث الخشبي للنمل الأبيض يجب أن يكون جزءاً من كل تنظيف دوري — العلامات لا تظهر بالعين حتى يكون التلف متقدماً. في المدن الساحلية الرطبة: الإصابة أعلى 4x',
             source: 'مؤلف موسوعة أخطاء في البناء',
-            url: 'https://x.com/ssrrr22',
         },
     ],
 
@@ -104,14 +99,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'jeddah-sofa-cleaning', context: 'كنب + أثاث — باقة مشتركة', priority: 1 },
-        { slug: 'jeddah-steam-cleaning', context: 'بخار شامل لكل الأثاث', priority: 2 },
-        { slug: 'jeddah-cleaning', context: 'تنظيف شامل + أثاث', priority: 3 },
-        { slug: 'jeddah-mattress-cleaning', context: 'مراتب + أثاث غرفة النوم', priority: 4 },
-        { slug: 'jeddah-carpet-cleaning', context: 'سجاد + أثاث — منظومة متكاملة', priority: 5 },
-        { slug: 'jeddah-sanitization', context: 'تعقيم الأثاث من البكتيريا والعث', priority: 6 },
-        { slug: 'jeddah-termite-control', context: 'نمل أبيض — حماية الأثاث الخشبي', priority: 7 },
-        { slug: 'jeddah-furniture-moving', context: 'نقل + تنظيف — باقة انتقال', priority: 8 },
-        { slug: 'jeddah-pest-control', context: 'حشرات الأثاث (عث، بق، خنافس)', priority: 9 },
+        { slug: 'sofa-cleaning', context: 'كنب + أثاث — باقة مشتركة', priority: 1 },
+        { slug: 'steam-cleaning', context: 'بخار شامل لكل الأثاث', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف شامل + أثاث', priority: 3 },
+        { slug: 'mattress-cleaning', context: 'مراتب + أثاث غرفة النوم', priority: 4 },
+        { slug: 'carpet-cleaning', context: 'سجاد + أثاث — منظومة متكاملة', priority: 5 },
+        { slug: 'sanitization', context: 'تعقيم الأثاث من البكتيريا والعث', priority: 6 },
+        { slug: 'termite-control', context: 'نمل أبيض — حماية الأثاث الخشبي', priority: 7 },
+        { slug: 'furniture-moving', context: 'نقل + تنظيف — باقة انتقال', priority: 8 },
+        { slug: 'pest-control', context: 'حشرات الأثاث (عث، بق، خنافس)', priority: 9 },
     ],
 };

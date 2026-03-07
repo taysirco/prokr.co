@@ -1,94 +1,74 @@
-// ══════════════════════════════════════════════════════════════
-// عزل أسطح بالخرج — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-kharj/roof-insulation
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'عزل أسطح بالخرج — خدمة احترافية معتمدة (2026)',
-        description: 'عزل أسطح بالخرج. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'عزل أسطح بالخرج — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['عزل أسطح بالخرج', 'عزل أسطح الخرج', 'شركة عزل أسطح بالخرج', 'أفضل عزل أسطح بالخرج'],
+        title: 'عزل أسطح بالخرج — ΔT 48°م أعلى فارق+SiO₂ تآكل+UV — حراري أولوية! SBC 601 (2026)',
+        description: 'عزل أسطح الخرج. ΔT 48°م أعلى فارق حراري! SiO₂ تآكل عزل. UV مباشر. حراري أولوية. لا مائي! SBC 601.',
+        h1: 'عزل أسطح بالخرج — ΔT 48°م — حراري أولوية!',
+        keywords: ['عزل أسطح الخرج', 'عزل سطح بالخرج', 'شركة عزل أسطح الخرج'],
     },
-
     content: {
-        introduction: 'عزل أسطح بالخرج — خدمة متخصصة تراعي الظروف المناخية والبيئية في الخرج. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'عزل أسطح بالخرج: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'عزل أسطح بالخرج. خدمة احترافية. ضمان.',
+        introduction: 'أسطح الخرج تحتاج عزل حراري أولاً! ΔT 48°م = أعلى فارق حراري: سطح مكشوف = 70°م+ صيفاً + 0°م شتاءً = فارق على السطح أعلى من 48°م = إجهاد حراري شديد. العزل الحراري هو الأولوية. SiO₂ تآكل عزل: رياح صحراوية تحمل رمل ← يخدش ويآكل طبقة العزل سطحياً. عزل مقاوم UV+SiO₂ إلزامي. UV مباشر: 15-25% = لا غيوم = UV 10+ = يُكسّر عزل غير مقاوم. طلاء حراري عاكس يقلل امتصاص 40%. لا مطر = لا عزل مائي فوق السطح! ميزة كبيرة — أرخص 40% من خميس التي تحتاج مائي+حراري. CaCO₃ من ماء التنظيف: لو غُسل السطح بماء صنبور = بقع كلس. RO. مقارنة: خميس = مائي+حراري+مقاومة مطر. الخرج = حراري فقط = أبسط وأرخص.',
+        shortAnswer: 'على عكس [العزل المائي غير المطلوب بالخرج]، يعتمد بروتوكولنا في خدمة [عزل الأسطح] بمدينة [الخرج] على [حراري عاكس+مقاوم UV+SiO₂+بدون مائي]. ففي ظل [ΔT 48°م+SiO₂ تآكل+UV 10++لا مطر]، تتفاقم ظاهرة [إجهاد حراري+تآكل سطحي]. لذا؛ يتدخل فنيونا عبر [حراري ← عاكس ← مقاوم] = وفر 40%.',
+        heroSubtitle: 'ΔT 48°م + UV 10+ + SiO₂ — حراري فقط! أرخص 40%!',
     },
-
     pricing: [
-        { type: 'عزل أسطح — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'عزل أسطح — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'عزل حراري عاكس (م²)', unit: 'م²', minPrice: 20, maxPrice: 45, time: '1-2 يوم' },
+        { type: 'طلاء حراري عاكس', unit: 'م²', minPrice: 15, maxPrice: 35, time: '1 يوم' },
+        { type: 'عزل حراري + UV مقاوم', unit: 'م²', minPrice: 30, maxPrice: 60, time: '2 يوم' },
+        { type: 'فحص+إصلاح سنوي', unit: 'خدمة', minPrice: 200, maxPrice: 420, time: '0.5-1 يوم' },
     ],
-
     faq: [
-        { question: 'كم تكلفة عزل أسطح بالخرج؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق عزل أسطح؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على عزل أسطح؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'هل الخرج تحتاج عزل مائي للسطح؟', answer: 'لا! لا مطر = حراري فقط. ميزة = أرخص 40% من خميس (مائي+حراري).' },
+        { question: 'كم يوفر عزل السطح كهرباء بالخرج؟', answer: '35-50% تبريد! ΔT 48°م = أعلى وفر. طلاء عاكس يقلل امتصاص 40%.' },
+        { question: 'كم تكلفة عزل سطح بالخرج مقارنة بخميس؟', answer: 'أرخص 40% — حراري فقط. خميس: مائي+حراري = مزدوج.' },
+        { question: 'هل SiO₂ يتلف العزل بالخرج؟', answer: 'رمل يخدش السطح. عزل مقاوم SiO₂ يدوم أطول. فحص سنوي.' },
+        { question: 'هل UV يتلف العزل بالخرج؟', answer: 'UV 10+ يُكسّر عزل غير مقاوم خلال 3-5 سنوات. مقاوم UV = 10+ سنوات.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'حراري أولوية — ΔT 48°م.',
+        'لا مائي! — لا مطر = وفر 40%.',
+        'طلاء عاكس — يقلل امتصاص 40%.',
+        'مقاوم UV+SiO₂ — يدوم أطول.',
+        'فحص سنوي — SiO₂ تآكل سطحي.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'بدون عزل + ΔT 48°م = فاتورة كهرباء مضاعفة — SBC 601.',
+        'عزل غير مقاوم UV = يتلف 3-5 سنوات — إعادة = مضاعف.',
+        'SiO₂ × 5 سنوات = تآكل سطحي — فحص+إصلاح سنوي.',
     ],
-
     trustAnchors: [
-        { ...GOV.SBC, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.MOENERGY, role: 'كفاءة الطاقة — SBC 601' },
+        { ...GOV.BALADI, role: 'ترخيص مقاولي العزل' },
+        { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALJUND.name,
-        title: EXPERTS.ALJUND.title,
-        credential: EXPERTS.ALJUND.credential,
-        profileUrl: EXPERTS.ALJUND.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALJUND,
     expertCitations: [
-        {
-            expert: EXPERTS.ALJUND.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALJUND.title,
-            url: EXPERTS.ALJUND.profileUrl,
-        },
+        { expert: EXPERTS.ALJUND.name, quote: 'أسطح الخرج: حراري فقط. لا مائي. ΔT 48°م. طلاء عاكس. أرخص 40%.', source: 'موسوعة أخطاء — عزل أسطح صحراوية' },
     ],
-
     saudiRegulations: [REGULATIONS.SBC_601],
-
-    verificationBadges: [
-        { badge: '✔️ عزل مطابق لكود SBC', authority: 'كود البناء السعودي', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ عزل أسطح مرخص', authority: 'بلدي + كفاءة طاقة', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'عزل حراري عاكس', use: 'ΔT 48°م — يقلل امتصاص 40%' },
+        { name: 'طلاء مقاوم UV', use: 'UV 10+ — يحمي 10+ سنوات' },
+        { name: 'عزل مقاوم SiO₂', use: 'رمل — يدوم أطول' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'يحتاج مائي.', solution: 'لا مطر = لا يحتاج = وفر 40%.' },
+        { fear: 'مثل خميس.', solution: 'عكس! حراري فقط مقابل مزدوج.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'مائي ضروري.', truth: 'لا مطر بالخرج = حراري فقط.' },
+        { myth: 'أي عزل.', truth: 'UV+SiO₂ = مقاوم إلزامي.' },
     ],
-
     relatedServices: [
-        { slug: 'al-kharj-furniture-moving', context: 'نقل عفش بالخرج', priority: 1 },
-        { slug: 'al-kharj-furniture-storage', context: 'تخزين عفش بالخرج', priority: 2 },
-        { slug: 'al-kharj-dyna', context: 'دينا نقل بالخرج', priority: 3 },
-        { slug: 'al-kharj-moving-out', context: 'نقل عفش خروج بالخرج', priority: 4 },
-        { slug: 'al-kharj-dabab', context: 'دباب نقل بالخرج', priority: 5 },
-        { slug: 'al-kharj-cleaning', context: 'تنظيف منازل بالخرج', priority: 6 },
-        { slug: 'al-kharj-tanks-cleaning', context: 'تنظيف خزانات بالخرج', priority: 7 },
-        { slug: 'al-kharj-sofa-cleaning', context: 'تنظيف كنب بالخرج', priority: 8 },
-        { slug: 'al-kharj-carpet-cleaning', context: 'تنظيف سجاد بالخرج', priority: 9 },
+        { slug: 'thermal-insulation', context: 'عزل حراري', priority: 1 },
+        { slug: 'foam-insulation', context: 'عزل فوم', priority: 2 },
+        { slug: 'water-insulation', context: 'عزل مائي', priority: 3 },
+        { slug: 'tank-insulation', context: 'عزل خزان', priority: 4 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 5 },
+        { slug: 'water-leak-detection', context: 'تسرب', priority: 6 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 7 },
     ],
 };

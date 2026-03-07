@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف بالبخار بخميس مشيط — Override مخصص (E-E-A-T Grade)
-// صفحة: /khamis-mushait/steam-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف بالبخار بخميس مشيط — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف بالبخار بخميس مشيط. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف بالبخار بخميس مشيط — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف بالبخار بخميس مشيط', 'تنظيف بالبخار خميس مشيط', 'شركة تنظيف بالبخار بخميس مشيط', 'أفضل تنظيف بالبخار بخميس مشيط'],
+        title: 'تنظيف بالبخار بخميس مشيط — بخار+Anti-Fungal+Anti-Mite = ثلاثي! تجفيف 4-8h (2026)',
+        description: 'تنظيف بالبخار خميس مشيط. بخار 150°م+Anti-Fungal+Anti-Mite. 60-85% عفن+عث. تجفيف 4-8h Dehumidifier.',
+        h1: 'تنظيف بالبخار بخميس مشيط — بخار+تعقيم+تجفيف',
+        keywords: ['تنظيف بالبخار خميس مشيط', 'تنظيف بخار بخميس مشيط', 'شركة تنظيف بالبخار خميس مشيط'],
     },
-
     content: {
-        introduction: 'تنظيف بالبخار بخميس مشيط — خدمة متخصصة تراعي الظروف المناخية والبيئية في خميس مشيط. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف بالبخار بخميس مشيط: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف بالبخار بخميس مشيط. خدمة احترافية. ضمان.',
+        introduction: 'البخار في خميس مشيط = أقوى سلاح لكن يحتاج ملحقات! البخار 150°م: يقتل بكتيريا+عث+بق على السطح. لكن بخميس: 60-85% = البخار يضيف رطوبة على بيئة رطبة أصلاً ← يحتاج Dehumidifier فوري بعد البخار. Anti-Fungal: البخار يقتل العفن على السطح لكن الجذور عميقة. Anti-Fungal يخترق المسام والألياف. البخار+Anti-Fungal معاً = ثنائي قاتل. Anti-Mite: العث داخل الحشوات لا يصله البخار السطحي. Anti-Mite بعد البخار يصل الحشوة. تجفيف 4-8 ساعات: البخار يُرطّب + 60-85% = السطح لا يجف. Dehumidifier إلزامي. مقارنة: عنيزة = بخار يكفي وحده + تجفيف 20 دقيقة + لا Dehumidifier + أرخص 25%. خميس = بخار + ملحقات.',
+        shortAnswer: 'على عكس [البخار وحده بدون Anti-Fungal ولا Dehumidifier]، يعتمد بروتوكولنا في خدمة [التنظيف بالبخار] بمدينة [خميس مشيط] على [بخار 150°م+Anti-Fungal+Anti-Mite+Dehumidifier]. ففي ظل [60-85%+عفن عميق+عث حشوات+تجفيف بطيء]، تتفاقم ظاهرة [رطوبة إضافية+عفن يرجع+عث يبقى]. لذا؛ يتدخل فريقنا عبر [بخار ← تعقيم ← ضد عث ← تجفيف Dehumidifier].',
+        heroSubtitle: 'بخار + Anti-Fungal + Anti-Mite + Dehumidifier — ثلاثي!',
     },
-
     pricing: [
-        { type: 'تنظيف بالبخار — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف بالبخار — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'غرفة', unit: 'غرفة', minPrice: 80, maxPrice: 170, time: '1-2h + تجفيف 4-8h' },
+        { type: 'شقة كاملة', unit: 'شقة', minPrice: 250, maxPrice: 500, time: '3-5h + تجفيف' },
+        { type: '+ Anti-Fungal/Mite', unit: 'إضافي', minPrice: 60, maxPrice: 130, time: '1h' },
+        { type: 'ربع سنوي (4 زيارات)', unit: 'سنة', minPrice: 350, maxPrice: 700, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف بالبخار بخميس مشيط؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف بالبخار؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف بالبخار؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'هل البخار يكفي وحده بخميس مشيط؟', answer: 'لا! البخار يقتل السطح. لكن: عفن عميق يحتاج Anti-Fungal. عث حشوات يحتاج Anti-Mite. تجفيف يحتاج Dehumidifier.' },
+        { question: 'ليش تجفيف بخميس أبطأ بعد البخار؟', answer: 'البخار يُرطّب + 60-85% أصلاً = لا يجف. 4-8h مع Dehumidifier. عنيزة: 20 دقيقة.' },
+        { question: 'كم تكلفة بخار بخميس مقارنة بعنيزة؟', answer: 'أغلى 25% — Anti-Fungal+Anti-Mite+Dehumidifier. 80-500 مقابل 65-400.' },
+        { question: 'هل البخار يقتل العفن بخميس مشيط؟', answer: 'يقتل السطح فقط. الجذور عميقة. Anti-Fungal+بخار = ثنائي يقتل السطح+العمق.' },
+        { question: 'متى أفضل وقت للبخار بخميس مشيط؟', answer: 'صباحاً — يومان جفاف أفضل. ضباب مساءً يُبطئ. Dehumidifier يوم كامل.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'بخار 150°م — يقتل سطحياً.',
+        'Anti-Fungal بعد البخار — يقتل جذور العفن.',
+        'Anti-Mite — يصل حشوات لا يصلها البخار.',
+        'Dehumidifier فوري — بدونه عفن جديد!',
+        'لا بخار بدون تجفيف — يزيد الرطوبة.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'بخار بدون Dehumidifier + 60-85% = عفن جديد 72 ساعة — أسوأ!',
+        'بخار سطحي بدون Anti-Fungal = العفن يرجع أسبوعين.',
+        'عث داخل حشوات بدون Anti-Mite = حساسية مستمرة.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
+        { entity: AMANA.ASIR.entity, url: AMANA.ASIR.url, role: 'اشتراطات أمانة عسير' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'بخار خميس: يحتاج Anti-Fungal+Anti-Mite+Dehumidifier. البخار وحده لا يكفي بالرطوبة.', source: 'نصائح هندسية — تنظيف جبلي' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف بخار مرخص', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'بخار 150°م', use: 'يقتل بكتيريا+عث+بق سطحياً' },
+        { name: 'Anti-Fungal+Anti-Mite', use: 'يقتل عفن+عث عميقاً' },
+        { name: 'Dehumidifier', use: 'تجفيف 4-8h — يمنع عفن جديد' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'بخار يكفي.', solution: 'سطحي فقط. Anti-Fungal+Anti-Mite+Dehumidifier.' },
+        { fear: 'مثل عنيزة.', solution: '4-8h تجفيف مقابل 20 دقيقة. مختلف تماماً.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'البخار يقتل كل شيء.', truth: 'سطحي. عفن عميق+عث حشوات = يحتاج ملحقات.' },
+        { myth: 'يجف بسرعة.', truth: '4-8h + Dehumidifier. 60-85% = لا يجف بدونه.' },
     ],
-
     relatedServices: [
-        { slug: 'khamis-mushait-furniture-moving', context: 'نقل عفش بخميس مشيط', priority: 1 },
-        { slug: 'khamis-mushait-furniture-storage', context: 'تخزين عفش بخميس مشيط', priority: 2 },
-        { slug: 'khamis-mushait-dyna', context: 'دينا نقل بخميس مشيط', priority: 3 },
-        { slug: 'khamis-mushait-moving-out', context: 'نقل عفش خروج بخميس مشيط', priority: 4 },
-        { slug: 'khamis-mushait-dabab', context: 'دباب نقل بخميس مشيط', priority: 5 },
-        { slug: 'khamis-mushait-cleaning', context: 'تنظيف منازل بخميس مشيط', priority: 6 },
-        { slug: 'khamis-mushait-tanks-cleaning', context: 'تنظيف خزانات بخميس مشيط', priority: 7 },
-        { slug: 'khamis-mushait-sofa-cleaning', context: 'تنظيف كنب بخميس مشيط', priority: 8 },
-        { slug: 'khamis-mushait-carpet-cleaning', context: 'تنظيف سجاد بخميس مشيط', priority: 9 },
+        { slug: 'carpet-cleaning', context: 'سجاد — بخار', priority: 1 },
+        { slug: 'sofa-cleaning', context: 'كنب — بخار', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 3 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف — عفن', priority: 4 },
+        { slug: 'councils-cleaning', context: 'مجالس', priority: 5 },
+        { slug: 'pest-control', context: 'حشرات', priority: 6 },
+        { slug: 'marble-polishing', context: 'رخام', priority: 7 },
     ],
 };

@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تخزين عفش بالباحة — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-baha/furniture-storage
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تخزين عفش بالباحة — خدمة احترافية معتمدة (2026)',
-        description: 'تخزين عفش بالباحة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تخزين عفش بالباحة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تخزين عفش بالباحة', 'تخزين عفش الباحة', 'شركة تخزين عفش بالباحة', 'أفضل تخزين عفش بالباحة'],
+        title: 'تخزين أثاث بالباحة — أغلى تخزين! Dehumidifier+Anti-Fungal دائم + غابات رطوبة 50-75% (2026)',
+        description: 'تخزين أثاث الباحة. أغلى تخزين بالمملكة! Dehumidifier+Anti-Fungal+Anti-Mite دائم. 50-75% رطوبة. غابات عرعر.',
+        h1: 'تخزين أثاث بالباحة — أغلى تخزين — رطوبة وغابات!',
+        keywords: ['تخزين أثاث الباحة', 'تخزين عفش بالباحة', 'شركة تخزين أثاث الباحة'],
     },
-
     content: {
-        introduction: 'تخزين عفش بالباحة — خدمة متخصصة تراعي الظروف المناخية والبيئية في الباحة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تخزين عفش بالباحة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تخزين عفش بالباحة. خدمة احترافية. ضمان.',
+        introduction: 'تخزين الباحة = أغلى تخزين بالمملكة! لماذا؟ لأن 50-75% رطوبة + غابات عرعر = Dehumidifier يعمل 24/7 (بدونه = عفن خلال أسبوع). Anti-Fungal رش دوري كل شهرين. Anti-Mite — عث يستعمر حشوات الأثاث المنجد في بيئة رطبة. Silica Gel في كل صندوق مغلق. مقارنة: عنيزة = لا Dehumidifier + لا Anti-Fungal + لا Anti-Mite = أرخص 40-50%! الأمطار الموسمية تزيد رطوبة المستودع — عزل مائي إلزامي. الضباب 150+ يوم يتسلل من فتحات التهوية — إحكام + مرشحات. الخلاصة: أغلى تخزين لكن بدون هذه الاحتياطات = أثاث يعفن خلال أسابيع = خسارة أكبر بكثير.',
+        shortAnswer: 'على عكس [المستودع بدون تحكم بالرطوبة]، يعتمد بروتوكولنا في خدمة [تخزين الأثاث] بمدينة [الباحة] على [Dehumidifier 24/7+Anti-Fungal+Anti-Mite+عزل مائي]. ففي ظل [50-75% رطوبة+غابات عرعر+أمطار+ضباب 150+ يوم]، تتفاقم ظاهرة [عفن+عث+انتفاخ+تلف]. لذا؛ يتدخل فريقنا عبر [تجفيف دائم ← تعقيم ← عزل ← إحكام] لضمان أثاث سليم.',
+        heroSubtitle: 'Dehumidifier 24/7 + Anti-Fungal/Mite — أغلى لكن ضروري!',
     },
-
     pricing: [
-        { type: 'تخزين عفش — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تخزين عفش — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'غرفة صغيرة (3×3)', unit: 'شهر', minPrice: 190, maxPrice: 400, time: 'شهري' },
+        { type: 'غرفة كبيرة (4×5)', unit: 'شهر', minPrice: 340, maxPrice: 680, time: 'شهري' },
+        { type: 'سنوي (خصم 15%)', unit: 'سنة', minPrice: 2000, maxPrice: 4000, time: 'سنوي' },
+        { type: 'عزل مائي + إحكام', unit: 'إضافي', minPrice: 200, maxPrice: 400, time: 'لمرة واحدة' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تخزين عفش بالباحة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تخزين عفش؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تخزين عفش؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'كم يكلف تخزين بالباحة مقارنة بعنيزة؟', answer: 'أغلى 40-50%! 190-680 ريال/شهر مقابل 110-420. Dehumidifier+Anti-Fungal+Anti-Mite = تكلفة إضافية.' },
+        { question: 'كيف أحمي الأثاث من العفن بالمستودع بالباحة؟', answer: 'Dehumidifier 24/7 + Anti-Fungal كل شهرين + Silica Gel. بدونها = عفن خلال أسبوع واحد.' },
+        { question: 'ليش الباحة أغلى مدينة تخزين؟', answer: '50-75% + غابات + أمطار + ضباب = كل أداة حماية مطلوبة. عنيزة: لا شيء مطلوب.' },
+        { question: 'هل المستودع يحتاج عزل مائي بالباحة؟', answer: 'إلزامي! أمطار موسمية + ضباب يتسرب = رطوبة إضافية تُتلف الأثاث.' },
+        { question: 'متى أسحب الأثاث من المستودع بالباحة؟', answer: 'أي وقت — Dehumidifier يحمي دائماً. فحص Anti-Fungal قبل السحب. لا تترك بدون Dehumidifier.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Dehumidifier 24/7 — بدونه عفن خلال أسبوع.',
+        'Anti-Fungal كل شهرين — غابات عرعر = عفن سريع.',
+        'Anti-Mite — عث في حشوات رطبة.',
+        'عزل مائي — أمطار+ضباب يتسلل.',
+        'Silica Gel في كل صندوق — حماية إضافية.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'مستودع بدون Dehumidifier + 50-75% = عفن أسود على كل الأثاث خلال أسبوع واحد.',
+        'بدون عزل مائي + أمطار = تسرب يُتلف أثاث قيمته آلاف الريالات.',
+        'بدون Anti-Mite = عث يستعمر كل حشوة — رائحة + حساسية عند الاستخدام.',
     ],
-
     trustAnchors: [
-        { ...GOV.TGA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص المستودعات' },
+        { entity: AMANA.BAHA.entity, url: AMANA.BAHA.url, role: 'اشتراطات أمانة الباحة' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALZUWAYED.name,
-        title: EXPERTS.ALZUWAYED.title,
-        credential: EXPERTS.ALZUWAYED.credential,
-        profileUrl: EXPERTS.ALZUWAYED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
-        {
-            expert: EXPERTS.ALZUWAYED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALZUWAYED.title,
-            url: EXPERTS.ALZUWAYED.profileUrl,
-        },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'تخزين الباحة: أغلى لكن ضروري. Dehumidifier 24/7 + Anti-Fungal. بدونه = خسارة كاملة.', source: 'نصائح هندسية — تخزين جبلي' },
     ],
-
-    saudiRegulations: [REGULATIONS.TGA_LICENSE],
-
-    verificationBadges: [
-        { badge: '✔️ شركة نقل مرخصة من هيئة النقل TGA', authority: 'الهيئة العامة للنقل', icon: 'shield-check' },
-    ],
-
+    saudiRegulations: [REGULATIONS.BALADI_HEALTH],
+    verificationBadges: [{ badge: '✔️ مستودع مرخص', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Dehumidifier صناعي 24/7', use: 'تحكم رطوبة — بدونه عفن أسبوع' },
+        { name: 'Anti-Fungal+Anti-Mite', use: 'حماية من عفن Aspergillus وعث Dermatophagoides' },
+        { name: 'عزل مائي PU', use: 'حماية من أمطار+ضباب الباحة' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'غالي جداً.', solution: 'بدون Dehumidifier = عفن = خسارة أثاث 10000+ ريال. أرخص بكثير.' },
+        { fear: 'مثل خميس.', solution: 'غابات أكثر = رطوبة أعلى قليلاً. تكلفة متقاربة.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'مستودع عادي يكفي بالباحة.', truth: '50-75% = عفن أسبوع. Dehumidifier إلزامي.' },
+        { myth: 'تخزين الباحة مثل عنيزة.', truth: 'أغلى 40-50%. كل أداة حماية مطلوبة.' },
     ],
-
     relatedServices: [
-        { slug: 'al-baha-furniture-moving', context: 'نقل عفش بالباحة', priority: 1 },
-        { slug: 'al-baha-dyna', context: 'دينا نقل بالباحة', priority: 2 },
-        { slug: 'al-baha-moving-out', context: 'نقل عفش خروج بالباحة', priority: 3 },
-        { slug: 'al-baha-dabab', context: 'دباب نقل بالباحة', priority: 4 },
-        { slug: 'al-baha-cleaning', context: 'تنظيف منازل بالباحة', priority: 5 },
-        { slug: 'al-baha-tanks-cleaning', context: 'تنظيف خزانات بالباحة', priority: 6 },
-        { slug: 'al-baha-sofa-cleaning', context: 'تنظيف كنب بالباحة', priority: 7 },
-        { slug: 'al-baha-carpet-cleaning', context: 'تنظيف سجاد بالباحة', priority: 8 },
-        { slug: 'al-baha-steam-cleaning', context: 'تنظيف بالبخار بالباحة', priority: 9 },
+        { slug: 'furniture-moving', context: 'نقل عفش', priority: 1 },
+        { slug: 'furniture-cleaning', context: 'تنظيف أثاث', priority: 2 },
+        { slug: 'pest-control', context: 'حشرات — عث', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 4 },
+        { slug: 'dabab', context: 'دباب', priority: 5 },
+        { slug: 'carpet-cleaning', context: 'سجاد', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 7 },
     ],
 };

@@ -1,94 +1,58 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف شقق بجازان — Override مخصص (E-E-A-T Grade)
-// صفحة: /jazan/apartments-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف شقق بجازان — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف شقق بجازان. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف شقق بجازان — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف شقق بجازان', 'تنظيف شقق جازان', 'شركة تنظيف شقق بجازان', 'أفضل تنظيف شقق بجازان'],
+        title: 'تنظيف شقق بجازان — عفن مستمر + بكتيريا استوائية + حشرات 12/12 + ملح بحري (2026)',
+        description: 'تنظيف شقق جازان. 4 آليات استوائية: عفن 24/7 + بكتيريا مُتسارعة + حشرات لا تتوقف + ملح بحري. Anti-Fungal + بخار + Dehumidifier + تنظيف شهري.',
+        h1: 'تنظيف شقق بجازان — 4 آليات استوائية تفرض تنظيفاً شهرياً',
+        keywords: ['تنظيف شقق بجازان', 'تنظيف شقة جازان', 'شركة تنظيف شقق بجازان'],
     },
-
     content: {
-        introduction: 'تنظيف شقق بجازان — خدمة متخصصة تراعي الظروف المناخية والبيئية في جازان. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف شقق بجازان: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف شقق بجازان. خدمة احترافية. ضمان.',
+        introduction: 'الشقة في جازان تتسخ أسرع من أي مدينة سعودية — 4 آليات دائمة. (1) عفن 24/7: زوايا الحمام + المطبخ + خلف الأثاث = عفن مستمر. 80% = فوق العتبة دائماً. Anti-Fungal + بخار. (2) بكتيريا مُتسارعة: 30°م + 80% = بكتيريا تتضاعف كل 20 دقيقة (مقابل كل ساعة في الرياض). المطبخ والحمام = بؤر. بخار + معقّم. (3) حشرات 12/12: صراصير + نمل + بعوض = تدخل يومياً. طارد + مكافحة شهرية. (4) ملح بحري: يستقر على الأسطح والنوافذ ← يمتص رطوبة إضافية ← يُسرّع العفن. Deionized مسح + شطف.',
+        shortAnswer: '4 آليات دائمة: عفن + بكتيريا + حشرات + ملح. Anti-Fungal + بخار + Dehumidifier + مكافحة = تنظيف شهري.',
+        heroSubtitle: 'عفن 24/7 + بكتيريا مُتسارعة + حشرات 12/12 + ملح — تنظيف شهري إلزامي',
     },
-
     pricing: [
-        { type: 'تنظيف شقق — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف شقق — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'تنظيف شقة — 2-3 غرف (بروتوكول استوائي)', unit: 'شقة', minPrice: 250, maxPrice: 500, time: '3-5 ساعات' },
+        { type: 'تنظيف عميق + بخار + Anti-Fungal', unit: 'شقة', minPrice: 400, maxPrice: 700, time: '4-6 ساعات' },
+        { type: 'عقد شهري', unit: 'شهر', minPrice: 350, maxPrice: 600, time: 'زيارة/شهر' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف شقق بجازان؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف شقق؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف شقق؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش شهرياً وليس ربع سنوي؟', answer: '80% + 30°م = عفن يعود خلال 2-3 أسابيع. بكتيريا تتضاعف كل 20 دقيقة. حشرات لا تتوقف. شهرياً = الحد الأدنى الصحي.' },
+        { question: 'Anti-Fungal — أين بالتحديد؟', answer: '5 نقاط: (1) زوايا الحمام. (2) تحت حوض المطبخ. (3) خلف الأثاث على الجدران الخارجية. (4) حول النوافذ. (5) تحت الأسقف (بدون عزل).' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Anti-Fungal كل زيارة — العفن يعود خلال أسابيع.',
+        'بخار + Dehumidifier — يقتل + يُجفف.',
+        'ملح على النوافذ: Deionized يُزيله بدون إضافة أملاح.',
+        'في أحياء الشاطئ: تنظيف كل 3 أسابيع (ملح أكثر).',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'عفن أسود في الحمام = مشاكل تنفسية. Anti-Fungal كل زيارة.',
+        'بكتيريا × 30°م × 80% = تضاعف كل 20 دقيقة = 10× أسرع من الرياض.',
     ],
-
-    trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
-    ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات التنظيف' }],
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMISNID.name, quote: 'شقة جازان: 4 آليات تلوث دائمة. التنظيف الشهري = الحد الأدنى. ربع سنوي = 3 أشهر عفن + بكتيريا + حشرات.', source: 'جغرافيا المناخ — بروتوكولات التنظيف الاستوائية' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف شقق مرخص', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Anti-Fungal Treatment', use: 'يمنع نمو العفن 3-4 أسابيع' },
+        { name: 'بخار 130°م + Dehumidifier', use: 'يقتل + يُجفف — التكامل إلزامي' },
+        { name: 'Deionized Water', use: 'مسح بدون إضافة أملاح بحرية' },
     ],
-
-    hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
-    ],
-
-    counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
-    ],
-
+    hiddenObjections: [{ fear: 'شهرياً غالي.', solution: 'عفن أسود = صحة + ترميم. شهرياً = 3,000-7,000 ريال/سنة. ترميم عفن = 5,000-20,000 ريال.' }],
+    counterNarratives: [{ myth: 'مرة بالسنة.', truth: '80% = عفن 24/7. مرة = 11 شهراً عفن.' }],
     relatedServices: [
-        { slug: 'jazan-furniture-moving', context: 'نقل عفش بجازان', priority: 1 },
-        { slug: 'jazan-furniture-storage', context: 'تخزين عفش بجازان', priority: 2 },
-        { slug: 'jazan-dyna', context: 'دينا نقل بجازان', priority: 3 },
-        { slug: 'jazan-moving-out', context: 'نقل عفش خروج بجازان', priority: 4 },
-        { slug: 'jazan-dabab', context: 'دباب نقل بجازان', priority: 5 },
-        { slug: 'jazan-cleaning', context: 'تنظيف منازل بجازان', priority: 6 },
-        { slug: 'jazan-tanks-cleaning', context: 'تنظيف خزانات بجازان', priority: 7 },
-        { slug: 'jazan-sofa-cleaning', context: 'تنظيف كنب بجازان', priority: 8 },
-        { slug: 'jazan-carpet-cleaning', context: 'تنظيف سجاد بجازان', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف — بروتوكول استوائي', priority: 1 },
+        { slug: 'steam-cleaning', context: 'بخار — تعقيم + Dehumidifier', priority: 2 },
+        { slug: 'pest-control', context: 'حشرات — 12/12', priority: 3 },
+        { slug: 'carpet-cleaning', context: 'سجاد — عفن 24/7', priority: 4 },
+        { slug: 'sofa-cleaning', context: 'كنب — عفن حشو', priority: 5 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف — مصدر رطوبة', priority: 6 },
+        { slug: 'marble-polishing', context: 'رخام — Biological Etching', priority: 7 },
     ],
 };

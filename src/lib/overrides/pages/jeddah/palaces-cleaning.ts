@@ -6,6 +6,7 @@
 // ══════════════════════════════════════════════════════════════
 
 import type { PageOverride } from '../../types';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -81,19 +82,13 @@ export const override: PageOverride = {
         { entity: 'الهيئة السعودية للمواصفات والمقاييس', acronym: 'SASO', url: 'https://www.saso.gov.sa', role: 'اعتماد مواد جلي وتلميع الرخام والأسطح الحساسة' },
     ],
 
-    expertReviewer: {
-        name: 'م. ماجد المحيميد',
-        title: 'خبير جودة تشطيبات وعزل',
-        credential: 'مهندس جودة تشطيبات — المرجع الأول في جودة البناء',
-        profileUrl: 'https://x.com/majedalmohaimed',
-    },
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
             expert: 'م. ماجد المحيميد',
             quote: 'القصور تحتاج معاملة فندقية — كل سطح فيه مادة مختلفة تحتاج pH مختلف. الكلور ممنوع كلياً على الرخام والجلد والنحاس والفضة. الخطأ ثمنه آلاف الريالات',
             source: 'خبير جودة تشطيبات وعزل',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
 
@@ -103,14 +98,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'jeddah-villas-cleaning', context: 'فلل فاخرة — نفس المعايير على مساحة أصغر', priority: 1 },
-        { slug: 'jeddah-glass-facades-cleaning', context: 'واجهات القصر الزجاجية — ملح NaCl', priority: 2 },
-        { slug: 'jeddah-swimming-pool-cleaning', context: 'مسابح القصر — صيانة أسبوعية', priority: 3 },
-        { slug: 'jeddah-marble-polishing', context: 'جلي رخام القصر — فندقي', priority: 4 },
-        { slug: 'jeddah-carpet-cleaning', context: 'سجاد فاخر يدوي — معاملة خاصة', priority: 5 },
-        { slug: 'jeddah-sofa-cleaning', context: 'مجالس القصر — بخار جاف', priority: 6 },
-        { slug: 'jeddah-air-conditioner-cleaning', context: 'مكيفات مركزية + دكتات', priority: 7 },
-        { slug: 'jeddah-sanitization', context: 'تعقيم بعد المناسبات', priority: 8 },
-        { slug: 'jeddah-tanks-cleaning', context: 'خزانات كبيرة 10,000+ لتر', priority: 9 },
+        { slug: 'villas-cleaning', context: 'فلل فاخرة — نفس المعايير على مساحة أصغر', priority: 1 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات القصر الزجاجية — ملح NaCl', priority: 2 },
+        { slug: 'swimming-pool-cleaning', context: 'مسابح القصر — صيانة أسبوعية', priority: 3 },
+        { slug: 'marble-polishing', context: 'جلي رخام القصر — فندقي', priority: 4 },
+        { slug: 'carpet-cleaning', context: 'سجاد فاخر يدوي — معاملة خاصة', priority: 5 },
+        { slug: 'sofa-cleaning', context: 'مجالس القصر — بخار جاف', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيفات مركزية + دكتات', priority: 7 },
+        { slug: 'sanitization', context: 'تعقيم بعد المناسبات', priority: 8 },
+        { slug: 'tanks-cleaning', context: 'خزانات كبيرة 10,000+ لتر', priority: 9 },
     ],
 };

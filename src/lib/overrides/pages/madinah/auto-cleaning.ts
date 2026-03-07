@@ -74,12 +74,7 @@ export const override: PageOverride = {
         { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'الرقابة على معايير استهلاك المياه في مغاسل السيارات', acronym: 'أمانة المدينة' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMISNID.name,
-        title: EXPERTS.ALMISNID.title,
-        credential: EXPERTS.ALMISNID.credential,
-        profileUrl: EXPERTS.ALMISNID.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMISNID,
 
     expertCitations: [
         {
@@ -115,8 +110,8 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'madinah-cleaning', context: 'تنظيف منزل + غسيل سيارة = نظافة شاملة بباقة واحدة.', priority: 1 },
-        { slug: 'madinah-furniture-cleaning', context: 'تلميع أثاث من غبار الحرات — نفس العدو بطريقة مختلفة.', priority: 2 },
-        { slug: 'madinah-glass-facades-cleaning', context: 'تنظيف واجهات زجاجية من الغبار — يتكامل مع غسيل السيارة.', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف منزل + غسيل سيارة = نظافة شاملة بباقة واحدة.', priority: 1 },
+        { slug: 'furniture-cleaning', context: 'تلميع أثاث من غبار الحرات — نفس العدو بطريقة مختلفة.', priority: 2 },
+        { slug: 'glass-facades-cleaning', context: 'تنظيف واجهات زجاجية من الغبار — يتكامل مع غسيل السيارة.', priority: 3 },
     ],
 };

@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف بالساعة بعنيزة — Override مخصص (E-E-A-T Grade)
-// صفحة: /onizah/hourly-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف بالساعة بعنيزة — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف بالساعة بعنيزة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف بالساعة بعنيزة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف بالساعة بعنيزة', 'تنظيف بالساعة عنيزة', 'شركة تنظيف بالساعة بعنيزة', 'أفضل تنظيف بالساعة بعنيزة'],
+        title: 'تنظيف بالساعة بعنيزة — 3 خطوات فقط! SiO₂+CaCO₃+طلع — لا عفن! أرخص+أسرع (2026)',
+        description: 'تنظيف بالساعة عنيزة. 3 خطوات فقط! HEPA+RO+Anti-Static. لا عفن لا عث. أرخص 40% من خميس. تمور = فحص حشرات.',
+        h1: 'تنظيف بالساعة بعنيزة — 3 خطوات — أبسط وأرخص!',
+        keywords: ['تنظيف بالساعة عنيزة', 'عاملة تنظيف بعنيزة', 'شركة تنظيف بالساعة عنيزة'],
     },
-
     content: {
-        introduction: 'تنظيف بالساعة بعنيزة — خدمة متخصصة تراعي الظروف المناخية والبيئية في عنيزة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف بالساعة بعنيزة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف بالساعة بعنيزة. خدمة احترافية. ضمان.',
+        introduction: 'العاملة بعنيزة تحتاج 3 خطوات فقط — أبسط بروتوكول بالمملكة! الخطوة 1: شفط HEPA — يُزيل SiO₂+طلع من كل الأسطح. الخطوة 2: مسح RO — ماء منقّى بدون CaCO₃ (يمنع بقع كلسية). الخطوة 3: Anti-Static — يمنع التصاق طلع النخيل على الأسطح بعد التنظيف. لماذا 3 خطوات فقط؟ لأن: لا عفن (15-25% رطوبة = صفر Anti-Fungal)، لا عث (صفر Anti-Mite)، لا Biofilm (صفر Anti-Biofilm)، لا NaCl (صفر Anti-Rust). مقارنة: خميس مشيط = 5-6 خطوات (عفن+عث+Dehumidifier). عنيزة أرخص 40% وأسرع. الفريد: موسم التمور = فحص مداخل حشرات كل زيارة (30 ثانية إضافية). بريدة = نفس 3 خطوات.',
+        shortAnswer: 'على عكس [التنظيف بـ 5-6 خطوات في المدن الجبلية]، يعتمد بروتوكولنا في خدمة [التنظيف بالساعة] بمدينة [عنيزة] على [3 خطوات: HEPA ← RO ← Anti-Static]. ففي ظل [SiO₂+CaCO₃ 550ppm+طلع+15-25% رطوبة]، تنعدم مشاكل [العفن+العث+Biofilm]. لذا؛ تُنفّذ العاملة عبر [شفط ← مسح ← رش] لضمان نظافة بأقل تكلفة ووقت.',
+        heroSubtitle: '3 خطوات فقط — أبسط+أرخص — لا عفن ولا عث!',
     },
-
     pricing: [
-        { type: 'تنظيف بالساعة — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف بالساعة — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'ساعة واحدة', unit: 'ساعة', minPrice: 22, maxPrice: 40, time: '1 ساعة' },
+        { type: '4 ساعات', unit: 'حصة', minPrice: 75, maxPrice: 140, time: '4 ساعات' },
+        { type: 'أسبوعي (4 زيارات/شهر)', unit: 'شهر', minPrice: 250, maxPrice: 500, time: '4 زيارات' },
+        { type: 'يومي (26 يوم/شهر)', unit: 'شهر', minPrice: 1300, maxPrice: 2600, time: '26 زيارة' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف بالساعة بعنيزة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف بالساعة؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف بالساعة؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'كم تكلفة عاملة بالساعة بعنيزة مقارنة بخميس مشيط؟', answer: 'أرخص 40% — 22-40 ريال/ساعة مقابل 28-50. لا Anti-Fungal ولا Anti-Mite ولا Dehumidifier.' },
+        { question: 'ليش 3 خطوات بس بعنيزة؟', answer: '15-25% رطوبة = صفر عفن+عث+Biofilm. لا حاجة لخطوات إضافية. خميس: 5-6 خطوات بسبب 60-85% رطوبة.' },
+        { question: 'كيف العاملة تتعامل مع رمل النفود؟', answer: 'HEPA أولاً — شفط SiO₂ من كل الأسطح قبل مسح. بدونه = ممسحة تخدش البلاط والأثاث.' },
+        { question: 'هل العاملة تفحص حشرات التمور؟', answer: 'كل زيارة: فحص مداخل 30 ثانية. موسم التمور (أغسطس-أكتوبر) = ذباب+نمل. سد فجوات عند الحاجة.' },
+        { question: 'متى أفضل وقت لطلب عاملة بعنيزة؟', answer: 'الصباح الباكر — أقل SiO₂ في الهواء. بعد عاصفة = عاجل. أسبوعي أفضل من كل أسبوعين.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'HEPA أولاً — لا تمسح أبداً قبل شفط SiO₂.',
+        'ماء RO — CaCO₃ 550ppm يترك بقع كلسية.',
+        'Anti-Static — يمنع التصاق طلع بعد التنظيف.',
+        'فحص مداخل — موسم تمور = حشرات.',
+        'لا Anti-Fungal/Mite — 15-25% = صفر. وفّر.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'مسح بدون HEPA + SiO₂ = خدش أرضيات وأثاث — خسارة مالية.',
+        'ماء صنبور بدون RO = بقع كلسية بيضاء على كل الأسطح.',
+        'موسم تمور بدون فحص مداخل = ذباب+نمل يستوطن المطبخ.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.HRSD, role: 'تنظيم العمالة المنزلية' },
+        { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMISNID.name, quote: 'عاملة عنيزة: 3 خطوات. أبسط مدينة. لا عفن. لا عث. موسم تمور = حشرات فقط.', source: 'جغرافيا المناخ — القصيم' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ عمالة مرخصة', authority: 'HRSD + بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'HEPA H13', use: 'شفط SiO₂+طلع — 99.97%' },
+        { name: 'ماء RO منقّى', use: 'مسح بدون CaCO₃ — صفر بقع كلسية' },
+        { name: 'Anti-Static Spray', use: 'منع التصاق طلع النخيل بعد التنظيف' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'أقل من خميس = أقل جودة.', solution: '3 خطوات لأن البيئة أبسط. لا عفن = لا حاجة لخطوات إضافية.' },
+        { fear: 'حشرات تمور.', solution: 'فحص مداخل 30 ثانية كل زيارة. بسيط.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'عاملة عنيزة تحتاج 5-6 خطوات مثل خميس.', truth: '3 خطوات — لا عفن لا عث. 15-25% رطوبة.' },
+        { myth: 'أرخص = أسوأ.', truth: 'أبسط بيئة = أقل تكلفة. الجودة نفسها.' },
     ],
-
     relatedServices: [
-        { slug: 'onizah-furniture-moving', context: 'نقل عفش بعنيزة', priority: 1 },
-        { slug: 'onizah-furniture-storage', context: 'تخزين عفش بعنيزة', priority: 2 },
-        { slug: 'onizah-dyna', context: 'دينا نقل بعنيزة', priority: 3 },
-        { slug: 'onizah-moving-out', context: 'نقل عفش خروج بعنيزة', priority: 4 },
-        { slug: 'onizah-dabab', context: 'دباب نقل بعنيزة', priority: 5 },
-        { slug: 'onizah-cleaning', context: 'تنظيف منازل بعنيزة', priority: 6 },
-        { slug: 'onizah-tanks-cleaning', context: 'تنظيف خزانات بعنيزة', priority: 7 },
-        { slug: 'onizah-sofa-cleaning', context: 'تنظيف كنب بعنيزة', priority: 8 },
-        { slug: 'onizah-carpet-cleaning', context: 'تنظيف سجاد بعنيزة', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف منازل', priority: 1 },
+        { slug: 'apartments-cleaning', context: 'شقق', priority: 2 },
+        { slug: 'carpet-cleaning', context: 'سجاد', priority: 3 },
+        { slug: 'steam-cleaning', context: 'بخار', priority: 4 },
+        { slug: 'sofa-cleaning', context: 'كنب', priority: 5 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 6 },
+        { slug: 'pest-control', context: 'حشرات', priority: 7 },
     ],
 };

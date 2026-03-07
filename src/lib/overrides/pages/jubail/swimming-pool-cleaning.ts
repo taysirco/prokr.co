@@ -1,94 +1,72 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف مسابح بالجبيل — Override مخصص (E-E-A-T Grade)
-// صفحة: /jubail/swimming-pool-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف مسابح بالجبيل — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف مسابح بالجبيل. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف مسابح بالجبيل — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف مسابح بالجبيل', 'تنظيف مسابح الجبيل', 'شركة تنظيف مسابح بالجبيل', 'أفضل تنظيف مسابح بالجبيل'],
+        title: 'تنظيف مسابح بالجبيل — NaCl Chloride Demand + 85-98% طحالب أقصى + Biofilm + VOC (2026)',
+        description: 'تنظيف مسابح الجبيل. NaCl Chloride Demand أقصى. 85-98% طحالب أقصى. Biofilm أسطح. VOC يتفاعل. Algaecide Marine + فحص يومي.',
+        h1: 'تنظيف مسابح بالجبيل — ملح يستهلك الكلور وطحالب أقصى وBiofilm',
+        keywords: ['تنظيف مسابح الجبيل', 'تنظيف مسبح بالجبيل', 'شركة تنظيف مسابح بالجبيل'],
     },
-
     content: {
-        introduction: 'تنظيف مسابح بالجبيل — خدمة متخصصة تراعي الظروف المناخية والبيئية في الجبيل. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف مسابح بالجبيل: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف مسابح بالجبيل. خدمة احترافية. ضمان.',
+        introduction: 'مسبح الجبيل = أصعب مسبح في المملكة. الأول — NaCl Chloride Demand: ملح من الهواء يدخل المسبح ← يستهلك الكلور ← Demand أقصى. كلور 2× أكثر. الثاني — 85-98% طحالب أقصى: أقصى رطوبة = أقصى طحالب. أسرع نمو في المملكة. Algaecide Marine أسبوعي. الثالث — Biofilm: 98% = Biofilm على بلاط+أنابيب+فلاتر. Anti-Biofilm. الرابع — VOC: بتروكيماويات تتفاعل مع كلور + pH. فحص يومي.',
+        shortAnswer: 'على عكس [صيانة عادية] التي تتجاهل Chloride Demand و Biofilm، يعتمد بروتوكولنا في خدمة [تنظيف المسابح] بمدينة [الجبيل] على [كلور 2× + Algaecide Marine + Anti-Biofilm + فحص يومي]. ففي ظل [NaCl + 85-98% + Biofilm + VOC]، تتفاقم ظاهرة [Demand + طحالب + Biofilm + تفاعل]. لذا؛ يتدخل خبراؤنا عبر [بروتوكول مسبح صناعي-ساحلي].',
+        heroSubtitle: 'NaCl Chloride Demand + طحالب أقصى + Biofilm + VOC تفاعل',
     },
-
     pricing: [
-        { type: 'تنظيف مسابح — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف مسابح — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'صيانة أسبوعية', unit: 'مسبح', minPrice: 130, maxPrice: 260, time: '1-2 ساعة' },
+        { type: 'Anti-Biofilm + Algaecide', unit: 'مسبح', minPrice: 220, maxPrice: 440, time: '2-3 ساعات' },
+        { type: 'عقد شهري (4 زيارات)', unit: 'شهر', minPrice: 440, maxPrice: 880, time: '4 زيارات' },
+        { type: 'تجهيز صيف (كلور+Algaecide)', unit: 'مسبح', minPrice: 310, maxPrice: 620, time: '2-4 ساعات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف مسابح بالجبيل؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف مسابح؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف مسابح؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'Chloride Demand — ماذا يعني؟', answer: 'NaCl من الهواء ← يدخل المسبح ← يتفاعل مع الكلور ← يستهلكه. تحتاج كلور 2× أكثر من الرياض.' },
+        { question: 'طحالب — أسرع من حفر الباطن؟', answer: 'الأسرع في المملكة — 98% + حرارة = مثالي. حفر الباطن 10-15%: لا طحالب تقريباً (ميزة!).' },
+        { question: 'VOC + كلور — تفاعل؟', answer: 'VOC يتفاعل مع كلور = ينتج مركبات. فحص pH يومي + تعديل.' },
+        { question: 'فحص يومي — صيفاً؟', answer: 'NaCl+الحرارة+طحالب+VOC = تغيرات سريعة. يومي صيفاً = ضروري.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'كلور 2× — NaCl Chloride Demand.',
+        'Algaecide Marine أسبوعي — طحالب أقصى.',
+        'Anti-Biofilm شهري — 98% Biofilm أنابيب.',
+        'فحص pH يومي صيفاً — VOC + NaCl.',
+        'غطاء — يُقلل NaCl+VOC+طحالب.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'NaCl Demand بدون كلور إضافي = طحالب 48 ساعة.',
+        'Biofilm أنابيب = يحمي بكتيريا. Anti-Biofilm.',
+        'VOC + كلور = مركبات. فحص pH يومي.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص المسابح' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات المسابح بالشرقية' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALJUND,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALJUND.name, quote: 'مسبح الجبيل = الأصعب: NaCl Chloride Demand + 98% طحالب + Biofilm + VOC. كلور 2× + Algaecide Marine.', source: 'موسوعة أخطاء — مسابح صناعية-ساحلية' },
     ],
-
-    saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    saudiRegulations: [REGULATIONS.SBC_601],
+    verificationBadges: [{ badge: '✔️ مسابح مرخصة', authority: 'منصة بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'كلور 2×', use: 'NaCl Demand — يستهلك' },
+        { name: 'Algaecide Marine', use: '98% طحالب أقصى' },
+        { name: 'Anti-Biofilm', use: '98% Biofilm — أنابيب' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'مثل الخبر.', solution: 'VOC + 98%>95% + سخام. أقسى.' },
+        { fear: 'كلور عادي.', solution: 'NaCl Demand = يستهلك. 2×.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'مثل حفر الباطن.', truth: '98% طحالب vs 10-15% لا طحالب. عكس!' },
+        { myth: 'كلور يكفي.', truth: 'NaCl Demand + VOC. لا يكفي.' },
     ],
-
     relatedServices: [
-        { slug: 'jubail-furniture-moving', context: 'نقل عفش بالجبيل', priority: 1 },
-        { slug: 'jubail-furniture-storage', context: 'تخزين عفش بالجبيل', priority: 2 },
-        { slug: 'jubail-dyna', context: 'دينا نقل بالجبيل', priority: 3 },
-        { slug: 'jubail-moving-out', context: 'نقل عفش خروج بالجبيل', priority: 4 },
-        { slug: 'jubail-dabab', context: 'دباب نقل بالجبيل', priority: 5 },
-        { slug: 'jubail-cleaning', context: 'تنظيف منازل بالجبيل', priority: 6 },
-        { slug: 'jubail-tanks-cleaning', context: 'تنظيف خزانات بالجبيل', priority: 7 },
-        { slug: 'jubail-sofa-cleaning', context: 'تنظيف كنب بالجبيل', priority: 8 },
-        { slug: 'jubail-carpet-cleaning', context: 'تنظيف سجاد بالجبيل', priority: 9 },
+        { slug: 'tanks-cleaning', context: 'خزانات — NaCl', priority: 1 },
+        { slug: 'pest-control', context: 'حشرات — بعوض', priority: 2 },
+        { slug: 'villas-cleaning', context: 'فلل', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 4 },
+        { slug: 'marble-polishing', context: 'رخام — حول', priority: 5 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 7 },
     ],
 };

@@ -1,10 +1,3 @@
-// ══════════════════════════════════════════════════════════════
-// رش مبيدات بالمدينة المنورة — Override مخصص (E-E-A-T Grade)
-// صفحة: /madinah/pesticide-spraying
-// قطاع YMYL: صحي (مبيدات + سموم) + بيئي
-// خريطة 2.4: الخضيري → SFDA + بلدي + وقاء
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -25,7 +18,7 @@ export const override: PageOverride = {
 
     content: {
         introduction: 'المبيدات سلاح ذو حدين — فعّال على الحشرات لكنه سام على الإنسان إذا استُخدم بشكل خاطئ. في المدينة المنورة، المناخ الجاف الحار (48°م صيفاً + 12% رطوبة) يؤثر مباشرة على فعالية المبيد: الحرارة العالية تُبخّر المبيدات السائلة أسرع بنسبة 30-40% مقارنة بالمناطق المعتدلة — ما يعني أن مبيداً عشوائياً يُوزّع بتركيز غير محسوب قد يتبخر قبل أن يصل للحشرة المستهدفة. بالمقابل، بعض الحشرات في بيئة المدينة تطورت مقاومة (Resistance) للمبيدات الشائعة — خاصة صراصير البيوت الألمانية (Blattella germanica) التي تُقاوم مبيدات البايرثرويد العادية بعد أجيال متعددة من التعرض. بروتوكولنا يبدأ بتشخيص: تحديد نوع الحشرة ← اختيار المبيد المناسب لها (وليس "بخاخ عام لكل شيء") ← حساب التركيز حسب المساحة والمناخ ← تحديد فترة أمان (Re-entry Interval) قبل دخول الأطفال والحيوانات ← متابعة بعد 7-14 يوم. جميع مبيداتنا مصرح بها من SFDA (هيئة الغذاء والدواء) ومسجلة في وقاء (المركز الوطني للوقاية من الآفات).',
-        shortAnswer: 'على عكس البخاخات العشوائية التي تتبخر في حرارة المدينة قبل وصولها للحشرة، نعتمد تشخيصاً دقيقاً لنوع الحشرة ← مبيد متخصص مصرح من SFDA ← تركيز محسوب للمساحة والمناخ ← فترة أمان محددة. ضمان 3 أشهر. من 200 ريال.',
+        shortAnswer: 'على عكس [بخاخات عشوائية تتبخر في 48°م قبل الوصول للحشرة + Contact Kill لا يصل العش] الذي يفشل في القضاء على المستعمرة، يعتمد بروتوكولنا الهندسي في خدمة [رش المبيدات] بمدينة [المدينة المنورة] على [تشخيص + Micro-Encapsulated SFDA + Gel Bait + ULV]. ففي ظل [48°م تُبخّر السائل 30-40% أسرع + مقاومة Blattella germanica + مبيدات غير مرخصة]، تتفاقم ظاهرة [تبخّر + مقاومة + خطر صحي]. لذا؛ يتدخل خبراؤنا عبر [يُشخّص النوع ← يختار المُغلّف المقاوم للتبخر ← يصل الجل للعش]. ضمان 3 أشهر. من 200 ريال.',
         heroSubtitle: 'رش مبيدات بالمدينة. SFDA مصرح. تشخيص + علاج. ضمان 3 أشهر.',
     },
 
@@ -76,25 +69,18 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات مكافحة الآفات والرش الصحي' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALKHODAIRY.name,
-        title: EXPERTS.ALKHODAIRY.title,
-        credential: EXPERTS.ALKHODAIRY.credential,
-        profileUrl: EXPERTS.ALKHODAIRY.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALKHODAIRY,
 
     expertCitations: [
         {
             expert: EXPERTS.ALKHODAIRY.name,
             quote: 'المبيدات الحشرية المسجلة في SFDA اجتازت اختبارات سمية صارمة. المشكلة في المبيدات غير المرخصة التي تُباع بأسعار رخيصة — قد تحتوي مواد محظورة دولياً وتُسبب أمراضاً تنفسية وعصبية مزمنة.',
-            source: EXPERTS.ALKHODAIRY.title,
-            url: EXPERTS.ALKHODAIRY.profileUrl,
+            source: 'خبير أغذية ومبيدات',
         },
         {
             expert: EXPERTS.ALMISNID.name,
             quote: 'حرارة المدينة المنورة الشديدة تُبخّر المبيدات السائلة بسرعة مضاعفة. التركيبات المغلفة (Micro-Encapsulated) هي الأنسب لمناخ المنطقة لأنها تحمي المادة الفعالة من التبخر.',
-            source: EXPERTS.ALMISNID.title,
-            url: EXPERTS.ALMISNID.profileUrl,
+            source: 'أبحاث مناخ وصحة بيئية',
         },
     ],
 
@@ -124,10 +110,10 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'madinah-pest-control', context: 'مكافحة حشرات شاملة تتضمن الرش كجزء من بروتوكول متكامل.', priority: 1 },
-        { slug: 'madinah-termite-control', context: 'مكافحة النمل الأبيض تحتاج مبيدات متخصصة مختلفة عن الرش العام.', priority: 2 },
-        { slug: 'madinah-bedbugs-control', context: 'بق الفراش يقاوم المبيدات العادية — يحتاج بروتوكول حراري متخصص.', priority: 3 },
-        { slug: 'madinah-cleaning', context: 'النظافة العميقة + رش وقائي = حماية 360° من الحشرات.', priority: 4 },
-        { slug: 'madinah-tanks-cleaning', context: 'خزانات مفتوحة تجذب الحشرات — نظّفها وارش حولها.', priority: 5 },
+        { slug: 'pest-control', context: 'مكافحة حشرات شاملة تتضمن الرش كجزء من بروتوكول متكامل.', priority: 1 },
+        { slug: 'termite-control', context: 'مكافحة النمل الأبيض تحتاج مبيدات متخصصة مختلفة عن الرش العام.', priority: 2 },
+        { slug: 'bedbugs-control', context: 'بق الفراش يقاوم المبيدات العادية — يحتاج بروتوكول حراري متخصص.', priority: 3 },
+        { slug: 'cleaning', context: 'النظافة العميقة + رش وقائي = حماية 360° من الحشرات.', priority: 4 },
+        { slug: 'tanks-cleaning', context: 'خزانات مفتوحة تجذب الحشرات — نظّفها وارش حولها.', priority: 5 },
     ],
 };

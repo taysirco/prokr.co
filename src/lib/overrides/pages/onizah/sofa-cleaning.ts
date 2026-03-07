@@ -1,94 +1,17 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف كنب بعنيزة — Override مخصص (E-E-A-T Grade)
-// صفحة: /onizah/sofa-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
 
 export const override: PageOverride = {
-    meta: {
-        title: 'تنظيف كنب بعنيزة — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف كنب بعنيزة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف كنب بعنيزة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف كنب بعنيزة', 'تنظيف كنب عنيزة', 'شركة تنظيف كنب بعنيزة', 'أفضل تنظيف كنب بعنيزة'],
-    },
-
-    content: {
-        introduction: 'تنظيف كنب بعنيزة — خدمة متخصصة تراعي الظروف المناخية والبيئية في عنيزة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف كنب بعنيزة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف كنب بعنيزة. خدمة احترافية. ضمان.',
-    },
-
-    pricing: [
-        { type: 'تنظيف كنب — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف كنب — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
-    ],
-
-    faq: [
-        { question: 'كم تكلفة تنظيف كنب بعنيزة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف كنب؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف كنب؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
-    ],
-
-    expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
-    ],
-
-    warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
-    ],
-
-    trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
-    ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
-    expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
-    ],
-
-    saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
-    equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
-    ],
-
-    hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
-    ],
-
-    counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
-    ],
-
-    relatedServices: [
-        { slug: 'onizah-furniture-moving', context: 'نقل عفش بعنيزة', priority: 1 },
-        { slug: 'onizah-furniture-storage', context: 'تخزين عفش بعنيزة', priority: 2 },
-        { slug: 'onizah-dyna', context: 'دينا نقل بعنيزة', priority: 3 },
-        { slug: 'onizah-moving-out', context: 'نقل عفش خروج بعنيزة', priority: 4 },
-        { slug: 'onizah-dabab', context: 'دباب نقل بعنيزة', priority: 5 },
-        { slug: 'onizah-cleaning', context: 'تنظيف منازل بعنيزة', priority: 6 },
-        { slug: 'onizah-tanks-cleaning', context: 'تنظيف خزانات بعنيزة', priority: 7 },
-        { slug: 'onizah-carpet-cleaning', context: 'تنظيف سجاد بعنيزة', priority: 8 },
-        { slug: 'onizah-steam-cleaning', context: 'تنظيف بالبخار بعنيزة', priority: 9 },
-    ],
+    meta: { title: 'تنظيف كنب بعنيزة — CaCO₃ يُبيّض + Nafud يخدش + 48°م PVAc 70°م + 0°م تصلّب + جفاف مفرط (2026)', description: 'تنظيف كنب عنيزة. CaCO₃ 600ppm يُبيّض. Nafud يخدش. 48°م سطح 70°م = PVAc يسيل. 0°م = PVAc يتصلب. 10% = جلد يتشقق.', h1: 'تنظيف كنب بعنيزة — CaCO₃ + Nafud + حرارة مفرطة + جفاف', keywords: ['تنظيف كنب بعنيزة', 'تنظيف كنب عنيزة'] },
+    content: { introduction: '5 تحديات: (1) CaCO₃ 600ppm يُبيّض الأقمشة الداكنة. Citric Acid + RO water. (2) Nafud 7 Mohs يخدش الجلد. HEPA أولاً. (3) 48°م سطحي → نوافذ مواجهة = 70-85°م → PVAc يسيل → مفاصل تنفك. (4) 0°م شتاءً = PVAc يتصلب = هشاشة. Conditioner. (5) 10% RH = جلد يفقد 40-60% رطوبة → يتشقق خلال 6-12 شهراً. Leather Conditioner كل 3 أشهر. الكنب القصيمي يعيش أصعب 46°م Delta في المملكة: من 0°م (شتاء) إلى 70°م (سطح صيف).', shortAnswer: 'CaCO₃ يُبيّض + Nafud يخدش + 70°م PVAc + 0°م تصلّب + 10% تشقق. 5 معالجات مختلفة.', heroSubtitle: 'أصعب 46°م Delta: CaCO₃ + Nafud + PVAc يسيل/يتصلب + جلد يتشقق' },
+    pricing: [{ type: 'تنظيف + Descaling + Conditioner', unit: 'طقم', minPrice: 200, maxPrice: 400, time: '2-3 ساعات' }, { type: 'ربع سنوي (كل فصل)', unit: 'سنة', minPrice: 500, maxPrice: 1000, time: '4 زيارات' }],
+    faq: [{ question: 'جلد يتشقق — كل سنة؟', answer: '10% RH = يفقد رطوبة. Leather Conditioner كل 3 أشهر = يمنع.' }, { question: 'مفاصل تنفك صيفاً؟', answer: 'سطح نوافذ 70°م = PVAc يسيل. ستائر عازلة + بعد عن النوافذ.' }],
+    expertTips: ['RO water لا صنبور.', 'HEPA أولاً — Nafud.', 'Leather Conditioner كل 3 أشهر.', 'ستائر عازلة — PVAc.'],
+    warnings: ['70°م سطحي = PVAc يسيل = مفصل ينفك.', '10% بدون Conditioner = جلد يتشقق.'],
+    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص' }], expertReviewer: EXPERTS.ALMOHAIMED,
+    expertCitations: [{ expert: EXPERTS.ALMOHAIMED.name, quote: 'كنب عنيزة: 46°م Delta = أصعب بيئة أثاث بالمملكة.', source: 'نصائح هندسية — الأثاث في القصيم' }],
+    saudiRegulations: [REGULATIONS.BALADI_HEALTH], verificationBadges: [{ badge: '✔️ مرخص', authority: 'بلدي', icon: 'shield-check' }],
+    equipment: [{ name: 'Citric Acid + RO', use: 'CaCO₃' }, { name: 'HEPA', use: 'Nafud' }, { name: 'Leather Conditioner', use: '10% جفاف' }],
+    hiddenObjections: [{ fear: 'منظف عادي.', solution: '5 تحديات مختلفة.' }], counterNarratives: [{ myth: 'الجو جاف = نظيف.', truth: 'جاف = CaCO₃ يترسب + جلد يتشقق.' }],
+    relatedServices: [{ slug: 'carpet-cleaning', context: 'سجاد', priority: 1 }, { slug: 'furniture-cleaning', context: 'أثاث', priority: 2 }],
 };

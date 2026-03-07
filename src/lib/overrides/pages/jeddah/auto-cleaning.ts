@@ -4,6 +4,7 @@
 // ============================================
 
 import type { PageOverride } from '../../types';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -91,19 +92,13 @@ export const override: PageOverride = {
         { entity: 'الهيئة السعودية للمواصفات والمقاييس', acronym: 'SASO', url: 'https://www.saso.gov.sa', role: 'مواصفات مواد تنظيف السيارات' },
     ],
 
-    expertReviewer: {
-        name: 'أ.د. عبدالله المسند',
-        title: 'أستاذ جغرافيا المناخ',
-        credential: 'أستاذ جغرافيا المناخ — جامعة القصيم',
-        profileUrl: 'https://x.com/ALMISNID',
-    },
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
             expert: 'أ.د. عبدالله المسند',
             quote: 'السيارة في جدة تتعرض لملح بحري + رطوبة + أشعة UV شديدة — الداخلية تحتاج حماية ضد التقشر والتشقق كل 3-4 أشهر',
             source: 'تحليل مناخي',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -112,14 +107,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'jeddah-steam-cleaning', context: 'بخار السيارة', priority: 1 },
-        { slug: 'jeddah-sofa-cleaning', context: 'مقاعد السيارة', priority: 2 },
-        { slug: 'jeddah-carpet-cleaning', context: 'فرش السيارة', priority: 3 },
-        { slug: 'jeddah-sanitization', context: 'تعقيم داخلية السيارة', priority: 4 },
-        { slug: 'jeddah-cleaning', context: 'منزل + سيارة', priority: 5 },
-        { slug: 'jeddah-air-conditioner-cleaning', context: 'مكيف السيارة', priority: 6 },
-        { slug: 'jeddah-mattress-cleaning', context: 'نفس تقنية البخار', priority: 7 },
-        { slug: 'jeddah-floor-cleaning', context: 'أرضية الكراج', priority: 8 },
-        { slug: 'jeddah-pest-control', context: 'حشرات الكراج', priority: 9 },
+        { slug: 'steam-cleaning', context: 'بخار السيارة', priority: 1 },
+        { slug: 'sofa-cleaning', context: 'مقاعد السيارة', priority: 2 },
+        { slug: 'carpet-cleaning', context: 'فرش السيارة', priority: 3 },
+        { slug: 'sanitization', context: 'تعقيم داخلية السيارة', priority: 4 },
+        { slug: 'cleaning', context: 'منزل + سيارة', priority: 5 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف السيارة', priority: 6 },
+        { slug: 'mattress-cleaning', context: 'نفس تقنية البخار', priority: 7 },
+        { slug: 'floor-cleaning', context: 'أرضية الكراج', priority: 8 },
+        { slug: 'pest-control', context: 'حشرات الكراج', priority: 9 },
     ],
 };

@@ -1,12 +1,3 @@
-// ══════════════════════════════════════════════════════════════
-// عزل أسطح بالدمام — Override (E-E-A-T)
-// صفحة: /dammam/roof-insulation
-// قطاع YMYL: مالي (فاتورة كهرباء + حماية مبنى)
-// خريطة 2.4: المحيميد → SBC 601 + SEC + أمانة الشرقية
-// الزاوية: رطوبة 60-90% + نسيم بحري ملحي
-//   + حرارة رطبة (Heat Index 55-60°) أشد من الجافة
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -73,19 +64,13 @@ export const override: PageOverride = {
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات كود البناء والعزل في الدمام', acronym: 'أمانة الشرقية' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
             expert: 'م. ماجد المحيميد',
             quote: 'حرارة الدمام الرطبة أشد على المبنى من حرارة الرياض الجافة — السطح لا يتبرد ليلاً. Closed-Cell فوم فقط — Open-Cell يمتص الرطوبة البحرية. وبيتومين SBS يحمي من الأملاح الساحلية',
             source: 'خبير جودة البناء والتشطيبات',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
 
@@ -110,9 +95,9 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'dammam-foam-insulation', context: 'فوم Closed-Cell — نفس المادة للأسطح والجدران', priority: 1 },
-        { slug: 'dammam-thermal-insulation', context: 'عزل حراري للجدران يُكمل عزل السطح', priority: 2 },
-        { slug: 'dammam-water-insulation', context: 'عزل مائي شامل يحمي من الرطوبة البحرية', priority: 3 },
-        { slug: 'dammam-water-leak-detection', context: 'فحص تسربات قبل العزل', priority: 4 },
+        { slug: 'foam-insulation', context: 'فوم Closed-Cell — نفس المادة للأسطح والجدران', priority: 1 },
+        { slug: 'thermal-insulation', context: 'عزل حراري للجدران يُكمل عزل السطح', priority: 2 },
+        { slug: 'water-insulation', context: 'عزل مائي شامل يحمي من الرطوبة البحرية', priority: 3 },
+        { slug: 'water-leak-detection', context: 'فحص تسربات قبل العزل', priority: 4 },
     ],
 };

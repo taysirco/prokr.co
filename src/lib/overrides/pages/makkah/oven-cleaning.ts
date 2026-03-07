@@ -124,12 +124,12 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'makkah-restaurant-chimney-cleaning', context: 'تنظيف شفاطات ومداخن المطابخ التجارية — بجانب الأفران', priority: 1 },
-        { slug: 'makkah-cleaning', context: 'تنظيف شامل للمطبخ مع باقة الفرن — بلاط + خلفية + خزائن', priority: 2 },
-        { slug: 'makkah-steam-cleaning', context: 'تعقيم أسطح المطبخ بالبخار بعد تنظيف الفرن', priority: 3 },
-        { slug: 'makkah-pest-control', context: 'مكافحة صراصير المطبخ — الدهون المتراكمة تجذبها', priority: 4 },
-        { slug: 'makkah-hourly-cleaning', context: 'عاملة بالساعة لتنظيف مطبخ يومي سريع', priority: 5 },
-        { slug: 'makkah-marble-polishing', context: 'جلي رخام أرضية المطبخ بعد التنظيف العميق', priority: 6 },
-        { slug: 'makkah-sanitization', context: 'تعقيم شامل للمطبخ بعد التنظيف — حماية من البكتيريا', priority: 7 },
+        { slug: 'restaurant-chimney-cleaning', context: 'تنظيف شفاطات ومداخن المطابخ التجارية — بجانب الأفران', priority: 1 },
+        { slug: 'cleaning', context: 'تنظيف شامل للمطبخ مع باقة الفرن — بلاط + خلفية + خزائن', priority: 2 },
+        { slug: 'steam-cleaning', context: 'تعقيم أسطح المطبخ بالبخار بعد تنظيف الفرن', priority: 3 },
+        { slug: 'pest-control', context: 'مكافحة صراصير المطبخ — الدهون المتراكمة تجذبها', priority: 4 },
+        { slug: 'hourly-cleaning', context: 'عاملة بالساعة لتنظيف مطبخ يومي سريع', priority: 5 },
+        { slug: 'marble-polishing', context: 'جلي رخام أرضية المطبخ بعد التنظيف العميق', priority: 6 },
+        { slug: 'sanitization', context: 'تعقيم شامل للمطبخ بعد التنظيف — حماية من البكتيريا', priority: 7 },
     ],
 };

@@ -76,12 +76,7 @@ export const override: PageOverride = {
         { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'الرقابة على النظافة البيئية في المنشآت التجارية', acronym: 'أمانة المدينة' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMISNID.name,
-        title: EXPERTS.ALMISNID.title,
-        credential: EXPERTS.ALMISNID.credential,
-        profileUrl: EXPERTS.ALMISNID.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMISNID,
 
     expertCitations: [
         {
@@ -118,11 +113,11 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'madinah-carpet-cleaning', context: 'غسيل موكيت المكتب العميق كل 3 أشهر — يُكمل التنظيف اليومي.', priority: 1 },
-        { slug: 'madinah-sofa-cleaning', context: 'تنظيف كنب غرف الاجتماعات والاستقبال بالبخار.', priority: 2 },
-        { slug: 'madinah-air-conditioner-cleaning', context: 'غسيل مكيفات المكتب = هواء نظيف + توفير كهرباء.', priority: 3 },
-        { slug: 'madinah-glass-facades-cleaning', context: 'تنظيف واجهات المكتب الزجاجية من غبار الحرات.', priority: 4 },
-        { slug: 'madinah-steam-cleaning', context: 'تعقيم مفروشات المكتب بالبخار — بدون كيميائيات تزعج الموظفين.', priority: 5 },
-        { slug: 'madinah-pest-control', context: 'رش وقائي ضد الحشرات — خاصة في مكاتب الطابق الأرضي.', priority: 6 },
+        { slug: 'carpet-cleaning', context: 'غسيل موكيت المكتب العميق كل 3 أشهر — يُكمل التنظيف اليومي.', priority: 1 },
+        { slug: 'sofa-cleaning', context: 'تنظيف كنب غرف الاجتماعات والاستقبال بالبخار.', priority: 2 },
+        { slug: 'air-conditioner-cleaning', context: 'غسيل مكيفات المكتب = هواء نظيف + توفير كهرباء.', priority: 3 },
+        { slug: 'glass-facades-cleaning', context: 'تنظيف واجهات المكتب الزجاجية من غبار الحرات.', priority: 4 },
+        { slug: 'steam-cleaning', context: 'تعقيم مفروشات المكتب بالبخار — بدون كيميائيات تزعج الموظفين.', priority: 5 },
+        { slug: 'pest-control', context: 'رش وقائي ضد الحشرات — خاصة في مكاتب الطابق الأرضي.', priority: 6 },
     ],
 };

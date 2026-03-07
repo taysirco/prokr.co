@@ -82,12 +82,7 @@ export const override: PageOverride = {
         { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'التراخيص البلدية التي تضمن الالتزام بقواعد سلامة الشوارع والمباني', acronym: 'أمانة المدينة المنورة' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALZUWAYED.name,
-        title: EXPERTS.ALZUWAYED.title,
-        credential: EXPERTS.ALZUWAYED.credential,
-        profileUrl: EXPERTS.ALZUWAYED.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALZUWAYED,
 
     expertCitations: [
         {
@@ -133,12 +128,12 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'madinah-furniture-storage', context: 'هل المكان الجديد غير جاهز؟ نوفر تخزين أثاث آمن بالمدينة المنورة في مستودعات معزولة عن الحرارة.', priority: 1 },
-        { slug: 'madinah-furniture-cleaning', context: 'بعد النقل، نقدم غسيل أثاث احترافي لإزالة بصمات العمالة وتراكمات الغبار البسيطة.', priority: 2 },
-        { slug: 'madinah-cleaning', context: 'تنظيف شامل للفيلا أو الشقة الجديدة قبل إدخال أثاثك لضمان بيئة معقمة مسببة للراحة.', priority: 3 },
-        { slug: 'madinah-pest-control', context: 'تأمين وقائي برش المبيدات للمنزل الجديد قبل الاستقرار للتأكد من خلوه من حشرات البق والنمل الأبيض.', priority: 4 },
-        { slug: 'madinah-dyna', context: 'إذا كانت قطع العفش قليلة وتحتاج نقل سريع، خدمة دينا النقل لدينا هي الخيار العملي والأوفر.', priority: 5 },
-        { slug: 'madinah-dabab', context: 'لنقل الأجهزة الفردية كشاشات كبيرة أو ثلاجة، نوفر دباب النقل الداخلي المجهز بالقيود القماشية الآمنة.', priority: 6 },
-        { slug: 'madinah-air-conditioner-cleaning', context: 'غسيل مكيفات البيت الجديد قبل تشغيلها للتخلص من روائح الغبار المخزن داخل ملفات التبريد.', priority: 7 },
+        { slug: 'furniture-storage', context: 'هل المكان الجديد غير جاهز؟ نوفر تخزين أثاث آمن بالمدينة المنورة في مستودعات معزولة عن الحرارة.', priority: 1 },
+        { slug: 'furniture-cleaning', context: 'بعد النقل، نقدم غسيل أثاث احترافي لإزالة بصمات العمالة وتراكمات الغبار البسيطة.', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف شامل للفيلا أو الشقة الجديدة قبل إدخال أثاثك لضمان بيئة معقمة مسببة للراحة.', priority: 3 },
+        { slug: 'pest-control', context: 'تأمين وقائي برش المبيدات للمنزل الجديد قبل الاستقرار للتأكد من خلوه من حشرات البق والنمل الأبيض.', priority: 4 },
+        { slug: 'dyna', context: 'إذا كانت قطع العفش قليلة وتحتاج نقل سريع، خدمة دينا النقل لدينا هي الخيار العملي والأوفر.', priority: 5 },
+        { slug: 'dabab', context: 'لنقل الأجهزة الفردية كشاشات كبيرة أو ثلاجة، نوفر دباب النقل الداخلي المجهز بالقيود القماشية الآمنة.', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'غسيل مكيفات البيت الجديد قبل تشغيلها للتخلص من روائح الغبار المخزن داخل ملفات التبريد.', priority: 7 },
     ],
 };

@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف مكاتب ببريدة — Override مخصص (E-E-A-T Grade)
-// صفحة: /buraidah/office-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف مكاتب ببريدة — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف مكاتب ببريدة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف مكاتب ببريدة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف مكاتب ببريدة', 'تنظيف مكاتب بريدة', 'شركة تنظيف مكاتب ببريدة', 'أفضل تنظيف مكاتب ببريدة'],
+        title: 'تنظيف مكاتب ببريدة — CaCO₃ 600ppm كلس+Nafud SiO₂ إلكترونيات+نخيل — HEPA+RO! (2026)',
+        description: 'تنظيف مكاتب بريدة. CaCO₃ 600ppm كلس حمامات! Nafud SiO₂ إلكترونيات. نخيل 8M. HEPA+Descaler+RO.',
+        h1: 'تنظيف مكاتب ببريدة — كلس+Nafud إلكترونيات!',
+        keywords: ['تنظيف مكاتب بريدة', 'تنظيف مكتب ببريدة', 'شركة تنظيف مكاتب بريدة'],
     },
-
     content: {
-        introduction: 'تنظيف مكاتب ببريدة — خدمة متخصصة تراعي الظروف المناخية والبيئية في بريدة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف مكاتب ببريدة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف مكاتب ببريدة. خدمة احترافية. ضمان.',
+        introduction: 'مكتب بريدة = Nafud يتلف الإلكترونيات! CaCO₃ 600ppm كلس حمامات: أعلى كلس بالمملكة = حمام المكتب ومطبخ الموظفين يتكلّسان أسرع. Descaler أسبوعي. Nafud SiO₂ إلكترونيات: رمل النفود الناعم 10-50 μm يدخل الحواسيب والطابعات ← يتراكم على المراوح ← حرارة ترتفع ← عمر أقصر. HEPA + تنظيف أجهزة. نخيل 8M: حبوب لقاح تدخل نظام التكييف المركزي ← حساسية موظفين. فلتر HEPA Pollen. ΔT 45°م: مكيف المركزي يعمل 12+ ساعة صيفاً = فلتر يتسخ أسرع. 10-20% = لا عفن في السجاد! تجفيف سريع. مقارنة: خميس = عفن+رطوبة. بريدة = كلس+Nafud+نخيل = مختلف.',
+        shortAnswer: 'على عكس [التنظيف بدون HEPA بدون Descaler]، يعتمد بروتوكولنا في خدمة [تنظيف المكاتب] بمدينة [بريدة] على [HEPA+Descaler+RO+Pollen Filter]. ففي ظل [CaCO₃ 600ppm+Nafud إلكترونيات+نخيل لقاح+ΔT 45°م]، تتفاقم ظاهرة [كلس+تلف أجهزة+حساسية]. لذا؛ يتدخل فريقنا عبر [HEPA ← Descaler ← فلتر ← RO] — لا عفن!',
+        heroSubtitle: 'CaCO₃ 600ppm + Nafud إلكترونيات + نخيل لقاح — HEPA+Descaler!',
     },
-
     pricing: [
-        { type: 'تنظيف مكاتب — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف مكاتب — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'مكتب صغير (50 م²)', unit: 'زيارة', minPrice: 100, maxPrice: 200, time: '1-2h' },
+        { type: 'مكتب كبير (200+ م²)', unit: 'زيارة', minPrice: 250, maxPrice: 520, time: '3-5h' },
+        { type: '+ تنظيف أجهزة HEPA', unit: 'إضافي', minPrice: 80, maxPrice: 170, time: '1h' },
+        { type: 'يومي (30 يوم)', unit: 'شهر', minPrice: 800, maxPrice: 1600, time: '30 زيارة' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف مكاتب ببريدة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف مكاتب؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف مكاتب؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش أجهزة المكتب تتلف أسرع ببريدة؟', answer: 'Nafud 10-50 μm يدخل الحاسوب ← مراوح تتسخ ← حرارة ← عمر أقصر. HEPA.' },
+        { question: 'ليش حمام المكتب يتكلّس ببريدة؟', answer: 'CaCO₃ 600ppm أعلى كلس. Descaler أسبوعي. RO في الشطف.' },
+        { question: 'كم تكلفة تنظيف مكتب ببريدة مقارنة بخميس؟', answer: 'أرخص 15-20% — لا Anti-Fungal (لا عفن). Descaler +HEPA.' },
+        { question: 'هل نخيل يأثر على المكتب ببريدة؟', answer: 'لقاح يدخل التكييف المركزي ← حساسية موظفين. فلتر HEPA Pollen.' },
+        { question: 'هل سجاد المكتب يتعفّن ببريدة؟', answer: 'لا! 10-20% = لا عفن. تجفيف سريع. خميس: عفن أسبوعين.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'HEPA أجهزة — Nafud يتلف إلكترونيات.',
+        'Descaler أسبوعي — 600ppm حمام مكتب.',
+        'فلتر Pollen — نخيل تكييف مركزي.',
+        'Microfiber — Nafud يخدش مكاتب.',
+        'لا عفن سجاد — تجفيف سريع.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'Nafud × 6 أشهر بدون HEPA = حاسوب يحترق — 3000+.',
+        'CaCO₃ 600ppm × أسبوع = حمام مكتب كلس صلب.',
+        'نخيل + تكييف مركزي = حساسية موظفين — إنتاجية تقل YMYL.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
+        { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMISNID.name, quote: 'مكتب بريدة: Nafud يتلف أجهزة. 600ppm كلس. HEPA+Descaler.', source: 'جغرافيا المناخ — مكاتب القصيم' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف مكاتب مرخص', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'HEPA Fine', use: 'Nafud 10 μm — إلكترونيات' },
+        { name: 'Descaler صناعي', use: 'CaCO₃ 600ppm — حمام' },
+        { name: 'HEPA Pollen', use: 'نخيل — تكييف مركزي' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'مكنسة تكفي.', solution: 'Nafud 10 μm يمر = HEPA. أجهزة.' },
+        { fear: 'مثل الرياض.', solution: '600ppm+Nafud+نخيل = 3 تحديات فريدة.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'تنظيف عادي.', truth: 'Nafud يتلف أجهزة+600ppm كلس. HEPA+Descaler.' },
+        { myth: 'شهري.', truth: 'Nafud+كلس = يومي أو أسبوعي.' },
     ],
-
     relatedServices: [
-        { slug: 'buraidah-furniture-moving', context: 'نقل عفش ببريدة', priority: 1 },
-        { slug: 'buraidah-furniture-storage', context: 'تخزين عفش ببريدة', priority: 2 },
-        { slug: 'buraidah-dyna', context: 'دينا نقل ببريدة', priority: 3 },
-        { slug: 'buraidah-moving-out', context: 'نقل عفش خروج ببريدة', priority: 4 },
-        { slug: 'buraidah-dabab', context: 'دباب نقل ببريدة', priority: 5 },
-        { slug: 'buraidah-cleaning', context: 'تنظيف منازل ببريدة', priority: 6 },
-        { slug: 'buraidah-tanks-cleaning', context: 'تنظيف خزانات ببريدة', priority: 7 },
-        { slug: 'buraidah-sofa-cleaning', context: 'تنظيف كنب ببريدة', priority: 8 },
-        { slug: 'buraidah-carpet-cleaning', context: 'تنظيف سجاد ببريدة', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 1 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 2 },
+        { slug: 'carpet-cleaning', context: 'سجاد', priority: 3 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات', priority: 4 },
+        { slug: 'marble-polishing', context: 'رخام', priority: 5 },
+        { slug: 'pest-control', context: 'حشرات', priority: 6 },
+        { slug: 'steam-cleaning', context: 'بخار', priority: 7 },
     ],
 };

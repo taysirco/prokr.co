@@ -1,94 +1,74 @@
-// ══════════════════════════════════════════════════════════════
-// مكافحة بق الفراش ببريدة — Override مخصص (E-E-A-T Grade)
-// صفحة: /buraidah/bedbugs-control
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'مكافحة بق الفراش ببريدة — خدمة احترافية معتمدة (2026)',
-        description: 'مكافحة بق الفراش ببريدة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'مكافحة بق الفراش ببريدة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['مكافحة بق الفراش ببريدة', 'مكافحة بق الفراش بريدة', 'شركة مكافحة بق الفراش ببريدة', 'أفضل مكافحة بق الفراش ببريدة'],
+        title: 'مكافحة بق الفراش ببريدة — ΔT 45°م بق حراري+نخيل ألياف خبيء+Nafud — Heat+Residual! (2026)',
+        description: 'مكافحة بق الفراش بريدة. ΔT 45°م بق حراري! ألياف نخيل خبيء. Nafud غبار. Heat Treatment+Residual+HEPA.',
+        h1: 'مكافحة بق الفراش ببريدة — بق حراري ونخيل!',
+        keywords: ['مكافحة بق الفراش بريدة', 'مكافحة بق ببريدة', 'شركة مكافحة بق بريدة'],
     },
-
     content: {
-        introduction: 'مكافحة بق الفراش ببريدة — خدمة متخصصة تراعي الظروف المناخية والبيئية في بريدة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'مكافحة بق الفراش ببريدة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'مكافحة بق الفراش ببريدة. خدمة احترافية. ضمان.',
+        introduction: 'بق فراش بريدة = بق حراري يتكاثر أسرع! ΔT 45°م: صيف 48°م يسارع دورة حياة البق = يتكاثر أسرع 2× من المدن المعتدلة. لكن: Heat Treatment 55°م يقتل! حرارة الصيف ميزة — سخّن الغرفة إضافي ← يموت أسرع. نخيل ألياف خبيء: 8M نخلة = ألياف نخيل تدخل الغرفة ← البق يختبئ فيها. فحص ألياف النخيل حول الأثاث. Nafud SiO₂: غبار ناعم يدخل الغرفة ← يتراكم حول السرير ← يُخفي أدلة البق (بقع دم+فضلات). تنظيف أولاً ← ثم بحث. 10-20% = لا رطوبة ← البق يبحث عن رطوبة الجسم أكثر. مقارنة: خميس = بق+عفن+عث = 3 مشاكل. بريدة = بق فقط (لا عفن لا عث) = أبسط.',
+        shortAnswer: 'على عكس [الرش بدون Heat Treatment الذي لا يقتل البيض]، يعتمد بروتوكولنا في خدمة [مكافحة بق الفراش] بمدينة [بريدة] على [Heat 55°م+Residual+HEPA+فحص ألياف]. ففي ظل [ΔT تكاثر سريع+نخيل خبيء+Nafud إخفاء+10-20% جاف]، تتفاقم ظاهرة [تكاثر 2×+اختباء+إخفاء]. لذا؛ يتدخل فريقنا عبر [Heat ← Residual ← HEPA ← فحص ألياف].',
+        heroSubtitle: 'ΔT بق حراري + نخيل خبيء + Nafud إخفاء — Heat 55°م!',
     },
-
     pricing: [
-        { type: 'مكافحة بق الفراش — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'مكافحة بق الفراش — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'Heat Treatment (غرفة)', unit: 'غرفة', minPrice: 250, maxPrice: 520, time: '4-6 ساعات' },
+        { type: 'Heat + Residual (شقة)', unit: 'شقة', minPrice: 500, maxPrice: 1000, time: '6-8 ساعات' },
+        { type: 'فحص + كشف', unit: 'زيارة', minPrice: 100, maxPrice: 200, time: '1-2 ساعة' },
+        { type: 'ضمان 3 أشهر (3 زيارات)', unit: 'باقة', minPrice: 600, maxPrice: 1200, time: '3 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة مكافحة بق الفراش ببريدة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق مكافحة بق الفراش؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على مكافحة بق الفراش؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش بق بريدة يتكاثر أسرع؟', answer: 'ΔT 45°م صيف = حرارة تسارع دورة الحياة 2×. Heat 55°م يقتل أسرع أيضاً.' },
+        { question: 'كيف النخيل يأثر على البق ببريدة؟', answer: 'ألياف نخيل = مخبأ إضافي حول الأثاث. فحص ألياف إلزامي مع كل معالجة.' },
+        { question: 'كم تكلفة مكافحة بق ببريدة مقارنة بخميس؟', answer: 'متقاربة — لكن بريدة: بق فقط. خميس: بق+عفن+عث = أعقد.' },
+        { question: 'هل الرش يكفي لبق بريدة؟', answer: 'لا! البيض مقاوم. Heat 55°م يقتل الكل. Residual يمنع إعادة الإصابة.' },
+        { question: 'هل Nafud يخفي البق ببريدة؟', answer: 'غبار ناعم يتراكم ← يُخفي بقع دم+فضلات = أدلة. تنظيف أولاً ← فحص.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Heat 55°م — يقتل الكل بما فيه البيض.',
+        'الصيف ميزة — سخّن إضافي = أسرع.',
+        'فحص ألياف نخيل — مخبأ إضافي.',
+        'تنظيف Nafud أولاً — يكشف أدلة.',
+        'Residual — يمنع إعادة الإصابة.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'رش بدون Heat = البيض يبقى ← إعادة إصابة 2-3 أسابيع.',
+        'ΔT × صيف = تكاثر 2× ← تأخير أسبوع = ضعف الأعداد.',
+        'نخيل ألياف غير مفحوصة = مخبأ ← إعادة إصابة رغم المعالجة.',
     ],
-
     trustAnchors: [
-        { ...GOV.SFDA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.SFDA, role: 'تسجيل المبيدات — نظام غد' },
+        { ...GOV.BALADI, role: 'ترخيص شركات المكافحة' },
+        { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALKHODAIRY.name,
-        title: EXPERTS.ALKHODAIRY.title,
-        credential: EXPERTS.ALKHODAIRY.credential,
-        profileUrl: EXPERTS.ALKHODAIRY.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALKHODAIRY,
     expertCitations: [
-        {
-            expert: EXPERTS.ALKHODAIRY.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALKHODAIRY.title,
-            url: EXPERTS.ALKHODAIRY.profileUrl,
-        },
+        { expert: EXPERTS.ALKHODAIRY.name, quote: 'بق بريدة: حراري يتكاثر أسرع. Heat 55°م. ألياف نخيل: مخبأ إضافي.', source: 'أبحاث سموم — بق حراري' },
     ],
-
     saudiRegulations: [REGULATIONS.GHAD_SYSTEM],
-
-    verificationBadges: [
-        { badge: '✔️ مبيدات معتمدة من SFDA', authority: 'هيئة الغذاء والدواء', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ مكافحة بق مرخصة', authority: 'بلدي + SFDA', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Heat Treatment 55°م', use: 'يقتل بق+بيض — حرارة' },
+        { name: 'Residual Spray', use: 'حماية طويلة — يمنع إعادة' },
+        { name: 'HEPA Vacuum', use: 'ألياف نخيل+Nafud+فضلات' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'رش يكفي.', solution: 'البيض مقاوم. Heat يقتل الكل.' },
+        { fear: 'مثل عنيزة.', solution: 'بريدة: 8M نخلة = ألياف أكثر.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'رش عام.', truth: 'بيض مقاوم = Heat 55°م.' },
+        { myth: 'مرة واحدة.', truth: 'ΔT تكاثر سريع. 3 زيارات ضمان.' },
     ],
-
     relatedServices: [
-        { slug: 'buraidah-furniture-moving', context: 'نقل عفش ببريدة', priority: 1 },
-        { slug: 'buraidah-furniture-storage', context: 'تخزين عفش ببريدة', priority: 2 },
-        { slug: 'buraidah-dyna', context: 'دينا نقل ببريدة', priority: 3 },
-        { slug: 'buraidah-moving-out', context: 'نقل عفش خروج ببريدة', priority: 4 },
-        { slug: 'buraidah-dabab', context: 'دباب نقل ببريدة', priority: 5 },
-        { slug: 'buraidah-cleaning', context: 'تنظيف منازل ببريدة', priority: 6 },
-        { slug: 'buraidah-tanks-cleaning', context: 'تنظيف خزانات ببريدة', priority: 7 },
-        { slug: 'buraidah-sofa-cleaning', context: 'تنظيف كنب ببريدة', priority: 8 },
-        { slug: 'buraidah-carpet-cleaning', context: 'تنظيف سجاد ببريدة', priority: 9 },
+        { slug: 'pest-control', context: 'حشرات', priority: 1 },
+        { slug: 'pesticide-spraying', context: 'رش مبيدات', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 3 },
+        { slug: 'steam-cleaning', context: 'بخار', priority: 4 },
+        { slug: 'carpet-cleaning', context: 'سجاد', priority: 5 },
+        { slug: 'sofa-cleaning', context: 'كنب', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 7 },
     ],
 };

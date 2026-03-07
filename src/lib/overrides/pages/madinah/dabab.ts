@@ -81,12 +81,7 @@ export const override: PageOverride = {
         { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'تنظيم وضبط تنقل مركبات التوصيل والنقل الخفيف داخل الأحياء والمناطق الحيوية', acronym: 'أمانة المدينة' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALZUWAYED.name,
-        title: EXPERTS.ALZUWAYED.title,
-        credential: EXPERTS.ALZUWAYED.credential,
-        profileUrl: EXPERTS.ALZUWAYED.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALZUWAYED,
 
     expertCitations: [
         {
@@ -126,10 +121,10 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'madinah-furniture-moving', context: 'إذا اتضح أن عدد الأغراض لديك أكبر من طاقة الدباب، بادر بتغيير الطلب إلى دينا مغلقة لنقل منزلي شامل.', priority: 1 },
-        { slug: 'madinah-dyna', context: 'لنقل غرف النوم أو الجلسات الكاملة، خدمة (دينا النقل) هي الترقية الملائمة لضمان مساحة واسعة للقطع الطويلة.', priority: 2 },
-        { slug: 'madinah-sofa-cleaning', context: 'إذا نقلت كنب مستعمل بالدباب، يمكن لمغاسلنا المتنقلة زيارتك لتنظيفه وتعقيمه في نفس اليوم.', priority: 3 },
-        { slug: 'madinah-cleaning', context: 'قبل تركيب الأجهزة أو الأثاث الجديد المنقول، اطلب خدمة تنظيف الغرفة لضمان نظافة الزوايا الصعبة.', priority: 4 },
-        { slug: 'madinah-pest-control', context: 'اطلب خدمة المكافحة لضمان خلو الأجهزة الكهربائية المستعملة المنقولة من أي صراصير ألمانية قديمة.', priority: 5 },
+        { slug: 'furniture-moving', context: 'إذا اتضح أن عدد الأغراض لديك أكبر من طاقة الدباب، بادر بتغيير الطلب إلى دينا مغلقة لنقل منزلي شامل.', priority: 1 },
+        { slug: 'dyna', context: 'لنقل غرف النوم أو الجلسات الكاملة، خدمة (دينا النقل) هي الترقية الملائمة لضمان مساحة واسعة للقطع الطويلة.', priority: 2 },
+        { slug: 'sofa-cleaning', context: 'إذا نقلت كنب مستعمل بالدباب، يمكن لمغاسلنا المتنقلة زيارتك لتنظيفه وتعقيمه في نفس اليوم.', priority: 3 },
+        { slug: 'cleaning', context: 'قبل تركيب الأجهزة أو الأثاث الجديد المنقول، اطلب خدمة تنظيف الغرفة لضمان نظافة الزوايا الصعبة.', priority: 4 },
+        { slug: 'pest-control', context: 'اطلب خدمة المكافحة لضمان خلو الأجهزة الكهربائية المستعملة المنقولة من أي صراصير ألمانية قديمة.', priority: 5 },
     ],
 };

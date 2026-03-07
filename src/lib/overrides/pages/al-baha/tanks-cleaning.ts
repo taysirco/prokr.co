@@ -1,94 +1,18 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف خزانات بالباحة — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-baha/tanks-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
 
 export const override: PageOverride = {
-    meta: {
-        title: 'تنظيف خزانات بالباحة — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف خزانات بالباحة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف خزانات بالباحة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف خزانات بالباحة', 'تنظيف خزانات الباحة', 'شركة تنظيف خزانات بالباحة', 'أفضل تنظيف خزانات بالباحة'],
-    },
-
-    content: {
-        introduction: 'تنظيف خزانات بالباحة — خدمة متخصصة تراعي الظروف المناخية والبيئية في الباحة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف خزانات بالباحة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف خزانات بالباحة. خدمة احترافية. ضمان.',
-    },
-
-    pricing: [
-        { type: 'تنظيف خزانات — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف خزانات — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
-    ],
-
-    faq: [
-        { question: 'كم تكلفة تنظيف خزانات بالباحة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف خزانات؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف خزانات؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
-    ],
-
-    expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
-    ],
-
-    warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
-    ],
-
-    trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
-    ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
-    expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
-    ],
-
-    saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
-    equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
-    ],
-
-    hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
-    ],
-
-    counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
-    ],
-
-    relatedServices: [
-        { slug: 'al-baha-furniture-moving', context: 'نقل عفش بالباحة', priority: 1 },
-        { slug: 'al-baha-furniture-storage', context: 'تخزين عفش بالباحة', priority: 2 },
-        { slug: 'al-baha-dyna', context: 'دينا نقل بالباحة', priority: 3 },
-        { slug: 'al-baha-moving-out', context: 'نقل عفش خروج بالباحة', priority: 4 },
-        { slug: 'al-baha-dabab', context: 'دباب نقل بالباحة', priority: 5 },
-        { slug: 'al-baha-cleaning', context: 'تنظيف منازل بالباحة', priority: 6 },
-        { slug: 'al-baha-sofa-cleaning', context: 'تنظيف كنب بالباحة', priority: 7 },
-        { slug: 'al-baha-carpet-cleaning', context: 'تنظيف سجاد بالباحة', priority: 8 },
-        { slug: 'al-baha-steam-cleaning', context: 'تنظيف بالبخار بالباحة', priority: 9 },
-    ],
+    meta: { title: 'تنظيف خزانات بالباحة — أمطار صيفية تملأ + ضباب يُنتج تكاثف + Laterite يترسب + 5°م (2026)', description: 'تنظيف خزانات الباحة. أمطار صيفية. ضباب تكاثف تحت الغطاء. Laterite رواسب. 5°م كلور بطيء. تعقيم نصف سنوي.', h1: 'تنظيف خزانات بالباحة — أمطار + ضباب + Laterite + برودة', keywords: ['تنظيف خزانات بالباحة', 'تنظيف خزان الباحة', 'شركة تنظيف خزانات بالباحة'] },
+    content: { introduction: '4 تحديات: (1) أمطار صيفية = ماء مُلوّث يدخل خزانات مفتوحة. غطاء محكم. (2) ضباب 80% = تكاثف تحت الغطاء ← عفن. فتحة تهوية. (3) Laterite = رواسب حمراء في القاع = تلوين ماء. تنظيف قاع. (4) 5°م = كلور يعمل أبطأ 50%. جرعة أعلى شتاءً.', shortAnswer: 'أمطار + ضباب + Laterite + كلور بطيء. غطاء + فتحة + تنظيف قاع + كلور مُضاعف.', heroSubtitle: 'أمطار تملأ + ضباب يُعفّن + Laterite يترسب + 5°م يُبطئ الكلور' },
+    pricing: [{ type: 'تنظيف + تعقيم', unit: 'خزان', minPrice: 130, maxPrice: 300, time: '2-3 ساعات' }, { type: 'عقد نصف سنوي', unit: 'سنة', minPrice: 220, maxPrice: 500, time: '2 زيارة' }],
+    faq: [{ question: 'كلور بطيء — 5°م؟', answer: 'الكلور يعمل أبطأ 50% في ماء بارد. جرعة مُضاعفة أو وقت أطول.' }],
+    expertTips: ['غطاء محكم + فتحة تهوية.', 'كلور مُضاعف شتاءً.', 'تنظيف رواسب Laterite.'],
+    warnings: ['كلور عادي في 5°م = نصف فعالية.'],
+    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص تنظيف الخزانات' }],
+    expertReviewer: EXPERTS.ALJUND,
+    expertCitations: [{ expert: EXPERTS.ALJUND.name, quote: 'خزان الباحة: 5°م = كلور بطيء. جرعة مُضاعفة أو وقت أطول.', source: 'موسوعة أخطاء' }],
+    saudiRegulations: [REGULATIONS.NWC_REPORT], verificationBadges: [{ badge: '✔️ مرخص', authority: 'بلدي + NWC', icon: 'shield-check' }],
+    equipment: [{ name: 'كلور مُركّز', use: '5°م = جرعة أعلى' }, { name: 'فرشاة قاع', use: 'Laterite' }],
+    hiddenObjections: [{ fear: 'سنوي يكفي.', solution: 'ضباب + أمطار + Laterite + كلور بطيء = نصف سنوي.' }], counterNarratives: [{ myth: 'الخزان آمن.', truth: 'ضباب + أمطار + Laterite = 3 مصادر تلوث.' }],
+    relatedServices: [{ slug: 'swimming-pool-cleaning', context: 'مسابح', priority: 1 }, { slug: 'pest-control', context: 'حشرات', priority: 2 }],
 };

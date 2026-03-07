@@ -84,7 +84,6 @@ export const override: PageOverride = {
             expert: 'أ.د. عبدالله المسند',
             quote: 'رمال الرياض غنية بالكوارتز (SiO₂) — Mohs 7 — أصلب معدن شائع في الطبيعة. يخدش البلاط والسيراميك. الشفط قبل المسح — وليس بعده — هو القاعدة الذهبية',
             source: 'أستاذ جغرافيا المناخ — بيانات جيولوجية',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -111,14 +110,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'riyadh-floor-polishing', context: 'تلميع بعد التنظيف', priority: 1 },
-        { slug: 'riyadh-marble-polishing', context: 'جلي رخام', priority: 2 },
-        { slug: 'riyadh-steam-cleaning', context: 'بخار الأرضيات', priority: 3 },
-        { slug: 'riyadh-cleaning', context: 'تنظيف شامل', priority: 4 },
-        { slug: 'riyadh-carpet-cleaning', context: 'سجاد فوق الأرضيات', priority: 5 },
-        { slug: 'riyadh-sanitization', context: 'تعقيم الأرضيات', priority: 6 },
-        { slug: 'riyadh-villas-cleaning', context: 'أرضيات الفلل', priority: 7 },
-        { slug: 'riyadh-water-insulation', context: 'عزل أرضيات ضد الرطوبة', priority: 8 },
-        { slug: 'riyadh-pest-control', context: 'رش أرضيات', priority: 9 },
+        { slug: 'floor-polishing', context: 'تلميع بعد التنظيف', priority: 1 },
+        { slug: 'marble-polishing', context: 'جلي رخام', priority: 2 },
+        { slug: 'steam-cleaning', context: 'بخار الأرضيات', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف شامل', priority: 4 },
+        { slug: 'carpet-cleaning', context: 'سجاد فوق الأرضيات', priority: 5 },
+        { slug: 'sanitization', context: 'تعقيم الأرضيات', priority: 6 },
+        { slug: 'villas-cleaning', context: 'أرضيات الفلل', priority: 7 },
+        { slug: 'water-insulation', context: 'عزل أرضيات ضد الرطوبة', priority: 8 },
+        { slug: 'pest-control', context: 'رش أرضيات', priority: 9 },
     ],
 };

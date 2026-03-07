@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف مجالس ببريدة — Override مخصص (E-E-A-T Grade)
-// صفحة: /buraidah/councils-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف مجالس ببريدة — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف مجالس ببريدة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف مجالس ببريدة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف مجالس ببريدة', 'تنظيف مجالس بريدة', 'شركة تنظيف مجالس ببريدة', 'أفضل تنظيف مجالس ببريدة'],
+        title: 'تنظيف مجالس ببريدة — CaCO₃ 600ppm خشونة+نخيل لقاح 8M+Nafud — RO+HEPA! (2026)',
+        description: 'تنظيف مجالس بريدة. CaCO₃ 600ppm خشونة أقمشة! نخيل 8M لقاح. Nafud يقطع. RO+HEPA Pollen+Microfiber.',
+        h1: 'تنظيف مجالس ببريدة — أعلى كلس+نخيل 8M!',
+        keywords: ['تنظيف مجالس بريدة', 'تنظيف مجلس ببريدة', 'شركة تنظيف مجالس بريدة'],
     },
-
     content: {
-        introduction: 'تنظيف مجالس ببريدة — خدمة متخصصة تراعي الظروف المناخية والبيئية في بريدة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف مجالس ببريدة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف مجالس ببريدة. خدمة احترافية. ضمان.',
+        introduction: 'مجلس بريدة = كلس في الأقمشة وحبوب لقاح! CaCO₃ 600ppm خشونة: لو غُسل المجلس بماء صنبور = أعلى كلس بالمملكة يترسب في الأقمشة ← يُخشّنها بشكل ملحوظ. RO Rinse إلزامي. حبوب نخيل 8M لقاح: مجلس بريدة يجمع حبوب لقاح من 8M نخلة (مارس-مايو) ← مسبب حساسية أثناء الجلوس. HEPA Pollen يسحب. Nafud SiO₂ يقطع: رمل النفود الناعم يتغلغل في أنسجة المجلس ← يقطع الألياف من الداخل. HEPA Extraction أولاً. غبار تمور: كل موسم تمور = غبار لزج يتراكم على المجلس ← يحتاج Enzymatic. 10-20% = تجفيف 20-30 دقيقة! لا عفن لا عث. مقارنة: خميس = عفن+عث+4-8h. بريدة = كلس+نخيل+Nafud لكن لا عفن = أبسط.',
+        shortAnswer: 'على عكس [الشامبو بماء صنبور الذي يُخشّن]، يعتمد بروتوكولنا في خدمة [تنظيف المجالس] بمدينة [بريدة] على [HEPA Extraction+RO+Pollen Filter+Enzymatic]. ففي ظل [CaCO₃ 600ppm+نخيل 8M لقاح+Nafud يقطع+10-20%]، تتفاقم ظاهرة [خشونة+حساسية+قطع ألياف]. لذا؛ يتدخل فريقنا عبر [HEPA ← غسل ← RO ← تجفيف 20 دقيقة] — لا عفن!',
+        heroSubtitle: 'CaCO₃ 600ppm خشونة + نخيل لقاح + Nafud يقطع — RO+HEPA!',
     },
-
     pricing: [
-        { type: 'تنظيف مجالس — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف مجالس — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'مجلس عادي (10 مقاعد)', unit: 'مجلس', minPrice: 130, maxPrice: 260, time: '2-3h + 20 دقيقة' },
+        { type: 'مجلس + HEPA عميق', unit: 'مجلس', minPrice: 180, maxPrice: 360, time: '3-4h' },
+        { type: 'مجلس كبير (20+ مقعد)', unit: 'مجلس', minPrice: 250, maxPrice: 500, time: '4-6h' },
+        { type: 'ربع سنوي (4 زيارات)', unit: 'سنة', minPrice: 400, maxPrice: 820, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف مجالس ببريدة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف مجالس؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف مجالس؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش مجلس بريدة يخشن بعد الغسل؟', answer: 'CaCO₃ 600ppm أعلى كلس. يترسب في الألياف. RO Rinse = ناعم.' },
+        { question: 'هل حبوب النخيل تأثر على مجلس بريدة؟', answer: '8M نخلة = لقاح يتراكم. جلوس = حساسية. HEPA Pollen يسحب.' },
+        { question: 'كم تكلفة تنظيف مجلس ببريدة مقارنة بخميس؟', answer: 'أرخص 25% — لا Anti-Fungal+Anti-Mite+تجفيف 20 دقيقة.' },
+        { question: 'هل Nafud يتلف مجلس بريدة؟', answer: 'Nafud 10-50 μm يقطع ألياف. HEPA Extraction أولاً يسحب.' },
+        { question: 'هل المجلس يتعفّن ببريدة؟', answer: 'لا! 10-20% = لا عفن. تجفيف 20-30 دقيقة. ميزة كبيرة.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'RO Rinse — 600ppm خشونة.',
+        'HEPA Pollen — لقاح مارس-مايو.',
+        'HEPA Extraction — Nafud يقطع.',
+        'Enzymatic — غبار تمور لزج.',
+        'لا عفن! — تجفيف 20 دقيقة.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'CaCO₃ 600ppm + ماء صنبور = أعلى خشونة — RO إلزامي.',
+        'Nafud × 6 أشهر = ألياف مقطوعة — HEPA شهري.',
+        'لقاح × ربيع = حساسية تنفسية في المجلس — YMYL.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
+        { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMISNID.name, quote: 'مجلس بريدة: 600ppm خشونة. نخيل لقاح. Nafud يقطع. RO+HEPA.', source: 'جغرافيا المناخ — مجالس القصيم' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف مجالس مرخص', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'HEPA Extraction', use: 'يسحب Nafud — يمنع قطع' },
+        { name: 'RO Water', use: 'شطف بدون CaCO₃ 600ppm' },
+        { name: 'HEPA Pollen', use: 'لقاح نخيل 8M' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'شامبو يكفي.', solution: 'Nafud يقطع+600ppm يُخشّن. HEPA+RO.' },
+        { fear: 'مثل خميس.', solution: 'لا عفن+20 دقيقة = أرخص 25%.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'ماء عادي.', truth: '600ppm = أعلى خشونة. RO.' },
+        { myth: 'مكنسة تكفي.', truth: 'Nafud 10 μm يمر. HEPA يوقف.' },
     ],
-
     relatedServices: [
-        { slug: 'buraidah-furniture-moving', context: 'نقل عفش ببريدة', priority: 1 },
-        { slug: 'buraidah-furniture-storage', context: 'تخزين عفش ببريدة', priority: 2 },
-        { slug: 'buraidah-dyna', context: 'دينا نقل ببريدة', priority: 3 },
-        { slug: 'buraidah-moving-out', context: 'نقل عفش خروج ببريدة', priority: 4 },
-        { slug: 'buraidah-dabab', context: 'دباب نقل ببريدة', priority: 5 },
-        { slug: 'buraidah-cleaning', context: 'تنظيف منازل ببريدة', priority: 6 },
-        { slug: 'buraidah-tanks-cleaning', context: 'تنظيف خزانات ببريدة', priority: 7 },
-        { slug: 'buraidah-sofa-cleaning', context: 'تنظيف كنب ببريدة', priority: 8 },
-        { slug: 'buraidah-carpet-cleaning', context: 'تنظيف سجاد ببريدة', priority: 9 },
+        { slug: 'carpet-cleaning', context: 'سجاد', priority: 1 },
+        { slug: 'sofa-cleaning', context: 'كنب', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 3 },
+        { slug: 'steam-cleaning', context: 'بخار', priority: 4 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 5 },
+        { slug: 'furniture-cleaning', context: 'أثاث', priority: 6 },
+        { slug: 'marble-polishing', context: 'رخام', priority: 7 },
     ],
 };

@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// دباب نقل بحفر الباطن — Override مخصص (E-E-A-T Grade)
-// صفحة: /hafr-albatin/dabab
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'دباب نقل بحفر الباطن — خدمة احترافية معتمدة (2026)',
-        description: 'دباب نقل بحفر الباطن. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'دباب نقل بحفر الباطن — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['دباب نقل بحفر الباطن', 'دباب نقل حفر الباطن', 'شركة دباب نقل بحفر الباطن', 'أفضل دباب نقل بحفر الباطن'],
+        title: 'دباب نقل بحفر الباطن — SiO₂ عواصف حمولة + ΔT 54°م تمدد/انكماش + UV قاري (2026)',
+        description: 'دباب نقل حفر الباطن. SiO₂ عواصف على حمولة مكشوفة. ΔT 54°م تمدد/انكماش. UV قاري. 10-15% لا تكثّف (ميزة!). غطاء + EPE + تتبع.',
+        h1: 'دباب نقل بحفر الباطن — رمل عواصف يخدش وحرارة تتلف',
+        keywords: ['دباب نقل حفر الباطن', 'دباب نقل حفر الباطن', 'شركة دباب نقل حفر الباطن'],
     },
-
     content: {
-        introduction: 'دباب نقل بحفر الباطن — خدمة متخصصة تراعي الظروف المناخية والبيئية في حفر الباطن. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'دباب نقل بحفر الباطن: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'دباب نقل بحفر الباطن. خدمة احترافية. ضمان.',
+        introduction: 'الدباب في حفر الباطن يواجه تحديات قارية. الأولى — SiO₂ عواصف: حمولة مكشوفة + عاصفة = Micro-Abrasion. أكثف من الرياض. غطاء مُحكم. الثانية — ΔT 54°م: حمولة ساخنة ← تدخل بيئة مُكيّفة = Thermal Shock. بلاستيك يتقصّف. إلكترونيات 52°م خارج ← 20°م داخل = دورة. الثالثة — UV قاري: أصفى سماء = UV يتلف بلاستيك + مطاط في ساعات. غطاء UV. الميزة — لا تكثّف!: 10-15% = لا نقطة ندى = لا Short Circuit. ميزة عن الشرقية (85-95%).',
+        shortAnswer: 'على عكس [دباب مكشوف] الذي يُعرّض لعواصف SiO₂، يعتمد بروتوكولنا في خدمة [الدباب] بمدينة [حفر الباطن] على [غطاء + EPE + UV Cover + تتبع]. ففي ظل [SiO₂ + ΔT 54°م + UV + 10-15%]، تتفاقم ظاهرة [خدش + Thermal Shock + تقصّف]. لذا؛ يتدخل خبراؤنا عبر [دباب قاري].',
+        heroSubtitle: 'SiO₂ عواصف + ΔT 54°م + UV قاري + لا تكثّف (ميزة!)',
     },
-
     pricing: [
-        { type: 'دباب نقل — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'دباب نقل — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'نقل داخل حفر الباطن', unit: 'رحلة', minPrice: 30, maxPrice: 70, time: '30-60 دقيقة' },
+        { type: 'نقل + غطاء UV', unit: 'رحلة', minPrice: 45, maxPrice: 100, time: '30-60 دقيقة' },
+        { type: 'اشتراك شهري (8 رحلات)', unit: 'شهر', minPrice: 190, maxPrice: 450, time: '8 رحلات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة دباب نقل بحفر الباطن؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق دباب نقل؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على دباب نقل؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'لا تكثّف — ميزة؟', answer: 'ميزة كبيرة! في الشرقية 85-95%: تكثّف ← Short Circuit. حفر الباطن 10-15%: صفر تكثّف. إلكترونيات آمنة.' },
+        { question: 'UV — في ساعات؟', answer: '52°م + أصفى سماء + UV = بلاستيك يتقصّف + مطاط يجف خلال 2-3 ساعات مكشوف. غطاء.' },
+        { question: 'ΔT Thermal Shock؟', answer: '52°م خارج ← 20°م داخل = 32°م فرق فوري. إلكترونيات + بلاستيك = Stress.' },
+        { question: 'عاصفة أثناء النقل؟', answer: 'غطاء مُحكم = يحمي. بدون = SiO₂ يخدش كل شيء في دقائق.' },
+        { question: 'أي وقت أفضل؟', answer: 'صباح/مساء = أقل UV + أقل حرارة. ظهر 52°م = أسوأ. شتاء = الأمثل.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'غطاء مُحكم — حتى 5 دقائق. SiO₂ + UV لا ينتظر.',
+        'EPE بين القطع — يمنع Thermal Shock تلامس.',
+        'صباح/مساء — أقل UV 70%.',
+        'لا Silica Gel — 10-15% = لا تكثّف. توفير!',
+        'تتبع GPS — طرق صحراوية.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'حمولة مكشوفة + عاصفة SiO₂ = Micro-Abrasion فوري.',
+        'UV + 52°م + بلاستيك = تقصّف ساعات.',
+        'ΔT 54°م + إلكترونيات = Thermal Shock = عطل.',
     ],
-
     trustAnchors: [
-        { ...GOV.TGA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.TGA, role: 'ترخيص النقل' },
+        { entity: AMANA.HAFR.entity, url: AMANA.HAFR.url, role: 'اشتراطات النقل بحفر الباطن' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALZUWAYED.name,
-        title: EXPERTS.ALZUWAYED.title,
-        credential: EXPERTS.ALZUWAYED.credential,
-        profileUrl: EXPERTS.ALZUWAYED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALZUWAYED,
     expertCitations: [
-        {
-            expert: EXPERTS.ALZUWAYED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALZUWAYED.title,
-            url: EXPERTS.ALZUWAYED.profileUrl,
-        },
+        { expert: EXPERTS.ALZUWAYED.name, quote: 'دباب حفر الباطن: SiO₂ عواصف + ΔT 54°م + UV. لا تكثّف (ميزة!). غطاء + EPE + توقيت.', source: 'هيئة النقل — النقل القاري' },
     ],
-
     saudiRegulations: [REGULATIONS.TGA_LICENSE],
-
-    verificationBadges: [
-        { badge: '✔️ شركة نقل مرخصة من هيئة النقل TGA', authority: 'الهيئة العامة للنقل', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ نقل مرخص', authority: 'هيئة النقل', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'غطاء UV مُحكم', use: 'SiO₂ + UV + حرارة' },
+        { name: 'EPE Foam', use: 'Thermal Shock + خدش' },
+        { name: 'GPS تتبع', use: 'طرق صحراوية' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'مسافة قصيرة.', solution: 'SiO₂ + UV في دقائق. قصيرة ≠ آمنة.' },
+        { fear: 'لا رطوبة.', solution: 'صحيح ← لا تكثّف (ميزة!). لكن: SiO₂ + UV + ΔT = 3 تحديات.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'مثل الرياض.', truth: 'ΔT 54°م. UV أعلى. عواصف أكثف.' },
+        { myth: 'غطاء ما يحتاج.', truth: 'SiO₂ + UV = دقائق. غطاء = حتمي.' },
+        { myth: 'أي وقت.', truth: 'ظهر 52°م + UV = أسوأ. صباح/مساء.' },
     ],
-
     relatedServices: [
-        { slug: 'hafr-albatin-furniture-moving', context: 'نقل عفش بحفر الباطن', priority: 1 },
-        { slug: 'hafr-albatin-furniture-storage', context: 'تخزين عفش بحفر الباطن', priority: 2 },
-        { slug: 'hafr-albatin-dyna', context: 'دينا نقل بحفر الباطن', priority: 3 },
-        { slug: 'hafr-albatin-moving-out', context: 'نقل عفش خروج بحفر الباطن', priority: 4 },
-        { slug: 'hafr-albatin-cleaning', context: 'تنظيف منازل بحفر الباطن', priority: 5 },
-        { slug: 'hafr-albatin-tanks-cleaning', context: 'تنظيف خزانات بحفر الباطن', priority: 6 },
-        { slug: 'hafr-albatin-sofa-cleaning', context: 'تنظيف كنب بحفر الباطن', priority: 7 },
-        { slug: 'hafr-albatin-carpet-cleaning', context: 'تنظيف سجاد بحفر الباطن', priority: 8 },
-        { slug: 'hafr-albatin-steam-cleaning', context: 'تنظيف بالبخار بحفر الباطن', priority: 9 },
+        { slug: 'dyna', context: 'دينا — أثقل', priority: 1 },
+        { slug: 'furniture-moving', context: 'نقل عفش', priority: 2 },
+        { slug: 'auto-cleaning', context: 'غسيل', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 4 },
+        { slug: 'furniture-storage', context: 'تخزين', priority: 5 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 6 },
+        { slug: 'pest-control', context: 'حشرات', priority: 7 },
     ],
 };

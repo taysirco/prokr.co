@@ -4,6 +4,7 @@
 // ============================================
 
 import type { PageOverride } from '../../types';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -90,19 +91,13 @@ export const override: PageOverride = {
         { entity: 'وزارة البلديات — منصة بلدي', acronym: 'بلدي', url: 'https://balady.gov.sa', role: 'ترخيص شركات التنظيف' },
     ],
 
-    expertReviewer: {
-        name: 'أ.د. عبدالله المسند',
-        title: 'أستاذ جغرافيا المناخ',
-        credential: 'أستاذ جغرافيا المناخ — جامعة القصيم',
-        profileUrl: 'https://x.com/ALMISNID',
-    },
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
             expert: 'أ.د. عبدالله المسند',
             quote: 'في المدن الساحلية: الأسطح تتسخ أسرع بسبب الملوحة والرطوبة — خدمة التنظيف بالساعة مثالية للصيانة المتكررة بتكلفة منخفضة',
             source: 'تحليل مناخي',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -111,14 +106,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'jeddah-cleaning', context: 'تنظيف بالجلسة أشمل', priority: 1 },
-        { slug: 'jeddah-apartments-cleaning', context: 'شقق بأسعار ثابتة', priority: 2 },
-        { slug: 'jeddah-kitchen-cleaning', context: 'مطبخ بالساعة', priority: 3 },
-        { slug: 'jeddah-steam-cleaning', context: 'بخار بالساعة', priority: 4 },
-        { slug: 'jeddah-sanitization', context: 'تعقيم سريع', priority: 5 },
-        { slug: 'jeddah-sofa-cleaning', context: 'كنب بالساعة', priority: 6 },
-        { slug: 'jeddah-carpet-cleaning', context: 'سجاد بجلسة منفصلة', priority: 7 },
-        { slug: 'jeddah-air-conditioner-cleaning', context: 'صيانة مكيف', priority: 8 },
-        { slug: 'jeddah-pest-control', context: 'رش سريع', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف بالجلسة أشمل', priority: 1 },
+        { slug: 'apartments-cleaning', context: 'شقق بأسعار ثابتة', priority: 2 },
+        { slug: 'kitchen-cleaning', context: 'مطبخ بالساعة', priority: 3 },
+        { slug: 'steam-cleaning', context: 'بخار بالساعة', priority: 4 },
+        { slug: 'sanitization', context: 'تعقيم سريع', priority: 5 },
+        { slug: 'sofa-cleaning', context: 'كنب بالساعة', priority: 6 },
+        { slug: 'carpet-cleaning', context: 'سجاد بجلسة منفصلة', priority: 7 },
+        { slug: 'air-conditioner-cleaning', context: 'صيانة مكيف', priority: 8 },
+        { slug: 'pest-control', context: 'رش سريع', priority: 9 },
     ],
 };

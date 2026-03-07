@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف واجهات زجاجية بعنيزة — Override مخصص (E-E-A-T Grade)
-// صفحة: /onizah/glass-facades-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف واجهات زجاجية بعنيزة — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف واجهات زجاجية بعنيزة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف واجهات زجاجية بعنيزة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف واجهات زجاجية بعنيزة', 'تنظيف واجهات زجاجية عنيزة', 'شركة تنظيف واجهات زجاجية بعنيزة', 'أفضل تنظيف واجهات زجاجية بعنيزة'],
+        title: 'تنظيف واجهات زجاجية بعنيزة — SiO₂ Pitting + CaCO₃ 550ppm + تمور لزجة محلات — لا Biofilm! (2026)',
+        description: 'تنظيف واجهات عنيزة. SiO₂ Pitting زجاج. CaCO₃ 550ppm بقع. تمور لزجة على واجهات محلات. لا Biofilm! pH neutral + Descaler.',
+        h1: 'تنظيف واجهات زجاجية بعنيزة — رمل يحفر وتمور تلزّق',
+        keywords: ['تنظيف واجهات عنيزة', 'تنظيف واجهات بعنيزة', 'شركة تنظيف واجهات عنيزة'],
     },
-
     content: {
-        introduction: 'تنظيف واجهات زجاجية بعنيزة — خدمة متخصصة تراعي الظروف المناخية والبيئية في عنيزة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف واجهات زجاجية بعنيزة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف واجهات زجاجية بعنيزة. خدمة احترافية. ضمان.',
+        introduction: 'واجهات عنيزة الزجاجية تواجه ثلاثي هجوم فريد. أولاً: SiO₂ من النفود بصلابة 7 Mohs يُحدث Pitting (حُفر مجهرية) على سطح الزجاج (6.5 Mohs) — أي فرك بقطعة قماش تحمل رمل = خدوش دائرية لا تُزال. يجب شطف بماء أولاً ثم مسح بـ Microfiber بدون ضغط. ثانياً: CaCO₃ 550ppm يترك بقع كلسية بيضاء على الواجهات بعد كل غسلة — Descaler حمضي أو ماء Softened يمنعها. ثالثاً — وهذا الفريد!: واجهات محلات سوق التمور تتلطخ ببقايا تمور لزجة من أيدي الزبائن والشاحنات. السكر يتكرمل تحت شمس 48°م = طبقة صلبة على الزجاج. Enzymatic يُكسِّر السكر. الميزة الذهبية: لا Biofilm — رطوبة 15-25% = لا طحالب ولا فطريات على الواجهات. عكس جدة والباحة تماماً!',
+        shortAnswer: 'على عكس [الفرك بقطعة قماش جافة الذي يُحدث Pitting]، يعتمد بروتوكولنا في خدمة [تنظيف الواجهات] بمدينة [عنيزة] على [pH Neutral + Descaler + Enzymatic تمور]. ففي ظل [SiO₂ 7 Mohs + CaCO₃ 550ppm + تمور لزجة + 48°م]، تتفاقم ظاهرة [Pitting + بقع كلسية + Caramelized Sugar]. لذا؛ يتدخل فريقنا عبر [شطف ← مسح ناعم ← إذابة ← إنزيم] لضمان واجهات شفافة بدون خدش.',
+        heroSubtitle: 'SiO₂ Pitting + CaCO₃ بقع + تمور لزجة — لا Biofilm!',
     },
-
     pricing: [
-        { type: 'تنظيف واجهات زجاجية — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف واجهات زجاجية — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'واجهة صغيرة (< 50 م²)', unit: 'خدمة', minPrice: 130, maxPrice: 270, time: '2-3 ساعات' },
+        { type: 'واجهة كبيرة (100+ م²)', unit: 'خدمة', minPrice: 280, maxPrice: 650, time: '4-8 ساعات' },
+        { type: 'محل سوق تمور + Enzymatic', unit: 'خدمة', minPrice: 170, maxPrice: 340, time: '2-4 ساعات' },
+        { type: 'ربع سنوي (4 زيارات)', unit: 'سنة', minPrice: 400, maxPrice: 800, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف واجهات زجاجية بعنيزة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف واجهات زجاجية؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف واجهات زجاجية؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'كيف أنظف واجهة زجاجية بعنيزة بدون خدش؟', answer: 'شطف ماء أولاً لإزالة SiO₂ ← ثم Microfiber بدون ضغط. لا فرك أبداً! SiO₂ 7 Mohs > زجاج 6.5.' },
+        { question: 'ليش الواجهات تبقّع بعد الغسل بعنيزة؟', answer: 'CaCO₃ 550ppm — ماء الصنبور يترك بقع كلسية. Softened Water أو Descaler بعد الغسل.' },
+        { question: 'كم تكلفة تنظيف واجهة محل تمور؟', answer: '170-340 ريال — Enzymatic يُزيل سكر التمور. بدونه = فرك = خدش الزجاج.' },
+        { question: 'هل الواجهات تحتاج Anti-Biofilm بعنيزة؟', answer: 'لا! 15-25% رطوبة = صفر Biofilm. وفّر 100% من تكلفة Anti-Biofilm. عكس جدة والباحة.' },
+        { question: 'متى أنظف الواجهات بعنيزة؟', answer: 'بعد عواصف الربيع (SiO₂) وبعد موسم التمور (سكر). ربع سنوي مثالي. لا حاجة شهري.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'شطف ماء أولاً — SiO₂ يخدش لو فركت مباشرة.',
+        'Descaler بعد كل غسلة — CaCO₃ 550ppm يبقّع.',
+        'Enzymatic لمحلات التمور — يُكسِّر السكر بدون فرك.',
+        'لا Anti-Biofilm — 15-25% = صفر. وفّر.',
+        'Marine Sealant لا حاجة — لا رطوبة بحرية.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'فرك + SiO₂ = Pitting دائم في الزجاج — تغيير لوح كامل (1000+ ريال).',
+        'ماء صنبور + شمس = Water Spots كلسية تتشرب بالزجاج — Softened فقط.',
+        'تمور لزجة + 48°م + أسبوع = Caramelized Sugar لا يزول إلا بـ Enzymatic.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص شركات النظافة' },
+        { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات واجهات — أمانة القصيم' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'واجهات عنيزة: SiO₂ Pitting + تمور لزجة = فريد. لا Biofilm — ميزة. pH Neutral+Enzymatic.', source: 'نصائح هندسية — واجهات قصيمية' },
     ],
-
-    saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    saudiRegulations: [REGULATIONS.SBC_601],
+    verificationBadges: [{ badge: '✔️ شركة واجهات مرخصة', authority: 'منصة بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'pH Neutral Cleaner', use: 'تنظيف زجاج — لا يتفاعل مع SiO₂ أو CaCO₃' },
+        { name: 'Descaler حمضي', use: 'إذابة بقع CaCO₃ الكلسية' },
+        { name: 'Enzymatic Sugar Breaker', use: 'إزالة تمور لزجة بدون فرك' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'مثل أي مدينة.', solution: 'تمور لزجة = فريد عنيزة. Enzymatic إضافي.' },
+        { fear: 'Biofilm مثل الباحة.', solution: 'صفر — 15-25% رطوبة. وفّر 100%.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'الماء والصابون يكفي للواجهات.', truth: 'SiO₂ Pitting + CaCO₃ Spots. يحتاج أدوات متخصصة.' },
+        { myth: 'الواجهات تحتاج تنظيف شهري.', truth: 'ربع سنوي يكفي — لا Biofilm = لا تراكم.' },
     ],
-
     relatedServices: [
-        { slug: 'onizah-furniture-moving', context: 'نقل عفش بعنيزة', priority: 1 },
-        { slug: 'onizah-furniture-storage', context: 'تخزين عفش بعنيزة', priority: 2 },
-        { slug: 'onizah-dyna', context: 'دينا نقل بعنيزة', priority: 3 },
-        { slug: 'onizah-moving-out', context: 'نقل عفش خروج بعنيزة', priority: 4 },
-        { slug: 'onizah-dabab', context: 'دباب نقل بعنيزة', priority: 5 },
-        { slug: 'onizah-cleaning', context: 'تنظيف منازل بعنيزة', priority: 6 },
-        { slug: 'onizah-tanks-cleaning', context: 'تنظيف خزانات بعنيزة', priority: 7 },
-        { slug: 'onizah-sofa-cleaning', context: 'تنظيف كنب بعنيزة', priority: 8 },
-        { slug: 'onizah-carpet-cleaning', context: 'تنظيف سجاد بعنيزة', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف عام', priority: 1 },
+        { slug: 'marble-polishing', context: 'رخام — SiO₂', priority: 2 },
+        { slug: 'office-cleaning', context: 'مكاتب', priority: 3 },
+        { slug: 'villas-cleaning', context: 'فلل', priority: 4 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 5 },
+        { slug: 'pest-control', context: 'حشرات — تمور', priority: 6 },
+        { slug: 'apartments-cleaning', context: 'شقق', priority: 7 },
     ],
 };

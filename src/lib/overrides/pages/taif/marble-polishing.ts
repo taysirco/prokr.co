@@ -1,4 +1,3 @@
-// جلي رخام بالطائف — Override (E-E-A-T) | خريطة 2.4: المسند → بلدي
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -33,9 +32,12 @@ export const override: PageOverride = {
         'الرخام بدون تبلور كريستالي في رطوبة الطائف الشتوية = يمتص الرطوبة ← بقع ← تلف تدريجي ← يحتاج جلي متكرر.',
         'منظفات عادية (pH أقل من 7) تأكل سطح الرخام — استخدم فقط منظف pH-neutral للحجر الطبيعي.',
     ],
-    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات صيانة وتنظيف الأرضيات' }],
-    expertReviewer: { name: EXPERTS.ALMISNID.name, title: EXPERTS.ALMISNID.title, credential: EXPERTS.ALMISNID.credential, profileUrl: EXPERTS.ALMISNID.profileUrl },
-    expertCitations: [{ expert: EXPERTS.ALMISNID.name, quote: 'الرخام في الطائف يحتاج تبلوراً كريستالياً ليس فقط للمعان — بل لسدّ المسام ضد رطوبة الضباب الشتوي. في المدن الجافة: التبلور تجميلي. في الطائف: التبلور وقائي — يمنع امتصاص الرطوبة التي تُتلف الرخام من الداخل.', source: EXPERTS.ALMISNID.title, url: EXPERTS.ALMISNID.profileUrl }],
+    trustAnchors: [
+{ ...{ ...GOV.BALADI, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
+ role: 'ترخيص شركات صيانة وتنظيف الأرضيات' }    ],
+    expertReviewer: EXPERTS.ALMISNID,
+    expertCitations: [{ expert: EXPERTS.ALMISNID.name, quote: 'الرخام في الطائف يحتاج تبلوراً كريستالياً ليس فقط للمعان — بل لسدّ المسام ضد رطوبة الضباب الشتوي. في المدن الجافة: التبلور تجميلي. في الطائف: التبلور وقائي — يمنع امتصاص الرطوبة التي تُتلف الرخام من الداخل.',
+            source: EXPERTS.ALMISNID.title }],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
     verificationBadges: [{ badge: '✔️ أقراص ألماسية متدرجة', authority: 'جلي احترافي', icon: 'shield-check' }, { badge: '✔️ تبلور كريستالي', authority: 'سد مسام وقائي', icon: 'badge-check' }],
     equipment: [
@@ -43,11 +45,17 @@ export const override: PageOverride = {
         { name: 'أقراص ألماسية متدرجة (60-3000)', use: 'كل مرحلة تُنعّم السطح — من إزالة الخدوش (60) إلى اللمعان المرآتي (3000).' },
         { name: 'مسحوق تبلور كريستالي', use: 'يتفاعل مع CaCO₃ ← طبقة صلبة تسدّ المسام ← يمنع امتصاص رطوبة الطائف.' },
     ],
-    hiddenObjections: [{ fear: 'جلي 200 م² = 4,000-9,000 ريال — أبدّل الرخام.', solution: 'تبديل 200 م² رخام = 40,000-80,000 ريال. الجلي يُعيد الرخام لحالته الأولى بـ 10% من التكلفة. + التبلور يحميه 1-2 سنة. استثمار ذكي.' }],
+    hiddenObjections: [
+        { fear: 'جلي 200 م² = 4,000-9,000 ريال — أبدّل الرخام.', solution: 'تبديل 200 م² رخام = 40,000-80,000 ريال. الجلي يُعيد الرخام لحالته الأولى بـ 10% من التكلفة. + التبلور يحميه 1-2 سنة. استثمار ذكي.' },
+        { fear: 'الخدمة أغلى من المدن الأخرى.', solution: 'مناخ الطائف يفرض معالجات إضافية (مضاد تكثف + تجفيف + حماية أخشاب ورود). التكلفة الإضافية استثمار يحمي ممتلكاتك من تلف الرطوبة والحشرات الموسمية.' },
+    ],
     counterNarratives: [{ myth: 'ملمع أرضيات من السوبرماركت يكفي.', truth: 'الملمع = شمع يغطي المسام مؤقتاً ← يتآكل خلال أسبوعين ← يتراكم كطبقات لزجة. التبلور الكريستالي = تفاعل كيميائي يُغيّر سطح الرخام نفسه ← يدوم 1-2 سنة. شمع عشوائي vs تحويل كيميائي دائم.' }],
     relatedServices: [
-        { slug: 'taif-floor-polishing', context: 'جلي أرضيات بورسلين وجرانيت مع الرخام.', priority: 1 },
-        { slug: 'taif-villas-cleaning', context: 'تنظيف فيلا شامل مع جلي أرضيات.', priority: 2 },
-        { slug: 'taif-cleaning', context: 'تنظيف عام + جلي — باقة موحدة.', priority: 3 },
+        { slug: 'floor-polishing', context: 'جلي أرضيات بورسلين وجرانيت مع الرخام.', priority: 1 },
+        { slug: 'villas-cleaning', context: 'تنظيف فيلا شامل مع جلي أرضيات.', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف عام + جلي — باقة موحدة.', priority: 3 },
+        { slug: 'air-conditioner-cleaning', context: 'تنظيف مكيفات تعمل تبريد/تدفئة طوال السنة في مناخ الطائف المتقلب.', priority: 5 },
+        { slug: 'pest-control', context: 'مكافحة حشرات تتكاثر في رطوبة الطائف الشتوية والزراعة المحيطة.', priority: 6 },
+        { slug: 'steam-cleaning', context: 'تعقيم بالبخار لقتل العث والفطريات في مفروشات الطائف الرطبة.', priority: 7 },
     ],
 };

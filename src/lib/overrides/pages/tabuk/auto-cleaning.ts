@@ -1,94 +1,62 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف سيارات بتبوك — Override مخصص (E-E-A-T Grade)
-// صفحة: /tabuk/auto-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف سيارات بتبوك — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف سيارات بتبوك. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف سيارات بتبوك — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف سيارات بتبوك', 'تنظيف سيارات تبوك', 'شركة تنظيف سيارات بتبوك', 'أفضل تنظيف سيارات بتبوك'],
+        title: 'غسيل سيارات بتبوك — شمع يتجمد -2°م + يلين 44°م + حسمى يحفر + ثلج يُكلّس — Ceramic SiO₂ 9H (2026)',
+        description: 'غسيل سيارات تبوك. شمع يتجمد -2°م ← يتشقق ← يتقشر. يلين 44°م. حسمى 6 Mohs يحفر Clear Coat. ثلج يُكلّس. Ceramic SiO₂ 9H = -10°م إلى 80°م = حماية 12/12.',
+        h1: 'غسيل سيارات بتبوك — الشمع يتجمد والحسمى يحفر والثلج يُكلّس — Ceramic هو الحل',
+        keywords: ['غسيل سيارات بتبوك', 'غسيل سيارات تبوك', 'شركة غسيل سيارات بتبوك'],
     },
-
     content: {
-        introduction: 'تنظيف سيارات بتبوك — خدمة متخصصة تراعي الظروف المناخية والبيئية في تبوك. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف سيارات بتبوك: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف سيارات بتبوك. خدمة احترافية. ضمان.',
+        introduction: 'السيارة في تبوك تتعرض لأقسى ظروف في المملكة — 46°م مدى + ثلوج حقيقية. مشكلة الشمع: في -2°م: الشمع (Carnauba) يتجمد ← يتشقق ← يتقشر. في 44°م: يلين ← يفقد سماكته. الشمع لا يعمل في تبوك. + حسمى 6 Mohs يحفر Clear Coat. + ثلج يُكلّس. الحل: Ceramic SiO₂ 9H — يعمل من -10°م إلى 80°م = يتحمل 46°م المدى. صلابة 9H = أصلب من حسمى 6. لا يتشقق ولا يلين.',
+        shortAnswer: 'الشمع يتجمد -2°م ويلين 44°م = لا يعمل. Ceramic SiO₂ 9H (-10°م → 80°م) = الحماية الوحيدة في 46°م مدى + حسمى 6 Mohs + ثلج.',
+        heroSubtitle: 'الشمع فشل — Ceramic SiO₂ 9H = -10°م إلى 80°م = حماية 12/12',
     },
-
     pricing: [
-        { type: 'تنظيف سيارات — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف سيارات — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'غسيل خارجي (Touchless + Deionized)', unit: 'سيارة', minPrice: 50, maxPrice: 100, time: '30-45 دقيقة' },
+        { type: 'غسيل + تلميع Crystal', unit: 'سيارة', minPrice: 100, maxPrice: 200, time: '1-2 ساعة' },
+        { type: 'Ceramic SiO₂ 9H (حماية 2-3 سنوات)', unit: 'سيارة', minPrice: 800, maxPrice: 2000, time: '6-10 ساعات' },
+        { type: 'عقد غسيل شهري', unit: 'شهر', minPrice: 100, maxPrice: 200, time: '4 غسلات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف سيارات بتبوك؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف سيارات؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف سيارات؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'الشمع يتقشر بعد أسبوعين — ليش؟', answer: '-2°م = Carnauba يتجمد ← يتشقق ← يتقشر. حتى لو لم يتقشر شتاءً: 44°م صيفاً = يلين ← يُمسح بأول غسلة. الشمع لا يعمل في 46°م مدى. Ceramic = لا يتجمد ولا يلين.' },
+        { question: 'Ceramic 800-2,000 ريال — يستاهل؟', answer: '2-3 سنوات حماية × صفر شمع × صفر Polishing = وفر 1,500-3,000 ريال/سنة. + يحمي من حسمى 6 Mohs (Clear Coat إصلاح: 2,000-5,000 ريال). Ceramic = أرخص على 3 سنوات.' },
+        { question: 'ثلج يكلس السيارة؟', answer: 'ثلج يذوب ← ماء يحمل أملاح ← يجف في 12% ← بقع كلسية. Ceramic Hydrophobic: الماء ينزلق ← لا يجف = لا كلس.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Ceramic SiO₂ 9H = الحل الوحيد في 46°م (-2°م → 44°م). الشمع لا يعمل.',
+        'Touchless حصراً — إسفنجة على حسمى = خدوش = Clear Coat يتلف.',
+        'Deionized للغسل — ماء صنبور = كلس ثلجي.',
+        'لا تغسل في الصقيع — ماء يتجمد في الأقفال والمقابض.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'إسفنجة على حسمى = خدوش دائمة في Clear Coat. Touchless حصراً.',
+        'شمع في تبوك = أموال مهدرة. -2°م يُدمّره. Ceramic فقط.',
+        'غسل في -2°م = ماء يتجمد في أقفال وأنابيب. غسل نهاراً 10 ص+.',
     ],
-
-    trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
-    ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص غسيل السيارات' }],
+    expertReviewer: EXPERTS.ALJUND,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALJUND.name, quote: 'سيارة تبوك في 46°م مدى: الشمع خيار فاشل. Ceramic SiO₂ 9H = يعمل -10°م → 80°م = الحل الوحيد. + Touchless + Deionized = بروتوكول تبوكي كامل.', source: 'موسوعة أخطاء — حماية دهان السيارات في مناخ الصقيع' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ غسيل سيارات مرخص', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Touchless Pressure Washer', use: 'يغسل بدون لمس = صفر خدوش حسمى' },
+        { name: 'Deionized Water', use: 'بدون كلس ثلجي — ماء نقي 100%' },
+        { name: 'Ceramic SiO₂ 9H', use: 'يعمل -10°م → 80°م × 2-3 سنوات — أصلب من حسمى' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'Ceramic غالي.', solution: '800-2,000 ÷ 3 سنوات = 267-667 ريال/سنة. شمع: 100-200 × 6-8 مرات = 600-1,600 ريال/سنة. + Clear Coat إصلاح: 2,000-5,000. Ceramic = أرخص.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'الشمع يكفي.', truth: '-2°م = يتجمد. 44°م = يلين. 46°م مدى = 0% فعالية. Ceramic = 100%.' },
     ],
-
     relatedServices: [
-        { slug: 'tabuk-furniture-moving', context: 'نقل عفش بتبوك', priority: 1 },
-        { slug: 'tabuk-furniture-storage', context: 'تخزين عفش بتبوك', priority: 2 },
-        { slug: 'tabuk-dyna', context: 'دينا نقل بتبوك', priority: 3 },
-        { slug: 'tabuk-moving-out', context: 'نقل عفش خروج بتبوك', priority: 4 },
-        { slug: 'tabuk-dabab', context: 'دباب نقل بتبوك', priority: 5 },
-        { slug: 'tabuk-cleaning', context: 'تنظيف منازل بتبوك', priority: 6 },
-        { slug: 'tabuk-tanks-cleaning', context: 'تنظيف خزانات بتبوك', priority: 7 },
-        { slug: 'tabuk-sofa-cleaning', context: 'تنظيف كنب بتبوك', priority: 8 },
-        { slug: 'tabuk-carpet-cleaning', context: 'تنظيف سجاد بتبوك', priority: 9 },
+        { slug: 'marble-polishing', context: 'رخام — نفس Mohs differential', priority: 1 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات — نفس كلس ثلجي', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف — المرآب', priority: 3 },
+        { slug: 'dyna', context: 'دينا — نقل الأجهزة', priority: 4 },
     ],
 };

@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف مجالس بالقطيف — Override مخصص (E-E-A-T Grade)
-// صفحة: /qatif/councils-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف مجالس بالقطيف — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف مجالس بالقطيف. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف مجالس بالقطيف — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف مجالس بالقطيف', 'تنظيف مجالس القطيف', 'شركة تنظيف مجالس بالقطيف', 'أفضل تنظيف مجالس بالقطيف'],
+        title: 'تنظيف مجالس بالقطيف — بخور+NaCl بلمرة ملحية + 80-95% عفن+عث + طلع نخيل (2026)',
+        description: 'تنظيف مجالس القطيف. بخور+NaCl بلمرة ملحية. 80-95% عفن+عث حشوة. طلع نخيل حساسية. تجفيف 4-8 ساعات. Enzymatic + Anti-Fungal + Anti-Mite + Turbo.',
+        h1: 'تنظيف مجالس بالقطيف — بخور ملحي وعفن واحي وعث وطلع نخيل',
+        keywords: ['تنظيف مجالس القطيف', 'تنظيف مجلس بالقطيف', 'شركة تنظيف مجالس بالقطيف'],
     },
-
     content: {
-        introduction: 'تنظيف مجالس بالقطيف — خدمة متخصصة تراعي الظروف المناخية والبيئية في القطيف. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف مجالس بالقطيف: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف مجالس بالقطيف. خدمة احترافية. ضمان.',
+        introduction: 'المجلس في القطيف يتعرض لبيئة ساحلية-واحية على الأقمشة. الأول — بخور+NaCl بلمرة ملحية: Olibanum يتبلمر + NaCl يُصلّب = بلمرة ملحية فريدة. Enzymatic + RO. الثاني — 80-95% عفن حشوة: عفن مزدوج يصيب الحشوة. Anti-Fungal. الثالث — عث: 80-95% > 50% = عث. بخار + Anti-Mite. الرابع — طلع نخيل: يدخل المجلس = حساسية. HEPA. تجفيف: 80-95% = 4-8 ساعات. Turbo + Dehumidifier.',
+        shortAnswer: 'على عكس [شامبو] الذي لا يُكسر بلمرة ملحية، يعتمد بروتوكولنا في خدمة [تنظيف المجالس] بمدينة [القطيف] على [Enzymatic + Anti-Fungal + Anti-Mite + Turbo]. ففي ظل [بخور+NaCl + 80-95% + عث + طلع]، تتفاقم ظاهرة [بلمرة + عفن + عث + حساسية]. لذا؛ يتدخل خبراؤنا عبر [بروتوكول مجلس ساحلي-واحي].',
+        heroSubtitle: 'بخور+NaCl بلمرة + عفن+عث واحي + طلع نخيل + 4-8 ساعات',
     },
-
     pricing: [
-        { type: 'تنظيف مجالس — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف مجالس — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'مجلس — ساحلي-واحي', unit: 'مجلس', minPrice: 210, maxPrice: 410, time: '3-4 ساعات' },
+        { type: 'مجلس + سجاد', unit: 'مجلس', minPrice: 300, maxPrice: 590, time: '4-6 ساعات' },
+        { type: 'عميق (Enzymatic+بخار+عث)', unit: 'مجلس', minPrice: 340, maxPrice: 680, time: '4-6 ساعات' },
+        { type: 'ربع سنوي', unit: 'سنة', minPrice: 630, maxPrice: 1260, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف مجالس بالقطيف؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف مجالس؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف مجالس؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'بلمرة ملحية — فريدة؟', answer: 'بخور Ester + NaCl بلورات = Bonds ملحية. مختلفة عن الجبيل (VOC). أقل صعوبة لكن فريدة.' },
+        { question: 'عث — مثل الخبر؟', answer: '80-95% = عث. مشابه للخبر. لكن: طلع نخيل إضافي = حساسية مُركّبة.' },
+        { question: 'طلع في المجلس؟', answer: 'نوافذ مفتوحة + واحة = طلع على كل شيء. HEPA + بخار.' },
+        { question: 'ربع سنوي — يكفي؟', answer: 'بخور+NaCl+عفن+عث+طلع. ربع سنوي = الحد.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Enzymatic — بلمرة ملحية بخور+NaCl.',
+        'بخار 100°م + Anti-Mite — عث.',
+        'Anti-Fungal — عفن مزدوج.',
+        'HEPA طلع نخيل — حساسية.',
+        'Turbo + Dehumidifier — 80-95%.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'بلمرة ملحية × 6 أشهر = طبقة صعبة.',
+        '80-95% + حشوة = عفن+عث مزمن.',
+        'طلع + عث = حساسية مُركّبة.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص التنظيف' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات النظافة بالشرقية' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'مجلس القطيف: بخور+NaCl بلمرة ملحية + 80-95% عفن+عث + طلع نخيل. Enzymatic + Anti-Mite + HEPA.', source: 'نصائح هندسية — مجالس الواحات الساحلية' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف مجالس مرخص', authority: 'منصة بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Enzymatic', use: 'بلمرة ملحية بخور+NaCl' },
+        { name: 'بخار 100°م', use: 'عث + طلع' },
+        { name: 'Anti-Fungal', use: '80-95% عفن مزدوج' },
+        { name: 'HEPA', use: 'طلع نخيل حساسية' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'مثل الخبر.', solution: 'واحة = طلع+طين+عيون. مختلف.' },
+        { fear: 'شامبو.', solution: 'بلمرة ملحية = Enzymatic.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'ساحلي فقط.', truth: 'واحي = طلع+طين+عيون.' },
+        { myth: 'نصف سنوي.', truth: 'عفن+عث+بخور+طلع. ربع سنوي.' },
     ],
-
     relatedServices: [
-        { slug: 'qatif-furniture-moving', context: 'نقل عفش بالقطيف', priority: 1 },
-        { slug: 'qatif-furniture-storage', context: 'تخزين عفش بالقطيف', priority: 2 },
-        { slug: 'qatif-dyna', context: 'دينا نقل بالقطيف', priority: 3 },
-        { slug: 'qatif-moving-out', context: 'نقل عفش خروج بالقطيف', priority: 4 },
-        { slug: 'qatif-dabab', context: 'دباب نقل بالقطيف', priority: 5 },
-        { slug: 'qatif-cleaning', context: 'تنظيف منازل بالقطيف', priority: 6 },
-        { slug: 'qatif-tanks-cleaning', context: 'تنظيف خزانات بالقطيف', priority: 7 },
-        { slug: 'qatif-sofa-cleaning', context: 'تنظيف كنب بالقطيف', priority: 8 },
-        { slug: 'qatif-carpet-cleaning', context: 'تنظيف سجاد بالقطيف', priority: 9 },
+        { slug: 'carpet-cleaning', context: 'سجاد', priority: 1 },
+        { slug: 'sofa-cleaning', context: 'كنب', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 3 },
+        { slug: 'steam-cleaning', context: 'بخار', priority: 4 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 5 },
+        { slug: 'pest-control', context: 'حشرات', priority: 6 },
+        { slug: 'marble-polishing', context: 'رخام', priority: 7 },
     ],
 };

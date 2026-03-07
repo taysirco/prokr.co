@@ -1,94 +1,76 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف مداخن مطاعم بالظهران — Override مخصص (E-E-A-T Grade)
-// صفحة: /dhahran/restaurant-chimney-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف مداخن مطاعم بالظهران — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف مداخن مطاعم بالظهران. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف مداخن مطاعم بالظهران — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف مداخن مطاعم بالظهران', 'تنظيف مداخن مطاعم الظهران', 'شركة تنظيف مداخن مطاعم بالظهران', 'أفضل تنظيف مداخن مطاعم بالظهران'],
+        title: 'تنظيف مداخن مطاعم بالظهران — كربنة مزدوجة NaCl+SiO₂ + 75-85% Biofilm + NFPA 96 (2026)',
+        description: 'تنظيف مداخن الظهران. كربنة مزدوجة NaCl+SiO₂. 75-85% Biofilm. NFPA 96. Alkaline pH 13 + Anti-Biofilm + RO + ربع سنوي.',
+        h1: 'تنظيف مداخن مطاعم بالظهران — كربنة مزدوجة أصعب والرطوبة تُغشّي',
+        keywords: ['تنظيف مداخن مطاعم بالظهران', 'تنظيف مداخن الظهران', 'شركة تنظيف مداخن بالظهران'],
     },
-
     content: {
-        introduction: 'تنظيف مداخن مطاعم بالظهران — خدمة متخصصة تراعي الظروف المناخية والبيئية في الظهران. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف مداخن مطاعم بالظهران: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف مداخن مطاعم بالظهران. خدمة احترافية. ضمان.',
+        introduction: 'مداخن مطاعم الظهران تواجه كربنة مزدوجة فريدة. الأولى — NaCl+SiO₂ كربنة: NaCl من مأكولات بحرية + SiO₂ من الهواء = كربنة مُركّبة (كربون + ملح + رمل). SiO₂ يُخشّن الكربنة = أصعب كشط. Alkaline pH 13 مع وقت أطول. الثانية — 75-85% Biofilm: أبطأ من الخبر لكن ينمو (4-6 أسابيع). Biofilm = طبقة عضوية رطبة ← قابلة للاشتعال عند الجفاف. Anti-Biofilm. الثالثة — NFPA 96: SiO₂ يُضيف خشونة = كربنة تتراكم أسرع ← تصل 6,000 ميكرون أسرع. + Biofilm يُضيف سُمكاً. فحص ميكرون ربع سنوي.',
+        shortAnswer: 'على عكس [تنظيف بدون مراعاة مزدوج] الذي يتجاهل SiO₂ والبيوفيلم، يعتمد بروتوكولنا في خدمة [تنظيف المداخن] بمدينة [الظهران] على [Alkaline pH 13 + Anti-Biofilm + RO + ربع سنوي]. ففي ظل [NaCl+SiO₂ + 75-85% + NFPA]، تتفاقم ظاهرة [كربنة مُركّبة + غشاء + سُمك]. لذا؛ يتدخل خبراؤنا عبر [بروتوكول مدخنة مزدوج].',
+        heroSubtitle: 'كربنة مزدوجة NaCl+SiO₂ + 75-85% Biofilm + NFPA 96',
     },
-
     pricing: [
-        { type: 'تنظيف مداخن مطاعم — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف مداخن مطاعم — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'مدخنة (Alkaline pH 13)', unit: 'مدخنة', minPrice: 290, maxPrice: 670, time: '2-4 ساعات' },
+        { type: 'Anti-Biofilm + فلاتر', unit: 'خدمة', minPrice: 190, maxPrice: 370, time: '1-2 ساعة' },
+        { type: 'عقد ربع سنوي', unit: 'سنة', minPrice: 940, maxPrice: 2300, time: '4+ زيارات' },
+        { type: 'طوارئ', unit: 'خدمة', minPrice: 370, maxPrice: 780, time: '2-3 ساعات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف مداخن مطاعم بالظهران؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف مداخن مطاعم؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف مداخن مطاعم؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'SiO₂ يُخشّن — ماذا يعني؟', answer: 'SiO₂ يترسب في الكربنة = سطح خشن ← كربنة جديدة تلتصق أسرع ← تراكم أسرع. في الخبر: كربنة NaCl فقط = أملس نسبياً. الظهران: NaCl+SiO₂ = أخشن = أسرع.' },
+        { question: 'NFPA — أسرع وصول؟', answer: '6,000 ميكرون بسبب: (1) SiO₂ يُسرّع التراكم + (2) Biofilm يُضيف 500-1,000 ميكرون. كلاهما = يصل NFPA أسرع من الخبر.' },
+        { question: 'Biofilm أبطأ — يعني أمان؟', answer: '4-6 أسابيع ≠ لا ينمو. أبطأ ← لكن: يُضيف سُمكاً. Anti-Biofilm كل 4 أشهر.' },
+        { question: 'RO أيضاً للمدخنة؟', answer: 'ماء الظهران = NaCl ← شطف = NaCl جديد = Biofilm جديد + كربنة أسرع. RO = صفر.' },
+        { question: 'ربع سنوي؟', answer: 'SiO₂ يُسرّع + Biofilm يُضيف + NaCl يمنع Saponification. ربع سنوي = الحد.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Alkaline pH 13 × 30 دقيقة — كربنة مزدوجة تحتاج وقت أطول.',
+        'Anti-Biofilm بعد كل تنظيف — يمنع 4 أشهر.',
+        'RO شطف — يمنع NaCl جديد.',
+        'فحص ميكرون — SiO₂ يُسرّع التراكم = يصل NFPA أسرع.',
+        'Baffle فلاتر شهرياً — NaCl+SiO₂ يسدّان أسرع.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'كربنة مزدوجة + Biofilm = 6,000 ميكرون أسرع = خطر اشتعال. ربع سنوي.',
+        'SiO₂ يُخشّن = كربنة أسرع = فلتر مسدود أسرع = دخان.',
+        'Biofilm جاف = قابل للاشتعال.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص مطاعم' },
+        { ...GOV.CIVILDEFENSE, role: 'السلامة — NFPA 96' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات مطاعم الشرقية' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'مدخنة الظهران = مزدوجة: NaCl+SiO₂ كربنة مُركّبة + 75-85% Biofilm. SiO₂ يُخشّن ← يُسرّع التراكم. Alkaline pH 13 + Anti-Biofilm + RO.', source: 'نصائح هندسية — مداخن مزدوجة' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ مداخن مرخصة', authority: 'بلدي + دفاع مدني', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Alkaline pH 13', use: 'كربنة مزدوجة — 30 دقيقة' },
+        { name: 'Anti-Biofilm', use: 'يمنع — 4 أشهر' },
+        { name: 'RO Water', use: 'صفر NaCl' },
+        { name: 'مقياس ميكرون', use: 'يكشف SiO₂ المُسرّع' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'ربع سنوي مكلف.', solution: 'حريق = 50,000-200,000. عقد = 1-4%.' },
+        { fear: 'نظيفة.', solution: 'SiO₂ يُخشّن داخلياً. مقياس ميكرون يكشف.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'مثل الخبر.', truth: 'SiO₂ يُخشّن = أسرع. كربنة مُركّبة ≠ NaCl فقط.' },
+        { myth: 'نصف سنوي.', truth: 'SiO₂ يُسرّع + Biofilm يُضيف. ربع سنوي.' },
+        { myth: 'ماء عادي.', truth: 'NaCl = Biofilm. RO fقط.' },
     ],
-
     relatedServices: [
-        { slug: 'dhahran-furniture-moving', context: 'نقل عفش بالظهران', priority: 1 },
-        { slug: 'dhahran-furniture-storage', context: 'تخزين عفش بالظهران', priority: 2 },
-        { slug: 'dhahran-dyna', context: 'دينا نقل بالظهران', priority: 3 },
-        { slug: 'dhahran-moving-out', context: 'نقل عفش خروج بالظهران', priority: 4 },
-        { slug: 'dhahran-dabab', context: 'دباب نقل بالظهران', priority: 5 },
-        { slug: 'dhahran-cleaning', context: 'تنظيف منازل بالظهران', priority: 6 },
-        { slug: 'dhahran-tanks-cleaning', context: 'تنظيف خزانات بالظهران', priority: 7 },
-        { slug: 'dhahran-sofa-cleaning', context: 'تنظيف كنب بالظهران', priority: 8 },
-        { slug: 'dhahran-carpet-cleaning', context: 'تنظيف سجاد بالظهران', priority: 9 },
+        { slug: 'oven-cleaning', context: 'أفران — كربنة', priority: 1 },
+        { slug: 'cleaning', context: 'تنظيف — مطعم', priority: 2 },
+        { slug: 'pest-control', context: 'حشرات — شحوم', priority: 3 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 4 },
+        { slug: 'steam-cleaning', context: 'بخار', priority: 5 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات', priority: 6 },
+        { slug: 'office-cleaning', context: 'مكاتب', priority: 7 },
     ],
 };

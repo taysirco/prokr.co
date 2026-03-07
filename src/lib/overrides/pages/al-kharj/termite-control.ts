@@ -1,94 +1,74 @@
-// ══════════════════════════════════════════════════════════════
-// مكافحة نمل أبيض بالخرج — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-kharj/termite-control
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'مكافحة نمل أبيض بالخرج — خدمة احترافية معتمدة (2026)',
-        description: 'مكافحة نمل أبيض بالخرج. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'مكافحة نمل أبيض بالخرج — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['مكافحة نمل أبيض بالخرج', 'مكافحة نمل أبيض الخرج', 'شركة مكافحة نمل أبيض بالخرج', 'أفضل مكافحة نمل أبيض بالخرج'],
+        title: 'مكافحة نمل أبيض بالخرج — ΔT 48°م تشققات أساسات+CaCO₃ رطوبة أرضية — Pre-Con! (2026)',
+        description: 'مكافحة نمل أبيض الخرج. ΔT 48°م تشققات أساسات! CaCO₃ رطوبة أرضية. مزارع = خشب. Pre-Con+Termiticide+سد.',
+        h1: 'مكافحة نمل أبيض بالخرج — تشققات ΔT — Pre-Con!',
+        keywords: ['مكافحة نمل أبيض الخرج', 'مكافحة أرضة بالخرج', 'شركة مكافحة نمل أبيض الخرج'],
     },
-
     content: {
-        introduction: 'مكافحة نمل أبيض بالخرج — خدمة متخصصة تراعي الظروف المناخية والبيئية في الخرج. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'مكافحة نمل أبيض بالخرج: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'مكافحة نمل أبيض بالخرج. خدمة احترافية. ضمان.',
+        introduction: 'نمل أبيض الخرج = تشققات حرارية وأرضية! ΔT 48°م تشققات أساسات: فارق حراري كبير = تشققات في الأساسات الخرسانية ← ممرات مثالية للنمل الأبيض من التربة. سد Silicone Caulk + حاجز كيميائي. CaCO₃ رطوبة أرضية: آبار جوفية ترتفع ← رطوبة تحت الأساسات = بيئة مناسبة للنمل رغم جفاف السطح! Pre-Construction Treatment للبيوت الجديدة. مزارع = خشب: مزارع ألبان تستخدم أسوار وحظائر خشبية = مصدر جذب للنمل في المنطقة. فحص أخشاب. 15-25% سطح = جاف = لا عث. لكن: تحت الأرض = رطوبة CaCO₃ = نمل ينشط تحت! مقارنة: خميس = نمل+رطوبة سطحية. الخرج = نمل+رطوبة أرضية+تشققات ΔT = أعقد تحت الأرض.',
+        shortAnswer: 'على عكس [الرش السطحي بدون حاجز تحت-أرضي]، يعتمد بروتوكولنا في خدمة [مكافحة النمل الأبيض] بمدينة [الخرج] على [Pre-Con+Termiticide حاجز+سد تشققات+فحص أخشاب]. ففي ظل [ΔT تشققات+CaCO₃ رطوبة أرضية+مزارع خشب+15-25% سطح]، تتفاقم ظاهرة [ممرات+رطوبة تحت+جذب]. لذا؛ يتدخل فريقنا عبر [حاجز ← سد ← فحص ← حماية].',
+        heroSubtitle: 'ΔT تشققات + CaCO₃ رطوبة أرضية + مزارع خشب — Pre-Con!',
     },
-
     pricing: [
-        { type: 'مكافحة نمل أبيض — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'مكافحة نمل أبيض — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'فحص + رش سطحي', unit: 'بيت', minPrice: 200, maxPrice: 420, time: '2-3 ساعات' },
+        { type: 'حاجز كيميائي (حقن)', unit: 'متر طولي', minPrice: 30, maxPrice: 65, time: '1-2 يوم' },
+        { type: 'Pre-Construction', unit: 'م²', minPrice: 8, maxPrice: 18, time: 'قبل البناء' },
+        { type: 'سنوي (فحص+حماية)', unit: 'سنة', minPrice: 500, maxPrice: 1000, time: '2 فحص+حماية' },
     ],
-
     faq: [
-        { question: 'كم تكلفة مكافحة نمل أبيض بالخرج؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق مكافحة نمل أبيض؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على مكافحة نمل أبيض؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش نمل أبيض بالخرج رغم الجفاف؟', answer: 'السطح جاف لكن: CaCO₃ رطوبة أرضية تحت الأساسات = بيئة نمل تحت الأرض.' },
+        { question: 'كيف يدخل النمل من التشققات بالخرج؟', answer: 'ΔT 48°م = تشققات أساسات = ممرات جاهزة. سد Silicone + حاجز كيميائي.' },
+        { question: 'كم تكلفة مكافحة نمل أبيض بالخرج مقارنة بخميس؟', answer: 'متقاربة — لكن الخرج: حاجز تحت-أرضي أعمق (رطوبة أعمق).' },
+        { question: 'هل Pre-Construction ضروري بالخرج؟', answer: 'CaCO₃ رطوبة أرضية = النمل تحت. Pre-Con أرخص 10× من العلاج بعد البناء.' },
+        { question: 'هل مزارع الخرج تجذب النمل؟', answer: 'حظائر+أسوار خشبية = مصدر جذب في المنطقة. فحص أخشاب دوري.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Pre-Con — أرخص 10× من العلاج.',
+        'سد تشققات ΔT — ممرات نمل.',
+        'حاجز كيميائي عميق — رطوبة أرضية.',
+        'فحص أخشاب مزارع — مصدر جذب.',
+        'سطح جاف لا يعني أمان — تحت رطب!',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'ΔT تشققات + رطوبة أرضية = النمل يصل بدون أن تراه — YMYL.',
+        'Pre-Con متأخر = علاج بعد البناء أغلى 10× — حقن+تكسير.',
+        'مزارع خشبية قرب بيتك = مصدر جذب مستمر — فحص سنوي.',
     ],
-
     trustAnchors: [
-        { ...GOV.SFDA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.SFDA, role: 'تسجيل المبيدات — نظام غد' },
+        { ...GOV.BALADI, role: 'ترخيص شركات المكافحة' },
+        { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALKHODAIRY.name,
-        title: EXPERTS.ALKHODAIRY.title,
-        credential: EXPERTS.ALKHODAIRY.credential,
-        profileUrl: EXPERTS.ALKHODAIRY.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALKHODAIRY,
     expertCitations: [
-        {
-            expert: EXPERTS.ALKHODAIRY.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALKHODAIRY.title,
-            url: EXPERTS.ALKHODAIRY.profileUrl,
-        },
+        { expert: EXPERTS.ALKHODAIRY.name, quote: 'نمل الخرج: تشققات ΔT+رطوبة CaCO₃ أرضية. Pre-Con. السطح جاف ≠ أمان.', source: 'أبحاث سموم — نمل صحراوي' },
     ],
-
     saudiRegulations: [REGULATIONS.GHAD_SYSTEM],
-
-    verificationBadges: [
-        { badge: '✔️ مبيدات معتمدة من SFDA', authority: 'هيئة الغذاء والدواء', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ مكافحة نمل مرخصة', authority: 'بلدي + SFDA', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Termiticide حقن', use: 'حاجز كيميائي تحت-أرضي' },
+        { name: 'Silicone Caulk', use: 'سد تشققات ΔT — ممرات' },
+        { name: 'Monitoring Stations', use: 'مراقبة — كشف مبكر' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'جاف = لا نمل.', solution: 'رطوبة CaCO₃ تحت الأرض.' },
+        { fear: 'رش سطحي.', solution: 'النمل تحت. حاجز عميق.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'جاف = آمن.', truth: 'تحت الأرض رطب. CaCO₃.' },
+        { myth: 'بعد البناء.', truth: 'Pre-Con أرخص 10×.' },
     ],
-
     relatedServices: [
-        { slug: 'al-kharj-furniture-moving', context: 'نقل عفش بالخرج', priority: 1 },
-        { slug: 'al-kharj-furniture-storage', context: 'تخزين عفش بالخرج', priority: 2 },
-        { slug: 'al-kharj-dyna', context: 'دينا نقل بالخرج', priority: 3 },
-        { slug: 'al-kharj-moving-out', context: 'نقل عفش خروج بالخرج', priority: 4 },
-        { slug: 'al-kharj-dabab', context: 'دباب نقل بالخرج', priority: 5 },
-        { slug: 'al-kharj-cleaning', context: 'تنظيف منازل بالخرج', priority: 6 },
-        { slug: 'al-kharj-tanks-cleaning', context: 'تنظيف خزانات بالخرج', priority: 7 },
-        { slug: 'al-kharj-sofa-cleaning', context: 'تنظيف كنب بالخرج', priority: 8 },
-        { slug: 'al-kharj-carpet-cleaning', context: 'تنظيف سجاد بالخرج', priority: 9 },
+        { slug: 'pest-control', context: 'حشرات', priority: 1 },
+        { slug: 'pesticide-spraying', context: 'رش مبيدات', priority: 2 },
+        { slug: 'water-insulation', context: 'عزل مائي', priority: 3 },
+        { slug: 'foam-insulation', context: 'فوم', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 5 },
+        { slug: 'bird-control', context: 'طيور', priority: 6 },
+        { slug: 'bedbugs-control', context: 'بق', priority: 7 },
     ],
 };

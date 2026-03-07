@@ -1,94 +1,74 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف أفران ببريدة — Override مخصص (E-E-A-T Grade)
-// صفحة: /buraidah/oven-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف أفران ببريدة — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف أفران ببريدة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف أفران ببريدة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف أفران ببريدة', 'تنظيف أفران بريدة', 'شركة تنظيف أفران ببريدة', 'أفضل تنظيف أفران ببريدة'],
+        title: 'تنظيف أفران ببريدة — CaCO₃ 600ppm كلس داخلي+Nafud SiO₂+ΔT — Descaler فرن! (2026)',
+        description: 'تنظيف أفران بريدة. CaCO₃ 600ppm كلس داخل الفرن! Nafud SiO₂ يتسلل. ΔT 45°م. Descaler+Degreaser+HEPA.',
+        h1: 'تنظيف أفران ببريدة — أعلى كلس داخل الفرن!',
+        keywords: ['تنظيف أفران بريدة', 'تنظيف فرن ببريدة', 'شركة تنظيف أفران بريدة'],
     },
-
     content: {
-        introduction: 'تنظيف أفران ببريدة — خدمة متخصصة تراعي الظروف المناخية والبيئية في بريدة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف أفران ببريدة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف أفران ببريدة. خدمة احترافية. ضمان.',
+        introduction: 'فرن بريدة = كلس داخلي فريد! CaCO₃ 600ppm كلس داخلي: ماء الطبخ والبخار يحمل أعلى كلس بالمملكة ← يترسب داخل الفرن = طبقة كلس+دهن مزدوجة صلبة جداً. Descaler أولاً ← ثم Degreaser. بدون Descaler = Degreaser وحده لا يخترق الكلس. Nafud SiO₂: رمل النفود الناعم يتسلل للمطبخ ← يتراكم في زوايا الفرن ← يحترق = رائحة. تنظيف زوايا HEPA. ΔT 45°م: صيف = فرن أساساً حار + بيئة 48°م = دهون تتحلل أسرع = رائحة أقوى. تنظيف أسبوعي صيفاً. 10-20% = لا عفن داخل الفرن! مقارنة: خميس = رطوبة+عفن داخل الفرن. بريدة = كلس+Nafud = مختلف.',
+        shortAnswer: 'على عكس [Degreaser بدون Descaler الذي لا يخترق كلس]، يعتمد بروتوكولنا في خدمة [تنظيف الأفران] بمدينة [بريدة] على [Descaler أولاً+Degreaser ثانياً+HEPA زوايا]. ففي ظل [CaCO₃ 600ppm كلس+Nafud يتسلل+ΔT 45°م+لا عفن]، تتفاقم ظاهرة [كلس+دهن مزدوج+رائحة]. لذا؛ يتدخل فريقنا عبر [Descaler ← Degreaser ← HEPA ← شطف] — لا عفن!',
+        heroSubtitle: 'CaCO₃ 600ppm كلس+دهن مزدوج — Descaler أولاً! لا عفن!',
     },
-
     pricing: [
-        { type: 'تنظيف أفران — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف أفران — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'فرن عادي', unit: 'فرن', minPrice: 60, maxPrice: 120, time: '1-2h' },
+        { type: 'فرن + Descaler عميق', unit: 'فرن', minPrice: 80, maxPrice: 170, time: '2-3h' },
+        { type: 'فرن تجاري', unit: 'فرن', minPrice: 150, maxPrice: 310, time: '3-5h' },
+        { type: 'ربع سنوي (4 جلسات)', unit: 'سنة', minPrice: 200, maxPrice: 420, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف أفران ببريدة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف أفران؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف أفران؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش فرن بريدة أصعب تنظيف من الرياض؟', answer: 'CaCO₃ 600ppm = كلس+دهن طبقة مزدوجة. Descaler أولاً. الرياض: 300ppm = دهن فقط.' },
+        { question: 'ليش Degreaser وحده لا يكفي ببريدة؟', answer: '600ppm كلس يغطي الدهن. Degreaser لا يخترق كلس. Descaler أولاً ← ثم Degreaser.' },
+        { question: 'كم تكلفة تنظيف فرن ببريدة مقارنة بخميس؟', answer: 'أغلى 10-15% — Descaler إضافي. لكن: لا عفن = أبسط عموماً.' },
+        { question: 'هل Nafud يأثر على الفرن ببريدة؟', answer: 'يتراكم في زوايا ← يحترق = رائحة. HEPA زوايا.' },
+        { question: 'هل الفرن يتعفّن ببريدة؟', answer: 'لا! 10-20% = لا عفن. خميس: عفن+رائحة عفن.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Descaler أولاً — كلس يغطي دهن.',
+        'Degreaser ثانياً — بعد إذابة كلس.',
+        'HEPA زوايا — Nafud يحترق.',
+        'أسبوعي صيفاً — ΔT رائحة أقوى.',
+        'لا عفن! — ميزة 10-20%.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'CaCO₃ 600ppm × شهر = كلس+دهن صلب — يحتاج حمض.',
+        'Degreaser بدون Descaler = لا يخترق — يبقى كلس تحت.',
+        'Nafud في زوايا + حرارة = رائحة حرق — HEPA.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.CIVILDEFENSE, role: 'سلامة الأفران والمداخن' },
+        { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
+        { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'فرن بريدة: 600ppm كلس+دهن مزدوج. Descaler أولاً ← Degreaser.', source: 'نصائح هندسية — أفران القصيم' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف أفران مرخص', authority: 'بلدي + 998', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Descaler صناعي', use: 'CaCO₃ 600ppm — يذيب كلس أولاً' },
+        { name: 'Degreaser صناعي', use: 'دهن — بعد Descaler' },
+        { name: 'HEPA زوايا', use: 'Nafud محترق — رائحة' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'Degreaser يكفي.', solution: '600ppm كلس يغطي. Descaler أولاً.' },
+        { fear: 'مثل خميس.', solution: 'لا عفن. لكن: كلس+دهن مزدوج.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'Degreaser فقط.', truth: '600ppm = Descaler أولاً.' },
+        { myth: 'شهري يكفي.', truth: 'صيف ΔT = أسبوعي.' },
     ],
-
     relatedServices: [
-        { slug: 'buraidah-furniture-moving', context: 'نقل عفش ببريدة', priority: 1 },
-        { slug: 'buraidah-furniture-storage', context: 'تخزين عفش ببريدة', priority: 2 },
-        { slug: 'buraidah-dyna', context: 'دينا نقل ببريدة', priority: 3 },
-        { slug: 'buraidah-moving-out', context: 'نقل عفش خروج ببريدة', priority: 4 },
-        { slug: 'buraidah-dabab', context: 'دباب نقل ببريدة', priority: 5 },
-        { slug: 'buraidah-cleaning', context: 'تنظيف منازل ببريدة', priority: 6 },
-        { slug: 'buraidah-tanks-cleaning', context: 'تنظيف خزانات ببريدة', priority: 7 },
-        { slug: 'buraidah-sofa-cleaning', context: 'تنظيف كنب ببريدة', priority: 8 },
-        { slug: 'buraidah-carpet-cleaning', context: 'تنظيف سجاد ببريدة', priority: 9 },
+        { slug: 'restaurant-chimney-cleaning', context: 'مداخن', priority: 1 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 2 },
+        { slug: 'steam-cleaning', context: 'بخار', priority: 3 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 4 },
+        { slug: 'pest-control', context: 'حشرات', priority: 5 },
+        { slug: 'marble-polishing', context: 'رخام', priority: 6 },
+        { slug: 'apartments-cleaning', context: 'شقق', priority: 7 },
     ],
 };

@@ -1,94 +1,71 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف كنب بالقطيف — Override مخصص (E-E-A-T Grade)
-// صفحة: /qatif/sofa-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف كنب بالقطيف — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف كنب بالقطيف. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف كنب بالقطيف — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف كنب بالقطيف', 'تنظيف كنب القطيف', 'شركة تنظيف كنب بالقطيف', 'أفضل تنظيف كنب بالقطيف'],
+        title: 'تنظيف كنب بالقطيف — بخور+NaCl بلمرة ملحية + 80-95% عفن+عث + طلع نخيل (2026)',
+        description: 'تنظيف كنب القطيف. بخور+NaCl بلمرة ملحية. 80-95% عفن+عث. طلع نخيل حساسية. NaCl تصلب. Enzymatic + Anti-Fungal + Anti-Mite + Turbo.',
+        h1: 'تنظيف كنب بالقطيف — بخور ملحي وعفن وعث وطلع نخيل',
+        keywords: ['تنظيف كنب القطيف', 'غسيل كنب بالقطيف', 'شركة تنظيف كنب بالقطيف'],
     },
-
     content: {
-        introduction: 'تنظيف كنب بالقطيف — خدمة متخصصة تراعي الظروف المناخية والبيئية في القطيف. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف كنب بالقطيف: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف كنب بالقطيف. خدمة احترافية. ضمان.',
+        introduction: 'الكنب في القطيف = ساحلي-واحي على الأقمشة. الأول — بخور+NaCl بلمرة ملحية: Olibanum + NaCl = Bonds فريدة. Enzymatic. الثاني — 80-95% عفن+عث: عفن حشوة + عث Der p 1. Anti-Fungal + Anti-Mite. الثالث — طلع نخيل: يدخل الكنب = حساسية مُركّبة مع عث. بخار. الرابع — NaCl تصلب: ألياف = هشاشة. RO. تجفيف: 80-95% = 4-8 ساعات. Turbo.',
+        shortAnswer: 'على عكس [شامبو] فوق بلمرة ملحية+عث، يعتمد بروتوكولنا في خدمة [تنظيف الكنب] بمدينة [القطيف] على [Enzymatic + Anti-Fungal + Anti-Mite + Turbo]. ففي ظل [بخور+NaCl + 80-95% + عث + طلع]، تتفاقم ظاهرة [بلمرة + عفن + عث + حساسية]. لذا؛ يتدخل خبراؤنا عبر [بروتوكول كنب ساحلي-واحي].',
+        heroSubtitle: 'بخور+NaCl بلمرة + عفن+عث + طلع نخيل + 4-8 ساعات',
     },
-
     pricing: [
-        { type: 'تنظيف كنب — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف كنب — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'كنب (3-5 مقاعد)', unit: 'طقم', minPrice: 170, maxPrice: 340, time: '3-4 ساعات' },
+        { type: '+ Anti-Mite + عفن', unit: 'طقم', minPrice: 220, maxPrice: 430, time: '3-5 ساعات' },
+        { type: 'جلد + Conditioner', unit: 'طقم', minPrice: 190, maxPrice: 380, time: '2-3 ساعات' },
+        { type: 'ربع سنوي', unit: 'سنة', minPrice: 520, maxPrice: 1050, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف كنب بالقطيف؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف كنب؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف كنب؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'بلمرة ملحية — فرق عن الجبيل؟', answer: 'الجبيل: بخور+VOC. القطيف: بخور+NaCl. أقل صعوبة لكن فريدة.' },
+        { question: 'طلع+عث — مُركّبة؟', answer: 'نعم — طلع = أليرجين 1. عث = أليرجين 2. معاً = حساسية مُركّبة.' },
+        { question: 'تجفيف — 4-8 ساعات؟', answer: '80-95%. أسرع من الجبيل (6-10). Turbo.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Enzymatic — بلمرة ملحية.',
+        'بخار 100°م — عث + طلع.',
+        'Anti-Fungal — عفن حشوة.',
+        'Turbo — 80-95% تجفيف.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'بلمرة ملحية × 6 أشهر = طبقة صعبة.',
+        '80-95% + حشوة = عفن+عث = حساسية مُركّبة.',
+        'تجفيف بدون Turbo = عفن حشوة.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص التنظيف' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات النظافة بالشرقية' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'كنب القطيف: بخور+NaCl بلمرة + عث+طلع = حساسية مُركّبة. Enzymatic+Anti-Mite+بخار.', source: 'نصائح هندسية — كنب الواحات الساحلية' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف كنب مرخص', authority: 'منصة بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Enzymatic', use: 'بلمرة ملحية' },
+        { name: 'بخار 100°م', use: 'عث + طلع' },
+        { name: 'Anti-Fungal', use: '80-95% عفن' },
+        { name: 'Turbo', use: '80-95% تجفيف' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'مثل الخبر.', solution: 'واحة = طلع. مختلف.' },
+        { fear: 'شامبو.', solution: 'بلمرة ملحية = Enzymatic.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'بخار لعفن.', truth: 'بخار = عث+طلع+تعقيم.' },
+        { myth: 'نصف سنوي.', truth: 'عفن+عث+بخور+طلع. ربع سنوي.' },
     ],
-
     relatedServices: [
-        { slug: 'qatif-furniture-moving', context: 'نقل عفش بالقطيف', priority: 1 },
-        { slug: 'qatif-furniture-storage', context: 'تخزين عفش بالقطيف', priority: 2 },
-        { slug: 'qatif-dyna', context: 'دينا نقل بالقطيف', priority: 3 },
-        { slug: 'qatif-moving-out', context: 'نقل عفش خروج بالقطيف', priority: 4 },
-        { slug: 'qatif-dabab', context: 'دباب نقل بالقطيف', priority: 5 },
-        { slug: 'qatif-cleaning', context: 'تنظيف منازل بالقطيف', priority: 6 },
-        { slug: 'qatif-tanks-cleaning', context: 'تنظيف خزانات بالقطيف', priority: 7 },
-        { slug: 'qatif-carpet-cleaning', context: 'تنظيف سجاد بالقطيف', priority: 8 },
-        { slug: 'qatif-steam-cleaning', context: 'تنظيف بالبخار بالقطيف', priority: 9 },
+        { slug: 'carpet-cleaning', context: 'سجاد', priority: 1 },
+        { slug: 'councils-cleaning', context: 'مجالس', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 3 },
+        { slug: 'steam-cleaning', context: 'بخار', priority: 4 },
+        { slug: 'furniture-cleaning', context: 'أثاث', priority: 5 },
+        { slug: 'pest-control', context: 'حشرات', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 7 },
     ],
 };

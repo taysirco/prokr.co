@@ -1,9 +1,3 @@
-// ══════════════════════════════════════════════════════════════
-// دينا نقل بالدمام — Override مخصص (E-E-A-T Grade)
-// صفحة: /dammam/dyna
-// قطاع YMYL: مالي (حماية ممتلكات)
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
 
@@ -85,12 +79,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'الرخصة التجارية' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALZUWAYED.name,
-        title: EXPERTS.ALZUWAYED.title,
-        credential: EXPERTS.ALZUWAYED.credential,
-        profileUrl: EXPERTS.ALZUWAYED.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALZUWAYED,
 
     expertCitations: [
         {

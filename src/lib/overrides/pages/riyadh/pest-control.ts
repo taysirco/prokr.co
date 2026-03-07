@@ -94,13 +94,11 @@ export const override: PageOverride = {
             expert: 'أ.د. فهد الخضيري',
             quote: 'المبيدات غير المسجلة — خاصة غاز الفوسفين — تسبب تسممات حقيقية وقد تكون مميتة. اسألوا دائماً عن اسم المبيد ورقم تسجيله في SFDA',
             source: 'تحذيرات صحية متكررة — عالم أبحاث طبي متخصص في السموم',
-            url: 'https://x.com/DrAlkhodairy',
         },
         {
             expert: 'أ.د. عبدالله المسند',
             quote: 'مناخ الرياض القاري يخلق دورة موسمية فريدة — التطرف الحراري بين الصيف (50°م) والشتاء (0°م) يعني موجتَيْ غزو حشري للمنازل سنوياً',
             source: 'أستاذ جغرافيا المناخ — المرجع الأول للظواهر المناخية السعودية',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -131,14 +129,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'riyadh-cockroach-control', context: 'صراصير — الأكثر شيوعاً', priority: 1 },
-        { slug: 'riyadh-ants-control', context: 'نمل منازل', priority: 2 },
-        { slug: 'riyadh-termite-control', context: 'نمل أبيض يأكل الخشب', priority: 3 },
-        { slug: 'riyadh-bedbugs-control', context: 'بق الفراش', priority: 4 },
-        { slug: 'riyadh-rodent-control', context: 'فئران وقوارض', priority: 5 },
-        { slug: 'riyadh-snakes-control', context: 'ثعابين', priority: 6 },
-        { slug: 'riyadh-cleaning', context: 'تنظيف بعد المكافحة', priority: 7 },
-        { slug: 'riyadh-sanitization', context: 'تعقيم بعد الرش', priority: 8 },
-        { slug: 'riyadh-insects-spraying', context: 'رش حشرات متخصص', priority: 9 },
+        { slug: 'cockroach-control', context: 'صراصير — الأكثر شيوعاً', priority: 1 },
+        { slug: 'ants-control', context: 'نمل منازل', priority: 2 },
+        { slug: 'termite-control', context: 'نمل أبيض يأكل الخشب', priority: 3 },
+        { slug: 'bedbugs-control', context: 'بق الفراش', priority: 4 },
+        { slug: 'rodent-control', context: 'فئران وقوارض', priority: 5 },
+        { slug: 'snakes-control', context: 'ثعابين', priority: 6 },
+        { slug: 'cleaning', context: 'تنظيف بعد المكافحة', priority: 7 },
+        { slug: 'sanitization', context: 'تعقيم بعد الرش', priority: 8 },
+        { slug: 'insects-spraying', context: 'رش حشرات متخصص', priority: 9 },
     ],
 };

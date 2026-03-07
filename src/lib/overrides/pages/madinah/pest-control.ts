@@ -78,12 +78,7 @@ export const override: PageOverride = {
         { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'الرقابة الصحية على منشآت الإيواء ومتابعة اشتراطات النظافة والمكافحة', acronym: 'أمانة المدينة' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALKHODAIRY.name,
-        title: EXPERTS.ALKHODAIRY.title,
-        credential: EXPERTS.ALKHODAIRY.credential,
-        profileUrl: EXPERTS.ALKHODAIRY.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALKHODAIRY,
 
     expertCitations: [
         {
@@ -119,13 +114,13 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'madinah-pesticide-spraying', context: 'رش مبيدات وقائي دوري — يمنع تكوّن المستعمرات قبل أن تحتاج مكافحة', priority: 1 },
-        { slug: 'madinah-termite-control', context: 'النمل الأبيض في التربة البازلتية يحتاج حقن تربة تخصصي منفصل', priority: 2 },
-        { slug: 'madinah-bedbugs-control', context: 'بق الفراش في فنادق المدينة — تبخير حراري متخصص بدون إخلاء طويل', priority: 3 },
-        { slug: 'madinah-bird-control', context: 'الحمام البري يجذب البراغيث والقراد — مكافحة مزدوجة', priority: 4 },
-        { slug: 'madinah-cleaning', context: 'تنظيف عميق بعد المكافحة يُزيل بقايا الحشرات ويُعقّم الأسطح', priority: 5 },
-        { slug: 'madinah-tanks-cleaning', context: 'خزانات المياه بيئة حاضنة للحشرات المائية — تنظيف دوري ضروري', priority: 6 },
-        { slug: 'madinah-restaurant-chimney-cleaning', context: 'مداخن المطاعم تجذب الصراصير والقوارض — تنظيف + مكافحة معاً', priority: 7 },
-        { slug: 'madinah-sewage-unblocking', context: 'مجاري الصرف = أكبر مصدر للصراصير. تسليك + مكافحة = حل جذري', priority: 8 },
+        { slug: 'pesticide-spraying', context: 'رش مبيدات وقائي دوري — يمنع تكوّن المستعمرات قبل أن تحتاج مكافحة', priority: 1 },
+        { slug: 'termite-control', context: 'النمل الأبيض في التربة البازلتية يحتاج حقن تربة تخصصي منفصل', priority: 2 },
+        { slug: 'bedbugs-control', context: 'بق الفراش في فنادق المدينة — تبخير حراري متخصص بدون إخلاء طويل', priority: 3 },
+        { slug: 'bird-control', context: 'الحمام البري يجذب البراغيث والقراد — مكافحة مزدوجة', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف عميق بعد المكافحة يُزيل بقايا الحشرات ويُعقّم الأسطح', priority: 5 },
+        { slug: 'tanks-cleaning', context: 'خزانات المياه بيئة حاضنة للحشرات المائية — تنظيف دوري ضروري', priority: 6 },
+        { slug: 'restaurant-chimney-cleaning', context: 'مداخن المطاعم تجذب الصراصير والقوارض — تنظيف + مكافحة معاً', priority: 7 },
+        { slug: 'sewage-unblocking', context: 'مجاري الصرف = أكبر مصدر للصراصير. تسليك + مكافحة = حل جذري', priority: 8 },
     ],
 };

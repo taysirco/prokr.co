@@ -74,12 +74,7 @@ export const override: PageOverride = {
         { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'الرقابة على نظافة المطابخ ومعايير السلامة الغذائية', acronym: 'أمانة المدينة' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMISNID.name,
-        title: EXPERTS.ALMISNID.title,
-        credential: EXPERTS.ALMISNID.credential,
-        profileUrl: EXPERTS.ALMISNID.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMISNID,
 
     expertCitations: [
         {
@@ -115,10 +110,10 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'madinah-restaurant-chimney-cleaning', context: 'تنظيف مداخن مطاعم — البروتوكول التجاري لإزالة دهون الأفران الكبيرة.', priority: 1 },
-        { slug: 'madinah-cleaning', context: 'تنظيف شامل للمنزل مع تنظيف المطبخ — باقة متكاملة.', priority: 2 },
-        { slug: 'madinah-steam-cleaning', context: 'تعقيم أسطح المطبخ بالبخار — يُكمل تنظيف الفرن.', priority: 3 },
-        { slug: 'madinah-pest-control', context: 'الأفران المتسخة تجذب الصراصير — نظّف الفرن وارش وقائياً.', priority: 4 },
-        { slug: 'madinah-kitchen-cleaning', context: 'تنظيف مطبخ كامل مع الفرن والشفاط — باقة مطبخ نظيف.', priority: 5 },
+        { slug: 'restaurant-chimney-cleaning', context: 'تنظيف مداخن مطاعم — البروتوكول التجاري لإزالة دهون الأفران الكبيرة.', priority: 1 },
+        { slug: 'cleaning', context: 'تنظيف شامل للمنزل مع تنظيف المطبخ — باقة متكاملة.', priority: 2 },
+        { slug: 'steam-cleaning', context: 'تعقيم أسطح المطبخ بالبخار — يُكمل تنظيف الفرن.', priority: 3 },
+        { slug: 'pest-control', context: 'الأفران المتسخة تجذب الصراصير — نظّف الفرن وارش وقائياً.', priority: 4 },
+        { slug: 'kitchen-cleaning', context: 'تنظيف مطبخ كامل مع الفرن والشفاط — باقة مطبخ نظيف.', priority: 5 },
     ],
 };

@@ -1,6 +1,3 @@
-// شفط بيارات بتبوك — Override (E-E-A-T)
-// الزاوية: البرد يُبطئ التحلل = امتلاء أبطأ لكن روائح أقل
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -52,19 +49,13 @@ export const override: PageOverride = {
         { entity: AMANA.TABUK.entity, url: AMANA.TABUK.url, role: 'الرقابة على خدمات شفط البيارات بتبوك', acronym: 'أمانة تبوك' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALJUND.name,
-        title: EXPERTS.ALJUND.title,
-        credential: EXPERTS.ALJUND.credential,
-        profileUrl: EXPERTS.ALJUND.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALJUND,
 
     expertCitations: [
         {
             expert: 'م. عبدالغني الجند',
             quote: 'بيارات تبوك = الأسهل جدولةً بالسعودية — لا مياه جوفية تتسلل. الامتلاء يعتمد على الاستهلاك فقط. الجدولة الموسمية (أكثف صيفاً، أقل شتاءً) = أذكى نهج',
             source: 'موسوعة "أخطاء في البناء"',
-            url: 'https://x.com/ssrrr22',
         },
     ],
 
@@ -81,14 +72,20 @@ export const override: PageOverride = {
 
     hiddenObjections: [
         { fear: 'عقد سنوي غالي', solution: 'بدون عقد: طفح صيفي (H₂S أقوى) = تنظيف 2,000-5,000 + أضرار. العقد الموسمي يمنع الطفح ويُدير الجدولة = أذكى وأأمن' },
+        { fear: 'السعر أعلى من المتوقع.', solution: 'السعر يشمل معدات صناعية متخصصة + مواد احترافية + عمالة مدربة + ضمان مكتوب. المقارنة العادلة ليست مع عامل عشوائي بل مع تكلفة إصلاح الأضرار الناتجة عن العمل غير المتخصص.' },
     ],
 
     counterNarratives: [
         { myth: 'البيارة ما تحتاج شفط بالشتاء', truth: 'أبطأ — نعم. لا تحتاج — لا. البيارة تمتلئ حتى شتاءً وإن كان أبطأ. التخطيط الموسمي = تمنع الطفح المفاجئ' },
+        { myth: 'أي شركة تنظيف/صيانة نتيجتها واحدة.', truth: 'الفرق بين شركة مرخصة ومُعتمدة وأخرى عشوائية = الفرق بين معالجة جذرية وإخفاء مؤقت. المعدات المتخصصة والبروتوكولات العلمية تحل المشكلة من جذرها — التنظيف العشوائي يُعيدها أسوأ خلال أسابيع.' },
+        { myth: 'أوفر وأسوي الشغل بنفسي.', truth: 'التوفير الظاهري يتحول لتكلفة مضاعفة: أدوات منزلية لا تصل للعمق المطلوب + مواد غير مناسبة قد تُتلف الأسطح + وقت وجهد بلا ضمان نتيجة. الاحتراف = ضمان + توفير حقيقي على المدى الطويل.' },
     ],
 
     relatedServices: [
-        { slug: 'tabuk-sewage-unblocking', context: 'تسليك مجاري — دهون متجمدة شتاءً', priority: 1 },
-        { slug: 'tabuk-pest-control', context: 'مكافحة حشرات — صراصير الصرف', priority: 2 },
+        { slug: 'sewage-unblocking', context: 'تسليك مجاري — دهون متجمدة شتاءً', priority: 1 },
+        { slug: 'pest-control', context: 'مكافحة حشرات — صراصير الصرف', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف شامل يُكمّل الخدمة الأساسية — بيئة نظيفة متكاملة.', priority: 5 },
+        { slug: 'pest-control', context: 'مكافحة حشرات متكاملة مع خدمات النظافة والصيانة.', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'تنظيف مكيفات لهواء نظيف — يُكمّل أي خدمة منزلية.', priority: 7 },
     ],
 };

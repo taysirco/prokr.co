@@ -1,8 +1,3 @@
-// عزل خزانات بجازان — Override (E-E-A-T)
-// الزاوية: طحالب تنمو داخل الخزان بسرعة استوائية
-//   + بعوض ملاريا في خزانات مكشوفة
-//   + تآكل ساحلي يأكل الصمامات
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -55,19 +50,13 @@ export const override: PageOverride = {
         { entity: AMANA.JAZAN.entity, url: AMANA.JAZAN.url, role: 'الرقابة على خزانات المياه بجازان', acronym: 'أمانة جازان' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
             expert: 'م. ماجد المحيميد',
             quote: 'خزان جازان بدون إيبوكسي مضاد طحالب = حقل نمو. وبدون غطاء محكم = بيئة ملاريا. وبدون ستانلس 316 = صدأ. الثلاثية إلزامية بأسوأ بيئة خزانات بالسعودية',
             source: 'خبير جودة البناء والتشطيبات',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
 
@@ -86,20 +75,23 @@ export const override: PageOverride = {
 
     hiddenObjections: [
         { fear: 'إيبوكسي مضاد طحالب أغلى 20%', solution: 'بجازان: الطحالب تُلزمك بتنظيف إضافي (500-1000 ريال/مرة × 4/سنة) + تلوث مياه + خطر صحي. الإيبوكسي المضاد يُقلل التنظيف 50% + يحمي الصحة = أوفر وأأمن' },
+        { fear: 'السعر أعلى من المتوقع.', solution: 'السعر يشمل معدات صناعية متخصصة + مواد احترافية + عمالة مدربة + ضمان مكتوب. المقارنة العادلة ليست مع عامل عشوائي بل مع تكلفة إصلاح الأضرار الناتجة عن العمل غير المتخصص.' },
     ],
 
     counterNarratives: [
         { myth: 'الطحالب مو خطيرة — بس لون', truth: 'الطحالب = بيئة بكتيريا (E. Coli, Salmonella). اللون = مؤشر على تلوث بكتيري. \"بس لون\" = ماء ملوث تشربه عائلتك' },
+        { myth: 'أي شركة تنظيف/صيانة نتيجتها واحدة.', truth: 'الفرق بين شركة مرخصة ومُعتمدة وأخرى عشوائية = الفرق بين معالجة جذرية وإخفاء مؤقت. المعدات المتخصصة والبروتوكولات العلمية تحل المشكلة من جذرها — التنظيف العشوائي يُعيدها أسوأ خلال أسابيع.' },
+        { myth: 'أوفر وأسوي الشغل بنفسي.', truth: 'التوفير الظاهري يتحول لتكلفة مضاعفة: أدوات منزلية لا تصل للعمق المطلوب + مواد غير مناسبة قد تُتلف الأسطح + وقت وجهد بلا ضمان نتيجة. الاحتراف = ضمان + توفير حقيقي على المدى الطويل.' },
     ],
 
     relatedServices: [
-        { slug: 'jazan-tanks-cleaning', context: 'تنظيف وتعقيم — كل 3-4 أشهر بجازان', priority: 1 },
-        { slug: 'jazan-tank-leak-detection', context: 'فحص تسرب — الشقوق = ضوء = طحالب', priority: 2 },
-        { slug: 'jazan-pest-control', context: 'مكافحة بعوض — خزان + رش محيطي', priority: 3 },
-        { slug: 'jazan-water-insulation', context: 'عزل مائي — يحمي المبنى من تسرب الخزان', priority: 4 },
-        { slug: 'jazan-roof-insulation', context: 'عزل سطح — الخزان على السطح يحتاج حماية', priority: 5 },
-        { slug: 'jazan-water-leak-detection', context: 'كشف تسربات — التسرب يُغذي الطحالب', priority: 6 },
-        { slug: 'jazan-foam-insulation', context: 'فوم Closed-Cell — عزل حراري يحمي الخزان', priority: 7 },
-        { slug: 'jazan-sewage-unblocking', context: 'تسليك مجاري — خزان ملوث يؤثر على الشبكة', priority: 8 },
+        { slug: 'tanks-cleaning', context: 'تنظيف وتعقيم — كل 3-4 أشهر بجازان', priority: 1 },
+        { slug: 'tank-leak-detection', context: 'فحص تسرب — الشقوق = ضوء = طحالب', priority: 2 },
+        { slug: 'pest-control', context: 'مكافحة بعوض — خزان + رش محيطي', priority: 3 },
+        { slug: 'water-insulation', context: 'عزل مائي — يحمي المبنى من تسرب الخزان', priority: 4 },
+        { slug: 'roof-insulation', context: 'عزل سطح — الخزان على السطح يحتاج حماية', priority: 5 },
+        { slug: 'water-leak-detection', context: 'كشف تسربات — التسرب يُغذي الطحالب', priority: 6 },
+        { slug: 'foam-insulation', context: 'فوم Closed-Cell — عزل حراري يحمي الخزان', priority: 7 },
+        { slug: 'sewage-unblocking', context: 'تسليك مجاري — خزان ملوث يؤثر على الشبكة', priority: 8 },
     ],
 };

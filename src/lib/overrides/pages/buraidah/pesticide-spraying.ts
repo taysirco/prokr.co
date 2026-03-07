@@ -1,94 +1,76 @@
-// ══════════════════════════════════════════════════════════════
-// رش مبيدات ببريدة — Override مخصص (E-E-A-T Grade)
-// صفحة: /buraidah/pesticide-spraying
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'رش مبيدات ببريدة — خدمة احترافية معتمدة (2026)',
-        description: 'رش مبيدات ببريدة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'رش مبيدات ببريدة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['رش مبيدات ببريدة', 'رش مبيدات بريدة', 'شركة رش مبيدات ببريدة', 'أفضل رش مبيدات ببريدة'],
+        title: 'رش مبيدات ببريدة — ΔT 45°م تبخّر+Nafud فتحات+نخيل 8M — Micro-Encap! (2026)',
+        description: 'رش مبيدات بريدة. ΔT 45°م يُبخّر مبيدات! Nafud فتحات. نخيل غذاء. Micro-Encapsulated+Gel+SFDA غد.',
+        h1: 'رش مبيدات ببريدة — ΔT يُبخّر+Nafud فتحات!',
+        keywords: ['رش مبيدات بريدة', 'رش مبيدات ببريدة', 'شركة رش مبيدات بريدة'],
     },
-
     content: {
-        introduction: 'رش مبيدات ببريدة — خدمة متخصصة تراعي الظروف المناخية والبيئية في بريدة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'رش مبيدات ببريدة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'رش مبيدات ببريدة. خدمة احترافية. ضمان.',
+        introduction: 'رش مبيدات ببريدة = حرارة تُبخّر أسرع! ΔT 45°م تبخّر: صيف 48°م = المبيدات السائلة تتبخر 30-40% أسرع من الرياض! فعالية تقل. Micro-Encapsulated تحمي المادة الفعالة. Gel Bait: لا يتبخر. Nafud فتحات: رمل النفود يآكل حشيات الأبواب والنوافذ ← حشرات تدخل مجدداً. رش+إحكام معاً. نخيل 8M: تمور ساقطة = غذاء = حشرات تعود. مبيد حول المبنى + نظافة تمور. CaCO₃ 600ppm: لا يأثر على المبيدات. 10-20% = مبيد لا يتبلل بالمطر = يدوم أطول! ميزة. SFDA: مبيدات مسجلة في نظام غد فقط. مقارنة: خميس = مبيد يتبلل بالأمطار. بريدة = لا مطر = يدوم + Micro-Encap ضد حرارة.',
+        shortAnswer: 'على عكس [الرش السائل الذي يتبخر بالحرارة]، يعتمد بروتوكولنا في خدمة [رش المبيدات] بمدينة [بريدة] على [Micro-Encapsulated+Gel Bait+إحكام+SFDA]. ففي ظل [ΔT تبخّر 30-40%+Nafud فتحات+نخيل غذاء+لا مطر]، تتفاقم ظاهرة [تبخّر+فتحات+أعداد]. لذا؛ يتدخل فريقنا عبر [Micro-Encap ← Gel ← إحكام] — يدوم! لا مطر!',
+        heroSubtitle: 'ΔT يُبخّر 30-40% + Nafud فتحات — Micro-Encap! لا مطر = يدوم!',
     },
-
     pricing: [
-        { type: 'رش مبيدات — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'رش مبيدات — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'شقة (رش+Gel)', unit: 'شقة', minPrice: 100, maxPrice: 200, time: '1-2h' },
+        { type: 'فيلا (Micro-Encap)', unit: 'فيلا', minPrice: 200, maxPrice: 420, time: '2-3h' },
+        { type: '+ إحكام فتحات', unit: 'إضافي', minPrice: 80, maxPrice: 170, time: '1-2h' },
+        { type: 'ربع سنوي (4 رش)', unit: 'سنة', minPrice: 350, maxPrice: 700, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة رش مبيدات ببريدة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق رش مبيدات؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على رش مبيدات؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش المبيد يفقد فعاليته أسرع ببريدة؟', answer: 'ΔT 45°م = تبخّر 30-40% أسرع. Micro-Encapsulated يحمي المادة.' },
+        { question: 'ليش حشرات تعود بعد الرش ببريدة؟', answer: 'Nafud يآكل حشيات = فتحات. نخيل = غذاء يعود. رش+إحكام+نظافة.' },
+        { question: 'كم تكلفة رش مبيدات ببريدة مقارنة بخميس؟', answer: 'Micro-Encap أغلى 10%. لكن: لا مطر = يدوم 2× أطول.' },
+        { question: 'هل المبيد يتبلل ببريدة؟', answer: 'لا! لا مطر = يدوم. ميزة كبيرة. خميس: أمطار تغسل المبيد.' },
+        { question: 'هل المبيدات آمنة ببريدة؟', answer: 'SFDA نظام غد مسجل فقط. Gel Bait = أقل سمية. آمن على الأسرة.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Micro-Encapsulated — ΔT لا يُبخّر.',
+        'Gel Bait — لا يتبخر+دقيق.',
+        'إحكام فتحات — Nafud يآكل حشيات.',
+        'لا مطر — مبيد يدوم 2×.',
+        'SFDA غد — مبيدات مسجلة آمنة.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'مبيد سائل + ΔT 48°م = فعالية 40% أقل — Micro-Encap إلزامي.',
+        'بدون إحكام + Nafud = فتحات ← حشرات تعود أسبوعياً.',
+        'مبيد غير SFDA = سموم + غرامة — نظام غد فقط YMYL.',
     ],
-
     trustAnchors: [
-        { ...GOV.SFDA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.SFDA, role: 'نظام غد — تسجيل المبيدات' },
+        { ...GOV.WEQAA, role: 'مكافحة الآفات' },
+        { ...GOV.BALADI, role: 'ترخيص شركات المكافحة' },
+        { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALKHODAIRY.name,
-        title: EXPERTS.ALKHODAIRY.title,
-        credential: EXPERTS.ALKHODAIRY.credential,
-        profileUrl: EXPERTS.ALKHODAIRY.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALKHODAIRY,
     expertCitations: [
-        {
-            expert: EXPERTS.ALKHODAIRY.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALKHODAIRY.title,
-            url: EXPERTS.ALKHODAIRY.profileUrl,
-        },
+        { expert: EXPERTS.ALKHODAIRY.name, quote: 'رش بريدة: ΔT يُبخّر. Micro-Encap يحمي. SFDA غد.', source: 'أبحاث سموم — مبيدات القصيم' },
+        { expert: EXPERTS.ALMISNID.name, quote: 'لا مطر القصيم = مبيد يدوم. Nafud يآكل حشيات.', source: 'جغرافيا المناخ — القصيم' },
     ],
-
     saudiRegulations: [REGULATIONS.GHAD_SYSTEM],
-
-    verificationBadges: [
-        { badge: '✔️ مبيدات معتمدة من SFDA', authority: 'هيئة الغذاء والدواء', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ رش مبيدات مرخص', authority: 'بلدي + SFDA', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Micro-Encapsulated', use: 'مقاوم تبخّر ΔT' },
+        { name: 'Gel Bait', use: 'لا يتبخر — دقيق' },
+        { name: 'Residual Spray', use: 'فتحات — حماية طويلة' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'رش عادي يكفي.', solution: 'ΔT يُبخّر 40%. Micro-Encap.' },
+        { fear: 'مثل خميس.', solution: 'لا مطر = يدوم 2×. لكن: تبخّر.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'رش سائل.', truth: 'ΔT = Micro-Encap+Gel.' },
+        { myth: 'مرة سنوياً.', truth: 'Nafud+نخيل = ربع سنوي.' },
     ],
-
     relatedServices: [
-        { slug: 'buraidah-furniture-moving', context: 'نقل عفش ببريدة', priority: 1 },
-        { slug: 'buraidah-furniture-storage', context: 'تخزين عفش ببريدة', priority: 2 },
-        { slug: 'buraidah-dyna', context: 'دينا نقل ببريدة', priority: 3 },
-        { slug: 'buraidah-moving-out', context: 'نقل عفش خروج ببريدة', priority: 4 },
-        { slug: 'buraidah-dabab', context: 'دباب نقل ببريدة', priority: 5 },
-        { slug: 'buraidah-cleaning', context: 'تنظيف منازل ببريدة', priority: 6 },
-        { slug: 'buraidah-tanks-cleaning', context: 'تنظيف خزانات ببريدة', priority: 7 },
-        { slug: 'buraidah-sofa-cleaning', context: 'تنظيف كنب ببريدة', priority: 8 },
-        { slug: 'buraidah-carpet-cleaning', context: 'تنظيف سجاد ببريدة', priority: 9 },
+        { slug: 'pest-control', context: 'حشرات', priority: 1 },
+        { slug: 'bedbugs-control', context: 'بق', priority: 2 },
+        { slug: 'termite-control', context: 'نمل أبيض', priority: 3 },
+        { slug: 'bird-control', context: 'طيور', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 5 },
+        { slug: 'sewage-unblocking', context: 'تسليك', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 7 },
     ],
 };

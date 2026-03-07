@@ -1,94 +1,71 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف خزانات بالقطيف — Override مخصص (E-E-A-T Grade)
-// صفحة: /qatif/tanks-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف خزانات بالقطيف — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف خزانات بالقطيف. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف خزانات بالقطيف — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف خزانات بالقطيف', 'تنظيف خزانات القطيف', 'شركة تنظيف خزانات بالقطيف', 'أفضل تنظيف خزانات بالقطيف'],
+        title: 'تنظيف خزانات بالقطيف — NaCl Demand + عيون تغذية + Biofilm واحي + طحالب (2026)',
+        description: 'تنظيف خزانات القطيف. NaCl Chloride Demand. عيون تسرب معادن. Biofilm 80-95%. طحالب واحية. Anti-Biofilm + كلور 2× + Algaecide.',
+        h1: 'تنظيف خزانات بالقطيف — ملح يستهلك الكلور وعيون تُغذي البكتيريا',
+        keywords: ['تنظيف خزانات القطيف', 'تنظيف خزان بالقطيف', 'شركة تنظيف خزانات بالقطيف'],
     },
-
     content: {
-        introduction: 'تنظيف خزانات بالقطيف — خدمة متخصصة تراعي الظروف المناخية والبيئية في القطيف. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف خزانات بالقطيف: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف خزانات بالقطيف. خدمة احترافية. ضمان.',
+        introduction: 'خزان القطيف = ساحلي-واحي فريد. الأول — NaCl Chloride Demand: ملح من الهواء+الماء يستهلك الكلور. 2×. الثاني — عيون تغذية: ماء أرضي من العيون = غني بمعادن+حديد ← يتسرب للخزان ← يُغذي بكتيريا+طحالب. فريد! الثالث — Biofilm واحي: 80-95% = Biofilm يحمي البكتيريا. Anti-Biofilm. الرابع — طحالب واحية: عيون+80-95% = طحالب أسرع. Algaecide. الميزة — لا CaCO₃ Scale: ماء أقل عسراً = لا Acid Wash.',
+        shortAnswer: 'على عكس [غسل عادي] الذي لا يُراعي عيون+Biofilm، يعتمد بروتوكولنا في خدمة [تنظيف الخزانات] بمدينة [القطيف] على [Anti-Biofilm ← كلور 2× ← Algaecide]. ففي ظل [NaCl + عيون + Biofilm + طحالب]، تتفاقم ظاهرة [Demand + تغذية + حماية + نمو]. لذا؛ يتدخل خبراؤنا عبر [بروتوكول خزان ساحلي-واحي].',
+        heroSubtitle: 'NaCl Demand + عيون تُغذي + Biofilm واحي — لا Scale (ميزة!)',
     },
-
     pricing: [
-        { type: 'تنظيف خزانات — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف خزانات — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'علوي (1-3 م³)', unit: 'خزان', minPrice: 120, maxPrice: 250, time: '1-2 ساعة' },
+        { type: 'أرضي (5-10 م³)', unit: 'خزان', minPrice: 250, maxPrice: 500, time: '2-4 ساعات' },
+        { type: 'Anti-Biofilm + Algaecide', unit: 'خزان', minPrice: 290, maxPrice: 580, time: '3-5 ساعات' },
+        { type: 'ربع سنوي', unit: 'سنة', minPrice: 430, maxPrice: 860, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف خزانات بالقطيف؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف خزانات؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف خزانات؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'عيون — تدخل الخزان؟', answer: 'ماء أرضي يتسرب ← حديد+كبريت+معادن ← يُغذي بكتيريا+طحالب في الخزان. فريد للقطيف.' },
+        { question: 'Biofilm — يحمي هنا أيضاً؟', answer: '80-95% = Biofilm يمنع الكلور من الوصول. Anti-Biofilm أولاً ← ثم كلور.' },
+        { question: 'لا Scale — مثل الجبيل؟', answer: 'نعم — لا CaCO₃. لكن: عيون تغذية = تحدي مختلف.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Anti-Biofilm أولاً — يكشف جدار الخزان.',
+        'كلور 2× — Demand.',
+        'فحص تسرب عيون — معادن.',
+        'غطاء محكم — NaCl هواء.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'عيون + Biofilm = بكتيريا محمية+مُغذّاة.',
+        'NaCl Demand بدون 2× = طحالب 48 ساعة.',
+        'تسرب عيون بدون فحص = حديد+كبريت.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص خزانات' },
+        { ...GOV.NWC, role: 'معايير مياه' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات المياه بالشرقية' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALJUND,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALJUND.name, quote: 'خزان القطيف: عيون تُغذي+Biofilm يحمي+NaCl Demand. فريد. Anti-Biofilm ← كلور 2×.', source: 'موسوعة أخطاء — خزانات الواحات الساحلية' },
     ],
-
-    saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    saudiRegulations: [REGULATIONS.SBC_601],
+    verificationBadges: [{ badge: '✔️ خزانات مرخصة', authority: 'بلدي + NWC', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Anti-Biofilm', use: '80-95% — يكشف' },
+        { name: 'كلور 2×', use: 'NaCl Demand' },
+        { name: 'Algaecide', use: 'عيون — طحالب' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'لا Scale = سهل.', solution: 'عيون+Biofilm+Demand. 3 تحديات.' },
+        { fear: 'كلور يكفي.', solution: 'Biofilm يحمي. Anti-Biofilm أولاً.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'مثل الخبر.', truth: 'عيون تغذية. فريد.' },
+        { myth: 'مثل حفر الباطن.', truth: 'طحالب+Biofilm vs لا طحالب.' },
     ],
-
     relatedServices: [
-        { slug: 'qatif-furniture-moving', context: 'نقل عفش بالقطيف', priority: 1 },
-        { slug: 'qatif-furniture-storage', context: 'تخزين عفش بالقطيف', priority: 2 },
-        { slug: 'qatif-dyna', context: 'دينا نقل بالقطيف', priority: 3 },
-        { slug: 'qatif-moving-out', context: 'نقل عفش خروج بالقطيف', priority: 4 },
-        { slug: 'qatif-dabab', context: 'دباب نقل بالقطيف', priority: 5 },
-        { slug: 'qatif-cleaning', context: 'تنظيف منازل بالقطيف', priority: 6 },
-        { slug: 'qatif-sofa-cleaning', context: 'تنظيف كنب بالقطيف', priority: 7 },
-        { slug: 'qatif-carpet-cleaning', context: 'تنظيف سجاد بالقطيف', priority: 8 },
-        { slug: 'qatif-steam-cleaning', context: 'تنظيف بالبخار بالقطيف', priority: 9 },
+        { slug: 'swimming-pool-cleaning', context: 'مسابح', priority: 1 },
+        { slug: 'pest-control', context: 'حشرات', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 3 },
+        { slug: 'villas-cleaning', context: 'فلل', priority: 4 },
+        { slug: 'apartments-cleaning', context: 'شقق', priority: 5 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 6 },
+        { slug: 'steam-cleaning', context: 'بخار', priority: 7 },
     ],
 };

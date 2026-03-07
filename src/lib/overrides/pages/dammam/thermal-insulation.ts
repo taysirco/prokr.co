@@ -1,13 +1,3 @@
-// ══════════════════════════════════════════════════════════════
-// عزل حراري بالدمام — Override (E-E-A-T)
-// صفحة: /dammam/thermal-insulation
-// قطاع YMYL: مالي (فاتورة كهرباء)
-// خريطة 2.4: المحيميد → SBC 601 + كفاءة + أمانة الشرقية
-// الزاوية: Heat Index 55-60° (حرارة رطبة أشد من جافة)
-//   + تكييف 16-18 ساعة/يوم + Closed-Cell وصوف صخري فقط
-//   + مباني قبل SBC 601 = فرصة وفر 30-40%
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -76,19 +66,13 @@ export const override: PageOverride = {
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'تطبيق كود البناء SBC 601 واشتراطات العزل الحراري بالدمام', acronym: 'أمانة الشرقية' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
             expert: 'م. ماجد المحيميد',
             quote: 'حرارة الدمام الرطبة أشد على فاتورة الكهرباء من حرارة الرياض الجافة — السطح لا يتبرد ليلاً بسبب الرطوبة. العزل بمواد لا تمتص الرطوبة (Closed-Cell + صوف صخري) يوفر 30-40% فوراً',
             source: 'خبير جودة البناء والتشطيبات',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
 
@@ -114,9 +98,9 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'dammam-roof-insulation', context: 'عزل السطح = الأولوية — 60-70% من الحرارة تدخل عبر السقف', priority: 1 },
-        { slug: 'dammam-foam-insulation', context: 'فوم Closed-Cell — أقوى مادة عزل حراري للبيئة الساحلية', priority: 2 },
-        { slug: 'dammam-water-insulation', context: 'عزل مائي يُكمل الحراري — حماية شاملة', priority: 3 },
-        { slug: 'dammam-air-conditioner-cleaning', context: 'مكيف نظيف + مبنى معزول = أقصى كفاءة بأقل كهرباء', priority: 4 },
+        { slug: 'roof-insulation', context: 'عزل السطح = الأولوية — 60-70% من الحرارة تدخل عبر السقف', priority: 1 },
+        { slug: 'foam-insulation', context: 'فوم Closed-Cell — أقوى مادة عزل حراري للبيئة الساحلية', priority: 2 },
+        { slug: 'water-insulation', context: 'عزل مائي يُكمل الحراري — حماية شاملة', priority: 3 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف نظيف + مبنى معزول = أقصى كفاءة بأقل كهرباء', priority: 4 },
     ],
 };

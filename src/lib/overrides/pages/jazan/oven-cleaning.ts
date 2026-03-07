@@ -1,94 +1,54 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف أفران بجازان — Override مخصص (E-E-A-T Grade)
-// صفحة: /jazan/oven-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف أفران بجازان — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف أفران بجازان. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف أفران بجازان — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف أفران بجازان', 'تنظيف أفران جازان', 'شركة تنظيف أفران بجازان', 'أفضل تنظيف أفران بجازان'],
+        title: 'تنظيف أفران بجازان — شحوم تتعفّن + بكتيريا 3× + صدأ ملحي على العنصر + تكاثف مكيف (2026)',
+        description: 'تنظيف أفران جازان. شحوم + 80% = تتعفّن (لا تتكربن فقط). بكتيريا طعام 3× أسرع. ملح يُصدئ عنصر التسخين. تكاثف مكيف يُبلل. Alkaline + Anti-Bacterial + Anti-Rust.',
+        h1: 'تنظيف أفران بجازان — الشحوم تتعفّن والبكتيريا تتكاثر والملح يُصدئ',
+        keywords: ['تنظيف أفران بجازان', 'تنظيف فرن جازان', 'شركة تنظيف أفران بجازان'],
     },
-
     content: {
-        introduction: 'تنظيف أفران بجازان — خدمة متخصصة تراعي الظروف المناخية والبيئية في جازان. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف أفران بجازان: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف أفران بجازان. خدمة احترافية. ضمان.',
+        introduction: 'الفرن في جازان يتسخ بنمط مختلف: (1) شحوم تتعفّن: في تبوك: تتكربن. في جازان: تتعفّن + تتكربن = طبقة مُركّبة (عفن + كربون). 80% رطوبة = عفن ينمو على الشحوم. (2) بكتيريا 3×: بقايا طعام (أسماك جازان + مانجو + فواكه استوائية) + 80% + 30°م = تضاعف كل 20 دقيقة. (3) صدأ ملحي: عنصر التسخين المعدني + NaCl الهواء = Pitting Corrosion. Descaling + Anti-Rust. (4) تكاثف مكيف: المكيف يُنتج رطوبة ← تتكاثف داخل الفرن البارد = عفن + صدأ.',
+        shortAnswer: 'شحوم تتعفّن + بكتيريا 3× + صدأ ملحي + تكاثف مكيف. Alkaline + Anti-Bacterial + Anti-Rust.',
+        heroSubtitle: 'الشحوم تتعفّن لا تتكربن فقط — البكتيريا 3× — الملح يُصدئ',
     },
-
     pricing: [
-        { type: 'تنظيف أفران — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف أفران — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'تنظيف فرن — عادي', unit: 'فرن', minPrice: 80, maxPrice: 150, time: '30-60 دقيقة' },
+        { type: 'تنظيف عميق (Alkaline + Anti-Rust)', unit: 'فرن', minPrice: 120, maxPrice: 250, time: '1-2 ساعة' },
+        { type: 'فرن + شفاط + موقد', unit: 'مطبخ', minPrice: 200, maxPrice: 400, time: '2-3 ساعات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف أفران بجازان؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف أفران؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف أفران؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'رائحة عفن من الفرن بعد فترة عدم استخدام؟', answer: '80% + شحوم = عفن ينمو على الشحوم + تكاثف مكيف. تنظيف قبل الاستخدام + تشغيل 200°م × 15 دقيقة = تعقيم.' },
+        { question: 'كل كم أنظف في جازان؟', answer: 'كل شهر-شهرين. في الرياض: كل 4-6 أشهر. 80% = شحوم تتعفّن أسرع + بكتيريا + صدأ.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Alkaline pH 13 يُزيل عفن الشحوم + الكربون — طبقة مُركّبة تحتاج قوة.',
+        'Anti-Rust على عنصر التسخين كل 3 أشهر — ملح يُصدئ.',
+        'تشغيل على فارغ 200°م × 15 دقيقة بعد التنظيف — يُعقّم بقايا.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'شحوم + عفن + بكتيريا = خطر صحي. تنظيف شهري في جازان.',
+        'صدأ ملحي على العنصر = كفاءة أقل + خطر كهربائي. Anti-Rust كل 3 أشهر.',
     ],
-
-    trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
-    ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات التنظيف' }],
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'فرن جازان: الشحوم تتعفّن (عكس التكربن الجاف). + بكتيريا أسماك استوائية 3× أسرع. + صدأ ملحي. تنظيف شهري = الحد الأدنى.', source: 'نصائح هندسية — أجهزة المطبخ في المناخ الاستوائي' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف أفران مرخص', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Alkaline pH 13', use: 'يُزيل عفن الشحوم + الكربون' },
+        { name: 'Anti-Rust Coating', use: 'يحمي عنصر التسخين من ملح البحر' },
+        { name: 'Anti-Bacterial Sanitizer', use: 'يقتل بكتيريا الطعام الاستوائي' },
     ],
-
-    hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
-    ],
-
-    counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
-    ],
-
+    hiddenObjections: [{ fear: 'بخاخ عادي يكفي.', solution: 'pH 9-10 لا يخترق عفن الشحوم المُركّب. pH 13 مهني = يخترق.' }],
+    counterNarratives: [{ myth: 'الفرن يُنظف نفسه بالحرارة.', truth: 'الحرارة تقتل البكتيريا — لكن لا تُزيل عفن الشحوم ولا الصدأ. تنظيف مهني = كامل.' }],
     relatedServices: [
-        { slug: 'jazan-furniture-moving', context: 'نقل عفش بجازان', priority: 1 },
-        { slug: 'jazan-furniture-storage', context: 'تخزين عفش بجازان', priority: 2 },
-        { slug: 'jazan-dyna', context: 'دينا نقل بجازان', priority: 3 },
-        { slug: 'jazan-moving-out', context: 'نقل عفش خروج بجازان', priority: 4 },
-        { slug: 'jazan-dabab', context: 'دباب نقل بجازان', priority: 5 },
-        { slug: 'jazan-cleaning', context: 'تنظيف منازل بجازان', priority: 6 },
-        { slug: 'jazan-tanks-cleaning', context: 'تنظيف خزانات بجازان', priority: 7 },
-        { slug: 'jazan-sofa-cleaning', context: 'تنظيف كنب بجازان', priority: 8 },
-        { slug: 'jazan-carpet-cleaning', context: 'تنظيف سجاد بجازان', priority: 9 },
+        { slug: 'restaurant-chimney-cleaning', context: 'مداخن — نفس شحوم + ملح', priority: 1 },
+        { slug: 'steam-cleaning', context: 'بخار — تعقيم المطبخ', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف — المطبخ كاملاً', priority: 3 },
+        { slug: 'pest-control', context: 'حشرات — صراصير المطبخ', priority: 4 },
     ],
 };

@@ -91,7 +91,6 @@ export const override: PageOverride = {
             expert: 'م. ماجد المحيميد',
             quote: 'مسبح في الرياض بدون غطاء = كارثة صيانة أسبوعية. الغطاء يقلل دخول الرمل 90% والتبخر 70% — أفضل استثمار قبل أي صيانة',
             source: 'خبير جودة البناء والتشطيبات',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
 
@@ -118,14 +117,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'riyadh-villas-cleaning', context: 'فيلا + مسبح', priority: 1 },
-        { slug: 'riyadh-sanitization', context: 'تعقيم المسبح', priority: 2 },
-        { slug: 'riyadh-tanks-cleaning', context: 'خزان مياه المسبح', priority: 3 },
-        { slug: 'riyadh-pest-control', context: 'بعوض المسبح', priority: 4 },
-        { slug: 'riyadh-cleaning', context: 'تنظيف منطقة المسبح', priority: 5 },
-        { slug: 'riyadh-floor-cleaning', context: 'بلاط حول المسبح', priority: 6 },
-        { slug: 'riyadh-water-insulation', context: 'عزل حوض المسبح', priority: 7 },
-        { slug: 'riyadh-glass-facades-cleaning', context: 'سور المسبح الزجاجي', priority: 8 },
-        { slug: 'riyadh-palaces-cleaning', context: 'مسابح القصور', priority: 9 },
+        { slug: 'villas-cleaning', context: 'فيلا + مسبح', priority: 1 },
+        { slug: 'sanitization', context: 'تعقيم المسبح', priority: 2 },
+        { slug: 'tanks-cleaning', context: 'خزان مياه المسبح', priority: 3 },
+        { slug: 'pest-control', context: 'بعوض المسبح', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف منطقة المسبح', priority: 5 },
+        { slug: 'floor-cleaning', context: 'بلاط حول المسبح', priority: 6 },
+        { slug: 'water-insulation', context: 'عزل حوض المسبح', priority: 7 },
+        { slug: 'glass-facades-cleaning', context: 'سور المسبح الزجاجي', priority: 8 },
+        { slug: 'palaces-cleaning', context: 'مسابح القصور', priority: 9 },
     ],
 };

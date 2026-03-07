@@ -87,7 +87,6 @@ export const override: PageOverride = {
             expert: 'د. سعد الجند',
             quote: 'الرطوبة الساحلية في جدة تُفسد المبيدات أسرع — العقد الربع سنوي هو الحد الأدنى. والجل الطعم أفضل من الرش في المطابخ: يبقى فعالاً مع الرطوبة ويقتل المستعمرة من جذرها',
             source: 'خبير مكافحة حشرات',
-            url: 'https://x.com/ALJUNDI',
         },
     ],
 
@@ -115,14 +114,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'jeddah-cockroach-control', context: 'الصراصير = أكثر الحشرات في جدة — معالجة متخصصة', priority: 1 },
-        { slug: 'jeddah-termite-control', context: 'النمل الأبيض يدمّر الأخشاب بصمت — فحص ضروري', priority: 2 },
-        { slug: 'jeddah-bedbugs-control', context: 'بق الفراش يحتاج معالجة حرارية خاصة', priority: 3 },
-        { slug: 'jeddah-rodent-control', context: 'الفئران مصدر أمراض — مكافحة متكاملة مع الحشرات', priority: 4 },
-        { slug: 'jeddah-sanitization', context: 'تعقيم بعد المكافحة يزيل البكتيريا والفطريات', priority: 5 },
-        { slug: 'jeddah-tanks-cleaning', context: 'الحشرات تلوث خزانات المياه المكشوفة', priority: 6 },
-        { slug: 'jeddah-cleaning', context: 'تنظيف شامل بعد المكافحة يزيل الفضلات والمخلفات', priority: 7 },
-        { slug: 'jeddah-sewage-unblocking', context: 'المجاري المسدودة = مصدر رئيسي لدخول الصراصير والفئران', priority: 8 },
-        { slug: 'jeddah-snakes-control', context: 'مكافحة ثعابين لفلل أطراف جدة — تتبع الفئران', priority: 9 },
+        { slug: 'cockroach-control', context: 'الصراصير = أكثر الحشرات في جدة — معالجة متخصصة', priority: 1 },
+        { slug: 'termite-control', context: 'النمل الأبيض يدمّر الأخشاب بصمت — فحص ضروري', priority: 2 },
+        { slug: 'bedbugs-control', context: 'بق الفراش يحتاج معالجة حرارية خاصة', priority: 3 },
+        { slug: 'rodent-control', context: 'الفئران مصدر أمراض — مكافحة متكاملة مع الحشرات', priority: 4 },
+        { slug: 'sanitization', context: 'تعقيم بعد المكافحة يزيل البكتيريا والفطريات', priority: 5 },
+        { slug: 'tanks-cleaning', context: 'الحشرات تلوث خزانات المياه المكشوفة', priority: 6 },
+        { slug: 'cleaning', context: 'تنظيف شامل بعد المكافحة يزيل الفضلات والمخلفات', priority: 7 },
+        { slug: 'sewage-unblocking', context: 'المجاري المسدودة = مصدر رئيسي لدخول الصراصير والفئران', priority: 8 },
+        { slug: 'snakes-control', context: 'مكافحة ثعابين لفلل أطراف جدة — تتبع الفئران', priority: 9 },
     ],
 };

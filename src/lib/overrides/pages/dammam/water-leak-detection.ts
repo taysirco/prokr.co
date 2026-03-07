@@ -1,13 +1,3 @@
-// ══════════════════════════════════════════════════════════════
-// كشف تسربات مياه بالدمام — Override (E-E-A-T)
-// صفحة: /dammam/water-leak-detection
-// قطاع YMYL: مالي (فاتورة) + صحي (عفن أسود)
-// خريطة 2.4: المحيميد → NWC + بلدي + أمانة الشرقية
-// الزاوية الفريدة: رطوبة 60-90% تنبت عفن أسود خلال 48 ساعة
-//   + ملوحة مياه التحلية تأكل الحديد (Pitting Corrosion)
-//   + مياه جوفية ضاغطة على الأساسات
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -78,19 +68,13 @@ export const override: PageOverride = {
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'الرقابة على صيانة المباني واشتراطات العزل المائي في الدمام', acronym: 'أمانة الشرقية' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
             expert: 'م. ماجد المحيميد',
             quote: 'في الدمام — التسرب ليس مشكلة مياه فقط، بل مشكلة صحية. رطوبة 60-90% تنبت عفناً أسوداً خلال 48 ساعة. والملوحة تأكل الأنابيب من الداخل — الفحص المبكر بالأكوافون يوفر الصحة والمال',
             source: 'خبير جودة البناء والتشطيبات',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
 
@@ -119,10 +103,10 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'dammam-bathroom-leak-detection', context: 'كشف تسربات الحمام — أكثر مصادر العفن الأسود بالدمام', priority: 1 },
-        { slug: 'dammam-tank-leak-detection', context: 'كشف تسربات الخزان — ملوحة المياه تُسرّع تآكل العزل', priority: 2 },
-        { slug: 'dammam-water-insulation', context: 'عزل مائي يمنع ضغط المياه الجوفية على الأساسات', priority: 3 },
-        { slug: 'dammam-pest-control', context: 'الرطوبة من التسرب تجذب الحشرات — مكافحة بعد الإصلاح', priority: 4 },
-        { slug: 'dammam-cleaning', context: 'تنظيف وتعقيم بعد إزالة العفن الأسود — بيروكسيد هيدروجين', priority: 5 },
+        { slug: 'bathroom-leak-detection', context: 'كشف تسربات الحمام — أكثر مصادر العفن الأسود بالدمام', priority: 1 },
+        { slug: 'tank-leak-detection', context: 'كشف تسربات الخزان — ملوحة المياه تُسرّع تآكل العزل', priority: 2 },
+        { slug: 'water-insulation', context: 'عزل مائي يمنع ضغط المياه الجوفية على الأساسات', priority: 3 },
+        { slug: 'pest-control', context: 'الرطوبة من التسرب تجذب الحشرات — مكافحة بعد الإصلاح', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف وتعقيم بعد إزالة العفن الأسود — بيروكسيد هيدروجين', priority: 5 },
     ],
 };

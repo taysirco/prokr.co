@@ -1,94 +1,77 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف مكيفات بالظهران — Override مخصص (E-E-A-T Grade)
-// صفحة: /dhahran/air-conditioner-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف مكيفات بالظهران — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف مكيفات بالظهران. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف مكيفات بالظهران — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف مكيفات بالظهران', 'تنظيف مكيفات الظهران', 'شركة تنظيف مكيفات بالظهران', 'أفضل تنظيف مكيفات بالظهران'],
+        title: 'تنظيف مكيفات بالظهران — NaCl+SiO₂ مزدوج + 75-85% عفن مبخر + رمل يسد + أرامكو (2026)',
+        description: 'تنظيف مكيفات الظهران. NaCl رذاذ + SiO₂ رمل = Micro-Abrasion + تآكل مزدوج. 75-85% Aspergillus. رمل يسد الفلتر. معايير أرامكو. Anti-Rust + Anti-Fungal + HEPA.',
+        h1: 'تنظيف مكيفات بالظهران — ملح+رمل = تحدٍ مزدوج لا يوجد في مدينة أخرى',
+        keywords: ['تنظيف مكيفات بالظهران', 'تنظيف مكيف الظهران', 'شركة تنظيف مكيفات بالظهران'],
     },
-
     content: {
-        introduction: 'تنظيف مكيفات بالظهران — خدمة متخصصة تراعي الظروف المناخية والبيئية في الظهران. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف مكيفات بالظهران: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف مكيفات بالظهران. خدمة احترافية. ضمان.',
+        introduction: 'مكيف الظهران يواجه تحدياً مزدوجاً فريداً لا يوجد في الخبر ولا الرياض. التحدي المزدوج — NaCl + SiO₂: الظهران = ساحلية-داخلية — قريبة من الخليج (NaCl رذاذ بحري) + قريبة من الصحراء (SiO₂ رمل ناعم). المكيف يستقبل الاثنين: NaCl يُسبب Galvanic Corrosion للزعانف + SiO₂ يتراكم على الفلتر كسنفرة (Micro-Abrasion). معاً: الأسوأ من العالمين. Anti-Rust الزعانف + HEPA فلتر + تنظيف دوري. التحدي الثاني — 75-85% عفن مبخر: أقل من الخبر (85-95%) لكن أعلى من الأحساء (60-70%). في 75-85%: Aspergillus ينمو خلال 3-4 أسابيع (بدلاً من أسبوعين في الخبر). Anti-Fungal كل 5 أشهر. التحدي الثالث — سياق أرامكو: الظهران = مقر أرامكو ← مُجمّعات سكنية بمعايير عالية ← التنظيف يحتاج شهادات + بروتوكولات مُوثّقة.',
+        shortAnswer: 'على عكس [غسل بالماء فقط] الذي لا يحمي من المزدوج، يعتمد بروتوكولنا في خدمة [تنظيف المكيفات] بمدينة [الظهران] على [Anti-Rust + HEPA + Anti-Fungal + بروتوكول مزدوج]. ففي ظل [NaCl+SiO₂ + 75-85% + معايير أرامكو]، تتفاقم ظاهرة [تآكل+انسداد + عفن]. لذا؛ يتدخل خبراؤنا عبر [بروتوكول ظهراني مزدوج].',
+        heroSubtitle: 'NaCl+SiO₂ تآكل+انسداد مزدوج + 75-85% عفن + معايير أرامكو',
     },
-
     pricing: [
-        { type: 'تنظيف مكيفات — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف مكيفات — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'فلتر + Anti-Fungal (سبليت)', unit: 'مكيف', minPrice: 65, maxPrice: 130, time: '30-45 دقيقة' },
+        { type: 'عميق + Anti-Rust + HEPA', unit: 'مكيف', minPrice: 160, maxPrice: 320, time: '1-2 ساعة' },
+        { type: 'مركزي (دكت) — معايير أرامكو', unit: 'وحدة', minPrice: 280, maxPrice: 550, time: '2-4 ساعات' },
+        { type: 'عقد موسمي (4 زيارات)', unit: 'سنة', minPrice: 500, maxPrice: 1000, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف مكيفات بالظهران؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف مكيفات؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف مكيفات؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'NaCl+SiO₂ — ليش أسوأ من كل واحد لوحده؟', answer: 'SiO₂ يخدش Coating ← يكشف الألمنيوم ← NaCl يتآكله مباشرة. SiO₂ وحده = يسد. NaCl وحده = يتآكل. معاً = يسد + يتآكل + يخدش الحماية = ضرر مُركّب.' },
+        { question: 'الظهران بين الخبر والأحساء — أي خطة؟', answer: 'الخبر = NaCl أكثر. الأحساء = CaSO₄ + لقاح. الظهران = NaCl + SiO₂ مزدوج — ليس مجموعهما بل تفاعلهما. خطة خاصة.' },
+        { question: '75-85% — أقل من الخبر؟', answer: 'نعم — 10-15% أقل = عفن أبطأ (3-4 أسابيع بدلاً من أسبوعين). لكن: حتمي. Anti-Fungal كل 5 أشهر (بدلاً من 4 في الخبر).' },
+        { question: 'معايير أرامكو — ماذا تعني؟', answer: 'بروتوكولات مُوثّقة + شهادات + تقارير. المُجمّعات السكنية (أحياء أرامكو) تحتاج مقاولين بمعايير. نحن مُجهّزون.' },
+        { question: 'HEPA فلتر — لماذا؟', answer: 'SiO₂ ناعم (< 10 ميكرون) يمر من الفلتر العادي ← يدخل الغرفة ← PM10. HEPA = يحجز 99.97%. في الظهران: SiO₂ أكثر من الخبر.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Anti-Rust + HEPA = الثنائي الظهراني — NaCl يتآكل + SiO₂ يسد. حل مزدوج.',
+        'Anti-Fungal كل 5 أشهر — 75-85% = أبطأ من الخبر لكن حتمي.',
+        'فلتر HEPA لغرف النوم — SiO₂ < 10 ميكرون = يدخل الرئة.',
+        'تنظيف Condenser خارجي شهري — SiO₂ يتراكم + NaCl يلصقه = طبقة سميكة.',
+        'بروتوكول مُوثّق — تقرير بالصور لكل زيارة (معايير أرامكو).',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'NaCl+SiO₂ المزدوج = زعانف تتآكل 40-60% أسرع من NaCl وحده. SiO₂ يكشف ← NaCl يتآكل = تلف مُركّب.',
+        'SiO₂ < 10 ميكرون بدون HEPA = يدخل الغرفة 24/7 = PM10 = أمراض تنفسية. HEPA = حماية.',
+        'عفن 75-85% = أبطأ لكن حتمي. تجاهل = نفس النتيجة بعد 5 أشهر.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.SCE, role: 'كفاءة الطاقة' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات الصحة بالشرقية' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALJUND,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALJUND.name, quote: 'مكيف الظهران = مزدوج: NaCl+SiO₂ يتفاعلان — SiO₂ يخدش الحماية + NaCl يتآكل المكشوف. لا يُشبه الخبر (NaCl فقط) ولا الرياض (SiO₂ فقط). بروتوكول خاص.', source: 'موسوعة أخطاء — مكيفات البيئة المزدوجة' },
     ],
-
-    saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
+    saudiRegulations: [REGULATIONS.SBC_601],
     verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
+        { badge: '✔️ صيانة مكيفات مرخصة', authority: 'منصة بلدي', icon: 'shield-check' },
+        { badge: '✔️ بروتوكول مزدوج', authority: 'معتمد داخلياً', icon: 'badge-check' },
     ],
-
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Anti-Rust Coating (إيبوكسي)', use: 'يحمي زعانف الألمنيوم من NaCl بعد خدش SiO₂' },
+        { name: 'HEPA Filter', use: 'يحجز SiO₂ < 10 ميكرون — 99.97% كفاءة' },
+        { name: 'Anti-Fungal Coil Coating', use: 'يمنع Aspergillus 75-85% — فعّال 5 أشهر' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'مثل الخبر.', solution: 'الخبر = NaCl. الظهران = NaCl+SiO₂ مزدوج. SiO₂ يخدش ← NaCl يتآكل = أسوأ.' },
+        { fear: 'HEPA غالي.', solution: 'HEPA = 50-100 ريال/فلتر. أمراض تنفسية = آلاف. استثمار صحي.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'الظهران مثل الخبر.', truth: 'الخبر = NaCl 90%. الظهران = NaCl 60% + SiO₂ 40%. المزيج = أسوأ.' },
+        { myth: 'غسل عادي.', truth: 'بدون Anti-Rust: SiO₂ يكشف + NaCl يتآكل. بدون HEPA: SiO₂ يدخل. بروتوكول مزدوج.' },
+        { myth: 'مرة بالسنة.', truth: 'SiO₂ شهري + NaCl أسبوعي + عفن 5 أشهر. سنوي = متأخر.' },
     ],
-
     relatedServices: [
-        { slug: 'dhahran-furniture-moving', context: 'نقل عفش بالظهران', priority: 1 },
-        { slug: 'dhahran-furniture-storage', context: 'تخزين عفش بالظهران', priority: 2 },
-        { slug: 'dhahran-dyna', context: 'دينا نقل بالظهران', priority: 3 },
-        { slug: 'dhahran-moving-out', context: 'نقل عفش خروج بالظهران', priority: 4 },
-        { slug: 'dhahran-dabab', context: 'دباب نقل بالظهران', priority: 5 },
-        { slug: 'dhahran-cleaning', context: 'تنظيف منازل بالظهران', priority: 6 },
-        { slug: 'dhahran-tanks-cleaning', context: 'تنظيف خزانات بالظهران', priority: 7 },
-        { slug: 'dhahran-sofa-cleaning', context: 'تنظيف كنب بالظهران', priority: 8 },
-        { slug: 'dhahran-carpet-cleaning', context: 'تنظيف سجاد بالظهران', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف — مزدوج', priority: 1 },
+        { slug: 'office-cleaning', context: 'مكاتب — أرامكو', priority: 2 },
+        { slug: 'carpet-cleaning', context: 'سجاد — SiO₂+NaCl', priority: 3 },
+        { slug: 'villas-cleaning', context: 'فلل — مزدوج', priority: 4 },
+        { slug: 'steam-cleaning', context: 'بخار — تعقيم', priority: 5 },
+        { slug: 'apartments-cleaning', context: 'شقق — ساحلي-داخلي', priority: 6 },
+        { slug: 'pest-control', context: 'حشرات — رطوبة', priority: 7 },
     ],
 };

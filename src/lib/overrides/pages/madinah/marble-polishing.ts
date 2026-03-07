@@ -80,12 +80,7 @@ export const override: PageOverride = {
         { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'الرقابة على جودة خدمات الصيانة في المنشآت السكنية والتجارية', acronym: 'أمانة المدينة' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
@@ -123,10 +118,10 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'madinah-floor-polishing', context: 'تلميع أرضيات بلاط وبورسلان — البديل للرخام بنفس التقنية.', priority: 1 },
-        { slug: 'madinah-cleaning', context: 'تنظيف شامل للمنزل بعد الجلي — إزالة أي أتربة متبقية.', priority: 2 },
-        { slug: 'madinah-villas-cleaning', context: 'تنظيف فلل كاملة مع جلي الرخام — باقة متكاملة.', priority: 3 },
-        { slug: 'madinah-swimming-pool-cleaning', context: 'إزالة ترسبات كلسية من رخام محيط المسبح.', priority: 4 },
-        { slug: 'madinah-glass-facades-cleaning', context: 'تنظيف واجهات زجاجية من غبار الحرات — يتكامل مع جلي الأرضيات.', priority: 5 },
+        { slug: 'floor-polishing', context: 'تلميع أرضيات بلاط وبورسلان — البديل للرخام بنفس التقنية.', priority: 1 },
+        { slug: 'cleaning', context: 'تنظيف شامل للمنزل بعد الجلي — إزالة أي أتربة متبقية.', priority: 2 },
+        { slug: 'villas-cleaning', context: 'تنظيف فلل كاملة مع جلي الرخام — باقة متكاملة.', priority: 3 },
+        { slug: 'swimming-pool-cleaning', context: 'إزالة ترسبات كلسية من رخام محيط المسبح.', priority: 4 },
+        { slug: 'glass-facades-cleaning', context: 'تنظيف واجهات زجاجية من غبار الحرات — يتكامل مع جلي الأرضيات.', priority: 5 },
     ],
 };

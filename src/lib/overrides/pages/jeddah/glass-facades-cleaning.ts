@@ -4,6 +4,7 @@
 // ============================================
 
 import type { PageOverride } from '../../types';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -92,19 +93,13 @@ export const override: PageOverride = {
         { entity: 'وزارة البلديات — منصة بلدي', acronym: 'بلدي', url: 'https://balady.gov.sa', role: 'اشتراطات نظافة الواجهات التجارية' },
     ],
 
-    expertReviewer: {
-        name: 'م. ماجد المحيميد',
-        title: 'خبير جودة تشطيبات وعزل',
-        credential: 'مهندس جودة تشطيبات — المرجع الأول في جودة البناء',
-        profileUrl: 'https://x.com/majedalmohaimed',
-    },
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
             expert: 'م. ماجد المحيميد',
             quote: 'واجهات زجاج جدة تتسخ أسرع 3x من الرياض — ملح NaCl الساحلي يتصلب على الزجاج ولا يُزال بالماء العادي. يحتاج محلول Descaler متخصص',
             source: 'خبير تشطيبات',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
 
@@ -113,14 +108,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'jeddah-cleaning', context: 'تنظيف شامل + واجهات', priority: 1 },
-        { slug: 'jeddah-villas-cleaning', context: 'واجهات الفلل', priority: 2 },
-        { slug: 'jeddah-office-cleaning', context: 'واجهات أبراج المكاتب', priority: 3 },
-        { slug: 'jeddah-bird-control', context: 'حمام الواجهات', priority: 4 },
-        { slug: 'jeddah-shops-cleaning', context: 'واجهة المحل', priority: 5 },
-        { slug: 'jeddah-floor-polishing', context: 'واجهات + أرضيات', priority: 6 },
-        { slug: 'jeddah-water-insulation', context: 'عزل حول الواجهات', priority: 7 },
-        { slug: 'jeddah-palaces-cleaning', context: 'واجهات القصور', priority: 8 },
-        { slug: 'jeddah-air-conditioner-cleaning', context: 'مكيفات خلف الواجهات', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف شامل + واجهات', priority: 1 },
+        { slug: 'villas-cleaning', context: 'واجهات الفلل', priority: 2 },
+        { slug: 'office-cleaning', context: 'واجهات أبراج المكاتب', priority: 3 },
+        { slug: 'bird-control', context: 'حمام الواجهات', priority: 4 },
+        { slug: 'shops-cleaning', context: 'واجهة المحل', priority: 5 },
+        { slug: 'floor-polishing', context: 'واجهات + أرضيات', priority: 6 },
+        { slug: 'water-insulation', context: 'عزل حول الواجهات', priority: 7 },
+        { slug: 'palaces-cleaning', context: 'واجهات القصور', priority: 8 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيفات خلف الواجهات', priority: 9 },
     ],
 };

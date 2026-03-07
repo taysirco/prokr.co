@@ -78,19 +78,13 @@ export const override: PageOverride = {
         { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'الرقابة الصحية على منشآت الإيواء والشقق المفروشة واشتراطات النظافة', acronym: 'أمانة المدينة' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
             expert: 'م. ماجد المحيميد',
             quote: 'الغبار البازلتي من حرة رهط يُتلف الأسطح اللامعة إذا مُسح جافاً — صلابته تفوق الرمل العادي. التنظيف الاحترافي بالمدينة يبدأ بالشفط لا بالمسح، ويُنهي بالتعقيم لأن المدينة تستقبل زواراً من كل القارات',
             source: 'خبير جودة البناء والتشطيبات',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
 
@@ -119,13 +113,13 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'madinah-steam-cleaning', context: 'تنظيف بالبخار 150°م+ — تعقيم عميق للكنب والسجاد والمراتب', priority: 1 },
-        { slug: 'madinah-carpet-cleaning', context: 'سجاد المدينة يحبس الغبار البازلتي — غسيل عميق يستخرج الجسيمات', priority: 2 },
-        { slug: 'madinah-sofa-cleaning', context: 'تنظيف كنب بالبخار يُزيل البقع ويُعقّم ضد البكتيريا والعث', priority: 3 },
-        { slug: 'madinah-air-conditioner-cleaning', context: 'فلاتر المكيف تحبس الغبار البازلتي — تنظيفها يُحسن جودة الهواء', priority: 4 },
-        { slug: 'madinah-marble-polishing', context: 'الغبار البازلتي خدش رخامك؟ جلي رخام يُعيد اللمعان الأصلي', priority: 5 },
-        { slug: 'madinah-glass-facades-cleaning', context: 'تنظيف واجهات الزجاج من ترسبات الغبار البركاني والكلس', priority: 6 },
-        { slug: 'madinah-pest-control', context: 'مكافحة حشرات بعد التنظيف — بيئة نظيفة + مكافحة = حماية شاملة', priority: 7 },
-        { slug: 'madinah-tanks-cleaning', context: 'تنظيف خزانات المياه — مصدر الترسبات الكلسية التي تُبقّع الحمامات', priority: 8 },
+        { slug: 'steam-cleaning', context: 'تنظيف بالبخار 150°م+ — تعقيم عميق للكنب والسجاد والمراتب', priority: 1 },
+        { slug: 'carpet-cleaning', context: 'سجاد المدينة يحبس الغبار البازلتي — غسيل عميق يستخرج الجسيمات', priority: 2 },
+        { slug: 'sofa-cleaning', context: 'تنظيف كنب بالبخار يُزيل البقع ويُعقّم ضد البكتيريا والعث', priority: 3 },
+        { slug: 'air-conditioner-cleaning', context: 'فلاتر المكيف تحبس الغبار البازلتي — تنظيفها يُحسن جودة الهواء', priority: 4 },
+        { slug: 'marble-polishing', context: 'الغبار البازلتي خدش رخامك؟ جلي رخام يُعيد اللمعان الأصلي', priority: 5 },
+        { slug: 'glass-facades-cleaning', context: 'تنظيف واجهات الزجاج من ترسبات الغبار البركاني والكلس', priority: 6 },
+        { slug: 'pest-control', context: 'مكافحة حشرات بعد التنظيف — بيئة نظيفة + مكافحة = حماية شاملة', priority: 7 },
+        { slug: 'tanks-cleaning', context: 'تنظيف خزانات المياه — مصدر الترسبات الكلسية التي تُبقّع الحمامات', priority: 8 },
     ],
 };

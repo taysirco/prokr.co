@@ -1,4 +1,3 @@
-// تنظيف أثاث بالطائف — Override (E-E-A-T)
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -35,9 +34,12 @@ export const override: PageOverride = {
         'أثاث MDF في رطوبة 85% بدون حماية = انتفاخ وتلف دائم خلال شتاء واحد.',
         'لا تستخدم منظفات منزلية على الخشب ← الحمض يُتلف اللمعان والقلوي يُذيب الغراء.',
     ],
-    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات التنظيف' }],
-    expertReviewer: { name: EXPERTS.ALMISNID.name, title: EXPERTS.ALMISNID.title, credential: EXPERTS.ALMISNID.credential, profileUrl: EXPERTS.ALMISNID.profileUrl },
-    expertCitations: [{ expert: EXPERTS.ALMISNID.name, quote: 'Moisture Cycling في الطائف (85% شتاء ← 35% صيف) يُرهق الأثاث الخشبي أكثر من الرطوبة الثابتة. زيت بذر الكتان يسدّ المسام ← يُقلل التمدد والانكماش ← يُطيل عمر الأثاث 3-5 أضعاف.', source: EXPERTS.ALMISNID.title, url: EXPERTS.ALMISNID.profileUrl }],
+    trustAnchors: [
+{ ...{ ...GOV.BALADI, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
+ role: 'ترخيص شركات التنظيف' }    ],
+    expertReviewer: EXPERTS.ALMISNID,
+    expertCitations: [{ expert: EXPERTS.ALMISNID.name, quote: 'Moisture Cycling في الطائف (85% شتاء ← 35% صيف) يُرهق الأثاث الخشبي أكثر من الرطوبة الثابتة. زيت بذر الكتان يسدّ المسام ← يُقلل التمدد والانكماش ← يُطيل عمر الأثاث 3-5 أضعاف.',
+            source: EXPERTS.ALMISNID.title }],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
     verificationBadges: [{ badge: '✔️ منظف pH-neutral', authority: 'آمن للخشب', icon: 'shield-check' }, { badge: '✔️ سيليكون وقائي', authority: 'حماية 3-6 أشهر', icon: 'badge-check' }],
     equipment: [
@@ -45,11 +47,17 @@ export const override: PageOverride = {
         { name: 'كريم Leather Conditioner', use: 'يُرطّب الجلد ← يبقيه مرناً ← يمنع التشقق في الجفاف الصيفي.' },
         { name: 'سيليكون مائي (Silicone Spray)', use: 'يحمي أسطح الخشب وMDF من الرطوبة 3-6 أشهر ← وقاية موسمية.' },
     ],
-    hiddenObjections: [{ fear: 'الأثاث مسألة نظافة عادية — ما يحتاج متخصص.', solution: 'التنظيف العادي = مسح بقطعة رطبة (تضيف رطوبة + لا تحمي). التنظيف المتخصص = منظف pH-neutral + زيت حماية + سيليكون ← تنظيف + حماية. الفرق في الطائف = أثاث يدوم 5 سنوات vs أثاث يدوم 15 سنة.' }],
+    hiddenObjections: [
+        { fear: 'الأثاث مسألة نظافة عادية — ما يحتاج متخصص.', solution: 'التنظيف العادي = مسح بقطعة رطبة (تضيف رطوبة + لا تحمي). التنظيف المتخصص = منظف pH-neutral + زيت حماية + سيليكون ← تنظيف + حماية. الفرق في الطائف = أثاث يدوم 5 سنوات vs أثاث يدوم 15 سنة.' },
+        { fear: 'الخدمة أغلى من المدن الأخرى.', solution: 'مناخ الطائف يفرض معالجات إضافية (مضاد تكثف + تجفيف + حماية أخشاب ورود). التكلفة الإضافية استثمار يحمي ممتلكاتك من تلف الرطوبة والحشرات الموسمية.' },
+    ],
     counterNarratives: [{ myth: 'أثاث جديد ما يحتاج صيانة.', truth: 'الأثاث الجديد = طلاء مصنعي قد لا يتحمل رطوبة الطائف (مصنوع في بيئة جافة). أول شتاء بدون حماية = التلف يبدأ. زيت بذر كتان في أول شهر = حماية منذ اليوم الأول.' }],
     relatedServices: [
-        { slug: 'taif-sofa-cleaning', context: 'كنب مع الأثاث — باقة متكاملة.', priority: 1 },
-        { slug: 'taif-cleaning', context: 'تنظيف شامل مع صيانة أثاث.', priority: 2 },
-        { slug: 'taif-furniture-moving', context: 'نقل + تنظيف أثاث بعد الانتقال.', priority: 3 },
+        { slug: 'sofa-cleaning', context: 'كنب مع الأثاث — باقة متكاملة.', priority: 1 },
+        { slug: 'cleaning', context: 'تنظيف شامل مع صيانة أثاث.', priority: 2 },
+        { slug: 'furniture-moving', context: 'نقل + تنظيف أثاث بعد الانتقال.', priority: 3 },
+        { slug: 'air-conditioner-cleaning', context: 'تنظيف مكيفات تعمل تبريد/تدفئة طوال السنة في مناخ الطائف المتقلب.', priority: 5 },
+        { slug: 'pest-control', context: 'مكافحة حشرات تتكاثر في رطوبة الطائف الشتوية والزراعة المحيطة.', priority: 6 },
+        { slug: 'steam-cleaning', context: 'تعقيم بالبخار لقتل العث والفطريات في مفروشات الطائف الرطبة.', priority: 7 },
     ],
 };

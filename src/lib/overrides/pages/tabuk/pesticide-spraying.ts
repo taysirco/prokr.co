@@ -1,7 +1,3 @@
-// رش مبيدات بتبوك — Override (E-E-A-T)
-// الزاوية: حشرات تختفي شتاءً (سكون) = فرصة رش أقل
-//   + العقارب أخطر آفة بتبوك (جبلية صحراوية)
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -59,19 +55,13 @@ export const override: PageOverride = {
         { entity: AMANA.TABUK.entity, url: AMANA.TABUK.url, role: 'ترخيص شركات المكافحة بتبوك', acronym: 'أمانة تبوك' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALKHODAIRY.name,
-        title: EXPERTS.ALKHODAIRY.title,
-        credential: EXPERTS.ALKHODAIRY.credential,
-        profileUrl: EXPERTS.ALKHODAIRY.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALKHODAIRY,
 
     expertCitations: [
         {
             expert: 'د. فهد الخضيري',
             quote: 'تبوك = مكافحة موسمية ذكية. الشتاء البارد يُخمد 70-80% من الحشرات ← رشتين/سنة تكفيان. لكن العقارب الجبلية الصحراوية هي الخطر الحقيقي — مكافحة محيطية + سد فتحات = الأولوية',
             source: 'مكافحة حشرات وآفات',
-            url: 'https://x.com/DrAlkhodairy',
         },
     ],
 
@@ -90,14 +80,20 @@ export const override: PageOverride = {
 
     hiddenObjections: [
         { fear: 'رشتين بس ما تكفي', solution: 'بتبوك: الشتاء يُخمد الحشرات طبيعياً ← فترة راحة 3-4 أشهر. رشة ربيعية (تستقبل النشاط) + رشة خريفية (تمنع دخول المنازل) = تغطية كاملة. 4 رشات = هدر بتبوك' },
+        { fear: 'السعر أعلى من المتوقع.', solution: 'السعر يشمل معدات صناعية متخصصة + مواد احترافية + عمالة مدربة + ضمان مكتوب. المقارنة العادلة ليست مع عامل عشوائي بل مع تكلفة إصلاح الأضرار الناتجة عن العمل غير المتخصص.' },
     ],
 
     counterNarratives: [
         { myth: 'تبوك صحراء — ما فيها حشرات', truth: 'حشرات أقل — نعم. لكن العقارب أكثر (بيئة جبلية صحراوية). والصراصير تدخل المنازل بحثاً عن دفء شتاءً. أقل ≠ صفر' },
+        { myth: 'أي شركة تنظيف/صيانة نتيجتها واحدة.', truth: 'الفرق بين شركة مرخصة ومُعتمدة وأخرى عشوائية = الفرق بين معالجة جذرية وإخفاء مؤقت. المعدات المتخصصة والبروتوكولات العلمية تحل المشكلة من جذرها — التنظيف العشوائي يُعيدها أسوأ خلال أسابيع.' },
+        { myth: 'أوفر وأسوي الشغل بنفسي.', truth: 'التوفير الظاهري يتحول لتكلفة مضاعفة: أدوات منزلية لا تصل للعمق المطلوب + مواد غير مناسبة قد تُتلف الأسطح + وقت وجهد بلا ضمان نتيجة. الاحتراف = ضمان + توفير حقيقي على المدى الطويل.' },
     ],
 
     relatedServices: [
-        { slug: 'tabuk-pest-control', context: 'مكافحة حشرات متكاملة IPM', priority: 1 },
-        { slug: 'tabuk-bird-control', context: 'طرد حمام — فضلاته تجذب حشرات', priority: 2 },
+        { slug: 'pest-control', context: 'مكافحة حشرات متكاملة IPM', priority: 1 },
+        { slug: 'bird-control', context: 'طرد حمام — فضلاته تجذب حشرات', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف شامل يُكمّل الخدمة الأساسية — بيئة نظيفة متكاملة.', priority: 5 },
+        { slug: 'pest-control', context: 'مكافحة حشرات متكاملة مع خدمات النظافة والصيانة.', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'تنظيف مكيفات لهواء نظيف — يُكمّل أي خدمة منزلية.', priority: 7 },
     ],
 };

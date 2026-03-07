@@ -92,7 +92,6 @@ export const override: PageOverride = {
             expert: 'م. ماجد المحيميد',
             quote: 'مداخن المطاعم في الرياض تتراكم فيها شحوم أصلب من أي مدينة ساحلية — الغبار والجفاف يحولانها لطبقة كربونية تحتاج كشط كيميائي وليس مجرد غسيل',
             source: 'خبير جودة البناء والتشطيبات — ملاحظات ميدانية',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
 
@@ -120,14 +119,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'riyadh-kitchen-cleaning', context: 'مطبخ مطعم + مداخن', priority: 1 },
-        { slug: 'riyadh-oven-cleaning', context: 'أفران المطعم', priority: 2 },
-        { slug: 'riyadh-sanitization', context: 'شهادة تعقيم مطعم', priority: 3 },
-        { slug: 'riyadh-pest-control', context: 'مكافحة حشرات المطعم', priority: 4 },
-        { slug: 'riyadh-cockroach-control', context: 'صراصير الدكتات', priority: 5 },
-        { slug: 'riyadh-cleaning', context: 'صالة المطعم', priority: 6 },
-        { slug: 'riyadh-air-conditioner-cleaning', context: 'مكيفات المطعم', priority: 7 },
-        { slug: 'riyadh-floor-cleaning', context: 'أرضيات المطبخ', priority: 8 },
-        { slug: 'riyadh-glass-facades-cleaning', context: 'واجهة المطعم', priority: 9 },
+        { slug: 'kitchen-cleaning', context: 'مطبخ مطعم + مداخن', priority: 1 },
+        { slug: 'oven-cleaning', context: 'أفران المطعم', priority: 2 },
+        { slug: 'sanitization', context: 'شهادة تعقيم مطعم', priority: 3 },
+        { slug: 'pest-control', context: 'مكافحة حشرات المطعم', priority: 4 },
+        { slug: 'cockroach-control', context: 'صراصير الدكتات', priority: 5 },
+        { slug: 'cleaning', context: 'صالة المطعم', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيفات المطعم', priority: 7 },
+        { slug: 'floor-cleaning', context: 'أرضيات المطبخ', priority: 8 },
+        { slug: 'glass-facades-cleaning', context: 'واجهة المطعم', priority: 9 },
     ],
 };

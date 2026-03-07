@@ -1,10 +1,3 @@
-// ══════════════════════════════════════════════════════════════
-// كشف تسربات حمامات بجازان — Override (E-E-A-T)
-// الزاوية: رطوبة استوائية = أسرع مدينة ينمو فيها عفن الحمام
-//   + تآكل نحاس مُسرّع (رطوبة + ملوحة ساحلية)
-//   + الجراوت يتعفن لا يتشقق (عكس تبوك)
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -64,19 +57,13 @@ export const override: PageOverride = {
         { entity: AMANA.JAZAN.entity, url: AMANA.JAZAN.url, role: 'اشتراطات السباكة والعزل بجازان', acronym: 'أمانة جازان' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALJUND.name,
-        title: EXPERTS.ALJUND.title,
-        credential: EXPERTS.ALJUND.credential,
-        profileUrl: EXPERTS.ALJUND.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALJUND,
 
     expertCitations: [
         {
             expert: 'م. عبدالغني الجند',
             quote: 'حمام جازان = أخطر حمام في السعودية من حيث العفن. رطوبة 58%+ + ساحل البحر الأحمر = عفن مداري سريع + تآكل نحاس. جراوت إيبوكسي مضاد فطريات + PPR = الحل المستدام الوحيد',
             source: 'موسوعة "أخطاء في البناء"',
-            url: 'https://x.com/ssrrr22',
         },
     ],
 
@@ -101,16 +88,17 @@ export const override: PageOverride = {
     counterNarratives: [
         { myth: 'الرطوبة عالية أصلاً — التسرب ما يفرق', truth: 'الرطوبة الجوية 58% ≠ تسرب ماء. التسرب يرفع رطوبة الجدار من 15% (طبيعي) إلى 30%+ = عفن مداري سام + نمل أبيض. "عالي أصلاً" + تسرب = كارثة مضاعفة' },
         { myth: 'الحمام يتبخر — ما يحتاج فحص', truth: 'بجازان: الحمام لا يتبخر. رطوبة 58%+ + حمام = 95%+ رطوبة ← لا تبخر ← كل قطرة تتراكم. شفاط هواء 30 دقيقة بعد الاستحمام + فحص دوري = الحد الأدنى' },
+        { myth: 'أي شركة تنظيف/صيانة نتيجتها واحدة.', truth: 'الفرق بين شركة مرخصة ومُعتمدة وأخرى عشوائية = الفرق بين معالجة جذرية وإخفاء مؤقت. المعدات المتخصصة والبروتوكولات العلمية تحل المشكلة من جذرها — التنظيف العشوائي يُعيدها أسوأ خلال أسابيع.' },
     ],
 
     relatedServices: [
-        { slug: 'jazan-water-leak-detection', context: 'فحص شبكة كاملة — التسرب قد يكون من خارج الحمام', priority: 1 },
-        { slug: 'jazan-water-insulation', context: 'عزل مائي — يمنع تسرب الأمطار ورطوبة الأرض', priority: 2 },
-        { slug: 'jazan-roof-insulation', context: 'عزل سطح — تسرب فوق الحمام يأتي من السطح أحياناً', priority: 3 },
-        { slug: 'jazan-termite-control', context: 'مكافحة نمل أبيض — رطوبة الحمام تستدعي مستعمرات', priority: 4 },
-        { slug: 'jazan-pest-control', context: 'مكافحة حشرات حمام — صراصير الصرف المدارية', priority: 5 },
-        { slug: 'jazan-tanks-cleaning', context: 'تنظيف خزان — مصدر مياه الحمام', priority: 6 },
-        { slug: 'jazan-sewage-unblocking', context: 'تسليك مجاري — انسداد حمام يُراكم رطوبة إضافية', priority: 7 },
-        { slug: 'jazan-foam-insulation', context: 'فوم Closed-Cell — عزل حراري لا يمتص رطوبة', priority: 8 },
+        { slug: 'water-leak-detection', context: 'فحص شبكة كاملة — التسرب قد يكون من خارج الحمام', priority: 1 },
+        { slug: 'water-insulation', context: 'عزل مائي — يمنع تسرب الأمطار ورطوبة الأرض', priority: 2 },
+        { slug: 'roof-insulation', context: 'عزل سطح — تسرب فوق الحمام يأتي من السطح أحياناً', priority: 3 },
+        { slug: 'termite-control', context: 'مكافحة نمل أبيض — رطوبة الحمام تستدعي مستعمرات', priority: 4 },
+        { slug: 'pest-control', context: 'مكافحة حشرات حمام — صراصير الصرف المدارية', priority: 5 },
+        { slug: 'tanks-cleaning', context: 'تنظيف خزان — مصدر مياه الحمام', priority: 6 },
+        { slug: 'sewage-unblocking', context: 'تسليك مجاري — انسداد حمام يُراكم رطوبة إضافية', priority: 7 },
+        { slug: 'foam-insulation', context: 'فوم Closed-Cell — عزل حراري لا يمتص رطوبة', priority: 8 },
     ],
 };

@@ -89,7 +89,6 @@ export const override: PageOverride = {
             expert: 'أ.د. عبدالله المسند',
             quote: 'الرياض تستقبل 15-25 عاصفة غبارية سنوياً. السجاد هو المخزن الأكبر للرمل الناعم — كل سجادة 3×4م تخزّن كوب رمل في قاعدتها',
             source: 'أستاذ جغرافيا المناخ',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -116,14 +115,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'riyadh-sofa-cleaning', context: 'كنب + سجاد — خصم الباقة', priority: 1 },
-        { slug: 'riyadh-mattress-cleaning', context: 'مراتب + سجاد', priority: 2 },
-        { slug: 'riyadh-steam-cleaning', context: 'بخار شامل', priority: 3 },
-        { slug: 'riyadh-cleaning', context: 'تنظيف شامل', priority: 4 },
-        { slug: 'riyadh-floor-cleaning', context: 'أرضية تحت السجاد', priority: 5 },
-        { slug: 'riyadh-floor-polishing', context: 'تلميع بعد غسيل الموكيت', priority: 6 },
-        { slug: 'riyadh-sanitization', context: 'تعقيم بعد الغسيل', priority: 7 },
-        { slug: 'riyadh-pest-control', context: 'رش وقائي', priority: 8 },
-        { slug: 'riyadh-furniture-moving', context: 'نقل أثاث لغسيل السجاد', priority: 9 },
+        { slug: 'sofa-cleaning', context: 'كنب + سجاد — خصم الباقة', priority: 1 },
+        { slug: 'mattress-cleaning', context: 'مراتب + سجاد', priority: 2 },
+        { slug: 'steam-cleaning', context: 'بخار شامل', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف شامل', priority: 4 },
+        { slug: 'floor-cleaning', context: 'أرضية تحت السجاد', priority: 5 },
+        { slug: 'floor-polishing', context: 'تلميع بعد غسيل الموكيت', priority: 6 },
+        { slug: 'sanitization', context: 'تعقيم بعد الغسيل', priority: 7 },
+        { slug: 'pest-control', context: 'رش وقائي', priority: 8 },
+        { slug: 'furniture-moving', context: 'نقل أثاث لغسيل السجاد', priority: 9 },
     ],
 };

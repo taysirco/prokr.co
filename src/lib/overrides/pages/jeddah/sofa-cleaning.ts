@@ -4,6 +4,7 @@
 // ============================================
 
 import type { PageOverride } from '../../types';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -93,19 +94,13 @@ export const override: PageOverride = {
         { entity: 'هيئة الغذاء والدواء', acronym: 'SFDA', url: 'https://sfda.gov.sa', role: 'اعتماد مواد تنظيف المفروشات' },
     ],
 
-    expertReviewer: {
-        name: 'أ.د. عبدالله المسند',
-        title: 'أستاذ جغرافيا المناخ',
-        credential: 'أستاذ جغرافيا المناخ — جامعة القصيم',
-        profileUrl: 'https://x.com/ALMISNID',
-    },
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
             expert: 'أ.د. عبدالله المسند',
             quote: 'الكنب في المدن الساحلية يجمع رطوبة داخلية أعلى بكثير من المدن الجافة — بدون تنظيف بالبخار كل 3-4 أشهر: العث والعفن يتكاثران داخل الحشوة بلا رادع',
             source: 'تحليل مناخي',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -115,15 +110,15 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'jeddah-carpet-cleaning', context: 'غسيل السجاد مع الكنب — خصم الباقة', priority: 1 },
-        { slug: 'jeddah-mattress-cleaning', context: 'المراتب بؤرة العث — تنظيف مع الكنب', priority: 2 },
-        { slug: 'jeddah-steam-cleaning', context: 'بخار 150°م شامل للمنزل — كنب + أرضيات + حمامات', priority: 3 },
-        { slug: 'jeddah-cleaning', context: 'تنظيف شامل للمنزل مع تنظيف الكنب', priority: 4 },
-        { slug: 'jeddah-sanitization', context: 'تعقيم بعد تنظيف الكنب — حماية مزدوجة', priority: 5 },
-        { slug: 'jeddah-furniture-cleaning', context: 'تنظيف أثاث خشبي مع تنظيف الكنب القماشي', priority: 6 },
-        { slug: 'jeddah-pest-control', context: 'عث الكنب يسبب حساسية — مكافحة شاملة', priority: 7 },
-        { slug: 'jeddah-bedbugs-control', context: 'بق الفراش يختبئ في الكنب — فحص مع التنظيف', priority: 8 },
-        { slug: 'jeddah-air-conditioner-cleaning', context: 'المكيف ينشر غبار على الكنب — تنظيفه يقلل التلوث', priority: 9 },
+        { slug: 'carpet-cleaning', context: 'غسيل السجاد مع الكنب — خصم الباقة', priority: 1 },
+        { slug: 'mattress-cleaning', context: 'المراتب بؤرة العث — تنظيف مع الكنب', priority: 2 },
+        { slug: 'steam-cleaning', context: 'بخار 150°م شامل للمنزل — كنب + أرضيات + حمامات', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف شامل للمنزل مع تنظيف الكنب', priority: 4 },
+        { slug: 'sanitization', context: 'تعقيم بعد تنظيف الكنب — حماية مزدوجة', priority: 5 },
+        { slug: 'furniture-cleaning', context: 'تنظيف أثاث خشبي مع تنظيف الكنب القماشي', priority: 6 },
+        { slug: 'pest-control', context: 'عث الكنب يسبب حساسية — مكافحة شاملة', priority: 7 },
+        { slug: 'bedbugs-control', context: 'بق الفراش يختبئ في الكنب — فحص مع التنظيف', priority: 8 },
+        { slug: 'air-conditioner-cleaning', context: 'المكيف ينشر غبار على الكنب — تنظيفه يقلل التلوث', priority: 9 },
     ],
 };
 

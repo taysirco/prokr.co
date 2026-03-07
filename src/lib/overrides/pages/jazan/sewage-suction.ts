@@ -1,6 +1,3 @@
-// شفط بيارات بجازان — Override (E-E-A-T)
-// الزاوية: أمطار تملأ البيارة + تحلل أسرع = امتلاء مزدوج
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -58,19 +55,13 @@ export const override: PageOverride = {
         { entity: AMANA.JAZAN.entity, url: AMANA.JAZAN.url, role: 'الرقابة على خدمات شفط البيارات بجازان', acronym: 'أمانة جازان' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
             expert: 'م. عبدالغني الجند',
             quote: 'بيارات جازان الأسرع امتلاءً بالسعودية — أمطار تتسلل + تحلل استوائي مُسرّع = ضعف سرعة الرياض. جدولة مكثفة + عزل جوانب البيارة = الحل المزدوج',
             source: 'موسوعة "أخطاء في البناء"',
-            url: 'https://x.com/ssrrr22',
         },
     ],
 
@@ -87,19 +78,22 @@ export const override: PageOverride = {
 
     hiddenObjections: [
         { fear: 'شفط كل 2-4 أسابيع = تكلفة عالية', solution: 'طفح بيارة بجازان = تلوث + رائحة + حشرات مدارية + غرامة = 3,000-8,000. عقد ربع سنوي (3,000-6,000/سنة) = أوفر وأأمن من الطوارئ' },
+        { fear: 'السعر أعلى من المتوقع.', solution: 'السعر يشمل معدات صناعية متخصصة + مواد احترافية + عمالة مدربة + ضمان مكتوب. المقارنة العادلة ليست مع عامل عشوائي بل مع تكلفة إصلاح الأضرار الناتجة عن العمل غير المتخصص.' },
     ],
 
     counterNarratives: [
         { myth: 'البيارة ما تحتاج شفط أكثف', truth: 'بجازان: أمطار تتسلل (ماء إضافي) + تحلل أسرع (حرارة+رطوبة) = تمتلئ ×1.5-2 أسرع من الرياض. نفس الجدول = طفح مضمون' },
+        { myth: 'أي شركة تنظيف/صيانة نتيجتها واحدة.', truth: 'الفرق بين شركة مرخصة ومُعتمدة وأخرى عشوائية = الفرق بين معالجة جذرية وإخفاء مؤقت. المعدات المتخصصة والبروتوكولات العلمية تحل المشكلة من جذرها — التنظيف العشوائي يُعيدها أسوأ خلال أسابيع.' },
+        { myth: 'أوفر وأسوي الشغل بنفسي.', truth: 'التوفير الظاهري يتحول لتكلفة مضاعفة: أدوات منزلية لا تصل للعمق المطلوب + مواد غير مناسبة قد تُتلف الأسطح + وقت وجهد بلا ضمان نتيجة. الاحتراف = ضمان + توفير حقيقي على المدى الطويل.' },
     ],
 
     relatedServices: [
-        { slug: 'jazan-sewage-unblocking', context: 'تسليك مجاري — انسداد يُراكم ويُسرّع الطفح', priority: 1 },
-        { slug: 'jazan-pest-control', context: 'مكافحة حشرات — صراصير مدارية من الصرف', priority: 2 },
-        { slug: 'jazan-water-insulation', context: 'عزل مائي — يمنع تسلل أمطار للبيارة', priority: 3 },
-        { slug: 'jazan-water-leak-detection', context: 'كشف تسربات — تسرب يُسرّع امتلاء البيارة', priority: 4 },
-        { slug: 'jazan-bathroom-leak-detection', context: 'فحص حمام — تسرب حمام يزيد حمل البيارة', priority: 5 },
-        { slug: 'jazan-bird-control', context: 'طرد حمام — فضلاته تسد المصارف', priority: 6 },
-        { slug: 'jazan-tanks-cleaning', context: 'تنظيف خزان — مياه نظيفة تقلل حمل الصرف', priority: 7 },
+        { slug: 'sewage-unblocking', context: 'تسليك مجاري — انسداد يُراكم ويُسرّع الطفح', priority: 1 },
+        { slug: 'pest-control', context: 'مكافحة حشرات — صراصير مدارية من الصرف', priority: 2 },
+        { slug: 'water-insulation', context: 'عزل مائي — يمنع تسلل أمطار للبيارة', priority: 3 },
+        { slug: 'water-leak-detection', context: 'كشف تسربات — تسرب يُسرّع امتلاء البيارة', priority: 4 },
+        { slug: 'bathroom-leak-detection', context: 'فحص حمام — تسرب حمام يزيد حمل البيارة', priority: 5 },
+        { slug: 'bird-control', context: 'طرد حمام — فضلاته تسد المصارف', priority: 6 },
+        { slug: 'tanks-cleaning', context: 'تنظيف خزان — مياه نظيفة تقلل حمل الصرف', priority: 7 },
     ],
 };

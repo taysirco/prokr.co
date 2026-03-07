@@ -1,11 +1,3 @@
-// ══════════════════════════════════════════════════════════════
-// مكافحة نمل أبيض بالدمام — Override مخصص (E-E-A-T Grade)
-// صفحة: /dammam/termite-control
-// قطاع YMYL: مالي (ضرر هيكلي 50,000-500,000+ ريال) + سلامة (انهيار)
-// خريطة 2.4: الخضيري (سموم) + المحيميد (بناء/هيكل) → SFDA + بلدي
-// NLP: Subterranean Termites، رطوبة خليجية تسرّع الخشب الرطب، تربة طينية
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
 
@@ -81,19 +73,13 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'اشتراط معالجة النمل الأبيض قبل البناء — حماية المنشآت' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
             expert: 'م. ماجد المحيميد',
             quote: 'كل مبنى جديد بالدمام يجب أن يُعالج بحاجز كيميائي قبل صب الأساسات — التكلفة 5,000-15,000 ريال. بدون حاجز: إصلاح ضرر نمل أبيض = 50,000-500,000+ ريال. الوقاية = 1-3% من تكلفة العلاج',
             source: 'خبير جودة البناء والتشطيبات',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
 
@@ -122,14 +108,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'dammam-pest-control', context: 'مكافحة حشرات شاملة — النمل الأبيض ضمن الخطة', priority: 1 },
-        { slug: 'dammam-ants-control', context: 'نمل عادي ونجار — تأكد أنه ليس أبيض', priority: 2 },
-        { slug: 'dammam-water-leak-detection', context: 'تسرب مياه = رطوبة = تسريع أكل النمل', priority: 3 },
-        { slug: 'dammam-water-insulation', context: 'عزل مائي يحمي الأساسات من الرطوبة المغذية للنمل', priority: 4 },
-        { slug: 'dammam-thermal-insulation', context: 'عزل حراري يشمل حماية من النمل', priority: 5 },
-        { slug: 'dammam-foam-insulation', context: 'عزل فوم — حماية شاملة', priority: 6 },
-        { slug: 'dammam-rodent-control', context: 'فئران تحفر أنفاق = مسارات للنمل', priority: 7 },
-        { slug: 'dammam-insects-spraying', context: 'رش وقائي — جزء من خطة IPM', priority: 8 },
-        { slug: 'dammam-villas-cleaning', context: 'تنظيف فيلا كامل — فحص نمل ضمني', priority: 9 },
+        { slug: 'pest-control', context: 'مكافحة حشرات شاملة — النمل الأبيض ضمن الخطة', priority: 1 },
+        { slug: 'ants-control', context: 'نمل عادي ونجار — تأكد أنه ليس أبيض', priority: 2 },
+        { slug: 'water-leak-detection', context: 'تسرب مياه = رطوبة = تسريع أكل النمل', priority: 3 },
+        { slug: 'water-insulation', context: 'عزل مائي يحمي الأساسات من الرطوبة المغذية للنمل', priority: 4 },
+        { slug: 'thermal-insulation', context: 'عزل حراري يشمل حماية من النمل', priority: 5 },
+        { slug: 'foam-insulation', context: 'عزل فوم — حماية شاملة', priority: 6 },
+        { slug: 'rodent-control', context: 'فئران تحفر أنفاق = مسارات للنمل', priority: 7 },
+        { slug: 'insects-spraying', context: 'رش وقائي — جزء من خطة IPM', priority: 8 },
+        { slug: 'villas-cleaning', context: 'تنظيف فيلا كامل — فحص نمل ضمني', priority: 9 },
     ],
 };

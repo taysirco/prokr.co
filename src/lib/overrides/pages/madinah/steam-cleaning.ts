@@ -79,12 +79,7 @@ export const override: PageOverride = {
         { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'الرقابة على مزودي خدمات النظافة والتعقيم في منطقة المدينة المنورة', acronym: 'أمانة المدينة' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMISNID.name,
-        title: EXPERTS.ALMISNID.title,
-        credential: EXPERTS.ALMISNID.credential,
-        profileUrl: EXPERTS.ALMISNID.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMISNID,
 
     expertCitations: [
         {
@@ -122,11 +117,11 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'madinah-sofa-cleaning', context: 'اغسل بقع الكنب بالشامبو ثم عقّمه بالبخار — بروتوكول مزدوج للنظافة والصحة.', priority: 1 },
-        { slug: 'madinah-carpet-cleaning', context: 'غسيل سجاد + تعقيم بخار = إزالة غبار الحرات وقتل العث معاً.', priority: 2 },
-        { slug: 'madinah-cleaning', context: 'تنظيف شامل للمنزل مع تعقيم بخار للمفروشات والأسطح.', priority: 3 },
-        { slug: 'madinah-pest-control', context: 'البخار يقتل العث — والمبيدات تحمي الزوايا. بروتوكول تكاملي.', priority: 4 },
-        { slug: 'madinah-councils-cleaning', context: 'تعقيم مجالس أرضية بالبخار — حماية ضيوفك من العث والبكتيريا.', priority: 5 },
-        { slug: 'madinah-oven-cleaning', context: 'بخار الأفران يُذيب الحروقات بدون خدش — أكمل نظافة مطبخك.', priority: 6 },
+        { slug: 'sofa-cleaning', context: 'اغسل بقع الكنب بالشامبو ثم عقّمه بالبخار — بروتوكول مزدوج للنظافة والصحة.', priority: 1 },
+        { slug: 'carpet-cleaning', context: 'غسيل سجاد + تعقيم بخار = إزالة غبار الحرات وقتل العث معاً.', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف شامل للمنزل مع تعقيم بخار للمفروشات والأسطح.', priority: 3 },
+        { slug: 'pest-control', context: 'البخار يقتل العث — والمبيدات تحمي الزوايا. بروتوكول تكاملي.', priority: 4 },
+        { slug: 'councils-cleaning', context: 'تعقيم مجالس أرضية بالبخار — حماية ضيوفك من العث والبكتيريا.', priority: 5 },
+        { slug: 'oven-cleaning', context: 'بخار الأفران يُذيب الحروقات بدون خدش — أكمل نظافة مطبخك.', priority: 6 },
     ],
 };

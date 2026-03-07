@@ -1,4 +1,3 @@
-// مكافحة بق الفراش بالطائف — Override (E-E-A-T) | خريطة 2.4: الخضيري → SFDA + بلدي
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -36,22 +35,32 @@ export const override: PageOverride = {
         'بخاخات السوبرماركت قد تطرد البق لغرف أخرى ← تنتشر الإصابة بدلاً من القضاء عليها.',
     ],
     trustAnchors: [
-        { ...GOV.SFDA, role: 'تسجيل المبيدات المستخدمة — نظام غد' },
-        { ...GOV.BALADI, role: 'ترخيص شركات المكافحة — الشهادة الصحية' },
-    ],
-    expertReviewer: { name: EXPERTS.ALKHODAIRY.name, title: EXPERTS.ALKHODAIRY.title, credential: EXPERTS.ALKHODAIRY.credential, profileUrl: EXPERTS.ALKHODAIRY.profileUrl },
-    expertCitations: [{ expert: EXPERTS.ALKHODAIRY.name, quote: 'الطائف = عاصمة السياحة الصيفية ← عاصمة بق الفراش "الترانزيت". الإيجارات القصيرة بدون تعقيم بين الضيوف = الناقل الأول. أصحاب الشاليهات والاستراحات يجب أن يعتبروا التعقيم جزءاً من تكلفة التشغيل.', source: EXPERTS.ALKHODAIRY.title, url: EXPERTS.ALKHODAIRY.profileUrl }],
+
+        { ...{ ...GOV.SFDA, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
+ role: 'تسجيل المبيدات المستخدمة — نظام غد' },
+        { ...{ ...GOV.BALADI, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
+ role: 'ترخيص شركات المكافحة — الشهادة الصحية' },
+        ],
+    expertReviewer: EXPERTS.ALKHODAIRY,
+    expertCitations: [{ expert: EXPERTS.ALKHODAIRY.name, quote: 'الطائف = عاصمة السياحة الصيفية ← عاصمة بق الفراش "الترانزيت". الإيجارات القصيرة بدون تعقيم بين الضيوف = الناقل الأول. أصحاب الشاليهات والاستراحات يجب أن يعتبروا التعقيم جزءاً من تكلفة التشغيل.',
+            source: EXPERTS.ALKHODAIRY.title }],
     saudiRegulations: [REGULATIONS.GHAD_SYSTEM, REGULATIONS.BALADI_HEALTH],
     verificationBadges: [{ badge: '✔️ معالجة حرارية 55°م', authority: 'Lethal Temperature', icon: 'shield-check' }, { badge: '✔️ بروتوكول 3 جلسات', authority: 'استئصال كامل', icon: 'badge-check' }],
     equipment: [
         { name: 'سخانات هواء صناعية (Heat Treatment Units)', use: 'ترفع حرارة الغرفة لـ 55°م لمدة 4+ ساعات — تقتل البق وبيضه في كل مراحل النمو بدون كيماويات.' },
         { name: 'مبيد Micro-Encapsulated (كبسولات)', use: 'يُرش على الحواف والزوايا ← يقتل أي بق يمر لمدة 2-3 أشهر. يُكمل المعالجة الحرارية.' },
     ],
-    hiddenObjections: [{ fear: 'البق حشرة صغيرة — مشكلة بسيطة.', solution: 'البق يلدغ 5-7 مرات في الليلة ← حكة مزمنة ← أرق ← تأثير نفسي (قلق النوم). + التأخير = انتشار لكل الغرف + الملابس + العفش. + إعادة البيع/التأجير = مستحيلة بسمعة "بق". المعالجة المبكرة = أرخص وأسهل.' }],
+    hiddenObjections: [
+        { fear: 'البق حشرة صغيرة — مشكلة بسيطة.', solution: 'البق يلدغ 5-7 مرات في الليلة ← حكة مزمنة ← أرق ← تأثير نفسي (قلق النوم). + التأخير = انتشار لكل الغرف + الملابس + العفش. + إعادة البيع/التأجير = مستحيلة بسمعة "بق". المعالجة المبكرة = أرخص وأسهل.' },
+        { fear: 'الخدمة أغلى من المدن الأخرى.', solution: 'مناخ الطائف يفرض معالجات إضافية (مضاد تكثف + تجفيف + حماية أخشاب ورود). التكلفة الإضافية استثمار يحمي ممتلكاتك من تلف الرطوبة والحشرات الموسمية.' },
+    ],
     counterNarratives: [{ myth: 'البق = قلة نظافة.', truth: 'البق لا علاقة له بالنظافة — يعيش في أنظف الفنادق الخمس نجوم. ينتقل عبر الأمتعة والعفش المستعمل. في الطائف: الإيجارات السياحية هي الناقل الأول وليس النظافة الشخصية.' }],
     relatedServices: [
-        { slug: 'taif-pest-control', context: 'مكافحة شاملة — بروتوكول متكامل.', priority: 1 },
-        { slug: 'taif-pesticide-spraying', context: 'رش وقائي بعد علاج البق.', priority: 2 },
-        { slug: 'taif-sofa-cleaning', context: 'تنظيف كنب بعد معالجة البق — إزالة الفضلات.', priority: 3 },
+        { slug: 'pest-control', context: 'مكافحة شاملة — بروتوكول متكامل.', priority: 1 },
+        { slug: 'pesticide-spraying', context: 'رش وقائي بعد علاج البق.', priority: 2 },
+        { slug: 'sofa-cleaning', context: 'تنظيف كنب بعد معالجة البق — إزالة الفضلات.', priority: 3 },
+        { slug: 'air-conditioner-cleaning', context: 'تنظيف مكيفات تعمل تبريد/تدفئة طوال السنة في مناخ الطائف المتقلب.', priority: 5 },
+        { slug: 'pest-control', context: 'مكافحة حشرات تتكاثر في رطوبة الطائف الشتوية والزراعة المحيطة.', priority: 6 },
+        { slug: 'steam-cleaning', context: 'تعقيم بالبخار لقتل العث والفطريات في مفروشات الطائف الرطبة.', priority: 7 },
     ],
 };

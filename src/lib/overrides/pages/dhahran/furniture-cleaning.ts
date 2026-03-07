@@ -1,94 +1,75 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف أثاث بالظهران — Override مخصص (E-E-A-T Grade)
-// صفحة: /dhahran/furniture-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف أثاث بالظهران — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف أثاث بالظهران. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف أثاث بالظهران — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف أثاث بالظهران', 'تنظيف أثاث الظهران', 'شركة تنظيف أثاث بالظهران', 'أفضل تنظيف أثاث بالظهران'],
+        title: 'تنظيف أثاث بالظهران — NaCl+SiO₂ مفصلات + 75-85% عفن داخلي + PVAc مزدوج (2026)',
+        description: 'تنظيف أثاث الظهران. NaCl يُصدّئ + SiO₂ يخدش المفصلات. 75-85% عفن خزائن. PVAc حرارة+رطوبة. بخور بلمرة. Anti-Corrosion + Anti-Fungal + Conditioner.',
+        h1: 'تنظيف أثاث بالظهران — ملح يُصدّئ ورمل يخدش والرطوبة تُعفّن',
+        keywords: ['تنظيف أثاث بالظهران', 'تنظيف عفش الظهران', 'شركة تنظيف أثاث بالظهران'],
     },
-
     content: {
-        introduction: 'تنظيف أثاث بالظهران — خدمة متخصصة تراعي الظروف المناخية والبيئية في الظهران. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف أثاث بالظهران: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف أثاث بالظهران. خدمة احترافية. ضمان.',
+        introduction: 'الأثاث في الظهران يتعرض لتلف مزدوج. الأولى — NaCl+SiO₂ مفصلات: NaCl يتآكل + SiO₂ يخدش الطلاء = Coating يتقشر ← صدأ أسرع. Anti-Corrosion Silicone. الثانية — 75-85% عفن داخلي: أدراج مُغلقة + خزائن = رطوبة محبوسة = Aspergillus 3-4 أسابيع. Silica Gel + Anti-Fungal + تهوية. الثالثة — PVAc مزدوج: 45°م يلين + 75-85% يمتص رطوبة = مفاصل ضعيفة. أبطأ من الخبر لكن: حتمي. Conditioner. الرابعة — بخور Olibanum بلمرة على أقمشة الأثاث. Enzymatic.',
+        shortAnswer: 'على عكس [ملمّع ومسح] الذي لا يحمي من المزدوج، يعتمد بروتوكولنا في خدمة [تنظيف الأثاث] بمدينة [الظهران] على [Anti-Corrosion + Anti-Fungal + Conditioner + Enzymatic]. ففي ظل [NaCl+SiO₂ + 75-85% + PVAc]، تتفاقم ظاهرة [صدأ+خدش + عفن + تفكك]. لذا؛ يتدخل خبراؤنا عبر [بروتوكول أثاث مزدوج].',
+        heroSubtitle: 'NaCl+SiO₂ صدأ+خدش + 75-85% عفن + PVAc مزدوج',
     },
-
     pricing: [
-        { type: 'تنظيف أثاث — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف أثاث — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'غرفة نوم', unit: 'غرفة', minPrice: 160, maxPrice: 310, time: '2-3 ساعات' },
+        { type: '+ Anti-Fungal + Anti-Corrosion', unit: 'غرفة', minPrice: 210, maxPrice: 400, time: '3-4 ساعات' },
+        { type: 'بيت كامل', unit: 'بيت', minPrice: 420, maxPrice: 940, time: '5-8 ساعات' },
+        { type: 'عقد نصف سنوي', unit: 'سنة', minPrice: 370, maxPrice: 730, time: '2 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف أثاث بالظهران؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف أثاث؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف أثاث؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'SiO₂ يخدش المفصلات — كيف؟', answer: 'SiO₂ ناعم يترسب على Coating المفصلة ← حركة المفصلة = يخدش Coating ← NaCl يدخل المكشوف = صدأ. Anti-Corrosion = يحمي.' },
+        { question: 'عفن خزانة مُغلقة — 75-85% يكفي؟', answer: '75-85% = كافٍ. الخزانة المُغلقة تحبس الرطوبة ← 3-4 أسابيع = Aspergillus. Silica Gel + فتح يومي.' },
+        { question: 'PVAc — أبطأ من الخبر؟', answer: '75-85% < 85-95% = PVAc يمتص أقل = أبطأ. لكن: 45°م = يلين. مزدوج (حرارة+رطوبة) = تفكك حتمي. Conditioner كل 6 أشهر.' },
+        { question: 'Conditioner خشب — ليش؟', answer: '75-85% = انتفاخ. 45°م = انكماش. دورة = شقوق. Conditioner = يوازن.' },
+        { question: 'نصف سنوي — يكفي؟', answer: 'Anti-Corrosion: كل 6 أشهر. Anti-Fungal: كل 5 أشهر. Conditioner: كل 6 أشهر. نصف سنوي = الحد الأدنى.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Anti-Corrosion Silicone على كل مفصلة — SiO₂ يخدش + NaCl يتآكل.',
+        'Silica Gel في كل درج وخزانة — يمتص 75-85% المحبوسة.',
+        'فتح أبواب الخزائن 15 دقيقة يومياً — أبسط حل.',
+        'Conditioner كل 6 أشهر — يوازن انتفاخ/انكماش.',
+        'Enzymatic على أقمشة — يُكسر بوليمر بخور.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'مفصلات + NaCl+SiO₂ = صدأ مُركّب أسرع. Anti-Corrosion = يمنع.',
+        'عفن خزانة 75-85% = جراثيم على الملابس = حساسية.',
+        'PVAc مزدوج = مفاصل تنفك 1-2 سنة. Conditioner = 50-100 ريال.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص التنظيف' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات النظافة بالشرقية' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'أثاث الظهران = مزدوج: NaCl+SiO₂ مفصلات + 75-85% عفن + PVAc (حرارة+رطوبة). Anti-Corrosion + Anti-Fungal + Conditioner = حماية مزدوجة.', source: 'نصائح هندسية — أثاث البيئة المزدوجة' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف أثاث مرخص', authority: 'منصة بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Anti-Corrosion Silicone', use: 'يحمي مفصلات من NaCl+SiO₂' },
+        { name: 'Anti-Fungal + Silica Gel', use: 'يمنع عفن خزائن 75-85%' },
+        { name: 'Wood Conditioner', use: 'يوازن رطوبة — يمنع PVAc مزدوج' },
+        { name: 'Enzymatic', use: 'يُكسر بوليمر بخور' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'أثاث جديد.', solution: 'NaCl+SiO₂ من اليوم الأول. حماية مبكرة = أرخص.' },
+        { fear: 'ملمّع يكفي.', solution: 'سطحي. لا يحمي مفصلات ولا يمنع عفن داخلي.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'مثل الرياض.', truth: 'NaCl إضافي = صدأ. 75-85% = عفن. مختلف.' },
+        { myth: 'خشب يتحمل.', truth: '75-85% + 45°م = انتفاخ/انكماش. دورة = شقوق.' },
+        { myth: 'سنوي.', truth: 'مزدوج + عفن 3-4 أسابيع. نصف سنوي = الحد.' },
     ],
-
     relatedServices: [
-        { slug: 'dhahran-furniture-moving', context: 'نقل عفش بالظهران', priority: 1 },
-        { slug: 'dhahran-furniture-storage', context: 'تخزين عفش بالظهران', priority: 2 },
-        { slug: 'dhahran-dyna', context: 'دينا نقل بالظهران', priority: 3 },
-        { slug: 'dhahran-moving-out', context: 'نقل عفش خروج بالظهران', priority: 4 },
-        { slug: 'dhahran-dabab', context: 'دباب نقل بالظهران', priority: 5 },
-        { slug: 'dhahran-cleaning', context: 'تنظيف منازل بالظهران', priority: 6 },
-        { slug: 'dhahran-tanks-cleaning', context: 'تنظيف خزانات بالظهران', priority: 7 },
-        { slug: 'dhahran-sofa-cleaning', context: 'تنظيف كنب بالظهران', priority: 8 },
-        { slug: 'dhahran-carpet-cleaning', context: 'تنظيف سجاد بالظهران', priority: 9 },
+        { slug: 'furniture-moving', context: 'نقل — حماية', priority: 1 },
+        { slug: 'furniture-storage', context: 'تخزين — NaCl+SiO₂', priority: 2 },
+        { slug: 'sofa-cleaning', context: 'كنب — عث + بخور', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف — مزدوج', priority: 4 },
+        { slug: 'carpet-cleaning', context: 'سجاد — حول الأثاث', priority: 5 },
+        { slug: 'pest-control', context: 'حشرات — رطوبة', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف — مزدوج', priority: 7 },
     ],
 };

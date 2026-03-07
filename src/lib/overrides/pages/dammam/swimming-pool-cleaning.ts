@@ -1,11 +1,3 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف مسابح بالدمام — Override مخصص (E-E-A-T Grade)
-// صفحة: /dammam/swimming-pool-cleaning
-// قطاع YMYL: صحة (Cryptosporidium + كلور + غرق أطفال) + مالي (مضخات 5,000+)
-// خريطة 2.4: المحيميد (خزانات/مسابح) → بلدي + مائي
-// NLP: الراكة، الشاطئ، مجمعات أرامكو/سابك، كلوريدات خليجية، رطوبة، حرارة 48°م
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
 
@@ -79,19 +71,13 @@ export const override: PageOverride = {
         { ...GOV.MAEE, role: 'معايير جودة المياه وترشيد الاستهلاك — تقليل تبديل ماء المسبح' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
             expert: 'م. ماجد المحيميد',
             quote: 'مسبح الدمام يحتاج ضعف جرعة الكلور ونصف وقت الفحص مقارنة بالرياض. الحرارة + الرطوبة + PM2.5 الصناعي = معادلة كيميائية فريدة. فحص pH والكلور يومياً — وليس أسبوعياً',
             source: 'خبير جودة البناء والتشطيبات',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
 
@@ -119,14 +105,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'dammam-tanks-cleaning', context: 'خزان المياه يغذي المسبح — نظافته تؤثر مباشرة', priority: 1 },
-        { slug: 'dammam-sanitization', context: 'تعقيم منطقة المسبح (أرضيات + كراسي + دش)', priority: 2 },
-        { slug: 'dammam-water-leak-detection', context: 'تسرب مسبح: فقدان 3+ سم ماء/يوم = كشف فوري', priority: 3 },
-        { slug: 'dammam-water-insulation', context: 'عزل مائي لحوض المسبح يمنع التسرب', priority: 4 },
-        { slug: 'dammam-cleaning', context: 'تنظيف شامل يشمل محيط المسبح', priority: 5 },
-        { slug: 'dammam-glass-facades-cleaning', context: 'واجهات زجاج حول المسبح تحتاج تنظيف ملوحة', priority: 6 },
-        { slug: 'dammam-pest-control', context: 'مسبح مكشوف = مصدر بعوض — مكافحة حشرات', priority: 7 },
-        { slug: 'dammam-floor-cleaning', context: 'تنظيف أرضيات محيط المسبح — طحالب وترسبات', priority: 8 },
-        { slug: 'dammam-tank-insulation', context: 'عزل خزان تغذية المسبح يحافظ على حرارة الماء', priority: 9 },
+        { slug: 'tanks-cleaning', context: 'خزان المياه يغذي المسبح — نظافته تؤثر مباشرة', priority: 1 },
+        { slug: 'sanitization', context: 'تعقيم منطقة المسبح (أرضيات + كراسي + دش)', priority: 2 },
+        { slug: 'water-leak-detection', context: 'تسرب مسبح: فقدان 3+ سم ماء/يوم = كشف فوري', priority: 3 },
+        { slug: 'water-insulation', context: 'عزل مائي لحوض المسبح يمنع التسرب', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف شامل يشمل محيط المسبح', priority: 5 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات زجاج حول المسبح تحتاج تنظيف ملوحة', priority: 6 },
+        { slug: 'pest-control', context: 'مسبح مكشوف = مصدر بعوض — مكافحة حشرات', priority: 7 },
+        { slug: 'floor-cleaning', context: 'تنظيف أرضيات محيط المسبح — طحالب وترسبات', priority: 8 },
+        { slug: 'tank-insulation', context: 'عزل خزان تغذية المسبح يحافظ على حرارة الماء', priority: 9 },
     ],
 };

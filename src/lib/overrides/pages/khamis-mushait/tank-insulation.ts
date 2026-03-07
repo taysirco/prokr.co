@@ -1,94 +1,74 @@
-// ══════════════════════════════════════════════════════════════
-// عزل خزانات بخميس مشيط — Override مخصص (E-E-A-T Grade)
-// صفحة: /khamis-mushait/tank-insulation
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'عزل خزانات بخميس مشيط — خدمة احترافية معتمدة (2026)',
-        description: 'عزل خزانات بخميس مشيط. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'عزل خزانات بخميس مشيط — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['عزل خزانات بخميس مشيط', 'عزل خزانات خميس مشيط', 'شركة عزل خزانات بخميس مشيط', 'أفضل عزل خزانات بخميس مشيط'],
+        title: 'عزل خزانات بخميس مشيط — أمطار تلوث+60-85% طحالب+ضباب — Closed-Cell+UV! (2026)',
+        description: 'عزل خزانات خميس مشيط. أمطار تلوث! 60-85% طحالب. ضباب أبواغ. Closed-Cell+UV+إحكام غطاء.',
+        h1: 'عزل خزانات بخميس مشيط — أمطار تلوث — Closed-Cell!',
+        keywords: ['عزل خزانات خميس مشيط', 'عزل خزان بخميس مشيط', 'شركة عزل خزانات خميس مشيط'],
     },
-
     content: {
-        introduction: 'عزل خزانات بخميس مشيط — خدمة متخصصة تراعي الظروف المناخية والبيئية في خميس مشيط. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'عزل خزانات بخميس مشيط: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'عزل خزانات بخميس مشيط. خدمة احترافية. ضمان.',
+        introduction: 'خزان خميس مشيط يحتاج عزلاً أقوى من الصحراء! أمطار تلوث: ماء مطر يتسرب للخزان لو الغطاء غير محكم ← تلوث الماء. إحكام غطاء Anti-Leak. 60-85% = طحالب: رطوبة تدخل الخزان ← طحالب تنمو على الجدران الداخلية 2× أسرع. عزل Closed-Cell PU Foam غذائي = يمنع رطوبة + يحمي من تآكل. ضباب: يحمل أبواغ بكتيريا وطحالب ← تدخل من فتحات الخزان ← تلوث. فلتر تهوية. برد 0-5°م: مياه باردة جداً شتاءً ← يحتاج حماية من تجمد في مواسير خارجية. مقارنة: عنيزة = لا أمطار + لا طحالب + لا ضباب = عزل أساسي يكفي. خميس = عزل مقوّى+إحكام.',
+        shortAnswer: 'على عكس [العزل الأساسي بدون إحكام]، يعتمد بروتوكولنا في خدمة [عزل الخزانات] بمدينة [خميس مشيط] على [Closed-Cell PU+إحكام غطاء+فلتر تهوية+حماية تجمد]. ففي ظل [أمطار تلوث+60-85% طحالب+ضباب أبواغ+برد 0°م]، تتفاقم ظاهرة [تلوث+طحالب+أبواغ+تجمد]. لذا؛ يتدخل فنيونا عبر [عزل ← إحكام ← فلتر ← حماية].',
+        heroSubtitle: 'أمطار تلوث + طحالب 2× + ضباب — Closed-Cell+إحكام!',
     },
-
     pricing: [
-        { type: 'عزل خزانات — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'عزل خزانات — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'خزان أرضي (< 10 م³)', unit: 'خزان', minPrice: 300, maxPrice: 650, time: '1 يوم' },
+        { type: 'خزان علوي', unit: 'خزان', minPrice: 200, maxPrice: 420, time: '4-6 ساعات' },
+        { type: '+ إحكام غطاء+فلتر', unit: 'إضافي', minPrice: 120, maxPrice: 250, time: '2 ساعة' },
+        { type: 'فحص + إصلاح عزل', unit: 'خدمة', minPrice: 180, maxPrice: 380, time: '3-4 ساعات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة عزل خزانات بخميس مشيط؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق عزل خزانات؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على عزل خزانات؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش خزان خميس يحتاج عزل أقوى من عنيزة؟', answer: 'أمطار تلوث+طحالب 2×+ضباب أبواغ. عنيزة: لا مطر+لا طحالب = عزل أساسي.' },
+        { question: 'كيف الأمطار تلوث الخزان بخميس مشيط؟', answer: 'ماء مطر يدخل من غطاء غير محكم ← يحمل تلوث. إحكام Anti-Leak إلزامي.' },
+        { question: 'هل الطحالب تنمو في الخزان بخميس مشيط؟', answer: '60-85% = طحالب 2× أسرع على الجدران. Closed-Cell + تنظيف كل 3 أشهر.' },
+        { question: 'كم تكلفة عزل خزان بخميس مقارنة بعنيزة؟', answer: 'أغلى 20-30% — Closed-Cell+إحكام+فلتر. 200-650 مقابل 160-500.' },
+        { question: 'هل البرد يأثر على الخزان بخميس مشيط؟', answer: '0-5°م = مواسير خارجية قد تتجمد. عزل مواسير شتوي إلزامي.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Closed-Cell PU — لا يمتص رطوبة 60-85%.',
+        'إحكام غطاء — أمطار تلوث.',
+        'فلتر تهوية — ضباب يحمل أبواغ.',
+        'تنظيف كل 3 أشهر — طحالب 2×.',
+        'عزل مواسير — برد 0°م تجمد.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'غطاء غير محكم + أمطار = تلوث ماء شرب — خطر صحي YMYL.',
+        'طحالب × 6 أشهر = طبقة سميكة تغيّر طعم ولون الماء.',
+        'مواسير غير معزولة + 0°م = تجمد + انفجار.',
     ],
-
     trustAnchors: [
-        { ...GOV.SBC, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.NWC, role: 'معايير خزانات مياه الشرب' },
+        { ...GOV.BALADI, role: 'ترخيص مقاولي العزل' },
+        { entity: AMANA.ASIR.entity, url: AMANA.ASIR.url, role: 'اشتراطات أمانة عسير' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALJUND.name,
-        title: EXPERTS.ALJUND.title,
-        credential: EXPERTS.ALJUND.credential,
-        profileUrl: EXPERTS.ALJUND.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALJUND,
     expertCitations: [
-        {
-            expert: EXPERTS.ALJUND.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALJUND.title,
-            url: EXPERTS.ALJUND.profileUrl,
-        },
+        { expert: EXPERTS.ALJUND.name, quote: 'خزان خميس: أمطار+طحالب+ضباب. Closed-Cell+إحكام. أقوى من عزل الصحراء.', source: 'موسوعة أخطاء — خزانات جبلية' },
     ],
-
-    saudiRegulations: [REGULATIONS.SBC_601],
-
-    verificationBadges: [
-        { badge: '✔️ عزل مطابق لكود SBC', authority: 'كود البناء السعودي', icon: 'shield-check' },
-    ],
-
+    saudiRegulations: [REGULATIONS.NWC_REPORT],
+    verificationBadges: [{ badge: '✔️ عزل خزان مرخص', authority: 'بلدي + NWC', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Closed-Cell PU غذائي', use: 'لا يمتص رطوبة — آمن لمياه الشرب' },
+        { name: 'إحكام Anti-Leak', use: 'يمنع دخول أمطار وضباب' },
+        { name: 'فلتر تهوية', use: 'يمنع أبواغ ضبابية من الدخول' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'عزل عادي يكفي.', solution: 'أمطار+طحالب = Closed-Cell+إحكام.' },
+        { fear: 'مثل عنيزة.', solution: 'عنيزة: لا مطر+لا طحالب = أبسط.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'الخزان لا يحتاج إحكام.', truth: 'أمطار خميس = تلوث. إحكام إلزامي.' },
+        { myth: 'Open-Cell أرخص.', truth: 'يمتص رطوبة 60-85% = يتعفّن.' },
     ],
-
     relatedServices: [
-        { slug: 'khamis-mushait-furniture-moving', context: 'نقل عفش بخميس مشيط', priority: 1 },
-        { slug: 'khamis-mushait-furniture-storage', context: 'تخزين عفش بخميس مشيط', priority: 2 },
-        { slug: 'khamis-mushait-dyna', context: 'دينا نقل بخميس مشيط', priority: 3 },
-        { slug: 'khamis-mushait-moving-out', context: 'نقل عفش خروج بخميس مشيط', priority: 4 },
-        { slug: 'khamis-mushait-dabab', context: 'دباب نقل بخميس مشيط', priority: 5 },
-        { slug: 'khamis-mushait-cleaning', context: 'تنظيف منازل بخميس مشيط', priority: 6 },
-        { slug: 'khamis-mushait-tanks-cleaning', context: 'تنظيف خزانات بخميس مشيط', priority: 7 },
-        { slug: 'khamis-mushait-sofa-cleaning', context: 'تنظيف كنب بخميس مشيط', priority: 8 },
-        { slug: 'khamis-mushait-carpet-cleaning', context: 'تنظيف سجاد بخميس مشيط', priority: 9 },
+        { slug: 'tanks-cleaning', context: 'تنظيف خزانات', priority: 1 },
+        { slug: 'tank-leak-detection', context: 'تسرب خزان', priority: 2 },
+        { slug: 'water-insulation', context: 'عزل مائي', priority: 3 },
+        { slug: 'water-leak-detection', context: 'تسرب مياه', priority: 4 },
+        { slug: 'foam-insulation', context: 'عزل فوم', priority: 5 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 6 },
+        { slug: 'pest-control', context: 'حشرات', priority: 7 },
     ],
 };

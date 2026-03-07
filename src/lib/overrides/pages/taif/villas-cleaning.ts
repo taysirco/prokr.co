@@ -1,4 +1,3 @@
-// تنظيف فلل بالطائف — Override (E-E-A-T) | خريطة 2.4: المسند → بلدي
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -33,9 +32,12 @@ export const override: PageOverride = {
         'لا تسكن فيلا مغلقة 6 أشهر بدون تنظيف — الأبواغ الفطرية المركزة تُسبب حساسية حادة فورية خاصة للأطفال.',
         'فلل بدون عزل حراري = تكثف رطوبة على الأسقف والجدران الباردة شتاءً ← عفن مزمن كل سنة.',
     ],
-    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات التنظيف — اشتراطات جودة وسلامة' }],
-    expertReviewer: { name: EXPERTS.ALMISNID.name, title: EXPERTS.ALMISNID.title, credential: EXPERTS.ALMISNID.credential, profileUrl: EXPERTS.ALMISNID.profileUrl },
-    expertCitations: [{ expert: EXPERTS.ALMISNID.name, quote: 'فلل الهدا والشفا المغلقة 6-8 أشهر تتراكم فيها أبواغ فطرية بتركيز يصل 10 أضعاف المنازل المسكونة. بروتوكول التهوية المسبقة قبل الدخول = ليس ترفاً بل ضرورة صحية — خاصة لعائلات فيها أطفال أو كبار سن.', source: EXPERTS.ALMISNID.title, url: EXPERTS.ALMISNID.profileUrl }],
+    trustAnchors: [
+{ ...{ ...GOV.BALADI, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
+ role: 'ترخيص شركات التنظيف — اشتراطات جودة وسلامة' }    ],
+    expertReviewer: EXPERTS.ALMISNID,
+    expertCitations: [{ expert: EXPERTS.ALMISNID.name, quote: 'فلل الهدا والشفا المغلقة 6-8 أشهر تتراكم فيها أبواغ فطرية بتركيز يصل 10 أضعاف المنازل المسكونة. بروتوكول التهوية المسبقة قبل الدخول = ليس ترفاً بل ضرورة صحية — خاصة لعائلات فيها أطفال أو كبار سن.',
+            source: EXPERTS.ALMISNID.title }],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
     verificationBadges: [{ badge: '✔️ بروتوكول فتح موسمي', authority: 'تهوية + تعقيم + تجفيف', icon: 'shield-check' }, { badge: '✔️ تعقيم مضاد عفن', authority: 'Antifungal', icon: 'badge-check' }],
     equipment: [
@@ -43,12 +45,18 @@ export const override: PageOverride = {
         { name: 'جهاز بخار 150°م + مكنسة HEPA', use: 'البخار يقتل العفن والعث. HEPA تحبس الأبواغ بدون إعادة نشرها.' },
         { name: 'مزيل رطوبة صناعي + مبيد فطري', use: 'التجفيف يمنع عودة العفن + المبيد يحمي 3-6 أشهر.' },
     ],
-    hiddenObjections: [{ fear: 'أفتح الفيلا وأمسحها بنفسي — أوفر.', solution: 'فتح فيلا مغلقة 6 أشهر بدون تهوية مسبقة + مسح بدون HEPA = استنشاق أبواغ مركزة + نشر العفن بدلاً من إزالته. التنظيف الاحترافي: تهوية قبل الدخول ← HEPA ← بخار ← تجفيف. 600 ريال لحماية صحة عائلتك طوال الموسم.' }],
+    hiddenObjections: [
+        { fear: 'أفتح الفيلا وأمسحها بنفسي — أوفر.', solution: 'فتح فيلا مغلقة 6 أشهر بدون تهوية مسبقة + مسح بدون HEPA = استنشاق أبواغ مركزة + نشر العفن بدلاً من إزالته. التنظيف الاحترافي: تهوية قبل الدخول ← HEPA ← بخار ← تجفيف. 600 ريال لحماية صحة عائلتك طوال الموسم.' },
+        { fear: 'الخدمة أغلى من المدن الأخرى.', solution: 'مناخ الطائف يفرض معالجات إضافية (مضاد تكثف + تجفيف + حماية أخشاب ورود). التكلفة الإضافية استثمار يحمي ممتلكاتك من تلف الرطوبة والحشرات الموسمية.' },
+    ],
     counterNarratives: [{ myth: 'الفيلا مُغلقة ونظيفة — ما دخلها أحد.', truth: 'الغبار يدخل من الشقوق. الرطوبة تدخل من الهواء. العفن لا يحتاج بشراً ← يحتاج رطوبة 65%+ فقط. فيلا مغلقة في شتاء الطائف (رطوبة 85%) = مصنع عفن. "مغلقة" = أوسخ — ليس أنظف.' }],
     relatedServices: [
-        { slug: 'taif-cleaning', context: 'تنظيف شامل — البروتوكول الأساسي.', priority: 1 },
-        { slug: 'taif-pest-control', context: 'رش فيلا وقائي مع التنظيف.', priority: 2 },
-        { slug: 'taif-sofa-cleaning', context: 'كنب الفيلا الموسمية يحتاج غسيل عميق.', priority: 3 },
-        { slug: 'taif-carpet-cleaning', context: 'سجاد الفيلا — عث مكثف بعد الإغلاق.', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف شامل — البروتوكول الأساسي.', priority: 1 },
+        { slug: 'pest-control', context: 'رش فيلا وقائي مع التنظيف.', priority: 2 },
+        { slug: 'sofa-cleaning', context: 'كنب الفيلا الموسمية يحتاج غسيل عميق.', priority: 3 },
+        { slug: 'carpet-cleaning', context: 'سجاد الفيلا — عث مكثف بعد الإغلاق.', priority: 4 },
+        { slug: 'air-conditioner-cleaning', context: 'تنظيف مكيفات تعمل تبريد/تدفئة طوال السنة في مناخ الطائف المتقلب.', priority: 5 },
+        { slug: 'pest-control', context: 'مكافحة حشرات تتكاثر في رطوبة الطائف الشتوية والزراعة المحيطة.', priority: 6 },
+        { slug: 'steam-cleaning', context: 'تعقيم بالبخار لقتل العث والفطريات في مفروشات الطائف الرطبة.', priority: 7 },
     ],
 };

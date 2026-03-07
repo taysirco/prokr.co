@@ -1,94 +1,19 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف بالبخار بالباحة — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-baha/steam-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
 
 export const override: PageOverride = {
-    meta: {
-        title: 'تنظيف بالبخار بالباحة — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف بالبخار بالباحة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف بالبخار بالباحة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف بالبخار بالباحة', 'تنظيف بالبخار الباحة', 'شركة تنظيف بالبخار بالباحة', 'أفضل تنظيف بالبخار بالباحة'],
-    },
-
-    content: {
-        introduction: 'تنظيف بالبخار بالباحة — خدمة متخصصة تراعي الظروف المناخية والبيئية في الباحة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف بالبخار بالباحة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف بالبخار بالباحة. خدمة احترافية. ضمان.',
-    },
-
-    pricing: [
-        { type: 'تنظيف بالبخار — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف بالبخار — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
-    ],
-
-    faq: [
-        { question: 'كم تكلفة تنظيف بالبخار بالباحة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف بالبخار؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف بالبخار؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
-    ],
-
-    expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
-    ],
-
-    warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
-    ],
-
-    trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
-    ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
-    expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
-    ],
-
-    saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
-    equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
-    ],
-
-    hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
-    ],
-
-    counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
-    ],
-
-    relatedServices: [
-        { slug: 'al-baha-furniture-moving', context: 'نقل عفش بالباحة', priority: 1 },
-        { slug: 'al-baha-furniture-storage', context: 'تخزين عفش بالباحة', priority: 2 },
-        { slug: 'al-baha-dyna', context: 'دينا نقل بالباحة', priority: 3 },
-        { slug: 'al-baha-moving-out', context: 'نقل عفش خروج بالباحة', priority: 4 },
-        { slug: 'al-baha-dabab', context: 'دباب نقل بالباحة', priority: 5 },
-        { slug: 'al-baha-cleaning', context: 'تنظيف منازل بالباحة', priority: 6 },
-        { slug: 'al-baha-tanks-cleaning', context: 'تنظيف خزانات بالباحة', priority: 7 },
-        { slug: 'al-baha-sofa-cleaning', context: 'تنظيف كنب بالباحة', priority: 8 },
-        { slug: 'al-baha-carpet-cleaning', context: 'تنظيف سجاد بالباحة', priority: 9 },
-    ],
+    meta: { title: 'تنظيف بالبخار بالباحة — عفن ضباب موسمي + عث غابة + Laterite = ثلاثي البخار (2026)', description: 'تنظيف بالبخار الباحة. بخار يقتل عفن ضباب + عث غابة عرعر + يُذيب Laterite سطحي. Dehumidifier في موسم الضباب. يجف طبيعياً باقي السنة.', h1: 'تنظيف بالبخار بالباحة — يقتل عفن ضباب + عث غابة', keywords: ['تنظيف بالبخار بالباحة', 'تنظيف بخار الباحة', 'شركة تنظيف بالبخار بالباحة'] },
+    content: { introduction: 'البخار في الباحة = أداة موسمية مزدوجة. في الضباب (يوليو-أكتوبر): يقتل عفن Penicillium + لكن Dehumidifier بعده (80% لا تُجفف — مثل جازان). باقي السنة (40-60%): يجف طبيعياً (مثل الرياض). + يقتل عث غابة العرعر. + يُذيب Laterite سطحي.', shortAnswer: 'في الضباب: بخار + Dehumidifier. باقي السنة: يجف طبيعياً. يقتل عفن + عث + Laterite.', heroSubtitle: 'موسمي مزدوج: ضباب = Dehumidifier — باقي السنة = يجف طبيعياً' },
+    pricing: [{ type: 'بخار — غرفة', unit: 'غرفة', minPrice: 80, maxPrice: 160, time: '30-60 دقيقة' }, { type: 'بخار — شقة كاملة', unit: 'شقة', minPrice: 250, maxPrice: 500, time: '2-3 ساعات' }],
+    faq: [{ question: 'Dehumidifier — متى يلزم؟', answer: 'يوليو-أكتوبر (ضباب 80%): يلزم — مثل جازان. نوفمبر-يونيو (40-60%): لا يلزم — يجف طبيعياً.' }],
+    expertTips: ['Dehumidifier فقط في موسم الضباب.', 'بخار بعد كل موسم ضباب — عفن + عث.', 'Laterite السطحي: بخار يُذيبه.'],
+    warnings: ['بخار في ضباب 80% بدون Dehumidifier = عفن أسوأ.'],
+    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات التنظيف' }],
+    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertCitations: [{ expert: EXPERTS.ALMOHAIMED.name, quote: 'بخار الباحة: موسمي مزدوج. ضباب = Dehumidifier. باقي = طبيعي.', source: 'نصائح هندسية — البخار في البيئات الجبلية' }],
+    saudiRegulations: [REGULATIONS.BALADI_HEALTH], verificationBadges: [{ badge: '✔️ بخار مرخص', authority: 'بلدي', icon: 'shield-check' }],
+    equipment: [{ name: 'بخار 130°م', use: 'يقتل عفن + عث + يُذيب Laterite' }, { name: 'Dehumidifier', use: 'فقط في موسم الضباب (يوليو-أكتوبر)' }],
+    hiddenObjections: [{ fear: 'البخار يبلل.', solution: '40-60% عادي = يجف. 80% ضباب = Dehumidifier.' }],
+    counterNarratives: [{ myth: 'كل السنة واحد.', truth: 'موسمي مزدوج. ضباب ≠ باقي السنة.' }],
+    relatedServices: [{ slug: 'carpet-cleaning', context: 'سجاد — عفن + عث', priority: 1 }, { slug: 'sofa-cleaning', context: 'كنب — ضباب', priority: 2 }, { slug: 'cleaning', context: 'تنظيف — المنزل', priority: 3 }],
 };

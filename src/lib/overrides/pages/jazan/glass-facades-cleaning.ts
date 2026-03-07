@@ -1,94 +1,56 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف واجهات زجاجية بجازان — Override مخصص (E-E-A-T Grade)
-// صفحة: /jazan/glass-facades-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف واجهات زجاجية بجازان — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف واجهات زجاجية بجازان. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف واجهات زجاجية بجازان — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف واجهات زجاجية بجازان', 'تنظيف واجهات زجاجية جازان', 'شركة تنظيف واجهات زجاجية بجازان', 'أفضل تنظيف واجهات زجاجية بجازان'],
+        title: 'تنظيف واجهات زجاجية بجازان — ملح يأكل السيلكون + طحالب على الزجاج + Salt Fog Etching (2026)',
+        description: 'تنظيف واجهات جازان. ملح البحر الأحمر يأكل السيلكون 3× أسرع. طحالب/أشنات تنمو على الزجاج. Salt Fog Etching يُعتم. Marine-Grade Sealant + Biocide + Deionized.',
+        h1: 'تنظيف واجهات زجاجية بجازان — الملح يأكل والطحالب تنمو والضباب الملحي يُعتم',
+        keywords: ['تنظيف واجهات زجاجية بجازان', 'تنظيف واجهات جازان', 'شركة تنظيف واجهات بجازان'],
     },
-
     content: {
-        introduction: 'تنظيف واجهات زجاجية بجازان — خدمة متخصصة تراعي الظروف المناخية والبيئية في جازان. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف واجهات زجاجية بجازان: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف واجهات زجاجية بجازان. خدمة احترافية. ضمان.',
+        introduction: 'الواجهات في جازان تتعرض لبيئة بحرية استوائية فريدة. (1) ملح يأكل السيلكون: NaCl + 80% = يتسرب في السيلكون ← يُفتته من الداخل. عمر: 1-2 سنة (جازان) مقابل 5-8 (الرياض). Marine-Grade Sealant فقط. (2) طحالب/أشنات على الزجاج: 80% + ضوء = نمو بيولوجي على الزجاج الخارجي. Biocide + Anti-Moss. (3) Salt Fog Etching: رذاذ البحر (Salt Fog) يُرسّب ميكرو-ملح على الزجاج ← يمتص رطوبة ← يُنتج محلول حمضي خفيف ← Micro-Etching = زجاج مُعتم. Deionized + CeO₂ يستعيد الشفافية.',
+        shortAnswer: 'ملح يأكل السيلكون 3× + طحالب تنمو + Salt Fog يُعتم. Marine-Grade + Biocide + Deionized + CeO₂.',
+        heroSubtitle: 'بيئة بحرية استوائية: ملح يأكل + طحالب تنمو + ضباب ملحي يُعتم',
     },
-
     pricing: [
-        { type: 'تنظيف واجهات زجاجية — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف واجهات زجاجية — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'تنظيف واجهة — محل (حتى 50 م²)', unit: 'خدمة', minPrice: 200, maxPrice: 400, time: '2-3 ساعات' },
+        { type: 'تنظيف + CeO₂ + Hydrophobic', unit: 'خدمة', minPrice: 400, maxPrice: 800, time: '4-6 ساعات' },
+        { type: 'فحص + تجديد Marine Sealant', unit: 'خدمة', minPrice: 300, maxPrice: 700, time: '3-5 ساعات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف واجهات زجاجية بجازان؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف واجهات زجاجية؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف واجهات زجاجية؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'السيلكون ينتهي أسرع؟', answer: '1-2 سنة — ملح + 80% = يُفتّت من الداخل. Marine-Grade: 3-4 سنوات. فحص كل 6 أشهر.' },
+        { question: 'زجاج مُعتم — ليس أوساخ؟', answer: 'Salt Fog Etching: ميكرو-ملح يُنتج محلول حمضي ← Micro-Etching. CeO₂ يملأ الخدوش ← يستعيد الشفافية. Hydrophobic يمنع التكرار.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Marine-Grade Sealant حصراً — السيلكون العادي يفنى خلال سنة.',
+        'Biocide كل 3 أشهر — طحالب تعود سريعاً في 80%.',
+        'Deionized فقط — ماء صنبور = أملاح إضافية.',
+        'CeO₂ كل 6 أشهر — يستعيد الشفافية من Salt Fog Etching.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'سيلكون عادي في جازان = يتفتت خلال سنة = تسلل ماء + ملح = تلف داخلي.',
+        'ماء صنبور في الغسل = أملاح إضافية = Etching أسوأ. Deionized فقط.',
     ],
-
-    trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
-    ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات تنظيف الواجهات' }, { ...GOV.SCE, role: 'اعتماد فنيي الواجهات' }],
+    expertReviewer: EXPERTS.ALJUND,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALJUND.name, quote: 'واجهات جازان: بيئة بحرية استوائية = أسرع تدهور سيلكون (1-2 سنة) + Salt Fog Etching + نمو بيولوجي. Marine-Grade + CeO₂ + Biocide = الحد الأدنى.', source: 'موسوعة أخطاء — الواجهات في البيئة البحرية الاستوائية' },
     ],
-
-    saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    saudiRegulations: [REGULATIONS.SBC_601],
+    verificationBadges: [{ badge: '✔️ تنظيف واجهات مرخص', authority: 'بلدي + SCE', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Marine-Grade Sealant', use: 'يتحمل NaCl + 80% — 3-4 سنوات بدلاً من 1' },
+        { name: 'Deionized Water', use: 'غسل بدون أملاح إضافية' },
+        { name: 'CeO₂ + Hydrophobic', use: 'يستعيد الشفافية + يمنع Salt Fog Etching' },
+        { name: 'Biocide Anti-Moss', use: 'يقتل طحالب/أشنات + يمنع العودة 3 أشهر' },
     ],
-
-    hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
-    ],
-
-    counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
-    ],
-
+    hiddenObjections: [{ fear: 'Marine-Grade أغلى.', solution: 'سيلكون عادي × تجديد كل سنة = أغلى على 5 سنوات. Marine-Grade × 3-4 سنوات = أرخص 40%.' }],
+    counterNarratives: [{ myth: 'الزجاج لا يتأثر.', truth: 'Salt Fog Micro-Etching يُعتمه تدريجياً. + الطحالب تنمو على السطح. + السيلكون يفنى = تسلل.' }],
     relatedServices: [
-        { slug: 'jazan-furniture-moving', context: 'نقل عفش بجازان', priority: 1 },
-        { slug: 'jazan-furniture-storage', context: 'تخزين عفش بجازان', priority: 2 },
-        { slug: 'jazan-dyna', context: 'دينا نقل بجازان', priority: 3 },
-        { slug: 'jazan-moving-out', context: 'نقل عفش خروج بجازان', priority: 4 },
-        { slug: 'jazan-dabab', context: 'دباب نقل بجازان', priority: 5 },
-        { slug: 'jazan-cleaning', context: 'تنظيف منازل بجازان', priority: 6 },
-        { slug: 'jazan-tanks-cleaning', context: 'تنظيف خزانات بجازان', priority: 7 },
-        { slug: 'jazan-sofa-cleaning', context: 'تنظيف كنب بجازان', priority: 8 },
-        { slug: 'jazan-carpet-cleaning', context: 'تنظيف سجاد بجازان', priority: 9 },
+        { slug: 'marble-polishing', context: 'رخام — نفس ملح + طحالب', priority: 1 },
+        { slug: 'cleaning', context: 'تنظيف — المبنى كاملاً', priority: 2 },
+        { slug: 'villas-cleaning', context: 'فلل — واجهات الفيلا', priority: 3 },
+        { slug: 'office-cleaning', context: 'مكاتب — واجهات المكتب', priority: 4 },
     ],
 };

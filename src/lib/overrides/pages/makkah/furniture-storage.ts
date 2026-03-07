@@ -90,7 +90,6 @@ export const override: PageOverride = {
             expert: 'م. ماجد المحيميد',
             quote: 'تخزين العفش في سطح أو ملحق مكشوف في مكة = إعدام بطيء. حرارة 50°م+ تُذيب أصماغ الأخشاب وتُفكّك الأثاث. المستودع المعزول حرارياً هو الخيار الوحيد الذي يحمي استثمارك',
             source: 'خبير جودة البناء والتشطيبات',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
 
@@ -121,12 +120,12 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'makkah-furniture-moving', context: 'نقل أثاثك من بيتك للمستودع — فك + تغليف + نقل + تخزين', priority: 1 },
-        { slug: 'makkah-furniture-cleaning', context: 'تنظيف الأثاث قبل التخزين — البقع + رطوبة مغلقة = عفن', priority: 2 },
-        { slug: 'makkah-pest-control', context: 'رش أثاثك قبل التخزين — إذا كان بيتك فيه حشرات', priority: 3 },
-        { slug: 'makkah-sofa-cleaning', context: 'غسيل كنب قبل التغليف — نظيف يدخل نظيف يخرج', priority: 4 },
-        { slug: 'makkah-termite-control', context: 'مكافحة نمل أبيض — حماية الأخشاب المُخزّنة', priority: 5 },
-        { slug: 'makkah-cleaning', context: 'تنظيف بيتك الجديد قبل استرجاع العفش من التخزين', priority: 6 },
-        { slug: 'makkah-ac-installation', context: 'تركيب مكيفات بيتك الجديد قبل نقل العفش من المستودع', priority: 7 },
+        { slug: 'furniture-moving', context: 'نقل أثاثك من بيتك للمستودع — فك + تغليف + نقل + تخزين', priority: 1 },
+        { slug: 'furniture-cleaning', context: 'تنظيف الأثاث قبل التخزين — البقع + رطوبة مغلقة = عفن', priority: 2 },
+        { slug: 'pest-control', context: 'رش أثاثك قبل التخزين — إذا كان بيتك فيه حشرات', priority: 3 },
+        { slug: 'sofa-cleaning', context: 'غسيل كنب قبل التغليف — نظيف يدخل نظيف يخرج', priority: 4 },
+        { slug: 'termite-control', context: 'مكافحة نمل أبيض — حماية الأخشاب المُخزّنة', priority: 5 },
+        { slug: 'cleaning', context: 'تنظيف بيتك الجديد قبل استرجاع العفش من التخزين', priority: 6 },
+        { slug: 'ac-installation', context: 'تركيب مكيفات بيتك الجديد قبل نقل العفش من المستودع', priority: 7 },
     ],
 };

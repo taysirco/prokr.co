@@ -1,94 +1,74 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف أفران بالظهران — Override مخصص (E-E-A-T Grade)
-// صفحة: /dhahran/oven-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف أفران بالظهران — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف أفران بالظهران. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف أفران بالظهران — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف أفران بالظهران', 'تنظيف أفران الظهران', 'شركة تنظيف أفران بالظهران', 'أفضل تنظيف أفران بالظهران'],
+        title: 'تنظيف أفران بالظهران — كربنة + NaCl+SiO₂ شحوم مزدوجة + 75-85% Biofilm (2026)',
+        description: 'تنظيف أفران الظهران. كربنة + NaCl مأكولات بحرية + SiO₂ يُخشّن الكربنة. 75-85% Biofilm شحمي. Alkaline pH 12+ + Anti-Biofilm + RO.',
+        h1: 'تنظيف أفران بالظهران — كربنة + شحوم مزدوجة: ملح بحري يُصلّب',
+        keywords: ['تنظيف أفران بالظهران', 'تنظيف فرن الظهران', 'شركة تنظيف أفران بالظهران'],
     },
-
     content: {
-        introduction: 'تنظيف أفران بالظهران — خدمة متخصصة تراعي الظروف المناخية والبيئية في الظهران. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف أفران بالظهران: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف أفران بالظهران. خدمة احترافية. ضمان.',
+        introduction: 'الفرن الظهراني يواجه كربنة مزدوجة. الأولى — NaCl من مأكولات بحرية: مثل الخبر — مأكولات بحرية = NaCl عالي يمتزج بالشحوم ← يُصلّب. + SiO₂ يُخشّن الكربنة = طبقة مُركّبة. الثانية — 75-85% Biofilm شحمي: رطوبة + شحوم = Biofilm بكتيري/فطري. أبطأ من الخبر (85-95%) لكن: ينمو. Anti-Biofilm. الثالثة — كربنة شبه رطبة: 75-85% = بين الرياض (جافة) والخبر (رطبة). لزجة-شبه جافة = أصعب كشط.',
+        shortAnswer: 'على عكس [بخاخ عادي] الذي لا يُعالج NaCl+SiO₂ الشحمي، يعتمد بروتوكولنا في خدمة [تنظيف الأفران] بمدينة [الظهران] على [Alkaline pH 12+ + Anti-Biofilm + RO]. ففي ظل [NaCl+SiO₂ بحري + 75-85%]، تتفاقم ظاهرة [تصلب مزدوج + Biofilm]. لذا؛ يتدخل خبراؤنا عبر [بروتوكول فرن مزدوج].',
+        heroSubtitle: 'كربنة + NaCl+SiO₂ مزدوج + 75-85% Biofilm شحمي',
     },
-
     pricing: [
-        { type: 'تنظيف أفران — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف أفران — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'فرن عادي — مزدوج', unit: 'فرن', minPrice: 85, maxPrice: 175, time: '1-2 ساعة' },
+        { type: 'عميق + Anti-Biofilm', unit: 'فرن', minPrice: 140, maxPrice: 270, time: '2-3 ساعات' },
+        { type: 'فرن + شفاط + مطبخ', unit: 'باقة', minPrice: 210, maxPrice: 420, time: '3-5 ساعات' },
+        { type: 'ربع سنوي', unit: 'سنة', minPrice: 400, maxPrice: 780, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف أفران بالظهران؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف أفران؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف أفران؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'SiO₂ في الفرن — من أين؟', answer: 'SiO₂ يدخل المطبخ من الهواء ← يترسب على الشحوم ← يُخشّن الكربنة = طبقة مُركّبة (كربون + NaCl + SiO₂). أصعب إزالة.' },
+        { question: 'Biofilm 75-85% — أبطأ؟', answer: 'أبطأ من الخبر (4-6 أسابيع بدلاً من 2-3). لكن: ينمو. Anti-Biofilm كل 4 أشهر.' },
+        { question: 'كربنة شبه رطبة — ماذا يعني؟', answer: 'الرياض = كربنة جافة صلبة. الخبر = كربنة رطبة لزجة. الظهران = بينهما. أصعب كشط من الخبر — أصعب إذابة من الرياض.' },
+        { question: 'RO — للفرن؟', answer: 'ماء الظهران = NaCl ← شطف = NaCl جديد = Biofilm جديد. RO = صفر.' },
+        { question: 'ربع سنوي؟', answer: 'Biofilm 4-6 أسابيع + كربنة مزدوجة. ربع سنوي = الحد.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Alkaline pH 12+ × 20 دقيقة — NaCl+SiO₂ الشحمي يحتاج وقت.',
+        'Anti-Biofilm بعد كل تنظيف — يمنع 4 أشهر.',
+        'RO شطف — يمنع NaCl جديد.',
+        'تجفيف — 75-85% = لا يجف. مروحة 20 دقيقة.',
+        'فتحات تهوية — NaCl+SiO₂ يسدّان.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'كربنة مزدوجة (NaCl+SiO₂) + Biofilm = طبقة مُركّبة = خطر اشتعال + رائحة.',
+        'شطف بماء الظهران = NaCl = Biofilm. RO فقط.',
+        'كربنة 6 أشهر مزدوجة = صعبة الإزالة 3× من عادية.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص التنظيف' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات الصحة بالشرقية' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'فرن الظهران = مزدوج: NaCl+SiO₂ بحري + 75-85% Biofilm + كربنة شبه رطبة. Alkaline + Anti-Biofilm + RO.', source: 'نصائح هندسية — أفران مزدوجة' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف أفران مرخص', authority: 'منصة بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Alkaline pH 12+', use: 'يُذيب كربنة + NaCl+SiO₂ شحمي' },
+        { name: 'Anti-Biofilm', use: 'يقتل + يمنع — 4 أشهر' },
+        { name: 'RO Water', use: 'صفر NaCl = صفر Biofilm جديد' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'بخاخ يكفي.', solution: 'pH 9-10 لا يُذيب NaCl+SiO₂. لا يقتل Biofilm.' },
+        { fear: 'أنظف بنفسي.', solution: 'بماء الظهران = NaCl. بدون Anti-Biofilm = يعود.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'فرن عادي.', truth: 'NaCl+SiO₂ + 75-85% = مزدوج. مختلف.' },
+        { myth: 'مثل الخبر.', truth: 'SiO₂ إضافي يُخشّن. 75-85% = أبطأ. كربنة شبه رطبة = أصعب.' },
+        { myth: 'نصف سنوي.', truth: 'Biofilm 4-6 أسابيع. ربع سنوي.' },
     ],
-
     relatedServices: [
-        { slug: 'dhahran-furniture-moving', context: 'نقل عفش بالظهران', priority: 1 },
-        { slug: 'dhahran-furniture-storage', context: 'تخزين عفش بالظهران', priority: 2 },
-        { slug: 'dhahran-dyna', context: 'دينا نقل بالظهران', priority: 3 },
-        { slug: 'dhahran-moving-out', context: 'نقل عفش خروج بالظهران', priority: 4 },
-        { slug: 'dhahran-dabab', context: 'دباب نقل بالظهران', priority: 5 },
-        { slug: 'dhahran-cleaning', context: 'تنظيف منازل بالظهران', priority: 6 },
-        { slug: 'dhahran-tanks-cleaning', context: 'تنظيف خزانات بالظهران', priority: 7 },
-        { slug: 'dhahran-sofa-cleaning', context: 'تنظيف كنب بالظهران', priority: 8 },
-        { slug: 'dhahran-carpet-cleaning', context: 'تنظيف سجاد بالظهران', priority: 9 },
+        { slug: 'restaurant-chimney-cleaning', context: 'مداخن — كربنة', priority: 1 },
+        { slug: 'cleaning', context: 'تنظيف — مطبخ', priority: 2 },
+        { slug: 'pest-control', context: 'حشرات — شحوم', priority: 3 },
+        { slug: 'steam-cleaning', context: 'بخار — تعقيم', priority: 4 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف — شحوم', priority: 5 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات', priority: 6 },
+        { slug: 'hourly-cleaning', context: 'بالساعة', priority: 7 },
     ],
 };

@@ -1,4 +1,3 @@
-// تنظيف بالساعة بالطائف — Override (E-E-A-T)
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -34,9 +33,12 @@ export const override: PageOverride = {
         'مسح رطب + إغلاق الشقة في شتاء الطائف = أرضية لا تجف ← عفن. التجفيف بعد المسح = إلزامي.',
         'مكنسة عادية في موسم اللقاح = تنشر المُحسس بدلاً من إزالته ← حساسية.',
     ],
-    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات الخدمات المنزلية — حقوق العمالة' }],
-    expertReviewer: { name: EXPERTS.ALMISNID.name, title: EXPERTS.ALMISNID.title, credential: EXPERTS.ALMISNID.credential, profileUrl: EXPERTS.ALMISNID.profileUrl },
-    expertCitations: [{ expert: EXPERTS.ALMISNID.name, quote: 'الفرق بين عاملة عادية وعاملة مدربة على مناخ الطائف = الفرق بين Wet Mopping (يسبب عفن) وDamp Mopping + تجفيف (يمنع عفن). تدريب 30 دقيقة يمنع مشكلة صحية مزمنة.', source: EXPERTS.ALMISNID.title, url: EXPERTS.ALMISNID.profileUrl }],
+    trustAnchors: [
+{ ...{ ...GOV.BALADI, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
+ role: 'ترخيص شركات الخدمات المنزلية — حقوق العمالة' }    ],
+    expertReviewer: EXPERTS.ALMISNID,
+    expertCitations: [{ expert: EXPERTS.ALMISNID.name, quote: 'الفرق بين عاملة عادية وعاملة مدربة على مناخ الطائف = الفرق بين Wet Mopping (يسبب عفن) وDamp Mopping + تجفيف (يمنع عفن). تدريب 30 دقيقة يمنع مشكلة صحية مزمنة.',
+            source: EXPERTS.ALMISNID.title }],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
     verificationBadges: [{ badge: '✔️ بروتوكول رطوبة', authority: 'Damp+Dry', icon: 'shield-check' }, { badge: '✔️ HEPA مُعتمد', authority: 'حبس اللقاح', icon: 'badge-check' }],
     equipment: [
@@ -44,10 +46,16 @@ export const override: PageOverride = {
         { name: 'مكنسة بفلتر HEPA', use: 'تحبس حبوب اللقاح وأبواغ العفن الدقيقة ← لا تنشرها في الهواء.' },
         { name: 'منظف pH-neutral', use: 'آمن لكل الأسطح (رخام/بورسلين/خشب) ← لا يتلف ولا يترك ترسبات.' },
     ],
-    hiddenObjections: [{ fear: 'أجيب عاملة أرخص من أي مكان.', solution: 'عاملة غير مدربة تمسح بكثير ماء + لا تجفف + تكنس بمكنسة عادية = عفن أرضي + حساسية. تفرق 10-15 ريال/ساعة ← تمنع تنظيف عميق 500+ ريال كل 3 أشهر. "الأرخص" = الأغلى على المدى الشهري.' }],
+    hiddenObjections: [
+        { fear: 'أجيب عاملة أرخص من أي مكان.', solution: 'عاملة غير مدربة تمسح بكثير ماء + لا تجفف + تكنس بمكنسة عادية = عفن أرضي + حساسية. تفرق 10-15 ريال/ساعة ← تمنع تنظيف عميق 500+ ريال كل 3 أشهر. "الأرخص" = الأغلى على المدى الشهري.' },
+        { fear: 'الخدمة أغلى من المدن الأخرى.', solution: 'مناخ الطائف يفرض معالجات إضافية (مضاد تكثف + تجفيف + حماية أخشاب ورود). التكلفة الإضافية استثمار يحمي ممتلكاتك من تلف الرطوبة والحشرات الموسمية.' },
+    ],
     counterNarratives: [{ myth: 'التنظيف تنظيف — ما في فرق بين عاملة وعاملة.', truth: 'في الرياض: الفرق محدود (المناخ الجاف يتسامح). في الطائف: Wet Mopping بدون تجفيف = عفن خلال أسابيع. HEPA vs عادية = فرق صحي حقيقي. "التنظيف" ليس واحداً — المناخ يُملي البروتوكول.' }],
     relatedServices: [
-        { slug: 'taif-cleaning', context: 'تنظيف شامل (عميق) مع التنظيف بالساعة.', priority: 1 },
-        { slug: 'taif-villas-cleaning', context: 'صيانة نظافة فيلا — عقد بالساعة.', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف شامل (عميق) مع التنظيف بالساعة.', priority: 1 },
+        { slug: 'villas-cleaning', context: 'صيانة نظافة فيلا — عقد بالساعة.', priority: 2 },
+        { slug: 'air-conditioner-cleaning', context: 'تنظيف مكيفات تعمل تبريد/تدفئة طوال السنة في مناخ الطائف المتقلب.', priority: 5 },
+        { slug: 'pest-control', context: 'مكافحة حشرات تتكاثر في رطوبة الطائف الشتوية والزراعة المحيطة.', priority: 6 },
+        { slug: 'steam-cleaning', context: 'تعقيم بالبخار لقتل العث والفطريات في مفروشات الطائف الرطبة.', priority: 7 },
     ],
 };

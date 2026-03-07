@@ -1,8 +1,3 @@
-// ══════════════════════════════════════════════════════════════
-// كشف تسربات المياه بعنيزة — Override مخصص (E-E-A-T Grade)
-// صفحة: /onizah/water-leak-detection
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
 
@@ -46,12 +41,7 @@ export const override: PageOverride = {
         { ...GOV.NWC, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALJUND.name,
-        title: EXPERTS.ALJUND.title,
-        credential: EXPERTS.ALJUND.credential,
-        profileUrl: EXPERTS.ALJUND.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALJUND,
 
     expertCitations: [
         {
@@ -74,21 +64,24 @@ export const override: PageOverride = {
 
     hiddenObjections: [
         { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'السعر أعلى من المتوقع.', solution: 'السعر يشمل معدات صناعية متخصصة + مواد احترافية + عمالة مدربة + ضمان مكتوب. المقارنة العادلة ليست مع عامل عشوائي بل مع تكلفة إصلاح الأضرار الناتجة عن العمل غير المتخصص.' },
     ],
 
     counterNarratives: [
         { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'أي شركة تنظيف/صيانة نتيجتها واحدة.', truth: 'الفرق بين شركة مرخصة ومُعتمدة وأخرى عشوائية = الفرق بين معالجة جذرية وإخفاء مؤقت. المعدات المتخصصة والبروتوكولات العلمية تحل المشكلة من جذرها — التنظيف العشوائي يُعيدها أسوأ خلال أسابيع.' },
+        { myth: 'أوفر وأسوي الشغل بنفسي.', truth: 'التوفير الظاهري يتحول لتكلفة مضاعفة: أدوات منزلية لا تصل للعمق المطلوب + مواد غير مناسبة قد تُتلف الأسطح + وقت وجهد بلا ضمان نتيجة. الاحتراف = ضمان + توفير حقيقي على المدى الطويل.' },
     ],
 
     relatedServices: [
-        { slug: 'onizah-furniture-moving', context: 'نقل عفش بعنيزة', priority: 1 },
-        { slug: 'onizah-furniture-storage', context: 'تخزين عفش بعنيزة', priority: 2 },
-        { slug: 'onizah-dyna', context: 'دينا نقل بعنيزة', priority: 3 },
-        { slug: 'onizah-moving-out', context: 'نقل عفش خروج بعنيزة', priority: 4 },
-        { slug: 'onizah-dabab', context: 'دباب نقل بعنيزة', priority: 5 },
-        { slug: 'onizah-cleaning', context: 'تنظيف منازل بعنيزة', priority: 6 },
-        { slug: 'onizah-tanks-cleaning', context: 'تنظيف خزانات بعنيزة', priority: 7 },
-        { slug: 'onizah-sofa-cleaning', context: 'تنظيف كنب بعنيزة', priority: 8 },
-        { slug: 'onizah-carpet-cleaning', context: 'تنظيف سجاد بعنيزة', priority: 9 },
+        { slug: 'furniture-moving', context: 'نقل عفش بعنيزة', priority: 1 },
+        { slug: 'furniture-storage', context: 'تخزين عفش بعنيزة', priority: 2 },
+        { slug: 'dyna', context: 'دينا نقل بعنيزة', priority: 3 },
+        { slug: 'moving-out', context: 'نقل عفش خروج بعنيزة', priority: 4 },
+        { slug: 'dabab', context: 'دباب نقل بعنيزة', priority: 5 },
+        { slug: 'cleaning', context: 'تنظيف منازل بعنيزة', priority: 6 },
+        { slug: 'tanks-cleaning', context: 'تنظيف خزانات بعنيزة', priority: 7 },
+        { slug: 'sofa-cleaning', context: 'تنظيف كنب بعنيزة', priority: 8 },
+        { slug: 'carpet-cleaning', context: 'تنظيف سجاد بعنيزة', priority: 9 },
     ],
 };

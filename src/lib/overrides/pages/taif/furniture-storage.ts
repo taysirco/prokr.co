@@ -1,4 +1,3 @@
-// تخزين عفش بالطائف — Override (E-E-A-T) | خريطة 2.4: المحيميد → TGA
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -34,9 +33,12 @@ export const override: PageOverride = {
         'مستودع رخيص بدون مزيل رطوبة في الطائف = عفش متعفن خلال 3 أشهر. التوفير الآن = خسارة أضعاف.',
         'لا تُخزّن أجهزة إلكترونية بدون تغليف مانع رطوبة — الدوائر الإلكترونية تتأكسد في رطوبة 70%.',
     ],
-    trustAnchors: [{ ...GOV.TGA, role: 'ترخيص شركات النقل والتخزين — حقوق العميل وتأمين الممتلكات' }],
-    expertReviewer: { name: EXPERTS.ALMOHAIMED.name, title: EXPERTS.ALMOHAIMED.title, credential: EXPERTS.ALMOHAIMED.credential, profileUrl: EXPERTS.ALMOHAIMED.profileUrl },
-    expertCitations: [{ expert: EXPERTS.ALMOHAIMED.name, quote: 'تخزين العفش في الطائف بدون مزيل رطوبة = خسارة مؤكدة. الخشب يتعفن. المعادن تصدأ. الأقمشة تتعفن. المستودع المُجهز لمناخ الطائف الرطب = الفارق بين عفش سليم وعفش تالف.', source: EXPERTS.ALMOHAIMED.title, url: EXPERTS.ALMOHAIMED.profileUrl }],
+    trustAnchors: [
+{ ...{ ...GOV.TGA, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
+ role: 'ترخيص شركات النقل والتخزين — حقوق العميل وتأمين الممتلكات' }    ],
+    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertCitations: [{ expert: EXPERTS.ALMOHAIMED.name, quote: 'تخزين العفش في الطائف بدون مزيل رطوبة = خسارة مؤكدة. الخشب يتعفن. المعادن تصدأ. الأقمشة تتعفن. المستودع المُجهز لمناخ الطائف الرطب = الفارق بين عفش سليم وعفش تالف.',
+            source: EXPERTS.ALMOHAIMED.title }],
     saudiRegulations: [REGULATIONS.TGA_LICENSE],
     verificationBadges: [{ badge: '✔️ مستودع مزيل رطوبة', authority: 'أقل من 50% RH', icon: 'shield-check' }, { badge: '✔️ تأمين ممتلكات', authority: 'ضد التلف والسرقة', icon: 'badge-check' }],
     equipment: [
@@ -44,10 +46,16 @@ export const override: PageOverride = {
         { name: 'Pallets خشبية/بلاستيكية 10 سم', use: 'ترفع العفش عن الأرض ← تمنع امتصاص رطوبة الأرضية الباردة.' },
         { name: 'بلاستيك Shrink Wrap + سيليكا جل', use: 'تغليف مانع للرطوبة + سيليكا تمتص أي رطوبة متبقية داخل التغليف.' },
     ],
-    hiddenObjections: [{ fear: 'أخزن في غرفة فاضية في البيت — أوفر.', solution: 'غرفة بدون مزيل رطوبة في شتاء الطائف (رطوبة 80%) = عفش متعفن. + شغل مساحة في البيت. + لا تأمين. المستودع المُجهز: 200 ريال/شهر × 6 أشهر = 1,200 ريال. كنبة واحدة تتعفن = 3,000+ ريال. المستودع أرخص.' }],
+    hiddenObjections: [
+        { fear: 'أخزن في غرفة فاضية في البيت — أوفر.', solution: 'غرفة بدون مزيل رطوبة في شتاء الطائف (رطوبة 80%) = عفش متعفن. + شغل مساحة في البيت. + لا تأمين. المستودع المُجهز: 200 ريال/شهر × 6 أشهر = 1,200 ريال. كنبة واحدة تتعفن = 3,000+ ريال. المستودع أرخص.' },
+        { fear: 'الخدمة أغلى من المدن الأخرى.', solution: 'مناخ الطائف يفرض معالجات إضافية (مضاد تكثف + تجفيف + حماية أخشاب ورود). التكلفة الإضافية استثمار يحمي ممتلكاتك من تلف الرطوبة والحشرات الموسمية.' },
+    ],
     counterNarratives: [{ myth: 'التخزين تخزين — كلها مستودعات.', truth: 'مستودع في الرياض بدون تكييف = مقبول (الجفاف يحمي). مستودع في الطائف بدون تكييف ومزيل رطوبة = مصنع عفن. "مستودع" في الطائف يحتاج مواصفات مختلفة ← اسأل عن مزيل الرطوبة قبل التوقيع.' }],
     relatedServices: [
-        { slug: 'taif-furniture-moving', context: 'نقل + تخزين — باقة انتقال كاملة.', priority: 1 },
-        { slug: 'taif-cleaning', context: 'تنظيف بيت جديد قبل استلام العفش من التخزين.', priority: 2 },
+        { slug: 'furniture-moving', context: 'نقل + تخزين — باقة انتقال كاملة.', priority: 1 },
+        { slug: 'cleaning', context: 'تنظيف بيت جديد قبل استلام العفش من التخزين.', priority: 2 },
+        { slug: 'air-conditioner-cleaning', context: 'تنظيف مكيفات تعمل تبريد/تدفئة طوال السنة في مناخ الطائف المتقلب.', priority: 5 },
+        { slug: 'pest-control', context: 'مكافحة حشرات تتكاثر في رطوبة الطائف الشتوية والزراعة المحيطة.', priority: 6 },
+        { slug: 'steam-cleaning', context: 'تعقيم بالبخار لقتل العث والفطريات في مفروشات الطائف الرطبة.', priority: 7 },
     ],
 };

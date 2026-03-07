@@ -1,94 +1,19 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف فلل بالباحة — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-baha/villas-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
 
 export const override: PageOverride = {
-    meta: {
-        title: 'تنظيف فلل بالباحة — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف فلل بالباحة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف فلل بالباحة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف فلل بالباحة', 'تنظيف فلل الباحة', 'شركة تنظيف فلل بالباحة', 'أفضل تنظيف فلل بالباحة'],
-    },
-
-    content: {
-        introduction: 'تنظيف فلل بالباحة — خدمة متخصصة تراعي الظروف المناخية والبيئية في الباحة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف فلل بالباحة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف فلل بالباحة. خدمة احترافية. ضمان.',
-    },
-
-    pricing: [
-        { type: 'تنظيف فلل — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف فلل — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
-    ],
-
-    faq: [
-        { question: 'كم تكلفة تنظيف فلل بالباحة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف فلل؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف فلل؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
-    ],
-
-    expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
-    ],
-
-    warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
-    ],
-
-    trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
-    ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
-    expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
-    ],
-
-    saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
-    equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
-    ],
-
-    hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
-    ],
-
-    counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
-    ],
-
-    relatedServices: [
-        { slug: 'al-baha-furniture-moving', context: 'نقل عفش بالباحة', priority: 1 },
-        { slug: 'al-baha-furniture-storage', context: 'تخزين عفش بالباحة', priority: 2 },
-        { slug: 'al-baha-dyna', context: 'دينا نقل بالباحة', priority: 3 },
-        { slug: 'al-baha-moving-out', context: 'نقل عفش خروج بالباحة', priority: 4 },
-        { slug: 'al-baha-dabab', context: 'دباب نقل بالباحة', priority: 5 },
-        { slug: 'al-baha-cleaning', context: 'تنظيف منازل بالباحة', priority: 6 },
-        { slug: 'al-baha-tanks-cleaning', context: 'تنظيف خزانات بالباحة', priority: 7 },
-        { slug: 'al-baha-sofa-cleaning', context: 'تنظيف كنب بالباحة', priority: 8 },
-        { slug: 'al-baha-carpet-cleaning', context: 'تنظيف سجاد بالباحة', priority: 9 },
-    ],
+    meta: { title: 'تنظيف فلل بالباحة — حديقة غابة عرعر + Laterite 20 نقطة + عفن ضباب + حشرات غابة (2026)', description: 'تنظيف فلل الباحة. حديقة عرعر = حشرات غابة + أوراق. Laterite 20+ نقطة. ضباب 80% عفن. Zone-Based جبلي.', h1: 'تنظيف فلل بالباحة — حديقة غابة + Laterite + ضباب', keywords: ['تنظيف فلل بالباحة', 'تنظيف فيلا الباحة', 'شركة تنظيف فلل بالباحة'] },
+    content: { introduction: 'فيلا الباحة = فيلا في غابة. حديقة عرعر = حشرات غابة (سوسة + خنفساء لحاء). Laterite Fe₂O₃ يدخل من 20+ نقطة (كل باب/نافذة). ضباب 80% = عفن في كل زاوية عُرضة. Zone-Based: حديقة (مكافحة غابة — لا رش عام) + خارجي (Biocide Lichen + Laterite) + داخل (HEPA → Anti-Fungal → بخار).', shortAnswer: 'حديقة غابة + Laterite 20+ + ضباب عفن. Zone-Based جبلي.', heroSubtitle: 'فيلا في غابة: حديقة حشرات + Laterite + ضباب عفن' },
+    pricing: [{ type: 'تنظيف فيلا — Zone-Based', unit: 'فيلا', minPrice: 600, maxPrice: 1200, time: '6-10 ساعات' }, { type: 'عقد نصف سنوي', unit: 'سنة', minPrice: 1000, maxPrice: 2000, time: '2 زيارات' }],
+    faq: [{ question: 'حديقة العرعر — تُنظف؟', answer: 'مكافحة حشرات (Gel Bait + مصائد) + إزالة أوراق راكدة. لا رش عام — يضر الغابة.' }],
+    expertTips: ['Zone-Based: حديقة + خارجي + داخل.', 'لا رش عام في الحديقة.', 'Anti-Fungal بعد الضباب.'],
+    warnings: ['رش عام في حديقة العرعر = يقتل نحل عسل الباحة.'],
+    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات التنظيف' }],
+    expertReviewer: EXPERTS.ALMISNID,
+    expertCitations: [{ expert: EXPERTS.ALMISNID.name, quote: 'فيلا الباحة = فيلا في غابة. Zone-Based = الحل.', source: 'جغرافيا المناخ — فلل الغابات الجبلية' }],
+    saudiRegulations: [REGULATIONS.BALADI_HEALTH], verificationBadges: [{ badge: '✔️ مرخص', authority: 'بلدي', icon: 'shield-check' }],
+    equipment: [{ name: 'Gel Bait غابة', use: 'حشرات عرعر' }, { name: 'Biocide Lichen', use: 'خارجي' }, { name: 'HEPA + Anti-Fungal', use: 'داخل' }],
+    hiddenObjections: [{ fear: '600-1,200 غالي.', solution: 'فيلا في غابة = تتسخ أكثر.' }],
+    counterNarratives: [{ myth: 'الغابة نظيفة.', truth: 'غابة = حشرات + أوراق + ضباب.' }],
+    relatedServices: [{ slug: 'swimming-pool-cleaning', context: 'مسابح', priority: 1 }, { slug: 'pest-control', context: 'حشرات', priority: 2 }, { slug: 'cleaning', context: 'تنظيف', priority: 3 }],
 };

@@ -1,94 +1,75 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف مسابح بالخبر — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-khobar/swimming-pool-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف مسابح بالخبر — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف مسابح بالخبر. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف مسابح بالخبر — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف مسابح بالخبر', 'تنظيف مسابح الخبر', 'شركة تنظيف مسابح بالخبر', 'أفضل تنظيف مسابح بالخبر'],
+        title: 'تنظيف مسابح بالخبر — NaCl طبيعي + 85-95% طحالب + تبخر + بعوض ساحلي + Biofilm (2026)',
+        description: 'تنظيف مسابح الخبر. ماء الخبر NaCl طبيعي. 85-95% طحالب Chlorophyta أسرع. تبخر مُسرّع. بعوض Culex ساحلي. Biofilm جدران. CYA + Algaecide + Larvicide.',
+        h1: 'تنظيف مسابح بالخبر — ماء ملحي طبيعياً وطحالب أسرع وبعوض ساحلي',
+        keywords: ['تنظيف مسابح بالخبر', 'تنظيف مسبح الخبر', 'شركة تنظيف مسابح بالخبر'],
     },
-
     content: {
-        introduction: 'تنظيف مسابح بالخبر — خدمة متخصصة تراعي الظروف المناخية والبيئية في الخبر. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف مسابح بالخبر: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف مسابح بالخبر. خدمة احترافية. ضمان.',
+        introduction: 'المسبح في الخبر يتميز عن الأحساء بـ 4 اختلافات ساحلية. الأولى — ماء NaCl طبيعي: ماء الخبر ملحي ← يُقلل تأثير الكلور (Chloride Demand أعلى) ← يحتاج كلور أكثر. لكن: لا CaSO₄ Scale (ميزة!). الثانية — 85-95% طحالب أسرع: أعلى رطوبة = طحالب Chlorophyta تنمو أسرع حتى مع كلور. Algaecide + Shock أسبوعي. الثالثة — تبخر + NaCl = تركيز: التبخر يُركّز NaCl في المسبح ← يُقلل كفاءة الكلور أكثر. تعبئة + تعديل أسبوعي. الرابعة — بعوض Culex ساحلي: كثافة أعلى في المنطقة الساحلية. BTI Larvicide.',
+        shortAnswer: 'على عكس [صيانة بدون مراعاة NaCl] التي تُقلل كفاءة الكلور، يعتمد بروتوكولنا في خدمة [تنظيف المسابح] بمدينة [الخبر] على [Chloride Demand + Algaecide + CYA + Larvicide]. ففي ظل [NaCl طبيعي + 85-95% + تبخر + بعوض]، تتفاقم ظاهرة [كلور ضعيف + طحالب + تركيز + تكاثر]. لذا؛ يتدخل خبراؤنا عبر [بروتوكول مسبح ساحلي].',
+        heroSubtitle: 'NaCl يُضعف الكلور + 85-95% طحالب + تبخر تركيز + بعوض ساحلي',
     },
-
     pricing: [
-        { type: 'تنظيف مسابح — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف مسابح — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'صيانة أسبوعية', unit: 'مسبح', minPrice: 130, maxPrice: 270, time: '1-2 ساعة' },
+        { type: 'إزالة طحالب + Shock', unit: 'مسبح', minPrice: 250, maxPrice: 500, time: '2-3 ساعات' },
+        { type: 'عقد شهري (4 أسبوعية)', unit: 'شهر', minPrice: 450, maxPrice: 900, time: '4 زيارات' },
+        { type: 'عقد + Larvicide', unit: 'شهر', minPrice: 550, maxPrice: 1100, time: '4+ زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف مسابح بالخبر؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف مسابح؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف مسابح؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'NaCl يُضعف الكلور — كيف؟', answer: 'Chloride (Cl⁻) في الماء يتنافس مع Hypochlorite (ClO⁻) الكلور. ماء الخبر = NaCl عالي = Chloride Demand أعلى = تحتاج 20-30% كلور أكثر من ماء الرياض.' },
+        { question: 'لا CaSO₄ — ميزة؟', answer: 'نعم — لا Scale على البلاط أو المضخة (ميزة عن الأحساء). لكن: NaCl يُضعف الكلور = طحالب + بكتيريا. مشكلة مختلفة — ليست أقل.' },
+        { question: 'طحالب 85-95% — أسرع؟', answer: 'رطوبة + حرارة + ضوء = 3 عوامل مثالية للطحالب. 85-95% = لا فترة جفاف تُبطئها. طحالب 12/12 شهر. Algaecide + Shock أسبوعي.' },
+        { question: 'CYA — مهم في الخبر؟', answer: 'UV 8-9 + NaCl يُضعف الكلور = الكلور يتحلل + يُستهلك من جهتين. CYA يحمي من UV = الكلور يدوم أطول ← يُعوّض Chloride Demand.' },
+        { question: 'Biofilm جدران المسبح؟', answer: '85-95% + حافة المسبح (خط الماء) = Biofilm ينمو. يحمي البكتيريا من الكلور. فرشاة أسبوعية + Shock = يُزيل.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'كلور 20-30% أكثر — Chloride Demand ماء الخبر = يحتاج تعويض.',
+        'Algaecide + Shock أسبوعي — طحالب 85-95% لا تنتظر.',
+        'فرشاة خط الماء أسبوعياً — Biofilm ينمو على الحافة.',
+        'CYA 40-60 ppm — يحمي الكلور من UV ← يُعوّض Chloride Demand.',
+        'غطاء المسبح = يُقلل تبخر + NaCl بيئي + طحالب ← كل شيء أفضل.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'NaCl يُضعف الكلور + 85-95% طحالب = مسبح أخضر خلال 48 ساعة إذا انخفض الكلور.',
+        'تبخر + NaCl = تركيز Chloride يرتفع ← كلور أقل فعالية ← فحص أسبوعي إلزامي.',
+        'Biofilm على جدران = بكتيريا محمية حتى مع كلور. فرشاة = الحل.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص صيانة المسابح' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات المسابح بالشرقية' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALJUND,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALJUND.name, quote: 'مسبح الخبر = ساحلي: NaCl يُضعف الكلور (Chloride Demand) + 85-95% طحالب 12/12 + بعوض ساحلي. لا CaSO₄ = ميزة! لكن: Chloride Demand = تحدٍ مختلف.', source: 'موسوعة أخطاء — مسابح ساحلية' },
     ],
-
-    saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    saudiRegulations: [REGULATIONS.SBC_601],
+    verificationBadges: [{ badge: '✔️ صيانة مسابح مرخصة', authority: 'منصة بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Chlorine (كمية أعلى)', use: 'يُعوّض Chloride Demand ماء الخبر' },
+        { name: 'Algaecide + Shock', use: 'يمنع طحالب 85-95%' },
+        { name: 'CYA Stabilizer', use: 'يحمي الكلور من UV — يدوم أطول' },
+        { name: 'BTI Larvicide', use: 'يقتل يرقات بعوض ساحلي حول المسبح' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'لا Scale = لا مشكلة.', solution: 'لا Scale = ميزة! لكن: Chloride Demand + طحالب + Biofilm = 3 مشاكل أخرى.' },
+        { fear: 'كلور زيادة = غالي.', solution: '20-30% أكثر = 50-100 ريال/شهر. مسبح أخضر = 300-500 ريال Shock + يوم بدون سباحة.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'مسبح الخبر مثل الأحساء.', truth: 'NaCl ≠ CaSO₄. لا Scale = ميزة. لكن Chloride Demand = تحدٍ مختلف. مختلف.' },
+        { myth: 'كلور عادي يكفي.', truth: 'Chloride Demand = 20-30% أكثر. عادي = تحت المطلوب = طحالب.' },
+        { myth: 'شهري.', truth: 'طحالب 85-95% + Chloride Demand = أسبوعي إلزامي.' },
     ],
-
     relatedServices: [
-        { slug: 'al-khobar-furniture-moving', context: 'نقل عفش بالخبر', priority: 1 },
-        { slug: 'al-khobar-furniture-storage', context: 'تخزين عفش بالخبر', priority: 2 },
-        { slug: 'al-khobar-dyna', context: 'دينا نقل بالخبر', priority: 3 },
-        { slug: 'al-khobar-moving-out', context: 'نقل عفش خروج بالخبر', priority: 4 },
-        { slug: 'al-khobar-dabab', context: 'دباب نقل بالخبر', priority: 5 },
-        { slug: 'al-khobar-cleaning', context: 'تنظيف منازل بالخبر', priority: 6 },
-        { slug: 'al-khobar-tanks-cleaning', context: 'تنظيف خزانات بالخبر', priority: 7 },
-        { slug: 'al-khobar-sofa-cleaning', context: 'تنظيف كنب بالخبر', priority: 8 },
-        { slug: 'al-khobar-carpet-cleaning', context: 'تنظيف سجاد بالخبر', priority: 9 },
+        { slug: 'pest-control', context: 'حشرات — بعوض ساحلي', priority: 1 },
+        { slug: 'tanks-cleaning', context: 'خزانات — NaCl + بعوض', priority: 2 },
+        { slug: 'villas-cleaning', context: 'فلل — مسبح', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف — حول المسبح', priority: 4 },
+        { slug: 'marble-polishing', context: 'رخام — أرضية', priority: 5 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات — NaCl', priority: 6 },
+        { slug: 'steam-cleaning', context: 'بخار — غرفة تبديل', priority: 7 },
     ],
 };

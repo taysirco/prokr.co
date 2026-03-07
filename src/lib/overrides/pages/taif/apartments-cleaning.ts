@@ -1,4 +1,3 @@
-// تنظيف شقق بالطائف — Override (E-E-A-T) | خريطة 2.4: المسند → بلدي
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -33,20 +32,29 @@ export const override: PageOverride = {
         'شقة مفروشة بدون تنظيف بين الضيوف = مخاطرة بق فراش + تقييمات سلبية = خسارة طويلة الأمد.',
         'شقة مُغلقة 5 أشهر بإحكام = عفن مضمون. الإغلاق المُحكم = أسوأ من التهوية المحدودة.',
     ],
-    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات النظافة — اشتراطات جودة' }],
-    expertReviewer: { name: EXPERTS.ALMISNID.name, title: EXPERTS.ALMISNID.title, credential: EXPERTS.ALMISNID.credential, profileUrl: EXPERTS.ALMISNID.profileUrl },
-    expertCitations: [{ expert: EXPERTS.ALMISNID.name, quote: 'شقق الطائف المفروشة = أصول عقارية تعمل 4-5 أشهر فقط. التنظيف الاحترافي بين الضيوف ليس تكلفة — بل حماية للأصل وللسمعة. شقة نظيفة = تقييم 5 نجوم = سعر أعلى الموسم القادم.', source: EXPERTS.ALMISNID.title, url: EXPERTS.ALMISNID.profileUrl }],
+    trustAnchors: [
+{ ...{ ...GOV.BALADI, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
+ role: 'ترخيص شركات النظافة — اشتراطات جودة' }    ],
+    expertReviewer: EXPERTS.ALMISNID,
+    expertCitations: [{ expert: EXPERTS.ALMISNID.name, quote: 'شقق الطائف المفروشة = أصول عقارية تعمل 4-5 أشهر فقط. التنظيف الاحترافي بين الضيوف ليس تكلفة — بل حماية للأصل وللسمعة. شقة نظيفة = تقييم 5 نجوم = سعر أعلى الموسم القادم.',
+            source: EXPERTS.ALMISNID.title }],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
     verificationBadges: [{ badge: '✔️ بروتوكول بين ضيوف', authority: 'Gas Turnover Cleaning', icon: 'shield-check' }, { badge: '✔️ تقرير تسليم مصور', authority: 'استرداد تأمين', icon: 'badge-check' }],
     equipment: [
         { name: 'جهاز بخار + مكنسة HEPA', use: 'بخار يقتل البق والعث + HEPA يحبس الأبواغ — ضروري بين كل ضيف.' },
         { name: 'مبيد فطري وقائي', use: 'يُرش قبل إغلاق الشقة ← يحمي من العفن الشتوي 3-6 أشهر.' },
     ],
-    hiddenObjections: [{ fear: 'تنظيف بين كل ضيف مكلف — أنظف مرة بالشهر.', solution: 'ضيف واحد يترك تقييم "قذرة/بق" = خسارة حجوزات بقية الموسم. 200 ريال تنظيف × 10 ضيوف = 2,000 ريال. خسارة حجوزات = 10,000+ ريال. التنظيف = تأمين على الدخل.' }],
+    hiddenObjections: [
+        { fear: 'تنظيف بين كل ضيف مكلف — أنظف مرة بالشهر.', solution: 'ضيف واحد يترك تقييم "قذرة/بق" = خسارة حجوزات بقية الموسم. 200 ريال تنظيف × 10 ضيوف = 2,000 ريال. خسارة حجوزات = 10,000+ ريال. التنظيف = تأمين على الدخل.' },
+        { fear: 'الخدمة أغلى من المدن الأخرى.', solution: 'مناخ الطائف يفرض معالجات إضافية (مضاد تكثف + تجفيف + حماية أخشاب ورود). التكلفة الإضافية استثمار يحمي ممتلكاتك من تلف الرطوبة والحشرات الموسمية.' },
+    ],
     counterNarratives: [{ myth: 'الشقة صغيرة — أنظفها بنفسي.', truth: 'التنظيف المرئي سهل. لكن: بق الفراش يختبئ في الفُرش والأطراف — لا يُرى. العفن خلف الخزائن — لا يُشم حتى يتقدم. شفط HEPA + بخار + فحص بق = ما يفرق شقة هاوي عن شقة محترف.' }],
     relatedServices: [
-        { slug: 'taif-cleaning', context: 'تنظيف شامل — البروتوكول الأساسي.', priority: 1 },
-        { slug: 'taif-sofa-cleaning', context: 'كنب الشقة المفروشة — تنظيف بين الضيوف.', priority: 2 },
-        { slug: 'taif-bedbugs-control', context: 'مكافحة بق الفراش — ضرورة للشقق السياحية.', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف شامل — البروتوكول الأساسي.', priority: 1 },
+        { slug: 'sofa-cleaning', context: 'كنب الشقة المفروشة — تنظيف بين الضيوف.', priority: 2 },
+        { slug: 'bedbugs-control', context: 'مكافحة بق الفراش — ضرورة للشقق السياحية.', priority: 3 },
+        { slug: 'air-conditioner-cleaning', context: 'تنظيف مكيفات تعمل تبريد/تدفئة طوال السنة في مناخ الطائف المتقلب.', priority: 5 },
+        { slug: 'pest-control', context: 'مكافحة حشرات تتكاثر في رطوبة الطائف الشتوية والزراعة المحيطة.', priority: 6 },
+        { slug: 'steam-cleaning', context: 'تعقيم بالبخار لقتل العث والفطريات في مفروشات الطائف الرطبة.', priority: 7 },
     ],
 };

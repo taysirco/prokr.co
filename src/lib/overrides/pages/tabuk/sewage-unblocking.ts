@@ -1,7 +1,3 @@
-// تسليك مجاري بتبوك — Override (E-E-A-T)
-// الزاوية: تجمد دهون في الأنابيب بالشتاء البارد
-//   + جفاف يُجفف السيفون = روائح
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -57,19 +53,13 @@ export const override: PageOverride = {
         { entity: AMANA.TABUK.entity, url: AMANA.TABUK.url, role: 'الرقابة على شبكات الصرف بتبوك', acronym: 'أمانة تبوك' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALJUND.name,
-        title: EXPERTS.ALJUND.title,
-        credential: EXPERTS.ALJUND.credential,
-        profileUrl: EXPERTS.ALJUND.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALJUND,
 
     expertCitations: [
         {
             expert: 'م. عبدالغني الجند',
             quote: 'الدهون بمجاري تبوك تتجمد شتاءً = سدادة صلبة (Fatberg) لا تُحل بالسلك. ضغط مائي ساخن = الحل. والجفاف يُبخّر السيفون = رائحة بدون انسداد. كوب ماء أسبوعياً = حل مجاني',
             source: 'موسوعة "أخطاء في البناء"',
-            url: 'https://x.com/ssrrr22',
         },
     ],
 
@@ -88,14 +78,20 @@ export const override: PageOverride = {
 
     hiddenObjections: [
         { fear: 'ضغط مائي ساخن غالي (450-900)', solution: 'تسليك سلك 250 × كل شهر شتاءً (الدهون تعود) = 750-1,000/شتاء. ضغط مائي ساخن 600 مرة واحدة يغسل الأنبوب ← ما يعود الانسداد لأشهر. أوفر وأنظف' },
+        { fear: 'السعر أعلى من المتوقع.', solution: 'السعر يشمل معدات صناعية متخصصة + مواد احترافية + عمالة مدربة + ضمان مكتوب. المقارنة العادلة ليست مع عامل عشوائي بل مع تكلفة إصلاح الأضرار الناتجة عن العمل غير المتخصص.' },
     ],
 
     counterNarratives: [
         { myth: 'الانسداد عادي — السلك يكفي', truth: 'بتبوك: الدهون تتجمد = صلبة. السلك يفتح ممراً ضيقاً ← الدهون تعود مع أول دفعة زيت. الضغط الساخن = يُذيب ويغسل = حل أطول أمداً' },
+        { myth: 'أي شركة تنظيف/صيانة نتيجتها واحدة.', truth: 'الفرق بين شركة مرخصة ومُعتمدة وأخرى عشوائية = الفرق بين معالجة جذرية وإخفاء مؤقت. المعدات المتخصصة والبروتوكولات العلمية تحل المشكلة من جذرها — التنظيف العشوائي يُعيدها أسوأ خلال أسابيع.' },
+        { myth: 'أوفر وأسوي الشغل بنفسي.', truth: 'التوفير الظاهري يتحول لتكلفة مضاعفة: أدوات منزلية لا تصل للعمق المطلوب + مواد غير مناسبة قد تُتلف الأسطح + وقت وجهد بلا ضمان نتيجة. الاحتراف = ضمان + توفير حقيقي على المدى الطويل.' },
     ],
 
     relatedServices: [
-        { slug: 'tabuk-sewage-suction', context: 'شفط بيارة — إذا طفحت', priority: 1 },
-        { slug: 'tabuk-pest-control', context: 'مكافحة حشرات — صراصير الصرف', priority: 2 },
+        { slug: 'sewage-suction', context: 'شفط بيارة — إذا طفحت', priority: 1 },
+        { slug: 'pest-control', context: 'مكافحة حشرات — صراصير الصرف', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف شامل يُكمّل الخدمة الأساسية — بيئة نظيفة متكاملة.', priority: 5 },
+        { slug: 'pest-control', context: 'مكافحة حشرات متكاملة مع خدمات النظافة والصيانة.', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'تنظيف مكيفات لهواء نظيف — يُكمّل أي خدمة منزلية.', priority: 7 },
     ],
 };

@@ -84,7 +84,6 @@ export const override: PageOverride = {
             expert: 'أ.د. فهد الخضيري',
             quote: 'المبيدات غير المعتمدة (Organophosphates القديمة) خطرة على الأطفال والحوامل. تأكد أن الشركة تستخدم الجيل الرابع المسجل في نظام غد — SFDA',
             source: 'عالم أبحاث طبي — سموم ومسرطنات',
-            url: 'https://x.com/DrAlkhodairy',
         },
     ],
 
@@ -111,14 +110,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'jeddah-pest-control', context: 'الرش الشامل جزء من مكافحة متكاملة لكل الحشرات', priority: 1 },
-        { slug: 'jeddah-pesticide-spraying', context: 'رش مبيدات الجيل الرابع — وقائي دوري كل 3 أشهر', priority: 2 },
-        { slug: 'jeddah-cockroach-control', context: 'الصراصير تحتاج جل طُعم إضافة للرش الشامل', priority: 3 },
-        { slug: 'jeddah-ants-control', context: 'النمل يحتاج جل طُعم — الرش وحده لا يصل العش', priority: 4 },
-        { slug: 'jeddah-rodent-control', context: 'البيئة التي تجذب حشرات = تجذب فئران أيضاً', priority: 5 },
-        { slug: 'jeddah-sewage-unblocking', context: 'المجاري المسدودة = بؤر تكاثر بعوض وصراصير', priority: 6 },
-        { slug: 'jeddah-sanitization', context: 'تعقيم بعد الرش — يزيل بقايا الحشرات والبكتيريا', priority: 7 },
-        { slug: 'jeddah-cleaning', context: 'تنظيف شامل بعد الرش يزيل مخلفات الحشرات', priority: 8 },
-        { slug: 'jeddah-bird-control', context: 'أعشاش الحمام = بؤر حشرات — شبك ورش معاً', priority: 9 },
+        { slug: 'pest-control', context: 'الرش الشامل جزء من مكافحة متكاملة لكل الحشرات', priority: 1 },
+        { slug: 'pesticide-spraying', context: 'رش مبيدات الجيل الرابع — وقائي دوري كل 3 أشهر', priority: 2 },
+        { slug: 'cockroach-control', context: 'الصراصير تحتاج جل طُعم إضافة للرش الشامل', priority: 3 },
+        { slug: 'ants-control', context: 'النمل يحتاج جل طُعم — الرش وحده لا يصل العش', priority: 4 },
+        { slug: 'rodent-control', context: 'البيئة التي تجذب حشرات = تجذب فئران أيضاً', priority: 5 },
+        { slug: 'sewage-unblocking', context: 'المجاري المسدودة = بؤر تكاثر بعوض وصراصير', priority: 6 },
+        { slug: 'sanitization', context: 'تعقيم بعد الرش — يزيل بقايا الحشرات والبكتيريا', priority: 7 },
+        { slug: 'cleaning', context: 'تنظيف شامل بعد الرش يزيل مخلفات الحشرات', priority: 8 },
+        { slug: 'bird-control', context: 'أعشاش الحمام = بؤر حشرات — شبك ورش معاً', priority: 9 },
     ],
 };

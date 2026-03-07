@@ -74,12 +74,7 @@ export const override: PageOverride = {
         { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'الإشراف على اشتراطات خدمات النظافة في القطاع السكني', acronym: 'أمانة المدينة' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMISNID.name,
-        title: EXPERTS.ALMISNID.title,
-        credential: EXPERTS.ALMISNID.credential,
-        profileUrl: EXPERTS.ALMISNID.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMISNID,
 
     expertCitations: [
         {
@@ -115,10 +110,10 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'madinah-sofa-cleaning', context: 'غسيل كنب الشقة بالبخار — أكمل التنظيف بغسيل المفروشات.', priority: 1 },
-        { slug: 'madinah-carpet-cleaning', context: 'غسيل سجاد قبل أو بعد النقل — طقم نظيف.', priority: 2 },
-        { slug: 'madinah-pest-control', context: 'رش وقائي عند الانتقال لشقة جديدة — ابدأ بدون حشرات.', priority: 3 },
-        { slug: 'madinah-air-conditioner-cleaning', context: 'غسيل مكيفات الشقة — هواء نظيف من أول يوم.', priority: 4 },
-        { slug: 'madinah-furniture-moving', context: 'نقل أثاث + تنظيف شقة المغادرة = باقة متكاملة.', priority: 5 },
+        { slug: 'sofa-cleaning', context: 'غسيل كنب الشقة بالبخار — أكمل التنظيف بغسيل المفروشات.', priority: 1 },
+        { slug: 'carpet-cleaning', context: 'غسيل سجاد قبل أو بعد النقل — طقم نظيف.', priority: 2 },
+        { slug: 'pest-control', context: 'رش وقائي عند الانتقال لشقة جديدة — ابدأ بدون حشرات.', priority: 3 },
+        { slug: 'air-conditioner-cleaning', context: 'غسيل مكيفات الشقة — هواء نظيف من أول يوم.', priority: 4 },
+        { slug: 'furniture-moving', context: 'نقل أثاث + تنظيف شقة المغادرة = باقة متكاملة.', priority: 5 },
     ],
 };

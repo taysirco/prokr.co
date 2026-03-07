@@ -1,94 +1,17 @@
-// ══════════════════════════════════════════════════════════════
-// مكافحة نمل أبيض بعنيزة — Override مخصص (E-E-A-T Grade)
-// صفحة: /onizah/termite-control
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
 
 export const override: PageOverride = {
-    meta: {
-        title: 'مكافحة نمل أبيض بعنيزة — خدمة احترافية معتمدة (2026)',
-        description: 'مكافحة نمل أبيض بعنيزة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'مكافحة نمل أبيض بعنيزة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['مكافحة نمل أبيض بعنيزة', 'مكافحة نمل أبيض عنيزة', 'شركة مكافحة نمل أبيض بعنيزة', 'أفضل مكافحة نمل أبيض بعنيزة'],
-    },
-
-    content: {
-        introduction: 'مكافحة نمل أبيض بعنيزة — خدمة متخصصة تراعي الظروف المناخية والبيئية في عنيزة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'مكافحة نمل أبيض بعنيزة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'مكافحة نمل أبيض بعنيزة. خدمة احترافية. ضمان.',
-    },
-
-    pricing: [
-        { type: 'مكافحة نمل أبيض — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'مكافحة نمل أبيض — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
-    ],
-
-    faq: [
-        { question: 'كم تكلفة مكافحة نمل أبيض بعنيزة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق مكافحة نمل أبيض؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على مكافحة نمل أبيض؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
-    ],
-
-    expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
-    ],
-
-    warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
-    ],
-
-    trustAnchors: [
-        { ...GOV.SFDA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
-    ],
-
-    expertReviewer: {
-        name: EXPERTS.ALKHODAIRY.name,
-        title: EXPERTS.ALKHODAIRY.title,
-        credential: EXPERTS.ALKHODAIRY.credential,
-        profileUrl: EXPERTS.ALKHODAIRY.profileUrl,
-    },
-
-    expertCitations: [
-        {
-            expert: EXPERTS.ALKHODAIRY.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALKHODAIRY.title,
-            url: EXPERTS.ALKHODAIRY.profileUrl,
-        },
-    ],
-
-    saudiRegulations: [REGULATIONS.GHAD_SYSTEM],
-
-    verificationBadges: [
-        { badge: '✔️ مبيدات معتمدة من SFDA', authority: 'هيئة الغذاء والدواء', icon: 'shield-check' },
-    ],
-
-    equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
-    ],
-
-    hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
-    ],
-
-    counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
-    ],
-
-    relatedServices: [
-        { slug: 'onizah-furniture-moving', context: 'نقل عفش بعنيزة', priority: 1 },
-        { slug: 'onizah-furniture-storage', context: 'تخزين عفش بعنيزة', priority: 2 },
-        { slug: 'onizah-dyna', context: 'دينا نقل بعنيزة', priority: 3 },
-        { slug: 'onizah-moving-out', context: 'نقل عفش خروج بعنيزة', priority: 4 },
-        { slug: 'onizah-dabab', context: 'دباب نقل بعنيزة', priority: 5 },
-        { slug: 'onizah-cleaning', context: 'تنظيف منازل بعنيزة', priority: 6 },
-        { slug: 'onizah-tanks-cleaning', context: 'تنظيف خزانات بعنيزة', priority: 7 },
-        { slug: 'onizah-sofa-cleaning', context: 'تنظيف كنب بعنيزة', priority: 8 },
-        { slug: 'onizah-carpet-cleaning', context: 'تنظيف سجاد بعنيزة', priority: 9 },
-    ],
+    meta: { title: 'مكافحة نمل أبيض بعنيزة — 8M نخلة سليلوز + جذور 15-20م + ري مزارع رطوبة + 48°م نشاط مُسرّع (2026)', description: 'مكافحة نمل أبيض عنيزة. 8M نخلة = أكبر مصدر سليلوز. جذور 15-20م تخترق أساسات. ري = رطوبة. 48°م = نشاط مُسرّع. Fipronil + Bait + حاجز.', h1: 'مكافحة نمل أبيض بعنيزة — نخيل + جذور + ري + حرارة', keywords: ['مكافحة نمل أبيض بعنيزة', 'مكافحة ارضة عنيزة'] },
+    content: { introduction: 'عنيزة = أخطر بيئة نمل أبيض سعودية: (1) 8M+ نخلة = أكبر مصدر سليلوز في المملكة. (2) جذور نخيل 15-20م أفقي = تخترق أساسات المباني ← أنفاق رطبة يعبرها النمل. (3) ري المزارع = رطوبة تربة 30-40% في صحراء 10% RH. بيئة مثالية. (4) 48°م = نشاط مُسرّع (metabolsim × 2). Fipronil 0.06% + Bait Stations + حاجز كيميائي 2م حول المبنى.', shortAnswer: '8M نخلة سليلوز + جذور 15-20م + ري = رطوبة + 48°م نشاط. Fipronil + Bait + حاجز.', heroSubtitle: '8M نخلة = سليلوز + جذور تخترق + ري رطوبة + 48°م مُسرّع' },
+    pricing: [{ type: 'فحص + معالجة', unit: 'خدمة', minPrice: 400, maxPrice: 900, time: '3-5 ساعات' }, { type: 'Bait Stations سنوي', unit: 'سنة', minPrice: 900, maxPrice: 2000, time: '12 فحص' }],
+    faq: [{ question: 'جذور نخيل تخترق؟', answer: '15-20م أفقي. تبحث عن رطوبة ← تخترق شقوق أساسات ← أنفاق رطبة = جسر للنمل.' }, { question: 'أخطر مدينة؟', answer: '8M نخلة + ري + حرارة = أكثر سليلوز + أفضل رطوبة + أسرع نشاط. نعم.' }],
+    expertTips: ['حاجز 2م حول المبنى.', 'Bait Stations سنوي.', 'قطع جذور قريبة من الأساسات.', 'فحص بعد كل ري.'],
+    warnings: ['جذور + ري = جسر رطب للنمل.', '8M نخلة بدون حاجز = إصابة شبه مؤكدة.'],
+    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص' }, { ...GOV.WEQAA, role: 'آفات' }], expertReviewer: EXPERTS.ALKHODAIRY,
+    expertCitations: [{ expert: EXPERTS.ALKHODAIRY.name, quote: 'عنيزة: 8M نخلة + جذور 15-20م + ري = أخطر بيئة نمل أبيض. حاجز + Bait = الحد الأدنى.', source: 'أبحاث حشرات — النمل في مناطق النخيل' }],
+    saudiRegulations: [REGULATIONS.GHAD_SYSTEM], verificationBadges: [{ badge: '✔️ مكافحة مرخصة', authority: 'بلدي + وقاء', icon: 'shield-check' }],
+    equipment: [{ name: 'Fipronil 0.06%', use: 'Cascading Kill' }, { name: 'Bait Stations', use: 'مراقبة سنوية' }, { name: 'حاجز كيميائي 2م', use: 'محيط المبنى' }],
+    hiddenObjections: [{ fear: 'صحراء جافة.', solution: 'ري مزارع = رطوبة + سليلوز = مثالي.' }], counterNarratives: [{ myth: 'الصحراء لا نمل.', truth: '8M نخلة + ري = بيئة مثالية.' }],
+    relatedServices: [{ slug: 'pest-control', context: 'حشرات', priority: 1 }],
 };

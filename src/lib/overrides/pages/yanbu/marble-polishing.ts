@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// جلي رخام بينبع — Override مخصص (E-E-A-T Grade)
-// صفحة: /yanbu/marble-polishing
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'جلي رخام بينبع — خدمة احترافية معتمدة (2026)',
-        description: 'جلي رخام بينبع. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'جلي رخام بينبع — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['جلي رخام بينبع', 'جلي رخام ينبع', 'شركة جلي رخام بينبع', 'أفضل جلي رخام بينبع'],
+        title: 'جلي رخام بينبع — NaCl Etching+SOx حمض+SiO₂ خدش+70-85% — Marine Sealer+RO! (2026)',
+        description: 'جلي رخام ينبع. NaCl Salt Etching! SOx H₂SO₄. SiO₂ خدش. 70-85% عفن تحت. Marine Sealer+Diamond+RO.',
+        h1: 'جلي رخام بينبع — NaCl Etching+SOx حمض!',
+        keywords: ['جلي رخام ينبع', 'تلميع رخام بينبع', 'شركة جلي رخام ينبع'],
     },
-
     content: {
-        introduction: 'جلي رخام بينبع — خدمة متخصصة تراعي الظروف المناخية والبيئية في ينبع. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'جلي رخام بينبع: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'جلي رخام بينبع. خدمة احترافية. ضمان.',
+        introduction: 'رخام ينبع = ملح وحمض يأكلان السطح! NaCl Salt Etching: ملح البحر الأحمر يتفاعل مع CaCO₃ الرخام ← يأكل السطح = Etching (حفر دقيقة). Marine Sealer إلزامي بعد الجلي. SOx H₂SO₄: أكاسيد YASREF + رطوبة = حمض يتفاعل مع الرخام (CaCO₃ + H₂SO₄ = CaSO₄) ← بقع. pH Neutralizer. SiO₂+NaCl خدش: رمل على ملح = Liquid Grinding يخدش الرخام أسرع. Pre-Rinse إلزامي. 70-85% عفن تحت: رطوبة = عفن أسود تحت الرخام خلال شهر. Anti-Fungal تحت. Diamond Pad يُجدد. مقارنة: بريدة = CaCO₃ كلس بقع + Nafud خدش لكن لا عفن تحت. ينبع = Etching+حمض+عفن = أعقد.',
+        shortAnswer: 'على عكس [الجلي بدون Marine Sealer]، يعتمد بروتوكولنا في خدمة [جلي الرخام] بمدينة [ينبع] على [Diamond+Marine Sealer+pH Neutralizer+Anti-Fungal]. ففي ظل [NaCl Etching+SOx حمض+SiO₂ خدش+70-85% عفن]، تتفاقم ظاهرة [حفر+بقع+خدش+عفن تحت]. لذا؛ يتدخل فنيونا عبر [Pre-Rinse ← Diamond ← Marine Sealer ← Anti-Fungal].',
+        heroSubtitle: 'NaCl Etching + SOx حمض + SiO₂ خدش — Marine Sealer!',
     },
-
     pricing: [
-        { type: 'جلي رخام — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'جلي رخام — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'جلي رخام (م²)', unit: 'م²', minPrice: 20, maxPrice: 45, time: '1-3 أيام' },
+        { type: '+ Marine Sealer', unit: 'م²', minPrice: 15, maxPrice: 30, time: '+ يوم' },
+        { type: '+ Anti-Fungal تحت', unit: 'م²', minPrice: 8, maxPrice: 18, time: '+ معالجة' },
+        { type: 'صيانة نصف سنوية', unit: 'خدمة', minPrice: 400, maxPrice: 800, time: '2 زيارة' },
     ],
-
     faq: [
-        { question: 'كم تكلفة جلي رخام بينبع؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق جلي رخام؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على جلي رخام؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش رخام ينبع يتآكل أسرع؟', answer: 'NaCl + CaCO₃ رخام = Salt Etching. SOx = H₂SO₄ حمض. Marine Sealer.' },
+        { question: 'هل عفن تحت الرخام بينبع؟', answer: '70-85% = عفن أسود تحت الرخام شهر. Anti-Fungal تحت.' },
+        { question: 'كم تكلفة جلي رخام بينبع مقابل بريدة؟', answer: 'أغلى 40-50% — Marine Sealer+Anti-Fungal. بريدة: Descaler+لا عفن.' },
+        { question: 'هل Marine Sealer ضروري للرخام بينبع؟', answer: 'إلزامي! بدونه = NaCl Etching يأكل السطح. يدوم 6-12 شهر.' },
+        { question: 'ليش SiO₂ أخطر على رخام ينبع؟', answer: 'SiO₂+NaCl = Liquid Grinding أخشن. Pre-Rinse أولاً.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Marine Sealer — NaCl Etching إلزامي.',
+        'Pre-Rinse — SiO₂+NaCl قبل الجلي.',
+        'pH Neutralizer — SOx H₂SO₄.',
+        'Anti-Fungal تحت — 70-85% عفن.',
+        'Diamond Pad — يُجدد Etching.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'NaCl + رخام × 6 أشهر بدون Sealer = Etching = حفر دائمة.',
+        'SOx × رخام = CaSO₄ بقع — pH Neutralizer إلزامي.',
+        '70-85% + رخام بدون Anti-Fungal = عفن تحت — رائحة YMYL.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
+        { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'اشتراطات أمانة ينبع' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMISNID.name, quote: 'رخام ينبع: NaCl Etching+SOx حمض. Marine Sealer+Diamond. عفن تحت.', source: 'جغرافيا المناخ — رخام ساحلي' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ جلي رخام مرخص', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Diamond Pad', use: 'يُجدد Etching — جلي' },
+        { name: 'Marine Sealer', use: 'NaCl Etching — حماية' },
+        { name: 'Anti-Fungal', use: '70-85% — عفن تحت رخام' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'Descaler يكفي.', solution: 'NaCl Etching ≠ كلس. Marine Sealer.' },
+        { fear: 'مثل بريدة.', solution: 'Etching+حمض+عفن vs كلس+Nafud.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'سنوي.', truth: 'NaCl Etching = نصف سنوي Sealer.' },
+        { myth: 'ماء عادي.', truth: 'NaCl يعود. RO.' },
     ],
-
     relatedServices: [
-        { slug: 'yanbu-furniture-moving', context: 'نقل عفش بينبع', priority: 1 },
-        { slug: 'yanbu-furniture-storage', context: 'تخزين عفش بينبع', priority: 2 },
-        { slug: 'yanbu-dyna', context: 'دينا نقل بينبع', priority: 3 },
-        { slug: 'yanbu-moving-out', context: 'نقل عفش خروج بينبع', priority: 4 },
-        { slug: 'yanbu-dabab', context: 'دباب نقل بينبع', priority: 5 },
-        { slug: 'yanbu-cleaning', context: 'تنظيف منازل بينبع', priority: 6 },
-        { slug: 'yanbu-tanks-cleaning', context: 'تنظيف خزانات بينبع', priority: 7 },
-        { slug: 'yanbu-sofa-cleaning', context: 'تنظيف كنب بينبع', priority: 8 },
-        { slug: 'yanbu-carpet-cleaning', context: 'تنظيف سجاد بينبع', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 1 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات', priority: 2 },
+        { slug: 'carpet-cleaning', context: 'سجاد', priority: 3 },
+        { slug: 'steam-cleaning', context: 'بخار', priority: 4 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 5 },
+        { slug: 'water-leak-detection', context: 'تسرب', priority: 6 },
+        { slug: 'pest-control', context: 'حشرات', priority: 7 },
     ],
 };

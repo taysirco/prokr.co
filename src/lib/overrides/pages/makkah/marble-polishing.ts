@@ -124,12 +124,12 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'makkah-floor-polishing', context: 'تلميع أرضيات بلاط وبورسلين — نفس الماكينة بتقنية مختلفة', priority: 1 },
-        { slug: 'makkah-villas-cleaning', context: 'تنظيف شامل للفيلا يشمل جلي الرخام + تعقيم', priority: 2 },
-        { slug: 'makkah-apartments-cleaning', context: 'تنظيف شقق مع تلميع أرضيات', priority: 3 },
-        { slug: 'makkah-hourly-cleaning', context: 'صيانة نظافة دورية بعد الجلي — تحافظ على اللمعان', priority: 4 },
-        { slug: 'makkah-epoxy-coating', context: 'دهان إيبوكسي للأرضيات الصناعية والمستودعات', priority: 5 },
-        { slug: 'makkah-furniture-moving', context: 'نقل الأثاث قبل جلي الرخام في الفيلا الجديدة', priority: 6 },
-        { slug: 'makkah-furniture-cleaning', context: 'تنظيف الأثاث بعد الجلي — إزالة أي غبار متبقي', priority: 7 },
+        { slug: 'floor-polishing', context: 'تلميع أرضيات بلاط وبورسلين — نفس الماكينة بتقنية مختلفة', priority: 1 },
+        { slug: 'villas-cleaning', context: 'تنظيف شامل للفيلا يشمل جلي الرخام + تعقيم', priority: 2 },
+        { slug: 'apartments-cleaning', context: 'تنظيف شقق مع تلميع أرضيات', priority: 3 },
+        { slug: 'hourly-cleaning', context: 'صيانة نظافة دورية بعد الجلي — تحافظ على اللمعان', priority: 4 },
+        { slug: 'epoxy-coating', context: 'دهان إيبوكسي للأرضيات الصناعية والمستودعات', priority: 5 },
+        { slug: 'furniture-moving', context: 'نقل الأثاث قبل جلي الرخام في الفيلا الجديدة', priority: 6 },
+        { slug: 'furniture-cleaning', context: 'تنظيف الأثاث بعد الجلي — إزالة أي غبار متبقي', priority: 7 },
     ],
 };

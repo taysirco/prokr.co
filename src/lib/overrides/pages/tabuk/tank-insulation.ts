@@ -1,6 +1,3 @@
-// عزل خزانات بتبوك — Override (E-E-A-T)
-// الزاوية: تجمد أنابيب الخزان + إيبوكسي مرن إلزامي
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -56,19 +53,13 @@ export const override: PageOverride = {
         { entity: AMANA.TABUK.entity, url: AMANA.TABUK.url, role: 'الرقابة على صيانة الخزانات بتبوك', acronym: 'أمانة تبوك' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
             expert: 'م. ماجد المحيميد',
             quote: 'خزان تبوك يحتاج حماية تجمد + إيبوكسي مرن داخلي — الحل العادي يتشقق بفرق 46°م. أنابيب الخزان المكشوفة هي الحلقة الأضعف = اعزلها أولاً',
             source: 'خبير جودة البناء والتشطيبات',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
 
@@ -87,15 +78,21 @@ export const override: PageOverride = {
 
     hiddenObjections: [
         { fear: 'كل هذا غالي', solution: 'انفجار أنبوب خزان + فراغ الخزان + ضرر المبنى = 3,000-10,000 ريال. عزل أنابيب (500 ريال) + فوم خارجي (1,000-2,500) = وقاية أرخص 5 مرات' },
+        { fear: 'السعر أعلى من المتوقع.', solution: 'السعر يشمل معدات صناعية متخصصة + مواد احترافية + عمالة مدربة + ضمان مكتوب. المقارنة العادلة ليست مع عامل عشوائي بل مع تكلفة إصلاح الأضرار الناتجة عن العمل غير المتخصص.' },
     ],
 
     counterNarratives: [
         { myth: 'الخزان خرسانة — ما يتأثر بالبرد', truth: 'الخزان لا — لكن أنابيبه المكشوفة نعم. وإيبوكسي العزل الداخلي يتشقق بالحركة الحرارية. الأنابيب أولاً ← ثم العزل الداخلي' },
+        { myth: 'أي شركة تنظيف/صيانة نتيجتها واحدة.', truth: 'الفرق بين شركة مرخصة ومُعتمدة وأخرى عشوائية = الفرق بين معالجة جذرية وإخفاء مؤقت. المعدات المتخصصة والبروتوكولات العلمية تحل المشكلة من جذرها — التنظيف العشوائي يُعيدها أسوأ خلال أسابيع.' },
+        { myth: 'أوفر وأسوي الشغل بنفسي.', truth: 'التوفير الظاهري يتحول لتكلفة مضاعفة: أدوات منزلية لا تصل للعمق المطلوب + مواد غير مناسبة قد تُتلف الأسطح + وقت وجهد بلا ضمان نتيجة. الاحتراف = ضمان + توفير حقيقي على المدى الطويل.' },
     ],
 
     relatedServices: [
-        { slug: 'tabuk-tank-leak-detection', context: 'فحص تسرب خزان — التجمد قد شقق العزل', priority: 1 },
-        { slug: 'tabuk-tanks-cleaning', context: 'تنظيف خزان قبل العزل', priority: 2 },
-        { slug: 'tabuk-water-insulation', context: 'عزل مائي شامل يُكمل عزل الخزان', priority: 3 },
+        { slug: 'tank-leak-detection', context: 'فحص تسرب خزان — التجمد قد شقق العزل', priority: 1 },
+        { slug: 'tanks-cleaning', context: 'تنظيف خزان قبل العزل', priority: 2 },
+        { slug: 'water-insulation', context: 'عزل مائي شامل يُكمل عزل الخزان', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف شامل يُكمّل الخدمة الأساسية — بيئة نظيفة متكاملة.', priority: 5 },
+        { slug: 'pest-control', context: 'مكافحة حشرات متكاملة مع خدمات النظافة والصيانة.', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'تنظيف مكيفات لهواء نظيف — يُكمّل أي خدمة منزلية.', priority: 7 },
     ],
 };

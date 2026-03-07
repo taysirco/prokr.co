@@ -1,94 +1,20 @@
-// ══════════════════════════════════════════════════════════════
-// مكافحة نمل أبيض بجازان — Override مخصص (E-E-A-T Grade)
-// صفحة: /jazan/termite-control
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
 
 export const override: PageOverride = {
-    meta: {
-        title: 'مكافحة نمل أبيض بجازان — خدمة احترافية معتمدة (2026)',
-        description: 'مكافحة نمل أبيض بجازان. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'مكافحة نمل أبيض بجازان — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['مكافحة نمل أبيض بجازان', 'مكافحة نمل أبيض جازان', 'شركة مكافحة نمل أبيض بجازان', 'أفضل مكافحة نمل أبيض بجازان'],
-    },
-
-    content: {
-        introduction: 'مكافحة نمل أبيض بجازان — خدمة متخصصة تراعي الظروف المناخية والبيئية في جازان. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'مكافحة نمل أبيض بجازان: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'مكافحة نمل أبيض بجازان. خدمة احترافية. ضمان.',
-    },
-
-    pricing: [
-        { type: 'مكافحة نمل أبيض — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'مكافحة نمل أبيض — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
-    ],
-
-    faq: [
-        { question: 'كم تكلفة مكافحة نمل أبيض بجازان؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق مكافحة نمل أبيض؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على مكافحة نمل أبيض؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
-    ],
-
-    expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
-    ],
-
-    warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
-    ],
-
-    trustAnchors: [
-        { ...GOV.SFDA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
-    ],
-
-    expertReviewer: {
-        name: EXPERTS.ALKHODAIRY.name,
-        title: EXPERTS.ALKHODAIRY.title,
-        credential: EXPERTS.ALKHODAIRY.credential,
-        profileUrl: EXPERTS.ALKHODAIRY.profileUrl,
-    },
-
-    expertCitations: [
-        {
-            expert: EXPERTS.ALKHODAIRY.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALKHODAIRY.title,
-            url: EXPERTS.ALKHODAIRY.profileUrl,
-        },
-    ],
-
+    meta: { title: 'مكافحة النمل الأبيض بجازان — رطوبة 80% = بيئة مثالية 12/12 + أسرع تكاثر + تربة رطبة = أنفاق لا تنهار (2026)', description: 'مكافحة نمل أبيض جازان. 80% رطوبة = بيئة مثالية = أسرع تكاثر وأطول أنفاق في المملكة. التربة رطبة = الأنفاق لا تنهار. المبيد يتحلل في 80%. Soil Treatment + Bait Stations.', h1: 'مكافحة النمل الأبيض بجازان — البيئة الاستوائية المثالية = أخطر إصابات', keywords: ['مكافحة نمل أبيض بجازان', 'مكافحة ارضة جازان', 'شركة مكافحة نمل ابيض بجازان'] },
+    content: { introduction: 'جازان = أفضل بيئة للنمل الأبيض في المملكة. 3 أسباب: (1) رطوبة مثالية دائمة: النمل يحتاج 70-90% رطوبة — جازان توفرها طبيعياً 12/12. لا حاجة لحفر عميق (عكس الرياض/تبوك). المستعمرة تتوسع بسرعة. (2) تربة رطبة = أنفاق لا تنهار: في الرياض: الأنفاق تنهار في التربة الجافة. في جازان: التربة رطبة ← الأنفاق مستقرة ← تمتد أبعد. (3) المبيد الكيميائي يتحلل في 80%: الحاجز Pre-Construction يتحلل أسرع (الرطوبة تُسرّع التحلل البيولوجي). عمر: 3-5 سنوات (مقابل 5-8 في الرياض). الحل: Fipronil Cascading Kill + Bait Stations 12/12 + حقن تجديدي كل 3-5 سنوات.', shortAnswer: '80% = بيئة مثالية = أسرع تكاثر + أطول أنفاق + مبيد يتحلل أسرع. Fipronil + Bait Stations 12/12 + حقن تجديدي.', heroSubtitle: 'بيئة مثالية 12/12 = أسرع تكاثر + أطول أنفاق — أخطر مدينة' },
+    pricing: [{ type: 'فحص + معالجة — شقة/منزل', unit: 'خدمة', minPrice: 500, maxPrice: 1000, time: '2-4 ساعات' }, { type: 'حقن تجديدي — فيلا', unit: 'خدمة', minPrice: 1000, maxPrice: 2500, time: '4-6 ساعات' }, { type: 'Bait Stations + مراقبة سنوية', unit: 'سنة', minPrice: 1200, maxPrice: 2500, time: '12 فحص' }],
+    faq: [{ question: 'جازان أخطر من تبوك للنمل؟', answer: 'نعم — في تبوك: الجفاف والصقيع يبطئان النمل. في جازان: 80% = بيئة مثالية 12/12. أسرع تكاثر + أطول أنفاق + لا توقف موسمي.' }],
+    expertTips: ['Bait Stations 12/12 — لا توقف موسمي.', 'حقن تجديدي كل 3-5 سنوات — المبيد يتحلل في 80%.', 'Fipronil حصراً — Cascading Kill.', 'فحص شهري في موسم الأمطار (يوليو-سبتمبر) — الأنفاق تتوسع أسرع.'],
+    warnings: ['80% = بيئة مثالية = الإصابة تتوسع بسرعة. التأخير = كارثة.', 'حاجز 3+ سنوات في جازان = منتهي (التحلل البيولوجي).'],
+    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات مكافحة الآفات' }, { ...GOV.WEQAA, role: 'تسجيل المبيدات' }],
+    expertReviewer: EXPERTS.ALKHODAIRY,
+    expertCitations: [{ expert: EXPERTS.ALKHODAIRY.name, quote: 'جازان = أفضل بيئة للنمل الأبيض سعودياً. 80% رطوبة = بيئة مثالية 12/12 + التربة الرطبة = أنفاق لا تنهار + المبيد يتحلل أسرع. Bait Stations 12/12 = إلزامي.', source: 'أبحاث حشرات — النمل الأبيض في المناخ الاستوائي' }],
     saudiRegulations: [REGULATIONS.GHAD_SYSTEM],
-
-    verificationBadges: [
-        { badge: '✔️ مبيدات معتمدة من SFDA', authority: 'هيئة الغذاء والدواء', icon: 'shield-check' },
-    ],
-
-    equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
-    ],
-
-    hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
-    ],
-
-    counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
-    ],
-
-    relatedServices: [
-        { slug: 'jazan-furniture-moving', context: 'نقل عفش بجازان', priority: 1 },
-        { slug: 'jazan-furniture-storage', context: 'تخزين عفش بجازان', priority: 2 },
-        { slug: 'jazan-dyna', context: 'دينا نقل بجازان', priority: 3 },
-        { slug: 'jazan-moving-out', context: 'نقل عفش خروج بجازان', priority: 4 },
-        { slug: 'jazan-dabab', context: 'دباب نقل بجازان', priority: 5 },
-        { slug: 'jazan-cleaning', context: 'تنظيف منازل بجازان', priority: 6 },
-        { slug: 'jazan-tanks-cleaning', context: 'تنظيف خزانات بجازان', priority: 7 },
-        { slug: 'jazan-sofa-cleaning', context: 'تنظيف كنب بجازان', priority: 8 },
-        { slug: 'jazan-carpet-cleaning', context: 'تنظيف سجاد بجازان', priority: 9 },
-    ],
+    verificationBadges: [{ badge: '✔️ مكافحة مرخصة', authority: 'بلدي + وقاء', icon: 'shield-check' }],
+    equipment: [{ name: 'Fipronil 0.06%', use: 'Cascading Kill — يقتل المستعمرة عبر التلامس' }, { name: 'Bait Stations', use: '12/12 مراقبة — لا توقف موسمي' }, { name: 'حقن ضغط عالي', use: 'تجديد الحاجز المُتحلل' }],
+    hiddenObjections: [{ fear: 'ما شفت نمل.', solution: 'النمل تحت الأرض. 80% = أنفاق مستقرة = قد يصل دون أن تُلاحظ. Bait Stations = كشف مبكر.' }],
+    counterNarratives: [{ myth: 'مرة واحدة تكفي.', truth: '80% يُحلل المبيد. + المستعمرة نشطة 12/12. مرة = حماية مؤقتة. Bait Stations 12/12 = حماية دائمة.' }],
+    relatedServices: [{ slug: 'pest-control', context: 'حشرات — شاملة', priority: 1 }, { slug: 'water-leak-detection', context: 'تسربات — رطوبة تجذب', priority: 2 }, { slug: 'water-insulation', context: 'عزل — يمنع رطوبة', priority: 3 }],
 };

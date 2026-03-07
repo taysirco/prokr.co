@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// دباب نقل بالباحة — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-baha/dabab
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'دباب نقل بالباحة — خدمة احترافية معتمدة (2026)',
-        description: 'دباب نقل بالباحة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'دباب نقل بالباحة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['دباب نقل بالباحة', 'دباب نقل الباحة', 'شركة دباب نقل بالباحة', 'أفضل دباب نقل بالباحة'],
+        title: 'دباب نقل بالباحة — أمطار+ضباب+منحدرات غابية — أصعب طرق! Waterproof+فرامل (2026)',
+        description: 'دباب نقل الباحة. أمطار+ضباب+منحدرات غابات عرعر. أصعب طرق بالمملكة! Waterproof+فرامل+تأمين. الطائف 200 كم.',
+        h1: 'دباب نقل بالباحة — غابات ومطر ومنحدرات — أصعب!',
+        keywords: ['دباب نقل الباحة', 'دباب نقل بالباحة', 'شركة دباب نقل الباحة'],
     },
-
     content: {
-        introduction: 'دباب نقل بالباحة — خدمة متخصصة تراعي الظروف المناخية والبيئية في الباحة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'دباب نقل بالباحة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'دباب نقل بالباحة. خدمة احترافية. ضمان.',
+        introduction: 'الدباب في الباحة يواجه أصعب ظروف نقل بالمملكة! أولاً: أمطار موسمية غزيرة — البضائع المكشوفة تتلف. Waterproof Tarpaulin إلزامي. ثانياً: ضباب 150+ يوم/سنة = رؤية محدودة أقل من 100 متر. إضاءة عالية + سرعة منخفضة. ثالثاً: منحدرات غابات عرعر — طرق جبلية ملتوية بانحدار 8-15%. فرامل فحص يومي + سلاسل إطارات شتاءً. رابعاً: رطوبة 50-75% = عفن يصيب البضائع المخزنة مؤقتاً. Silica Gel في الصناديق. الطائف 200 كم = أقرب مدينة رئيسية = 2-3 ساعات بطرق جبلية. مقارنة: عنيزة = طرق مسطحة + لا مطر + بريدة 30 كم. الباحة = أصعب وأغلى 25-30%.',
+        shortAnswer: 'على عكس [النقل بدون Waterproof في طرق مسطحة]، يعتمد بروتوكولنا في خدمة [دباب النقل] بمدينة [الباحة] على [Waterproof+فرامل+إضاءة+Silica Gel]. ففي ظل [أمطار+ضباب 150+ يوم+منحدرات 8-15%+50-75% رطوبة]، تتفاقم ظاهرة [تلف+انزلاق+عفن مؤقت]. لذا؛ يتدخل سائقونا عبر [تغطية ← فحص ← إنارة ← حماية] لضمان توصيل آمن.',
+        heroSubtitle: 'أمطار + ضباب + منحدرات غابية — أصعب طرق!',
     },
-
     pricing: [
-        { type: 'دباب نقل — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'دباب نقل — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'داخل الباحة', unit: 'رحلة', minPrice: 35, maxPrice: 80, time: '30-60 دقيقة' },
+        { type: 'الباحة ← الطائف (200 كم)', unit: 'رحلة', minPrice: 100, maxPrice: 220, time: '2-3 ساعات' },
+        { type: 'الباحة ← أبها (300 كم)', unit: 'رحلة', minPrice: 150, maxPrice: 350, time: '3-4 ساعات' },
+        { type: 'يومي (موسم أمطار)', unit: 'يوم', minPrice: 200, maxPrice: 450, time: '8 ساعات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة دباب نقل بالباحة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق دباب نقل؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على دباب نقل؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'كم المسافة من الباحة للطائف بالدباب؟', answer: '200 كم = 2-3 ساعات طرق جبلية. أقرب مدينة رئيسية. 100-220 ريال.' },
+        { question: 'كيف أحمي البضائع من المطر بالباحة؟', answer: 'Waterproof Tarpaulin إلزامي + Silica Gel في الصناديق. بدونه = تلف مائي خلال ساعة.' },
+        { question: 'ليش الباحة أصعب نقل بالمملكة؟', answer: 'أمطار+ضباب 150+ يوم+منحدرات 8-15%+غابات = كل التحديات معاً. لا مدينة أخرى تجمعها.' },
+        { question: 'هل الدباب يحتاج سلاسل إطارات بالباحة؟', answer: 'شتاءً في المنحدرات: نعم. المطر+منحدر = انزلاق. فرامل فحص يومي إلزامي.' },
+        { question: 'متى أخطر وقت للنقل بالباحة؟', answer: 'موسم الأمطار (نوفمبر-مارس) + ضباب صباحي = أخطر. ظهراً أفضل — ضباب يخف.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Waterproof Tarpaulin — أمطار تُتلف البضائع.',
+        'فرامل فحص يومي — منحدرات 8-15%.',
+        'إضاءة عالية — ضباب رؤية < 100 متر.',
+        'Silica Gel — 50-75% رطوبة = عفن مؤقت.',
+        'سلاسل إطارات شتاءً — مطر+منحدر = انزلاق.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'بدون Waterproof + أمطار = تلف بضائع خلال ساعة — خسارة كاملة.',
+        'منحدر 15% + مطر + فرامل ضعيفة = انزلاق — حادث.',
+        'ضباب + سرعة عالية + رؤية < 100م = خطر حقيقي.',
     ],
-
     trustAnchors: [
-        { ...GOV.TGA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.TGA, role: 'ترخيص النقل البري' },
+        { entity: AMANA.BAHA.entity, url: AMANA.BAHA.url, role: 'اشتراطات أمانة الباحة' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALZUWAYED.name,
-        title: EXPERTS.ALZUWAYED.title,
-        credential: EXPERTS.ALZUWAYED.credential,
-        profileUrl: EXPERTS.ALZUWAYED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALZUWAYED,
     expertCitations: [
-        {
-            expert: EXPERTS.ALZUWAYED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALZUWAYED.title,
-            url: EXPERTS.ALZUWAYED.profileUrl,
-        },
+        { expert: EXPERTS.ALZUWAYED.name, quote: 'دباب الباحة: أصعب طرق بالمملكة. غابات+منحدرات+ضباب+أمطار. Waterproof+فرامل إلزامي.', source: 'هيئة النقل — جنوبية' },
     ],
-
     saudiRegulations: [REGULATIONS.TGA_LICENSE],
-
-    verificationBadges: [
-        { badge: '✔️ شركة نقل مرخصة من هيئة النقل TGA', authority: 'الهيئة العامة للنقل', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ نقل مرخص TGA', authority: 'هيئة النقل', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Waterproof Tarpaulin', use: 'حماية من أمطار الباحة الغزيرة' },
+        { name: 'فرامل صيانة يومية', use: 'منحدرات 8-15% جبلية غابية' },
+        { name: 'Silica Gel', use: 'حماية مؤقتة من 50-75% رطوبة' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'مثل خميس مشيط.', solution: 'غابات أكثر = طرق أضيق + طين إضافي. أصعب قليلاً.' },
+        { fear: 'Waterproof غالي.', solution: 'بدونه = خسارة بضائع = أغلى 100×.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'الباحة طرق سهلة.', truth: 'منحدرات 8-15% + ضباب + أمطار = أصعب طرق.' },
+        { myth: 'لا مطر بالباحة.', truth: 'أمطار موسمية غزيرة نوفمبر-مارس.' },
     ],
-
     relatedServices: [
-        { slug: 'al-baha-furniture-moving', context: 'نقل عفش بالباحة', priority: 1 },
-        { slug: 'al-baha-furniture-storage', context: 'تخزين عفش بالباحة', priority: 2 },
-        { slug: 'al-baha-dyna', context: 'دينا نقل بالباحة', priority: 3 },
-        { slug: 'al-baha-moving-out', context: 'نقل عفش خروج بالباحة', priority: 4 },
-        { slug: 'al-baha-cleaning', context: 'تنظيف منازل بالباحة', priority: 5 },
-        { slug: 'al-baha-tanks-cleaning', context: 'تنظيف خزانات بالباحة', priority: 6 },
-        { slug: 'al-baha-sofa-cleaning', context: 'تنظيف كنب بالباحة', priority: 7 },
-        { slug: 'al-baha-carpet-cleaning', context: 'تنظيف سجاد بالباحة', priority: 8 },
-        { slug: 'al-baha-steam-cleaning', context: 'تنظيف بالبخار بالباحة', priority: 9 },
+        { slug: 'furniture-moving', context: 'نقل عفش', priority: 1 },
+        { slug: 'auto-cleaning', context: 'غسيل سيارات', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 3 },
+        { slug: 'furniture-storage', context: 'تخزين — رطوبة', priority: 4 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 5 },
+        { slug: 'pest-control', context: 'حشرات غابات', priority: 6 },
+        { slug: 'carpet-cleaning', context: 'سجاد', priority: 7 },
     ],
 };

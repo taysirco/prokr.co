@@ -53,7 +53,10 @@ export const override: PageOverride = {
         { name: 'Crystalline Waterproofing (Xypex)', use: 'يتغلغل في مسام الخرسانة ← بلورات تسدّ الشقوق ← يلتئم ذاتياً 0.4mm.' },
         { name: 'French Drain (مصرف فرنسي)', use: 'أنبوب مثقب + حصى حول الأساسات ← يُحوّل الماء الجوفي بعيداً عن المبنى.' },
     ],
-    hiddenObjections: [{ fear: 'French Drain يحتاج حفر حول البيت — مزعج.', solution: 'الحفر 2-3 أيام ← إعادة ردم. الإزعاج مؤقت. النتيجة دائمة: أساسات جافة 20+ سنة. البديل: صدأ تسليح صامت ← تصدع خرسانة ← ترميم هيكلي مكلف ومزعج أكثر بمراحل.' }],
+    hiddenObjections: [
+        { fear: 'French Drain يحتاج حفر حول البيت — مزعج.', solution: 'الحفر 2-3 أيام ← إعادة ردم. الإزعاج مؤقت. النتيجة دائمة: أساسات جافة 20+ سنة. البديل: صدأ تسليح صامت ← تصدع خرسانة ← ترميم هيكلي مكلف ومزعج أكثر بمراحل.' },
+        { fear: 'الخدمة غالية مقارنة بالمدن الأخرى.', solution: 'خدمات أبها تتطلب معدات إضافية (Dehumidifier + مضاد فطري + تجفيف صناعي) لا تحتاجها المدن الجافة. التكلفة الإضافية تمنع تلف أثاث بآلاف الريالات — استثمار وليس تكلفة.' },
+    ],
     counterNarratives: [{ myth: 'بيتنا خرسانة — ما يسرّب من تحت.', truth: 'الخرسانة مسامية. ماء + ضغط (Hydrostatic) = يعبر الخرسانة عبر المسام والشقوق المجهرية. كل خرسانة فيها شقوق مجهرية (Shrinkage Cracks). الماء يجدها دائماً. العزل يسدّها.' }],
     relatedServices: [
         { slug: 'abha-roof-insulation', context: 'عزل سطح ثلاثي الطبقات.', priority: 1 },
@@ -62,5 +65,6 @@ export const override: PageOverride = {
         { slug: 'abha-thermal-insulation', context: 'عزل حراري شامل.', priority: 4 },
         { slug: 'abha-tank-insulation', context: 'عزل خزانات مائي.', priority: 5 },
         { slug: 'abha-tanks-cleaning', context: 'تنظيف خزان بعد العزل.', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'تنظيف المكيفات التي تنشر أبواغ العفن في رطوبة أبها العالية.', priority: 5 },
     ],
 };

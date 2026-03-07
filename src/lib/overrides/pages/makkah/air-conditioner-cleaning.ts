@@ -90,7 +90,6 @@ export const override: PageOverride = {
             expert: 'م. ماجد المحيميد',
             quote: 'أكثر من 40% من أعطال فصل الكمبريسور في صيف مكة سببها عدم غسيل المبادل الحراري الخارجي — الغبار يرفع حرارة الكمبريسور فوق الحد المسموح ← يفصل تلقائياً',
             source: 'خبير جودة البناء والتشطيبات',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
 
@@ -121,12 +120,12 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'makkah-ac-maintenance', context: 'المكيف نظيف بس ما يبرد = يحتاج صيانة (فريون/كمبريسور)', priority: 1 },
-        { slug: 'makkah-ac-installation', context: 'تركيب مكيف سبليت جديد — فك القديم وتركيب الجديد', priority: 2 },
-        { slug: 'makkah-cleaning', context: 'تنظيف المنزل مع غسيل المكيفات — باقة صيفية شاملة', priority: 3 },
-        { slug: 'makkah-pest-control', context: 'حشرات تدخل من فتحة خرطوم المكيف — مكافحة + سد الفتحات', priority: 4 },
-        { slug: 'makkah-roof-insulation', context: 'عزل السطح يُقلل الحمل الحراري ← المكيف يعمل أقل ← فاتورة أقل', priority: 5 },
-        { slug: 'makkah-steam-cleaning', context: 'تعقيم بالبخار للكنب والمراتب — يُكمل تعقيم المكيف', priority: 6 },
-        { slug: 'makkah-villas-cleaning', context: 'تنظيف فيلا شامل مع غسيل كل المكيفات', priority: 7 },
+        { slug: 'ac-maintenance', context: 'المكيف نظيف بس ما يبرد = يحتاج صيانة (فريون/كمبريسور)', priority: 1 },
+        { slug: 'ac-installation', context: 'تركيب مكيف سبليت جديد — فك القديم وتركيب الجديد', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف المنزل مع غسيل المكيفات — باقة صيفية شاملة', priority: 3 },
+        { slug: 'pest-control', context: 'حشرات تدخل من فتحة خرطوم المكيف — مكافحة + سد الفتحات', priority: 4 },
+        { slug: 'roof-insulation', context: 'عزل السطح يُقلل الحمل الحراري ← المكيف يعمل أقل ← فاتورة أقل', priority: 5 },
+        { slug: 'steam-cleaning', context: 'تعقيم بالبخار للكنب والمراتب — يُكمل تعقيم المكيف', priority: 6 },
+        { slug: 'villas-cleaning', context: 'تنظيف فيلا شامل مع غسيل كل المكيفات', priority: 7 },
     ],
 };

@@ -63,19 +63,13 @@ export const override: PageOverride = {
         { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'الرقابة الصحية على مطابخ الفنادق والمطاعم في المدينة المنورة', acronym: 'أمانة المدينة' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
             expert: 'م. ماجد المحيميد',
             quote: 'الغبار البازلتي يلتصق بدهون المطابخ ويُشكّل طبقة صلبة لا تُزال بالمنظفات المنزلية. في المدينة: تنظيف المطبخ العميق يحتاج مذيبات صناعية ومعالجة كلسية — ليس فقط ماء وصابون',
             source: 'خبير جودة البناء والتشطيبات',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
 
@@ -100,10 +94,10 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'madinah-cleaning', context: 'تنظيف منزل شامل يتضمن المطبخ ← الباقة الأفضل', priority: 1 },
-        { slug: 'madinah-oven-cleaning', context: 'تنظيف فرن عميق — الدهون المحترقة تحتاج معالجة منفصلة', priority: 2 },
-        { slug: 'madinah-restaurant-chimney-cleaning', context: 'تنظيف مداخن المطابخ التجارية — وقاية من خطر الحريق', priority: 3 },
-        { slug: 'madinah-pest-control', context: 'مكافحة صراصير المطبخ — التنظيف + المكافحة = حل جذري', priority: 4 },
-        { slug: 'madinah-sewage-unblocking', context: 'انسداد صرف المطبخ بالدهون — تسليك مع التنظيف', priority: 5 },
+        { slug: 'cleaning', context: 'تنظيف منزل شامل يتضمن المطبخ ← الباقة الأفضل', priority: 1 },
+        { slug: 'oven-cleaning', context: 'تنظيف فرن عميق — الدهون المحترقة تحتاج معالجة منفصلة', priority: 2 },
+        { slug: 'restaurant-chimney-cleaning', context: 'تنظيف مداخن المطابخ التجارية — وقاية من خطر الحريق', priority: 3 },
+        { slug: 'pest-control', context: 'مكافحة صراصير المطبخ — التنظيف + المكافحة = حل جذري', priority: 4 },
+        { slug: 'sewage-unblocking', context: 'انسداد صرف المطبخ بالدهون — تسليك مع التنظيف', priority: 5 },
     ],
 };

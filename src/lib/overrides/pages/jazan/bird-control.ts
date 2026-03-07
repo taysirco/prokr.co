@@ -1,7 +1,3 @@
-// مكافحة طيور بجازان — Override (E-E-A-T)
-// الزاوية: ذرق حمضي يبقى رطباً = تآكل مستمر
-//   + تآكل مزدوج (ذرق رطب + ملوحة بحرية) = SS316 إلزامي
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -57,19 +53,13 @@ export const override: PageOverride = {
         { entity: AMANA.JAZAN.entity, url: AMANA.JAZAN.url, role: 'الرقابة على نظافة المباني بجازان', acronym: 'أمانة جازان' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMISNID.name,
-        title: EXPERTS.ALMISNID.title,
-        credential: EXPERTS.ALMISNID.credential,
-        profileUrl: EXPERTS.ALMISNID.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMISNID,
 
     expertCitations: [
         {
             expert: 'د. فهد الخضيري',
             quote: 'جازان = أسوأ بيئة حمام بالسعودية. الذرق لا يجف = حمض نشط 24/7. + ملوحة البحر الأحمر = تآكل مزدوج يأكل 304. SS316 + بولي كربونات UV = الحد الأدنى. وتكاثر 12 شهر = لا وقت للتأخير',
             source: 'مكافحة حشرات وآفات',
-            url: 'https://x.com/DrAlkhodairy',
         },
     ],
 
@@ -88,19 +78,22 @@ export const override: PageOverride = {
 
     hiddenObjections: [
         { fear: 'SS316 أغلى 25-30%', solution: '304 بجازان = يصدأ خلال 1-2 سنة = استبدال = ضعف التكلفة + ضرر مبنى. 316: مرة واحدة 10+ سنوات. على 10 سنوات: 316 أوفر 50%+' },
+        { fear: 'السعر أعلى من المتوقع.', solution: 'السعر يشمل معدات صناعية متخصصة + مواد احترافية + عمالة مدربة + ضمان مكتوب. المقارنة العادلة ليست مع عامل عشوائي بل مع تكلفة إصلاح الأضرار الناتجة عن العمل غير المتخصص.' },
     ],
 
     counterNarratives: [
         { myth: 'الذرق ما يضر — بس وسخ', truth: 'حمض اليوريك + رطوبة 58% + ملوحة = تآكل مزدوج يأكل الخرسانة والمعادن والطلاء. \"وسخ\" أيضاً يحمل بكتيريا (سالمونيلا، هيستوبلازما). خطر صحي وهيكلي' },
+        { myth: 'أي شركة تنظيف/صيانة نتيجتها واحدة.', truth: 'الفرق بين شركة مرخصة ومُعتمدة وأخرى عشوائية = الفرق بين معالجة جذرية وإخفاء مؤقت. المعدات المتخصصة والبروتوكولات العلمية تحل المشكلة من جذرها — التنظيف العشوائي يُعيدها أسوأ خلال أسابيع.' },
+        { myth: 'أوفر وأسوي الشغل بنفسي.', truth: 'التوفير الظاهري يتحول لتكلفة مضاعفة: أدوات منزلية لا تصل للعمق المطلوب + مواد غير مناسبة قد تُتلف الأسطح + وقت وجهد بلا ضمان نتيجة. الاحتراف = ضمان + توفير حقيقي على المدى الطويل.' },
     ],
 
     relatedServices: [
-        { slug: 'jazan-pest-control', context: 'الحمام يحمل براغيث — مكافحة بعد الطرد', priority: 1 },
-        { slug: 'jazan-cleaning', context: 'تنظيف أسطح من ذرق حمضي رطب', priority: 2 },
-        { slug: 'jazan-roof-insulation', context: 'عزل سطح — ذرق رطب يأكل العزل', priority: 3 },
-        { slug: 'jazan-water-insulation', context: 'عزل مائي — الذرق يُضعف طبقة البيتومين', priority: 4 },
-        { slug: 'jazan-sewage-unblocking', context: 'تسليك مجاري — فضلات الحمام تسد المصارف', priority: 5 },
-        { slug: 'jazan-tanks-cleaning', context: 'تنظيف خزان — الحمام يلوث خزانات مكشوفة', priority: 6 },
-        { slug: 'jazan-foam-insulation', context: 'فوم = الحمام ينقر الفوم المكشوف', priority: 7 },
+        { slug: 'pest-control', context: 'الحمام يحمل براغيث — مكافحة بعد الطرد', priority: 1 },
+        { slug: 'cleaning', context: 'تنظيف أسطح من ذرق حمضي رطب', priority: 2 },
+        { slug: 'roof-insulation', context: 'عزل سطح — ذرق رطب يأكل العزل', priority: 3 },
+        { slug: 'water-insulation', context: 'عزل مائي — الذرق يُضعف طبقة البيتومين', priority: 4 },
+        { slug: 'sewage-unblocking', context: 'تسليك مجاري — فضلات الحمام تسد المصارف', priority: 5 },
+        { slug: 'tanks-cleaning', context: 'تنظيف خزان — الحمام يلوث خزانات مكشوفة', priority: 6 },
+        { slug: 'foam-insulation', context: 'فوم = الحمام ينقر الفوم المكشوف', priority: 7 },
     ],
 };

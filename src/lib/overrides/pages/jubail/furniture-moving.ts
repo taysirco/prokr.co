@@ -1,94 +1,71 @@
-// ══════════════════════════════════════════════════════════════
-// نقل عفش بالجبيل — Override مخصص (E-E-A-T Grade)
-// صفحة: /jubail/furniture-moving
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'نقل عفش بالجبيل — خدمة احترافية معتمدة (2026)',
-        description: 'نقل عفش بالجبيل. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'نقل عفش بالجبيل — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['نقل عفش بالجبيل', 'نقل عفش الجبيل', 'شركة نقل عفش بالجبيل', 'أفضل نقل عفش بالجبيل'],
+        title: 'نقل أثاث بالجبيل — NaCl+VOC تآكل ترانزيت + 85-98% تكثّف + SABIC مسارات (2026)',
+        description: 'نقل أثاث الجبيل. NaCl+VOC تآكل ترانزيت. 85-98% تكثّف Short Circuit. SABIC مسارات صناعية. VCI + Silica + Stretch Marine + تصاريح.',
+        h1: 'نقل أثاث بالجبيل — ملح+بتروكيماويات في الطريق وتكثّف يُعطّل',
+        keywords: ['نقل أثاث الجبيل', 'نقل عفش بالجبيل', 'شركة نقل أثاث بالجبيل'],
     },
-
     content: {
-        introduction: 'نقل عفش بالجبيل — خدمة متخصصة تراعي الظروف المناخية والبيئية في الجبيل. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'نقل عفش بالجبيل: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'نقل عفش بالجبيل. خدمة احترافية. ضمان.',
+        introduction: 'نقل أثاث الجبيل = أقسى نقل ساحلي-صناعي. الأول — NaCl+VOC ترانزيت: أثاء النقل = NaCl+VOC يهاجم الأثاث. VCI لمعادن + Stretch Marine لأسطح. الثاني — 85-98% تكثّف: أقصى تكثّف = Short Circuit إلكترونيات + صدأ. Silica Gel إلزامي. الثالث — PVAc: 98% = PVAc يمتص = مفاصل ضعيفة. حذر. الرابع — SABIC مسارات: طرق صناعية = تصاريح + معرفة مسارات.',
+        shortAnswer: 'على عكس [نقل عادي] في 98% تكثّف، يعتمد بروتوكولنا في خدمة [نقل الأثاث] بمدينة [الجبيل] على [VCI + Silica + Stretch Marine + تصاريح]. ففي ظل [NaCl+VOC + 85-98% + SABIC]، تتفاقم ظاهرة [تآكل + تكثّف + تقييد]. لذا؛ يتدخل خبراؤنا عبر [نقل صناعي-ساحلي].',
+        heroSubtitle: 'NaCl+VOC ترانزيت + 98% تكثّف + PVAc + SABIC مسارات',
     },
-
     pricing: [
-        { type: 'نقل عفش — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'نقل عفش — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'نقل داخل الجبيل', unit: 'رحلة', minPrice: 350, maxPrice: 780, time: '3-5 ساعات' },
+        { type: 'الجبيل ← الدمام (100 كم)', unit: 'رحلة', minPrice: 930, maxPrice: 2300, time: '4-7 ساعات' },
+        { type: 'الجبيل ← الرياض (400 كم)', unit: 'رحلة', minPrice: 2200, maxPrice: 5500, time: '8-14 ساعة' },
+        { type: 'فك + تغليف Marine + نقل + تركيب', unit: 'باقة', minPrice: 780, maxPrice: 2000, time: '5-10 ساعات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة نقل عفش بالجبيل؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق نقل عفش؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على نقل عفش؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: '98% تكثّف — أخطر نقل؟', answer: 'الأخطر. 98% = تكثّف فوري على إلكترونيات = Short Circuit. Silica Gel + VCI = إلزامي. لا بديل.' },
+        { question: 'VCI — لماذا؟', answer: 'NaCl+VOC = Galvanic 2×. مفصلات أثاث = حديد. VCI = حماية أثناء النقل.' },
+        { question: 'PVAc — خلال النقل؟', answer: '98% في الشاحنة = PVAc يمتص = ضعف. نقل سريع + Dehumidifier في الشاحنة.' },
+        { question: 'Stretch Marine — فرق عن عادي؟', answer: 'Marine = مُقاوم NaCl+VOC. عادي = يتآكل. فرق حماية.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Silica Gel في كل صندوق — 98% = تكثّف.',
+        'VCI لمعادن — NaCl+VOC Galvanic.',
+        'Stretch Marine — لا Stretch عادي.',
+        'نقل صباحي — أقل حرارة = أقل تكثّف.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        '98% + إلكترونيات بدون Silica = Short Circuit.',
+        'VCI بدون = مفصلات تصدأ أثناء النقل.',
+        'PVAc + 98% + نقل بطيء = تفكك.',
     ],
-
     trustAnchors: [
-        { ...GOV.TGA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.TGA, role: 'ترخيص نقل الأثاث' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات النقل بالشرقية' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALZUWAYED.name,
-        title: EXPERTS.ALZUWAYED.title,
-        credential: EXPERTS.ALZUWAYED.credential,
-        profileUrl: EXPERTS.ALZUWAYED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALZUWAYED,
     expertCitations: [
-        {
-            expert: EXPERTS.ALZUWAYED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALZUWAYED.title,
-            url: EXPERTS.ALZUWAYED.profileUrl,
-        },
+        { expert: EXPERTS.ALZUWAYED.name, quote: 'نقل الجبيل = الأخطر ساحلي-صناعي: 98% تكثّف + NaCl+VOC. VCI + Silica + Stretch Marine = إلزامي.', source: 'هيئة النقل — النقل الصناعي-الساحلي' },
     ],
-
     saudiRegulations: [REGULATIONS.TGA_LICENSE],
-
-    verificationBadges: [
-        { badge: '✔️ شركة نقل مرخصة من هيئة النقل TGA', authority: 'الهيئة العامة للنقل', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ نقل مرخص', authority: 'هيئة النقل', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Stretch Marine', use: 'NaCl+VOC — أسطح' },
+        { name: 'VCI', use: 'Galvanic — معادن' },
+        { name: 'Silica Gel', use: '98% — تكثّف' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'مثل الخبر.', solution: 'VOC + 98% > 95% + SABIC. أخطر.' },
+        { fear: 'غالي.', solution: 'VCI + Silica = 50-100. تلف = آلاف.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'شاحنة مُغلقة.', truth: '98% = تكثّف حتى مُغلقة. Silica.' },
+        { myth: 'Stretch عادي.', truth: 'NaCl+VOC يتآكله. Marine.' },
     ],
-
     relatedServices: [
-        { slug: 'jubail-furniture-storage', context: 'تخزين عفش بالجبيل', priority: 1 },
-        { slug: 'jubail-dyna', context: 'دينا نقل بالجبيل', priority: 2 },
-        { slug: 'jubail-moving-out', context: 'نقل عفش خروج بالجبيل', priority: 3 },
-        { slug: 'jubail-dabab', context: 'دباب نقل بالجبيل', priority: 4 },
-        { slug: 'jubail-cleaning', context: 'تنظيف منازل بالجبيل', priority: 5 },
-        { slug: 'jubail-tanks-cleaning', context: 'تنظيف خزانات بالجبيل', priority: 6 },
-        { slug: 'jubail-sofa-cleaning', context: 'تنظيف كنب بالجبيل', priority: 7 },
-        { slug: 'jubail-carpet-cleaning', context: 'تنظيف سجاد بالجبيل', priority: 8 },
-        { slug: 'jubail-steam-cleaning', context: 'تنظيف بالبخار بالجبيل', priority: 9 },
+        { slug: 'furniture-cleaning', context: 'أثاث — بعد', priority: 1 },
+        { slug: 'furniture-storage', context: 'تخزين — 98%', priority: 2 },
+        { slug: 'dabab', context: 'دباب — خفيف', priority: 3 },
+        { slug: 'dyna', context: 'دينا — ثقيل', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 5 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 6 },
+        { slug: 'pest-control', context: 'حشرات', priority: 7 },
     ],
 };

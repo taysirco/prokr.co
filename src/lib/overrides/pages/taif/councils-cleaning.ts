@@ -1,4 +1,3 @@
-// تنظيف مجالس بالطائف — Override (E-E-A-T)
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -35,9 +34,12 @@ export const override: PageOverride = {
         'مجلس أرضي بدون عازل في شتاء الطائف = عفن مضمون خلال أسابيع.',
         'تنظيف مجلس مغلق 6 أشهر بدون كمامة = استنشاق أبواغ فطرية مركزة.',
     ],
-    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات التنظيف' }],
-    expertReviewer: { name: EXPERTS.ALMISNID.name, title: EXPERTS.ALMISNID.title, credential: EXPERTS.ALMISNID.credential, profileUrl: EXPERTS.ALMISNID.profileUrl },
-    expertCitations: [{ expert: EXPERTS.ALMISNID.name, quote: 'المجالس الأرضية في الطائف تمتص رطوبة 3-4 أضعاف الكنب المرتفع. الأرضية الباردة (5°م شتاءً) + مفروشات ملاصقة = تكثف ← عفن. بساط عازل + رفع 5 سم = حل بسيط يمنع مشكلة كبيرة.', source: EXPERTS.ALMISNID.title, url: EXPERTS.ALMISNID.profileUrl }],
+    trustAnchors: [
+{ ...{ ...GOV.BALADI, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
+ role: 'ترخيص شركات التنظيف' }    ],
+    expertReviewer: EXPERTS.ALMISNID,
+    expertCitations: [{ expert: EXPERTS.ALMISNID.name, quote: 'المجالس الأرضية في الطائف تمتص رطوبة 3-4 أضعاف الكنب المرتفع. الأرضية الباردة (5°م شتاءً) + مفروشات ملاصقة = تكثف ← عفن. بساط عازل + رفع 5 سم = حل بسيط يمنع مشكلة كبيرة.',
+            source: EXPERTS.ALMISNID.title }],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
     verificationBadges: [{ badge: '✔️ استخراج ساخن 70°م', authority: 'غسيل عميق', icon: 'shield-check' }, { badge: '✔️ مذيب بخور قلوي', authority: 'إزالة بقع', icon: 'badge-check' }],
     equipment: [
@@ -45,11 +47,17 @@ export const override: PageOverride = {
         { name: 'مذيب قلوي (pH 10-11)', use: 'يُذيب بقع البخور والقطران — الماء العادي لا يذيبها.' },
         { name: 'مراوح تجفيف + مزيل رطوبة', use: 'يسرّع التجفيف ← يمنع عودة العفن. إلزامي في رطوبة الطائف.' },
     ],
-    hiddenObjections: [{ fear: 'أنفض المجلس بالعصا وأبخّره — يكفي.', solution: 'النفض يطيّر الغبار الكبير فقط — العث وحبوب اللقاح والأبواغ لا تطير بالعصا. البخور المباشر = إضافة بقع جديدة. HEPA يحبس الدقيق + استخراج ساخن يغسل العمق = تنظيف حقيقي.' }],
+    hiddenObjections: [
+        { fear: 'أنفض المجلس بالعصا وأبخّره — يكفي.', solution: 'النفض يطيّر الغبار الكبير فقط — العث وحبوب اللقاح والأبواغ لا تطير بالعصا. البخور المباشر = إضافة بقع جديدة. HEPA يحبس الدقيق + استخراج ساخن يغسل العمق = تنظيف حقيقي.' },
+        { fear: 'الخدمة أغلى من المدن الأخرى.', solution: 'مناخ الطائف يفرض معالجات إضافية (مضاد تكثف + تجفيف + حماية أخشاب ورود). التكلفة الإضافية استثمار يحمي ممتلكاتك من تلف الرطوبة والحشرات الموسمية.' },
+    ],
     counterNarratives: [{ myth: 'البخور يعقّم المجلس.', truth: 'البخور = عطر + دخان. لا يقتل عثاً ولا عفناً. المجلس "يفوح" لكنه مليء بالعث والأبواغ. التطهير = بخار 150°م أو استخراج ساخن 70°م.' }],
     relatedServices: [
-        { slug: 'taif-sofa-cleaning', context: 'كنب مع المجلس — باقة متكاملة.', priority: 1 },
-        { slug: 'taif-carpet-cleaning', context: 'سجاد المجلس — نفس مشكلة الرطوبة.', priority: 2 },
-        { slug: 'taif-cleaning', context: 'تنظيف شامل مع المجلس.', priority: 3 },
+        { slug: 'sofa-cleaning', context: 'كنب مع المجلس — باقة متكاملة.', priority: 1 },
+        { slug: 'carpet-cleaning', context: 'سجاد المجلس — نفس مشكلة الرطوبة.', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف شامل مع المجلس.', priority: 3 },
+        { slug: 'air-conditioner-cleaning', context: 'تنظيف مكيفات تعمل تبريد/تدفئة طوال السنة في مناخ الطائف المتقلب.', priority: 5 },
+        { slug: 'pest-control', context: 'مكافحة حشرات تتكاثر في رطوبة الطائف الشتوية والزراعة المحيطة.', priority: 6 },
+        { slug: 'steam-cleaning', context: 'تعقيم بالبخار لقتل العث والفطريات في مفروشات الطائف الرطبة.', priority: 7 },
     ],
 };

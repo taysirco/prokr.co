@@ -1,12 +1,3 @@
-// ══════════════════════════════════════════════════════════════
-// عزل خزانات بالدمام — Override (E-E-A-T)
-// صفحة: /dammam/tank-insulation
-// قطاع YMYL: صحي (ليجونيلا + تلوث) + مالي
-// خريطة 2.4: المحيميد → NWC + بلدي + أمانة الشرقية
-// الزاوية: هجوم ثلاثي على الخزان:
-//   كلوريدات من الداخل + حرارة رطبة من الخارج + مياه جوفية
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -76,19 +67,13 @@ export const override: PageOverride = {
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'الرقابة على صيانة الخزانات وسلامة المياه بالدمام', acronym: 'أمانة الشرقية' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
             expert: 'م. ماجد المحيميد',
             quote: 'خزانات الدمام تحتاج عزلاً ثلاثياً: إيبوكسي بحري من الداخل ضد كلوريدات التحلية + فوم Closed-Cell من الخارج ضد الحرارة الرطبة + بيتوميني للخزان الأرضي ضد المياه الجوفية. الخزان أخطر نقطة بالمبنى الساحلي',
             source: 'خبير جودة البناء والتشطيبات',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
 
@@ -115,9 +100,9 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'dammam-tanks-cleaning', context: 'تنظيف الخزان من الترسبات قبل العزل = التصاق أفضل', priority: 1 },
-        { slug: 'dammam-tank-leak-detection', context: 'فحص تسرب الخزان قبل العزل — لا فائدة من العزل فوق شق', priority: 2 },
-        { slug: 'dammam-water-insulation', context: 'عزل مائي شامل للمبنى يُكمل عزل الخزان', priority: 3 },
-        { slug: 'dammam-water-leak-detection', context: 'فحص شبكة المياه — التسرب قد يكون من الشبكة لا الخزان', priority: 4 },
+        { slug: 'tanks-cleaning', context: 'تنظيف الخزان من الترسبات قبل العزل = التصاق أفضل', priority: 1 },
+        { slug: 'tank-leak-detection', context: 'فحص تسرب الخزان قبل العزل — لا فائدة من العزل فوق شق', priority: 2 },
+        { slug: 'water-insulation', context: 'عزل مائي شامل للمبنى يُكمل عزل الخزان', priority: 3 },
+        { slug: 'water-leak-detection', context: 'فحص شبكة المياه — التسرب قد يكون من الشبكة لا الخزان', priority: 4 },
     ],
 };

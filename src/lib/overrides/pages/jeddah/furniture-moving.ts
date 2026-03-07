@@ -85,7 +85,6 @@ export const override: PageOverride = {
             expert: 'م. ماجد المحيميد',
             quote: 'في جدة — التغليف المقاوم للرطوبة ليس كمالياً. ساعة تعرض مكشوف في 80% رطوبة = عفن على القماش + خشب ينتفخ. غلّف كل قطعة + Silica Gel + دينا مغلقة',
             source: 'خبير جودة البناء والتشطيبات',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
 
@@ -112,14 +111,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'jeddah-furniture-storage', context: 'تخزين أثاث مكيّف أثناء التجهيز — حماية من رطوبة جدة', priority: 1 },
-        { slug: 'jeddah-furniture-cleaning', context: 'تنظيف الأثاث بعد النقل يزيل غبار التغليف', priority: 2 },
-        { slug: 'jeddah-cleaning', context: 'تنظيف شامل للبيت الجديد قبل ترتيب الأثاث', priority: 3 },
-        { slug: 'jeddah-pest-control', context: 'رش وقائي للبيت الجديد قبل إدخال الأثاث', priority: 4 },
-        { slug: 'jeddah-air-conditioner-cleaning', context: 'تنظيف مكيفات البيت الجديد قبل التشغيل', priority: 5 },
-        { slug: 'jeddah-dyna', context: 'نقل أغراض كبيرة تحتاج دينا مع شاحنة النقل', priority: 6 },
-        { slug: 'jeddah-sofa-cleaning', context: 'تنظيف كنب بالبخار بعد النقل — يزيل الغبار المتراكم', priority: 7 },
-        { slug: 'jeddah-carpet-cleaning', context: 'غسيل سجاد بعد النقل — ينظف من أتربة التغليف', priority: 8 },
-        { slug: 'jeddah-water-leak-detection', context: 'كشف تسربات البيت الجديد قبل ترتيب الأثاث', priority: 9 },
+        { slug: 'furniture-storage', context: 'تخزين أثاث مكيّف أثناء التجهيز — حماية من رطوبة جدة', priority: 1 },
+        { slug: 'furniture-cleaning', context: 'تنظيف الأثاث بعد النقل يزيل غبار التغليف', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف شامل للبيت الجديد قبل ترتيب الأثاث', priority: 3 },
+        { slug: 'pest-control', context: 'رش وقائي للبيت الجديد قبل إدخال الأثاث', priority: 4 },
+        { slug: 'air-conditioner-cleaning', context: 'تنظيف مكيفات البيت الجديد قبل التشغيل', priority: 5 },
+        { slug: 'dyna', context: 'نقل أغراض كبيرة تحتاج دينا مع شاحنة النقل', priority: 6 },
+        { slug: 'sofa-cleaning', context: 'تنظيف كنب بالبخار بعد النقل — يزيل الغبار المتراكم', priority: 7 },
+        { slug: 'carpet-cleaning', context: 'غسيل سجاد بعد النقل — ينظف من أتربة التغليف', priority: 8 },
+        { slug: 'water-leak-detection', context: 'كشف تسربات البيت الجديد قبل ترتيب الأثاث', priority: 9 },
     ],
 };

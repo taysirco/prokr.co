@@ -1,94 +1,82 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف فلل بالجبيل — Override مخصص (E-E-A-T Grade)
-// صفحة: /jubail/villas-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف فلل بالجبيل — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف فلل بالجبيل. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف فلل بالجبيل — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف فلل بالجبيل', 'تنظيف فلل الجبيل', 'شركة تنظيف فلل بالجبيل', 'أفضل تنظيف فلل بالجبيل'],
+        title: 'تنظيف فلل بالجبيل — بروتوكول صناعي-ساحلي 7 محاور: NaCl+VOC+عفن+عث+بعوض+سخام+Biofilm (2026)',
+        description: 'تنظيف فلل الجبيل. 7 محاور صناعية-ساحلية. NaCl+VOC. عفن 98%. عث أقصى. بعوض Aedes. سخام SABIC. Biofilm. أعقد فيلا في المملكة.',
+        h1: 'تنظيف فلل بالجبيل — 7 محاور صناعية-ساحلية — أعقد فيلا في المملكة',
+        keywords: ['تنظيف فلل الجبيل', 'تنظيف فيلا بالجبيل', 'شركة تنظيف فلل بالجبيل'],
     },
-
     content: {
-        introduction: 'تنظيف فلل بالجبيل — خدمة متخصصة تراعي الظروف المناخية والبيئية في الجبيل. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف فلل بالجبيل: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف فلل بالجبيل. خدمة احترافية. ضمان.',
+        introduction: 'الفيلا في الجبيل = أعقد فيلا في المملكة — 7 محاور. المحور 1 — NaCl+VOC ترسبات: ملح+بتروكيماويات على كل سطح. Marine Degreaser. المحور 2 — 85-98% عفن: عفن أسبوع على كل سطح رطب. Anti-Fungal. المحور 3 — عث أقصى: حشوات + سجاد + ستائر. بخار + Anti-Mite. المحور 4 — بعوض Aedes: تصريف مكيفات + برك = بعوض ضنك. Larvicide. المحور 5 — سخام SABIC: طبقة سوداء على واجهات + أثاث + سيارات. Enzymatic. المحور 6 — Biofilm: 98% = Biofilm على حدائق + مسبح + واجهات. Anti-Biofilm. المحور 7 — تكثّف: 98% = Dehumidifier 24/7. Sick Building. المقارنة: حفر الباطن = 5 محاور (لا عفن + لا عث = ميزتين). الجبيل = 7 = أعقد.',
+        shortAnswer: 'على عكس [فريق عادي] بـ 2-3 محاور، يعتمد بروتوكولنا في خدمة [تنظيف الفلل] بمدينة [الجبيل] على [فريق 7 محاور صناعي-ساحلي]. ففي ظل [NaCl+VOC + 85-98% + عث + بعوض + سخام + Biofilm + تكثّف]، تتفاقم ظاهرة [7-محاور]. لذا؛ يتدخل خبراؤنا عبر [بروتوكول فيلا صناعي-ساحلي 7 محاور].',
+        heroSubtitle: '7 محاور: NaCl+VOC + عفن + عث + بعوض + سخام + Biofilm + تكثّف',
     },
-
     pricing: [
-        { type: 'تنظيف فلل — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف فلل — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'فيلا — بروتوكول صناعي-ساحلي', unit: 'فيلا', minPrice: 550, maxPrice: 1200, time: '6-10 ساعات' },
+        { type: 'فيلا + حديقة + مسبح + واجهات', unit: 'فيلا', minPrice: 780, maxPrice: 1800, time: '8-14 ساعة' },
+        { type: 'بعد إجازة (عفن 98%)', unit: 'فيلا', minPrice: 640, maxPrice: 1400, time: '8-12 ساعة' },
+        { type: 'عقد أسبوعي', unit: 'شهر', minPrice: 680, maxPrice: 1400, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف فلل بالجبيل؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف فلل؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف فلل؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: '7 محاور — أكثر من أي مدينة؟', answer: 'الأكثر. حفر الباطن: 5 (لا عفن+عث). الخبر: 7 (بلا سخام). الجبيل: 7 كاملة + سخام = الأعقد.' },
+        { question: 'فريق — كم شخص؟', answer: 'فيلا صغيرة: 5-6. فيلا كبيرة: 7-8. أكبر فريق في المملكة.' },
+        { question: 'أغلى من حفر الباطن — كم؟', answer: 'أغلى 30-50%. محورين إضافيين (عفن+عث) + سخام + Dehumidifier.' },
+        { question: 'أسبوعي — ليش؟', answer: '7 ملوثات يومية + عفن أسبوعي + بعوض. أسبوعي = يمنع التراكم.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Marine Degreaser — NaCl+VOC المحور 1.',
+        'Anti-Fungal كل زيارة — 98% المحور 2.',
+        'بخار + Anti-Mite — عث المحور 3.',
+        'Larvicide تصريف مكيف — بعوض المحور 4.',
+        'Enzymatic سخام — المحور 5.',
+        'Anti-Biofilm حديقة+مسبح — المحور 6.',
+        'Dehumidifier 24/7 — المحور 7.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        '7 محاور × 12 شهر = تلف شامل بدون بروتوكول.',
+        'بعد إجازة 98% = عفن شامل + بعوض + Biofilm.',
+        'Dehumidifier 24/7 = إلزامي. بدون = Sick Building.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص التنظيف' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات الفلل بالشرقية' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMISNID.name, quote: 'فيلا الجبيل = الأعقد: 7 محاور صناعية-ساحلية. NaCl+VOC+عفن+عث+بعوض+سخام+Biofilm+تكثّف. أكبر فريق + أغلى عقد.', source: 'جغرافيا المناخ — فلل البيئة الصناعية' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
     verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
+        { badge: '✔️ تنظيف فلل مرخص', authority: 'منصة بلدي', icon: 'shield-check' },
+        { badge: '✔️ بروتوكول 7 محاور صناعي-ساحلي', authority: 'معتمد داخلياً', icon: 'badge-check' },
     ],
-
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Marine Degreaser', use: 'NaCl+VOC — المحور 1' },
+        { name: 'Anti-Fungal', use: '98% عفن — المحور 2' },
+        { name: 'بخار + Anti-Mite', use: 'عث — المحور 3' },
+        { name: 'BTI Larvicide', use: 'بعوض — المحور 4' },
+        { name: 'Enzymatic', use: 'سخام — المحور 5' },
+        { name: 'Anti-Biofilm', use: 'Biofilm — المحور 6' },
+        { name: 'Dehumidifier', use: 'تكثّف — المحور 7' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'مثل الخبر.', solution: 'سخام SABIC + 98%>95% + VOC. أعقد.' },
+        { fear: 'غالي.', solution: '7 محاور = 7 أدوات+فريق. بدون = تلف أغلى.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'مثل حفر الباطن.', truth: '5 محاور vs 7. عفن+عث إضافي. أعقد 40%.' },
+        { myth: 'شهري.', truth: '7 ملوثات يومية + عفن أسبوعي. أسبوعي.' },
+        { myth: 'فريق صغير.', truth: '7 محاور = 5-8 أشخاص.' },
     ],
-
     relatedServices: [
-        { slug: 'jubail-furniture-moving', context: 'نقل عفش بالجبيل', priority: 1 },
-        { slug: 'jubail-furniture-storage', context: 'تخزين عفش بالجبيل', priority: 2 },
-        { slug: 'jubail-dyna', context: 'دينا نقل بالجبيل', priority: 3 },
-        { slug: 'jubail-moving-out', context: 'نقل عفش خروج بالجبيل', priority: 4 },
-        { slug: 'jubail-dabab', context: 'دباب نقل بالجبيل', priority: 5 },
-        { slug: 'jubail-cleaning', context: 'تنظيف منازل بالجبيل', priority: 6 },
-        { slug: 'jubail-tanks-cleaning', context: 'تنظيف خزانات بالجبيل', priority: 7 },
-        { slug: 'jubail-sofa-cleaning', context: 'تنظيف كنب بالجبيل', priority: 8 },
-        { slug: 'jubail-carpet-cleaning', context: 'تنظيف سجاد بالجبيل', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف — NaCl+VOC', priority: 1 },
+        { slug: 'swimming-pool-cleaning', context: 'مسبح — Demand', priority: 2 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات — سخام', priority: 3 },
+        { slug: 'carpet-cleaning', context: 'سجاد — عفن', priority: 4 },
+        { slug: 'furniture-cleaning', context: 'أثاث — Galvanic', priority: 5 },
+        { slug: 'pest-control', context: 'حشرات — بعوض', priority: 6 },
+        { slug: 'termite-control', context: 'نمل أبيض', priority: 7 },
     ],
 };

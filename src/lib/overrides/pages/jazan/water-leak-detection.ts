@@ -1,14 +1,3 @@
-// ══════════════════════════════════════════════════════════════
-// كشف تسربات المياه بجازان — Override (E-E-A-T)
-// صفحة: /jazan/water-leak-detection
-// قطاع YMYL: صحي (عفن مداري) + مالي (فاتورة NWC)
-// خريطة 2.4: الجند → NWC + MOH + أمانة جازان
-// الزاوية: رطوبة استوائية 58%+ = عفن خلال 24 ساعة
-//   + حرارة مستقرة = بيئة تكاثر ميكروبات 12 شهر
-//   + أمطار حقيقية 200+ ملم = مصدر تسرب خارجي
-//   + نمل أبيض ينجذب لمناطق الرطوبة
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -82,19 +71,13 @@ export const override: PageOverride = {
         { entity: AMANA.JAZAN.entity, url: AMANA.JAZAN.url, role: 'اشتراطات صيانة المباني والعزل المائي بجازان', acronym: 'أمانة جازان' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALJUND.name,
-        title: EXPERTS.ALJUND.title,
-        credential: EXPERTS.ALJUND.credential,
-        profileUrl: EXPERTS.ALJUND.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALJUND,
 
     expertCitations: [
         {
             expert: 'م. عبدالغني الجند',
             quote: 'جازان = المناخ الاستوائي الوحيد في السعودية. التسرب هنا ليس مجرد ماء ضائع — بل بوابة عفن مداري (24 ساعة) ونمل أبيض (أعلى كثافة). سرعة الاستجابة = سرعة الحياة في جازان',
             source: 'موسوعة "أخطاء في البناء"',
-            url: 'https://x.com/ssrrr22',
         },
     ],
 
@@ -119,17 +102,18 @@ export const override: PageOverride = {
     counterNarratives: [
         { myth: 'جازان رطبة — العفن طبيعي وما يضر', truth: 'العفن \"الطبيعي\" سطحي. عفن التسرب = Stachybotrys (العفن الأسود السام) ينمو خلف الجدران ← سموم فطرية (Mycotoxins) ← حساسية + ربو + التهابات رئوية. \"طبيعي\" ≠ \"آمن\"' },
         { myth: 'أنابيب البيت جديدة — ما فيها تسرب', truth: 'بجازان: حتى الأنابيب الجديدة الحديد المجلفن تبدأ بالتآكل فوراً (ملوحة + رطوبة). + الأمطار تكشف عيوب العزل المائي ← تسرب خارجي بدون علاقة بالأنابيب. الفحص يشمل الشبكة + العزل + المصادر الخارجية' },
+        { myth: 'أي شركة تنظيف/صيانة نتيجتها واحدة.', truth: 'الفرق بين شركة مرخصة ومُعتمدة وأخرى عشوائية = الفرق بين معالجة جذرية وإخفاء مؤقت. المعدات المتخصصة والبروتوكولات العلمية تحل المشكلة من جذرها — التنظيف العشوائي يُعيدها أسوأ خلال أسابيع.' },
     ],
 
     relatedServices: [
-        { slug: 'jazan-bathroom-leak-detection', context: 'فحص حمام — أكثر الأماكن رطوبة = أول مكان ينمو عفن', priority: 1 },
-        { slug: 'jazan-water-insulation', context: 'عزل مائي — يمنع تسرب الأمطار (200+ ملم/سنة)', priority: 2 },
-        { slug: 'jazan-roof-insulation', context: 'عزل سطح — مصدر التسرب الخارجي الأول بجازان', priority: 3 },
-        { slug: 'jazan-tank-leak-detection', context: 'فحص خزان — التسرب يُنشئ بيئة طحالب وبعوض', priority: 4 },
-        { slug: 'jazan-termite-control', context: 'مكافحة نمل أبيض — التسرب يستدعي المستعمرة', priority: 5 },
-        { slug: 'jazan-pest-control', context: 'مكافحة حشرات — الرطوبة تجذب صراصير مدارية 12 شهر', priority: 6 },
-        { slug: 'jazan-tanks-cleaning', context: 'تنظيف خزانات — طحالب تنمو ×3-5 أسرع بحرارة جازان', priority: 7 },
-        { slug: 'jazan-foam-insulation', context: 'فوم Closed-Cell — يمنع تكثف الرطوبة الاستوائية', priority: 8 },
-        { slug: 'jazan-sewage-unblocking', context: 'تسليك مجاري — الرطوبة تُسرّع التحلل وتُراكم الانسداد', priority: 9 },
+        { slug: 'bathroom-leak-detection', context: 'فحص حمام — أكثر الأماكن رطوبة = أول مكان ينمو عفن', priority: 1 },
+        { slug: 'water-insulation', context: 'عزل مائي — يمنع تسرب الأمطار (200+ ملم/سنة)', priority: 2 },
+        { slug: 'roof-insulation', context: 'عزل سطح — مصدر التسرب الخارجي الأول بجازان', priority: 3 },
+        { slug: 'tank-leak-detection', context: 'فحص خزان — التسرب يُنشئ بيئة طحالب وبعوض', priority: 4 },
+        { slug: 'termite-control', context: 'مكافحة نمل أبيض — التسرب يستدعي المستعمرة', priority: 5 },
+        { slug: 'pest-control', context: 'مكافحة حشرات — الرطوبة تجذب صراصير مدارية 12 شهر', priority: 6 },
+        { slug: 'tanks-cleaning', context: 'تنظيف خزانات — طحالب تنمو ×3-5 أسرع بحرارة جازان', priority: 7 },
+        { slug: 'foam-insulation', context: 'فوم Closed-Cell — يمنع تكثف الرطوبة الاستوائية', priority: 8 },
+        { slug: 'sewage-unblocking', context: 'تسليك مجاري — الرطوبة تُسرّع التحلل وتُراكم الانسداد', priority: 9 },
     ],
 };

@@ -74,12 +74,7 @@ export const override: PageOverride = {
         { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'مراقبة التزام شركات الخدمات المنزلية بالأنظمة', acronym: 'أمانة المدينة' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMISNID.name,
-        title: EXPERTS.ALMISNID.title,
-        credential: EXPERTS.ALMISNID.credential,
-        profileUrl: EXPERTS.ALMISNID.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMISNID,
 
     expertCitations: [
         {
@@ -114,9 +109,9 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'madinah-cleaning', context: 'تنظيف عميق كل 3 أشهر + عاملة بالساعة أسبوعياً = معادلة نظافة متكاملة.', priority: 1 },
-        { slug: 'madinah-sofa-cleaning', context: 'عاملة الساعة تُرتّب الكنب — لكن الغسيل العميق يحتاج فريق متخصص.', priority: 2 },
-        { slug: 'madinah-carpet-cleaning', context: 'المكنسة اليومية صيانة — غسيل السجاد العميق كل 6 أشهر = المكمّل.', priority: 3 },
-        { slug: 'madinah-pest-control', context: 'النظافة اليومية تقلل الحشرات — لكن الرش الوقائي يمنعها تماماً.', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف عميق كل 3 أشهر + عاملة بالساعة أسبوعياً = معادلة نظافة متكاملة.', priority: 1 },
+        { slug: 'sofa-cleaning', context: 'عاملة الساعة تُرتّب الكنب — لكن الغسيل العميق يحتاج فريق متخصص.', priority: 2 },
+        { slug: 'carpet-cleaning', context: 'المكنسة اليومية صيانة — غسيل السجاد العميق كل 6 أشهر = المكمّل.', priority: 3 },
+        { slug: 'pest-control', context: 'النظافة اليومية تقلل الحشرات — لكن الرش الوقائي يمنعها تماماً.', priority: 4 },
     ],
 };

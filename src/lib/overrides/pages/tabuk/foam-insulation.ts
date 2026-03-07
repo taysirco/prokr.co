@@ -1,9 +1,3 @@
-// ══════════════════════════════════════════════════════════════
-// عزل فوم بتبوك — Override (E-E-A-T)
-// الزاوية: Closed-Cell يعزل حر+برد معاً
-//   + Open-Cell يتكثّف فيه الماء شتاءً (نقطة الندى)
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -56,19 +50,13 @@ export const override: PageOverride = {
         { entity: AMANA.TABUK.entity, url: AMANA.TABUK.url, role: 'تطبيق اشتراطات العزل بتبوك', acronym: 'أمانة تبوك' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
             expert: 'م. ماجد المحيميد',
             quote: 'Open-Cell فوم بتبوك = كارثة شتوية — التكثف عند نقطة الندى يملؤه بالرطوبة. Closed-Cell الخيار الوحيد لمدينة تحتاج عزلاً يعمل في اتجاهين',
             source: 'خبير جودة البناء والتشطيبات',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
 
@@ -87,15 +75,21 @@ export const override: PageOverride = {
 
     hiddenObjections: [
         { fear: 'Closed-Cell أغلى 40%', solution: 'بتبوك: Open-Cell يمتص تكثف الشتاء ← يفشل خلال 3-5 سنوات = إزالة + إعادة = ضعف التكلفة. Closed-Cell: مرة واحدة 15-20 سنة. على 20 سنة: Closed-Cell أوفر 60%' },
+        { fear: 'السعر أعلى من المتوقع.', solution: 'السعر يشمل معدات صناعية متخصصة + مواد احترافية + عمالة مدربة + ضمان مكتوب. المقارنة العادلة ليست مع عامل عشوائي بل مع تكلفة إصلاح الأضرار الناتجة عن العمل غير المتخصص.' },
     ],
 
     counterNarratives: [
         { myth: 'تبوك جافة — أي فوم يكفي', truth: 'جافة صيفاً — لكن شتاءً يحدث تكثف (نقطة الندى) عندما يلتقي الهواء الدافئ بالسطح البارد. Open-Cell يمتص هذا التكثف = كارثة. \"جافة\" ≠ \"بلا رطوبة\"' },
+        { myth: 'أي شركة تنظيف/صيانة نتيجتها واحدة.', truth: 'الفرق بين شركة مرخصة ومُعتمدة وأخرى عشوائية = الفرق بين معالجة جذرية وإخفاء مؤقت. المعدات المتخصصة والبروتوكولات العلمية تحل المشكلة من جذرها — التنظيف العشوائي يُعيدها أسوأ خلال أسابيع.' },
+        { myth: 'أوفر وأسوي الشغل بنفسي.', truth: 'التوفير الظاهري يتحول لتكلفة مضاعفة: أدوات منزلية لا تصل للعمق المطلوب + مواد غير مناسبة قد تُتلف الأسطح + وقت وجهد بلا ضمان نتيجة. الاحتراف = ضمان + توفير حقيقي على المدى الطويل.' },
     ],
 
     relatedServices: [
-        { slug: 'tabuk-roof-insulation', context: 'عزل سطح — فوم + بيتومين SBS = حماية شاملة', priority: 1 },
-        { slug: 'tabuk-thermal-insulation', context: 'عزل حراري جدران يُكمل فوم السطح', priority: 2 },
-        { slug: 'tabuk-water-insulation', context: 'عزل مائي يحمي من أمطار تبوك', priority: 3 },
+        { slug: 'roof-insulation', context: 'عزل سطح — فوم + بيتومين SBS = حماية شاملة', priority: 1 },
+        { slug: 'thermal-insulation', context: 'عزل حراري جدران يُكمل فوم السطح', priority: 2 },
+        { slug: 'water-insulation', context: 'عزل مائي يحمي من أمطار تبوك', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف شامل يُكمّل الخدمة الأساسية — بيئة نظيفة متكاملة.', priority: 5 },
+        { slug: 'pest-control', context: 'مكافحة حشرات متكاملة مع خدمات النظافة والصيانة.', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'تنظيف مكيفات لهواء نظيف — يُكمّل أي خدمة منزلية.', priority: 7 },
     ],
 };

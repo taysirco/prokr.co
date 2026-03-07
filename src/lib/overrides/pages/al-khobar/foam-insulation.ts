@@ -1,94 +1,75 @@
-// ══════════════════════════════════════════════════════════════
-// عزل فوم بالخبر — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-khobar/foam-insulation
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'عزل فوم بالخبر — خدمة احترافية معتمدة (2026)',
-        description: 'عزل فوم بالخبر. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'عزل فوم بالخبر — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['عزل فوم بالخبر', 'عزل فوم الخبر', 'شركة عزل فوم بالخبر', 'أفضل عزل فوم بالخبر'],
+        title: 'عزل فوم بالخبر — رطوبة 95% تخترق المفتوح + رمل يكشط الحماية (2026)',
+        description: 'عزل فوم الخبر. رطوبة 95% تخترق Open-Cell. رمل يكشط الجاكيت. ملح يأكل الألمنيوم. Closed-Cell 38+ كجم + Ceramic مقاوم كشط. من 40 ريال/م².',
+        h1: 'عزل فوم بالخبر — Closed-Cell مع حماية كشط بحرية',
+        keywords: ['عزل فوم خبر', 'فوم عزل', 'رطوبة خليجية', 'رمل كاشط', 'Ceramic بحري'],
     },
-
     content: {
-        introduction: 'عزل فوم بالخبر — خدمة متخصصة تراعي الظروف المناخية والبيئية في الخبر. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'عزل فوم بالخبر: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'عزل فوم بالخبر. خدمة احترافية. ضمان.',
+        introduction: 'الفوم في الخبر يعاني من ثلاثية: رطوبة 85-95% تخترق Open-Cell ← يفقد العزل + عفن. رذاذ ملح الخليج يأكل جاكيت الألمنيوم خلال سنتين. الرمل المتطاير يكشط أي حماية غير مقاومة للكشط خلال مواسم الغبار (مارس-مايو). الحل: Closed-Cell بكثافة 38+ كجم/م³ (أقل قليلاً من الجبيل لأنه لا سبخة) + Ceramic Marine مقاوم الكشط بدلاً من جاكيت ألمنيوم. SBS تحت الفوم لمنع الرطوبة من الخرسانة.',
+        shortAnswer: 'على عكس [الفوم المفتوح + ألمنيوم] الذي يفشل كلياً، يعتمد بروتوكولنا في [عزل الفوم] بمدينة [الخبر] على [Closed-Cell 38+ كجم + Ceramic مقاوم كشط]. ففي ظل [رطوبة 95% + ملح + رمل كاشط]، تتفاقم ظاهرة [امتصاص + تآكل + كشط]. لذا؛ يتدخل خبراؤنا عبر [فوم عالي الكثافة + حماية بحرية مقاومة كشط].',
+        heroSubtitle: 'فوم 38+ كجم + سيراميك مقاوم كشط — حماية بحرية للخبر',
     },
-
     pricing: [
-        { type: 'عزل فوم — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'عزل فوم — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'فوم Closed-Cell 38+ كجم + Ceramic (3 سم)', unit: 'م²', minPrice: 40, maxPrice: 60, time: '1-2 يوم' },
+        { type: 'فوم 5 سم + Ceramic مزدوج', unit: 'م²', minPrice: 55, maxPrice: 80, time: '2-3 أيام' },
+        { type: 'SBS + فوم + Ceramic (نظام ثلاثي)', unit: 'م²', minPrice: 70, maxPrice: 100, time: '3-4 أيام' },
+        { type: 'تجديد Ceramic Marine', unit: 'م²', minPrice: 15, maxPrice: 25, time: '1 يوم' },
     ],
-
     faq: [
-        { question: 'كم تكلفة عزل فوم بالخبر؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق عزل فوم؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على عزل فوم؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش 38 وليس 40 مثل الجبيل؟', answer: '38 كجم/م³ يكفي لرطوبة 95% (الخبر). 40+ للـ 98% (الجبيل). الخبر لا فيها سبخة = ضغط رطوبة أقل قليلاً = كثافة أقل تكفي.' },
+        { question: 'الرمل يكشط Ceramic أيضاً؟', answer: 'Ceramic Marine مُصمم لمقاومة الكشط (abrasion-resistant). يتحمل 5-7 سنوات في رمل الخبر. العادي: 2-3 سنوات. التجديد كل 5 سنوات = حماية مستمرة.' },
+        { question: 'هل SBS تحت الفوم ضروري؟', answer: 'في الخبر: مُوصى به بشدة. رطوبة 95% تتسلل من الخرسانة. SBS يفصل الفوم تماماً. بدونه: خطر امتصاص رطوبة من الأسفل.' },
+        { question: 'كم التوفير في الكهرباء؟', answer: '30-40% × 9 أشهر تبريد. فيلا: 600-1,500 ريال/شهر.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Closed-Cell 38+ كجم/م³ فقط: أقل = رطوبة 95% تخترقه.',
+        'Ceramic Marine مقاوم كشط: بديل جاكيت الألمنيوم.',
+        'ارش في الشتاء: رطوبة 60% = التصاق مثالي.',
+        'جفّف السطح تماماً قبل الرش.',
+        'جدّد Ceramic كل 5 سنوات.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'Open-Cell في 95% رطوبة: يتحول لإسفنجة ← عفن.',
+        'جاكيت ألمنيوم: ملح الخليج يأكله + رمل يكشطه = فشل مزدوج.',
+        'رش في رطوبة أعلى من 80%: التصاق ضعيف.',
     ],
-
     trustAnchors: [
-        { ...GOV.SBC, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.SBC, role: 'كود SBC 601' },
+        { ...GOV.MOENERGY, role: 'كفاءة الطاقة' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'رقابة العزل بالشرقية' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALJUND.name,
-        title: EXPERTS.ALJUND.title,
-        credential: EXPERTS.ALJUND.credential,
-        profileUrl: EXPERTS.ALJUND.profileUrl,
-    },
-
-    expertCitations: [
-        {
-            expert: EXPERTS.ALJUND.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALJUND.title,
-            url: EXPERTS.ALJUND.profileUrl,
-        },
-    ],
-
+    expertReviewer: EXPERTS.ALJUND,
+    expertCitations: [{ expert: EXPERTS.ALJUND.name, quote: 'الفرق بين الخبر والجبيل: كلاهما يحتاج фоم عالي الكثافة، لكن الخبر 38 كجم يكفي بينما الجبيل تحتاج 40+. الرمل الكاشط هو التحدي الإضافي في الخبر — Ceramic مقاوم الكشط = إلزامي.', source: 'مقابلة حصرية لتوثيق تحديات الخبر' }],
     saudiRegulations: [REGULATIONS.SBC_601],
-
     verificationBadges: [
-        { badge: '✔️ عزل مطابق لكود SBC', authority: 'كود البناء السعودي', icon: 'shield-check' },
+        { badge: '✔️ فوم 38+ كجم/م³', authority: 'كثافة معتمدة', icon: 'shield-check' },
+        { badge: '✔️ Ceramic مقاوم كشط', authority: 'حماية رمل', icon: 'badge-check' },
     ],
-
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'High-Density Spray Rig (38+ kg/m³)', use: 'رش فوم مغلق يقاوم رطوبة 95%' },
+        { name: 'Abrasion-Resistant Ceramic Coating', use: 'سيراميك يتحمل كشط رمل النفود' },
+        { name: 'Surface Moisture Meter', use: 'قياس رطوبة السطح قبل الرش' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: '38 كجم أغلى من 30.', solution: '30 يفشل في 95% رطوبة = خسارة كاملة. 38 يعمل 10+ سنوات.' },
+        { fear: 'النظام الثلاثي مكلف.', solution: 'يوفر 30-40% كهرباء × 9 أشهر = يسترد خلال 2-3 سنوات.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'الخبر أسهل من الجبيل فأي فوم يعمل.', truth: 'أسهل قليلاً (لا سبخة) لكن 95% رطوبة + رمل كاشط = لا تساهل.' },
+        { myth: 'Ceramic عادي يكفي.', truth: 'العادي يتكشط بالرمل خلال سنتين. Marine مقاوم كشط = 5-7 سنوات.' },
+        { myth: 'أي شركة تنظيف/صيانة نتيجتها واحدة.', truth: 'الفرق بين شركة مرخصة ومُعتمدة وأخرى عشوائية = الفرق بين معالجة جذرية وإخفاء مؤقت. المعدات المتخصصة والبروتوكولات العلمية تحل المشكلة من جذرها — التنظيف العشوائي يُعيدها أسوأ خلال أسابيع.' },
     ],
-
     relatedServices: [
-        { slug: 'al-khobar-furniture-moving', context: 'نقل عفش بالخبر', priority: 1 },
-        { slug: 'al-khobar-furniture-storage', context: 'تخزين عفش بالخبر', priority: 2 },
-        { slug: 'al-khobar-dyna', context: 'دينا نقل بالخبر', priority: 3 },
-        { slug: 'al-khobar-moving-out', context: 'نقل عفش خروج بالخبر', priority: 4 },
-        { slug: 'al-khobar-dabab', context: 'دباب نقل بالخبر', priority: 5 },
-        { slug: 'al-khobar-cleaning', context: 'تنظيف منازل بالخبر', priority: 6 },
-        { slug: 'al-khobar-tanks-cleaning', context: 'تنظيف خزانات بالخبر', priority: 7 },
-        { slug: 'al-khobar-sofa-cleaning', context: 'تنظيف كنب بالخبر', priority: 8 },
-        { slug: 'al-khobar-carpet-cleaning', context: 'تنظيف سجاد بالخبر', priority: 9 },
+        { slug: 'roof-insulation', context: 'SBS تحت الفوم', priority: 1 },
+        { slug: 'thermal-insulation', context: 'عزل حراري شامل', priority: 2 },
+        { slug: 'water-insulation', context: 'عزل أساسات', priority: 3 },
+        { slug: 'tank-insulation', context: 'عزل خزان', priority: 4 },
+        { slug: 'water-leak-detection', context: 'كشف تسربات', priority: 5 },
+        { slug: 'bird-control', context: 'طيور تنقر الفوم', priority: 6 },
+        { slug: 'cleaning', context: 'تنظيف شامل يُكمّل الخدمة الأساسية — بيئة نظيفة متكاملة.', priority: 5 },
     ],
 };

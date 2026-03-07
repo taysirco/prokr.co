@@ -91,7 +91,6 @@ export const override: PageOverride = {
             expert: 'أ.د. عبدالله المسند',
             quote: 'مكة تستضيف ملايين الزوار سنوياً من كل أنحاء العالم — التعقيم الدوري بين الضيوف ليس نظافة سطحية بل ضرورة صحية وبائية لمنع انتقال الأمراض',
             source: 'أستاذ المناخ والبيئة',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -122,12 +121,12 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'makkah-cleaning', context: 'تنظيف منزل عام — أخف من تنظيف شقق بعد بناء', priority: 1 },
-        { slug: 'makkah-steam-cleaning', context: 'تعقيم كنب ومراتب بالبخار — مكمل لتنظيف الشقة المفروشة', priority: 2 },
-        { slug: 'makkah-pest-control', context: 'رش شقة جديدة قبل إدخال الأثاث — حماية وقائية', priority: 3 },
-        { slug: 'makkah-tanks-cleaning', context: 'تنظيف خزان العمارة الجديدة — قبل استخدام المياه', priority: 4 },
-        { slug: 'makkah-sofa-cleaning', context: 'غسيل كنب شقة مفروشة بين الضيوف — تعقيم عميق', priority: 5 },
-        { slug: 'makkah-carpet-cleaning', context: 'غسيل سجاد شقة المعتمرين — إزالة بقع وتعقيم', priority: 6 },
-        { slug: 'makkah-hourly-cleaning', context: 'تنظيف بالساعة — للشقق الصغيرة والمهام السريعة', priority: 7 },
+        { slug: 'cleaning', context: 'تنظيف منزل عام — أخف من تنظيف شقق بعد بناء', priority: 1 },
+        { slug: 'steam-cleaning', context: 'تعقيم كنب ومراتب بالبخار — مكمل لتنظيف الشقة المفروشة', priority: 2 },
+        { slug: 'pest-control', context: 'رش شقة جديدة قبل إدخال الأثاث — حماية وقائية', priority: 3 },
+        { slug: 'tanks-cleaning', context: 'تنظيف خزان العمارة الجديدة — قبل استخدام المياه', priority: 4 },
+        { slug: 'sofa-cleaning', context: 'غسيل كنب شقة مفروشة بين الضيوف — تعقيم عميق', priority: 5 },
+        { slug: 'carpet-cleaning', context: 'غسيل سجاد شقة المعتمرين — إزالة بقع وتعقيم', priority: 6 },
+        { slug: 'hourly-cleaning', context: 'تنظيف بالساعة — للشقق الصغيرة والمهام السريعة', priority: 7 },
     ],
 };

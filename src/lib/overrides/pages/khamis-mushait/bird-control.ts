@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// مكافحة حمام بخميس مشيط — Override مخصص (E-E-A-T Grade)
-// صفحة: /khamis-mushait/bird-control
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'مكافحة حمام بخميس مشيط — خدمة احترافية معتمدة (2026)',
-        description: 'مكافحة حمام بخميس مشيط. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'مكافحة حمام بخميس مشيط — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['مكافحة حمام بخميس مشيط', 'مكافحة حمام خميس مشيط', 'شركة مكافحة حمام بخميس مشيط', 'أفضل مكافحة حمام بخميس مشيط'],
+        title: 'مكافحة طيور بخميس مشيط — ضباب+أمطار = تجمع أكبر + عفن فضلات 60-85% — طارد+شبك (2026)',
+        description: 'مكافحة طيور خميس مشيط. ضباب+أمطار = طيور تتجمع. 60-85% = عفن فضلات أسرع. Histoplasma. طارد+شبك+تنظيف Anti-Fungal.',
+        h1: 'مكافحة طيور بخميس مشيط — ضباب وعفن فضلات',
+        keywords: ['مكافحة طيور خميس مشيط', 'طرد حمام بخميس مشيط', 'شركة مكافحة طيور خميس مشيط'],
     },
-
     content: {
-        introduction: 'مكافحة حمام بخميس مشيط — خدمة متخصصة تراعي الظروف المناخية والبيئية في خميس مشيط. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'مكافحة حمام بخميس مشيط: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'مكافحة حمام بخميس مشيط. خدمة احترافية. ضمان.',
+        introduction: 'الطيور في خميس مشيط أخطر بسبب الرطوبة! أولاً: ضباب+أمطار = مصادر مياه متعددة ← طيور (حمام+عصافير) تتجمع أكثر حول المباني. ثانياً — الأخطر: 60-85% رطوبة = فضلات الطيور تتعفّن أسرع 3× مقارنة بالمدن الصحراوية. في عنيزة (15-25%): فضلات تجف وتتحلل كغبار. في خميس: فضلات رطبة = بيئة مثالية لـ Histoplasma capsulatum (فطر تنفسي خطير). Anti-Fungal للتنظيف إلزامي. الأمطار تغسل فضلات من الأسطح إلى المداخل والممرات ← تلوث أوسع. الحل: طارد بصري+صوتي (لا تسميم — الأنظمة تمنع) + شبك فتحات + تنظيف Anti-Fungal دوري. مقارنة: عنيزة = طارد+شبك يكفي. خميس = +Anti-Fungal تنظيف = أغلى 20%.',
+        shortAnswer: 'على عكس [الطرد فقط بدون تنظيف Anti-Fungal]، يعتمد بروتوكولنا في خدمة [مكافحة الطيور] بمدينة [خميس مشيط] على [طارد+شبك+تنظيف Anti-Fungal دوري]. ففي ظل [ضباب+أمطار+60-85%+فضلات تتعفّن 3×]، تتفاقم ظاهرة [Histoplasma+تلوث أوسع+رائحة]. لذا؛ يتدخل فريقنا عبر [طرد ← شبك ← تنظيف ← تعقيم] لبيئة صحية.',
+        heroSubtitle: 'ضباب تجمع + 60-85% عفن فضلات — Histoplasma خطير!',
     },
-
     pricing: [
-        { type: 'مكافحة حمام — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'مكافحة حمام — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'طارد+شبك (واجهة)', unit: 'متر طولي', minPrice: 25, maxPrice: 55, time: 'يوم' },
+        { type: 'تنظيف فضلات + Anti-Fungal', unit: 'خدمة', minPrice: 150, maxPrice: 320, time: '2-3 ساعات' },
+        { type: 'سطح كامل', unit: 'سطح', minPrice: 300, maxPrice: 650, time: '4-6 ساعات' },
+        { type: 'صيانة ربع سنوية', unit: 'سنة', minPrice: 400, maxPrice: 850, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة مكافحة حمام بخميس مشيط؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق مكافحة حمام؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على مكافحة حمام؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش فضلات الطيور أخطر بخميس مشيط؟', answer: '60-85% = فضلات تتعفّن 3× أسرع = Histoplasma capsulatum (فطر تنفسي). عنيزة: تجف وتتحلل. خميس: تتعفّن.' },
+        { question: 'كيف أمنع تجمع الطيور بخميس مشيط؟', answer: 'طارد بصري+صوتي + شبك فتحات. لا تسميم (الأنظمة تمنع). ضباب+أمطار = مصادر مياه تجذبها.' },
+        { question: 'كم تكلفة مكافحة طيور بخميس مقارنة بعنيزة؟', answer: 'أغلى 20% — Anti-Fungal تنظيف فضلات إضافي. عنيزة: طارد+شبك يكفي (فضلات تجف).' },
+        { question: 'هل تنظيف الفضلات يحتاج Anti-Fungal بخميس مشيط؟', answer: 'إلزامي! Histoplasma ينمو في فضلات رطبة. بدون Anti-Fungal = خطر تنفسي لمن يُنظف.' },
+        { question: 'متى أفضل وقت لتركيب طارد بخميس مشيط؟', answer: 'قبل موسم الأمطار (أكتوبر) — الأمطار تجذب الطيور. والربيع (موسم تزاوج).' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'طارد بصري+صوتي — لا تسميم (نظام يمنع).',
+        'شبك فتحات — يمنع تعشيش داخل المبنى.',
+        'Anti-Fungal عند التنظيف — Histoplasma خطير.',
+        'كمامة N95 للعمال — فضلات رطبة = فطر تنفسي.',
+        'تنظيف دوري — أمطار تغسل فضلات للممرات.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'تنظيف فضلات بدون Anti-Fungal + 60-85% = خطر Histoplasma تنفسي — YMYL.',
+        'فضلات على واجهات + أمطار = حمض يأكل الطلاء والخرسانة.',
+        'تعشيش في فتحات تهوية = انسداد + فضلات داخل المبنى = Sick Building.',
     ],
-
     trustAnchors: [
-        { ...GOV.SFDA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص مكافحة آفات' },
+        { entity: AMANA.ASIR.entity, url: AMANA.ASIR.url, role: 'اشتراطات أمانة عسير' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALKHODAIRY.name,
-        title: EXPERTS.ALKHODAIRY.title,
-        credential: EXPERTS.ALKHODAIRY.credential,
-        profileUrl: EXPERTS.ALKHODAIRY.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALKHODAIRY,
     expertCitations: [
-        {
-            expert: EXPERTS.ALKHODAIRY.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALKHODAIRY.title,
-            url: EXPERTS.ALKHODAIRY.profileUrl,
-        },
+        { expert: EXPERTS.ALKHODAIRY.name, quote: 'فضلات طيور خميس: Histoplasma بسبب رطوبة. Anti-Fungal إلزامي. أخطر من الصحراء.', source: 'أبحاث سموم — فطريات بيئية' },
     ],
-
-    saudiRegulations: [REGULATIONS.GHAD_SYSTEM],
-
-    verificationBadges: [
-        { badge: '✔️ مبيدات معتمدة من SFDA', authority: 'هيئة الغذاء والدواء', icon: 'shield-check' },
-    ],
-
+    saudiRegulations: [REGULATIONS.BALADI_HEALTH],
+    verificationBadges: [{ badge: '✔️ مكافحة آفات مرخصة', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'طارد بصري+صوتي', use: 'يمنع تجمع بدون تسميم (نظام يمنع)' },
+        { name: 'شبك ستانلس', use: 'يمنع تعشيش في فتحات' },
+        { name: 'Anti-Fungal صناعي', use: 'يقتل Histoplasma في فضلات رطبة' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'تسميم أسرع.', solution: 'الأنظمة تمنع. طارد+شبك = حل دائم ومشروع.' },
+        { fear: 'مثل عنيزة.', solution: 'فضلات رطبة = Histoplasma. أخطر. Anti-Fungal إلزامي.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'فضلات طيور غير خطيرة.', truth: '60-85% = Histoplasma فطر تنفسي. خطير بالرطوبة.' },
+        { myth: 'طارد يكفي.', truth: 'طارد+شبك+تنظيف Anti-Fungal. الفضلات الموجودة خطيرة.' },
     ],
-
     relatedServices: [
-        { slug: 'khamis-mushait-furniture-moving', context: 'نقل عفش بخميس مشيط', priority: 1 },
-        { slug: 'khamis-mushait-furniture-storage', context: 'تخزين عفش بخميس مشيط', priority: 2 },
-        { slug: 'khamis-mushait-dyna', context: 'دينا نقل بخميس مشيط', priority: 3 },
-        { slug: 'khamis-mushait-moving-out', context: 'نقل عفش خروج بخميس مشيط', priority: 4 },
-        { slug: 'khamis-mushait-dabab', context: 'دباب نقل بخميس مشيط', priority: 5 },
-        { slug: 'khamis-mushait-cleaning', context: 'تنظيف منازل بخميس مشيط', priority: 6 },
-        { slug: 'khamis-mushait-tanks-cleaning', context: 'تنظيف خزانات بخميس مشيط', priority: 7 },
-        { slug: 'khamis-mushait-sofa-cleaning', context: 'تنظيف كنب بخميس مشيط', priority: 8 },
-        { slug: 'khamis-mushait-carpet-cleaning', context: 'تنظيف سجاد بخميس مشيط', priority: 9 },
+        { slug: 'pest-control', context: 'حشرات', priority: 1 },
+        { slug: 'cleaning', context: 'تنظيف — فضلات', priority: 2 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات — فضلات', priority: 3 },
+        { slug: 'roof-insulation', context: 'سطح', priority: 4 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف — تعشيش', priority: 5 },
+        { slug: 'water-insulation', context: 'عزل مائي', priority: 6 },
+        { slug: 'termite-control', context: 'نمل أبيض', priority: 7 },
     ],
 };

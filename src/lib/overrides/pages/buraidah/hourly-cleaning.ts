@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف بالساعة ببريدة — Override مخصص (E-E-A-T Grade)
-// صفحة: /buraidah/hourly-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف بالساعة ببريدة — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف بالساعة ببريدة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف بالساعة ببريدة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف بالساعة ببريدة', 'تنظيف بالساعة بريدة', 'شركة تنظيف بالساعة ببريدة', 'أفضل تنظيف بالساعة ببريدة'],
+        title: 'تنظيف بالساعة ببريدة — CaCO₃ 600ppm يومي+Nafud SiO₂+نخيل — Descaler+HEPA! (2026)',
+        description: 'تنظيف بالساعة بريدة. CaCO₃ 600ppm يومي! Nafud SiO₂ يتراكم. حبوب نخيل 8M. Descaler+HEPA+RO+Microfiber.',
+        h1: 'تنظيف بالساعة ببريدة — كلس يومي+Nafud!',
+        keywords: ['تنظيف بالساعة بريدة', 'عاملة بالساعة ببريدة', 'شركة تنظيف بالساعة بريدة'],
     },
-
     content: {
-        introduction: 'تنظيف بالساعة ببريدة — خدمة متخصصة تراعي الظروف المناخية والبيئية في بريدة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف بالساعة ببريدة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف بالساعة ببريدة. خدمة احترافية. ضمان.',
+        introduction: 'تنظيف بالساعة ببريدة = مواجهة يومية للكلس والنخيل! CaCO₃ 600ppm يومي: أعلى كلس بالمملكة يتراكم يومياً على الحنفيات والدش. عاملة بدون Descaler = كلس يتحول لصلب خلال أسبوع. Descaler يومي أو كل يومين. Nafud SiO₂ يتراكم: رمل النفود الناعم 10-50 μm يدخل من النوافذ والمكيفات ← يتراكم على كل سطح ← Pre-Rinse ثم Microfiber. لا مكنسة عادية = تنثر الرمل. نخيل 8M: حبوب لقاح مارس-مايو + ألياف نخيل + غبار تمور = طبقة نخيلية يومية. HEPA Pollen. 10-20% = لا عفن! تجفيف 15 دقيقة! عاملة بالساعة ببريدة تحتاج 3 أدوات خاصة: Descaler+HEPA+Microfiber. مقارنة: خميس = Anti-Fungal+Anti-Mite+4h تجفيف. بريدة = Descaler+HEPA = أبسط.',
+        shortAnswer: 'على عكس [التنظيف بمكنسة وماء صنبور]، يعتمد بروتوكولنا في خدمة [التنظيف بالساعة] بمدينة [بريدة] على [Descaler يومي+HEPA+Microfiber+RO]. ففي ظل [CaCO₃ 600ppm+Nafud SiO₂+نخيل 8M+10-20%]، تتفاقم ظاهرة [كلس يومي+رمل ناعم+لقاح]. لذا؛ يتدخل فريقنا عبر [Descaler ← HEPA ← Pre-Rinse ← RO] — 15 دقيقة تجفيف!',
+        heroSubtitle: 'CaCO₃ 600ppm يومي + Nafud + نخيل — Descaler+HEPA! تجفيف سريع!',
     },
-
     pricing: [
-        { type: 'تنظيف بالساعة — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف بالساعة — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'ساعة واحدة', unit: 'ساعة', minPrice: 25, maxPrice: 50, time: '1h' },
+        { type: '3 ساعات', unit: 'جلسة', minPrice: 65, maxPrice: 130, time: '3h' },
+        { type: '5 ساعات', unit: 'جلسة', minPrice: 100, maxPrice: 200, time: '5h' },
+        { type: 'يومي (30 يوم)', unit: 'شهر', minPrice: 600, maxPrice: 1200, time: '30 زيارة' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف بالساعة ببريدة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف بالساعة؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف بالساعة؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش بريدة تحتاج Descaler يومي؟', answer: 'CaCO₃ 600ppm أعلى بالمملكة. كلس يتصلب خلال أسبوع. يومي أو كل يومين.' },
+        { question: 'ليش HEPA ضروري بالساعة ببريدة؟', answer: 'Nafud 10-50 μm يمر من مكنسة عادية + نخيل 8M لقاح. HEPA يوقف الاثنين.' },
+        { question: 'كم تكلفة عاملة بالساعة ببريدة مقارنة بخميس؟', answer: 'متقاربة ساعة. لكن: بريدة أبسط (لا Anti-Fungal+Anti-Mite). أسرع تجفيف.' },
+        { question: 'ليش Microfiber وليس قطن ببريدة؟', answer: 'Nafud يعلق بالقطن = يخدش كل الأسطح. Microfiber يحمل بدون خدش.' },
+        { question: 'هل التنظيف بالساعة يسبب عفن ببريدة؟', answer: 'لا! 10-20% = تجفيف 15 دقيقة. ميزة. خميس: 4h تجفيف.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Descaler يومي — 600ppm أعلى كلس.',
+        'HEPA — Nafud + نخيل.',
+        'Microfiber — لا قطن أبداً.',
+        'Pre-Rinse — Nafud قبل المسح.',
+        '15 دقيقة تجفيف — لا عفن!',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'CaCO₃ 600ppm × أسبوع بدون Descaler = كلس صلب — يحتاج حمض.',
+        'مكنسة عادية + Nafud = ينثر ← يخدش — HEPA فقط.',
+        'قطن + Nafud = خدش كل الأسطح — Microfiber إلزامي.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
+        { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMISNID.name, quote: 'بالساعة ببريدة: Descaler يومي 600ppm. HEPA Nafud+نخيل. 15 دقيقة تجفيف.', source: 'جغرافيا المناخ — القصيم' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف مرخص', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Descaler صناعي', use: 'CaCO₃ 600ppm — يومي' },
+        { name: 'HEPA Pollen+Fine', use: 'Nafud+نخيل — 10 μm' },
+        { name: 'Microfiber', use: 'Nafud لا يخدش' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'عاملة عادية.', solution: 'Descaler+HEPA+Microfiber = 3 أدوات خاصة.' },
+        { fear: 'مثل الرياض.', solution: '600ppm+Nafud+نخيل = مختلف.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'مكنسة تكفي.', truth: 'Nafud 10 μm يمر = HEPA.' },
+        { myth: 'Descaler شهري.', truth: '600ppm = يومي أو كل يومين.' },
     ],
-
     relatedServices: [
-        { slug: 'buraidah-furniture-moving', context: 'نقل عفش ببريدة', priority: 1 },
-        { slug: 'buraidah-furniture-storage', context: 'تخزين عفش ببريدة', priority: 2 },
-        { slug: 'buraidah-dyna', context: 'دينا نقل ببريدة', priority: 3 },
-        { slug: 'buraidah-moving-out', context: 'نقل عفش خروج ببريدة', priority: 4 },
-        { slug: 'buraidah-dabab', context: 'دباب نقل ببريدة', priority: 5 },
-        { slug: 'buraidah-cleaning', context: 'تنظيف منازل ببريدة', priority: 6 },
-        { slug: 'buraidah-tanks-cleaning', context: 'تنظيف خزانات ببريدة', priority: 7 },
-        { slug: 'buraidah-sofa-cleaning', context: 'تنظيف كنب ببريدة', priority: 8 },
-        { slug: 'buraidah-carpet-cleaning', context: 'تنظيف سجاد ببريدة', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 1 },
+        { slug: 'apartments-cleaning', context: 'شقق', priority: 2 },
+        { slug: 'villas-cleaning', context: 'فلل', priority: 3 },
+        { slug: 'carpet-cleaning', context: 'سجاد', priority: 4 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 5 },
+        { slug: 'marble-polishing', context: 'رخام', priority: 6 },
+        { slug: 'pest-control', context: 'حشرات', priority: 7 },
     ],
 };

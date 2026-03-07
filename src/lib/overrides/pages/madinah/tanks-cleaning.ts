@@ -81,12 +81,7 @@ export const override: PageOverride = {
         { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'الإشراف على اشتراطات صيانة الخزانات السكنية والتجارية في المنطقة', acronym: 'أمانة المدينة' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
@@ -133,12 +128,12 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'madinah-water-leak-detection', context: 'ارتفاع فاتورة المياه قد يكون بسبب تسرب في شبكة الخزان — كشف التسربات يوفر عليك آلاف الريالات.', priority: 1 },
-        { slug: 'madinah-tank-insulation', context: 'عزل الخزان الخرساني بطبقة إيبوكسي يمنع تسرب أملاح التربة ويُطيل عمر التعقيم.', priority: 2 },
-        { slug: 'madinah-tank-leak-detection', context: 'إذا اكتشفت انخفاضاً مستمراً في منسوب الخزان، فحص التسربات يكشف الخلل.', priority: 3 },
-        { slug: 'madinah-swimming-pool-cleaning', context: 'تنظيف المسابح يعتمد نفس بروتوكول التعقيم بالكلور — اطلب الخدمتين معاً بخصم.', priority: 4 },
-        { slug: 'madinah-water-insulation', context: 'عزل مائي للأسطح يمنع تسرب مياه الأمطار الملوثة إلى خزانك الأرضي.', priority: 5 },
-        { slug: 'madinah-cleaning', context: 'تنظيف شامل للمنزل بعد صيانة الخزان لإزالة أي بقايا ترسبات من الحنفيات.', priority: 6 },
-        { slug: 'madinah-pest-control', context: 'الخزانات المفتوحة أو المتشققة تجذب الحشرات — افحص واغلق الفتحات بعد الغسيل.', priority: 7 },
+        { slug: 'water-leak-detection', context: 'ارتفاع فاتورة المياه قد يكون بسبب تسرب في شبكة الخزان — كشف التسربات يوفر عليك آلاف الريالات.', priority: 1 },
+        { slug: 'tank-insulation', context: 'عزل الخزان الخرساني بطبقة إيبوكسي يمنع تسرب أملاح التربة ويُطيل عمر التعقيم.', priority: 2 },
+        { slug: 'tank-leak-detection', context: 'إذا اكتشفت انخفاضاً مستمراً في منسوب الخزان، فحص التسربات يكشف الخلل.', priority: 3 },
+        { slug: 'swimming-pool-cleaning', context: 'تنظيف المسابح يعتمد نفس بروتوكول التعقيم بالكلور — اطلب الخدمتين معاً بخصم.', priority: 4 },
+        { slug: 'water-insulation', context: 'عزل مائي للأسطح يمنع تسرب مياه الأمطار الملوثة إلى خزانك الأرضي.', priority: 5 },
+        { slug: 'cleaning', context: 'تنظيف شامل للمنزل بعد صيانة الخزان لإزالة أي بقايا ترسبات من الحنفيات.', priority: 6 },
+        { slug: 'pest-control', context: 'الخزانات المفتوحة أو المتشققة تجذب الحشرات — افحص واغلق الفتحات بعد الغسيل.', priority: 7 },
     ],
 };

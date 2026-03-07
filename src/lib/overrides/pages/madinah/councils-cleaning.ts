@@ -73,12 +73,7 @@ export const override: PageOverride = {
         { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'ترخيص ومراقبة شركات خدمات النظافة', acronym: 'أمانة المدينة' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMISNID.name,
-        title: EXPERTS.ALMISNID.title,
-        credential: EXPERTS.ALMISNID.credential,
-        profileUrl: EXPERTS.ALMISNID.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMISNID,
 
     expertCitations: [
         {
@@ -112,10 +107,10 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'madinah-sofa-cleaning', context: 'غسيل كنب صالة مع المجلس — باقة كنب متكاملة.', priority: 1 },
-        { slug: 'madinah-carpet-cleaning', context: 'غسيل سجاد المجلس مع الكنب — طقم نظيف شامل.', priority: 2 },
-        { slug: 'madinah-steam-cleaning', context: 'تعقيم مراتب وستائر بالبخار — يُكمل تنظيف المجلس.', priority: 3 },
-        { slug: 'madinah-cleaning', context: 'تنظيف عميق للمنزل كاملاً — عرض موحد.', priority: 4 },
-        { slug: 'madinah-pest-control', context: 'عث الغبار في المجالس = مكافحة وقائية ضرورية.', priority: 5 },
+        { slug: 'sofa-cleaning', context: 'غسيل كنب صالة مع المجلس — باقة كنب متكاملة.', priority: 1 },
+        { slug: 'carpet-cleaning', context: 'غسيل سجاد المجلس مع الكنب — طقم نظيف شامل.', priority: 2 },
+        { slug: 'steam-cleaning', context: 'تعقيم مراتب وستائر بالبخار — يُكمل تنظيف المجلس.', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف عميق للمنزل كاملاً — عرض موحد.', priority: 4 },
+        { slug: 'pest-control', context: 'عث الغبار في المجالس = مكافحة وقائية ضرورية.', priority: 5 },
     ],
 };

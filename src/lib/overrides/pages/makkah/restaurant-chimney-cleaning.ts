@@ -124,12 +124,12 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'makkah-oven-cleaning', context: 'تنظيف أفران المطعم مع المدخنة — باقة مطبخ متكاملة', priority: 1 },
-        { slug: 'makkah-pest-control', context: 'مكافحة صراصير المطعم — دهون المداخن تجذبها', priority: 2 },
-        { slug: 'makkah-office-cleaning', context: 'تنظيف صالة المطعم وأرضياتها بشكل دوري', priority: 3 },
-        { slug: 'makkah-sanitization', context: 'تعقيم مطبخ المطعم بعد تنظيف المدخنة', priority: 4 },
-        { slug: 'makkah-glass-facades-cleaning', context: 'تنظيف واجهة المطعم الزجاجية من دهون الشفاط', priority: 5 },
-        { slug: 'makkah-steam-cleaning', context: 'تنظيف بالبخار لأسطح المطبخ والطاولات', priority: 6 },
-        { slug: 'makkah-sewage-unblocking', context: 'تسليك مجاري مصيدة الدهون (Grease Trap)', priority: 7 },
+        { slug: 'oven-cleaning', context: 'تنظيف أفران المطعم مع المدخنة — باقة مطبخ متكاملة', priority: 1 },
+        { slug: 'pest-control', context: 'مكافحة صراصير المطعم — دهون المداخن تجذبها', priority: 2 },
+        { slug: 'office-cleaning', context: 'تنظيف صالة المطعم وأرضياتها بشكل دوري', priority: 3 },
+        { slug: 'sanitization', context: 'تعقيم مطبخ المطعم بعد تنظيف المدخنة', priority: 4 },
+        { slug: 'glass-facades-cleaning', context: 'تنظيف واجهة المطعم الزجاجية من دهون الشفاط', priority: 5 },
+        { slug: 'steam-cleaning', context: 'تنظيف بالبخار لأسطح المطبخ والطاولات', priority: 6 },
+        { slug: 'sewage-unblocking', context: 'تسليك مجاري مصيدة الدهون (Grease Trap)', priority: 7 },
     ],
 };

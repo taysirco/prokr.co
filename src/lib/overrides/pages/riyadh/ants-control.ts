@@ -91,7 +91,6 @@ export const override: PageOverride = {
             expert: 'أ.د. عبدالله المسند',
             quote: 'قمة نشاط النمل في الرياض تتزامن مع الحرارة القصوى (يونيو-أغسطس) — الحرارة تسرّع الأيض فيتكاثر النمل ويبحث عن ماء بيأس. الموسم الذهبي للجل الطُعم',
             source: 'أستاذ جغرافيا المناخ — المرجع الأول للمناخ السعودي',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -119,14 +118,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'riyadh-pest-control', context: 'مكافحة شاملة مع النمل', priority: 1 },
-        { slug: 'riyadh-cockroach-control', context: 'صراصير + نمل = بؤر مشتركة', priority: 2 },
-        { slug: 'riyadh-termite-control', context: 'نمل أبيض يأكل الخشب', priority: 3 },
-        { slug: 'riyadh-cleaning', context: 'تنظيف يزيل مصادر غذاء النمل', priority: 4 },
-        { slug: 'riyadh-kitchen-cleaning', context: 'المطبخ بؤرة النمل الأولى', priority: 5 },
-        { slug: 'riyadh-sanitization', context: 'تعقيم بعد المكافحة', priority: 6 },
-        { slug: 'riyadh-insects-spraying', context: 'رش حشرات شامل', priority: 7 },
-        { slug: 'riyadh-pesticide-spraying', context: 'رش مبيدات متخصصة', priority: 8 },
-        { slug: 'riyadh-sewage-unblocking', context: 'مجاري = مصدر نمل', priority: 9 },
+        { slug: 'pest-control', context: 'مكافحة شاملة مع النمل', priority: 1 },
+        { slug: 'cockroach-control', context: 'صراصير + نمل = بؤر مشتركة', priority: 2 },
+        { slug: 'termite-control', context: 'نمل أبيض يأكل الخشب', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف يزيل مصادر غذاء النمل', priority: 4 },
+        { slug: 'kitchen-cleaning', context: 'المطبخ بؤرة النمل الأولى', priority: 5 },
+        { slug: 'sanitization', context: 'تعقيم بعد المكافحة', priority: 6 },
+        { slug: 'insects-spraying', context: 'رش حشرات شامل', priority: 7 },
+        { slug: 'pesticide-spraying', context: 'رش مبيدات متخصصة', priority: 8 },
+        { slug: 'sewage-unblocking', context: 'مجاري = مصدر نمل', priority: 9 },
     ],
 };

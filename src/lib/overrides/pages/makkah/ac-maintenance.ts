@@ -92,7 +92,6 @@ export const override: PageOverride = {
             expert: 'م. ماجد المحيميد',
             quote: 'أكثر أعطال المكيفات في مكة سببها الغبار الكثيف + الحرارة المستمرة 10+ أشهر. الغسيل الدوري كل 3-4 أشهر يمنع 70% من الأعطال المكلفة — أرخص من أي إصلاح',
             source: 'خبير جودة البناء والتشطيبات',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
 
@@ -123,12 +122,12 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'makkah-air-conditioner-cleaning', context: '80% من مشاكل التبريد = غبار — الغسيل يحل المشكلة بدون صيانة', priority: 1 },
-        { slug: 'makkah-ac-installation', context: 'الكمبريسور محترق فعلاً؟ أحياناً مكيف جديد أوفر من إصلاح', priority: 2 },
-        { slug: 'makkah-roof-insulation', context: 'عزل السطح يُقلل حمل المكيف 60-70% ← أعطال أقل + فاتورة أقل', priority: 3 },
-        { slug: 'makkah-thermal-insulation', context: 'عزل حراري شامل = المكيف يعمل أقل ← عمر أطول ← صيانة أقل', priority: 4 },
-        { slug: 'makkah-foam-insulation', context: 'فوم السطح يقطع 85% من الحرارة ← المكيف يعمل نصف الوقت', priority: 5 },
-        { slug: 'makkah-water-leak-detection', context: 'المكيف ينقّط؟ قد يكون تسرب من خط الصرف ← كشف وإصلاح', priority: 6 },
-        { slug: 'makkah-cleaning', context: 'تنظيف منزل شامل + صيانة مكيفات = باقة تجهيز الصيف', priority: 7 },
+        { slug: 'air-conditioner-cleaning', context: '80% من مشاكل التبريد = غبار — الغسيل يحل المشكلة بدون صيانة', priority: 1 },
+        { slug: 'ac-installation', context: 'الكمبريسور محترق فعلاً؟ أحياناً مكيف جديد أوفر من إصلاح', priority: 2 },
+        { slug: 'roof-insulation', context: 'عزل السطح يُقلل حمل المكيف 60-70% ← أعطال أقل + فاتورة أقل', priority: 3 },
+        { slug: 'thermal-insulation', context: 'عزل حراري شامل = المكيف يعمل أقل ← عمر أطول ← صيانة أقل', priority: 4 },
+        { slug: 'foam-insulation', context: 'فوم السطح يقطع 85% من الحرارة ← المكيف يعمل نصف الوقت', priority: 5 },
+        { slug: 'water-leak-detection', context: 'المكيف ينقّط؟ قد يكون تسرب من خط الصرف ← كشف وإصلاح', priority: 6 },
+        { slug: 'cleaning', context: 'تنظيف منزل شامل + صيانة مكيفات = باقة تجهيز الصيف', priority: 7 },
     ],
 };

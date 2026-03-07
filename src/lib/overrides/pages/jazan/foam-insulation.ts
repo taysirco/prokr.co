@@ -1,8 +1,3 @@
-// عزل فوم بجازان — Override (E-E-A-T)
-// الزاوية: Open-Cell = كارثة (يمتص رطوبة 58%+)
-//   + UV الاستوائي يُحلل الفوم المكشوف أسرع
-//   + فطريات تنمو على الفوم في الرطوبة
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -59,19 +54,13 @@ export const override: PageOverride = {
         { entity: AMANA.JAZAN.entity, url: AMANA.JAZAN.url, role: 'تطبيق اشتراطات العزل بجازان', acronym: 'أمانة جازان' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALJUND.name,
-        title: EXPERTS.ALJUND.title,
-        credential: EXPERTS.ALJUND.credential,
-        profileUrl: EXPERTS.ALJUND.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALJUND,
 
     expertCitations: [
         {
             expert: 'م. ماجد المحيميد',
             quote: 'Open-Cell بجازان = يمتص 58% رطوبة ← يتعفن من الداخل ← عفن مداري. وUV الاستوائية تُحلل الفوم ×2 أسرع. Closed-Cell + حماية UV فورية + مضاد فطريات = الوصفة الوحيدة',
             source: 'خبير جودة البناء والتشطيبات',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
 
@@ -96,15 +85,16 @@ export const override: PageOverride = {
     counterNarratives: [
         { myth: 'الفوم عزل حراري — ما يتأثر بالرطوبة', truth: 'Open-Cell يمتص ← يفقد 100% عزله. "فوم" ≠ "مقاوم رطوبة". فقط Closed-Cell الخلايا المغلقة لا يمتص' },
         { myth: 'الفوم ما يحتاج حماية UV', truth: 'UV جازان الاستوائية أقوى (أقرب لخط الاستواء). الفوم المكشوف يتفتت خلال 3-6 أشهر. حماية UV خلال 24 ساعة = إلزامي' },
+        { myth: 'أي شركة تنظيف/صيانة نتيجتها واحدة.', truth: 'الفرق بين شركة مرخصة ومُعتمدة وأخرى عشوائية = الفرق بين معالجة جذرية وإخفاء مؤقت. المعدات المتخصصة والبروتوكولات العلمية تحل المشكلة من جذرها — التنظيف العشوائي يُعيدها أسوأ خلال أسابيع.' },
     ],
 
     relatedServices: [
-        { slug: 'jazan-roof-insulation', context: 'عزل سطح — فوم + بيتومين = حماية شاملة', priority: 1 },
-        { slug: 'jazan-water-insulation', context: 'عزل مائي — الأولوية الأولى بجازان', priority: 2 },
-        { slug: 'jazan-thermal-insulation', context: 'عزل حراري شامل يُكمل الفوم', priority: 3 },
-        { slug: 'jazan-water-leak-detection', context: 'كشف تسربات — الفوم يمنع التكثف', priority: 4 },
-        { slug: 'jazan-tank-insulation', context: 'عزل خزان — فوم يحمي الخزان من الحرارة', priority: 5 },
-        { slug: 'jazan-bird-control', context: 'طرد حمام — لا ينقرون الفوم', priority: 6 },
-        { slug: 'jazan-pest-control', context: 'مكافحة حشرات — فوم سليم يمنع رطوبة تجذب حشرات', priority: 7 },
+        { slug: 'roof-insulation', context: 'عزل سطح — فوم + بيتومين = حماية شاملة', priority: 1 },
+        { slug: 'water-insulation', context: 'عزل مائي — الأولوية الأولى بجازان', priority: 2 },
+        { slug: 'thermal-insulation', context: 'عزل حراري شامل يُكمل الفوم', priority: 3 },
+        { slug: 'water-leak-detection', context: 'كشف تسربات — الفوم يمنع التكثف', priority: 4 },
+        { slug: 'tank-insulation', context: 'عزل خزان — فوم يحمي الخزان من الحرارة', priority: 5 },
+        { slug: 'bird-control', context: 'طرد حمام — لا ينقرون الفوم', priority: 6 },
+        { slug: 'pest-control', context: 'مكافحة حشرات — فوم سليم يمنع رطوبة تجذب حشرات', priority: 7 },
     ],
 };

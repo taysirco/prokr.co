@@ -1,94 +1,19 @@
-// ══════════════════════════════════════════════════════════════
-// نقل عفش بالباحة — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-baha/furniture-moving
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
 
 export const override: PageOverride = {
-    meta: {
-        title: 'نقل عفش بالباحة — خدمة احترافية معتمدة (2026)',
-        description: 'نقل عفش بالباحة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'نقل عفش بالباحة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['نقل عفش بالباحة', 'نقل عفش الباحة', 'شركة نقل عفش بالباحة', 'أفضل نقل عفش بالباحة'],
-    },
-
-    content: {
-        introduction: 'نقل عفش بالباحة — خدمة متخصصة تراعي الظروف المناخية والبيئية في الباحة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'نقل عفش بالباحة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'نقل عفش بالباحة. خدمة احترافية. ضمان.',
-    },
-
-    pricing: [
-        { type: 'نقل عفش — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'نقل عفش — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
-    ],
-
-    faq: [
-        { question: 'كم تكلفة نقل عفش بالباحة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق نقل عفش؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على نقل عفش؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
-    ],
-
-    expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
-    ],
-
-    warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
-    ],
-
-    trustAnchors: [
-        { ...GOV.TGA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
-    ],
-
-    expertReviewer: {
-        name: EXPERTS.ALZUWAYED.name,
-        title: EXPERTS.ALZUWAYED.title,
-        credential: EXPERTS.ALZUWAYED.credential,
-        profileUrl: EXPERTS.ALZUWAYED.profileUrl,
-    },
-
-    expertCitations: [
-        {
-            expert: EXPERTS.ALZUWAYED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALZUWAYED.title,
-            url: EXPERTS.ALZUWAYED.profileUrl,
-        },
-    ],
-
-    saudiRegulations: [REGULATIONS.TGA_LICENSE],
-
-    verificationBadges: [
-        { badge: '✔️ شركة نقل مرخصة من هيئة النقل TGA', authority: 'الهيئة العامة للنقل', icon: 'shield-check' },
-    ],
-
-    equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
-    ],
-
-    hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
-    ],
-
-    counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
-    ],
-
-    relatedServices: [
-        { slug: 'al-baha-furniture-storage', context: 'تخزين عفش بالباحة', priority: 1 },
-        { slug: 'al-baha-dyna', context: 'دينا نقل بالباحة', priority: 2 },
-        { slug: 'al-baha-moving-out', context: 'نقل عفش خروج بالباحة', priority: 3 },
-        { slug: 'al-baha-dabab', context: 'دباب نقل بالباحة', priority: 4 },
-        { slug: 'al-baha-cleaning', context: 'تنظيف منازل بالباحة', priority: 5 },
-        { slug: 'al-baha-tanks-cleaning', context: 'تنظيف خزانات بالباحة', priority: 6 },
-        { slug: 'al-baha-sofa-cleaning', context: 'تنظيف كنب بالباحة', priority: 7 },
-        { slug: 'al-baha-carpet-cleaning', context: 'تنظيف سجاد بالباحة', priority: 8 },
-        { slug: 'al-baha-steam-cleaning', context: 'تنظيف بالبخار بالباحة', priority: 9 },
-    ],
+    meta: { title: 'نقل عفش بالباحة — منحدرات جبلية + ضباب رؤية صفر + طرق متعرجة + 5°م PVAc (2026)', description: 'نقل عفش الباحة. منحدرات جبلية 15-20%. ضباب يُخفض الرؤية لصفر. طرق متعرجة (عقبة الملك). 5°م PVAc. فرامل هوائية + قيادة ضباب.', h1: 'نقل عفش بالباحة — منحدرات + ضباب + طرق متعرجة', keywords: ['نقل عفش بالباحة', 'نقل اثاث الباحة', 'شركة نقل عفش بالباحة'] },
+    content: { introduction: '4 مخاطر جبلية: (1) منحدرات 15-20%: الشاحنة على منحدر = حمولة تنزلق. Ratchet + أحزمة + فرامل هوائية. (2) ضباب رؤية صفر: يوليو-أكتوبر: ضباب يُخفض الرؤية لـ 10-50 متر. لا نقل في ضباب كثيف — أو قيادة بطيئة (30 كم/ساعة). (3) طرق متعرجة: عقبة الملك + طرق المندق = منعطفات حادة. اهتزاز رأسي + جانبي = أخطر من اهتزاز مستقيم. تثبيت جانبي. (4) 5°م شتاءً: PVAc يتصلب — ليس بشدة تبوك لكن كافٍ. شاحنة مُغلقة.', shortAnswer: 'منحدرات + ضباب + منعطفات + 5°م. Ratchet + لا نقل في ضباب + تثبيت جانبي.', heroSubtitle: 'منحدرات جبلية + ضباب رؤية صفر + منعطفات حادة' },
+    pricing: [{ type: 'نقل داخل الباحة — شقة', unit: 'نقلة', minPrice: 300, maxPrice: 600, time: '3-5 ساعات' }, { type: 'نقل فيلا', unit: 'نقلة', minPrice: 600, maxPrice: 1200, time: '5-8 ساعات' }, { type: 'باحة ↔ بلجرشي (عقبة)', unit: 'نقلة', minPrice: 500, maxPrice: 1000, time: '3-5 ساعات' }],
+    faq: [{ question: 'ضباب — يلغي النقل؟', answer: 'ضباب كثيف (رؤية <50 م) = تأجيل. ضباب خفيف = سرعة 30 كم/ساعة + أضواء ضباب.' }],
+    expertTips: ['Ratchet 8+ أحزمة — منحدرات + منعطفات.', 'لا نقل في ضباب كثيف.', 'تثبيت جانبي — المنعطفات = اهتزاز جانبي.', 'فرامل هوائية — المنحدرات.'],
+    warnings: ['نقل في ضباب كثيف = حادث. التأجيل = أمان.', 'منحدر + بدون Ratchet = حمولة تنزلق.'],
+    trustAnchors: [{ ...GOV.TGA, role: 'ترخيص النقل' }],
+    expertReviewer: EXPERTS.ALZUWAYED,
+    expertCitations: [{ expert: EXPERTS.ALZUWAYED.name, quote: 'نقل الباحة: منحدرات + ضباب + منعطفات = أخطر نقل جبلي. 8+ أحزمة + لا ضباب كثيف.', source: 'هيئة النقل — النقل الجبلي' }],
+    saudiRegulations: [REGULATIONS.TGA_LICENSE], verificationBadges: [{ badge: '✔️ نقل مرخص', authority: 'هيئة النقل', icon: 'shield-check' }],
+    equipment: [{ name: 'Ratchet 8+ أحزمة', use: 'منحدرات + منعطفات' }, { name: 'فرامل هوائية', use: 'منحدرات 15-20%' }, { name: 'أضواء ضباب', use: 'رؤية محدودة' }],
+    hiddenObjections: [{ fear: 'مكشوفة أرخص.', solution: '5°م + منحدر = PVAc + انزلاق. مُغلقة = حماية.' }],
+    counterNarratives: [{ myth: 'طريق سهل.', truth: 'عقبات + منعطفات + ضباب = أصعب نقل.' }],
+    relatedServices: [{ slug: 'furniture-storage', context: 'تخزين', priority: 1 }, { slug: 'dyna', context: 'دينا — أجهزة', priority: 2 }, { slug: 'dabab', context: 'دباب — خفيف', priority: 3 }],
 };

@@ -1,94 +1,74 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف مسابح ببريدة — Override مخصص (E-E-A-T Grade)
-// صفحة: /buraidah/swimming-pool-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف مسابح ببريدة — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف مسابح ببريدة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف مسابح ببريدة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف مسابح ببريدة', 'تنظيف مسابح بريدة', 'شركة تنظيف مسابح ببريدة', 'أفضل تنظيف مسابح ببريدة'],
+        title: 'تنظيف مسابح ببريدة — CaCO₃ 600ppm Scale+Nafud SiO₂ عكر+ΔT — Descaler+فلتر! (2026)',
+        description: 'تنظيف مسابح بريدة. CaCO₃ 600ppm Scale+عكر كلسي! Nafud SiO₂ عكر. ΔT 45°م. Descaler+فلتر+RO.',
+        h1: 'تنظيف مسابح ببريدة — أعلى كلس+Nafud عكر!',
+        keywords: ['تنظيف مسابح بريدة', 'تنظيف مسبح ببريدة', 'شركة تنظيف مسابح بريدة'],
     },
-
     content: {
-        introduction: 'تنظيف مسابح ببريدة — خدمة متخصصة تراعي الظروف المناخية والبيئية في بريدة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف مسابح ببريدة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف مسابح ببريدة. خدمة احترافية. ضمان.',
+        introduction: 'مسبح بريدة = كلس+رمل ناعم في الماء! CaCO₃ 600ppm Scale: أعلى كلس بالمملكة = Scale أسرع على البلاط والأنابيب. عكر كلسي يجعل الماء أبيض. Acid Wash + Descaler أسبوعي. Nafud SiO₂ عكر: رمل النفود الناعم يدخل المسبح ← عكر أحمر دقيق لا يترسب بسهولة. فلتر Sand Filter لا يكفي — يحتاج DE Filter. ΔT 45°م: صيف 48°م = مياه المسبح 35-40°م! كلور يتبخر أسرع. جرعة مضاعفة. 10-20% = لا تكثّف! لا طحالب شتاءً. مقارنة: خميس = عفن+طحالب+رطوبة. بريدة = كلس+Nafud لكن لا طحالب شتاءً = أبسط.',
+        shortAnswer: 'على عكس [التنظيف بدون Descaler+DE Filter]، يعتمد بروتوكولنا في خدمة [تنظيف المسابح] بمدينة [بريدة] على [Descaler+Acid Wash+DE Filter+كلور مضاعف]. ففي ظل [CaCO₃ 600ppm Scale+Nafud عكر+ΔT تبخّر كلور+لا طحالب]، تتفاقم ظاهرة [Scale+عكر+تبخّر]. لذا؛ يتدخل فنيونا عبر [Descaler ← Acid ← DE ← كلور].',
+        heroSubtitle: 'CaCO₃ 600ppm Scale + Nafud عكر + ΔT تبخّر — Descaler+DE!',
     },
-
     pricing: [
-        { type: 'تنظيف مسابح — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف مسابح — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'تنظيف مسبح صغير', unit: 'مسبح', minPrice: 200, maxPrice: 420, time: '2-4h' },
+        { type: 'تنظيف + Acid Wash', unit: 'مسبح', minPrice: 350, maxPrice: 720, time: '4-6h' },
+        { type: 'صيانة شهرية', unit: 'شهر', minPrice: 250, maxPrice: 520, time: '4 زيارات' },
+        { type: 'عقد سنوي', unit: 'سنة', minPrice: 2000, maxPrice: 4200, time: '48 زيارة' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف مسابح ببريدة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف مسابح؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف مسابح؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش مسبح بريدة يتكلّس أسرع؟', answer: 'CaCO₃ 600ppm أعلى بالمملكة. Scale 2× أسرع. Descaler أسبوعي.' },
+        { question: 'ليش الماء عكر أحمر ببريدة؟', answer: 'Nafud SiO₂ 10-50 μm ناعم لا يترسب. DE Filter يوقف. Sand لا يكفي.' },
+        { question: 'كم تكلفة تنظيف مسبح ببريدة مقارنة بخميس؟', answer: 'متقاربة. لكن: لا طحالب شتاءً = اسبوعي أقل شتاءً.' },
+        { question: 'ليش كلور يتبخر أسرع ببريدة؟', answer: 'ΔT 48°م = ماء 35-40°م. كلور يتبخر. جرعة مضاعفة+مساءً.' },
+        { question: 'هل المسبح يتعفّن ببريدة؟', answer: 'لا! 10-20% = لا طحالب شتاءً. خميس: طحالب+عفن.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Descaler أسبوعي — 600ppm Scale.',
+        'DE Filter — Nafud ناعم يمر Sand.',
+        'كلور مساءً — ΔT يبخّر.',
+        'Acid Wash ربع سنوي — Scale.',
+        'لا طحالب شتاءً — ميزة.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'CaCO₃ 600ppm × شهر = Scale صلب على البلاط — Acid Wash 1000+.',
+        'Nafud + Sand Filter فقط = ماء عكر دائم — DE Filter إلزامي.',
+        'ΔT × كلور صباحي = يتبخّر 50% — مساءً فقط.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص صيانة المسابح' },
+        { ...GOV.MAEE, role: 'ترشيد المياه' },
+        { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'مسبح بريدة: 600ppm Scale+Nafud عكر. Descaler+DE Filter. لا طحالب.', source: 'نصائح هندسية — مسابح القصيم' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ صيانة مسابح مرخصة', authority: 'بلدي + مائي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'DE Filter', use: 'Nafud 10-50 μm — يوقف عكر' },
+        { name: 'Descaler مسابح', use: 'CaCO₃ 600ppm — أسبوعي' },
+        { name: 'Acid Wash', use: 'Scale صلب — ربع سنوي' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'Sand Filter يكفي.', solution: 'Nafud 10 μm يمر. DE.' },
+        { fear: 'مثل الرياض.', solution: '600ppm > 300. Nafud فريد.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'Descaler شهري.', truth: '600ppm = أسبوعي. أسرع Scale.' },
+        { myth: 'كلور عادي.', truth: 'ΔT = مضاعف+مساءً.' },
     ],
-
     relatedServices: [
-        { slug: 'buraidah-furniture-moving', context: 'نقل عفش ببريدة', priority: 1 },
-        { slug: 'buraidah-furniture-storage', context: 'تخزين عفش ببريدة', priority: 2 },
-        { slug: 'buraidah-dyna', context: 'دينا نقل ببريدة', priority: 3 },
-        { slug: 'buraidah-moving-out', context: 'نقل عفش خروج ببريدة', priority: 4 },
-        { slug: 'buraidah-dabab', context: 'دباب نقل ببريدة', priority: 5 },
-        { slug: 'buraidah-cleaning', context: 'تنظيف منازل ببريدة', priority: 6 },
-        { slug: 'buraidah-tanks-cleaning', context: 'تنظيف خزانات ببريدة', priority: 7 },
-        { slug: 'buraidah-sofa-cleaning', context: 'تنظيف كنب ببريدة', priority: 8 },
-        { slug: 'buraidah-carpet-cleaning', context: 'تنظيف سجاد ببريدة', priority: 9 },
+        { slug: 'tanks-cleaning', context: 'خزانات', priority: 1 },
+        { slug: 'water-leak-detection', context: 'تسرب', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 3 },
+        { slug: 'pest-control', context: 'حشرات', priority: 4 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 5 },
+        { slug: 'marble-polishing', context: 'رخام', priority: 6 },
+        { slug: 'water-insulation', context: 'مائي', priority: 7 },
     ],
 };

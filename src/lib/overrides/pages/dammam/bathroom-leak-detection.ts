@@ -1,12 +1,3 @@
-// ══════════════════════════════════════════════════════════════
-// كشف تسربات حمامات بالدمام — Override (E-E-A-T)
-// صفحة: /dammam/bathroom-leak-detection
-// قطاع YMYL: صحي (عفن أسود في الحمام) + مالي
-// خريطة 2.4: المحيميد → NWC + بلدي + أمانة الشرقية
-// الزاوية: حمام الدمام = بيئة مثالية للعفن الأسود
-//   + كلوريدات تأكل خلاطات + ترويبة مشبعة بكتيرياً
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -69,19 +60,13 @@ export const override: PageOverride = {
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات العزل المائي للحمامات في المباني السكنية بالدمام', acronym: 'أمانة الشرقية' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
             expert: 'م. ماجد المحيميد',
             quote: 'حمام الدمام أخطر غرفة من ناحية التسربات — رطوبة 90%+ تُنبت عفناً أسوداً خلال 48 ساعة. الملوحة تأكل الخلاطات والسيفونات. الكشف المبكر بالأكوافون والكاميرا الحرارية يوفر الصحة والمال',
             source: 'خبير جودة البناء والتشطيبات',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
 
@@ -107,9 +92,9 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'dammam-water-leak-detection', context: 'فحص شبكة المياه الكاملة — التسرب قد يكون في خط التغذية لا الحمام', priority: 1 },
-        { slug: 'dammam-water-insulation', context: 'إعادة عزل أرضية الحمام بعد إصلاح التسرب — يمنع التكرار', priority: 2 },
-        { slug: 'dammam-cleaning', context: 'تنظيف وتعقيم الحمام بعد إزالة العفن — بيروكسيد هيدروجين', priority: 3 },
-        { slug: 'dammam-tank-leak-detection', context: 'فحص خزان المياه — مصدر الملوحة التي تأكل الخلاطات', priority: 4 },
+        { slug: 'water-leak-detection', context: 'فحص شبكة المياه الكاملة — التسرب قد يكون في خط التغذية لا الحمام', priority: 1 },
+        { slug: 'water-insulation', context: 'إعادة عزل أرضية الحمام بعد إصلاح التسرب — يمنع التكرار', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف وتعقيم الحمام بعد إزالة العفن — بيروكسيد هيدروجين', priority: 3 },
+        { slug: 'tank-leak-detection', context: 'فحص خزان المياه — مصدر الملوحة التي تأكل الخلاطات', priority: 4 },
     ],
 };

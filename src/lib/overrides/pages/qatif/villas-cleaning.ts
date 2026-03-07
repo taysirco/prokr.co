@@ -1,94 +1,80 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف فلل بالقطيف — Override مخصص (E-E-A-T Grade)
-// صفحة: /qatif/villas-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف فلل بالقطيف — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف فلل بالقطيف. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف فلل بالقطيف — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف فلل بالقطيف', 'تنظيف فلل القطيف', 'شركة تنظيف فلل بالقطيف', 'أفضل تنظيف فلل بالقطيف'],
+        title: 'تنظيف فلل بالقطيف — بروتوكول ساحلي-واحي 6 محاور: NaCl+عفن مزدوج+عث+بعوض+طين+نخيل (2026)',
+        description: 'تنظيف فلل القطيف. 6 محاور ساحلية-واحية. NaCl. عفن مزدوج. عث. بعوض عيون. طين. نخيل طلع. واحة ساحلية فريدة.',
+        h1: 'تنظيف فلل بالقطيف — 6 محاور ساحلية-واحية — واحة على الخليج',
+        keywords: ['تنظيف فلل القطيف', 'تنظيف فيلا بالقطيف', 'شركة تنظيف فلل بالقطيف'],
     },
-
     content: {
-        introduction: 'تنظيف فلل بالقطيف — خدمة متخصصة تراعي الظروف المناخية والبيئية في القطيف. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف فلل بالقطيف: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف فلل بالقطيف. خدمة احترافية. ضمان.',
+        introduction: 'الفيلا في القطيف = ساحلية-واحية — 6 محاور. المحور 1 — NaCl ترسبات: ملح ساحلي + طين واحي = طبقة لزجة ملحية. RO + Microfiber. المحور 2 — عفن مزدوج: ساحلي (من أعلى) + واحي (من أسفل/عيون) = Anti-Fungal أعلى+أسفل. المحور 3 — عث: 80-95% = عث. بخار + Anti-Mite. المحور 4 — بعوض عيون: عيون+ينابيع = نقاط تكاثر بعوض. Larvicide BTI. المحور 5 — طين: تربة واحية = طين على أرضيات+حدائق. HEPA + تنظيف. المحور 6 — نخيل طلع: ألياف+غبار طلع = حساسية. HEPA. المقارنة: الجبيل = 7 محاور (VOC+سخام). القطيف = 6 (واحي). حفر الباطن = 5 (لا عفن+عث).',
+        shortAnswer: 'على عكس [فريق عادي] بـ 2-3 محاور، يعتمد بروتوكولنا في خدمة [تنظيف الفلل] بمدينة [القطيف] على [فريق 6 محاور ساحلي-واحي]. ففي ظل [NaCl + عفن مزدوج + عث + بعوض + طين + نخيل]، تتفاقم ظاهرة [6 محاور]. لذا؛ يتدخل خبراؤنا عبر [بروتوكول فيلا ساحلي-واحي 6 محاور].',
+        heroSubtitle: '6 محاور: NaCl + عفن مزدوج + عث + بعوض عيون + طين + نخيل طلع',
     },
-
     pricing: [
-        { type: 'تنظيف فلل — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف فلل — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'فيلا — ساحلي-واحي', unit: 'فيلا', minPrice: 480, maxPrice: 1050, time: '6-10 ساعات' },
+        { type: 'فيلا + حديقة واحية + مسبح', unit: 'فيلا', minPrice: 680, maxPrice: 1600, time: '8-14 ساعة' },
+        { type: 'بعد إجازة (عفن مزدوج 80-95%)', unit: 'فيلا', minPrice: 550, maxPrice: 1200, time: '8-12 ساعة' },
+        { type: 'عقد أسبوعي', unit: 'شهر', minPrice: 580, maxPrice: 1200, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف فلل بالقطيف؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف فلل؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف فلل؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: '6 محاور — أقل من الجبيل؟', answer: 'أقل — الجبيل: 7 (VOC+سخام). القطيف: 6. حفر الباطن: 5. لكن: واحي فريد.' },
+        { question: 'حديقة واحية — فرق؟', answer: 'حديقة القطيف = نخيل+عيون+تربة طينية = بعوض+طحالب+طين. أعقد من حديقة الخبر.' },
+        { question: 'فريق — كم شخص؟', answer: 'فيلا صغيرة: 4-5. كبيرة مع حديقة: 6-7.' },
+        { question: 'أسبوعي — ليش؟', answer: '6 ملوثات + عفن أسبوعي + بعوض. أسبوعي.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'RO + Microfiber — NaCl+طين المحور 1.',
+        'Anti-Fungal مزدوج — أعلى+أسفل المحور 2.',
+        'بخار + Anti-Mite — عث المحور 3.',
+        'BTI Larvicide عيون — بعوض المحور 4.',
+        'HEPA — طين+طلع المحور 5+6.',
+        'Dehumidifier — 80-95%.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        '6 محاور × 12 شهر = تلف شامل بدون بروتوكول.',
+        'بعد إجازة = عفن مزدوج + بعوض + طحالب.',
+        'حديقة واحية بدون Larvicide = بعوض.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص التنظيف' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات الفلل بالشرقية' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMISNID.name, quote: 'فيلا القطيف: 6 محاور ساحلية-واحية. NaCl+عفن مزدوج+عث+بعوض عيون+طين+نخيل. واحة على الخليج = فريد.', source: 'جغرافيا المناخ — فلل الواحات الساحلية' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
     verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
+        { badge: '✔️ تنظيف فلل مرخص', authority: 'منصة بلدي', icon: 'shield-check' },
+        { badge: '✔️ بروتوكول 6 محاور ساحلي-واحي', authority: 'معتمد داخلياً', icon: 'badge-check' },
     ],
-
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'RO + Microfiber', use: 'NaCl+طين — المحور 1' },
+        { name: 'Anti-Fungal مزدوج', use: 'واحي+ساحلي — المحور 2' },
+        { name: 'بخار + Anti-Mite', use: 'عث — المحور 3' },
+        { name: 'BTI Larvicide', use: 'بعوض عيون — المحور 4' },
+        { name: 'HEPA', use: 'طين+طلع — المحور 5+6' },
+        { name: 'Dehumidifier', use: '80-95% — تكثّف' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'مثل الخبر.', solution: 'واحة = 6 محاور. عفن مزدوج+طين+نخيل+عيون.' },
+        { fear: 'غالي.', solution: '6 محاور = 6 أدوات. بدون = تلف أغلى.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'ساحلي فقط.', truth: 'واحي = طين+نخيل+عيون+عفن واحي. ثنائي.' },
+        { myth: 'شهري.', truth: '6 ملوثات + عفن أسبوعي. أسبوعي.' },
+        { myth: 'مثل حفر الباطن.', truth: '6 محاور vs 5. عفن+عث إضافي.' },
     ],
-
     relatedServices: [
-        { slug: 'qatif-furniture-moving', context: 'نقل عفش بالقطيف', priority: 1 },
-        { slug: 'qatif-furniture-storage', context: 'تخزين عفش بالقطيف', priority: 2 },
-        { slug: 'qatif-dyna', context: 'دينا نقل بالقطيف', priority: 3 },
-        { slug: 'qatif-moving-out', context: 'نقل عفش خروج بالقطيف', priority: 4 },
-        { slug: 'qatif-dabab', context: 'دباب نقل بالقطيف', priority: 5 },
-        { slug: 'qatif-cleaning', context: 'تنظيف منازل بالقطيف', priority: 6 },
-        { slug: 'qatif-tanks-cleaning', context: 'تنظيف خزانات بالقطيف', priority: 7 },
-        { slug: 'qatif-sofa-cleaning', context: 'تنظيف كنب بالقطيف', priority: 8 },
-        { slug: 'qatif-carpet-cleaning', context: 'تنظيف سجاد بالقطيف', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 1 },
+        { slug: 'swimming-pool-cleaning', context: 'مسبح', priority: 2 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات', priority: 3 },
+        { slug: 'carpet-cleaning', context: 'سجاد', priority: 4 },
+        { slug: 'furniture-cleaning', context: 'أثاث', priority: 5 },
+        { slug: 'pest-control', context: 'حشرات', priority: 6 },
+        { slug: 'termite-control', context: 'نمل أبيض', priority: 7 },
     ],
 };

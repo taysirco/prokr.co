@@ -85,7 +85,6 @@ export const override: PageOverride = {
             expert: 'أ.د. عبدالله المسند',
             quote: 'الجلد يتشقق 3 مرات أسرع في الرياض (رطوبة 10-20%) مقارنة بالمدن الساحلية. الترطيب الدوري — وليس التنظيف فقط — هو ما يحمي الأثاث',
             source: 'أستاذ جغرافيا المناخ',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -112,14 +111,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'riyadh-sofa-cleaning', context: 'كنب + أثاث', priority: 1 },
-        { slug: 'riyadh-steam-cleaning', context: 'بخار الأثاث', priority: 2 },
-        { slug: 'riyadh-cleaning', context: 'تنظيف شامل + أثاث', priority: 3 },
-        { slug: 'riyadh-mattress-cleaning', context: 'مراتب + أثاث', priority: 4 },
-        { slug: 'riyadh-carpet-cleaning', context: 'سجاد + أثاث', priority: 5 },
-        { slug: 'riyadh-sanitization', context: 'تعقيم الأثاث', priority: 6 },
-        { slug: 'riyadh-termite-control', context: 'نمل أبيض — أثاث خشبي', priority: 7 },
-        { slug: 'riyadh-furniture-moving', context: 'نقل + تنظيف', priority: 8 },
-        { slug: 'riyadh-pest-control', context: 'حشرات الأثاث', priority: 9 },
+        { slug: 'sofa-cleaning', context: 'كنب + أثاث', priority: 1 },
+        { slug: 'steam-cleaning', context: 'بخار الأثاث', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف شامل + أثاث', priority: 3 },
+        { slug: 'mattress-cleaning', context: 'مراتب + أثاث', priority: 4 },
+        { slug: 'carpet-cleaning', context: 'سجاد + أثاث', priority: 5 },
+        { slug: 'sanitization', context: 'تعقيم الأثاث', priority: 6 },
+        { slug: 'termite-control', context: 'نمل أبيض — أثاث خشبي', priority: 7 },
+        { slug: 'furniture-moving', context: 'نقل + تنظيف', priority: 8 },
+        { slug: 'pest-control', context: 'حشرات الأثاث', priority: 9 },
     ],
 };

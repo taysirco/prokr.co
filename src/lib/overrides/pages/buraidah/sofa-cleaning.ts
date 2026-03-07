@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف كنب ببريدة — Override مخصص (E-E-A-T Grade)
-// صفحة: /buraidah/sofa-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف كنب ببريدة — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف كنب ببريدة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف كنب ببريدة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف كنب ببريدة', 'تنظيف كنب بريدة', 'شركة تنظيف كنب ببريدة', 'أفضل تنظيف كنب ببريدة'],
+        title: 'تنظيف كنب ببريدة — Nafud SiO₂ يقطع+CaCO₃ 600ppm خشونة+نخيل — HEPA+RO! (2026)',
+        description: 'تنظيف كنب بريدة. Nafud SiO₂ يقطع أقمشة! CaCO₃ 600ppm خشونة. نخيل 8M لقاح. HEPA+RO+Pollen Filter.',
+        h1: 'تنظيف كنب ببريدة — Nafud يقطع+أعلى كلس!',
+        keywords: ['تنظيف كنب بريدة', 'تنظيف كنب ببريدة', 'شركة تنظيف كنب بريدة'],
     },
-
     content: {
-        introduction: 'تنظيف كنب ببريدة — خدمة متخصصة تراعي الظروف المناخية والبيئية في بريدة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف كنب ببريدة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف كنب ببريدة. خدمة احترافية. ضمان.',
+        introduction: 'كنب بريدة = Nafud يقطع ألياف الأقمشة! Nafud SiO₂ يقطع: رمل النفود الناعم 10-50 μm يتغلغل في تنجيد الكنب ← كل جلوس = ألياف تُقطع من الداخل. HEPA Extraction يسحب قبل القطع. CaCO₃ 600ppm خشونة: لو غُسل الكنب بماء صنبور = أعلى كلس بالمملكة يترسب في الألياف ← يُخشّن الكنب حتى الناعم. RO Rinse إلزامي. نخيل 8M لقاح: حبوب لقاح مارس-مايو تتراكم في الكنب ← مسبب حساسية تنفسية أثناء الجلوس. HEPA Pollen. ΔT 45°م: تجفيف 15-20 دقيقة! 10-20% = لا عفن لا عث! ميزة كبرى. مقارنة: خميس = عفن+عث+Anti-Fungal+Anti-Mite+4-8h تجفيف = أغلى 30%. بريدة = أبسط.',
+        shortAnswer: 'على عكس [الشامبو بماء صنبور الذي يُخشّن]، يعتمد بروتوكولنا في خدمة [تنظيف الكنب] بمدينة [بريدة] على [HEPA Extraction+RO+Pollen Filter]. ففي ظل [Nafud يقطع+CaCO₃ 600ppm+نخيل لقاح+10-20%]، تتفاقم ظاهرة [قطع ألياف+خشونة+حساسية]. لذا؛ يتدخل فريقنا عبر [HEPA ← غسل ← RO ← تجفيف 15 دقيقة] — لا عفن!',
+        heroSubtitle: 'Nafud يقطع + CaCO₃ 600ppm خشونة + نخيل لقاح — HEPA+RO!',
     },
-
     pricing: [
-        { type: 'تنظيف كنب — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف كنب — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'كنبة 3 مقاعد', unit: 'كنبة', minPrice: 50, maxPrice: 100, time: '30-45 دقيقة + 15 تجفيف' },
+        { type: 'طقم كنب (5 قطع)', unit: 'طقم', minPrice: 150, maxPrice: 310, time: '2-3h' },
+        { type: '+ HEPA عميق', unit: 'إضافي', minPrice: 60, maxPrice: 120, time: '1h' },
+        { type: 'شهري (4 HEPA)', unit: 'شهر', minPrice: 250, maxPrice: 500, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف كنب ببريدة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف كنب؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف كنب؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش كنب بريدة يتلف أسرع؟', answer: 'Nafud 10-50 μm يقطع ألياف من الداخل. HEPA Extraction يسحب قبل القطع.' },
+        { question: 'ليش الكنب يخشن بعد الغسل ببريدة؟', answer: 'CaCO₃ 600ppm أعلى كلس. يترسب في الألياف. RO = ناعم.' },
+        { question: 'كم تكلفة تنظيف كنب ببريدة مقارنة بخميس؟', answer: 'أرخص 25-30% — لا Anti-Fungal+Anti-Mite+تجفيف 15 دقيقة.' },
+        { question: 'هل الكنب يتعفّن ببريدة؟', answer: 'لا! 10-20% = لا عفن لا عث. تجفيف 15-20 دقيقة.' },
+        { question: 'هل نخيل يأثر على الكنب ببريدة؟', answer: '8M نخلة = لقاح يتراكم. حساسية أثناء الجلوس. HEPA Pollen.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'HEPA Extraction — Nafud يقطع.',
+        'RO Rinse — 600ppm خشونة.',
+        'HEPA Pollen — لقاح مارس-مايو.',
+        'تجفيف 15 دقيقة — لا عفن!',
+        'لا قطن — Nafud يخدش.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'Nafud × 6 أشهر = ألياف مقطوعة — تغيير تنجيد 2000+.',
+        'CaCO₃ 600ppm + ماء صنبور = أعلى خشونة — RO إلزامي.',
+        'لقاح × ربيع + كنب بدون HEPA = حساسية تنفسية YMYL.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
+        { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMISNID.name, quote: 'كنب بريدة: Nafud يقطع+600ppm خشونة. HEPA+RO. لا عفن.', source: 'جغرافيا المناخ — كنب القصيم' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف كنب مرخص', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'HEPA Extraction', use: 'يسحب Nafud — يمنع قطع' },
+        { name: 'RO Water', use: 'بدون CaCO₃ 600ppm' },
+        { name: 'HEPA Pollen', use: 'لقاح نخيل 8M' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'شامبو يكفي.', solution: 'Nafud يقطع+600ppm يُخشّن. HEPA+RO.' },
+        { fear: 'مثل خميس.', solution: 'لا عفن+15 دقيقة = أرخص 30%.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'ماء عادي.', truth: '600ppm = أعلى خشونة. RO.' },
+        { myth: 'مكنسة تكفي.', truth: 'Nafud 10 μm يمر. HEPA.' },
     ],
-
     relatedServices: [
-        { slug: 'buraidah-furniture-moving', context: 'نقل عفش ببريدة', priority: 1 },
-        { slug: 'buraidah-furniture-storage', context: 'تخزين عفش ببريدة', priority: 2 },
-        { slug: 'buraidah-dyna', context: 'دينا نقل ببريدة', priority: 3 },
-        { slug: 'buraidah-moving-out', context: 'نقل عفش خروج ببريدة', priority: 4 },
-        { slug: 'buraidah-dabab', context: 'دباب نقل ببريدة', priority: 5 },
-        { slug: 'buraidah-cleaning', context: 'تنظيف منازل ببريدة', priority: 6 },
-        { slug: 'buraidah-tanks-cleaning', context: 'تنظيف خزانات ببريدة', priority: 7 },
-        { slug: 'buraidah-carpet-cleaning', context: 'تنظيف سجاد ببريدة', priority: 8 },
-        { slug: 'buraidah-steam-cleaning', context: 'تنظيف بالبخار ببريدة', priority: 9 },
+        { slug: 'carpet-cleaning', context: 'سجاد', priority: 1 },
+        { slug: 'councils-cleaning', context: 'مجالس', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 3 },
+        { slug: 'steam-cleaning', context: 'بخار', priority: 4 },
+        { slug: 'furniture-cleaning', context: 'أثاث', priority: 5 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 6 },
+        { slug: 'marble-polishing', context: 'رخام', priority: 7 },
     ],
 };

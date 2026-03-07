@@ -74,12 +74,7 @@ export const override: PageOverride = {
         { ...GOV.SCE, role: 'اشتراطات سلامة المباني وعزل الأساسات' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALJUND.name,
-        title: EXPERTS.ALJUND.title,
-        credential: EXPERTS.ALJUND.credential,
-        profileUrl: EXPERTS.ALJUND.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALJUND,
 
     expertCitations: [
         {
@@ -116,9 +111,9 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'madinah-pest-control', context: 'مكافحة حشرات عامة مع فحص نمل أبيض — باقة حماية شاملة.', priority: 1 },
-        { slug: 'madinah-pesticide-spraying', context: 'رش وقائي للحشرات السطحية — يُكمل حماية النمل الأبيض الجوفية.', priority: 2 },
-        { slug: 'madinah-water-leak-detection', context: 'تسربات المياه تجذب النمل الأبيض — أصلح التسرب أولاً.', priority: 3 },
-        { slug: 'madinah-roof-insulation', context: 'عزل أسطح يحمي الأخشاب من الرطوبة التي تجذب النمل.', priority: 4 },
+        { slug: 'pest-control', context: 'مكافحة حشرات عامة مع فحص نمل أبيض — باقة حماية شاملة.', priority: 1 },
+        { slug: 'pesticide-spraying', context: 'رش وقائي للحشرات السطحية — يُكمل حماية النمل الأبيض الجوفية.', priority: 2 },
+        { slug: 'water-leak-detection', context: 'تسربات المياه تجذب النمل الأبيض — أصلح التسرب أولاً.', priority: 3 },
+        { slug: 'roof-insulation', context: 'عزل أسطح يحمي الأخشاب من الرطوبة التي تجذب النمل.', priority: 4 },
     ],
 };

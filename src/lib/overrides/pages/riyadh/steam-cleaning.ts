@@ -90,7 +90,6 @@ export const override: PageOverride = {
             expert: 'أ.د. عبدالله المسند',
             quote: 'مناخ الرياض الجاف يجعل البخار الحل الأمثل — يعقم بالحرارة ثم يتبخر فوراً. في المدن الرطبة: البخار يبلل ويسبب عفن. في الرياض: لا وجود لهذه المشكلة',
             source: 'أستاذ جغرافيا المناخ',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -117,14 +116,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'riyadh-sofa-cleaning', context: 'بخار الكنب', priority: 1 },
-        { slug: 'riyadh-carpet-cleaning', context: 'بخار السجاد', priority: 2 },
-        { slug: 'riyadh-mattress-cleaning', context: 'بخار المراتب', priority: 3 },
-        { slug: 'riyadh-cleaning', context: 'تنظيف شامل بالبخار', priority: 4 },
-        { slug: 'riyadh-sanitization', context: 'تعقيم يكمّل البخار', priority: 5 },
-        { slug: 'riyadh-air-conditioner-cleaning', context: 'بخار المكيف', priority: 6 },
-        { slug: 'riyadh-kitchen-cleaning', context: 'بخار المطبخ', priority: 7 },
-        { slug: 'riyadh-oven-cleaning', context: 'بخار الفرن', priority: 8 },
-        { slug: 'riyadh-floor-cleaning', context: 'بخار الأرضيات', priority: 9 },
+        { slug: 'sofa-cleaning', context: 'بخار الكنب', priority: 1 },
+        { slug: 'carpet-cleaning', context: 'بخار السجاد', priority: 2 },
+        { slug: 'mattress-cleaning', context: 'بخار المراتب', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف شامل بالبخار', priority: 4 },
+        { slug: 'sanitization', context: 'تعقيم يكمّل البخار', priority: 5 },
+        { slug: 'air-conditioner-cleaning', context: 'بخار المكيف', priority: 6 },
+        { slug: 'kitchen-cleaning', context: 'بخار المطبخ', priority: 7 },
+        { slug: 'oven-cleaning', context: 'بخار الفرن', priority: 8 },
+        { slug: 'floor-cleaning', context: 'بخار الأرضيات', priority: 9 },
     ],
 };

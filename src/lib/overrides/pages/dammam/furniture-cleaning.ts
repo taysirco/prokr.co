@@ -1,11 +1,3 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف أثاث بالدمام — Override مخصص (E-E-A-T Grade)
-// صفحة: /dammam/furniture-cleaning
-// قطاع YMYL: صحة (عث + PM2.5 في تنجيد) + مالي (أثاث 10,000-100,000+ ريال)
-// خريطة 2.4: المسند (مناخ/تنظيف) → بلدي
-// NLP: رطوبة خليجية، أقمشة حساسة، تنجيد إسفنج، حرير وجلد وصوف
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
 
@@ -80,19 +72,13 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات تنظيف المفروشات — مواد معتمدة وحماية المستهلك' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMISNID.name,
-        title: EXPERTS.ALMISNID.title,
-        credential: EXPERTS.ALMISNID.credential,
-        profileUrl: EXPERTS.ALMISNID.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMISNID,
 
     expertCitations: [
         {
             expert: 'أ.د. عبدالله المسند',
             quote: 'الأثاث في المنطقة الشرقية يتلف بسرعة مضاعفة من الرياض — ليس بسبب الاستخدام بل بسبب المناخ. الرطوبة تُنمّي العث والعفن داخل الإسفنج. PM2.5 يخدش الجلد والأقمشة. الملوحة تتبلور على الأسطح الباردة',
             source: 'أستاذ جغرافيا المناخ — جامعة القصيم',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -122,14 +108,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'dammam-sofa-cleaning', context: 'كنب — أكبر قطعة أثاث وأكثرها تراكماً', priority: 1 },
-        { slug: 'dammam-councils-cleaning', context: 'مجالس أرضية — نفس التقنية بموقع مختلف', priority: 2 },
-        { slug: 'dammam-mattress-cleaning', context: 'مراتب — نفس مشكلة العث بالأثاث', priority: 3 },
-        { slug: 'dammam-carpet-cleaning', context: 'سجاد تحت الأثاث — نظفهم معاً', priority: 4 },
-        { slug: 'dammam-steam-cleaning', context: 'بخار شامل لكل أثاث الغرفة', priority: 5 },
-        { slug: 'dammam-cleaning', context: 'تنظيف شامل يشمل الأثاث', priority: 6 },
-        { slug: 'dammam-villas-cleaning', context: 'فيلا شاملة — أثاث 5-10 غرف', priority: 7 },
-        { slug: 'dammam-palaces-cleaning', context: 'قصور — أثاث فاخر حساس', priority: 8 },
-        { slug: 'dammam-air-conditioner-cleaning', context: 'المكيف يوزع PM2.5 على الأثاث', priority: 9 },
+        { slug: 'sofa-cleaning', context: 'كنب — أكبر قطعة أثاث وأكثرها تراكماً', priority: 1 },
+        { slug: 'councils-cleaning', context: 'مجالس أرضية — نفس التقنية بموقع مختلف', priority: 2 },
+        { slug: 'mattress-cleaning', context: 'مراتب — نفس مشكلة العث بالأثاث', priority: 3 },
+        { slug: 'carpet-cleaning', context: 'سجاد تحت الأثاث — نظفهم معاً', priority: 4 },
+        { slug: 'steam-cleaning', context: 'بخار شامل لكل أثاث الغرفة', priority: 5 },
+        { slug: 'cleaning', context: 'تنظيف شامل يشمل الأثاث', priority: 6 },
+        { slug: 'villas-cleaning', context: 'فيلا شاملة — أثاث 5-10 غرف', priority: 7 },
+        { slug: 'palaces-cleaning', context: 'قصور — أثاث فاخر حساس', priority: 8 },
+        { slug: 'air-conditioner-cleaning', context: 'المكيف يوزع PM2.5 على الأثاث', priority: 9 },
     ],
 };

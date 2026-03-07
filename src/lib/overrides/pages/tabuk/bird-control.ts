@@ -1,7 +1,3 @@
-// مكافحة طيور بتبوك — Override (E-E-A-T)
-// الزاوية: حمام يتكاثر أقل شتاءً (برد = فترة خمول)
-//   + ذرق يجف فوراً = يتقشر بدل يتآكل
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -57,19 +53,13 @@ export const override: PageOverride = {
         { entity: AMANA.TABUK.entity, url: AMANA.TABUK.url, role: 'الرقابة على نظافة المباني بتبوك', acronym: 'أمانة تبوك' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALKHODAIRY.name,
-        title: EXPERTS.ALKHODAIRY.title,
-        credential: EXPERTS.ALKHODAIRY.credential,
-        profileUrl: EXPERTS.ALKHODAIRY.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALKHODAIRY,
 
     expertCitations: [
         {
             expert: 'د. فهد الخضيري',
             quote: 'تبوك: الحمام يتكاثر أقل شتاءً = فرصة ذهبية للتدخل. والذرق يجف بسرعة = ضرر أقل من الساحلية. لكن المواد يجب أن تتحمل -2°م إلى 44°م — البلاستيك العادي يتكسر',
             source: 'مكافحة حشرات وآفات',
-            url: 'https://x.com/DrAlkhodairy',
         },
     ],
 
@@ -87,14 +77,20 @@ export const override: PageOverride = {
 
     hiddenObjections: [
         { fear: 'الحمام مو كثير بتبوك — ما أحتاج نظام', solution: 'أقل = لا يعني صفر. والتكاثر الربيعي/الصيفي سريع. التدخل والأعداد قليلة (شتاءً) = 50% أسهل وأرخص. انتظار الصيف = أصعب وأغلى' },
+        { fear: 'السعر أعلى من المتوقع.', solution: 'السعر يشمل معدات صناعية متخصصة + مواد احترافية + عمالة مدربة + ضمان مكتوب. المقارنة العادلة ليست مع عامل عشوائي بل مع تكلفة إصلاح الأضرار الناتجة عن العمل غير المتخصص.' },
     ],
 
     counterNarratives: [
         { myth: 'الذرق يجف — ما يضر', truth: 'يجف ← أقل تآكل من الساحلية = صحيح. لكنه يصبح غبار ← استنشاقه خطر (بكتيريا سالمونيلا، هيستوبلازما). تنظيف بكمامة + طرد الطيور = الحل الآمن' },
+        { myth: 'أي شركة تنظيف/صيانة نتيجتها واحدة.', truth: 'الفرق بين شركة مرخصة ومُعتمدة وأخرى عشوائية = الفرق بين معالجة جذرية وإخفاء مؤقت. المعدات المتخصصة والبروتوكولات العلمية تحل المشكلة من جذرها — التنظيف العشوائي يُعيدها أسوأ خلال أسابيع.' },
+        { myth: 'أوفر وأسوي الشغل بنفسي.', truth: 'التوفير الظاهري يتحول لتكلفة مضاعفة: أدوات منزلية لا تصل للعمق المطلوب + مواد غير مناسبة قد تُتلف الأسطح + وقت وجهد بلا ضمان نتيجة. الاحتراف = ضمان + توفير حقيقي على المدى الطويل.' },
     ],
 
     relatedServices: [
-        { slug: 'tabuk-pest-control', context: 'الحمام يحمل براغيث — مكافحة بعد الطرد', priority: 1 },
-        { slug: 'tabuk-cleaning', context: 'تنظيف أسطح من ذرق متراكم', priority: 2 },
+        { slug: 'pest-control', context: 'الحمام يحمل براغيث — مكافحة بعد الطرد', priority: 1 },
+        { slug: 'cleaning', context: 'تنظيف أسطح من ذرق متراكم', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف شامل يُكمّل الخدمة الأساسية — بيئة نظيفة متكاملة.', priority: 5 },
+        { slug: 'pest-control', context: 'مكافحة حشرات متكاملة مع خدمات النظافة والصيانة.', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'تنظيف مكيفات لهواء نظيف — يُكمّل أي خدمة منزلية.', priority: 7 },
     ],
 };

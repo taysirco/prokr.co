@@ -81,12 +81,7 @@ export const override: PageOverride = {
         { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'ضمان التزام أسطول النقل بالمسارات المحددة في المخططات الحضرية دون إعاقة للأحياء', acronym: 'أمانة المدينة' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALZUWAYED.name,
-        title: EXPERTS.ALZUWAYED.title,
-        credential: EXPERTS.ALZUWAYED.credential,
-        profileUrl: EXPERTS.ALZUWAYED.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALZUWAYED,
 
     expertCitations: [
         {
@@ -126,11 +121,11 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'madinah-dabab', context: 'لنقل الأغراض الفردية المحدودة (ثلاجة، غسالة، مكيف) بتكلفة اقتصادية، اطلب خدمة "دباب النقل".', priority: 1 },
-        { slug: 'madinah-furniture-moving', context: 'لخدمة نقل متكاملة للفلل (شاملة الفك والتغليف الجذري للقطع الكبيرة والنجارين)، اطلب وفد النقل الشامل.', priority: 2 },
-        { slug: 'madinah-furniture-storage', context: 'إذا أخليت عقارك القديم والعقار الجديد ليس جاهزاً، يمكن للدينا إنزال الأثاث في مستودعاتنا اللوجستية الآمنة.', priority: 3 },
-        { slug: 'madinah-cleaning', context: 'سبق الدينا خطوة بتنظيف المنزل الجديد للحد من الأتربة وتجهيزه لاستقبال الأثاث نظيفاً.', priority: 4 },
-        { slug: 'madinah-sofa-cleaning', context: 'إذا تسبب سوء تخزين سابق أو نقل عشوائي في اتساخ كنبك، نرسل الدينا لإحضاره وتقوم مغاسلنا بتجديده بالكامل.', priority: 5 },
-        { slug: 'madinah-pest-control', context: 'فحص ورش المنزل الجديد قبل إدخال العفش المنقول، خطوة جوهرية لمنع استيطان الحشرات لاحقاً.', priority: 6 },
+        { slug: 'dabab', context: 'لنقل الأغراض الفردية المحدودة (ثلاجة، غسالة، مكيف) بتكلفة اقتصادية، اطلب خدمة "دباب النقل".', priority: 1 },
+        { slug: 'furniture-moving', context: 'لخدمة نقل متكاملة للفلل (شاملة الفك والتغليف الجذري للقطع الكبيرة والنجارين)، اطلب وفد النقل الشامل.', priority: 2 },
+        { slug: 'furniture-storage', context: 'إذا أخليت عقارك القديم والعقار الجديد ليس جاهزاً، يمكن للدينا إنزال الأثاث في مستودعاتنا اللوجستية الآمنة.', priority: 3 },
+        { slug: 'cleaning', context: 'سبق الدينا خطوة بتنظيف المنزل الجديد للحد من الأتربة وتجهيزه لاستقبال الأثاث نظيفاً.', priority: 4 },
+        { slug: 'sofa-cleaning', context: 'إذا تسبب سوء تخزين سابق أو نقل عشوائي في اتساخ كنبك، نرسل الدينا لإحضاره وتقوم مغاسلنا بتجديده بالكامل.', priority: 5 },
+        { slug: 'pest-control', context: 'فحص ورش المنزل الجديد قبل إدخال العفش المنقول، خطوة جوهرية لمنع استيطان الحشرات لاحقاً.', priority: 6 },
     ],
 };

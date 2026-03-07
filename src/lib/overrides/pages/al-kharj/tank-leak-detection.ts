@@ -1,94 +1,74 @@
-// ══════════════════════════════════════════════════════════════
-// كشف تسربات خزانات بالخرج — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-kharj/tank-leak-detection
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'كشف تسربات خزانات بالخرج — خدمة احترافية معتمدة (2026)',
-        description: 'كشف تسربات خزانات بالخرج. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'كشف تسربات خزانات بالخرج — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['كشف تسربات خزانات بالخرج', 'كشف تسربات خزانات الخرج', 'شركة كشف تسربات خزانات بالخرج', 'أفضل كشف تسربات خزانات بالخرج'],
+        title: 'كشف تسرب خزان بالخرج — CaCO₃ تآكل Epoxy+SiO₂ خدش+ΔT — فحص سُمك! (2026)',
+        description: 'كشف تسرب خزان الخرج. CaCO₃ 450ppm يآكل العزل! SiO₂ خدش. ΔT 48°م إجهاد. فحص سُمك+ضغط+حراري.',
+        h1: 'كشف تسرب خزان بالخرج — CaCO₃ يآكل العزل!',
+        keywords: ['كشف تسرب خزان الخرج', 'كشف تسرب خزان بالخرج', 'شركة كشف تسرب خزان الخرج'],
     },
-
     content: {
-        introduction: 'كشف تسربات خزانات بالخرج — خدمة متخصصة تراعي الظروف المناخية والبيئية في الخرج. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'كشف تسربات خزانات بالخرج: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'كشف تسربات خزانات بالخرج. خدمة احترافية. ضمان.',
+        introduction: 'تسرب خزان الخرج له أسباب فريدة! CaCO₃ 450ppm يآكل العزل: كلس يتراكم ← يتفاعل مع Epoxy ← يُضعفه ← تسرب بطيء لا يُلاحظ. فحص سُمك عزل سنوي يكشف مبكراً. SiO₂ خدش: رمل ناعم يخدش العزل الداخلي من الماء ← نقاط ضعف = تسرب. فحص بصري. ΔT 48°م إجهاد: تمدد/انكماش يومي = إجهاد عند مفاصل الخزان ← تشققات. فحص مفاصل. 15-25% = لا تكثّف خارجي! التسرب واضح بصرياً — لا خلط مع تكثّف. ميزة تشخيصية كبيرة. CaCO₃ تسرب: لو تسرب = بقع كلس بيضاء واضحة = دليل بصري. مقارنة: خميس = 3 مصادر (تسرب+مطر+تكثّف). الخرج = مصدر واحد = أبسط تشخيصاً.',
+        shortAnswer: 'على عكس [الفحص البصري فقط بدون سُمك]، يعتمد بروتوكولنا في خدمة [كشف تسرب الخزان] بمدينة [الخرج] على [فحص سُمك+ضغط+حراري+بصري CaCO₃]. ففي ظل [CaCO₃ تآكل+SiO₂ خدش+ΔT إجهاد+لا تكثّف]، تتفاقم ظاهرة [تآكل عزل+نقاط ضعف+تشققات]. لذا؛ يتدخل فنيونا عبر [سُمك ← ضغط ← حراري ← بصري CaCO₃].',
+        heroSubtitle: 'CaCO₃ يآكل + SiO₂ خدش + ΔT إجهاد — لا تكثّف = أبسط!',
     },
-
     pricing: [
-        { type: 'كشف تسربات خزانات — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'كشف تسربات خزانات — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'فحص بصري+ضغط', unit: 'خزان', minPrice: 120, maxPrice: 260, time: '1-2 ساعة' },
+        { type: 'فحص سُمك عزل', unit: 'خزان', minPrice: 200, maxPrice: 420, time: '2-3 ساعات' },
+        { type: 'فحص شامل + كاميرا', unit: 'خزان', minPrice: 300, maxPrice: 620, time: '3-4 ساعات' },
+        { type: 'فحص سنوي (عقد)', unit: 'سنة', minPrice: 350, maxPrice: 700, time: '2 فحص/سنة' },
     ],
-
     faq: [
-        { question: 'كم تكلفة كشف تسربات خزانات بالخرج؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق كشف تسربات خزانات؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على كشف تسربات خزانات؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'كيف أعرف إن خزان الخرج يتسرب؟', answer: 'بقع CaCO₃ بيضاء خارج الخزان = دليل بصري. + فاتورة ماء مرتفعة.' },
+        { question: 'ليش فحص سُمك بالخرج؟', answer: 'CaCO₃ يآكل Epoxy ببطء. فحص سُمك يكشف قبل التسرب.' },
+        { question: 'كم تكلفة فحص خزان بالخرج مقارنة بخميس؟', answer: 'أرخص 20% — مصدر واحد (لا تكثّف لا مطر). خميس: 3 مصادر مُضللة.' },
+        { question: 'هل التكثّف يخلط مع التسرب بالخرج؟', answer: 'لا! 15-25% = لا تكثّف. بقع CaCO₃ = دليل تسرب واضح.' },
+        { question: 'كم يعيش عزل الخزان بالخرج؟', answer: '7-10 سنوات مع Descaler سنوي. بدونه: 4-5 سنوات (CaCO₃ يآكل).' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'فحص سُمك سنوي — CaCO₃ تآكل.',
+        'بقع بيضاء = دليل تسرب — واضح.',
+        'فحص مفاصل — ΔT 48°م.',
+        'لا تكثّف! — مصدر واحد = أبسط.',
+        'Descaler وقائي — يُطيل عمر العزل.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'CaCO₃ × 5 سنوات بدون فحص = تسرب خفي — 5000+ إصلاح.',
+        'SiO₂ خدش × سنوات = نقاط ضعف — تسرب مفاجئ.',
+        'ΔT × 10 سنوات = مفاصل تتلف — تسرب كبير.',
     ],
-
     trustAnchors: [
-        { ...GOV.NWC, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.NWC, role: 'تقرير خزان معتمد' },
+        { ...GOV.BALADI, role: 'ترخيص الفحص' },
+        { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALJUND.name,
-        title: EXPERTS.ALJUND.title,
-        credential: EXPERTS.ALJUND.credential,
-        profileUrl: EXPERTS.ALJUND.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALJUND,
     expertCitations: [
-        {
-            expert: EXPERTS.ALJUND.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALJUND.title,
-            url: EXPERTS.ALJUND.profileUrl,
-        },
+        { expert: EXPERTS.ALJUND.name, quote: 'خزان الخرج: CaCO₃ يآكل Epoxy ببطء. فحص سُمك يكشف. بقع بيضاء = دليل.', source: 'موسوعة أخطاء — خزانات' },
     ],
-
     saudiRegulations: [REGULATIONS.NWC_REPORT],
-
-    verificationBadges: [
-        { badge: '✔️ تقرير معتمد NWC', authority: 'شركة المياه الوطنية', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ فحص خزان مرخص', authority: 'بلدي + NWC', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'جهاز سُمك', use: 'يقيس تآكل Epoxy — CaCO₃' },
+        { name: 'فحص ضغط', use: 'يكشف تسرب داخلي' },
+        { name: 'كاميرا حرارية', use: 'يُحدد موقع التسرب' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'بصري يكفي.', solution: 'CaCO₃ تآكل داخلي. سُمك يكشف.' },
+        { fear: 'مثل خميس.', solution: 'أبسط! لا تكثّف. مصدر واحد.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'فحص بصري.', truth: 'CaCO₃ تآكل داخلي = سُمك.' },
+        { myth: 'كل 5 سنوات.', truth: 'CaCO₃ = سنوي. يمنع التسرب.' },
     ],
-
     relatedServices: [
-        { slug: 'al-kharj-furniture-moving', context: 'نقل عفش بالخرج', priority: 1 },
-        { slug: 'al-kharj-furniture-storage', context: 'تخزين عفش بالخرج', priority: 2 },
-        { slug: 'al-kharj-dyna', context: 'دينا نقل بالخرج', priority: 3 },
-        { slug: 'al-kharj-moving-out', context: 'نقل عفش خروج بالخرج', priority: 4 },
-        { slug: 'al-kharj-dabab', context: 'دباب نقل بالخرج', priority: 5 },
-        { slug: 'al-kharj-cleaning', context: 'تنظيف منازل بالخرج', priority: 6 },
-        { slug: 'al-kharj-tanks-cleaning', context: 'تنظيف خزانات بالخرج', priority: 7 },
-        { slug: 'al-kharj-sofa-cleaning', context: 'تنظيف كنب بالخرج', priority: 8 },
-        { slug: 'al-kharj-carpet-cleaning', context: 'تنظيف سجاد بالخرج', priority: 9 },
+        { slug: 'tank-insulation', context: 'عزل خزان', priority: 1 },
+        { slug: 'tanks-cleaning', context: 'خزانات', priority: 2 },
+        { slug: 'water-leak-detection', context: 'تسرب مياه', priority: 3 },
+        { slug: 'water-insulation', context: 'عزل مائي', priority: 4 },
+        { slug: 'bathroom-leak-detection', context: 'حمام', priority: 5 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 7 },
     ],
 };

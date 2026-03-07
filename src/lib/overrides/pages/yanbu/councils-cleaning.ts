@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف مجالس بينبع — Override مخصص (E-E-A-T Grade)
-// صفحة: /yanbu/councils-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف مجالس بينبع — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف مجالس بينبع. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف مجالس بينبع — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف مجالس بينبع', 'تنظيف مجالس ينبع', 'شركة تنظيف مجالس بينبع', 'أفضل تنظيف مجالس بينبع'],
+        title: 'تنظيف مجالس بينبع — NaCl ملح+SOx حمض+70-85% عفن أقمشة — Anti-Fungal+RO! (2026)',
+        description: 'تنظيف مجالس ينبع. NaCl ملح يتبلور! SOx حمض. 70-85% عفن أقمشة. Anti-Fungal+RO+HEPA+Dehumidifier.',
+        h1: 'تنظيف مجالس بينبع — ملح+حمض+عفن!',
+        keywords: ['تنظيف مجالس ينبع', 'تنظيف مجلس بينبع', 'شركة تنظيف مجالس ينبع'],
     },
-
     content: {
-        introduction: 'تنظيف مجالس بينبع — خدمة متخصصة تراعي الظروف المناخية والبيئية في ينبع. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف مجالس بينبع: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف مجالس بينبع. خدمة احترافية. ضمان.',
+        introduction: 'مجلس ينبع = NaCl يُملّح الأقمشة! NaCl ملح: ملح البحر الأحمر يتبلور داخل أقمشة المجلس ← يُخشّن الملمس ← يُفتّت الألياف. RO Extraction. SOx H₂SO₄: طبقة حمضية لزجة تغيّر لون الأقمشة. pH Neutralizer+RO. 70-85% عفن أقمشة: رطوبة بحرية = عفن أسود خلف المساند وتحت المجلس أسبوعين! Anti-Fungal+Dehumidifier. تجفيف 4-6h. SiO₂+NaCl: رمل على ملح = Liquid Grinding يخدش أقمشة ناعمة. HEPA أولاً. مقارنة: بريدة = Nafud+CaCO₃+تجفيف 15 دقيقة+لا عفن. ينبع = ملح+حمض+عفن+4-6h = أعقد بكثير.',
+        shortAnswer: 'على عكس [الشامبو بماء صنبور]، يعتمد بروتوكولنا في خدمة [تنظيف المجالس] بمدينة [ينبع] على [RO Extraction+Anti-Fungal+pH Neutralizer+Dehumidifier]. ففي ظل [NaCl تبلور+SOx حمض+70-85% عفن+SiO₂]، تتفاقم ظاهرة [تبلور+تغير لون+عفن+خدش]. لذا؛ يتدخل فريقنا عبر [HEPA ← RO ← Anti-Fungal ← Dehumidifier].',
+        heroSubtitle: 'NaCl ملح + SOx حمض + 70-85% عفن — Anti-Fungal+RO!',
     },
-
     pricing: [
-        { type: 'تنظيف مجالس — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف مجالس — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'مجلس (6 مقاعد)', unit: 'مجلس', minPrice: 180, maxPrice: 370, time: '2-3h + 4-6h تجفيف' },
+        { type: 'مجلس + Anti-Fungal', unit: 'مجلس', minPrice: 230, maxPrice: 480, time: '+ معالجة' },
+        { type: '+ Dehumidifier تجفيف', unit: 'إضافي', minPrice: 60, maxPrice: 130, time: 'يُقلّل تجفيف' },
+        { type: 'شهري (4 زيارات)', unit: 'شهر', minPrice: 350, maxPrice: 700, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف مجالس بينبع؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف مجالس؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف مجالس؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش مجلس ينبع يخشن بعد الغسل؟', answer: 'NaCl يتبلور في الألياف. ماء صنبور = يُملّح أكثر. RO Extraction.' },
+        { question: 'ليش عفن تحت المجلس بينبع؟', answer: '70-85% رطوبة. عفن أسود أسبوعين. Anti-Fungal+Dehumidifier.' },
+        { question: 'كم تكلفة مجالس بينبع مقابل بريدة؟', answer: 'أغلى 40% — Anti-Fungal+4-6h. بريدة: 15 دقيقة+لا عفن.' },
+        { question: 'هل SOx يغيّر لون المجلس؟', answer: 'SOx+NaCl+رطوبة = H₂SO₄ يغيّر لون. pH Neutralizer.' },
+        { question: 'كم تجفيف مجلس بينبع؟', answer: '4-6 ساعات! 70-85%. Dehumidifier يُقلّل لـ 2-3h.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'RO Extraction — NaCl يتبلور.',
+        'Anti-Fungal — 70-85% عفن أقمشة.',
+        'HEPA أولاً — SiO₂+NaCl.',
+        'pH Neutralizer — SOx حمض.',
+        'Dehumidifier — 4-6h تجفيف.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'NaCl + ماء صنبور = يُملّح أقمشة — RO إلزامي.',
+        '70-85% + مجلس مبلول = عفن أسود ← صحة YMYL.',
+        'SiO₂+NaCl بدون HEPA = يخدش أقمشة ناعمة.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
+        { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'اشتراطات أمانة ينبع' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMISNID.name, quote: 'مجلس ينبع: NaCl يتبلور+عفن. RO+Anti-Fungal. 4-6h تجفيف.', source: 'جغرافيا المناخ — مجالس ساحلية' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف مجالس مرخص', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'RO Extraction', use: 'NaCl — لا ملح جديد' },
+        { name: 'Anti-Fungal', use: '70-85% — عفن أقمشة' },
+        { name: 'Dehumidifier', use: 'تجفيف 4-6h — ساحلي' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'شامبو يكفي.', solution: 'NaCl يتبلور+SOx حمض. RO.' },
+        { fear: 'مثل بريدة.', solution: 'عفن+4-6h مقابل 15 دقيقة+لا عفن.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'ماء عادي.', truth: 'NaCl يتبلور = يُملّح. RO.' },
+        { myth: 'تجفيف سريع.', truth: '70-85% = 4-6h. Dehumidifier.' },
     ],
-
     relatedServices: [
-        { slug: 'yanbu-furniture-moving', context: 'نقل عفش بينبع', priority: 1 },
-        { slug: 'yanbu-furniture-storage', context: 'تخزين عفش بينبع', priority: 2 },
-        { slug: 'yanbu-dyna', context: 'دينا نقل بينبع', priority: 3 },
-        { slug: 'yanbu-moving-out', context: 'نقل عفش خروج بينبع', priority: 4 },
-        { slug: 'yanbu-dabab', context: 'دباب نقل بينبع', priority: 5 },
-        { slug: 'yanbu-cleaning', context: 'تنظيف منازل بينبع', priority: 6 },
-        { slug: 'yanbu-tanks-cleaning', context: 'تنظيف خزانات بينبع', priority: 7 },
-        { slug: 'yanbu-sofa-cleaning', context: 'تنظيف كنب بينبع', priority: 8 },
-        { slug: 'yanbu-carpet-cleaning', context: 'تنظيف سجاد بينبع', priority: 9 },
+        { slug: 'sofa-cleaning', context: 'كنب', priority: 1 },
+        { slug: 'carpet-cleaning', context: 'سجاد', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 3 },
+        { slug: 'steam-cleaning', context: 'بخار', priority: 4 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 5 },
+        { slug: 'pest-control', context: 'حشرات', priority: 6 },
+        { slug: 'furniture-cleaning', context: 'أثاث', priority: 7 },
     ],
 };

@@ -4,6 +4,7 @@
 // ============================================
 
 import type { PageOverride } from '../../types';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -94,19 +95,13 @@ export const override: PageOverride = {
         { entity: 'الهيئة العامة للنقل', acronym: 'TGA', url: 'https://tga.gov.sa', role: 'ترخيص شركات النقل والتخزين' },
     ],
 
-    expertReviewer: {
-        name: 'م. ماجد المحيميد',
-        title: 'خبير جودة تشطيبات وعزل',
-        credential: 'مهندس جودة تشطيبات',
-        profileUrl: 'https://x.com/majedalmohaimed',
-    },
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
             expert: 'م. ماجد المحيميد',
             quote: 'تخزين الأثاث في جدة بدون تكييف = عفن مضمون خلال شهرين. المستودع المكيّف + مجففات هواء + تغليف Shrink Wrap = الفرق بين أثاث سليم وأثاث تالف',
             source: 'خبير جودة تشطيبات',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
 
@@ -115,14 +110,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'jeddah-furniture-moving', context: 'نقل + تخزين', priority: 1 },
-        { slug: 'jeddah-furniture-cleaning', context: 'تنظيف قبل التخزين', priority: 2 },
-        { slug: 'jeddah-pest-control', context: 'رش المستودع', priority: 3 },
-        { slug: 'jeddah-termite-control', context: 'فحص نمل أبيض', priority: 4 },
-        { slug: 'jeddah-cleaning', context: 'تنظيف البيت الجديد', priority: 5 },
-        { slug: 'jeddah-moving-out', context: 'تنظيف الشقة القديمة', priority: 6 },
-        { slug: 'jeddah-sanitization', context: 'تعقيم بعد التخزين', priority: 7 },
-        { slug: 'jeddah-sofa-cleaning', context: 'كنب بعد التخزين', priority: 8 },
-        { slug: 'jeddah-mattress-cleaning', context: 'مراتب بعد التخزين', priority: 9 },
+        { slug: 'furniture-moving', context: 'نقل + تخزين', priority: 1 },
+        { slug: 'furniture-cleaning', context: 'تنظيف قبل التخزين', priority: 2 },
+        { slug: 'pest-control', context: 'رش المستودع', priority: 3 },
+        { slug: 'termite-control', context: 'فحص نمل أبيض', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف البيت الجديد', priority: 5 },
+        { slug: 'moving-out', context: 'تنظيف الشقة القديمة', priority: 6 },
+        { slug: 'sanitization', context: 'تعقيم بعد التخزين', priority: 7 },
+        { slug: 'sofa-cleaning', context: 'كنب بعد التخزين', priority: 8 },
+        { slug: 'mattress-cleaning', context: 'مراتب بعد التخزين', priority: 9 },
     ],
 };

@@ -84,7 +84,6 @@ export const override: PageOverride = {
             expert: 'أ.د. عبدالله المسند',
             quote: 'مارس-مايو موسم الصريف في الرياض — الطلب على عاملات التنظيف يتضاعف. الحجز المبكر أو الباقة الأسبوعية = الحل الأذكى',
             source: 'أستاذ جغرافيا المناخ',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -111,14 +110,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'riyadh-cleaning', context: 'تنظيف بالجلسة أشمل', priority: 1 },
-        { slug: 'riyadh-apartments-cleaning', context: 'شقق بأسعار ثابتة', priority: 2 },
-        { slug: 'riyadh-kitchen-cleaning', context: 'مطبخ بالساعة', priority: 3 },
-        { slug: 'riyadh-steam-cleaning', context: 'بخار بالساعة', priority: 4 },
-        { slug: 'riyadh-sanitization', context: 'تعقيم سريع', priority: 5 },
-        { slug: 'riyadh-sofa-cleaning', context: 'كنب بالساعة', priority: 6 },
-        { slug: 'riyadh-carpet-cleaning', context: 'سجاد بجلسة منفصلة', priority: 7 },
-        { slug: 'riyadh-air-conditioner-cleaning', context: 'صيانة مكيف', priority: 8 },
-        { slug: 'riyadh-pest-control', context: 'رش سريع', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف بالجلسة أشمل', priority: 1 },
+        { slug: 'apartments-cleaning', context: 'شقق بأسعار ثابتة', priority: 2 },
+        { slug: 'kitchen-cleaning', context: 'مطبخ بالساعة', priority: 3 },
+        { slug: 'steam-cleaning', context: 'بخار بالساعة', priority: 4 },
+        { slug: 'sanitization', context: 'تعقيم سريع', priority: 5 },
+        { slug: 'sofa-cleaning', context: 'كنب بالساعة', priority: 6 },
+        { slug: 'carpet-cleaning', context: 'سجاد بجلسة منفصلة', priority: 7 },
+        { slug: 'air-conditioner-cleaning', context: 'صيانة مكيف', priority: 8 },
+        { slug: 'pest-control', context: 'رش سريع', priority: 9 },
     ],
 };

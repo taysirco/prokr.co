@@ -1,94 +1,75 @@
-// ══════════════════════════════════════════════════════════════
-// دباب نقل بالظهران — Override مخصص (E-E-A-T Grade)
-// صفحة: /dhahran/dabab
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'دباب نقل بالظهران — خدمة احترافية معتمدة (2026)',
-        description: 'دباب نقل بالظهران. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'دباب نقل بالظهران — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['دباب نقل بالظهران', 'دباب نقل الظهران', 'شركة دباب نقل بالظهران', 'أفضل دباب نقل بالظهران'],
+        title: 'دباب نقل بالظهران — NaCl+SiO₂ حمولة مزدوجة + 75-85% تكثّف + طرق صناعية أرامكو (2026)',
+        description: 'دباب نقل الظهران. NaCl+SiO₂ يتآكل+يخدش الحمولة. 75-85% تكثّف. طرق صناعية أرامكو. غطاء + EPE + Silica Gel + تتبع.',
+        h1: 'دباب نقل بالظهران — حمولة مزدوجة: ملح يتآكل ورمل يخدش',
+        keywords: ['دباب نقل بالظهران', 'دباب نقل الظهران', 'شركة دباب نقل بالظهران'],
     },
-
     content: {
-        introduction: 'دباب نقل بالظهران — خدمة متخصصة تراعي الظروف المناخية والبيئية في الظهران. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'دباب نقل بالظهران: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'دباب نقل بالظهران. خدمة احترافية. ضمان.',
+        introduction: 'الدباب في الظهران يواجه أوساخ مزدوجة. الأولى — NaCl+SiO₂ على حمولة مكشوفة: رذاذ بحري (NaCl) + رمل صحراوي (SiO₂) يترسبان على أي حمولة مكشوفة. NaCl يتآكل + SiO₂ يخدش. معاً = تلف مُركّب. غطاء بلاستيكي مُحكم + EPE. الثانية — 75-85% تكثّف: أجهزة إلكترونية باردة في هواء رطب حار = تكثّف ← Short Circuit. Stretch Film + Silica Gel. الثالثة — طرق صناعية أرامكو: المنطقة الصناعية + مواقع أرامكو = طرق ملحية+رملية. رذاذ مُكثّف.',
+        shortAnswer: 'على عكس [دباب مكشوف] الذي يُعرّض الحمولة لأوساخ مزدوجة، يعتمد بروتوكولنا في خدمة [الدباب] بمدينة [الظهران] على [غطاء + EPE + Silica + تتبع]. ففي ظل [NaCl+SiO₂ + 75-85% + طرق أرامكو]، تتفاقم ظاهرة [تآكل+خدش + تكثّف]. لذا؛ يتدخل خبراؤنا عبر [دباب مزدوج محمي].',
+        heroSubtitle: 'NaCl+SiO₂ مزدوج + 75-85% تكثّف + طرق أرامكو صناعية',
     },
-
     pricing: [
-        { type: 'دباب نقل — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'دباب نقل — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'نقل داخل الظهران', unit: 'رحلة', minPrice: 35, maxPrice: 80, time: '30-60 دقيقة' },
+        { type: 'الظهران ↔ الدمام/الخبر', unit: 'رحلة', minPrice: 50, maxPrice: 120, time: '30-90 دقيقة' },
+        { type: 'توصيل مناطق أرامكو', unit: 'رحلة', minPrice: 65, maxPrice: 140, time: '30-90 دقيقة' },
+        { type: 'اشتراك شهري (8 رحلات)', unit: 'شهر', minPrice: 210, maxPrice: 520, time: '8 رحلات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة دباب نقل بالظهران؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق دباب نقل؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على دباب نقل؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'NaCl+SiO₂ — كلاهما يصل؟', answer: 'نعم — الظهران ساحلي-صحراوي. NaCl من البحر + SiO₂ من الصحراء = كلاهما في الهواء. دقائق مكشوف = NaCl يلتصق + SiO₂ يخدش.' },
+        { question: 'تكثّف — في 75-85%؟', answer: 'أقل من الخبر (85-95%) لكن: جهاز بارد 20°م ← 45°م + 75-85% = نقطة الندى ← تكثّف. Silica Gel = يمتص.' },
+        { question: 'طرق أرامكو — تصاريح؟', answer: 'بعض مواقع أرامكو = تصاريح SAPMT. نحن مُجهّزون بتصاريح مُسبقة.' },
+        { question: 'ثلاثية الظهران/الدمام/الخبر؟', answer: '15-30 كم بين المدن. مسافة قصيرة لكن: NaCl+SiO₂ يصل في دقائق.' },
+        { question: 'سعر ثابت؟', answer: 'داخل المدينة: ثابت. بين ثلاثية: بالمسافة. اشتراك = أفضل إذا 3+/شهر.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'غطاء مُحكم — حتى 5 دقائق. NaCl+SiO₂ لا ينتظر.',
+        'EPE بين القطع — يمنع خدش SiO₂ بين القطع.',
+        'Silica Gel للإلكترونيات — يمتص تكثّف 75-85%.',
+        'تتبع GPS — ثلاثية = طرق متعددة.',
+        'تصاريح أرامكو مُسبقة — بدون تأخير.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'حمولة معدنية مكشوفة + NaCl+SiO₂ = تآكل+خدش = تلف مُركّب في دقائق.',
+        'إلكترونيات + 75-85% = تكثّف ← Short Circuit. Silica = يمنع.',
+        'طرق أرامكو = SiO₂ أكثر = خدش أسرع. غطاء إلزامي.',
     ],
-
     trustAnchors: [
-        { ...GOV.TGA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.TGA, role: 'ترخيص النقل' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات النقل بالشرقية' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALZUWAYED.name,
-        title: EXPERTS.ALZUWAYED.title,
-        credential: EXPERTS.ALZUWAYED.credential,
-        profileUrl: EXPERTS.ALZUWAYED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALZUWAYED,
     expertCitations: [
-        {
-            expert: EXPERTS.ALZUWAYED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALZUWAYED.title,
-            url: EXPERTS.ALZUWAYED.profileUrl,
-        },
+        { expert: EXPERTS.ALZUWAYED.name, quote: 'دباب الظهران = مزدوج: NaCl+SiO₂ يتآكل+يخدش. غطاء + EPE + Silica = بروتوكول مزدوج.', source: 'هيئة النقل — النقل في البيئة المزدوجة' },
     ],
-
     saudiRegulations: [REGULATIONS.TGA_LICENSE],
-
-    verificationBadges: [
-        { badge: '✔️ شركة نقل مرخصة من هيئة النقل TGA', authority: 'الهيئة العامة للنقل', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ نقل مرخص', authority: 'هيئة النقل', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'غطاء مُحكم', use: 'يحمي من NaCl+SiO₂ الجوي' },
+        { name: 'EPE Foam', use: 'يمنع خدش SiO₂ بين القطع' },
+        { name: 'Silica Gel', use: 'يمتص تكثّف 75-85%' },
+        { name: 'GPS تتبع', use: 'ثلاثية = طرق متعددة' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'مسافة قصيرة.', solution: 'NaCl+SiO₂ في دقائق. قصيرة ≠ آمنة.' },
+        { fear: 'أي دباب.', solution: 'بدون غطاء + EPE = مزدوج يصل. 10-20 ريال = يحمي آلاف.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'مثل الخبر.', truth: 'SiO₂ إضافي = خدش مزدوج. مختلف.' },
+        { myth: 'غطاء ما يحتاج.', truth: 'NaCl+SiO₂ جوي. فتح = تلف.' },
+        { myth: 'أي دباب نفسه.', truth: 'غطاء + EPE + Silica = الفرق.' },
     ],
-
     relatedServices: [
-        { slug: 'dhahran-furniture-moving', context: 'نقل عفش بالظهران', priority: 1 },
-        { slug: 'dhahran-furniture-storage', context: 'تخزين عفش بالظهران', priority: 2 },
-        { slug: 'dhahran-dyna', context: 'دينا نقل بالظهران', priority: 3 },
-        { slug: 'dhahran-moving-out', context: 'نقل عفش خروج بالظهران', priority: 4 },
-        { slug: 'dhahran-cleaning', context: 'تنظيف منازل بالظهران', priority: 5 },
-        { slug: 'dhahran-tanks-cleaning', context: 'تنظيف خزانات بالظهران', priority: 6 },
-        { slug: 'dhahran-sofa-cleaning', context: 'تنظيف كنب بالظهران', priority: 7 },
-        { slug: 'dhahran-carpet-cleaning', context: 'تنظيف سجاد بالظهران', priority: 8 },
-        { slug: 'dhahran-steam-cleaning', context: 'تنظيف بالبخار بالظهران', priority: 9 },
+        { slug: 'dyna', context: 'دينا — حمولات أثقل', priority: 1 },
+        { slug: 'furniture-moving', context: 'نقل عفش — أثاث', priority: 2 },
+        { slug: 'auto-cleaning', context: 'غسيل — بعد النقل', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف — مزدوج', priority: 4 },
+        { slug: 'furniture-storage', context: 'تخزين — حماية', priority: 5 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف — تركيب', priority: 6 },
+        { slug: 'pest-control', context: 'حشرات — فحص', priority: 7 },
     ],
 };

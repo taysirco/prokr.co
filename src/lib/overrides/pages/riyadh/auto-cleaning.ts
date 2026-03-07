@@ -79,7 +79,6 @@ export const override: PageOverride = {
             expert: 'أ.د. عبدالله المسند',
             quote: 'الرياض من أعلى المدن تعرضاً للأشعة فوق البنفسجية في العالم — 3,200+ ساعة شمس سنوياً. حماية طلاء السيارة ضرورة وليس ترف',
             source: 'أستاذ جغرافيا المناخ',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -105,14 +104,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'riyadh-steam-cleaning', context: 'بخار السيارة', priority: 1 },
-        { slug: 'riyadh-sofa-cleaning', context: 'مقاعد السيارة', priority: 2 },
-        { slug: 'riyadh-carpet-cleaning', context: 'فرش السيارة', priority: 3 },
-        { slug: 'riyadh-sanitization', context: 'تعقيم داخلية السيارة', priority: 4 },
-        { slug: 'riyadh-cleaning', context: 'منزل + سيارة', priority: 5 },
-        { slug: 'riyadh-air-conditioner-cleaning', context: 'مكيف السيارة', priority: 6 },
-        { slug: 'riyadh-mattress-cleaning', context: 'نفس تقنية البخار', priority: 7 },
-        { slug: 'riyadh-floor-cleaning', context: 'أرضية الكراج', priority: 8 },
-        { slug: 'riyadh-pest-control', context: 'حشرات الكراج', priority: 9 },
+        { slug: 'steam-cleaning', context: 'بخار السيارة', priority: 1 },
+        { slug: 'sofa-cleaning', context: 'مقاعد السيارة', priority: 2 },
+        { slug: 'carpet-cleaning', context: 'فرش السيارة', priority: 3 },
+        { slug: 'sanitization', context: 'تعقيم داخلية السيارة', priority: 4 },
+        { slug: 'cleaning', context: 'منزل + سيارة', priority: 5 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف السيارة', priority: 6 },
+        { slug: 'mattress-cleaning', context: 'نفس تقنية البخار', priority: 7 },
+        { slug: 'floor-cleaning', context: 'أرضية الكراج', priority: 8 },
+        { slug: 'pest-control', context: 'حشرات الكراج', priority: 9 },
     ],
 };

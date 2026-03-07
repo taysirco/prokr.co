@@ -1,4 +1,3 @@
-// تنظيف مداخن مطاعم بالطائف — Override (E-E-A-T)
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -37,11 +36,15 @@ export const override: PageOverride = {
         'حريق الدكت = أخطر أنواع الحرائق — ينتشر داخل الجدران بلا مرئية ← يشمل المبنى كاملاً.',
     ],
     trustAnchors: [
-        { ...GOV.BALADI, role: 'ترخيص المطاعم — اشتراطات النظافة والسلامة' },
-        { ...GOV.CIVILDEFENSE, role: 'كود الدفاع المدني — سلامة المداخن والمطابخ التجارية' },
-    ],
-    expertReviewer: { name: EXPERTS.ALMOHAIMED.name, title: EXPERTS.ALMOHAIMED.title, credential: EXPERTS.ALMOHAIMED.credential, profileUrl: EXPERTS.ALMOHAIMED.profileUrl },
-    expertCitations: [{ expert: EXPERTS.ALMOHAIMED.name, quote: 'مطاعم الطائف السياحية (مشاوي + حنيذ + مندي) = فحم وحطب = سخام 5-10× أكثر من الغاز. الموسم المكثف (4-5 أشهر) يُتبعه شتاء بارد يُحجّر الدهون. التنظيف نهاية سبتمبر = الأهم في السنة — لا تؤجّل.', source: EXPERTS.ALMOHAIMED.title, url: EXPERTS.ALMOHAIMED.profileUrl }],
+
+        { ...{ ...GOV.BALADI, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
+ role: 'ترخيص المطاعم — اشتراطات النظافة والسلامة' },
+        { ...{ ...GOV.CIVILDEFENSE, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
+ role: 'كود الدفاع المدني — سلامة المداخن والمطابخ التجارية' },
+        ],
+    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertCitations: [{ expert: EXPERTS.ALMOHAIMED.name, quote: 'مطاعم الطائف السياحية (مشاوي + حنيذ + مندي) = فحم وحطب = سخام 5-10× أكثر من الغاز. الموسم المكثف (4-5 أشهر) يُتبعه شتاء بارد يُحجّر الدهون. التنظيف نهاية سبتمبر = الأهم في السنة — لا تؤجّل.',
+            source: EXPERTS.ALMOHAIMED.title }],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
     verificationBadges: [{ badge: '✔️ تقرير دفاع مدني', authority: 'تجديد رخصة', icon: 'shield-check' }, { badge: '✔️ فرشاة دوارة + ضغط', authority: 'تنظيف دكت شامل', icon: 'badge-check' }],
     equipment: [
@@ -49,11 +52,17 @@ export const override: PageOverride = {
         { name: 'محلول قلوي صناعي (pH 12-13)', use: 'يُنقع فيه الفلاتر 12+ ساعة ← يُذيب الدهون المتكربنة والسخام.' },
         { name: 'غسالة ضغط عالي (داخل الدكت)', use: 'تشطف بقايا الدهون والمذيب بعد الفرشاة ← دكت نظيف كالجديد.' },
     ],
-    hiddenObjections: [{ fear: 'التنظيف كل ربع غالي — أنظف مرة بالسنة.', solution: 'مرة/سنة بعد موسم حنيذ = دهون متحجرة تحتاج ضعف الجهد = ضعف السعر. + 9 أشهر بدون تنظيف = خطر حريق حقيقي + مخالفة دفاع مدني. عقد ربع سنوي 3,000-6,000 ريال/سنة = أرخص من مرتين منفردتين + سلامة + التزام.' }],
+    hiddenObjections: [
+        { fear: 'التنظيف كل ربع غالي — أنظف مرة بالسنة.', solution: 'مرة/سنة بعد موسم حنيذ = دهون متحجرة تحتاج ضعف الجهد = ضعف السعر. + 9 أشهر بدون تنظيف = خطر حريق حقيقي + مخالفة دفاع مدني. عقد ربع سنوي 3,000-6,000 ريال/سنة = أرخص من مرتين منفردتين + سلامة + التزام.' },
+        { fear: 'الخدمة أغلى من المدن الأخرى.', solution: 'مناخ الطائف يفرض معالجات إضافية (مضاد تكثف + تجفيف + حماية أخشاب ورود). التكلفة الإضافية استثمار يحمي ممتلكاتك من تلف الرطوبة والحشرات الموسمية.' },
+    ],
     counterNarratives: [{ myth: 'الفلاتر تحمي المدخنة — ما يوصل دهن.', truth: 'الفلاتر تحبس 60-70% من الدهون. الباقي (30-40%) يتسرب للدكت ← يتراكم ← بعد 3 أشهر: طبقة دهنية كافية للاشتعال. الفلاتر = خط أول وليس حماية كاملة. الدكت يحتاج تنظيفاً دورياً.' }],
     relatedServices: [
-        { slug: 'taif-oven-cleaning', context: 'فرن + مدخنة — باقة مطعم شاملة.', priority: 1 },
-        { slug: 'taif-cleaning', context: 'تنظيف مطبخ مطعم شامل.', priority: 2 },
-        { slug: 'taif-pest-control', context: 'مكافحة حشرات مطعم مع التنظيف.', priority: 3 },
+        { slug: 'oven-cleaning', context: 'فرن + مدخنة — باقة مطعم شاملة.', priority: 1 },
+        { slug: 'cleaning', context: 'تنظيف مطبخ مطعم شامل.', priority: 2 },
+        { slug: 'pest-control', context: 'مكافحة حشرات مطعم مع التنظيف.', priority: 3 },
+        { slug: 'air-conditioner-cleaning', context: 'تنظيف مكيفات تعمل تبريد/تدفئة طوال السنة في مناخ الطائف المتقلب.', priority: 5 },
+        { slug: 'pest-control', context: 'مكافحة حشرات تتكاثر في رطوبة الطائف الشتوية والزراعة المحيطة.', priority: 6 },
+        { slug: 'steam-cleaning', context: 'تعقيم بالبخار لقتل العث والفطريات في مفروشات الطائف الرطبة.', priority: 7 },
     ],
 };

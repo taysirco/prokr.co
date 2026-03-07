@@ -1,10 +1,3 @@
-// ══════════════════════════════════════════════════════════════
-// عزل أسطح بجازان — Override (E-E-A-T)
-// الزاوية: أمطار حقيقية 200+ ملم + رطوبة 58%
-//   = العزل المائي أهم من الحراري (عكس الرياض)
-//   + فطريات تنمو فوق العزل المكشوف + ملوحة بحرية
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -63,19 +56,13 @@ export const override: PageOverride = {
         { entity: AMANA.JAZAN.entity, url: AMANA.JAZAN.url, role: 'تطبيق كود البناء واشتراطات العزل بجازان', acronym: 'أمانة جازان' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
             expert: 'م. ماجد المحيميد',
             quote: 'جازان = المدينة الوحيدة بالسعودية التي العزل المائي فيها أهم من الحراري. أمطار 200+ ملم + رطوبة 58%+ + فطريات تنمو فوق العزل = بيتومين مضاد فطريات + Closed-Cell = الوصفة الإلزامية',
             source: 'خبير جودة البناء والتشطيبات',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
 
@@ -100,16 +87,17 @@ export const override: PageOverride = {
     counterNarratives: [
         { myth: 'جازان ما فيها حر شديد — ما تحتاج عزل', truth: 'Heat Index = 50°م+ (أعلى من الرياض أحياناً). + الأمطار 200+ ملم = السطح يحتاج حماية مائية + حرارية. العزل = أهم مما تظن بجازان' },
         { myth: 'APP تكفي — أرخص من SBS', truth: 'APP صلبة — لا تتحمل الحركة الحرارية. SBS مرنة (مطاط صناعي) = تتمدد وتنكمش مع الحرارة. APP بجازان = تتشقق خلال 2-3 سنوات' },
+        { myth: 'أي شركة تنظيف/صيانة نتيجتها واحدة.', truth: 'الفرق بين شركة مرخصة ومُعتمدة وأخرى عشوائية = الفرق بين معالجة جذرية وإخفاء مؤقت. المعدات المتخصصة والبروتوكولات العلمية تحل المشكلة من جذرها — التنظيف العشوائي يُعيدها أسوأ خلال أسابيع.' },
     ],
 
     relatedServices: [
-        { slug: 'jazan-water-insulation', context: 'عزل مائي — الأولوية الأولى بجازان', priority: 1 },
-        { slug: 'jazan-foam-insulation', context: 'فوم Closed-Cell — عزل حراري لا يمتص رطوبة', priority: 2 },
-        { slug: 'jazan-thermal-insulation', context: 'عزل حراري شامل — Heat Index 50°م+', priority: 3 },
-        { slug: 'jazan-water-leak-detection', context: 'كشف تسربات — السطح مصدر تسرب خارجي رئيسي', priority: 4 },
-        { slug: 'jazan-tank-insulation', context: 'عزل خزان — الخزان على السطح يحتاج حماية', priority: 5 },
-        { slug: 'jazan-bird-control', context: 'طرد حمام — ذرق رطب يأكل العزل', priority: 6 },
-        { slug: 'jazan-pest-control', context: 'مكافحة حشرات — عزل سليم يمنع رطوبة تجذب حشرات', priority: 7 },
-        { slug: 'jazan-sewage-unblocking', context: 'تسليك مجاري — السطح يحتاج مصارف سليمة لتصريف الأمطار', priority: 8 },
+        { slug: 'water-insulation', context: 'عزل مائي — الأولوية الأولى بجازان', priority: 1 },
+        { slug: 'foam-insulation', context: 'فوم Closed-Cell — عزل حراري لا يمتص رطوبة', priority: 2 },
+        { slug: 'thermal-insulation', context: 'عزل حراري شامل — Heat Index 50°م+', priority: 3 },
+        { slug: 'water-leak-detection', context: 'كشف تسربات — السطح مصدر تسرب خارجي رئيسي', priority: 4 },
+        { slug: 'tank-insulation', context: 'عزل خزان — الخزان على السطح يحتاج حماية', priority: 5 },
+        { slug: 'bird-control', context: 'طرد حمام — ذرق رطب يأكل العزل', priority: 6 },
+        { slug: 'pest-control', context: 'مكافحة حشرات — عزل سليم يمنع رطوبة تجذب حشرات', priority: 7 },
+        { slug: 'sewage-unblocking', context: 'تسليك مجاري — السطح يحتاج مصارف سليمة لتصريف الأمطار', priority: 8 },
     ],
 };

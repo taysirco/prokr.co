@@ -1,12 +1,3 @@
-// ══════════════════════════════════════════════════════════════
-// شفط بيارات بالدمام — Override (E-E-A-T)
-// صفحة: /dammam/sewage-suction
-// قطاع YMYL: صحي (H₂S قاتل) + بيئي
-// خريطة 2.4: الجند → بلدي + أمانة الشرقية
-// الزاوية: مياه جوفية 1-3م تملأ البيارة بضعف السرعة
-//   + رطوبة تُسرّع الروائح + تفريغ أكثر تكراراً
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -70,19 +61,13 @@ export const override: PageOverride = {
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'الرقابة على خدمات شفط البيارات وترخيص الصهاريج بالدمام', acronym: 'أمانة الشرقية' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALJUND.name,
-        title: EXPERTS.ALJUND.title,
-        credential: EXPERTS.ALJUND.credential,
-        profileUrl: EXPERTS.ALJUND.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALJUND,
 
     expertCitations: [
         {
             expert: 'م. عبدالغني الجند',
             quote: 'بيارات الدمام تمتلئ أسرع بسبب المياه الجوفية القريبة — ليس الاستهلاك فقط. جدول تفريغ أقصر بـ 30-50% ضروري. والأهم: لا تفتح غطاء البيارة بنفسك — H₂S بالدمام أخطر بسبب الرطوبة العالية',
             source: 'موسوعة "أخطاء في البناء"',
-            url: 'https://x.com/ssrrr22',
         },
     ],
 
@@ -108,8 +93,8 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'dammam-sewage-unblocking', context: 'تسليك مجاري + شفط = حل شامل لشبكة الصرف', priority: 1 },
-        { slug: 'dammam-pest-control', context: 'مكافحة حشرات البيارة — صراصير نشطة 12 شهر', priority: 2 },
-        { slug: 'dammam-cleaning', context: 'تنظيف وتعقيم بعد طفح — إزالة ملوثات وبكتيريا', priority: 3 },
+        { slug: 'sewage-unblocking', context: 'تسليك مجاري + شفط = حل شامل لشبكة الصرف', priority: 1 },
+        { slug: 'pest-control', context: 'مكافحة حشرات البيارة — صراصير نشطة 12 شهر', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف وتعقيم بعد طفح — إزالة ملوثات وبكتيريا', priority: 3 },
     ],
 };

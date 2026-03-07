@@ -1,12 +1,3 @@
-// ══════════════════════════════════════════════════════════════
-// كشف تسربات خزانات بالدمام — Override (E-E-A-T)
-// صفحة: /dammam/tank-leak-detection
-// قطاع YMYL: صحي (تلوث مياه) + مالي
-// خريطة 2.4: المحيميد → NWC + بلدي + أمانة الشرقية
-// الزاوية: كلوريدات التحلية تأكل عزل الخزان + رطوبة عالية
-//   تُنبت عفناً حول الخزان + مياه جوفية تضغط من الخارج
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -68,19 +59,13 @@ export const override: PageOverride = {
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'الرقابة على صيانة الخزانات في المباني السكنية بالدمام', acronym: 'أمانة الشرقية' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
             expert: 'م. ماجد المحيميد',
             quote: 'خزانات الدمام تحتاج عزلاً مقاوماً للكلوريدات — ملوحة مياه التحلية تأكل الإيبوكسي العادي أسرع بـ 30-40%. والخزان الأرضي يحتاج عزلاً خارجياً ضد المياه الجوفية القريبة — التلوث العكسي خطر صحي حقيقي',
             source: 'خبير جودة البناء والتشطيبات',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
 
@@ -106,9 +91,9 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'dammam-tanks-cleaning', context: 'تنظيف الخزان + فحص عزل = حماية شاملة', priority: 1 },
-        { slug: 'dammam-tank-insulation', context: 'إعادة عزل الخزان بإيبوكسي بحري بعد الإصلاح', priority: 2 },
-        { slug: 'dammam-water-leak-detection', context: 'كشف تسربات شبكة المياه الخارجية', priority: 3 },
-        { slug: 'dammam-water-insulation', context: 'عزل مائي خارجي يحمي الخزان الأرضي من المياه الجوفية', priority: 4 },
+        { slug: 'tanks-cleaning', context: 'تنظيف الخزان + فحص عزل = حماية شاملة', priority: 1 },
+        { slug: 'tank-insulation', context: 'إعادة عزل الخزان بإيبوكسي بحري بعد الإصلاح', priority: 2 },
+        { slug: 'water-leak-detection', context: 'كشف تسربات شبكة المياه الخارجية', priority: 3 },
+        { slug: 'water-insulation', context: 'عزل مائي خارجي يحمي الخزان الأرضي من المياه الجوفية', priority: 4 },
     ],
 };

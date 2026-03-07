@@ -1,11 +1,3 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف شقق بالدمام — Override مخصص (E-E-A-T Grade)
-// صفحة: /dammam/apartments-cleaning
-// قطاع YMYL: صحة (PM2.5 + عث في مساحات صغيرة) + مالي (إيجار/تسليم)
-// خريطة 2.4: المسند (مناخ/تنظيف) → بلدي
-// NLP: الراكة، الفيصلية، العزيزية، شقق أرامكو، رطوبة خليجية مغلقة
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
 
@@ -78,19 +70,13 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف — الشهادة الصحية لحماية المستهلك' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMISNID.name,
-        title: EXPERTS.ALMISNID.title,
-        credential: EXPERTS.ALMISNID.credential,
-        profileUrl: EXPERTS.ALMISNID.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMISNID,
 
     expertCitations: [
         {
             expert: 'أ.د. عبدالله المسند',
             quote: 'الشقق في المنطقة الشرقية تحتاج تنظيف عميق أكثر تكراراً من الفلل — تركيز الملوثات أعلى في المساحة الأصغر. كل 6 أسابيع: الحد الأدنى لشقة بالدمام',
             source: 'أستاذ جغرافيا المناخ — جامعة القصيم',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -118,14 +104,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'dammam-cleaning', context: 'تنظيف منازل شامل — القاعدة لكل أنواع السكن', priority: 1 },
-        { slug: 'dammam-sanitization', context: 'تعقيم شقة بعد التنظيف — ضروري بعد سفر/مرض', priority: 2 },
-        { slug: 'dammam-air-conditioner-cleaning', context: 'مكيف الشقة أولاً — يوزع الملوثات في مساحة صغيرة', priority: 3 },
-        { slug: 'dammam-steam-cleaning', context: 'بخار شقة — بدون كيماويات في مساحة مغلقة', priority: 4 },
-        { slug: 'dammam-sofa-cleaning', context: 'كنب شقة — عث PM2.5 في وسادة التلفزيون', priority: 5 },
-        { slug: 'dammam-carpet-cleaning', context: 'سجاد شقة — فلتر أرضي يخزن الملوثات', priority: 6 },
-        { slug: 'dammam-mattress-cleaning', context: 'مراتب — أخطر سطح في شقة صغيرة', priority: 7 },
-        { slug: 'dammam-kitchen-cleaning', context: 'مطبخ شقة — دهون في مساحة مغلقة', priority: 8 },
-        { slug: 'dammam-pest-control', context: 'شقة مهملة = صراصير. تنظيف + مكافحة', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف منازل شامل — القاعدة لكل أنواع السكن', priority: 1 },
+        { slug: 'sanitization', context: 'تعقيم شقة بعد التنظيف — ضروري بعد سفر/مرض', priority: 2 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف الشقة أولاً — يوزع الملوثات في مساحة صغيرة', priority: 3 },
+        { slug: 'steam-cleaning', context: 'بخار شقة — بدون كيماويات في مساحة مغلقة', priority: 4 },
+        { slug: 'sofa-cleaning', context: 'كنب شقة — عث PM2.5 في وسادة التلفزيون', priority: 5 },
+        { slug: 'carpet-cleaning', context: 'سجاد شقة — فلتر أرضي يخزن الملوثات', priority: 6 },
+        { slug: 'mattress-cleaning', context: 'مراتب — أخطر سطح في شقة صغيرة', priority: 7 },
+        { slug: 'kitchen-cleaning', context: 'مطبخ شقة — دهون في مساحة مغلقة', priority: 8 },
+        { slug: 'pest-control', context: 'شقة مهملة = صراصير. تنظيف + مكافحة', priority: 9 },
     ],
 };

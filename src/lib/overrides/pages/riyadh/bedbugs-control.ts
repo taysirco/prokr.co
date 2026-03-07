@@ -93,7 +93,6 @@ export const override: PageOverride = {
             expert: 'أ.د. فهد الخضيري',
             quote: 'المبيدات الرذاذية لا تصل لبيض البق المخبأ في اللحامات — يفقس بعد 14 يوماً ويعود الإصابة. المعالجة الحرارية هي الوحيدة التي تخترق كل شق',
             source: 'عالم أبحاث طبي — متخصص في السموم والمسرطنات',
-            url: 'https://x.com/DrAlkhodairy',
         },
     ],
 
@@ -124,14 +123,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'riyadh-pest-control', context: 'مكافحة شاملة مع بق الفراش', priority: 1 },
-        { slug: 'riyadh-mattress-cleaning', context: 'تنظيف المراتب — بؤرة البق', priority: 2 },
-        { slug: 'riyadh-sofa-cleaning', context: 'الكنب مخبأ ثاني للبق', priority: 3 },
-        { slug: 'riyadh-steam-cleaning', context: 'بخار 150°م يقتل البق', priority: 4 },
-        { slug: 'riyadh-sanitization', context: 'تعقيم بعد المكافحة', priority: 5 },
-        { slug: 'riyadh-cleaning', context: 'تنظيف شامل بعد القضاء', priority: 6 },
-        { slug: 'riyadh-insects-spraying', context: 'رش حشرات متخصص', priority: 7 },
-        { slug: 'riyadh-carpet-cleaning', context: 'سجاد غرفة النوم', priority: 8 },
-        { slug: 'riyadh-furniture-cleaning', context: 'تنظيف أثاث الغرفة', priority: 9 },
+        { slug: 'pest-control', context: 'مكافحة شاملة مع بق الفراش', priority: 1 },
+        { slug: 'mattress-cleaning', context: 'تنظيف المراتب — بؤرة البق', priority: 2 },
+        { slug: 'sofa-cleaning', context: 'الكنب مخبأ ثاني للبق', priority: 3 },
+        { slug: 'steam-cleaning', context: 'بخار 150°م يقتل البق', priority: 4 },
+        { slug: 'sanitization', context: 'تعقيم بعد المكافحة', priority: 5 },
+        { slug: 'cleaning', context: 'تنظيف شامل بعد القضاء', priority: 6 },
+        { slug: 'insects-spraying', context: 'رش حشرات متخصص', priority: 7 },
+        { slug: 'carpet-cleaning', context: 'سجاد غرفة النوم', priority: 8 },
+        { slug: 'furniture-cleaning', context: 'تنظيف أثاث الغرفة', priority: 9 },
     ],
 };

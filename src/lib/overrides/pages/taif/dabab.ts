@@ -1,4 +1,3 @@
-// دباب نقل بالطائف — Override (E-E-A-T) | خريطة 2.4: الزويد → TGA
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -33,19 +32,28 @@ export const override: PageOverride = {
         'الدباب على منحدر رطب بضباب + حمولة زائدة = خطر انزلاق حقيقي. احترم حدود الحمولة.',
         'لا تطلب دباب لنقل أشياء ثقيلة/كبيرة (أثاث) — استخدم دينا مناسبة.',
     ],
-    trustAnchors: [{ ...GOV.TGA, role: 'تنظيم النقل — حقوق المستخدم' }],
-    expertReviewer: { name: EXPERTS.ALZUWAYED.name, title: EXPERTS.ALZUWAYED.title, credential: EXPERTS.ALZUWAYED.credential, profileUrl: EXPERTS.ALZUWAYED.profileUrl },
-    expertCitations: [{ expert: EXPERTS.ALZUWAYED.name, quote: 'الدباب في الطائف ليس مجرد وسيلة نقل رخيصة — هو الحل الوحيد لأحياء جبلية لا تدخلها الدينا. السائق الذي يعرف أزقة الطائف ومنحدراتها = أصل وليس بديل.', source: EXPERTS.ALZUWAYED.title, url: EXPERTS.ALZUWAYED.profileUrl }],
+    trustAnchors: [
+{ ...{ ...GOV.TGA, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
+ role: 'تنظيم النقل — حقوق المستخدم' }    ],
+    expertReviewer: EXPERTS.ALZUWAYED,
+    expertCitations: [{ expert: EXPERTS.ALZUWAYED.name, quote: 'الدباب في الطائف ليس مجرد وسيلة نقل رخيصة — هو الحل الوحيد لأحياء جبلية لا تدخلها الدينا. السائق الذي يعرف أزقة الطائف ومنحدراتها = أصل وليس بديل.',
+            source: EXPERTS.ALZUWAYED.title }],
     saudiRegulations: [REGULATIONS.TGA_LICENSE],
     verificationBadges: [{ badge: '✔️ سائق خبرة جبلية', authority: 'يعرف الأزقة', icon: 'shield-check' }],
     equipment: [
         { name: 'دباب نقل 150-200cc', use: 'محرك قوي يكفي لمنحدرات الطائف + صندوق خلفي مثبت للأغراض.' },
         { name: 'أحزمة تثبيت مطاطية', use: 'تحزم الحمولة بإحكام ← لا تنزلق في المنعطفات الجبلية.' },
     ],
-    hiddenObjections: [{ fear: 'أوصل بسيارتي — أوفر.', solution: 'سيارتك لا تدخل الأزقة الضيقة (عرض 1.5م). وقوف مزدوج = مخالفة. دباب 30-50 ريال يصل الباب ← يوفر وقتك ووقود سيارتك.' }],
+    hiddenObjections: [
+        { fear: 'أوصل بسيارتي — أوفر.', solution: 'سيارتك لا تدخل الأزقة الضيقة (عرض 1.5م). وقوف مزدوج = مخالفة. دباب 30-50 ريال يصل الباب ← يوفر وقتك ووقود سيارتك.' },
+        { fear: 'الخدمة أغلى من المدن الأخرى.', solution: 'مناخ الطائف يفرض معالجات إضافية (مضاد تكثف + تجفيف + حماية أخشاب ورود). التكلفة الإضافية استثمار يحمي ممتلكاتك من تلف الرطوبة والحشرات الموسمية.' },
+    ],
     counterNarratives: [{ myth: 'الدباب وسيلة نقل بدائية.', truth: 'في مدينة جبلية مثل الطائف: الدباب يصل حيث لا تصل السيارة أو الدينا. ليس بدائياً — عملي ومناسب للجغرافيا.' }],
     relatedServices: [
-        { slug: 'taif-dyna', context: 'دينا نقل للأحمال الأكبر.', priority: 1 },
-        { slug: 'taif-furniture-moving', context: 'نقل عفش كامل — دينا وليس دباب.', priority: 2 },
+        { slug: 'dyna', context: 'دينا نقل للأحمال الأكبر.', priority: 1 },
+        { slug: 'furniture-moving', context: 'نقل عفش كامل — دينا وليس دباب.', priority: 2 },
+        { slug: 'air-conditioner-cleaning', context: 'تنظيف مكيفات تعمل تبريد/تدفئة طوال السنة في مناخ الطائف المتقلب.', priority: 5 },
+        { slug: 'pest-control', context: 'مكافحة حشرات تتكاثر في رطوبة الطائف الشتوية والزراعة المحيطة.', priority: 6 },
+        { slug: 'steam-cleaning', context: 'تعقيم بالبخار لقتل العث والفطريات في مفروشات الطائف الرطبة.', priority: 7 },
     ],
 };

@@ -1,9 +1,3 @@
-// ══════════════════════════════════════════════════════════════
-// كشف تسربات خزانات بجازان — Override (E-E-A-T)
-// الزاوية: طحالب استوائية (حرارة+ضوء+رطوبة) تنمو داخل الخزان
-//   + تآكل ملحي بحري للمعادن + بعوض يتكاثر بالخزان المكشوف
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -60,19 +54,13 @@ export const override: PageOverride = {
         { entity: AMANA.JAZAN.entity, url: AMANA.JAZAN.url, role: 'الرقابة على خزانات المياه بجازان', acronym: 'أمانة جازان' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
             expert: 'م. عبدالغني الجند',
             quote: 'خزان جازان المكشوف = حوض استوائي: طحالب + بعوض ملاريا + تآكل ساحلي. الغطاء المحكم والصمامات المقاومة (316) وتحليل المياه = الثلاثية الإلزامية',
             source: 'موسوعة "أخطاء في البناء"',
-            url: 'https://x.com/ssrrr22',
         },
     ],
 
@@ -102,13 +90,13 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'jazan-tanks-cleaning', context: 'تنظيف وتعقيم — كل 3-4 أشهر بجازان', priority: 1 },
-        { slug: 'jazan-tank-insulation', context: 'عزل خزان — إيبوكسي مضاد طحالب', priority: 2 },
-        { slug: 'jazan-water-leak-detection', context: 'فحص شبكة — التسرب من الشبكة يُغذي الطحالب', priority: 3 },
-        { slug: 'jazan-pest-control', context: 'مكافحة بعوض — خزان + رش محيطي', priority: 4 },
-        { slug: 'jazan-water-insulation', context: 'عزل مائي — يمنع تسلل أمطار للخزان', priority: 5 },
-        { slug: 'jazan-roof-insulation', context: 'عزل سطح — الخزان على السطح يحتاج حماية محيطية', priority: 6 },
-        { slug: 'jazan-foam-insulation', context: 'فوم Closed-Cell — عزل حراري يحمي الخزان من الحرارة الاستوائية', priority: 7 },
-        { slug: 'jazan-sewage-unblocking', context: 'تسليك مجاري — خزان ملوث يؤثر على الشبكة كلها', priority: 8 },
+        { slug: 'tanks-cleaning', context: 'تنظيف وتعقيم — كل 3-4 أشهر بجازان', priority: 1 },
+        { slug: 'tank-insulation', context: 'عزل خزان — إيبوكسي مضاد طحالب', priority: 2 },
+        { slug: 'water-leak-detection', context: 'فحص شبكة — التسرب من الشبكة يُغذي الطحالب', priority: 3 },
+        { slug: 'pest-control', context: 'مكافحة بعوض — خزان + رش محيطي', priority: 4 },
+        { slug: 'water-insulation', context: 'عزل مائي — يمنع تسلل أمطار للخزان', priority: 5 },
+        { slug: 'roof-insulation', context: 'عزل سطح — الخزان على السطح يحتاج حماية محيطية', priority: 6 },
+        { slug: 'foam-insulation', context: 'فوم Closed-Cell — عزل حراري يحمي الخزان من الحرارة الاستوائية', priority: 7 },
+        { slug: 'sewage-unblocking', context: 'تسليك مجاري — خزان ملوث يؤثر على الشبكة كلها', priority: 8 },
     ],
 };

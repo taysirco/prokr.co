@@ -1,94 +1,19 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف مسابح بالباحة — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-baha/swimming-pool-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
 
 export const override: PageOverride = {
-    meta: {
-        title: 'تنظيف مسابح بالباحة — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف مسابح بالباحة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف مسابح بالباحة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف مسابح بالباحة', 'تنظيف مسابح الباحة', 'شركة تنظيف مسابح بالباحة', 'أفضل تنظيف مسابح بالباحة'],
-    },
-
-    content: {
-        introduction: 'تنظيف مسابح بالباحة — خدمة متخصصة تراعي الظروف المناخية والبيئية في الباحة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف مسابح بالباحة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف مسابح بالباحة. خدمة احترافية. ضمان.',
-    },
-
-    pricing: [
-        { type: 'تنظيف مسابح — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف مسابح — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
-    ],
-
-    faq: [
-        { question: 'كم تكلفة تنظيف مسابح بالباحة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف مسابح؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف مسابح؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
-    ],
-
-    expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
-    ],
-
-    warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
-    ],
-
-    trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
-    ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
-    expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
-    ],
-
-    saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
-    equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
-    ],
-
-    hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
-    ],
-
-    counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
-    ],
-
-    relatedServices: [
-        { slug: 'al-baha-furniture-moving', context: 'نقل عفش بالباحة', priority: 1 },
-        { slug: 'al-baha-furniture-storage', context: 'تخزين عفش بالباحة', priority: 2 },
-        { slug: 'al-baha-dyna', context: 'دينا نقل بالباحة', priority: 3 },
-        { slug: 'al-baha-moving-out', context: 'نقل عفش خروج بالباحة', priority: 4 },
-        { slug: 'al-baha-dabab', context: 'دباب نقل بالباحة', priority: 5 },
-        { slug: 'al-baha-cleaning', context: 'تنظيف منازل بالباحة', priority: 6 },
-        { slug: 'al-baha-tanks-cleaning', context: 'تنظيف خزانات بالباحة', priority: 7 },
-        { slug: 'al-baha-sofa-cleaning', context: 'تنظيف كنب بالباحة', priority: 8 },
-        { slug: 'al-baha-carpet-cleaning', context: 'تنظيف سجاد بالباحة', priority: 9 },
-    ],
+    meta: { title: 'تنظيف مسابح بالباحة — ضباب طحالب + أوراق عرعر + ماء بارد 5°م + أمطار صيفية (2026)', description: 'تنظيف مسابح الباحة. ضباب 80% = طحالب موسمية. أوراق عرعر تسقط. ماء 5°م = كلور أبطأ. أمطار صيفية تُخفف. Algaecide + Skimmer + Shock.', h1: 'تنظيف مسابح بالباحة — ضباب + عرعر + برودة + أمطار', keywords: ['تنظيف مسابح بالباحة', 'تنظيف مسبح الباحة', 'شركة تنظيف مسابح بالباحة'] },
+    content: { introduction: '4 تحديات: (1) ضباب 80% = طحالب موسمية (يوليو-أكتوبر). Algaecide أسبوعي. (2) أوراق/إبر عرعر تسقط في المسبح ← تتحلل ← تستهلك كلور + تُنتج Tannin (يُلوّن). Skimmer + شبكة + Enzyme. (3) ماء 5°م شتاءً: كلور يعمل أبطأ بـ 50% في الماء البارد — يحتاج جرعة أعلى. (4) أمطار صيفية تُخفف التركيز + تجلب Phosphates = طحالب. Shock بعد كل مطر.', shortAnswer: 'طحالب ضباب + عرعر Tannin + كلور بطيء 5°م + أمطار. Algaecide + Enzyme + Shock.', heroSubtitle: 'ضباب = طحالب + عرعر = Tannin + برودة = كلور بطيء' },
+    pricing: [{ type: 'صيانة أسبوعية', unit: 'مسبح', minPrice: 100, maxPrice: 220, time: '1-2 ساعة' }, { type: 'تنظيف عرعر + Enzyme', unit: 'مسبح', minPrice: 150, maxPrice: 300, time: '2-3 ساعات' }, { type: 'عقد شهري', unit: 'شهر', minPrice: 300, maxPrice: 650, time: '4 زيارات' }],
+    faq: [{ question: 'مسبح أصفر/بني — عرعر؟', answer: 'أوراق عرعر تُنتج Tannin ← يُلوّن الماء. Enzyme يُكسر Tannin + شبكة تمنع.' }],
+    expertTips: ['شبكة تغطية — أوراق عرعر.', 'Algaecide أسبوعي في الضباب.', 'كلور أعلى 50% في الشتاء (5°م = أبطأ).', 'Shock بعد كل مطر صيفي.'],
+    warnings: ['أوراق عرعر في المسبح = تستهلك كلور + Tannin = لون.', 'كلور عادي في 5°م = نصف فعالية.'],
+    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص صيانة المسابح' }],
+    expertReviewer: EXPERTS.ALJUND,
+    expertCitations: [{ expert: EXPERTS.ALJUND.name, quote: 'مسبح الباحة: ضباب + عرعر + برودة = 3 تحديات فريدة. Algaecide + Enzyme + كلور مُضاعف شتاءً.', source: 'موسوعة أخطاء — المسابح الجبلية' }],
+    saudiRegulations: [REGULATIONS.SBC_601], verificationBadges: [{ badge: '✔️ صيانة مسابح مرخصة', authority: 'بلدي', icon: 'shield-check' }],
+    equipment: [{ name: 'Algaecide', use: 'يمنع طحالب الضباب' }, { name: 'Enzyme', use: 'يُكسر Tannin العرعر' }, { name: 'شبكة تغطية', use: 'تمنع أوراق/إبر العرعر' }],
+    hiddenObjections: [{ fear: 'شتاءً المسبح مُغلق.', solution: 'حتى مُغلق: أوراق + ضباب = طحالب + Tannin. صيانة شتوية = أسهل فتح صيفاً.' }],
+    counterNarratives: [{ myth: 'الجو بارد = لا طحالب.', truth: 'ضباب 80% = طحالب. + عرعر = Tannin.' }],
+    relatedServices: [{ slug: 'pest-control', context: 'حشرات — بعوض', priority: 1 }, { slug: 'villas-cleaning', context: 'فلل — المسبح', priority: 2 }],
 };

@@ -1,10 +1,3 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف منازل بالدمام — Override مخصص (E-E-A-T Grade)
-// صفحة: /dammam/cleaning
-// قطاع YMYL: صحة (غبار صناعي PM2.5 + عفن) + مالي (صيانة مبنى)
-// خريطة 2.4: المسند → بلدي
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
 
@@ -79,19 +72,13 @@ export const override: PageOverride = {
         { ...GOV.MOENERGY, role: 'معايير كفاءة التكييف — تنظيف الفلاتر يحسّن كفاءة الطاقة 15-20%' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMISNID.name,
-        title: EXPERTS.ALMISNID.title,
-        credential: EXPERTS.ALMISNID.credential,
-        profileUrl: EXPERTS.ALMISNID.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMISNID,
 
     expertCitations: [
         {
             expert: 'أ.د. عبدالله المسند',
             quote: 'في المنطقة الشرقية — الغبار ليس رملاً عادياً. جزيئات صناعية دقيقة PM2.5 تخترق الفلاتر العادية وتستقر في الرئتين. التنظيف الدوري بالبخار + فلاتر HEPA هو الحماية الفعلية',
             source: 'أستاذ المناخ والبيئة',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -119,14 +106,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'dammam-steam-cleaning', context: 'التنظيف بالبخار — الطريقة الأفضل لإزالة الطبقة اللزجة في مناخ الدمام', priority: 1 },
-        { slug: 'dammam-air-conditioner-cleaning', context: 'تنظيف المكيفات يمنع إعادة توزيع الغبار الصناعي PM2.5', priority: 2 },
-        { slug: 'dammam-sanitization', context: 'تعقيم شامل بعد التنظيف — يقتل العفن والبكتيريا من الرطوبة', priority: 3 },
-        { slug: 'dammam-carpet-cleaning', context: 'السجاد يحبس PM2.5 — غسيل عميق ضروري', priority: 4 },
-        { slug: 'dammam-sofa-cleaning', context: 'الكنب يمتص رطوبة ملحية — تنظيف بالبخار يحميه', priority: 5 },
-        { slug: 'dammam-glass-facades-cleaning', context: 'رواسب ملحية على الواجهات الزجاجية — تنظيف متخصص', priority: 6 },
-        { slug: 'dammam-tanks-cleaning', context: 'تنظيف خزانات المياه — كلوريدات الدمام تلوث أسرع', priority: 7 },
-        { slug: 'dammam-pest-control', context: 'العفن والرطوبة تجذب الحشرات — مكافحة متكاملة', priority: 8 },
-        { slug: 'dammam-floor-polishing', context: 'جلي وتلميع الأرضيات بعد التنظيف العميق', priority: 9 },
+        { slug: 'steam-cleaning', context: 'التنظيف بالبخار — الطريقة الأفضل لإزالة الطبقة اللزجة في مناخ الدمام', priority: 1 },
+        { slug: 'air-conditioner-cleaning', context: 'تنظيف المكيفات يمنع إعادة توزيع الغبار الصناعي PM2.5', priority: 2 },
+        { slug: 'sanitization', context: 'تعقيم شامل بعد التنظيف — يقتل العفن والبكتيريا من الرطوبة', priority: 3 },
+        { slug: 'carpet-cleaning', context: 'السجاد يحبس PM2.5 — غسيل عميق ضروري', priority: 4 },
+        { slug: 'sofa-cleaning', context: 'الكنب يمتص رطوبة ملحية — تنظيف بالبخار يحميه', priority: 5 },
+        { slug: 'glass-facades-cleaning', context: 'رواسب ملحية على الواجهات الزجاجية — تنظيف متخصص', priority: 6 },
+        { slug: 'tanks-cleaning', context: 'تنظيف خزانات المياه — كلوريدات الدمام تلوث أسرع', priority: 7 },
+        { slug: 'pest-control', context: 'العفن والرطوبة تجذب الحشرات — مكافحة متكاملة', priority: 8 },
+        { slug: 'floor-polishing', context: 'جلي وتلميع الأرضيات بعد التنظيف العميق', priority: 9 },
     ],
 };

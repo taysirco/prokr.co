@@ -4,6 +4,7 @@
 // ============================================
 
 import type { PageOverride } from '../../types';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -93,19 +94,13 @@ export const override: PageOverride = {
         { entity: 'المركز الوطني لكفاءة وترشيد المياه', acronym: 'مائي', url: 'https://maee.gov.sa', role: 'ترشيد استهلاك مياه المسبح' },
     ],
 
-    expertReviewer: {
-        name: 'م. ماجد المحيميد',
-        title: 'خبير جودة تشطيبات وعزل',
-        credential: 'مهندس جودة تشطيبات',
-        profileUrl: 'https://x.com/majedalmohaimed',
-    },
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
             expert: 'م. ماجد المحيميد',
             quote: 'المسبح في جدة يحتاج صيانة أكثر من المدن الجافة — الرطوبة العالية تنمّي الطحالب أسرع 3x + الأملاح تتراكم على البلاط والفلاتر. فحص pH والكلور أسبوعي إلزامي',
             source: 'خبير جودة تشطيبات',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
 
@@ -114,14 +109,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'jeddah-villas-cleaning', context: 'فيلا + مسبح', priority: 1 },
-        { slug: 'jeddah-sanitization', context: 'تعقيم المسبح', priority: 2 },
-        { slug: 'jeddah-tanks-cleaning', context: 'خزان مياه المسبح', priority: 3 },
-        { slug: 'jeddah-pest-control', context: 'بعوض المسبح', priority: 4 },
-        { slug: 'jeddah-cleaning', context: 'تنظيف منطقة المسبح', priority: 5 },
-        { slug: 'jeddah-floor-cleaning', context: 'بلاط حول المسبح', priority: 6 },
-        { slug: 'jeddah-water-insulation', context: 'عزل حوض المسبح', priority: 7 },
-        { slug: 'jeddah-glass-facades-cleaning', context: 'سور المسبح الزجاجي', priority: 8 },
-        { slug: 'jeddah-palaces-cleaning', context: 'مسابح القصور', priority: 9 },
+        { slug: 'villas-cleaning', context: 'فيلا + مسبح', priority: 1 },
+        { slug: 'sanitization', context: 'تعقيم المسبح', priority: 2 },
+        { slug: 'tanks-cleaning', context: 'خزان مياه المسبح', priority: 3 },
+        { slug: 'pest-control', context: 'بعوض المسبح', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف منطقة المسبح', priority: 5 },
+        { slug: 'floor-cleaning', context: 'بلاط حول المسبح', priority: 6 },
+        { slug: 'water-insulation', context: 'عزل حوض المسبح', priority: 7 },
+        { slug: 'glass-facades-cleaning', context: 'سور المسبح الزجاجي', priority: 8 },
+        { slug: 'palaces-cleaning', context: 'مسابح القصور', priority: 9 },
     ],
 };

@@ -1,94 +1,75 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف واجهات زجاجية بالظهران — Override مخصص (E-E-A-T Grade)
-// صفحة: /dhahran/glass-facades-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف واجهات زجاجية بالظهران — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف واجهات زجاجية بالظهران. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف واجهات زجاجية بالظهران — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف واجهات زجاجية بالظهران', 'تنظيف واجهات زجاجية الظهران', 'شركة تنظيف واجهات زجاجية بالظهران', 'أفضل تنظيف واجهات زجاجية بالظهران'],
+        title: 'تنظيف واجهات زجاجية بالظهران — NaCl+SiO₂ مزدوج + 75-85% Biofilm + Sealant (2026)',
+        description: 'تنظيف واجهات الظهران. NaCl بقع + SiO₂ خدش = مزدوج. 75-85% Biofilm. Sealant تآكل. Deionized + Anti-Biofilm + Marine Sealant + Squeegee.',
+        h1: 'تنظيف واجهات زجاجية بالظهران — ملح يُبقّع ورمل يخدش وBiofilm ينمو',
+        keywords: ['تنظيف واجهات زجاجية بالظهران', 'تنظيف واجهات الظهران', 'شركة تنظيف واجهات بالظهران'],
     },
-
     content: {
-        introduction: 'تنظيف واجهات زجاجية بالظهران — خدمة متخصصة تراعي الظروف المناخية والبيئية في الظهران. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف واجهات زجاجية بالظهران: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف واجهات زجاجية بالظهران. خدمة احترافية. ضمان.',
+        introduction: 'واجهات الظهران الزجاجية تواجه مشكلة مزدوجة فريدة. المزدوج — NaCl بقع + SiO₂ خدش: NaCl يترسب بقع ملحية + SiO₂ يترسب كطبقة رملية. المسح = SiO₂ يخدش الزجاج تحت NaCl الرطب. Squeegee (مطاطي) بدلاً من قماش. Deionized غسل ← Squeegee = NaCl يُذاب + SiO₂ يُرفع بلا خدش. التحدي الثاني — 75-85% Biofilm: أبطأ من الخبر لكن: ينمو. غشاء بكتيري/طحلبي كل 4-6 أسابيع. Anti-Biofilm كل 4 أشهر. التحدي الثالث — Sealant: NaCl يتآكل + SiO₂ يخدش = Sealant يتآكل+يتقشر أسرع. Marine-Grade يقاوم.',
+        shortAnswer: 'على عكس [قماش + ماء] الذي يخدش بـ SiO₂ ويترك NaCl، يعتمد بروتوكولنا في خدمة [تنظيف الواجهات] بمدينة [الظهران] على [Deionized + Squeegee + Anti-Biofilm + Marine Sealant]. ففي ظل [NaCl+SiO₂ + 75-85% + Sealant]، تتفاقم ظاهرة [بقع+خدش + غشاء + تآكل]. لذا؛ يتدخل خبراؤنا عبر [بروتوكول واجهات مزدوج].',
+        heroSubtitle: 'NaCl+SiO₂ بقع+خدش + 75-85% Biofilm + Sealant مزدوج',
     },
-
     pricing: [
-        { type: 'تنظيف واجهات زجاجية — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف واجهات زجاجية — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'واجهة صغيرة (50 م²)', unit: 'خدمة', minPrice: 210, maxPrice: 420, time: '2-3 ساعات' },
+        { type: 'واجهة كبيرة (100+ م²)', unit: 'خدمة', minPrice: 420, maxPrice: 940, time: '4-8 ساعات' },
+        { type: 'Anti-Biofilm + إزالة مزدوج', unit: 'خدمة', minPrice: 330, maxPrice: 670, time: '3-5 ساعات' },
+        { type: 'عقد ربع سنوي', unit: 'سنة', minPrice: 670, maxPrice: 1500, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف واجهات زجاجية بالظهران؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف واجهات زجاجية؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف واجهات زجاجية؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'SiO₂ يخدش الزجاج — حقاً؟', answer: 'SiO₂ = 7 Mohs. زجاج = 5.5-6 Mohs. SiO₂ يخدش الزجاج فعلاً. تحت NaCl الرطب = خدش مُبلّل أعمق. Squeegee مطاطي = الحل.' },
+        { question: 'Biofilm أبطأ من الخبر؟', answer: '75-85% < 85-95% = أبطأ (4-6 أسابيع بدلاً من 2-3). لكن: ينمو حتماً. Anti-Biofilm كل 4 أشهر.' },
+        { question: 'Marine Sealant — ضروري؟', answer: 'NaCl يتآكل + SiO₂ يخدش = Sealant عادي يفشل أسرع (3-4 سنوات بدلاً من 5-7). Marine = 7-10 سنوات.' },
+        { question: 'صباحي أفضل؟', answer: 'نعم — 75-85% + شمس = ماء يتبخر = NaCl+SiO₂ يتصلبان. صباحي = أبرد + أقل تبخر.' },
+        { question: 'ربع سنوي — ليش؟', answer: 'NaCl أسبوعي + SiO₂ أسبوعي + Biofilm شهري. ربع سنوي = قبل التصلب المزدوج + التأصّل.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Deionized غسل ← Squeegee — لا قماش. SiO₂ يخدش.',
+        'Anti-Biofilm كل 4 أشهر — أبطأ من الخبر لكن ينمو.',
+        'Marine Sealant — يقاوم NaCl+SiO₂ أطول.',
+        'صباحي — أقل تبخر = أسهل إزالة.',
+        'فحص Sealant سنوي — مزدوج يُسرّع التآكل.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'SiO₂ + NaCl مبلل = خدوش في الزجاج. 7 Mohs > 5.5 Mohs. Squeegee only.',
+        'Biofilm 75-85% متأصل = كشط = خدوش فوق خدوش SiO₂. Anti-Biofilm = يمنع.',
+        'Sealant مزدوج التآكل = ماء بين طبقات = بقع دائمة. Marine = يقاوم.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص شركات الواجهات' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات المباني بالشرقية' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'واجهات الظهران = مزدوج: NaCl بقع + SiO₂ خدش + 75-85% Biofilm. Deionized + Squeegee + Anti-Biofilm + Marine Sealant = بروتوكول مزدوج.', source: 'نصائح هندسية — واجهات مزدوجة' },
     ],
-
-    saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    saudiRegulations: [REGULATIONS.SBC_601],
+    verificationBadges: [{ badge: '✔️ واجهات مرخصة', authority: 'منصة بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Deionized Water', use: 'صفر أملاح — يُذيب NaCl' },
+        { name: 'Squeegee مطاطي', use: 'يرفع SiO₂ بلا خدش' },
+        { name: 'Anti-Biofilm', use: 'يمنع غشاء — 4 أشهر' },
+        { name: 'Marine Sealant', use: 'يقاوم NaCl+SiO₂ — 7-10 سنوات' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'نظيفة.', solution: 'NaCl شفاف + Biofilm شفاف + SiO₂ ناعم. \"نظيفة\" = لا تُلاحظ. ربع سنوي يكشف.' },
+        { fear: 'ماء وقماش.', solution: 'ماء = NaCl جديد. قماش + SiO₂ = خدش. 2 أخطاء.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'مثل الخبر.', truth: 'SiO₂ خدش 7 Mohs > زجاج 5.5 = فرق حرج.' },
+        { myth: 'المطر.', truth: 'مطر الظهران = NaCl + SiO₂ = بقع+خدوش إضافية.' },
+        { myth: 'سنوي.', truth: 'مزدوج أسبوعي + Biofilm شهري. ربع سنوي.' },
     ],
-
     relatedServices: [
-        { slug: 'dhahran-furniture-moving', context: 'نقل عفش بالظهران', priority: 1 },
-        { slug: 'dhahran-furniture-storage', context: 'تخزين عفش بالظهران', priority: 2 },
-        { slug: 'dhahran-dyna', context: 'دينا نقل بالظهران', priority: 3 },
-        { slug: 'dhahran-moving-out', context: 'نقل عفش خروج بالظهران', priority: 4 },
-        { slug: 'dhahran-dabab', context: 'دباب نقل بالظهران', priority: 5 },
-        { slug: 'dhahran-cleaning', context: 'تنظيف منازل بالظهران', priority: 6 },
-        { slug: 'dhahran-tanks-cleaning', context: 'تنظيف خزانات بالظهران', priority: 7 },
-        { slug: 'dhahran-sofa-cleaning', context: 'تنظيف كنب بالظهران', priority: 8 },
-        { slug: 'dhahran-carpet-cleaning', context: 'تنظيف سجاد بالظهران', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف — مزدوج', priority: 1 },
+        { slug: 'marble-polishing', context: 'رخام — NaCl+SiO₂', priority: 2 },
+        { slug: 'office-cleaning', context: 'مكاتب — واجهات', priority: 3 },
+        { slug: 'villas-cleaning', context: 'فلل — واجهات', priority: 4 },
+        { slug: 'auto-cleaning', context: 'سيارات — NaCl+SiO₂', priority: 5 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف — مزدوج', priority: 6 },
+        { slug: 'steam-cleaning', context: 'بخار — تعقيم', priority: 7 },
     ],
 };

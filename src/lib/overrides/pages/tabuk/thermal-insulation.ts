@@ -1,6 +1,3 @@
-// عزل حراري بتبوك — Override (E-E-A-T)
-// الزاوية: عزل مزدوج حر+برد — وفر طاقة في الاتجاهين
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -58,19 +55,13 @@ export const override: PageOverride = {
         { entity: AMANA.TABUK.entity, url: AMANA.TABUK.url, role: 'تطبيق كود البناء بتبوك', acronym: 'أمانة تبوك' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
             expert: 'م. ماجد المحيميد',
             quote: 'تبوك = أعلى عائد على العزل الحراري بالسعودية — وفر مزدوج في تكييف وتدفئة. الجدار الشمالي أولوية خاصة بسبب الرياح الباردة. ومواد مرنة فقط — فرق 46°م يُشقق كل شيء جامد',
             source: 'خبير جودة البناء والتشطيبات',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
 
@@ -89,15 +80,21 @@ export const override: PageOverride = {
 
     hiddenObjections: [
         { fear: 'العزل مكلف', solution: 'بتبوك: فاتورة بلا عزل = تكييف + تدفئة = ضعف أي مدينة. العزل يُوفّر 30-40% مرتين. يدفع نفسه في أقل من سنة. أسرع من أي عائد بالسعودية' },
+        { fear: 'السعر أعلى من المتوقع.', solution: 'السعر يشمل معدات صناعية متخصصة + مواد احترافية + عمالة مدربة + ضمان مكتوب. المقارنة العادلة ليست مع عامل عشوائي بل مع تكلفة إصلاح الأضرار الناتجة عن العمل غير المتخصص.' },
     ],
 
     counterNarratives: [
         { myth: 'العزل بس للحر', truth: 'العزل يمنع انتقال الحرارة في أي اتجاه — حر أو برد. بتبوك: بدون عزل تخسر الدفء شتاءً بنفس القدر الذي تكسب الحرارة صيفاً. وفر مزدوج = ضعف الفائدة' },
+        { myth: 'أي شركة تنظيف/صيانة نتيجتها واحدة.', truth: 'الفرق بين شركة مرخصة ومُعتمدة وأخرى عشوائية = الفرق بين معالجة جذرية وإخفاء مؤقت. المعدات المتخصصة والبروتوكولات العلمية تحل المشكلة من جذرها — التنظيف العشوائي يُعيدها أسوأ خلال أسابيع.' },
+        { myth: 'أوفر وأسوي الشغل بنفسي.', truth: 'التوفير الظاهري يتحول لتكلفة مضاعفة: أدوات منزلية لا تصل للعمق المطلوب + مواد غير مناسبة قد تُتلف الأسطح + وقت وجهد بلا ضمان نتيجة. الاحتراف = ضمان + توفير حقيقي على المدى الطويل.' },
     ],
 
     relatedServices: [
-        { slug: 'tabuk-roof-insulation', context: 'عزل سطح — الأولوية الأولى', priority: 1 },
-        { slug: 'tabuk-foam-insulation', context: 'فوم Closed-Cell — أقوى مادة مزدوجة الاتجاه', priority: 2 },
-        { slug: 'tabuk-water-insulation', context: 'عزل مائي يحمي من أمطار تبوك', priority: 3 },
+        { slug: 'roof-insulation', context: 'عزل سطح — الأولوية الأولى', priority: 1 },
+        { slug: 'foam-insulation', context: 'فوم Closed-Cell — أقوى مادة مزدوجة الاتجاه', priority: 2 },
+        { slug: 'water-insulation', context: 'عزل مائي يحمي من أمطار تبوك', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف شامل يُكمّل الخدمة الأساسية — بيئة نظيفة متكاملة.', priority: 5 },
+        { slug: 'pest-control', context: 'مكافحة حشرات متكاملة مع خدمات النظافة والصيانة.', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'تنظيف مكيفات لهواء نظيف — يُكمّل أي خدمة منزلية.', priority: 7 },
     ],
 };

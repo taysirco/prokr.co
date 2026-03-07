@@ -1,4 +1,3 @@
-// غسيل سيارات بالطائف — Override (E-E-A-T) | خريطة 2.4: المسند → بلدي
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -36,9 +35,12 @@ export const override: PageOverride = {
         'حبوب لقاح الطائف الحمضية + ندى الضباب = تأكل طبقة الكلير خلال أسابيع. لا تتجاهل الطبقة الصفراء.',
         'الغسيل بإسفنجة واحدة يسحب غبار الطائف المعدني على الطلاء ← Swirl Marks دائمة ← تحتاج تلميع 200+ ريال.',
     ],
-    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص مغاسل السيارات والخدمات المتنقلة' }],
-    expertReviewer: { name: EXPERTS.ALMISNID.name, title: EXPERTS.ALMISNID.title, credential: EXPERTS.ALMISNID.credential, profileUrl: EXPERTS.ALMISNID.profileUrl },
-    expertCitations: [{ expert: EXPERTS.ALMISNID.name, quote: 'حبوب لقاح الطائف مع ندى الضباب = مزيج حمضي لزج لا يشبه الغبار الصحراوي الجاف. الغسيل التقليدي (إسفنجة + خرطوم) يخدش الطلاء. Two-Bucket Method + تجفيف مايكروفايبر = البروتوكول الوحيد الآمن.', source: EXPERTS.ALMISNID.title, url: EXPERTS.ALMISNID.profileUrl }],
+    trustAnchors: [
+{ ...{ ...GOV.BALADI, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
+ role: 'ترخيص مغاسل السيارات والخدمات المتنقلة' }    ],
+    expertReviewer: EXPERTS.ALMISNID,
+    expertCitations: [{ expert: EXPERTS.ALMISNID.name, quote: 'حبوب لقاح الطائف مع ندى الضباب = مزيج حمضي لزج لا يشبه الغبار الصحراوي الجاف. الغسيل التقليدي (إسفنجة + خرطوم) يخدش الطلاء. Two-Bucket Method + تجفيف مايكروفايبر = البروتوكول الوحيد الآمن.',
+            source: EXPERTS.ALMISNID.title }],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
     verificationBadges: [{ badge: '✔️ Two-Bucket Method', authority: 'بدون Swirl Marks', icon: 'shield-check' }, { badge: '✔️ طلاء سيراميك معتمد', authority: 'حماية 2-5 سنوات', icon: 'badge-check' }],
     equipment: [
@@ -46,10 +48,16 @@ export const override: PageOverride = {
         { name: 'غسالة ضغط (1,500-2,000 PSI)', use: 'تشطف 80% من الأوساخ بدون لمس ← تُقلل الخدوش في مرحلة الغسيل اليدوي.' },
         { name: 'طلاء سيراميك نانو (Nano Ceramic Coating)', use: 'طبقة صلبة شفافة (9H) تمنع التصاق اللقاح والندى ← سطح ذاتي التنظيف 2-5 سنوات.' },
     ],
-    hiddenObjections: [{ fear: 'أغسل بنفسي بالخرطوم — أوفر.', solution: 'الخرطوم + إسفنجة = Swirl Marks من غبار الطائف المعدني. تلميع إزالة Swirl Marks = 200-500 ريال. غسيل احترافي 50 ريال/مرة × 4 = 200 ريال/شهر = طلاء محمي. "الأوفر" = الأغلى على المدى الطويل.' }],
+    hiddenObjections: [
+        { fear: 'أغسل بنفسي بالخرطوم — أوفر.', solution: 'الخرطوم + إسفنجة = Swirl Marks من غبار الطائف المعدني. تلميع إزالة Swirl Marks = 200-500 ريال. غسيل احترافي 50 ريال/مرة × 4 = 200 ريال/شهر = طلاء محمي. "الأوفر" = الأغلى على المدى الطويل.' },
+        { fear: 'الخدمة أغلى من المدن الأخرى.', solution: 'مناخ الطائف يفرض معالجات إضافية (مضاد تكثف + تجفيف + حماية أخشاب ورود). التكلفة الإضافية استثمار يحمي ممتلكاتك من تلف الرطوبة والحشرات الموسمية.' },
+    ],
     counterNarratives: [{ myth: 'مناخ الطائف معتدل — السيارة ما تتسخ بسرعة.', truth: 'ندى ضبابي يومي + حبوب لقاح ربيعية + غبار مزارع = تلوث يومي مختلف عن الغبار الصحراوي. "معتدل" = نوع أوساخ مختلف وليس أوساخ أقل.' }],
     relatedServices: [
-        { slug: 'taif-cleaning', context: 'تنظيف منزل + سيارة — باقة.', priority: 1 },
-        { slug: 'taif-furniture-moving', context: 'تنظيف سيارة بعد النقل.', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف منزل + سيارة — باقة.', priority: 1 },
+        { slug: 'furniture-moving', context: 'تنظيف سيارة بعد النقل.', priority: 2 },
+        { slug: 'air-conditioner-cleaning', context: 'تنظيف مكيفات تعمل تبريد/تدفئة طوال السنة في مناخ الطائف المتقلب.', priority: 5 },
+        { slug: 'pest-control', context: 'مكافحة حشرات تتكاثر في رطوبة الطائف الشتوية والزراعة المحيطة.', priority: 6 },
+        { slug: 'steam-cleaning', context: 'تعقيم بالبخار لقتل العث والفطريات في مفروشات الطائف الرطبة.', priority: 7 },
     ],
 };

@@ -85,7 +85,6 @@ export const override: PageOverride = {
             expert: 'م. عبدالغني الجند',
             quote: 'النمل الأبيض في جدة ليس احتمال — بل مسألة وقت. كل مبنى بدون حاجز كيميائي في تربة جدة الرملية: يُصاب خلال 3-5 سنوات. الحقن الوقائي أرخص 10 أضعاف من إصلاح الضرر',
             source: 'مؤلف موسوعة أخطاء في البناء',
-            url: 'https://x.com/ssrrr22',
         },
     ],
 
@@ -112,14 +111,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'jeddah-pest-control', context: 'فحص حشرات شامل يكشف نمل أبيض مبكراً', priority: 1 },
-        { slug: 'jeddah-water-leak-detection', context: 'تسرب المياه يبلل الخشب ← يجذب النمل الأبيض', priority: 2 },
-        { slug: 'jeddah-water-insulation', context: 'العزل المائي يمنع الرطوبة ← يحمي الأخشاب', priority: 3 },
-        { slug: 'jeddah-ants-control', context: 'التمييز بين النمل العادي والنمل الأبيض — فحص متخصص', priority: 4 },
-        { slug: 'jeddah-roof-insulation', context: 'عزل السطح يمنع تسرب المياه ← يحمي الأخشاب', priority: 5 },
-        { slug: 'jeddah-cockroach-control', context: 'الصراصير تشارك النمل الأبيض بيئة الرطوبة', priority: 6 },
-        { slug: 'jeddah-bathroom-leak-detection', context: 'تسرب الحمام يبلل إطارات الأبواب ← هدف للأرضة', priority: 7 },
-        { slug: 'jeddah-furniture-moving', context: 'نقل أثاث خشبي من بيت مصاب يحتاج فحص قبل النقل', priority: 8 },
-        { slug: 'jeddah-thermal-insulation', context: 'التكثيف من ضعف العزل = رطوبة = بيئة أرضة', priority: 9 },
+        { slug: 'pest-control', context: 'فحص حشرات شامل يكشف نمل أبيض مبكراً', priority: 1 },
+        { slug: 'water-leak-detection', context: 'تسرب المياه يبلل الخشب ← يجذب النمل الأبيض', priority: 2 },
+        { slug: 'water-insulation', context: 'العزل المائي يمنع الرطوبة ← يحمي الأخشاب', priority: 3 },
+        { slug: 'ants-control', context: 'التمييز بين النمل العادي والنمل الأبيض — فحص متخصص', priority: 4 },
+        { slug: 'roof-insulation', context: 'عزل السطح يمنع تسرب المياه ← يحمي الأخشاب', priority: 5 },
+        { slug: 'cockroach-control', context: 'الصراصير تشارك النمل الأبيض بيئة الرطوبة', priority: 6 },
+        { slug: 'bathroom-leak-detection', context: 'تسرب الحمام يبلل إطارات الأبواب ← هدف للأرضة', priority: 7 },
+        { slug: 'furniture-moving', context: 'نقل أثاث خشبي من بيت مصاب يحتاج فحص قبل النقل', priority: 8 },
+        { slug: 'thermal-insulation', context: 'التكثيف من ضعف العزل = رطوبة = بيئة أرضة', priority: 9 },
     ],
 };

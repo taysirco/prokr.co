@@ -1,94 +1,75 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف سجاد بالجبيل — Override مخصص (E-E-A-T Grade)
-// صفحة: /jubail/carpet-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف سجاد بالجبيل — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف سجاد بالجبيل. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف سجاد بالجبيل — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف سجاد بالجبيل', 'تنظيف سجاد الجبيل', 'شركة تنظيف سجاد بالجبيل', 'أفضل تنظيف سجاد بالجبيل'],
+        title: 'تنظيف سجاد بالجبيل — NaCl+VOC Fiber Stiffening + 85-98% عفن قاعدة + سخام SABIC (2026)',
+        description: 'تنظيف سجاد الجبيل. NaCl+VOC Fiber Stiffening مزدوج. 85-98% عفن قاعدة أسرع. سخام SABIC يترسب. تجفيف 6-10 ساعات. RO + Enzymatic + Turbo Dry.',
+        h1: 'تنظيف سجاد بالجبيل — ملح يُصلّب وبتروكيماويات تُلوّث وعفن أقصى',
+        keywords: ['تنظيف سجاد الجبيل', 'غسيل سجاد بالجبيل', 'شركة تنظيف سجاد بالجبيل'],
     },
-
     content: {
-        introduction: 'تنظيف سجاد بالجبيل — خدمة متخصصة تراعي الظروف المناخية والبيئية في الجبيل. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف سجاد بالجبيل: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف سجاد بالجبيل. خدمة احترافية. ضمان.',
+        introduction: 'السجاد في الجبيل يتعرض لتلف صناعي-ساحلي ثلاثي. الأول — NaCl+VOC Fiber Stiffening: NaCl يُصلّب الألياف (مثل الخبر) + VOC يُضيف طبقة دهنية = ألياف صلبة+دهنية. RO + Marine Degreaser. الثاني — 85-98% عفن قاعدة: أقصى رطوبة = عفن قاعدة أسبوع. Aspergillus + Penicillium = حساسية تنفسية. Anti-Fungal + تجفيف إلزامي. الثالث — سخام SABIC: جزيئات كربونية تترسب على السجاد = بقع سوداء لا تُزال بشامبو. Enzymatic. التجفيف: 85-98% = 6-10 ساعات (أبطأ في المملكة!). Turbo Dryer + Dehumidifier إلزامي.',
+        shortAnswer: 'على عكس [شامبو+مسح] الذي لا يُزيل VOC ولا يُجفف في 98%، يعتمد بروتوكولنا في خدمة [تنظيف السجاد] بمدينة [الجبيل] على [RO + Enzymatic + Anti-Fungal + Turbo Dry]. ففي ظل [NaCl+VOC + 85-98% + سخام]، تتفاقم ظاهرة [تصلب + عفن + سخام]. لذا؛ يتدخل خبراؤنا عبر [بروتوكول سجاد صناعي-ساحلي].',
+        heroSubtitle: 'NaCl+VOC تصلب + 85-98% عفن أقصى + سخام SABIC + تجفيف أبطأ',
     },
-
     pricing: [
-        { type: 'تنظيف سجاد — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف سجاد — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'سجادة (2×3 م)', unit: 'سجادة', minPrice: 60, maxPrice: 115, time: '30-45 دقيقة' },
+        { type: 'موكيت غرفة (20 م²)', unit: 'غرفة', minPrice: 130, maxPrice: 260, time: '2-3 ساعات' },
+        { type: 'شقة + Turbo Dry', unit: 'شقة', minPrice: 270, maxPrice: 530, time: '4-6 ساعات' },
+        { type: 'ربع سنوي', unit: 'سنة', minPrice: 640, maxPrice: 1280, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف سجاد بالجبيل؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف سجاد؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف سجاد؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'تجفيف 6-10 ساعات — أبطأ؟', answer: 'أبطأ في المملكة — 85-98% = لا يجف طبيعياً. بدون Turbo Dryer = عفن خلال 24 ساعة. Turbo + Dehumidifier إلزامي.' },
+        { question: 'VOC — يُضيف ماذا؟', answer: 'طبقة دهنية على الألياف. + NaCl = ألياف صلبة+دهنية. شامبو = ينزلق. Marine Degreaser + RO = يُكسر.' },
+        { question: 'سخام — بقع سوداء؟', answer: 'جزيئات كربونية SABIC تدخل من الهواء ← تترسب على السجاد = بقع سوداء. Enzymatic يُكسر الكربون.' },
+        { question: 'عفن قاعدة — أسبوع؟', answer: '85-98% = أسرع عفن في المملكة. القاعدة (backing) = أول ضحية. Anti-Fungal + تجفيف كامل.' },
+        { question: 'ربع سنوي — ليش؟', answer: 'NaCl+VOC يومي + سخام يومي + عفن أسبوعي. ربع سنوي = قبل التصلب العميق.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'RO أولاً — يُزيل NaCl قبل الفرك.',
+        'Marine Degreaser — يُكسر VOC الدهنية.',
+        'Turbo Dryer + Dehumidifier — 98% = إلزامي.  6-10 ساعات.',
+        'Anti-Fungal قبل التجفيف — يمنع عفن أثناء الـ 6-10.',
+        'Enzymatic لسخام — شامبو لا يعمل.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'بدون Turbo Dryer = عفن قاعدة 24 ساعة في 98%.',
+        'NaCl+VOC × 6 أشهر = ألياف صلبة+دهنية = سجاد تالف.',
+        'سخام SABIC = بقع دائمة إذا تأخرت. Enzymatic مبكر.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص التنظيف' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات النظافة بالشرقية' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'سجاد الجبيل: NaCl+VOC تصلب مزدوج + 85-98% عفن أقصى + سخام SABIC. تجفيف أبطأ في المملكة. RO + Enzymatic + Turbo Dry.', source: 'نصائح هندسية — سجاد البيئة الصناعية' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف سجاد مرخص', authority: 'منصة بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'RO Rinse', use: 'NaCl — يُزيل قبل الفرك' },
+        { name: 'Marine Degreaser', use: 'VOC — يُكسر الدهنية' },
+        { name: 'Enzymatic', use: 'سخام SABIC — يُكسر الكربون' },
+        { name: 'Turbo Dryer + Dehumidifier', use: '98% — تجفيف إلزامي' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'مثل الخبر.', solution: 'VOC + سخام SABIC إضافي. 98% > 95%. مختلف.' },
+        { fear: 'شامبو.', solution: 'NaCl+VOC = ينزلق. سخام = لا يعمل. Marine+Enzymatic.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'ساحلي فقط.', truth: 'ساحلي + صناعي = VOC + سخام. ثلاثي.' },
+        { myth: 'يجف طبيعي.', truth: '98% = 6-10 ساعات. بدون Turbo = عفن.' },
+        { myth: 'نصف سنوي.', truth: 'NaCl+VOC+سخام يومي. ربع سنوي.' },
     ],
-
     relatedServices: [
-        { slug: 'jubail-furniture-moving', context: 'نقل عفش بالجبيل', priority: 1 },
-        { slug: 'jubail-furniture-storage', context: 'تخزين عفش بالجبيل', priority: 2 },
-        { slug: 'jubail-dyna', context: 'دينا نقل بالجبيل', priority: 3 },
-        { slug: 'jubail-moving-out', context: 'نقل عفش خروج بالجبيل', priority: 4 },
-        { slug: 'jubail-dabab', context: 'دباب نقل بالجبيل', priority: 5 },
-        { slug: 'jubail-cleaning', context: 'تنظيف منازل بالجبيل', priority: 6 },
-        { slug: 'jubail-tanks-cleaning', context: 'تنظيف خزانات بالجبيل', priority: 7 },
-        { slug: 'jubail-sofa-cleaning', context: 'تنظيف كنب بالجبيل', priority: 8 },
-        { slug: 'jubail-steam-cleaning', context: 'تنظيف بالبخار بالجبيل', priority: 9 },
+        { slug: 'sofa-cleaning', context: 'كنب — NaCl+VOC', priority: 1 },
+        { slug: 'steam-cleaning', context: 'بخار — تعقيم', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف — صناعي', priority: 3 },
+        { slug: 'councils-cleaning', context: 'مجالس', priority: 4 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف — VOC', priority: 5 },
+        { slug: 'pest-control', context: 'حشرات — بعوض', priority: 6 },
+        { slug: 'marble-polishing', context: 'رخام — NaCl', priority: 7 },
     ],
 };

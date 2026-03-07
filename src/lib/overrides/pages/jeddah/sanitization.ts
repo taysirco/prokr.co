@@ -5,6 +5,7 @@
 // ══════════════════════════════════════════════════════════════
 
 import type { PageOverride } from '../../types';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -98,19 +99,13 @@ export const override: PageOverride = {
         { code: 'اشتراطات أمانة جدة — التعقيم الدوري', description: 'إلزام المحلات التجارية والمطاعم بشهادة تعقيم دوري', url: 'https://www.jeddah.gov.sa' },
     ],
 
-    expertReviewer: {
-        name: 'أ.د. فهد الخضيري',
-        title: 'عالم أبحاث طبي',
-        credential: 'عالم أبحاث طبي — متخصص في السموم والصحة العامة',
-        profileUrl: 'https://x.com/DrAlkhodairy',
-    },
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
             expert: 'أ.د. فهد الخضيري',
             quote: 'التعقيم الفعال يُقاس بجهاز ATP — لو الشركة ما تقيس بعد التعقيم: كيف تثبت أنها عقّمت فعلاً؟ اطلب قراءة ATP قبل وبعد',
             source: 'عالم أبحاث طبي — سموم وصحة عامة',
-            url: 'https://x.com/DrAlkhodairy',
         },
     ],
 
@@ -120,14 +115,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'jeddah-cleaning', context: 'تنظيف شامل + تعقيم = حماية مزدوجة', priority: 1 },
-        { slug: 'jeddah-steam-cleaning', context: 'بخار 150°م يكمّل التعقيم الكيميائي — حل مزدوج', priority: 2 },
-        { slug: 'jeddah-pest-control', context: 'الحشرات تنقل بكتيريا — مكافحة بعد التعقيم', priority: 3 },
-        { slug: 'jeddah-air-conditioner-cleaning', context: 'تنظيف المكيف يمنع إعادة نشر الجراثيم', priority: 4 },
-        { slug: 'jeddah-tanks-cleaning', context: 'تعقيم خزان المياه — المصدر الأساسي', priority: 5 },
-        { slug: 'jeddah-mattress-cleaning', context: 'تعقيم المراتب — بؤرة عث الغبار والبكتيريا', priority: 6 },
-        { slug: 'jeddah-sofa-cleaning', context: 'تعقيم الكنب بالبخار بعد مرض أحد أفراد العائلة', priority: 7 },
-        { slug: 'jeddah-office-cleaning', context: 'تنظيف مكاتب مع تعقيم — شهادة واحدة تغطي الاثنين', priority: 8 },
-        { slug: 'jeddah-carpet-cleaning', context: 'السجاد يحتجز بكتيريا — غسيل بعد التعقيم', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف شامل + تعقيم = حماية مزدوجة', priority: 1 },
+        { slug: 'steam-cleaning', context: 'بخار 150°م يكمّل التعقيم الكيميائي — حل مزدوج', priority: 2 },
+        { slug: 'pest-control', context: 'الحشرات تنقل بكتيريا — مكافحة بعد التعقيم', priority: 3 },
+        { slug: 'air-conditioner-cleaning', context: 'تنظيف المكيف يمنع إعادة نشر الجراثيم', priority: 4 },
+        { slug: 'tanks-cleaning', context: 'تعقيم خزان المياه — المصدر الأساسي', priority: 5 },
+        { slug: 'mattress-cleaning', context: 'تعقيم المراتب — بؤرة عث الغبار والبكتيريا', priority: 6 },
+        { slug: 'sofa-cleaning', context: 'تعقيم الكنب بالبخار بعد مرض أحد أفراد العائلة', priority: 7 },
+        { slug: 'office-cleaning', context: 'تنظيف مكاتب مع تعقيم — شهادة واحدة تغطي الاثنين', priority: 8 },
+        { slug: 'carpet-cleaning', context: 'السجاد يحتجز بكتيريا — غسيل بعد التعقيم', priority: 9 },
     ],
 };

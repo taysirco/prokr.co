@@ -1,4 +1,3 @@
-// تنظيف سجاد بالطائف — Override (E-E-A-T) | خريطة 2.4: المسند → بلدي
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -33,20 +32,29 @@ export const override: PageOverride = {
         'غسيل سجاد بالماء + تركه يجف في رطوبة 80% = عفن أسوأ مما كان قبل الغسيل. التجفيف الصناعي = إلزامي.',
         'المكنسة العادية تطيّر أبواغ العفن وحبوب اللقاح في الهواء — مكنسة HEPA تحبسها.',
     ],
-    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات التنظيف المنزلي' }],
-    expertReviewer: { name: EXPERTS.ALMISNID.name, title: EXPERTS.ALMISNID.title, credential: EXPERTS.ALMISNID.credential, profileUrl: EXPERTS.ALMISNID.profileUrl },
-    expertCitations: [{ expert: EXPERTS.ALMISNID.name, quote: 'في شتاء الطائف: السجاد يمتص الرطوبة من الأرضية الباردة والهواء الرطب معاً. تركيز عث الغبار في سجاد الطائف الشتوي يصل 3 أضعاف سجاد الرياض الجافة. التجفيف السريع بعد الغسيل = الفارق بين سجاد نظيف وسجاد متعفن.', source: EXPERTS.ALMISNID.title, url: EXPERTS.ALMISNID.profileUrl }],
+    trustAnchors: [
+{ ...{ ...GOV.BALADI, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
+ role: 'ترخيص شركات التنظيف المنزلي' }    ],
+    expertReviewer: EXPERTS.ALMISNID,
+    expertCitations: [{ expert: EXPERTS.ALMISNID.name, quote: 'في شتاء الطائف: السجاد يمتص الرطوبة من الأرضية الباردة والهواء الرطب معاً. تركيز عث الغبار في سجاد الطائف الشتوي يصل 3 أضعاف سجاد الرياض الجافة. التجفيف السريع بعد الغسيل = الفارق بين سجاد نظيف وسجاد متعفن.',
+            source: EXPERTS.ALMISNID.title }],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
     verificationBadges: [{ badge: '✔️ استخراج ساخن 70°م', authority: 'غسيل عميق', icon: 'shield-check' }, { badge: '✔️ تجفيف صناعي', authority: 'منع عفن إعادة النمو', icon: 'badge-check' }],
     equipment: [
         { name: 'جهاز استخراج ساخن (Truck-Mount Extractor)', use: 'يضخ ماء 70°م في ألياف السجاد ويسحبه مع الأوساخ والعث — استخراج 90% من الرطوبة.' },
         { name: 'مراوح تجفيف صناعية + مزيل رطوبة', use: 'يسرّع تجفيف السجاد من 18 ساعة إلى 4-5 ساعات في رطوبة الطائف — يمنع عودة العفن.' },
     ],
-    hiddenObjections: [{ fear: 'أغسل السجاد عند المغسلة — أوفر.', solution: 'المغاسل تغسل بالماء البارد ← لا تقتل العث. + تُعيد السجاد مبللاً ← يبقى رطباً يوماً كاملاً في رطوبة الطائف ← عفن. الاستخراج الساخن 70°م + التجفيف الصناعي في الموقع = نظيف وجاف في نفس اليوم.' }],
+    hiddenObjections: [
+        { fear: 'أغسل السجاد عند المغسلة — أوفر.', solution: 'المغاسل تغسل بالماء البارد ← لا تقتل العث. + تُعيد السجاد مبللاً ← يبقى رطباً يوماً كاملاً في رطوبة الطائف ← عفن. الاستخراج الساخن 70°م + التجفيف الصناعي في الموقع = نظيف وجاف في نفس اليوم.' },
+        { fear: 'الخدمة أغلى من المدن الأخرى.', solution: 'مناخ الطائف يفرض معالجات إضافية (مضاد تكثف + تجفيف + حماية أخشاب ورود). التكلفة الإضافية استثمار يحمي ممتلكاتك من تلف الرطوبة والحشرات الموسمية.' },
+    ],
     counterNarratives: [{ myth: 'أنشر السجاد في الشمس — يقتل العث.', truth: 'الشمس تقتل العث على السطح العلوي فقط — 90% من العث يعيش في الألياف السفلية بعيداً عن الشمس. + شمس الطائف الشتوية ضعيفة (10-15°م) لا تكفي لقتل العث (يحتاج 50°م+). الاستخراج الساخن 70°م = يصل العمق ويقتل العث.' }],
     relatedServices: [
-        { slug: 'taif-sofa-cleaning', context: 'الكنب يعاني من نفس مشكلة الرطوبة — تنظيفهما معاً.', priority: 1 },
-        { slug: 'taif-cleaning', context: 'تنظيف شامل مع السجاد.', priority: 2 },
-        { slug: 'taif-steam-cleaning', context: 'بخار لكل شيء — مفروشات + أسطح.', priority: 3 },
+        { slug: 'sofa-cleaning', context: 'الكنب يعاني من نفس مشكلة الرطوبة — تنظيفهما معاً.', priority: 1 },
+        { slug: 'cleaning', context: 'تنظيف شامل مع السجاد.', priority: 2 },
+        { slug: 'steam-cleaning', context: 'بخار لكل شيء — مفروشات + أسطح.', priority: 3 },
+        { slug: 'air-conditioner-cleaning', context: 'تنظيف مكيفات تعمل تبريد/تدفئة طوال السنة في مناخ الطائف المتقلب.', priority: 5 },
+        { slug: 'pest-control', context: 'مكافحة حشرات تتكاثر في رطوبة الطائف الشتوية والزراعة المحيطة.', priority: 6 },
+        { slug: 'steam-cleaning', context: 'تعقيم بالبخار لقتل العث والفطريات في مفروشات الطائف الرطبة.', priority: 7 },
     ],
 };

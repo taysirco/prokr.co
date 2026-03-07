@@ -1,94 +1,76 @@
-// ══════════════════════════════════════════════════════════════
-// مكافحة حشرات ببريدة — Override مخصص (E-E-A-T Grade)
-// صفحة: /buraidah/pest-control
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'مكافحة حشرات ببريدة — خدمة احترافية معتمدة (2026)',
-        description: 'مكافحة حشرات ببريدة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'مكافحة حشرات ببريدة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['مكافحة حشرات ببريدة', 'مكافحة حشرات بريدة', 'شركة مكافحة حشرات ببريدة', 'أفضل مكافحة حشرات ببريدة'],
+        title: 'مكافحة حشرات ببريدة — ΔT 45°م تكاثر+Nafud فتحات+نخيل 8M غذاء — IPM حراري! (2026)',
+        description: 'مكافحة حشرات بريدة. ΔT 45°م تكاثر سريع! Nafud فتحات. نخيل 8M غذاء حشرات. IPM حراري+Gel+Residual.',
+        h1: 'مكافحة حشرات ببريدة — ΔT تكاثر+نخيل غذاء!',
+        keywords: ['مكافحة حشرات بريدة', 'مكافحة حشرات ببريدة', 'شركة مكافحة حشرات بريدة'],
     },
-
     content: {
-        introduction: 'مكافحة حشرات ببريدة — خدمة متخصصة تراعي الظروف المناخية والبيئية في بريدة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'مكافحة حشرات ببريدة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'مكافحة حشرات ببريدة. خدمة احترافية. ضمان.',
+        introduction: 'حشرات بريدة تتكاثر أسرع بسبب الحرارة والنخيل! ΔT 45°م تكاثر: صيف 48°م يسارع دورة حياة الحشرات = تتكاثر أسرع 2× من المدن المعتدلة. صراصير: 3 أسابيع مقابل 6. IPM حراري (Heat Treatment) + Gel Bait + Residual. Nafud فتحات: رمل النفود = فجوات في الأبواب والنوافذ (لأن الرمل يآكل الحشيات) = ممرات دخول حشرات. إحكام + حشيات سيليكون. نخيل 8M غذاء: تمور ساقطة + حشرات نخيل = مصدر غذاء وفير = أعداد أعلى. مكافحة حول المبنى. CaCO₃ 600ppm: لا يأثر مباشرة على الحشرات. 10-20% = لا رطوبة = صراصير تبحث عن رطوبة المطبخ/الحمام فقط. مقارنة: خميس = حشرات+عفن+عث. بريدة = حشرات فقط (لا عفن لا عث) = أبسط.',
+        shortAnswer: 'على عكس [الرش العشوائي بدون IPM]، يعتمد بروتوكولنا في خدمة [مكافحة الحشرات] بمدينة [بريدة] على [IPM حراري+Gel Bait+Residual+إحكام]. ففي ظل [ΔT تكاثر سريع+Nafud فتحات+نخيل غذاء+10-20%]، تتفاقم ظاهرة [تكاثر 2×+ممرات+أعداد]. لذا؛ يتدخل فريقنا عبر [إحكام ← Heat ← Gel ← Residual] — لا عفن!',
+        heroSubtitle: 'ΔT تكاثر 2× + Nafud فتحات + نخيل غذاء — IPM حراري!',
     },
-
     pricing: [
-        { type: 'مكافحة حشرات — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'مكافحة حشرات — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'شقة (رش+Gel)', unit: 'شقة', minPrice: 120, maxPrice: 250, time: '1-2h' },
+        { type: 'فيلا (IPM شامل)', unit: 'فيلا', minPrice: 250, maxPrice: 520, time: '2-4h' },
+        { type: '+ إحكام فتحات', unit: 'إضافي', minPrice: 80, maxPrice: 170, time: '1-2h' },
+        { type: 'ربع سنوي (4 زيارات)', unit: 'سنة', minPrice: 400, maxPrice: 800, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة مكافحة حشرات ببريدة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق مكافحة حشرات؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على مكافحة حشرات؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش حشرات بريدة تتكاثر أسرع؟', answer: 'ΔT 45°م حرارة تسارع دورة حياة = 2× أسرع. IPM حراري يقتل أسرع أيضاً.' },
+        { question: 'كيف النخيل يزيد الحشرات ببريدة؟', answer: '8M نخلة = تمور ساقطة+حشرات نخيل = غذاء. مكافحة حول المبنى.' },
+        { question: 'كم تكلفة مكافحة حشرات ببريدة مقارنة بخميس؟', answer: 'أرخص 20% — لا Anti-Fungal+Anti-Mite. حشرات فقط.' },
+        { question: 'ليش حشرات تدخل من Nafud ببريدة؟', answer: 'Nafud يآكل حشيات الأبواب = فتحات. إحكام سيليكون.' },
+        { question: 'هل بريدة فيها عث أو عفن؟', answer: 'لا! 10-20% = لا عفن لا عث. حشرات فقط. ميزة.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'IPM حراري — ΔT صيف = ميزة.',
+        'Gel Bait — دقيق في المطبخ.',
+        'إحكام فتحات — Nafud يآكل حشيات.',
+        'مكافحة حول المبنى — نخيل غذاء.',
+        'لا Anti-Mite — 10-20% ميزة.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'ΔT × صيف = تكاثر 2× ← تأخير أسبوع = ضعف الأعداد.',
+        'Nafud فتحات + بدون إحكام = حشرات تعود أسبوعياً.',
+        'نخيل + تمور ساقطة = مصدر لا ينتهي — مكافحة دورية.',
     ],
-
     trustAnchors: [
-        { ...GOV.SFDA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.SFDA, role: 'نظام غد — تسجيل المبيدات' },
+        { ...GOV.WEQAA, role: 'مكافحة الآفات' },
+        { ...GOV.BALADI, role: 'ترخيص شركات المكافحة' },
+        { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALKHODAIRY.name,
-        title: EXPERTS.ALKHODAIRY.title,
-        credential: EXPERTS.ALKHODAIRY.credential,
-        profileUrl: EXPERTS.ALKHODAIRY.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALKHODAIRY,
     expertCitations: [
-        {
-            expert: EXPERTS.ALKHODAIRY.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALKHODAIRY.title,
-            url: EXPERTS.ALKHODAIRY.profileUrl,
-        },
+        { expert: EXPERTS.ALKHODAIRY.name, quote: 'حشرات بريدة: ΔT تكاثر 2×. نخيل غذاء. IPM. لا عفن.', source: 'أبحاث سموم — حشرات القصيم' },
+        { expert: EXPERTS.ALMISNID.name, quote: 'ΔT 45°م يسارع دورة حياة. Nafud يآكل حشيات.', source: 'جغرافيا المناخ — القصيم' },
     ],
-
     saudiRegulations: [REGULATIONS.GHAD_SYSTEM],
-
-    verificationBadges: [
-        { badge: '✔️ مبيدات معتمدة من SFDA', authority: 'هيئة الغذاء والدواء', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ مكافحة مرخصة', authority: 'بلدي + SFDA', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'IPM Heat Treatment', use: 'يقتل حشرات+بيض — حرارة' },
+        { name: 'Gel Bait', use: 'صراصير — دقيق مطبخ' },
+        { name: 'Residual Spray', use: 'حماية طويلة — فتحات' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'رش عام يكفي.', solution: 'ΔT تكاثر 2×. IPM+Gel+إحكام.' },
+        { fear: 'مثل خميس.', solution: 'لا عفن+لا عث = أبسط 20%.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'رش مرة.', truth: 'ΔT+نخيل = دوري. ربع سنوي.' },
+        { myth: 'أي مبيد.', truth: 'SFDA غد مسجل. Gel > رش.' },
     ],
-
     relatedServices: [
-        { slug: 'buraidah-furniture-moving', context: 'نقل عفش ببريدة', priority: 1 },
-        { slug: 'buraidah-furniture-storage', context: 'تخزين عفش ببريدة', priority: 2 },
-        { slug: 'buraidah-dyna', context: 'دينا نقل ببريدة', priority: 3 },
-        { slug: 'buraidah-moving-out', context: 'نقل عفش خروج ببريدة', priority: 4 },
-        { slug: 'buraidah-dabab', context: 'دباب نقل ببريدة', priority: 5 },
-        { slug: 'buraidah-cleaning', context: 'تنظيف منازل ببريدة', priority: 6 },
-        { slug: 'buraidah-tanks-cleaning', context: 'تنظيف خزانات ببريدة', priority: 7 },
-        { slug: 'buraidah-sofa-cleaning', context: 'تنظيف كنب ببريدة', priority: 8 },
-        { slug: 'buraidah-carpet-cleaning', context: 'تنظيف سجاد ببريدة', priority: 9 },
+        { slug: 'pesticide-spraying', context: 'رش مبيدات', priority: 1 },
+        { slug: 'bedbugs-control', context: 'بق', priority: 2 },
+        { slug: 'termite-control', context: 'نمل أبيض', priority: 3 },
+        { slug: 'bird-control', context: 'طيور', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 5 },
+        { slug: 'sewage-unblocking', context: 'تسليك', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 7 },
     ],
 };

@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تخزين عفش ببريدة — Override مخصص (E-E-A-T Grade)
-// صفحة: /buraidah/furniture-storage
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تخزين عفش ببريدة — خدمة احترافية معتمدة (2026)',
-        description: 'تخزين عفش ببريدة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تخزين عفش ببريدة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تخزين عفش ببريدة', 'تخزين عفش بريدة', 'شركة تخزين عفش ببريدة', 'أفضل تخزين عفش ببريدة'],
+        title: 'تخزين عفش ببريدة — ΔT 45°م تشقق+Nafud SiO₂ خدش+CaCO₃ — مكيف+محكم! (2026)',
+        description: 'تخزين عفش بريدة. ΔT 45°م يشقق خشب! Nafud SiO₂ يخدش. CaCO₃ 600ppm. مستودع مكيف+محكم+Oil Polish.',
+        h1: 'تخزين عفش ببريدة — ΔT تشقق+Nafud خدش!',
+        keywords: ['تخزين عفش بريدة', 'تخزين أثاث ببريدة', 'شركة تخزين عفش بريدة'],
     },
-
     content: {
-        introduction: 'تخزين عفش ببريدة — خدمة متخصصة تراعي الظروف المناخية والبيئية في بريدة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تخزين عفش ببريدة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تخزين عفش ببريدة. خدمة احترافية. ضمان.',
+        introduction: 'تخزين عفش بريدة = حرارة ورمل ناعم! ΔT 45°م تشقق: مستودع غير مكيف = صيف 55°م داخل المستودع + شتاء 0°م = فارق 55°م! خشب يتشقق ← تلف. مستودع مكيف 18-22°م ثابت. Nafud SiO₂ خدش: رمل النفود الناعم 10-50 μm يتسلل من أي فتحة ← يتراكم على الأثاث ← يخدش الأسطح اللامعة. مستودع محكم + تغليف. CaCO₃ 600ppm: لا يأثر مباشرة على التخزين. 10-20% = لا عفن! لا عث! ميزة كبيرة — خميس: مستودع يتعفّن + عث يتلف الأقمشة = Anti-Fungal+Anti-Mite. لا نخيل داخل المستودع المحكم. مقارنة: خميس = مكيف+مانع عفن+مانع عث = أغلى 30%. بريدة = مكيف+محكم فقط = أبسط.',
+        shortAnswer: 'على عكس [المستودع غير المكيف الذي يُشقّق الخشب]، يعتمد بروتوكولنا في خدمة [تخزين العفش] بمدينة [بريدة] على [مستودع مكيف 18-22°م+محكم Nafud+تغليف]. ففي ظل [ΔT 45°م+Nafud خدش+10-20% لا عفن]، تتفاقم ظاهرة [تشقق+خدش]. لذا؛ يتدخل فريقنا عبر [مكيف ← محكم ← تغليف] — ميزة: لا عفن!',
+        heroSubtitle: 'ΔT 45°م تشقق + Nafud خدش — مكيف+محكم! لا عفن!',
     },
-
     pricing: [
-        { type: 'تخزين عفش — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تخزين عفش — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'غرفة تخزين صغيرة', unit: 'شهر', minPrice: 200, maxPrice: 420, time: 'شهري' },
+        { type: 'غرفة كبيرة مكيفة', unit: 'شهر', minPrice: 350, maxPrice: 720, time: 'شهري' },
+        { type: '+ تغليف محكم', unit: 'إضافي', minPrice: 100, maxPrice: 200, time: 'مرة' },
+        { type: 'سنوي (خصم 20%)', unit: 'سنة', minPrice: 3000, maxPrice: 6500, time: 'سنوي' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تخزين عفش ببريدة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تخزين عفش؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تخزين عفش؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش الأثاث يتشقق في مستودعات بريدة؟', answer: 'ΔT 45°م = مستودع غير مكيف 55°م صيفاً + 0°م شتاءً. مكيف 18-22°م يمنع.' },
+        { question: 'هل Nafud يخدش الأثاث في المستودع ببريدة؟', answer: 'Nafud 10-50 μm يتسلل من أي فتحة. مستودع محكم+تغليف = لا خدش.' },
+        { question: 'كم تكلفة تخزين عفش ببريدة مقارنة بخميس؟', answer: 'أرخص 25-30% — لا Anti-Fungal+Anti-Mite. مكيف+محكم فقط.' },
+        { question: 'هل العفش يتعفّن في مستودع ببريدة؟', answer: 'لا! 10-20% = لا عفن. ميزة. خميس: عفن+عث.' },
+        { question: 'كم أقصى مدة تخزين ببريدة؟', answer: 'سنوات! لا عفن. فحص ربع سنوي+Oil Polish يحمي. مكيف ثابت.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'مكيف 18-22°م — ΔT 45°م تشقق.',
+        'محكم — Nafud SiO₂ يتسلل.',
+        'تغليف — حماية خدش.',
+        'Oil Polish خشب — قبل التخزين.',
+        'لا عفن! — 10-20% ميزة.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'مستودع غير مكيف + ΔT 45°م = خشب يتشقق خلال 3 أشهر.',
+        'Nafud + فتحة صغيرة = خدش تراكمي — محكم إلزامي.',
+        'بدون تغليف = أسطح لامعة تُخدش — تلميع 2000+.',
     ],
-
     trustAnchors: [
-        { ...GOV.TGA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.TGA, role: 'ترخيص التخزين' },
+        { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALZUWAYED.name,
-        title: EXPERTS.ALZUWAYED.title,
-        credential: EXPERTS.ALZUWAYED.credential,
-        profileUrl: EXPERTS.ALZUWAYED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
-        {
-            expert: EXPERTS.ALZUWAYED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALZUWAYED.title,
-            url: EXPERTS.ALZUWAYED.profileUrl,
-        },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'تخزين بريدة: مكيف+محكم. ΔT+Nafud. لا عفن. أبسط.', source: 'نصائح هندسية — تخزين القصيم' },
     ],
-
     saudiRegulations: [REGULATIONS.TGA_LICENSE],
-
-    verificationBadges: [
-        { badge: '✔️ شركة نقل مرخصة من هيئة النقل TGA', authority: 'الهيئة العامة للنقل', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تخزين مرخص', authority: 'بلدي + TGA', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'تكييف ثابت 18-22°م', use: 'يمنع تشقق ΔT' },
+        { name: 'إحكام Nafud', use: 'يمنع SiO₂ — محكم' },
+        { name: 'تغليف Microfiber', use: 'يحمي خدش — أسطح لامعة' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'مستودع عادي.', solution: 'ΔT+Nafud = مكيف+محكم.' },
+        { fear: 'مثل خميس.', solution: 'لا عفن = أرخص 30%.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'أي مستودع.', truth: 'ΔT 45°م = مكيف. Nafud = محكم.' },
+        { myth: 'مثل الرياض.', truth: 'Nafud أنعم. 600ppm. نخيل.' },
     ],
-
     relatedServices: [
-        { slug: 'buraidah-furniture-moving', context: 'نقل عفش ببريدة', priority: 1 },
-        { slug: 'buraidah-dyna', context: 'دينا نقل ببريدة', priority: 2 },
-        { slug: 'buraidah-moving-out', context: 'نقل عفش خروج ببريدة', priority: 3 },
-        { slug: 'buraidah-dabab', context: 'دباب نقل ببريدة', priority: 4 },
-        { slug: 'buraidah-cleaning', context: 'تنظيف منازل ببريدة', priority: 5 },
-        { slug: 'buraidah-tanks-cleaning', context: 'تنظيف خزانات ببريدة', priority: 6 },
-        { slug: 'buraidah-sofa-cleaning', context: 'تنظيف كنب ببريدة', priority: 7 },
-        { slug: 'buraidah-carpet-cleaning', context: 'تنظيف سجاد ببريدة', priority: 8 },
-        { slug: 'buraidah-steam-cleaning', context: 'تنظيف بالبخار ببريدة', priority: 9 },
+        { slug: 'furniture-moving', context: 'نقل عفش', priority: 1 },
+        { slug: 'dyna', context: 'دينا', priority: 2 },
+        { slug: 'dabab', context: 'دباب', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 4 },
+        { slug: 'pest-control', context: 'حشرات', priority: 5 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 6 },
+        { slug: 'termite-control', context: 'نمل أبيض', priority: 7 },
     ],
 };

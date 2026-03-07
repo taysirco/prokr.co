@@ -1,4 +1,3 @@
-// تنظيف أفران بالطائف — Override (E-E-A-T)
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -35,9 +34,12 @@ export const override: PageOverride = {
         'الطبقة الكربونية السوداء داخل الفرن تُطلق PAH مُسرطن مع كل استخدام. لا تتجاهلها.',
         'لا تخلط مذيبات قلوية مع مبيض (كلوركس) ← يُنتج غاز كلور سام. القلوي وحده يكفي.',
     ],
-    trustAnchors: [{ ...GOV.BALADI, role: 'اشتراطات نظافة المطابخ التجارية' }],
-    expertReviewer: { name: EXPERTS.ALMISNID.name, title: EXPERTS.ALMISNID.title, credential: EXPERTS.ALMISNID.credential, profileUrl: EXPERTS.ALMISNID.profileUrl },
-    expertCitations: [{ expert: EXPERTS.ALMISNID.name, quote: 'أفران الطائف تتكربن أسرع بسبب ساعات التشغيل الشتوية الطويلة. الخبز اليومي + المعجنات + "تدفئة المطبخ بالفرن" = 2-3× ساعات عمل أكثر من مدن حارة. تنظيف كل 2-3 أشهر = وقاية من PAH وتوفير طاقة.', source: EXPERTS.ALMISNID.title, url: EXPERTS.ALMISNID.profileUrl }],
+    trustAnchors: [
+{ ...{ ...GOV.BALADI, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
+ role: 'اشتراطات نظافة المطابخ التجارية' }    ],
+    expertReviewer: EXPERTS.ALMISNID,
+    expertCitations: [{ expert: EXPERTS.ALMISNID.name, quote: 'أفران الطائف تتكربن أسرع بسبب ساعات التشغيل الشتوية الطويلة. الخبز اليومي + المعجنات + "تدفئة المطبخ بالفرن" = 2-3× ساعات عمل أكثر من مدن حارة. تنظيف كل 2-3 أشهر = وقاية من PAH وتوفير طاقة.',
+            source: EXPERTS.ALMISNID.title }],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
     verificationBadges: [{ badge: '✔️ مذيب قلوي pH 12-13', authority: 'إزالة كربون', icon: 'shield-check' }, { badge: '✔️ بخار 150°م', authority: 'زوايا + مفاصل', icon: 'badge-check' }],
     equipment: [
@@ -45,11 +47,17 @@ export const override: PageOverride = {
         { name: 'جهاز بخار 150°م', use: 'ينظف الزوايا والمفاصل التي لا تصلها الفرشاة — يُذيب الدهون المتحجرة.' },
         { name: 'فرش نايلون صلبة (وليس سلك معدني)', use: 'تفرك الكربون بدون خدش طبقة الإيناميل — السلك يخدش ← يصعب التنظيف لاحقاً.' },
     ],
-    hiddenObjections: [{ fear: 'منظف الفرن من السوبرماركت يكفي.', solution: 'منظف السوبرماركت (pH 9-10) يُزيل الدهون الطازجة. الكربون المتحجر (أسود صلب) يحتاج pH 12-13 صناعي + حرارة + وقت + فرك احترافي. 100 ريال كل 2-3 أشهر = فرن نظيف + طعام صحي + طاقة أقل.' }],
+    hiddenObjections: [
+        { fear: 'منظف الفرن من السوبرماركت يكفي.', solution: 'منظف السوبرماركت (pH 9-10) يُزيل الدهون الطازجة. الكربون المتحجر (أسود صلب) يحتاج pH 12-13 صناعي + حرارة + وقت + فرك احترافي. 100 ريال كل 2-3 أشهر = فرن نظيف + طعام صحي + طاقة أقل.' },
+        { fear: 'الخدمة أغلى من المدن الأخرى.', solution: 'مناخ الطائف يفرض معالجات إضافية (مضاد تكثف + تجفيف + حماية أخشاب ورود). التكلفة الإضافية استثمار يحمي ممتلكاتك من تلف الرطوبة والحشرات الموسمية.' },
+    ],
     counterNarratives: [{ myth: 'الفرن ينظف نفسه بالحرارة.', truth: 'الحرارة العالية تحرق الدهون الخفيفة ← لكن الكربون المتحجر يبقى (يتصلب أكثر). "ينظف نفسه" = 70% فقط. الزوايا والمفاصل والشبك = لا يصلها Self-Clean. التنظيف الكيميائي + البخار = 95%.' }],
     relatedServices: [
-        { slug: 'taif-cleaning', context: 'تنظيف مطبخ شامل مع الفرن.', priority: 1 },
-        { slug: 'taif-restaurant-chimney-cleaning', context: 'شفاط + مدخنة مع الفرن.', priority: 2 },
-        { slug: 'taif-steam-cleaning', context: 'بخار لكل المطبخ.', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف مطبخ شامل مع الفرن.', priority: 1 },
+        { slug: 'restaurant-chimney-cleaning', context: 'شفاط + مدخنة مع الفرن.', priority: 2 },
+        { slug: 'steam-cleaning', context: 'بخار لكل المطبخ.', priority: 3 },
+        { slug: 'air-conditioner-cleaning', context: 'تنظيف مكيفات تعمل تبريد/تدفئة طوال السنة في مناخ الطائف المتقلب.', priority: 5 },
+        { slug: 'pest-control', context: 'مكافحة حشرات تتكاثر في رطوبة الطائف الشتوية والزراعة المحيطة.', priority: 6 },
+        { slug: 'steam-cleaning', context: 'تعقيم بالبخار لقتل العث والفطريات في مفروشات الطائف الرطبة.', priority: 7 },
     ],
 };

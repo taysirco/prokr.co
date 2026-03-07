@@ -1,94 +1,19 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف سجاد بعنيزة — Override مخصص (E-E-A-T Grade)
-// صفحة: /onizah/carpet-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
 
 export const override: PageOverride = {
-    meta: {
-        title: 'تنظيف سجاد بعنيزة — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف سجاد بعنيزة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف سجاد بعنيزة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف سجاد بعنيزة', 'تنظيف سجاد عنيزة', 'شركة تنظيف سجاد بعنيزة', 'أفضل تنظيف سجاد بعنيزة'],
-    },
-
-    content: {
-        introduction: 'تنظيف سجاد بعنيزة — خدمة متخصصة تراعي الظروف المناخية والبيئية في عنيزة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف سجاد بعنيزة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف سجاد بعنيزة. خدمة احترافية. ضمان.',
-    },
-
-    pricing: [
-        { type: 'تنظيف سجاد — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف سجاد — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
-    ],
-
-    faq: [
-        { question: 'كم تكلفة تنظيف سجاد بعنيزة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف سجاد؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف سجاد؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
-    ],
-
-    expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
-    ],
-
-    warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
-    ],
-
-    trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
-    ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
-    expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
-    ],
-
-    saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
-    equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
-    ],
-
-    hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
-    ],
-
-    counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
-    ],
-
-    relatedServices: [
-        { slug: 'onizah-furniture-moving', context: 'نقل عفش بعنيزة', priority: 1 },
-        { slug: 'onizah-furniture-storage', context: 'تخزين عفش بعنيزة', priority: 2 },
-        { slug: 'onizah-dyna', context: 'دينا نقل بعنيزة', priority: 3 },
-        { slug: 'onizah-moving-out', context: 'نقل عفش خروج بعنيزة', priority: 4 },
-        { slug: 'onizah-dabab', context: 'دباب نقل بعنيزة', priority: 5 },
-        { slug: 'onizah-cleaning', context: 'تنظيف منازل بعنيزة', priority: 6 },
-        { slug: 'onizah-tanks-cleaning', context: 'تنظيف خزانات بعنيزة', priority: 7 },
-        { slug: 'onizah-sofa-cleaning', context: 'تنظيف كنب بعنيزة', priority: 8 },
-        { slug: 'onizah-steam-cleaning', context: 'تنظيف بالبخار بعنيزة', priority: 9 },
-    ],
+    meta: { title: 'تنظيف سجاد بعنيزة — CaCO₃ 600ppm ترسبات بيضاء + Nafud 7 Mohs + حبوب لقاح نخيل + 10% جفاف (2026)', description: 'تنظيف سجاد عنيزة. CaCO₃ 600ppm = ترسبات بيضاء على أقمشة داكنة. Nafud 7 Mohs = خدوش. حبوب لقاح 20-30μm = Van der Waals. 10% = يجف فوراً.', h1: 'تنظيف سجاد بعنيزة — CaCO₃ بيضاء + Nafud خدوش + لقاح نخيل', keywords: ['تنظيف سجاد بعنيزة', 'تنظيف سجاد عنيزة', 'شركة تنظيف سجاد بعنيزة'] },
+    content: { introduction: '4 تحديات: (1) CaCO₃ 600ppm: أعسر ماء سعودي. الماء يتبخر ← يترك ترسبات بيضاء على السجاد الداكن. Citric Acid (CaCO₃ + 2H⁺ → Ca²⁺ + H₂O + CO₂). (2) Nafud Sand 7 Mohs: كوارتز يخدش الألياف. HEPA أولاً — أي فرك بدون شفط = خدوش دائمة (Swirl Marks). (3) حبوب لقاح نخيل: 20-30 ميكرون — تلتصق بالألياف عبر Van der Waals. مكنسة عادية لا تسحبها — تحتاج HEPA + Beater Bar. (4) 10% RH = ميزة: السجاد يجف فوراً بعد الغسيل (لا Dehumidifier — عكس جازان/الباحة).', shortAnswer: 'CaCO₃ (Citric Acid) + Nafud (HEPA أولاً) + لقاح (Beater Bar) + ميزة: يجف فوراً.', heroSubtitle: 'CaCO₃ يُبيّض + Nafud يخدش + لقاح يلتصق — لكن يجف فوراً' },
+    pricing: [{ type: 'تنظيف سجاد + Descaling', unit: 'غرفة', minPrice: 80, maxPrice: 180, time: '1-2 ساعة' }, { type: 'موسم لقاح (مارس-مايو)', unit: 'غرفة', minPrice: 100, maxPrice: 200, time: '1-2 ساعة' }],
+    faq: [{ question: 'بقع بيضاء على السجاد الداكن؟', answer: 'CaCO₃ 600ppm: الماء يتبخر = ترسب أبيض. Citric Acid يُذيب (تفاعل حمض-قاعدة). لا تستخدم ماء الصنبور للغسيل!' }, { question: 'لقاح نخيل — كل سنة؟', answer: 'مارس-مايو: موسم تلقيح. لقاح 20-30μm يلتصق بـ Van der Waals. HEPA + Beater Bar.' }],
+    expertTips: ['HEPA أولاً — Nafud 7 Mohs يخدش.', 'Citric Acid لـ CaCO₃ — لا ماء صنبور!', 'Beater Bar للقاح.', '10% = يجف فوراً (ميزة).'],
+    warnings: ['ماء صنبور 600ppm للغسيل = ترسبات أكثر!', 'فرك بدون HEPA = Swirl Marks دائمة.'],
+    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص' }],
+    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertCitations: [{ expert: EXPERTS.ALMOHAIMED.name, quote: 'سجاد عنيزة: 600ppm = لا تغسل بماء الصنبور. RO water فقط. + HEPA أولاً — Nafud = خدوش.', source: 'نصائح هندسية — التنظيف في بيئات الماء العسر' }],
+    saudiRegulations: [REGULATIONS.BALADI_HEALTH], verificationBadges: [{ badge: '✔️ مرخص', authority: 'بلدي', icon: 'shield-check' }],
+    equipment: [{ name: 'HEPA + Beater Bar', use: 'Nafud + لقاح نخيل' }, { name: 'Citric Acid', use: 'CaCO₃ Descaling' }, { name: 'RO Water', use: 'غسيل بماء نقي — لا صنبور!' }],
+    hiddenObjections: [{ fear: 'منظف عادي + ماء.', solution: '600ppm = ترسبات. RO water + Citric Acid.' }],
+    counterNarratives: [{ myth: 'اغسل بالماء.', truth: '600ppm = ترسبات بيضاء أكثر. RO water فقط.' }],
+    relatedServices: [{ slug: 'sofa-cleaning', context: 'كنب — CaCO₃', priority: 1 }, { slug: 'steam-cleaning', context: 'بخار', priority: 2 }, { slug: 'cleaning', context: 'تنظيف', priority: 3 }],
 };

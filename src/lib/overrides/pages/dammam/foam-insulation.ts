@@ -1,13 +1,3 @@
-// ══════════════════════════════════════════════════════════════
-// عزل فوم بالدمام — Override (E-E-A-T)
-// صفحة: /dammam/foam-insulation
-// قطاع YMYL: مالي (كهرباء + حماية مبنى)
-// خريطة 2.4: المحيميد → SBC 601 + كفاءة + أمانة الشرقية
-// الزاوية: Closed-Cell فقط — رطوبة بحرية 60-90% تُدمّر Open-Cell
-//   + أملاح بحرية تتراكم داخل الخلايا المفتوحة
-//   + حماية UV إلزامية خلال 6-12 شهر
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -77,19 +67,13 @@ export const override: PageOverride = {
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'تطبيق اشتراطات العزل وكود البناء بالدمام', acronym: 'أمانة الشرقية' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
             expert: 'م. ماجد المحيميد',
             quote: 'بالدمام — Closed-Cell فقط. Open-Cell يمتص رطوبة 60-90% ويتحول من عزل لعبء رطب فوق السقف. والأملاح البحرية تتراكم في خلاياه وتوصل الكلوريدات للخرسانة — تآكل يُضعف المبنى',
             source: 'خبير جودة البناء والتشطيبات',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
 
@@ -116,9 +100,9 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'dammam-roof-insulation', context: 'عزل سطح متكامل: فوم + بيتومين SBS + طلاء عاكس', priority: 1 },
-        { slug: 'dammam-thermal-insulation', context: 'عزل حراري للجدران يُكمل فوم السطح', priority: 2 },
-        { slug: 'dammam-water-insulation', context: 'عزل مائي يحمي من الرطوبة البحرية والمياه الجوفية', priority: 3 },
-        { slug: 'dammam-tank-insulation', context: 'عزل خزان مياه بفوم Closed-Cell — يمنع تسخين المياه', priority: 4 },
+        { slug: 'roof-insulation', context: 'عزل سطح متكامل: فوم + بيتومين SBS + طلاء عاكس', priority: 1 },
+        { slug: 'thermal-insulation', context: 'عزل حراري للجدران يُكمل فوم السطح', priority: 2 },
+        { slug: 'water-insulation', context: 'عزل مائي يحمي من الرطوبة البحرية والمياه الجوفية', priority: 3 },
+        { slug: 'tank-insulation', context: 'عزل خزان مياه بفوم Closed-Cell — يمنع تسخين المياه', priority: 4 },
     ],
 };

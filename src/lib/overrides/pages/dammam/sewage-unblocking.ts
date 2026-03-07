@@ -1,13 +1,3 @@
-// ══════════════════════════════════════════════════════════════
-// تسليك مجاري بالدمام — Override (E-E-A-T)
-// صفحة: /dammam/sewage-unblocking
-// قطاع YMYL: صحي (H₂S + بكتيريا) + مالي
-// خريطة 2.4: الجند → بلدي + أمانة الشرقية
-// الزاوية: أملاح بحرية تفكك مفاصل الأنابيب
-//   + مياه جوفية ترفع منسوب + رطوبة تسرّع H₂S
-//   + صراصير 12 شهر في شبكة الصرف
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -70,19 +60,13 @@ export const override: PageOverride = {
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'الرقابة على شبكات الصرف والبيارات بالدمام', acronym: 'أمانة الشرقية' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALJUND.name,
-        title: EXPERTS.ALJUND.title,
-        credential: EXPERTS.ALJUND.credential,
-        profileUrl: EXPERTS.ALJUND.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALJUND,
 
     expertCitations: [
         {
             expert: 'م. عبدالغني الجند',
             quote: 'الأملاح البحرية في تربة الدمام تأكل مفاصل أنابيب الصرف تدريجياً — التسليك المتكرر بدون تشخيص بكاميرا CCTV = تسليك لمشكلة بنيوية لا تُحل بالسلك. التشخيص أولاً ← ثم الحل الجذري',
             source: 'موسوعة "أخطاء في البناء"',
-            url: 'https://x.com/ssrrr22',
         },
     ],
 
@@ -108,8 +92,8 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'dammam-sewage-suction', context: 'شفط بيارة — المياه الجوفية ترفع المنسوب بسرعة', priority: 1 },
-        { slug: 'dammam-pest-control', context: 'مكافحة صراصير الصرف — نشطة 12 شهر بلا فترة خمول', priority: 2 },
-        { slug: 'dammam-cleaning', context: 'تنظيف وتعقيم بعد طفح — إزالة ملوثات بكتيرية', priority: 3 },
+        { slug: 'sewage-suction', context: 'شفط بيارة — المياه الجوفية ترفع المنسوب بسرعة', priority: 1 },
+        { slug: 'pest-control', context: 'مكافحة صراصير الصرف — نشطة 12 شهر بلا فترة خمول', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف وتعقيم بعد طفح — إزالة ملوثات بكتيرية', priority: 3 },
     ],
 };

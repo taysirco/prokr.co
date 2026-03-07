@@ -85,7 +85,6 @@ export const override: PageOverride = {
             expert: 'أ.د. عبدالله المسند',
             quote: 'مجاري التكييف المركزي هي الناقل #1 للغبار داخل الشقق المغلقة في الرياض. بدون فلاتر HEPA أو تنظيف مجاري سنوياً: الشقة تتنفس غباراً مستمراً',
             source: 'أستاذ جغرافيا المناخ',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -112,14 +111,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'riyadh-cleaning', context: 'تنظيف شامل للشقق', priority: 1 },
-        { slug: 'riyadh-steam-cleaning', context: 'بخار الشقة — كنب + أرضيات', priority: 2 },
-        { slug: 'riyadh-sofa-cleaning', context: 'تنظيف الكنب مع الشقة', priority: 3 },
-        { slug: 'riyadh-carpet-cleaning', context: 'غسيل السجاد مع الشقة', priority: 4 },
-        { slug: 'riyadh-sanitization', context: 'تعقيم بعد التنظيف', priority: 5 },
-        { slug: 'riyadh-air-conditioner-cleaning', context: 'غسيل مكيفات الشقة', priority: 6 },
-        { slug: 'riyadh-kitchen-cleaning', context: 'تنظيف مطبخ الشقة', priority: 7 },
-        { slug: 'riyadh-pest-control', context: 'رش وقائي بعد التنظيف', priority: 8 },
-        { slug: 'riyadh-moving-out', context: 'تنظيف شقة بعد خروج المستأجر', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف شامل للشقق', priority: 1 },
+        { slug: 'steam-cleaning', context: 'بخار الشقة — كنب + أرضيات', priority: 2 },
+        { slug: 'sofa-cleaning', context: 'تنظيف الكنب مع الشقة', priority: 3 },
+        { slug: 'carpet-cleaning', context: 'غسيل السجاد مع الشقة', priority: 4 },
+        { slug: 'sanitization', context: 'تعقيم بعد التنظيف', priority: 5 },
+        { slug: 'air-conditioner-cleaning', context: 'غسيل مكيفات الشقة', priority: 6 },
+        { slug: 'kitchen-cleaning', context: 'تنظيف مطبخ الشقة', priority: 7 },
+        { slug: 'pest-control', context: 'رش وقائي بعد التنظيف', priority: 8 },
+        { slug: 'moving-out', context: 'تنظيف شقة بعد خروج المستأجر', priority: 9 },
     ],
 };

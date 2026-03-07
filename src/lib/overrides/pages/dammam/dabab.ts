@@ -1,9 +1,3 @@
-// ══════════════════════════════════════════════════════════════
-// دباب نقل بالدمام — Override مخصص (E-E-A-T Grade)
-// صفحة: /dammam/dabab
-// قطاع YMYL: مالي (حماية بضائع)
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
 
@@ -85,12 +79,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'الرخصة التجارية' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALSHABNAN.name,
-        title: EXPERTS.ALSHABNAN.title,
-        credential: EXPERTS.ALSHABNAN.credential,
-        profileUrl: EXPERTS.ALSHABNAN.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALSHABNAN,
 
     expertCitations: [
         {

@@ -85,7 +85,6 @@ export const override: PageOverride = {
             expert: 'م. ماجد المحيميد',
             quote: 'لا تحمّل الدينا المفتوحة بعد 10ص صيفاً — الحرارة تبدأ تؤثر على كل شيء. والأهم: ثبّت الحمولة بالحبال — طرقات الرياض الطويلة مليئة بالمطبات',
             source: 'خبير جودة البناء والتشطيبات',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
 
@@ -111,14 +110,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'riyadh-dabab', context: 'دباب للنقل الخفيف', priority: 1 },
-        { slug: 'riyadh-furniture-moving', context: 'نقل عفش كامل', priority: 2 },
-        { slug: 'riyadh-furniture-storage', context: 'تخزين', priority: 3 },
-        { slug: 'riyadh-moving-out', context: 'تنظيف بعد التحميل', priority: 4 },
-        { slug: 'riyadh-cleaning', context: 'تنظيف البيت الجديد', priority: 5 },
-        { slug: 'riyadh-pest-control', context: 'رش البيت الجديد', priority: 6 },
-        { slug: 'riyadh-furniture-cleaning', context: 'تنظيف بعد النقل', priority: 7 },
-        { slug: 'riyadh-sanitization', context: 'تعقيم', priority: 8 },
-        { slug: 'riyadh-air-conditioner-cleaning', context: 'فك وتركيب مكيفات', priority: 9 },
+        { slug: 'dabab', context: 'دباب للنقل الخفيف', priority: 1 },
+        { slug: 'furniture-moving', context: 'نقل عفش كامل', priority: 2 },
+        { slug: 'furniture-storage', context: 'تخزين', priority: 3 },
+        { slug: 'moving-out', context: 'تنظيف بعد التحميل', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف البيت الجديد', priority: 5 },
+        { slug: 'pest-control', context: 'رش البيت الجديد', priority: 6 },
+        { slug: 'furniture-cleaning', context: 'تنظيف بعد النقل', priority: 7 },
+        { slug: 'sanitization', context: 'تعقيم', priority: 8 },
+        { slug: 'air-conditioner-cleaning', context: 'فك وتركيب مكيفات', priority: 9 },
     ],
 };

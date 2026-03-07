@@ -85,7 +85,6 @@ export const override: PageOverride = {
             expert: 'أ.د. عبدالله المسند',
             quote: 'الجلسات الأرضية في الرياض = أقل مستوى في الغرفة = أعلى تراكم غبار. بخار 150°م يستخرج الغبار ويجف خلال 30 دقيقة — ميزة مناخ الرياض الجاف',
             source: 'أستاذ جغرافيا المناخ',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -112,14 +111,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'riyadh-sofa-cleaning', context: 'كنب المجلس', priority: 1 },
-        { slug: 'riyadh-carpet-cleaning', context: 'سجاد المجلس', priority: 2 },
-        { slug: 'riyadh-steam-cleaning', context: 'بخار شامل للمجلس', priority: 3 },
-        { slug: 'riyadh-sanitization', context: 'تعقيم بعد التجمعات', priority: 4 },
-        { slug: 'riyadh-cleaning', context: 'تنظيف شامل مع المجلس', priority: 5 },
-        { slug: 'riyadh-air-conditioner-cleaning', context: 'مكيف المجلس', priority: 6 },
-        { slug: 'riyadh-mattress-cleaning', context: 'مساند المجلس الأرضي', priority: 7 },
-        { slug: 'riyadh-pest-control', context: 'رش وقائي', priority: 8 },
-        { slug: 'riyadh-floor-polishing', context: 'أرضية المجلس', priority: 9 },
+        { slug: 'sofa-cleaning', context: 'كنب المجلس', priority: 1 },
+        { slug: 'carpet-cleaning', context: 'سجاد المجلس', priority: 2 },
+        { slug: 'steam-cleaning', context: 'بخار شامل للمجلس', priority: 3 },
+        { slug: 'sanitization', context: 'تعقيم بعد التجمعات', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف شامل مع المجلس', priority: 5 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف المجلس', priority: 6 },
+        { slug: 'mattress-cleaning', context: 'مساند المجلس الأرضي', priority: 7 },
+        { slug: 'pest-control', context: 'رش وقائي', priority: 8 },
+        { slug: 'floor-polishing', context: 'أرضية المجلس', priority: 9 },
     ],
 };

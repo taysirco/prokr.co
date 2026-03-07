@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف مكاتب بالخرج — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-kharj/office-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف مكاتب بالخرج — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف مكاتب بالخرج. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف مكاتب بالخرج — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف مكاتب بالخرج', 'تنظيف مكاتب الخرج', 'شركة تنظيف مكاتب بالخرج', 'أفضل تنظيف مكاتب بالخرج'],
+        title: 'تنظيف مكاتب بالخرج — NH₃ مزارع رائحة+CaCO₃ كلس+SiO₂ — AC+Descaler! (2026)',
+        description: 'تنظيف مكاتب الخرج. NH₃ مزارع ألبان رائحة! CaCO₃ 450ppm كلس حمامات. SiO₂ خدش أثاث. HEPA AC+Descaler+Microfiber.',
+        h1: 'تنظيف مكاتب بالخرج — NH₃ مزارع — لا عفن!',
+        keywords: ['تنظيف مكاتب الخرج', 'تنظيف مكاتب بالخرج', 'شركة تنظيف مكاتب الخرج'],
     },
-
     content: {
-        introduction: 'تنظيف مكاتب بالخرج — خدمة متخصصة تراعي الظروف المناخية والبيئية في الخرج. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف مكاتب بالخرج: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف مكاتب بالخرج. خدمة احترافية. ضمان.',
+        introduction: 'مكاتب الخرج تواجه بيئة زراعية! NH₃ رائحة مكاتب: مزارع ألبان/دواجن ← أمونيا تدخل المبنى من المكيف ← رائحة غير مهنية في بيئة العمل. HEPA Activated Carbon في المكيف+فلتر. CaCO₃ حمامات المكتب: 450ppm = كلس يتراكم ← عملاء يرون كلس = انطباع سيء. Descaler أسبوعي. SiO₂ أثاث مكتبي: غبار رمل يخدش المكاتب والطاولات الزجاجية ← Microfiber يومي. ΔT 48°م: مكيف يعمل بأقصى طاقة ← غبار أكثر من مرشح المكيف ← تنظيف فلتر شهري. 15-25% = لا عفن! بيئة عمل صحية = إنتاجية أعلى. مقارنة: خميس = عفن+عث = حساسية موظفين. الخرج = NH₃+كلس لكن لا عفن = أصح.',
+        shortAnswer: 'على عكس [التنظيف العادي بدون AC الذي يترك NH₃]، يعتمد بروتوكولنا في خدمة [تنظيف المكاتب] بمدينة [الخرج] على [HEPA AC+Descaler+Microfiber+فلتر مكيف]. ففي ظل [NH₃ رائحة+CaCO₃ كلس+SiO₂ خدش+ΔT غبار مكيف]، تتفاقم ظاهرة [رائحة غير مهنية+كلس+خدش]. لذا؛ يتدخل فريقنا عبر [AC ← Descaler ← Microfiber ← فلتر] — ميزة: لا عفن!',
+        heroSubtitle: 'NH₃ رائحة + CaCO₃ كلس + SiO₂ — لا عفن! بيئة عمل صحية!',
     },
-
     pricing: [
-        { type: 'تنظيف مكاتب — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف مكاتب — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'مكتب صغير (< 100 م²)', unit: 'مكتب', minPrice: 120, maxPrice: 250, time: '2-3 ساعات' },
+        { type: 'مكتب كبير (100+ م²)', unit: 'مكتب', minPrice: 250, maxPrice: 500, time: '4-6 ساعات' },
+        { type: 'يومي (5 أيام/أسبوع)', unit: 'شهر', minPrice: 700, maxPrice: 1200, time: '20 زيارة' },
+        { type: '3 أيام/أسبوع', unit: 'شهر', minPrice: 420, maxPrice: 700, time: '12 زيارة' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف مكاتب بالخرج؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف مكاتب؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف مكاتب؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش مكتبنا بالخرج له رائحة غريبة؟', answer: 'NH₃ من مزارع. AC فلتر يمتص. معطر = مؤقت = غير مهني.' },
+        { question: 'كيف أمنع كلس حمام المكتب بالخرج؟', answer: 'CaCO₃ 450ppm. Descaler أسبوعي يمنع التراكم. شهري = يتصلّب.' },
+        { question: 'كم تكلفة تنظيف مكتب بالخرج مقارنة بخميس؟', answer: 'أرخص 25-30% — لا Anti-Fungal+Anti-Mite = أبسط وأسرع.' },
+        { question: 'هل عفن بمكاتب الخرج؟', answer: 'لا! 15-25% = لا عفن. بيئة صحية. خميس: عفن = حساسية موظفين.' },
+        { question: 'كم مرة تنظيف مكتب بالخرج؟', answer: 'يومي أفضل — NH₃+SiO₂ يومي. كحد أدنى: 3 أيام/أسبوع.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'HEPA AC فلتر — NH₃ رائحة غير مهنية.',
+        'Descaler أسبوعي — CaCO₃ حمام.',
+        'Microfiber يومي — SiO₂ مكاتب.',
+        'فلتر مكيف شهري — ΔT غبار أكثر.',
+        'لا عفن! — بيئة عمل صحية.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'NH₃ + مكيف بدون فلتر = رائحة غير مهنية — عملاء يلاحظون.',
+        'CaCO₃ + حمام مكتب = انطباع سيء — Descaler أسبوعي.',
+        'SiO₂ + مسح قطن = خدش مكاتب زجاجية — Microfiber.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
+        { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMISNID.name, quote: 'مكاتب الخرج: NH₃ رائحة غير مهنية. AC فلتر. ميزة: لا عفن = صحة موظفين.', source: 'جغرافيا المناخ — مكاتب' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف مكاتب مرخص', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'HEPA AC Filter', use: 'NH₃ — رائحة غير مهنية' },
+        { name: 'Descaler', use: 'CaCO₃ — حمام مكتب' },
+        { name: 'Microfiber', use: 'SiO₂ — مكاتب زجاجية' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'معطر يكفي.', solution: 'NH₃ يتراكم. AC يمتص = فرق.' },
+        { fear: 'يومي غالي.', solution: 'NH₃+SiO₂ يومي. رائحة = عملاء يخسرون.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'مرتين بالأسبوع.', truth: 'NH₃+SiO₂ يومي. يومي أو 3 أيام.' },
+        { myth: 'مثل الرياض.', truth: 'NH₃+CaCO₃ = خطوات إضافية.' },
     ],
-
     relatedServices: [
-        { slug: 'al-kharj-furniture-moving', context: 'نقل عفش بالخرج', priority: 1 },
-        { slug: 'al-kharj-furniture-storage', context: 'تخزين عفش بالخرج', priority: 2 },
-        { slug: 'al-kharj-dyna', context: 'دينا نقل بالخرج', priority: 3 },
-        { slug: 'al-kharj-moving-out', context: 'نقل عفش خروج بالخرج', priority: 4 },
-        { slug: 'al-kharj-dabab', context: 'دباب نقل بالخرج', priority: 5 },
-        { slug: 'al-kharj-cleaning', context: 'تنظيف منازل بالخرج', priority: 6 },
-        { slug: 'al-kharj-tanks-cleaning', context: 'تنظيف خزانات بالخرج', priority: 7 },
-        { slug: 'al-kharj-sofa-cleaning', context: 'تنظيف كنب بالخرج', priority: 8 },
-        { slug: 'al-kharj-carpet-cleaning', context: 'تنظيف سجاد بالخرج', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 1 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات', priority: 2 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 3 },
+        { slug: 'marble-polishing', context: 'رخام', priority: 4 },
+        { slug: 'carpet-cleaning', context: 'سجاد', priority: 5 },
+        { slug: 'hourly-cleaning', context: 'بالساعة', priority: 6 },
+        { slug: 'pest-control', context: 'حشرات', priority: 7 },
     ],
 };

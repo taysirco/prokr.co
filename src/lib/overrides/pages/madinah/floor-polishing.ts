@@ -64,19 +64,13 @@ export const override: PageOverride = {
         { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'اشتراطات نظافة وصيانة الفنادق والمباني التجارية', acronym: 'أمانة المدينة' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
             expert: 'م. ماجد المحيميد',
             quote: 'أرضيات الرخام في المدينة المنورة تحتاج جلياً أكثر تكراراً من أي مدينة سعودية — الغبار البازلتي أصلب من الرخام ويخدشه بالمشي اليومي. الجلي الميكانيكي بالتدرج الماسي + التلميع الكريستالي = الحل الوحيد لاستعادة اللمعان',
             source: 'خبير جودة البناء والتشطيبات',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
 
@@ -100,9 +94,9 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'madinah-marble-polishing', context: 'تلميع رخام متخصص — نفس الخدمة بتفصيل أكبر', priority: 1 },
-        { slug: 'madinah-cleaning', context: 'تنظيف شامل يُكمل جلي الأرضيات', priority: 2 },
-        { slug: 'madinah-glass-facades-cleaning', context: 'واجهات لامعة + أرضيات لامعة = مبنى متكامل', priority: 3 },
-        { slug: 'madinah-steam-cleaning', context: 'تنظيف بالبخار للكنب والسجاد بعد جلي الأرضيات', priority: 4 },
+        { slug: 'marble-polishing', context: 'تلميع رخام متخصص — نفس الخدمة بتفصيل أكبر', priority: 1 },
+        { slug: 'cleaning', context: 'تنظيف شامل يُكمل جلي الأرضيات', priority: 2 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات لامعة + أرضيات لامعة = مبنى متكامل', priority: 3 },
+        { slug: 'steam-cleaning', context: 'تنظيف بالبخار للكنب والسجاد بعد جلي الأرضيات', priority: 4 },
     ],
 };

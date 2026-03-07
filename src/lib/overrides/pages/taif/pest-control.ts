@@ -1,8 +1,3 @@
-// ══════════════════════════════════════════════════════════════
-// مكافحة حشرات بالطائف — Override (E-E-A-T Grade)
-// خريطة 2.4: الخضيري → SFDA + بلدي + وقاء
-// على ارتفاع 1,800م: نشاط حشري موسمي مختلف جذرياً عن المدن الحارة
-// ══════════════════════════════════════════════════════════════
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -41,12 +36,17 @@ export const override: PageOverride = {
         'رش مرة واحدة بالسنة في الطائف = غير كافٍ. النشاط الحشري 9 أشهر يحتاج 3-4 جولات رش موسمية.',
     ],
     trustAnchors: [
-        { ...GOV.SFDA, role: 'تسجيل واعتماد المبيدات الحشرية المسموح استخدامها' },
-        { ...GOV.BALADI, role: 'ترخيص شركات مكافحة الحشرات — الشهادة الصحية' },
-        { ...GOV.WEQAA, role: 'المرجع الوطني لمكافحة الآفات والإرشادات الفنية' },
-    ],
-    expertReviewer: { name: EXPERTS.ALKHODAIRY.name, title: EXPERTS.ALKHODAIRY.title, credential: EXPERTS.ALKHODAIRY.credential, profileUrl: EXPERTS.ALKHODAIRY.profileUrl },
-    expertCitations: [{ expert: EXPERTS.ALKHODAIRY.name, quote: 'مناخ الطائف المعتدل (25-33°م صيفاً) هو "الدرجة المثالية" لتكاثر الصراصير والنمل. المكافحة هنا تحتاج تفكيراً موسمياً: وقاية في الشتاء البارد + هجوم مكثف في ربيع وصيف النشاط.', source: EXPERTS.ALKHODAIRY.title, url: EXPERTS.ALKHODAIRY.profileUrl }],
+
+        { ...{ ...GOV.SFDA, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
+ role: 'تسجيل واعتماد المبيدات الحشرية المسموح استخدامها' },
+        { ...{ ...GOV.BALADI, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
+ role: 'ترخيص شركات مكافحة الحشرات — الشهادة الصحية' },
+        { ...{ ...GOV.WEQAA, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
+ role: 'المرجع الوطني لمكافحة الآفات والإرشادات الفنية' },
+        ],
+    expertReviewer: EXPERTS.ALKHODAIRY,
+    expertCitations: [{ expert: EXPERTS.ALKHODAIRY.name, quote: 'مناخ الطائف المعتدل (25-33°م صيفاً) هو "الدرجة المثالية" لتكاثر الصراصير والنمل. المكافحة هنا تحتاج تفكيراً موسمياً: وقاية في الشتاء البارد + هجوم مكثف في ربيع وصيف النشاط.',
+            source: EXPERTS.ALKHODAIRY.title }],
     saudiRegulations: [REGULATIONS.GHAD_SYSTEM, REGULATIONS.BALADI_HEALTH],
     verificationBadges: [{ badge: '✔️ مبيدات مسجلة SFDA', authority: 'هيئة الغذاء والدواء', icon: 'shield-check' }, { badge: '✔️ شركة مرخصة بلدي', authority: 'وزارة البلديات', icon: 'badge-check' }],
     equipment: [
@@ -54,13 +54,18 @@ export const override: PageOverride = {
         { name: 'مبيدات Micro-Encapsulated مغلفة', use: 'كبسولات دقيقة تُطلق المادة الفعالة ببطء ← فعالية 2-3 أشهر — مناسبة لموسم الطائف الطويل (9 أشهر).' },
         { name: 'معدات حقن تربة (Soil Injection Rig)', use: 'تحقن مبيد النمل الأبيض في التربة حول الأساسات ← حاجز كيميائي طويل الأمد.' },
     ],
-    hiddenObjections: [{ fear: 'الطائف مناخها بارد — ما فيها حشرات كثير.', solution: '25-33°م صيفاً = "الحرارة المثالية" للحشرات (أكثر من 48°م الرياض). + بساتين ورد وفاكهة = طعام. الطائف من أكثر مدن المملكة نشاطاً حشرياً في الصيف لأن الحشرات "مرتاحة" في المناخ المعتدل.' }],
+    hiddenObjections: [
+        { fear: 'الطائف مناخها بارد — ما فيها حشرات كثير.', solution: '25-33°م صيفاً = "الحرارة المثالية" للحشرات (أكثر من 48°م الرياض). + بساتين ورد وفاكهة = طعام. الطائف من أكثر مدن المملكة نشاطاً حشرياً في الصيف لأن الحشرات "مرتاحة" في المناخ المعتدل.' },
+        { fear: 'الخدمة أغلى من المدن الأخرى.', solution: 'مناخ الطائف يفرض معالجات إضافية (مضاد تكثف + تجفيف + حماية أخشاب ورود). التكلفة الإضافية استثمار يحمي ممتلكاتك من تلف الرطوبة والحشرات الموسمية.' },
+    ],
     counterNarratives: [{ myth: 'البيت في الطائف مناخه بارد — ما يحتاج مكافحة.', truth: 'الشتاء البارد يدفع الحشرات داخل بيتك (تبحث عن دفء). والصيف المعتدل = تكاثر مكثف في الحديقة ← تدخل من الفتحات. "البارد" لا يعني "خالي من الحشرات" — يعني "أنماط مختلفة".' }],
     relatedServices: [
-        { slug: 'taif-pesticide-spraying', context: 'رش مبيدات تفصيلي — البروتوكول الكامل.', priority: 1 },
-        { slug: 'taif-termite-control', context: 'نمل أبيض — تربة الطائف الرطبة شتاءً تجذبه.', priority: 2 },
-        { slug: 'taif-bedbugs-control', context: 'بق فراش — إيجارات سياحية الصيف تنقله.', priority: 3 },
-        { slug: 'taif-cleaning', context: 'تنظيف + رش = حماية متكاملة.', priority: 4 },
-        { slug: 'taif-bird-control', context: 'طرد حمام — فضلاته تجذب الحشرات.', priority: 5 },
+        { slug: 'pesticide-spraying', context: 'رش مبيدات تفصيلي — البروتوكول الكامل.', priority: 1 },
+        { slug: 'termite-control', context: 'نمل أبيض — تربة الطائف الرطبة شتاءً تجذبه.', priority: 2 },
+        { slug: 'bedbugs-control', context: 'بق فراش — إيجارات سياحية الصيف تنقله.', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف + رش = حماية متكاملة.', priority: 4 },
+        { slug: 'bird-control', context: 'طرد حمام — فضلاته تجذب الحشرات.', priority: 5 },
+        { slug: 'air-conditioner-cleaning', context: 'تنظيف مكيفات تعمل تبريد/تدفئة طوال السنة في مناخ الطائف المتقلب.', priority: 5 },
+        { slug: 'pest-control', context: 'مكافحة حشرات تتكاثر في رطوبة الطائف الشتوية والزراعة المحيطة.', priority: 6 },
     ],
 };

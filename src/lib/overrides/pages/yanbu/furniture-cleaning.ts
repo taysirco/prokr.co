@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف أثاث بينبع — Override مخصص (E-E-A-T Grade)
-// صفحة: /yanbu/furniture-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف أثاث بينبع — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف أثاث بينبع. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف أثاث بينبع — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف أثاث بينبع', 'تنظيف أثاث ينبع', 'شركة تنظيف أثاث بينبع', 'أفضل تنظيف أثاث بينبع'],
+        title: 'تنظيف أثاث بينبع — NaCl صدأ معدن+SOx حمض+70-85% عفن خشب — Anti-Rust+Anti-Fungal! (2026)',
+        description: 'تنظيف أثاث ينبع. NaCl صدأ معدن! SOx حمض. 70-85% عفن خشب. Anti-Rust+Anti-Fungal+RO+Dehumidifier.',
+        h1: 'تنظيف أثاث بينبع — صدأ+حمض+عفن!',
+        keywords: ['تنظيف أثاث ينبع', 'تنظيف أثاث بينبع', 'شركة تنظيف أثاث ينبع'],
     },
-
     content: {
-        introduction: 'تنظيف أثاث بينبع — خدمة متخصصة تراعي الظروف المناخية والبيئية في ينبع. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف أثاث بينبع: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف أثاث بينبع. خدمة احترافية. ضمان.',
+        introduction: 'أثاث ينبع = NaCl يصدئ المعدن ويُعفّن الخشب! NaCl صدأ: ملح البحر يتراكم على الأجزاء المعدنية (مفصلات، براغي، أرجل) ← Pitting 48h. Anti-Rust. SOx H₂SO₄: حمض يتآكل الأسطح المعدنية والخشبية. Anti-Corrosion. 70-85% عفن خشب: رطوبة بحرية = عفن أسود داخل الخشب أسبوعين! Anti-Fungal Wood Treatment. NaCl أقمشة: ملح يتبلور في أقمشة الأثاث ← يُخشّن. RO Extraction. SiO₂+NaCl: خدش أسطح الخشب. Pre-Rinse. مقارنة: بريدة = Nafud+CaCO₃+ΔT خشب يتشقق لكن لا عفن. ينبع = صدأ+عفن = أعقد.',
+        shortAnswer: 'على عكس [التنظيف بدون Anti-Rust+Anti-Fungal]، يعتمد بروتوكولنا في خدمة [تنظيف الأثاث] بمدينة [ينبع] على [Anti-Rust+Anti-Fungal+RO+Dehumidifier]. ففي ظل [NaCl صدأ+SOx حمض+70-85% عفن خشب+SiO₂]، تتفاقم ظاهرة [صدأ+حمض+عفن+خدش]. لذا؛ يتدخل فريقنا عبر [Anti-Rust ← Anti-Fungal ← RO ← Dehumidifier].',
+        heroSubtitle: 'NaCl صدأ + SOx حمض + 70-85% عفن — Anti-Rust+Anti-Fungal!',
     },
-
     pricing: [
-        { type: 'تنظيف أثاث — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف أثاث — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'غرفة نوم', unit: 'غرفة', minPrice: 120, maxPrice: 250, time: '1-2h' },
+        { type: 'صالة كاملة', unit: 'صالة', minPrice: 180, maxPrice: 370, time: '2-3h' },
+        { type: '+ Anti-Rust كامل', unit: 'إضافي', minPrice: 100, maxPrice: 200, time: '+ 1h' },
+        { type: 'نصف سنوي (2 زيارة)', unit: 'سنة', minPrice: 300, maxPrice: 600, time: '2 زيارة' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف أثاث بينبع؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف أثاث؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف أثاث؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش أثاث ينبع يصدأ؟', answer: 'NaCl 41‰ على مفصلات+براغي+أرجل. Pitting 48h. Anti-Rust.' },
+        { question: 'ليش الخشب يتعفّن سريع بينبع؟', answer: '70-85% = عفن أسود داخل الخشب أسبوعين. Anti-Fungal Wood.' },
+        { question: 'كم تكلفة أثاث بينبع مقابل بريدة؟', answer: 'أغلى 25-30% — Anti-Rust+Anti-Fungal. بريدة: لا صدأ+لا عفن.' },
+        { question: 'هل SOx يتلف الأثاث بينبع؟', answer: 'H₂SO₄ يتآكل خشب+معدن. Anti-Corrosion.' },
+        { question: 'هل أقمشة الأثاث تتملّح بينبع؟', answer: 'NaCl يتبلور في الأقمشة = يُخشّن. RO Extraction.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Anti-Rust كل 6 أشهر — NaCl.',
+        'Anti-Fungal Wood — 70-85% عفن.',
+        'RO Extraction أقمشة — NaCl.',
+        'Pre-Rinse — SiO₂+NaCl خدش.',
+        'Dehumidifier — رطوبة خشب.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'NaCl × مفصلات × سنة = صدأ = أثاث يتفكك — Anti-Rust.',
+        '70-85% + خشب بدون Anti-Fungal = عفن أسود ← صحة YMYL.',
+        'SOx × خشب × 6 أشهر = تآكل — Anti-Corrosion.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
+        { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'اشتراطات أمانة ينبع' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMISNID.name, quote: 'أثاث ينبع: NaCl صدأ+عفن خشب. Anti-Rust+Anti-Fungal.', source: 'جغرافيا المناخ — أثاث ساحلي' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف أثاث مرخص', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Anti-Rust Coating', use: 'NaCl — مفصلات+براغي' },
+        { name: 'Anti-Fungal Wood', use: '70-85% — عفن خشب' },
+        { name: 'RO Extraction', use: 'NaCl — أقمشة' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'تنظيف عادي.', solution: 'NaCl+عفن = Anti-Rust+Anti-Fungal.' },
+        { fear: 'مثل بريدة.', solution: 'صدأ+عفن = مختلف تماماً.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'سنوي.', truth: 'NaCl = نصف سنوي Anti-Rust.' },
+        { myth: 'تنظيف يكفي.', truth: 'Anti-Rust+Anti-Fungal إضافي.' },
     ],
-
     relatedServices: [
-        { slug: 'yanbu-furniture-moving', context: 'نقل عفش بينبع', priority: 1 },
-        { slug: 'yanbu-furniture-storage', context: 'تخزين عفش بينبع', priority: 2 },
-        { slug: 'yanbu-dyna', context: 'دينا نقل بينبع', priority: 3 },
-        { slug: 'yanbu-moving-out', context: 'نقل عفش خروج بينبع', priority: 4 },
-        { slug: 'yanbu-dabab', context: 'دباب نقل بينبع', priority: 5 },
-        { slug: 'yanbu-cleaning', context: 'تنظيف منازل بينبع', priority: 6 },
-        { slug: 'yanbu-tanks-cleaning', context: 'تنظيف خزانات بينبع', priority: 7 },
-        { slug: 'yanbu-sofa-cleaning', context: 'تنظيف كنب بينبع', priority: 8 },
-        { slug: 'yanbu-carpet-cleaning', context: 'تنظيف سجاد بينبع', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 1 },
+        { slug: 'sofa-cleaning', context: 'كنب', priority: 2 },
+        { slug: 'carpet-cleaning', context: 'سجاد', priority: 3 },
+        { slug: 'furniture-moving', context: 'نقل', priority: 4 },
+        { slug: 'furniture-storage', context: 'تخزين', priority: 5 },
+        { slug: 'pest-control', context: 'حشرات', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 7 },
     ],
 };

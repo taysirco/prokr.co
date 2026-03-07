@@ -1,94 +1,77 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف منازل بحفر الباطن — Override مخصص (E-E-A-T Grade)
-// صفحة: /hafr-albatin/cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف منازل بحفر الباطن — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف منازل بحفر الباطن. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف منازل بحفر الباطن — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف منازل بحفر الباطن', 'تنظيف منازل حفر الباطن', 'شركة تنظيف منازل بحفر الباطن', 'أفضل تنظيف منازل بحفر الباطن'],
+        title: 'تنظيف منازل بحفر الباطن — بروتوكول قاري: HEPA + Anti-Static + ختم ΔT + لا عفن (2026)',
+        description: 'تنظيف منازل حفر الباطن. SiO₂ عواصف 2-4/شهر. ΔT 54°م شقوق. 10-15% كهرباء ساكنة. لا عفن = ميزة! HEPA ← Anti-Static ← ختم ← غسل.',
+        h1: 'تنظيف منازل بحفر الباطن — بروتوكول قاري: 4 خطوات صحراوية',
+        keywords: ['تنظيف منازل حفر الباطن', 'تنظيف بيت حفر الباطن', 'شركة تنظيف منازل حفر الباطن'],
     },
-
     content: {
-        introduction: 'تنظيف منازل بحفر الباطن — خدمة متخصصة تراعي الظروف المناخية والبيئية في حفر الباطن. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف منازل بحفر الباطن: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف منازل بحفر الباطن. خدمة احترافية. ضمان.',
+        introduction: 'المنزل في حفر الباطن يتسخ بطريقة قارية مختلفة تماماً عن الشرقية. الخطوة 1 — HEPA شفط: SiO₂ عواصف يومي. المكنسة العادية = تنقله. HEPA = تحجزه (99.97%). الخطوة 2 — Anti-Static: 10-15% = SiO₂ يلتصق بكهرباء ساكنة. Anti-Static يُفرّغ الشحنة ← SiO₂ يُرفع. الخطوة 3 — ختم ΔT: 52°م/‑2°م = Micro-Cracks حول النوافذ = SiO₂ يدخل 30-50% أكثر. سيليكون يختم. الخطوة 4 — غسل: ماء حفر الباطن = عسر (CaCO₃). منظف مُعادل + غسل. الميزة — لا عفن!: 10-15% = صفر Aspergillus. لا Anti-Fungal. أنظف بيئة في المملكة. لكن: SiO₂ PM10.',
+        shortAnswer: 'على عكس [ممسحة عادية] التي تنقل SiO₂ بكهرباء ساكنة، يعتمد بروتوكولنا في خدمة [تنظيف المنازل] بمدينة [حفر الباطن] على [HEPA ← Anti-Static ← ختم ← غسل]. ففي ظل [SiO₂ + ΔT 54°م + 10-15%]، تتفاقم ظاهرة [رمل + شقوق + كهرباء]. لذا؛ يتدخل خبراؤنا عبر [بروتوكول قاري].',
+        heroSubtitle: 'HEPA ← Anti-Static ← ختم ΔT ← غسل + لا عفن (ميزة!)',
     },
-
     pricing: [
-        { type: 'تنظيف منازل — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف منازل — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'شقة — بروتوكول قاري', unit: 'شقة', minPrice: 180, maxPrice: 360, time: '2-4 ساعات' },
+        { type: 'منزل/فيلا صغيرة', unit: 'منزل', minPrice: 320, maxPrice: 630, time: '4-6 ساعات' },
+        { type: 'بعد عاصفة — طوارئ', unit: 'وحدة', minPrice: 230, maxPrice: 440, time: '3-5 ساعات' },
+        { type: 'عقد أسبوعي', unit: 'شهر', minPrice: 310, maxPrice: 620, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف منازل بحفر الباطن؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف منازل؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف منازل؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'HEPA — ليش مو مكنسة عادية؟', answer: 'مكنسة = تنقل SiO₂ للهواء ← تستنشقه. HEPA = تحجز 99.97% من SiO₂ < 0.3 ميكرون. في حفر الباطن: SiO₂ أكثف = HEPA أهم.' },
+        { question: 'كهرباء ساكنة — حقيقية؟', answer: '10-15% = أجف هواء في المملكة. SiO₂ + جفاف = شحنة. تمشي = صدمة. SiO₂ يلتصق. Anti-Static = يُفرّغ.' },
+        { question: 'لا عفن — أنظف من الشرقية؟', answer: 'بيئياً: أنظف هواء (لا عفن). لكن: SiO₂ PM10 = تنفسي. تحدٍ مختلف — ليس أقل.' },
+        { question: 'ماء عسر — فرق؟', answer: 'CaCO₃ = بقع بيضاء بعد الجفاف. منظف مُعادل أو ماء مُفلتر.' },
+        { question: 'أسبوعي — ليش؟', answer: 'عواصف 2-4/شهر + SiO₂ يومي + كهرباء ساكنة. أسبوعي = يمنع التراكم.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'HEPA أولاً — يحجز SiO₂ بدلاً من نقله.',
+        'Anti-Static ثانياً — يُفرّغ شحنة ← SiO₂ يُرفع.',
+        'ختم سيليكون ΔT سنوي — يمنع 30-50% SiO₂ إضافي.',
+        '10-15% = يجف فوراً — غسل بلا خطر عفن (ميزة!).',
+        'بعد عاصفة = HEPA فوري — التراكم يبدأ فوراً.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'مكنسة بدون HEPA = SiO₂ PM10 في الهواء = تنفسي.',
+        'ΔT شقوق بدون ختم = SiO₂ 30-50% إضافي.',
+        'كهرباء ساكنة + SiO₂ = يلتصق بإلكترونيات + أسطح.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص التنظيف' },
+        { entity: AMANA.HAFR.entity, url: AMANA.HAFR.url, role: 'اشتراطات النظافة بحفر الباطن' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMISNID.name, quote: 'منزل حفر الباطن: HEPA ← Anti-Static ← ختم ΔT ← غسل. 4 خطوات قارية. لا عفن (ميزة!). التحدي = SiO₂ PM10.', source: 'جغرافيا المناخ — التنظيف القاري' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
     verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
+        { badge: '✔️ تنظيف مرخص', authority: 'منصة بلدي', icon: 'shield-check' },
+        { badge: '✔️ بروتوكول قاري', authority: 'معتمد داخلياً', icon: 'badge-check' },
     ],
-
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'HEPA Vacuum', use: 'يحجز SiO₂ 99.97% — الخطوة 1' },
+        { name: 'Anti-Static Spray', use: 'يُفرّغ شحنة — الخطوة 2' },
+        { name: 'سيليكون ختم', use: 'شقوق ΔT — الخطوة 3' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'لا عفن = سهل.', solution: 'SiO₂ PM10 + كهرباء ساكنة + ΔT شقوق = 3 تحديات.' },
+        { fear: 'ممسحة.', solution: 'تنقل SiO₂ بكهرباء ساكنة. HEPA + Anti-Static = الحل.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'مثل الرياض.', truth: 'ΔT 54°م > 35°م. عواصف أكثف. -2°م شتاء.' },
+        { myth: 'جاف = نظيف.', truth: 'جاف = كهرباء ساكنة = SiO₂ يلتصق.' },
+        { myth: 'شهري.', truth: 'عواصف 2-4/شهر. أسبوعي.' },
     ],
-
     relatedServices: [
-        { slug: 'hafr-albatin-furniture-moving', context: 'نقل عفش بحفر الباطن', priority: 1 },
-        { slug: 'hafr-albatin-furniture-storage', context: 'تخزين عفش بحفر الباطن', priority: 2 },
-        { slug: 'hafr-albatin-dyna', context: 'دينا نقل بحفر الباطن', priority: 3 },
-        { slug: 'hafr-albatin-moving-out', context: 'نقل عفش خروج بحفر الباطن', priority: 4 },
-        { slug: 'hafr-albatin-dabab', context: 'دباب نقل بحفر الباطن', priority: 5 },
-        { slug: 'hafr-albatin-tanks-cleaning', context: 'تنظيف خزانات بحفر الباطن', priority: 6 },
-        { slug: 'hafr-albatin-sofa-cleaning', context: 'تنظيف كنب بحفر الباطن', priority: 7 },
-        { slug: 'hafr-albatin-carpet-cleaning', context: 'تنظيف سجاد بحفر الباطن', priority: 8 },
-        { slug: 'hafr-albatin-steam-cleaning', context: 'تنظيف بالبخار بحفر الباطن', priority: 9 },
+        { slug: 'apartments-cleaning', context: 'شقق — SiO₂', priority: 1 },
+        { slug: 'carpet-cleaning', context: 'سجاد — SiO₂', priority: 2 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف — ΔT', priority: 3 },
+        { slug: 'steam-cleaning', context: 'بخار — تعقيم', priority: 4 },
+        { slug: 'pest-control', context: 'حشرات — عقارب', priority: 5 },
+        { slug: 'marble-polishing', context: 'رخام — SiO₂', priority: 6 },
+        { slug: 'villas-cleaning', context: 'فلل — عواصف', priority: 7 },
     ],
 };

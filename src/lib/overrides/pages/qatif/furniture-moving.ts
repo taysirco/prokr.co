@@ -1,94 +1,71 @@
-// ══════════════════════════════════════════════════════════════
-// نقل عفش بالقطيف — Override مخصص (E-E-A-T Grade)
-// صفحة: /qatif/furniture-moving
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'نقل عفش بالقطيف — خدمة احترافية معتمدة (2026)',
-        description: 'نقل عفش بالقطيف. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'نقل عفش بالقطيف — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['نقل عفش بالقطيف', 'نقل عفش القطيف', 'شركة نقل عفش بالقطيف', 'أفضل نقل عفش بالقطيف'],
+        title: 'نقل أثاث بالقطيف — NaCl ترانزيت + 80-95% تكثّف + طين طرق + أزقة تاريخية (2026)',
+        description: 'نقل أثاث القطيف. NaCl ترانزيت. 80-95% تكثّف. طين طرق زراعية. أزقة تاريخية ضيقة. VCI + Silica + فريق أزقة.',
+        h1: 'نقل أثاث بالقطيف — ملح وتكثّف وطين وأزقة تاريخ',
+        keywords: ['نقل أثاث القطيف', 'نقل عفش بالقطيف', 'شركة نقل أثاث بالقطيف'],
     },
-
     content: {
-        introduction: 'نقل عفش بالقطيف — خدمة متخصصة تراعي الظروف المناخية والبيئية في القطيف. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'نقل عفش بالقطيف: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'نقل عفش بالقطيف. خدمة احترافية. ضمان.',
+        introduction: 'نقل أثاث القطيف = ساحلي-واحي + طابع تاريخي. الأول — NaCl ترانزيت: أثناء النقل = رذاذ ملحي. VCI لمعادن. الثاني — 80-95% تكثّف: إلكترونيات = Short Circuit. Silica Gel. الثالث — طين: طرق زراعية = طين. حماية. الرابع — أزقة تاريخية: ميزة+تحدي. ميزة: نعرف كل زقاق. تحدي: شاحنة كبيرة لا تدخل = فك+نقل يدوي.',
+        shortAnswer: 'على عكس [نقل عادي] بدون حماية NaCl ولا Silica، يعتمد بروتوكولنا في خدمة [نقل الأثاث] بمدينة [القطيف] على [VCI + Silica + فريق أزقة]. ففي ظل [NaCl + 80-95% + طين + أزقة]، تتفاقم ظاهرة [تآكل + تكثّف + التصاق + ضيق]. لذا؛ يتدخل خبراؤنا عبر [نقل ساحلي-واحي + فريق أزقة].',
+        heroSubtitle: 'NaCl ترانزيت + 80-95% تكثّف + طين + أزقة تاريخية',
     },
-
     pricing: [
-        { type: 'نقل عفش — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'نقل عفش — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'نقل داخل القطيف', unit: 'رحلة', minPrice: 320, maxPrice: 700, time: '3-5 ساعات' },
+        { type: 'القطيف ← الدمام (30 كم)', unit: 'رحلة', minPrice: 750, maxPrice: 1800, time: '3-5 ساعات' },
+        { type: 'القطيف ← الرياض (400 كم)', unit: 'رحلة', minPrice: 2000, maxPrice: 5000, time: '8-14 ساعة' },
+        { type: 'أزقة تاريخية (يدوي)', unit: 'خدمة', minPrice: 400, maxPrice: 900, time: '4-7 ساعات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة نقل عفش بالقطيف؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق نقل عفش؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على نقل عفش؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'أزقة تاريخية — كيف؟', answer: 'فك ← نقل يدوي عبر أزقة ← دينا صغيرة خارج الحي ← نقل. فريق مُتخصص يعرف الأزقة.' },
+        { question: 'يدوي أغلى — كم؟', answer: 'أغلى 25-40% بسبب اليدوي. لكن: لا بديل في الأزقة التاريخية.' },
+        { question: 'VCI — ضروري؟', answer: 'NaCl + 80-95% = صدأ. VCI = 5-10 ريال/قطعة. بدون = صدأ.' },
+        { question: 'Silica — لإلكترونيات فقط؟', answer: 'لإلكترونيات أساساً. + أجهزة حساسة. 80-95% = تكثّف.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'فريق أزقة — يعرف كل ممر.',
+        'VCI لمعادن — NaCl.',
+        'Silica لإلكترونيات — 80-95%.',
+        'نقل صباحي — أقل حرارة+رطوبة.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'أزقة + شاحنة كبيرة = لا تدخل. يدوي.',
+        '80-95% + إلكترونيات بدون Silica = Short Circuit.',
+        'NaCl + حديد بدون VCI = صدأ أثناء النقل.',
     ],
-
     trustAnchors: [
-        { ...GOV.TGA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.TGA, role: 'ترخيص نقل الأثاث' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات النقل بالشرقية' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALZUWAYED.name,
-        title: EXPERTS.ALZUWAYED.title,
-        credential: EXPERTS.ALZUWAYED.credential,
-        profileUrl: EXPERTS.ALZUWAYED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALZUWAYED,
     expertCitations: [
-        {
-            expert: EXPERTS.ALZUWAYED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALZUWAYED.title,
-            url: EXPERTS.ALZUWAYED.profileUrl,
-        },
+        { expert: EXPERTS.ALZUWAYED.name, quote: 'نقل القطيف: أزقة تاريخية = فريق يدوي مُتخصص. NaCl+80-95%. VCI+Silica+معرفة الأزقة.', source: 'هيئة النقل — النقل في المدن التاريخية' },
     ],
-
     saudiRegulations: [REGULATIONS.TGA_LICENSE],
-
-    verificationBadges: [
-        { badge: '✔️ شركة نقل مرخصة من هيئة النقل TGA', authority: 'الهيئة العامة للنقل', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ نقل مرخص', authority: 'هيئة النقل', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'VCI', use: 'NaCl — حديد' },
+        { name: 'Silica Gel', use: '80-95% — إلكترونيات' },
+        { name: 'Stretch', use: 'NaCl+طين — حاجز' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'أزقة = مستحيل.', solution: 'فريق يدوي يعرف كل زقاق.' },
+        { fear: 'غالي.', solution: 'يدوي = 25-40% إضافي. بدون = لا بديل.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'شاحنة كبيرة.', truth: 'أزقة = يدوي + دينا صغيرة.' },
+        { myth: 'لا VCI.', truth: 'NaCl + 80-95%. صدأ.' },
     ],
-
     relatedServices: [
-        { slug: 'qatif-furniture-storage', context: 'تخزين عفش بالقطيف', priority: 1 },
-        { slug: 'qatif-dyna', context: 'دينا نقل بالقطيف', priority: 2 },
-        { slug: 'qatif-moving-out', context: 'نقل عفش خروج بالقطيف', priority: 3 },
-        { slug: 'qatif-dabab', context: 'دباب نقل بالقطيف', priority: 4 },
-        { slug: 'qatif-cleaning', context: 'تنظيف منازل بالقطيف', priority: 5 },
-        { slug: 'qatif-tanks-cleaning', context: 'تنظيف خزانات بالقطيف', priority: 6 },
-        { slug: 'qatif-sofa-cleaning', context: 'تنظيف كنب بالقطيف', priority: 7 },
-        { slug: 'qatif-carpet-cleaning', context: 'تنظيف سجاد بالقطيف', priority: 8 },
-        { slug: 'qatif-steam-cleaning', context: 'تنظيف بالبخار بالقطيف', priority: 9 },
+        { slug: 'furniture-cleaning', context: 'أثاث — بعد', priority: 1 },
+        { slug: 'furniture-storage', context: 'تخزين', priority: 2 },
+        { slug: 'dabab', context: 'دباب — أزقة', priority: 3 },
+        { slug: 'dyna', context: 'دينا', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 5 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 6 },
+        { slug: 'pest-control', context: 'حشرات', priority: 7 },
     ],
 };

@@ -1,94 +1,69 @@
-// ══════════════════════════════════════════════════════════════
-// دباب نقل بالقطيف — Override مخصص (E-E-A-T Grade)
-// صفحة: /qatif/dabab
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'دباب نقل بالقطيف — خدمة احترافية معتمدة (2026)',
-        description: 'دباب نقل بالقطيف. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'دباب نقل بالقطيف — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['دباب نقل بالقطيف', 'دباب نقل القطيف', 'شركة دباب نقل بالقطيف', 'أفضل دباب نقل بالقطيف'],
+        title: 'دباب نقل بالقطيف — NaCl تآكل + 80-95% تكثّف + طين لزج + أزقة تاريخية (2026)',
+        description: 'دباب نقل القطيف. NaCl تآكل. 80-95% تكثّف. طين لزج يلتصق. أزقة تاريخية ضيقة. Stretch + Silica Gel + VCI.',
+        h1: 'دباب نقل بالقطيف — ملح وتكثّف وطين وأزقة التاريخ',
+        keywords: ['دباب نقل القطيف', 'دباب نقل بالقطيف', 'شركة دباب نقل بالقطيف'],
     },
-
     content: {
-        introduction: 'دباب نقل بالقطيف — خدمة متخصصة تراعي الظروف المناخية والبيئية في القطيف. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'دباب نقل بالقطيف: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'دباب نقل بالقطيف. خدمة احترافية. ضمان.',
+        introduction: 'الدباب في القطيف يواجه تحديات ساحلية-واحية + تاريخية. الأول — NaCl تآكل: حمولة مكشوفة + رذاذ ملحي = تآكل. Stretch. الثاني — 80-95% تكثّف: إلكترونيات = Short Circuit. Silica Gel. الثالث — طين لزج: تربة واحية ← طرق ← إطارات ← حمولة. الرابع — أزقة تاريخية: القطيف التاريخية = أزقة ضيقة = دباب مثالي (لا شاحنة). + ميزة!',
+        shortAnswer: 'على عكس [دباب مكشوف] في NaCl+طين، يعتمد بروتوكولنا في خدمة [الدباب] بمدينة [القطيف] على [Stretch + Silica Gel + VCI]. ففي ظل [NaCl + 80-95% + طين + أزقة]، تتفاقم ظاهرة [تآكل + تكثّف + التصاق]. لذا؛ يتدخل خبراؤنا عبر [دباب ساحلي-واحي + أزقة].',
+        heroSubtitle: 'NaCl تآكل + 80-95% تكثّف + طين لزج + أزقة تاريخية (ميزة!)',
     },
-
     pricing: [
-        { type: 'دباب نقل — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'دباب نقل — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'نقل داخل القطيف', unit: 'رحلة', minPrice: 30, maxPrice: 70, time: '30-60 دقيقة' },
+        { type: '+ Stretch + Silica Gel', unit: 'رحلة', minPrice: 45, maxPrice: 100, time: '30-60 دقيقة' },
+        { type: 'أزقة تاريخية', unit: 'رحلة', minPrice: 40, maxPrice: 90, time: '45-75 دقيقة' },
     ],
-
     faq: [
-        { question: 'كم تكلفة دباب نقل بالقطيف؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق دباب نقل؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على دباب نقل؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'أزقة — ميزة؟', answer: 'ميزة! أزقة ضيقة = شاحنة لا تدخل. دباب = المثالي. نعرف كل زقاق.' },
+        { question: '80-95% تكثّف — خطير؟', answer: 'إلكترونيات = Short Circuit. Silica Gel. أقل خطراً من الجبيل 98% لكن حقيقي.' },
+        { question: 'طين — يلوّث؟', answer: 'تربة واحية ← إطارات ← رذاذ ← حمولة. تنظيف بعد. لا يُتلف.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Silica Gel لإلكترونيات — 80-95% تكثّف.',
+        'VCI لحديد — NaCl.',
+        'أزقة تاريخية = دباب فقط.',
+        'تنظيف حمولة بعد نقل — طين.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        '80-95% + إلكترونيات = Silica Gel.',
+        'NaCl + حديد مكشوف = صدأ.',
+        'أزقة ← ابتعد عن جدران قديمة = حجر هش.',
     ],
-
     trustAnchors: [
-        { ...GOV.TGA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.TGA, role: 'ترخيص النقل' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات النقل بالشرقية' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALZUWAYED.name,
-        title: EXPERTS.ALZUWAYED.title,
-        credential: EXPERTS.ALZUWAYED.credential,
-        profileUrl: EXPERTS.ALZUWAYED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALZUWAYED,
     expertCitations: [
-        {
-            expert: EXPERTS.ALZUWAYED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALZUWAYED.title,
-            url: EXPERTS.ALZUWAYED.profileUrl,
-        },
+        { expert: EXPERTS.ALZUWAYED.name, quote: 'دباب القطيف: أزقة تاريخية = ميزة فريدة. NaCl+80-95%+طين. Silica Gel + VCI.', source: 'هيئة النقل — النقل في الواحات' },
     ],
-
     saudiRegulations: [REGULATIONS.TGA_LICENSE],
-
-    verificationBadges: [
-        { badge: '✔️ شركة نقل مرخصة من هيئة النقل TGA', authority: 'الهيئة العامة للنقل', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ نقل مرخص', authority: 'هيئة النقل', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Stretch', use: 'NaCl+طين — حاجز' },
+        { name: 'Silica Gel', use: '80-95% — تكثّف' },
+        { name: 'VCI', use: 'NaCl — حديد' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'مسافة قصيرة.', solution: '80-95% تكثّف = دقائق. Silica.' },
+        { fear: 'مثل الخبر.', solution: 'أزقة تاريخية + طين. مختلف.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'شاحنة.', truth: 'أزقة = دباب فقط.' },
+        { myth: 'لا Silica.', truth: '80-95% = Short Circuit.' },
     ],
-
     relatedServices: [
-        { slug: 'qatif-furniture-moving', context: 'نقل عفش بالقطيف', priority: 1 },
-        { slug: 'qatif-furniture-storage', context: 'تخزين عفش بالقطيف', priority: 2 },
-        { slug: 'qatif-dyna', context: 'دينا نقل بالقطيف', priority: 3 },
-        { slug: 'qatif-moving-out', context: 'نقل عفش خروج بالقطيف', priority: 4 },
-        { slug: 'qatif-cleaning', context: 'تنظيف منازل بالقطيف', priority: 5 },
-        { slug: 'qatif-tanks-cleaning', context: 'تنظيف خزانات بالقطيف', priority: 6 },
-        { slug: 'qatif-sofa-cleaning', context: 'تنظيف كنب بالقطيف', priority: 7 },
-        { slug: 'qatif-carpet-cleaning', context: 'تنظيف سجاد بالقطيف', priority: 8 },
-        { slug: 'qatif-steam-cleaning', context: 'تنظيف بالبخار بالقطيف', priority: 9 },
+        { slug: 'dyna', context: 'دينا — أثقل', priority: 1 },
+        { slug: 'furniture-moving', context: 'نقل عفش', priority: 2 },
+        { slug: 'auto-cleaning', context: 'غسيل', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 4 },
+        { slug: 'furniture-storage', context: 'تخزين', priority: 5 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 6 },
+        { slug: 'pest-control', context: 'حشرات', priority: 7 },
     ],
 };

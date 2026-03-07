@@ -90,7 +90,6 @@ export const override: PageOverride = {
             expert: 'أ.د. عبدالله المسند',
             quote: 'الرياض تتعرض لـ 15-25 عاصفة غبارية سنوياً. كل عاصفة تضخ آلاف الجزيئات الدقيقة PM2.5 في الهواء الداخلي — تتغلغل في أقمشة الكنب ولا تخرج بالمكنسة العادية',
             source: 'أستاذ جغرافيا المناخ — بيانات مناخية وبيئية',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -117,14 +116,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'riyadh-carpet-cleaning', context: 'سجاد + كنب', priority: 1 },
-        { slug: 'riyadh-mattress-cleaning', context: 'مراتب + كنب', priority: 2 },
-        { slug: 'riyadh-steam-cleaning', context: 'بخار شامل', priority: 3 },
-        { slug: 'riyadh-cleaning', context: 'تنظيف شامل', priority: 4 },
-        { slug: 'riyadh-sanitization', context: 'تعقيم بعد التنظيف', priority: 5 },
-        { slug: 'riyadh-furniture-cleaning', context: 'أثاث خشبي + كنب', priority: 6 },
-        { slug: 'riyadh-pest-control', context: 'عث الكنب', priority: 7 },
-        { slug: 'riyadh-bedbugs-control', context: 'بق الفراش في الكنب', priority: 8 },
-        { slug: 'riyadh-air-conditioner-cleaning', context: 'غبار المكيف على الكنب', priority: 9 },
+        { slug: 'carpet-cleaning', context: 'سجاد + كنب', priority: 1 },
+        { slug: 'mattress-cleaning', context: 'مراتب + كنب', priority: 2 },
+        { slug: 'steam-cleaning', context: 'بخار شامل', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف شامل', priority: 4 },
+        { slug: 'sanitization', context: 'تعقيم بعد التنظيف', priority: 5 },
+        { slug: 'furniture-cleaning', context: 'أثاث خشبي + كنب', priority: 6 },
+        { slug: 'pest-control', context: 'عث الكنب', priority: 7 },
+        { slug: 'bedbugs-control', context: 'بق الفراش في الكنب', priority: 8 },
+        { slug: 'air-conditioner-cleaning', context: 'غبار المكيف على الكنب', priority: 9 },
     ],
 };

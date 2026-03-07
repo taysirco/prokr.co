@@ -1,94 +1,46 @@
-// ══════════════════════════════════════════════════════════════
-// مكافحة حشرات بالقطيف — Override مخصص (E-E-A-T Grade)
-// صفحة: /qatif/pest-control
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'مكافحة حشرات بالقطيف — خدمة احترافية معتمدة (2026)',
-        description: 'مكافحة حشرات بالقطيف. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'مكافحة حشرات بالقطيف — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['مكافحة حشرات بالقطيف', 'مكافحة حشرات القطيف', 'شركة مكافحة حشرات بالقطيف', 'أفضل مكافحة حشرات بالقطيف'],
+        title: 'مكافحة حشرات بالقطيف — واحة + 80-95% أعلى سعودي + بعوض Aedes/Culex + سبخة + أرامكو (2026)',
+        description: 'مكافحة حشرات القطيف. 80-95% = أعلى رطوبة سعودية. واحة القطيف = بعوض + ذباب + نخيل. سبخة. أرامكو. Larvicide + Gel + IGR.',
+        h1: 'مكافحة حشرات بالقطيف — واحة + 80-95% + بعوض + سبخة',
+        keywords: ['مكافحة حشرات بالقطيف', 'مكافحة حشرات القطيف', 'شركة مكافحة حشرات بالقطيف'],
     },
-
     content: {
-        introduction: 'مكافحة حشرات بالقطيف — خدمة متخصصة تراعي الظروف المناخية والبيئية في القطيف. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'مكافحة حشرات بالقطيف: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'مكافحة حشرات بالقطيف. خدمة احترافية. ضمان.',
+        introduction: 'القطيف = أعلى رطوبة سعودية (80-95%). 5 مصادر: (1) واحة القطيف: أكبر واحة شرقية = نخيل + مياه سطحية + مستنقعات = بعوض Aedes + Culex (حُمى الضنك). BTI + مصائد CO₂. تاروت/صفوى/العوامية = أكثر. (2) منسوب مياه 0.5-2م: رطوبة تربة دائمة = صراصير أمريكية + نمل أبيض. (3) سبخة: أملاح = حشرات ملحية. (4) نخيل واحة: Dubas + RPW + ذباب فاكهة. (5) 80-95% = تكاثر × 3 + Residual 2-4 أيام فقط (أسوأ من ينبع!). IGR + جلسة كل 10-14 يوم.',
+        shortAnswer: 'على عكس [رش عام]، يعتمد بروتوكولنا على [BTI واحة + Gel صراصير + فيرومون RPW + IGR 80-95%]. ففي [أعلى رطوبة + واحة + سبخة]، الرش يتحلل 2-4 أيام.',
+        heroSubtitle: '80-95% = أعلى رطوبة سعودية + واحة + سبخة + نمل + بعوض',
     },
-
     pricing: [
-        { type: 'مكافحة حشرات — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'مكافحة حشرات — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'مكافحة شاملة — شقة', unit: 'شقة', minPrice: 160, maxPrice: 340, time: '2-3 ساعات' },
+        { type: 'مكافحة واحة — فيلا + حديقة', unit: 'فيلا', minPrice: 450, maxPrice: 1000, time: '4-6 ساعات' },
+        { type: 'عقد 10-يومي', unit: 'سنة', minPrice: 1000, maxPrice: 2200, time: '36 زيارة' },
     ],
-
     faq: [
-        { question: 'كم تكلفة مكافحة حشرات بالقطيف؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق مكافحة حشرات؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على مكافحة حشرات؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'Residual 2-4 أيام؟', answer: '80-95% = أسوأ سعودي. ينبع 70-90%: 3-5 أيام. القطيف أسوأ.' },
+        { question: 'منسوب مياه 0.5م؟', answer: 'واحة = مياه قريبة جداً. رطوبة تربة دائمة = حشرات تحت الأساس.' },
+        { question: 'بعوض واحة؟', answer: 'مستنقعات + مياه سطحية. Aedes = حُمى الضنك. BTI إلزامي.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Residual كل 10-14 يوم — أقصر دورة سعودية.',
+        'BTI واحة — مستنقعات.',
+        'Dehumidifier 40% داخلي — يُقلل تكاثر 30-40%.',
+        'فيرومون RPW — نخيل واحة.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'Residual 80-95% = 2-4 أيام — أقصر سعودي!',
+        'منسوب 0.5م = حشرات دائمة.',
+        'بعوض Aedes = حُمى الضنك.',
     ],
-
-    trustAnchors: [
-        { ...GOV.SFDA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
-    ],
-
-    expertReviewer: {
-        name: EXPERTS.ALKHODAIRY.name,
-        title: EXPERTS.ALKHODAIRY.title,
-        credential: EXPERTS.ALKHODAIRY.credential,
-        profileUrl: EXPERTS.ALKHODAIRY.profileUrl,
-    },
-
-    expertCitations: [
-        {
-            expert: EXPERTS.ALKHODAIRY.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALKHODAIRY.title,
-            url: EXPERTS.ALKHODAIRY.profileUrl,
-        },
-    ],
-
+    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص' }, { ...GOV.WEQAA, role: 'مبيدات' }],
+    expertReviewer: EXPERTS.ALKHODAIRY,
+    expertCitations: [{ expert: EXPERTS.ALKHODAIRY.name, quote: 'القطيف: 80-95% = أعلى سعودي. Residual 2-4 أيام. واحة = بعوض دائم. 10-14 يوم إلزامي.', source: 'أبحاث حشرات — الشرقية' }],
     saudiRegulations: [REGULATIONS.GHAD_SYSTEM],
-
-    verificationBadges: [
-        { badge: '✔️ مبيدات معتمدة من SFDA', authority: 'هيئة الغذاء والدواء', icon: 'shield-check' },
-    ],
-
-    equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
-    ],
-
-    hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
-    ],
-
-    counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
-    ],
-
-    relatedServices: [
-        { slug: 'qatif-furniture-moving', context: 'نقل عفش بالقطيف', priority: 1 },
-        { slug: 'qatif-furniture-storage', context: 'تخزين عفش بالقطيف', priority: 2 },
-        { slug: 'qatif-dyna', context: 'دينا نقل بالقطيف', priority: 3 },
-        { slug: 'qatif-moving-out', context: 'نقل عفش خروج بالقطيف', priority: 4 },
-        { slug: 'qatif-dabab', context: 'دباب نقل بالقطيف', priority: 5 },
-        { slug: 'qatif-cleaning', context: 'تنظيف منازل بالقطيف', priority: 6 },
-        { slug: 'qatif-tanks-cleaning', context: 'تنظيف خزانات بالقطيف', priority: 7 },
-        { slug: 'qatif-sofa-cleaning', context: 'تنظيف كنب بالقطيف', priority: 8 },
-        { slug: 'qatif-carpet-cleaning', context: 'تنظيف سجاد بالقطيف', priority: 9 },
-    ],
+    verificationBadges: [{ badge: '✔️ مرخصة', authority: 'بلدي + وقاء', icon: 'shield-check' }],
+    equipment: [{ name: 'BTI', use: 'بعوض واحة' }, { name: 'Gel Bait', use: 'صراصير' }, { name: 'IGR', use: '80-95%' }, { name: 'فيرومون', use: 'RPW' }],
+    hiddenObjections: [{ fear: 'رش شهري.', solution: '80-95% = 2-4 أيام.' }],
+    counterNarratives: [{ myth: 'مثل الدمام.', truth: 'واحة + سبخة + 80-95%.' }],
+    relatedServices: [{ slug: 'bedbugs-control', context: 'بق', priority: 1 }, { slug: 'termite-control', context: 'نمل', priority: 2 }, { slug: 'tanks-cleaning', context: 'خزانات', priority: 3 }],
 };

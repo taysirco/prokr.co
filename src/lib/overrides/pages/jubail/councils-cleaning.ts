@@ -1,94 +1,75 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف مجالس بالجبيل — Override مخصص (E-E-A-T Grade)
-// صفحة: /jubail/councils-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف مجالس بالجبيل — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف مجالس بالجبيل. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف مجالس بالجبيل — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف مجالس بالجبيل', 'تنظيف مجالس الجبيل', 'شركة تنظيف مجالس بالجبيل', 'أفضل تنظيف مجالس بالجبيل'],
+        title: 'تنظيف مجالس بالجبيل — بخور+VOC بلمرة مُركّبة + 85-98% عفن حشوة + عث أقصى (2026)',
+        description: 'تنظيف مجالس الجبيل. بخور+VOC بلمرة مُركّبة أقسى. 85-98% عفن حشوة أسبوع. عث Der p 1 أقصى. NaCl Stiffening. Enzymatic+Anti-Fungal+Anti-Mite+Turbo.',
+        h1: 'تنظيف مجالس بالجبيل — بخور+بتروكيماويات بلمرة وعفن وعث أقصى',
+        keywords: ['تنظيف مجالس الجبيل', 'تنظيف مجلس بالجبيل', 'شركة تنظيف مجالس بالجبيل'],
     },
-
     content: {
-        introduction: 'تنظيف مجالس بالجبيل — خدمة متخصصة تراعي الظروف المناخية والبيئية في الجبيل. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف مجالس بالجبيل: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف مجالس بالجبيل. خدمة احترافية. ضمان.',
+        introduction: 'المجلس في الجبيل يتعرض لأقسى تلويث أقمشة في المملكة. الأول — بخور+VOC بلمرة مُركّبة: Olibanum يتبلمر + VOC بتروكيماوي = Ester+VOC Bonds = أقسى بلمرة في المملكة. Enzymatic تركيز أقصى. الثاني — 85-98% عفن حشوة: أسرع عفن في المملكة. حشوة = بيئة مثالية. Aspergillus أسبوع. Anti-Fungal + تجفيف Turbo. الثالث — عث أقصى: 85-98% > 50% = أقصى Der p 1. بخار 100°م + Anti-Mite إلزامي. الرابع — NaCl Stiffening: ملح يُصلّب الألياف. RO ← Marine.',
+        shortAnswer: 'على عكس [شامبو عادي] الذي لا يُكسر بلمرة مُركّبة ولا يقتل عث، يعتمد بروتوكولنا في خدمة [تنظيف المجالس] بمدينة [الجبيل] على [Enzymatic + Anti-Fungal + Anti-Mite + Turbo Dry]. ففي ظل [بخور+VOC + 85-98% + عث + NaCl]، تتفاقم ظاهرة [بلمرة + عفن + عث + تصلب]. لذا؛ يتدخل خبراؤنا عبر [بروتوكول مجلس صناعي-ساحلي].',
+        heroSubtitle: 'بخور+VOC بلمرة أقسى + عفن أقصى + عث أقصى + NaCl تصلب',
     },
-
     pricing: [
-        { type: 'تنظيف مجالس — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف مجالس — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'مجلس — صناعي-ساحلي', unit: 'مجلس', minPrice: 230, maxPrice: 450, time: '3-4 ساعات' },
+        { type: 'مجلس + سجاد', unit: 'مجلس', minPrice: 330, maxPrice: 640, time: '4-6 ساعات' },
+        { type: 'عميق (Enzymatic+بخار+عث)', unit: 'مجلس', minPrice: 380, maxPrice: 740, time: '4-6 ساعات' },
+        { type: 'ربع سنوي', unit: 'سنة', minPrice: 700, maxPrice: 1400, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف مجالس بالجبيل؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف مجالس؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف مجالس؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'بلمرة مُركّبة — أصعب من كل مدينة؟', answer: 'الأصعب. بخور Ester + VOC = Bonds مزدوجة. Enzymatic تركيز أقصى + وقت 35-45 دقيقة. حفر الباطن 52°م: أصلب. الجبيل VOC: أقسى Bonds.' },
+        { question: 'عث — أقصى في المملكة؟', answer: '85-98% = أقصى رطوبة = أقصى Der p 1 (أليرجين). بخار 100°م + Anti-Mite كل ربع. في حفر الباطن: لا عث (ميزة!).' },
+        { question: 'تجفيف — أبطأ؟', answer: 'أبطأ مجلس في المملكة. 98% = 6-10 ساعات. Turbo + Dehumidifier + فتحات تهوية. بدون = عفن حشوة.' },
+        { question: 'NaCl — يُصلّب المجلس؟', answer: 'ألياف + NaCl = بلورات ملحية = تصلب + تكسر. RO أولاً ← Marine ← Enzymatic.' },
+        { question: 'ربع سنوي — ليش؟', answer: 'بخور+VOC تراكمي + عفن أسبوعي + عث شهري + NaCl. ربع سنوي = الحد.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Enzymatic تركيز أقصى — بلمرة VOC+بخور.',
+        'بخار 100°م + Anti-Mite — عث أقصى.',
+        'Anti-Fungal قبل تجفيف — عفن أثناء 6-10 ساعات.',
+        'RO شطف أولاً — NaCl قبل الفرك.',
+        'Turbo + Dehumidifier — 98% = إلزامي.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'بلمرة VOC+بخور × 6 أشهر = طبقة لا تُزال إلا مهنياً.',
+        '98% + حشوة = عفن أسبوع + عث أقصى = حساسية.',
+        'تجفيف بدون Turbo = عفن حشوة 24 ساعة.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص التنظيف' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات النظافة بالشرقية' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'مجلس الجبيل = الأقسى: بخور+VOC بلمرة مُركّبة + 98% عفن+عث أقصى. Enzymatic أقصى + بخار + Anti-Mite + Turbo.', source: 'نصائح هندسية — مجالس البيئة الصناعية' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف مجالس مرخص', authority: 'منصة بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Enzymatic أقصى', use: 'بلمرة VOC+بخور مُركّبة' },
+        { name: 'بخار 100°م', use: 'عث Der p 1 أقصى' },
+        { name: 'Anti-Fungal', use: '98% عفن حشوة' },
+        { name: 'Turbo Dryer', use: '98% تجفيف إلزامي' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'مثل الخبر.', solution: 'VOC بلمرة مُركّبة + 98% > 95% + سخام. أقسى.' },
+        { fear: 'شامبو.', solution: 'لا يُكسر VOC+بخور Bonds. Enzymatic.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'بخار لعفن فقط.', truth: 'بخار = عث + تعقيم + يُحرر NaCl. ثلاثي.' },
+        { myth: 'نصف سنوي.', truth: 'عفن أسبوعي + عث شهري. ربع سنوي.' },
+        { myth: 'ساحلي فقط.', truth: 'VOC بلمرة مُركّبة = صناعي+ساحلي.' },
     ],
-
     relatedServices: [
-        { slug: 'jubail-furniture-moving', context: 'نقل عفش بالجبيل', priority: 1 },
-        { slug: 'jubail-furniture-storage', context: 'تخزين عفش بالجبيل', priority: 2 },
-        { slug: 'jubail-dyna', context: 'دينا نقل بالجبيل', priority: 3 },
-        { slug: 'jubail-moving-out', context: 'نقل عفش خروج بالجبيل', priority: 4 },
-        { slug: 'jubail-dabab', context: 'دباب نقل بالجبيل', priority: 5 },
-        { slug: 'jubail-cleaning', context: 'تنظيف منازل بالجبيل', priority: 6 },
-        { slug: 'jubail-tanks-cleaning', context: 'تنظيف خزانات بالجبيل', priority: 7 },
-        { slug: 'jubail-sofa-cleaning', context: 'تنظيف كنب بالجبيل', priority: 8 },
-        { slug: 'jubail-carpet-cleaning', context: 'تنظيف سجاد بالجبيل', priority: 9 },
+        { slug: 'carpet-cleaning', context: 'سجاد — NaCl+VOC', priority: 1 },
+        { slug: 'sofa-cleaning', context: 'كنب — بخور', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 3 },
+        { slug: 'steam-cleaning', context: 'بخار', priority: 4 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 5 },
+        { slug: 'pest-control', context: 'حشرات', priority: 6 },
+        { slug: 'marble-polishing', context: 'رخام', priority: 7 },
     ],
 };

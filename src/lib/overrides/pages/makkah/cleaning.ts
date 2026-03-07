@@ -93,7 +93,6 @@ export const override: PageOverride = {
             expert: 'أ.د. عبدالله المسند',
             quote: 'الغبار في مكة يحمل معادن ثقيلة من التربة الجبلية — تراكمه على أسطح المنزل يُحوّل الهواء الداخلي لمصدر حساسية مزمنة. التنظيف العميق مرتين سنوياً يُخفض PM2.5 بنسبة 60-70%',
             source: 'أستاذ المناخ والبيئة',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -124,14 +123,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'makkah-villas-cleaning', context: 'تنظيف فلل وقصور بمكة — فريق أكبر ومعدات متخصصة', priority: 1 },
-        { slug: 'makkah-steam-cleaning', context: 'تنظيف بالبخار للكنب والمجالس والستائر داخل المنزل', priority: 2 },
-        { slug: 'makkah-carpet-cleaning', context: 'غسيل سجاد وموكيت بالبخار — إزالة بقع وتراب كلسي', priority: 3 },
-        { slug: 'makkah-sofa-cleaning', context: 'تنظيف وتعقيم كنب ومجالس — بخار يقتل عث الغبار', priority: 4 },
-        { slug: 'makkah-air-conditioner-cleaning', context: 'تنظيف فلاتر المكيفات — يُحسّن جودة الهواء ويقلل PM2.5', priority: 5 },
-        { slug: 'makkah-marble-polishing', context: 'جلي وتلميع رخام بعد التنظيف — إعادة اللمعة المفقودة', priority: 6 },
-        { slug: 'makkah-tanks-cleaning', context: 'تنظيف وتعقيم خزان المياه — صحة عائلتك في الماء', priority: 7 },
-        { slug: 'makkah-pest-control', context: 'بعد التنظيف العميق: مكافحة وقائية تحمي من عودة الحشرات', priority: 8 },
-        { slug: 'makkah-sanitization', context: 'تعقيم شامل بعد التنظيف — مثالي بعد مواسم الحج والعمرة', priority: 9 },
+        { slug: 'villas-cleaning', context: 'تنظيف فلل وقصور بمكة — فريق أكبر ومعدات متخصصة', priority: 1 },
+        { slug: 'steam-cleaning', context: 'تنظيف بالبخار للكنب والمجالس والستائر داخل المنزل', priority: 2 },
+        { slug: 'carpet-cleaning', context: 'غسيل سجاد وموكيت بالبخار — إزالة بقع وتراب كلسي', priority: 3 },
+        { slug: 'sofa-cleaning', context: 'تنظيف وتعقيم كنب ومجالس — بخار يقتل عث الغبار', priority: 4 },
+        { slug: 'air-conditioner-cleaning', context: 'تنظيف فلاتر المكيفات — يُحسّن جودة الهواء ويقلل PM2.5', priority: 5 },
+        { slug: 'marble-polishing', context: 'جلي وتلميع رخام بعد التنظيف — إعادة اللمعة المفقودة', priority: 6 },
+        { slug: 'tanks-cleaning', context: 'تنظيف وتعقيم خزان المياه — صحة عائلتك في الماء', priority: 7 },
+        { slug: 'pest-control', context: 'بعد التنظيف العميق: مكافحة وقائية تحمي من عودة الحشرات', priority: 8 },
+        { slug: 'sanitization', context: 'تعقيم شامل بعد التنظيف — مثالي بعد مواسم الحج والعمرة', priority: 9 },
     ],
 };

@@ -1,94 +1,47 @@
-// ══════════════════════════════════════════════════════════════
-// مكافحة حشرات بالظهران — Override مخصص (E-E-A-T Grade)
-// صفحة: /dhahran/pest-control
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'مكافحة حشرات بالظهران — خدمة احترافية معتمدة (2026)',
-        description: 'مكافحة حشرات بالظهران. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'مكافحة حشرات بالظهران — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['مكافحة حشرات بالظهران', 'مكافحة حشرات الظهران', 'شركة مكافحة حشرات بالظهران', 'أفضل مكافحة حشرات بالظهران'],
+        title: 'مكافحة حشرات بالظهران — عقارب صحراوية + مشجرات KFUPM + مجمعات أرامكو 40-80 سنة + 70-85% (2026)',
+        description: 'مكافحة حشرات الظهران. عقارب صحراوية. مشجرات KFUPM. مجمعات أرامكو قديمة. 70-85% Residual 5-7 أيام.',
+        h1: 'مكافحة حشرات بالظهران — عقارب + مشجرات + أرامكو + 70-85%',
+        keywords: ['مكافحة حشرات بالظهران', 'مكافحة حشرات الظهران', 'شركة مكافحة حشرات بالظهران'],
     },
-
     content: {
-        introduction: 'مكافحة حشرات بالظهران — خدمة متخصصة تراعي الظروف المناخية والبيئية في الظهران. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'مكافحة حشرات بالظهران: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'مكافحة حشرات بالظهران. خدمة احترافية. ضمان.',
+        introduction: 'الظهران = مقر أرامكو العالمي + KFUPM. 4 تحديات فريدة: (1) عقارب صحراوية (Androctonus + Leiurus): صحراء مُباشرة حول KFUPM والدوحة الجنوبية. Delta Dust + ختم شقوق + UV Blacklight. (2) مشجرات KFUPM/أرامكو: تشجير كثيف ← حشرات مشجرات (خنافس + ذباب أبيض + حشرات ورقية) مختلفة عن بعوض الخبر. IPM مُتخصص. (3) مجمعات أرامكو 40-80 سنة: بنية أمريكية قديمة = شقوق + فراغات = مخابئ صراصير + فئران. Gel + محطات + ختم. (4) 70-85% = Residual 5-7 أيام (أفضل من الخبر 3-5!). أقل من ساحلي.',
+        shortAnswer: 'على عكس [رش عام]، يعتمد بروتوكولنا على [Delta Dust عقارب + IPM مشجرات + Gel مجمعات + IGR 70-85%]. ففي [أرامكو + KFUPM + صحراء + 70-85%]، نظام مُتعدد.',
+        heroSubtitle: 'عقارب صحراوية + مشجرات KFUPM + مجمعات 40-80 سنة + 70-85%',
     },
-
     pricing: [
-        { type: 'مكافحة حشرات — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'مكافحة حشرات — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'شقة', unit: 'شقة', minPrice: 150, maxPrice: 320, time: '2-3 ساعات' },
+        { type: 'مجمع أرامكو — فيلا', unit: 'فيلا', minPrice: 350, maxPrice: 800, time: '3-5 ساعات' },
+        { type: 'عقد 16-يومي', unit: 'سنة', minPrice: 900, maxPrice: 1900, time: '22 زيارة' },
     ],
-
     faq: [
-        { question: 'كم تكلفة مكافحة حشرات بالظهران؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق مكافحة حشرات؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على مكافحة حشرات؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'عقارب؟', answer: 'Androctonus + Leiurus. صحراء مُباشرة. Delta Dust + ختم + UV.' },
+        { question: 'Residual 5-7؟', answer: '70-85% أقل من الخبر. أفضل.' },
+        { question: 'مجمعات قديمة؟', answer: '40-80 سنة. شقوق + فراغات. ختم + Gel.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Delta Dust عقارب.',
+        'IPM مشجرات KFUPM.',
+        'Gel مجمعات قديمة.',
+        'Residual 16 يوم.',
+        'UV Blacklight كشف عقارب.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'عقارب = خطر صحي.',
+        'مجمعات قديمة = مخابئ.',
+        'مشجرات = حشرات مختلفة.',
     ],
-
-    trustAnchors: [
-        { ...GOV.SFDA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
-    ],
-
-    expertReviewer: {
-        name: EXPERTS.ALKHODAIRY.name,
-        title: EXPERTS.ALKHODAIRY.title,
-        credential: EXPERTS.ALKHODAIRY.credential,
-        profileUrl: EXPERTS.ALKHODAIRY.profileUrl,
-    },
-
-    expertCitations: [
-        {
-            expert: EXPERTS.ALKHODAIRY.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALKHODAIRY.title,
-            url: EXPERTS.ALKHODAIRY.profileUrl,
-        },
-    ],
-
+    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص' }, { ...GOV.WEQAA, role: 'مبيدات' }],
+    expertReviewer: EXPERTS.ALKHODAIRY,
+    expertCitations: [{ expert: EXPERTS.ALKHODAIRY.name, quote: 'الظهران: عقارب صحراوية + مشجرات + مجمعات قديمة. 70-85% = أفضل من ساحلي.', source: 'أبحاث حشرات — الشرقية' }],
     saudiRegulations: [REGULATIONS.GHAD_SYSTEM],
-
-    verificationBadges: [
-        { badge: '✔️ مبيدات معتمدة من SFDA', authority: 'هيئة الغذاء والدواء', icon: 'shield-check' },
-    ],
-
-    equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
-    ],
-
-    hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
-    ],
-
-    counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
-    ],
-
-    relatedServices: [
-        { slug: 'dhahran-furniture-moving', context: 'نقل عفش بالظهران', priority: 1 },
-        { slug: 'dhahran-furniture-storage', context: 'تخزين عفش بالظهران', priority: 2 },
-        { slug: 'dhahran-dyna', context: 'دينا نقل بالظهران', priority: 3 },
-        { slug: 'dhahran-moving-out', context: 'نقل عفش خروج بالظهران', priority: 4 },
-        { slug: 'dhahran-dabab', context: 'دباب نقل بالظهران', priority: 5 },
-        { slug: 'dhahran-cleaning', context: 'تنظيف منازل بالظهران', priority: 6 },
-        { slug: 'dhahran-tanks-cleaning', context: 'تنظيف خزانات بالظهران', priority: 7 },
-        { slug: 'dhahran-sofa-cleaning', context: 'تنظيف كنب بالظهران', priority: 8 },
-        { slug: 'dhahran-carpet-cleaning', context: 'تنظيف سجاد بالظهران', priority: 9 },
-    ],
+    verificationBadges: [{ badge: '✔️ مرخصة', authority: 'بلدي + وقاء', icon: 'shield-check' }],
+    equipment: [{ name: 'Delta Dust', use: 'عقارب' }, { name: 'UV Blacklight', use: 'كشف' }, { name: 'Gel Bait', use: 'مجمعات' }, { name: 'IGR', use: '70-85%' }],
+    hiddenObjections: [{ fear: 'رش.', solution: '5-7 أيام أفضل.' }],
+    counterNarratives: [{ myth: 'مثل الخبر.', truth: 'عقارب + مشجرات + أبعد عن بحر.' }],
+    relatedServices: [{ slug: 'bedbugs-control', context: 'بق', priority: 1 }, { slug: 'termite-control', context: 'نمل — خشب قديم', priority: 2 }],
 };

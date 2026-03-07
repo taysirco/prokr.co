@@ -1,94 +1,75 @@
-// ══════════════════════════════════════════════════════════════
-// تخزين عفش بالظهران — Override مخصص (E-E-A-T Grade)
-// صفحة: /dhahran/furniture-storage
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تخزين عفش بالظهران — خدمة احترافية معتمدة (2026)',
-        description: 'تخزين عفش بالظهران. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تخزين عفش بالظهران — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تخزين عفش بالظهران', 'تخزين عفش الظهران', 'شركة تخزين عفش بالظهران', 'أفضل تخزين عفش بالظهران'],
+        title: 'تخزين أثاث بالظهران — NaCl+SiO₂ مزدوج + 75-85% عفن + PVAc + Dehumidifier (2026)',
+        description: 'تخزين أثاث الظهران. NaCl+SiO₂ مزدوج يدخل المستودع. 75-85% عفن. PVAc تفكك. مستودع مُحكم + Dehumidifier + VCI + Anti-Corrosion + فلتر SiO₂.',
+        h1: 'تخزين أثاث بالظهران — مستودع مزدوج: مُحكم ملح+رمل وجاف ومُبرّد',
+        keywords: ['تخزين أثاث بالظهران', 'تخزين عفش الظهران', 'شركة تخزين أثاث بالظهران'],
     },
-
     content: {
-        introduction: 'تخزين عفش بالظهران — خدمة متخصصة تراعي الظروف المناخية والبيئية في الظهران. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تخزين عفش بالظهران: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تخزين عفش بالظهران. خدمة احترافية. ضمان.',
+        introduction: 'تخزين الأثاث في الظهران يحتاج مستودع مزدوج. الشرط 1 — مُحكم ضد NaCl+SiO₂: NaCl من الهواء + SiO₂ من الصحراء = كلاهما يدخل. NaCl يُصدّئ + SiO₂ يخدش. ختم + فلاتر مزدوجة (NaCl + SiO₂). الشرط 2 — Dehumidifier: 75-85% = عفن خلال 3-4 أسابيع. Dehumidifier يُخفض ← 45-55%. الشرط 3 — VCI + Anti-Corrosion: معادن تحتاج حماية مزدوجة (NaCl تآكل + SiO₂ خدش Coating). الشرط 4 — مُبرّد: 45°م + 75-85% = PVAc يلين + يمتص = تفكك. < 35°م.',
+        shortAnswer: 'على عكس [مستودع عادي] الذي لا يحمي من مزدوج، يعتمد بروتوكولنا في خدمة [تخزين الأثاث] بمدينة [الظهران] على [مُحكم مزدوج + Dehumidifier + VCI + مُبرّد]. ففي ظل [NaCl+SiO₂ + 75-85% + PVAc]، تتفاقم ظاهرة [صدأ+خدش + عفن + تفكك]. لذا؛ يتدخل خبراؤنا عبر [مستودع مزدوج].',
+        heroSubtitle: 'مُحكم NaCl+SiO₂ + Dehumidifier 75-85% + VCI + مُبرّد',
     },
-
     pricing: [
-        { type: 'تخزين عفش — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تخزين عفش — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'غرفة صغيرة (10 م²)', unit: 'شهر', minPrice: 280, maxPrice: 560, time: 'شهري' },
+        { type: 'غرفة كبيرة (20 م²)', unit: 'شهر', minPrice: 470, maxPrice: 940, time: 'شهري' },
+        { type: 'تغليف مزدوج + نقل + تخزين', unit: 'باقة', minPrice: 940, maxPrice: 2350, time: 'حسب' },
+        { type: 'عقد سنوي (خصم 15%)', unit: 'سنة', minPrice: 2800, maxPrice: 5600, time: 'سنوي' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تخزين عفش بالظهران؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تخزين عفش؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تخزين عفش؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'فلتر مزدوج — ليش؟', answer: 'NaCl = جزيئات ملحية. SiO₂ = جزيئات رملية. أحجام مختلفة = فلتر واحد لا يحجز كلاهما. فلتر مزدوج (HEPA + Salt Trap).' },
+        { question: 'Dehumidifier — 75-85% أقل من الخبر؟', answer: 'أقل بـ 10-15% لكن: كافٍ لعفن. Dehumidifier يُخفض ← 45-55% = آمن. 24/7 لكن كهرباء أقل من الخبر.' },
+        { question: 'PVAc — أبطأ؟', answer: '75-85% < 85-95% = أبطأ. لكن: 45°م = يلين. مُبرّد < 35°م = يحمي.' },
+        { question: 'فحص — كل شهر؟', answer: 'حرارة + رطوبة + صدأ + عفن + سلامة تغليف. تقرير بالصور.' },
+        { question: 'أرخص من الخبر؟', answer: 'أرخص قليلاً — 75-85% = كهرباء Dehumidifier أقل. لكن: SiO₂ = فلتر إضافي.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Dehumidifier 24/7 — الشرط الأول. 75-85% = كافٍ لعفن.',
+        'فلتر مزدوج (HEPA + Salt Trap) — يحجز NaCl + SiO₂.',
+        'VCI لكل معدن — حماية مزدوجة.',
+        'فحص شهري — يكشف مبكراً.',
+        'مُبرّد < 35°م — يوقف PVAc تلين.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'مستودع بدون فلتر مزدوج = NaCl+SiO₂ يدخلان = صدأ+خدش.',
+        'بدون Dehumidifier في 75-85% = عفن 3-4 أسابيع.',
+        'بدون تبريد + 45°م + 75-85% = PVAc تفكك أشهر.',
     ],
-
     trustAnchors: [
-        { ...GOV.TGA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص مستودعات' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات التخزين بالشرقية' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALZUWAYED.name,
-        title: EXPERTS.ALZUWAYED.title,
-        credential: EXPERTS.ALZUWAYED.credential,
-        profileUrl: EXPERTS.ALZUWAYED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
-        {
-            expert: EXPERTS.ALZUWAYED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALZUWAYED.title,
-            url: EXPERTS.ALZUWAYED.profileUrl,
-        },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'تخزين الظهران = مزدوج: NaCl+SiO₂ + 75-85% + PVAc. مستودع مُحكم مزدوج + Dehumidifier + VCI + مُبرّد.', source: 'نصائح هندسية — تخزين مزدوج' },
     ],
-
-    saudiRegulations: [REGULATIONS.TGA_LICENSE],
-
-    verificationBadges: [
-        { badge: '✔️ شركة نقل مرخصة من هيئة النقل TGA', authority: 'الهيئة العامة للنقل', icon: 'shield-check' },
-    ],
-
+    saudiRegulations: [REGULATIONS.BALADI_HEALTH],
+    verificationBadges: [{ badge: '✔️ مستودع مرخص', authority: 'منصة بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'فلتر مزدوج (HEPA + Salt)', use: 'يحجز NaCl + SiO₂' },
+        { name: 'Dehumidifier 24/7', use: 'يُخفض 75-85% ← 45-55%' },
+        { name: 'VCI + Anti-Corrosion', use: 'يحمي معادن من مزدوج' },
+        { name: 'تبريد < 35°م', use: 'PVAc حماية' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'عادي أرخص.', solution: 'عادي + مزدوج = تلف. أرخص بـ 200/شهر — أغلى بـ آلاف تلف.' },
+        { fear: 'قصير.', solution: '3-4 أسابيع = عفن. ساعات = صدأ. قصير ≠ آمن.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'أي مستودع.', truth: 'بدون فلتر = مزدوج يدخل. بدون Dehumidifier = عفن. بدون تبريد = PVAc.' },
+        { myth: 'مثل الخبر.', truth: 'SiO₂ إضافي = فلتر مزدوج. 75-85% < 85-95% = أقل كهرباء.' },
+        { myth: 'بيت.', truth: 'غرفة مُغلقة + 75-85% = عفن. نفس المشكلة.' },
     ],
-
     relatedServices: [
-        { slug: 'dhahran-furniture-moving', context: 'نقل عفش بالظهران', priority: 1 },
-        { slug: 'dhahran-dyna', context: 'دينا نقل بالظهران', priority: 2 },
-        { slug: 'dhahran-moving-out', context: 'نقل عفش خروج بالظهران', priority: 3 },
-        { slug: 'dhahran-dabab', context: 'دباب نقل بالظهران', priority: 4 },
-        { slug: 'dhahran-cleaning', context: 'تنظيف منازل بالظهران', priority: 5 },
-        { slug: 'dhahran-tanks-cleaning', context: 'تنظيف خزانات بالظهران', priority: 6 },
-        { slug: 'dhahran-sofa-cleaning', context: 'تنظيف كنب بالظهران', priority: 7 },
-        { slug: 'dhahran-carpet-cleaning', context: 'تنظيف سجاد بالظهران', priority: 8 },
-        { slug: 'dhahran-steam-cleaning', context: 'تنظيف بالبخار بالظهران', priority: 9 },
+        { slug: 'furniture-moving', context: 'نقل — للمستودع', priority: 1 },
+        { slug: 'furniture-cleaning', context: 'أثاث — قبل', priority: 2 },
+        { slug: 'pest-control', context: 'حشرات — فحص', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف — بعد', priority: 4 },
+        { slug: 'dyna', context: 'دينا', priority: 5 },
+        { slug: 'dabab', context: 'دباب', priority: 6 },
+        { slug: 'termite-control', context: 'نمل أبيض', priority: 7 },
     ],
 };

@@ -4,6 +4,7 @@
 // ============================================
 
 import type { PageOverride } from '../../types';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -91,19 +92,13 @@ export const override: PageOverride = {
         { entity: 'وزارة البلديات — منصة بلدي', acronym: 'بلدي', url: 'https://balady.gov.sa', role: 'اشتراطات النظافة' },
     ],
 
-    expertReviewer: {
-        name: 'أ.د. عبدالله المسند',
-        title: 'أستاذ جغرافيا المناخ',
-        credential: 'أستاذ جغرافيا المناخ — جامعة القصيم',
-        profileUrl: 'https://x.com/ALMISNID',
-    },
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
             expert: 'أ.د. عبدالله المسند',
             quote: 'المجالس الأرضية في جدة تجمع رطوبة من الجدران والأرضية — السجاد والمساند تمتص الملوحة الساحلية. بخار جاف كل 3 أشهر يمنع العفن والعث',
             source: 'تحليل مناخي',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -112,14 +107,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'jeddah-sofa-cleaning', context: 'كنب المجلس', priority: 1 },
-        { slug: 'jeddah-carpet-cleaning', context: 'سجاد المجلس', priority: 2 },
-        { slug: 'jeddah-steam-cleaning', context: 'بخار شامل للمجلس', priority: 3 },
-        { slug: 'jeddah-sanitization', context: 'تعقيم بعد التجمعات', priority: 4 },
-        { slug: 'jeddah-cleaning', context: 'تنظيف شامل مع المجلس', priority: 5 },
-        { slug: 'jeddah-air-conditioner-cleaning', context: 'مكيف المجلس', priority: 6 },
-        { slug: 'jeddah-mattress-cleaning', context: 'مساند المجلس الأرضي', priority: 7 },
-        { slug: 'jeddah-pest-control', context: 'رش وقائي', priority: 8 },
-        { slug: 'jeddah-floor-polishing', context: 'أرضية المجلس', priority: 9 },
+        { slug: 'sofa-cleaning', context: 'كنب المجلس', priority: 1 },
+        { slug: 'carpet-cleaning', context: 'سجاد المجلس', priority: 2 },
+        { slug: 'steam-cleaning', context: 'بخار شامل للمجلس', priority: 3 },
+        { slug: 'sanitization', context: 'تعقيم بعد التجمعات', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف شامل مع المجلس', priority: 5 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف المجلس', priority: 6 },
+        { slug: 'mattress-cleaning', context: 'مساند المجلس الأرضي', priority: 7 },
+        { slug: 'pest-control', context: 'رش وقائي', priority: 8 },
+        { slug: 'floor-polishing', context: 'أرضية المجلس', priority: 9 },
     ],
 };

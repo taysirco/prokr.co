@@ -1,94 +1,62 @@
-// ══════════════════════════════════════════════════════════════
-// مكافحة حشرات بعنيزة — Override مخصص (E-E-A-T Grade)
-// صفحة: /onizah/pest-control
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'مكافحة حشرات بعنيزة — خدمة احترافية معتمدة (2026)',
-        description: 'مكافحة حشرات بعنيزة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'مكافحة حشرات بعنيزة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['مكافحة حشرات بعنيزة', 'مكافحة حشرات عنيزة', 'شركة مكافحة حشرات بعنيزة', 'أفضل مكافحة حشرات بعنيزة'],
+        title: 'مكافحة حشرات بعنيزة — 8 مليون نخلة + Dubas + سوسة حمراء + نمل حريقة + عقارب (2026)',
+        description: 'مكافحة حشرات عنيزة. 8M+ نخلة = Dubas + سوسة حمراء RPW. نمل حريقة Fire Ant. عقارب صحراوية. 48°م = دورة 21 يوم. Fipronil + IGR + مصائد فيرومون.',
+        h1: 'مكافحة حشرات بعنيزة — نخيل + Dubas + سوسة حمراء + عقارب',
+        keywords: ['مكافحة حشرات بعنيزة', 'مكافحة حشرات عنيزة', 'شركة مكافحة حشرات بعنيزة', 'رش حشرات عنيزة'],
     },
-
     content: {
-        introduction: 'مكافحة حشرات بعنيزة — خدمة متخصصة تراعي الظروف المناخية والبيئية في عنيزة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'مكافحة حشرات بعنيزة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'مكافحة حشرات بعنيزة. خدمة احترافية. ضمان.',
+        introduction: 'عنيزة = عاصمة التمور. 8 مليون+ نخلة = مصنع حشرات مفتوح. المصدر الأول — حشرات النخيل: Dubas Bug (حشرة الدوباس) تُفرز عسلاً لزجاً (Honeydew) يجذب النمل + الذباب. سوسة النخيل الحمراء (Red Palm Weevil — RPW) = أخطر آفة — تقتل النخلة من الداخل. مصائد فيرومون + Phosphine Fumigation. المصدر الثاني — نمل حريقة (Fire Ant): المزارع والأحياء المحاذية (البركة، الناصرية) = لدغة مؤلمة + حساسية. Fipronil Granular. المصدر الثالث — عقارب صحراوية: أطراف عنيزة (قرب النفود) = عقرب أصفر Deathstalker. مصائد + ختم شقوق. المصدر الرابع — دورة حياة مُسرّعة: 48°م = Bedbug lifecycle 21 يوم (بدلاً من 45). تكاثر × 5 شهرياً. IGR إلزامي.',
+        shortAnswer: 'على عكس [رش عام]، يعتمد بروتوكولنا في مكافحة حشرات عنيزة على [مصائد فيرومون RPW + Fipronil نمل + مصائد عقارب + IGR دورة 21 يوم]. ففي [8M+ نخلة + 48°م]، الرش العام لا يكفي.',
+        heroSubtitle: '8M+ نخلة = Dubas + RPW + نمل حريقة + عقارب + دورة 21 يوم',
     },
-
     pricing: [
-        { type: 'مكافحة حشرات — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'مكافحة حشرات — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'مكافحة شاملة — شقة', unit: 'شقة', minPrice: 150, maxPrice: 300, time: '2-3 ساعات' },
+        { type: 'مكافحة شاملة — فيلا + مزرعة', unit: 'فيلا', minPrice: 400, maxPrice: 900, time: '4-6 ساعات' },
+        { type: 'مكافحة RPW — نخيل', unit: '10 نخلات', minPrice: 300, maxPrice: 700, time: '2-4 ساعات' },
+        { type: 'عقد ربع سنوي', unit: 'سنة', minPrice: 600, maxPrice: 1500, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة مكافحة حشرات بعنيزة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق مكافحة حشرات؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على مكافحة حشرات؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'سوسة حمراء — تقتل النخلة؟', answer: 'RPW تأكل الجذع من الداخل. بدون كشف مبكر = النخلة تموت خلال 6-12 شهراً. مصائد فيرومون + فحص صوتي.' },
+        { question: 'Dubas — الندى اللزج؟', answer: 'Honeydew: إفراز سكري يجذب نمل + ذباب + يُنبت فطر أسود (Sooty Mold). يسقط على السيارات والأثاث الخارجي.' },
+        { question: 'نمل حريقة — أي أحياء؟', answer: 'البركة، الناصرية، أحياء المزارع. لدغة = حساسية. Fipronil Granular حول المحيط.' },
+        { question: '48°م — الحشرات تنشط أكثر؟', answer: 'بق الفراش: دورة 21 يوم بدلاً من 45. تكاثر × 5. IGR يمنع البيض من النضوج.' },
+        { question: 'عقارب — أطراف المدينة؟', answer: 'Deathstalker قرب النفود. ختم شقوق أساس + مصائد UV ليلية.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'مصائد فيرومون لـ RPW — كشف مبكر قبل الأعراض.',
+        'Fipronil Granular حول محيط الفيلا — نمل حريقة.',
+        'IGR مع كل دورة — 48°م = تكاثر × 5.',
+        'ختم شقوق أساس — عقارب.',
+        'Honeydew: غسيل سيارات فوري — يتصلب.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'RPW بدون كشف مبكر = نخلة ميتة خلال 6-12 شهراً.',
+        'نمل حريقة: لدغة = حساسية مُفرطة (Anaphylaxis) عند بعض الأشخاص.',
+        'عقرب Deathstalker: لدغة تحتاج مستشفى فوراً.',
     ],
-
-    trustAnchors: [
-        { ...GOV.SFDA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
-    ],
-
-    expertReviewer: {
-        name: EXPERTS.ALKHODAIRY.name,
-        title: EXPERTS.ALKHODAIRY.title,
-        credential: EXPERTS.ALKHODAIRY.credential,
-        profileUrl: EXPERTS.ALKHODAIRY.profileUrl,
-    },
-
+    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات مكافحة الآفات' }, { ...GOV.WEQAA, role: 'تسجيل المبيدات' }],
+    expertReviewer: EXPERTS.ALKHODAIRY,
     expertCitations: [
-        {
-            expert: EXPERTS.ALKHODAIRY.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALKHODAIRY.title,
-            url: EXPERTS.ALKHODAIRY.profileUrl,
-        },
+        { expert: EXPERTS.ALKHODAIRY.name, quote: 'عنيزة: 8 مليون نخلة = أكبر مصنع حشري مفتوح في المملكة. Dubas + RPW + نمل حريقة = 3 طبقات. + 48°م = دورة 21 يوم. بروتوكول رباعي.', source: 'أبحاث حشرات — حشرات النخيل في القصيم' },
     ],
-
     saudiRegulations: [REGULATIONS.GHAD_SYSTEM],
-
-    verificationBadges: [
-        { badge: '✔️ مبيدات معتمدة من SFDA', authority: 'هيئة الغذاء والدواء', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ مكافحة مرخصة', authority: 'بلدي + وقاء', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'مصائد فيرومون RPW', use: 'كشف سوسة حمراء مبكر — قبل الأعراض' },
+        { name: 'Fipronil Granular', use: 'نمل حريقة — محيط الفيلا' },
+        { name: 'IGR (منظم نمو)', use: 'يمنع دورة 21 يوم من التكاثر' },
+        { name: 'مصائد UV ليلية', use: 'عقارب Deathstalker — أطراف المدينة' },
     ],
-
-    hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
-    ],
-
-    counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
-    ],
-
+    hiddenObjections: [{ fear: 'رش واحد يكفي.', solution: '4 مصادر مختلفة (نخيل + نمل + عقارب + حرارة). رش واحد ≠ يغطي. بروتوكول رباعي.' }],
+    counterNarratives: [{ myth: 'الحرارة تقتل الحشرات.', truth: '48°م = تُسرّع دورة الحياة. بق 21 يوم بدلاً من 45. الحرارة = صديقة الحشرات.' }],
     relatedServices: [
-        { slug: 'onizah-furniture-moving', context: 'نقل عفش بعنيزة', priority: 1 },
-        { slug: 'onizah-furniture-storage', context: 'تخزين عفش بعنيزة', priority: 2 },
-        { slug: 'onizah-dyna', context: 'دينا نقل بعنيزة', priority: 3 },
-        { slug: 'onizah-moving-out', context: 'نقل عفش خروج بعنيزة', priority: 4 },
-        { slug: 'onizah-dabab', context: 'دباب نقل بعنيزة', priority: 5 },
-        { slug: 'onizah-cleaning', context: 'تنظيف منازل بعنيزة', priority: 6 },
-        { slug: 'onizah-tanks-cleaning', context: 'تنظيف خزانات بعنيزة', priority: 7 },
-        { slug: 'onizah-sofa-cleaning', context: 'تنظيف كنب بعنيزة', priority: 8 },
-        { slug: 'onizah-carpet-cleaning', context: 'تنظيف سجاد بعنيزة', priority: 9 },
+        { slug: 'bedbugs-control', context: 'بق — دورة 21 يوم', priority: 1 },
+        { slug: 'termite-control', context: 'نمل أبيض — نخيل سليلوز', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف — بعد مكافحة', priority: 3 },
+        { slug: 'tanks-cleaning', context: 'خزانات — CaCO₃', priority: 4 },
     ],
 };

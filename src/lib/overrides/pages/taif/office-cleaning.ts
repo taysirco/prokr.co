@@ -1,4 +1,3 @@
-// تنظيف مكاتب بالطائف — Override (E-E-A-T) | خريطة 2.4: المسند → بلدي
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -33,9 +32,12 @@ export const override: PageOverride = {
         'مكتب بدون عقد تنظيف دوري في الطائف = تراكم أبواغ عفن + حبوب لقاح ←  حساسية مزمنة + غياب موظفين + انخفاض إنتاجية.',
         'لا تعتمد على "عامل النظافة" بمكنسة عادية — تنشر الغبار الدقيق بدلاً من حبسه.',
     ],
-    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات النظافة — عقود مكاتب' }],
-    expertReviewer: { name: EXPERTS.ALMISNID.name, title: EXPERTS.ALMISNID.title, credential: EXPERTS.ALMISNID.credential, profileUrl: EXPERTS.ALMISNID.profileUrl },
-    expertCitations: [{ expert: EXPERTS.ALMISNID.name, quote: 'جودة الهواء الداخلي (IAQ) في مكاتب الطائف = تحدٍ مزدوج: عفن التكييف شتاءً + حبوب لقاح صيفاً. العقد الشهري الذي يشمل تعقيم المكيفات = الاستثمار الأذكى لصاحب العمل — إنتاجية أعلى وغياب أقل.', source: EXPERTS.ALMISNID.title, url: EXPERTS.ALMISNID.profileUrl }],
+    trustAnchors: [
+{ ...{ ...GOV.BALADI, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
+ role: 'ترخيص شركات النظافة — عقود مكاتب' }    ],
+    expertReviewer: EXPERTS.ALMISNID,
+    expertCitations: [{ expert: EXPERTS.ALMISNID.name, quote: 'جودة الهواء الداخلي (IAQ) في مكاتب الطائف = تحدٍ مزدوج: عفن التكييف شتاءً + حبوب لقاح صيفاً. العقد الشهري الذي يشمل تعقيم المكيفات = الاستثمار الأذكى لصاحب العمل — إنتاجية أعلى وغياب أقل.',
+            source: EXPERTS.ALMISNID.title }],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
     verificationBadges: [{ badge: '✔️ بروتوكول IAQ', authority: 'جودة هواء داخلي', icon: 'shield-check' }, { badge: '✔️ عقد شهري منتظم', authority: '4 زيارات + تعقيم', icon: 'badge-check' }],
     equipment: [
@@ -43,11 +45,17 @@ export const override: PageOverride = {
         { name: 'جهاز بخار 150°م', use: 'يعقم السجاد والمفروشات بدون كيماويات — آمن في بيئة مكتبية.' },
         { name: 'مبيد فطري لمجاري التكييف', use: 'يُرش داخل الدكتات بعد التنظيف ← يمنع نمو العفن 3-6 أشهر.' },
     ],
-    hiddenObjections: [{ fear: 'عقد شهري 600-1,200 ريال — كثير على مكتب صغير.', solution: 'موظف يغيب يومين/شهر بسبب حساسية = 500-1,000 ريال خسارة إنتاجية. + سمعة المكتب مع الزوار/العملاء. 600 ريال/شهر = بيئة صحية + إنتاجية + سمعة. التنظيف مُدخل وليس مصروف.' }],
+    hiddenObjections: [
+        { fear: 'عقد شهري 600-1,200 ريال — كثير على مكتب صغير.', solution: 'موظف يغيب يومين/شهر بسبب حساسية = 500-1,000 ريال خسارة إنتاجية. + سمعة المكتب مع الزوار/العملاء. 600 ريال/شهر = بيئة صحية + إنتاجية + سمعة. التنظيف مُدخل وليس مصروف.' },
+        { fear: 'الخدمة أغلى من المدن الأخرى.', solution: 'مناخ الطائف يفرض معالجات إضافية (مضاد تكثف + تجفيف + حماية أخشاب ورود). التكلفة الإضافية استثمار يحمي ممتلكاتك من تلف الرطوبة والحشرات الموسمية.' },
+    ],
     counterNarratives: [{ myth: 'المكتب نظيف يومياً — ما يحتاج متخصصين.', truth: 'التنظيف اليومي العادي = مسح أسطح. أبواغ العفن في المكيفات + حبوب لقاح في السجاد + بكتيريا في الحمامات = لا يصلها المسح اليومي. HEPA + بخار + تعقيم مكيفات = الفرق بين "مكتب نظيف" و"مكتب صحي".' }],
     relatedServices: [
-        { slug: 'taif-air-conditioner-cleaning', context: 'تنظيف مكيفات المكتب — مصدر #1 للعفن.', priority: 1 },
-        { slug: 'taif-carpet-cleaning', context: 'سجاد المكتب — حبوب لقاح + عث.', priority: 2 },
-        { slug: 'taif-pest-control', context: 'رش وقائي للمكتب — حشرات الصيف.', priority: 3 },
+        { slug: 'air-conditioner-cleaning', context: 'تنظيف مكيفات المكتب — مصدر #1 للعفن.', priority: 1 },
+        { slug: 'carpet-cleaning', context: 'سجاد المكتب — حبوب لقاح + عث.', priority: 2 },
+        { slug: 'pest-control', context: 'رش وقائي للمكتب — حشرات الصيف.', priority: 3 },
+        { slug: 'air-conditioner-cleaning', context: 'تنظيف مكيفات تعمل تبريد/تدفئة طوال السنة في مناخ الطائف المتقلب.', priority: 5 },
+        { slug: 'pest-control', context: 'مكافحة حشرات تتكاثر في رطوبة الطائف الشتوية والزراعة المحيطة.', priority: 6 },
+        { slug: 'steam-cleaning', context: 'تعقيم بالبخار لقتل العث والفطريات في مفروشات الطائف الرطبة.', priority: 7 },
     ],
 };

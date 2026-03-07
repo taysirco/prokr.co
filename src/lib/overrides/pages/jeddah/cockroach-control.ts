@@ -84,7 +84,6 @@ export const override: PageOverride = {
             expert: 'أ.د. فهد الخضيري',
             quote: 'المبيدات غير المنتقاة تقتل الصراصير الظاهرة فقط وتنفّرها لغرف أخرى. الجل الطُعم هو الحل العلمي الوحيد الذي يصل المستعمرة ويقتل الملكة',
             source: 'عالم أبحاث طبي — سموم ومسرطنات',
-            url: 'https://x.com/DrAlkhodairy',
         },
     ],
 
@@ -111,14 +110,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'jeddah-pest-control', context: 'مكافحة شاملة لكل الحشرات — ليس فقط الصراصير', priority: 1 },
-        { slug: 'jeddah-ants-control', context: 'النمل يشارك الصراصير نفس البيئة الرطبة — مكافحة مزدوجة', priority: 2 },
-        { slug: 'jeddah-insects-spraying', context: 'رش وقائي شامل بعد إبادة الصراصير يمنع عودتها', priority: 3 },
-        { slug: 'jeddah-pesticide-spraying', context: 'رش مبيدات الجيل الرابع — حماية دورية ربع سنوية', priority: 4 },
-        { slug: 'jeddah-rodent-control', context: 'الفئران والصراصير تتشارك المجاري — مكافحة مترابطة', priority: 5 },
-        { slug: 'jeddah-sewage-unblocking', context: 'المجاري المسدودة = المدخل الرئيسي للصراصير الأمريكية', priority: 6 },
-        { slug: 'jeddah-sanitization', context: 'تعقيم المطبخ بعد إبادة الصراصير — يزيل البكتيريا', priority: 7 },
-        { slug: 'jeddah-kitchen-cleaning', context: 'تنظيف عميق للمطبخ — يزيل مصادر جذب الصراصير', priority: 8 },
-        { slug: 'jeddah-cleaning', context: 'تنظيف شامل بعد المكافحة يزيل فضلات ومخلفات', priority: 9 },
+        { slug: 'pest-control', context: 'مكافحة شاملة لكل الحشرات — ليس فقط الصراصير', priority: 1 },
+        { slug: 'ants-control', context: 'النمل يشارك الصراصير نفس البيئة الرطبة — مكافحة مزدوجة', priority: 2 },
+        { slug: 'insects-spraying', context: 'رش وقائي شامل بعد إبادة الصراصير يمنع عودتها', priority: 3 },
+        { slug: 'pesticide-spraying', context: 'رش مبيدات الجيل الرابع — حماية دورية ربع سنوية', priority: 4 },
+        { slug: 'rodent-control', context: 'الفئران والصراصير تتشارك المجاري — مكافحة مترابطة', priority: 5 },
+        { slug: 'sewage-unblocking', context: 'المجاري المسدودة = المدخل الرئيسي للصراصير الأمريكية', priority: 6 },
+        { slug: 'sanitization', context: 'تعقيم المطبخ بعد إبادة الصراصير — يزيل البكتيريا', priority: 7 },
+        { slug: 'kitchen-cleaning', context: 'تنظيف عميق للمطبخ — يزيل مصادر جذب الصراصير', priority: 8 },
+        { slug: 'cleaning', context: 'تنظيف شامل بعد المكافحة يزيل فضلات ومخلفات', priority: 9 },
     ],
 };

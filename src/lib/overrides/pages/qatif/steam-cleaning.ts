@@ -1,94 +1,70 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف بالبخار بالقطيف — Override مخصص (E-E-A-T Grade)
-// صفحة: /qatif/steam-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف بالبخار بالقطيف — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف بالبخار بالقطيف. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف بالبخار بالقطيف — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف بالبخار بالقطيف', 'تنظيف بالبخار القطيف', 'شركة تنظيف بالبخار بالقطيف', 'أفضل تنظيف بالبخار بالقطيف'],
+        title: 'تنظيف بالبخار بالقطيف — يُحرر NaCl + يقتل عث + يُعقّم + تجفيف 4-8 ساعات (2026)',
+        description: 'تنظيف بالبخار القطيف. يُحرر NaCl+طين. يقتل عث 80-95%. يُعقّم. يُحرر طلع. تجفيف 4-8 ساعات. Dehumidifier بعد.',
+        h1: 'تنظيف بالبخار بالقطيف — يُحرر الملح والطين ويقتل العث',
+        keywords: ['تنظيف بالبخار القطيف', 'تنظيف بخار بالقطيف', 'شركة تنظيف بالبخار بالقطيف'],
     },
-
     content: {
-        introduction: 'تنظيف بالبخار بالقطيف — خدمة متخصصة تراعي الظروف المناخية والبيئية في القطيف. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف بالبخار بالقطيف: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف بالبخار بالقطيف. خدمة احترافية. ضمان.',
+        introduction: 'البخار في القطيف = ضروري لـ 4 أسباب — مع تحدي تجفيف. الفائدة 1 — يُحرر NaCl+طين: بخار يُذيب ملح + يُحرر طين. الفائدة 2 — يقتل عث: 80-95% = عث. بخار 100°م = يقتل. الفائدة 3 — يُعقّم: 80-95% = بكتيريا. بخار = تعقيم. الفائدة 4 — يُحرر طلع: حرارة تُحرر غبار طلع من الأقمشة. التحدي — تجفيف 4-8 ساعات: 80-95% = أبطأ من الرياض. أسرع من الجبيل. Dehumidifier.',
+        shortAnswer: 'على عكس [بخار بدون تجفيف]، يعتمد بروتوكولنا في خدمة [التنظيف بالبخار] بمدينة [القطيف] على [بخار 130°م + Dehumidifier بعد]. ففي ظل [NaCl + 80-95% + عث + طلع]، يحقق البخار [تحرير + قتل + تعقيم — لكن تجفيف]. لذا؛ يتدخل خبراؤنا عبر [بخار ساحلي-واحي + Dehumidifier].',
+        heroSubtitle: 'يُحرر NaCl+طين + يقتل عث + يُعقّم — 4-8 ساعات تجفيف',
     },
-
     pricing: [
-        { type: 'تنظيف بالبخار — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف بالبخار — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'غرفة + Dehumidifier', unit: 'غرفة', minPrice: 80, maxPrice: 160, time: '30 دقيقة + تجفيف' },
+        { type: 'شقة + Dehumidifier', unit: 'شقة', minPrice: 230, maxPrice: 460, time: '3-4 ساعات + تجفيف' },
+        { type: 'بيت/فيلا', unit: 'بيت', minPrice: 380, maxPrice: 760, time: '5-8 ساعات + تجفيف' },
+        { type: 'ربع سنوي', unit: 'سنة', minPrice: 540, maxPrice: 1080, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف بالبخار بالقطيف؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف بالبخار؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف بالبخار؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'تجفيف — 4-8 ساعات؟', answer: '80-95% = أبطأ من الرياض (1-2). أسرع من الجبيل (6-10). Dehumidifier.' },
+        { question: 'يقتل عث — ضروري هنا؟', answer: '80-95% = عث. ضروري. بخار = الأداة الأولى. Anti-Mite بعد.' },
+        { question: 'طلع — يُحرره البخار؟', answer: 'حرارة تُحرر طلع من الألياف ← HEPA يلتقط. مزدوج.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Dehumidifier بعد البخار — 80-95%.',
+        'بخار يُحرر NaCl+طين — ثم RO.',
+        'Anti-Mite بعد بخار — يمنع عودة.',
+        'HEPA بعد بخار — يلتقط طلع.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'بخار بدون Dehumidifier = عفن 24-48 ساعة.',
+        '80-95% + بخار + غرفة مُغلقة = 100%. كارثة.',
+        'تجفيف 4-8 ساعات = تخطيط.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص التنظيف' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات النظافة بالشرقية' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'بخار القطيف: يُحرر NaCl+طين + يقتل عث + يُحرر طلع. 4-8 ساعات. Dehumidifier.', source: 'نصائح هندسية — بخار الواحات الساحلية' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ بخار مرخص', authority: 'منصة بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Dry Vapor 130°م', use: 'NaCl+طين+عث+تعقيم' },
+        { name: 'Dehumidifier', use: '80-95% → 50-60%' },
+        { name: 'Anti-Mite', use: 'بعد بخار — عث' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'يبلل.', solution: '80-95% = يبلل. Dehumidifier.' },
+        { fear: 'بدون Dehumidifier.', solution: 'عفن 24-48 ساعة.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'يجف طبيعي.', truth: '80-95% = 4-8 ساعات.' },
+        { myth: 'مثل حفر الباطن.', truth: '10-15% = 20 دقيقة. 80-95% = 4-8.' },
     ],
-
     relatedServices: [
-        { slug: 'qatif-furniture-moving', context: 'نقل عفش بالقطيف', priority: 1 },
-        { slug: 'qatif-furniture-storage', context: 'تخزين عفش بالقطيف', priority: 2 },
-        { slug: 'qatif-dyna', context: 'دينا نقل بالقطيف', priority: 3 },
-        { slug: 'qatif-moving-out', context: 'نقل عفش خروج بالقطيف', priority: 4 },
-        { slug: 'qatif-dabab', context: 'دباب نقل بالقطيف', priority: 5 },
-        { slug: 'qatif-cleaning', context: 'تنظيف منازل بالقطيف', priority: 6 },
-        { slug: 'qatif-tanks-cleaning', context: 'تنظيف خزانات بالقطيف', priority: 7 },
-        { slug: 'qatif-sofa-cleaning', context: 'تنظيف كنب بالقطيف', priority: 8 },
-        { slug: 'qatif-carpet-cleaning', context: 'تنظيف سجاد بالقطيف', priority: 9 },
+        { slug: 'carpet-cleaning', context: 'سجاد', priority: 1 },
+        { slug: 'sofa-cleaning', context: 'كنب', priority: 2 },
+        { slug: 'councils-cleaning', context: 'مجالس', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 4 },
+        { slug: 'marble-polishing', context: 'رخام', priority: 5 },
+        { slug: 'pest-control', context: 'حشرات', priority: 6 },
+        { slug: 'apartments-cleaning', context: 'شقق', priority: 7 },
     ],
 };

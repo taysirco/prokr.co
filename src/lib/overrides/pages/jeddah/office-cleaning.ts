@@ -4,6 +4,7 @@
 // ============================================
 
 import type { PageOverride } from '../../types';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -91,19 +92,13 @@ export const override: PageOverride = {
         { entity: 'وزارة البلديات — منصة بلدي', acronym: 'بلدي', url: 'https://balady.gov.sa', role: 'الشهادة الصحية للمكاتب التجارية' },
     ],
 
-    expertReviewer: {
-        name: 'أ.د. عبدالله المسند',
-        title: 'أستاذ جغرافيا المناخ',
-        credential: 'أستاذ جغرافيا المناخ — جامعة القصيم',
-        profileUrl: 'https://x.com/ALMISNID',
-    },
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
             expert: 'أ.د. عبدالله المسند',
             quote: 'مكاتب جدة تجمع ترسبات ملحية على الواجهات والأسطح أسرع من المدن الجافة — التنظيف الاحترافي الأسبوعي يحمي صحة الموظفين وانطباع العملاء',
             source: 'تحليل مناخي',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -112,14 +107,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'jeddah-sanitization', context: 'تعقيم — شهادة صحية', priority: 1 },
-        { slug: 'jeddah-cleaning', context: 'تنظيف شامل مكاتب', priority: 2 },
-        { slug: 'jeddah-air-conditioner-cleaning', context: 'مكيفات المكتب', priority: 3 },
-        { slug: 'jeddah-carpet-cleaning', context: 'موكيت المكتب', priority: 4 },
-        { slug: 'jeddah-glass-facades-cleaning', context: 'واجهات المبنى', priority: 5 },
-        { slug: 'jeddah-steam-cleaning', context: 'بخار كراسي + أرضيات', priority: 6 },
-        { slug: 'jeddah-sofa-cleaning', context: 'كراسي الاستقبال', priority: 7 },
-        { slug: 'jeddah-pest-control', context: 'رش وقائي للمكتب', priority: 8 },
-        { slug: 'jeddah-floor-polishing', context: 'تلميع أرضيات المكتب', priority: 9 },
+        { slug: 'sanitization', context: 'تعقيم — شهادة صحية', priority: 1 },
+        { slug: 'cleaning', context: 'تنظيف شامل مكاتب', priority: 2 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيفات المكتب', priority: 3 },
+        { slug: 'carpet-cleaning', context: 'موكيت المكتب', priority: 4 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات المبنى', priority: 5 },
+        { slug: 'steam-cleaning', context: 'بخار كراسي + أرضيات', priority: 6 },
+        { slug: 'sofa-cleaning', context: 'كراسي الاستقبال', priority: 7 },
+        { slug: 'pest-control', context: 'رش وقائي للمكتب', priority: 8 },
+        { slug: 'floor-polishing', context: 'تلميع أرضيات المكتب', priority: 9 },
     ],
 };

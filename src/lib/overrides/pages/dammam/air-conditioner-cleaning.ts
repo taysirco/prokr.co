@@ -1,11 +1,3 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف مكيفات بالدمام — Override مخصص (E-E-A-T Grade)
-// صفحة: /dammam/air-conditioner-cleaning
-// قطاع YMYL: صحة (PM2.5 + Legionella في صينية التكثف) + مالي (فاتورة كهرباء)
-// خريطة 2.4: المسند (مناخ/تنظيف) → بلدي + كفاءة
-// NLP: الراكة، الفيصلية، مجمعات أرامكو، غبار صناعي، كلوريدات خليجية
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
 
@@ -79,19 +71,13 @@ export const override: PageOverride = {
         { ...GOV.MOENERGY, role: 'معايير كفاءة الطاقة — المكيف النظيف يُحسّن كفاءة الطاقة 15-25%' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMISNID.name,
-        title: EXPERTS.ALMISNID.title,
-        credential: EXPERTS.ALMISNID.credential,
-        profileUrl: EXPERTS.ALMISNID.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMISNID,
 
     expertCitations: [
         {
             expert: 'أ.د. عبدالله المسند',
             quote: 'المكيف في المنطقة الشرقية ليس جهاز تبريد فقط — بل نظام توزيع هواء. إذا كان ملوثاً فأنت توزّع PM2.5 صناعي وبكتيريا على كل غرفة. تنظيف المبخر + الدكتات + فلتر HEPA = الحل الوحيد',
             source: 'أستاذ جغرافيا المناخ — جامعة القصيم',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -120,14 +106,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'dammam-cleaning', context: 'تنظيف منازل شامل يشمل المكيفات — حل متكامل', priority: 1 },
-        { slug: 'dammam-sanitization', context: 'تعقيم بعد تنظيف المكيف يضمن هواء نظيف 100%', priority: 2 },
-        { slug: 'dammam-steam-cleaning', context: 'بخار 180°م لتعقيم وحدة المكيف الخارجية', priority: 3 },
-        { slug: 'dammam-tanks-cleaning', context: 'الخزان والمكيف = مصدرا Legionella الرئيسيين بالدمام', priority: 4 },
-        { slug: 'dammam-sofa-cleaning', context: 'مكيف ملوث = كنب ملوث. نظفهم معاً', priority: 5 },
-        { slug: 'dammam-carpet-cleaning', context: 'PM2.5 من المكيف يستقر في السجاد — غسيل عميق', priority: 6 },
-        { slug: 'dammam-thermal-insulation', context: 'العزل يقلل ساعات تشغيل المكيف 30-40% = أقل تلوث + وفر كهرباء', priority: 7 },
-        { slug: 'dammam-roof-insulation', context: 'عزل السطح يخفض حمل التبريد — المكيف يعمل أقل = يتسخ أبطأ', priority: 8 },
-        { slug: 'dammam-pest-control', context: 'حشرات تدخل من فتحات المكيف — سد وتنظيف', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف منازل شامل يشمل المكيفات — حل متكامل', priority: 1 },
+        { slug: 'sanitization', context: 'تعقيم بعد تنظيف المكيف يضمن هواء نظيف 100%', priority: 2 },
+        { slug: 'steam-cleaning', context: 'بخار 180°م لتعقيم وحدة المكيف الخارجية', priority: 3 },
+        { slug: 'tanks-cleaning', context: 'الخزان والمكيف = مصدرا Legionella الرئيسيين بالدمام', priority: 4 },
+        { slug: 'sofa-cleaning', context: 'مكيف ملوث = كنب ملوث. نظفهم معاً', priority: 5 },
+        { slug: 'carpet-cleaning', context: 'PM2.5 من المكيف يستقر في السجاد — غسيل عميق', priority: 6 },
+        { slug: 'thermal-insulation', context: 'العزل يقلل ساعات تشغيل المكيف 30-40% = أقل تلوث + وفر كهرباء', priority: 7 },
+        { slug: 'roof-insulation', context: 'عزل السطح يخفض حمل التبريد — المكيف يعمل أقل = يتسخ أبطأ', priority: 8 },
+        { slug: 'pest-control', context: 'حشرات تدخل من فتحات المكيف — سد وتنظيف', priority: 9 },
     ],
 };

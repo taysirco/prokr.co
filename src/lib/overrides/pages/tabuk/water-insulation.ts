@@ -1,7 +1,3 @@
-// عزل مائي بتبوك — Override (E-E-A-T)
-// الزاوية: أمطار حقيقية (50-80 ملم) + صقيع يُجمّد الماء في الشقوق
-//   + فرق حراري يُشقق APP = SBS مرن إلزامي
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -57,19 +53,13 @@ export const override: PageOverride = {
         { entity: AMANA.TABUK.entity, url: AMANA.TABUK.url, role: 'تطبيق اشتراطات العزل المائي بتبوك', acronym: 'أمانة تبوك' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
             expert: 'م. ماجد المحيميد',
             quote: 'تبوك = Frost Wedging + حركة حرارية 46°م + أمطار حقيقية. كل شق مفتوح يتوسع تلقائياً شتاءً. APP يتشقق = بوابة تدمير. SBS المرن = الضمان الوحيد بتبوك',
             source: 'خبير جودة البناء والتشطيبات',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
 
@@ -88,15 +78,21 @@ export const override: PageOverride = {
 
     hiddenObjections: [
         { fear: 'الأمطار قليلة — ما أحتاج عزل مائي', solution: 'بتبوك: ليس كم المطر المهم بل ما يحدث بعده. ماء يدخل شق ← يتجمد ← يُوسّعه 5 أضعاف. مطرة واحدة + صقيعة واحدة = ضرر هيكلي. العزل يمنع الماء من الدخول أصلاً' },
+        { fear: 'السعر أعلى من المتوقع.', solution: 'السعر يشمل معدات صناعية متخصصة + مواد احترافية + عمالة مدربة + ضمان مكتوب. المقارنة العادلة ليست مع عامل عشوائي بل مع تكلفة إصلاح الأضرار الناتجة عن العمل غير المتخصص.' },
     ],
 
     counterNarratives: [
         { myth: 'تبوك صحراء — ما تحتاج عزل مائي', truth: '50-80 ملم أمطار/سنة + صقيع = Frost Wedging يُدمّر المباني بدون عزل. تبوك تحتاج عزل مائي أكثر من الرياض (صفر أمطار تقريباً)' },
+        { myth: 'أي شركة تنظيف/صيانة نتيجتها واحدة.', truth: 'الفرق بين شركة مرخصة ومُعتمدة وأخرى عشوائية = الفرق بين معالجة جذرية وإخفاء مؤقت. المعدات المتخصصة والبروتوكولات العلمية تحل المشكلة من جذرها — التنظيف العشوائي يُعيدها أسوأ خلال أسابيع.' },
+        { myth: 'أوفر وأسوي الشغل بنفسي.', truth: 'التوفير الظاهري يتحول لتكلفة مضاعفة: أدوات منزلية لا تصل للعمق المطلوب + مواد غير مناسبة قد تُتلف الأسطح + وقت وجهد بلا ضمان نتيجة. الاحتراف = ضمان + توفير حقيقي على المدى الطويل.' },
     ],
 
     relatedServices: [
-        { slug: 'tabuk-roof-insulation', context: 'عزل سطح حراري+مائي = حماية شاملة', priority: 1 },
-        { slug: 'tabuk-foam-insulation', context: 'فوم Closed-Cell يُكمل البيتومين', priority: 2 },
-        { slug: 'tabuk-water-leak-detection', context: 'فحص تسربات بعد العزل — تأكيد فعالية', priority: 3 },
+        { slug: 'roof-insulation', context: 'عزل سطح حراري+مائي = حماية شاملة', priority: 1 },
+        { slug: 'foam-insulation', context: 'فوم Closed-Cell يُكمل البيتومين', priority: 2 },
+        { slug: 'water-leak-detection', context: 'فحص تسربات بعد العزل — تأكيد فعالية', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف شامل يُكمّل الخدمة الأساسية — بيئة نظيفة متكاملة.', priority: 5 },
+        { slug: 'pest-control', context: 'مكافحة حشرات متكاملة مع خدمات النظافة والصيانة.', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'تنظيف مكيفات لهواء نظيف — يُكمّل أي خدمة منزلية.', priority: 7 },
     ],
 };

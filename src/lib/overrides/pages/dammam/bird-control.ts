@@ -1,14 +1,3 @@
-// ══════════════════════════════════════════════════════════════
-// مكافحة طيور بالدمام — Override (E-E-A-T)
-// صفحة: /dammam/bird-control
-// قطاع YMYL: صحي (بكتيريا ذرق) + مالي (تآكل)
-// خريطة 2.4: الخضيري → بلدي + أمانة الشرقية
-// الزاوية: حمام يتكاثر 12 شهر بدون توقف شتوي
-//   + نوارس ساحلية عدوانية بالقرب من الكورنيش
-//   + ذرق حمضي يبقى رطباً = تآكل أسرع
-//   + كل الأجهزة يجب أن تكون SS316 Marine Grade
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -72,19 +61,13 @@ export const override: PageOverride = {
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'الرقابة على نظافة المباني ومكافحة الطيور بالدمام', acronym: 'أمانة الشرقية' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALKHODAIRY.name,
-        title: EXPERTS.ALKHODAIRY.title,
-        credential: EXPERTS.ALKHODAIRY.credential,
-        profileUrl: EXPERTS.ALKHODAIRY.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALKHODAIRY,
 
     expertCitations: [
         {
             expert: 'د. فهد الخضيري',
             quote: 'ذرق الحمام حمضي (pH 3-4) — في رطوبة الدمام يبقى رطباً ويتفاعل مع الأسطح بشكل مستمر. بالمدن الجافة يجف ويُزال بسهولة. بالدمام: تآكل حقيقي يُتلف الطلاء والمعدن ويحتاج معدات مكافحة مقاومة للملح',
             source: 'مكافحة حشرات وآفات',
-            url: 'https://x.com/DrAlkhodairy',
         },
     ],
 
@@ -111,8 +94,8 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'dammam-pest-control', context: 'الحمام يحمل براغيث وقراد — مكافحة حشرات بعد الطرد', priority: 1 },
-        { slug: 'dammam-glass-facades-cleaning', context: 'تنظيف واجهات زجاجية من بقع الذرق الحمضية المتراكمة', priority: 2 },
-        { slug: 'dammam-cleaning', context: 'تنظيف أسطح وشرفات من ذرق الحمام المتراكم', priority: 3 },
+        { slug: 'pest-control', context: 'الحمام يحمل براغيث وقراد — مكافحة حشرات بعد الطرد', priority: 1 },
+        { slug: 'glass-facades-cleaning', context: 'تنظيف واجهات زجاجية من بقع الذرق الحمضية المتراكمة', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف أسطح وشرفات من ذرق الحمام المتراكم', priority: 3 },
     ],
 };

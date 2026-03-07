@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف شقق بالباحة — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-baha/apartments-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف شقق بالباحة — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف شقق بالباحة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف شقق بالباحة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف شقق بالباحة', 'تنظيف شقق الباحة', 'شركة تنظيف شقق بالباحة', 'أفضل تنظيف شقق بالباحة'],
+        title: 'تنظيف شقق بالباحة — 200 يوم ضباب+عرعر لزج+Laterite أحمر+عفن — Oxalic+HEPA! (2026)',
+        description: 'تنظيف شقق الباحة. 200 يوم ضباب! عرعر لزج. Laterite Fe₂O₃. عفن أسبوعين. Oxalic+HEPA+Anti-Fungal+Dehumidifier.',
+        h1: 'تنظيف شقق بالباحة — ضباب+عرعر+طين أحمر!',
+        keywords: ['تنظيف شقق بالباحة', 'تنظيف شقة بالباحة', 'شركة تنظيف شقق بالباحة'],
     },
-
     content: {
-        introduction: 'تنظيف شقق بالباحة — خدمة متخصصة تراعي الظروف المناخية والبيئية في الباحة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف شقق بالباحة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف شقق بالباحة. خدمة احترافية. ضمان.',
+        introduction: 'شقة الباحة = ضباب يدخل من النوافذ! 200 يوم ضباب: رطوبة 60-85% تتسلل داخل الشقة ← عفن Penicillium في زوايا الحمام والمطبخ أسبوعين! Anti-Fungal أسبوعي. عرعر لزج: حبوب لقاح صفراء من الغابة تدخل مع الضباب ← تلتصق بالأثاث والأسطح = طبقة لزجة صفراء. HEPA AC+مسح Microfiber. Laterite Fe₂O₃: طين بازلتي أحمر يدخل بالأحذية ← المبيّض يُثبّته! Oxalic Acid فقط. تجفيف 6-10h: أبطأ تجفيف بالمملكة! Dehumidifier إلزامي. مقارنة: بريدة = جاف 10-20% تجفيف 15 دقيقة+لا عفن+لا عرعر. الباحة = ضباب+عرعر+طين = أعقد.',
+        shortAnswer: 'على عكس [المنظف العادي+المبيّض]، يعتمد بروتوكولنا في خدمة [تنظيف الشقق] بمدينة [الباحة] على [Oxalic ← HEPA ← Anti-Fungal ← Dehumidifier]. ففي ظل [200 يوم ضباب+عرعر لزج+Laterite+60-85% عفن]، تتفاقم ظاهرة [عفن+لقاح+طين+بطء تجفيف]. لذا؛ يتدخل فريقنا عبر [4 ركائز جبلية] — ربع سنوي+ضباب!',
+        heroSubtitle: '200 يوم ضباب + عرعر + Laterite — 4 ركائز جبلية!',
     },
-
     pricing: [
-        { type: 'تنظيف شقق — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف شقق — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'شقة غرفتين', unit: 'شقة', minPrice: 150, maxPrice: 310, time: '2-4h + 6-10h تجفيف' },
+        { type: 'شقة 3-4 غرف', unit: 'شقة', minPrice: 250, maxPrice: 520, time: '4-6h + تجفيف' },
+        { type: 'بعد موسم ضباب — عميق', unit: 'شقة', minPrice: 300, maxPrice: 620, time: '5-7h' },
+        { type: 'ربع سنوي (4+ضباب)', unit: 'سنة', minPrice: 500, maxPrice: 1000, time: '5 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف شقق بالباحة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف شقق؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف شقق؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش شقة الباحة تتعفّن أسرع بكثير؟', answer: '200 يوم ضباب = 60-85% = عفن أسبوعين. بريدة: 10-20% = لا عفن.' },
+        { question: 'ليش المبيّض ممنوع بالباحة؟', answer: 'Laterite Fe₂O₃ + مبيّض = بقعة حمراء دائمة! Oxalic Acid فقط.' },
+        { question: 'كم تجفيف شقة بالباحة؟', answer: '6-10 ساعات! أبطأ بالمملكة. Dehumidifier يُقلّل لـ 3-4h.' },
+        { question: 'ما الطبقة الصفراء اللزجة بالباحة؟', answer: 'عرعر: حبوب لقاح + ضباب = لزجة. HEPA+Microfiber.' },
+        { question: 'كم تكلفة شقة بالباحة مقارنة ببريدة؟', answer: 'أغلى 30-40% — Anti-Fungal+Dehumidifier+Oxalic.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Oxalic أولاً — Laterite. لا مبيّض!',
+        'HEPA AC — عرعر لزج ضبابي.',
+        'Anti-Fungal أسبوعي — 200 يوم ضباب.',
+        'Dehumidifier — 6-10h تجفيف.',
+        'بخار 130°م — عث الرطوبة.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'مبيّض + Laterite = بقعة حمراء دائمة — Oxalic فقط.',
+        '200 يوم ضباب بدون Anti-Fungal = عفن ← صحة YMYL.',
+        'تجفيف بدون Dehumidifier = 6-10h = عفن يعود.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
+        { entity: AMANA.BAHA.entity, url: AMANA.BAHA.url, role: 'اشتراطات أمانة الباحة' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMISNID.name, quote: 'شقة الباحة: 200 يوم ضباب. Oxalic+HEPA+Anti-Fungal. أبطأ تجفيف بالمملكة.', source: 'جغرافيا المناخ — شقق جبلية' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف مرخص', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Oxalic Acid', use: 'Laterite Fe₂O₃ — لا مبيّض' },
+        { name: 'HEPA Filter', use: 'عرعر لزج — ضبابي' },
+        { name: 'Dehumidifier', use: '6-10h — أبطأ تجفيف' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'منظف عادي.', solution: 'Laterite+عرعر+عفن = 4 ركائز.' },
+        { fear: 'مثل بريدة.', solution: 'ضباب+عرعر ≠ كلس+Nafud.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'تجفيف سريع.', truth: '6-10h! Dehumidifier إلزامي.' },
+        { myth: 'مبيّض يُنظّف.', truth: 'يُثبّت Laterite. Oxalic.' },
     ],
-
     relatedServices: [
-        { slug: 'al-baha-furniture-moving', context: 'نقل عفش بالباحة', priority: 1 },
-        { slug: 'al-baha-furniture-storage', context: 'تخزين عفش بالباحة', priority: 2 },
-        { slug: 'al-baha-dyna', context: 'دينا نقل بالباحة', priority: 3 },
-        { slug: 'al-baha-moving-out', context: 'نقل عفش خروج بالباحة', priority: 4 },
-        { slug: 'al-baha-dabab', context: 'دباب نقل بالباحة', priority: 5 },
-        { slug: 'al-baha-cleaning', context: 'تنظيف منازل بالباحة', priority: 6 },
-        { slug: 'al-baha-tanks-cleaning', context: 'تنظيف خزانات بالباحة', priority: 7 },
-        { slug: 'al-baha-sofa-cleaning', context: 'تنظيف كنب بالباحة', priority: 8 },
-        { slug: 'al-baha-carpet-cleaning', context: 'تنظيف سجاد بالباحة', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 1 },
+        { slug: 'carpet-cleaning', context: 'سجاد', priority: 2 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 3 },
+        { slug: 'steam-cleaning', context: 'بخار', priority: 4 },
+        { slug: 'pest-control', context: 'حشرات', priority: 5 },
+        { slug: 'marble-polishing', context: 'رخام', priority: 6 },
+        { slug: 'villas-cleaning', context: 'فلل', priority: 7 },
     ],
 };

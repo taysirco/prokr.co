@@ -85,7 +85,6 @@ export const override: PageOverride = {
             expert: 'م. ماجد المحيميد',
             quote: 'الونش يحتاج 3 شروط: فني مدرّب، طقس مناسب، وتغليف كامل. بدون أي شرط: يتحول من حل لمشكلة. في الرياض: تحقق من الرياح قبل 24 ساعة',
             source: 'خبير جودة البناء والتشطيبات',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
 
@@ -112,14 +111,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'riyadh-cleaning', context: 'تنظيف شامل بعد الخروج', priority: 1 },
-        { slug: 'riyadh-apartments-cleaning', context: 'تنظيف شقة للتسليم', priority: 2 },
-        { slug: 'riyadh-steam-cleaning', context: 'بخار شامل', priority: 3 },
-        { slug: 'riyadh-sanitization', context: 'تعقيم للساكن الجديد', priority: 4 },
-        { slug: 'riyadh-pest-control', context: 'رش قبل الدخول', priority: 5 },
-        { slug: 'riyadh-air-conditioner-cleaning', context: 'مكيفات قبل التسليم', priority: 6 },
-        { slug: 'riyadh-floor-polishing', context: 'تلميع أرضيات', priority: 7 },
-        { slug: 'riyadh-furniture-moving', context: 'نقل عفش', priority: 8 },
-        { slug: 'riyadh-tanks-cleaning', context: 'غسيل خزان', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف شامل بعد الخروج', priority: 1 },
+        { slug: 'apartments-cleaning', context: 'تنظيف شقة للتسليم', priority: 2 },
+        { slug: 'steam-cleaning', context: 'بخار شامل', priority: 3 },
+        { slug: 'sanitization', context: 'تعقيم للساكن الجديد', priority: 4 },
+        { slug: 'pest-control', context: 'رش قبل الدخول', priority: 5 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيفات قبل التسليم', priority: 6 },
+        { slug: 'floor-polishing', context: 'تلميع أرضيات', priority: 7 },
+        { slug: 'furniture-moving', context: 'نقل عفش', priority: 8 },
+        { slug: 'tanks-cleaning', context: 'غسيل خزان', priority: 9 },
     ],
 };

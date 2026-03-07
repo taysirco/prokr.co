@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف منازل بالخرج — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-kharj/cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف منازل بالخرج — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف منازل بالخرج. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف منازل بالخرج — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف منازل بالخرج', 'تنظيف منازل الخرج', 'شركة تنظيف منازل بالخرج', 'أفضل تنظيف منازل بالخرج'],
+        title: 'تنظيف منازل بالخرج — NH₃ مزارع ألبان 4 محاور+CaCO₃+SiO₂ — Activated Carbon! (2026)',
+        description: 'تنظيف منازل الخرج. 4 محاور زراعية: NH₃ مزارع+CaCO₃ 450ppm+SiO₂+ΔT 48°م. HEPA AC+Descaler+RO. لا عفن! تجفيف سريع.',
+        h1: 'تنظيف منازل بالخرج — 4 محاور زراعية — لا عفن!',
+        keywords: ['تنظيف منازل الخرج', 'تنظيف بيوت بالخرج', 'شركة تنظيف الخرج'],
     },
-
     content: {
-        introduction: 'تنظيف منازل بالخرج — خدمة متخصصة تراعي الظروف المناخية والبيئية في الخرج. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف منازل بالخرج: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف منازل بالخرج. خدمة احترافية. ضمان.',
+        introduction: 'منزل الخرج يتسخ بطريقة زراعية-حيوانية فريدة — 4 محاور! المحور 1 — NH₃ أمونيا: مزارع ألبان/دواجن = رائحة تدخل من النوافذ والمكيف. HEPA Activated Carbon يمتص — المعطر يُخفي فقط! المحور 2 — CaCO₃ 450ppm: آبار جوفية = كلس على الحمامات والمطبخ والحنفيات. Descaler حمضي+RO. المحور 3 — SiO₂ صحراوي: غبار رمل ناعم يخدش الأسطح لو مُسح بقطن عادي. Microfiber فقط. المحور 4 — ΔT 48°م: تشققات حرارية في الجدران. لكن: 15-25% = لا عفن ولا عث! تجفيف 20-40 دقيقة! مقارنة: الرياض = لا NH₃ ولا CaCO₃. خميس = 7 محاور + عفن + عث. الخرج = 4 محاور + لا عفن = أبسط من خميس وأعقد من الرياض.',
+        shortAnswer: 'على عكس [المعطر الذي يُخفي NH₃ بدون إزالة]، يعتمد بروتوكولنا في خدمة [تنظيف المنازل] بمدينة [الخرج] على [HEPA AC+Descaler+RO+Microfiber]. ففي ظل [NH₃ مزارع+CaCO₃ 450ppm+SiO₂+ΔT 48°م]، تتفاقم ظاهرة [رائحة+كلس+خدش+تشقق]. لذا؛ يتدخل فريقنا عبر [4 محاور زراعية متكاملة] — ميزة: لا عفن!',
+        heroSubtitle: '4 محاور زراعية — NH₃+CaCO₃+SiO₂+ΔT — لا عفن! تجفيف سريع!',
     },
-
     pricing: [
-        { type: 'تنظيف منازل — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف منازل — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'شقة — زراعي', unit: 'شقة', minPrice: 160, maxPrice: 320, time: '3-4h + تجفيف 20-40 دقيقة' },
+        { type: 'فيلا', unit: 'فيلا', minPrice: 350, maxPrice: 700, time: '5-8h' },
+        { type: '+ AC رائحة عميق', unit: 'إضافي', minPrice: 80, maxPrice: 160, time: '1-2h' },
+        { type: 'أسبوعي (4 زيارات/شهر)', unit: 'شهر', minPrice: 280, maxPrice: 560, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف منازل بالخرج؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف منازل؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف منازل؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش منزل الخرج له رائحة غريبة؟', answer: 'NH₃ من مزارع ألبان/دواجن. المعطر يُخفي مؤقتاً — AC يمتص الجزيئات ويُزيل.' },
+        { question: 'كم تكلفة تنظيف منزل بالخرج مقارنة بخميس مشيط؟', answer: 'أرخص 30-40%! 4 محاور مقابل 7. لا Anti-Fungal+Anti-Mite+تجفيف 20 دقيقة.' },
+        { question: 'هل الخرج فيها عفن مثل خميس مشيط؟', answer: 'لا! 15-25% = جاف. لا عفن لا عث. ميزة كبيرة = أرخص+أبسط.' },
+        { question: 'ليش كلس على الحنفيات بالخرج؟', answer: 'CaCO₃ 450ppm من آبار. Descaler حمضي يُذيب. RO يمنع تراكم جديد.' },
+        { question: 'كم مرة أنظف المنزل عميق بالخرج؟', answer: 'ربع سنوي. قرب مزرعة = شهري. NH₃ يتراكم في الأقمشة يومياً.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'HEPA AC — يمتص NH₃ لا يُعطّر.',
+        'Descaler — CaCO₃ 450ppm كلس.',
+        'Microfiber — SiO₂ يخدش القطن.',
+        'لا عفن! ميزة — تجفيف 20-40 دقيقة.',
+        'قرب مزرعة = أسبوعي — NH₃ أعلى.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'NH₃ + معطر × 6 أشهر = بلمرة حيوانية في أقمشة — لا تُزال بدون Enzymatic.',
+        'CaCO₃ + ماء صنبور = كلس يتراكم — RO+Descaler إلزامي.',
+        'SiO₂ + مسح بقطن = خدش أسطح لامعة — Microfiber فقط.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
+        { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMISNID.name, quote: 'منزل الخرج: 4 محاور زراعية. NH₃+CaCO₃+SiO₂+ΔT. ميزة: لا عفن.', source: 'جغرافيا المناخ — زراعي' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف منازل مرخص', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'HEPA Activated Carbon', use: 'يمتص NH₃/H₂S — لا يُعطّر' },
+        { name: 'Chemical Descaler', use: 'يُذيب CaCO₃ 450ppm' },
+        { name: 'Microfiber + RO', use: 'SiO₂ بدون خدش + لا كلس' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'مثل الرياض.', solution: 'NH₃+CaCO₃. الرياض لا مزارع ولا آبار.' },
+        { fear: 'غالي.', solution: 'أرخص 30% من خميس. 4 محاور مقابل 7.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'معطر يكفي.', truth: 'NH₃ يتراكم. AC يمتص = فرق حقيقي.' },
+        { myth: 'مثل خميس.', truth: 'لا عفن+لا عث+20 دقيقة = أبسط 40%.' },
     ],
-
     relatedServices: [
-        { slug: 'al-kharj-furniture-moving', context: 'نقل عفش بالخرج', priority: 1 },
-        { slug: 'al-kharj-furniture-storage', context: 'تخزين عفش بالخرج', priority: 2 },
-        { slug: 'al-kharj-dyna', context: 'دينا نقل بالخرج', priority: 3 },
-        { slug: 'al-kharj-moving-out', context: 'نقل عفش خروج بالخرج', priority: 4 },
-        { slug: 'al-kharj-dabab', context: 'دباب نقل بالخرج', priority: 5 },
-        { slug: 'al-kharj-tanks-cleaning', context: 'تنظيف خزانات بالخرج', priority: 6 },
-        { slug: 'al-kharj-sofa-cleaning', context: 'تنظيف كنب بالخرج', priority: 7 },
-        { slug: 'al-kharj-carpet-cleaning', context: 'تنظيف سجاد بالخرج', priority: 8 },
-        { slug: 'al-kharj-steam-cleaning', context: 'تنظيف بالبخار بالخرج', priority: 9 },
+        { slug: 'apartments-cleaning', context: 'شقق', priority: 1 },
+        { slug: 'villas-cleaning', context: 'فلل', priority: 2 },
+        { slug: 'carpet-cleaning', context: 'سجاد — NH₃', priority: 3 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 4 },
+        { slug: 'pest-control', context: 'حشرات', priority: 5 },
+        { slug: 'steam-cleaning', context: 'بخار', priority: 6 },
+        { slug: 'hourly-cleaning', context: 'بالساعة', priority: 7 },
     ],
 };

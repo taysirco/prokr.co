@@ -1,11 +1,3 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف أفران بالدمام — Override مخصص (E-E-A-T Grade)
-// صفحة: /dammam/oven-cleaning
-// قطاع YMYL: سلامة (حريق دهون Class F + غاز) + صحة (كربون محترق)
-// خريطة 2.4: المسند (مناخ/تنظيف) + المحيميد (مداخن) → 998 + بلدي
-// NLP: رطوبة خليجية تبطّئ جفاف الدهون، PM2.5 يختلط بالكربون المحترق
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
 
@@ -81,25 +73,18 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف — مواد معتمدة وآمنة للاستخدام المنزلي' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMISNID.name,
-        title: EXPERTS.ALMISNID.title,
-        credential: EXPERTS.ALMISNID.credential,
-        profileUrl: EXPERTS.ALMISNID.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMISNID,
 
     expertCitations: [
         {
             expert: 'أ.د. عبدالله المسند',
             quote: 'الفرن في مناخ الدمام الرطب يتراكم عليه دهون لزجة لا تجف + كربون محترق + ترسبات كلسية = ثلاث طبقات تحتاج ثلاث معالجات مختلفة. بيكربونات الصوديوم للكربون + Degreaser للدهون + محلول حمضي للكلس',
             source: 'أستاذ جغرافيا المناخ — جامعة القصيم',
-            url: 'https://x.com/ALMISNID',
         },
         {
             expert: 'م. ماجد المحيميد',
             quote: 'تنظيف فتحات الشعلات وخطوط الغاز جزء من سلامة المنزل — ليس فقط نظافة. لهب أصفر = تنظيف فوري',
             source: 'خبير جودة البناء والتشطيبات',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
 
@@ -130,14 +115,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'dammam-kitchen-cleaning', context: 'تنظيف مطبخ شامل يتضمن الفرن والشفاط', priority: 1 },
-        { slug: 'dammam-restaurant-chimney-cleaning', context: 'تنظيف مداخن أفران تجارية — نفس مخاطر الحريق مضاعفة', priority: 2 },
-        { slug: 'dammam-steam-cleaning', context: 'بخار 180°م — يُكمّل تنظيف الفرن الكيميائي', priority: 3 },
-        { slug: 'dammam-cleaning', context: 'تنظيف شامل يشمل المطبخ والفرن', priority: 4 },
-        { slug: 'dammam-sanitization', context: 'تعقيم المطبخ بعد تنظيف الفرن', priority: 5 },
-        { slug: 'dammam-air-conditioner-cleaning', context: 'مكيف المطبخ يمتص دهون الفرن — نظفه معه', priority: 6 },
-        { slug: 'dammam-pest-control', context: 'دهون فرن مهمل تجذب صراصير', priority: 7 },
-        { slug: 'dammam-floor-cleaning', context: 'أرضية المطبخ حول الفرن — دهون', priority: 8 },
-        { slug: 'dammam-glass-facades-cleaning', context: 'نافذة المطبخ فوق الفرن — دهون + ملوحة', priority: 9 },
+        { slug: 'kitchen-cleaning', context: 'تنظيف مطبخ شامل يتضمن الفرن والشفاط', priority: 1 },
+        { slug: 'restaurant-chimney-cleaning', context: 'تنظيف مداخن أفران تجارية — نفس مخاطر الحريق مضاعفة', priority: 2 },
+        { slug: 'steam-cleaning', context: 'بخار 180°م — يُكمّل تنظيف الفرن الكيميائي', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف شامل يشمل المطبخ والفرن', priority: 4 },
+        { slug: 'sanitization', context: 'تعقيم المطبخ بعد تنظيف الفرن', priority: 5 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف المطبخ يمتص دهون الفرن — نظفه معه', priority: 6 },
+        { slug: 'pest-control', context: 'دهون فرن مهمل تجذب صراصير', priority: 7 },
+        { slug: 'floor-cleaning', context: 'أرضية المطبخ حول الفرن — دهون', priority: 8 },
+        { slug: 'glass-facades-cleaning', context: 'نافذة المطبخ فوق الفرن — دهون + ملوحة', priority: 9 },
     ],
 };

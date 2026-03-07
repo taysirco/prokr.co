@@ -85,7 +85,6 @@ export const override: PageOverride = {
             expert: 'أ.د. عبدالله المسند',
             quote: 'الغبار الصحراوي يدخل كل مكان — المطبخ ليس استثناء. في الأفران والشفاطات يختلط مع الدهون ويخلق مادة مركّبة لا تُزال بالوسائل المنزلية',
             source: 'أستاذ جغرافيا المناخ',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -112,14 +111,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'riyadh-kitchen-cleaning', context: 'مطبخ شامل + فرن', priority: 1 },
-        { slug: 'riyadh-steam-cleaning', context: 'بخار الفرن', priority: 2 },
-        { slug: 'riyadh-cleaning', context: 'تنظيف شامل', priority: 3 },
-        { slug: 'riyadh-restaurant-chimney-cleaning', context: 'أفران المطاعم', priority: 4 },
-        { slug: 'riyadh-sanitization', context: 'تعقيم المطبخ', priority: 5 },
-        { slug: 'riyadh-cockroach-control', context: 'صراصير خلف الفرن', priority: 6 },
-        { slug: 'riyadh-air-conditioner-cleaning', context: 'دهون تسد الفلتر', priority: 7 },
-        { slug: 'riyadh-pest-control', context: 'رش المطبخ', priority: 8 },
-        { slug: 'riyadh-floor-cleaning', context: 'أرضية المطبخ', priority: 9 },
+        { slug: 'kitchen-cleaning', context: 'مطبخ شامل + فرن', priority: 1 },
+        { slug: 'steam-cleaning', context: 'بخار الفرن', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف شامل', priority: 3 },
+        { slug: 'restaurant-chimney-cleaning', context: 'أفران المطاعم', priority: 4 },
+        { slug: 'sanitization', context: 'تعقيم المطبخ', priority: 5 },
+        { slug: 'cockroach-control', context: 'صراصير خلف الفرن', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'دهون تسد الفلتر', priority: 7 },
+        { slug: 'pest-control', context: 'رش المطبخ', priority: 8 },
+        { slug: 'floor-cleaning', context: 'أرضية المطبخ', priority: 9 },
     ],
 };

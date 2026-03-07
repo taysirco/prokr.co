@@ -90,7 +90,6 @@ export const override: PageOverride = {
             expert: 'أ.د. فهد الخضيري',
             quote: 'الفئران ليست مجرد إزعاج — فضلاتها وبولها تنقل Leptospirosis و Hantavirus. المطبخ الملوث = خطر صحي حقيقي. وإذا تُرك فأر: يجذب ثعابين',
             source: 'عالم أبحاث طبي — متخصص في السموم والصحة العامة',
-            url: 'https://x.com/DrAlkhodairy',
         },
     ],
 
@@ -119,14 +118,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'riyadh-pest-control', context: 'مكافحة شاملة', priority: 1 },
-        { slug: 'riyadh-snakes-control', context: 'ثعابين تتبع الفئران', priority: 2 },
-        { slug: 'riyadh-cockroach-control', context: 'صراصير + فئران', priority: 3 },
-        { slug: 'riyadh-sanitization', context: 'تعقيم بعد المكافحة', priority: 4 },
-        { slug: 'riyadh-cleaning', context: 'تنظيف شامل', priority: 5 },
-        { slug: 'riyadh-sewage-unblocking', context: 'مجاري = مصدر فئران', priority: 6 },
-        { slug: 'riyadh-insects-spraying', context: 'رش حشرات شامل', priority: 7 },
-        { slug: 'riyadh-pesticide-spraying', context: 'رش مبيدات متخصصة', priority: 8 },
-        { slug: 'riyadh-kitchen-cleaning', context: 'مطبخ يجذب الفئران', priority: 9 },
+        { slug: 'pest-control', context: 'مكافحة شاملة', priority: 1 },
+        { slug: 'snakes-control', context: 'ثعابين تتبع الفئران', priority: 2 },
+        { slug: 'cockroach-control', context: 'صراصير + فئران', priority: 3 },
+        { slug: 'sanitization', context: 'تعقيم بعد المكافحة', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف شامل', priority: 5 },
+        { slug: 'sewage-unblocking', context: 'مجاري = مصدر فئران', priority: 6 },
+        { slug: 'insects-spraying', context: 'رش حشرات شامل', priority: 7 },
+        { slug: 'pesticide-spraying', context: 'رش مبيدات متخصصة', priority: 8 },
+        { slug: 'kitchen-cleaning', context: 'مطبخ يجذب الفئران', priority: 9 },
     ],
 };

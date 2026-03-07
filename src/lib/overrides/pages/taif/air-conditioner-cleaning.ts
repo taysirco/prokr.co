@@ -1,4 +1,3 @@
-// تنظيف مكيفات بالطائف — Override (E-E-A-T) | خريطة 2.4: المسند → بلدي + كفاءة
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -35,11 +34,15 @@ export const override: PageOverride = {
         'تشغيل التدفئة بدون تنظيف مسبق = رائحة عفن + أبواغ مركزة ← ربو عند الأطفال والمسنين.',
     ],
     trustAnchors: [
-        { ...GOV.BALADI, role: 'ترخيص شركات صيانة وتنظيف المكيفات' },
-        { ...GOV.MOENERGY, role: 'معايير كفاءة الطاقة — تنظيف المكيف يوفر 15-25% كهرباء' },
-    ],
-    expertReviewer: { name: EXPERTS.ALMISNID.name, title: EXPERTS.ALMISNID.title, credential: EXPERTS.ALMISNID.credential, profileUrl: EXPERTS.ALMISNID.profileUrl },
-    expertCitations: [{ expert: EXPERTS.ALMISNID.name, quote: 'مكيفات الطائف تعمل بنمط حراري فريد: تبريد ← يتكثف ماء على الملف. تدفئة ← العكس. هذا الانتقال المتكرر = بيئة رطوبة متغيرة داخل المكيف = عفن مضمون. التنظيف مرتين سنوياً (قبل كل موسم) = إلزامي في الطائف.', source: EXPERTS.ALMISNID.title, url: EXPERTS.ALMISNID.profileUrl }],
+
+        { ...{ ...GOV.BALADI, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
+ role: 'ترخيص شركات صيانة وتنظيف المكيفات' },
+        { ...{ ...GOV.MOENERGY, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
+ role: 'معايير كفاءة الطاقة — تنظيف المكيف يوفر 15-25% كهرباء' },
+        ],
+    expertReviewer: EXPERTS.ALMISNID,
+    expertCitations: [{ expert: EXPERTS.ALMISNID.name, quote: 'مكيفات الطائف تعمل بنمط حراري فريد: تبريد ← يتكثف ماء على الملف. تدفئة ← العكس. هذا الانتقال المتكرر = بيئة رطوبة متغيرة داخل المكيف = عفن مضمون. التنظيف مرتين سنوياً (قبل كل موسم) = إلزامي في الطائف.',
+            source: EXPERTS.ALMISNID.title }],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
     verificationBadges: [{ badge: '✔️ تعقيم مضاد فطري', authority: 'Antifungal AC Treatment', icon: 'shield-check' }, { badge: '✔️ فحص فريون', authority: 'كشف تسريب', icon: 'badge-check' }],
     equipment: [
@@ -47,11 +50,17 @@ export const override: PageOverride = {
         { name: 'غسالة ضغط للوحدة الخارجية', use: 'تُنظف زعانف المكثف من الغبار والحشرات ← يعود التبريد/التدفئة بكفاءة كاملة.' },
         { name: 'مبيد فطري داخلي (Antifungal Spray)', use: 'يُرش على الملف بعد التنظيف ← يمنع نمو العفن لـ 3-6 أشهر.' },
     ],
-    hiddenObjections: [{ fear: 'أنظف الفلتر بنفسي — يكفي.', solution: 'الفلتر = 20% من المشكلة. 80% من الغبار والعفن يتراكم على ملف المبخر (خلف الفلتر) ← لا يصل غسيل الفلتر المنزلي. تنظيف الملف يحتاج مذيب متخصص + تفكيك ← مهمة فني.' }],
+    hiddenObjections: [
+        { fear: 'أنظف الفلتر بنفسي — يكفي.', solution: 'الفلتر = 20% من المشكلة. 80% من الغبار والعفن يتراكم على ملف المبخر (خلف الفلتر) ← لا يصل غسيل الفلتر المنزلي. تنظيف الملف يحتاج مذيب متخصص + تفكيك ← مهمة فني.' },
+        { fear: 'الخدمة أغلى من المدن الأخرى.', solution: 'مناخ الطائف يفرض معالجات إضافية (مضاد تكثف + تجفيف + حماية أخشاب ورود). التكلفة الإضافية استثمار يحمي ممتلكاتك من تلف الرطوبة والحشرات الموسمية.' },
+    ],
     counterNarratives: [{ myth: 'مناخ الطائف معتدل — المكيف ما يشتغل كثير.', truth: 'المكيف يعمل تبريد 5 أشهر + تدفئة 5 أشهر = 10 أشهر. في الرياض: تبريد فقط 6 أشهر. المكيف بالطائف يشتغل أكثر وليس أقل — بوضعين مختلفين (أرهق للجهاز).' }],
     relatedServices: [
-        { slug: 'taif-cleaning', context: 'تنظيف منزل شامل مع المكيف — باقة موسمية.', priority: 1 },
-        { slug: 'taif-pest-control', context: 'الرطوبة في المكيف تجذب الحشرات — رش وقائي.', priority: 2 },
-        { slug: 'taif-steam-cleaning', context: 'بخار للمفروشات مع تنظيف المكيف — تكامل.', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف منزل شامل مع المكيف — باقة موسمية.', priority: 1 },
+        { slug: 'pest-control', context: 'الرطوبة في المكيف تجذب الحشرات — رش وقائي.', priority: 2 },
+        { slug: 'steam-cleaning', context: 'بخار للمفروشات مع تنظيف المكيف — تكامل.', priority: 3 },
+        { slug: 'air-conditioner-cleaning', context: 'تنظيف مكيفات تعمل تبريد/تدفئة طوال السنة في مناخ الطائف المتقلب.', priority: 5 },
+        { slug: 'pest-control', context: 'مكافحة حشرات تتكاثر في رطوبة الطائف الشتوية والزراعة المحيطة.', priority: 6 },
+        { slug: 'steam-cleaning', context: 'تعقيم بالبخار لقتل العث والفطريات في مفروشات الطائف الرطبة.', priority: 7 },
     ],
 };

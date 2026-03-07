@@ -123,12 +123,12 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'makkah-furniture-moving', context: 'خدمة نقل عفش متكاملة مع فك وتركيب وتغليف احترافي', priority: 1 },
-        { slug: 'makkah-dabab', context: 'للحمولات الخفيفة (1-3 قطع) — أرخص وأسرع من الدينا', priority: 2 },
-        { slug: 'makkah-furniture-storage', context: 'تخزين أثاث مؤقت أثناء الانتقال أو السفر', priority: 3 },
-        { slug: 'makkah-cleaning', context: 'تنظيف الشقة الجديدة قبل ترتيب العفش', priority: 4 },
-        { slug: 'makkah-pest-control', context: 'رش مبيدات في الشقة الجديدة قبل إدخال الأثاث', priority: 5 },
-        { slug: 'makkah-ac-installation', context: 'تركيب مكيفات سبليت في الشقة الجديدة', priority: 6 },
-        { slug: 'makkah-villas-cleaning', context: 'تنظيف شامل للفيلا قبل الانتقال', priority: 7 },
+        { slug: 'furniture-moving', context: 'خدمة نقل عفش متكاملة مع فك وتركيب وتغليف احترافي', priority: 1 },
+        { slug: 'dabab', context: 'للحمولات الخفيفة (1-3 قطع) — أرخص وأسرع من الدينا', priority: 2 },
+        { slug: 'furniture-storage', context: 'تخزين أثاث مؤقت أثناء الانتقال أو السفر', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف الشقة الجديدة قبل ترتيب العفش', priority: 4 },
+        { slug: 'pest-control', context: 'رش مبيدات في الشقة الجديدة قبل إدخال الأثاث', priority: 5 },
+        { slug: 'ac-installation', context: 'تركيب مكيفات سبليت في الشقة الجديدة', priority: 6 },
+        { slug: 'villas-cleaning', context: 'تنظيف شامل للفيلا قبل الانتقال', priority: 7 },
     ],
 };

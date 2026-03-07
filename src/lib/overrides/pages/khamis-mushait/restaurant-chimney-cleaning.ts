@@ -1,94 +1,74 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف مداخن مطاعم بخميس مشيط — Override مخصص (E-E-A-T Grade)
-// صفحة: /khamis-mushait/restaurant-chimney-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف مداخن مطاعم بخميس مشيط — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف مداخن مطاعم بخميس مشيط. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف مداخن مطاعم بخميس مشيط — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف مداخن مطاعم بخميس مشيط', 'تنظيف مداخن مطاعم خميس مشيط', 'شركة تنظيف مداخن مطاعم بخميس مشيط', 'أفضل تنظيف مداخن مطاعم بخميس مشيط'],
+        title: 'تنظيف مداخن مطاعم بخميس مشيط — Biofilm+كربنة رطبة = أخطر NFPA! شهري إلزامي (2026)',
+        description: 'تنظيف مداخن خميس مشيط. Biofilm يحمي كربنة رطبة = أخطر حريق NFPA 96! Anti-Biofilm ← Alkaline. شهري إلزامي.',
+        h1: 'تنظيف مداخن بخميس مشيط — Biofilm + كربنة رطبة — أخطر!',
+        keywords: ['تنظيف مداخن خميس مشيط', 'تنظيف مداخن بخميس مشيط', 'شركة تنظيف مداخن خميس مشيط'],
     },
-
     content: {
-        introduction: 'تنظيف مداخن مطاعم بخميس مشيط — خدمة متخصصة تراعي الظروف المناخية والبيئية في خميس مشيط. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف مداخن مطاعم بخميس مشيط: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف مداخن مطاعم بخميس مشيط. خدمة احترافية. ضمان.',
+        introduction: 'مداخن خميس مشيط = من أخطر المداخن بالمملكة NFPA 96! لماذا؟ Biofilm يحمي الكربنة: 60-85% + ضباب = غشاء بيولوجي ينمو فوق الكربنة الدهنية. يحمي الكربنة من Alkaline! Anti-Biofilm إلزامي أولاً. كربنة رطبة أسمك: عنيزة (15-25%) = كربنة جافة هشة رقيقة. خميس (60-85%) = كربنة رطبة لزجة سميكة = وقود أكثر = حريق أسرع. الخطر: Biofilm + كربنة رطبة = طبقة مزدوجة قابلة للاشتعال. مقياس ميكرون بعد التنظيف أعلى من عنيزة. شهري لمطاعم مكثفة — ربع سنوي لمطاعم خفيفة. مقارنة: عنيزة = Alkaline مباشر + ربع سنوي + كربنة جافة. خميس = Anti-Biofilm إضافي + شهري = أغلى 25-30%.',
+        shortAnswer: 'على عكس [Alkaline مباشر الذي لا يخترق Biofilm]، يعتمد بروتوكولنا في خدمة [تنظيف مداخن المطاعم] بمدينة [خميس مشيط] على [Anti-Biofilm ← Alkaline ← مقياس ميكرون]. ففي ظل [60-85%+ضباب+كربنة رطبة+Biofilm]، تتفاقم ظاهرة [طبقة مزدوجة قابلة للاشتعال]. لذا؛ يتدخل فنيونا عبر [كشف ← إذابة ← قياس] لسلامة NFPA 96.',
+        heroSubtitle: 'Biofilm + كربنة رطبة = أخطر NFPA! شهري إلزامي!',
     },
-
     pricing: [
-        { type: 'تنظيف مداخن مطاعم — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف مداخن مطاعم — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'مدخنة واحدة', unit: 'مدخنة', minPrice: 260, maxPrice: 550, time: '4-5 ساعات' },
+        { type: 'Anti-Biofilm + Alkaline عميق', unit: 'مدخنة', minPrice: 330, maxPrice: 700, time: '5-6 ساعات' },
+        { type: 'فحص ميكرون NFPA', unit: 'فحص', minPrice: 110, maxPrice: 230, time: '1 ساعة' },
+        { type: 'شهري (12 زيارة/سنة)', unit: 'سنة', minPrice: 2600, maxPrice: 5500, time: '12 زيارة' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف مداخن مطاعم بخميس مشيط؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف مداخن مطاعم؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف مداخن مطاعم؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش مداخن خميس أخطر NFPA؟', answer: 'Biofilm يحمي كربنة رطبة = طبقة مزدوجة قابلة للاشتعال. أسمك من عنيزة (كربنة جافة).' },
+        { question: 'كم مرة أنظف المدخنة بخميس؟', answer: 'شهري لمطاعم مكثفة! ربع سنوي للخفيفة. عنيزة: ربع سنوي يكفي.' },
+        { question: 'كيف Anti-Biofilm يحمي من الحريق؟', answer: 'يكشف الكربنة للـ Alkaline. بدونه = تنظيف سطحي + كربنة كامنة = خطر حريق.' },
+        { question: 'كم تكلفة تنظيف مدخنة بخميس مقارنة بعنيزة؟', answer: 'أغلى 25-30%! Anti-Biofilm = خطوة إضافية. 260-700 مقابل 200-550.' },
+        { question: 'هل مقياس الميكرون مختلف بخميس؟', answer: 'قراءة ما قبل = أعلى 2× من عنيزة. كربنة رطبة أسمك. بعد التنظيف < 25μm.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Anti-Biofilm أولاً — يكشف الكربنة.',
+        'Alkaline ثانياً — يُذيب الكربنة بعد كشفها.',
+        'مقياس ميكرون — NFPA 96 < 25μm.',
+        'شهري لمطاعم مكثفة — ربع سنوي خطر.',
+        'تجفيف — بدونه Biofilm يرجع.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'Biofilm + كربنة رطبة = أخطر طبقة — أسرع حريق مدخنة.',
+        'Alkaline مباشر بدون Anti-Biofilm = نظافة سطحية فقط.',
+        'شهرين بدون تنظيف + 60-85% = ≥ 50μm = خطر NFPA فوري.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.CIVILDEFENSE, role: 'سلامة مداخن — NFPA 96' },
+        { ...GOV.BALADI, role: 'ترخيص مطاعم' },
+        { entity: AMANA.ASIR.entity, url: AMANA.ASIR.url, role: 'اشتراطات أمانة عسير' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'مداخن خميس: Biofilm يحمي كربنة رطبة. Anti-Biofilm أولاً. شهري. من أخطر NFPA.', source: 'نصائح هندسية — مداخن جبلية' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ مداخن مرخصة', authority: 'دفاع مدني + بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Anti-Biofilm صناعي', use: 'يكشف الكربنة بإزالة Biofilm' },
+        { name: 'Alkaline Degreaser', use: 'يُذيب كربنة رطبة' },
+        { name: 'مقياس ميكرون', use: 'NFPA 96 < 25μm' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'مثل الباحة.', solution: 'متشابه — نفس الفيزياء.' },
+        { fear: 'شهري غالي.', solution: 'حريق = خسارة مطعم. شهري أرخص 1000×.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'ربع سنوي يكفي بخميس.', truth: 'Biofilm + كربنة رطبة = تراكم سريع. شهري.' },
+        { myth: 'Alkaline وحده.', truth: 'Biofilm يمنع الوصول. Anti-Biofilm أولاً.' },
     ],
-
     relatedServices: [
-        { slug: 'khamis-mushait-furniture-moving', context: 'نقل عفش بخميس مشيط', priority: 1 },
-        { slug: 'khamis-mushait-furniture-storage', context: 'تخزين عفش بخميس مشيط', priority: 2 },
-        { slug: 'khamis-mushait-dyna', context: 'دينا نقل بخميس مشيط', priority: 3 },
-        { slug: 'khamis-mushait-moving-out', context: 'نقل عفش خروج بخميس مشيط', priority: 4 },
-        { slug: 'khamis-mushait-dabab', context: 'دباب نقل بخميس مشيط', priority: 5 },
-        { slug: 'khamis-mushait-cleaning', context: 'تنظيف منازل بخميس مشيط', priority: 6 },
-        { slug: 'khamis-mushait-tanks-cleaning', context: 'تنظيف خزانات بخميس مشيط', priority: 7 },
-        { slug: 'khamis-mushait-sofa-cleaning', context: 'تنظيف كنب بخميس مشيط', priority: 8 },
-        { slug: 'khamis-mushait-carpet-cleaning', context: 'تنظيف سجاد بخميس مشيط', priority: 9 },
+        { slug: 'oven-cleaning', context: 'أفران — Biofilm', priority: 1 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 2 },
+        { slug: 'pest-control', context: 'حشرات مطاعم', priority: 3 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 4 },
+        { slug: 'steam-cleaning', context: 'بخار', priority: 5 },
+        { slug: 'office-cleaning', context: 'مكاتب', priority: 6 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات', priority: 7 },
     ],
 };

@@ -91,7 +91,6 @@ export const override: PageOverride = {
             expert: 'أ.د. عبدالله المسند',
             quote: 'غبار مكة الكلسي (كربونات كالسيوم) أثقل من الغبار الرملي — لا يتحرك بالمكنسة الجافة بل يتطاير ويعود. المسح الرطب بأقمشة ميكروفايبر = الطريقة الصحيحة لالتقاطه',
             source: 'أستاذ المناخ والبيئة',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -122,12 +121,12 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'makkah-cleaning', context: 'تنظيف عميق بمعدات صناعية — أشمل من التنظيف بالساعة', priority: 1 },
-        { slug: 'makkah-apartments-cleaning', context: 'تنظيف شقة كاملة بضمان إنجاز — بدون نظام ساعات', priority: 2 },
-        { slug: 'makkah-villas-cleaning', context: 'تنظيف فيلا شامل بفريق كبير — للمساحات الضخمة', priority: 3 },
-        { slug: 'makkah-steam-cleaning', context: 'تعقيم كنب ومراتب بالبخار — مكمل للتنظيف الدوري', priority: 4 },
-        { slug: 'makkah-sofa-cleaning', context: 'غسيل كنب عميق — كل 3-6 أشهر مع التنظيف الدوري', priority: 5 },
-        { slug: 'makkah-carpet-cleaning', context: 'غسيل سجاد — كل 6 أشهر مع التنظيف الدوري بالساعة', priority: 6 },
-        { slug: 'makkah-pest-control', context: 'رش وقائي كل 6 أشهر — يُكمل النظافة الدورية', priority: 7 },
+        { slug: 'cleaning', context: 'تنظيف عميق بمعدات صناعية — أشمل من التنظيف بالساعة', priority: 1 },
+        { slug: 'apartments-cleaning', context: 'تنظيف شقة كاملة بضمان إنجاز — بدون نظام ساعات', priority: 2 },
+        { slug: 'villas-cleaning', context: 'تنظيف فيلا شامل بفريق كبير — للمساحات الضخمة', priority: 3 },
+        { slug: 'steam-cleaning', context: 'تعقيم كنب ومراتب بالبخار — مكمل للتنظيف الدوري', priority: 4 },
+        { slug: 'sofa-cleaning', context: 'غسيل كنب عميق — كل 3-6 أشهر مع التنظيف الدوري', priority: 5 },
+        { slug: 'carpet-cleaning', context: 'غسيل سجاد — كل 6 أشهر مع التنظيف الدوري بالساعة', priority: 6 },
+        { slug: 'pest-control', context: 'رش وقائي كل 6 أشهر — يُكمل النظافة الدورية', priority: 7 },
     ],
 };

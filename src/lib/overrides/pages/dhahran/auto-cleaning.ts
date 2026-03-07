@@ -1,94 +1,75 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف سيارات بالظهران — Override مخصص (E-E-A-T Grade)
-// صفحة: /dhahran/auto-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف سيارات بالظهران — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف سيارات بالظهران. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف سيارات بالظهران — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف سيارات بالظهران', 'تنظيف سيارات الظهران', 'شركة تنظيف سيارات بالظهران', 'أفضل تنظيف سيارات بالظهران'],
+        title: 'غسيل سيارات بالظهران — NaCl+SiO₂ تآكل+خدش مزدوج + 75-85% Water Spots + Sabkha+رمل (2026)',
+        description: 'غسيل سيارات الظهران. NaCl+SiO₂ = Micro-Swirls+تآكل مزدوج. 75-85% Water Spots. Sabkha+رمل. أرامكو. Touchless + Deionized + Ceramic 9H + Underbody.',
+        h1: 'غسيل سيارات بالظهران — ملح+رمل = أوساخ مزدوجة تخدش وتتآكل',
+        keywords: ['غسيل سيارات بالظهران', 'غسيل سيارة الظهران', 'شركة غسيل سيارات بالظهران'],
     },
-
     content: {
-        introduction: 'تنظيف سيارات بالظهران — خدمة متخصصة تراعي الظروف المناخية والبيئية في الظهران. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف سيارات بالظهران: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف سيارات بالظهران. خدمة احترافية. ضمان.',
+        introduction: 'غسيل السيارة في الظهران يواجه المشكلة المزدوجة الأصعب. المشكلة المزدوجة — NaCl+SiO₂: رذاذ بحري (NaCl) يلتصق بالطلاء ← رمل صحراوي (SiO₂) يلتصق فوقه ← المسح = SiO₂ يخدش (Micro-Swirls) تحت NaCl الرطب = أوساخ تتآكل الطلاء وتخدشه معاً. الخبر = NaCl فقط (تآكل). الرياض = SiO₂ فقط (خدش). الظهران = كلاهما. Touchless = صفر تلامس. المشكلة الثانية — 75-85% Water Spots: رطوبة تُبطئ التجفيف ← NaCl+أملاح تتبلور أثناء التجفيف البطيء = Water Spots مُركّبة. Deionized Rinse + تجفيف Chamois فوري. المشكلة الثالثة — Sabkha+رمل: تربة مزدوجة من الطريق ← Undercarriage يستقبل NaCl (تآكل) + SiO₂ (خدش). Underbody Pressure Wash.',
+        shortAnswer: 'على عكس [إسفنجة + ماء عادي] الذي يخدش بـ SiO₂ تحت NaCl، يعتمد بروتوكولنا في خدمة [غسيل السيارات] بمدينة [الظهران] على [Touchless + Deionized + Ceramic + Underbody]. ففي ظل [NaCl+SiO₂ + 75-85% + Sabkha+رمل]، تتفاقم ظاهرة [خدش+تآكل + بقع]. لذا؛ يتدخل خبراؤنا عبر [غسيل مزدوج].',
+        heroSubtitle: 'NaCl+SiO₂ خدش+تآكل + 75-85% Water Spots + Underbody',
     },
-
     pricing: [
-        { type: 'تنظيف سيارات — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف سيارات — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'غسيل خارجي Touchless + Deionized', unit: 'سيارة', minPrice: 50, maxPrice: 100, time: '20-30 دقيقة' },
+        { type: 'غسيل شامل + Underbody', unit: 'سيارة', minPrice: 100, maxPrice: 200, time: '45-60 دقيقة' },
+        { type: 'تلميع + Ceramic 9H', unit: 'سيارة', minPrice: 400, maxPrice: 1000, time: '3-5 ساعات' },
+        { type: 'اشتراك شهري (4 غسلات)', unit: 'شهر', minPrice: 170, maxPrice: 350, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف سيارات بالظهران؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف سيارات؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف سيارات؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'NaCl+SiO₂ — لماذا أسوأ من كل واحد؟', answer: 'SiO₂ وحده = يخدش. NaCl وحده = يتآكل. معاً = NaCl يُلصق SiO₂ ← المسح = خدش مُبلّل + تآكل = Clear Coat يتقشر أسرع 2-3×. Touchless = الحل الوحيد.' },
+        { question: 'Ceramic 9H — ضروري في الظهران؟', answer: 'أكثر من أي مدينة: NaCl يتآكل Clear Coat + SiO₂ يخدشه + UV يُؤكسده = 3 هجمات. Ceramic 9H = حاجز ثلاثي. Wax لا يكفي (يذوب + NaCl يخترقه).' },
+        { question: 'Water Spots — من الغسل؟', answer: 'ماء الظهران = NaCl+أملاح. يغسل ← يجف ببطء (75-85%) ← بقع مُركّبة. Deionized = صفر أملاح. + Chamois فوري.' },
+        { question: 'Underbody — كل غسلة؟', answer: 'Sabkha+رمل من الطريق ← NaCl+SiO₂ تحت السيارة. كل غسلة = يُزيل قبل التآكل+الخدش.' },
+        { question: 'سيارة أرامكو — فرق؟', answer: 'نفس البيئة المزدوجة. لكن: مواقف أرامكو قريبة من صحراء = SiO₂ أكثر. Ceramic + Underbody = حماية.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Touchless إلزامي — أي تلامس + NaCl+SiO₂ = Micro-Swirls فوري.',
+        'Ceramic 9H أفضل استثمار — حماية ثلاثية (NaCl+SiO₂+UV) لـ 2-3 سنوات.',
+        'Deionized Rinse + Chamois فوري — يمنع Water Spots 75-85%.',
+        'Underbody كل غسلة — Sabkha+رمل تحت = أخطر من فوق.',
+        'Anti-Rust Wax Undercarriage كل 6 أشهر — يحمي من NaCl المزدوج.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'إسفنجة + NaCl+SiO₂ = Micro-Swirls أول غسلة. خدش مُبلّل = أعمق من جاف. Touchless only.',
+        'Clear Coat بدون Ceramic في NaCl+SiO₂+UV = يتقشّر 1-2 سنة. إعادة = 3,000-8,000 ريال.',
+        'Undercarriage بدون غسل 3 أشهر = NaCl+SiO₂ = صدأ+خدش = خطر هيكلي.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص مراكز الغسيل' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات البيئة بالشرقية' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALZUWAYED,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALZUWAYED.name, quote: 'سيارة الظهران = مزدوجة: NaCl يتآكل + SiO₂ يخدش = أسوأ مزيج. Touchless + Ceramic + Underbody = بروتوكول مزدوج لا يُشبه أي مدينة.', source: 'هيئة النقل — غسيل البيئة المزدوجة' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ غسيل مرخص', authority: 'منصة بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Touchless Wash', use: 'صفر تلامس — يمنع SiO₂ خدش تحت NaCl' },
+        { name: 'Deionized Rinse', use: 'صفر أملاح — يمنع Water Spots' },
+        { name: 'Ceramic 9H', use: 'حاجز ثلاثي (NaCl+SiO₂+UV) — 2-3 سنوات' },
+        { name: 'Underbody Pressure Wash', use: 'يُزيل Sabkha+رمل من الشاسيه' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'مثل الخبر.', solution: 'الخبر = NaCl فقط. الظهران = NaCl+SiO₂. SiO₂ يخدش Clear Coat ← NaCl يتآكل المكشوف. أسوأ.' },
+        { fear: 'Ceramic غالي.', solution: '400-1,000 ÷ 2-3 سنوات vs إعادة طلاء 3,000-8,000. = 5-13%.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'غبار عادي.', truth: 'NaCl+SiO₂ ≠ غبار. يتآكل + يخدش. مزدوج.' },
+        { myth: 'إسفنجة ناعمة.', truth: 'إسفنجة + SiO₂ تحت NaCl = أسوأ خدش. Touchless فقط.' },
+        { myth: 'شهري.', truth: 'NaCl+SiO₂ يومي. أسبوعي = الأمثل.' },
     ],
-
     relatedServices: [
-        { slug: 'dhahran-furniture-moving', context: 'نقل عفش بالظهران', priority: 1 },
-        { slug: 'dhahran-furniture-storage', context: 'تخزين عفش بالظهران', priority: 2 },
-        { slug: 'dhahran-dyna', context: 'دينا نقل بالظهران', priority: 3 },
-        { slug: 'dhahran-moving-out', context: 'نقل عفش خروج بالظهران', priority: 4 },
-        { slug: 'dhahran-dabab', context: 'دباب نقل بالظهران', priority: 5 },
-        { slug: 'dhahran-cleaning', context: 'تنظيف منازل بالظهران', priority: 6 },
-        { slug: 'dhahran-tanks-cleaning', context: 'تنظيف خزانات بالظهران', priority: 7 },
-        { slug: 'dhahran-sofa-cleaning', context: 'تنظيف كنب بالظهران', priority: 8 },
-        { slug: 'dhahran-carpet-cleaning', context: 'تنظيف سجاد بالظهران', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف — مزدوج', priority: 1 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات — NaCl+SiO₂', priority: 2 },
+        { slug: 'dabab', context: 'دباب — نقل', priority: 3 },
+        { slug: 'dyna', context: 'دينا — نقل', priority: 4 },
+        { slug: 'furniture-moving', context: 'نقل — حماية', priority: 5 },
+        { slug: 'marble-polishing', context: 'رخام — المرآب', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف — مزدوج', priority: 7 },
     ],
 };

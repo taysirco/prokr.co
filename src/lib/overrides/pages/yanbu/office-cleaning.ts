@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف مكاتب بينبع — Override مخصص (E-E-A-T Grade)
-// صفحة: /yanbu/office-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف مكاتب بينبع — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف مكاتب بينبع. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف مكاتب بينبع — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف مكاتب بينبع', 'تنظيف مكاتب ينبع', 'شركة تنظيف مكاتب بينبع', 'أفضل تنظيف مكاتب بينبع'],
+        title: 'تنظيف مكاتب بينبع — NaCl+SOx إلكترونيات+70-85% عفن سجاد — HEPA AC+Anti-Fungal! (2026)',
+        description: 'تنظيف مكاتب ينبع. NaCl+SOx إلكترونيات! 70-85% عفن سجاد. HEPA AC+Anti-Fungal+RO+Dehumidifier.',
+        h1: 'تنظيف مكاتب بينبع — ملح+حمض إلكترونيات+عفن!',
+        keywords: ['تنظيف مكاتب ينبع', 'تنظيف مكتب بينبع', 'شركة تنظيف مكاتب ينبع'],
     },
-
     content: {
-        introduction: 'تنظيف مكاتب بينبع — خدمة متخصصة تراعي الظروف المناخية والبيئية في ينبع. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف مكاتب بينبع: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف مكاتب بينبع. خدمة احترافية. ضمان.',
+        introduction: 'مكتب ينبع = NaCl+SOx يُتلفان الإلكترونيات! NaCl إلكترونيات: ملح البحر يدخل المكتب ← يتراكم على لوحات الدوائر ← Short Circuit (دارة قصيرة). HEPA يمنع. SOx YASREF: أكاسيد كبريت + رطوبة = H₂SO₄ غازي ← يتآكل الموصلات النحاسية. HEPA Activated Carbon إلزامي. 70-85% عفن سجاد: سجاد المكتب يتعفّن تحته أسبوعين! Anti-Fungal+Dehumidifier. صحة موظفين YMYL. NaCl على أسطح: مكاتب الكتابة تُخشّن ← RO مسح. مقارنة: بريدة = Nafud يتراكم+CaCO₃ لكن لا عفن = أبسط. ينبع = ملح+حمض+عفن = أعقد بكثير.',
+        shortAnswer: 'على عكس [التنظيف بدون HEPA AC]، يعتمد بروتوكولنا في خدمة [تنظيف المكاتب] بمدينة [ينبع] على [HEPA AC+Anti-Fungal+RO+Dehumidifier]. ففي ظل [NaCl إلكترونيات+SOx حمض+70-85% عفن+SiO₂]، تتفاقم ظاهرة [Short Circuit+تآكل+عفن]. لذا؛ يتدخل فريقنا عبر [HEPA AC ← RO ← Anti-Fungal ← Dehumidifier].',
+        heroSubtitle: 'NaCl Short Circuit + SOx تآكل + عفن سجاد — HEPA AC!',
     },
-
     pricing: [
-        { type: 'تنظيف مكاتب — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف مكاتب — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'مكتب صغير (50 م²)', unit: 'زيارة', minPrice: 130, maxPrice: 270, time: '1-2h' },
+        { type: 'مكتب كبير (200+ م²)', unit: 'زيارة', minPrice: 300, maxPrice: 620, time: '3-5h' },
+        { type: '+ HEPA AC إلكترونيات', unit: 'إضافي', minPrice: 100, maxPrice: 200, time: '1h' },
+        { type: 'يومي (30 يوم)', unit: 'شهر', minPrice: 1000, maxPrice: 2000, time: '30 زيارة' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف مكاتب بينبع؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف مكاتب؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف مكاتب؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش إلكترونيات تتلف أسرع بمكتب ينبع؟', answer: 'NaCl = Short Circuit. SOx = تآكل موصلات. HEPA AC يمنع.' },
+        { question: 'ليش سجاد المكتب يتعفّن بينبع؟', answer: '70-85% = عفن أسبوعين. Anti-Fungal+Dehumidifier.' },
+        { question: 'كم تكلفة مكتب بينبع مقابل بريدة؟', answer: 'أغلى 30-40% — HEPA AC+Anti-Fungal. بريدة: HEPA+Descaler فقط.' },
+        { question: 'هل HEPA AC ضروري بمكتب ينبع؟', answer: 'إلزامي! NaCl+SOx = Short Circuit+تآكل. إنتاجية YMYL.' },
+        { question: 'كم مرة تنظيف مكتب بينبع؟', answer: 'يومي أو كل يومين! NaCl+SOx يومي. أسبوعي = تلف.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'HEPA AC — NaCl+SOx إلكترونيات.',
+        'Anti-Fungal سجاد — 70-85% عفن.',
+        'RO مسح أسطح — NaCl يُخشّن.',
+        'Dehumidifier — رطوبة بحرية.',
+        'يومي — NaCl+SOx لا يتوقف.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'NaCl + إلكترونيات × أسبوع = Short Circuit — HEPA إلزامي.',
+        '70-85% + سجاد مكتب = عفن ← صحة موظفين YMYL.',
+        'SOx + موصلات نحاسية = تآكل ← حاسوب يتلف 3000+.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
+        { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'اشتراطات أمانة ينبع' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMISNID.name, quote: 'مكتب ينبع: NaCl Short Circuit. SOx تآكل. HEPA AC+Anti-Fungal.', source: 'جغرافيا المناخ — مكاتب ساحلية' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف مكاتب مرخص', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'HEPA Activated Carbon', use: 'NaCl+SOx — إلكترونيات' },
+        { name: 'Anti-Fungal', use: '70-85% — عفن سجاد' },
+        { name: 'RO Water', use: 'NaCl — مسح أسطح' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'مكنسة تكفي.', solution: 'NaCl+SOx = HEPA AC.' },
+        { fear: 'مثل بريدة.', solution: 'ملح+حمض+عفن vs كلس+Nafud.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'أسبوعي.', truth: 'NaCl+SOx يومي.' },
+        { myth: 'تنظيف عادي.', truth: 'HEPA AC+Anti-Fungal+RO.' },
     ],
-
     relatedServices: [
-        { slug: 'yanbu-furniture-moving', context: 'نقل عفش بينبع', priority: 1 },
-        { slug: 'yanbu-furniture-storage', context: 'تخزين عفش بينبع', priority: 2 },
-        { slug: 'yanbu-dyna', context: 'دينا نقل بينبع', priority: 3 },
-        { slug: 'yanbu-moving-out', context: 'نقل عفش خروج بينبع', priority: 4 },
-        { slug: 'yanbu-dabab', context: 'دباب نقل بينبع', priority: 5 },
-        { slug: 'yanbu-cleaning', context: 'تنظيف منازل بينبع', priority: 6 },
-        { slug: 'yanbu-tanks-cleaning', context: 'تنظيف خزانات بينبع', priority: 7 },
-        { slug: 'yanbu-sofa-cleaning', context: 'تنظيف كنب بينبع', priority: 8 },
-        { slug: 'yanbu-carpet-cleaning', context: 'تنظيف سجاد بينبع', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 1 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 2 },
+        { slug: 'carpet-cleaning', context: 'سجاد', priority: 3 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات', priority: 4 },
+        { slug: 'marble-polishing', context: 'رخام', priority: 5 },
+        { slug: 'pest-control', context: 'حشرات', priority: 6 },
+        { slug: 'steam-cleaning', context: 'بخار', priority: 7 },
     ],
 };

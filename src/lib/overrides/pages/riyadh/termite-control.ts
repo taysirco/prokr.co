@@ -92,7 +92,6 @@ export const override: PageOverride = {
             expert: 'م. عبدالغني الجند',
             quote: 'مبنى بدون معالجة تربة ما قبل البناء — المقاول وفّر 3-5 ريال/م². النتيجة: بداية الأرضة من السنة الخامسة وتكلفة الإصلاح 50,000-100,000 ريال. التوفير المزيف = كارثة مالية مؤجلة',
             source: 'موسوعة "أخطاء في البناء" — أشهر مرجع هندسي سعودي',
-            url: 'https://x.com/ssrrr22',
         },
     ],
 
@@ -121,14 +120,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'riyadh-pest-control', context: 'مكافحة شاملة', priority: 1 },
-        { slug: 'riyadh-insects-spraying', context: 'رش حشرات', priority: 2 },
-        { slug: 'riyadh-furniture-cleaning', context: 'فحص الأثاث الخشبي', priority: 3 },
-        { slug: 'riyadh-water-insulation', context: 'عزل مائي يمنع رطوبة', priority: 4 },
-        { slug: 'riyadh-cleaning', context: 'تنظيف بعد المكافحة', priority: 5 },
-        { slug: 'riyadh-sanitization', context: 'تعقيم', priority: 6 },
-        { slug: 'riyadh-ants-control', context: 'أنواع نمل أخرى', priority: 7 },
-        { slug: 'riyadh-cockroach-control', context: 'حشرات الخشب', priority: 8 },
-        { slug: 'riyadh-pesticide-spraying', context: 'رش مبيدات متخصصة', priority: 9 },
+        { slug: 'pest-control', context: 'مكافحة شاملة', priority: 1 },
+        { slug: 'insects-spraying', context: 'رش حشرات', priority: 2 },
+        { slug: 'furniture-cleaning', context: 'فحص الأثاث الخشبي', priority: 3 },
+        { slug: 'water-insulation', context: 'عزل مائي يمنع رطوبة', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف بعد المكافحة', priority: 5 },
+        { slug: 'sanitization', context: 'تعقيم', priority: 6 },
+        { slug: 'ants-control', context: 'أنواع نمل أخرى', priority: 7 },
+        { slug: 'cockroach-control', context: 'حشرات الخشب', priority: 8 },
+        { slug: 'pesticide-spraying', context: 'رش مبيدات متخصصة', priority: 9 },
     ],
 };

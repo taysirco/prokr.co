@@ -1,4 +1,3 @@
-// تنظيف خزانات بالطائف — Override (E-E-A-T) | خريطة 2.4: المحيميد → بلدي + NWC + مائي
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -35,11 +34,15 @@ export const override: PageOverride = {
         'لا تشرب من خزان لم يُنظف لأكثر من سنة — ترسبات وطحالب تُغيّر طعم المياه وقد تحتوي بكتيريا ضارة.',
     ],
     trustAnchors: [
-        { ...GOV.NWC, role: 'معايير تعقيم خزانات مياه الشرب — كلور 0.5-1 PPM' },
-        { ...GOV.BALADI, role: 'اشتراطات نظافة الخزانات في المباني السكنية' },
-    ],
-    expertReviewer: { name: EXPERTS.ALMOHAIMED.name, title: EXPERTS.ALMOHAIMED.title, credential: EXPERTS.ALMOHAIMED.credential, profileUrl: EXPERTS.ALMOHAIMED.profileUrl },
-    expertCitations: [{ expert: EXPERTS.ALMOHAIMED.name, quote: 'مناخ الطائف المعتدل يُنبت الطحالب في الخزانات أسرع من المدن الحارة — الحرارة المعتدلة + الرطوبة = بيئة مثالية. الفرك الميكانيكي لإزالة البيوفيلم قبل التعقيم = الخطوة التي يتجاهلها 80% من المقاولين.', source: EXPERTS.ALMOHAIMED.title, url: EXPERTS.ALMOHAIMED.profileUrl }],
+
+        { ...{ ...GOV.NWC, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
+ role: 'معايير تعقيم خزانات مياه الشرب — كلور 0.5-1 PPM' },
+        { ...{ ...GOV.BALADI, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
+ role: 'اشتراطات نظافة الخزانات في المباني السكنية' },
+        ],
+    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertCitations: [{ expert: EXPERTS.ALMOHAIMED.name, quote: 'مناخ الطائف المعتدل يُنبت الطحالب في الخزانات أسرع من المدن الحارة — الحرارة المعتدلة + الرطوبة = بيئة مثالية. الفرك الميكانيكي لإزالة البيوفيلم قبل التعقيم = الخطوة التي يتجاهلها 80% من المقاولين.',
+            source: EXPERTS.ALMOHAIMED.title }],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
     verificationBadges: [{ badge: '✔️ تعقيم كلور 0.5-1 PPM', authority: 'معيار NWC', icon: 'shield-check' }, { badge: '✔️ فحص جودة مياه', authority: 'TDS + pH + كلور', icon: 'badge-check' }],
     equipment: [
@@ -47,11 +50,17 @@ export const override: PageOverride = {
         { name: 'مضخة غسيل ضغط عالي', use: 'تشطف بقايا الطحالب والرواسب بعد الفرك ← ثم يُسحب الماء المتسخ.' },
         { name: 'جهاز فحص كلور + pH + TDS', use: 'يقيس جودة المياه بعد التعقيم — يُثبت أن التركيز آمن للشرب.' },
     ],
-    hiddenObjections: [{ fear: 'مياه الطائف من السد ونظيفة — ما يحتاج إلا إذا فيه مشكلة.', solution: 'المياه تركد في الخزان 3-7 أيام قبل استخدامها. في هذه المدة: الطحالب تنمو + الرواسب تترسب + البيوفيلم يتكوّن. "نظيفة من السد" ≠ "نظيفة في الخزان". التنظيف كل 6 أشهر = ضمان أن ما تشربه فعلاً نظيف.' }],
+    hiddenObjections: [
+        { fear: 'مياه الطائف من السد ونظيفة — ما يحتاج إلا إذا فيه مشكلة.', solution: 'المياه تركد في الخزان 3-7 أيام قبل استخدامها. في هذه المدة: الطحالب تنمو + الرواسب تترسب + البيوفيلم يتكوّن. "نظيفة من السد" ≠ "نظيفة في الخزان". التنظيف كل 6 أشهر = ضمان أن ما تشربه فعلاً نظيف.' },
+        { fear: 'الخدمة أغلى من المدن الأخرى.', solution: 'مناخ الطائف يفرض معالجات إضافية (مضاد تكثف + تجفيف + حماية أخشاب ورود). التكلفة الإضافية استثمار يحمي ممتلكاتك من تلف الرطوبة والحشرات الموسمية.' },
+    ],
     counterNarratives: [{ myth: 'أضيف كلور كل شهر — يكفي.', truth: 'الكلور يقتل البكتيريا السابحة في الماء. لكن البيوفيلم على الجدران يحمي البكتيريا من الكلور — مثل درع. الفرك الميكانيكي يُزيل الدرع أولاً ← ثم الكلور يقتل البكتيريا المكشوفة. الكلور بدون فرك = نصف الحل.' }],
     relatedServices: [
-        { slug: 'taif-tank-insulation', context: 'عزل خزان يحمي من التلوث ويمنع الطحالب.', priority: 1 },
-        { slug: 'taif-tank-leak-detection', context: 'فحص تسرب خزان مع التنظيف.', priority: 2 },
-        { slug: 'taif-water-leak-detection', context: 'كشف تسربات شبكة المياه مع الخزان.', priority: 3 },
+        { slug: 'tank-insulation', context: 'عزل خزان يحمي من التلوث ويمنع الطحالب.', priority: 1 },
+        { slug: 'tank-leak-detection', context: 'فحص تسرب خزان مع التنظيف.', priority: 2 },
+        { slug: 'water-leak-detection', context: 'كشف تسربات شبكة المياه مع الخزان.', priority: 3 },
+        { slug: 'air-conditioner-cleaning', context: 'تنظيف مكيفات تعمل تبريد/تدفئة طوال السنة في مناخ الطائف المتقلب.', priority: 5 },
+        { slug: 'pest-control', context: 'مكافحة حشرات تتكاثر في رطوبة الطائف الشتوية والزراعة المحيطة.', priority: 6 },
+        { slug: 'steam-cleaning', context: 'تعقيم بالبخار لقتل العث والفطريات في مفروشات الطائف الرطبة.', priority: 7 },
     ],
 };

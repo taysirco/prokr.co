@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// مكافحة نمل أبيض بالقطيف — Override مخصص (E-E-A-T Grade)
-// صفحة: /qatif/termite-control
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'مكافحة نمل أبيض بالقطيف — خدمة احترافية معتمدة (2026)',
-        description: 'مكافحة نمل أبيض بالقطيف. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'مكافحة نمل أبيض بالقطيف — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['مكافحة نمل أبيض بالقطيف', 'مكافحة نمل أبيض القطيف', 'شركة مكافحة نمل أبيض بالقطيف', 'أفضل مكافحة نمل أبيض بالقطيف'],
+        title: 'مكافحة النمل الأبيض بالقطيف — تربة طينية رطبة مثالية + نخيل غذاء + عيون + بيوت تاريخية (2026)',
+        description: 'مكافحة نمل أبيض القطيف. تربة طينية 80-95% مثالية. نخيل غذاء. عيون رطوبة أرضية. بيوت تاريخية خشب. Bait + Barrier + فحص.',
+        h1: 'مكافحة النمل الأبيض بالقطيف — تربة واحية مثالية ونخيل يُغذيه',
+        keywords: ['مكافحة النمل الأبيض القطيف', 'مكافحة نمل بالقطيف', 'شركة مكافحة نمل بالقطيف'],
     },
-
     content: {
-        introduction: 'مكافحة نمل أبيض بالقطيف — خدمة متخصصة تراعي الظروف المناخية والبيئية في القطيف. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'مكافحة نمل أبيض بالقطيف: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'مكافحة نمل أبيض بالقطيف. خدمة احترافية. ضمان.',
+        introduction: 'النمل الأبيض في القطيف يجد بيئته المثالية. الأول — تربة طينية رطبة 80-95%: تربة واحية طينية + رطوبة عالية = أسرع حفر + أسرع نمو. الثاني — نخيل غذاء: ملايين نخلة = سعف + جذوع = غذاء وفير. أكبر مصدر غذاء في المملكة. الثالث — عيون: رطوبة أرضية مُضافة = تربة أكثر رطوبة = مثالية أكثر. الرابع — بيوت تاريخية: القطيف التاريخية = خشب قديم + تربة رطبة = الأكثر عرضة. الخامس — بعوض: مكافحة بعوض ≠ نمل أبيض.',
+        shortAnswer: 'على عكس [رش سطحي] الذي لا يصل التربة الطينية العميقة، يعتمد بروتوكولنا في خدمة [مكافحة النمل الأبيض] بمدينة [القطيف] على [Bait + Barrier + فحص نخيل]. ففي ظل [تربة طينية + نخيل + عيون + بيوت تاريخية]، تتفاقم ظاهرة [مثالية + غذاء + رطوبة + خشب قديم]. لذا؛ يتدخل خبراؤنا عبر [بروتوكول نمل ساحلي-واحي].',
+        heroSubtitle: 'تربة طينية مثالية + نخيل غذاء + عيون + بيوت تاريخية خشب',
     },
-
     pricing: [
-        { type: 'مكافحة نمل أبيض — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'مكافحة نمل أبيض — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'فحص + تقييم', unit: 'زيارة', minPrice: 120, maxPrice: 250, time: '1-2 ساعة' },
+        { type: 'Bait System', unit: 'منزل', minPrice: 680, maxPrice: 1800, time: 'تركيب + مراقبة' },
+        { type: 'Barrier', unit: 'فيلا', minPrice: 1300, maxPrice: 3500, time: '1-2 يوم' },
+        { type: 'بيت تاريخي (شامل)', unit: 'بيت', minPrice: 1500, maxPrice: 4000, time: '2-3 أيام' },
+        { type: 'عقد سنوي', unit: 'سنة', minPrice: 850, maxPrice: 2100, time: '6 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة مكافحة نمل أبيض بالقطيف؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق مكافحة نمل أبيض؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على مكافحة نمل أبيض؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'نخيل — أخطر مصدر؟', answer: 'أخطر — ملايين نخلة = سعف+جذوع = أكبر مصدر غذاء. إزالة سعف ميت = وقاية.' },
+        { question: 'بيوت تاريخية — أكثر عرضة؟', answer: 'الأكثر — خشب قديم + تربة رطبة + شقوق = مثالي للنمل. فحص دوري ضروري.' },
+        { question: 'تربة طينية — أسوأ؟', answer: 'تربة طينية رطبة = مثالية. النمل يحفر أسرع في طين رطب من رمل جاف.' },
+        { question: 'مقابل الجبيل — فرق؟', answer: 'مشابه — لكن نخيل القطيف أكثر + بيوت تاريخية. نفس الرطوبة تقريباً.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'إزالة سعف ميت — أكبر مصدر غذاء.',
+        'فحص بيوت تاريخية — خشب قديم.',
+        'Barrier رطوبة — 80-95%.',
+        'لا تخلط بعوض مع نمل — آليات مختلفة.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'تربة طينية + نخيل + 80-95% = أسرع مستعمرات.',
+        'بيوت تاريخية بدون فحص = تلف إنشائي.',
+        'سعف ميت = وليمة نمل أبيض.',
     ],
-
     trustAnchors: [
-        { ...GOV.SFDA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص مكافحة آفات' },
+        { ...GOV.WEQAA, role: 'تسجيل مبيدات' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'صحة عامة بالشرقية' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALKHODAIRY.name,
-        title: EXPERTS.ALKHODAIRY.title,
-        credential: EXPERTS.ALKHODAIRY.credential,
-        profileUrl: EXPERTS.ALKHODAIRY.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALKHODAIRY,
     expertCitations: [
-        {
-            expert: EXPERTS.ALKHODAIRY.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALKHODAIRY.title,
-            url: EXPERTS.ALKHODAIRY.profileUrl,
-        },
+        { expert: EXPERTS.ALKHODAIRY.name, quote: 'نمل القطيف: تربة طينية مثالية + نخيل غذاء + عيون + بيوت تاريخية. أكبر خطر نمل في المملكة.', source: 'أبحاث حشرات — نمل الواحات الساحلية' },
     ],
-
     saudiRegulations: [REGULATIONS.GHAD_SYSTEM],
-
-    verificationBadges: [
-        { badge: '✔️ مبيدات معتمدة من SFDA', authority: 'هيئة الغذاء والدواء', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ مكافحة مرخصة', authority: 'بلدي + وقاء', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Bait System', use: 'تربة طينية' },
+        { name: 'Barrier', use: 'رطوبة 80-95%' },
+        { name: 'فحص UV', use: 'خشب تاريخي — بيوت' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'بيت قديم = مستحيل.', solution: 'Bait + Barrier حتى بيوت تاريخية. الحل موجود.' },
+        { fear: 'رش بعوض يكفي.', solution: 'آلية مختلفة.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'مثل حفر الباطن.', truth: '80-95% طين vs 10-15% رمل. أسرع 5×.' },
+        { myth: 'Barrier عادي.', truth: 'تربة طينية رطبة = يتحلل. مُخصص.' },
     ],
-
     relatedServices: [
-        { slug: 'qatif-furniture-moving', context: 'نقل عفش بالقطيف', priority: 1 },
-        { slug: 'qatif-furniture-storage', context: 'تخزين عفش بالقطيف', priority: 2 },
-        { slug: 'qatif-dyna', context: 'دينا نقل بالقطيف', priority: 3 },
-        { slug: 'qatif-moving-out', context: 'نقل عفش خروج بالقطيف', priority: 4 },
-        { slug: 'qatif-dabab', context: 'دباب نقل بالقطيف', priority: 5 },
-        { slug: 'qatif-cleaning', context: 'تنظيف منازل بالقطيف', priority: 6 },
-        { slug: 'qatif-tanks-cleaning', context: 'تنظيف خزانات بالقطيف', priority: 7 },
-        { slug: 'qatif-sofa-cleaning', context: 'تنظيف كنب بالقطيف', priority: 8 },
-        { slug: 'qatif-carpet-cleaning', context: 'تنظيف سجاد بالقطيف', priority: 9 },
+        { slug: 'pest-control', context: 'حشرات', priority: 1 },
+        { slug: 'bedbugs-control', context: 'بق', priority: 2 },
+        { slug: 'furniture-cleaning', context: 'أثاث — خشب', priority: 3 },
+        { slug: 'villas-cleaning', context: 'فلل', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 5 },
+        { slug: 'furniture-storage', context: 'تخزين', priority: 6 },
+        { slug: 'steam-cleaning', context: 'بخار', priority: 7 },
     ],
 };

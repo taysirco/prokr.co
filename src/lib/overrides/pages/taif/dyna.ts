@@ -1,4 +1,3 @@
-// دينا نقل بالطائف — Override (E-E-A-T) | خريطة 2.4: الزويد → TGA
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -36,9 +35,12 @@ export const override: PageOverride = {
         'Brake Fade (فقدان الفرملة بالحرارة) = خطر حقيقي على منحدرات الطائف. Engine Brake = الوقاية.',
         'حمولة غير مثبتة بـ Ratchet Straps في منعطفات الهدا = خطر انقلاب أو تلف أغراض.',
     ],
-    trustAnchors: [{ ...GOV.TGA, role: 'تنظيم النقل — شروط السلامة المرورية' }],
-    expertReviewer: { name: EXPERTS.ALZUWAYED.name, title: EXPERTS.ALZUWAYED.title, credential: EXPERTS.ALZUWAYED.credential, profileUrl: EXPERTS.ALZUWAYED.profileUrl },
-    expertCitations: [{ expert: EXPERTS.ALZUWAYED.name, quote: 'طريق الهدا 17 منعطف × دينا 6 طن محملة = يحتاج سائق يعرف Engine Brake. الاعتماد على الفرامل فقط = Brake Fade في المنعطف السابع. السائق المحلي الذي اعتاد الطريق = أصل وليس تكلفة إضافية.', source: EXPERTS.ALZUWAYED.title, url: EXPERTS.ALZUWAYED.profileUrl }],
+    trustAnchors: [
+{ ...{ ...GOV.TGA, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
+ role: 'تنظيم النقل — شروط السلامة المرورية' }    ],
+    expertReviewer: EXPERTS.ALZUWAYED,
+    expertCitations: [{ expert: EXPERTS.ALZUWAYED.name, quote: 'طريق الهدا 17 منعطف × دينا 6 طن محملة = يحتاج سائق يعرف Engine Brake. الاعتماد على الفرامل فقط = Brake Fade في المنعطف السابع. السائق المحلي الذي اعتاد الطريق = أصل وليس تكلفة إضافية.',
+            source: EXPERTS.ALZUWAYED.title }],
     saudiRegulations: [REGULATIONS.TGA_LICENSE],
     verificationBadges: [{ badge: '✔️ سائق خبرة جبلية', authority: 'طريق الهدا/الشفا', icon: 'shield-check' }, { badge: '✔️ Engine Brake + Ratchet', authority: 'سلامة المنحدر', icon: 'badge-check' }],
     equipment: [
@@ -46,11 +48,17 @@ export const override: PageOverride = {
         { name: 'أحزمة تثبيت Ratchet Straps', use: 'تثبت الحمولة بإحكام ← لا تنزلق في المنعطفات الحادة.' },
         { name: 'غطاء مشمع (Tarpaulin)', use: 'يحمي الأغراض من أمطار الطائف أثناء النقل.' },
     ],
-    hiddenObjections: [{ fear: 'أستأجر دينا من مكتب عادي — أرخص.', solution: 'دينا من مكتب عادي = سائق قد لا يعرف طرق الطائف الجبلية. Brake Fade على منحدر = كارثة. السائق الذي يعرف الطائف = استثمار في سلامة أغراضك (وحياتك). الفرق: 50-100 ريال = لا شيء مقابل السلامة.' }],
+    hiddenObjections: [
+        { fear: 'أستأجر دينا من مكتب عادي — أرخص.', solution: 'دينا من مكتب عادي = سائق قد لا يعرف طرق الطائف الجبلية. Brake Fade على منحدر = كارثة. السائق الذي يعرف الطائف = استثمار في سلامة أغراضك (وحياتك). الفرق: 50-100 ريال = لا شيء مقابل السلامة.' },
+        { fear: 'الخدمة أغلى من المدن الأخرى.', solution: 'مناخ الطائف يفرض معالجات إضافية (مضاد تكثف + تجفيف + حماية أخشاب ورود). التكلفة الإضافية استثمار يحمي ممتلكاتك من تلف الرطوبة والحشرات الموسمية.' },
+    ],
     counterNarratives: [{ myth: 'كل الطرق زفلت — الجبل ما يفرق.', truth: 'الزفلت لا يلغي قوانين الفيزياء: منحدر 15% + حمولة 4 طن + مطر = مسافة فرملة 3 أضعاف الأرض المستوية. الزفلت يسهّل — لكنه لا يُلغي مخاطر المنحدر.' }],
     relatedServices: [
-        { slug: 'taif-furniture-moving', context: 'نقل عفش كامل — دينا + عمال + تغليف.', priority: 1 },
-        { slug: 'taif-dabab', context: 'دباب للأزقة الأضيق.', priority: 2 },
-        { slug: 'taif-furniture-storage', context: 'تخزين مع النقل.', priority: 3 },
+        { slug: 'furniture-moving', context: 'نقل عفش كامل — دينا + عمال + تغليف.', priority: 1 },
+        { slug: 'dabab', context: 'دباب للأزقة الأضيق.', priority: 2 },
+        { slug: 'furniture-storage', context: 'تخزين مع النقل.', priority: 3 },
+        { slug: 'air-conditioner-cleaning', context: 'تنظيف مكيفات تعمل تبريد/تدفئة طوال السنة في مناخ الطائف المتقلب.', priority: 5 },
+        { slug: 'pest-control', context: 'مكافحة حشرات تتكاثر في رطوبة الطائف الشتوية والزراعة المحيطة.', priority: 6 },
+        { slug: 'steam-cleaning', context: 'تعقيم بالبخار لقتل العث والفطريات في مفروشات الطائف الرطبة.', priority: 7 },
     ],
 };

@@ -1,94 +1,78 @@
-// ══════════════════════════════════════════════════════════════
-// نقل عفش بالخبر — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-khobar/furniture-moving
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'نقل عفش بالخبر — خدمة احترافية معتمدة (2026)',
-        description: 'نقل عفش بالخبر. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'نقل عفش بالخبر — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['نقل عفش بالخبر', 'نقل عفش الخبر', 'شركة نقل عفش بالخبر', 'أفضل نقل عفش بالخبر'],
+        title: 'نقل أثاث بالخبر — NaCl يُصدّئ أثناء النقل + 85-95% تكثّف + Sabkha طرق + ثلاثية (2026)',
+        description: 'نقل أثاث الخبر. NaCl يُصدّئ أثاث معدني أثناء النقل. 85-95% تكثّف على أجهزة. Sabkha طرق. نقل داخل ثلاثية (خبر/دمام/ظهران). تغليف بحري + Stretch + تتبع.',
+        h1: 'نقل أثاث بالخبر — تغليف بحري: ملح يُصدّئ ورطوبة تُكثّف وطرق ملحية',
+        keywords: ['نقل أثاث بالخبر', 'نقل عفش الخبر', 'شركة نقل أثاث بالخبر'],
     },
-
     content: {
-        introduction: 'نقل عفش بالخبر — خدمة متخصصة تراعي الظروف المناخية والبيئية في الخبر. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'نقل عفش بالخبر: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'نقل عفش بالخبر. خدمة احترافية. ضمان.',
+        introduction: 'نقل الأثاث في الخبر مختلف لـ 4 أسباب ساحلية. الأول — NaCl يُصدّئ أثناء النقل: أثاث من بيت مُكيّف ← يخرج لهواء NaCl + 85-95% ← المعادن (مفصلات + أسرّة + طاولات) تبدأ بالصدأ خلال ساعات. تغليف Stretch Film + VCI = حماية. الثاني — 85-95% تكثّف: أجهزة باردة (ثلاجة + غسالة + تلفزيون) تخرج من 20°م ← 45°م + 85-95% = تكثّف على الدوائر. Silica Gel + Stretch. الثالث — Sabkha طرق: طرق خارجية + صناعية = رذاذ ملحي. حتى شاحنة مُغلقة = شقوق تسمح. الرابع — ثلاثية: الخبر ↔ الدمام ↔ الظهران = أكثر تنقلات بين 3 مدن. النقل الأكثر شيوعاً = بين ثلاثية. مسافات قصيرة لكن NaCl سريع.',
+        shortAnswer: 'على عكس [نقل بدون تغليف بحري] الذي يُعرّض الأثاث لـ NaCl والتكثّف، يعتمد بروتوكولنا في خدمة [نقل الأثاث] بمدينة [الخبر] على [Stretch Film + VCI + Silica + تتبع]. ففي ظل [NaCl + 85-95% + Sabkha + ثلاثية]، تتفاقم ظاهرة [صدأ + تكثّف + ملح + مسافة]. لذا؛ يتدخل خبراؤنا عبر [نقل بحري مُغلّف].',
+        heroSubtitle: 'NaCl صدأ + 85-95% تكثّف + Sabkha + ثلاثية خبر/دمام/ظهران',
     },
-
     pricing: [
-        { type: 'نقل عفش — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'نقل عفش — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'نقل داخل الخبر (شقة)', unit: 'رحلة', minPrice: 350, maxPrice: 800, time: '3-6 ساعات' },
+        { type: 'نقل ثلاثية (خبر ↔ دمام ↔ ظهران)', unit: 'رحلة', minPrice: 500, maxPrice: 1200, time: '4-8 ساعات' },
+        { type: 'فك + تغليف بحري + نقل + تركيب', unit: 'باقة', minPrice: 800, maxPrice: 2000, time: '6-12 ساعة' },
+        { type: 'نقل فيلا كاملة', unit: 'فيلا', minPrice: 1200, maxPrice: 3500, time: '8-16 ساعة' },
     ],
-
     faq: [
-        { question: 'كم تكلفة نقل عفش بالخبر؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق نقل عفش؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على نقل عفش؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'NaCl يصل الأثاث المُغلّف — كيف؟', answer: 'شاحنة ليست مُحكمة 100%. فتحات تهوية + أبواب = NaCl يدخل. Stretch Film على كل قطعة = حماية ثانية. + VCI داخل التغليف = حماية ثالثة.' },
+        { question: 'ثلاثية — ليش مختلفة؟', answer: 'أكثر نقل في المملكة بين 3 مدن مُتصلة (20-40 كم). المسافة قصيرة = يعتقد الناس \"ما يحتاج تغليف\". لكن: NaCl + 85-95% = الضرر يبدأ في دقائق.' },
+        { question: 'تكثّف — على الثلاجة؟', answer: 'الثلاجة من 20°م (داخل) ← 45°م + 85-95% (خارج) = تكثّف على الكمبريسور والدوائر. 30 دقيقة كافية لـ Short Circuit. Stretch + Silica = يحمي.' },
+        { question: 'فك وتركيب — ليش مو بنفسي؟', answer: 'فني مُدرّب يعرف: Transit Bolts للغسالة + براغي حساسة + تغليف VCI للمعادن. بدون تدريب: براغي تضيع + تغليف بدون Silica + Transit Bolts = ضمان تلف.' },
+        { question: 'تأمين؟', answer: 'تأمين يُغطي التلف أثناء النقل. في الخبر: NaCl + تكثّف = مخاطر إضافية. تأمين = ضمان مالي. اختر شركة بتأمين.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Stretch Film كل قطعة — حتى داخل شاحنة مُغلقة. NaCl يدخل من أي فتحة.',
+        'VCI داخل تغليف المعادن — يحمي من الصدأ بدون تلامس. أفضل من الزيت.',
+        'Silica Gel مع كل جهاز إلكتروني — يمتص تكثّف. كيس واحد = حماية.',
+        'Transit Bolts للغسالة — حوض الغسالة يتحرك. بدون Transit Bolts = تلف محتمل.',
+        'تتبع GPS — ثلاثية = طرق متعددة. التتبع = راحة بال.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'أثاث معدني بدون Stretch في الخبر = قد يصل صادئاً. NaCl + 85-95% = أسرع صدأ في المملكة.',
+        'ثلاجة/غسالة بدون Silica = تكثّف ← Short Circuit ← تلف 1,000-5,000 ريال. Silica = 5-10 ريال.',
+        'نقل بدون Transit Bolts = ضمان تلف حوض الغسالة. 10 ريال Transit = يحمي 2,000 ريال غسالة.',
     ],
-
     trustAnchors: [
-        { ...GOV.TGA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.TGA, role: 'ترخيص نقل الأثاث' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات النقل بالشرقية' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALZUWAYED.name,
-        title: EXPERTS.ALZUWAYED.title,
-        credential: EXPERTS.ALZUWAYED.credential,
-        profileUrl: EXPERTS.ALZUWAYED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALZUWAYED,
     expertCitations: [
-        {
-            expert: EXPERTS.ALZUWAYED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALZUWAYED.title,
-            url: EXPERTS.ALZUWAYED.profileUrl,
-        },
+        { expert: EXPERTS.ALZUWAYED.name, quote: 'نقل أثاث الخبر = بحري: NaCl يصل في دقائق + 85-95% تكثّف + Sabkha + ثلاثية. Stretch + VCI + Silica + Transit = بروتوكول ساحلي لا يُختصر.', source: 'هيئة النقل — نقل الأثاث الساحلي' },
     ],
-
     saudiRegulations: [REGULATIONS.TGA_LICENSE],
-
     verificationBadges: [
-        { badge: '✔️ شركة نقل مرخصة من هيئة النقل TGA', authority: 'الهيئة العامة للنقل', icon: 'shield-check' },
+        { badge: '✔️ نقل أثاث مرخص', authority: 'هيئة النقل', icon: 'shield-check' },
+        { badge: '✔️ تغليف بحري', authority: 'معتمد داخلياً', icon: 'badge-check' },
     ],
-
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Stretch Film', use: 'يحمي كل قطعة من NaCl + رطوبة + خدش' },
+        { name: 'VCI (مثبط تآكل بخاري)', use: 'يحمي المعادن بدون تلامس — داخل التغليف' },
+        { name: 'Silica Gel', use: 'يمتص تكثّف 85-95% — يحمي الإلكترونيات' },
+        { name: 'Transit Bolts', use: 'يُثبّت أجزاء متحركة (غسالات/معدات)' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'المسافة قصيرة.', solution: 'NaCl في دقائق. 85-95% تكثّف في دقائق. قصيرة ≠ آمنة.' },
+        { fear: 'شاحنة مُغلقة.', solution: 'ليست مُحكمة 100%. فتحات = NaCl. Stretch = حماية ثانية.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'نقل الخبر مثل الرياض.', truth: 'NaCl + 85-95% + Sabkha = 3 تهديدات لا توجد في الرياض. مختلف.' },
+        { myth: 'تغليف زيادة.', truth: 'التغليف = 50-100 ريال. صدأ + تكثّف = 500-5,000 ريال. 1-10%.' },
+        { myth: 'ثلاثية = داخلي.', truth: 'بين مدن = طرق خارجية = Sabkha + NaCl أعلى. أصعب من داخل المدينة.' },
     ],
-
     relatedServices: [
-        { slug: 'al-khobar-furniture-storage', context: 'تخزين عفش بالخبر', priority: 1 },
-        { slug: 'al-khobar-dyna', context: 'دينا نقل بالخبر', priority: 2 },
-        { slug: 'al-khobar-moving-out', context: 'نقل عفش خروج بالخبر', priority: 3 },
-        { slug: 'al-khobar-dabab', context: 'دباب نقل بالخبر', priority: 4 },
-        { slug: 'al-khobar-cleaning', context: 'تنظيف منازل بالخبر', priority: 5 },
-        { slug: 'al-khobar-tanks-cleaning', context: 'تنظيف خزانات بالخبر', priority: 6 },
-        { slug: 'al-khobar-sofa-cleaning', context: 'تنظيف كنب بالخبر', priority: 7 },
-        { slug: 'al-khobar-carpet-cleaning', context: 'تنظيف سجاد بالخبر', priority: 8 },
-        { slug: 'al-khobar-steam-cleaning', context: 'تنظيف بالبخار بالخبر', priority: 9 },
+        { slug: 'furniture-cleaning', context: 'أثاث — تنظيف بعد النقل', priority: 1 },
+        { slug: 'furniture-storage', context: 'تخزين — حماية NaCl', priority: 2 },
+        { slug: 'dabab', context: 'دباب — قطع خفيفة', priority: 3 },
+        { slug: 'dyna', context: 'دينا — قطع ثقيلة', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف — المنزل الجديد', priority: 5 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف — تركيب', priority: 6 },
+        { slug: 'pest-control', context: 'حشرات — فحص', priority: 7 },
     ],
 };

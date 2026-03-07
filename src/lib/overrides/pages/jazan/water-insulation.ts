@@ -1,7 +1,3 @@
-// عزل مائي بجازان — Override (E-E-A-T)
-// الزاوية: أمطار 200+ ملم = أهم من أي مدينة جافة
-//   + رطوبة لا تُجفف = تسرب مستمر بدون عزل
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -59,19 +55,13 @@ export const override: PageOverride = {
         { entity: AMANA.JAZAN.entity, url: AMANA.JAZAN.url, role: 'تطبيق اشتراطات العزل المائي بجازان', acronym: 'أمانة جازان' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALJUND.name,
-        title: EXPERTS.ALJUND.title,
-        credential: EXPERTS.ALJUND.credential,
-        profileUrl: EXPERTS.ALJUND.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALJUND,
 
     expertCitations: [
         {
             expert: 'م. ماجد المحيميد',
             quote: 'جازان = المدينة السعودية الوحيدة التي المبنى فيها رطب حتى بدون مطر (تكثف مستمر). العزل المائي = \"حياة أو موت\" وليس إضافة. بيتومين مضاد فطريات + ستانلس 316 = الحد الأدنى',
             source: 'خبير جودة البناء والتشطيبات',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
 
@@ -96,16 +86,17 @@ export const override: PageOverride = {
     counterNarratives: [
         { myth: 'المبنى خرسانة — ما يحتاج عزل مائي', truth: 'الخرسانة مسامية — تمتص الماء عبر الشعيرات (Capillary Rise). بجازان: أمطار + رطوبة = الخرسانة مُشبعة. الماء يصل لحديد التسليح ← صدأ ← تمدد ← تشقق الخرسانة (Spalling)' },
         { myth: 'العزل المائي = رفاهية', truth: 'بجازان: العزل المائي = الخط الأول لحماية المبنى (200+ ملم أمطار + 58% رطوبة + تكثف). "رفاهية" في الرياض. "حياة أو موت" بجازان' },
+        { myth: 'أي شركة تنظيف/صيانة نتيجتها واحدة.', truth: 'الفرق بين شركة مرخصة ومُعتمدة وأخرى عشوائية = الفرق بين معالجة جذرية وإخفاء مؤقت. المعدات المتخصصة والبروتوكولات العلمية تحل المشكلة من جذرها — التنظيف العشوائي يُعيدها أسوأ خلال أسابيع.' },
     ],
 
     relatedServices: [
-        { slug: 'jazan-roof-insulation', context: 'عزل سطح حراري+مائي = حماية شاملة', priority: 1 },
-        { slug: 'jazan-foam-insulation', context: 'فوم Closed-Cell — لا يمتص الرطوبة', priority: 2 },
-        { slug: 'jazan-water-leak-detection', context: 'فحص تسربات بعد العزل', priority: 3 },
-        { slug: 'jazan-thermal-insulation', context: 'عزل حراري يُكمل المائي', priority: 4 },
-        { slug: 'jazan-tank-insulation', context: 'عزل خزان — حماية مياه الشرب', priority: 5 },
-        { slug: 'jazan-bathroom-leak-detection', context: 'فحص حمام — العزل يحمي الحمامات', priority: 6 },
-        { slug: 'jazan-bird-control', context: 'طرد حمام — ذرق رطب يُضعف العزل', priority: 7 },
-        { slug: 'jazan-pest-control', context: 'مكافحة حشرات — عزل سليم يمنع رطوبة تجذب حشرات', priority: 8 },
+        { slug: 'roof-insulation', context: 'عزل سطح حراري+مائي = حماية شاملة', priority: 1 },
+        { slug: 'foam-insulation', context: 'فوم Closed-Cell — لا يمتص الرطوبة', priority: 2 },
+        { slug: 'water-leak-detection', context: 'فحص تسربات بعد العزل', priority: 3 },
+        { slug: 'thermal-insulation', context: 'عزل حراري يُكمل المائي', priority: 4 },
+        { slug: 'tank-insulation', context: 'عزل خزان — حماية مياه الشرب', priority: 5 },
+        { slug: 'bathroom-leak-detection', context: 'فحص حمام — العزل يحمي الحمامات', priority: 6 },
+        { slug: 'bird-control', context: 'طرد حمام — ذرق رطب يُضعف العزل', priority: 7 },
+        { slug: 'pest-control', context: 'مكافحة حشرات — عزل سليم يمنع رطوبة تجذب حشرات', priority: 8 },
     ],
 };

@@ -1,4 +1,3 @@
-// تنظيف واجهات زجاجية بالطائف — Override (E-E-A-T)
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -34,9 +33,12 @@ export const override: PageOverride = {
         'مسح الزجاج جافاً بعد الضباب = سحب غبار معدني فوق السطح ← خدوش دائمة. اشطف أولاً.',
         'غسيل الواجهات بماء عادي بدون DI Water = ترسبات كلسية جديدة فور الجفاف.',
     ],
-    trustAnchors: [{ ...GOV.BALADI, role: 'سلامة العمل على المباني المرتفعة' }],
-    expertReviewer: { name: EXPERTS.ALMISNID.name, title: EXPERTS.ALMISNID.title, credential: EXPERTS.ALMISNID.credential, profileUrl: EXPERTS.ALMISNID.profileUrl },
-    expertCitations: [{ expert: EXPERTS.ALMISNID.name, quote: 'ترسبات ضباب الطائف الكلسية = مشكلة حصرية للمدن الجبلية. الشطف النهائي بماء DI منزوع أملاح + Rain Repellent = ثنائي يحل المشكلة من الجذر: ماء بلا أملاح = لا ترسبات فورية. Repellent = ندى يومي ينزلق بدلاً من التبخر.', source: EXPERTS.ALMISNID.title, url: EXPERTS.ALMISNID.profileUrl }],
+    trustAnchors: [
+{ ...{ ...GOV.BALADI, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
+ role: 'سلامة العمل على المباني المرتفعة' }    ],
+    expertReviewer: EXPERTS.ALMISNID,
+    expertCitations: [{ expert: EXPERTS.ALMISNID.name, quote: 'ترسبات ضباب الطائف الكلسية = مشكلة حصرية للمدن الجبلية. الشطف النهائي بماء DI منزوع أملاح + Rain Repellent = ثنائي يحل المشكلة من الجذر: ماء بلا أملاح = لا ترسبات فورية. Repellent = ندى يومي ينزلق بدلاً من التبخر.',
+            source: EXPERTS.ALMISNID.title }],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
     verificationBadges: [{ badge: '✔️ DI Water شطف نهائي', authority: 'بلا ترسبات', icon: 'shield-check' }, { badge: '✔️ Rain Repellent', authority: 'حماية 6-12 شهر', icon: 'badge-check' }],
     equipment: [
@@ -44,10 +46,16 @@ export const override: PageOverride = {
         { name: 'مزيل ترسبات كلسية (pH 3-4)', use: 'يُذيب ترسبات الضباب المتصلبة بدون تلف الزجاج أو الإطارات.' },
         { name: 'Rain Repellent (طبقة نانو)', use: 'تجعل الماء والندى ينزلق ← تنظيف ذاتي ← يُقلل الترسبات 70%.' },
     ],
-    hiddenObjections: [{ fear: 'أنظف بنفسي من الداخل — أوفر.', solution: 'التلوث الأهم (ترسبات ضباب + فضلات حمام) = على السطح الخارجي ← لا تصله من الداخل. تنظيف الداخل فقط = 50% من النتيجة. + الخطوة الحاسمة (DI Water + Rain Repellent) تحتاج معدات متخصصة.' }],
+    hiddenObjections: [
+        { fear: 'أنظف بنفسي من الداخل — أوفر.', solution: 'التلوث الأهم (ترسبات ضباب + فضلات حمام) = على السطح الخارجي ← لا تصله من الداخل. تنظيف الداخل فقط = 50% من النتيجة. + الخطوة الحاسمة (DI Water + Rain Repellent) تحتاج معدات متخصصة.' },
+        { fear: 'الخدمة أغلى من المدن الأخرى.', solution: 'مناخ الطائف يفرض معالجات إضافية (مضاد تكثف + تجفيف + حماية أخشاب ورود). التكلفة الإضافية استثمار يحمي ممتلكاتك من تلف الرطوبة والحشرات الموسمية.' },
+    ],
     counterNarratives: [{ myth: 'الأمطار تنظف الزجاج طبيعياً.', truth: 'مياه أمطار الطائف تحمل معادن (كلسية) ← تتبخر ← تترك ترسبات مثل الضباب. المطر = تلويث إضافي وليس تنظيف. DI Water فقط لا يترك ترسبات.' }],
     relatedServices: [
-        { slug: 'taif-bird-control', context: 'طرد حمام + تنظيف واجهات.', priority: 1 },
-        { slug: 'taif-villas-cleaning', context: 'تنظيف فيلا شامل + واجهات.', priority: 2 },
+        { slug: 'bird-control', context: 'طرد حمام + تنظيف واجهات.', priority: 1 },
+        { slug: 'villas-cleaning', context: 'تنظيف فيلا شامل + واجهات.', priority: 2 },
+        { slug: 'air-conditioner-cleaning', context: 'تنظيف مكيفات تعمل تبريد/تدفئة طوال السنة في مناخ الطائف المتقلب.', priority: 5 },
+        { slug: 'pest-control', context: 'مكافحة حشرات تتكاثر في رطوبة الطائف الشتوية والزراعة المحيطة.', priority: 6 },
+        { slug: 'steam-cleaning', context: 'تعقيم بالبخار لقتل العث والفطريات في مفروشات الطائف الرطبة.', priority: 7 },
     ],
 };

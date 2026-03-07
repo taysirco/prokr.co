@@ -1,94 +1,47 @@
-// ══════════════════════════════════════════════════════════════
-// مكافحة حشرات بحفر الباطن — Override مخصص (E-E-A-T Grade)
-// صفحة: /hafr-albatin/pest-control
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'مكافحة حشرات بحفر الباطن — خدمة احترافية معتمدة (2026)',
-        description: 'مكافحة حشرات بحفر الباطن. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'مكافحة حشرات بحفر الباطن — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['مكافحة حشرات بحفر الباطن', 'مكافحة حشرات حفر الباطن', 'شركة مكافحة حشرات بحفر الباطن', 'أفضل مكافحة حشرات بحفر الباطن'],
+        title: 'مكافحة حشرات بحفر الباطن — عقارب صفراء + ثعابين + وادي فيضان + KKMC عسكري + جراد (2026)',
+        description: 'مكافحة حشرات حفر الباطن. عقارب صفراء أخطر سعودي. ثعابين. وادي فيضان. KKMC. جراد. 5-15% Residual 12-18 يوم أفضل سعودي.',
+        h1: 'مكافحة حشرات بحفر الباطن — عقارب + ثعابين + وادي + KKMC',
+        keywords: ['مكافحة حشرات بحفر الباطن', 'مكافحة حشرات حفر الباطن', 'شركة مكافحة حشرات بحفر الباطن'],
     },
-
     content: {
-        introduction: 'مكافحة حشرات بحفر الباطن — خدمة متخصصة تراعي الظروف المناخية والبيئية في حفر الباطن. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'مكافحة حشرات بحفر الباطن: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'مكافحة حشرات بحفر الباطن. خدمة احترافية. ضمان.',
+        introduction: 'حفر الباطن = أقصى شمال صحراوي. 5 تحديات فريدة لا تتكرر: (1) عقارب صفراء Leiurus quinquestriatus (أخطر عقرب سعودي — سم عصبي!): حدود العراق/الكويت = كثافة عالية. Delta Dust + ختم شقوق + UV Blacklight. بعد فيضان وادي = انتشار. (2) ثعابين (أفاعي قرناء + أم جنيب): صحراء مفتوحة. مصائد غراء + ختم + تنظيف بيئة. (3) وادي الباطن: فيضان شتوي = طرد عقارب وثعابين نحو المنازل + بعوض مؤقت. (4) KKMC عسكريين: سكن مُتنقّل = بق + صراصير. K9. (5) رياح شمالية Shamal: غبار عراقي PM10 = حشرات تختبئ داخلياً. 5-15% = Residual 12-18 يوم (أفضل سعودي!).',
+        shortAnswer: 'على عكس [مدن ساحلية]، يتمتع بروتوكولنا بـ [Residual 12-18 يوم — أفضل سعودي]. لكن [عقارب أخطر + ثعابين + فيضان] يتطلب [مكافحة صحراوية شمالية مُتخصصة].',
+        heroSubtitle: 'أخطر عقارب سعودية + ثعابين + وادي فيضان + KKMC + Residual 12-18 أفضل!',
     },
-
     pricing: [
-        { type: 'مكافحة حشرات — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'مكافحة حشرات — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'شقة', unit: 'شقة', minPrice: 130, maxPrice: 280, time: '2-3 ساعات' },
+        { type: 'KKMC — وحدة', unit: 'وحدة', minPrice: 90, maxPrice: 180, time: '1-2 ساعة' },
+        { type: 'عقد شهري', unit: 'سنة', minPrice: 700, maxPrice: 1500, time: '12 زيارة' },
     ],
-
     faq: [
-        { question: 'كم تكلفة مكافحة حشرات بحفر الباطن؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق مكافحة حشرات؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على مكافحة حشرات؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'Residual 12-18؟', answer: '5-15% = أجف سعودي. أفضل Residual. شهري يكفي!' },
+        { question: 'عقارب صفراء؟', answer: 'Leiurus = سم عصبي. أخطر سعودي. Delta Dust + UV + ختم.' },
+        { question: 'فيضان وادي؟', answer: 'شتاء = طرد عقارب وثعابين. فحص فوري بعد مطر.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Delta Dust عقارب — UV Blacklight.',
+        'ختم ثعابين + مصائد غراء.',
+        'فحص فوري بعد فيضان وادي.',
+        'Residual شهري يكفي (12-18!).',
+        'KKMC فحص K9 دوري.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'عقارب صفراء = سم عصبي خطير!',
+        'ثعابين = خطر حقيقي.',
+        'فيضان = طوارئ حشرات.',
     ],
-
-    trustAnchors: [
-        { ...GOV.SFDA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
-    ],
-
-    expertReviewer: {
-        name: EXPERTS.ALKHODAIRY.name,
-        title: EXPERTS.ALKHODAIRY.title,
-        credential: EXPERTS.ALKHODAIRY.credential,
-        profileUrl: EXPERTS.ALKHODAIRY.profileUrl,
-    },
-
-    expertCitations: [
-        {
-            expert: EXPERTS.ALKHODAIRY.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALKHODAIRY.title,
-            url: EXPERTS.ALKHODAIRY.profileUrl,
-        },
-    ],
-
+    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص' }, { ...GOV.WEQAA, role: 'مبيدات' }],
+    expertReviewer: EXPERTS.ALKHODAIRY,
+    expertCitations: [{ expert: EXPERTS.ALKHODAIRY.name, quote: 'حفر الباطن: أخطر عقارب + أفضل Residual. صحراء شمالية مُتطرفة.', source: 'أبحاث حشرات — الشمالية' }],
     saudiRegulations: [REGULATIONS.GHAD_SYSTEM],
-
-    verificationBadges: [
-        { badge: '✔️ مبيدات معتمدة من SFDA', authority: 'هيئة الغذاء والدواء', icon: 'shield-check' },
-    ],
-
-    equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
-    ],
-
-    hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
-    ],
-
-    counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
-    ],
-
-    relatedServices: [
-        { slug: 'hafr-albatin-furniture-moving', context: 'نقل عفش بحفر الباطن', priority: 1 },
-        { slug: 'hafr-albatin-furniture-storage', context: 'تخزين عفش بحفر الباطن', priority: 2 },
-        { slug: 'hafr-albatin-dyna', context: 'دينا نقل بحفر الباطن', priority: 3 },
-        { slug: 'hafr-albatin-moving-out', context: 'نقل عفش خروج بحفر الباطن', priority: 4 },
-        { slug: 'hafr-albatin-dabab', context: 'دباب نقل بحفر الباطن', priority: 5 },
-        { slug: 'hafr-albatin-cleaning', context: 'تنظيف منازل بحفر الباطن', priority: 6 },
-        { slug: 'hafr-albatin-tanks-cleaning', context: 'تنظيف خزانات بحفر الباطن', priority: 7 },
-        { slug: 'hafr-albatin-sofa-cleaning', context: 'تنظيف كنب بحفر الباطن', priority: 8 },
-        { slug: 'hafr-albatin-carpet-cleaning', context: 'تنظيف سجاد بحفر الباطن', priority: 9 },
-    ],
+    verificationBadges: [{ badge: '✔️ مرخصة', authority: 'بلدي + وقاء', icon: 'shield-check' }],
+    equipment: [{ name: 'Delta Dust', use: 'عقارب' }, { name: 'UV Blacklight', use: 'كشف' }, { name: 'مصائد غراء', use: 'ثعابين' }, { name: 'K9', use: 'KKMC' }],
+    hiddenObjections: [{ fear: 'رش شهري.', solution: '12-18 يوم Residual!' }],
+    counterNarratives: [{ myth: 'مثل الرياض.', truth: 'عقارب + ثعابين + فيضان. أكثر تطرفاً.' }],
+    relatedServices: [{ slug: 'bedbugs-control', context: 'بق — KKMC', priority: 1 }, { slug: 'termite-control', context: 'نمل', priority: 2 }],
 };

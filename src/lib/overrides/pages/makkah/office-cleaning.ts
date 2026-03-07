@@ -124,12 +124,12 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'makkah-glass-facades-cleaning', context: 'تنظيف واجهات المبنى الزجاجية — مظهر خارجي مثل الداخلي', priority: 1 },
-        { slug: 'makkah-carpet-cleaning', context: 'غسيل موكيت المكاتب عميق — إزالة البقع والروائح', priority: 2 },
-        { slug: 'makkah-steam-cleaning', context: 'تعقيم كراسي وكنب الاستقبال بالبخار', priority: 3 },
-        { slug: 'makkah-marble-polishing', context: 'جلي رخام لوبي الشركة — انطباع أول لامع', priority: 4 },
-        { slug: 'makkah-pest-control', context: 'مكافحة صراصير ألمانية في مطابخ المكاتب', priority: 5 },
-        { slug: 'makkah-sanitization', context: 'تعقيم شامل بعد حالة مرضية بين الموظفين', priority: 6 },
-        { slug: 'makkah-hourly-cleaning', context: 'عاملة بالساعة لتنظيف سريع في المناسبات', priority: 7 },
+        { slug: 'glass-facades-cleaning', context: 'تنظيف واجهات المبنى الزجاجية — مظهر خارجي مثل الداخلي', priority: 1 },
+        { slug: 'carpet-cleaning', context: 'غسيل موكيت المكاتب عميق — إزالة البقع والروائح', priority: 2 },
+        { slug: 'steam-cleaning', context: 'تعقيم كراسي وكنب الاستقبال بالبخار', priority: 3 },
+        { slug: 'marble-polishing', context: 'جلي رخام لوبي الشركة — انطباع أول لامع', priority: 4 },
+        { slug: 'pest-control', context: 'مكافحة صراصير ألمانية في مطابخ المكاتب', priority: 5 },
+        { slug: 'sanitization', context: 'تعقيم شامل بعد حالة مرضية بين الموظفين', priority: 6 },
+        { slug: 'hourly-cleaning', context: 'عاملة بالساعة لتنظيف سريع في المناسبات', priority: 7 },
     ],
 };

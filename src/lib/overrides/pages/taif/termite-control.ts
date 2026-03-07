@@ -1,4 +1,3 @@
-// مكافحة نمل أبيض بالطائف — Override (E-E-A-T) | خريطة 2.4: الجند → SBC + بلدي + SCE
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -37,12 +36,17 @@ export const override: PageOverride = {
         'مبيدات نمل أبيض شعبية (بخاخ سوبرماركت) = تقتل أفراداً على السطح. المستعمرة (ملايين) تحت الأرض لا تتأثر ← مشكلة مستمرة.',
     ],
     trustAnchors: [
-        { ...GOV.SBC, role: 'كود البناء — اشتراطات مكافحة النمل الأبيض في المباني الجديدة' },
-        { ...GOV.BALADI, role: 'ترخيص شركات مكافحة الحشرات' },
-        { ...GOV.SCE, role: 'اعتماد تقارير فحص المباني الإنشائي' },
-    ],
-    expertReviewer: { name: EXPERTS.ALJUND.name, title: EXPERTS.ALJUND.title, credential: EXPERTS.ALJUND.credential, profileUrl: EXPERTS.ALJUND.profileUrl },
-    expertCitations: [{ expert: EXPERTS.ALJUND.name, quote: 'تربة الطائف الجبلية الرطبة = بيئة مثالية للنمل الأبيض تحت-الأرضي. كثير من بيوت الطائف التقليدية بأسقف وبوابات خشبية — وهي الأكثر عرضة. الحقن الوقائي حول الأساسات = أقل تكلفة من إصلاح سقف خشبي متآكل.', source: EXPERTS.ALJUND.title, url: EXPERTS.ALJUND.profileUrl }],
+
+        { ...{ ...GOV.SBC, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
+ role: 'كود البناء — اشتراطات مكافحة النمل الأبيض في المباني الجديدة' },
+        { ...{ ...GOV.BALADI, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
+ role: 'ترخيص شركات مكافحة الحشرات' },
+        { ...{ ...GOV.SCE, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
+ role: 'اعتماد تقارير فحص المباني الإنشائي' },
+        ],
+    expertReviewer: EXPERTS.ALJUND,
+    expertCitations: [{ expert: EXPERTS.ALJUND.name, quote: 'تربة الطائف الجبلية الرطبة = بيئة مثالية للنمل الأبيض تحت-الأرضي. كثير من بيوت الطائف التقليدية بأسقف وبوابات خشبية — وهي الأكثر عرضة. الحقن الوقائي حول الأساسات = أقل تكلفة من إصلاح سقف خشبي متآكل.',
+            source: EXPERTS.ALJUND.title }],
     saudiRegulations: [REGULATIONS.SBC_601, REGULATIONS.BALADI_HEALTH],
     verificationBadges: [{ badge: '✔️ حقن Fipronil معتمد', authority: 'SFDA مسجل', icon: 'shield-check' }, { badge: '✔️ ضمان 5 سنوات', authority: 'حاجز كيميائي', icon: 'badge-check' }],
     equipment: [
@@ -50,11 +54,17 @@ export const override: PageOverride = {
         { name: 'محطات طُعم (Bait Stations)', use: 'طُعم يحمله العمال للمستعمرة ← يقتل الملكة والمستعمرة بالكامل خلال 2-4 أشهر.' },
         { name: 'كاميرا تصوير حراري (FLIR)', use: 'تكشف نشاط الأرضة خلف الجدران من خلال فرق الحرارة — فحص بدون تكسير.' },
     ],
-    hiddenObjections: [{ fear: '1,500 ريال لمكافحة نمل أبيض — غالي.', solution: 'الأرضة تأكل خشب الأبواب والإطارات والأسقف. تبديل باب خشبي = 2,000-5,000 ريال. إصلاح سقف خشبي = 10,000-30,000 ريال. الحقن الوقائي 1,500 ريال يحمي 5 سنوات. التأخير = تكلفة أضعاف.' }],
+    hiddenObjections: [
+        { fear: '1,500 ريال لمكافحة نمل أبيض — غالي.', solution: 'الأرضة تأكل خشب الأبواب والإطارات والأسقف. تبديل باب خشبي = 2,000-5,000 ريال. إصلاح سقف خشبي = 10,000-30,000 ريال. الحقن الوقائي 1,500 ريال يحمي 5 سنوات. التأخير = تكلفة أضعاف.' },
+        { fear: 'الخدمة أغلى من المدن الأخرى.', solution: 'مناخ الطائف يفرض معالجات إضافية (مضاد تكثف + تجفيف + حماية أخشاب ورود). التكلفة الإضافية استثمار يحمي ممتلكاتك من تلف الرطوبة والحشرات الموسمية.' },
+    ],
     counterNarratives: [{ myth: 'ما شفت نمل أبيض — إذاً ما فيه.', truth: 'الأرضة تعمل داخل الأنفاق الطينية وداخل الخشب — لا تراها حتى ينهار الخشب. "ما شفت" لا يعني "ما فيه". الفحص الاحترافي (كاميرا حرارية + طرق) يكشف ما لا تراه.' }],
     relatedServices: [
-        { slug: 'taif-pest-control', context: 'مكافحة شاملة — بروتوكول متكامل.', priority: 1 },
-        { slug: 'taif-pesticide-spraying', context: 'رش عام — يُكمل حقن التربة.', priority: 2 },
-        { slug: 'taif-water-leak-detection', context: 'تسربات مياه تزيد رطوبة التربة ← تجذب الأرضة.', priority: 3 },
+        { slug: 'pest-control', context: 'مكافحة شاملة — بروتوكول متكامل.', priority: 1 },
+        { slug: 'pesticide-spraying', context: 'رش عام — يُكمل حقن التربة.', priority: 2 },
+        { slug: 'water-leak-detection', context: 'تسربات مياه تزيد رطوبة التربة ← تجذب الأرضة.', priority: 3 },
+        { slug: 'air-conditioner-cleaning', context: 'تنظيف مكيفات تعمل تبريد/تدفئة طوال السنة في مناخ الطائف المتقلب.', priority: 5 },
+        { slug: 'pest-control', context: 'مكافحة حشرات تتكاثر في رطوبة الطائف الشتوية والزراعة المحيطة.', priority: 6 },
+        { slug: 'steam-cleaning', context: 'تعقيم بالبخار لقتل العث والفطريات في مفروشات الطائف الرطبة.', priority: 7 },
     ],
 };

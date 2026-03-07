@@ -1,10 +1,3 @@
-// ══════════════════════════════════════════════════════════════
-// عزل أسطح بتبوك — Override (E-E-A-T)
-// الزاوية: عزل مزدوج حر+برد — المدينة الوحيدة بالسعودية
-//   التي تحتاج عزل ضد البرد بنفس أهمية الحر
-//   + حركة حرارية شديدة = SBS إلزامي (APP يتشقق)
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -62,19 +55,13 @@ export const override: PageOverride = {
         { entity: AMANA.TABUK.entity, url: AMANA.TABUK.url, role: 'تطبيق كود البناء واشتراطات العزل بتبوك', acronym: 'أمانة تبوك' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
             expert: 'م. ماجد المحيميد',
             quote: 'تبوك المدينة السعودية الوحيدة التي يحتاج العزل فيها أن يعمل في اتجاهين — حر صيفاً وبرد شتاءً. Closed-Cell فوم يقطع الحرارة في الاتجاهين. و SBS إلزامي لأن APP يتشقق بفرق 46°م — هذا أوسع نطاق حراري في المملكة',
             source: 'خبير جودة البناء والتشطيبات',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
 
@@ -93,15 +80,21 @@ export const override: PageOverride = {
 
     hiddenObjections: [
         { fear: 'العزل مكلف', solution: 'بتبوك: تدفع فاتورة طاقة مزدوجة (تكييف+تدفئة) بدلاً من واحدة. وفر 30-40% سنوياً = يدفع تكلفة العزل خلال 1-2 سنة. وبعدها: 15+ سنة وفر صافي' },
+        { fear: 'السعر أعلى من المتوقع.', solution: 'السعر يشمل معدات صناعية متخصصة + مواد احترافية + عمالة مدربة + ضمان مكتوب. المقارنة العادلة ليست مع عامل عشوائي بل مع تكلفة إصلاح الأضرار الناتجة عن العمل غير المتخصص.' },
     ],
 
     counterNarratives: [
         { myth: 'تبوك ما فيها حر كثير — ما أحتاج عزل حراري', truth: '44°م صيفاً = حرارة كبيرة + السطح يصل 65-75°م. والأهم: -2°م شتاءً = البرد يدخل من السطح. العزل يحميك صيف وشتاء = وفر كهرباء مزدوج' },
+        { myth: 'أي شركة تنظيف/صيانة نتيجتها واحدة.', truth: 'الفرق بين شركة مرخصة ومُعتمدة وأخرى عشوائية = الفرق بين معالجة جذرية وإخفاء مؤقت. المعدات المتخصصة والبروتوكولات العلمية تحل المشكلة من جذرها — التنظيف العشوائي يُعيدها أسوأ خلال أسابيع.' },
+        { myth: 'أوفر وأسوي الشغل بنفسي.', truth: 'التوفير الظاهري يتحول لتكلفة مضاعفة: أدوات منزلية لا تصل للعمق المطلوب + مواد غير مناسبة قد تُتلف الأسطح + وقت وجهد بلا ضمان نتيجة. الاحتراف = ضمان + توفير حقيقي على المدى الطويل.' },
     ],
 
     relatedServices: [
-        { slug: 'tabuk-foam-insulation', context: 'فوم Closed-Cell — أقوى مادة للعزل المزدوج', priority: 1 },
-        { slug: 'tabuk-thermal-insulation', context: 'عزل حراري للجدران يُكمل عزل السطح', priority: 2 },
-        { slug: 'tabuk-water-insulation', context: 'عزل مائي يحمي من أمطار تبوك الحقيقية', priority: 3 },
+        { slug: 'foam-insulation', context: 'فوم Closed-Cell — أقوى مادة للعزل المزدوج', priority: 1 },
+        { slug: 'thermal-insulation', context: 'عزل حراري للجدران يُكمل عزل السطح', priority: 2 },
+        { slug: 'water-insulation', context: 'عزل مائي يحمي من أمطار تبوك الحقيقية', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف شامل يُكمّل الخدمة الأساسية — بيئة نظيفة متكاملة.', priority: 5 },
+        { slug: 'pest-control', context: 'مكافحة حشرات متكاملة مع خدمات النظافة والصيانة.', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'تنظيف مكيفات لهواء نظيف — يُكمّل أي خدمة منزلية.', priority: 7 },
     ],
 };

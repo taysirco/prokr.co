@@ -1,94 +1,74 @@
-// ══════════════════════════════════════════════════════════════
-// كشف تسربات المياه بينبع — Override مخصص (E-E-A-T Grade)
-// صفحة: /yanbu/water-leak-detection
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'كشف تسربات المياه بينبع — خدمة احترافية معتمدة (2026)',
-        description: 'كشف تسربات المياه بينبع. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'كشف تسربات المياه بينبع — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['كشف تسربات المياه بينبع', 'كشف تسربات المياه ينبع', 'شركة كشف تسربات المياه بينبع', 'أفضل كشف تسربات المياه بينبع'],
+        title: 'كشف تسربات مياه بينبع — تحلية تآكل+NaCl مزدوج+70-85% تكثّف — FLIR+ضغط! (2026)',
+        description: 'كشف تسربات مياه ينبع. تحلية تآكل مزدوج! NaCl. 70-85% تكثّف يُخفي. FLIR+فحص ضغط+PPR+NWC.',
+        h1: 'كشف تسربات مياه بينبع — تآكل مزدوج+تكثّف!',
+        keywords: ['كشف تسربات مياه ينبع', 'كشف تسربات بينبع', 'شركة كشف تسربات مياه ينبع'],
     },
-
     content: {
-        introduction: 'كشف تسربات المياه بينبع — خدمة متخصصة تراعي الظروف المناخية والبيئية في ينبع. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'كشف تسربات المياه بينبع: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'كشف تسربات المياه بينبع. خدمة احترافية. ضمان.',
+        introduction: 'تسربات ينبع = تآكل مزدوج+تكثّف يُخفي! تحلية TDS<150: مياه محلاة "جائعة" تتآكل أنابيب حديد مجلفن من داخل 40% أسرع. NaCl 41‰: ملح يتآكل الأنابيب من خارج = تآكل مزدوج! PPR بديل نهائي. 70-85% تكثّف: أكبر تحدي تشخيصي! كل الأسطح رطبة طبيعياً ← بقعة تسرب تختفي. FLIR الحرارية = بقعة باردة = الحل الوحيد. عكس بريدة: بقع CaCO₃ بيضاء = دليل واضح! ينبع: لا بقع = FLIR إلزامي. تقرير NWC يُعدّل فاتورة حتى 6 أشهر.',
+        shortAnswer: 'على عكس [الفحص البصري الذي يفشل في 70-85%]، يعتمد بروتوكولنا في خدمة [كشف التسربات] بمدينة [ينبع] على [FLIR+فحص ضغط+Acoustic+PPR]. ففي ظل [تآكل مزدوج+70-85% تكثّف+NaCl]، تتفاقم ظاهرة [تآكل+إخفاء+صدأ]. لذا؛ يتدخل فنيونا عبر [FLIR ← Acoustic ← ضغط ← PPR].',
+        heroSubtitle: 'تآكل مزدوج + 70-85% تكثّف يُخفي — FLIR إلزامي!',
     },
-
     pricing: [
-        { type: 'كشف تسربات المياه — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'كشف تسربات المياه — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'فحص FLIR+Acoustic', unit: 'خدمة', minPrice: 200, maxPrice: 420, time: '1-3h' },
+        { type: 'فحص + إصلاح نقطة', unit: 'خدمة', minPrice: 300, maxPrice: 620, time: '2-5h' },
+        { type: '+ PPR استبدال', unit: 'شقة', minPrice: 800, maxPrice: 1600, time: '2-3 أيام' },
+        { type: 'تقرير NWC معتمد', unit: 'تقرير', minPrice: 200, maxPrice: 420, time: '1-2 يوم' },
     ],
-
     faq: [
-        { question: 'كم تكلفة كشف تسربات المياه بينبع؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق كشف تسربات المياه؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على كشف تسربات المياه؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش فحص بصري لا يكفي بينبع؟', answer: '70-85% = كل شيء رطب. تسرب يختفي. FLIR = بقعة باردة.' },
+        { question: 'ما تآكل مزدوج بينبع؟', answer: 'تحلية من داخل+NaCl من خارج = 40% أسرع. PPR حل نهائي.' },
+        { question: 'كم تكلفة كشف بينبع مقابل بريدة؟', answer: 'أغلى 20-25% — FLIR إلزامي. بريدة: بقع CaCO₃ واضحة.' },
+        { question: 'هل PPR يحل تسربات ينبع نهائياً؟', answer: 'بلاستيك لا يتآكل. تحلية+NaCl لا تأثر.' },
+        { question: 'هل NWC يُعدّل فاتورة بينبع؟', answer: 'نعم حتى 6 أشهر بأثر رجعي. تقرير معتمد.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'FLIR — تكثّف 70-85% يُخفي.',
+        'PPR — تآكل مزدوج حل نهائي.',
+        'Acoustic — تسرب مخفي تحت أرض.',
+        'ضغط نيتروجين — ثقوب تآكل.',
+        'تقرير NWC — تعديل فاتورة.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'تآكل مزدوج × سنة = انفجار أنبوب — PPR YMYL.',
+        '70-85% تكثّف = تسرب مخفي ← 40% فاتورة مياه ضائعة.',
+        'بصري بدون FLIR = يفوت 80% تسربات ينبع.',
     ],
-
     trustAnchors: [
-        { ...GOV.NWC, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.NWC, role: 'تقرير تسرب — تعديل فاتورة 6 أشهر' },
+        { ...GOV.BALADI, role: 'ترخيص فنيين' },
+        { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'اشتراطات أمانة ينبع' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALJUND.name,
-        title: EXPERTS.ALJUND.title,
-        credential: EXPERTS.ALJUND.credential,
-        profileUrl: EXPERTS.ALJUND.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALJUND,
     expertCitations: [
-        {
-            expert: EXPERTS.ALJUND.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALJUND.title,
-            url: EXPERTS.ALJUND.profileUrl,
-        },
+        { expert: EXPERTS.ALJUND.name, quote: 'تسربات ينبع: تآكل مزدوج+تكثّف 70-85%. FLIR+PPR.', source: 'موسوعة أخطاء — تسربات ساحلية' },
     ],
-
-    saudiRegulations: [REGULATIONS.NWC_REPORT],
-
-    verificationBadges: [
-        { badge: '✔️ تقرير معتمد NWC', authority: 'شركة المياه الوطنية', icon: 'shield-check' },
-    ],
-
+    saudiRegulations: [REGULATIONS.NWC_REPORT, REGULATIONS.SBC_602],
+    verificationBadges: [{ badge: '✔️ كشف تسرب معتمد NWC', authority: 'NWC', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'FLIR Thermal Camera', use: 'تكثّف — بقعة باردة' },
+        { name: 'Acoustic Leak Detector', use: 'تحت أرض — صوت' },
+        { name: 'PPR Pipes', use: 'بديل — لا تتآكل' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'بصري يكفي.', solution: '70-85% = FLIR إلزامي.' },
+        { fear: 'حديد مجلفن.', solution: 'تآكل مزدوج. PPR.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'بصري.', truth: '70-85% تكثّف = FLIR.' },
+        { myth: 'المجلفن يكفي.', truth: 'تآكل مزدوج = PPR.' },
     ],
-
     relatedServices: [
-        { slug: 'yanbu-furniture-moving', context: 'نقل عفش بينبع', priority: 1 },
-        { slug: 'yanbu-furniture-storage', context: 'تخزين عفش بينبع', priority: 2 },
-        { slug: 'yanbu-dyna', context: 'دينا نقل بينبع', priority: 3 },
-        { slug: 'yanbu-moving-out', context: 'نقل عفش خروج بينبع', priority: 4 },
-        { slug: 'yanbu-dabab', context: 'دباب نقل بينبع', priority: 5 },
-        { slug: 'yanbu-cleaning', context: 'تنظيف منازل بينبع', priority: 6 },
-        { slug: 'yanbu-tanks-cleaning', context: 'تنظيف خزانات بينبع', priority: 7 },
-        { slug: 'yanbu-sofa-cleaning', context: 'تنظيف كنب بينبع', priority: 8 },
-        { slug: 'yanbu-carpet-cleaning', context: 'تنظيف سجاد بينبع', priority: 9 },
+        { slug: 'bathroom-leak-detection', context: 'حمام', priority: 1 },
+        { slug: 'tank-leak-detection', context: 'خزان', priority: 2 },
+        { slug: 'water-insulation', context: 'مائي', priority: 3 },
+        { slug: 'tanks-cleaning', context: 'خزانات', priority: 4 },
+        { slug: 'sewage-unblocking', context: 'تسليك', priority: 5 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 7 },
     ],
 };

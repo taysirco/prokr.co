@@ -80,12 +80,7 @@ export const override: PageOverride = {
         { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'ترخيص ومراقبة شركات خدمات النظافة في منطقة المدينة المنورة', acronym: 'أمانة المدينة' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMISNID.name,
-        title: EXPERTS.ALMISNID.title,
-        credential: EXPERTS.ALMISNID.credential,
-        profileUrl: EXPERTS.ALMISNID.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMISNID,
 
     expertCitations: [
         {
@@ -123,11 +118,11 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'madinah-steam-cleaning', context: 'تنظيف بالبخار للستائر والمراتب — يُكمل تنظيف الكنب لتعقيم شامل.', priority: 1 },
-        { slug: 'madinah-carpet-cleaning', context: 'غسيل سجاد من غبار الحرات مع الكنب — طقم نظيف متكامل.', priority: 2 },
-        { slug: 'madinah-councils-cleaning', context: 'تنظيف كنب المجالس الأرضية العربية التقليدية — أقمشة خاصة تحتاج عناية.', priority: 3 },
-        { slug: 'madinah-furniture-cleaning', context: 'تلميع أثاث خشبي وجلدي — مُكمّل لتنظيف الكنب القماشي.', priority: 4 },
-        { slug: 'madinah-cleaning', context: 'تنظيف عميق للمنزل كاملاً مع غسيل الكنب — باقة شاملة.', priority: 5 },
-        { slug: 'madinah-pest-control', context: 'عث الغبار في الكنب = مكافحة وقائية تحمي من حساسية الأطفال.', priority: 6 },
+        { slug: 'steam-cleaning', context: 'تنظيف بالبخار للستائر والمراتب — يُكمل تنظيف الكنب لتعقيم شامل.', priority: 1 },
+        { slug: 'carpet-cleaning', context: 'غسيل سجاد من غبار الحرات مع الكنب — طقم نظيف متكامل.', priority: 2 },
+        { slug: 'councils-cleaning', context: 'تنظيف كنب المجالس الأرضية العربية التقليدية — أقمشة خاصة تحتاج عناية.', priority: 3 },
+        { slug: 'furniture-cleaning', context: 'تلميع أثاث خشبي وجلدي — مُكمّل لتنظيف الكنب القماشي.', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف عميق للمنزل كاملاً مع غسيل الكنب — باقة شاملة.', priority: 5 },
+        { slug: 'pest-control', context: 'عث الغبار في الكنب = مكافحة وقائية تحمي من حساسية الأطفال.', priority: 6 },
     ],
 };

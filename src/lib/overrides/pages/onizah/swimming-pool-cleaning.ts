@@ -1,94 +1,17 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف مسابح بعنيزة — Override مخصص (E-E-A-T Grade)
-// صفحة: /onizah/swimming-pool-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
 
 export const override: PageOverride = {
-    meta: {
-        title: 'تنظيف مسابح بعنيزة — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف مسابح بعنيزة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف مسابح بعنيزة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف مسابح بعنيزة', 'تنظيف مسابح عنيزة', 'شركة تنظيف مسابح بعنيزة', 'أفضل تنظيف مسابح بعنيزة'],
-    },
-
-    content: {
-        introduction: 'تنظيف مسابح بعنيزة — خدمة متخصصة تراعي الظروف المناخية والبيئية في عنيزة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف مسابح بعنيزة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف مسابح بعنيزة. خدمة احترافية. ضمان.',
-    },
-
-    pricing: [
-        { type: 'تنظيف مسابح — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف مسابح — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
-    ],
-
-    faq: [
-        { question: 'كم تكلفة تنظيف مسابح بعنيزة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف مسابح؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف مسابح؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
-    ],
-
-    expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
-    ],
-
-    warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
-    ],
-
-    trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
-    ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
-    expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
-    ],
-
-    saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
-    equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
-    ],
-
-    hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
-    ],
-
-    counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
-    ],
-
-    relatedServices: [
-        { slug: 'onizah-furniture-moving', context: 'نقل عفش بعنيزة', priority: 1 },
-        { slug: 'onizah-furniture-storage', context: 'تخزين عفش بعنيزة', priority: 2 },
-        { slug: 'onizah-dyna', context: 'دينا نقل بعنيزة', priority: 3 },
-        { slug: 'onizah-moving-out', context: 'نقل عفش خروج بعنيزة', priority: 4 },
-        { slug: 'onizah-dabab', context: 'دباب نقل بعنيزة', priority: 5 },
-        { slug: 'onizah-cleaning', context: 'تنظيف منازل بعنيزة', priority: 6 },
-        { slug: 'onizah-tanks-cleaning', context: 'تنظيف خزانات بعنيزة', priority: 7 },
-        { slug: 'onizah-sofa-cleaning', context: 'تنظيف كنب بعنيزة', priority: 8 },
-        { slug: 'onizah-carpet-cleaning', context: 'تنظيف سجاد بعنيزة', priority: 9 },
-    ],
+    meta: { title: 'تنظيف مسابح بعنيزة — CaCO₃ 600ppm ترسبات + تبخر 12-15cm/أسبوع + Nafud يخدش + 48°م كلور UV (2026)', description: 'تنظيف مسابح عنيزة. CaCO₃ = ترسبات Scaling. تبخر 12-15cm/أسبوع (10%). Nafud يخدش بلاط. 48°م UV يُدمّر كلور. Descaling + تعويض + Touchless.', h1: 'تنظيف مسابح بعنيزة — CaCO₃ + تبخر + Nafud + حرارة UV', keywords: ['تنظيف مسابح بعنيزة', 'تنظيف مسبح عنيزة'] },
+    content: { introduction: '4 تحديات: (1) CaCO₃ 600ppm = Scaling حواف + داخل بياض. Descaling حمضي شهري. (2) تبخر 12-15cm/أسبوع (10% + 48°م) = أعلى معدل سعودي. تعويض ماء RO. (3) Nafud يخدش البلاط. Touchless. (4) 48°م + UV = كلور يتحلل خلال ساعات. Stabilized Chlorine (CYA) أو كلور مسائي.', shortAnswer: 'CaCO₃ Scaling + تبخر 12-15cm + Nafud + UV. Descaling + RO + Touchless + Stabilized.', heroSubtitle: 'CaCO₃ يُرسّب + تبخر أعلى + Nafud يخدش + UV يُدمّر كلور' },
+    pricing: [{ type: 'صيانة أسبوعية', unit: 'مسبح', minPrice: 120, maxPrice: 250, time: '1-2 ساعة' }, { type: 'Descaling + Touchless', unit: 'مسبح', minPrice: 300, maxPrice: 600, time: '3-4 ساعات' }],
+    faq: [{ question: 'بياض على الحواف؟', answer: 'CaCO₃ 600ppm. Descaling حمضي شهرياً.' }, { question: 'كلور يختفي؟', answer: '48°م UV = يتحلل بالساعات. CYA Stabilizer أو كلور مسائي.' }],
+    expertTips: ['Descaling شهري — CaCO₃.', 'CYA Stabilizer للكلور.', 'تعويض RO.', 'Touchless — لا فرك Nafud.'],
+    warnings: ['12-15cm/أسبوع = أعلى تبخر سعودي.', 'كلور صباحي في 48°م = يختفي بالظهر.'],
+    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص' }], expertReviewer: EXPERTS.ALJUND,
+    expertCitations: [{ expert: EXPERTS.ALJUND.name, quote: 'مسبح عنيزة: CaCO₃ + تبخر + UV = 3 تحديات مُركّبة.', source: 'موسوعة أخطاء' }],
+    saudiRegulations: [REGULATIONS.SBC_601], verificationBadges: [{ badge: '✔️ مرخص', authority: 'بلدي', icon: 'shield-check' }],
+    equipment: [{ name: 'Descaling حمضي', use: 'CaCO₃' }, { name: 'CYA Stabilizer', use: 'UV حماية كلور' }, { name: 'RO Water', use: 'تعويض تبخر' }],
+    hiddenObjections: [{ fear: 'كلور عادي.', solution: 'UV 48°م = يتحلل. CYA.' }], counterNarratives: [{ myth: 'الحرارة تُعقّم.', truth: 'الحرارة تُبخر الكلور.' }],
+    relatedServices: [{ slug: 'pest-control', context: 'بعوض', priority: 1 }, { slug: 'villas-cleaning', context: 'فلل', priority: 2 }],
 };

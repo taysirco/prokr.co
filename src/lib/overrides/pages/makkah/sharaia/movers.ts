@@ -94,8 +94,8 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'makkah-furniture-moving', context: 'نقل عفش عام لمكة', priority: 1 },
-        { slug: 'makkah-cleaning', context: 'تنظيف الشقة الجديدة بالشرائع', priority: 2 },
-        { slug: 'makkah-pest-control', context: 'مكافحة حشرات قبل السكن', priority: 3 },
+        { slug: 'furniture-moving', context: 'نقل عفش عام لمكة', priority: 1 },
+        { slug: 'cleaning', context: 'تنظيف الشقة الجديدة بالشرائع', priority: 2 },
+        { slug: 'pest-control', context: 'مكافحة حشرات قبل السكن', priority: 3 },
     ],
 };

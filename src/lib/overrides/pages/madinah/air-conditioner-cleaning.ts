@@ -81,12 +81,7 @@ export const override: PageOverride = {
         { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'مراقبة التزام مزودي خدمات الصيانة بالمعايير الفنية', acronym: 'أمانة المدينة' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMISNID.name,
-        title: EXPERTS.ALMISNID.title,
-        credential: EXPERTS.ALMISNID.credential,
-        profileUrl: EXPERTS.ALMISNID.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMISNID,
 
     expertCitations: [
         {
@@ -124,11 +119,11 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'madinah-cleaning', context: 'تنظيف منزل شامل مع غسيل المكيفات — باقة متكاملة لراحة تامة.', priority: 1 },
-        { slug: 'madinah-steam-cleaning', context: 'تعقيم مجاري هواء المكيف بالبخار — يُكمل غسيل المبخر للقضاء على البكتيريا.', priority: 2 },
-        { slug: 'madinah-roof-insulation', context: 'عزل السطح يُقلل حِمل التبريد على المكيف ← عمر أطول واستهلاك أقل.', priority: 3 },
-        { slug: 'madinah-thermal-insulation', context: 'عزل حراري للجدران = مكيف يعمل نصف الوقت ← وفر كهرباء 40%.', priority: 4 },
-        { slug: 'madinah-pest-control', context: 'الحشرات تدخل من ثقوب تمديدات المكيف — اسدها واطلب رشاً وقائياً.', priority: 5 },
-        { slug: 'madinah-water-leak-detection', context: 'تسريب مياه المكيف على الجدار = تلف خفي. اكشف وعالج قبل فوات الأوان.', priority: 6 },
+        { slug: 'cleaning', context: 'تنظيف منزل شامل مع غسيل المكيفات — باقة متكاملة لراحة تامة.', priority: 1 },
+        { slug: 'steam-cleaning', context: 'تعقيم مجاري هواء المكيف بالبخار — يُكمل غسيل المبخر للقضاء على البكتيريا.', priority: 2 },
+        { slug: 'roof-insulation', context: 'عزل السطح يُقلل حِمل التبريد على المكيف ← عمر أطول واستهلاك أقل.', priority: 3 },
+        { slug: 'thermal-insulation', context: 'عزل حراري للجدران = مكيف يعمل نصف الوقت ← وفر كهرباء 40%.', priority: 4 },
+        { slug: 'pest-control', context: 'الحشرات تدخل من ثقوب تمديدات المكيف — اسدها واطلب رشاً وقائياً.', priority: 5 },
+        { slug: 'water-leak-detection', context: 'تسريب مياه المكيف على الجدار = تلف خفي. اكشف وعالج قبل فوات الأوان.', priority: 6 },
     ],
 };

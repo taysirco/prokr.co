@@ -1,10 +1,3 @@
-// ══════════════════════════════════════════════════════════════
-// كشف تسربات خزانات بتبوك — Override (E-E-A-T)
-// الزاوية: تجمد مياه الخزان العلوي = توسع + تشقق
-//   + حركة حرارية يومية = إجهاد العزل الداخلي
-//   + الجفاف يُسرّع تبخر التسرب فلا تكتشفه
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -56,19 +49,13 @@ export const override: PageOverride = {
         { entity: AMANA.TABUK.entity, url: AMANA.TABUK.url, role: 'الرقابة على صيانة الخزانات بتبوك', acronym: 'أمانة تبوك' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALJUND.name,
-        title: EXPERTS.ALJUND.title,
-        credential: EXPERTS.ALJUND.credential,
-        profileUrl: EXPERTS.ALJUND.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALJUND,
 
     expertCitations: [
         {
             expert: 'م. عبدالغني الجند',
             quote: 'خزانات تبوك السطحية معرّضة لتجمد الطبقة السطحية والأنابيب — والفرق الحراري اليومي يُشقق الإيبوكسي الجامد. عزل خارجي + إيبوكسي مرن = الحل الشامل',
             source: 'موسوعة "أخطاء في البناء"',
-            url: 'https://x.com/ssrrr22',
         },
     ],
 
@@ -86,15 +73,21 @@ export const override: PageOverride = {
 
     hiddenObjections: [
         { fear: 'عزل خارجي غالي (1,000-2,500)', solution: 'بتبوك: العزل يحمي من تجمد شتاءً (تشقق = إصلاح 3,000-5,000) + تسخين صيفاً (بكتيريا ليجونيلا). وفر الحماية المزدوجة أغلى من التكلفة بكثير' },
+        { fear: 'السعر أعلى من المتوقع.', solution: 'السعر يشمل معدات صناعية متخصصة + مواد احترافية + عمالة مدربة + ضمان مكتوب. المقارنة العادلة ليست مع عامل عشوائي بل مع تكلفة إصلاح الأضرار الناتجة عن العمل غير المتخصص.' },
     ],
 
     counterNarratives: [
         { myth: 'خزان خرسانة سميك — ما يتأثر بالبرد', truth: 'الخرسانة لا تتجمد — لكن الماء داخلها نعم. تمدد الماء 9% = ضغط يُشقق الفواصل والعزل. والأنابيب المكشوفة الداخلة/الخارجة أضعف بكثير' },
+        { myth: 'أي شركة تنظيف/صيانة نتيجتها واحدة.', truth: 'الفرق بين شركة مرخصة ومُعتمدة وأخرى عشوائية = الفرق بين معالجة جذرية وإخفاء مؤقت. المعدات المتخصصة والبروتوكولات العلمية تحل المشكلة من جذرها — التنظيف العشوائي يُعيدها أسوأ خلال أسابيع.' },
+        { myth: 'أوفر وأسوي الشغل بنفسي.', truth: 'التوفير الظاهري يتحول لتكلفة مضاعفة: أدوات منزلية لا تصل للعمق المطلوب + مواد غير مناسبة قد تُتلف الأسطح + وقت وجهد بلا ضمان نتيجة. الاحتراف = ضمان + توفير حقيقي على المدى الطويل.' },
     ],
 
     relatedServices: [
-        { slug: 'tabuk-tanks-cleaning', context: 'تنظيف خزان قبل الفحص', priority: 1 },
-        { slug: 'tabuk-tank-insulation', context: 'عزل خزان — حماية مزدوجة برد/حر', priority: 2 },
-        { slug: 'tabuk-water-leak-detection', context: 'فحص شبكة المياه — التسرب قد يكون من الشبكة', priority: 3 },
+        { slug: 'tanks-cleaning', context: 'تنظيف خزان قبل الفحص', priority: 1 },
+        { slug: 'tank-insulation', context: 'عزل خزان — حماية مزدوجة برد/حر', priority: 2 },
+        { slug: 'water-leak-detection', context: 'فحص شبكة المياه — التسرب قد يكون من الشبكة', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف شامل يُكمّل الخدمة الأساسية — بيئة نظيفة متكاملة.', priority: 5 },
+        { slug: 'pest-control', context: 'مكافحة حشرات متكاملة مع خدمات النظافة والصيانة.', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'تنظيف مكيفات لهواء نظيف — يُكمّل أي خدمة منزلية.', priority: 7 },
     ],
 };

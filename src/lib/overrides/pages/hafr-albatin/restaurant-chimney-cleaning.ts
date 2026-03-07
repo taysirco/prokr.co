@@ -1,94 +1,76 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف مداخن مطاعم بحفر الباطن — Override مخصص (E-E-A-T Grade)
-// صفحة: /hafr-albatin/restaurant-chimney-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف مداخن مطاعم بحفر الباطن — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف مداخن مطاعم بحفر الباطن. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف مداخن مطاعم بحفر الباطن — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف مداخن مطاعم بحفر الباطن', 'تنظيف مداخن مطاعم حفر الباطن', 'شركة تنظيف مداخن مطاعم بحفر الباطن', 'أفضل تنظيف مداخن مطاعم بحفر الباطن'],
+        title: 'تنظيف مداخن مطاعم بحفر الباطن — كربنة جافة أصلب + SiO₂ + ΔT 54°م + لا Biofilm (2026)',
+        description: 'تنظيف مداخن حفر الباطن. كربنة جافة أصلب 52°م. SiO₂ يُخشّن. ΔT 54°م يُشقق ductwork. لا Biofilm (ميزة!). NFPA 96. Alkaline + Mechanical.',
+        h1: 'تنظيف مداخن مطاعم بحفر الباطن — كربنة أصلب وحرارة تُشقق المجاري',
+        keywords: ['تنظيف مداخن مطاعم حفر الباطن', 'تنظيف مداخن حفر الباطن', 'شركة تنظيف مداخن حفر الباطن'],
     },
-
     content: {
-        introduction: 'تنظيف مداخن مطاعم بحفر الباطن — خدمة متخصصة تراعي الظروف المناخية والبيئية في حفر الباطن. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف مداخن مطاعم بحفر الباطن: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف مداخن مطاعم بحفر الباطن. خدمة احترافية. ضمان.',
+        introduction: 'مداخن حفر الباطن تواجه كربنة قارية + ΔT + ميزة. الأولى — كربنة جافة أصلب: أصلب كربنة في المملكة (52°م + 10-15%). تحتاج Alkaline pH 13 + Mechanical. الثانية — SiO₂ يُخشّن: يدخل من الخارج ← يترسب على الكربنة ← خشونة ← كربنة جديدة تلتصق أسرع. الثالثة — ΔT 54°م Ductwork: Ductwork يتمدد ← ينكمش = Micro-Cracks ← كربنة تدخل = خطر. الميزة — لا Biofilm!: 10-15% = لا Biofilm. لا Anti-Biofilm. أقل سمكاً = أبطأ وصول NFPA.',
+        shortAnswer: 'على عكس [تنظيف بدون Mechanical] الذي لا يصل كربنة صلبة، يعتمد بروتوكولنا في خدمة [تنظيف المداخن] بمدينة [حفر الباطن] على [Alkaline pH 13 + Mechanical + فحص ΔT]. ففي ظل [كربنة صلبة + SiO₂ + ΔT]، تتفاقم ظاهرة [صلابة + خشونة + تشقق]. لذا؛ يتدخل خبراؤنا عبر [بروتوكول مدخنة قاري].',
+        heroSubtitle: 'كربنة أصلب + SiO₂ خشونة + ΔT 54°م Ductwork + لا Biofilm',
     },
-
     pricing: [
-        { type: 'تنظيف مداخن مطاعم — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف مداخن مطاعم — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'مدخنة (Alkaline + Mechanical)', unit: 'مدخنة', minPrice: 270, maxPrice: 630, time: '2-4 ساعات' },
+        { type: 'فحص ΔT Ductwork', unit: 'فحص', minPrice: 140, maxPrice: 290, time: '1-2 ساعة' },
+        { type: 'عقد ربع سنوي', unit: 'سنة', minPrice: 870, maxPrice: 2100, time: '4 زيارات' },
+        { type: 'طوارئ', unit: 'خدمة', minPrice: 340, maxPrice: 730, time: '2-3 ساعات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف مداخن مطاعم بحفر الباطن؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف مداخن مطاعم؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف مداخن مطاعم؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'كربنة أصلب — أصعب تنظيف؟', answer: 'الأصعب في المملكة. 52°م + 10-15% = تجف فوراً = صلبة. Alkaline + Mechanical (ليس Alkaline فقط).' },
+        { question: 'لا Biofilm — أبطأ NFPA؟', answer: 'نعم! لا Biofilm = لا سمك إضافي = أبطأ وصول 6,000 ميكرون. ميزة قارية. ربع سنوي كافٍ (بدلاً من أقل في الشرقية).' },
+        { question: 'ΔT Ductwork — خطر؟', answer: 'Micro-Cracks = كربنة تتسرب ← خطر اشتعال في مكان غير مُراقب. فحص ΔT سنوي.' },
+        { question: 'SiO₂ في المدخنة — من أين؟', answer: 'من الهواء الخارجي ← يدخل من فتحات ← يترسب على كربنة ← يُخشّن ← تلتصق أسرع.' },
+        { question: 'ربع سنوي — يكفي؟', answer: 'لا Biofilm = أبطأ. كربنة صلبة = أبطأ نمو لكن أصعب إزالة. ربع سنوي = مثالي.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Alkaline pH 13 + Mechanical — كربنة صلبة لا تستجيب لكيميائي فقط.',
+        'فحص ΔT Ductwork سنوي — يكشف Micro-Cracks.',
+        'لا Anti-Biofilm — 10-15% = توفير!',
+        'Baffle فلاتر شهري — SiO₂ يسد.',
+        'مقياس ميكرون — كربنة صلبة أبطأ لكن أصعب.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'كربنة صلبة + Micro-Cracks = تسرب ← اشتعال. ربع سنوي + فحص.',
+        'SiO₂ يُخشّن ← تراكم أسرع. فلاتر شهري.',
+        'Alkaline فقط بدون Mechanical = لا يعمل على كربنة 52°م.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص مطاعم' },
+        { ...GOV.CIVILDEFENSE, role: 'السلامة — NFPA 96' },
+        { entity: AMANA.HAFR.entity, url: AMANA.HAFR.url, role: 'اشتراطات مطاعم حفر الباطن' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'مدخنة حفر الباطن: كربنة أصلب (52°م+10-15%) + SiO₂ خشونة + ΔT Ductwork. لا Biofilm (ميزة!). Alkaline + Mechanical.', source: 'نصائح هندسية — مداخن قارية' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ مداخن مرخصة', authority: 'بلدي + دفاع مدني', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Alkaline pH 13', use: 'كربنة صلبة — 30 دقيقة' },
+        { name: 'Mechanical Scraper', use: 'خشونة SiO₂ + صلابة' },
+        { name: 'Thermal Camera', use: 'ΔT Ductwork Micro-Cracks' },
+        { name: 'مقياس ميكرون', use: 'كربنة صلبة = قياس NFPA' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'لا Biofilm = أسهل.', solution: 'كربنة أصلب + SiO₂ + ΔT. 3 تحديات قارية.' },
+        { fear: 'ربع سنوي مكلف.', solution: 'حريق = 50,000-200,000. عقد = 1-4%.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'مثل الرياض.', truth: '52°م أحر = أصلب. ΔT 54°م > 35°م.' },
+        { myth: 'كيميائي يكفي.', truth: 'كربنة صلبة = Mechanical إلزامي.' },
+        { myth: 'نصف سنوي.', truth: 'SiO₂ يُخشّن = تراكم أسرع. ربع سنوي.' },
     ],
-
     relatedServices: [
-        { slug: 'hafr-albatin-furniture-moving', context: 'نقل عفش بحفر الباطن', priority: 1 },
-        { slug: 'hafr-albatin-furniture-storage', context: 'تخزين عفش بحفر الباطن', priority: 2 },
-        { slug: 'hafr-albatin-dyna', context: 'دينا نقل بحفر الباطن', priority: 3 },
-        { slug: 'hafr-albatin-moving-out', context: 'نقل عفش خروج بحفر الباطن', priority: 4 },
-        { slug: 'hafr-albatin-dabab', context: 'دباب نقل بحفر الباطن', priority: 5 },
-        { slug: 'hafr-albatin-cleaning', context: 'تنظيف منازل بحفر الباطن', priority: 6 },
-        { slug: 'hafr-albatin-tanks-cleaning', context: 'تنظيف خزانات بحفر الباطن', priority: 7 },
-        { slug: 'hafr-albatin-sofa-cleaning', context: 'تنظيف كنب بحفر الباطن', priority: 8 },
-        { slug: 'hafr-albatin-carpet-cleaning', context: 'تنظيف سجاد بحفر الباطن', priority: 9 },
+        { slug: 'oven-cleaning', context: 'أفران — كربنة', priority: 1 },
+        { slug: 'cleaning', context: 'تنظيف — مطعم', priority: 2 },
+        { slug: 'pest-control', context: 'حشرات', priority: 3 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف — ΔT', priority: 4 },
+        { slug: 'steam-cleaning', context: 'بخار', priority: 5 },
+        { slug: 'office-cleaning', context: 'مكاتب', priority: 6 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات', priority: 7 },
     ],
 };

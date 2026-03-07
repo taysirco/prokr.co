@@ -1,94 +1,78 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف مداخن مطاعم بالخبر — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-khobar/restaurant-chimney-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف مداخن مطاعم بالخبر — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف مداخن مطاعم بالخبر. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف مداخن مطاعم بالخبر — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف مداخن مطاعم بالخبر', 'تنظيف مداخن مطاعم الخبر', 'شركة تنظيف مداخن مطاعم بالخبر', 'أفضل تنظيف مداخن مطاعم بالخبر'],
+        title: 'تنظيف مداخن مطاعم بالخبر — كربنة + NaCl بحري + 85-95% Biofilm + NFPA 96 (2026)',
+        description: 'تنظيف مداخن مطاعم الخبر. كربنة + NaCl من مأكولات بحرية. 85-95% Biofilm شحمي. NFPA 96. Alkaline pH 13 + Anti-Biofilm + RO شطف + ربع سنوي.',
+        h1: 'تنظيف مداخن مطاعم بالخبر — كربنة + ملح بحري + Biofilm رطب',
+        keywords: ['تنظيف مداخن مطاعم بالخبر', 'تنظيف مداخن الخبر', 'شركة تنظيف مداخن بالخبر'],
     },
-
     content: {
-        introduction: 'تنظيف مداخن مطاعم بالخبر — خدمة متخصصة تراعي الظروف المناخية والبيئية في الخبر. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف مداخن مطاعم بالخبر: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف مداخن مطاعم بالخبر. خدمة احترافية. ضمان.',
+        introduction: 'مداخن مطاعم الخبر تواجه تحديات ساحلية إضافية فوق الكربنة. التحدي الأول — NaCl من مأكولات بحرية: مطاعم الخبر = أسماك + ربيان = NaCl عالي في الشحوم ← يمتزج بالكربنة ← أصعب إزالة (يمنع Saponification). Alkaline pH 13 مع وقت أطول. التحدي الثاني — 85-95% Biofilm في المدخنة: رطوبة عالية + شحوم رطبة = Biofilm بكتيري/فطري على جدران المدخنة ← طبقة لزجة ← رائحة + بكتيريا. Anti-Biofilm بعد كل تنظيف. التحدي الثالث — كربنة رطبة: 85-95% = الكربنة لا تجف ← تبقى لزجة ← Biofilm ينمو عليها ← طبقة مُركّبة (كربون + Biofilm). أصعب فصلاً. NFPA 96: خطر اشتعال عند 6,000 ميكرون ← Biofilm يُضيف سُمكاً إضافياً.',
+        shortAnswer: 'على عكس [تنظيف سنوي بدون Anti-Biofilm] الذي يتجاهل الغشاء، يعتمد بروتوكولنا في خدمة [تنظيف المداخن] بمدينة [الخبر] على [Alkaline pH 13 + Anti-Biofilm + RO + ربع سنوي]. ففي ظل [NaCl بحري + 85-95% + كربنة رطبة]، تتفاقم ظاهرة [تصلب + غشاء + سُمك]. لذا؛ يتدخل خبراؤنا عبر [بروتوكول مدخنة ساحلي].',
+        heroSubtitle: 'NaCl مأكولات بحرية + 85-95% Biofilm + كربنة رطبة + NFPA 96',
     },
-
     pricing: [
-        { type: 'تنظيف مداخن مطاعم — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف مداخن مطاعم — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'تنظيف مدخنة (Alkaline pH 13)', unit: 'مدخنة', minPrice: 280, maxPrice: 650, time: '2-4 ساعات' },
+        { type: 'Anti-Biofilm + فلاتر', unit: 'خدمة', minPrice: 180, maxPrice: 350, time: '1-2 ساعة' },
+        { type: 'عقد ربع سنوي (4 مداخن + Anti-Biofilm)', unit: 'سنة', minPrice: 900, maxPrice: 2200, time: '4+ زيارات' },
+        { type: 'طوارئ (انسداد/دخان)', unit: 'خدمة', minPrice: 350, maxPrice: 750, time: '2-3 ساعات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف مداخن مطاعم بالخبر؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف مداخن مطاعم؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف مداخن مطاعم؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'NaCl بحري — أصعب؟', answer: 'NaCl يمنع Saponification (تصبّن الشحوم) ← Alkaline يحتاج pH أعلى + وقت أطول. مطاعم بحرية = أصعب من مطاعم لحوم.' },
+        { question: 'Biofilm في المدخنة — خطر حريق؟', answer: 'Biofilm = طبقة عضوية رطبة. عندما تجف (إذا توقف الطبخ): قابلة للاشتعال. + تُضيف سُمكاً للكربنة = تصل 6,000 ميكرون NFPA أسرع.' },
+        { question: 'كل 3 أشهر — ربع سنوي؟', answer: 'NaCl + 85-95% = Biofilm ينمو أسرع + كربنة لا تجف. ربع سنوي = الحد الأدنى. مطاعم بحرية = كل شهرين أفضل.' },
+        { question: 'NFPA 96 — ملزم في الخبر؟', answer: 'الدفاع المدني يعتمد NFPA 96. 6,000 ميكرون = خطر اشتعال. في 85-95%: Biofilm يُضيف 1,000-2,000 ميكرون = يصل أسرع.' },
+        { question: 'RO للشطف — ضروري؟', answer: 'ماء الخبر = NaCl ← يترسب بعد الشطف ← Biofilm جديد. RO = صفر NaCl = مدخنة نظيفة فعلاً.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Alkaline pH 13 × 30 دقيقة — NaCl شحمي يحتاج وقت أطول من الشحوم العادية.',
+        'Anti-Biofilm بعد كل تنظيف — يمنع إعادة النمو 3 أشهر.',
+        'RO للشطف — يمنع NaCl جديد.',
+        'فحص سُمك (مقياس ميكرون) — يكشف Biofilm المُضاف.',
+        'فلاتر Baffle شهرية — NaCl + Biofilm يسدّان أسرع.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'NaCl + Biofilm + كربنة = طبقة مُركّبة 6,000 ميكرون+ = خطر اشتعال. Anti-Ignition 260-290°م.',
+        'Biofilm في المدخنة = بكتيريا + رائحة = مشكلة صحية + تقييم منخفض.',
+        'فلتر مسدود بـ NaCl + Biofilm = كفاءة سحب أقل = شحوم في المطبخ + كربنة أسرع.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص المطاعم' },
+        { ...GOV.CIVILDEFENSE, role: 'السلامة — NFPA 96' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات مطاعم الشرقية' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'مداخن الخبر = ساحلية + بحرية: NaCl مأكولات بحرية + 85-95% Biofilm + كربنة رطبة. Alkaline pH 13 + Anti-Biofilm + RO = بروتوكول ساحلي.', source: 'نصائح هندسية — مداخن المطاعم الساحلية' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
     verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
+        { badge: '✔️ تنظيف مداخن مرخص', authority: 'بلدي + الدفاع المدني', icon: 'shield-check' },
     ],
-
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Alkaline Degreaser pH 13', use: 'يُذيب كربنة + NaCl شحمي — 30 دقيقة' },
+        { name: 'Anti-Biofilm Treatment', use: 'يقتل Biofilm + يمنع إعادة النمو' },
+        { name: 'RO Water (شطف)', use: 'صفر NaCl = صفر Biofilm جديد' },
+        { name: 'مقياس سُمك ميكرون', use: 'يكشف كربنة + Biofilm المُضاف' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'ربع سنوي مكلف.', solution: 'حريق مدخنة = 50,000-200,000 ريال. عقد 900-2,200/سنة = 1-4%.' },
+        { fear: 'المدخنة نظيفة.', solution: 'Biofilm شفاف. كربنة رطبة لزجة. مقياس ميكرون يكشف.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'نصف سنوي.', truth: 'Biofilm 85-95% + NaCl = يصل 6,000 ميكرون أسرع. ربع سنوي = الحد.' },
+        { myth: 'ماء عادي للشطف.', truth: 'ماء الخبر = NaCl = Biofilm جديد. RO فقط.' },
+        { myth: 'مداخن الخبر مثل الرياض.', truth: 'NaCl + Biofilm + كربنة رطبة = 3 فروقات ساحلية.' },
     ],
-
     relatedServices: [
-        { slug: 'al-khobar-furniture-moving', context: 'نقل عفش بالخبر', priority: 1 },
-        { slug: 'al-khobar-furniture-storage', context: 'تخزين عفش بالخبر', priority: 2 },
-        { slug: 'al-khobar-dyna', context: 'دينا نقل بالخبر', priority: 3 },
-        { slug: 'al-khobar-moving-out', context: 'نقل عفش خروج بالخبر', priority: 4 },
-        { slug: 'al-khobar-dabab', context: 'دباب نقل بالخبر', priority: 5 },
-        { slug: 'al-khobar-cleaning', context: 'تنظيف منازل بالخبر', priority: 6 },
-        { slug: 'al-khobar-tanks-cleaning', context: 'تنظيف خزانات بالخبر', priority: 7 },
-        { slug: 'al-khobar-sofa-cleaning', context: 'تنظيف كنب بالخبر', priority: 8 },
-        { slug: 'al-khobar-carpet-cleaning', context: 'تنظيف سجاد بالخبر', priority: 9 },
+        { slug: 'oven-cleaning', context: 'أفران — نفس كربنة', priority: 1 },
+        { slug: 'cleaning', context: 'تنظيف — المطعم', priority: 2 },
+        { slug: 'pest-control', context: 'حشرات — شحوم', priority: 3 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف — NaCl', priority: 4 },
+        { slug: 'steam-cleaning', context: 'بخار — تعقيم', priority: 5 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات — NaCl', priority: 6 },
+        { slug: 'office-cleaning', context: 'مكاتب — إدارة المطعم', priority: 7 },
     ],
 };

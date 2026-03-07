@@ -1,94 +1,74 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف مداخن مطاعم ببريدة — Override مخصص (E-E-A-T Grade)
-// صفحة: /buraidah/restaurant-chimney-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف مداخن مطاعم ببريدة — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف مداخن مطاعم ببريدة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف مداخن مطاعم ببريدة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف مداخن مطاعم ببريدة', 'تنظيف مداخن مطاعم بريدة', 'شركة تنظيف مداخن مطاعم ببريدة', 'أفضل تنظيف مداخن مطاعم ببريدة'],
+        title: 'تنظيف مداخن مطاعم ببريدة — CaCO₃ 600ppm كلس+ΔT 45°م دهون+Nafud — Descaler+Degreaser! (2026)',
+        description: 'تنظيف مداخن مطاعم بريدة. CaCO₃ 600ppm كلس بخار! ΔT 45°م دهون. Nafud SiO₂. Descaler+Degreaser+فحص 998.',
+        h1: 'تنظيف مداخن مطاعم ببريدة — كلس+دهون!',
+        keywords: ['تنظيف مداخن مطاعم بريدة', 'تنظيف مدخنة ببريدة', 'شركة تنظيف مداخن بريدة'],
     },
-
     content: {
-        introduction: 'تنظيف مداخن مطاعم ببريدة — خدمة متخصصة تراعي الظروف المناخية والبيئية في بريدة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف مداخن مطاعم ببريدة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف مداخن مطاعم ببريدة. خدمة احترافية. ضمان.',
+        introduction: 'مدخنة مطعم بريدة = كلس+دهون طبقة مزدوجة! CaCO₃ 600ppm كلس بخار: بخار الطبخ يحمل أعلى كلس بالمملكة ← يترسب داخل المدخنة = كلس+دهن طبقة مزدوجة أصلب. Descaler أولاً ← ثم Degreaser. ΔT 45°م دهون: صيف 48°م = دهون تتحلل أسرع ← رائحة أقوى ← خطر حريق أعلى. فحص شهري. Nafud SiO₂: رمل النفود يدخل المدخنة ← يختلط بالدهن = طبقة خشنة. HEPA. 10-20% = لا تكثّف في المدخنة! ميزة — خميس: تكثّف+عفن. مقارنة: خميس = رطوبة+تكثّف+عفن. بريدة = كلس+دهن مزدوج لكن لا تكثّف = أبسط عموماً. الدفاع المدني 998 يشترط فحص دوري.',
+        shortAnswer: 'على عكس [Degreaser بدون Descaler]، يعتمد بروتوكولنا في خدمة [تنظيف المداخن] بمدينة [بريدة] على [Descaler أولاً+Degreaser+HEPA+فحص 998]. ففي ظل [CaCO₃ 600ppm كلس+ΔT دهون أسرع+Nafud خشونة+لا تكثّف]، تتفاقم ظاهرة [طبقة مزدوجة+رائحة+حريق]. لذا؛ يتدخل فريقنا عبر [Descaler ← Degreaser ← HEPA ← فحص] — لا تكثّف!',
+        heroSubtitle: 'CaCO₃ 600ppm + ΔT دهون = طبقة مزدوجة — Descaler أولاً!',
     },
-
     pricing: [
-        { type: 'تنظيف مداخن مطاعم — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف مداخن مطاعم — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'مدخنة مطعم صغير', unit: 'مدخنة', minPrice: 200, maxPrice: 420, time: '2-4h' },
+        { type: 'مدخنة كبيرة + Descaler', unit: 'مدخنة', minPrice: 350, maxPrice: 720, time: '4-6h' },
+        { type: 'فحص 998 + تقرير', unit: 'فحص', minPrice: 150, maxPrice: 310, time: '1-2h' },
+        { type: 'عقد ربع سنوي', unit: 'سنة', minPrice: 600, maxPrice: 1200, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف مداخن مطاعم ببريدة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف مداخن مطاعم؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف مداخن مطاعم؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش مدخنة بريدة أصعب تنظيف؟', answer: 'CaCO₃ 600ppm بخار = كلس+دهن مزدوج. Descaler أولاً ← Degreaser.' },
+        { question: 'ليش خطر حريق أعلى ببريدة صيفاً؟', answer: 'ΔT 48°م = دهون تتحلل أسرع = رائحة+اشتعال. فحص شهري صيفاً.' },
+        { question: 'كم تكلفة تنظيف مدخنة ببريدة مقارنة بخميس؟', answer: 'Descaler إضافي +10%. لكن: لا تكثّف = أبسط عموماً.' },
+        { question: 'هل الدفاع المدني 998 يفحص ببريدة؟', answer: 'نعم — فحص دوري إلزامي. تقرير مطلوب. غرامة بدونه.' },
+        { question: 'هل المدخنة تتكثّف ببريدة؟', answer: 'لا! 10-20% = لا تكثّف. خميس: تكثّف+عفن يومي.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Descaler أولاً — كلس يغطي دهن.',
+        'Degreaser ثانياً — بعد إذابة كلس.',
+        'فحص 998 — إلزامي دوري.',
+        'شهري صيفاً — ΔT يُسرّع تحلل.',
+        'لا تكثّف — 10-20% ميزة.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'كلس+دهن × 3 أشهر = طبقة صلبة ← خطر حريق — 998 غرامة.',
+        'Degreaser بدون Descaler = كلس يبقى تحت ← طبقة مزدوجة دائمة.',
+        'ΔT × صيف × بدون فحص = أعلى خطر اشتعال — YMYL.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.CIVILDEFENSE, role: 'فحص سلامة المداخن 998' },
+        { ...GOV.BALADI, role: 'ترخيص المطاعم' },
+        { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'مداخن بريدة: 600ppm كلس+دهن مزدوج. Descaler أولاً. فحص 998.', source: 'نصائح هندسية — مداخن القصيم' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ مداخن فحص 998', authority: 'الدفاع المدني + بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Descaler صناعي', use: 'CaCO₃ 600ppm كلس مدخنة' },
+        { name: 'Degreaser صناعي', use: 'دهون — بعد Descaler' },
+        { name: 'كاميرا فحص', use: 'فحص 998 — تقرير' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'Degreaser يكفي.', solution: '600ppm كلس يغطي. Descaler أولاً.' },
+        { fear: 'سنوي يكفي.', solution: 'ΔT = شهري صيفاً. 998 دوري.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'Degreaser فقط.', truth: '600ppm = Descaler أولاً.' },
+        { myth: 'فحص اختياري.', truth: '998 = إلزامي. غرامة.' },
     ],
-
     relatedServices: [
-        { slug: 'buraidah-furniture-moving', context: 'نقل عفش ببريدة', priority: 1 },
-        { slug: 'buraidah-furniture-storage', context: 'تخزين عفش ببريدة', priority: 2 },
-        { slug: 'buraidah-dyna', context: 'دينا نقل ببريدة', priority: 3 },
-        { slug: 'buraidah-moving-out', context: 'نقل عفش خروج ببريدة', priority: 4 },
-        { slug: 'buraidah-dabab', context: 'دباب نقل ببريدة', priority: 5 },
-        { slug: 'buraidah-cleaning', context: 'تنظيف منازل ببريدة', priority: 6 },
-        { slug: 'buraidah-tanks-cleaning', context: 'تنظيف خزانات ببريدة', priority: 7 },
-        { slug: 'buraidah-sofa-cleaning', context: 'تنظيف كنب ببريدة', priority: 8 },
-        { slug: 'buraidah-carpet-cleaning', context: 'تنظيف سجاد ببريدة', priority: 9 },
+        { slug: 'oven-cleaning', context: 'أفران', priority: 1 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 2 },
+        { slug: 'pest-control', context: 'حشرات', priority: 3 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 4 },
+        { slug: 'steam-cleaning', context: 'بخار', priority: 5 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات', priority: 6 },
+        { slug: 'marble-polishing', context: 'رخام', priority: 7 },
     ],
 };

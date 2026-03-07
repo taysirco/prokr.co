@@ -1,94 +1,74 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف أفران بالخبر — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-khobar/oven-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف أفران بالخبر — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف أفران بالخبر. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف أفران بالخبر — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف أفران بالخبر', 'تنظيف أفران الخبر', 'شركة تنظيف أفران بالخبر', 'أفضل تنظيف أفران بالخبر'],
+        title: 'تنظيف أفران بالخبر — كربنة + NaCl يُصلّب + 85-95% Biofilm شحمي + Sabkha فتحات (2026)',
+        description: 'تنظيف أفران الخبر. 45°م كربنة. NaCl من مأكولات بحرية يُصلّب. 85-95% Biofilm شحمي. Sabkha يسد فتحات. Alkaline + Anti-Biofilm + RO شطف.',
+        h1: 'تنظيف أفران بالخبر — كربنة + ملح مأكولات بحرية + Biofilm شحمي',
+        keywords: ['تنظيف أفران بالخبر', 'تنظيف فرن الخبر', 'شركة تنظيف أفران بالخبر'],
     },
-
     content: {
-        introduction: 'تنظيف أفران بالخبر — خدمة متخصصة تراعي الظروف المناخية والبيئية في الخبر. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف أفران بالخبر: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف أفران بالخبر. خدمة احترافية. ضمان.',
+        introduction: 'الفرن في الخبر يتعرض لـ 3 تحديات ساحلية فريدة. الأولى — NaCl من مأكولات بحرية: المنطقة الشرقية = مأكولات بحرية أكثر (أسماك + ربيان). NaCl العالي يمتزج بالشحوم ← يتصلب بشكل مختلف عن الشحوم العادية (Saponification أبطأ). Alkaline pH 12+ مع وقت تلامس أطول. الثانية — 85-95% Biofilm شحمي: رطوبة عالية + شحوم = Biofilm بكتيري/فطري ينمو داخل الفرن ← طبقة لزجة ← رائحة. Anti-Biofilm بعد كل تنظيف عميق. الثالثة — الكربنة تبقى رطبة أطول: في 15% (رياض): الكربنة تجف ← صلبة. في 85-95% (الخبر): الكربنة تبقى رطبة ← لزجة ← Biofilm ينمو عليها. Alkaline + Anti-Biofilm.',
+        shortAnswer: 'على عكس [بخاخ فرن عادي] الذي لا يُعالج NaCl الشحمي ولا Biofilm، يعتمد بروتوكولنا في خدمة [تنظيف الأفران] بمدينة [الخبر] على [Alkaline pH 12+ + Anti-Biofilm + RO]. ففي ظل [NaCl بحري + 85-95% + كربنة رطبة]، تتفاقم ظاهرة [تصلب + غشاء + لزوجة]. لذا؛ يتدخل خبراؤنا عبر [بروتوكول فرن ساحلي].',
+        heroSubtitle: 'NaCl مأكولات بحرية + 85-95% Biofilm شحمي + كربنة رطبة',
     },
-
     pricing: [
-        { type: 'تنظيف أفران — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف أفران — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'تنظيف فرن عادي', unit: 'فرن', minPrice: 80, maxPrice: 170, time: '1-2 ساعة' },
+        { type: 'تنظيف عميق + Anti-Biofilm', unit: 'فرن', minPrice: 130, maxPrice: 260, time: '2-3 ساعات' },
+        { type: 'فرن + شفاط + مطبخ', unit: 'باقة', minPrice: 200, maxPrice: 400, time: '3-5 ساعات' },
+        { type: 'عقد ربع سنوي (4 زيارات)', unit: 'سنة', minPrice: 380, maxPrice: 750, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف أفران بالخبر؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف أفران؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف أفران؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'NaCl من الطبخ — مو بس الجو؟', answer: 'مأكولات بحرية = NaCl عالي في الشحوم. الشحم + NaCl = يتصلب بشكل مختلف (يمنع Saponification). Alkaline يحتاج وقت أطول.' },
+        { question: 'Biofilm في الفرن — مو بس بكتيريا؟', answer: '85-95% + شحوم رطبة = بيئة مثالية لـ Biofilm بكتيري/فطري. يُنتج رائحة + يحمي البكتيريا. Anti-Biofilm يقتل.' },
+        { question: 'الكربنة رطبة — ميزة أم عيب؟', answer: 'عيب: كربنة رطبة = Biofilm ينمو عليها. ميزة: أسهل إزالة من الكربنة الجافة الصلبة. Alkaline يعمل أسرع — لكن Biofilm يحتاج علاج إضافي.' },
+        { question: 'RO للشطف — ليش؟', answer: 'ماء الخبر = NaCl يترسب بعد الشطف = بقع ملحية + بيئة Biofilm جديدة. RO = صفر أملاح = فرن نظيف فعلاً.' },
+        { question: 'كل 3 أشهر؟', answer: 'مأكولات بحرية + 85-95% = Biofilm ينمو سريعاً. ربع سنوي = قبل التأصّل.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Alkaline pH 12+ × 20 دقيقة — NaCl الشحمي يحتاج وقت أطول.',
+        'Anti-Biofilm بعد كل تنظيف عميق — يمنع إعادة النمو 3 أشهر.',
+        'RO للشطف — يمنع NaCl جديد.',
+        'تجفيف الفرن بعد التنظيف — 85-95% = لا يجف ← مروحة 30 دقيقة.',
+        'فتحات تهوية — Sabkha + NaCl يسدانها. تنظيف شهري.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'NaCl شحمي + Biofilm 85-95% = رائحة + بكتيريا في كل طبخة. Anti-Biofilm = أمان غذائي.',
+        'كربنة رطبة 6 أشهر = Biofilm مُتأصل + خطر اشتعال. ربع سنوي = يمنع.',
+        'شطف بماء الخبر = NaCl جديد = Biofilm يعود. RO = صفر أملاح.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات الصحة بالشرقية' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'فرن الخبر = ساحلي + بحري: NaCl من مأكولات بحرية + 85-95% Biofilm شحمي + كربنة رطبة. Alkaline + Anti-Biofilm + RO = ثلاثي ساحلي.', source: 'نصائح هندسية — أفران ساحلية' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف أفران مرخص', authority: 'منصة بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Alkaline Degreaser pH 12+', use: 'يُذيب كربنة + NaCl شحمي' },
+        { name: 'Anti-Biofilm Treatment', use: 'يقتل Biofilm بكتيري/فطري' },
+        { name: 'RO Water (شطف)', use: 'صفر NaCl = صفر بقع = صفر Biofilm جديد' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'بخاخ يكفي.', solution: 'pH 9-10 لا يصل NaCl. لا يقتل Biofilm. أداة ضعيفة.' },
+        { fear: 'أنظف بنفسي.', solution: 'بماء الخبر؟ = NaCl جديد. بدون Anti-Biofilm? = يعود.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'فرن عادي.', truth: 'NaCl + 85-95% + مأكولات بحرية = 3 فروقات ساحلية.' },
+        { myth: 'ماء وصابون.', truth: 'ماء NaCl + صابون < pH 12. لا يكفي لكربنة ولا Biofilm.' },
+        { myth: 'نصف سنوي.', truth: 'Biofilm 85-95% = ينمو أسابيع. ربع سنوي.' },
     ],
-
     relatedServices: [
-        { slug: 'al-khobar-furniture-moving', context: 'نقل عفش بالخبر', priority: 1 },
-        { slug: 'al-khobar-furniture-storage', context: 'تخزين عفش بالخبر', priority: 2 },
-        { slug: 'al-khobar-dyna', context: 'دينا نقل بالخبر', priority: 3 },
-        { slug: 'al-khobar-moving-out', context: 'نقل عفش خروج بالخبر', priority: 4 },
-        { slug: 'al-khobar-dabab', context: 'دباب نقل بالخبر', priority: 5 },
-        { slug: 'al-khobar-cleaning', context: 'تنظيف منازل بالخبر', priority: 6 },
-        { slug: 'al-khobar-tanks-cleaning', context: 'تنظيف خزانات بالخبر', priority: 7 },
-        { slug: 'al-khobar-sofa-cleaning', context: 'تنظيف كنب بالخبر', priority: 8 },
-        { slug: 'al-khobar-carpet-cleaning', context: 'تنظيف سجاد بالخبر', priority: 9 },
+        { slug: 'restaurant-chimney-cleaning', context: 'مداخن — نفس كربنة', priority: 1 },
+        { slug: 'cleaning', context: 'تنظيف — المطبخ', priority: 2 },
+        { slug: 'pest-control', context: 'حشرات — شحوم', priority: 3 },
+        { slug: 'steam-cleaning', context: 'بخار — تعقيم', priority: 4 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف — شحوم', priority: 5 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات — شحوم', priority: 6 },
+        { slug: 'hourly-cleaning', context: 'بالساعة — يومي', priority: 7 },
     ],
 };

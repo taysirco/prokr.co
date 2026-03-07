@@ -81,12 +81,7 @@ export const override: PageOverride = {
         { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'إصدار الترخيص البلدي للمستودعات لضمان مطابقتها للاشتراطات الفنية والبيئية', acronym: 'أمانة المدينة' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALSHABNAN.name,
-        title: EXPERTS.ALSHABNAN.title,
-        credential: EXPERTS.ALSHABNAN.credential,
-        profileUrl: EXPERTS.ALSHABNAN.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALSHABNAN,
 
     expertCitations: [
         {
@@ -127,11 +122,11 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'madinah-furniture-moving', context: 'نحن لا نخزن فقط، بل نوفر أسطول دينا مغلقة لنقل عفشك باحترافية من منزلك إلى المستودع والعكس.', priority: 1 },
-        { slug: 'madinah-furniture-cleaning', context: 'عندما تقرر استعادة عفشك المخزن، نقدم خدمة تلميع الأثاث والتنظيف الجاف كخطوة أخيرة للاستلام المثالي.', priority: 2 },
-        { slug: 'madinah-pest-control', context: 'إذا كنت تخزن أثاثك تمهيداً للانتقال لبيت جديد، اطلب مسحاً رشياً وقائياً لمسكنك المستقبلي الآن.', priority: 3 },
-        { slug: 'madinah-sofa-cleaning', context: 'تنظيف كنب ومجالس بالبخار للقضاء على أي روائح تخزين متوقعة وإعادتها لحالتها الزاهية.', priority: 4 },
-        { slug: 'madinah-carpet-cleaning', context: 'تخزين السجاد يتطلب غسيله وتجفيفه تماماً قبل لفه؛ استفد من معملنا المجهز بالكامل لغسيل السجاد.', priority: 5 },
-        { slug: 'madinah-dyna', context: 'لتخزين قطع معدودة (مكيفات، أطقم عرسان)، يمكنك طلب دينا صغيرة ومساحة تخزين مصغرة بأسعار اقتصادية.', priority: 6 },
+        { slug: 'furniture-moving', context: 'نحن لا نخزن فقط، بل نوفر أسطول دينا مغلقة لنقل عفشك باحترافية من منزلك إلى المستودع والعكس.', priority: 1 },
+        { slug: 'furniture-cleaning', context: 'عندما تقرر استعادة عفشك المخزن، نقدم خدمة تلميع الأثاث والتنظيف الجاف كخطوة أخيرة للاستلام المثالي.', priority: 2 },
+        { slug: 'pest-control', context: 'إذا كنت تخزن أثاثك تمهيداً للانتقال لبيت جديد، اطلب مسحاً رشياً وقائياً لمسكنك المستقبلي الآن.', priority: 3 },
+        { slug: 'sofa-cleaning', context: 'تنظيف كنب ومجالس بالبخار للقضاء على أي روائح تخزين متوقعة وإعادتها لحالتها الزاهية.', priority: 4 },
+        { slug: 'carpet-cleaning', context: 'تخزين السجاد يتطلب غسيله وتجفيفه تماماً قبل لفه؛ استفد من معملنا المجهز بالكامل لغسيل السجاد.', priority: 5 },
+        { slug: 'dyna', context: 'لتخزين قطع معدودة (مكيفات، أطقم عرسان)، يمكنك طلب دينا صغيرة ومساحة تخزين مصغرة بأسعار اقتصادية.', priority: 6 },
     ],
 };

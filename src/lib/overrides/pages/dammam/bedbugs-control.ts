@@ -1,11 +1,3 @@
-// ══════════════════════════════════════════════════════════════
-// مكافحة بق الفراش بالدمام — Override مخصص (E-E-A-T Grade)
-// صفحة: /dammam/bedbugs-control
-// قطاع YMYL: صحة (لدغات + أنيميا أطفال) + نفسي (Delusory Parasitosis)
-// خريطة 2.4: الخضيري (سموم/صحة) → SFDA + وقاء + بلدي
-// NLP: فنادق الدمام، مسافرون، أثاث مستورد عبر الميناء، Cimex lectularius
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
 
@@ -81,19 +73,13 @@ export const override: PageOverride = {
         { ...GOV.WEQAA, role: 'إرشادات الوقاية من بق الفراش في المؤسسات والفنادق' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALKHODAIRY.name,
-        title: EXPERTS.ALKHODAIRY.title,
-        credential: EXPERTS.ALKHODAIRY.credential,
-        profileUrl: EXPERTS.ALKHODAIRY.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALKHODAIRY,
 
     expertCitations: [
         {
             expert: 'أ.د. فهد الخضيري',
             quote: 'بق الفراش طوّر مقاومة لمعظم Pyrethroids التقليدية — المعالجة الحرارية 55°م هي المعيار الذهبي الحالي لأنها تقتل كل المراحل بما فيها البيض المقاوم. المبيد وحده يحتاج 3 زيارات على الأقل ومع ذلك قد يفشل مع السلالات المقاومة',
             source: 'عالم أبحاث طبي — متخصص في السموم والصحة العامة',
-            url: 'https://x.com/DrAlkhodairy',
         },
     ],
 
@@ -122,14 +108,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'dammam-pest-control', context: 'مكافحة حشرات شاملة — البق غالباً مع حشرات أخرى', priority: 1 },
-        { slug: 'dammam-mattress-cleaning', context: 'تنظيف مراتب بعد إبادة البق — إزالة فضلات', priority: 2 },
-        { slug: 'dammam-steam-cleaning', context: 'بخار 100°م كعلاج سطحي مساعد', priority: 3 },
-        { slug: 'dammam-sanitization', context: 'تعقيم بعد الإبادة — قتل بكتيريا ثانوية', priority: 4 },
-        { slug: 'dammam-sofa-cleaning', context: 'كنب قد يكون مصاباً — فحص ضروري', priority: 5 },
-        { slug: 'dammam-furniture-cleaning', context: 'أثاث غرفة النوم — فحص وتنظيف', priority: 6 },
-        { slug: 'dammam-cockroach-control', context: 'صراصير — معالجة مختلفة لكن غالباً معاً', priority: 7 },
-        { slug: 'dammam-carpet-cleaning', context: 'سجاد غرفة النوم — بق يختبئ فيه أحياناً', priority: 8 },
-        { slug: 'dammam-cleaning', context: 'تنظيف شامل بعد المعالجة', priority: 9 },
+        { slug: 'pest-control', context: 'مكافحة حشرات شاملة — البق غالباً مع حشرات أخرى', priority: 1 },
+        { slug: 'mattress-cleaning', context: 'تنظيف مراتب بعد إبادة البق — إزالة فضلات', priority: 2 },
+        { slug: 'steam-cleaning', context: 'بخار 100°م كعلاج سطحي مساعد', priority: 3 },
+        { slug: 'sanitization', context: 'تعقيم بعد الإبادة — قتل بكتيريا ثانوية', priority: 4 },
+        { slug: 'sofa-cleaning', context: 'كنب قد يكون مصاباً — فحص ضروري', priority: 5 },
+        { slug: 'furniture-cleaning', context: 'أثاث غرفة النوم — فحص وتنظيف', priority: 6 },
+        { slug: 'cockroach-control', context: 'صراصير — معالجة مختلفة لكن غالباً معاً', priority: 7 },
+        { slug: 'carpet-cleaning', context: 'سجاد غرفة النوم — بق يختبئ فيه أحياناً', priority: 8 },
+        { slug: 'cleaning', context: 'تنظيف شامل بعد المعالجة', priority: 9 },
     ],
 };

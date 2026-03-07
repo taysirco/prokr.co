@@ -1,4 +1,3 @@
-// نقل عفش بالطائف — Override (E-E-A-T) | خريطة 2.4: الزويد/الشبنان → TGA + لوجستي
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -36,11 +35,15 @@ export const override: PageOverride = {
         'لا تنقل عفش بدون تأمين — حوادث الطرق الجبلية تُتلف العفش بالكامل. التأمين (200-500 ريال) يحميك.',
     ],
     trustAnchors: [
-        { ...GOV.TGA, role: 'ترخيص شركات النقل وحقوق العميل وتأمين الشحنات' },
-        { ...GOV.LOGISTI, role: 'بيان حمولة رسمي للنقل بين المدن — إثبات قانوني' },
-    ],
-    expertReviewer: { name: EXPERTS.ALZUWAYED.name, title: EXPERTS.ALZUWAYED.title, credential: EXPERTS.ALZUWAYED.credential, profileUrl: EXPERTS.ALZUWAYED.profileUrl },
-    expertCitations: [{ expert: EXPERTS.ALZUWAYED.name, quote: 'نقل العفش على طرق الطائف الجبلية يحتاج تثبيتاً مختلفاً — أحزمة Ratchet كل 50 سم وليس حبال. المنعطفات تُولّد قوة جانبية تُزيح الأحمال غير المثبتة. 90% من حالات الكسر أثناء النقل الجبلي = تثبيت ضعيف.', source: EXPERTS.ALZUWAYED.title, url: EXPERTS.ALZUWAYED.profileUrl }],
+
+        { ...{ ...GOV.TGA, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
+ role: 'ترخيص شركات النقل وحقوق العميل وتأمين الشحنات' },
+        { ...{ ...GOV.LOGISTI, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
+ role: 'بيان حمولة رسمي للنقل بين المدن — إثبات قانوني' },
+        ],
+    expertReviewer: EXPERTS.ALZUWAYED,
+    expertCitations: [{ expert: EXPERTS.ALZUWAYED.name, quote: 'نقل العفش على طرق الطائف الجبلية يحتاج تثبيتاً مختلفاً — أحزمة Ratchet كل 50 سم وليس حبال. المنعطفات تُولّد قوة جانبية تُزيح الأحمال غير المثبتة. 90% من حالات الكسر أثناء النقل الجبلي = تثبيت ضعيف.',
+            source: EXPERTS.ALZUWAYED.title }],
     saudiRegulations: [REGULATIONS.TGA_LICENSE],
     verificationBadges: [{ badge: '✔️ شركة مرخصة TGA', authority: 'هيئة النقل', icon: 'shield-check' }, { badge: '✔️ تأمين على العفش', authority: 'ضد الكسر والضياع', icon: 'badge-check' }],
     equipment: [
@@ -48,11 +51,17 @@ export const override: PageOverride = {
         { name: 'أحزمة تثبيت Ratchet Straps', use: 'تُثبت العفش بشدّ ميكانيكي — لا تنزلق ولا ترتخي في المنعطفات الجبلية (على عكس الحبال).' },
         { name: 'تغليف كرتون مُعزز + فقاعات هوائية', use: 'يحمي الزجاج والأجهزة من الصدمات الناتجة عن اهتزازات الطريق الجبلي.' },
     ],
-    hiddenObjections: [{ fear: 'عمال باكستانيين بـ 100 ريال بينقلون — ليش أدفع أكثر?', solution: 'عمال بدون تأمين + حبال بدون Ratchet + سائق بدون خبرة جبلية = مخاطرة. كنبة مكسورة = 3,000+ ريال. غسالة ملابس تالفة = 2,000 ريال. 300 ريال مع شركة مرخصة + تأمين = توفير حقيقي.' }],
+    hiddenObjections: [
+        { fear: 'عمال باكستانيين بـ 100 ريال بينقلون — ليش أدفع أكثر?', solution: 'عمال بدون تأمين + حبال بدون Ratchet + سائق بدون خبرة جبلية = مخاطرة. كنبة مكسورة = 3,000+ ريال. غسالة ملابس تالفة = 2,000 ريال. 300 ريال مع شركة مرخصة + تأمين = توفير حقيقي.' },
+        { fear: 'الخدمة أغلى من المدن الأخرى.', solution: 'مناخ الطائف يفرض معالجات إضافية (مضاد تكثف + تجفيف + حماية أخشاب ورود). التكلفة الإضافية استثمار يحمي ممتلكاتك من تلف الرطوبة والحشرات الموسمية.' },
+    ],
     counterNarratives: [{ myth: 'النقل بالطائف سهل — المسافات قصيرة.', truth: 'المسافات قصيرة لكن الطريق جبلي. 5 كم منحدر أخطر من 50 كم مستوي. المنعطفات + المنحدرات + الضباب الشتوي = تحدي حقيقي يحتاج سائق محترف ودينا مجهزة.' }],
     relatedServices: [
-        { slug: 'taif-furniture-storage', context: 'تخزين عفش مع النقل — إيجارات سياحية موسمية.', priority: 1 },
-        { slug: 'taif-dyna', context: 'دينا نقل صغيرة داخل أحياء الطائف.', priority: 2 },
-        { slug: 'taif-cleaning', context: 'تنظيف شقة جديدة قبل استلام العفش.', priority: 3 },
+        { slug: 'furniture-storage', context: 'تخزين عفش مع النقل — إيجارات سياحية موسمية.', priority: 1 },
+        { slug: 'dyna', context: 'دينا نقل صغيرة داخل أحياء الطائف.', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف شقة جديدة قبل استلام العفش.', priority: 3 },
+        { slug: 'air-conditioner-cleaning', context: 'تنظيف مكيفات تعمل تبريد/تدفئة طوال السنة في مناخ الطائف المتقلب.', priority: 5 },
+        { slug: 'pest-control', context: 'مكافحة حشرات تتكاثر في رطوبة الطائف الشتوية والزراعة المحيطة.', priority: 6 },
+        { slug: 'steam-cleaning', context: 'تعقيم بالبخار لقتل العث والفطريات في مفروشات الطائف الرطبة.', priority: 7 },
     ],
 };

@@ -1,94 +1,77 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف أثاث بالخبر — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-khobar/furniture-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف أثاث بالخبر — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف أثاث بالخبر. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف أثاث بالخبر — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف أثاث بالخبر', 'تنظيف أثاث الخبر', 'شركة تنظيف أثاث بالخبر', 'أفضل تنظيف أثاث بالخبر'],
+        title: 'تنظيف أثاث بالخبر — NaCl يُصدّئ المفصلات + 85-95% عفن داخلي + PVAc يتكسّر + بخور يتبلمر (2026)',
+        description: 'تنظيف أثاث الخبر. NaCl يُصدّئ مفصلات ومسامير. 85-95% عفن داخلي. PVAc يتكسّر صيفاً. بخور يتبلمر. Anti-Corrosion + Anti-Fungal + Conditioner + Enzymatic.',
+        h1: 'تنظيف أثاث بالخبر — الملح يُصدّئ والرطوبة تُعفّن والحرارة تُفكّك',
+        keywords: ['تنظيف أثاث بالخبر', 'تنظيف عفش الخبر', 'شركة تنظيف أثاث بالخبر'],
     },
-
     content: {
-        introduction: 'تنظيف أثاث بالخبر — خدمة متخصصة تراعي الظروف المناخية والبيئية في الخبر. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف أثاث بالخبر: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف أثاث بالخبر. خدمة احترافية. ضمان.',
+        introduction: 'الأثاث في الخبر يتعرض لـ 4 آليات تلف ساحلية. الأولى — NaCl يُصدّئ المعادن: مفصلات خزائن + مسامير + إطارات أسرّة ← NaCl من الهواء يترسب ← صدأ + بقع صدأ على الخشب المُحيط. Anti-Corrosion WD-40/Silicone كل 6 أشهر. الثانية — 85-95% عفن داخلي: الأدراج المُغلقة + خزائن = رطوبة محبوسة = Aspergillus. المفاجأة: الأثاث المُغلق أسوأ من المفتوح في 85-95%. Silica Gel + Anti-Fungal + تهوية. الثالثة — PVAc يتكسّر: 45°م + 85-95% = ظروف مُتناقضة. PVAc يلين بالحرارة + يمتص رطوبة = مفاصل ضعيفة. الأثاث يتفكك أسرع من أي مدينة. الرابعة — بخور يتبلمر على الأقمشة: Olibanum Polymerization في 45°م.',
+        shortAnswer: 'على عكس [ملمّع ومسح] الذي لا يحمي من الصدأ ولا العفن، يعتمد بروتوكولنا في خدمة [تنظيف الأثاث] بمدينة [الخبر] على [Anti-Corrosion + Anti-Fungal + Conditioner + Enzymatic]. ففي ظل [NaCl + 85-95% + PVAc + بخور]، تتفاقم ظاهرة [صدأ + عفن + تفكك + بلمرة]. لذا؛ يتدخل خبراؤنا عبر [بروتوكول أثاث ساحلي].',
+        heroSubtitle: 'NaCl صدأ + 85-95% عفن + PVAc ضعف + بخور بلمرة',
     },
-
     pricing: [
-        { type: 'تنظيف أثاث — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف أثاث — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'تنظيف غرفة نوم (أثاث)', unit: 'غرفة', minPrice: 150, maxPrice: 300, time: '2-3 ساعات' },
+        { type: 'تنظيف + Anti-Fungal + Anti-Corrosion', unit: 'غرفة', minPrice: 200, maxPrice: 380, time: '3-4 ساعات' },
+        { type: 'بيت كامل (كل الأثاث)', unit: 'بيت', minPrice: 400, maxPrice: 900, time: '5-8 ساعات' },
+        { type: 'عقد نصف سنوي (2 زيارة)', unit: 'سنة', minPrice: 350, maxPrice: 700, time: '2 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف أثاث بالخبر؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف أثاث؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف أثاث؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'صدأ على مفصلات جديدة — من NaCl؟', answer: 'نعم — مفصلات حتى Stainless 304 تصدأ في NaCl + 85-95%. Stainless 316 (بحري) = يقاوم. لكن معظم الأثاث = 304 أو أقل. Anti-Corrosion = يحمي أي نوع.' },
+        { question: 'عفن داخل خزانة مُغلقة — كيف؟', answer: '85-95% = الهواء بالداخل رطب. الأبواب المُغلقة = تمنع التهوية = رطوبة محبوسة = عفن. الحل: Silica Gel داخل الأدراج + فتح أبواب يومياً + Anti-Fungal.' },
+        { question: 'PVAc يتأثر بالرطوبة — مو بس الحرارة؟', answer: 'PVAc يمتص رطوبة ← ينتفخ = مفاصل تضعف. + 45°م = يلين. PVAc في 85-95% + 45°م = أسوأ مكان في المملكة. Conditioner خشب كل 6 أشهر.' },
+        { question: 'Anti-Corrosion — كل المعادن؟', answer: 'مفصلات + مسامير + سحّابات أدراج + إطارات أسرّة + أقدام أثاث معدنية. كل معدن مكشوف أو مخفي = NaCl يصله. Anti-Corrosion شامل.' },
+        { question: 'Conditioner خشب — ليش؟', answer: '85-95% = الخشب يمتص ← ينتفخ ← أبواب تنتفخ + أدراج تعلق. 45°م = يجف ← ينكمش ← شقوق. تناقض = يحتاج Conditioner يوازن الرطوبة.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Anti-Corrosion Silicone على المفصلات كل 6 أشهر — WD-40 مؤقت. Silicone = أطول.',
+        'Silica Gel في كل درج وخزانة — يمتص الرطوبة المحبوسة. يُجدّد كل 2-3 أشهر.',
+        'فتح أبواب الخزائن يومياً 15 دقيقة — أبسط حل لعفن الخزانة المُغلقة.',
+        'Conditioner خشب كل 6 أشهر — يوازن الرطوبة: لا يجف ولا ينتفخ.',
+        'Enzymatic على أقمشة الأثاث — يُكسر بوليمر بخور متراكم.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'مفصلات صادئة = أبواب لا تُغلق + بقع صدأ على الخشب (بنية لا تُزال). Anti-Corrosion = يمنع.',
+        'عفن داخل خزانة ملابس = جراثيم على الملابس = حساسية + رائحة. Silica + Anti-Fungal = يمنع.',
+        'PVAc في 85-95% + 45°م = مفاصل تنفك خلال 1-2 سنة. ترميم 500-2,000 ريال. Conditioner = 50-100 ريال.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات النظافة بالشرقية' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'أثاث الخبر = أصعب بيئة: NaCl صدأ + 85-95% عفن + PVAc مُزدوج (حرارة + رطوبة). Anti-Corrosion + Anti-Fungal + Conditioner = حماية ساحلية.', source: 'نصائح هندسية — أثاث البيئات الساحلية الرطبة' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
     verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
+        { badge: '✔️ تنظيف أثاث مرخص', authority: 'منصة بلدي', icon: 'shield-check' },
     ],
-
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Anti-Corrosion Silicone Spray', use: 'يحمي مفصلات ومسامير من NaCl — فعّال 6 أشهر' },
+        { name: 'Anti-Fungal Spray', use: 'يمنع Aspergillus في الخزائن 85-95%' },
+        { name: 'Wood Conditioner', use: 'يوازن رطوبة الخشب — يمنع انتفاخ + تشقق' },
+        { name: 'Silica Gel Packets', use: 'يمتص رطوبة محبوسة في الأدراج والخزائن' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'أثاث جديد.', solution: 'NaCl يصل من اليوم الأول. 85-95% يدخل من أول فتحة. حماية مبكرة = أرخص.' },
+        { fear: 'ملمّع يكفي.', solution: 'الملمّع = سطحي. لا يحمي مفصلات (مخفية) ولا يمنع عفن داخلي ولا يوازن رطوبة.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'أثاث الخبر مثل الرياض.', truth: 'NaCl + 85-95% = صدأ + عفن + PVAc مُزدوج. الرياض = لا صدأ + لا عفن. مختلف.' },
+        { myth: 'خشب يتحمل.', truth: 'الخشب يمتص رطوبة 85-95% ← ينتفخ. يجف في 45°م ← ينكمش. دورة انتفاخ/انكماش = شقوق.' },
+        { myth: 'سنوي.', truth: 'NaCl شهري + رطوبة 24/7. نصف سنوي = الحد الأدنى.' },
     ],
-
     relatedServices: [
-        { slug: 'al-khobar-furniture-moving', context: 'نقل عفش بالخبر', priority: 1 },
-        { slug: 'al-khobar-furniture-storage', context: 'تخزين عفش بالخبر', priority: 2 },
-        { slug: 'al-khobar-dyna', context: 'دينا نقل بالخبر', priority: 3 },
-        { slug: 'al-khobar-moving-out', context: 'نقل عفش خروج بالخبر', priority: 4 },
-        { slug: 'al-khobar-dabab', context: 'دباب نقل بالخبر', priority: 5 },
-        { slug: 'al-khobar-cleaning', context: 'تنظيف منازل بالخبر', priority: 6 },
-        { slug: 'al-khobar-tanks-cleaning', context: 'تنظيف خزانات بالخبر', priority: 7 },
-        { slug: 'al-khobar-sofa-cleaning', context: 'تنظيف كنب بالخبر', priority: 8 },
-        { slug: 'al-khobar-carpet-cleaning', context: 'تنظيف سجاد بالخبر', priority: 9 },
+        { slug: 'furniture-moving', context: 'نقل — حماية أثناء النقل', priority: 1 },
+        { slug: 'furniture-storage', context: 'تخزين — حماية من NaCl', priority: 2 },
+        { slug: 'sofa-cleaning', context: 'كنب — عث + بخور', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف — ساحلي', priority: 4 },
+        { slug: 'carpet-cleaning', context: 'سجاد — حول الأثاث', priority: 5 },
+        { slug: 'pest-control', context: 'حشرات — خنافس رطوبة', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف — عفن مشترك', priority: 7 },
     ],
 };

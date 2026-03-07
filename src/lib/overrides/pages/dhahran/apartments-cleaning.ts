@@ -1,94 +1,78 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف شقق بالظهران — Override مخصص (E-E-A-T Grade)
-// صفحة: /dhahran/apartments-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف شقق بالظهران — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف شقق بالظهران. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف شقق بالظهران — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف شقق بالظهران', 'تنظيف شقق الظهران', 'شركة تنظيف شقق بالظهران', 'أفضل تنظيف شقق بالظهران'],
+        title: 'تنظيف شقق بالظهران — NaCl+SiO₂ مزدوج + 75-85% عفن + Sabkha+رمل + أرامكو (2026)',
+        description: 'تنظيف شقق الظهران. NaCl ملح + SiO₂ رمل = أوساخ مزدوجة. 75-85% عفن. Sabkha+رمل صحراوي. معايير أرامكو. RO + Anti-Fungal + HEPA + تجفيف.',
+        h1: 'تنظيف شقق بالظهران — طبقتان ساحلية+صحراوية والرطوبة تُعفّن',
+        keywords: ['تنظيف شقق بالظهران', 'تنظيف شقة الظهران', 'شركة تنظيف شقق بالظهران'],
     },
-
     content: {
-        introduction: 'تنظيف شقق بالظهران — خدمة متخصصة تراعي الظروف المناخية والبيئية في الظهران. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف شقق بالظهران: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف شقق بالظهران. خدمة احترافية. ضمان.',
+        introduction: 'الشقة في الظهران تتسخ بطريقة مزدوجة فريدة. الطبقة الأولى — NaCl+SiO₂: رذاذ بحري (NaCl) + رمل صحراوي (SiO₂) يدخلان معاً ← NaCl يلتصق بالسطح + SiO₂ يخدش ← غسل بماء عادي = SiO₂ يخدش تحت NaCl الرطب. RO مُقطر + Microfiber ناعم = غسل بلا خدش وبلا ملح. الطبقة الثانية — 75-85% عفن: أقل من الخبر بـ 10-15% لكن: كافٍ لعفن Aspergillus خلال 3-4 أسابيع في الحمام والخزائن. Anti-Fungal + تهوية. الطبقة الثالثة — Sabkha+رمل: تربة الظهران = خليط Sabkha ملحية + رمل صحراوي. تدخل من الأحذية ← خليط يخدش ويتآكل. غسل + تجفيف فوري.',
+        shortAnswer: 'على عكس [ممسحة ومنظف] الذي يخدش بـ SiO₂ تحت NaCl، يعتمد بروتوكولنا في خدمة [تنظيف الشقق] بمدينة [الظهران] على [RO + Microfiber + Anti-Fungal + تجفيف]. ففي ظل [NaCl+SiO₂ + 75-85% + Sabkha+رمل]، تتفاقم ظاهرة [خدش+تآكل + عفن]. لذا؛ يتدخل خبراؤنا عبر [بروتوكول مزدوج].',
+        heroSubtitle: 'NaCl+SiO₂ مزدوج + 75-85% عفن + Sabkha+رمل مختلط',
     },
-
     pricing: [
-        { type: 'تنظيف شقق — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف شقق — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'شقة — بروتوكول مزدوج', unit: 'شقة', minPrice: 200, maxPrice: 400, time: '3-5 ساعات' },
+        { type: 'شقة + Anti-Fungal عميق', unit: 'شقة', minPrice: 260, maxPrice: 470, time: '4-6 ساعات' },
+        { type: 'بعد إخلاء — مكافحة عفن', unit: 'شقة', minPrice: 300, maxPrice: 600, time: '5-8 ساعات' },
+        { type: 'عقد أسبوعي (4 زيارات/شهر)', unit: 'شهر', minPrice: 360, maxPrice: 720, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف شقق بالظهران؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف شقق؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف شقق؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'SiO₂ تحت NaCl — ليش خطر؟', answer: 'NaCl رطب = يُلصق SiO₂ على السطح. المسح = SiO₂ يخدش تحت NaCl اللزج. مثل سنفرة مبللة. RO أولاً = يُذيب NaCl ← يرفع SiO₂ بلا خدش.' },
+        { question: 'الظهران ≠ الخبر في الرطوبة؟', answer: 'الظهران 75-85% vs الخبر 85-95%. فرق 10-15% = عفن أبطأ (3-4 أسابيع vs أسبوعين). لكن: حتمي. Anti-Fungal كل 5 أشهر.' },
+        { question: 'أحياء أرامكو — فرق؟', answer: 'مُجمّعات أرامكو = تصميم أفضل (تهوية + عزل). لكن: NaCl+SiO₂ يدخل من أي فتحة. الميزة: عفن أبطأ بسبب التهوية. العيب: نفس الأوساخ.' },
+        { question: 'Sabkha+رمل — أسوأ من كل واحد؟', answer: 'Sabkha = NaCl تآكل. رمل = SiO₂ خدش. معاً = مثل NaCl+SiO₂ الجوي — لكن من الأحذية. نفس المبدأ المزدوج.' },
+        { question: 'كم مرة؟', answer: 'أسبوعي = الأمثل. NaCl+SiO₂ يومي. عفن أسبوعي-شهري. أسبوعي = يمنع التراكم المزدوج.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'RO أولاً لإذابة NaCl ← ثم Microfiber ناعم لرفع SiO₂ — الترتيب مهم.',
+        'Anti-Fungal على حمام + مطبخ + خزائن كل 5 أشهر — 75-85% = حتمي.',
+        'HEPA في غرف النوم — SiO₂ ناعم يدخل الرئة (PM10).',
+        'تجفيف بعد التنظيف — 75-85% = أبطأ تجفيف من الرياض. Microfiber جاف.',
+        'سجاد مدخل يُغسل أسبوعياً — يحجز Sabkha+رمل قبل الدخول.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'SiO₂ تحت NaCl = Micro-Abrasion مُبلّل = خدوش على بلاط/رخام أسرع. ترتيب الغسل = حماية.',
+        'عفن 75-85% في خزائن مُغلقة = جراثيم على الملابس = حساسية. Anti-Fungal + Silica Gel.',
+        'Sabkha+رمل من الأحذية × سنة = بلاط مخدوش + تآكل. سجاد مدخل = أبسط حل.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات النظافة بالشرقية' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMISNID.name, quote: 'شقة الظهران = مزدوجة: NaCl+SiO₂ يتفاعلان — SiO₂ يخدش تحت NaCl الرطب. 75-85% عفن. بروتوكول: RO ← Microfiber ← Anti-Fungal ← تجفيف — ترتيب لا يُختصر.', source: 'جغرافيا المناخ — التنظيف المزدوج' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
     verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
+        { badge: '✔️ تنظيف شقق مرخص', authority: 'منصة بلدي', icon: 'shield-check' },
+        { badge: '✔️ بروتوكول مزدوج', authority: 'معتمد داخلياً', icon: 'badge-check' },
     ],
-
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'RO Water', use: 'يُذيب NaCl بدون إضافة أملاح — الخطوة الأولى' },
+        { name: 'Microfiber ناعم', use: 'يرفع SiO₂ بلا خدش بعد إذابة NaCl' },
+        { name: 'Anti-Fungal Spray', use: 'يمنع Aspergillus 75-85% — فعّال 5 أشهر' },
+        { name: 'HEPA فلتر', use: 'يحجز SiO₂ < 10 ميكرون في غرف النوم' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'مثل الخبر.', solution: 'الخبر = NaCl 90%. الظهران = NaCl+SiO₂ 60/40. المزيج = خدش+تآكل معاً.' },
+        { fear: 'ممسحة عادية.', solution: 'ممسحة + SiO₂ تحت NaCl = خدش مُبلّل. أسوأ من جاف.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'الظهران مثل الخبر.', truth: 'SiO₂ إضافي = خدش مزدوج. 75-85% ≠ 85-95%. مختلف.' },
+        { myth: 'ماء وصابون.', truth: 'ماء الظهران = NaCl. صابون + SiO₂ = خدش. 2 أخطاء.' },
+        { myth: 'شهري.', truth: 'NaCl+SiO₂ يومي. أسبوعي = الحد.' },
     ],
-
     relatedServices: [
-        { slug: 'dhahran-furniture-moving', context: 'نقل عفش بالظهران', priority: 1 },
-        { slug: 'dhahran-furniture-storage', context: 'تخزين عفش بالظهران', priority: 2 },
-        { slug: 'dhahran-dyna', context: 'دينا نقل بالظهران', priority: 3 },
-        { slug: 'dhahran-moving-out', context: 'نقل عفش خروج بالظهران', priority: 4 },
-        { slug: 'dhahran-dabab', context: 'دباب نقل بالظهران', priority: 5 },
-        { slug: 'dhahran-cleaning', context: 'تنظيف منازل بالظهران', priority: 6 },
-        { slug: 'dhahran-tanks-cleaning', context: 'تنظيف خزانات بالظهران', priority: 7 },
-        { slug: 'dhahran-sofa-cleaning', context: 'تنظيف كنب بالظهران', priority: 8 },
-        { slug: 'dhahran-carpet-cleaning', context: 'تنظيف سجاد بالظهران', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف — مزدوج', priority: 1 },
+        { slug: 'carpet-cleaning', context: 'سجاد — SiO₂+NaCl', priority: 2 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف — مزدوج', priority: 3 },
+        { slug: 'marble-polishing', context: 'رخام — خدش SiO₂', priority: 4 },
+        { slug: 'steam-cleaning', context: 'بخار — تعقيم', priority: 5 },
+        { slug: 'pest-control', context: 'حشرات — رطوبة', priority: 6 },
+        { slug: 'villas-cleaning', context: 'فلل — مزدوج', priority: 7 },
     ],
 };

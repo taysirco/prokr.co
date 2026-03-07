@@ -1,10 +1,3 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف خزانات بالدمام — Override مخصص (E-E-A-T Grade)
-// صفحة: /dammam/tanks-cleaning
-// قطاع YMYL: صحة (مياه شرب — Legionella + كلوريدات) + مالي (فاتورة NWC)
-// خريطة 2.4: المحيميد → NWC + بلدي
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
 
@@ -74,19 +67,13 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات تنظيف الخزانات — اشتراطات صحية' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
             expert: 'م. ماجد المحيميد',
             quote: 'في الدمام — الخزان العلوي المكشوف صيفاً = حاضنة Legionella. حرارة 35-40°م + كلوريدات + غطاء غير محكم = خطر صحي حقيقي. التعقيم كل 3 أشهر إلزامي',
             source: 'خبير جودة البناء والتشطيبات',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
 
@@ -115,14 +102,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'dammam-water-leak-detection', context: 'تسرب = ماء ملوث يدخل الخزان من شقوق — كشف فوري ضروري', priority: 1 },
-        { slug: 'dammam-tank-leak-detection', context: 'كشف تسرب الخزان نفسه — شق = دخول مياه جوفية ملوثة', priority: 2 },
-        { slug: 'dammam-tank-insulation', context: 'عزل الخزان العلوي يخفض الحرارة 10°م — يمنع بيئة Legionella', priority: 3 },
-        { slug: 'dammam-sanitization', context: 'تعقيم شامل بعد اكتشاف تلوث بكتيري في الخزان', priority: 4 },
-        { slug: 'dammam-water-insulation', context: 'عزل مائي يمنع تسرب مياه جوفية إلى الخزان الأرضي', priority: 5 },
-        { slug: 'dammam-cleaning', context: 'تنظيف شامل للمنزل مع تنظيف الخزان', priority: 6 },
-        { slug: 'dammam-pest-control', context: 'خزان مكشوف = مصدر بعوض. مكافحة متكاملة', priority: 7 },
-        { slug: 'dammam-roof-insulation', context: 'عزل السطح يحمي الخزان العلوي من الحرارة', priority: 8 },
-        { slug: 'dammam-swimming-pool-cleaning', context: 'تنظيف مسابح يحتاج نفس معايير التعقيم', priority: 9 },
+        { slug: 'water-leak-detection', context: 'تسرب = ماء ملوث يدخل الخزان من شقوق — كشف فوري ضروري', priority: 1 },
+        { slug: 'tank-leak-detection', context: 'كشف تسرب الخزان نفسه — شق = دخول مياه جوفية ملوثة', priority: 2 },
+        { slug: 'tank-insulation', context: 'عزل الخزان العلوي يخفض الحرارة 10°م — يمنع بيئة Legionella', priority: 3 },
+        { slug: 'sanitization', context: 'تعقيم شامل بعد اكتشاف تلوث بكتيري في الخزان', priority: 4 },
+        { slug: 'water-insulation', context: 'عزل مائي يمنع تسرب مياه جوفية إلى الخزان الأرضي', priority: 5 },
+        { slug: 'cleaning', context: 'تنظيف شامل للمنزل مع تنظيف الخزان', priority: 6 },
+        { slug: 'pest-control', context: 'خزان مكشوف = مصدر بعوض. مكافحة متكاملة', priority: 7 },
+        { slug: 'roof-insulation', context: 'عزل السطح يحمي الخزان العلوي من الحرارة', priority: 8 },
+        { slug: 'swimming-pool-cleaning', context: 'تنظيف مسابح يحتاج نفس معايير التعقيم', priority: 9 },
     ],
 };

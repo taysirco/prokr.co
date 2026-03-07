@@ -1,94 +1,74 @@
-// ══════════════════════════════════════════════════════════════
-// تسليك مجاري بالخرج — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-kharj/sewage-unblocking
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تسليك مجاري بالخرج — خدمة احترافية معتمدة (2026)',
-        description: 'تسليك مجاري بالخرج. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تسليك مجاري بالخرج — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تسليك مجاري بالخرج', 'تسليك مجاري الخرج', 'شركة تسليك مجاري بالخرج', 'أفضل تسليك مجاري بالخرج'],
+        title: 'تسليك مجاري بالخرج — CaCO₃ يسد+SiO₂ يتراكم+NH₃ — Jetting+Descaler! (2026)',
+        description: 'تسليك مجاري الخرج. CaCO₃ 450ppm يسد المفاصل! SiO₂ ترسيب صلب. NH₃ رائحة مزدوجة. Jetting+Descaler+تهوية.',
+        h1: 'تسليك مجاري بالخرج — كلس يسد ورمل يتراكم',
+        keywords: ['تسليك مجاري الخرج', 'تسليك مجاري بالخرج', 'شركة تسليك مجاري الخرج'],
     },
-
     content: {
-        introduction: 'تسليك مجاري بالخرج — خدمة متخصصة تراعي الظروف المناخية والبيئية في الخرج. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تسليك مجاري بالخرج: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تسليك مجاري بالخرج. خدمة احترافية. ضمان.',
+        introduction: 'مجاري الخرجتنسد بطريقة مختلفة! CaCO₃ 450ppm يسد المفاصل: كلس يتراكم عند مفاصل الأنابيب ← يُضيّق ← أي شيء صلب يعلق عند المفصل ← انسداد. Descaler يُذيب الكلس عند التسليك. SiO₂ ترسيب صلب: رمل يدخل من صرف الفناء الخارجي ← يتراكم ← ترسيب صلب يحتاج Jetting ضغط عالي. بدون Jetting = سنبك لا يُزيل. NH₃ رائحة مزدوجة: كل انسداد بالخرج = رائحة أقوى 2× (صرف+مزارع). تهوية مقوّاة. ΔT 48°م: حرارة تسارع التحلل ← رائحة أسرع ← انتظار التسليك = أسوأ. استجابة سريعة. 15-25% = لا تكثّف في المجاري! المياه تجري — لا تكثّف. مقارنة: الرياض = دهون فقط. خميس = جذور أشجار+دهون. الخرج = كلس+رمل = مختلف.',
+        shortAnswer: 'على عكس [السنبك بدون Descaler الذي يصنع ثقب في الكلس]، يعتمد بروتوكولنا في خدمة [تسليك المجاري] بمدينة [الخرج] على [Jetting+Descaler+تهوية+سنبك]. ففي ظل [CaCO₃ يسد+SiO₂ ترسيب+NH₃ مزدوجة+ΔT 48°م]، تتفاقم ظاهرة [انسداد مفاصل+ترسيب صلب+رائحة]. لذا؛ يتدخل فنيونا عبر [Jetting ← Descaler ← تهوية ← وقاية].',
+        heroSubtitle: 'CaCO₃ يسد + SiO₂ ترسيب + NH₃ مزدوجة — Jetting+Descaler!',
     },
-
     pricing: [
-        { type: 'تسليك مجاري — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تسليك مجاري — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'تسليك بسيط (سنبك)', unit: 'نقطة', minPrice: 80, maxPrice: 170, time: '30-60 دقيقة' },
+        { type: 'تسليك + Jetting', unit: 'نقطة', minPrice: 150, maxPrice: 320, time: '1-2 ساعة' },
+        { type: 'تسليك + Jetting + Descaler', unit: 'نقطة', minPrice: 220, maxPrice: 450, time: '2-3 ساعات' },
+        { type: 'عقد سنوي (4 زيارات وقائية)', unit: 'سنة', minPrice: 500, maxPrice: 1000, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تسليك مجاري بالخرج؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تسليك مجاري؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تسليك مجاري؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش المجاري تنسد أسرع بالخرج؟', answer: 'CaCO₃ يُضيّق المفاصل + SiO₂ يتراكم = انسداد أسرع. Descaler+Jetting يمنعان.' },
+        { question: 'ليش السنبك لا يكفي بالخرج؟', answer: 'السنبك يصنع ثقب في الكلس — لا يُذيبه. Descaler يُذيب ← Jetting يُنظف.' },
+        { question: 'كم تكلفة تسليك بالخرج مقارنة بالرياض؟', answer: 'أغلى 20% — Descaler+Jetting. لكن: بدونهما = ينسد خلال شهر.' },
+        { question: 'ليش الرائحة أقوى عند الانسداد بالخرج؟', answer: 'NH₃ صرف + NH₃ مزارع = مزدوجة + ΔT يسارع التحلل. تهوية مقوّاة.' },
+        { question: 'كيف أمنع انسداد المجاري بالخرج؟', answer: 'Descaler وقائي كل 3 أشهر + فلتر فناء (SiO₂). بدونهما = انسداد مفاجئ.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Descaler كل تسليك — يُذيب CaCO₃.',
+        'Jetting — يُزيل SiO₂ ترسيب صلب.',
+        'فلتر فناء — يمنع SiO₂ من الدخول.',
+        'وقائي ربع سنوي — كلس+رمل.',
+        'تهوية مقوّاة — NH₃ مزدوجة.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'سنبك بدون Descaler = ثقب مؤقت — كلس يُغلق خلال أسابيع.',
+        'SiO₂ × سنة = ترسيب صلب — سنبك لا يُزيل — Jetting إلزامي.',
+        'تأخير تسليك + ΔT + NH₃ = رائحة تدخل المنزل — صحة YMYL.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.NWC, role: 'تنظيم الصرف' },
+        { ...GOV.BALADI, role: 'ترخيص شركات التسليك' },
+        { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALJUND,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALJUND.name, quote: 'مجاري الخرج: CaCO₃ يسد المفاصل. Descaler+Jetting. السنبك لا يكفي.', source: 'موسوعة أخطاء — صرف زراعي' },
     ],
-
-    saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة صرف صحي مرخصة', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    saudiRegulations: [REGULATIONS.NWC_REPORT],
+    verificationBadges: [{ badge: '✔️ تسليك مرخص', authority: 'بلدي + NWC', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Jetting ضغط عالي', use: 'يُزيل CaCO₃+SiO₂ ترسيب صلب' },
+        { name: 'Chemical Descaler', use: 'يُذيب كلس — لا سنبك' },
+        { name: 'سنبك كهربائي', use: 'دهون+مواد عضوية' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'سنبك يكفي.', solution: 'CaCO₃ = كلس. سنبك لا يُذيب. Descaler.' },
+        { fear: 'مثل الرياض.', solution: 'كلس+رمل. الرياض: دهون فقط.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'أي تسليك.', truth: 'CaCO₃+SiO₂ = Descaler+Jetting.' },
+        { myth: 'مرة بالسنة.', truth: 'كلس+رمل = ربع سنوي.' },
     ],
-
     relatedServices: [
-        { slug: 'al-kharj-furniture-moving', context: 'نقل عفش بالخرج', priority: 1 },
-        { slug: 'al-kharj-furniture-storage', context: 'تخزين عفش بالخرج', priority: 2 },
-        { slug: 'al-kharj-dyna', context: 'دينا نقل بالخرج', priority: 3 },
-        { slug: 'al-kharj-moving-out', context: 'نقل عفش خروج بالخرج', priority: 4 },
-        { slug: 'al-kharj-dabab', context: 'دباب نقل بالخرج', priority: 5 },
-        { slug: 'al-kharj-cleaning', context: 'تنظيف منازل بالخرج', priority: 6 },
-        { slug: 'al-kharj-tanks-cleaning', context: 'تنظيف خزانات بالخرج', priority: 7 },
-        { slug: 'al-kharj-sofa-cleaning', context: 'تنظيف كنب بالخرج', priority: 8 },
-        { slug: 'al-kharj-carpet-cleaning', context: 'تنظيف سجاد بالخرج', priority: 9 },
+        { slug: 'sewage-suction', context: 'شفط صرف', priority: 1 },
+        { slug: 'bathroom-leak-detection', context: 'حمام', priority: 2 },
+        { slug: 'water-leak-detection', context: 'تسرب', priority: 3 },
+        { slug: 'tanks-cleaning', context: 'خزانات', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 5 },
+        { slug: 'pest-control', context: 'حشرات', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 7 },
     ],
 };

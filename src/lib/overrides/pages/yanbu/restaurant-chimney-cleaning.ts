@@ -1,94 +1,75 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف مداخن مطاعم بينبع — Override مخصص (E-E-A-T Grade)
-// صفحة: /yanbu/restaurant-chimney-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف مداخن مطاعم بينبع — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف مداخن مطاعم بينبع. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف مداخن مطاعم بينبع — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف مداخن مطاعم بينبع', 'تنظيف مداخن مطاعم ينبع', 'شركة تنظيف مداخن مطاعم بينبع', 'أفضل تنظيف مداخن مطاعم بينبع'],
+        title: 'تنظيف مداخن مطاعم بينبع — NaCl+دهن+SOx=طبقة صناعية+70-85% — Degreaser! (2026)',
+        description: 'تنظيف مداخن مطاعم ينبع. NaCl+دهن+SOx=طبقة صناعية! 70-85%. Degreaser صناعي+HEPA+فلتر ساحلي.',
+        h1: 'تنظيف مداخن مطاعم بينبع — ملح+دهن+حمض!',
+        keywords: ['تنظيف مداخن مطاعم ينبع', 'تنظيف مدخنة بينبع', 'شركة تنظيف مداخن ينبع'],
     },
-
     content: {
-        introduction: 'تنظيف مداخن مطاعم بينبع — خدمة متخصصة تراعي الظروف المناخية والبيئية في ينبع. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف مداخن مطاعم بينبع: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف مداخن مطاعم بينبع. خدمة احترافية. ضمان.',
+        introduction: 'مدخنة مطعم بينبع = ثلاثي ملح+دهن+حمض! NaCl+دهن+SOx: ملح بحري+دهن مطبخ+أكاسيد YASREF = طبقة صناعية ثلاثية صلبة لا تُزال بدون Degreaser صناعي. 70-85%: رطوبة تُبقي الطبقة لزجة = خطر حريق أعلى! NaCl تآكل: ملح يأكل الفولاذ المقاوم (حتى Stainless). Anti-Corrosion. SOx+حرارة: حمض مُركّز بالحرارة داخل المدخنة. Chemical Wash. مقارنة: بريدة = CaCO₃+دهن. ينبع = NaCl+SOx+دهن = طبقة صناعية ثلاثية أصعب. الدفاع المدني يفتّش.',
+        shortAnswer: 'على عكس [التنظيف بدون Degreaser صناعي]، يعتمد بروتوكولنا في خدمة [تنظيف المداخن] بمدينة [ينبع] على [Degreaser ثلاثي+Anti-Corrosion+Chemical Wash]. ففي ظل [NaCl+دهن+SOx+70-85%+حريق]، تتفاقم ظاهرة [طبقة صناعية+تآكل+حريق]. لذا؛ يتدخل فنيونا عبر [Degreaser ← Anti-Corrosion ← Chemical ← فحص].',
+        heroSubtitle: 'NaCl+دهن+SOx = طبقة ثلاثية + حريق — Degreaser صناعي!',
     },
-
     pricing: [
-        { type: 'تنظيف مداخن مطاعم — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف مداخن مطاعم — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'مدخنة صغيرة', unit: 'مدخنة', minPrice: 250, maxPrice: 520, time: '2-3h' },
+        { type: 'مدخنة + فلاتر', unit: 'مدخنة', minPrice: 400, maxPrice: 800, time: '3-5h' },
+        { type: 'نظام كامل (مطعم)', unit: 'نظام', minPrice: 600, maxPrice: 1200, time: '5-8h' },
+        { type: 'ربع سنوي (4 تنظيف)', unit: 'باقة', minPrice: 800, maxPrice: 1600, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف مداخن مطاعم بينبع؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف مداخن مطاعم؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف مداخن مطاعم؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ما الطبقة الصناعية داخل مدخنة ينبع؟', answer: 'NaCl+دهن+SOx = ثلاثي صلب. Degreaser صناعي فقط.' },
+        { question: 'ليش حريق مدخنة أخطر بينبع؟', answer: '70-85% يُبقي الدهن لزجاً+NaCl يُصلّب = اشتعال. الدفاع المدني.' },
+        { question: 'هل NaCl يأكل Stainless Steel بينبع؟', answer: 'حتى Stainless يتآكل بـ NaCl 41‰. Anti-Corrosion Spray.' },
+        { question: 'كم مرة تنظيف مدخنة بينبع؟', answer: 'ربع سنوي إلزامي. الدفاع المدني يفتّش.' },
+        { question: 'كم تكلفة مدخنة بينبع مقابل بريدة؟', answer: 'أغلى 30-40% — طبقة ثلاثية+Anti-Corrosion.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Degreaser صناعي — ثلاثي NaCl+دهن+SOx.',
+        'Anti-Corrosion — NaCl حتى Stainless.',
+        'Chemical Wash — SOx+حرارة.',
+        'ربع سنوي — الدفاع المدني.',
+        'HEPA مطبخ — SOx+دهن غازي.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'NaCl+دهن+SOx × 3 أشهر = حريق مدخنة — الدفاع المدني YMYL.',
+        'NaCl + Stainless × سنة = تآكل — Anti-Corrosion.',
+        '70-85% + دهن لزج = اشتعال أسرع — تنظيف ربع سنوي.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.CIVILDEFENSE, role: 'فحص مداخن — سلامة حريق' },
+        { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
+        { ...GOV.SFDA, role: 'سلامة غذائية' },
+        { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'اشتراطات أمانة ينبع' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'مدخنة ينبع: NaCl+دهن+SOx = ثلاثي. Anti-Corrosion حتى Stainless.', source: 'نصائح هندسية — مداخن ساحلية' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف مداخن مرخص', authority: 'الدفاع المدني + بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Degreaser صناعي ثلاثي', use: 'NaCl+دهن+SOx — صلب' },
+        { name: 'Anti-Corrosion Spray', use: 'NaCl — Stainless' },
+        { name: 'Chemical Wash', use: 'SOx+حرارة — حمض' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'التنظيف العادي.', solution: 'طبقة ثلاثية. Degreaser صناعي.' },
+        { fear: 'مثل بريدة.', solution: 'NaCl+SOx إضافي. ثلاثي.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'سنوي.', truth: 'ربع سنوي. الدفاع المدني.' },
+        { myth: 'تنظيف عادي.', truth: 'ثلاثي = Degreaser صناعي.' },
     ],
-
     relatedServices: [
-        { slug: 'yanbu-furniture-moving', context: 'نقل عفش بينبع', priority: 1 },
-        { slug: 'yanbu-furniture-storage', context: 'تخزين عفش بينبع', priority: 2 },
-        { slug: 'yanbu-dyna', context: 'دينا نقل بينبع', priority: 3 },
-        { slug: 'yanbu-moving-out', context: 'نقل عفش خروج بينبع', priority: 4 },
-        { slug: 'yanbu-dabab', context: 'دباب نقل بينبع', priority: 5 },
-        { slug: 'yanbu-cleaning', context: 'تنظيف منازل بينبع', priority: 6 },
-        { slug: 'yanbu-tanks-cleaning', context: 'تنظيف خزانات بينبع', priority: 7 },
-        { slug: 'yanbu-sofa-cleaning', context: 'تنظيف كنب بينبع', priority: 8 },
-        { slug: 'yanbu-carpet-cleaning', context: 'تنظيف سجاد بينبع', priority: 9 },
+        { slug: 'oven-cleaning', context: 'أفران', priority: 1 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 2 },
+        { slug: 'pest-control', context: 'حشرات', priority: 3 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 4 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات', priority: 5 },
+        { slug: 'steam-cleaning', context: 'بخار', priority: 6 },
+        { slug: 'marble-polishing', context: 'رخام', priority: 7 },
     ],
 };

@@ -80,12 +80,7 @@ export const override: PageOverride = {
         { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'الرقابة على معايير السلامة في المسابح السكنية والتجارية', acronym: 'أمانة المدينة' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
@@ -122,10 +117,10 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'madinah-tanks-cleaning', context: 'تنظيف خزان مياه المنزل يضمن أن المياه المُغذية للمسبح نظيفة من المصدر.', priority: 1 },
-        { slug: 'madinah-water-leak-detection', context: 'انخفاض مستمر في مياه المسبح = تسرب خفي. اكشفه قبل أن يرتفع فاتورة المياه.', priority: 2 },
-        { slug: 'madinah-pest-control', context: 'المسابح المهملة تجذب البعوض — مكافحة وقائية تمنع التكاثر.', priority: 3 },
-        { slug: 'madinah-marble-polishing', context: 'جلي وتلميع الرخام المحيط بالمسبح — حماية من الترسبات الكلسية.', priority: 4 },
-        { slug: 'madinah-cleaning', context: 'تنظيف شامل للمنزل مع صيانة المسبح — باقة متكاملة.', priority: 5 },
+        { slug: 'tanks-cleaning', context: 'تنظيف خزان مياه المنزل يضمن أن المياه المُغذية للمسبح نظيفة من المصدر.', priority: 1 },
+        { slug: 'water-leak-detection', context: 'انخفاض مستمر في مياه المسبح = تسرب خفي. اكشفه قبل أن يرتفع فاتورة المياه.', priority: 2 },
+        { slug: 'pest-control', context: 'المسابح المهملة تجذب البعوض — مكافحة وقائية تمنع التكاثر.', priority: 3 },
+        { slug: 'marble-polishing', context: 'جلي وتلميع الرخام المحيط بالمسبح — حماية من الترسبات الكلسية.', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف شامل للمنزل مع صيانة المسبح — باقة متكاملة.', priority: 5 },
     ],
 };

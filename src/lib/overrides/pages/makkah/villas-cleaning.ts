@@ -91,7 +91,6 @@ export const override: PageOverride = {
             expert: 'أ.د. عبدالله المسند',
             quote: 'الغبار الكلسي في مكة (كربونات كالسيوم) أثقل وألصق من الغبار الرملي في نجد — يلتصق بالأسطح الملساء كالرخام والزجاج ويحتاج معالجة كيميائية خفيفة وليس مسح جاف',
             source: 'أستاذ المناخ والبيئة',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -122,12 +121,12 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'makkah-cleaning', context: 'تنظيف دوري للمنزل — أخف من تنظيف الفلل الشامل', priority: 1 },
-        { slug: 'makkah-marble-polishing', context: 'جلي وتلميع رخام تفصيلي — لرخام الصالات والمداخل', priority: 2 },
-        { slug: 'makkah-tanks-cleaning', context: 'تنظيف خزان الفيلا قبل السكن — خطوة أساسية', priority: 3 },
-        { slug: 'makkah-pest-control', context: 'رش وقائي لمحيط الفيلا والمجاري — قبل السكن', priority: 4 },
-        { slug: 'makkah-steam-cleaning', context: 'تعقيم كنب ومراتب بالبخار — مكمل لتنظيف الفيلا', priority: 5 },
-        { slug: 'makkah-glass-facades-cleaning', context: 'تنظيف واجهات زجاجية عالية — تخصصي', priority: 6 },
-        { slug: 'makkah-swimming-pool-cleaning', context: 'تنظيف مسبح الفيلا — مكمل للتنظيف الشامل', priority: 7 },
+        { slug: 'cleaning', context: 'تنظيف دوري للمنزل — أخف من تنظيف الفلل الشامل', priority: 1 },
+        { slug: 'marble-polishing', context: 'جلي وتلميع رخام تفصيلي — لرخام الصالات والمداخل', priority: 2 },
+        { slug: 'tanks-cleaning', context: 'تنظيف خزان الفيلا قبل السكن — خطوة أساسية', priority: 3 },
+        { slug: 'pest-control', context: 'رش وقائي لمحيط الفيلا والمجاري — قبل السكن', priority: 4 },
+        { slug: 'steam-cleaning', context: 'تعقيم كنب ومراتب بالبخار — مكمل لتنظيف الفيلا', priority: 5 },
+        { slug: 'glass-facades-cleaning', context: 'تنظيف واجهات زجاجية عالية — تخصصي', priority: 6 },
+        { slug: 'swimming-pool-cleaning', context: 'تنظيف مسبح الفيلا — مكمل للتنظيف الشامل', priority: 7 },
     ],
 };

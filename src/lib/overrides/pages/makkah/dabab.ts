@@ -123,12 +123,12 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'makkah-dyna', context: 'لو العفش أكثر من طاقة الدباب — دينا جامبو 5 متر مغلقة', priority: 1 },
-        { slug: 'makkah-furniture-moving', context: 'نقل أثاث متكامل مع فك وتركيب وتغليف احترافي', priority: 2 },
-        { slug: 'makkah-furniture-storage', context: 'تخزين أثاث مؤقت قبل أو بعد النقل', priority: 3 },
-        { slug: 'makkah-cleaning', context: 'تنظيف الشقة الجديدة قبل ترتيب العفش', priority: 4 },
-        { slug: 'makkah-villas-cleaning', context: 'تنظيف الفيلا بعد خروج المستأجر السابق', priority: 5 },
-        { slug: 'makkah-pest-control', context: 'رش مبيدات قبل إدخال العفش للشقة الجديدة', priority: 6 },
-        { slug: 'makkah-ac-installation', context: 'تركيب مكيفات في الشقة الجديدة مع النقل', priority: 7 },
+        { slug: 'dyna', context: 'لو العفش أكثر من طاقة الدباب — دينا جامبو 5 متر مغلقة', priority: 1 },
+        { slug: 'furniture-moving', context: 'نقل أثاث متكامل مع فك وتركيب وتغليف احترافي', priority: 2 },
+        { slug: 'furniture-storage', context: 'تخزين أثاث مؤقت قبل أو بعد النقل', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف الشقة الجديدة قبل ترتيب العفش', priority: 4 },
+        { slug: 'villas-cleaning', context: 'تنظيف الفيلا بعد خروج المستأجر السابق', priority: 5 },
+        { slug: 'pest-control', context: 'رش مبيدات قبل إدخال العفش للشقة الجديدة', priority: 6 },
+        { slug: 'ac-installation', context: 'تركيب مكيفات في الشقة الجديدة مع النقل', priority: 7 },
     ],
 };

@@ -93,13 +93,11 @@ export const override: PageOverride = {
             expert: 'أ.د. فهد الخضيري',
             quote: 'المبيدات الزراعية العشوائية لمكافحة النمل الأبيض خطر صحي مضاعف — لا تقتل المستعمرة لأن الملكة تحت الأرض، وسُميتها تبقى في التربة لسنوات. الحل الوحيد: Termiticide معتمد من SFDA',
             source: 'عالم أبحاث طبي — متخصص في السموم والمسرطنات',
-            url: 'https://x.com/DrAlkhodairy',
         },
         {
             expert: 'م. ماجد المحيميد',
             quote: 'رش الدفان قبل صب النظافة ليس ترفاً — هو خط الدفاع الأول لحماية استثمارك العقاري. تكلفته أقل من 1% من تكلفة البناء — بدونه: ضرر هيكلي بعشرات الآلاف',
             source: 'خبير جودة البناء والتشطيبات',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
 
@@ -130,12 +128,12 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'makkah-pest-control', context: 'مكافحة شاملة لكل الحشرات — خدمة مكمّلة لعلاج النمل', priority: 1 },
-        { slug: 'makkah-pesticide-spraying', context: 'رش وقائي دوري للفيلا — يمنع دخول حشرات جديدة', priority: 2 },
-        { slug: 'makkah-water-leak-detection', context: 'الرطوبة المخفية تجذب النمل الأبيض — كشف وإصلاح التسرب', priority: 3 },
-        { slug: 'makkah-water-insulation', context: 'عزل مائي يمنع وصول الرطوبة للأساسات ← يقطع طريق النمل', priority: 4 },
-        { slug: 'makkah-foam-insulation', context: 'عزل فوم حول الأساسات — حاجز فيزيائي إضافي', priority: 5 },
-        { slug: 'makkah-cleaning', context: 'تنظيف بعد أعمال الحقن — إزالة بقايا الترويبة والغبار', priority: 6 },
-        { slug: 'makkah-roof-insulation', context: 'عزل السطح يمنع تسرب المياه ← يقلل رطوبة المبنى ← يقلل جاذبية النمل', priority: 7 },
+        { slug: 'pest-control', context: 'مكافحة شاملة لكل الحشرات — خدمة مكمّلة لعلاج النمل', priority: 1 },
+        { slug: 'pesticide-spraying', context: 'رش وقائي دوري للفيلا — يمنع دخول حشرات جديدة', priority: 2 },
+        { slug: 'water-leak-detection', context: 'الرطوبة المخفية تجذب النمل الأبيض — كشف وإصلاح التسرب', priority: 3 },
+        { slug: 'water-insulation', context: 'عزل مائي يمنع وصول الرطوبة للأساسات ← يقطع طريق النمل', priority: 4 },
+        { slug: 'foam-insulation', context: 'عزل فوم حول الأساسات — حاجز فيزيائي إضافي', priority: 5 },
+        { slug: 'cleaning', context: 'تنظيف بعد أعمال الحقن — إزالة بقايا الترويبة والغبار', priority: 6 },
+        { slug: 'roof-insulation', context: 'عزل السطح يمنع تسرب المياه ← يقلل رطوبة المبنى ← يقلل جاذبية النمل', priority: 7 },
     ],
 };

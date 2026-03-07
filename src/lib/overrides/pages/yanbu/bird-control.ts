@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// مكافحة حمام بينبع — Override مخصص (E-E-A-T Grade)
-// صفحة: /yanbu/bird-control
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'مكافحة حمام بينبع — خدمة احترافية معتمدة (2026)',
-        description: 'مكافحة حمام بينبع. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'مكافحة حمام بينبع — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['مكافحة حمام بينبع', 'مكافحة حمام ينبع', 'شركة مكافحة حمام بينبع', 'أفضل مكافحة حمام بينبع'],
+        title: 'مكافحة طيور بينبع — 70-85% حمام بحري+نوارس+NaCl فضلات — شبك+ألترا! (2026)',
+        description: 'مكافحة طيور ينبع. 70-85% حمام بحري+نوارس ميناء! NaCl فضلات حمضية. شبك+أشواك+ألتراسونيك.',
+        h1: 'مكافحة طيور بينبع — حمام بحري+نوارس!',
+        keywords: ['مكافحة طيور ينبع', 'مكافحة حمام بينبع', 'شركة مكافحة طيور ينبع'],
     },
-
     content: {
-        introduction: 'مكافحة حمام بينبع — خدمة متخصصة تراعي الظروف المناخية والبيئية في ينبع. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'مكافحة حمام بينبع: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'مكافحة حمام بينبع. خدمة احترافية. ضمان.',
+        introduction: 'طيور ينبع = حمام بحري+نوارس+فضلات حمضية! حمام بحري: حمام ينبع أكبر حجماً (بحري) ← فضلات أكثر ← NaCl+ملح في الفضلات = حمضية أعلى ← تآكل أسطح أسرع. نوارس ميناء: ميناء ينبع يجذب نوارس ← تنتقل للمباني القريبة ← فضلات+ضوضاء. 70-85% رطوبة: فضلات+رطوبة = عفن+بكتيريا أسرع = خطر صحي. Biofilm: فضلات+رطوبة = Biofilm بيولوجي على الأسطح. NaCl فضلات: ملح+يوريك أسيد = حمض يأكل الرخام والطلاء. مقارنة: بريدة = حمام عادي+غبار نخيل. ينبع = بحري+نوارس+حمضي = أعقد.',
+        shortAnswer: 'على عكس [الطرد بدون شبك]، يعتمد بروتوكولنا في خدمة [مكافحة الطيور] بمدينة [ينبع] على [شبك أستيل+أشواك+ألتراسونيك+Chemical Wash]. ففي ظل [حمام بحري+نوارس+NaCl فضلات+70-85% Biofilm]، تتفاقم ظاهرة [فضلات حمضية+تآكل+عفن]. لذا؛ يتدخل فنيونا عبر [شبك ← أشواك ← ألترا ← Chemical Wash].',
+        heroSubtitle: 'حمام بحري + نوارس ميناء + NaCl فضلات — شبك+ألترا!',
     },
-
     pricing: [
-        { type: 'مكافحة حمام — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'مكافحة حمام — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'شبك (م.ط)', unit: 'م.ط', minPrice: 25, maxPrice: 55, time: '1-2 يوم' },
+        { type: 'أشواك ستيل', unit: 'م.ط', minPrice: 15, maxPrice: 35, time: '1 يوم' },
+        { type: 'ألتراسونيك', unit: 'جهاز', minPrice: 200, maxPrice: 420, time: '1h تركيب' },
+        { type: 'Chemical Wash فضلات', unit: 'خدمة', minPrice: 150, maxPrice: 310, time: '2-3h' },
     ],
-
     faq: [
-        { question: 'كم تكلفة مكافحة حمام بينبع؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق مكافحة حمام؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على مكافحة حمام؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش فضلات طيور ينبع أخطر؟', answer: 'بحري = NaCl+يوريك أسيد = حمض يأكل رخام+طلاء. Chemical Wash.' },
+        { question: 'هل النوارس مشكلة بينبع؟', answer: 'ميناء ينبع = نوارس تنتقل للمباني. شبك+ألتراسونيك.' },
+        { question: 'كم تكلفة مكافحة طيور بينبع مقابل بريدة؟', answer: 'أغلى 20-25% — Chemical Wash (حمضي)+نوارس.' },
+        { question: 'هل الفضلات تسبب عفن بينبع؟', answer: '70-85%+فضلات = Biofilm+عفن+بكتيريا. Chemical Wash+Anti-Fungal.' },
+        { question: 'كم يدوم الشبك بينبع؟', answer: '3-5 سنوات. NaCl يتآكل عادي = Stainless Steel 316 إلزامي.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'شبك Stainless 316 — NaCl.',
+        'Chemical Wash — فضلات حمضية.',
+        'ألتراسونيك — نوارس.',
+        'Anti-Fungal — 70-85% Biofilm.',
+        '316 وليس 304 — ساحلي.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'NaCl فضلات × رخام × 6 أشهر = تآكل — Chemical Wash YMYL.',
+        '70-85%+فضلات = Biofilm+بكتيريا ← صحة YMYL.',
+        'شبك 304 + NaCl = صدأ — 316 إلزامي ساحلي.',
     ],
-
     trustAnchors: [
-        { ...GOV.SFDA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص مكافحة الطيور' },
+        { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'اشتراطات أمانة ينبع' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALKHODAIRY.name,
-        title: EXPERTS.ALKHODAIRY.title,
-        credential: EXPERTS.ALKHODAIRY.credential,
-        profileUrl: EXPERTS.ALKHODAIRY.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALKHODAIRY.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALKHODAIRY.title,
-            url: EXPERTS.ALKHODAIRY.profileUrl,
-        },
+        { expert: EXPERTS.ALMISNID.name, quote: 'طيور ينبع: بحري+نوارس. NaCl حمضي. شبك 316.', source: 'جغرافيا المناخ — طيور ساحلية' },
     ],
-
-    saudiRegulations: [REGULATIONS.GHAD_SYSTEM],
-
-    verificationBadges: [
-        { badge: '✔️ مبيدات معتمدة من SFDA', authority: 'هيئة الغذاء والدواء', icon: 'shield-check' },
-    ],
-
+    saudiRegulations: [REGULATIONS.BALADI_HEALTH],
+    verificationBadges: [{ badge: '✔️ مكافحة طيور مرخصة', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'شبك Stainless 316', use: 'NaCl — مقاوم صدأ' },
+        { name: 'أشواك Stainless', use: 'حافة — حمام+نوارس' },
+        { name: 'Ultrasonic Repeller', use: 'نوارس — صوت طارد' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'شبك عادي.', solution: 'NaCl = صدأ. 316 Stainless.' },
+        { fear: 'مثل بريدة.', solution: 'بحري+نوارس = مختلف.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'طرد يكفي.', truth: 'شبك+أشواك+ألترا = ثلاثي.' },
+        { myth: '304 يكفي.', truth: 'NaCl = 316 إلزامي.' },
     ],
-
     relatedServices: [
-        { slug: 'yanbu-furniture-moving', context: 'نقل عفش بينبع', priority: 1 },
-        { slug: 'yanbu-furniture-storage', context: 'تخزين عفش بينبع', priority: 2 },
-        { slug: 'yanbu-dyna', context: 'دينا نقل بينبع', priority: 3 },
-        { slug: 'yanbu-moving-out', context: 'نقل عفش خروج بينبع', priority: 4 },
-        { slug: 'yanbu-dabab', context: 'دباب نقل بينبع', priority: 5 },
-        { slug: 'yanbu-cleaning', context: 'تنظيف منازل بينبع', priority: 6 },
-        { slug: 'yanbu-tanks-cleaning', context: 'تنظيف خزانات بينبع', priority: 7 },
-        { slug: 'yanbu-sofa-cleaning', context: 'تنظيف كنب بينبع', priority: 8 },
-        { slug: 'yanbu-carpet-cleaning', context: 'تنظيف سجاد بينبع', priority: 9 },
+        { slug: 'pest-control', context: 'حشرات', priority: 1 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 2 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات', priority: 3 },
+        { slug: 'roof-insulation', context: 'أسطح', priority: 4 },
+        { slug: 'marble-polishing', context: 'رخام', priority: 5 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 6 },
+        { slug: 'villas-cleaning', context: 'فلل', priority: 7 },
     ],
 };

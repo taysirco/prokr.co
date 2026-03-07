@@ -74,12 +74,7 @@ export const override: PageOverride = {
         { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'الرقابة على نظافة الفنادق والشقق المفروشة — حماية الزوار', acronym: 'أمانة المدينة' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALKHODAIRY.name,
-        title: EXPERTS.ALKHODAIRY.title,
-        credential: EXPERTS.ALKHODAIRY.credential,
-        profileUrl: EXPERTS.ALKHODAIRY.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALKHODAIRY,
 
     expertCitations: [
         {
@@ -116,10 +111,10 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'madinah-pest-control', context: 'مكافحة حشرات شاملة مع التركيز على بق الفراش.', priority: 1 },
-        { slug: 'madinah-pesticide-spraying', context: 'رش وقائي بعد معالجة البق — حماية ضد عودة الإصابة.', priority: 2 },
-        { slug: 'madinah-steam-cleaning', context: 'تعقيم مراتب وكنب بالبخار — خطوة إضافية بعد المكافحة.', priority: 3 },
-        { slug: 'madinah-sofa-cleaning', context: 'غسيل عميق للكنب بعد القضاء على البق — إزالة فضلات وبقع.', priority: 4 },
-        { slug: 'madinah-furniture-moving', context: 'نقل أثاث مع فحص بق — حماية منزلك الجديد من الإصابة.', priority: 5 },
+        { slug: 'pest-control', context: 'مكافحة حشرات شاملة مع التركيز على بق الفراش.', priority: 1 },
+        { slug: 'pesticide-spraying', context: 'رش وقائي بعد معالجة البق — حماية ضد عودة الإصابة.', priority: 2 },
+        { slug: 'steam-cleaning', context: 'تعقيم مراتب وكنب بالبخار — خطوة إضافية بعد المكافحة.', priority: 3 },
+        { slug: 'sofa-cleaning', context: 'غسيل عميق للكنب بعد القضاء على البق — إزالة فضلات وبقع.', priority: 4 },
+        { slug: 'furniture-moving', context: 'نقل أثاث مع فحص بق — حماية منزلك الجديد من الإصابة.', priority: 5 },
     ],
 };

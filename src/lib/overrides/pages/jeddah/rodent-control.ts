@@ -84,7 +84,6 @@ export const override: PageOverride = {
             expert: 'أ.د. فهد الخضيري',
             quote: 'السم المكشوف في المنزل حل خطير — يسمم الأطفال والحيوانات قبل الفئران. المحطات المغلقة (Tamper-Resistant) هي الحل الآمن الوحيد',
             source: 'عالم أبحاث طبي — سموم ومسرطنات',
-            url: 'https://x.com/DrAlkhodairy',
         },
     ],
 
@@ -111,14 +110,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'jeddah-pest-control', context: 'الفئران جزء من مكافحة شاملة — حشرات + قوارض معاً', priority: 1 },
-        { slug: 'jeddah-cockroach-control', context: 'الصراصير والفئران تتشارك المجاري — مكافحة مزدوجة', priority: 2 },
-        { slug: 'jeddah-snakes-control', context: 'الثعابين تتبع الفئران — بدون فئران لا ثعابين', priority: 3 },
-        { slug: 'jeddah-sewage-unblocking', context: 'المجاري = ممرات الفئران النرويجية — تسليك يقطع الطريق', priority: 4 },
-        { slug: 'jeddah-sanitization', context: 'تعقيم بعد إبادة الفئران — البول ينقل Leptospira', priority: 5 },
-        { slug: 'jeddah-cleaning', context: 'تنظيف شامل يزيل آثار الفئران ومصادر الجذب', priority: 6 },
-        { slug: 'jeddah-kitchen-cleaning', context: 'تنظيف المطبخ يزيل فتات الطعام — المصدر الرئيسي', priority: 7 },
-        { slug: 'jeddah-insects-spraying', context: 'رش حشرات شامل مع مكافحة الفئران = حماية متكاملة', priority: 8 },
-        { slug: 'jeddah-bird-control', context: 'طعام الحمام المكشوف يجذب فئران — مكافحة مترابطة', priority: 9 },
+        { slug: 'pest-control', context: 'الفئران جزء من مكافحة شاملة — حشرات + قوارض معاً', priority: 1 },
+        { slug: 'cockroach-control', context: 'الصراصير والفئران تتشارك المجاري — مكافحة مزدوجة', priority: 2 },
+        { slug: 'snakes-control', context: 'الثعابين تتبع الفئران — بدون فئران لا ثعابين', priority: 3 },
+        { slug: 'sewage-unblocking', context: 'المجاري = ممرات الفئران النرويجية — تسليك يقطع الطريق', priority: 4 },
+        { slug: 'sanitization', context: 'تعقيم بعد إبادة الفئران — البول ينقل Leptospira', priority: 5 },
+        { slug: 'cleaning', context: 'تنظيف شامل يزيل آثار الفئران ومصادر الجذب', priority: 6 },
+        { slug: 'kitchen-cleaning', context: 'تنظيف المطبخ يزيل فتات الطعام — المصدر الرئيسي', priority: 7 },
+        { slug: 'insects-spraying', context: 'رش حشرات شامل مع مكافحة الفئران = حماية متكاملة', priority: 8 },
+        { slug: 'bird-control', context: 'طعام الحمام المكشوف يجذب فئران — مكافحة مترابطة', priority: 9 },
     ],
 };

@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تخزين عفش بخميس مشيط — Override مخصص (E-E-A-T Grade)
-// صفحة: /khamis-mushait/furniture-storage
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تخزين عفش بخميس مشيط — خدمة احترافية معتمدة (2026)',
-        description: 'تخزين عفش بخميس مشيط. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تخزين عفش بخميس مشيط — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تخزين عفش بخميس مشيط', 'تخزين عفش خميس مشيط', 'شركة تخزين عفش بخميس مشيط', 'أفضل تخزين عفش بخميس مشيط'],
+        title: 'تخزين أثاث بخميس مشيط — Dehumidifier 24/7 إلزامي! 60-85% عفن+عث — أغلى تخزين (2026)',
+        description: 'تخزين أثاث خميس مشيط. Dehumidifier 24/7! 60-85% عفن+عث. Anti-Fungal+Anti-Mite. أغلى تخزين بالمنطقة.',
+        h1: 'تخزين أثاث بخميس مشيط — Dehumidifier إلزامي!',
+        keywords: ['تخزين أثاث خميس مشيط', 'تخزين عفش بخميس مشيط', 'شركة تخزين أثاث خميس مشيط'],
     },
-
     content: {
-        introduction: 'تخزين عفش بخميس مشيط — خدمة متخصصة تراعي الظروف المناخية والبيئية في خميس مشيط. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تخزين عفش بخميس مشيط: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تخزين عفش بخميس مشيط. خدمة احترافية. ضمان.',
+        introduction: 'تخزين خميس مشيط = من أغلى التخزين بالمملكة! لأن 60-85% رطوبة + ضباب 200 يوم = Dehumidifier يعمل 24/7 (بدونه = عفن خلال أسبوع). Anti-Fungal رش دوري كل شهرين. Anti-Mite — عث يستعمر حشوات الأثاث المنجّد الرطبة. Silica Gel في كل صندوق. الأمطار الموسمية تزيد رطوبة المستودع — عزل مائي إلزامي. تكثّف على جدران المستودع شتاءً (0-5°م) = رطوبة إضافية. مقارنة: عنيزة = لا Dehumidifier + لا Anti-Fungal + لا Anti-Mite = أرخص 40-50%! الخلاصة: بدون هذه الاحتياطات = أثاث يعفن خلال أسابيع.',
+        shortAnswer: 'على عكس [المستودع بدون تحكم بالرطوبة]، يعتمد بروتوكولنا في خدمة [تخزين الأثاث] بمدينة [خميس مشيط] على [Dehumidifier 24/7+Anti-Fungal+Anti-Mite+عزل مائي]. ففي ظل [60-85%+ضباب 200 يوم+أمطار+تكثّف شتوي]، تتفاقم ظاهرة [عفن+عث+انتفاخ+تلف]. لذا؛ يتدخل فريقنا عبر [تجفيف دائم ← تعقيم ← عزل ← Silica].',
+        heroSubtitle: 'Dehumidifier 24/7 + Anti-Fungal/Mite — أغلى لكن ضروري!',
     },
-
     pricing: [
-        { type: 'تخزين عفش — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تخزين عفش — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'غرفة صغيرة (3×3)', unit: 'شهر', minPrice: 180, maxPrice: 380, time: 'شهري' },
+        { type: 'غرفة كبيرة (4×5)', unit: 'شهر', minPrice: 320, maxPrice: 650, time: 'شهري' },
+        { type: 'سنوي (خصم 15%)', unit: 'سنة', minPrice: 1900, maxPrice: 3800, time: 'سنوي' },
+        { type: 'عزل مائي + إحكام', unit: 'إضافي', minPrice: 200, maxPrice: 400, time: 'لمرة واحدة' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تخزين عفش بخميس مشيط؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تخزين عفش؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تخزين عفش؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'كم يكلف تخزين بخميس مقارنة بعنيزة؟', answer: 'أغلى 40-50%! Dehumidifier+Anti-Fungal+Anti-Mite = تكلفة إضافية. 180-650 مقابل 110-420.' },
+        { question: 'هل Dehumidifier ضروري بالمستودع بخميس؟', answer: 'إلزامي! بدونه = عفن خلال أسبوع. 60-85% = لا خيار.' },
+        { question: 'كيف أحمي الأثاث من العفن بالتخزين بخميس؟', answer: 'Dehumidifier 24/7 + Anti-Fungal كل شهرين + Silica Gel في كل صندوق.' },
+        { question: 'هل المستودع يحتاج عزل مائي بخميس؟', answer: 'إلزامي! أمطار موسمية + تكثّف = رطوبة إضافية تُتلف الأثاث.' },
+        { question: 'متى أفحص الأثاث المخزّن بخميس مشيط؟', answer: 'كل شهرين Anti-Fungal+Anti-Mite. فحص بصري شهري. لا تترك بدون Dehumidifier.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Dehumidifier 24/7 — بدونه عفن أسبوع.',
+        'Anti-Fungal كل شهرين — ضباب+رطوبة.',
+        'Anti-Mite — عث في حشوات رطبة.',
+        'عزل مائي — أمطار+تكثّف.',
+        'Silica Gel في كل صندوق — حماية إضافية.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'مستودع بدون Dehumidifier + 60-85% = عفن أسود خلال أسبوع — خسارة كاملة.',
+        'بدون عزل مائي + أمطار = تسرب يُتلف أثاث بآلاف الريالات.',
+        'بدون Anti-Mite = عث يستعمر كل حشوة — رائحة+حساسية.',
     ],
-
     trustAnchors: [
-        { ...GOV.TGA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص المستودعات' },
+        { entity: AMANA.ASIR.entity, url: AMANA.ASIR.url, role: 'اشتراطات أمانة عسير' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALZUWAYED.name,
-        title: EXPERTS.ALZUWAYED.title,
-        credential: EXPERTS.ALZUWAYED.credential,
-        profileUrl: EXPERTS.ALZUWAYED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
-        {
-            expert: EXPERTS.ALZUWAYED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALZUWAYED.title,
-            url: EXPERTS.ALZUWAYED.profileUrl,
-        },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'تخزين خميس: Dehumidifier 24/7 إلزامي. 60-85% = عفن أسبوع بدونه.', source: 'نصائح هندسية — تخزين جبلي' },
     ],
-
-    saudiRegulations: [REGULATIONS.TGA_LICENSE],
-
-    verificationBadges: [
-        { badge: '✔️ شركة نقل مرخصة من هيئة النقل TGA', authority: 'الهيئة العامة للنقل', icon: 'shield-check' },
-    ],
-
+    saudiRegulations: [REGULATIONS.BALADI_HEALTH],
+    verificationBadges: [{ badge: '✔️ مستودع مرخص', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Dehumidifier صناعي 24/7', use: 'تحكم رطوبة — بدونه عفن أسبوع' },
+        { name: 'Anti-Fungal+Anti-Mite', use: 'حماية من عفن وعث' },
+        { name: 'عزل مائي PU', use: 'حماية من أمطار+تكثّف' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'غالي.', solution: 'بدون Dehumidifier = خسارة أثاث 10000+ ريال. أرخص بكثير.' },
+        { fear: 'مثل الباحة.', solution: 'متشابه. نفس الفيزياء الجبلية.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'مستودع عادي يكفي.', truth: '60-85% = عفن أسبوع. Dehumidifier إلزامي.' },
+        { myth: 'تخزين خميس مثل عنيزة.', truth: 'أغلى 40-50%. كل أداة حماية مطلوبة.' },
     ],
-
     relatedServices: [
-        { slug: 'khamis-mushait-furniture-moving', context: 'نقل عفش بخميس مشيط', priority: 1 },
-        { slug: 'khamis-mushait-dyna', context: 'دينا نقل بخميس مشيط', priority: 2 },
-        { slug: 'khamis-mushait-moving-out', context: 'نقل عفش خروج بخميس مشيط', priority: 3 },
-        { slug: 'khamis-mushait-dabab', context: 'دباب نقل بخميس مشيط', priority: 4 },
-        { slug: 'khamis-mushait-cleaning', context: 'تنظيف منازل بخميس مشيط', priority: 5 },
-        { slug: 'khamis-mushait-tanks-cleaning', context: 'تنظيف خزانات بخميس مشيط', priority: 6 },
-        { slug: 'khamis-mushait-sofa-cleaning', context: 'تنظيف كنب بخميس مشيط', priority: 7 },
-        { slug: 'khamis-mushait-carpet-cleaning', context: 'تنظيف سجاد بخميس مشيط', priority: 8 },
-        { slug: 'khamis-mushait-steam-cleaning', context: 'تنظيف بالبخار بخميس مشيط', priority: 9 },
+        { slug: 'furniture-moving', context: 'نقل عفش', priority: 1 },
+        { slug: 'furniture-cleaning', context: 'تنظيف أثاث', priority: 2 },
+        { slug: 'pest-control', context: 'حشرات — عث', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 4 },
+        { slug: 'dabab', context: 'دباب', priority: 5 },
+        { slug: 'carpet-cleaning', context: 'سجاد', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 7 },
     ],
 };

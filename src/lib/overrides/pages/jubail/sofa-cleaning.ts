@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف كنب بالجبيل — Override مخصص (E-E-A-T Grade)
-// صفحة: /jubail/sofa-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف كنب بالجبيل — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف كنب بالجبيل. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف كنب بالجبيل — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف كنب بالجبيل', 'تنظيف كنب الجبيل', 'شركة تنظيف كنب بالجبيل', 'أفضل تنظيف كنب بالجبيل'],
+        title: 'تنظيف كنب بالجبيل — بخور+VOC بلمرة مُركّبة + 85-98% عفن+عث أقصى + NaCl تصلب (2026)',
+        description: 'تنظيف كنب الجبيل. بخور+VOC بلمرة مُركّبة. 85-98% عفن حشوة + عث أقصى. NaCl Stiffening. تجفيف أبطأ. Enzymatic + Anti-Fungal + Anti-Mite + Turbo.',
+        h1: 'تنظيف كنب بالجبيل — بخور+بتروكيماويات وعفن وعث أقصى',
+        keywords: ['تنظيف كنب الجبيل', 'غسيل كنب بالجبيل', 'شركة تنظيف كنب بالجبيل'],
     },
-
     content: {
-        introduction: 'تنظيف كنب بالجبيل — خدمة متخصصة تراعي الظروف المناخية والبيئية في الجبيل. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف كنب بالجبيل: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف كنب بالجبيل. خدمة احترافية. ضمان.',
+        introduction: 'الكنب في الجبيل = أقسى بيئة كنب في المملكة. الأول — بخور+VOC بلمرة: Olibanum + VOC = أقسى Bonds في المملكة. Enzymatic أقصى. الثاني — 85-98% عفن حشوة: عفن أسبوع في الحشوة. Aspergillus أقصى. Anti-Fungal + تجفيف Turbo. الثالث — عث أقصى: 85-98% > 50% = أقصى Der p 1. بخار + Anti-Mite. الرابع — NaCl Stiffening: ألياف + NaCl = تصلب. RO شطف. الخامس — تجفيف: 98% = 6-10 ساعات. أبطأ في المملكة. Turbo + Dehumidifier.',
+        shortAnswer: 'على عكس [شامبو] الذي لا يُكسر بلمرة VOC+بخور ولا يقتل عث 98%، يعتمد بروتوكولنا في خدمة [تنظيف الكنب] بمدينة [الجبيل] على [Enzymatic + Anti-Fungal + Anti-Mite + Turbo + RO]. ففي ظل [بخور+VOC + 85-98% + عث + NaCl]، تتفاقم ظاهرة [بلمرة + عفن + عث + تصلب]. لذا؛ يتدخل خبراؤنا عبر [بروتوكول كنب صناعي-ساحلي].',
+        heroSubtitle: 'بخور+VOC أقسى بلمرة + عفن+عث أقصى + NaCl تصلب + أبطأ تجفيف',
     },
-
     pricing: [
-        { type: 'تنظيف كنب — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف كنب — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'كنب (3-5 مقاعد)', unit: 'طقم', minPrice: 190, maxPrice: 380, time: '3-4 ساعات' },
+        { type: '+ Anti-Mite + عفن', unit: 'طقم', minPrice: 250, maxPrice: 470, time: '3-5 ساعات' },
+        { type: 'جلد + Conditioner + Marine', unit: 'طقم', minPrice: 210, maxPrice: 420, time: '2-3 ساعات' },
+        { type: 'ربع سنوي', unit: 'سنة', minPrice: 580, maxPrice: 1150, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف كنب بالجبيل؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف كنب؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف كنب؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'بلمرة مُركّبة — أقسى؟', answer: 'بخور Ester + VOC = Bonds مزدوجة. أقسى في المملكة. Enzymatic تركيز أقصى + 35-45 دقيقة.' },
+        { question: 'عث أقصى — أسوأ مدينة؟', answer: '98% = أقصى Der p 1. بخار 100°م + Anti-Mite كل ربع. حفر الباطن 10-15%: لا عث (ميزة!).' },
+        { question: 'تجفيف — أبطأ كنب؟', answer: 'أبطأ في المملكة — 6-10 ساعات. بدون Turbo = عفن حشوة. Turbo + Dehumidifier.' },
+        { question: 'ربع سنوي — ليش؟', answer: 'عفن أسبوعي + عث شهري + بلمرة + NaCl. ربع سنوي = الحد.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Enzymatic أقصى — بلمرة VOC+بخور.',
+        'بخار 100°م + Anti-Mite — عث أقصى.',
+        'Anti-Fungal قبل تجفيف — عفن أثناء 6-10 ساعات.',
+        'RO شطف — NaCl تصلب.',
+        'Turbo + Dehumidifier — 98% = إلزامي.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'بلمرة VOC+بخور × 6 أشهر = طبقة دائمة.',
+        '98% + حشوة = عفن+عث أقصى = حساسية شديدة.',
+        'تجفيف بدون Turbo = عفن حشوة 24 ساعة.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص التنظيف' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات النظافة بالشرقية' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'كنب الجبيل = الأقسى: بخور+VOC + 98% عفن+عث أقصى + NaCl. Enzymatic أقصى + Anti-Mite + Turbo.', source: 'نصائح هندسية — كنب صناعي-ساحلي' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف كنب مرخص', authority: 'منصة بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Enzymatic أقصى', use: 'بلمرة VOC+بخور' },
+        { name: 'بخار 100°م', use: 'عث أقصى' },
+        { name: 'Anti-Fungal', use: '98% عفن حشوة' },
+        { name: 'Turbo + Dehumidifier', use: '98% تجفيف' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'مثل الخبر.', solution: 'VOC بلمرة + 98%>95% + سخام. أقسى.' },
+        { fear: 'شامبو.', solution: 'لا يُكسر VOC+بخور Bonds.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'بخار لعفن.', truth: 'بخار = عث + تعقيم + NaCl. ثلاثي.' },
+        { myth: 'نصف سنوي.', truth: 'عفن أسبوعي + عث شهري. ربع سنوي.' },
     ],
-
     relatedServices: [
-        { slug: 'jubail-furniture-moving', context: 'نقل عفش بالجبيل', priority: 1 },
-        { slug: 'jubail-furniture-storage', context: 'تخزين عفش بالجبيل', priority: 2 },
-        { slug: 'jubail-dyna', context: 'دينا نقل بالجبيل', priority: 3 },
-        { slug: 'jubail-moving-out', context: 'نقل عفش خروج بالجبيل', priority: 4 },
-        { slug: 'jubail-dabab', context: 'دباب نقل بالجبيل', priority: 5 },
-        { slug: 'jubail-cleaning', context: 'تنظيف منازل بالجبيل', priority: 6 },
-        { slug: 'jubail-tanks-cleaning', context: 'تنظيف خزانات بالجبيل', priority: 7 },
-        { slug: 'jubail-carpet-cleaning', context: 'تنظيف سجاد بالجبيل', priority: 8 },
-        { slug: 'jubail-steam-cleaning', context: 'تنظيف بالبخار بالجبيل', priority: 9 },
+        { slug: 'carpet-cleaning', context: 'سجاد — NaCl+VOC', priority: 1 },
+        { slug: 'councils-cleaning', context: 'مجالس — بخور', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 3 },
+        { slug: 'steam-cleaning', context: 'بخار', priority: 4 },
+        { slug: 'furniture-cleaning', context: 'أثاث', priority: 5 },
+        { slug: 'pest-control', context: 'حشرات', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 7 },
     ],
 };

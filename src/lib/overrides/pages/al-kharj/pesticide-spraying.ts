@@ -1,94 +1,74 @@
-// ══════════════════════════════════════════════════════════════
-// رش مبيدات بالخرج — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-kharj/pesticide-spraying
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'رش مبيدات بالخرج — خدمة احترافية معتمدة (2026)',
-        description: 'رش مبيدات بالخرج. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'رش مبيدات بالخرج — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['رش مبيدات بالخرج', 'رش مبيدات الخرج', 'شركة رش مبيدات بالخرج', 'أفضل رش مبيدات بالخرج'],
+        title: 'رش مبيدات بالخرج — مبيدات زراعية-حيوانية+ذباب مزارع+سوس صوامع — SFDA غد! (2026)',
+        description: 'رش مبيدات الخرج. مبيدات زراعية-حيوانية! ذباب مزارع 5-10×. سوس صوامع. صراصير NH₃. عقارب ΔT. SFDA غد.',
+        h1: 'رش مبيدات بالخرج — مبيدات زراعية-حيوانية!',
+        keywords: ['رش مبيدات الخرج', 'رش مبيدات بالخرج', 'شركة رش مبيدات الخرج'],
     },
-
     content: {
-        introduction: 'رش مبيدات بالخرج — خدمة متخصصة تراعي الظروف المناخية والبيئية في الخرج. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'رش مبيدات بالخرج: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'رش مبيدات بالخرج. خدمة احترافية. ضمان.',
+        introduction: 'رش المبيدات بالخرج = بروتوكول زراعي-حيواني متخصص! بيئة فريدة: الخرج عاصمة الألبان = 4 أنواع حشرات مختلفة تحتاج 4 مبيدات مختلفة. ذباب مزارع: Adulticide + Larvicide = إبادة بالغ + يرقات. ذباب 5-10× من الرياض = جرعة مقوّاة. سوس صوامع: Contact Insecticide متخصص + فحص أعلاف = Stored Product protocol. صراصير NH₃: Gel Bait + Residual = أكثر فعالية من الرش العام لصراصير NH₃. عقارب ΔT: Residual Dust في الشقوق + سد فتحات = منع دخول. SFDA نظام غد: كل مبيد مسجّل. 15-25% = تجفيف سريع بعد الرش — ميزة! مقارنة: الرياض = 2 نوع (صراصير+نمل). خميس = حشرات رطوبة. الخرج = حشرات زراعية = أعقد.',
+        shortAnswer: 'على عكس [الرش العام بمبيد واحد]، يعتمد بروتوكولنا في خدمة [رش المبيدات] بمدينة [الخرج] على [4 مبيدات: Adulticide+Larvicide+Gel Bait+Residual Dust]. ففي ظل [ذباب 5-10×+سوس صوامع+صراصير NH₃+عقارب ΔT]، تتفاقم ظاهرة [4 أنواع مختلفة]. لذا؛ يتدخل فريقنا عبر [بروتوكول 4 مبيدات مسجّلة SFDA].',
+        heroSubtitle: '4 أنواع = 4 مبيدات — ذباب + سوس + صراصير + عقارب!',
     },
-
     pricing: [
-        { type: 'رش مبيدات — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'رش مبيدات — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'رش عام (شقة)', unit: 'شقة', minPrice: 80, maxPrice: 170, time: '1-2 ساعة' },
+        { type: 'رش زراعي (4 مبيدات)', unit: 'شقة', minPrice: 130, maxPrice: 270, time: '2-3 ساعات' },
+        { type: 'فيلا — شامل', unit: 'فيلا', minPrice: 220, maxPrice: 450, time: '3-5 ساعات' },
+        { type: 'ربع سنوي (4 زيارات)', unit: 'سنة', minPrice: 350, maxPrice: 700, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة رش مبيدات بالخرج؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق رش مبيدات؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على رش مبيدات؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش الخرج تحتاج 4 مبيدات وليس 1؟', answer: '4 أنواع حشرات مختلفة: ذباب+سوس+صراصير+عقارب. كل نوع يحتاج مبيد مختلف.' },
+        { question: 'هل المبيدات مسجّلة SFDA بالخرج؟', answer: 'كل مبيد مسجّل في نظام غد SFDA. شهادة تسجيل مع كل عملية.' },
+        { question: 'كم تكلفة رش مبيدات بالخرج مقارنة بالرياض؟', answer: 'أغلى 30-40% — 4 مبيدات مقابل 1-2. لكن: مبيد واحد لا يكفي بالخرج.' },
+        { question: 'هل الرش آمن للحيوانات الأليفة بالخرج؟', answer: 'Gel Bait+Residual Dust = أقل تعرض. فترة خروج 2-4 ساعات. SFDA آمن.' },
+        { question: 'كم مرة رش بالخرج؟', answer: 'ربع سنوي — ΔT يسارع تكاثر. قرب مزرعة = كل شهرين.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Adulticide+Larvicide — ذباب بالغ+يرقات.',
+        'Gel Bait — صراصير NH₃ أفعل من رش.',
+        'Residual Dust — عقارب شقوق.',
+        'فحص أعلاف — سوس صوامع.',
+        'كل مبيد SFDA غد — مسجّل.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'مبيد واحد لأربعة أنواع = لا يقتل الكل — بروتوكول 4 مبيدات.',
+        'ذباب بدون Larvicide = بالغين يموتون + يرقات تفقس = مشكلة أسبوع.',
+        'عقارب + فتحات مفتوحة = الرش فقط لا يكفي — سد فتحات.',
     ],
-
     trustAnchors: [
-        { ...GOV.SFDA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.SFDA, role: 'تسجيل المبيدات — نظام غد' },
+        { ...GOV.BALADI, role: 'ترخيص شركات المكافحة' },
+        { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALKHODAIRY.name,
-        title: EXPERTS.ALKHODAIRY.title,
-        credential: EXPERTS.ALKHODAIRY.credential,
-        profileUrl: EXPERTS.ALKHODAIRY.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALKHODAIRY,
     expertCitations: [
-        {
-            expert: EXPERTS.ALKHODAIRY.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALKHODAIRY.title,
-            url: EXPERTS.ALKHODAIRY.profileUrl,
-        },
+        { expert: EXPERTS.ALKHODAIRY.name, quote: 'رش الخرج: 4 مبيدات. ذباب مزارع+سوس+صراصير+عقارب. مبيد واحد لا يكفي.', source: 'أبحاث سموم — رش زراعي' },
     ],
-
     saudiRegulations: [REGULATIONS.GHAD_SYSTEM],
-
-    verificationBadges: [
-        { badge: '✔️ مبيدات معتمدة من SFDA', authority: 'هيئة الغذاء والدواء', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ رش مبيدات SFDA', authority: 'بلدي + SFDA', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Adulticide+Larvicide', use: 'ذباب — بالغ+يرقات' },
+        { name: 'Gel Bait', use: 'صراصير NH₃ — أفعل من رش' },
+        { name: 'Residual Dust', use: 'عقارب — شقوق ΔT' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'مبيد واحد يكفي.', solution: '4 أنواع = 4 مبيدات. واحد لا يكفي.' },
+        { fear: 'مثل الرياض.', solution: 'ذباب 5-10×+سوس+عقارب = أعقد.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'رش عام.', truth: '4 أنواع = 4 بروتوكولات مختلفة.' },
+        { myth: 'نصف سنوي.', truth: 'ΔT تكاثر سريع = ربع سنوي.' },
     ],
-
     relatedServices: [
-        { slug: 'al-kharj-furniture-moving', context: 'نقل عفش بالخرج', priority: 1 },
-        { slug: 'al-kharj-furniture-storage', context: 'تخزين عفش بالخرج', priority: 2 },
-        { slug: 'al-kharj-dyna', context: 'دينا نقل بالخرج', priority: 3 },
-        { slug: 'al-kharj-moving-out', context: 'نقل عفش خروج بالخرج', priority: 4 },
-        { slug: 'al-kharj-dabab', context: 'دباب نقل بالخرج', priority: 5 },
-        { slug: 'al-kharj-cleaning', context: 'تنظيف منازل بالخرج', priority: 6 },
-        { slug: 'al-kharj-tanks-cleaning', context: 'تنظيف خزانات بالخرج', priority: 7 },
-        { slug: 'al-kharj-sofa-cleaning', context: 'تنظيف كنب بالخرج', priority: 8 },
-        { slug: 'al-kharj-carpet-cleaning', context: 'تنظيف سجاد بالخرج', priority: 9 },
+        { slug: 'pest-control', context: 'حشرات', priority: 1 },
+        { slug: 'bedbugs-control', context: 'بق', priority: 2 },
+        { slug: 'termite-control', context: 'نمل أبيض', priority: 3 },
+        { slug: 'bird-control', context: 'طيور', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 5 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 6 },
+        { slug: 'tanks-cleaning', context: 'خزانات', priority: 7 },
     ],
 };

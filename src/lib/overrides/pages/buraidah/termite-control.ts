@@ -1,94 +1,75 @@
-// ══════════════════════════════════════════════════════════════
-// مكافحة نمل أبيض ببريدة — Override مخصص (E-E-A-T Grade)
-// صفحة: /buraidah/termite-control
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'مكافحة نمل أبيض ببريدة — خدمة احترافية معتمدة (2026)',
-        description: 'مكافحة نمل أبيض ببريدة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'مكافحة نمل أبيض ببريدة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['مكافحة نمل أبيض ببريدة', 'مكافحة نمل أبيض بريدة', 'شركة مكافحة نمل أبيض ببريدة', 'أفضل مكافحة نمل أبيض ببريدة'],
+        title: 'مكافحة نمل أبيض ببريدة — ΔT 45°م تكاثر+CaCO₃ أساسات+نخيل 8M سيللوز — Termidor! (2026)',
+        description: 'مكافحة نمل أبيض بريدة. ΔT 45°م تكاثر سريع! CaCO₃ 600ppm أساسات. نخيل 8M سيللوز. Termidor+حقن+SBC.',
+        h1: 'مكافحة نمل أبيض ببريدة — ΔT تكاثر+نخيل 8M!',
+        keywords: ['مكافحة نمل أبيض بريدة', 'مكافحة أرضة ببريدة', 'شركة مكافحة نمل أبيض بريدة'],
     },
-
     content: {
-        introduction: 'مكافحة نمل أبيض ببريدة — خدمة متخصصة تراعي الظروف المناخية والبيئية في بريدة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'مكافحة نمل أبيض ببريدة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'مكافحة نمل أبيض ببريدة. خدمة احترافية. ضمان.',
+        introduction: 'نمل أبيض بريدة = خطير بسبب الحرارة والنخيل! ΔT 45°م تكاثر: صيف 48°م = نمل أبيض ينشط ويتكاثر أسرع 2× من المدن المعتدلة. مستعمرات أكبر. Termidor SC (Fipronil) — يقتل المستعمرة كاملة. CaCO₃ 600ppm أساسات: رطوبة كلسية حول الأساسات = بيئة رطبة تجذب النمل الأبيض. حقن أساسات + معالجة رطوبة. نخيل 8M سيللوز: 8M نخلة = جذوع+سعف+جذور = أكبر مصدر سيللوز بالمملكة = طعام وفير = مستعمرات ضخمة. معالجة حول النخيل. Nafud SiO₂: لا يأثر مباشرة على النمل. 10-20% = تربة جافة لكن رطوبة أساسات كلسية = فخ! SBC يشترط معالجة قبل البناء.',
+        shortAnswer: 'على عكس [الرش السطحي الذي لا يصل المستعمرة]، يعتمد بروتوكولنا في خدمة [مكافحة النمل الأبيض] بمدينة [بريدة] على [Termidor SC+حقن أساسات+معالجة نخيل+SBC]. ففي ظل [ΔT تكاثر 2×+CaCO₃ رطوبة أساسات+نخيل 8M سيللوز]، تتفاقم ظاهرة [مستعمرات ضخمة+أساسات مهددة]. لذا؛ يتدخل فنيونا عبر [Termidor ← حقن ← معالجة نخيل] — SBC!',
+        heroSubtitle: 'ΔT تكاثر 2× + نخيل 8M سيللوز — Termidor+حقن! SBC!',
     },
-
     pricing: [
-        { type: 'مكافحة نمل أبيض — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'مكافحة نمل أبيض — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'فحص + شقة', unit: 'شقة', minPrice: 200, maxPrice: 420, time: '2-3h' },
+        { type: 'فيلا (حقن أساسات)', unit: 'فيلا', minPrice: 500, maxPrice: 1000, time: '1-2 يوم' },
+        { type: 'معالجة قبل بناء (SBC)', unit: 'م²', minPrice: 15, maxPrice: 35, time: '1-3 أيام' },
+        { type: 'ضمان 5 سنوات', unit: 'باقة', minPrice: 800, maxPrice: 1600, time: 'فحص سنوي' },
     ],
-
     faq: [
-        { question: 'كم تكلفة مكافحة نمل أبيض ببريدة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق مكافحة نمل أبيض؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على مكافحة نمل أبيض؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش نمل أبيض بريدة أخطر؟', answer: 'ΔT 45°م = تكاثر 2×. نخيل 8M = سيللوز وفير. مستعمرات ضخمة.' },
+        { question: 'كيف CaCO₃ يجذب النمل الأبيض ببريدة؟', answer: '600ppm رطوبة كلسية حول أساسات = بيئة رطبة تجذب. حقن+معالجة.' },
+        { question: 'كم تكلفة مكافحة نمل أبيض ببريدة مقارنة بخميس؟', answer: 'متقاربة. لكن: نخيل 8M = نطاق أوسع. خميس: رطوبة+عفن خشب.' },
+        { question: 'هل SBC يشترط معالجة نمل أبيض ببريدة؟', answer: 'نعم — SBC يشترط معالجة قبل البناء. غرامة بدونها.' },
+        { question: 'كم يدوم Termidor ببريدة؟', answer: '5-8 سنوات. ΔT+جفاف = يدوم أطول (لا مطر يغسله). فحص سنوي.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Termidor SC — يقتل المستعمرة كاملة.',
+        'حقن أساسات — CaCO₃ رطوبة.',
+        'معالجة نخيل — 8M سيللوز.',
+        'SBC قبل بناء — إلزامي.',
+        'لا مطر = يدوم أطول — ميزة.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'ΔT × صيف = مستعمرة تتضاعف ← هيكل مبنى يتلف — YMYL.',
+        'نخيل 8M بدون معالجة = سيللوز وفير ← ينتقل للمبنى.',
+        'بدون حقن أساسات = CaCO₃ رطوبة تجذب ← اختراق.',
     ],
-
     trustAnchors: [
-        { ...GOV.SFDA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.SBC, role: 'كود البناء — معالجة قبل البناء' },
+        { ...GOV.BALADI, role: 'ترخيص شركات المكافحة' },
+        { ...GOV.SCE, role: 'فاحص مباني — تلف هيكلي' },
+        { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALKHODAIRY.name,
-        title: EXPERTS.ALKHODAIRY.title,
-        credential: EXPERTS.ALKHODAIRY.credential,
-        profileUrl: EXPERTS.ALKHODAIRY.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALJUND,
     expertCitations: [
-        {
-            expert: EXPERTS.ALKHODAIRY.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALKHODAIRY.title,
-            url: EXPERTS.ALKHODAIRY.profileUrl,
-        },
+        { expert: EXPERTS.ALJUND.name, quote: 'نمل أبيض بريدة: ΔT+نخيل 8M = ضخم. Termidor+حقن أساسات. SBC.', source: 'موسوعة أخطاء — نمل أبيض القصيم' },
     ],
-
-    saudiRegulations: [REGULATIONS.GHAD_SYSTEM],
-
-    verificationBadges: [
-        { badge: '✔️ مبيدات معتمدة من SFDA', authority: 'هيئة الغذاء والدواء', icon: 'shield-check' },
-    ],
-
+    saudiRegulations: [REGULATIONS.SBC_601, REGULATIONS.GHAD_SYSTEM],
+    verificationBadges: [{ badge: '✔️ مكافحة نمل أبيض مرخصة', authority: 'بلدي + SBC + SFDA', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Termidor SC (Fipronil)', use: 'يقتل مستعمرة كاملة — 5-8 سنوات' },
+        { name: 'حقن أساسات', use: 'CaCO₃ رطوبة — حاجز' },
+        { name: 'كاشف حرارة/صوت', use: 'يكشف نشاط داخل الخشب' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'رش سطحي يكفي.', solution: 'المستعمرة تحت الأرض. Termidor+حقن.' },
+        { fear: 'مثل خميس.', solution: 'نخيل 8M = سيللوز أكثر. نطاق أوسع.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'رش عام.', truth: 'مستعمرة = Termidor. سطحي لا يصل.' },
+        { myth: 'مرة عمر.', truth: 'ΔT+نخيل = فحص سنوي. مستعمرات جديدة.' },
     ],
-
     relatedServices: [
-        { slug: 'buraidah-furniture-moving', context: 'نقل عفش ببريدة', priority: 1 },
-        { slug: 'buraidah-furniture-storage', context: 'تخزين عفش ببريدة', priority: 2 },
-        { slug: 'buraidah-dyna', context: 'دينا نقل ببريدة', priority: 3 },
-        { slug: 'buraidah-moving-out', context: 'نقل عفش خروج ببريدة', priority: 4 },
-        { slug: 'buraidah-dabab', context: 'دباب نقل ببريدة', priority: 5 },
-        { slug: 'buraidah-cleaning', context: 'تنظيف منازل ببريدة', priority: 6 },
-        { slug: 'buraidah-tanks-cleaning', context: 'تنظيف خزانات ببريدة', priority: 7 },
-        { slug: 'buraidah-sofa-cleaning', context: 'تنظيف كنب ببريدة', priority: 8 },
-        { slug: 'buraidah-carpet-cleaning', context: 'تنظيف سجاد ببريدة', priority: 9 },
+        { slug: 'pest-control', context: 'حشرات', priority: 1 },
+        { slug: 'pesticide-spraying', context: 'رش مبيدات', priority: 2 },
+        { slug: 'water-insulation', context: 'مائي', priority: 3 },
+        { slug: 'roof-insulation', context: 'أسطح', priority: 4 },
+        { slug: 'water-leak-detection', context: 'تسرب', priority: 5 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 6 },
+        { slug: 'furniture-storage', context: 'تخزين', priority: 7 },
     ],
 };

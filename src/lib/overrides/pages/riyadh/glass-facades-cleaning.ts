@@ -83,7 +83,6 @@ export const override: PageOverride = {
             expert: 'أ.د. عبدالله المسند',
             quote: '15-25 عاصفة غبارية سنوياً في الرياض. واجهة برج بدون عقد تنظيف = تفقد شفافيتها خلال أسابيع. Nano-Coating يقلل التنظيفات 50%',
             source: 'أستاذ جغرافيا المناخ',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -110,14 +109,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'riyadh-cleaning', context: 'تنظيف شامل + واجهات', priority: 1 },
-        { slug: 'riyadh-villas-cleaning', context: 'واجهات الفلل', priority: 2 },
-        { slug: 'riyadh-office-cleaning', context: 'واجهات أبراج المكاتب', priority: 3 },
-        { slug: 'riyadh-bird-control', context: 'حمام الواجهات', priority: 4 },
-        { slug: 'riyadh-shops-cleaning', context: 'واجهة المحل', priority: 5 },
-        { slug: 'riyadh-floor-polishing', context: 'واجهات + أرضيات', priority: 6 },
-        { slug: 'riyadh-water-insulation', context: 'عزل حول الواجهات', priority: 7 },
-        { slug: 'riyadh-palaces-cleaning', context: 'واجهات القصور', priority: 8 },
-        { slug: 'riyadh-air-conditioner-cleaning', context: 'مكيفات خلف الواجهات', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف شامل + واجهات', priority: 1 },
+        { slug: 'villas-cleaning', context: 'واجهات الفلل', priority: 2 },
+        { slug: 'office-cleaning', context: 'واجهات أبراج المكاتب', priority: 3 },
+        { slug: 'bird-control', context: 'حمام الواجهات', priority: 4 },
+        { slug: 'shops-cleaning', context: 'واجهة المحل', priority: 5 },
+        { slug: 'floor-polishing', context: 'واجهات + أرضيات', priority: 6 },
+        { slug: 'water-insulation', context: 'عزل حول الواجهات', priority: 7 },
+        { slug: 'palaces-cleaning', context: 'واجهات القصور', priority: 8 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيفات خلف الواجهات', priority: 9 },
     ],
 };

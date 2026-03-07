@@ -6,6 +6,7 @@
 // ══════════════════════════════════════════════════════════════
 
 import type { PageOverride } from '../../types';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -81,19 +82,13 @@ export const override: PageOverride = {
         { entity: 'وزارة البلديات — منصة بلدي', acronym: 'بلدي', url: 'https://balady.gov.sa', role: 'ترخيص المطاعم + شهادة صحية — التنظيف جزء من الاشتراطات' },
     ],
 
-    expertReviewer: {
-        name: 'م. ماجد المحيميد',
-        title: 'خبير جودة تشطيبات وعزل',
-        credential: 'مهندس جودة تشطيبات — المرجع الأول في جودة البناء',
-        profileUrl: 'https://x.com/majedalmohaimed',
-    },
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
             expert: 'م. ماجد المحيميد',
             quote: 'التنظيف السطحي للهود يمنحك شعوراً زائفاً بالأمان — الخطر الحقيقي داخل الدكت. الروبوت + كاميرا CCTV = الطريقة الوحيدة لتنظيف وتوثيق المجرى كاملاً',
             source: 'خبير جودة تشطيبات وعزل',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
 
@@ -103,14 +98,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'jeddah-kitchen-cleaning', context: 'مطبخ المطعم كاملاً — أرضيات + أسطح', priority: 1 },
-        { slug: 'jeddah-oven-cleaning', context: 'أفران المطعم — دهون محروقة', priority: 2 },
-        { slug: 'jeddah-sanitization', context: 'تعقيم مطبخ بعد التنظيف — اشتراط بلدي', priority: 3 },
-        { slug: 'jeddah-pest-control', context: 'مكافحة حشرات مطعم — دهون تجذب صراصير', priority: 4 },
-        { slug: 'jeddah-cockroach-control', context: 'صراصير الدكتات والمجاري', priority: 5 },
-        { slug: 'jeddah-cleaning', context: 'صالة المطعم — نظافة للعملاء', priority: 6 },
-        { slug: 'jeddah-air-conditioner-cleaning', context: 'مكيفات المطعم — دهون تسد الفلتر', priority: 7 },
-        { slug: 'jeddah-floor-cleaning', context: 'أرضيات المطبخ — دهون + زيوت', priority: 8 },
-        { slug: 'jeddah-glass-facades-cleaning', context: 'واجهة المطعم — أول انطباع', priority: 9 },
+        { slug: 'kitchen-cleaning', context: 'مطبخ المطعم كاملاً — أرضيات + أسطح', priority: 1 },
+        { slug: 'oven-cleaning', context: 'أفران المطعم — دهون محروقة', priority: 2 },
+        { slug: 'sanitization', context: 'تعقيم مطبخ بعد التنظيف — اشتراط بلدي', priority: 3 },
+        { slug: 'pest-control', context: 'مكافحة حشرات مطعم — دهون تجذب صراصير', priority: 4 },
+        { slug: 'cockroach-control', context: 'صراصير الدكتات والمجاري', priority: 5 },
+        { slug: 'cleaning', context: 'صالة المطعم — نظافة للعملاء', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيفات المطعم — دهون تسد الفلتر', priority: 7 },
+        { slug: 'floor-cleaning', context: 'أرضيات المطبخ — دهون + زيوت', priority: 8 },
+        { slug: 'glass-facades-cleaning', context: 'واجهة المطعم — أول انطباع', priority: 9 },
     ],
 };

@@ -69,19 +69,13 @@ export const override: PageOverride = {
         { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'اشتراطات نظافة واجهات المباني والفنادق في المنطقة المركزية', acronym: 'أمانة المدينة' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
             expert: 'م. ماجد المحيميد',
             quote: 'الغبار البازلتي من حرة رهط أصلب من الزجاج نفسه — مسحه جافاً يخدش الواجهة بشكل دائم. الشطف بالماء المنقّى أولاً قاعدة غير قابلة للتفاوض في المدينة المنورة',
             source: 'خبير جودة البناء والتشطيبات',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
 
@@ -107,9 +101,9 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'madinah-cleaning', context: 'تنظيف داخلي شامل يُكمل نظافة الواجهات الخارجية', priority: 1 },
-        { slug: 'madinah-marble-polishing', context: 'جلي رخام الواجهات والأرضيات — إزالة خدوش الغبار البازلتي', priority: 2 },
-        { slug: 'madinah-office-cleaning', context: 'تنظيف مكاتب بعد تنظيف الواجهات — نظافة شاملة', priority: 3 },
-        { slug: 'madinah-air-conditioner-cleaning', context: 'غسيل مكيفات الواجهة — الغبار البازلتي يسد فلاتر الوحدات الخارجية', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف داخلي شامل يُكمل نظافة الواجهات الخارجية', priority: 1 },
+        { slug: 'marble-polishing', context: 'جلي رخام الواجهات والأرضيات — إزالة خدوش الغبار البازلتي', priority: 2 },
+        { slug: 'office-cleaning', context: 'تنظيف مكاتب بعد تنظيف الواجهات — نظافة شاملة', priority: 3 },
+        { slug: 'air-conditioner-cleaning', context: 'غسيل مكيفات الواجهة — الغبار البازلتي يسد فلاتر الوحدات الخارجية', priority: 4 },
     ],
 };

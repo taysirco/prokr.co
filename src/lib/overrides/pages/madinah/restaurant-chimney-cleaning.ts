@@ -74,12 +74,7 @@ export const override: PageOverride = {
         { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'ترخيص المطاعم ومراقبة التزامها باشتراطات النظافة والسلامة', acronym: 'أمانة المدينة' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
@@ -115,9 +110,9 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'madinah-oven-cleaning', context: 'تنظيف أفران تجارية مع المدخنة — باقة مطبخ متكاملة.', priority: 1 },
-        { slug: 'madinah-cleaning', context: 'تنظيف شامل للمطعم مع المدخنة والأرضيات.', priority: 2 },
-        { slug: 'madinah-pest-control', context: 'الدهون المتسربة تجذب الصراصير — نظّف وارش وقائياً.', priority: 3 },
-        { slug: 'madinah-office-cleaning', context: 'عقد نظافة يومي للمطعم — يُكمل صيانة المداخن الربع سنوية.', priority: 4 },
+        { slug: 'oven-cleaning', context: 'تنظيف أفران تجارية مع المدخنة — باقة مطبخ متكاملة.', priority: 1 },
+        { slug: 'cleaning', context: 'تنظيف شامل للمطعم مع المدخنة والأرضيات.', priority: 2 },
+        { slug: 'pest-control', context: 'الدهون المتسربة تجذب الصراصير — نظّف وارش وقائياً.', priority: 3 },
+        { slug: 'office-cleaning', context: 'عقد نظافة يومي للمطعم — يُكمل صيانة المداخن الربع سنوية.', priority: 4 },
     ],
 };

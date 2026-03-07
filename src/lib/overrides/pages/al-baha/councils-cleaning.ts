@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف مجالس بالباحة — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-baha/councils-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف مجالس بالباحة — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف مجالس بالباحة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف مجالس بالباحة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف مجالس بالباحة', 'تنظيف مجالس الباحة', 'شركة تنظيف مجالس بالباحة', 'أفضل تنظيف مجالس بالباحة'],
+        title: 'تنظيف مجالس بالباحة — بخور+ضباب بلمرة رطبة + غابات عرعر عفن+عث — أعقد مجلس! (2026)',
+        description: 'تنظيف مجالس الباحة. بلمرة رطبة ضباب+بخور. غابات عرعر عفن+عث. 50-75%. Anti-Fungal+Anti-Mite+Dehumidifier. 4-8h تجفيف.',
+        h1: 'تنظيف مجالس بالباحة — بخور رطب وغابات عفن — أعقد مجلس!',
+        keywords: ['تنظيف مجالس الباحة', 'تنظيف مجلس بالباحة', 'شركة تنظيف مجالس الباحة'],
     },
-
     content: {
-        introduction: 'تنظيف مجالس بالباحة — خدمة متخصصة تراعي الظروف المناخية والبيئية في الباحة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف مجالس بالباحة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف مجالس بالباحة. خدمة احترافية. ضمان.',
+        introduction: 'مجلس الباحة = أعقد مجلس بالمملكة! لماذا؟ بلمرة رطبة مزدوجة: SiO₂ (قليل — ليست صحراء مكشوفة) + دهون بخور + ضباب 50-75% = طبقة بوليمرية رطبة تتغلغل عميقاً في ألياف القماش. في عنيزة: بلمرة جافة سطحية = Enzymatic يكفي. هنا: بلمرة رطبة عميقة = Enzymatic + بخار + استخلاص. غابات عرعر = عفن Aspergillus يستعمر أقمشة المجلس خلال 72 ساعة + عث Dermatophagoides يتكاثر في الحشوات. Anti-Fungal + Anti-Mite إلزامي. طلع أشجار عرعر = حساسية تنفسية عند 20-30% من الجالسين. HEPA. أخطر ما في الموضوع: تجفيف 4-8 ساعات! 50-75% رطوبة = الغسيل لا يجف بسرعة = لو لم تستخدم Dehumidifier = عفن جديد يتكوّن بعد التنظيف! مقارنة: عنيزة = 20 دقيقة + لا عفن + أرخص 30%.',
+        shortAnswer: 'على عكس [الشامبو العادي الذي لا يصل البلمرة الرطبة]، يعتمد بروتوكولنا في خدمة [تنظيف المجالس] بمدينة [الباحة] على [Enzymatic+بخار+استخلاص+Anti-Fungal+Anti-Mite+Dehumidifier]. ففي ظل [ضباب 50-75%+غابات عرعر عفن+عث+بلمرة رطبة]، تتفاقم ظاهرة [خشونة عميقة+عفن+عث+تجفيف بطيء]. لذا؛ يتدخل فريقنا عبر [إنزيم ← بخار ← استخلاص ← تعقيم ← تجفيف Dehumidifier] لضمان مجلس نظيف وصحي.',
+        heroSubtitle: 'بلمرة رطبة + غابات عفن+عث — Dehumidifier إلزامي!',
     },
-
     pricing: [
-        { type: 'تنظيف مجالس — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف مجالس — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'مجلس رجال', unit: 'مجلس', minPrice: 250, maxPrice: 500, time: '3-4h + تجفيف 4-8h' },
+        { type: '+ Anti-Fungal/Mite', unit: 'مجلس', minPrice: 310, maxPrice: 620, time: '4-5h + تجفيف' },
+        { type: 'مجلسين (رجال+نساء)', unit: 'باقة', minPrice: 450, maxPrice: 900, time: '6-8h + تجفيف' },
+        { type: 'ربع سنوي (4 زيارات)', unit: 'سنة', minPrice: 750, maxPrice: 1500, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف مجالس بالباحة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف مجالس؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف مجالس؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'كم يحتاج المجلس يجف بعد التنظيف بالباحة؟', answer: '4-8 ساعات مع Dehumidifier! بدونه = 12-24 ساعة + عفن جديد. عنيزة: 20 دقيقة. الفرق = 50-75% رطوبة.' },
+        { question: 'كيف أمنع عفن المجلس بعد الغسل بالباحة؟', answer: 'Dehumidifier فوري بعد الغسل + Anti-Fungal. بدون Dehumidifier = الغسل يُسبب عفن جديد خلال 72 ساعة!' },
+        { question: 'ليش المجلس يعفن بالباحة وما يعفن بعنيزة؟', answer: 'الباحة: 50-75% رطوبة + غابات = بيئة مثالية. عنيزة: 15-25% = صفر عفن. الفرق = البيئة.' },
+        { question: 'هل الشامبو يكفي لمجلس الباحة؟', answer: 'لا! بلمرة رطبة عميقة = الشامبو يُنظف السطح فقط. Enzymatic+بخار 150°م+استخلاص = يصل العمق.' },
+        { question: 'متى أنظف المجلس بالباحة؟', answer: 'كل 3 أشهر — الرطوبة تُسرّع تراكم العفن. عنيزة: كل 6 أشهر. مضاعف.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Enzymatic+بخار+استخلاص — بلمرة رطبة عميقة لا يكفيها شامبو.',
+        'Anti-Fungal — غابات عرعر = عفن 72 ساعة.',
+        'Anti-Mite — عث يتكاثر في الحشوات الرطبة.',
+        'Dehumidifier فوري — بدونه = عفن جديد بعد الغسل!',
+        'HEPA — طلع عرعر = حساسية 20-30%.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'غسل بدون Dehumidifier + 50-75% = عفن جديد خلال 72 ساعة — أسوأ مما قبل!',
+        'بلمرة رطبة × 6 أشهر إهمال = طبقة لا تُزال — تغيير قماش كامل (3000+ ريال).',
+        'عفن+عث معاً = حساسية تنفسية+جلدية شديدة — خطر صحي YMYL.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
+        { entity: AMANA.BAHA.entity, url: AMANA.BAHA.url, role: 'اشتراطات أمانة الباحة' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'مجلس الباحة: أعقد بالمملكة. غابات عرعر+ضباب = عفن+عث+بلمرة رطبة. Dehumidifier إلزامي بعد كل غسل.', source: 'نصائح هندسية — أقمشة جبلية' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف مرخص', authority: 'منصة بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Enzymatic+بخار 150°م', use: 'يُكسِّر بلمرة رطبة عميقة — لا يكفي شامبو' },
+        { name: 'Anti-Fungal+Anti-Mite', use: 'يقتل عفن Aspergillus وعث Dermatophagoides' },
+        { name: 'Dehumidifier صناعي', use: 'تجفيف 4-8h — بدونه عفن جديد!' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'مثل خميس مشيط.', solution: 'غابات = رطوبة+طلع إضافي = أعقد قليلاً. تكلفة متقاربة.' },
+        { fear: 'Dehumidifier غالي.', solution: 'بدونه = عفن جديد = أغلى 10×. التجفيف ضروري.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'المجلس يجف بسرعة مثل عنيزة.', truth: '4-8 ساعات مقابل 20 دقيقة. 50-75% vs 15-25%.' },
+        { myth: 'لا عفن بالباحة.', truth: 'غابات عرعر+ضباب = أسرع عفن بالمملكة.' },
     ],
-
     relatedServices: [
-        { slug: 'al-baha-furniture-moving', context: 'نقل عفش بالباحة', priority: 1 },
-        { slug: 'al-baha-furniture-storage', context: 'تخزين عفش بالباحة', priority: 2 },
-        { slug: 'al-baha-dyna', context: 'دينا نقل بالباحة', priority: 3 },
-        { slug: 'al-baha-moving-out', context: 'نقل عفش خروج بالباحة', priority: 4 },
-        { slug: 'al-baha-dabab', context: 'دباب نقل بالباحة', priority: 5 },
-        { slug: 'al-baha-cleaning', context: 'تنظيف منازل بالباحة', priority: 6 },
-        { slug: 'al-baha-tanks-cleaning', context: 'تنظيف خزانات بالباحة', priority: 7 },
-        { slug: 'al-baha-sofa-cleaning', context: 'تنظيف كنب بالباحة', priority: 8 },
-        { slug: 'al-baha-carpet-cleaning', context: 'تنظيف سجاد بالباحة', priority: 9 },
+        { slug: 'carpet-cleaning', context: 'سجاد — عفن', priority: 1 },
+        { slug: 'sofa-cleaning', context: 'كنب — بلمرة', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 3 },
+        { slug: 'steam-cleaning', context: 'بخار — عفن', priority: 4 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف — طلع', priority: 5 },
+        { slug: 'pest-control', context: 'حشرات غابات', priority: 6 },
+        { slug: 'marble-polishing', context: 'رخام', priority: 7 },
     ],
 };

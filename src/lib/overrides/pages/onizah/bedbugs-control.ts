@@ -1,94 +1,20 @@
-// ══════════════════════════════════════════════════════════════
-// مكافحة بق الفراش بعنيزة — Override مخصص (E-E-A-T Grade)
-// صفحة: /onizah/bedbugs-control
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
 
 export const override: PageOverride = {
-    meta: {
-        title: 'مكافحة بق الفراش بعنيزة — خدمة احترافية معتمدة (2026)',
-        description: 'مكافحة بق الفراش بعنيزة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'مكافحة بق الفراش بعنيزة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['مكافحة بق الفراش بعنيزة', 'مكافحة بق الفراش عنيزة', 'شركة مكافحة بق الفراش بعنيزة', 'أفضل مكافحة بق الفراش بعنيزة'],
-    },
-
-    content: {
-        introduction: 'مكافحة بق الفراش بعنيزة — خدمة متخصصة تراعي الظروف المناخية والبيئية في عنيزة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'مكافحة بق الفراش بعنيزة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'مكافحة بق الفراش بعنيزة. خدمة احترافية. ضمان.',
-    },
-
-    pricing: [
-        { type: 'مكافحة بق الفراش — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'مكافحة بق الفراش — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
-    ],
-
-    faq: [
-        { question: 'كم تكلفة مكافحة بق الفراش بعنيزة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق مكافحة بق الفراش؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على مكافحة بق الفراش؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
-    ],
-
-    expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
-    ],
-
-    warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
-    ],
-
-    trustAnchors: [
-        { ...GOV.SFDA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
-    ],
-
-    expertReviewer: {
-        name: EXPERTS.ALKHODAIRY.name,
-        title: EXPERTS.ALKHODAIRY.title,
-        credential: EXPERTS.ALKHODAIRY.credential,
-        profileUrl: EXPERTS.ALKHODAIRY.profileUrl,
-    },
-
-    expertCitations: [
-        {
-            expert: EXPERTS.ALKHODAIRY.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALKHODAIRY.title,
-            url: EXPERTS.ALKHODAIRY.profileUrl,
-        },
-    ],
-
+    meta: { title: 'مكافحة بق الفراش بعنيزة — دورة 21 يوم (48°م) + kdr مقاومة + 10% RH = Residual 12-15 يوم (2026)', description: 'مكافحة بق فراش عنيزة. 48°م = دورة 21 يوم (× 5 شهرياً). kdr مقاومة مبيدات. 10% RH = Residual يدوم 12-15 يوم. حرارة 56°م + IGR.', h1: 'مكافحة بق بعنيزة — دورة 21 يوم + kdr + Residual 12-15 يوم', keywords: ['مكافحة بق الفراش بعنيزة', 'مكافحة بق فراش عنيزة', 'شركة مكافحة بق بعنيزة'] },
+    content: { introduction: '3 عوامل فريدة: (1) 48°م = دورة 21 يوم: بدلاً من 45 يوم. تكاثر × 5 شهرياً. كل أسبوع تأخير = جيل جديد. (2) kdr (Knockdown Resistance): بق القصيم يحمل جين مقاومة للمبيدات الشائعة (البيريثرويد). حرارة 56°م × 4-6 ساعات = Protein Denaturation = 100% قتل (لا مقاومة للحرارة). (3) 10% RH = ميزة: Residual Spray يدوم 12-15 يوم (في جازان 80%: 3-5 أيام). لكن 48°م = يتحلل بالحرارة. جلسة ثانية 14 يوم.', shortAnswer: '48°م = 21 يوم + kdr مقاومة. حرارة 56°م + Residual 12-15 يوم + IGR.', heroSubtitle: 'دورة 21 يوم + مقاومة kdr + Residual 12-15 يوم (ميزة جفاف)' },
+    pricing: [{ type: 'معالجة حرارية — غرفة', unit: 'غرفة', minPrice: 300, maxPrice: 600, time: '4-6 ساعات' }, { type: 'Residual + IGR — شقة', unit: 'شقة', minPrice: 400, maxPrice: 800, time: '3-4 ساعات × 2' }],
+    faq: [{ question: 'ليش المبيد ما يشتغل؟', answer: 'kdr gene: مقاومة البيريثرويد. حرارة 56°م = 100% (لا مقاومة للحرارة).' }, { question: '21 يوم — يعني إيش؟', answer: 'جيل كامل كل 3 أسابيع. تأخير أسبوع = جيل جديد.' }],
+    expertTips: ['حرارة 56°م × 4-6 ساعات — kdr لا تقاوم.', 'IGR يمنع بيض 21 يوم.', 'Residual 12-15 يوم (ميزة 10%).', '3 جلسات: أسبوع 0 + 14 + 28.'],
+    warnings: ['تأخير أسبوع = جيل كامل.', 'بيريثرويد وحده = kdr تقاوم.'],
+    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص مكافحة' }],
+    expertReviewer: EXPERTS.ALKHODAIRY,
+    expertCitations: [{ expert: EXPERTS.ALKHODAIRY.name, quote: 'بق عنيزة: kdr + 21 يوم. حرارة 56°م = الحل الوحيد للمقاومة.', source: 'أبحاث حشرات — مقاومة البيريثرويد في القصيم' }],
     saudiRegulations: [REGULATIONS.GHAD_SYSTEM],
-
-    verificationBadges: [
-        { badge: '✔️ مبيدات معتمدة من SFDA', authority: 'هيئة الغذاء والدواء', icon: 'shield-check' },
-    ],
-
-    equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
-    ],
-
-    hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
-    ],
-
-    counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
-    ],
-
-    relatedServices: [
-        { slug: 'onizah-furniture-moving', context: 'نقل عفش بعنيزة', priority: 1 },
-        { slug: 'onizah-furniture-storage', context: 'تخزين عفش بعنيزة', priority: 2 },
-        { slug: 'onizah-dyna', context: 'دينا نقل بعنيزة', priority: 3 },
-        { slug: 'onizah-moving-out', context: 'نقل عفش خروج بعنيزة', priority: 4 },
-        { slug: 'onizah-dabab', context: 'دباب نقل بعنيزة', priority: 5 },
-        { slug: 'onizah-cleaning', context: 'تنظيف منازل بعنيزة', priority: 6 },
-        { slug: 'onizah-tanks-cleaning', context: 'تنظيف خزانات بعنيزة', priority: 7 },
-        { slug: 'onizah-sofa-cleaning', context: 'تنظيف كنب بعنيزة', priority: 8 },
-        { slug: 'onizah-carpet-cleaning', context: 'تنظيف سجاد بعنيزة', priority: 9 },
-    ],
+    verificationBadges: [{ badge: '✔️ مكافحة مرخصة', authority: 'بلدي + وقاء', icon: 'shield-check' }],
+    equipment: [{ name: 'سخّان هواء 56°م', use: 'Protein Denaturation — يتجاوز kdr' }, { name: 'IGR', use: 'يمنع دورة 21 يوم' }, { name: 'Residual Spray', use: '12-15 يوم في 10%' }],
+    hiddenObjections: [{ fear: 'رشيت ولا فاد.', solution: 'kdr = مقاومة. حرارة 56°م = 100%.' }],
+    counterNarratives: [{ myth: 'الحرارة تقتل البق.', truth: '48°م ≠ 56°م. 48 = تُسرّع. 56 × 4 ساعات = تقتل.' }],
+    relatedServices: [{ slug: 'pest-control', context: 'حشرات', priority: 1 }, { slug: 'steam-cleaning', context: 'بخار', priority: 2 }, { slug: 'sofa-cleaning', context: 'كنب', priority: 3 }],
 };

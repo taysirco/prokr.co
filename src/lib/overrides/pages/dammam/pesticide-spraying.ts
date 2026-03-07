@@ -1,13 +1,3 @@
-// ══════════════════════════════════════════════════════════════
-// رش مبيدات بالدمام — Override (E-E-A-T)
-// صفحة: /dammam/pesticide-spraying
-// قطاع YMYL: صحي (سموم مبيدات) + صحة عامة
-// خريطة 2.4: الخضيري → SFDA + وقاء + بلدي + أمانة الشرقية
-// الزاوية: رطوبة 60-90% تُبطل المبيد السطحي 30-40% أسرع
-//   + حشرات نشطة 12 شهر بدون سكون شتوي
-//   + نمل أبيض ساحلي أكثر انتشاراً بسبب الرطوبة
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
@@ -78,19 +68,13 @@ export const override: PageOverride = {
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'ترخيص شركات المكافحة واشتراطات الصحة العامة بالدمام', acronym: 'أمانة الشرقية' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALKHODAIRY.name,
-        title: EXPERTS.ALKHODAIRY.title,
-        credential: EXPERTS.ALKHODAIRY.credential,
-        profileUrl: EXPERTS.ALKHODAIRY.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALKHODAIRY,
 
     expertCitations: [
         {
             expert: 'د. فهد الخضيري',
             quote: 'الرطوبة الساحلية بالدمام تُبطل المبيدات السطحية أسرع بـ 30-40%. الطعوم الجيلاتينية تبقى فعالة لأنها محكمة — والحقن الخرساني ضد النمل الأبيض ضروري في بيئة رطبة تجعل المستعمرات أكبر وأنشط بكثير',
             source: 'مكافحة حشرات وآفات',
-            url: 'https://x.com/DrAlkhodairy',
         },
     ],
 
@@ -118,9 +102,9 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'dammam-pest-control', context: 'مكافحة حشرات متكاملة IPM — أشمل من الرش وحده', priority: 1 },
-        { slug: 'dammam-termite-control', context: 'مكافحة نمل أبيض متخصصة — حقن تربة + طعوم + مصائد مراقبة', priority: 2 },
-        { slug: 'dammam-bird-control', context: 'طرد حمام — فضلاته تجذب حشرات إضافية', priority: 3 },
-        { slug: 'dammam-cleaning', context: 'تنظيف وتعقيم بعد المكافحة — إزالة بقايا حشرات وبيض', priority: 4 },
+        { slug: 'pest-control', context: 'مكافحة حشرات متكاملة IPM — أشمل من الرش وحده', priority: 1 },
+        { slug: 'termite-control', context: 'مكافحة نمل أبيض متخصصة — حقن تربة + طعوم + مصائد مراقبة', priority: 2 },
+        { slug: 'bird-control', context: 'طرد حمام — فضلاته تجذب حشرات إضافية', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف وتعقيم بعد المكافحة — إزالة بقايا حشرات وبيض', priority: 4 },
     ],
 };

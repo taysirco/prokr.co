@@ -91,7 +91,6 @@ export const override: PageOverride = {
             expert: 'م. ماجد المحيميد',
             quote: 'خزان أرضي غير معزول في مكة = حرارة الماء 35-40°م ← بيئة مثالية لبكتيريا Legionella. العزل الحراري للخزان يُخفض الحرارة 10-15°م ← يُبطئ التكاثر البكتيري بشكل كبير',
             source: 'خبير جودة البناء والتشطيبات',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
 
@@ -122,12 +121,12 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'makkah-tank-insulation', context: 'عزل الخزان حرارياً يُبطئ تكاثر البكتيريا — مكمل للتنظيف', priority: 1 },
-        { slug: 'makkah-tank-leak-detection', context: 'تسرب الخزان = مياه ملوثة + فاتورة عالية — كشف بعد التنظيف', priority: 2 },
-        { slug: 'makkah-water-leak-detection', context: 'ارتفاع الفاتورة بعد تنظيف الخزان = تسرب في الشبكة', priority: 3 },
-        { slug: 'makkah-water-insulation', context: 'عزل مائي للخزان يمنع اختلاط مياه الصرف', priority: 4 },
-        { slug: 'makkah-cleaning', context: 'تنظيف المنزل مع تنظيف الخزان — رزمة صحية شاملة', priority: 5 },
-        { slug: 'makkah-pest-control', context: 'غطاء خزان مفتوح = مدخل للحشرات — الحل: تنظيف + تغطية + مكافحة', priority: 6 },
-        { slug: 'makkah-sewage-unblocking', context: 'بيارة قريبة من الخزان = خطر تلوث — تسليك وصيانة وقائية', priority: 7 },
+        { slug: 'tank-insulation', context: 'عزل الخزان حرارياً يُبطئ تكاثر البكتيريا — مكمل للتنظيف', priority: 1 },
+        { slug: 'tank-leak-detection', context: 'تسرب الخزان = مياه ملوثة + فاتورة عالية — كشف بعد التنظيف', priority: 2 },
+        { slug: 'water-leak-detection', context: 'ارتفاع الفاتورة بعد تنظيف الخزان = تسرب في الشبكة', priority: 3 },
+        { slug: 'water-insulation', context: 'عزل مائي للخزان يمنع اختلاط مياه الصرف', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف المنزل مع تنظيف الخزان — رزمة صحية شاملة', priority: 5 },
+        { slug: 'pest-control', context: 'غطاء خزان مفتوح = مدخل للحشرات — الحل: تنظيف + تغطية + مكافحة', priority: 6 },
+        { slug: 'sewage-unblocking', context: 'بيارة قريبة من الخزان = خطر تلوث — تسليك وصيانة وقائية', priority: 7 },
     ],
 };

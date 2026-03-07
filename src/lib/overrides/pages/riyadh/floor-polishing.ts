@@ -81,7 +81,6 @@ export const override: PageOverride = {
             expert: 'أ.د. عبدالله المسند',
             quote: 'خدوش الرمل على البلاط ظاهرة خاصة بالرياض والمدن الصحراوية. الحل ليس تغيير البلاط — بل جلي + حماية + سجادة مدخل',
             source: 'أستاذ جغرافيا المناخ',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -107,14 +106,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'riyadh-floor-cleaning', context: 'تنظيف قبل التلميع', priority: 1 },
-        { slug: 'riyadh-marble-polishing', context: 'جلي رخام', priority: 2 },
-        { slug: 'riyadh-cleaning', context: 'تنظيف شامل + تلميع', priority: 3 },
-        { slug: 'riyadh-steam-cleaning', context: 'بخار + تلميع', priority: 4 },
-        { slug: 'riyadh-villas-cleaning', context: 'أرضيات فلل فاخرة', priority: 5 },
-        { slug: 'riyadh-shops-cleaning', context: 'تلميع أرضية محل', priority: 6 },
-        { slug: 'riyadh-office-cleaning', context: 'أرضية المكتب', priority: 7 },
-        { slug: 'riyadh-palaces-cleaning', context: 'رخام القصور', priority: 8 },
-        { slug: 'riyadh-water-insulation', context: 'عزل يحمي التلميع', priority: 9 },
+        { slug: 'floor-cleaning', context: 'تنظيف قبل التلميع', priority: 1 },
+        { slug: 'marble-polishing', context: 'جلي رخام', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف شامل + تلميع', priority: 3 },
+        { slug: 'steam-cleaning', context: 'بخار + تلميع', priority: 4 },
+        { slug: 'villas-cleaning', context: 'أرضيات فلل فاخرة', priority: 5 },
+        { slug: 'shops-cleaning', context: 'تلميع أرضية محل', priority: 6 },
+        { slug: 'office-cleaning', context: 'أرضية المكتب', priority: 7 },
+        { slug: 'palaces-cleaning', context: 'رخام القصور', priority: 8 },
+        { slug: 'water-insulation', context: 'عزل يحمي التلميع', priority: 9 },
     ],
 };

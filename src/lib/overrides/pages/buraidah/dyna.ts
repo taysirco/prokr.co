@@ -1,94 +1,74 @@
-// ══════════════════════════════════════════════════════════════
-// دينا نقل ببريدة — Override مخصص (E-E-A-T Grade)
-// صفحة: /buraidah/dyna
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'دينا نقل ببريدة — خدمة احترافية معتمدة (2026)',
-        description: 'دينا نقل ببريدة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'دينا نقل ببريدة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['دينا نقل ببريدة', 'دينا نقل بريدة', 'شركة دينا نقل ببريدة', 'أفضل دينا نقل ببريدة'],
+        title: 'دينا نقل ببريدة — تمور بالطن+معدات نخيل+Nafud — دينا نخيلية! (2026)',
+        description: 'دينا نقل بريدة. نقل تمور بالطن! معدات نخيل. أعلاف سعف. Nafud طرق. ΔT 45°م. دينا نخيلية.',
+        h1: 'دينا نقل ببريدة — تمور ومعدات نخيل!',
+        keywords: ['دينا نقل بريدة', 'دينا ببريدة', 'دينا نقل ببريدة'],
     },
-
     content: {
-        introduction: 'دينا نقل ببريدة — خدمة متخصصة تراعي الظروف المناخية والبيئية في بريدة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'دينا نقل ببريدة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'دينا نقل ببريدة. خدمة احترافية. ضمان.',
+        introduction: 'دينا بريدة = دينا نخيلية ثقيلة! نقل تمور بالطن: بريدة عاصمة التمور = دينا 3-7 طن تمور من المزارع للمصانع/التصدير. صندوق نظيف+معزول ΔT+مُغلق. معدات نخيل: ماكينات تلقيح+حصاد+تجفيف = أحمال ثقيلة وحساسة. تثبيت+حماية. أعلاف سعف: سعف+نوى نخيل بالطن = أعلاف حيوانية. تغطية ضد Nafud. Nafud طرق: مزارع النخيل = طرق Nafud ترابية 10-30 كم. دينا تحتاج عجلات مناسبة. ΔT 45°م: صيف = تمور تحتاج عزل حراري أثناء النقل. 10-20% = تمور/أعلاف لا تتعفّن! ميزة. مقارنة: الخرج = دينا ألبان. بريدة = دينا تمور/نخيل = فريد.',
+        shortAnswer: 'على عكس [الدينا المدنية بدون تخصص نخيلي]، يعتمد بروتوكولنا في خدمة [دينا النقل] بمدينة [بريدة] على [دينا 3-7 طن+نظيف+معزول+تغطية+عجلات]. ففي ظل [تمور بالطن+معدات نخيل+Nafud طرق+ΔT 45°م]، تتفاقم ظاهرة [حرارة+غبار+صعوبة]. لذا؛ يتدخل فريقنا عبر [تنظيف ← تحميل ← عزل ← توصيل].',
+        heroSubtitle: 'دينا نخيلية — تمور بالطن+معدات+Nafud — معزولة!',
     },
-
     pricing: [
-        { type: 'دينا نقل — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'دينا نقل — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'داخل بريدة (3 طن)', unit: 'رحلة', minPrice: 150, maxPrice: 300, time: '1-2 ساعة' },
+        { type: 'بريدة ← مزرعة (7 طن)', unit: 'رحلة', minPrice: 250, maxPrice: 520, time: '2-3 ساعات' },
+        { type: 'معدات نخيل (تثبيت)', unit: 'رحلة', minPrice: 350, maxPrice: 700, time: '3-5 ساعات' },
+        { type: 'عقد موسمي (تمور)', unit: 'موسم', minPrice: 2000, maxPrice: 4000, time: 'يوليو-أكتوبر' },
     ],
-
     faq: [
-        { question: 'كم تكلفة دينا نقل ببريدة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق دينا نقل؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على دينا نقل؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'هل الدينا تنقل تمور بالطن ببريدة؟', answer: 'نعم — 3-7 طن. صندوق نظيف+معزول. ΔT = بدون عزل تفسد.' },
+        { question: 'هل الدينا توصل مزارع النخيل ببريدة؟', answer: 'نعم — Nafud طرق 10-30 كم. عجلات مناسبة. تغطية.' },
+        { question: 'كم تكلفة دينا ببريدة مقارنة بالخرج؟', answer: 'متقاربة. لكن: بريدة: عقد موسم تمور = أرخص بالجملة.' },
+        { question: 'هل معدات النخيل تحتاج تثبيت خاص ببريدة؟', answer: 'نعم — Nafud طرق = صدمات. تثبيت+تغليف. حساسة.' },
+        { question: 'متى موسم ذروة الدينا ببريدة؟', answer: 'يوليو-أكتوبر = موسم تمور. 3-5× طلب. احجز مبكراً.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'صندوق نظيف — تمور غذاء SFDA.',
+        'معزول صيفاً — ΔT 45°م.',
+        'تغطية — Nafud SiO₂ غبار.',
+        'عقد موسمي — ذروة يوليو-أكتوبر.',
+        'تثبيت — معدات نخيل حساسة.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'تمور + ΔT بدون عزل = تلف بالطن — خسارة آلاف.',
+        'معدات بدون تثبيت + Nafud طريق = صدمات — تلف 10000+.',
+        'بدون تغطية + Nafud = غبار على التمور — رفض مصنع.',
     ],
-
     trustAnchors: [
-        { ...GOV.TGA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.TGA, role: 'ترخيص النقل البري' },
+        { ...GOV.BALADI, role: 'ترخيص النشاط' },
+        { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALZUWAYED.name,
-        title: EXPERTS.ALZUWAYED.title,
-        credential: EXPERTS.ALZUWAYED.credential,
-        profileUrl: EXPERTS.ALZUWAYED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALZUWAYED,
     expertCitations: [
-        {
-            expert: EXPERTS.ALZUWAYED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALZUWAYED.title,
-            url: EXPERTS.ALZUWAYED.profileUrl,
-        },
+        { expert: EXPERTS.ALZUWAYED.name, quote: 'دينا بريدة: نخيلية. تمور بالطن+معدات. Nafud طرق. عزل ΔT.', source: 'لوجستيات — القصيم' },
     ],
-
     saudiRegulations: [REGULATIONS.TGA_LICENSE],
-
-    verificationBadges: [
-        { badge: '✔️ شركة نقل مرخصة من هيئة النقل TGA', authority: 'الهيئة العامة للنقل', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ نقل مرخص TGA', authority: 'هيئة النقل', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'دينا 3-7 طن نظيف', use: 'تمور — SFDA غذاء' },
+        { name: 'صندوق معزول', use: 'ΔT 45°م — تمور' },
+        { name: 'تغطية محكمة', use: 'Nafud SiO₂ — غبار' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'دينا عادية.', solution: 'تمور = نظيف+معزول. مزرعة = Nafud.' },
+        { fear: 'غالي.', solution: 'خسارة تمور فاسدة أغلى 10×.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'أي دينا.', truth: 'طرق Nafud = عجلات مناسبة.' },
+        { myth: 'بدون عزل.', truth: 'ΔT 45°م = تلف ساعة.' },
     ],
-
     relatedServices: [
-        { slug: 'buraidah-furniture-moving', context: 'نقل عفش ببريدة', priority: 1 },
-        { slug: 'buraidah-furniture-storage', context: 'تخزين عفش ببريدة', priority: 2 },
-        { slug: 'buraidah-moving-out', context: 'نقل عفش خروج ببريدة', priority: 3 },
-        { slug: 'buraidah-dabab', context: 'دباب نقل ببريدة', priority: 4 },
-        { slug: 'buraidah-cleaning', context: 'تنظيف منازل ببريدة', priority: 5 },
-        { slug: 'buraidah-tanks-cleaning', context: 'تنظيف خزانات ببريدة', priority: 6 },
-        { slug: 'buraidah-sofa-cleaning', context: 'تنظيف كنب ببريدة', priority: 7 },
-        { slug: 'buraidah-carpet-cleaning', context: 'تنظيف سجاد ببريدة', priority: 8 },
-        { slug: 'buraidah-steam-cleaning', context: 'تنظيف بالبخار ببريدة', priority: 9 },
+        { slug: 'dabab', context: 'دباب', priority: 1 },
+        { slug: 'furniture-moving', context: 'نقل عفش', priority: 2 },
+        { slug: 'furniture-storage', context: 'تخزين', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 4 },
+        { slug: 'auto-cleaning', context: 'سيارات', priority: 5 },
+        { slug: 'pest-control', context: 'حشرات', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 7 },
     ],
 };

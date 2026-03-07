@@ -85,7 +85,6 @@ export const override: PageOverride = {
             expert: 'د. سعد الجند',
             quote: 'الرش الوقائي قبل الموسم (مارس وأكتوبر) يمنع 80% من مشكلات الحشرات. الانتظار حتى ظهور الحشرات = حل علاجي أصعب وأغلى',
             source: 'خبير مكافحة حشرات',
-            url: 'https://x.com/ALJUNDI',
         },
     ],
 
@@ -113,14 +112,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'riyadh-pest-control', context: 'مكافحة حشرات شاملة', priority: 1 },
-        { slug: 'riyadh-cockroach-control', context: 'صراصير — الأكثر طلباً', priority: 2 },
-        { slug: 'riyadh-ants-control', context: 'نمل منازل وحدائق', priority: 3 },
-        { slug: 'riyadh-bedbugs-control', context: 'بق الفراش', priority: 4 },
-        { slug: 'riyadh-pesticide-spraying', context: 'رش مبيدات متخصصة', priority: 5 },
-        { slug: 'riyadh-termite-control', context: 'نمل أبيض', priority: 6 },
-        { slug: 'riyadh-cleaning', context: 'تنظيف بعد الرش', priority: 7 },
-        { slug: 'riyadh-sanitization', context: 'تعقيم بعد المكافحة', priority: 8 },
-        { slug: 'riyadh-snakes-control', context: 'ثعابين بعد المكافحة', priority: 9 },
+        { slug: 'pest-control', context: 'مكافحة حشرات شاملة', priority: 1 },
+        { slug: 'cockroach-control', context: 'صراصير — الأكثر طلباً', priority: 2 },
+        { slug: 'ants-control', context: 'نمل منازل وحدائق', priority: 3 },
+        { slug: 'bedbugs-control', context: 'بق الفراش', priority: 4 },
+        { slug: 'pesticide-spraying', context: 'رش مبيدات متخصصة', priority: 5 },
+        { slug: 'termite-control', context: 'نمل أبيض', priority: 6 },
+        { slug: 'cleaning', context: 'تنظيف بعد الرش', priority: 7 },
+        { slug: 'sanitization', context: 'تعقيم بعد المكافحة', priority: 8 },
+        { slug: 'snakes-control', context: 'ثعابين بعد المكافحة', priority: 9 },
     ],
 };

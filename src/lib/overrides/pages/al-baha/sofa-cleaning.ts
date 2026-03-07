@@ -1,94 +1,19 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف كنب بالباحة — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-baha/sofa-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
 
 export const override: PageOverride = {
-    meta: {
-        title: 'تنظيف كنب بالباحة — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف كنب بالباحة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف كنب بالباحة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف كنب بالباحة', 'تنظيف كنب الباحة', 'شركة تنظيف كنب بالباحة', 'أفضل تنظيف كنب بالباحة'],
-    },
-
-    content: {
-        introduction: 'تنظيف كنب بالباحة — خدمة متخصصة تراعي الظروف المناخية والبيئية في الباحة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف كنب بالباحة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف كنب بالباحة. خدمة احترافية. ضمان.',
-    },
-
-    pricing: [
-        { type: 'تنظيف كنب — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف كنب — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
-    ],
-
-    faq: [
-        { question: 'كم تكلفة تنظيف كنب بالباحة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف كنب؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف كنب؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
-    ],
-
-    expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
-    ],
-
-    warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
-    ],
-
-    trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
-    ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
-    expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
-    ],
-
-    saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
-    equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
-    ],
-
-    hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
-    ],
-
-    counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
-    ],
-
-    relatedServices: [
-        { slug: 'al-baha-furniture-moving', context: 'نقل عفش بالباحة', priority: 1 },
-        { slug: 'al-baha-furniture-storage', context: 'تخزين عفش بالباحة', priority: 2 },
-        { slug: 'al-baha-dyna', context: 'دينا نقل بالباحة', priority: 3 },
-        { slug: 'al-baha-moving-out', context: 'نقل عفش خروج بالباحة', priority: 4 },
-        { slug: 'al-baha-dabab', context: 'دباب نقل بالباحة', priority: 5 },
-        { slug: 'al-baha-cleaning', context: 'تنظيف منازل بالباحة', priority: 6 },
-        { slug: 'al-baha-tanks-cleaning', context: 'تنظيف خزانات بالباحة', priority: 7 },
-        { slug: 'al-baha-carpet-cleaning', context: 'تنظيف سجاد بالباحة', priority: 8 },
-        { slug: 'al-baha-steam-cleaning', context: 'تنظيف بالبخار بالباحة', priority: 9 },
-    ],
+    meta: { title: 'تنظيف كنب بالباحة — Laterite Fe₂O₃ يصبغ + ضباب يُعفّن الحشو + برودة تُصلّب PVAc (2026)', description: 'تنظيف كنب الباحة. Laterite يصبغ الأقمشة. ضباب 80% يُعفّن الحشو 3-4 أشهر. 5°م شتاءً يُصلّب PVAc. Oxalic Acid + Anti-Fungal + Conditioner.', h1: 'تنظيف كنب بالباحة — Laterite يصبغ + ضباب يُعفّن + برودة تُصلّب', keywords: ['تنظيف كنب بالباحة', 'تنظيف كنب الباحة', 'شركة تنظيف كنب بالباحة'] },
+    content: { introduction: '3 تحديات: (1) Laterite Fe₂O₃ يصبغ الأقمشة — بقعة حمراء من الأحذية/الأطفال. Oxalic Acid. (2) ضباب 80% يُعفّن الحشو: 3-4 أشهر رطوبة مرتفعة = Penicillium في الحشو. Anti-Fungal بعد كل موسم + Dehumidifier. (3) 5°م شتاءً: PVAc يتصلب ← المفاصل تصبح هشة (ليس كتبوك -2°م لكن 5°م كافية لـ PVAc). في الباحة: عكس جازان — المشكلة = برودة + ضباب (ليس حرارة + رطوبة).', shortAnswer: 'Laterite يصبغ + ضباب يُعفّن + برودة تُصلّب. Oxalic Acid + Anti-Fungal + Conditioner.', heroSubtitle: 'تربة حمراء + ضباب عفن + برودة شتاء' },
+    pricing: [{ type: 'تنظيف + Oxalic Acid + Anti-Fungal', unit: 'طقم', minPrice: 200, maxPrice: 400, time: '2-3 ساعات' }, { type: 'عقد نصف سنوي (بعد ضباب + بعد شتاء)', unit: 'سنة', minPrice: 350, maxPrice: 700, time: '2 زيارات' }],
+    faq: [{ question: 'ضباب يعفّن الكنب؟', answer: '80% × 3-4 أشهر = Penicillium في الحشو. Dehumidifier أثناء الموسم + Anti-Fungal بعده.' }],
+    expertTips: ['Oxalic Acid لبقع Laterite.', 'Anti-Fungal بعد كل موسم ضباب.', 'Dehumidifier يوليو-أكتوبر.', 'فحص PVAc بعد الشتاء.'],
+    warnings: ['مبيّض على Laterite = يُثبّت = بقعة دائمة.', 'ضباب بدون Dehumidifier = عفن حشو.'],
+    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات التنظيف' }],
+    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertCitations: [{ expert: EXPERTS.ALMOHAIMED.name, quote: 'كنب الباحة: Laterite + ضباب + برودة = 3 فصول مختلفة. Oxalic Acid + Anti-Fungal + Conditioner.', source: 'نصائح هندسية — الأثاث في البيئات الجبلية' }],
+    saudiRegulations: [REGULATIONS.BALADI_HEALTH], verificationBadges: [{ badge: '✔️ تنظيف كنب مرخص', authority: 'بلدي', icon: 'shield-check' }],
+    equipment: [{ name: 'Oxalic Acid', use: 'يَختزل Fe₂O₃ من الأقمشة' }, { name: 'Anti-Fungal', use: 'بعد موسم الضباب' }, { name: 'Dehumidifier', use: 'أثناء الضباب' }],
+    hiddenObjections: [{ fear: 'الباحة معتدلة.', solution: 'ضباب 80% × 3-4 أشهر = عفن. + 5°م = PVAc.' }],
+    counterNarratives: [{ myth: 'الجو لطيف.', truth: 'لطيف للإنسان. ضباب + Laterite + 5°م = تحديات للأثاث.' }],
+    relatedServices: [{ slug: 'carpet-cleaning', context: 'سجاد — Laterite', priority: 1 }, { slug: 'furniture-cleaning', context: 'أثاث — PVAc', priority: 2 }, { slug: 'steam-cleaning', context: 'بخار — عفن', priority: 3 }],
 };
