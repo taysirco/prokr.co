@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف — اشتراطات نظافة المطابخ' },
         { entity: AMANA.NAJRAN.entity, url: AMANA.NAJRAN.url, role: 'اشتراطات الصحة والنظافة بمنطقة نجران' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'فرن نجران = كربنة مُسرّعة: 45°م بيئة + شحوم تمر بسكر 65-80% = طبقات كراميل-كربون مُركّبة لا يخترقها إلا pH 13. كل 2-3 أشهر = قبل التصلب العميق. نصف سنوي = مُتأخر.', source: 'نصائح هندسية — أفران المطابخ في بيئات الواحات' },
     ],

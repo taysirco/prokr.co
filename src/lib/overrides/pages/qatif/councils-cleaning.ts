@@ -41,7 +41,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص التنظيف' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات النظافة بالشرقية' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'مجلس القطيف: بخور+NaCl بلمرة ملحية + 80-95% عفن+عث + طلع نخيل. Enzymatic + Anti-Mite + HEPA.', source: 'نصائح هندسية — مجالس الواحات الساحلية' },
     ],

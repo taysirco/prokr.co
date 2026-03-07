@@ -41,7 +41,7 @@ export const override: PageOverride = {
         { ...GOV.CIVILDEFENSE, role: 'السلامة — NFPA 96' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات مطاعم بالشرقية' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'مدخنة الجبيل: Biofilm يُسرّع NFPA + كربنة لزجة + NaCl أسماك. Anti-Biofilm ← Alkaline Marine = الترتيب الحاسم.', source: 'نصائح هندسية — مداخن ساحلية-صناعية' },
     ],

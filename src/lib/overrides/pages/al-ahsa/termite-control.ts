@@ -43,7 +43,7 @@ export const override: PageOverride = {
         { ...GOV.WEQAA, role: 'تسجيل المبيدات وشركات المكافحة' },
         { entity: AMANA.AHSA.entity, url: AMANA.AHSA.url, role: 'اشتراطات البناء والصحة بمحافظة الأحساء' },
     ],
-    expertReviewer: EXPERTS.ALKHODAIRY,
+    expertReviewer: EXPERTS.ALJUND,
     expertCitations: [
         { expert: EXPERTS.ALKHODAIRY.name, quote: 'الأحساء = أكبر خطر نمل أبيض في المملكة: 2.5 مليون نخلة = سليلوز لا ينتهي + تربة رطبة + عيون. Cascading Kill + Chemical Barrier + مراقبة = البروتوكول الواحي الوحيد الذي يحمي.', source: 'أبحاث حشرات — النمل الأبيض في الواحات الكبرى' },
     ],

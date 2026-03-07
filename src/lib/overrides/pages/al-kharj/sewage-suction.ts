@@ -43,9 +43,9 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شفط الصرف' },
         { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
-        { expert: EXPERTS.ALJUND.name, quote: 'صرف الخرج: CaCO₃ يسد+NH₃ مزدوجة. Descaler+Jetting. ميزة: لا أمطار.', source: 'موسوعة أخطاء — صرف زراعي' },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'صرف الخرج: CaCO₃ يسد+NH₃ مزدوجة. Descaler+Jetting. ميزة: لا أمطار.', source: 'موسوعة أخطاء — صرف زراعي' },
     ],
     saudiRegulations: [REGULATIONS.NWC_REPORT],
     verificationBadges: [{ badge: '✔️ شفط مرخص', authority: 'بلدي + NWC', icon: 'shield-check' }],

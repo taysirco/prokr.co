@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص مراكز الغسيل' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات البيئة بالشرقية' },
     ],
-    expertReviewer: EXPERTS.ALZUWAYED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALZUWAYED.name, quote: 'سيارة الظهران = مزدوجة: NaCl يتآكل + SiO₂ يخدش = أسوأ مزيج. Touchless + Ceramic + Underbody = بروتوكول مزدوج لا يُشبه أي مدينة.', source: 'هيئة النقل — غسيل البيئة المزدوجة' },
     ],

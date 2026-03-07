@@ -34,7 +34,7 @@ export const override: PageOverride = {
         'خزان بدون تعقيم 6+ أشهر + تكاثف = عفن في مياه الشرب.',
     ],
     trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص تنظيف الخزانات' }],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'خزان تبوك: تجمد + كلس ثلجي + تكاثف = ثلاثي. عزل أنابيب + Descaling + تعقيم = الحد الأدنى.', source: 'موسوعة أخطاء — خزانات المياه في مناطق الصقيع' },
     ],

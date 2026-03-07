@@ -41,7 +41,7 @@ export const override: PageOverride = {
         { ...GOV.SFDA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
     ],
 
-    expertReviewer: EXPERTS.ALKHODAIRY,
+    expertReviewer: EXPERTS.ALMISNID,
 
     expertCitations: [
         {

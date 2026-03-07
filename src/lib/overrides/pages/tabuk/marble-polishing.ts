@@ -41,7 +41,7 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.BALADI, role: 'ترخيص شركات الجلي والتلميع' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'رخام تبوك يتعرض لثلاثية فريدة: 46°م Thermal Fatigue + حجر حسمى 6v3 + تكلس ثلجي. Diamond + إيبوكسي مرن + CaF₂ + Descaling = الحل الرباعي. الرخام الخارجي = الأشد تضرراً.', source: 'موسوعة أخطاء في البناء — الأحجار الطبيعية في المناخ شبه القاري' },
     ],

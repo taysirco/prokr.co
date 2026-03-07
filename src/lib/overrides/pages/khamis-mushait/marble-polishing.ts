@@ -42,9 +42,9 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات الجلي' },
         { entity: AMANA.ASIR.entity, url: AMANA.ASIR.url, role: 'اشتراطات أمانة عسير' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        { expert: EXPERTS.ALMOHAIMED.name, quote: 'رخام خميس: عفن بيولوجي+تآكل كيميائي. مختلف عن SiO₂ الصحراوي. Anti-Fungal+Poultice.', source: 'نصائح هندسية — رخام جبلي' },
+        { expert: EXPERTS.ALMISNID.name, quote: 'رخام خميس: عفن بيولوجي+تآكل كيميائي. مختلف عن SiO₂ الصحراوي. Anti-Fungal+Poultice.', source: 'نصائح هندسية — رخام جبلي' },
     ],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
     verificationBadges: [{ badge: '✔️ جلي مرخص', authority: 'بلدي', icon: 'shield-check' }],

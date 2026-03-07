@@ -9,7 +9,7 @@ export const override: PageOverride = {
     expertTips: ['Bait Stations 12/12 — لا توقف موسمي.', 'حقن تجديدي كل 3-5 سنوات — المبيد يتحلل في 80%.', 'Fipronil حصراً — Cascading Kill.', 'فحص شهري في موسم الأمطار (يوليو-سبتمبر) — الأنفاق تتوسع أسرع.'],
     warnings: ['80% = بيئة مثالية = الإصابة تتوسع بسرعة. التأخير = كارثة.', 'حاجز 3+ سنوات في جازان = منتهي (التحلل البيولوجي).'],
     trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات مكافحة الآفات' }, { ...GOV.WEQAA, role: 'تسجيل المبيدات' }],
-    expertReviewer: EXPERTS.ALKHODAIRY,
+    expertReviewer: EXPERTS.ALJUND,
     expertCitations: [{ expert: EXPERTS.ALKHODAIRY.name, quote: 'جازان = أفضل بيئة للنمل الأبيض سعودياً. 80% رطوبة = بيئة مثالية 12/12 + التربة الرطبة = أنفاق لا تنهار + المبيد يتحلل أسرع. Bait Stations 12/12 = إلزامي.', source: 'أبحاث حشرات — النمل الأبيض في المناخ الاستوائي' }],
     saudiRegulations: [REGULATIONS.GHAD_SYSTEM],
     verificationBadges: [{ badge: '✔️ مكافحة مرخصة', authority: 'بلدي + وقاء', icon: 'shield-check' }],

@@ -34,7 +34,7 @@ export const override: PageOverride = {
         'نافذة مفتوحة -2°م على مكتب 22°م = تكاثف = Short Circuit.',
     ],
     trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات التنظيف' }],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'المكتب التبوكي: Thermal Throttling + Short Circuit + ESD 3×. حسمى + -2°م + 12% = ثلاثي تقني فريد.', source: 'نصائح هندسية — بيئة العمل المكتبية' },
     ],

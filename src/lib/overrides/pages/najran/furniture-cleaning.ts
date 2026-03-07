@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف والصيانة' },
         { entity: AMANA.NAJRAN.entity, url: AMANA.NAJRAN.url, role: 'اشتراطات النظافة بمنطقة نجران' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'أثاث نجران = 4 مسارات تلف. المسار الفريد = حشرات الخشب من الواحة. الفحص الدوري = حماية من عدوى تنتشر لكل أثاث البيت.', source: 'نصائح هندسية — الأثاث في بيئات الواحات الصحراوية' },
     ],

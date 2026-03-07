@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات تنظيف الواجهات' },
         { entity: AMANA.AHSA.entity, url: AMANA.AHSA.url, role: 'اشتراطات المباني بمحافظة الأحساء' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'واجهات الأحساء = 3 تحديات واحية: CaSO₄ يُبقّع + لقاح يلتصق + UV يُتلف الختم. Deionized + Squeegee + Citric + UV Sealant = بروتوكول واجهات لا يشبه الساحلي ولا الصحراوي.', source: 'نصائح هندسية — واجهات الواحات' },
     ],

@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص التنظيف' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات النظافة بالشرقية' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'مجلس الظهران = 4 مزدوجة: بخور بلمرة + NaCl+SiO₂ بقع + 75-85% عفن + عث. Enzymatic + استخلاص + بخار + Anti-Fungal = تسلسل.', source: 'نصائح هندسية — مجالس البيئة المزدوجة' },
     ],

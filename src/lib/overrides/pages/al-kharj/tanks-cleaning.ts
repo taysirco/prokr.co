@@ -43,9 +43,9 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص تنظيف الخزانات' },
         { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
-        { expert: EXPERTS.ALJUND.name, quote: 'خزان الخرج: CaCO₃ Scale+SiO₂ قاع. Descaler+شفط. لا طحالب.', source: 'موسوعة أخطاء — خزانات' },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'خزان الخرج: CaCO₃ Scale+SiO₂ قاع. Descaler+شفط. لا طحالب.', source: 'موسوعة أخطاء — خزانات' },
     ],
     saudiRegulations: [REGULATIONS.NWC_REPORT],
     verificationBadges: [{ badge: '✔️ تنظيف خزانات مرخص', authority: 'بلدي + NWC', icon: 'shield-check' }],

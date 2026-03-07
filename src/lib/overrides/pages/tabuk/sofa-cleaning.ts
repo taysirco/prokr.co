@@ -41,7 +41,7 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'كنب تبوك يتشقق أسرع من أي مدينة سعودية — 12% رطوبة. 4-6 أشهر بدون Conditioner = شقوق لا تُصلح. + ثلج/مطر يُبقّع + رمل يبري. Conditioning كل 6-8 أسابيع + HEPA + Encapsulation = الحد الأدنى.', source: 'نصائح هندسية — صيانة الأقمشة والجلود في المناخ شبه القاري' },
     ],

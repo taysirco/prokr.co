@@ -73,7 +73,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'شهادة تنظيف مداخن ضمن متطلبات الترخيص التجاري للمطاعم' },
     ],
 
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
 
     expertCitations: [
         {

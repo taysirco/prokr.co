@@ -41,7 +41,7 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.TGA, role: 'ترخيص التخزين — شروط السلامة' },
     ],
-    expertReviewer: EXPERTS.ALZUWAYED,
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
         { expert: EXPERTS.ALZUWAYED.name, quote: 'تبوك = أصعب مدينة للتخزين. -2°م يُجمّد PVAc + 44°م يُليّنه = هجوم مزدوج من اتجاهين. + ثلوج تُبلل. HVAC 15-25°م 12 شهراً + عزل رطوبة + UPS = الحد الأدنى.', source: 'هيئة النقل — معايير تخزين الأثاث في المناطق ذات الصقيع' },
     ],

@@ -43,7 +43,7 @@ export const override: PageOverride = {
         { ...GOV.WEQAA, role: 'تسجيل مبيدات' },
         { entity: AMANA.HAFR.entity, url: AMANA.HAFR.url, role: 'صحة عامة بحفر الباطن' },
     ],
-    expertReviewer: EXPERTS.ALKHODAIRY,
+    expertReviewer: EXPERTS.ALJUND,
     expertCitations: [
         { expert: EXPERTS.ALKHODAIRY.name, quote: 'نمل أبيض حفر الباطن: تربة رملية + 10-15% بطيء (ميزة!) + -2°م عميق. مُركّب مع عقارب. Bait + Barrier + حراري.', source: 'أبحاث حشرات — نمل التربة القارية' },
     ],

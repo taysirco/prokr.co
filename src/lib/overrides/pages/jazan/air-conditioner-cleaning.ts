@@ -43,7 +43,7 @@ export const override: PageOverride = {
         { ...GOV.MOH, role: 'بروتوكولات مكافحة Legionella والوقاية من الأمراض المنقولة بالهواء' },
         { entity: AMANA.JAZAN.entity, url: AMANA.JAZAN.url, role: 'اشتراطات الصيانة والسلامة بمنطقة جازان' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'المكيف في جازان ليس جهاز تبريد — بل مُوزّع هواء رطب عبر ملفات مُستعمرة بالعفن 365 يوماً. غسيل المبخر كل 45 يوماً + Anti-Fungal + Marine-Guard للمكثف = الحد الأدنى. أقل من ذلك = التنظيف مؤقت والعفن دائم.', source: 'نصائح هندسية — صيانة التكييف في المناخ الاستوائي' },
     ],

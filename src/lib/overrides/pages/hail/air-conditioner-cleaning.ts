@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات صيانة المكيفات' },
         { ...GOV.SCE, role: 'اعتماد فنيي التكييف والتبريد' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'المكيف في حائل يعمل في أقسى ظروف: 48°م صيف + 0°م شتاء = فارق 48°م سنوي + غبار مزدوج. عمره أقل 2-3 سنوات بدون تنظيف. فلتر كل 6-8 أسابيع + Coil كل 6 أشهر = يُعيد العمر المفقود.', source: 'نصائح هندسية — صيانة أنظمة التكييف في المناخ القاري' },
     ],

@@ -43,7 +43,7 @@ export const override: PageOverride = {
         { ...GOV.SASO, role: 'اعتماد مواد الحماية والطلاء (Ceramic/Wax) وفق المواصفات السعودية' },
         { entity: AMANA.NAJRAN.entity, url: AMANA.NAJRAN.url, role: 'اشتراطات البيئة والنظافة بمنطقة نجران' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'سيارة نجران تعيش في بيئة كاشطة: كوارتز 7H يفوق Clear Coat 3H بضعفين+. أي تلامس = خدش حتمي. Touchless هو الغسيل الوحيد الآمن. Ceramic 9H هو الطلاء الوحيد الأصلب من الكوارتز. المعادلة واضحة.', source: 'موسوعة أخطاء — حماية المركبات في البيئات الصحراوية الكوارتزية' },
     ],

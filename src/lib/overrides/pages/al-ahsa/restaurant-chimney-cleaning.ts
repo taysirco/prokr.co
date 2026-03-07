@@ -43,7 +43,7 @@ export const override: PageOverride = {
         { ...GOV.CIVILDEFENSE, role: 'السلامة من الحريق — NFPA 96' },
         { entity: AMANA.AHSA.entity, url: AMANA.AHSA.url, role: 'اشتراطات مطاعم الأحساء' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'مداخن الأحساء = نجران + لقاح + CaSO₄. الكربنة المُسرّعة نفسها — لكن اللقاح يسد الفلاتر أسرع (2.5M نخلة) والجبس يُصلّب الشحوم. ربع سنوي + فلاتر شهرية + ماء مُقطر = الثلاثي الواحي.', source: 'نصائح هندسية — مداخن الواحات' },
     ],

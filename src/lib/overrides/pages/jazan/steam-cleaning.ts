@@ -33,7 +33,7 @@ export const override: PageOverride = {
         'عفن 24/7 بدون بخار = حساسية + ربو مزمن.',
     ],
     trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات التنظيف' }],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'البخار في جازان = سلاح ذو حدين. يقتل العفن والعث — لكن الرطوبة المتبقية في 80% = عفن جديد. Dehumidifier بعد كل جلسة = الفرق بين التعقيم والتخريب.', source: 'نصائح هندسية — البخار في المناخ الاستوائي' },
     ],

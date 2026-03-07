@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص مراكز الغسيل' },
         { entity: AMANA.HAFR.entity, url: AMANA.HAFR.url, role: 'اشتراطات البيئة بحفر الباطن' },
     ],
-    expertReviewer: EXPERTS.ALZUWAYED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALZUWAYED.name, quote: 'سيارة حفر الباطن = قارية: SiO₂ عواصف + ΔT 54°م + UV أعلى. Touchless + Ceramic + UV Protection = بروتوكول قاري.', source: 'هيئة النقل — غسيل المناخ القاري' },
     ],

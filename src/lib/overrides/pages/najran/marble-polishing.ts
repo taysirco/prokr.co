@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات الجلي والتلميع' },
         { entity: AMANA.NAJRAN.entity, url: AMANA.NAJRAN.url, role: 'اشتراطات المباني والتشطيبات بمنطقة نجران' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'رخام نجران = 3 أعداء متزامنين: طمي الوادي يتصلب في المسام خلال 48 ساعة (Silt Staining) + كوارتز أصلب ضعفين يخدش يومياً + UV يُصفّر. الـ 48 ساعة بعد السيل = أهم نافذة في السنة كلها.', source: 'موسوعة أخطاء — الرخام في بيئات الأودية' },
     ],

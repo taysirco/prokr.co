@@ -43,7 +43,7 @@ export const override: PageOverride = {
         { ...GOV.NWC, role: 'معايير مياه' },
         { entity: AMANA.HAFR.entity, url: AMANA.HAFR.url, role: 'اشتراطات المياه بحفر الباطن' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'خزان حفر الباطن: CaCO₃ + SiO₂ + تبخر + ΔT + -2°م. لا Biofilm (ميزة!). Acid + كشط + ختم + عزل.', source: 'موسوعة أخطاء — خزانات قارية' },
     ],

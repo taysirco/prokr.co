@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص صيانة المسابح — الشهادة الصحية' },
         { entity: AMANA.NAJRAN.entity, url: AMANA.NAJRAN.url, role: 'اشتراطات المسابح والصحة بمنطقة نجران' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'مسبح نجران = 4 تحديات: السيل الأخطر (طمي + بكتيريا) + بعوض يتكاثر في 7 أيام + تبخر مُسرّع + UV يُحلل الكلور. Flood Barrier + Shock + CYA + Larvicide = بروتوكول وادي المسبح.', source: 'موسوعة أخطاء — المسابح في بيئات الأودية' },
     ],

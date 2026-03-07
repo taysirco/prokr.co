@@ -43,7 +43,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'الشهادة الصحية لمستودعات التخزين' },
         { entity: AMANA.JAZAN.entity, url: AMANA.JAZAN.url, role: 'اشتراطات التخزين والسلامة بمنطقة جازان' },
     ],
-    expertReviewer: EXPERTS.ALZUWAYED,
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
         { expert: EXPERTS.ALZUWAYED.name, quote: 'جازان = المدينة الوحيدة في المملكة التي لا يُمكن فيها التخزين بدون Dehumidifier. 80% رطوبة = فوق عتبة العفن 100% من أيام السنة. مستودع عادي في جازان = مقبرة أثاث. Dehumidifier 24/7 + Anti-Fungal + Vapor Barrier = الترخيص الحقيقي للتخزين الآمن.', source: 'هيئة النقل — معايير التخزين في البيئات الاستوائية' },
     ],

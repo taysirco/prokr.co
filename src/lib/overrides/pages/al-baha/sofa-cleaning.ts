@@ -1,19 +1,73 @@
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
-    meta: { title: 'تنظيف كنب بالباحة — Laterite Fe₂O₃ يصبغ + ضباب يُعفّن الحشو + برودة تُصلّب PVAc (2026)', description: 'تنظيف كنب الباحة. Laterite يصبغ الأقمشة. ضباب 80% يُعفّن الحشو 3-4 أشهر. 5°م شتاءً يُصلّب PVAc. Oxalic Acid + Anti-Fungal + Conditioner.', h1: 'تنظيف كنب بالباحة — Laterite يصبغ + ضباب يُعفّن + برودة تُصلّب', keywords: ['تنظيف كنب بالباحة', 'تنظيف كنب الباحة', 'شركة تنظيف كنب بالباحة'] },
-    content: { introduction: '3 تحديات: (1) Laterite Fe₂O₃ يصبغ الأقمشة — بقعة حمراء من الأحذية/الأطفال. Oxalic Acid. (2) ضباب 80% يُعفّن الحشو: 3-4 أشهر رطوبة مرتفعة = Penicillium في الحشو. Anti-Fungal بعد كل موسم + Dehumidifier. (3) 5°م شتاءً: PVAc يتصلب ← المفاصل تصبح هشة (ليس كتبوك -2°م لكن 5°م كافية لـ PVAc). في الباحة: عكس جازان — المشكلة = برودة + ضباب (ليس حرارة + رطوبة).', shortAnswer: 'Laterite يصبغ + ضباب يُعفّن + برودة تُصلّب. Oxalic Acid + Anti-Fungal + Conditioner.', heroSubtitle: 'تربة حمراء + ضباب عفن + برودة شتاء' },
-    pricing: [{ type: 'تنظيف + Oxalic Acid + Anti-Fungal', unit: 'طقم', minPrice: 200, maxPrice: 400, time: '2-3 ساعات' }, { type: 'عقد نصف سنوي (بعد ضباب + بعد شتاء)', unit: 'سنة', minPrice: 350, maxPrice: 700, time: '2 زيارات' }],
-    faq: [{ question: 'ضباب يعفّن الكنب؟', answer: '80% × 3-4 أشهر = Penicillium في الحشو. Dehumidifier أثناء الموسم + Anti-Fungal بعده.' }],
-    expertTips: ['Oxalic Acid لبقع Laterite.', 'Anti-Fungal بعد كل موسم ضباب.', 'Dehumidifier يوليو-أكتوبر.', 'فحص PVAc بعد الشتاء.'],
-    warnings: ['مبيّض على Laterite = يُثبّت = بقعة دائمة.', 'ضباب بدون Dehumidifier = عفن حشو.'],
-    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات التنظيف' }],
-    expertReviewer: EXPERTS.ALMOHAIMED,
-    expertCitations: [{ expert: EXPERTS.ALMOHAIMED.name, quote: 'كنب الباحة: Laterite + ضباب + برودة = 3 فصول مختلفة. Oxalic Acid + Anti-Fungal + Conditioner.', source: 'نصائح هندسية — الأثاث في البيئات الجبلية' }],
-    saudiRegulations: [REGULATIONS.BALADI_HEALTH], verificationBadges: [{ badge: '✔️ تنظيف كنب مرخص', authority: 'بلدي', icon: 'shield-check' }],
-    equipment: [{ name: 'Oxalic Acid', use: 'يَختزل Fe₂O₃ من الأقمشة' }, { name: 'Anti-Fungal', use: 'بعد موسم الضباب' }, { name: 'Dehumidifier', use: 'أثناء الضباب' }],
-    hiddenObjections: [{ fear: 'الباحة معتدلة.', solution: 'ضباب 80% × 3-4 أشهر = عفن. + 5°م = PVAc.' }],
-    counterNarratives: [{ myth: 'الجو لطيف.', truth: 'لطيف للإنسان. ضباب + Laterite + 5°م = تحديات للأثاث.' }],
-    relatedServices: [{ slug: 'carpet-cleaning', context: 'سجاد — Laterite', priority: 1 }, { slug: 'furniture-cleaning', context: 'أثاث — PVAc', priority: 2 }, { slug: 'steam-cleaning', context: 'بخار — عفن', priority: 3 }],
+    meta: {
+        title: 'تنظيف كنب بالباحة — 200 يوم ضباب عفن+PVAc Swelling+عرعر — Anti-Fungal+Dehumidifier! (2026)',
+        description: 'تنظيف كنب الباحة. 200 يوم ضباب عفن! PVAc Swelling إطار. عرعر لزج. 6-10h. Anti-Fungal+Dehumidifier.',
+        h1: 'تنظيف كنب بالباحة — ضباب عفن+PVAc+عرعر!',
+        keywords: ['تنظيف كنب بالباحة', 'غسيل كنب الباحة', 'شركة تنظيف كنب بالباحة'],
+    },
+    content: {
+        introduction: 'كنب الباحة = عفن داخل الحشو! 200 يوم ضباب: رطوبة 60-85% تتغلغل في حشو الكنب ← عفن Penicillium خلال أسبوعين! Anti-Fungal Foam إلزامي. PVAc Swelling: غراء خشب إطار الكنب (PVAc) يمتص رطوبة ← ينتفخ ← ضعف مفاصل = كنب يتفكك 3-5 سنوات! Anti-Humidity Sealing. عكس بريدة: خشب يتشقق (جاف) = معاكس تماماً. عرعر لزج: حبوب لقاح تلتصق بالأقمشة = طبقة صفراء لزجة. Extraction+HEPA. 6-10h تجفيف: حشو الكنب الأبطأ تجفيف. Dehumidifier إلزامي. مقارنة: بريدة = CaCO₃+SiO₂ على القماش+تجفيف 15 دقيقة. الباحة = عفن+PVAc+عرعر+6-10h = أعقد.',
+        shortAnswer: 'على عكس [الغسل بدون Dehumidifier+Anti-Fungal]، يعتمد بروتوكولنا في خدمة [تنظيف الكنب] بمدينة [الباحة] على [Anti-Fungal ← Extraction ← Dehumidifier ← Anti-Humidity]. ففي ظل [200 يوم ضباب+PVAc Swelling+عرعر+6-10h]، تتفاقم ظاهرة [عفن+انتفاخ+لزوجة+بطء]. لذا؛ يتدخل فريقنا عبر [4 ركائز كنب جبلي].',
+        heroSubtitle: '200 يوم ضباب + PVAc Swelling + 6-10h — Dehumidifier إلزامي!',
+    },
+    pricing: [
+        { type: 'كنبة 3 مقاعد', unit: 'قطعة', minPrice: 80, maxPrice: 170, time: '30-60 دقيقة' },
+        { type: 'كنبة L-Shape', unit: 'قطعة', minPrice: 120, maxPrice: 250, time: '1-2h' },
+        { type: '+ Dehumidifier', unit: 'خدمة', minPrice: 50, maxPrice: 100, time: 'يُقلّل لـ 3-4h' },
+        { type: 'ربع سنوي', unit: 'سنة', minPrice: 280, maxPrice: 560, time: '4 غسلات' },
+    ],
+    faq: [
+        { question: 'ليش كنب الباحة يتعفّن من داخل؟', answer: '60-85% رطوبة تتغلغل = عفن حشو أسبوعين. Anti-Fungal Foam.' },
+        { question: 'ليش إطار الكنب ينتفخ بالباحة؟', answer: 'PVAc خشب يمتص رطوبة = Swelling. عكس بريدة (تشقق). Anti-Humidity.' },
+        { question: 'كم تجفيف كنب بالباحة؟', answer: '6-10h حشو! Dehumidifier يُقلّل لـ 3-4h. أبطأ بالمملكة.' },
+        { question: 'كم تكلفة كنب بالباحة مقارنة ببريدة؟', answer: 'أغلى 40-50% — Dehumidifier+Anti-Fungal. بريدة: 15 دقيقة!' },
+        { question: 'كم مرة تنظيف كنب بالباحة؟', answer: 'ربع سنوي + بعد الضباب. رغدان: شهري.' },
+    ],
+    expertTips: [
+        'Dehumidifier — 6-10h حشو!',
+        'Anti-Fungal Foam — عفن داخلي.',
+        'Anti-Humidity Sealing — PVAc إطار.',
+        'Extraction — عرعر لزج.',
+        'لا تُبلّل كثير — 6-10h!',
+    ],
+    warnings: [
+        'غسيل بدون Dehumidifier = حشو رطب 6-10h = عفن YMYL.',
+        'PVAc + رطوبة × 3 سنوات = مفاصل تنتفخ ← كنب يتفكك.',
+        'ضباب + كنب قرب نافذة = عفن أسرع ← Anti-Fungal أسبوعي.',
+    ],
+    trustAnchors: [
+        { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
+        { entity: AMANA.BAHA.entity, url: AMANA.BAHA.url, role: 'اشتراطات أمانة الباحة' },
+    ],
+    expertReviewer: EXPERTS.ALMISNID,
+    expertCitations: [
+        { expert: EXPERTS.ALMISNID.name, quote: 'كنب الباحة: عفن حشو+PVAc. Dehumidifier+Anti-Fungal. 6-10h!', source: 'جغرافيا المناخ — كنب جبلي' },
+    ],
+    saudiRegulations: [REGULATIONS.BALADI_HEALTH],
+    verificationBadges: [{ badge: '✔️ تنظيف كنب مرخص', authority: 'بلدي', icon: 'shield-check' }],
+    equipment: [
+        { name: 'Dehumidifier صناعي', use: '6-10h → 3-4h — إلزامي' },
+        { name: 'Anti-Fungal Foam', use: 'عفن حشو — ضباب' },
+        { name: 'Anti-Humidity Sealing', use: 'PVAc — إطار خشب' },
+    ],
+    hiddenObjections: [
+        { fear: 'تجفيف طبيعي.', solution: '6-10h = عفن. Dehumidifier.' },
+        { fear: 'مثل بريدة.', solution: 'PVAc Swelling vs Cracking.' },
+    ],
+    counterNarratives: [
+        { myth: 'كنب مصنّع.', truth: 'PVAc يمتص. Anti-Humidity.' },
+        { myth: 'نصف سنوي.', truth: 'ربع سنوي. ضباب.' },
+    ],
+    relatedServices: [
+        { slug: 'carpet-cleaning', context: 'سجاد', priority: 1 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 2 },
+        { slug: 'steam-cleaning', context: 'بخار', priority: 3 },
+        { slug: 'furniture-cleaning', context: 'أثاث', priority: 4 },
+        { slug: 'councils-cleaning', context: 'مجالس', priority: 5 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 6 },
+        { slug: 'pest-control', context: 'حشرات', priority: 7 },
+    ],
 };

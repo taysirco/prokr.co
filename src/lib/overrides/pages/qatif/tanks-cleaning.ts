@@ -40,7 +40,7 @@ export const override: PageOverride = {
         { ...GOV.NWC, role: 'معايير مياه' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات المياه بالشرقية' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'خزان القطيف: عيون تُغذي+Biofilm يحمي+NaCl Demand. فريد. Anti-Biofilm ← كلور 2×.', source: 'موسوعة أخطاء — خزانات الواحات الساحلية' },
     ],

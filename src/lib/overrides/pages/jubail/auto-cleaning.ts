@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص مراكز الغسيل' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات البيئة بالشرقية' },
     ],
-    expertReviewer: EXPERTS.ALZUWAYED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALZUWAYED.name, quote: 'سيارة الجبيل = الأصعب: NaCl+VOC Galvanic + سخام SABIC + 98% Water Spots. Touchless Marine + Ceramic 9H Marine + Underbody أسبوعي.', source: 'هيئة النقل — غسيل البيئة الصناعية' },
     ],

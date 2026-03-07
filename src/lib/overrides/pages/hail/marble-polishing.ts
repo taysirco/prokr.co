@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف والصيانة — اشتراطات مهنية' },
         { ...GOV.SCE, role: 'اعتماد فنيي الأرضيات والتلميع' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'الرخام في حائل يتعرض لإجهاد حراري يومي (20-25°م فارق) لا يتعرض له رخام أي مدينة ساحلية. هذا الإجهاد يُسبب شقوقاً شعرية حرارية تبدأ من الزوايا. التلميع الكريستالي (CaF₂) يحمي + HEPA يومي يمنع البري الكوارتزي.', source: 'موسوعة أخطاء في البناء — الأرضيات والتشطيبات في المناطق القارية' },
     ],

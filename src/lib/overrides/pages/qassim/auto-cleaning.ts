@@ -41,7 +41,7 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.BALADI, role: 'ترخيص مغاسل السيارات — اشتراطات بيئية وصحية' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'سيارات القصيم تحتاج بروتوكول غسيل مختلف تماماً — الرمل الكوارتزي أقسى بكثير من غبار المدن الساحلية ويُسبب Swirl Marks مع أي فرك. Touchless Wash + ماء RO + Ceramic Coating = الثلاثي الذي يحمي الطلاء في هذه البيئة القاسية.', source: 'نصائح هندسية — حماية الطلاء في بيئات الرمل والحرارة القارية' },
     ],

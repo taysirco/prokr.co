@@ -43,9 +43,9 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات التسليك' },
         { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
-        { expert: EXPERTS.ALJUND.name, quote: 'مجاري الخرج: CaCO₃ يسد المفاصل. Descaler+Jetting. السنبك لا يكفي.', source: 'موسوعة أخطاء — صرف زراعي' },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'مجاري الخرج: CaCO₃ يسد المفاصل. Descaler+Jetting. السنبك لا يكفي.', source: 'موسوعة أخطاء — صرف زراعي' },
     ],
     saudiRegulations: [REGULATIONS.NWC_REPORT],
     verificationBadges: [{ badge: '✔️ تسليك مرخص', authority: 'بلدي + NWC', icon: 'shield-check' }],

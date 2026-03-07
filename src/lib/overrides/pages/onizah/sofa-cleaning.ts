@@ -1,17 +1,73 @@
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
-    meta: { title: 'تنظيف كنب بعنيزة — CaCO₃ يُبيّض + Nafud يخدش + 48°م PVAc 70°م + 0°م تصلّب + جفاف مفرط (2026)', description: 'تنظيف كنب عنيزة. CaCO₃ 600ppm يُبيّض. Nafud يخدش. 48°م سطح 70°م = PVAc يسيل. 0°م = PVAc يتصلب. 10% = جلد يتشقق.', h1: 'تنظيف كنب بعنيزة — CaCO₃ + Nafud + حرارة مفرطة + جفاف', keywords: ['تنظيف كنب بعنيزة', 'تنظيف كنب عنيزة'] },
-    content: { introduction: '5 تحديات: (1) CaCO₃ 600ppm يُبيّض الأقمشة الداكنة. Citric Acid + RO water. (2) Nafud 7 Mohs يخدش الجلد. HEPA أولاً. (3) 48°م سطحي → نوافذ مواجهة = 70-85°م → PVAc يسيل → مفاصل تنفك. (4) 0°م شتاءً = PVAc يتصلب = هشاشة. Conditioner. (5) 10% RH = جلد يفقد 40-60% رطوبة → يتشقق خلال 6-12 شهراً. Leather Conditioner كل 3 أشهر. الكنب القصيمي يعيش أصعب 46°م Delta في المملكة: من 0°م (شتاء) إلى 70°م (سطح صيف).', shortAnswer: 'CaCO₃ يُبيّض + Nafud يخدش + 70°م PVAc + 0°م تصلّب + 10% تشقق. 5 معالجات مختلفة.', heroSubtitle: 'أصعب 46°م Delta: CaCO₃ + Nafud + PVAc يسيل/يتصلب + جلد يتشقق' },
-    pricing: [{ type: 'تنظيف + Descaling + Conditioner', unit: 'طقم', minPrice: 200, maxPrice: 400, time: '2-3 ساعات' }, { type: 'ربع سنوي (كل فصل)', unit: 'سنة', minPrice: 500, maxPrice: 1000, time: '4 زيارات' }],
-    faq: [{ question: 'جلد يتشقق — كل سنة؟', answer: '10% RH = يفقد رطوبة. Leather Conditioner كل 3 أشهر = يمنع.' }, { question: 'مفاصل تنفك صيفاً؟', answer: 'سطح نوافذ 70°م = PVAc يسيل. ستائر عازلة + بعد عن النوافذ.' }],
-    expertTips: ['RO water لا صنبور.', 'HEPA أولاً — Nafud.', 'Leather Conditioner كل 3 أشهر.', 'ستائر عازلة — PVAc.'],
-    warnings: ['70°م سطحي = PVAc يسيل = مفصل ينفك.', '10% بدون Conditioner = جلد يتشقق.'],
-    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص' }], expertReviewer: EXPERTS.ALMOHAIMED,
-    expertCitations: [{ expert: EXPERTS.ALMOHAIMED.name, quote: 'كنب عنيزة: 46°م Delta = أصعب بيئة أثاث بالمملكة.', source: 'نصائح هندسية — الأثاث في القصيم' }],
-    saudiRegulations: [REGULATIONS.BALADI_HEALTH], verificationBadges: [{ badge: '✔️ مرخص', authority: 'بلدي', icon: 'shield-check' }],
-    equipment: [{ name: 'Citric Acid + RO', use: 'CaCO₃' }, { name: 'HEPA', use: 'Nafud' }, { name: 'Leather Conditioner', use: '10% جفاف' }],
-    hiddenObjections: [{ fear: 'منظف عادي.', solution: '5 تحديات مختلفة.' }], counterNarratives: [{ myth: 'الجو جاف = نظيف.', truth: 'جاف = CaCO₃ يترسب + جلد يتشقق.' }],
-    relatedServices: [{ slug: 'carpet-cleaning', context: 'سجاد', priority: 1 }, { slug: 'furniture-cleaning', context: 'أثاث', priority: 2 }],
+    meta: {
+        title: 'تنظيف كنب بعنيزة — Nafud SiO₂ ألياف+CaCO₃ تصلب+ΔT تشقق خشب+لقاح — HEPA+Citric+ترطيب! (2026)',
+        description: 'تنظيف كنب عنيزة. Nafud SiO₂ ألياف! CaCO₃ تصلب أقمشة. ΔT 48°م تشقق خشب. لقاح. HEPA+Citric+ترطيب خشب.',
+        h1: 'تنظيف كنب بعنيزة — Nafud+كلس+تشقق!',
+        keywords: ['تنظيف كنب بعنيزة', 'غسيل كنب عنيزة', 'شركة تنظيف كنب بعنيزة'],
+    },
+    content: {
+        introduction: 'كنب عنيزة = Nafud يقصّ+كلس يصلّب+خشب يتشقق! Nafud SiO₂ 7 Mohs: رمل يتغلغل بأقمشة الكنب ← يقصّ ألياف بالجلوس! HEPA شفط أولاً. CaCO₃ 550ppm: ماء الغسيل يصلّب أقمشة ← كنب خشن! Citric+RO. ΔT تشقق خشب: جفاف 10-20%+48°م = إطار خشب الكنب يتشقق ← مفاصل تضعف! عكس الباحة (PVAc ينتفخ). ترطيب Oil Treatment. لقاح: مارس-مايو = حبوب لقاح تدخل بين الحشو. بخار 130°م. يجف فوراً: 15 دقيقة! ميزة. لكن: جفاف مستمر = خشب يتشقق. مقارنة: الباحة = PVAc Swelling (عكس!). عنيزة = ΔT Cracking = معكوس تماماً.',
+        shortAnswer: 'على عكس [الفرك+ماء صنبور]، يعتمد بروتوكولنا في خدمة [تنظيف الكنب] بمدينة [عنيزة] على [HEPA ← Citric+RO ← Oil Treatment ← بخار]. ففي ظل [Nafud SiO₂+CaCO₃+ΔT تشقق+لقاح]، تتفاقم ظاهرة [قصّ+تصلب+تشقق+التصاق]. لذا؛ يتدخل فريقنا عبر [HEPA ← Citric ← Oil ← بخار] — يجف فوراً!',
+        heroSubtitle: 'Nafud ألياف + CaCO₃ تصلب + ΔT تشقق خشب — يجف 15 دقيقة!',
+    },
+    pricing: [
+        { type: 'كنبة 3 مقاعد', unit: 'قطعة', minPrice: 60, maxPrice: 120, time: '30 دقيقة' },
+        { type: 'كنبة L-Shape', unit: 'قطعة', minPrice: 100, maxPrice: 200, time: '1h' },
+        { type: '+ Oil Treatment خشب', unit: 'خدمة', minPrice: 50, maxPrice: 100, time: '+ 30 دقيقة' },
+        { type: 'ربع سنوي', unit: 'سنة', minPrice: 200, maxPrice: 400, time: '4 تنظيف' },
+    ],
+    faq: [
+        { question: 'ليش كنب عنيزة يتشقق؟', answer: '10-20%+48°م = جفاف. خشب إطار يتشقق. Oil Treatment.' },
+        { question: 'ليش الباحة ينتفخ وعنيزة يتشقق؟', answer: 'الباحة: 60-85% PVAc Swelling. عنيزة: 10-20% ΔT Cracking. عكس!' },
+        { question: 'ليش أقمشة الكنب تصير خشنة بعنيزة؟', answer: 'CaCO₃ 550ppm ماء عسر. Citric+RO Water.' },
+        { question: 'كم تجفيف كنب بعنيزة مقابل الباحة؟', answer: '15 دقيقة! الباحة: 6-10h. عنيزة الأسرع.' },
+        { question: 'ما لقاح بالكنب بعنيزة؟', answer: 'مارس-مايو لقاح نخيل بالحشو. بخار 130°م.' },
+    ],
+    expertTips: [
+        'HEPA أولاً — Nafud ألياف.',
+        'Citric+RO — CaCO₃ تصلب.',
+        'Oil Treatment — ΔT تشقق خشب.',
+        'بخار — لقاح حشو.',
+        'يجف 15 دقيقة — لا تأخير.',
+    ],
+    warnings: [
+        'Nafud + جلوس × 6 أشهر = ألياف مقطوعة — HEPA شهري.',
+        'ماء صنبور + أقمشة = تصلب — Citric+RO.',
+        '10-20% × سنة = خشب يتشقق — Oil Treatment.',
+    ],
+    trustAnchors: [
+        { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
+        { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
+    ],
+    expertReviewer: EXPERTS.ALMISNID,
+    expertCitations: [
+        { expert: EXPERTS.ALMISNID.name, quote: 'كنب عنيزة: ΔT تشقق عكس الباحة PVAc. HEPA+Oil.', source: 'جغرافيا المناخ — كنب القصيم' },
+    ],
+    saudiRegulations: [REGULATIONS.BALADI_HEALTH],
+    verificationBadges: [{ badge: '✔️ تنظيف كنب مرخص', authority: 'بلدي', icon: 'shield-check' }],
+    equipment: [
+        { name: 'HEPA شفط', use: 'Nafud SiO₂ — ألياف' },
+        { name: 'Citric + RO', use: 'CaCO₃ — لا تصلب' },
+        { name: 'Oil Treatment', use: 'ΔT — خشب تشقق' },
+    ],
+    hiddenObjections: [
+        { fear: 'منظف عادي.', solution: 'Nafud+كلس+ΔT = 3 ركائز.' },
+        { fear: 'مثل الباحة.', solution: 'Cracking vs Swelling. عكس!' },
+    ],
+    counterNarratives: [
+        { myth: 'تجفيف مشكلة.', truth: '15 دقيقة! 10-20%.' },
+        { myth: 'خشب يستمر.', truth: 'ΔT = Oil Treatment.' },
+    ],
+    relatedServices: [
+        { slug: 'carpet-cleaning', context: 'سجاد', priority: 1 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 2 },
+        { slug: 'steam-cleaning', context: 'بخار', priority: 3 },
+        { slug: 'councils-cleaning', context: 'مجالس', priority: 4 },
+        { slug: 'furniture-cleaning', context: 'أثاث', priority: 5 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 6 },
+        { slug: 'pest-control', context: 'حشرات', priority: 7 },
+    ],
 };

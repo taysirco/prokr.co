@@ -42,9 +42,9 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
         { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        { expert: EXPERTS.ALMOHAIMED.name, quote: 'كنب الخرج: بلمرة حيوانية NH₃. Enzymatic+AC. ميزة: لا عفن+20 دقيقة.', source: 'نصائح هندسية' },
+        { expert: EXPERTS.ALMISNID.name, quote: 'كنب الخرج: بلمرة حيوانية NH₃. Enzymatic+AC. ميزة: لا عفن+20 دقيقة.', source: 'نصائح هندسية' },
     ],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
     verificationBadges: [{ badge: '✔️ تنظيف كنب مرخص', authority: 'بلدي', icon: 'shield-check' }],

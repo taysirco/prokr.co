@@ -41,7 +41,7 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.BALADI, role: 'ترخيص مغاسل السيارات — اشتراطات بيئية وصحية' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'حائل = المدينة الوحيدة التي يتشقق فيها شمع السيارة بالصقيع. Ceramic Coating SiO₂ 9H = الحل الوحيد الذي يعمل في 0°م و48°م بدون تشقق. + Touchless + RO = الثلاثي الذي يحمي الطلاء.', source: 'نصائح هندسية — حماية طلاء السيارات في المناخ القاري' },
     ],

@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات النظافة بالشرقية' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'بخار الخبر = ثلاثي ساحلي: يُذيب NaCl + يقتل عث + يُكسر Biofilm. لكن: 85-95% = تجفيف Dehumidifier إلزامي. بخار بدون تجفيف في الخبر = وصفة عفن.', source: 'نصائح هندسية — البخار الساحلي' },
     ],

@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
         { entity: AMANA.AHSA.entity, url: AMANA.AHSA.url, role: 'اشتراطات الصحة بمحافظة الأحساء' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'سجاد الأحساء = 4 آليات: لقاح Fiber Cutting + تربة عضوية Cemented + CaSO₄ يُثبّت البقع + عث يتغذى على اللقاح. HEPA أولاً ← Citric ← Enzymatic ← استخلاص ← بخار = بروتوكول واحي لا يشبه أي مدينة.', source: 'نصائح هندسية — سجاد الواحات الكبرى' },
     ],

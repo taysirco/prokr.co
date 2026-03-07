@@ -43,7 +43,7 @@ export const override: PageOverride = {
         { ...GOV.WEQAA, role: 'تسجيل مبيدات' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'صحة عامة بالشرقية' },
     ],
-    expertReviewer: EXPERTS.ALKHODAIRY,
+    expertReviewer: EXPERTS.ALJUND,
     expertCitations: [
         { expert: EXPERTS.ALKHODAIRY.name, quote: 'نمل أبيض الخبر = ساحلي: Sabkha ليّنة + 85-95% رطوبة مُطلقة + NaCl يُضعف Barrier. Bait + Barrier مُعزز + مراقبة ربع سنوية = بروتوكول ساحلي.', source: 'أبحاث حشرات — نمل أبيض Sabkha' },
     ],

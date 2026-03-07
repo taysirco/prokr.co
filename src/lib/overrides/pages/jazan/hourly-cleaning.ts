@@ -43,7 +43,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف — الشهادة الصحية الإلزامية' },
         { entity: AMANA.JAZAN.entity, url: AMANA.JAZAN.url, role: 'اشتراطات النظافة والصحة العامة بمنطقة جازان' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'العاملة غير المُدرّبة في 80% = تُعفّن المنزل بحسن نية. ممسحة مبللة + ماء صنبور + بدون تجفيف = أملاح + رطوبة = عفن. التدريب الاستوائي = الفرق بين نظافة وكارثة.', source: 'نصائح هندسية — التنظيف المنزلي في المناخ الاستوائي' },
     ],

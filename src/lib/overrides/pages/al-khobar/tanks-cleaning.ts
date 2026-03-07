@@ -43,7 +43,7 @@ export const override: PageOverride = {
         { ...GOV.NWC, role: 'معايير مياه الشرب' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات المياه بالشرقية' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'خزان الخبر = ساحلي: NaCl Chloride Demand + Biofilm 85-95% + بعوض Culex + تآكل. لا Scale (ميزة!) — لكن Chloride Demand = تعقيم أصعب.', source: 'موسوعة أخطاء — خزانات المياه الساحلية' },
     ],

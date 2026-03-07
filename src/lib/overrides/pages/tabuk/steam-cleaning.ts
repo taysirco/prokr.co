@@ -41,7 +41,7 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'البخار 130°م = الأداة الأكثر أهمية في تبوك. يقتل عث الثلج (Protein Denaturation) + يُعقّم عفن التكاثف (Sporicidal) + يُصبّن سخام المدافئ (Saponification). 3 مشاكل تبوكية فريدة بأداة واحدة.', source: 'نصائح هندسية — التنظيف بالبخار في المناخ شبه القاري' },
     ],

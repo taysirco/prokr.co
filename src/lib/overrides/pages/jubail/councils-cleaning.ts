@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص التنظيف' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات النظافة بالشرقية' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'مجلس الجبيل = الأقسى: بخور+VOC بلمرة مُركّبة + 98% عفن+عث أقصى. Enzymatic أقصى + بخار + Anti-Mite + Turbo.', source: 'نصائح هندسية — مجالس البيئة الصناعية' },
     ],

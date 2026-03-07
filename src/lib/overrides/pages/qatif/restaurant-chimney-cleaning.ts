@@ -40,7 +40,7 @@ export const override: PageOverride = {
         { ...GOV.CIVILDEFENSE, role: 'السلامة — NFPA 96' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات مطاعم بالشرقية' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'مدخنة القطيف: Biofilm + كربنة واحية + NaCl أسماك. مطاعم أسماك = كل شهرين.', source: 'نصائح هندسية — مداخن الواحات الساحلية' },
     ],

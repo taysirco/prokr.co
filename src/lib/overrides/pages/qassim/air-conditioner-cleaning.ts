@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.SCE, role: 'اعتماد فنيي التكييف والتبريد' },
         { ...GOV.MOENERGY, role: 'كفاءة الطاقة — صيانة المكيفات توفر 20-30% من الاستهلاك' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'مكيفات القصيم تتحمل غبار مزدوج: زراعي (عضوي لزج) + رملي (ناعم يعبر الفلتر). تنظيف سنوي واحد لا يكفي — كل 3-4 أشهر ضروري للحفاظ على كفاءة 90%+ وحماية الضاغط.', source: 'نصائح هندسية — جودة البناء السعودي' },
     ],

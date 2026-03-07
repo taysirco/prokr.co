@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.SCE, role: 'كفاءة الطاقة' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات الصحة بالشرقية' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'مكيف القطيف: NaCl ساحلي + عفن واحي + PM10 طيني + ألياف نخيل. بيئة ساحلية-زراعية فريدة. RO + Anti-Fungal + HEPA.', source: 'موسوعة أخطاء — مكيفات الواحات الساحلية' },
     ],

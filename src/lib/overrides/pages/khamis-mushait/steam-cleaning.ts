@@ -42,9 +42,9 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
         { entity: AMANA.ASIR.entity, url: AMANA.ASIR.url, role: 'اشتراطات أمانة عسير' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        { expert: EXPERTS.ALMOHAIMED.name, quote: 'بخار خميس: يحتاج Anti-Fungal+Anti-Mite+Dehumidifier. البخار وحده لا يكفي بالرطوبة.', source: 'نصائح هندسية — تنظيف جبلي' },
+        { expert: EXPERTS.ALMISNID.name, quote: 'بخار خميس: يحتاج Anti-Fungal+Anti-Mite+Dehumidifier. البخار وحده لا يكفي بالرطوبة.', source: 'نصائح هندسية — تنظيف جبلي' },
     ],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
     verificationBadges: [{ badge: '✔️ تنظيف بخار مرخص', authority: 'بلدي', icon: 'shield-check' }],

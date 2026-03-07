@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.NWC, role: 'معايير مياه' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات المياه بالشرقية' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'خزان الجبيل: Biofilm أقصى + NaCl Demand + طحالب. Anti-Biofilm ← كلور 2× = الترتيب الحاسم. لا Scale (ميزة!).', source: 'موسوعة أخطاء — خزانات صناعية-ساحلية' },
     ],

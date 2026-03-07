@@ -42,9 +42,9 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
         { entity: AMANA.ASIR.entity, url: AMANA.ASIR.url, role: 'اشتراطات أمانة عسير' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        { expert: EXPERTS.ALMOHAIMED.name, quote: 'كنب خميس: ثلاثي خطر. عفن+عث+بلمرة رطبة. Dehumidifier+Anti-Fungal+Enzymatic.', source: 'نصائح هندسية — أقمشة جبلية' },
+        { expert: EXPERTS.ALMISNID.name, quote: 'كنب خميس: ثلاثي خطر. عفن+عث+بلمرة رطبة. Dehumidifier+Anti-Fungal+Enzymatic.', source: 'نصائح هندسية — أقمشة جبلية' },
     ],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
     verificationBadges: [{ badge: '✔️ تنظيف مرخص', authority: 'بلدي', icon: 'shield-check' }],

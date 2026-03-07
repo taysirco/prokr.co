@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص التنظيف' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات النظافة بالشرقية' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'أثاث الجبيل: NaCl+VOC Galvanic 2× + 98% عفن + PVAc مزدوج. أقسى بيئة أثاث في المملكة. Marine+Anti-Fungal+Dehumidifier.', source: 'نصائح هندسية — أثاث البيئة الصناعية' },
     ],

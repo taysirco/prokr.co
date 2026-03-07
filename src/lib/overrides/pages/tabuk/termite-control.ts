@@ -37,7 +37,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات مكافحة الآفات' },
         { ...GOV.WEQAA, role: 'تسجيل المبيدات' },
     ],
-    expertReviewer: EXPERTS.ALKHODAIRY,
+    expertReviewer: EXPERTS.ALJUND,
     expertCitations: [
         { expert: EXPERTS.ALKHODAIRY.name, quote: 'نمل أبيض تبوك: حجر مسامي = أنفاق أسهل. -2°م = أقصر عمر حاجز في المشروع (2-4 سنوات). حقن تجديدي + Bait Stations = الحل.', source: 'أبحاث حشرات — النمل الأبيض في التربة الرملية' },
     ],

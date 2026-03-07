@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.SCE, role: 'كفاءة الطاقة' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات الصحة بالشرقية' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'مكيف الظهران = مزدوج: NaCl+SiO₂ يتفاعلان — SiO₂ يخدش الحماية + NaCl يتآكل المكشوف. لا يُشبه الخبر (NaCl فقط) ولا الرياض (SiO₂ فقط). بروتوكول خاص.', source: 'موسوعة أخطاء — مكيفات البيئة المزدوجة' },
     ],

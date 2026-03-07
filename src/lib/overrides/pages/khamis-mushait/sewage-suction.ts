@@ -43,9 +43,9 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شفط' },
         { entity: AMANA.ASIR.entity, url: AMANA.ASIR.url, role: 'اشتراطات أمانة عسير' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
-        { expert: EXPERTS.ALJUND.name, quote: 'بيارة خميس: أمطار تغمر+تربة صخرية. كل 3 أسابيع. رائحة لا تتبخر بالرطوبة.', source: 'موسوعة أخطاء — صرف جبلي' },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'بيارة خميس: أمطار تغمر+تربة صخرية. كل 3 أسابيع. رائحة لا تتبخر بالرطوبة.', source: 'موسوعة أخطاء — صرف جبلي' },
     ],
     saudiRegulations: [REGULATIONS.NWC_REPORT],
     verificationBadges: [{ badge: '✔️ شفط مرخص', authority: 'بلدي', icon: 'shield-check' }],

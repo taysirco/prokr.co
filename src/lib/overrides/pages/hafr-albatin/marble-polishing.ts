@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات الجلي' },
         { entity: AMANA.HAFR.entity, url: AMANA.HAFR.url, role: 'اشتراطات المباني بحفر الباطن' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'رخام حفر الباطن: SiO₂ أكثف + ΔT 54°م شعيرات + UV أكسدة. لا عفن (ميزة!). HEPA ← جلي ← Sealer ← UV Sealer.', source: 'نصائح هندسية — رخام قاري' },
     ],

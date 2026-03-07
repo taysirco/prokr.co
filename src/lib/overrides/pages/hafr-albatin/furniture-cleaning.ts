@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص التنظيف' },
         { entity: AMANA.HAFR.entity, url: AMANA.HAFR.url, role: 'اشتراطات النظافة بحفر الباطن' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'أثاث حفر الباطن: ΔT 54°م PVAc أقصى + 10-15% جلد يتشقق + SiO₂ مفصلات. لا صدأ ولا عفن (ميزتين!). Conditioner + Anti-UV.', source: 'نصائح هندسية — أثاث المناخ القاري' },
     ],

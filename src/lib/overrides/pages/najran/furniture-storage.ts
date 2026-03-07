@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.TGA, role: 'ترخيص مستودعات التخزين — معايير السلامة' },
         { entity: AMANA.NAJRAN.entity, url: AMANA.NAJRAN.url, role: 'اشتراطات التخزين والسلامة بمنطقة نجران' },
     ],
-    expertReviewer: EXPERTS.ALZUWAYED,
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
         { expert: EXPERTS.ALZUWAYED.name, quote: 'تخزين نجران = 3 شروط: مُبرّد (ضد 60°م) + مرتفع (ضد Rising Damp) + مختوم (ضد كوارتز). حذف أي شرط = مسار تلف مستقل. 3 شروط مُتكاملة = حماية كاملة.', source: 'هيئة النقل — التخزين في مناطق الأودية' },
     ],

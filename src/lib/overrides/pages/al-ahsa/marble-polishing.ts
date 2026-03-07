@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات الجلي والتلميع' },
         { entity: AMANA.AHSA.entity, url: AMANA.AHSA.url, role: 'اشتراطات المباني بمحافظة الأحساء' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'رخام الأحساء = 3 آليات واحية: CaSO₄ يُبهت + لقاح يخدش ميكروبياً + تربة تتسلل. Citric + HEPA + Poultice + Sealer = بروتوكول يحمي الاستثمار — لأن الرخام غالي والبيئة عنيدة.', source: 'نصائح هندسية — رخام الواحات' },
     ],

@@ -41,7 +41,7 @@ export const override: PageOverride = {
         { ...GOV.WEQAA, role: 'تسجيل مبيدات' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'صحة عامة بالشرقية' },
     ],
-    expertReviewer: EXPERTS.ALKHODAIRY,
+    expertReviewer: EXPERTS.ALJUND,
     expertCitations: [
         { expert: EXPERTS.ALKHODAIRY.name, quote: 'نمل أبيض الجبيل: 85-98% مثالي = أسرع نمو. خشب SABIC = غذاء. Biofilm = حماية. Barrier Marine + Anti-Biofilm.', source: 'أبحاث حشرات — نمل التربة الرطبة الصناعية' },
     ],

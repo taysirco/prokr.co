@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
         { entity: AMANA.AHSA.entity, url: AMANA.AHSA.url, role: 'اشتراطات الصحة بمحافظة الأحساء' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'فرن الأحساء = ثلاثي واحي: كربنة 48°م + غبار واحة يسد + CaSO₄ يُصلّب. Citric → Alkaline → HEPA = ترتيب إلزامي. بخاخ pH 9 لا يكفي لكربنة pH 12.', source: 'نصائح هندسية — أفران البيئات الحارة' },
     ],

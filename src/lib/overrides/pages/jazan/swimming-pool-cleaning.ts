@@ -37,7 +37,7 @@ export const override: PageOverride = {
         'المعدات المعدنية بدون Marine-Grade = Pitting Corrosion خلال أشهر = استبدال.',
     ],
     trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص صيانة المسابح' }],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'مسبح جازان = أصعب صيانة سعودية: طحالب وبعوض 12/12 + كلور يتحلل 3× + ملح بحري. الصيانة الأسبوعية = الحد الأدنى — ليست اختيارية.', source: 'موسوعة أخطاء — المسابح في المناخ الاستوائي' },
     ],

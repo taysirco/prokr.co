@@ -39,7 +39,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص التنظيف' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات النظافة بالشرقية' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'بخار القطيف: يُحرر NaCl+طين + يقتل عث + يُحرر طلع. 4-8 ساعات. Dehumidifier.', source: 'نصائح هندسية — بخار الواحات الساحلية' },
     ],

@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات النظافة بالشرقية' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'سجاد الخبر = 4 آليات ساحلية: NaCl يُصلّب + 85-95% عفن قاعدي حتمي + عث مُتسارع + Sabkha. استخلاص + بخار + Anti-Fungal + تجفيف سريع = الترتيب الإلزامي.', source: 'نصائح هندسية — سجاد البيئات الساحلية' },
     ],

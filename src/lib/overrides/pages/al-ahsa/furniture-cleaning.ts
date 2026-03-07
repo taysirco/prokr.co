@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
         { entity: AMANA.AHSA.entity, url: AMANA.AHSA.url, role: 'اشتراطات الصحة بمحافظة الأحساء' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'أثاث الأحساء = 4 تهديدات واحية: الحرارة تُليّن المفاصل + الواحة تُغذي خنافس الخشب + الماء الجبسي يُبقّع + العيون تُعفّن. بروتوكول واحي = Tightener + فحص Anobium + Citric + Anti-Fungal — لا يُترك لاحتمال.', source: 'نصائح هندسية — الأثاث في الواحات الكبرى' },
     ],

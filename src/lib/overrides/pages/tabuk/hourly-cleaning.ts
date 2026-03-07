@@ -37,7 +37,7 @@ export const override: PageOverride = {
         { ...GOV.HRSD, role: 'تنظيم العمالة المنزلية' },
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'عاملة تبوك تحتاج تدريباً خاصاً: HEPA-أولاً + Color-Coded + جدول فصلي. العاملة غير المُدرّبة تُتلف أكثر مما تُنظف.', source: 'نصائح هندسية — بروتوكولات التنظيف المنزلي' },
     ],

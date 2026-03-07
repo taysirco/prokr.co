@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص التنظيف' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات النظافة بالشرقية' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'سجاد الظهران = مزدوج: NaCl يُصلّب + SiO₂ يقطع + 75-85% عفن. استخلاص + بخار + Anti-Fungal + تجفيف = بروتوكول مزدوج لا يُختصر.', source: 'نصائح هندسية — سجاد البيئة المزدوجة' },
     ],

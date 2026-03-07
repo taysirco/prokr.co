@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص مكافحة آفات' },
         { ...GOV.WEQAA, role: 'صحة عامة — مخاطر فضلات الطيور' },
     ],
-    expertReviewer: EXPERTS.ALKHODAIRY,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALKHODAIRY.name, quote: 'فضلات الحمام pH 3-4 أشد حمضية مما يظن الناس. في جفاف الرياض: تجف وتتحول لغبار فطري. الخطر الصحي حقيقي خصوصاً للأطفال.', source: 'مكافحة آفات حضرية' },
     ],

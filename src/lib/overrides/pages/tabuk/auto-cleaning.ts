@@ -36,7 +36,7 @@ export const override: PageOverride = {
         'غسل في -2°م = ماء يتجمد في أقفال وأنابيب. غسل نهاراً 10 ص+.',
     ],
     trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص غسيل السيارات' }],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'سيارة تبوك في 46°م مدى: الشمع خيار فاشل. Ceramic SiO₂ 9H = يعمل -10°م → 80°م = الحل الوحيد. + Touchless + Deionized = بروتوكول تبوكي كامل.', source: 'موسوعة أخطاء — حماية دهان السيارات في مناخ الصقيع' },
     ],

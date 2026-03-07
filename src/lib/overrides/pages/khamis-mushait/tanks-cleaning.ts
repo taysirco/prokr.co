@@ -43,9 +43,9 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص تنظيف الخزانات' },
         { entity: AMANA.ASIR.entity, url: AMANA.ASIR.url, role: 'اشتراطات أمانة عسير' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
-        { expert: EXPERTS.ALJUND.name, quote: 'خزان خميس: طحالب 2×+أمطار. ربع سنوي+Anti-Algae+إحكام. أكثر تلوثاً.', source: 'موسوعة أخطاء — خزانات جبلية' },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'خزان خميس: طحالب 2×+أمطار. ربع سنوي+Anti-Algae+إحكام. أكثر تلوثاً.', source: 'موسوعة أخطاء — خزانات جبلية' },
     ],
     saudiRegulations: [REGULATIONS.NWC_REPORT],
     verificationBadges: [{ badge: '✔️ تنظيف خزان مرخص', authority: 'بلدي + NWC', icon: 'shield-check' }],

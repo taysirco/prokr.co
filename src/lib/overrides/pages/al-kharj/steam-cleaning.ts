@@ -42,9 +42,9 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
         { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        { expert: EXPERTS.ALMOHAIMED.name, quote: 'بخار الخرج: 150°م يكسّر بلمرة NH₃. أفعل من Enzymatic للأسطح الصلبة.', source: 'نصائح هندسية' },
+        { expert: EXPERTS.ALMISNID.name, quote: 'بخار الخرج: 150°م يكسّر بلمرة NH₃. أفعل من Enzymatic للأسطح الصلبة.', source: 'نصائح هندسية' },
     ],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
     verificationBadges: [{ badge: '✔️ تنظيف بخار مرخص', authority: 'بلدي', icon: 'shield-check' }],

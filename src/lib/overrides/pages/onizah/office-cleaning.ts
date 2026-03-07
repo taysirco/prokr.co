@@ -42,9 +42,9 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف التجاري' },
         { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        { expert: EXPERTS.ALJUND.name, quote: 'مكتب عنيزة: SiO₂ أجهزة + طلع مهني. لا Sick Building — ميزة. موسم تمور = فحص حشرات.', source: 'موسوعة أخطاء — بيئة عمل' },
+        { expert: EXPERTS.ALMISNID.name, quote: 'مكتب عنيزة: SiO₂ أجهزة + طلع مهني. لا Sick Building — ميزة. موسم تمور = فحص حشرات.', source: 'موسوعة أخطاء — بيئة عمل' },
     ],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
     verificationBadges: [{ badge: '✔️ تنظيف تجاري مرخص', authority: 'منصة بلدي', icon: 'shield-check' }],

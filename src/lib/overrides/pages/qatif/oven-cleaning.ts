@@ -39,7 +39,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص التنظيف' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات الصحة بالشرقية' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'فرن القطيف: كربنة واحية + NaCl أسماك + Biofilm. Anti-Biofilm ← Alkaline ← Acid Rinse.', source: 'نصائح هندسية — أفران الواحات الساحلية' },
     ],

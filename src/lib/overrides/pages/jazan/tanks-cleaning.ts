@@ -43,7 +43,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات تنظيف الخزانات — الشهادة الصحية' },
         { entity: AMANA.JAZAN.entity, url: AMANA.JAZAN.url, role: 'اشتراطات صحة المياه والنظافة بمنطقة جازان' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'الخزان في جازان = بيئة استوائية مُصغّرة. 80% + 30°م + 12/12 = طحالب دائمة + بعوض + عفن + ملح. 4 تهديدات لا يحلها تعقيم واحد/سنة. ربع سنوي بكلور 50 ppm + Anti-Algae + غطاء محكم = الحد الأدنى الآمن.', source: 'موسوعة أخطاء — خزانات المياه في البيئات الاستوائية' },
     ],

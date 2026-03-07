@@ -43,7 +43,7 @@ export const override: PageOverride = {
         { ...GOV.SASO, role: 'المواصفات القياسية لمواد تنظيف وحماية الأثاث' },
         { entity: AMANA.JAZAN.entity, url: AMANA.JAZAN.url, role: 'اشتراطات النظافة والصحة في منطقة جازان' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'أثاث جازان = العكس الكامل لأثاث تبوك. في الجفاف: الخطر التشقق والجفاف. في 80%: الخطر العفن والانتفاخ والصدأ. Anti-Fungal شهرياً + Dehumidifier دائم = الحد الأدنى. الخطأ الأكبر = تطبيق بروتوكول مدينة جافة في بيئة استوائية.', source: 'نصائح هندسية — صيانة الأثاث في المناخات عالية الرطوبة' },
     ],

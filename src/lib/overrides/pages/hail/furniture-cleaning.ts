@@ -41,7 +41,7 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'الأثاث في حائل يواجه 4 أعداء متزامنين: جفاف يُشقّق + رمل يخدش + UV يُبهت + صقيع يُبلور. الحماية الرباعية (Oil + Conditioner + HEPA + UV Protectant + تدفئة) = تُضاعف عمر الأثاث فعلياً.', source: 'نصائح هندسية — صيانة الأثاث في المناخ القاري المتطرف' },
     ],

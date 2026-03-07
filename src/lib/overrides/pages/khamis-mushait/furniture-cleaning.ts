@@ -42,9 +42,9 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
         { entity: AMANA.ASIR.entity, url: AMANA.ASIR.url, role: 'اشتراطات أمانة عسير' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        { expert: EXPERTS.ALMOHAIMED.name, quote: 'أثاث خميس: عكس عنيزة. انتفاخ+عفن+عث. Dehumidifier دائم. Anti-Fungal+Anti-Mite.', source: 'نصائح هندسية — خشب جبلي' },
+        { expert: EXPERTS.ALMISNID.name, quote: 'أثاث خميس: عكس عنيزة. انتفاخ+عفن+عث. Dehumidifier دائم. Anti-Fungal+Anti-Mite.', source: 'نصائح هندسية — خشب جبلي' },
     ],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
     verificationBadges: [{ badge: '✔️ تنظيف مرخص', authority: 'بلدي', icon: 'shield-check' }],

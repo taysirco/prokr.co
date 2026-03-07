@@ -41,7 +41,7 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'سجاد تبوك يواجه دورة فريدة: بري رملي من حسمى + بلل ثلجي + جفاف مُقصّف. الحل = HEPA يومي + Encapsulation ربع سنوي + Lanolin كل 6 أشهر. الماء الكثير = يُسرّع التقصف — Encapsulation = جاف وآمن.', source: 'نصائح هندسية — صيانة الأقمشة في المناخ شبه القاري' },
     ],

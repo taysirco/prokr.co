@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات مكافحة الآفات' },
         { ...GOV.WEQAA, role: 'تسجيل واعتماد المبيدات' },
     ],
-    expertReviewer: EXPERTS.ALKHODAIRY,
+    expertReviewer: EXPERTS.ALJUND,
     expertCitations: [
         { expert: EXPERTS.ALKHODAIRY.name, quote: 'النمل الأبيض في حائل يسلك سلوكاً استثنائياً — الجفاف المتطرف iه12% يدفعه لبناء أنفاق أطول (15-30 م) بحثاً عن رطوبة. واحات الرمان والزيتون = مصدر غذاء قريب. + Thermal Cycling يُشقّق الحاجز أسرع. حقن تجديدي كل 3-5 سنوات + Bait Stations = الحل.', source: 'أبحاث حشرات — سلوك Psammotermes في التربة الجافة' },
     ],

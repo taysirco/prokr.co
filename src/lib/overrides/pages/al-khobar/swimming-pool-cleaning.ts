@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص صيانة المسابح' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات المسابح بالشرقية' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'مسبح الخبر = ساحلي: NaCl يُضعف الكلور (Chloride Demand) + 85-95% طحالب 12/12 + بعوض ساحلي. لا CaSO₄ = ميزة! لكن: Chloride Demand = تحدٍ مختلف.', source: 'موسوعة أخطاء — مسابح ساحلية' },
     ],

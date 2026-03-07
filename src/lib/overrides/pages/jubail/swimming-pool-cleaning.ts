@@ -41,7 +41,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص المسابح' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات المسابح بالشرقية' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'مسبح الجبيل = الأصعب: NaCl Chloride Demand + 98% طحالب + Biofilm + VOC. كلور 2× + Algaecide Marine.', source: 'موسوعة أخطاء — مسابح صناعية-ساحلية' },
     ],

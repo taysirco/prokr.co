@@ -41,7 +41,7 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف — اشتراطات نظافة المطبخ' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'أفران حائل تتكربن أسرع بسبب: استخدام عالي (خبز + كبسة) + غبار زراعي يحترق ← طبقة مُركّبة. + كلس 600 ppm يُغلّف السخان. Saponification pH 13 + Descaling ستريك = البروتوكول المطلوب كل 2-3 أشهر.', source: 'نصائح هندسية — صيانة أجهزة المطبخ في بيئات الغبار الزراعي' },
     ],

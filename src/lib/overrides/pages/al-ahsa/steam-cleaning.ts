@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
         { entity: AMANA.AHSA.entity, url: AMANA.AHSA.url, role: 'اشتراطات النظافة بمحافظة الأحساء' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'بخار الأحساء = ثلاثي واحي: يُذيب CaSO₄ من كل سطح + يقتل عث اللقاح 2.5M + يُعقّم تربة عضوية. الهفوف ميزة (يجف سريعاً). العيون = Dehumidifier إلزامي.', source: 'نصائح هندسية — البخار في واحات المملكة' },
     ],

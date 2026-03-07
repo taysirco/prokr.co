@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.WEQAA, role: 'تسجيل مبيدات' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'صحة عامة بالشرقية' },
     ],
-    expertReviewer: EXPERTS.ALKHODAIRY,
+    expertReviewer: EXPERTS.ALJUND,
     expertCitations: [
         { expert: EXPERTS.ALKHODAIRY.name, quote: 'نمل القطيف: تربة طينية مثالية + نخيل غذاء + عيون + بيوت تاريخية. أكبر خطر نمل في المملكة.', source: 'أبحاث حشرات — نمل الواحات الساحلية' },
     ],

@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.SCE, role: 'كفاءة الطاقة — مكيف نظيف = COP أعلى' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات الصحة والبيئة بالمنطقة الشرقية' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'مكيف الخبر = مكيف ساحلي: NaCl Galvanic Corrosion يأكل الزعانف + 85-95% عفن حتمي + Biofilm يحمي البكتيريا. Anti-Rust + Anti-Fungal + UV-C = ثلاثية ساحلية — لا تشبه أي مدينة داخلية.', source: 'موسوعة أخطاء — مكيفات البيئات الساحلية' },
     ],

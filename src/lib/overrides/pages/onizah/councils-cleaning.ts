@@ -42,9 +42,9 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
         { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات النظافة — أمانة القصيم' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        { expert: EXPERTS.ALMOHAIMED.name, quote: 'مجلس عنيزة: بلمرة SiO₂+بخور + تمور لزجة = Enzymatic مزدوج. لا عفن — ميزة ذهبية.', source: 'نصائح هندسية — أقمشة قصيمية' },
+        { expert: EXPERTS.ALMISNID.name, quote: 'مجلس عنيزة: بلمرة SiO₂+بخور + تمور لزجة = Enzymatic مزدوج. لا عفن — ميزة ذهبية.', source: 'جغرافيا المناخ — أقمشة القصيم' },
     ],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
     verificationBadges: [

@@ -43,7 +43,7 @@ export const override: PageOverride = {
         { ...GOV.WEQAA, role: 'تسجيل المبيدات واعتماد شركات المكافحة' },
         { entity: AMANA.NAJRAN.entity, url: AMANA.NAJRAN.url, role: 'اشتراطات مكافحة الآفات بمنطقة نجران' },
     ],
-    expertReviewer: EXPERTS.ALKHODAIRY,
+    expertReviewer: EXPERTS.ALJUND,
     expertCitations: [
         { expert: EXPERTS.ALKHODAIRY.name, quote: 'نجران = ثلاثية خطيرة للنمل الأبيض: واحة سليلوز وفير + سيول ترفع رطوبة التربة + أبنية طينية اختراقها سهل. Fipronil Cascading Kill + Bait Stations = الحماية الشاملة. حماية المباني التاريخية (المدر النجراني) = أولوية تراثية وطنية.', source: 'أبحاث حشرات — النمل الأبيض في واحات المملكة' },
     ],

@@ -41,7 +41,7 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'المجلس التبوكي يجمع بين بخور (Polymerization) + عث ثلجي (10-15 سم) + سخام 4 أشهر + حسمى = أصعب تنظيف مجلس في المشروع. Enzymatic + HEPA Beater + بخار + Alkaline = البروتوكول الكامل.', source: 'نصائح هندسية — تنظيف المجالس في المناخ شبه القاري' },
     ],

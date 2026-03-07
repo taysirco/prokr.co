@@ -40,7 +40,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات الجلي' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات المباني بالشرقية' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'رخام القطيف: NaCl + عفن واحي مسامي + طين يسد + Biofilm. Sealer+Anti-Fungal+Turbo. ساحلي-واحي فريد.', source: 'نصائح هندسية — رخام الواحات الساحلية' },
     ],

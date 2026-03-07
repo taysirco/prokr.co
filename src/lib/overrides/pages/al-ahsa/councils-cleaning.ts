@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
         { entity: AMANA.AHSA.entity, url: AMANA.AHSA.url, role: 'اشتراطات النظافة بمحافظة الأحساء' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'مجلس الأحساء = 4 مصادر: بخور يتبلمر + لقاح يُغذي العث بصمت + قهوة جبسية تتصلب + عيون عفن. المجلس النظيف \"بالعين\" ≠ نظيف \"بالكيمياء\". البروتوكول الواحي يكشف ما لا تراه.', source: 'نصائح هندسية — مجالس الواحات' },
     ],

@@ -41,7 +41,7 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف — الشهادة الصحية' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'البخار في حائل = أداة شتوية أساسية. ظاهرة التكاثف الصقيعي تُنشئ بيئة عث وبكتيريا فريدة لا تحدث في مدن أخرى. جلسة فبراير = أهم جلسة في السنة.', source: 'نصائح هندسية — التعقيم الحراري في المناخ القاري' },
     ],

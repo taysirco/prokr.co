@@ -32,7 +32,7 @@ export const override: PageOverride = {
         'صدأ ملحي على العنصر = كفاءة أقل + خطر كهربائي. Anti-Rust كل 3 أشهر.',
     ],
     trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات التنظيف' }],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'فرن جازان: الشحوم تتعفّن (عكس التكربن الجاف). + بكتيريا أسماك استوائية 3× أسرع. + صدأ ملحي. تنظيف شهري = الحد الأدنى.', source: 'نصائح هندسية — أجهزة المطبخ في المناخ الاستوائي' },
     ],

@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف والصيانة — اشتراطات مهنية' },
         { ...GOV.SCE, role: 'اعتماد مهندسي الواجهات والأنظمة الخارجية' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'الواجهات الزجاجية في القصيم تخسر 15-25% من شفافيتها خلال 12-18 شهراً بسبب الخدش الرملي — وهذا لا يُصلح بالتنظيف. Glass Polishing بأكسيد السيريوم يستأصل الخدوش. والغسل بماء Deionized حصراً يمنع الترسيب الكلسي.', source: 'نصائح هندسية — صيانة الواجهات في بيئات الرمل والغبار' },
     ],

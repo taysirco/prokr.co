@@ -41,7 +41,7 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف — الشهادة الصحية' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'الكنب في حائل يتعرض لثلاثي قاري: جفاف 12-15% يُشقّق الجلد + تكاثف شتوي يُعثّ الحشو + رمل نفود يبري الأقمشة. الحل الثلاثي (Conditioner + بخار + HEPA) = يُضاعف عمر الكنب عملياً.', source: 'نصائح هندسية — صيانة الأثاث في المناخ القاري' },
     ],

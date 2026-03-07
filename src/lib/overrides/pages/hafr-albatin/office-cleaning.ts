@@ -41,7 +41,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص تنظيف تجاري' },
         { entity: AMANA.HAFR.entity, url: AMANA.HAFR.url, role: 'اشتراطات المكاتب بحفر الباطن' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'مكتب حفر الباطن: SiO₂ PM10 مهني + كهرباء ساكنة + ΔT. لا عفن (ميزة!). HEPA + Anti-Static + Microfiber.', source: 'موسوعة أخطاء — مكاتب قارية' },
     ],

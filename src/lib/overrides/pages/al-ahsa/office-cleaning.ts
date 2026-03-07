@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف التجاري' },
         { entity: AMANA.AHSA.entity, url: AMANA.AHSA.url, role: 'اشتراطات المكاتب والمنشآت بمحافظة الأحساء' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'المكتب الأحسائي = تحدٍ واحي: لقاح يخنق الأجهزة + CaSO₄ يُبقّع الشاشات + تربة تلتصق بالأرضيات. HEPA 24/7 + Deionized + Enzymatic = بروتوكول إنتاجية — ليس فقط نظافة.', source: 'موسوعة أخطاء — بيئات العمل في المناطق الزراعية' },
     ],

@@ -41,7 +41,7 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.BALADI, role: 'ترخيص صيانة المسابح' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'مسبح تبوك = أخطر مسبح سعودي. -2°م = تجمد حقيقي (ليس مجازاً). + ثلوج تتراكم. + 46°م مدى = Thermal Fatigue. Winterization كامل + غطاء ثلج + Anti-Freeze = الحد الأدنى. بدونه: ليلة واحدة = كارثة.', source: 'موسوعة أخطاء في البناء — المسابح في المناطق ذات الصقيع' },
     ],

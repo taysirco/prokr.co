@@ -95,7 +95,7 @@ export const override: PageOverride = {
         { entity: 'هيئة تنظيم الكهرباء والإنتاج المزدوج', acronym: 'ECRA', url: 'https://www.ecra.gov.sa', role: 'معايير كفاءة الطاقة للمكيفات' },
     ],
 
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
 
     expertCitations: [
         {

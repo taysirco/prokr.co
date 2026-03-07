@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص صيانة المسابح' },
         { entity: AMANA.AHSA.entity, url: AMANA.AHSA.url, role: 'اشتراطات المسابح بمحافظة الأحساء' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'مسبح الأحساء = واحي: CaSO₄ Scale فريد (لا يوجد في مسابح NaCl) + لقاح يُغذي طحالب + تبخر يُركّز + بعوض واحة. Citric + Algaecide + CYA + BTI = بروتوكول واحي.', source: 'موسوعة أخطاء — مسابح الواحات الزراعية' },
     ],

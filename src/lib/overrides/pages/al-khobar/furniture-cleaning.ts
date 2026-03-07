@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات النظافة بالشرقية' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'أثاث الخبر = أصعب بيئة: NaCl صدأ + 85-95% عفن + PVAc مُزدوج (حرارة + رطوبة). Anti-Corrosion + Anti-Fungal + Conditioner = حماية ساحلية.', source: 'نصائح هندسية — أثاث البيئات الساحلية الرطبة' },
     ],

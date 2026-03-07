@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص مراكز الغسيل — البيئة والمياه' },
         { entity: AMANA.AHSA.entity, url: AMANA.AHSA.url, role: 'اشتراطات النظافة والبيئة بمحافظة الأحساء' },
     ],
-    expertReviewer: EXPERTS.ALZUWAYED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALZUWAYED.name, quote: 'سيارة الأحساء = أوساخ واحية: لقاح لاصق يخدش + CaSO₄ يُبقّع + تربة عضوية تلتصق. Touchless فقط + Deionized + Ceramic = بروتوكول الواحة للسيارات.', source: 'هيئة النقل — العناية بالمركبات في البيئات الزراعية' },
     ],

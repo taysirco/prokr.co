@@ -43,9 +43,9 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص سباكة' },
         { entity: AMANA.ASIR.entity, url: AMANA.ASIR.url, role: 'اشتراطات أمانة عسير' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
-        { expert: EXPERTS.ALJUND.name, quote: 'مجاري خميس: 4 أنواع انسداد. أمطار+جذور+طحالب+تربة. كاميرا أولاً.', source: 'موسوعة أخطاء — صرف جبلي' },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'مجاري خميس: 4 أنواع انسداد. أمطار+جذور+طحالب+تربة. كاميرا أولاً.', source: 'موسوعة أخطاء — صرف جبلي' },
     ],
     saudiRegulations: [REGULATIONS.NWC_REPORT],
     verificationBadges: [{ badge: '✔️ سباكة مرخصة', authority: 'بلدي', icon: 'shield-check' }],

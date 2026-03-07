@@ -73,7 +73,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'اشتراط معالجة النمل الأبيض قبل البناء — حماية المنشآت' },
     ],
 
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALJUND,
 
     expertCitations: [
         {

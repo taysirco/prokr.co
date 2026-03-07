@@ -38,7 +38,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص المسابح' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات المسابح بالشرقية' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'مسبح القطيف: عيون تُغذي الطحالب + NaCl Demand + Biofilm. كلور 2× + Algaecide.', source: 'موسوعة أخطاء — مسابح الواحات الساحلية' },
     ],

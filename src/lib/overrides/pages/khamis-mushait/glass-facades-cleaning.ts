@@ -42,9 +42,9 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات النظافة' },
         { entity: AMANA.ASIR.entity, url: AMANA.ASIR.url, role: 'اشتراطات أمانة عسير' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        { expert: EXPERTS.ALMOHAIMED.name, quote: 'واجهات خميس: Biofilm أسبوعين+طحالب. Anti-Biofilm+Algicide شهري. من أسرع المدن تلوثاً بيولوجياً.', source: 'نصائح هندسية — واجهات جبلية' },
+        { expert: EXPERTS.ALMISNID.name, quote: 'واجهات خميس: Biofilm أسبوعين+طحالب. Anti-Biofilm+Algicide شهري. من أسرع المدن تلوثاً بيولوجياً.', source: 'نصائح هندسية — واجهات جبلية' },
     ],
     saudiRegulations: [REGULATIONS.SBC_601],
     verificationBadges: [{ badge: '✔️ واجهات مرخصة', authority: 'بلدي', icon: 'shield-check' }],

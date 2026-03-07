@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف — الشهادة الصحية الإلزامية' },
         { entity: AMANA.NAJRAN.entity, url: AMANA.NAJRAN.url, role: 'اشتراطات النظافة والصحة بمنطقة نجران' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'سجاد نجران = ساحة معركة 3 أنواع غبار: طمي يتصلب + كوارتز يقطع + واحة تُغذي عث. كل نوع يحتاج أداة. HEPA ← استخلاص ← بخار = الترتيب الذي يحمي الألياف والرئة. أي اختصار = ضرر.', source: 'نصائح هندسية — التنظيف في بيئات الأودية الزراعية' },
     ],

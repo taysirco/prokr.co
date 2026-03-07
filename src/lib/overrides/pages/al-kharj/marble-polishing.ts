@@ -42,9 +42,9 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات الجلي' },
         { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        { expert: EXPERTS.ALMOHAIMED.name, quote: 'رخام الخرج: CaCO₃+SiO₂ = كلس+خدش. Descaler pH 5-6+Diamond. ميزة: لا عفن.', source: 'نصائح هندسية — رخام صحراوي' },
+        { expert: EXPERTS.ALMISNID.name, quote: 'رخام الخرج: CaCO₃+SiO₂ = كلس+خدش. Descaler pH 5-6+Diamond. ميزة: لا عفن.', source: 'نصائح هندسية — رخام صحراوي' },
     ],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
     verificationBadges: [{ badge: '✔️ جلي رخام مرخص', authority: 'بلدي', icon: 'shield-check' }],

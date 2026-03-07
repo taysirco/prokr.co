@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات جلي الرخام — معايير مهنية' },
         { ...GOV.SASO, role: 'مواصفات مواد الجلي والتلميع المطابقة للمعايير السعودية' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'رخام القصيم يحتاج Nano Sealer فوراً بعد كل جلي — بدونه: كلس 600 ppm يتسرب في المسامات المفتوحة خلال أيام ← تبقيع صعب الإزالة. والفارق الحراري 46°م بين الصيف والشتاء يُشقّق الرخام غير المحمي خلال 5-7 سنوات.', source: 'نصائح هندسية — جودة التشطيبات والأرضيات' },
     ],

@@ -43,7 +43,7 @@ export const override: PageOverride = {
         { ...GOV.SASO, role: 'اعتماد مواد الحماية والتنظيف المطابقة للمواصفات السعودية' },
         { entity: AMANA.JAZAN.entity, url: AMANA.JAZAN.url, role: 'اشتراطات البيئة والنظافة بمنطقة جازان' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'السيارة في جازان تعيش في بيئة بحرية استوائية — أقسى بيئة على الطلاء والهيكل في السعودية. Carnauba Wax صُمّم لمناخات 30-50% رطوبة، لا لمناخ 80%. Ceramic SiO₂ يلتصق كيميائياً بغض النظر عن الرطوبة — الخيار العلمي الوحيد.', source: 'نصائح هندسية — حماية المركبات في البيئات البحرية' },
     ],

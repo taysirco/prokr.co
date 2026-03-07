@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص التنظيف التجاري' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات المكاتب بالشرقية' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'مكتب الخبر = ساحلي: NaCl Galvanic Corrosion على الأجهزة + عفن 85-95% في الزوايا + Biofilm شاشات. RO + Anti-Corrosion + Anti-Fungal + Anti-Biofilm = بروتوكول إنتاجية.', source: 'موسوعة أخطاء — بيئات العمل الساحلية' },
     ],

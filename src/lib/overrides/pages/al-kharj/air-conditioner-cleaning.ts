@@ -43,9 +43,9 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص الصيانة' },
         { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        { expert: EXPERTS.ALJUND.name, quote: 'مكيف الخرج: NH₃ مزارع ألبان + H₂S = تآكل نحاس. Activated Carbon إلزامي.', source: 'موسوعة أخطاء — مكيفات المناطق الزراعية-الحيوانية' },
+        { expert: EXPERTS.ALMISNID.name, quote: 'مكيف الخرج: NH₃ مزارع ألبان + H₂S = تآكل نحاس. Activated Carbon إلزامي.', source: 'موسوعة أخطاء — مكيفات المناطق الزراعية-الحيوانية' },
     ],
     saudiRegulations: [REGULATIONS.SBC_601],
     verificationBadges: [{ badge: '✔️ صيانة مكيفات مرخصة', authority: 'بلدي + SCE', icon: 'shield-check' }],

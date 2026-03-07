@@ -43,7 +43,7 @@ export const override: PageOverride = {
         { ...GOV.MOENERGY, role: 'معايير كفاءة الطاقة — فلتر نظيف = توفير 15-25% كهرباء' },
         { entity: AMANA.NAJRAN.entity, url: AMANA.NAJRAN.url, role: 'اشتراطات الصيانة والسلامة بمنطقة نجران' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'مكيف نجران = ثلاثية لا تجتمع في غيرها: كوارتز يسد أسرع 2× + واحة تُغذي عفن المبخر + Thermal Cycling 48/0°م يُجهد كل وصلة. فلتر كل 4-6 أسابيع ليس مبالغة — بل حساب هندسي لحماية الجهاز والرئة.', source: 'موسوعة أخطاء — التكييف في بيئات الأودية الزراعية' },
     ],

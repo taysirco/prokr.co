@@ -36,7 +36,7 @@ export const override: PageOverride = {
         'رائحة عفن من الكنب = العفن وصل الحشو = تنظيف فوري أو استبدال الحشو.',
     ],
     trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات التنظيف' }],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'كنب جازان يتعفّن من الداخل — 80% رطوبة تخترق الأقمشة للحشو. الجلد يتعفّن (عكس تبوك حيث يجف). Anti-Fungal Conditioner = مُختلف تماماً عن Conditioner المدن الجافة.', source: 'نصائح هندسية — صيانة الأقمشة في المناخ الاستوائي' },
     ],

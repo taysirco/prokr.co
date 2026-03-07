@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات تنظيف الواجهات — اشتراطات سلامة مهنية' },
         { ...GOV.SCE, role: 'اعتماد فنيي الواجهات والعمل على ارتفاعات' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'واجهات حائل تتدهور أسرع 2-3× من جدة — الجمع بين Thermal Cycling 20-25°م/يوم + UV 11+ يُدمّر سيلكون الوصلات. + كوارتز النفود يخدش الزجاج. فحص السيلكون كل 6 أشهر + CeO₂ = الحد الأدنى.', source: 'موسوعة أخطاء في البناء — الواجهات الزجاجية في المناطق القارية' },
     ],

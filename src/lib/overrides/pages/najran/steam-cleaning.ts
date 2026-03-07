@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف — الشهادة الصحية' },
         { entity: AMANA.NAJRAN.entity, url: AMANA.NAJRAN.url, role: 'اشتراطات النظافة والصحة بمنطقة نجران' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'بخار نجران = ثلاثي فريد: يُذيب الطمي (لا أداة أخرى تفعلها بأمان) + يقتل عث واحة 12/12 + يُعقّم بكتيريا 45°م. و 25% RH = يجف سريعاً — ميزة مناخية على جازان ومكة.', source: 'نصائح هندسية — البخار في بيئات الأودية' },
     ],

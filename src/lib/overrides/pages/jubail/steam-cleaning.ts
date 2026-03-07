@@ -40,7 +40,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص التنظيف' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات النظافة بالشرقية' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'بخار الجبيل: ضروري (NaCl+عث+تعقيم). لكن: 98% = 6-10 ساعات تجفيف. Dehumidifier = إلزامي. عكس حفر الباطن.', source: 'نصائح هندسية — بخار ساحلي-صناعي' },
     ],

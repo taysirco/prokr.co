@@ -41,7 +41,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات تنظيف الواجهات' },
         { ...GOV.SCE, role: 'اعتماد فنيي الواجهات' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'واجهات تبوك = أسرع تدهور في المشروع: 46°م مدى + -2°م تجمد + Frost Spalling. السيلكون العادي 2-3 سنوات فقط. سيلكون مرن + CeO₂ + فحص Frost Spalling = الحد الأدنى.', source: 'موسوعة أخطاء في البناء — الواجهات في مناطق الصقيع' },
     ],

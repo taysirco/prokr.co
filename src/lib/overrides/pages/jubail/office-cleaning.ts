@@ -40,7 +40,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص تنظيف تجاري' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات المكاتب بالشرقية' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'مكتب الجبيل = الأخطر: VOC PM2.5 + NaCl + 98% + سخام. HEPA AC + Marine + Anti-Fungal. Sick Building = حقيقي.', source: 'موسوعة أخطاء — مكاتب صناعية' },
     ],

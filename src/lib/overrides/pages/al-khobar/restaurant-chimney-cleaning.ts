@@ -43,7 +43,7 @@ export const override: PageOverride = {
         { ...GOV.CIVILDEFENSE, role: 'السلامة — NFPA 96' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات مطاعم الشرقية' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'مداخن الخبر = ساحلية + بحرية: NaCl مأكولات بحرية + 85-95% Biofilm + كربنة رطبة. Alkaline pH 13 + Anti-Biofilm + RO = بروتوكول ساحلي.', source: 'نصائح هندسية — مداخن المطاعم الساحلية' },
     ],

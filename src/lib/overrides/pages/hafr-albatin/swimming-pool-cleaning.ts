@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص المسابح' },
         { entity: AMANA.HAFR.entity, url: AMANA.HAFR.url, role: 'اشتراطات المسابح بحفر الباطن' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'مسبح حفر الباطن: SiO₂ + تبخر أسرع + ΔT 54°م + CaCO₃. قاري. لا طحالب (ميزة!). تجهيز شتاء -2°م.', source: 'موسوعة أخطاء — مسابح قارية' },
     ],

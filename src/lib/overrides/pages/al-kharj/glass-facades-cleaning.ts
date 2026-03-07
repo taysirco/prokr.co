@@ -42,9 +42,9 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
         { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        { expert: EXPERTS.ALMOHAIMED.name, quote: 'واجهات الخرج: SiO₂ يخدش+CaCO₃ بقع. Pre-Rinse+RO. حمام مزارع: فوري.', source: 'نصائح هندسية — واجهات صحراوية' },
+        { expert: EXPERTS.ALMISNID.name, quote: 'واجهات الخرج: SiO₂ يخدش+CaCO₃ بقع. Pre-Rinse+RO. حمام مزارع: فوري.', source: 'نصائح هندسية — واجهات صحراوية' },
     ],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
     verificationBadges: [{ badge: '✔️ تنظيف واجهات مرخص', authority: 'بلدي', icon: 'shield-check' }],

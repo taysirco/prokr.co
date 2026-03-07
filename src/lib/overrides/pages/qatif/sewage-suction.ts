@@ -41,7 +41,7 @@ export const override: PageOverride = {
         { ...GOV.NWC, role: 'توصيل بالشبكة' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'رقابة الصرف' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [{ expert: EXPERTS.ALJUND.name, quote: 'بيارات القطيف تتعرض لهجوم مزدوج: تسلل ملحي يملؤها + ملوحة تأكل جدرانها. البيارة نفسها في خطر. HDPE بحري يحميها. لكن التوصيل بالشبكة = الحل الحقيقي.', source: 'مقابلة حصرية لتوثيق تحديات القطيف' }],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
     verificationBadges: [

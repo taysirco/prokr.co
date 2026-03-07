@@ -42,9 +42,9 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
         { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        { expert: EXPERTS.ALMOHAIMED.name, quote: 'أثاث الخرج: NH₃ بلمرة+CaCO₃ كلس. Enzymatic+RO. ميزة: لا عفن.', source: 'نصائح هندسية — أثاث زراعي' },
+        { expert: EXPERTS.ALMISNID.name, quote: 'أثاث الخرج: NH₃ بلمرة+CaCO₃ كلس. Enzymatic+RO. ميزة: لا عفن.', source: 'نصائح هندسية — أثاث زراعي' },
     ],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
     verificationBadges: [{ badge: '✔️ تنظيف أثاث مرخص', authority: 'بلدي', icon: 'shield-check' }],

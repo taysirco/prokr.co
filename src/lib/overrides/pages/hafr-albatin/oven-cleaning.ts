@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص التنظيف' },
         { entity: AMANA.HAFR.entity, url: AMANA.HAFR.url, role: 'اشتراطات الصحة بحفر الباطن' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'فرن حفر الباطن: كربنة أصلب (52°م + 10-15%) + SiO₂ خشونة. لا Biofilm ولا NaCl (ميزتين!). Alkaline أطول.', source: 'نصائح هندسية — أفران قارية' },
     ],

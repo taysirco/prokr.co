@@ -42,9 +42,9 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
         { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        { expert: EXPERTS.ALMOHAIMED.name, quote: 'أثاث عنيزة: SiO₂ يخدش + CaCO₃ يُصلّب PVAc + ΔT يُشقّق. عكس خميس (انتفاخ). لا عفن.', source: 'نصائح هندسية — تشطيبات قصيمية' },
+        { expert: EXPERTS.ALMISNID.name, quote: 'أثاث عنيزة: SiO₂ يخدش + CaCO₃ يُصلّب PVAc + ΔT يُشقّق. عكس خميس (انتفاخ). لا عفن.', source: 'نصائح هندسية — تشطيبات قصيمية' },
     ],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
     verificationBadges: [{ badge: '✔️ شركة تنظيف مرخصة', authority: 'منصة بلدي', icon: 'shield-check' }],

@@ -42,9 +42,9 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص صيانة مسابح' },
         { entity: AMANA.ASIR.entity, url: AMANA.ASIR.url, role: 'اشتراطات أمانة عسير' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
-        { expert: EXPERTS.ALJUND.name, quote: 'مسبح خميس: أمطار تُخفف كلور+طحالب 2×+أوراق. Algicide+ضبط بعد مطر.', source: 'موسوعة أخطاء — مسابح جبلية' },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'مسبح خميس: أمطار تُخفف كلور+طحالب 2×+أوراق. Algicide+ضبط بعد مطر.', source: 'موسوعة أخطاء — مسابح جبلية' },
     ],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
     verificationBadges: [{ badge: '✔️ صيانة مسابح مرخصة', authority: 'بلدي', icon: 'shield-check' }],

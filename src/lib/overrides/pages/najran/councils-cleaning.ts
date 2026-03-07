@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف — الشهادة الصحية' },
         { entity: AMANA.NAJRAN.entity, url: AMANA.NAJRAN.url, role: 'اشتراطات النظافة والصحة بمنطقة نجران' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'المجلس النجراني = التحدي الكيميائي الأصعب: بخور يتبلمر في 45°م يحتاج إنزيمات متخصصة (Lipase + Esterase) لكسر الروابط. لا يوجد منظف عادي بأي pH يستطيع ذلك. Enzymatic = الأداة العلمية الوحيدة.', source: 'نصائح هندسية — المجالس في بيئات الواحات الصحراوية' },
     ],

@@ -41,7 +41,7 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف — اشتراطات مهنية' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'أثاث القصيم يتعرض لـ 4 عوامل تدهور متزامنة: رمل يخدش + كلس يُبقّع + UV يُبهت + جفاف يُشقّق. الحماية الرباعية (HEPA + Deionized + UV Protectant + Wood Conditioner) = تُضاعف عمر الأثاث فعلياً.', source: 'نصائح هندسية — صيانة الأثاث في بيئات الرمل والجفاف' },
     ],

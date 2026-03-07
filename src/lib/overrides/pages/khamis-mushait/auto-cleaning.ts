@@ -42,9 +42,9 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص مراكز الغسيل' },
         { entity: AMANA.ASIR.entity, url: AMANA.ASIR.url, role: 'اشتراطات أمانة عسير' },
     ],
-    expertReviewer: EXPERTS.ALZUWAYED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        { expert: EXPERTS.ALZUWAYED.name, quote: 'سيارة خميس: ضباب+أمطار+عفن مقصورة. أعقد من الصحراء. Anti-Fungal إلزامي للمقصورة.', source: 'هيئة النقل — جنوبية' },
+        { expert: EXPERTS.ALMISNID.name, quote: 'سيارة خميس: ضباب+أمطار+عفن مقصورة. أعقد من الصحراء. Anti-Fungal إلزامي للمقصورة.', source: 'هيئة النقل — جنوبية' },
     ],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
     verificationBadges: [{ badge: '✔️ مركز غسيل مرخص', authority: 'بلدي', icon: 'shield-check' }],

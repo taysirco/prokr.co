@@ -42,9 +42,9 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
         { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        { expert: EXPERTS.ALMOHAIMED.name, quote: 'مجلس الخرج: NH₃ بلمرة حيوانية. Enzymatic إلزامي. ميزة: لا عفن.', source: 'نصائح هندسية — مجالس زراعية' },
+        { expert: EXPERTS.ALMISNID.name, quote: 'مجلس الخرج: NH₃ بلمرة حيوانية. Enzymatic إلزامي. ميزة: لا عفن.', source: 'نصائح هندسية — مجالس زراعية' },
     ],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
     verificationBadges: [{ badge: '✔️ تنظيف مجالس مرخص', authority: 'بلدي', icon: 'shield-check' }],

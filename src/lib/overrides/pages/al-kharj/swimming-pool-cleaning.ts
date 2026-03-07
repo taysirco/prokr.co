@@ -42,9 +42,9 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص صيانة المسابح' },
         { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
-        { expert: EXPERTS.ALJUND.name, quote: 'مسبح الخرج: CaCO₃ Scale+NH₃ Chloramines. Descaler+فحص. لا طحالب!', source: 'موسوعة أخطاء — مسابح صحراوية' },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'مسبح الخرج: CaCO₃ Scale+NH₃ Chloramines. Descaler+فحص. لا طحالب!', source: 'موسوعة أخطاء — مسابح صحراوية' },
     ],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
     verificationBadges: [{ badge: '✔️ صيانة مسابح مرخصة', authority: 'بلدي', icon: 'shield-check' }],

@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات الواجهات' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات المباني بالشرقية' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'واجهات الظهران = مزدوج: NaCl بقع + SiO₂ خدش + 75-85% Biofilm. Deionized + Squeegee + Anti-Biofilm + Marine Sealant = بروتوكول مزدوج.', source: 'نصائح هندسية — واجهات مزدوجة' },
     ],

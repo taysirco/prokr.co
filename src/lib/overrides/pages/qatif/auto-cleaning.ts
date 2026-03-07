@@ -40,7 +40,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص مراكز الغسيل' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات البيئة بالشرقية' },
     ],
-    expertReviewer: EXPERTS.ALZUWAYED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALZUWAYED.name, quote: 'سيارة القطيف: NaCl+طين لزج+غبار طلع = Touchless إلزامي. Ceramic 9H يحمي من Galvanic.', source: 'هيئة النقل — غسيل الواحات الساحلية' },
     ],

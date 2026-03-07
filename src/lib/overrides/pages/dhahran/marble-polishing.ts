@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات الجلي' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات المباني بالشرقية' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'رخام الظهران = أصعب في المملكة: SiO₂ 7 Mohs خدش + NaCl إبهات + 75-85% عفن مسامي. RO ← جلي ← Anti-Fungal ← Sealer = بروتوكول مزدوج.', source: 'نصائح هندسية — رخام مزدوج' },
     ],

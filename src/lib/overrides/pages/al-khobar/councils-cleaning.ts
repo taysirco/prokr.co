@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات النظافة بالشرقية' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'مجلس الخبر = 4 ساحلية: بخور يتبلمر + NaCl يُصلّب + 85-95% عفن حشوة + عث. Enzymatic + Anti-Fungal + بخار + تجفيف = بروتوكول.', source: 'نصائح هندسية — مجالس البيئات الساحلية' },
     ],

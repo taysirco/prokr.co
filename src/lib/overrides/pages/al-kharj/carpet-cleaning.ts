@@ -42,9 +42,9 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
         { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        { expert: EXPERTS.ALMOHAIMED.name, quote: 'سجاد الخرج: NH₃ بلمرة حيوانية. Enzymatic+AC. ميزة: لا عفن+تجفيف سريع.', source: 'نصائح هندسية — أقمشة زراعية' },
+        { expert: EXPERTS.ALMISNID.name, quote: 'سجاد الخرج: NH₃ بلمرة حيوانية. Enzymatic+AC. ميزة: لا عفن+تجفيف سريع.', source: 'نصائح هندسية — أقمشة زراعية' },
     ],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
     verificationBadges: [{ badge: '✔️ تنظيف سجاد مرخص', authority: 'بلدي', icon: 'shield-check' }],

@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص المسابح' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات المسابح بالشرقية' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'مسبح الظهران = مزدوج: Chloride Demand + SiO₂ خدش بلاط + 75-85% طحالب. لا Scale = ميزة! Nylon + كلور + Algaecide.', source: 'موسوعة أخطاء — مسابح مزدوجة' },
     ],

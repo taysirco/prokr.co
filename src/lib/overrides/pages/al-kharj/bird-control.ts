@@ -42,9 +42,9 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص مكافحة الطيور' },
         { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
-    expertReviewer: EXPERTS.ALKHODAIRY,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        { expert: EXPERTS.ALKHODAIRY.name, quote: 'طيور الخرج: حمام مزارع 3-5×. صوامع أعلاف. شبك+سد تشققات. NH₃ مزدوج.', source: 'أبحاث سموم — طيور زراعية' },
+        { expert: EXPERTS.ALMISNID.name, quote: 'طيور الخرج: حمام مزارع 3-5×. صوامع أعلاف. شبك+سد تشققات. NH₃ مزدوج.', source: 'أبحاث سموم — طيور زراعية' },
     ],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
     verificationBadges: [{ badge: '✔️ مكافحة طيور مرخصة', authority: 'بلدي', icon: 'shield-check' }],

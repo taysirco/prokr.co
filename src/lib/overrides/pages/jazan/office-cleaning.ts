@@ -43,7 +43,7 @@ export const override: PageOverride = {
         { ...GOV.MOH, role: 'معايير بيئة العمل الصحية ومكافحة العدوى المكتبية' },
         { entity: AMANA.JAZAN.entity, url: AMANA.JAZAN.url, role: 'اشتراطات السلامة والنظافة للمنشآت التجارية بجازان' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'المكتب في جازان = تقاطع 3 مخاطر: عفن مجاري المكيف (صحة الموظفين) + ملح PCB (أعطال الأجهزة) + بكتيريا 3× (عدوى). الشركة التي لا تُنظف ببروتوكول ثلاثي = تدفع أضعاف التكلفة في إجازات مرضية وصيانة أجهزة.', source: 'نصائح هندسية — بيئة العمل المكتبية في المناخ الاستوائي' },
     ],

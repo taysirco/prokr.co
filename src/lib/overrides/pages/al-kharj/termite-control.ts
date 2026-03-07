@@ -43,9 +43,9 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات المكافحة' },
         { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
-    expertReviewer: EXPERTS.ALKHODAIRY,
+    expertReviewer: EXPERTS.ALJUND,
     expertCitations: [
-        { expert: EXPERTS.ALKHODAIRY.name, quote: 'نمل الخرج: تشققات ΔT+رطوبة CaCO₃ أرضية. Pre-Con. السطح جاف ≠ أمان.', source: 'أبحاث سموم — نمل صحراوي' },
+        { expert: EXPERTS.ALJUND.name, quote: 'نمل الخرج: تشققات ΔT+رطوبة CaCO₃ أرضية. Pre-Con. السطح جاف ≠ أمان.', source: 'أبحاث سموم — نمل صحراوي' },
     ],
     saudiRegulations: [REGULATIONS.GHAD_SYSTEM],
     verificationBadges: [{ badge: '✔️ مكافحة نمل مرخصة', authority: 'بلدي + SFDA', icon: 'shield-check' }],

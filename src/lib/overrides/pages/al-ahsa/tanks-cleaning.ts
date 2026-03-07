@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات تنظيف الخزانات' },
         { entity: AMANA.AHSA.entity, url: AMANA.AHSA.url, role: 'اشتراطات المياه بمحافظة الأحساء' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'خزان الأحساء = واحي: CaSO₄ يترسب (فريد!) + لقاح 2.5M يُنشئ Biofilm + بعوض واحة + عيون تتسلل. Citric + فرشاة + غطاء + عزل = بروتوكول خزان واحي.', source: 'موسوعة أخطاء — خزانات الواحات الزراعية' },
     ],

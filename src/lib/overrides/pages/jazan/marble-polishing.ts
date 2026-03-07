@@ -34,7 +34,7 @@ export const override: PageOverride = {
         'رخام خارجي بدون Biocide في جازان = أشنات خلال أسابيع ← تفتت المسام.',
     ],
     trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات الجلي والتلميع' }],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'رخام جازان يتعرض لـ Biological Etching — عفن يُفرز حمض يأكل CaCO₃. + Salt Crystallization يُفجّر المسام. + أشنات تُفتت الخارجي. بروتوكول بيولوجي-كيميائي = الحل.', source: 'موسوعة أخطاء في البناء — الأحجار الطبيعية في المناخ الاستوائي' },
     ],

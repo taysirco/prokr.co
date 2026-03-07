@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص مراكز الغسيل' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات البيئة بالمنطقة الشرقية' },
     ],
-    expertReviewer: EXPERTS.ALZUWAYED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALZUWAYED.name, quote: 'سيارة الخبر = ساحلية: NaCl يُصدّئ Undercarriage + 85-95% Water Spots + Sabkha تتآكل + UV يُؤكسد. Underbody + Deionized + Ceramic = بروتوكول ساحلي لا يُشبه أي مدينة داخلية.', source: 'هيئة النقل — العناية بالمركبات في البيئات الساحلية' },
     ],

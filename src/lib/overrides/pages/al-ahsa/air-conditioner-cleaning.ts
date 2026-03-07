@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.SCE, role: 'كفاءة الطاقة — مكيف نظيف = COP أعلى' },
         { entity: AMANA.AHSA.entity, url: AMANA.AHSA.url, role: 'اشتراطات الصحة والبيئة بمحافظة الأحساء' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'مكيف الأحساء = مكيف واحة: 2.5 مليون نخلة تُطلق أكبر حمولة لقاح في المملكة. فلتر أسبوعي في الموسم + Citric للجبس + Anti-Fungal للعيون = بروتوكول واحي لا يشبه أي مدينة ساحلية أو صحراوية.', source: 'موسوعة أخطاء — مكيفات الواحات الزراعية' },
     ],

@@ -42,9 +42,9 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات النظافة' },
         { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات واجهات — أمانة القصيم' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        { expert: EXPERTS.ALMOHAIMED.name, quote: 'واجهات عنيزة: SiO₂ Pitting + تمور لزجة = فريد. لا Biofilm — ميزة. pH Neutral+Enzymatic.', source: 'نصائح هندسية — واجهات قصيمية' },
+        { expert: EXPERTS.ALMISNID.name, quote: 'واجهات عنيزة: SiO₂ Pitting + تمور لزجة = فريد. لا Biofilm — ميزة. pH Neutral+Enzymatic.', source: 'نصائح هندسية — واجهات قصيمية' },
     ],
     saudiRegulations: [REGULATIONS.SBC_601],
     verificationBadges: [{ badge: '✔️ شركة واجهات مرخصة', authority: 'منصة بلدي', icon: 'shield-check' }],

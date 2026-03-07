@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص التنظيف' },
         { entity: AMANA.HAFR.entity, url: AMANA.HAFR.url, role: 'اشتراطات النظافة بحفر الباطن' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'بخار حفر الباطن = الأسهل: يجف 20-30 دقيقة. لا Dehumidifier. لا عفن. لا عث. يرفع SiO₂. اختبار أقمشة فقط.', source: 'نصائح هندسية — بخار قاري' },
     ],

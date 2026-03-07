@@ -43,9 +43,9 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص الصيانة' },
         { entity: AMANA.ASIR.entity, url: AMANA.ASIR.url, role: 'اشتراطات أمانة عسير' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        { expert: EXPERTS.ALJUND.name, quote: 'مكيف خميس مشيط: ضباب 200 يوم + 0°م. عفن Aspergillus + Heat Pump. جبلي فريد لا يُشبه الصحراء.', source: 'موسوعة أخطاء في البناء — مكيفات جبلية' },
+        { expert: EXPERTS.ALMISNID.name, quote: 'مكيف خميس مشيط: ضباب 200 يوم + 0°م. عفن Aspergillus + Heat Pump. جبلي فريد لا يُشبه الصحراء.', source: 'موسوعة أخطاء في البناء — مكيفات جبلية' },
     ],
     saudiRegulations: [REGULATIONS.SBC_601],
     verificationBadges: [

@@ -40,7 +40,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص + صحة' },
         { ...GOV.WEQAA, role: 'صحة عامة' },
     ],
-    expertReviewer: EXPERTS.ALKHODAIRY,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALKHODAIRY.name, quote: 'نوارس جدة pH 2.5 + ملح = تآكل مزدوج. SS316 ليس رفاهية — الحد الأدنى.', source: 'مكافحة آفات ساحلية' },
     ],

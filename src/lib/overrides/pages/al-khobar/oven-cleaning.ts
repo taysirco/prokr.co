@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات الصحة بالشرقية' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'فرن الخبر = ساحلي + بحري: NaCl من مأكولات بحرية + 85-95% Biofilm شحمي + كربنة رطبة. Alkaline + Anti-Biofilm + RO = ثلاثي ساحلي.', source: 'نصائح هندسية — أفران ساحلية' },
     ],

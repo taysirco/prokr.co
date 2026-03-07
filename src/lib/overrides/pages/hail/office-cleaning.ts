@@ -41,7 +41,7 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف — اشتراطات بيئة عمل صحية' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'المكتب الحائلي يواجه 3 تهديدات: Thermal Throttling من الغبار المزدوج + Short Circuit من تكاثف الشتاء + خدوش جرانيتية. ESD-Safe + تحكم رطوبة + Deionized = البروتوكول التقني الكامل.', source: 'نصائح هندسية — بيئة العمل المكتبية في المناطق القارية' },
     ],

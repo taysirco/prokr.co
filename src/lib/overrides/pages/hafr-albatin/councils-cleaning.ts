@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص التنظيف' },
         { entity: AMANA.HAFR.entity, url: AMANA.HAFR.url, role: 'اشتراطات النظافة بحفر الباطن' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'مجلس حفر الباطن: بلمرة 52°م أقسى + SiO₂ + كهرباء ساكنة. لا عفن ولا عث (ميزة!). Enzymatic أقوى + HEPA + Anti-Static.', source: 'نصائح هندسية — مجالس المناخ القاري' },
     ],

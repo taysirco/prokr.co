@@ -43,7 +43,7 @@ export const override: PageOverride = {
         { ...GOV.CIVILDEFENSE, role: 'السلامة — NFPA 96' },
         { entity: AMANA.HAFR.entity, url: AMANA.HAFR.url, role: 'اشتراطات مطاعم حفر الباطن' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'مدخنة حفر الباطن: كربنة أصلب (52°م+10-15%) + SiO₂ خشونة + ΔT Ductwork. لا Biofilm (ميزة!). Alkaline + Mechanical.', source: 'نصائح هندسية — مداخن قارية' },
     ],

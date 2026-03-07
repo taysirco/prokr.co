@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص التنظيف' },
         { entity: AMANA.HAFR.entity, url: AMANA.HAFR.url, role: 'اشتراطات النظافة بحفر الباطن' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'كنب حفر الباطن: SiO₂ Cutting + 10-15% جلد + بخور 52°م. لا عفن ولا عث (ميزتين!). HEPA + Enzymatic + Conditioner.', source: 'نصائح هندسية — كنب قاري' },
     ],

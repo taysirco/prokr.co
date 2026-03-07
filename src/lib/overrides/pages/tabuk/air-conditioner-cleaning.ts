@@ -35,7 +35,7 @@ export const override: PageOverride = {
         'تشغيل تدفئة بدون Transition Wash = عفن ينتشر في المنزل عبر المجاري.',
     ],
     trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات التكييف' }],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'مكيف تبوك: 10 أشهر تشغيل (أطول سعودياً) + حسمى يسد كل 4-6 أسابيع + عفن انتقالي فريد. Transition Wash أكتوبر/مارس = أهم صيانة.', source: 'موسوعة أخطاء — أنظمة التكييف في المناخ شبه القاري' },
     ],

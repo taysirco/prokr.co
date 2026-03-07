@@ -43,9 +43,9 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص المستودعات' },
         { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
-    expertReviewer: EXPERTS.ALZUWAYED,
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
-        { expert: EXPERTS.ALZUWAYED.name, quote: 'تخزين الخرج: مُكيّف إلزامي. ΔT 48°م. SiO₂ محكم. ميزة: لا عفن.', source: 'لوجستيات — تخزين صحراوي' },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'تخزين الخرج: مُكيّف إلزامي. ΔT 48°م. SiO₂ محكم. ميزة: لا عفن.', source: 'لوجستيات — تخزين صحراوي' },
     ],
     saudiRegulations: [REGULATIONS.TGA_LICENSE],
     verificationBadges: [{ badge: '✔️ تخزين مرخص', authority: 'بلدي + TGA', icon: 'shield-check' }],

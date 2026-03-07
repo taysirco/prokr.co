@@ -36,7 +36,7 @@ export const override: PageOverride = {
         'عث في 80% = حساسية تنفسية مزمنة = ربو. التنظيف الشهري = وقاية صحية.',
     ],
     trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات التنظيف' }],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'سجاد جازان = مزرعة عفن وعث مفتوحة. 80% رطوبة = فوق عتبة العفن 24/7. التجفيف ≤ 4 ساعات بـ Dehumidifier = أهم خطوة. بدونه: الغسل يُسوّء الوضع.', source: 'نصائح هندسية — التنظيف في المناخ الاستوائي' },
     ],

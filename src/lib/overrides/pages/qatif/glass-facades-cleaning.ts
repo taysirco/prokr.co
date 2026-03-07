@@ -39,7 +39,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات الواجهات' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات المباني بالشرقية' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'واجهات القطيف: NaCl + طين لزج + Biofilm واحي. Squeegee + Anti-Biofilm + Marine Sealant.', source: 'نصائح هندسية — واجهات الواحات الساحلية' },
     ],

@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص التنظيف' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات النظافة بالشرقية' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'أثاث الظهران = مزدوج: NaCl+SiO₂ مفصلات + 75-85% عفن + PVAc (حرارة+رطوبة). Anti-Corrosion + Anti-Fungal + Conditioner = حماية مزدوجة.', source: 'نصائح هندسية — أثاث البيئة المزدوجة' },
     ],

@@ -67,7 +67,7 @@ export const override: PageOverride = {
         { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'الرقابة على شبكات الصرف والاشتراطات الصحية في فنادق ومنشآت المدينة المنورة', acronym: 'أمانة المدينة' },
     ],
 
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {

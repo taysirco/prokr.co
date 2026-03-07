@@ -43,9 +43,9 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات المكافحة' },
         { entity: AMANA.ASIR.entity, url: AMANA.ASIR.url, role: 'اشتراطات أمانة عسير' },
     ],
-    expertReviewer: EXPERTS.ALKHODAIRY,
+    expertReviewer: EXPERTS.ALJUND,
     expertCitations: [
-        { expert: EXPERTS.ALKHODAIRY.name, quote: 'نمل أبيض خميس: رطوبة تُسرّع 50%. خشب رطب = طعام أسهل. Termidor+معالجة رطوبة.', source: 'أبحاث سموم — نمل أبيض جبلي' },
+        { expert: EXPERTS.ALJUND.name, quote: 'نمل أبيض خميس: رطوبة تُسرّع 50%. خشب رطب = طعام أسهل. Termidor+معالجة رطوبة.', source: 'أبحاث سموم — نمل أبيض جبلي' },
     ],
     saudiRegulations: [REGULATIONS.GHAD_SYSTEM],
     verificationBadges: [{ badge: '✔️ مكافحة نمل أبيض مرخصة', authority: 'بلدي + SFDA', icon: 'shield-check' }],

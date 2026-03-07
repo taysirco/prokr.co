@@ -61,7 +61,7 @@ export const override: PageOverride = {
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'الرقابة على خدمات شفط البيارات وترخيص الصهاريج بالدمام', acronym: 'أمانة الشرقية' },
     ],
 
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {

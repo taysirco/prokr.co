@@ -42,9 +42,9 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص مكافحة آفات' },
         { entity: AMANA.ASIR.entity, url: AMANA.ASIR.url, role: 'اشتراطات أمانة عسير' },
     ],
-    expertReviewer: EXPERTS.ALKHODAIRY,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        { expert: EXPERTS.ALKHODAIRY.name, quote: 'فضلات طيور خميس: Histoplasma بسبب رطوبة. Anti-Fungal إلزامي. أخطر من الصحراء.', source: 'أبحاث سموم — فطريات بيئية' },
+        { expert: EXPERTS.ALMISNID.name, quote: 'فضلات طيور خميس: Histoplasma بسبب رطوبة. Anti-Fungal إلزامي. أخطر من الصحراء.', source: 'أبحاث سموم — فطريات بيئية' },
     ],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
     verificationBadges: [{ badge: '✔️ مكافحة آفات مرخصة', authority: 'بلدي', icon: 'shield-check' }],

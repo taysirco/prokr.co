@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات الواجهات' },
         { entity: AMANA.HAFR.entity, url: AMANA.HAFR.url, role: 'اشتراطات المباني بحفر الباطن' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'واجهات حفر الباطن: SiO₂ أكثف + ΔT 54°م أقصى + UV أعلى. لا Biofilm (ميزة!). Squeegee + Flexible + UV Film.', source: 'نصائح هندسية — واجهات قارية' },
     ],

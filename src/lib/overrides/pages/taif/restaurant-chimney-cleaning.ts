@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...{ ...GOV.CIVILDEFENSE, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
  role: 'كود الدفاع المدني — سلامة المداخن والمطابخ التجارية' },
         ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [{ expert: EXPERTS.ALMOHAIMED.name, quote: 'مطاعم الطائف السياحية (مشاوي + حنيذ + مندي) = فحم وحطب = سخام 5-10× أكثر من الغاز. الموسم المكثف (4-5 أشهر) يُتبعه شتاء بارد يُحجّر الدهون. التنظيف نهاية سبتمبر = الأهم في السنة — لا تؤجّل.',
             source: EXPERTS.ALMOHAIMED.title }],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],

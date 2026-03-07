@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.SCE, role: 'كفاءة الطاقة' },
         { entity: AMANA.HAFR.entity, url: AMANA.HAFR.url, role: 'اشتراطات صحة بحفر الباطن' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'مكيف حفر الباطن = الأصعب: ΔT 54°م + SiO₂ + 10-15% + حمل أقصى. 6 صيانات/سنة = الحد الأدنى. الرياض: 4. فرق 50%.', source: 'موسوعة أخطاء — مكيفات المناخ القاري' },
     ],

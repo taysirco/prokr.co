@@ -91,7 +91,7 @@ export const override: PageOverride = {
         { entity: 'المديرية العامة للدفاع المدني', acronym: '998', url: 'https://www.998.gov.sa', role: 'الوقاية من حرائق الزيوت والدهون في الأفران' },
     ],
 
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
 
     expertCitations: [
         {

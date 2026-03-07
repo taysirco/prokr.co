@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.HRSD, role: 'تنظيم العمالة المنزلية — حماية حقوق العميل والعاملة' },
         { ...GOV.BALADI, role: 'ترخيص شركات خدمات التنظيف' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'التنظيف بالساعة في حائل يحتاج تدريباً خاصاً — الغبار المزدوج يخدش بأي ممسحة. HEPA-أولاً = قاعدة لا تُكسر. Color-Coded = حماية صحية. الجدول الفصلي = كفاءة. العاملة غير المُدرّبة تُتلف أكثر مما تُنظف.', source: 'نصائح هندسية — بروتوكولات التنظيف المنزلي في المناطق القارية' },
     ],

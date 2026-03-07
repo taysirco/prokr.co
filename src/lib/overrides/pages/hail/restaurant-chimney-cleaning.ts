@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.CIVILDEFENSE, role: 'اشتراطات السلامة من الحريق — فحص المداخن' },
         { ...GOV.BALADI, role: 'رخصة تشغيل المطعم — اشتراطات النظافة والسلامة' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'مداخن مطاعم حائل الحطبية أخطر مداخن في المشروع — سخام كربوني 2× + غبار عضوي قابل للاشتعال = مزيج مُركّب. التنظيف كل 3-4 أسابيع = الحد الأدنى. الإهمال = حريق.', source: 'موسوعة أخطاء في البناء — أنظمة التهوية والمداخن التجارية' },
     ],

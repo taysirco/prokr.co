@@ -41,7 +41,7 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف — الشهادة الصحية الإلزامية' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'كنب القصيم يحتاج تنظيفاً أعمق من أي مدينة — اللقاح يلتصق جزيئياً (Van der Waals) ولا يُزال بالمكنسة. والعث يتكاثر 3× أسرع في حرارة القصيم. Hot Water Extraction + بخار 130°م = البروتوكول الوحيد الذي يصل لعمق المشكلة.', source: 'نصائح هندسية — جودة البيئة الداخلية' },
     ],

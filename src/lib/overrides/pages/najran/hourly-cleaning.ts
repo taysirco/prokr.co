@@ -43,7 +43,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
         { entity: AMANA.NAJRAN.entity, url: AMANA.NAJRAN.url, role: 'اشتراطات النظافة بمنطقة نجران' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'عاملة نجران = 3 تدريبات إلزامية: HEPA أولاً (كوارتز) + لا تلمس الطمي (سيل) + شبكات مُغلقة (واحة). حذف أي تدريب = خطأ مكلف. ليست أي عاملة — بل مُدرّبة على بيئة الوادي.', source: 'نصائح هندسية — التنظيف المنزلي في بيئات الأودية' },
     ],

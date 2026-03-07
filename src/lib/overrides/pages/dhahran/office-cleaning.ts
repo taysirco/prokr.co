@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص تنظيف تجاري' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات المكاتب بالشرقية' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'مكتب الظهران = مزدوج + أرامكو: NaCl+SiO₂ أجهزة + 75-85% عفن + PM10. RO + Anti-Corrosion + HEPA + Anti-Fungal + بروتوكول ISO.', source: 'موسوعة أخطاء — مكاتب مزدوجة' },
     ],

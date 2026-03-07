@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص التنظيف' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات النظافة بالشرقية' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'بخار الظهران = مزدوج: يحل NaCl+SiO₂ في خطوة + يقتل عث + يُكسر Biofilm. 75-85% = تجفيف إلزامي لكن أسرع من الخبر.', source: 'نصائح هندسية — بخار مزدوج' },
     ],

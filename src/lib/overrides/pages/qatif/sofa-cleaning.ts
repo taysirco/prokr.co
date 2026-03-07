@@ -39,7 +39,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص التنظيف' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات النظافة بالشرقية' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'كنب القطيف: بخور+NaCl بلمرة + عث+طلع = حساسية مُركّبة. Enzymatic+Anti-Mite+بخار.', source: 'نصائح هندسية — كنب الواحات الساحلية' },
     ],

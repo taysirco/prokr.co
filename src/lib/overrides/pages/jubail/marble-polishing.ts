@@ -40,7 +40,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات الجلي' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات المباني بالشرقية' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'رخام الجبيل: NaCl إبهات + VOC بقع مسامية + 98% عفن مسامي. Sealer + Anti-Fungal + Turbo Dry. Biofilm رخام خارجي.', source: 'نصائح هندسية — رخام صناعي-ساحلي' },
     ],

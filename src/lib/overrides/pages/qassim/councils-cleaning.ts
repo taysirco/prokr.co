@@ -41,7 +41,7 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف — الشهادة الصحية الإلزامية' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'المجلس القصيمي يحتاج تنظيفاً أعمق بسبب الاستخدام اليومي (بخور + ضيافة) + البيئة (لقاح + عث). الراتنج المتبلمر على السقف يحتاج Alkaline Degreaser — المنظف العادي لا يخترقه.', source: 'نصائح هندسية — صيانة المجالس العربية' },
     ],

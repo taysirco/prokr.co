@@ -43,7 +43,7 @@ export const override: PageOverride = {
         { ...GOV.CIVILDEFENSE, role: 'السلامة من الحريق — معايير NFPA 96' },
         { entity: AMANA.NAJRAN.entity, url: AMANA.NAJRAN.url, role: 'اشتراطات مطاعم نجران' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'مداخن نجران = كربنة مُسرّعة: 45°م + واحة تسد + كوارتز يخدش. الثلاثية تجعل الربع السنوي إلزامياً — ليس اختيارياً. NFPA 96 يُحذّر من 6,000 ميكرون — و45°م تصلها خلال 3 أشهر.', source: 'نصائح هندسية — مداخن المطاعم في بيئات الواحات' },
     ],

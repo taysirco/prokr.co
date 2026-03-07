@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
         { entity: AMANA.AHSA.entity, url: AMANA.AHSA.url, role: 'اشتراطات النظافة بمحافظة الأحساء' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'كنب الأحساء = 4 آليات واحية: لقاح يُغذي عث + بخور يتبلمر + CaSO₄ يُصلّب البقع + عيون تُعفّن الحشوة. HEPA + Enzymatic + Citric + Anti-Fungal = بروتوكول رباعي لكنب الواحات.', source: 'نصائح هندسية — أثاث الواحات الكبرى' },
     ],

@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص التنظيف' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات النظافة بالشرقية' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'كنب الظهران = مزدوج: NaCl تصلب + SiO₂ Fiber Cutting + 75-85% عفن + عث + بخور. استخلاص + بخار + Anti-Fungal + Enzymatic + تجفيف.', source: 'نصائح هندسية — كنب مزدوج' },
     ],

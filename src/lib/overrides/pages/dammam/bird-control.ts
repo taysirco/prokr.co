@@ -61,7 +61,7 @@ export const override: PageOverride = {
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'الرقابة على نظافة المباني ومكافحة الطيور بالدمام', acronym: 'أمانة الشرقية' },
     ],
 
-    expertReviewer: EXPERTS.ALKHODAIRY,
+    expertReviewer: EXPERTS.ALMISNID,
 
     expertCitations: [
         {

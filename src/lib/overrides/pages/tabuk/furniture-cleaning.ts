@@ -33,7 +33,7 @@ export const override: PageOverride = {
         'أثاث MDF في غرفة -2°م بدون تدفئة = PVAc يتجمد = تلف دائم.',
     ],
     trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات التنظيف' }],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'أثاث تبوك يواجه 4 مسارات تدهور متزامنة — أعقد مدينة في المشروع. PVAc يتجمد فعلاً عند -2°م = MDF يتلف بشكل دائم.', source: 'نصائح هندسية — صيانة الأثاث في المناخ شبه القاري' },
     ],

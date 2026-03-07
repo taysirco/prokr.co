@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.SCE, role: 'كفاءة الطاقة' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات صحة بالشرقية' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'مكيف الجبيل = الأصعب في المملكة: NaCl+VOC مزدوج + 85-98% أقصى + SABIC PM2.5. HEPA Activated Carbon + Marine Degreaser + Anti-Fungal = بروتوكول صناعي-ساحلي.', source: 'موسوعة أخطاء — مكيفات البيئة الصناعية' },
     ],

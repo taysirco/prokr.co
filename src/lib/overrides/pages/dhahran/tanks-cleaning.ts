@@ -43,7 +43,7 @@ export const override: PageOverride = {
         { ...GOV.NWC, role: 'معايير مياه' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات المياه بالشرقية' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'خزان الظهران = مزدوج: Chloride Demand + SiO₂ قاع يحمي بكتيريا + 75-85% Biofilm. لا Scale = ميزة! كشط + Anti-Biofilm + كلور.', source: 'موسوعة أخطاء — خزانات مزدوجة' },
     ],

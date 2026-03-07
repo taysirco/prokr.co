@@ -43,7 +43,7 @@ export const override: PageOverride = {
         { ...GOV.MOENERGY, role: 'كفاءة الطاقة — أجهزة نظيفة = كهرباء أقل' },
         { entity: AMANA.NAJRAN.entity, url: AMANA.NAJRAN.url, role: 'اشتراطات بيئة العمل بمنطقة نجران' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'مكتب نجران = 3 مخاطر: كوارتز Thermal Throttling يُبطئ الأداء 15-30% + واحة عضوية تُهدد PCB + بكتيريا 45°م على كل سطح. HEPA + ESD + معقّم = 3 أدوات لا غنى عنها.', source: 'نصائح هندسية — بيئة العمل في المناطق الصحراوية الزراعية' },
     ],

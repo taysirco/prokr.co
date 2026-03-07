@@ -41,7 +41,7 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف — اشتراطات صحية' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'الأفران في القصيم تحتاج Descaling المقاومات كل 3 أشهر — كلس 600 ppm يُشكّل طبقة عازلة تُقلل الكفاءة 20-30%. معظم الناس يظنون المقاومة خربانة فيستبدلونها — والمشكلة مجرد كلس قابل للإذابة بالستريك.', source: 'نصائح هندسية — صيانة الأجهزة المنزلية في مياه عسرة' },
     ],

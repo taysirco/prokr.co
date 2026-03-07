@@ -33,7 +33,7 @@ export const override: PageOverride = {
         'ماء صنبور في الغسل = أملاح إضافية = Etching أسوأ. Deionized فقط.',
     ],
     trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات تنظيف الواجهات' }, { ...GOV.SCE, role: 'اعتماد فنيي الواجهات' }],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'واجهات جازان: بيئة بحرية استوائية = أسرع تدهور سيلكون (1-2 سنة) + Salt Fog Etching + نمو بيولوجي. Marine-Grade + CeO₂ + Biocide = الحد الأدنى.', source: 'موسوعة أخطاء — الواجهات في البيئة البحرية الاستوائية' },
     ],

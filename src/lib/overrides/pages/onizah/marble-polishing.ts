@@ -42,9 +42,9 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات الجلي' },
         { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        { expert: EXPERTS.ALMOHAIMED.name, quote: 'رخام عنيزة: SiO₂ Pitting + CaCO₃ Etching. Sealer 2-3 سنة — لأن صفر عفن. أطول عمر بالمملكة.', source: 'نصائح هندسية — تشطيبات' },
+        { expert: EXPERTS.ALMISNID.name, quote: 'رخام عنيزة: SiO₂ Pitting + CaCO₃ Etching. Sealer 2-3 سنة — لأن صفر عفن. أطول عمر بالمملكة.', source: 'نصائح هندسية — تشطيبات' },
     ],
     saudiRegulations: [REGULATIONS.SBC_601],
     verificationBadges: [{ badge: '✔️ جلي مرخص', authority: 'منصة بلدي', icon: 'shield-check' }],

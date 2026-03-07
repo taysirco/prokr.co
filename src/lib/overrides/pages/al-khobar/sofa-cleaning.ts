@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات النظافة بالشرقية' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'كنب الخبر = أسوأ بيئة في المملكة: NaCl + 85-95% + عث 12/12 + بخور. RO + Anti-Fungal + بخار + Enzymatic + تجفيف = 5 خطوات لا تُختصر.', source: 'نصائح هندسية — أثاث ساحلي' },
     ],

@@ -43,7 +43,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص المطاعم — اشتراطات المداخن والصحة' },
         { entity: AMANA.JAZAN.entity, url: AMANA.JAZAN.url, role: 'اشتراطات سلامة المطاعم بمنطقة جازان' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'مداخن مطاعم جازان = أخطر مداخن في المملكة. شحوم أسماك Omega-3 تتأكسد وتتعفّن 3-5×. Creosote في 80% = خطر اشتعال مُسرّع. ملح يأكل حتى الستانلس. كل شهرين بـ Alkaline pH 13 + Marine-Guard = الحد الأدنى. ربع سنوي = مُقامرة.', source: 'نصائح هندسية — مداخن المطاعم في البيئات الساحلية الاستوائية' },
     ],

@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات الجلي' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات المباني بالشرقية' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'رخام الخبر = 3 ساحلية: NaCl رطب يُبهت + 85-95% عفن مسامي + Biofilm طحلبي. RO + جلي + Anti-Fungal + Sealer + Anti-Biofilm = بروتوكول رخام ساحلي.', source: 'نصائح هندسية — رخام البيئات الساحلية' },
     ],

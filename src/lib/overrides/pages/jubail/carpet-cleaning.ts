@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص التنظيف' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات النظافة بالشرقية' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'سجاد الجبيل: NaCl+VOC تصلب مزدوج + 85-98% عفن أقصى + سخام SABIC. تجفيف أبطأ في المملكة. RO + Enzymatic + Turbo Dry.', source: 'نصائح هندسية — سجاد البيئة الصناعية' },
     ],

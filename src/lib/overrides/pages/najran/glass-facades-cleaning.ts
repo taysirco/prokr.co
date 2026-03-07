@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات تنظيف الواجهات — السلامة المهنية' },
         { entity: AMANA.NAJRAN.entity, url: AMANA.NAJRAN.url, role: 'اشتراطات المباني والواجهات بمنطقة نجران' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'واجهات نجران = معادلة بسيطة: كوارتز 7H > زجاج 5.5H = أي لمس يخدش. Touchless هو الأسلوب الوحيد. + UV 10+ يُحلل Sealant العادي خلال 2-3 سنوات. UV-Stable يتحمل 8-10. الفيزياء لا تتفاوض.', source: 'موسوعة أخطاء — الواجهات في بيئات الأودية' },
     ],

@@ -41,7 +41,7 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف — الشهادة الصحية الإلزامية ومطابقة المواد' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'سجاد القصيم يتهالك بسرعة مضاعفة بسبب الاحتكاك المجهري — رمل النفود (كوارتز 10-50 ميكرون) يعمل كورق صنفرة مجهري يبري الألياف من الداخل مع كل خطوة. HEPA صناعي أسبوعياً + استخلاص ساخن كل 3 أشهر = يُضاعف عمر السجاد فعلياً.', source: 'نصائح هندسية — جودة البيئة الداخلية في المباني السعودية' },
     ],

@@ -41,7 +41,7 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف — الشهادة الصحية' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'المجلس الحائلي فريد: بخور يتبلمر في الحرارة + عث يتكاثر في صقيع الشتاء + سخام مدافئ + رمل يُبرى. 4 آليات تلوث تحتاج 4 أدوات. تنظيف دوري = حماية مجلس بقيمة 20,000-50,000 ريال.', source: 'نصائح هندسية — صيانة الأقمشة في المناخ القاري' },
     ],

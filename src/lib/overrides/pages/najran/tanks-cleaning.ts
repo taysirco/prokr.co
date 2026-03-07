@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات تنظيف الخزانات — الشهادة الصحية' },
         { entity: AMANA.NAJRAN.entity, url: AMANA.NAJRAN.url, role: 'اشتراطات المياه والصحة بمنطقة نجران' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'خزان نجران = 4 تحديات: السيل يُلوّث (E. coli) + الطمي يترسب (Biofilm) + البعوض يتكاثر (Culex 7 أيام) + UV يُحلل الكلور. تعقيم بعد كل سيل = غير اختياري. غطاء محكم = أبسط حماية.', source: 'موسوعة أخطاء — خزانات مناطق الأودية' },
     ],

@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
         { entity: AMANA.NAJRAN.entity, url: AMANA.NAJRAN.url, role: 'اشتراطات النظافة بمنطقة نجران' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'كنب نجران = 4 مسارات: جفاف يُشقّق + طمي يتصلب + بخور يتبلمر + حرارة تُليّن. كل مسار يحتاج أداة مختلفة. Conditioner + Enzymatic + استخلاص + Tightener = بدون استثناء.', source: 'نصائح هندسية — الأثاث في بيئات الواحات' },
     ],
