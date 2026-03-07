@@ -39,6 +39,7 @@ export const override: PageOverride = {
  role: 'ترخيص شركات صيانة وتنظيف المكيفات' },
         { ...{ ...GOV.MOENERGY, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
  role: 'معايير كفاءة الطاقة — تنظيف المكيف يوفر 15-25% كهرباء' },
+        { entity: AMANA.TAIF.entity, url: AMANA.TAIF.url, role: 'اشتراطات أمانة الطائف' },
         ],
     expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [{ expert: EXPERTS.ALMISNID.name, quote: 'مكيفات الطائف تعمل بنمط حراري فريد: تبريد ← يتكثف ماء على الملف. تدفئة ← العكس. هذا الانتقال المتكرر = بيئة رطوبة متغيرة داخل المكيف = عفن مضمون. التنظيف مرتين سنوياً (قبل كل موسم) = إلزامي في الطائف.',

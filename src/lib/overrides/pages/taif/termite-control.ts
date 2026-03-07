@@ -43,6 +43,7 @@ export const override: PageOverride = {
  role: 'ترخيص شركات مكافحة الحشرات' },
         { ...{ ...GOV.SCE, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
  role: 'اعتماد تقارير فحص المباني الإنشائي' },
+        { entity: AMANA.TAIF.entity, url: AMANA.TAIF.url, role: 'اشتراطات أمانة الطائف' },
         ],
     expertReviewer: EXPERTS.ALJUND,
     expertCitations: [{ expert: EXPERTS.ALJUND.name, quote: 'تربة الطائف الجبلية الرطبة = بيئة مثالية للنمل الأبيض تحت-الأرضي. كثير من بيوت الطائف التقليدية بأسقف وبوابات خشبية — وهي الأكثر عرضة. الحقن الوقائي حول الأساسات = أقل تكلفة من إصلاح سقف خشبي متآكل.',

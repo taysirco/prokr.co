@@ -8,7 +8,7 @@
 // ══════════════════════════════════════════════════════════════
 
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -80,6 +80,7 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.CIVILDEFENSE, role: 'تعليمات الوقاية من حرائق المطابخ وسلامة أجهزة الغاز المنزلية' },
         { ...GOV.SFDA, role: 'اعتماد مواد تنظيف الأفران الآمنة غذائياً (Food Safe)' },
+        { entity: AMANA.MAKKAH.entity, url: AMANA.MAKKAH.url, role: 'اشتراطات أمانة مكة المكرمة' },
     ],
 
     expertReviewer: {

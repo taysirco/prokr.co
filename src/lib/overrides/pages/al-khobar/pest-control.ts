@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -34,8 +34,10 @@ export const override: PageOverride = {
         'مولات = مصدر دائم.',
         '85-95% = تكاثر سريع.',
     ],
-    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص' }, { ...GOV.WEQAA, role: 'مبيدات' }],
-    expertReviewer: EXPERTS.ALKHODAIRY,
+    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص' }, { ...GOV.WEQAA, role: 'مبيدات' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات أمانة الشرقية' },
+    ],
+        expertReviewer: EXPERTS.ALKHODAIRY,
     expertCitations: [{ expert: EXPERTS.ALKHODAIRY.name, quote: 'الخبر: جسر البحرين = بوابة عابرة. 70K سيارة = حشرات عابرة مُستمرة. مولات = مصدر. 85-95% = 3-5 أيام.', source: 'أبحاث حشرات — الشرقية' }],
     saudiRegulations: [REGULATIONS.GHAD_SYSTEM],
     verificationBadges: [{ badge: '✔️ مرخصة', authority: 'بلدي + وقاء', icon: 'shield-check' }],

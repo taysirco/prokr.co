@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -41,6 +41,7 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.TGA, role: 'ترخيص النقل البري — حماية حقوق العميل والتأمين الإلزامي' },
         { ...GOV.LOGISTI, role: 'بيان حمولة رسمي — توثيق النقل بين المدن' },
+        { entity: AMANA.HAIL.entity, url: AMANA.HAIL.url, role: 'اشتراطات أمانة حائل' },
     ],
     expertReviewer: EXPERTS.ALZUWAYED,
     expertCitations: [

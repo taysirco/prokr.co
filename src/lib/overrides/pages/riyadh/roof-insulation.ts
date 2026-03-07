@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -42,6 +42,7 @@ export const override: PageOverride = {
         { ...GOV.SBC, role: 'كود SBC 601 — الاشتراط الإلزامي للعزل الحراري — الرياض المنطقة 1' },
         { ...GOV.MOENERGY, role: 'كفاءة الطاقة في المباني — شهادة مطابقة' },
         { ...GOV.SCE, role: 'اعتماد مهندسي العزل والتشطيبات' },
+        { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
     expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [

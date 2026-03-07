@@ -6,7 +6,7 @@
 // ══════════════════════════════════════════════════════════════
 
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -76,6 +76,7 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.BALADI, role: 'اشتراطات النظافة للمطابخ التجارية — شهادة صحية وتقارير تنظيف دورية' },
         { ...GOV.SFDA, role: 'معايير سلامة الغذاء — المطبخ النظيف شرط أساسي لمنع التلوث' },
+        { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
 
     expertReviewer: {

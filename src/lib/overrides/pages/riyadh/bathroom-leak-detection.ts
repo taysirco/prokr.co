@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -42,6 +42,7 @@ export const override: PageOverride = {
         { ...GOV.NWC, role: 'تقرير معتمد لتعديل فاتورة المياه بأثر رجعي — حماية مالية' },
         { ...GOV.SCE, role: 'اعتماد مهندسي فحص المباني والتسربات' },
         { ...GOV.SBC, role: 'كود البناء SBC — معايير العزل المائي للحمامات' },
+        { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
     expertReviewer: EXPERTS.ALJUND,
     expertCitations: [

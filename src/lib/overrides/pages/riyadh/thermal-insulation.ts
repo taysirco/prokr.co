@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -41,6 +41,7 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.SBC, role: 'كود SBC 601 — الرياض المنطقة 1 — أعلى متطلبات' },
         { ...GOV.MOENERGY, role: 'كفاءة الطاقة — شهادة مطابقة' },
+        { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
     expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [

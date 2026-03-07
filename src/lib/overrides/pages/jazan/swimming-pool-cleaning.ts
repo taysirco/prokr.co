@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -36,8 +36,10 @@ export const override: PageOverride = {
         'كلور بدون CYA في جازان = يتحلل خلال 2-3 ساعات = كأنك لم تضف. CYA إلزامي.',
         'المعدات المعدنية بدون Marine-Grade = Pitting Corrosion خلال أشهر = استبدال.',
     ],
-    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص صيانة المسابح' }],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص صيانة المسابح' },
+        { entity: AMANA.JAZAN.entity, url: AMANA.JAZAN.url, role: 'اشتراطات أمانة جازان' },
+    ],
+        expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'مسبح جازان = أصعب صيانة سعودية: طحالب وبعوض 12/12 + كلور يتحلل 3× + ملح بحري. الصيانة الأسبوعية = الحد الأدنى — ليست اختيارية.', source: 'موسوعة أخطاء — المسابح في المناخ الاستوائي' },
     ],

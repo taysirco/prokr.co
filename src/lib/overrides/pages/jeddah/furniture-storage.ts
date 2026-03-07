@@ -93,6 +93,7 @@ export const override: PageOverride = {
 
     trustAnchors: [
         { entity: 'الهيئة العامة للنقل', acronym: 'TGA', url: 'https://tga.gov.sa', role: 'ترخيص شركات النقل والتخزين' },
+        { entity: AMANA.JEDDAH.entity, url: AMANA.JEDDAH.url, role: 'اشتراطات أمانة جدة' },
     ],
 
     expertReviewer: EXPERTS.ALMOHAIMED,

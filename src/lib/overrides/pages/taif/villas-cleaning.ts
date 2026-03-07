@@ -34,8 +34,10 @@ export const override: PageOverride = {
     ],
     trustAnchors: [
 { ...{ ...GOV.BALADI, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
- role: 'ترخيص شركات التنظيف — اشتراطات جودة وسلامة' }    ],
-    expertReviewer: EXPERTS.ALMISNID,
+ role: 'ترخيص شركات التنظيف — اشتراطات جودة وسلامة' }    ,
+        { entity: AMANA.TAIF.entity, url: AMANA.TAIF.url, role: 'اشتراطات أمانة الطائف' },
+    ],
+        expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [{ expert: EXPERTS.ALMISNID.name, quote: 'فلل الهدا والشفا المغلقة 6-8 أشهر تتراكم فيها أبواغ فطرية بتركيز يصل 10 أضعاف المنازل المسكونة. بروتوكول التهوية المسبقة قبل الدخول = ليس ترفاً بل ضرورة صحية — خاصة لعائلات فيها أطفال أو كبار سن.',
             source: EXPERTS.ALMISNID.title }],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],

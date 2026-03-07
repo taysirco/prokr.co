@@ -36,8 +36,10 @@ export const override: PageOverride = {
     ],
     trustAnchors: [
 { ...{ ...GOV.BALADI, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
- role: 'اشتراطات سلامة الأرضيات في المباني العامة' }    ],
-    expertReviewer: EXPERTS.ALMISNID,
+ role: 'اشتراطات سلامة الأرضيات في المباني العامة' }    ,
+        { entity: AMANA.TAIF.entity, url: AMANA.TAIF.url, role: 'اشتراطات أمانة الطائف' },
+    ],
+        expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [{ expert: EXPERTS.ALMISNID.name, quote: 'في الطائف: لمعان الأرضية بدون Anti-Slip = خطر وليس جمال. التكثف الشتوي يُحوّل البورسلين اللامع لحلبة تزلج. Nano Anti-Slip يحافظ على اللمعان ويمنع الانزلاق ← جمال وأمان في آنٍ واحد.',
             source: EXPERTS.ALMISNID.title }],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],

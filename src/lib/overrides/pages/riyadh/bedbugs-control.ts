@@ -5,7 +5,7 @@
 // ══════════════════════════════════════════════════════════════
 
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -79,6 +79,7 @@ export const override: PageOverride = {
         { ...GOV.SFDA, role: 'تسجيل المبيدات المستخدمة في مكافحة بق الفراش — ضمان السلامة' },
         { ...GOV.WEQAA, role: 'إرشادات الوقاية من الآفات المنزلية وبروتوكولات المكافحة المتكاملة' },
         { ...GOV.BALADI, role: 'ترخيص شركات مكافحة الحشرات — ضمان المهنية والمسؤولية القانونية' },
+        { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
 
     expertReviewer: {

@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -31,8 +31,10 @@ export const override: PageOverride = {
         'شحوم + عفن + بكتيريا = خطر صحي. تنظيف شهري في جازان.',
         'صدأ ملحي على العنصر = كفاءة أقل + خطر كهربائي. Anti-Rust كل 3 أشهر.',
     ],
-    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات التنظيف' }],
-    expertReviewer: EXPERTS.ALMISNID,
+    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
+        { entity: AMANA.JAZAN.entity, url: AMANA.JAZAN.url, role: 'اشتراطات أمانة جازان' },
+    ],
+        expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'فرن جازان: الشحوم تتعفّن (عكس التكربن الجاف). + بكتيريا أسماك استوائية 3× أسرع. + صدأ ملحي. تنظيف شهري = الحد الأدنى.', source: 'نصائح هندسية — أجهزة المطبخ في المناخ الاستوائي' },
     ],

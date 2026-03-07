@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -71,6 +71,7 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.SFDA, role: 'تسجيل مبيدات مكافحة النمل الأبيض عبر نظام غد — Fipronil/Imidacloprid/Hexaflumuron' },
         { ...GOV.BALADI, role: 'اشتراط معالجة النمل الأبيض قبل البناء — حماية المنشآت' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات أمانة الشرقية' },
     ],
 
     expertReviewer: EXPERTS.ALJUND,

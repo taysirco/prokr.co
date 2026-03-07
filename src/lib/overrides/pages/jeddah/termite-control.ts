@@ -6,7 +6,7 @@
 // ══════════════════════════════════════════════════════════════
 
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -71,6 +71,7 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.SBC, role: 'كود البناء السعودي يشترط معالجة التربة قبل البناء — شهادة معالجة إلزامية' },
         { ...GOV.BALADI, role: 'ترخيص شركات مكافحة النمل الأبيض — اشتراطات فنية' },
+        { entity: AMANA.JEDDAH.entity, url: AMANA.JEDDAH.url, role: 'اشتراطات أمانة جدة' },
     ],
 
     expertReviewer: {

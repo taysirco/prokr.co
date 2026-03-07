@@ -37,6 +37,7 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.NWC, role: 'معايير جودة مياه الشرب — كلور متبقي' },
         { ...GOV.BALADI, role: 'اشتراطات بلدية لصيانة الخزانات' },
+        { entity: AMANA.ASIR.entity, url: AMANA.ASIR.url, role: 'اشتراطات أمانة عسير' },
     ],
     expertReviewer: { name: EXPERTS.ALJUND.name, title: EXPERTS.ALJUND.title, credential: EXPERTS.ALJUND.credential, profileUrl: EXPERTS.ALJUND.profileUrl },
     expertCitations: [{ expert: EXPERTS.ALJUND.name, quote: 'خزانات أبها تُكوّن Biofilm أسرع من أي مدينة سعودية — المناخ المعتدل والرطوبة = طحالب + بكتيريا في أسابيع. الكلور وحده لا يخترق Biofilm ← الفرك الميكانيكي قبل التعقيم = إلزامي. وفحص بكتيري بعد الأمطار = خط أمان ضد التسرب الجوفي.', source: EXPERTS.ALJUND.title, url: EXPERTS.ALJUND.profileUrl }],

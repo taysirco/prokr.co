@@ -35,8 +35,10 @@ export const override: PageOverride = {
     ],
     trustAnchors: [
 { ...{ ...GOV.BALADI, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
- role: 'ترخيص شركات الخدمات المنزلية — حقوق العمالة' }    ],
-    expertReviewer: EXPERTS.ALMISNID,
+ role: 'ترخيص شركات الخدمات المنزلية — حقوق العمالة' }    ,
+        { entity: AMANA.TAIF.entity, url: AMANA.TAIF.url, role: 'اشتراطات أمانة الطائف' },
+    ],
+        expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [{ expert: EXPERTS.ALMISNID.name, quote: 'الفرق بين عاملة عادية وعاملة مدربة على مناخ الطائف = الفرق بين Wet Mopping (يسبب عفن) وDamp Mopping + تجفيف (يمنع عفن). تدريب 30 دقيقة يمنع مشكلة صحية مزمنة.',
             source: EXPERTS.ALMISNID.title }],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],

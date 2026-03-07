@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -69,6 +69,7 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف + تصاريح العمل على ارتفاعات' },
         { ...GOV.SASO, role: 'مواصفات مواد التنظيف ومحاليل الأحماض المعتمدة للاستخدام التجاري' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات أمانة الشرقية' },
     ],
 
     expertReviewer: EXPERTS.ALMISNID,

@@ -44,6 +44,7 @@ export const override: PageOverride = {
  role: 'ترخيص شركات التنظيف — اشتراطات صحية وجودة' },
         { ...{ ...GOV.MOH, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
  role: 'بروتوكولات التعقيم والوقاية من الأمراض الفطرية التنفسية' },
+        { entity: AMANA.TAIF.entity, url: AMANA.TAIF.url, role: 'اشتراطات أمانة الطائف' },
         ],
     expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [{ expert: EXPERTS.ALMISNID.name, quote: 'الطائف على ارتفاع 1,800 متر: ضباب الشتاء يرفع الرطوبة الداخلية لمستويات تُنبت العفن خلال أسابيع. المنازل بدون عزل حراري وتهوية = مشكلة عفن مزمنة كل شتاء. المعالجة الوقائية قبل الشتاء = أذكى استثمار.',

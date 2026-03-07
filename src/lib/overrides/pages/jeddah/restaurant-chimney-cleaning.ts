@@ -80,6 +80,7 @@ export const override: PageOverride = {
     trustAnchors: [
         { entity: 'المديرية العامة للدفاع المدني', acronym: '998', url: 'https://www.998.gov.sa', role: 'اشتراط تنظيف مداخن المطاعم كل 3 أشهر — الوقاية من حرائق الزيوت' },
         { entity: 'وزارة البلديات — منصة بلدي', acronym: 'بلدي', url: 'https://balady.gov.sa', role: 'ترخيص المطاعم + شهادة صحية — التنظيف جزء من الاشتراطات' },
+        { entity: AMANA.JEDDAH.entity, url: AMANA.JEDDAH.url, role: 'اشتراطات أمانة جدة' },
     ],
 
     expertReviewer: EXPERTS.ALMISNID,

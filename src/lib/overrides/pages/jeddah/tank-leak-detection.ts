@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -41,6 +41,7 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.NWC, role: 'معايير خزانات — سلامة مياه' },
         { ...GOV.SASO, role: 'SASO 1144 — مواصفات خزانات' },
+        { entity: AMANA.JEDDAH.entity, url: AMANA.JEDDAH.url, role: 'اشتراطات أمانة جدة' },
     ],
     expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [

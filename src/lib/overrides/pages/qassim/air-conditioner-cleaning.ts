@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -41,6 +41,7 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.SCE, role: 'اعتماد فنيي التكييف والتبريد' },
         { ...GOV.MOENERGY, role: 'كفاءة الطاقة — صيانة المكيفات توفر 20-30% من الاستهلاك' },
+        { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
     expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [

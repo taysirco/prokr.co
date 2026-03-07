@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -35,8 +35,10 @@ export const override: PageOverride = {
         'عيون = بعوض دائم.',
         'صيف = انفجار بعد سبات شتوي.',
     ],
-    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص' }, { ...GOV.WEQAA, role: 'مبيدات' }],
-    expertReviewer: EXPERTS.ALKHODAIRY,
+    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص' }, { ...GOV.WEQAA, role: 'مبيدات' },
+        { entity: AMANA.AHSA.entity, url: AMANA.AHSA.url, role: 'اشتراطات أمانة الأحساء' },
+    ],
+        expertReviewer: EXPERTS.ALKHODAIRY,
     expertCitations: [{ expert: EXPERTS.ALKHODAIRY.name, quote: 'الأحساء: أكبر واحة = أكبر تحدي زراعي. RPW + بعوض عيون + 2.5M نخلة. مكافحة زراعية مُتخصصة — ليست حضرية فقط.', source: 'أبحاث حشرات — واحات الشرقية' }],
     saudiRegulations: [REGULATIONS.GHAD_SYSTEM],
     verificationBadges: [{ badge: '✔️ مرخصة', authority: 'بلدي + وقاء', icon: 'shield-check' }],

@@ -34,8 +34,10 @@ export const override: PageOverride = {
     ],
     trustAnchors: [
 { ...{ ...GOV.BALADI, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
- role: 'ترخيص شركات النظافة — عقود مكاتب' }    ],
-    expertReviewer: EXPERTS.ALMISNID,
+ role: 'ترخيص شركات النظافة — عقود مكاتب' }    ,
+        { entity: AMANA.TAIF.entity, url: AMANA.TAIF.url, role: 'اشتراطات أمانة الطائف' },
+    ],
+        expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [{ expert: EXPERTS.ALMISNID.name, quote: 'جودة الهواء الداخلي (IAQ) في مكاتب الطائف = تحدٍ مزدوج: عفن التكييف شتاءً + حبوب لقاح صيفاً. العقد الشهري الذي يشمل تعقيم المكيفات = الاستثمار الأذكى لصاحب العمل — إنتاجية أعلى وغياب أقل.',
             source: EXPERTS.ALMISNID.title }],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],

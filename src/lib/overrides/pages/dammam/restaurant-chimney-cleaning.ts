@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -71,6 +71,7 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.CIVILDEFENSE, role: 'إرشادات وفحص سلامة مداخن المطاعم — الوقاية من حرائق الدهون' },
         { ...GOV.BALADI, role: 'شهادة تنظيف مداخن ضمن متطلبات الترخيص التجاري للمطاعم' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات أمانة الشرقية' },
     ],
 
     expertReviewer: EXPERTS.ALMISNID,

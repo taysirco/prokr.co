@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -42,6 +42,7 @@ export const override: PageOverride = {
         { ...GOV.NWC, role: 'معايير جودة مياه الخزانات وفحص التسرب — كود وطني' },
         { ...GOV.MOH, role: 'بروتوكولات تعقيم الخزانات وحماية الصحة العامة' },
         { ...GOV.SCE, role: 'اعتماد مهندسي فحص المنشآت والخزانات الخرسانية' },
+        { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
     expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [

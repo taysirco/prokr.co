@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -41,6 +41,7 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.SFDA, role: 'تسجيل مبيدات الصحة العامة في نظام غد — ضمان سلامة المواد المستخدمة' },
         { ...GOV.BALADI, role: 'ترخيص شركات مكافحة الآفات — الشهادة الصحية الإلزامية' },
+        { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
     expertReviewer: EXPERTS.ALKHODAIRY,
     expertCitations: [

@@ -90,6 +90,7 @@ export const override: PageOverride = {
 
     trustAnchors: [
         { entity: 'هيئة الغذاء والدواء', acronym: 'SFDA', url: 'https://sfda.gov.sa', role: 'اعتماد أجهزة البخار الصناعية' },
+        { entity: AMANA.JEDDAH.entity, url: AMANA.JEDDAH.url, role: 'اشتراطات أمانة جدة' },
     ],
 
     expertReviewer: EXPERTS.ALMISNID,

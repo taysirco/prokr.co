@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -32,8 +32,10 @@ export const override: PageOverride = {
         'شاحنة مكشوفة + مطر موسمي = MDF ينتفخ = تلف دائم.',
         'أثاث مُعفّن + نظيف = تلوث متبادل في 80% رطوبة.',
     ],
-    trustAnchors: [{ ...GOV.TGA, role: 'ترخيص النقل البري' }],
-    expertReviewer: EXPERTS.ALZUWAYED,
+    trustAnchors: [{ ...GOV.TGA, role: 'ترخيص النقل البري' },
+        { entity: AMANA.JAZAN.entity, url: AMANA.JAZAN.url, role: 'اشتراطات أمانة جازان' },
+    ],
+        expertReviewer: EXPERTS.ALZUWAYED,
     expertCitations: [
         { expert: EXPERTS.ALZUWAYED.name, quote: 'نقل جازان: أخطر نقل استوائي. العفن ينتقل بين الأثاث في 80%. MDF ينتفخ. الملح يُصدئ. PVAc يلين. شاحنة مُغلقة + مُهوّأة + فحص عفن = الحد الأدنى.', source: 'هيئة النقل — النقل في المناطق الاستوائية' },
     ],

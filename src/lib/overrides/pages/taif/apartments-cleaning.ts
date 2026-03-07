@@ -34,8 +34,10 @@ export const override: PageOverride = {
     ],
     trustAnchors: [
 { ...{ ...GOV.BALADI, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
- role: 'ترخيص شركات النظافة — اشتراطات جودة' }    ],
-    expertReviewer: EXPERTS.ALMISNID,
+ role: 'ترخيص شركات النظافة — اشتراطات جودة' }    ,
+        { entity: AMANA.TAIF.entity, url: AMANA.TAIF.url, role: 'اشتراطات أمانة الطائف' },
+    ],
+        expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [{ expert: EXPERTS.ALMISNID.name, quote: 'شقق الطائف المفروشة = أصول عقارية تعمل 4-5 أشهر فقط. التنظيف الاحترافي بين الضيوف ليس تكلفة — بل حماية للأصل وللسمعة. شقة نظيفة = تقييم 5 نجوم = سعر أعلى الموسم القادم.',
             source: EXPERTS.ALMISNID.title }],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],

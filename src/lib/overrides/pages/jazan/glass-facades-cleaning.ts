@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -32,8 +32,10 @@ export const override: PageOverride = {
         'سيلكون عادي في جازان = يتفتت خلال سنة = تسلل ماء + ملح = تلف داخلي.',
         'ماء صنبور في الغسل = أملاح إضافية = Etching أسوأ. Deionized فقط.',
     ],
-    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات تنظيف الواجهات' }, { ...GOV.SCE, role: 'اعتماد فنيي الواجهات' }],
-    expertReviewer: EXPERTS.ALMISNID,
+    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات تنظيف الواجهات' }, { ...GOV.SCE, role: 'اعتماد فنيي الواجهات' },
+        { entity: AMANA.JAZAN.entity, url: AMANA.JAZAN.url, role: 'اشتراطات أمانة جازان' },
+    ],
+        expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'واجهات جازان: بيئة بحرية استوائية = أسرع تدهور سيلكون (1-2 سنة) + Salt Fog Etching + نمو بيولوجي. Marine-Grade + CeO₂ + Biocide = الحد الأدنى.', source: 'موسوعة أخطاء — الواجهات في البيئة البحرية الاستوائية' },
     ],

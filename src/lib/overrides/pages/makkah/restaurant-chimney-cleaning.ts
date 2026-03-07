@@ -8,7 +8,7 @@
 // ══════════════════════════════════════════════════════════════
 
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -80,6 +80,7 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.CIVILDEFENSE, role: 'إلزام المطاعم بعقود تنظيف دكت دورية — مخالفة = إنذار/إغلاق' },
         { ...GOV.BALADI, role: 'اشتراطات الترخيص الصحي لمنشآت الغذاء وتفتيش المداخن' },
+        { entity: AMANA.MAKKAH.entity, url: AMANA.MAKKAH.url, role: 'اشتراطات أمانة مكة المكرمة' },
     ],
 
     expertReviewer: {

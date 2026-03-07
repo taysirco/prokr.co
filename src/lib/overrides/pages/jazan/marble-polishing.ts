@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -33,8 +33,10 @@ export const override: PageOverride = {
         'Sealer عادي على رخام مُعفّن = يحبس العفن داخل المسام ← يستمر الـ Etching. Anti-Fungal Sealer = يقتل أولاً.',
         'رخام خارجي بدون Biocide في جازان = أشنات خلال أسابيع ← تفتت المسام.',
     ],
-    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات الجلي والتلميع' }],
-    expertReviewer: EXPERTS.ALMISNID,
+    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات الجلي والتلميع' },
+        { entity: AMANA.JAZAN.entity, url: AMANA.JAZAN.url, role: 'اشتراطات أمانة جازان' },
+    ],
+        expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'رخام جازان يتعرض لـ Biological Etching — عفن يُفرز حمض يأكل CaCO₃. + Salt Crystallization يُفجّر المسام. + أشنات تُفتت الخارجي. بروتوكول بيولوجي-كيميائي = الحل.', source: 'موسوعة أخطاء في البناء — الأحجار الطبيعية في المناخ الاستوائي' },
     ],

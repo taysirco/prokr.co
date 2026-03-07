@@ -93,6 +93,7 @@ export const override: PageOverride = {
     trustAnchors: [
         { entity: 'الهيئة العامة للنقل', acronym: 'TGA', url: 'https://tga.gov.sa', role: 'ترخيص الدينات ومركبات النقل الثقيل' },
         { entity: 'بوابة النقل — منصة لوجستي', acronym: 'لوجستي', url: 'https://logisti.sa', role: 'بيان حمولة رسمي للنقل بين المدن' },
+        { entity: AMANA.JEDDAH.entity, url: AMANA.JEDDAH.url, role: 'اشتراطات أمانة جدة' },
     ],
 
     expertReviewer: EXPERTS.ALMOHAIMED,

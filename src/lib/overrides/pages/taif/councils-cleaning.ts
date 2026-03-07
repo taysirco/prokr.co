@@ -36,8 +36,10 @@ export const override: PageOverride = {
     ],
     trustAnchors: [
 { ...{ ...GOV.BALADI, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
- role: 'ترخيص شركات التنظيف' }    ],
-    expertReviewer: EXPERTS.ALMISNID,
+ role: 'ترخيص شركات التنظيف' }    ,
+        { entity: AMANA.TAIF.entity, url: AMANA.TAIF.url, role: 'اشتراطات أمانة الطائف' },
+    ],
+        expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [{ expert: EXPERTS.ALMISNID.name, quote: 'المجالس الأرضية في الطائف تمتص رطوبة 3-4 أضعاف الكنب المرتفع. الأرضية الباردة (5°م شتاءً) + مفروشات ملاصقة = تكثف ← عفن. بساط عازل + رفع 5 سم = حل بسيط يمنع مشكلة كبيرة.',
             source: EXPERTS.ALMISNID.title }],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],

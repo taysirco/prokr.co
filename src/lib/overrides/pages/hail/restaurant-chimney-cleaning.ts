@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -41,6 +41,7 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.CIVILDEFENSE, role: 'اشتراطات السلامة من الحريق — فحص المداخن' },
         { ...GOV.BALADI, role: 'رخصة تشغيل المطعم — اشتراطات النظافة والسلامة' },
+        { entity: AMANA.HAIL.entity, url: AMANA.HAIL.url, role: 'اشتراطات أمانة حائل' },
     ],
     expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [

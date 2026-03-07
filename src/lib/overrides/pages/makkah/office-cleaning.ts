@@ -8,7 +8,7 @@
 // ══════════════════════════════════════════════════════════════
 
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -80,6 +80,7 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.BALADI, role: 'ترخيص شركات النظافة والتشغيل والصيانة' },
         { entity: 'وزارة الموارد البشرية والتنمية الاجتماعية', acronym: 'HRSD', url: 'https://hrsd.gov.sa', role: 'تنظيم عقود العمالة واعتماد شركات التشغيل — مخالفة العمالة غير النظامية 10,000+ ريال' },
+        { entity: AMANA.MAKKAH.entity, url: AMANA.MAKKAH.url, role: 'اشتراطات أمانة مكة المكرمة' },
     ],
 
     expertReviewer: {

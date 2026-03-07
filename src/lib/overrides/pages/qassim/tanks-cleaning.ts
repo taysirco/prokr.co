@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -41,6 +41,7 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.NWC, role: 'معايير جودة مياه الخزانات — كود صحي' },
         { ...GOV.MOH, role: 'اشتراطات النظافة والتعقيم — حماية الصحة العامة' },
+        { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
     expertReviewer: EXPERTS.SHIHATA,
     expertCitations: [

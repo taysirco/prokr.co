@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -65,6 +65,7 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.NWC, role: 'معايير جودة مياه الشرب — تركيز الكلور والملوثات المسموح' },
         { ...GOV.BALADI, role: 'ترخيص شركات تنظيف الخزانات — اشتراطات صحية' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات أمانة الشرقية' },
     ],
 
     expertReviewer: EXPERTS.ALMOHAIMED,

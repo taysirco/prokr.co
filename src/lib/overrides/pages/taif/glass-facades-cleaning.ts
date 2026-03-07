@@ -35,8 +35,10 @@ export const override: PageOverride = {
     ],
     trustAnchors: [
 { ...{ ...GOV.BALADI, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
- role: 'سلامة العمل على المباني المرتفعة' }    ],
-    expertReviewer: EXPERTS.ALMISNID,
+ role: 'سلامة العمل على المباني المرتفعة' }    ,
+        { entity: AMANA.TAIF.entity, url: AMANA.TAIF.url, role: 'اشتراطات أمانة الطائف' },
+    ],
+        expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [{ expert: EXPERTS.ALMISNID.name, quote: 'ترسبات ضباب الطائف الكلسية = مشكلة حصرية للمدن الجبلية. الشطف النهائي بماء DI منزوع أملاح + Rain Repellent = ثنائي يحل المشكلة من الجذر: ماء بلا أملاح = لا ترسبات فورية. Repellent = ندى يومي ينزلق بدلاً من التبخر.',
             source: EXPERTS.ALMISNID.title }],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],

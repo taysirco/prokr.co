@@ -34,8 +34,10 @@ export const override: PageOverride = {
     ],
     trustAnchors: [
 { ...{ ...GOV.BALADI, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
- role: 'ترخيص شركات صيانة وتنظيف الأرضيات' }    ],
-    expertReviewer: EXPERTS.ALMISNID,
+ role: 'ترخيص شركات صيانة وتنظيف الأرضيات' }    ,
+        { entity: AMANA.TAIF.entity, url: AMANA.TAIF.url, role: 'اشتراطات أمانة الطائف' },
+    ],
+        expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [{ expert: EXPERTS.ALMISNID.name, quote: 'الرخام في الطائف يحتاج تبلوراً كريستالياً ليس فقط للمعان — بل لسدّ المسام ضد رطوبة الضباب الشتوي. في المدن الجافة: التبلور تجميلي. في الطائف: التبلور وقائي — يمنع امتصاص الرطوبة التي تُتلف الرخام من الداخل.',
             source: EXPERTS.ALMISNID.title }],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],

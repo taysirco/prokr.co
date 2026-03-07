@@ -36,8 +36,10 @@ export const override: PageOverride = {
     ],
     trustAnchors: [
 { ...{ ...GOV.BALADI, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
- role: 'ترخيص شركات التنظيف' }    ],
-    expertReviewer: EXPERTS.ALMISNID,
+ role: 'ترخيص شركات التنظيف' }    ,
+        { entity: AMANA.TAIF.entity, url: AMANA.TAIF.url, role: 'اشتراطات أمانة الطائف' },
+    ],
+        expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [{ expert: EXPERTS.ALMISNID.name, quote: 'Moisture Cycling في الطائف (85% شتاء ← 35% صيف) يُرهق الأثاث الخشبي أكثر من الرطوبة الثابتة. زيت بذر الكتان يسدّ المسام ← يُقلل التمدد والانكماش ← يُطيل عمر الأثاث 3-5 أضعاف.',
             source: EXPERTS.ALMISNID.title }],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],

@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -32,8 +32,10 @@ export const override: PageOverride = {
         'جلد بدون Conditioning 3+ أشهر في 12% = شقوق لا تُصلح.',
         'أثاث MDF في غرفة -2°م بدون تدفئة = PVAc يتجمد = تلف دائم.',
     ],
-    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات التنظيف' }],
-    expertReviewer: EXPERTS.ALMISNID,
+    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
+        { entity: AMANA.TABUK.entity, url: AMANA.TABUK.url, role: 'اشتراطات أمانة تبوك' },
+    ],
+        expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'أثاث تبوك يواجه 4 مسارات تدهور متزامنة — أعقد مدينة في المشروع. PVAc يتجمد فعلاً عند -2°م = MDF يتلف بشكل دائم.', source: 'نصائح هندسية — صيانة الأثاث في المناخ شبه القاري' },
     ],

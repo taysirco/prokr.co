@@ -93,6 +93,7 @@ export const override: PageOverride = {
 
     trustAnchors: [
         { entity: 'هيئة تنظيم الكهرباء والإنتاج المزدوج', acronym: 'ECRA', url: 'https://www.ecra.gov.sa', role: 'معايير كفاءة الطاقة للمكيفات' },
+        { entity: AMANA.JEDDAH.entity, url: AMANA.JEDDAH.url, role: 'اشتراطات أمانة جدة' },
     ],
 
     expertReviewer: EXPERTS.ALMISNID,

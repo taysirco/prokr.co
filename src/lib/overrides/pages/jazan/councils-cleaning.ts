@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -32,8 +32,10 @@ export const override: PageOverride = {
         'بخور + 80% = عفن على الأقمشة. Anti-Fungal بعد كل استخدام بخور.',
         'كنب مبلل بعد البخار + 80% + بدون Dehumidifier = عفن أسود خلال 24 ساعة.',
     ],
-    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات التنظيف' }],
-    expertReviewer: EXPERTS.ALMISNID,
+    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
+        { entity: AMANA.JAZAN.entity, url: AMANA.JAZAN.url, role: 'اشتراطات أمانة جازان' },
+    ],
+        expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'مجلس جازان = عكس مجلس تبوك. البخور يتعفّن بدلاً من أن يتبلمر. العث لا ينام أبداً. البكتيريا 3× أسرع. Anti-Fungal + Dehumidifier = الحد الأدنى.', source: 'نصائح هندسية — المجالس في المناخ الاستوائي' },
     ],

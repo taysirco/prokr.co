@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -35,8 +35,10 @@ export const override: PageOverride = {
         'سكن عمال = مصدر دائم.',
         'إضاءة 24/7 = حشرات طائرة.',
     ],
-    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص' }, { ...GOV.WEQAA, role: 'مبيدات' }],
-    expertReviewer: EXPERTS.ALKHODAIRY,
+    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص' }, { ...GOV.WEQAA, role: 'مبيدات' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات أمانة الشرقية' },
+    ],
+        expertReviewer: EXPERTS.ALKHODAIRY,
     expertCitations: [{ expert: EXPERTS.ALKHODAIRY.name, quote: 'الجبيل: كيماوي يتفاعل مع مبيدات. Gel مُقاوم. سكن 200K = مصدر. إضاءة 24/7 = جذب.', source: 'أبحاث حشرات — المدن الصناعية' }],
     saudiRegulations: [REGULATIONS.GHAD_SYSTEM],
     verificationBadges: [{ badge: '✔️ مرخصة', authority: 'بلدي + وقاء', icon: 'shield-check' }],

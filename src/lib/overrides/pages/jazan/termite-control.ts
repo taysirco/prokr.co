@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: { title: 'مكافحة النمل الأبيض بجازان — رطوبة 80% = بيئة مثالية 12/12 + أسرع تكاثر + تربة رطبة = أنفاق لا تنهار (2026)', description: 'مكافحة نمل أبيض جازان. 80% رطوبة = بيئة مثالية = أسرع تكاثر وأطول أنفاق في المملكة. التربة رطبة = الأنفاق لا تنهار. المبيد يتحلل في 80%. Soil Treatment + Bait Stations.', h1: 'مكافحة النمل الأبيض بجازان — البيئة الاستوائية المثالية = أخطر إصابات', keywords: ['مكافحة نمل أبيض بجازان', 'مكافحة ارضة جازان', 'شركة مكافحة نمل ابيض بجازان'] },
@@ -8,8 +8,10 @@ export const override: PageOverride = {
     faq: [{ question: 'جازان أخطر من تبوك للنمل؟', answer: 'نعم — في تبوك: الجفاف والصقيع يبطئان النمل. في جازان: 80% = بيئة مثالية 12/12. أسرع تكاثر + أطول أنفاق + لا توقف موسمي.' }],
     expertTips: ['Bait Stations 12/12 — لا توقف موسمي.', 'حقن تجديدي كل 3-5 سنوات — المبيد يتحلل في 80%.', 'Fipronil حصراً — Cascading Kill.', 'فحص شهري في موسم الأمطار (يوليو-سبتمبر) — الأنفاق تتوسع أسرع.'],
     warnings: ['80% = بيئة مثالية = الإصابة تتوسع بسرعة. التأخير = كارثة.', 'حاجز 3+ سنوات في جازان = منتهي (التحلل البيولوجي).'],
-    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات مكافحة الآفات' }, { ...GOV.WEQAA, role: 'تسجيل المبيدات' }],
-    expertReviewer: EXPERTS.ALJUND,
+    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات مكافحة الآفات' }, { ...GOV.WEQAA, role: 'تسجيل المبيدات' },
+        { entity: AMANA.JAZAN.entity, url: AMANA.JAZAN.url, role: 'اشتراطات أمانة جازان' },
+    ],
+        expertReviewer: EXPERTS.ALJUND,
     expertCitations: [{ expert: EXPERTS.ALKHODAIRY.name, quote: 'جازان = أفضل بيئة للنمل الأبيض سعودياً. 80% رطوبة = بيئة مثالية 12/12 + التربة الرطبة = أنفاق لا تنهار + المبيد يتحلل أسرع. Bait Stations 12/12 = إلزامي.', source: 'أبحاث حشرات — النمل الأبيض في المناخ الاستوائي' }],
     saudiRegulations: [REGULATIONS.GHAD_SYSTEM],
     verificationBadges: [{ badge: '✔️ مكافحة مرخصة', authority: 'بلدي + وقاء', icon: 'shield-check' }],

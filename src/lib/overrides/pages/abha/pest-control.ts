@@ -39,6 +39,7 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.SFDA, role: 'تسجيل المبيدات — نظام غد' },
         { ...GOV.BALADI, role: 'ترخيص شركات المكافحة' },
+        { entity: AMANA.ASIR.entity, url: AMANA.ASIR.url, role: 'اشتراطات أمانة عسير' },
     ],
     expertReviewer: { name: EXPERTS.ALKHODAIRY.name, title: EXPERTS.ALKHODAIRY.title, credential: EXPERTS.ALKHODAIRY.credential, profileUrl: EXPERTS.ALKHODAIRY.profileUrl },
     expertCitations: [{ expert: EXPERTS.ALKHODAIRY.name, quote: 'أبها = نقطة تقاطع مناخي فريدة: ارتفاع جبلي + أمطار استوائية + رطوبة عالية = تنوع حشري لا يوجد في أي مدينة سعودية أخرى. المبيد السائل التقليدي يفشل هنا — Micro-Encapsulated المقاوم للأمطار هو المعيار الإلزامي.', source: EXPERTS.ALKHODAIRY.title, url: EXPERTS.ALKHODAIRY.profileUrl }],

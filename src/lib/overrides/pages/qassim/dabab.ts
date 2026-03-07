@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -40,6 +40,7 @@ export const override: PageOverride = {
     ],
     trustAnchors: [
         { ...GOV.TGA, role: 'ترخيص النقل — حماية حقوق العميل' },
+        { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
     expertReviewer: EXPERTS.ALZUWAYED,
     expertCitations: [

@@ -5,7 +5,7 @@
 // ══════════════════════════════════════════════════════════════
 
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -80,6 +80,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'إصدار الشهادة الصحية لخزانات المياه — مطلوبة للعمارات المؤجرة والمطاعم' },
         { ...GOV.NWC, role: 'معايير جودة المياه وتركيز الكلور المسموح (0.5-1 PPM)' },
         { ...GOV.MAWAI, role: 'معايير ترشيد المياه وصيانة شبكات التخزين المنزلية' },
+        { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
 
     expertReviewer: {

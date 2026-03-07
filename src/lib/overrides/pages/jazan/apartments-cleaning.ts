@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -32,8 +32,10 @@ export const override: PageOverride = {
         'عفن أسود في الحمام = مشاكل تنفسية. Anti-Fungal كل زيارة.',
         'بكتيريا × 30°م × 80% = تضاعف كل 20 دقيقة = 10× أسرع من الرياض.',
     ],
-    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات التنظيف' }],
-    expertReviewer: EXPERTS.ALMISNID,
+    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
+        { entity: AMANA.JAZAN.entity, url: AMANA.JAZAN.url, role: 'اشتراطات أمانة جازان' },
+    ],
+        expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMISNID.name, quote: 'شقة جازان: 4 آليات تلوث دائمة. التنظيف الشهري = الحد الأدنى. ربع سنوي = 3 أشهر عفن + بكتيريا + حشرات.', source: 'جغرافيا المناخ — بروتوكولات التنظيف الاستوائية' },
     ],

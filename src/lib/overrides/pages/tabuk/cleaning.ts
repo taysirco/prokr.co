@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -34,8 +34,10 @@ export const override: PageOverride = {
         'ممسحة على حسمى = خدوش يومية. HEPA أولاً.',
         'تكاثف -2°م بدون بخار = عفن أسود = تنفس.',
     ],
-    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات التنظيف' }],
-    expertReviewer: EXPERTS.ALMISNID,
+    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
+        { entity: AMANA.TABUK.entity, url: AMANA.TABUK.url, role: 'اشتراطات أمانة تبوك' },
+    ],
+        expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMISNID.name, quote: 'البروتوكول الرباعي التبوكي (HEPA → بخار → Alkaline → ستريك) بترتيب حاسم = أساس النظافة في أقسى مناخ سعودي. الخلط = فشل.', source: 'جغرافيا المناخ — بروتوكولات التنظيف' },
     ],

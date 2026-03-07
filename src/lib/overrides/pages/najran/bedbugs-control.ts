@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -32,8 +32,10 @@ export const override: PageOverride = {
         'أثاث مُستعمل بدون فحص = أكبر مصدر إصابة في نجران.',
         'حركة حدودية = بق ينتقل عبر الأمتعة. فحص دوري.',
     ],
-    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات مكافحة الآفات' }, { ...GOV.WEQAA, role: 'تسجيل المبيدات' }],
-    expertReviewer: EXPERTS.ALKHODAIRY,
+    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات مكافحة الآفات' }, { ...GOV.WEQAA, role: 'تسجيل المبيدات' },
+        { entity: AMANA.NAJRAN.entity, url: AMANA.NAJRAN.url, role: 'اشتراطات أمانة نجران' },
+    ],
+        expertReviewer: EXPERTS.ALKHODAIRY,
     expertCitations: [
         { expert: EXPERTS.ALKHODAIRY.name, quote: 'بق نجران: 3 مداخل (حدود + سفر + أثاث مُستعمل). الميزة: 25% RH = Residual يدوم أطول. الخطر: الحركة الحدودية تُدخل إصابات جديدة.', source: 'أبحاث حشرات — Cimex في المناطق الحدودية' },
     ],

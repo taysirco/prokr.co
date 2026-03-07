@@ -34,8 +34,10 @@ export const override: PageOverride = {
     ],
     trustAnchors: [
 { ...{ ...GOV.BALADI, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
- role: 'ترخيص شركات التنظيف المنزلي' }    ],
-    expertReviewer: EXPERTS.ALMISNID,
+ role: 'ترخيص شركات التنظيف المنزلي' }    ,
+        { entity: AMANA.TAIF.entity, url: AMANA.TAIF.url, role: 'اشتراطات أمانة الطائف' },
+    ],
+        expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [{ expert: EXPERTS.ALMISNID.name, quote: 'في شتاء الطائف: السجاد يمتص الرطوبة من الأرضية الباردة والهواء الرطب معاً. تركيز عث الغبار في سجاد الطائف الشتوي يصل 3 أضعاف سجاد الرياض الجافة. التجفيف السريع بعد الغسيل = الفارق بين سجاد نظيف وسجاد متعفن.',
             source: EXPERTS.ALMISNID.title }],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],

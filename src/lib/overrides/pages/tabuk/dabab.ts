@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -31,8 +31,10 @@ export const override: PageOverride = {
         'دباب مكشوف + ثلج = MDF ينتفخ + إلكترونيات Short Circuit. غطاء 100%.',
         'شحن لابتوب في -2°م = ضرر بطارية. انتظر 30 دقيقة في الدفء.',
     ],
-    trustAnchors: [{ ...GOV.TGA, role: 'ترخيص النقل' }],
-    expertReviewer: EXPERTS.ALZUWAYED,
+    trustAnchors: [{ ...GOV.TGA, role: 'ترخيص النقل' },
+        { entity: AMANA.TABUK.entity, url: AMANA.TABUK.url, role: 'اشتراطات أمانة تبوك' },
+    ],
+        expertReviewer: EXPERTS.ALZUWAYED,
     expertCitations: [
         { expert: EXPERTS.ALZUWAYED.name, quote: 'دباب تبوك: ثلوج + حسمى + -2°م = غطاء إلزامي. المكشوف = مقامرة.', source: 'هيئة النقل — النقل الخفيف' },
     ],

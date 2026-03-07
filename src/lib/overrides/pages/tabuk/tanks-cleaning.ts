@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -33,8 +33,10 @@ export const override: PageOverride = {
         'أنابيب مكشوفة بدون عزل + -2°م = انفجار + غرق. عزل فوم = وقاية 15-30 ريال/متر.',
         'خزان بدون تعقيم 6+ أشهر + تكاثف = عفن في مياه الشرب.',
     ],
-    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص تنظيف الخزانات' }],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص تنظيف الخزانات' },
+        { entity: AMANA.TABUK.entity, url: AMANA.TABUK.url, role: 'اشتراطات أمانة تبوك' },
+    ],
+        expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'خزان تبوك: تجمد + كلس ثلجي + تكاثف = ثلاثي. عزل أنابيب + Descaling + تعقيم = الحد الأدنى.', source: 'موسوعة أخطاء — خزانات المياه في مناطق الصقيع' },
     ],

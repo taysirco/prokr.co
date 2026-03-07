@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -32,8 +32,10 @@ export const override: PageOverride = {
         'بخار بدون Dehumidifier في جازان = رطوبة إضافية + 80% = عفن أسوأ. Dehumidifier = إلزامي.',
         'عفن 24/7 بدون بخار = حساسية + ربو مزمن.',
     ],
-    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات التنظيف' }],
-    expertReviewer: EXPERTS.ALMISNID,
+    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
+        { entity: AMANA.JAZAN.entity, url: AMANA.JAZAN.url, role: 'اشتراطات أمانة جازان' },
+    ],
+        expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'البخار في جازان = سلاح ذو حدين. يقتل العفن والعث — لكن الرطوبة المتبقية في 80% = عفن جديد. Dehumidifier بعد كل جلسة = الفرق بين التعقيم والتخريب.', source: 'نصائح هندسية — البخار في المناخ الاستوائي' },
     ],

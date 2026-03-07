@@ -37,8 +37,10 @@ export const override: PageOverride = {
     ],
     trustAnchors: [
 { ...{ ...GOV.TGA, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
- role: 'تنظيم النقل — شروط السلامة المرورية' }    ],
-    expertReviewer: EXPERTS.ALZUWAYED,
+ role: 'تنظيم النقل — شروط السلامة المرورية' }    ,
+        { entity: AMANA.TAIF.entity, url: AMANA.TAIF.url, role: 'اشتراطات أمانة الطائف' },
+    ],
+        expertReviewer: EXPERTS.ALZUWAYED,
     expertCitations: [{ expert: EXPERTS.ALZUWAYED.name, quote: 'طريق الهدا 17 منعطف × دينا 6 طن محملة = يحتاج سائق يعرف Engine Brake. الاعتماد على الفرامل فقط = Brake Fade في المنعطف السابع. السائق المحلي الذي اعتاد الطريق = أصل وليس تكلفة إضافية.',
             source: EXPERTS.ALZUWAYED.title }],
     saudiRegulations: [REGULATIONS.TGA_LICENSE],

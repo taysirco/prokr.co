@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -34,8 +34,10 @@ export const override: PageOverride = {
         'فلتر ممتلئ = 15-25% كهرباء إضافية + تبريد/تدفئة ضعيف. كل 4-6 أسابيع.',
         'تشغيل تدفئة بدون Transition Wash = عفن ينتشر في المنزل عبر المجاري.',
     ],
-    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات التكييف' }],
-    expertReviewer: EXPERTS.ALMISNID,
+    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات التكييف' },
+        { entity: AMANA.TABUK.entity, url: AMANA.TABUK.url, role: 'اشتراطات أمانة تبوك' },
+    ],
+        expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'مكيف تبوك: 10 أشهر تشغيل (أطول سعودياً) + حسمى يسد كل 4-6 أسابيع + عفن انتقالي فريد. Transition Wash أكتوبر/مارس = أهم صيانة.', source: 'موسوعة أخطاء — أنظمة التكييف في المناخ شبه القاري' },
     ],

@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -42,6 +42,7 @@ export const override: PageOverride = {
         { ...GOV.NWC, role: 'معايير جودة مياه الخزانات — اشتراطات التعقيم والسلامة' },
         { ...GOV.SCE, role: 'اعتماد فاحصي المباني والخزانات — تقارير فنية معتمدة' },
         { ...GOV.SASO, role: 'مواصفات خزانات المياه وجودة المواد — SASO 1144' },
+        { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
     expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [

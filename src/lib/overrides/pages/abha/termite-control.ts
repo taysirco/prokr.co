@@ -39,6 +39,7 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.SFDA, role: 'تسجيل مبيدات النمل الأبيض — Fipronil / Imidacloprid' },
         { ...GOV.BALADI, role: 'كود البناء — معالجة أساسات ضد النمل' },
+        { entity: AMANA.ASIR.entity, url: AMANA.ASIR.url, role: 'اشتراطات أمانة عسير' },
     ],
     expertReviewer: { name: EXPERTS.ALKHODAIRY.name, title: EXPERTS.ALKHODAIRY.title, credential: EXPERTS.ALKHODAIRY.credential, profileUrl: EXPERTS.ALKHODAIRY.profileUrl },
     expertCitations: [{ expert: EXPERTS.ALKHODAIRY.name, quote: 'أبها = أخطر بيئة نمل أبيض في المملكة. التربة لا تجف أبداً = الأنفاق مستمرة = الهجوم لا يتوقف. والعمارة العسيرية التقليدية بأخشابها المكشوفة = وليمة مفتوحة. حقن Fipronil + طعوم Sentricon + بوراكس للأخشاب = الثلاثي الوحيد الذي يحمي.', source: EXPERTS.ALKHODAIRY.title, url: EXPERTS.ALKHODAIRY.profileUrl }],

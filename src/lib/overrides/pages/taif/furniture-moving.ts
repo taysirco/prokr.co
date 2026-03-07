@@ -40,6 +40,7 @@ export const override: PageOverride = {
  role: 'ترخيص شركات النقل وحقوق العميل وتأمين الشحنات' },
         { ...{ ...GOV.LOGISTI, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
  role: 'بيان حمولة رسمي للنقل بين المدن — إثبات قانوني' },
+        { entity: AMANA.TAIF.entity, url: AMANA.TAIF.url, role: 'اشتراطات أمانة الطائف' },
         ],
     expertReviewer: EXPERTS.ALZUWAYED,
     expertCitations: [{ expert: EXPERTS.ALZUWAYED.name, quote: 'نقل العفش على طرق الطائف الجبلية يحتاج تثبيتاً مختلفاً — أحزمة Ratchet كل 50 سم وليس حبال. المنعطفات تُولّد قوة جانبية تُزيح الأحمال غير المثبتة. 90% من حالات الكسر أثناء النقل الجبلي = تثبيت ضعيف.',

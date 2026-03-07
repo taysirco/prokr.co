@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -38,8 +38,10 @@ export const override: PageOverride = {
         'نمل حريقة: لدغة = حساسية مُفرطة (Anaphylaxis) عند بعض الأشخاص.',
         'عقرب Deathstalker: لدغة تحتاج مستشفى فوراً.',
     ],
-    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات مكافحة الآفات' }, { ...GOV.WEQAA, role: 'تسجيل المبيدات' }],
-    expertReviewer: EXPERTS.ALKHODAIRY,
+    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات مكافحة الآفات' }, { ...GOV.WEQAA, role: 'تسجيل المبيدات' },
+        { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
+    ],
+        expertReviewer: EXPERTS.ALKHODAIRY,
     expertCitations: [
         { expert: EXPERTS.ALKHODAIRY.name, quote: 'عنيزة: 8 مليون نخلة = أكبر مصنع حشري مفتوح في المملكة. Dubas + RPW + نمل حريقة = 3 طبقات. + 48°م = دورة 21 يوم. بروتوكول رباعي.', source: 'أبحاث حشرات — حشرات النخيل في القصيم' },
     ],

@@ -5,7 +5,7 @@
 // ══════════════════════════════════════════════════════════════
 
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -80,6 +80,7 @@ export const override: PageOverride = {
         { ...GOV.SFDA, role: 'تسجيل مبيدات الصحة العامة عبر نظام "غد" — كل مبيد يُستخدم في بيتك يجب أن يحمل رقم تسجيل SFDA' },
         { ...GOV.WEQAA, role: 'بروتوكولات المكافحة المتكاملة (IPM) وإرشادات الوقاية من الآفات المنزلية' },
         { ...GOV.BALADI, role: 'الشهادة الصحية والترخيص التجاري لشركات المكافحة — ضمان المهنية والمسؤولية القانونية' },
+        { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
 
     expertReviewer: {

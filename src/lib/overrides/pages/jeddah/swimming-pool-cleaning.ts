@@ -92,6 +92,7 @@ export const override: PageOverride = {
     trustAnchors: [
         { entity: 'وزارة البلديات — منصة بلدي', acronym: 'بلدي', url: 'https://balady.gov.sa', role: 'اشتراطات صحية لمسابح الفلل والمنتجعات' },
         { entity: 'المركز الوطني لكفاءة وترشيد المياه', acronym: 'مائي', url: 'https://maee.gov.sa', role: 'ترشيد استهلاك مياه المسبح' },
+        { entity: AMANA.JEDDAH.entity, url: AMANA.JEDDAH.url, role: 'اشتراطات أمانة جدة' },
     ],
 
     expertReviewer: EXPERTS.ALMOHAIMED,

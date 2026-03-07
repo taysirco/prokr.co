@@ -37,8 +37,10 @@ export const override: PageOverride = {
     ],
     trustAnchors: [
 { ...{ ...GOV.BALADI, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
- role: 'ترخيص مغاسل السيارات والخدمات المتنقلة' }    ],
-    expertReviewer: EXPERTS.ALMISNID,
+ role: 'ترخيص مغاسل السيارات والخدمات المتنقلة' }    ,
+        { entity: AMANA.TAIF.entity, url: AMANA.TAIF.url, role: 'اشتراطات أمانة الطائف' },
+    ],
+        expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [{ expert: EXPERTS.ALMISNID.name, quote: 'حبوب لقاح الطائف مع ندى الضباب = مزيج حمضي لزج لا يشبه الغبار الصحراوي الجاف. الغسيل التقليدي (إسفنجة + خرطوم) يخدش الطلاء. Two-Bucket Method + تجفيف مايكروفايبر = البروتوكول الوحيد الآمن.',
             source: EXPERTS.ALMISNID.title }],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],

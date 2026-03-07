@@ -39,6 +39,7 @@ export const override: PageOverride = {
  role: 'اشتراطات سلامة المسابح الخاصة والتجارية' },
         { ...{ ...GOV.MAWAI, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
  role: 'ترشيد استخدام المياه في المسابح' },
+        { entity: AMANA.TAIF.entity, url: AMANA.TAIF.url, role: 'اشتراطات أمانة الطائف' },
         ],
     expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [{ expert: EXPERTS.ALMOHAIMED.name, quote: 'مسابح الطائف تحتاج Winterization — وهو مفهوم غير مألوف في المدن الحارة. المسبح المُغلق بدون معالجة = طحالب متحجرة + صدأ مضخة + تلف فلتر. 300 ريال Winterization تحمي من 5,000 ريال إصلاحات.',

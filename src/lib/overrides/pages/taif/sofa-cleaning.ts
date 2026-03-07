@@ -36,8 +36,10 @@ export const override: PageOverride = {
     ],
     trustAnchors: [
 { ...{ ...GOV.BALADI, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
- role: 'ترخيص شركات التنظيف المنزلي — اشتراطات الجودة والسلامة' }    ],
-    expertReviewer: EXPERTS.ALMISNID,
+ role: 'ترخيص شركات التنظيف المنزلي — اشتراطات الجودة والسلامة' }    ,
+        { entity: AMANA.TAIF.entity, url: AMANA.TAIF.url, role: 'اشتراطات أمانة الطائف' },
+    ],
+        expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [{ expert: EXPERTS.ALMISNID.name, quote: 'الإسفنج الداخلي للكنب في بيوت الطائف يمتص رطوبة الضباب الشتوي فعلياً — درجة الحرارة الداخلية (18-22°م) + الرطوبة الممتصة = مزرعة عث غبار. تنظيف عميق بالاستخراج الساخن + تجفيف صناعي = الحل الوحيد الذي يصل الداخل.',
             source: EXPERTS.ALMISNID.title }],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],

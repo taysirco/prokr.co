@@ -43,6 +43,7 @@ export const override: PageOverride = {
  role: 'ترخيص شركات مكافحة الحشرات — الشهادة الصحية' },
         { ...{ ...GOV.WEQAA, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
  role: 'المرجع الوطني لمكافحة الآفات والإرشادات الفنية' },
+        { entity: AMANA.TAIF.entity, url: AMANA.TAIF.url, role: 'اشتراطات أمانة الطائف' },
         ],
     expertReviewer: EXPERTS.ALKHODAIRY,
     expertCitations: [{ expert: EXPERTS.ALKHODAIRY.name, quote: 'مناخ الطائف المعتدل (25-33°م صيفاً) هو "الدرجة المثالية" لتكاثر الصراصير والنمل. المكافحة هنا تحتاج تفكيراً موسمياً: وقاية في الشتاء البارد + هجوم مكثف في ربيع وصيف النشاط.',

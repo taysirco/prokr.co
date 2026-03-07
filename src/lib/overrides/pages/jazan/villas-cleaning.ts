@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -32,8 +32,10 @@ export const override: PageOverride = {
         'حديقة + ماء ري = بعوض Aedes = حمى الضنك. إفراغ يومي.',
         'فيلا بدون Anti-Fungal شهري = عفن أسود واسع.',
     ],
-    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات التنظيف' }],
-    expertReviewer: EXPERTS.ALMISNID,
+    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
+        { entity: AMANA.JAZAN.entity, url: AMANA.JAZAN.url, role: 'اشتراطات أمانة جازان' },
+    ],
+        expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMISNID.name, quote: 'فيلا جازان: الحديقة مصنع حشرات + المسبح مزرعة طحالب + الداخل مستعمرة عفن. Zone-Based استوائي = الحل الوحيد العملي.', source: 'جغرافيا المناخ — استراتيجيات التنظيف في فلل المناخ الاستوائي' },
     ],

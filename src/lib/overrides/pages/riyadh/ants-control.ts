@@ -5,7 +5,7 @@
 // ══════════════════════════════════════════════════════════════
 
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -77,6 +77,7 @@ export const override: PageOverride = {
         { ...GOV.SFDA, role: 'تسجيل مبيدات النمل في نظام "غد" — ضمان سلامة المواد المستخدمة في المنزل' },
         { ...GOV.WEQAA, role: 'بروتوكولات المكافحة المتكاملة (IPM) للآفات المنزلية' },
         { ...GOV.BALADI, role: 'ترخيص شركات المكافحة — ضمان المهنية والمسؤولية القانونية' },
+        { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
 
     expertReviewer: {

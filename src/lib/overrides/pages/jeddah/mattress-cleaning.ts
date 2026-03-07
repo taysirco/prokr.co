@@ -89,6 +89,7 @@ export const override: PageOverride = {
 
     trustAnchors: [
         { entity: 'الجمعية الأمريكية لعلم الحساسية', acronym: 'ACAAI', url: 'https://acaai.org', role: 'أبحاث عث الغبار وتأثيره على الجهاز التنفسي' },
+        { entity: AMANA.JEDDAH.entity, url: AMANA.JEDDAH.url, role: 'اشتراطات أمانة جدة' },
     ],
 
     expertReviewer: EXPERTS.ALMOHAIMED,

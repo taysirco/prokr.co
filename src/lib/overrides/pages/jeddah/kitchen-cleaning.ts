@@ -91,6 +91,7 @@ export const override: PageOverride = {
 
     trustAnchors: [
         { entity: 'أمانة جدة', url: 'https://www.jeddah.gov.sa', role: 'اشتراطات صحية لمطابخ المطاعم والمحلات' },
+        { entity: AMANA.JEDDAH.entity, url: AMANA.JEDDAH.url, role: 'اشتراطات أمانة جدة' },
     ],
 
     expertReviewer: EXPERTS.ALMOHAIMED,

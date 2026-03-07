@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -42,6 +42,7 @@ export const override: PageOverride = {
         { ...GOV.SBC, role: 'كود SBC 601 — اشتراط العزل الحراري الإلزامي — القصيم المنطقة المناخية 1' },
         { ...GOV.MOENERGY, role: 'كفاءة الطاقة — شهادة مطابقة + حوافز' },
         { ...GOV.SCE, role: 'اعتماد مهندسي العزل والفحص الحراري' },
+        { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
     expertReviewer: EXPERTS.ALJUND,
     expertCitations: [

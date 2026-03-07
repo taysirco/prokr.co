@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -33,8 +33,10 @@ export const override: PageOverride = {
         'تنظيف أجهزة بدون ESD في 12% = شرارة = تلف معالج/ذاكرة.',
         'نافذة مفتوحة -2°م على مكتب 22°م = تكاثف = Short Circuit.',
     ],
-    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات التنظيف' }],
-    expertReviewer: EXPERTS.ALMISNID,
+    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
+        { entity: AMANA.TABUK.entity, url: AMANA.TABUK.url, role: 'اشتراطات أمانة تبوك' },
+    ],
+        expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'المكتب التبوكي: Thermal Throttling + Short Circuit + ESD 3×. حسمى + -2°م + 12% = ثلاثي تقني فريد.', source: 'نصائح هندسية — بيئة العمل المكتبية' },
     ],

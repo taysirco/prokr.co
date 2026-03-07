@@ -5,7 +5,7 @@
 // ══════════════════════════════════════════════════════════════
 
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -78,6 +78,7 @@ export const override: PageOverride = {
         { ...GOV.SBC, role: 'كود البناء السعودي يُلزم بمعالجة التربة ضد الأرضة قبل صب الأساسات' },
         { ...GOV.BALADI, role: 'ترخيص شركات مكافحة الآفات وإصدار شهادات المعالجة المعتمدة' },
         { ...GOV.SCE, role: 'اعتماد المهندسين المسؤولين عن فحص المباني وتقارير الأرضة' },
+        { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
 
     expertReviewer: {

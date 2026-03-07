@@ -39,6 +39,7 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.NWC, role: 'تقارير معتمدة لتعديل فاتورة المياه' },
         { ...GOV.SCE, role: 'اعتماد تقارير فحص المباني' },
+        { entity: AMANA.ASIR.entity, url: AMANA.ASIR.url, role: 'اشتراطات أمانة عسير' },
     ],
     expertReviewer: { name: EXPERTS.ALJUND.name, title: EXPERTS.ALJUND.title, credential: EXPERTS.ALJUND.credential, profileUrl: EXPERTS.ALJUND.profileUrl },
     expertCitations: [{ expert: EXPERTS.ALJUND.name, quote: 'أبها = 5 مصادر رطوبة محتملة. في الرياض: مصدر واحد (سباكة). هذا يعني أن تشخيص التسربات في أبها أعقد 5 مرات. الفني الذي لا يفحص السقف والجدران والأساسات مع السباكة = فني ناقص.', source: EXPERTS.ALJUND.title, url: EXPERTS.ALJUND.profileUrl }],

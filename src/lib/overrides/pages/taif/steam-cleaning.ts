@@ -36,8 +36,10 @@ export const override: PageOverride = {
     trustAnchors: [
 { ...{ ...GOV.BALADI, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
  role: 'ترخيص شركات التنظيف والتعقيم' }, { ...{ ...GOV.MOH, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
- role: 'بروتوكولات التعقيم والوقاية من الأمراض الفطرية' }    ],
-    expertReviewer: EXPERTS.ALMISNID,
+ role: 'بروتوكولات التعقيم والوقاية من الأمراض الفطرية' }    ,
+        { entity: AMANA.TAIF.entity, url: AMANA.TAIF.url, role: 'اشتراطات أمانة الطائف' },
+    ],
+        expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [{ expert: EXPERTS.ALMISNID.name, quote: 'البخار في الطائف = سلاح ذو حدين. الحرارة 150°م تقتل كل شيء ← ممتاز. لكن البخار يتكثف في رطوبة 80% ← يزيد الرطوبة إذا لم يُجفف سريعاً. التقنية الصحيحة: بخار + تجفيف صناعي متزامن. الشركة التي لا تملك مروحة تجفيف = لا تفهم مناخ الطائف.',
             source: EXPERTS.ALMISNID.title }],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],

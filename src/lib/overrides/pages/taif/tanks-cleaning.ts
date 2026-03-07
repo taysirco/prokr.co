@@ -39,6 +39,7 @@ export const override: PageOverride = {
  role: 'معايير تعقيم خزانات مياه الشرب — كلور 0.5-1 PPM' },
         { ...{ ...GOV.BALADI, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
  role: 'اشتراطات نظافة الخزانات في المباني السكنية' },
+        { entity: AMANA.TAIF.entity, url: AMANA.TAIF.url, role: 'اشتراطات أمانة الطائف' },
         ],
     expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [{ expert: EXPERTS.ALMOHAIMED.name, quote: 'مناخ الطائف المعتدل يُنبت الطحالب في الخزانات أسرع من المدن الحارة — الحرارة المعتدلة + الرطوبة = بيئة مثالية. الفرك الميكانيكي لإزالة البيوفيلم قبل التعقيم = الخطوة التي يتجاهلها 80% من المقاولين.',

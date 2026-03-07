@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -36,8 +36,10 @@ export const override: PageOverride = {
         'دينا مكشوفة + ثلوج = Short Circuit + صدأ + PVAc يتجمد. مغطاة = إلزامي.',
         'حبال على 250 كم = تنفك. Ratchet فقط.',
     ],
-    trustAnchors: [{ ...GOV.TGA, role: 'ترخيص النقل' }],
-    expertReviewer: EXPERTS.ALZUWAYED,
+    trustAnchors: [{ ...GOV.TGA, role: 'ترخيص النقل' },
+        { entity: AMANA.TABUK.entity, url: AMANA.TABUK.url, role: 'اشتراطات أمانة تبوك' },
+    ],
+        expertReviewer: EXPERTS.ALZUWAYED,
     expertCitations: [
         { expert: EXPERTS.ALZUWAYED.name, quote: 'نقل أجهزة تبوك = أخطر نقل سعودي. -2°م = كمبريسور يتجمد + PVAc يتجمد. + ثلوج حقيقية. + 250 كم. شاحنة مغطاة + EPE + 6-8 ساعات = الحد الأدنى.', source: 'هيئة النقل — نقل الأجهزة في مناطق الصقيع' },
     ],

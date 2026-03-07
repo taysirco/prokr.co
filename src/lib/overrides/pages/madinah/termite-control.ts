@@ -72,6 +72,7 @@ export const override: PageOverride = {
         { ...GOV.SBC, role: 'كود البناء السعودي يُلزم بمعالجة التربة ضد النمل الأبيض قبل صب الأساسات' },
         { ...GOV.BALADI, role: 'ترخيص شركات مكافحة الآفات الهيكلية' },
         { ...GOV.SCE, role: 'اشتراطات سلامة المباني وعزل الأساسات' },
+        { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'اشتراطات أمانة المدينة المنورة' },
     ],
 
     expertReviewer: EXPERTS.ALJUND,

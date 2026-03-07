@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -35,8 +35,10 @@ export const override: PageOverride = {
         'ثعابين = خطر حقيقي.',
         'فيضان = طوارئ حشرات.',
     ],
-    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص' }, { ...GOV.WEQAA, role: 'مبيدات' }],
-    expertReviewer: EXPERTS.ALKHODAIRY,
+    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص' }, { ...GOV.WEQAA, role: 'مبيدات' },
+        { entity: AMANA.HAFR.entity, url: AMANA.HAFR.url, role: 'اشتراطات أمانة حفر الباطن' },
+    ],
+        expertReviewer: EXPERTS.ALKHODAIRY,
     expertCitations: [{ expert: EXPERTS.ALKHODAIRY.name, quote: 'حفر الباطن: أخطر عقارب + أفضل Residual. صحراء شمالية مُتطرفة.', source: 'أبحاث حشرات — الشمالية' }],
     saudiRegulations: [REGULATIONS.GHAD_SYSTEM],
     verificationBadges: [{ badge: '✔️ مرخصة', authority: 'بلدي + وقاء', icon: 'shield-check' }],

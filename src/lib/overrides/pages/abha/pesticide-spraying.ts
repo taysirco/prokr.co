@@ -39,6 +39,7 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.SFDA, role: 'تسجيل المبيدات — نظام غد + تصنيف Bee-Safe' },
         { ...GOV.BALADI, role: 'ترخيص شركات المكافحة' },
+        { entity: AMANA.ASIR.entity, url: AMANA.ASIR.url, role: 'اشتراطات أمانة عسير' },
     ],
     expertReviewer: { name: EXPERTS.ALKHODAIRY.name, title: EXPERTS.ALKHODAIRY.title, credential: EXPERTS.ALKHODAIRY.credential, profileUrl: EXPERTS.ALKHODAIRY.profileUrl },
     expertCitations: [{ expert: EXPERTS.ALKHODAIRY.name, quote: 'أبها الاستوائية-الجبلية = مبيد سائل يفشل في أسابيع. Micro-Encapsulated = تقنية تحرر بطيء تعمل 2-3 أشهر رغم 300mm مطر. وقرب مزارع عسير الزراعية: ULV إلزامي — ليس فقط لحماية المحاصيل بل لحماية النحل العسيري الذي يُنتج أغلى عسل سعودي.', source: EXPERTS.ALKHODAIRY.title, url: EXPERTS.ALKHODAIRY.profileUrl }],

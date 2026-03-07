@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -43,6 +43,7 @@ export const override: PageOverride = {
         { ...GOV.NWC, role: 'تقرير معتمد لتعديل فاتورة بأثر رجعي 3 فواتير' },
         { ...GOV.BALADI, role: 'ترخيص شركات كشف التسربات — ضمان الجودة' },
         { ...GOV.SCE, role: 'اعتماد مهندسي فحص المباني' },
+        { entity: AMANA.JEDDAH.entity, url: AMANA.JEDDAH.url, role: 'اشتراطات أمانة جدة' },
     ],
     expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [

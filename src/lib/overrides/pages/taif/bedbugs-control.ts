@@ -40,6 +40,7 @@ export const override: PageOverride = {
  role: 'تسجيل المبيدات المستخدمة — نظام غد' },
         { ...{ ...GOV.BALADI, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
  role: 'ترخيص شركات المكافحة — الشهادة الصحية' },
+        { entity: AMANA.TAIF.entity, url: AMANA.TAIF.url, role: 'اشتراطات أمانة الطائف' },
         ],
     expertReviewer: EXPERTS.ALKHODAIRY,
     expertCitations: [{ expert: EXPERTS.ALKHODAIRY.name, quote: 'الطائف = عاصمة السياحة الصيفية ← عاصمة بق الفراش "الترانزيت". الإيجارات القصيرة بدون تعقيم بين الضيوف = الناقل الأول. أصحاب الشاليهات والاستراحات يجب أن يعتبروا التعقيم جزءاً من تكلفة التشغيل.',

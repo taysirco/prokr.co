@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -42,6 +42,7 @@ export const override: PageOverride = {
         { ...GOV.SBC, role: 'كود SBC 601 — اشتراط العزل الحراري + مواصفات المواد' },
         { ...GOV.MOENERGY, role: 'كفاءة الطاقة — شهادة مطابقة' },
         { ...GOV.SCE, role: 'اعتماد مقاولي ومهندسي العزل' },
+        { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
     expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [

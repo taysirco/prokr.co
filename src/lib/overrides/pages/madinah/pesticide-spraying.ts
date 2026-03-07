@@ -67,6 +67,7 @@ export const override: PageOverride = {
         { ...GOV.SFDA, role: 'الجهة المسؤولة عن تسجيل واعتماد المبيدات الحشرية المسموح استخدامها' },
         { ...GOV.WEQAA, role: 'المركز الوطني للوقاية من الآفات — توثيق ومراقبة شركات المكافحة' },
         { ...GOV.BALADI, role: 'ترخيص شركات مكافحة الآفات والرش الصحي' },
+        { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'اشتراطات أمانة المدينة المنورة' },
     ],
 
     expertReviewer: EXPERTS.ALKHODAIRY,

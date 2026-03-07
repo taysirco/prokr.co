@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -72,6 +72,7 @@ export const override: PageOverride = {
         { ...GOV.SFDA, role: 'تسجيل مبيدات الصحة العامة عبر نظام غد — كل مبيد يُستخدم لازم يكون مسجل' },
         { ...GOV.WEQAA, role: 'إرشادات الوقاية من الآفات والأمراض المنقولة بالحشرات' },
         { ...GOV.BALADI, role: 'ترخيص شركات مكافحة الحشرات — الشهادة الصحية' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات أمانة الشرقية' },
     ],
 
     expertReviewer: EXPERTS.ALKHODAIRY,

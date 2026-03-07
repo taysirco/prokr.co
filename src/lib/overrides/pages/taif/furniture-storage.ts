@@ -35,8 +35,10 @@ export const override: PageOverride = {
     ],
     trustAnchors: [
 { ...{ ...GOV.TGA, role: 'جهة حكومية معتمدة للرقابة والضمان بالطائف' },
- role: 'ترخيص شركات النقل والتخزين — حقوق العميل وتأمين الممتلكات' }    ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+ role: 'ترخيص شركات النقل والتخزين — حقوق العميل وتأمين الممتلكات' }    ,
+        { entity: AMANA.TAIF.entity, url: AMANA.TAIF.url, role: 'اشتراطات أمانة الطائف' },
+    ],
+        expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [{ expert: EXPERTS.ALMOHAIMED.name, quote: 'تخزين العفش في الطائف بدون مزيل رطوبة = خسارة مؤكدة. الخشب يتعفن. المعادن تصدأ. الأقمشة تتعفن. المستودع المُجهز لمناخ الطائف الرطب = الفارق بين عفش سليم وعفش تالف.',
             source: EXPERTS.ALMOHAIMED.title }],
     saudiRegulations: [REGULATIONS.TGA_LICENSE],
