@@ -11,7 +11,8 @@ import { generateContentLayers, type ContentLayers } from '../ai-content-layers'
 import { generateSeoContent } from '../seo-content';
 import { getServiceKeywordProfile, getCityKeyword, resolveKeywordTemplate } from '../keyword-strategy';
 import { getCityContext, getAdjustedPriceRange } from '../city-context';
-import { getRelatedServices, type RelatedService } from '../related-services';
+import { getRelatedServices, generateServiceUrl, type RelatedService } from '../related-services';
+import { getCanonicalSlug } from '../services/super-page-groups';
 import { getServiceEntities, getServiceSectorCategory } from './entities';
 import { getClimateChallenges, getEntityIntersection } from './city-climate';
 import { ARCHITECT_EQUATION_PROMPT } from './nlp-prompts';
@@ -201,19 +202,32 @@ export function resolveSeoContent(city: City, service: Service) {
         : auto.pricing;
 
     // Blueprint Rule #13: Resolve related services (7-11) from override or auto
+    // Apply canonical slug resolution even for override-custom relations
     const resolvedRelated = override.relatedServices
-        ? override.relatedServices.sort((a, b) => a.priority - b.priority)
+        ? (() => {
+            const seen = new Set<string>();
+            return override.relatedServices
+                .map((rel: RelatedService) => {
+                    const canonical = getCanonicalSlug(rel.slug);
+                    const effectiveSlug = canonical || rel.slug;
+                    if (seen.has(effectiveSlug) || effectiveSlug === service.slug) return null;
+                    seen.add(effectiveSlug);
+                    return { ...rel, slug: effectiveSlug };
+                })
+                .filter(Boolean)
+                .sort((a: any, b: any) => a.priority - b.priority);
+        })()
         : auto.relatedServices;
 
-    // Build complementaryLinks from override relatedServices
+    // Build complementaryLinks from override relatedServices (fragment-aware)
     const { getServiceBySlug } = require('../seed');
     const resolvedComplementaryLinks = override.relatedServices
-        ? override.relatedServices.sort((a, b) => a.priority - b.priority).map((rel: RelatedService) => {
-            const relService = getServiceBySlug(rel.slug.replace(`${city.slug}-`, ''));
+        ? resolvedRelated.map((rel: any) => {
+            const relService = getServiceBySlug(rel.slug);
             return relService ? {
                 name_ar: relService.name_ar,
                 slug: relService.slug,
-                url: `/${city.slug}/${relService.slug}`,
+                url: generateServiceUrl(relService.slug, city.slug),
                 context: rel.context,
             } : null;
         }).filter(Boolean)
@@ -265,12 +279,26 @@ export function resolveSeoContent(city: City, service: Service) {
 
 /**
  * Resolves related services: full replacement if override exists.
+ * Always resolves absorbed slugs → canonical slugs for fragment URL architecture.
  */
 export function resolveRelatedServices(serviceSlug: string, citySlug: string, limit: number = 11): RelatedService[] {
     const override = getPageOverride(citySlug, serviceSlug);
 
     if (override?.relatedServices) {
-        return override.relatedServices
+        // Even override-custom relations need canonical resolution
+        const seen = new Set<string>();
+        const resolved: RelatedService[] = [];
+
+        for (const rel of override.relatedServices) {
+            const canonical = getCanonicalSlug(rel.slug);
+            const effectiveSlug = canonical || rel.slug;
+            if (seen.has(effectiveSlug)) continue;
+            if (effectiveSlug === serviceSlug) continue;
+            seen.add(effectiveSlug);
+            resolved.push({ ...rel, slug: effectiveSlug });
+        }
+
+        return resolved
             .sort((a: RelatedService, b: RelatedService) => b.priority - a.priority)
             .slice(0, limit);
     }

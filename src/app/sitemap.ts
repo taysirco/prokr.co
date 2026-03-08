@@ -3,6 +3,7 @@ import { CITIES, SERVICES } from '@/lib/seed';
 import { SUB_REGIONS } from '@/lib/sub-regions';
 import { BLOG_ARTICLES } from '@/lib/blog-data';
 import { hasPageOverride } from '@/lib/overrides/registry';
+import { isAbsorbedSlug } from '@/lib/services/super-page-groups';
 
 const BASE_URL = 'https://prokr.co';
 
@@ -77,6 +78,8 @@ export default async function sitemap({ id }: { id: number }): Promise<MetadataR
         const pages: MetadataRoute.Sitemap = [];
         for (const city of CITIES) {
             for (const serviceSlug of slugsForThisSitemap) {
+                // Skip absorbed slugs — they redirect to canonical Super Pages
+                if (isAbsorbedSlug(serviceSlug)) continue;
                 if (hasPageOverride(city.slug, serviceSlug)) {
                     pages.push({
                         url: `${BASE_URL}/${city.slug}/${serviceSlug}`,

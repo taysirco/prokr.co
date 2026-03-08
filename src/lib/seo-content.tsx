@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import type { City, Service } from '@/types';
 import { getCityContext, getAdjustedPriceRange, getServiceNuances, getClimateContent } from './city-context';
-import { getRelatedServices } from './related-services';
+import { getRelatedServices, generateServiceUrl } from './related-services';
 import { getServiceBySlug, getCityBySlug } from './seed';
 import { generateContentLayers } from './ai-content-layers';
 import { getServiceKeywordProfile, getCityKeyword, resolveKeywordTemplate } from './keyword-strategy';
@@ -136,7 +136,7 @@ export function generateSeoContent({ city, service }: SeoContentProps) {
         return relService ? {
             name_ar: relService.name_ar,
             slug: relService.slug,
-            url: `/${city.slug}/${relService.slug}`,
+            url: generateServiceUrl(relService.slug, city.slug),
             context: rel.context,
         } : null;
     }).filter(Boolean) as { name_ar: string; slug: string; url: string; context: string }[];

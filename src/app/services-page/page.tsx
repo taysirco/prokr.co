@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { Home, ChevronLeft, Truck, Sparkles, Bug, Droplet, Wrench, Building2 } from 'lucide-react';
 import { SERVICES, CATEGORY_NAMES, getServicesByCategory, getServiceImage } from '@/lib/seed';
 import { BreadcrumbJsonLd, ServiceCatalogJsonLd, WebPageJsonLd } from '@/components/JsonLd';
+import { isAbsorbedSlug } from '@/lib/services/super-page-groups';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
@@ -71,7 +72,7 @@ export default function ServicesPage() {
                 url="https://prokr.co/services"
                 breadcrumbs={breadcrumbs}
             />
-            <ServiceCatalogJsonLd services={SERVICES} />
+            <ServiceCatalogJsonLd services={SERVICES.filter(s => !isAbsorbedSlug(s.slug))} />
 
             <main className="min-h-screen bg-gray-50">
                 {/* Hero Section */}
@@ -119,7 +120,7 @@ export default function ServicesPage() {
                             </div>
 
                             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-                                {services.map(service => (
+                                {services.filter(s => !isAbsorbedSlug(s.slug)).map(service => (
                                     <Link
                                         key={service.slug}
                                         href={`/${service.slug}`}

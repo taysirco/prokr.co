@@ -21,7 +21,7 @@ const BASE_PRICE: Record<string, { label: string; min: number; max: number }> = 
     'pest-control': { label: 'شقة متوسطة/كبيرة', min: 250, max: 400 },
     'water-leak-detection': { label: 'كشف بالأجهزة', min: 200, max: 400 },
     'tank-insulation': { label: 'خزان متوسط (4-8 طن)', min: 800, max: 1200 },
-    'sewer-cleaning': { label: 'تسليك بالكمبروسر', min: 250, max: 500 },
+    'sewage-unblocking': { label: 'تسليك بالكمبروسر', min: 250, max: 500 },
 };
 
 interface ServicePageProps {

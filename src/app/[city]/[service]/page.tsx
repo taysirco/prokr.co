@@ -12,6 +12,9 @@ import { FaqJsonLd, ServiceOfferJsonLd } from '@/components/schema';
 import { getCityContext } from '@/lib/city-context';
 import { getServiceKeywordProfile, getCityKeyword } from '@/lib/keyword-strategy';
 import { resolveContentLayers, resolveMetadata, getOverrideForPage } from '@/lib/overrides';
+import { AbsorbedServiceSections } from '@/components/seo/AbsorbedServiceSection';
+import { getSuperPageGroup, isCanonicalSlug } from '@/lib/services/super-page-groups';
+import { SERVICES as ALL_SERVICES_LIST } from '@/lib/services';
 import Footer from '@/components/Footer';
 import type { Advertiser } from '@/types';
 
@@ -298,6 +301,19 @@ export default async function SiloPage({ params }: SiloPageProps) {
                 {/* Enhanced SEO Content with Pricing Table, FAQ, etc. */}
                 <SeoContentSection city={city} service={service} />
                 <FaqJsonLd city={city} service={service} />
+
+                {/* Fragment URL Architecture: Absorbed Service Sections */}
+                {isCanonicalSlug(service.slug) && (() => {
+                    const group = getSuperPageGroup(service.slug);
+                    return group ? (
+                        <AbsorbedServiceSections
+                            city={city}
+                            service={service}
+                            group={group}
+                            allServices={ALL_SERVICES_LIST}
+                        />
+                    ) : null;
+                })()}
 
                 {/* Footer */}
                 <Footer currentCity={resolvedParams.city} currentService={resolvedParams.service} />
