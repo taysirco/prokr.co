@@ -65,5 +65,6 @@ export const override: PageOverride = {
         { slug: 'water-leak-detection', context: 'تسربات', priority: 5 },
     
         { slug: 'cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 6 },
+        { slug: 'tanks-cleaning', context: 'تنظيف خزانات السطح مع العزل الحراري.', priority: 8 }
     ],
 };

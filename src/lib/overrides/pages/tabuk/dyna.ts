@@ -71,5 +71,6 @@ export const override: PageOverride = {
         { slug: 'air-conditioner-cleaning', context: 'مكيف — بعد النقل', priority: 5 },
     
         { slug: 'pest-control', context: 'خدمة مكملة — باقة شاملة.', priority: 6 },
+        { slug: 'sofa-cleaning', context: 'تنظيف كنب في المنزل الجديد بعد النقل.', priority: 8 }
     ],
 };

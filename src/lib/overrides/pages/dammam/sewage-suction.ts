@@ -104,5 +104,6 @@ export const override: PageOverride = {
         { slug: 'tank-leak-detection', context: 'خدمة مكملة — باقة شاملة.', priority: 4 },
         { slug: 'water-leak-detection', context: 'خدمة مكملة — باقة شاملة.', priority: 5 },
         { slug: 'tanks-cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 6 },
+        { slug: 'bathroom-leak-detection', context: 'فحص تسربات الحمام مع الشفط.', priority: 8 }
     ],
 };

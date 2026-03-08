@@ -106,5 +106,6 @@ export const override: PageOverride = {
     
         { slug: 'tank-insulation', context: 'خدمة مكملة — باقة شاملة.', priority: 5 },
         { slug: 'cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 6 },
+        { slug: 'tanks-cleaning', context: 'تنظيف خزانات السطح مع العزل.', priority: 8 }
     ],
 };

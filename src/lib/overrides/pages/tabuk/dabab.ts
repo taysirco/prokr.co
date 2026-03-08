@@ -31,6 +31,8 @@ export const override: PageOverride = {
         'حقيبة حرارية لإلكترونيات شتاءً.',
         'Stretch Film على كل سطح حساس.',
         'صوّر كل قطعة أثاث قبل النقل — توثيق بصري يحمي حقك في التعويض لو حصل ضرر.',
+    
+        'صوّر كل قطعة أثاث قبل النقل — توثيق بصري يحمي حقك في التعويض.',
     ],
     warnings: [
         'دباب مكشوف + ثلج = MDF ينتفخ + إلكترونيات Short Circuit. غطاء 100%.',
@@ -63,5 +65,6 @@ export const override: PageOverride = {
         { slug: 'furniture-storage', context: 'خدمة مكملة — باقة شاملة.', priority: 4 },
         { slug: 'pest-control', context: 'خدمة مكملة — باقة شاملة.', priority: 5 },
         { slug: 'air-conditioner-cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 6 },
+        { slug: 'sofa-cleaning', context: 'تنظيف كنب في المنزل الجديد.', priority: 8 }
     ],
 };

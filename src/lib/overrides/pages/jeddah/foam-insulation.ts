@@ -66,5 +66,6 @@ export const override: PageOverride = {
         { slug: 'water-leak-detection', context: 'تسربات', priority: 5 },
     
         { slug: 'cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 6 },
+        { slug: 'bathroom-leak-detection', context: 'كشف تسربات حمامات — الرطوبة تقلل فعالية العزل.', priority: 8 }
     ],
 };
