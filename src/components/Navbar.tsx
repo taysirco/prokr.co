@@ -147,7 +147,7 @@ export default function Navbar() {
                                         <div className="bg-gradient-to-l from-emerald-50 to-white px-6 py-4 border-t border-gray-100">
                                             <div className="flex items-center justify-between">
                                                 <div>
-                                                    <p className="font-bold text-gray-900">أكثر من 50 خدمة</p>
+                                                    <p className="font-bold text-gray-900">{SERVICES.filter(s => !isAbsorbedSlug(s.slug)).length} خدمة متخصصة</p>
                                                     <p className="text-sm text-gray-500">تصفح جميع الخدمات المتاحة</p>
                                                 </div>
                                                 <Link

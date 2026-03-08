@@ -31,9 +31,9 @@ interface ServicePageProps {
     }>;
 }
 
-// Generate static params for all services
+// Generate static params for canonical services only (absorbed slugs redirect via Super Pages)
 export async function generateStaticParams() {
-    return SERVICES.map(service => ({
+    return SERVICES.filter(s => !isAbsorbedSlug(s.slug)).map(service => ({
         service: service.slug,
     }));
 }
