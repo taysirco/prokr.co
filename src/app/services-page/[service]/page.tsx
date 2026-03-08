@@ -9,7 +9,7 @@ import { BreadcrumbJsonLd, ServiceJsonLd, ItemListJsonLd, WebPageJsonLd } from '
 import { getCityContext, getAdjustedPriceRange } from '@/lib/city-context';
 import { getServiceKeywordProfile } from '@/lib/keyword-strategy';
 import { hasPageOverride } from '@/lib/overrides/registry';
-import { isAbsorbedSlug } from '@/lib/services/super-page-groups';
+import { isAbsorbedSlug, getCanonicalSlug } from '@/lib/services/super-page-groups';
 import Footer from '@/components/Footer';
 
 // Major cities for price comparison
@@ -89,7 +89,7 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
             description,
         },
         alternates: {
-            canonical: `https://prokr.co/${resolvedParams.service}`,
+            canonical: `https://prokr.co/${getCanonicalSlug(resolvedParams.service) || resolvedParams.service}`,
         },
     };
 }
@@ -131,9 +131,9 @@ export default async function ServicePage({ params }: ServicePageProps) {
                 type="cities"
                 listName={`${service.name_ar} في مدن السعودية`}
                 description={`قائمة المدن التي تتوفر فيها خدمة ${service.name_ar}`}
-                items={CITIES.filter(c => hasPageOverride(c.slug, service.slug)).map(c => ({
+                items={CITIES.filter(c => hasPageOverride(c.slug, getCanonicalSlug(service.slug) || service.slug)).map(c => ({
                     name: c.name_ar,
-                    url: `https://prokr.co/${c.slug}/${service.slug}`
+                    url: `https://prokr.co/${c.slug}/${getCanonicalSlug(service.slug) || service.slug}`
                 }))}
             />
 
