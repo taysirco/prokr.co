@@ -59,6 +59,7 @@ export const override: PageOverride = {
     ],
     counterNarratives: [
         { myth: 'التربة الرملية تمتص دائماً.', truth: 'تمتص حتى يُغلّف الكلس والدهون المنفذ. بعد ذلك: تتوقف. تنظيف المنفذ يُعيدها.' },
+        { myth: 'الكلور يسلّك المجاري.', truth: 'الكلور يقتل بكتيريا لكن لا يفك انسداد دهون/شعر. Hydro-Jet أو Snake الميكانيكي = الحل.' },
     ],
     relatedServices: [
         { slug: 'sewage-unblocking', context: 'تسليك مجاري', priority: 1 },

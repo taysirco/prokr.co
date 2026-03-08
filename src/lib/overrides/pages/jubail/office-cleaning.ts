@@ -23,6 +23,7 @@ export const override: PageOverride = {
         { question: '98% عفن — Sick Building؟', answer: '98% = عفن مكيف + خلف أثاث + داخل أدراج = Sick Building Syndrome. صداع + حساسية + إرهاق.' },
         { question: 'سخام — على الأوراق؟', answer: 'SABIC سخام = طبقة سوداء رقيقة على كل سطح. أوراق + شاشات + لوحات. Enzymatic.' },
         { question: 'أسبوعي — ليش؟', answer: 'VOC+NaCl+سخام يومي + عفن أسبوعي. أسبوعي = يمنع Sick Building.' },
+        { question: 'كم تكلفة التنظيف العميق مقارنة بالتنظيف العادي؟', answer: 'التنظيف العميق أغلى 30-50% لكنه يشمل: HEPA + بخار 150°م + تعقيم. التنظيف العادي = مسح سطحي. العميق كل 3-4 أشهر + العادي أسبوعياً = أفضل معادلة تكلفة/نظافة.' },
     ],
     expertTips: [
         'HEPA Activated Carbon — VOC PM2.5.',

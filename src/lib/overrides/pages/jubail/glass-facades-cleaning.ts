@@ -24,12 +24,14 @@ export const override: PageOverride = {
         { question: 'Biofilm أقصى — أسوأ من الخبر؟', answer: '98% > 95% = Biofilm أسرع + أسمك. طحالب خضراء على الواجهة. Anti-Biofilm شهري.' },
         { question: 'Sealant — يتآكل؟', answer: 'NaCl+VOC = أسرع تآكل Sealant 2×. Marine Sealant يقاوم. عادي = يفشل سريعاً.' },
         { question: 'شهري — ليش؟', answer: 'سخام يومي + Biofilm أسبوعي + NaCl+VOC يومي. شهري = يمنع التراكم.' },
+        { question: 'كم تكلفة التنظيف العميق مقارنة بالتنظيف العادي؟', answer: 'التنظيف العميق أغلى 30-50% لكنه يشمل: HEPA + بخار 150°م + تعقيم. التنظيف العادي = مسح سطحي. العميق كل 3-4 أشهر + العادي أسبوعياً = أفضل معادلة تكلفة/نظافة.' },
     ],
     expertTips: [
         'Squeegee مطاطي — NaCl+سخام = يخدش بقماش.',
         'Enzymatic لسخام — Marine Degreaser لـ VOC.',
         'Anti-Biofilm شهري — 98% = أسرع Biofilm.',
         'Marine Sealant — NaCl+VOC 2× تآكل.',
+        'بعد التنظيف: شغّل المكيف وليس الشبّاك — الهواء الخارجي يعيد الغبار على الأسطح النظيفة.',
     ],
     warnings: [
         'سخام + ماء = يطبّخ. Enzymatic أولاً.',

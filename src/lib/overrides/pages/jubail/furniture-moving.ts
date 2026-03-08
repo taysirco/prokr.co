@@ -24,12 +24,14 @@ export const override: PageOverride = {
         { question: 'VCI — لماذا؟', answer: 'NaCl+VOC = Galvanic 2×. مفصلات أثاث = حديد. VCI = حماية أثناء النقل.' },
         { question: 'PVAc — خلال النقل؟', answer: '98% في الشاحنة = PVAc يمتص = ضعف. نقل سريع + Dehumidifier في الشاحنة.' },
         { question: 'Stretch Marine — فرق عن عادي؟', answer: 'Marine = مُقاوم NaCl+VOC. عادي = يتآكل. فرق حماية.' },
+        { question: 'هل الشركة مرخصة من هيئة النقل TGA؟', answer: 'كل شركات بروكر مرخصة TGA + بيان حمولة لوجستي. الترخيص = تأمين على الأمتعة + حقوق عميل. بدون ترخيص = لا تأمين = لا تعويض.' },
     ],
     expertTips: [
         'Silica Gel في كل صندوق — 98% = تكثّف.',
         'VCI لمعادن — NaCl+VOC Galvanic.',
         'Stretch Marine — لا Stretch عادي.',
         'نقل صباحي — أقل حرارة = أقل تكثّف.',
+        'صوّر كل قطعة أثاث قبل النقل — توثيق بصري يحمي حقك في التعويض لو حصل ضرر.',
     ],
     warnings: [
         '98% + إلكترونيات بدون Silica = Short Circuit.',

@@ -23,12 +23,14 @@ export const override: PageOverride = {
         { question: 'NaCl+VOC — أسرع تآكل؟', answer: 'أسرع 2× من الخبر (NaCl فقط). VOC يُسرّع Galvanic. Stretch Marine = حاجز.' },
         { question: 'سخام — يتلف؟', answer: 'طبقة دهنية كربونية. لا يُتلف لكن يُلوّث. تنظيف بعد النقل.' },
         { question: 'أقل UV — ميزة؟', answer: 'رطوبة = غيوم = UV أقل 30-40% من حفر الباطن. لا UV Cover. ميزة!' },
+        { question: 'هل الشركة مرخصة من هيئة النقل TGA؟', answer: 'كل شركات بروكر مرخصة TGA + بيان حمولة لوجستي. الترخيص = تأمين على الأمتعة + حقوق عميل. بدون ترخيص = لا تأمين = لا تعويض.' },
     ],
     expertTips: [
         'Silica Gel + VCI — 98% = Short Circuit. إلزامي.',
         'Stretch Marine — NaCl+VOC. عادي لا يكفي.',
         'أقل UV — لا UV Cover. توفير!',
         'تنظيف بعد نقل — سخام SABIC.',
+        'صوّر كل قطعة أثاث قبل النقل — توثيق بصري يحمي حقك في التعويض لو حصل ضرر.',
     ],
     warnings: [
         '98% + إلكترونيات مكشوفة = Short Circuit فوري.',

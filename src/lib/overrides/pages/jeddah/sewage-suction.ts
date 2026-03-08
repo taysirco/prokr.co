@@ -54,6 +54,7 @@ export const override: PageOverride = {
     ],
     counterNarratives: [
         { myth: 'بيارة جدة تعمل مثل الرياض.', truth: 'طين ≠ رمل. الامتصاص أبطأ 5-10×. شفط أكثر.' },
+        { myth: 'الكلور يسلّك المجاري.', truth: 'الكلور يقتل بكتيريا لكن لا يفك انسداد دهون/شعر. Hydro-Jet أو Snake الميكانيكي = الحل.' },
     ],
     relatedServices: [
         { slug: 'sewage-unblocking', context: 'تسليك', priority: 1 },

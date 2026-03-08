@@ -24,6 +24,7 @@ export const override: PageOverride = {
         { question: 'Chloride Demand — أخطر هنا؟', answer: 'الأخطر. NaCl هواء + NaCl ماء = يستهلك الكلور أسرع. 2× كلور + فحص أسبوعي.' },
         { question: 'طحالب — في خزان مُغلق؟', answer: '98% + أي ضوء = طحالب. غطاء محكم + Algaecide. حفر الباطن: لا طحالب!' },
         { question: 'لا Scale — ميزة؟', answer: 'ميزة! ماء أقل عسراً من حفر الباطن = لا CaCO₃ Scale. لا Acid Wash. لكن: Biofilm أسوأ.' },
+        { question: 'هل أحتاج شهادة صحية بعد التنظيف؟', answer: 'للمباني التجارية والمطاعم: نعم إلزامي. الأمانة تشترط شهادة تنظيف كل 6 أشهر. المفتش يطلبها. شركات بروكر تصدر شهادة معتمدة.' },
     ],
     expertTips: [
         'Anti-Biofilm أولاً — يكشف الجدار.',
