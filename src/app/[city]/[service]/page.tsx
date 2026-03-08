@@ -121,11 +121,15 @@ export default async function SiloPage({ params }: SiloPageProps) {
     // Hero image URL for ImageObject schema
     const heroImageUrl = getUniquePageImages(resolvedParams.city, resolvedParams.service, service.category, 1)[0];
 
+    // Defense-in-depth: canonical URL for schemas (consistent with generateMetadata)
+    const canonicalSlug = getCanonicalSlug(service.slug) || service.slug;
+    const canonicalPageUrl = `https://prokr.co/${city.slug}/${canonicalSlug}`;
+
     // Breadcrumb items
     const breadcrumbs = [
         { name: 'الرئيسية', url: 'https://prokr.co' },
         { name: city.name_ar, url: `https://prokr.co/${city.slug}` },
-        { name: service.name_ar, url: `https://prokr.co/${city.slug}/${service.slug}` },
+        { name: service.name_ar, url: canonicalPageUrl },
     ];
 
     return (
@@ -159,7 +163,7 @@ export default async function SiloPage({ params }: SiloPageProps) {
             <SpeakableWebPageJsonLd
                 title={aiContent.metaTitle}
                 description={aiContent.shortAnswer}
-                url={`https://prokr.co/${resolvedParams.city}/${resolvedParams.service}`}
+                url={canonicalPageUrl}
                 speakableSelectors={['.direct-answer', 'h1', '.seo-introduction']}
                 dateModified={new Date().toISOString()}
                 about={{ name: service.name_ar, type: 'Service' }}
