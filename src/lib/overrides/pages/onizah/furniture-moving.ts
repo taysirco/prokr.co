@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.TGA, role: 'ترخيص النقل' },
         { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
-    expertReviewer: EXPERTS.ALZUWAYED,
+    expertReviewer: EXPERTS.ALSHABNAN,
     expertCitations: [
         { expert: EXPERTS.ALZUWAYED.name, quote: 'نقل عنيزة: ΔT+48°م+Nafud. شاحنة معزولة+تغليف.', source: 'معايير النقل — القصيم' },
     ],

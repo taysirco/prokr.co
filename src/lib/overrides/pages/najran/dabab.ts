@@ -43,7 +43,7 @@ export const override: PageOverride = {
         { ...GOV.CIVILDEFENSE, role: 'إنذارات السيول وبروتوكولات السلامة' },
         { entity: AMANA.NAJRAN.entity, url: AMANA.NAJRAN.url, role: 'اشتراطات النقل والسلامة بمنطقة نجران' },
     ],
-    expertReviewer: EXPERTS.ALZUWAYED,
+    expertReviewer: EXPERTS.ALSHABNAN,
     expertCitations: [
         { expert: EXPERTS.ALZUWAYED.name, quote: 'الدباب في نجران = 3 مخاطر: السيل الأخطر (لا تعبر أبداً) + كوارتز يخدش كل مكشوف + حرارة تُتلف الإلكترونيات. الغطاء العاكس + Stretch Film + وعي الطقس = 3 احتياطات بسيطة تمنع خسائر آلاف.', source: 'هيئة النقل — النقل في مناطق الأودية الكبرى' },
     ],

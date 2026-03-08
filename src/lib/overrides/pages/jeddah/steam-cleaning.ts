@@ -78,6 +78,8 @@ export const override: PageOverride = {
     ],
 
 
+        verificationBadges: [{ badge: '✔️ شركة مرخصة من بلدي', authority: 'وزارة البلديات', icon: 'shield-check' }],
+
     equipment: [
         { name: 'جهاز بخار صناعي Dupray Carmen', use: 'بخار 180°م + ضغط 6 بار — يقتل البكتيريا ويذيب الدهون والأوساخ بدون كيماويات' },
         { name: 'فوهات متخصصة (Nozzle Kit)', use: 'فوهة أرضيات + فوهة كنب + فوهة فواصل + فوهة زجاج — كل سطح بالأداة المناسبة' },
@@ -102,6 +104,8 @@ export const override: PageOverride = {
             source: 'تحليل مناخي',
         },
     ],
+
+        saudiRegulations: [REGULATIONS.BALADI_HEALTH],
 
     counterNarratives: [
         { myth: 'جهاز بخار منزلي صغير يكفي', truth: 'أجهزة البخار المنزلية: ضغط 1-2 بار + 100°م. البخار الصناعي: 4-8 بار + 150-180°م. الفرق = 10x قوة تنظيف. المنزلي: ينظف أسطح بسيطة. الصناعي: يخترق أعماق الأقمشة ويقتل العث والبكتيريا في الداخل' },

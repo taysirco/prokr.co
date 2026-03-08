@@ -72,7 +72,7 @@ export const override: PageOverride = {
         { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'اشتراطات نظافة وصيانة الفنادق والمباني التجارية', acronym: 'أمانة المدينة' },
     ],
 
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
 
     expertCitations: [
         {

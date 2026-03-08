@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.TGA, role: 'ترخيص نقل الأثاث' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات النقل بالشرقية' },
     ],
-    expertReviewer: EXPERTS.ALZUWAYED,
+    expertReviewer: EXPERTS.ALSHABNAN,
     expertCitations: [
         { expert: EXPERTS.ALZUWAYED.name, quote: 'نقل الجبيل = الأخطر ساحلي-صناعي: 98% تكثّف + NaCl+VOC. VCI + Silica + Stretch Marine = إلزامي.', source: 'هيئة النقل — النقل الصناعي-الساحلي' },
     ],

@@ -80,6 +80,8 @@ export const override: PageOverride = {
 
 
 
+        verificationBadges: [{ badge: '✔️ مرخص من هيئة النقل TGA', authority: 'الهيئة العامة للنقل', icon: 'shield-check' }],
+
     equipment: [
         { name: 'دباب حجم 1-2 طن', use: 'مناسب لنقل أثاث غرفة أو قطع منفردة — يدخل الشوارع الضيقة' },
         { name: 'أربطة تثبيت صناعية (Ratchet Straps)', use: 'تثبّت الأثاث ومنع الحركة أثناء النقل — تمنع الخدوش والكسر' },
@@ -95,7 +97,7 @@ export const override: PageOverride = {
         { entity: AMANA.JEDDAH.entity, url: AMANA.JEDDAH.url, role: 'اشتراطات أمانة جدة' },
     ],
 
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALSHABNAN,
 
     expertCitations: [
         {
@@ -104,6 +106,8 @@ export const override: PageOverride = {
             source: 'خبير جودة تشطيبات',
         },
     ],
+
+        saudiRegulations: [REGULATIONS.TGA_LICENSE],
 
     counterNarratives: [
         { myth: 'الدباب نفس الدينا', truth: 'الدباب: حمولة 1-2 طن، أثاث شقة صغيرة أو جزء من الأثاث. الدينا: 4-10 طن، أثاث شقة كاملة أو أكثر. استخدام الدباب لحمولة كبيرة = رحلتين-ثلاث = تكلفة أعلى من الدينا' },

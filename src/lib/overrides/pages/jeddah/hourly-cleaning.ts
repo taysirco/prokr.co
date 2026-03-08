@@ -78,6 +78,8 @@ export const override: PageOverride = {
 
 
 
+        verificationBadges: [{ badge: '✔️ شركة مرخصة من بلدي', authority: 'وزارة البلديات', icon: 'shield-check' }],
+
     equipment: [
         { name: 'حقيبة تنظيف متنقلة (Cleaning Caddy)', use: 'كل مواد ومعدات التنظيف في حقيبة واحدة — العاملة تبدأ فوراً بدون تأخير' },
         { name: 'ممسحة مايكروفايبر محمولة', use: 'أفضل من الممسحة العادية — تمسح وتعقم بدون ماء زائد' },
@@ -101,6 +103,8 @@ export const override: PageOverride = {
             source: 'تحليل مناخي',
         },
     ],
+
+        saudiRegulations: [REGULATIONS.BALADI_HEALTH],
 
     counterNarratives: [
         { myth: 'التنظيف بالساعة أرخص دائماً', truth: 'بالساعة: مناسب لمهام محددة (مطبخ، حمامات). التنظيف الشامل بالجلسة أوفر 20-30% لأن الشركة تنظم العمل بكفاءة. في جدة: اطلب ساعات إضافية لتجفيف المفروشات بسبب الرطوبة' },

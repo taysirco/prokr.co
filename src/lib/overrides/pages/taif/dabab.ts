@@ -45,7 +45,7 @@ export const override: PageOverride = {
  role: 'تنظيم النقل — حقوق المستخدم' }    ,
         { entity: AMANA.TAIF.entity, url: AMANA.TAIF.url, role: 'اشتراطات أمانة الطائف' },
     ],
-        expertReviewer: EXPERTS.ALZUWAYED,
+        expertReviewer: EXPERTS.ALSHABNAN,
     expertCitations: [{ expert: EXPERTS.ALZUWAYED.name, quote: 'الدباب في الطائف ليس مجرد وسيلة نقل رخيصة — هو الحل الوحيد لأحياء جبلية لا تدخلها الدينا. السائق الذي يعرف أزقة الطائف ومنحدراتها = أصل وليس بديل.',
             source: EXPERTS.ALZUWAYED.title }],
     saudiRegulations: [REGULATIONS.TGA_LICENSE],

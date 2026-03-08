@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.TGA, role: 'ترخيص النقل البري وتنظيم حقوق الشحن' },
         { entity: AMANA.JAZAN.entity, url: AMANA.JAZAN.url, role: 'اشتراطات النقل والسلامة بمنطقة جازان' },
     ],
-    expertReviewer: EXPERTS.ALZUWAYED,
+    expertReviewer: EXPERTS.ALSHABNAN,
     expertCitations: [
         { expert: EXPERTS.ALZUWAYED.name, quote: 'النقل الخفيف (الدباب) في بيئة ساحلية استوائية كجازان يحتاج حماية مطر + ملح + رطوبة في كل رحلة — حتى لو 5 دقائق. الغطاء المقاوم للمطر + Stretch Film = ليس اختيارياً بل إلزامي لحماية ممتلكات العميل.', source: 'هيئة النقل — معايير النقل الخفيف في البيئات الساحلية' },
     ],

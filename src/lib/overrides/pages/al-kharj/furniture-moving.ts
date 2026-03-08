@@ -43,7 +43,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص النشاط' },
         { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
-    expertReviewer: EXPERTS.ALZUWAYED,
+    expertReviewer: EXPERTS.ALSHABNAN,
     expertCitations: [
         { expert: EXPERTS.ALZUWAYED.name, quote: 'نقل عفش الخرج: ΔT 48°م يُشقّق الخشب. تغليف حراري. طرق ترابية: تثبيت.', source: 'لوجستيات — نقل زراعي' },
     ],

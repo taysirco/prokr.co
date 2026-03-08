@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.TGA, role: 'ترخيص النقل الثقيل' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات النقل بالشرقية' },
     ],
-    expertReviewer: EXPERTS.ALZUWAYED,
+    expertReviewer: EXPERTS.ALSHABNAN,
     expertCitations: [
         { expert: EXPERTS.ALZUWAYED.name, quote: 'دينا الجبيل = صناعية-ساحلية: NaCl+VOC + 98% + طرق SABIC. Tarpaulin Marine + VCI + تصاريح.', source: 'هيئة النقل — النقل الصناعي' },
     ],

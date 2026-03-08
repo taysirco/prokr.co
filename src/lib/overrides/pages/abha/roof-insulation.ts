@@ -44,7 +44,7 @@ export const override: PageOverride = {
         { ...GOV.SCE, role: 'اعتماد المهندسين لمشاريع العزل' },
         { entity: AMANA.ASIR.entity, url: AMANA.ASIR.url, role: 'اشتراطات أمانة عسير' },
     ],
-    expertReviewer: { name: EXPERTS.ALJUND.name, title: EXPERTS.ALJUND.title, credential: EXPERTS.ALJUND.credential, profileUrl: EXPERTS.ALJUND.profileUrl },
+    expertReviewer: { name: EXPERTS.ALMOHAIMED.name, title: EXPERTS.ALMOHAIMED.title, credential: EXPERTS.ALMOHAIMED.credential, profileUrl: EXPERTS.ALMOHAIMED.profileUrl },
     expertCitations: [{ expert: EXPERTS.ALJUND.name, quote: 'عزل أسطح أبها = أعقد مشروع عزل في المملكة. 3 تحديات متزامنة: مطر 300mm + برد 2°م + تكثف. عزل طبقة واحدة لا يكفي — تحتاج ثلاثي: SBS + Closed-Cell + Vapor Barrier. المواد الرخيصة (APP + Open-Cell) تفشل في أول شتاء. استثمر في المواد الصحيحة من البداية.', source: EXPERTS.ALJUND.title, url: EXPERTS.ALJUND.profileUrl }],
     saudiRegulations: [REGULATIONS.SBC_601],
     verificationBadges: [{ badge: '✔️ SBS ثلاثي', authority: 'مرن -20°م', icon: 'shield-check' }, { badge: '✔️ Vapor Barrier', authority: 'مانع تكثف', icon: 'badge-check' }],

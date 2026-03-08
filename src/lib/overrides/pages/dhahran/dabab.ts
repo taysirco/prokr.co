@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.TGA, role: 'ترخيص النقل' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات النقل بالشرقية' },
     ],
-    expertReviewer: EXPERTS.ALZUWAYED,
+    expertReviewer: EXPERTS.ALSHABNAN,
     expertCitations: [
         { expert: EXPERTS.ALZUWAYED.name, quote: 'دباب الظهران = مزدوج: NaCl+SiO₂ يتآكل+يخدش. غطاء + EPE + Silica = بروتوكول مزدوج.', source: 'هيئة النقل — النقل في البيئة المزدوجة' },
     ],

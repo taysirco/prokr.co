@@ -83,10 +83,10 @@ export const override: PageOverride = {
     ],
 
     expertReviewer: {
-        name: EXPERTS.ALZUWAYED.name,
-        title: EXPERTS.ALZUWAYED.title,
-        credential: EXPERTS.ALZUWAYED.credential,
-        profileUrl: EXPERTS.ALZUWAYED.profileUrl,
+        name: EXPERTS.ALSHABNAN.name,
+        title: EXPERTS.ALSHABNAN.title,
+        credential: EXPERTS.ALSHABNAN.credential,
+        profileUrl: EXPERTS.ALSHABNAN.profileUrl,
     },
 
     expertCitations: [

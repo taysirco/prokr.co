@@ -81,6 +81,8 @@ export const override: PageOverride = {
 
 
 
+        verificationBadges: [{ badge: '✔️ مرخص من هيئة النقل TGA', authority: 'الهيئة العامة للنقل', icon: 'shield-check' }],
+
     equipment: [
         { name: 'أغطية بلاستيك حماية (Shrink Wrap)', use: 'تغليف كل قطعة أثاث بالكامل — حماية من الغبار والرطوبة' },
         { name: 'مجففات هواء صناعية (Dehumidifiers)', use: 'تحافظ على رطوبة المستودع أقل من 50% — تمنع العفن في مناخ جدة' },
@@ -105,6 +107,8 @@ export const override: PageOverride = {
             source: 'خبير جودة تشطيبات',
         },
     ],
+
+        saudiRegulations: [REGULATIONS.TGA_LICENSE],
 
     counterNarratives: [
         { myth: 'أي مستودع يصلح لتخزين الأثاث', truth: 'في جدة: الرطوبة 60-90% = أثاث خشبي يتعفن في مستودع بدون تبريد خلال شهرين. المستودع المناسب: تكييف + عزل رطوبة + رش دوري ضد النمل الأبيض + كاميرات أمان. اسأل عن شهادة التخزين المعتمدة من TGA' },

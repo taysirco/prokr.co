@@ -79,6 +79,8 @@ export const override: PageOverride = {
     ],
 
 
+        verificationBadges: [{ badge: '✔️ شركة مرخصة من بلدي', authority: 'وزارة البلديات', icon: 'shield-check' }],
+
     equipment: [
         { name: 'جهاز غسيل سجاد Karcher Puzzi', use: 'حقن محلول تنظيف + شفط — تنظيف عميق بدون نقع' },
         { name: 'مجفف هواء صناعي (Air Mover)', use: 'يجفف السجاد في 2 ساعة بدل 12 ساعة — يمنع العفن في رطوبة جدة' },
@@ -104,6 +106,8 @@ export const override: PageOverride = {
             source: 'تحليل مناخي',
         },
     ],
+
+        saudiRegulations: [REGULATIONS.BALADI_HEALTH],
 
     counterNarratives: [
         { myth: 'الغسيل بالماء والصابون يكفي للسجاد', truth: 'الماء والصابون: يزيل البقع السطحية. لكن: الغبار الناعم (2.5 ميكرون) والعث يتغلغل في قاعدة السجاد — لا يخرج بالفرك. في جدة: الماء الزائد = 24-48 ساعة جفاف = عفن مضمون. البخار الجاف: أقل ماء + يصل القاعدة + يجف 4-6 ساعات' },

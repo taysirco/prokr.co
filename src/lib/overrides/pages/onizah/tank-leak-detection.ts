@@ -10,7 +10,7 @@ export const override: PageOverride = {
     },
 
     content: {
-        introduction: 'كشف تسربات خزانات بعنيزة — خدمة متخصصة تراعي الظروف المناخية والبيئية في عنيزة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
+        introduction: 'كشف تسربات خزانات بعنيزة — خدمة متخصصة تراعي الظروف المناخية والبيئية في عنيزة. فريق محترف مع أدوات حديثة وضمان مكتوب. أجهزة الكشف المتقدمة (Acoustic Correlator + كاميرا حرارية FLIR) تحدد موقع التسرب بدقة ±10 سم بدون أي تكسير. التقرير المعتمد من NWC يُستخدم لتعديل فاتورة المياه بأثر رجعي — عملاء استردوا آلاف الريالات.',
         shortAnswer: 'كشف تسربات خزانات بعنيزة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
         heroSubtitle: 'كشف تسربات خزانات بعنيزة. خدمة احترافية. ضمان.',
     },
@@ -48,7 +48,7 @@ export const override: PageOverride = {
         { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
 
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {

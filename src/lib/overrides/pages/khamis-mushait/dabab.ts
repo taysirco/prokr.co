@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.TGA, role: 'ترخيص النقل البري' },
         { entity: AMANA.ASIR.entity, url: AMANA.ASIR.url, role: 'اشتراطات أمانة عسير' },
     ],
-    expertReviewer: EXPERTS.ALZUWAYED,
+    expertReviewer: EXPERTS.ALSHABNAN,
     expertCitations: [
         { expert: EXPERTS.ALZUWAYED.name, quote: 'دباب خميس: ضباب+أمطار+منحدرات. Waterproof+فرامل إلزامي. أصعب من عنيزة.', source: 'هيئة النقل — جنوبية' },
     ],

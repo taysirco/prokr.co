@@ -68,7 +68,7 @@ export const override: PageOverride = {
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'تطبيق اشتراطات العزل وكود البناء بالدمام', acronym: 'أمانة الشرقية' },
     ],
 
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALJUND,
 
     expertCitations: [
         {

@@ -10,7 +10,7 @@ export const override: PageOverride = {
     },
 
     content: {
-        introduction: 'عزل خزانات بعنيزة — خدمة متخصصة تراعي الظروف المناخية والبيئية في عنيزة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
+        introduction: 'عزل خزانات بعنيزة — خدمة متخصصة تراعي الظروف المناخية والبيئية في عنيزة. فريق محترف مع أدوات حديثة وضمان مكتوب. العزل المطابق لكود SBC 601 يوفر 30-40% من فاتورة الكهرباء سنوياً. المواد المستخدمة: فوم Closed-Cell بكثافة 32+ كجم/م³ أو رولات بيتومين SBS بسمك 4 مم. فحص حراري بكاميرا FLIR قبل وبعد العزل لقياس الفعالية.',
         shortAnswer: 'عزل خزانات بعنيزة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
         heroSubtitle: 'عزل خزانات بعنيزة. خدمة احترافية. ضمان.',
     },
@@ -48,7 +48,7 @@ export const override: PageOverride = {
         { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
 
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {

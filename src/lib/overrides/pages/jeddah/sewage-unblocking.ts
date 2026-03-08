@@ -54,6 +54,10 @@ export const override: PageOverride = {
         { name: 'CCTV Pipe Camera', use: 'يكشف Stress Cracking + رمل' },
         { name: 'Grease Trap', use: 'مصيدة دهون مطاعم — وقائية' },
     ],
+        hiddenObjections: [
+        { fear: 'الشفط يتم بدون نظافة.', solution: 'شفط + تنظيف + تعقيم = بروتوكول شامل. تقرير فني بعد كل خدمة.' },
+    ],
+
     counterNarratives: [
         { myth: 'المجاري الجديدة ما تنسد.', truth: 'رمال بناء تسد خلال أشهر. أبحر/ذهبان: الأكثر شكاوى.' },
         { myth: 'الدهون تذوب بالماء الحار.', truth: 'تذوب مؤقتاً ← تتجمد في النقطة الباردة التالية. لا تحل المشكلة.' },

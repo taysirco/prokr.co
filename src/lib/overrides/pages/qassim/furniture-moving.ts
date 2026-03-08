@@ -43,7 +43,7 @@ export const override: PageOverride = {
         { ...GOV.LOGISTI, role: 'بيان حمولة رسمي — توثيق النقل بين المدن' },
         { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
-    expertReviewer: EXPERTS.ALZUWAYED,
+    expertReviewer: EXPERTS.ALSHABNAN,
     expertCitations: [
         { expert: EXPERTS.ALZUWAYED.name, quote: 'النقل بين مدن القصيم (25-85 كم) يحتاج بروتوكولاً مختلفاً عن النقل الداخلي — المسافات + الحرارة + الطرق الزراعية = ثلاثي يُتلف الأثاث غير المحمي. الترخيص من هيئة النقل TGA يضمن التأمين والمسؤولية القانونية.', source: 'التقرير الإعلامي لهيئة النقل العامة — اشتراطات نقل البضائع والأمتعة' },
     ],

@@ -43,7 +43,7 @@ export const override: PageOverride = {
         { ...GOV.CIVILDEFENSE, role: 'إنذارات السيول وتحذيرات الطرق المقطوعة' },
         { entity: AMANA.NAJRAN.entity, url: AMANA.NAJRAN.url, role: 'اشتراطات النقل والسلامة بمنطقة نجران' },
     ],
-    expertReviewer: EXPERTS.ALZUWAYED,
+    expertReviewer: EXPERTS.ALSHABNAN,
     expertCitations: [
         { expert: EXPERTS.ALZUWAYED.name, quote: 'نقل أجهزة في نجران = 4 مخاطر لا تجتمع في غيرها: سيل أكبر وادي + حرارة تُليّن اللاصق + مسافات 280 كم + كوارتز. مُغلقة + تهوية + EPE + Ratchet + وعي بالطقس = الحد الأدنى الآمن.', source: 'هيئة النقل — النقل في مناطق الأودية الكبرى' },
     ],

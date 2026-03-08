@@ -84,7 +84,7 @@ export const override: PageOverride = {
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات أمانة الشرقية' },
     ],
 
-    expertReviewer: EXPERTS.ALSHABNAN,
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {

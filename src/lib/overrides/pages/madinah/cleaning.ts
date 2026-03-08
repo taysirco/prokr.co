@@ -79,7 +79,7 @@ export const override: PageOverride = {
         { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'الرقابة الصحية على منشآت الإيواء والشقق المفروشة واشتراطات النظافة', acronym: 'أمانة المدينة' },
     ],
 
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
 
     expertCitations: [
         {

@@ -80,6 +80,8 @@ export const override: PageOverride = {
 
 
 
+        verificationBadges: [{ badge: '✔️ مرخص من هيئة النقل TGA', authority: 'الهيئة العامة للنقل', icon: 'shield-check' }],
+
     equipment: [
         { name: 'دينا 4-10 طن مغلقة', use: 'حماية كاملة من الشمس والغبار — مثالية لنقل الأثاث' },
         { name: 'ونش هيدروليكي (Tailgate Lift)', use: 'رفع القطع الثقيلة (ثلاجات، غسالات) بدون حمل يدوي — يمنع كسر وإصابات' },
@@ -96,7 +98,7 @@ export const override: PageOverride = {
         { entity: AMANA.JEDDAH.entity, url: AMANA.JEDDAH.url, role: 'اشتراطات أمانة جدة' },
     ],
 
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALSHABNAN,
 
     expertCitations: [
         { expert: 'أ. صالح الزويد', quote: 'أي نقل بري بين المدن بدون بيان حمولة رسمي من منصة لوجستي = مخالفة قانونية. البيان يحمي حقوق العميل في حال تلف الأثاث', source: 'هيئة النقل', url: 'https://x.com/SalehAlZuwayed' },
@@ -106,6 +108,8 @@ export const override: PageOverride = {
             source: 'خبير جودة تشطيبات',
         },
     ],
+
+        saudiRegulations: [REGULATIONS.TGA_LICENSE],
 
     counterNarratives: [
         { myth: 'أي دينا بالشارع تنفع', truth: 'الدينا بدون ترخيص TGA = بدون تأمين. لو تلف أثاثك أثناء النقل = لا تعويض. الدينا المرخصة: تأمين ضد التلف + بيان حمولة رسمي + سائق معتمد. فرق السعر 10-20% فقط — يستحق الأمان' },

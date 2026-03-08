@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.TGA, role: 'ترخيص النقل — حقوق الشحن والحمولة' },
         { entity: AMANA.AHSA.entity, url: AMANA.AHSA.url, role: 'اشتراطات النقل بمحافظة الأحساء' },
     ],
-    expertReviewer: EXPERTS.ALZUWAYED,
+    expertReviewer: EXPERTS.ALSHABNAN,
     expertCitations: [
         { expert: EXPERTS.ALZUWAYED.name, quote: 'دباب الأحساء = وسيلة واحية: يصل حيث لا تصل الشاحنة (مزارع نخيل + طرق ضيقة). 48°م = حماية الحمولة إلزامية. غطاء UV + EPE + توقيت = بروتوكول الدباب الواحي.', source: 'هيئة النقل — النقل الخفيف في المناطق الزراعية' },
     ],

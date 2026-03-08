@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.MOENERGY, role: 'كفاءة طاقة — شهادة' },
         { entity: AMANA.JEDDAH.entity, url: AMANA.JEDDAH.url, role: 'اشتراطات أمانة جدة' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'في جدة: العزل المائي أولاً. سيول + رطوبة + تربة طينية. APP يفشل — SBS الخيار. Open-Cell يمتص الرطوبة — Closed-Cell فقط. كل مادة لها مدينتها.', source: 'موسوعة أخطاء في البناء — عزل المناطق الساحلية' },
     ],
@@ -56,6 +56,10 @@ export const override: PageOverride = {
         { name: 'Closed-Cell SPF 35+ kg', use: 'عزل حراري — لا يمتص رطوبة 80%' },
         { name: 'Anti-Fungal Coating', use: 'يحيِّد Stachybotrys على السطح' },
     ],
+        hiddenObjections: [
+        { fear: 'العزل مكلف — مش متأكد يستاهل.', solution: 'عزل SBC 601 يوفر 30-40% كهرباء سنوياً. يسترد تكلفته خلال 2-3 سنوات.' },
+    ],
+
     counterNarratives: [
         { myth: 'APP أرخص = أفضل.', truth: 'APP صلب = يتشقق في 2-3 سنوات. SBS أغلى 15% لكنه يدوم 3× أطول.' },
         { myth: 'العزل الحراري أهم.', truth: 'في جدة: المائي يمنع كوارث. الحراري يوفر 15-25%. الأولوية: المائي.' },

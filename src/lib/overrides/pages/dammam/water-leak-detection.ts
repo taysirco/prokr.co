@@ -70,7 +70,7 @@ export const override: PageOverride = {
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'الرقابة على صيانة المباني واشتراطات العزل المائي في الدمام', acronym: 'أمانة الشرقية' },
     ],
 
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALJUND,
 
     expertCitations: [
         {

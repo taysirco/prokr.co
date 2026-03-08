@@ -78,6 +78,8 @@ export const override: PageOverride = {
 
 
 
+        verificationBadges: [{ badge: '✔️ شركة مرخصة من بلدي', authority: 'وزارة البلديات', icon: 'shield-check' }],
+
     equipment: [
         { name: 'جهاز بخار جاف للمجالس الأرضية', use: 'ينظف المساند والسجاد بدون تبليل — المجلس جاهز للاستخدام خلال ساعة' },
         { name: 'مكنسة صناعية بفرشة سجاد', use: 'تشفط الغبار والفتات من ألياف السجاد العميقة' },
@@ -102,6 +104,8 @@ export const override: PageOverride = {
             source: 'تحليل مناخي',
         },
     ],
+
+        saudiRegulations: [REGULATIONS.BALADI_HEALTH],
 
     counterNarratives: [
         { myth: 'المجلس يُنظف بالمكنسة والمسّاحة', truth: 'المجلس العربي: سجاد يدوي + كنب أرضي + مساند = بيئة مثالية لعث الغبار في رطوبة جدة. المكنسة تزيل السطحي فقط. البخار 150°م يقتل العث في العمق — ضروري كل 3 أشهر في جدة' },

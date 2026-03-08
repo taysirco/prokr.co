@@ -43,7 +43,7 @@ export const override: PageOverride = {
     trustAnchors: [{ ...GOV.TGA, role: 'تنظيم النقل — شروط السلامة' },
         { entity: AMANA.ASIR.entity, url: AMANA.ASIR.url, role: 'اشتراطات أمانة عسير' },
     ],
-        expertReviewer: { name: EXPERTS.ALZUWAYED.name, title: EXPERTS.ALZUWAYED.title, credential: EXPERTS.ALZUWAYED.credential, profileUrl: EXPERTS.ALZUWAYED.profileUrl },
+        expertReviewer: { name: EXPERTS.ALSHABNAN.name, title: EXPERTS.ALSHABNAN.title, credential: EXPERTS.ALSHABNAN.credential, profileUrl: EXPERTS.ALSHABNAN.profileUrl },
     expertCitations: [{ expert: EXPERTS.ALZUWAYED.name, quote: 'عقبة ضلع بدينا 6 طن محملة = أخطر طريق نقل في المملكة. Engine Brake إلزامي. الحمولة 80% فقط. مشمع ضد المطر. سائق ذهب 100 مرة ← وما زال يحترم العقبة. الخبرة الجبلية لا تُشترى — تُكتسب بالسنوات.', source: EXPERTS.ALZUWAYED.title, url: EXPERTS.ALZUWAYED.profileUrl }],
     saudiRegulations: [REGULATIONS.TGA_LICENSE],
     verificationBadges: [{ badge: '✔️ سائق خبرة جبلية', authority: 'عقبة ضلع + سودة', icon: 'shield-check' }, { badge: '✔️ تغليف مانع رطوبة', authority: 'Shrink Wrap', icon: 'badge-check' }],

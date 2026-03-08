@@ -43,7 +43,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص مقاولي العزل' },
         { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'خزان الخرج: CaCO₃ يآكل. Descaler+Epoxy. لا عفن. ΔT = مرن.', source: 'موسوعة أخطاء — خزانات صحراوية' },
     ],

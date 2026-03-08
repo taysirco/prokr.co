@@ -81,7 +81,7 @@ export const override: PageOverride = {
         { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'إصدار الترخيص البلدي للمستودعات لضمان مطابقتها للاشتراطات الفنية والبيئية', acronym: 'أمانة المدينة' },
     ],
 
-    expertReviewer: EXPERTS.ALSHABNAN,
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {

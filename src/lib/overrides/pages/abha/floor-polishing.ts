@@ -44,7 +44,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف والجلي' },
         { entity: AMANA.ASIR.entity, url: AMANA.ASIR.url, role: 'أمانة منطقة عسير — اشتراطات سلامة المباني' },
     ],
-    expertReviewer: { name: EXPERTS.ALMOHAIMED.name, title: EXPERTS.ALMOHAIMED.title, credential: EXPERTS.ALMOHAIMED.credential, profileUrl: EXPERTS.ALMOHAIMED.profileUrl },
+    expertReviewer: { name: EXPERTS.ALMISNID.name, title: EXPERTS.ALMISNID.title, credential: EXPERTS.ALMISNID.credential, profileUrl: EXPERTS.ALMISNID.profileUrl },
     expertCitations: [{ expert: EXPERTS.ALMOHAIMED.name, quote: 'أرضية تتعرق = أرضية انزلاق. في أبها 5 أشهر/سنة: كل أرضية باردة تتكثف. Anti-Slip R11 = فرض سلامة وليس تجميل. خاصة في بيوت كبار السن والأطفال. والتبلور يسدّ المسام = يحمي الرخام من رطوبة أبها المزمنة.', source: EXPERTS.ALMOHAIMED.title, url: EXPERTS.ALMOHAIMED.profileUrl }],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
     verificationBadges: [{ badge: '✔️ Anti-Slip R11', authority: 'أمان مبلل', icon: 'shield-check' }, { badge: '✔️ تبلور', authority: 'سدّ مسام', icon: 'badge-check' }],

@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.TGA, role: 'ترخيص النقل الثقيل' },
         { entity: AMANA.HAFR.entity, url: AMANA.HAFR.url, role: 'اشتراطات النقل بحفر الباطن' },
     ],
-    expertReviewer: EXPERTS.ALZUWAYED,
+    expertReviewer: EXPERTS.ALSHABNAN,
     expertCitations: [
         { expert: EXPERTS.ALZUWAYED.name, quote: 'دينا حفر الباطن = قارية: SiO₂ عواصف + ΔT 54°م + UV + مسافات. Tarpaulin UV + EPE + توقيت.', source: 'هيئة النقل — النقل القاري' },
     ],

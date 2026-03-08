@@ -79,6 +79,8 @@ export const override: PageOverride = {
 
 
 
+        verificationBadges: [{ badge: '✔️ شركة مرخصة من بلدي', authority: 'وزارة البلديات', icon: 'shield-check' }],
+
     equipment: [
         { name: 'جهاز بخار صناعي لتعقيم الشقة', use: 'تعقيم حراري شامل — يقتل البكتيريا والعفن بدون كيماويات' },
         { name: 'مزيل كلس وترسبات أملاح', use: 'ينظف حنفيات ومرايا الحمامات من ترسبات مياه التحلية' },
@@ -103,6 +105,8 @@ export const override: PageOverride = {
             source: 'خبير جودة تشطيبات',
         },
     ],
+
+        saudiRegulations: [REGULATIONS.BALADI_HEALTH],
 
     counterNarratives: [
         { myth: 'تنظيف سريع بنفسك يكفي للتسليم', truth: 'المؤجر يحق له خصم من التأمين إذا الشقة غير نظيفة. التنظيف الاحترافي + صورة قبل/بعد + فاتورة = دليل يحمي حقك. في جدة: الرطوبة تترك علامات عفن — تحتاج تنظيف وتعقيم متخصص' },

@@ -41,7 +41,7 @@ export const override: PageOverride = {
         { ...GOV.TGA, role: 'ترخيص النقل' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات النقل بالشرقية' },
     ],
-    expertReviewer: EXPERTS.ALZUWAYED,
+    expertReviewer: EXPERTS.ALSHABNAN,
     expertCitations: [
         { expert: EXPERTS.ALZUWAYED.name, quote: 'دباب القطيف: أزقة تاريخية = ميزة فريدة. NaCl+80-95%+طين. Silica Gel + VCI.', source: 'هيئة النقل — النقل في الواحات' },
     ],

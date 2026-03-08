@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.TGA, role: 'ترخيص نقل الأثاث' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات النقل بالشرقية' },
     ],
-    expertReviewer: EXPERTS.ALZUWAYED,
+    expertReviewer: EXPERTS.ALSHABNAN,
     expertCitations: [
         { expert: EXPERTS.ALZUWAYED.name, quote: 'نقل أثاث الظهران = مزدوج: NaCl+SiO₂ يتآكل+يخدش + 75-85% تكثّف + ثلاثية + أرامكو. Stretch + VCI + Silica + EPE = بروتوكول مزدوج.', source: 'هيئة النقل — النقل المزدوج' },
     ],

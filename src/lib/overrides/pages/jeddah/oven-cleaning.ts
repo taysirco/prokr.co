@@ -77,6 +77,8 @@ export const override: PageOverride = {
 
 
 
+        verificationBadges: [{ badge: '✔️ شركة مرخصة من بلدي', authority: 'وزارة البلديات', icon: 'shield-check' }],
+
     equipment: [
         { name: 'مزيل دهون أفران صناعي (Oven Degreaser)', use: 'تركيز أقوى 20x من منظفات السوبر — يذيب الدهون المحروقة في 10 دقائق' },
         { name: 'فرشة سلكية ناعمة (Brass Brush)', use: 'تزيل الكربون المحروق بدون خدش طبقة المينا داخل الفرن' },
@@ -92,7 +94,7 @@ export const override: PageOverride = {
         { entity: AMANA.JEDDAH.entity, url: AMANA.JEDDAH.url, role: 'اشتراطات أمانة جدة' },
     ],
 
-    expertReviewer: EXPERTS.ALMISNID,
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
@@ -101,6 +103,8 @@ export const override: PageOverride = {
             source: 'تحليل مناخي',
         },
     ],
+
+        saudiRegulations: [REGULATIONS.BALADI_HEALTH],
 
     counterNarratives: [
         { myth: 'الفرن ينظف نفسه — Self-Clean يكفي', truth: 'Self-Clean يحرق البقع الخفيفة على الجدران الداخلية. لكن: دهون تحت العنصر الحراري + مؤخرة الفرن + مجرى الشفط = لا يصلها Self-Clean. هذه الدهون المتراكمة = خطر حريق حقيقي. تنظيف احترافي كل 3-6 أشهر إلزامي' },

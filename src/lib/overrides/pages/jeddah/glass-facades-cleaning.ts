@@ -79,6 +79,8 @@ export const override: PageOverride = {
 
 
 
+        verificationBadges: [{ badge: '✔️ شركة مرخصة من بلدي', authority: 'وزارة البلديات', icon: 'shield-check' }],
+
     equipment: [
         { name: 'نظام Rope Access (حبال أمان)', use: 'لتنظيف واجهات 3+ أدوار بأمان — بديل الرافعة الأرخص والأسرع' },
         { name: 'محلول إزالة أملاح بحرية (Descaler)', use: 'يذيب ملح NaCl المتصلب على الزجاج في 5 دقائق — بدون خدش' },
@@ -103,6 +105,8 @@ export const override: PageOverride = {
             source: 'خبير تشطيبات',
         },
     ],
+
+        saudiRegulations: [REGULATIONS.BALADI_HEALTH],
 
     counterNarratives: [
         { myth: 'ماء وصابون يكفي لتنظيف الواجهات', truth: 'الصابون يترك طبقة لزجة تجذب الغبار أسرع. في جدة: ملح NaCl البحري يتصلب على الزجاج — يحتاج محلول إزالة أملاح متخصص (Descaler). والارتفاعات فوق 3 أمتار تحتاج رافعة أو حبال أمان — لا تستخدم سلم عادي' },

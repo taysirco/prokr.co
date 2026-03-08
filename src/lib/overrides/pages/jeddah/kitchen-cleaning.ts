@@ -78,6 +78,8 @@ export const override: PageOverride = {
     ],
 
 
+        verificationBadges: [{ badge: '✔️ شركة مرخصة من بلدي', authority: 'وزارة البلديات', icon: 'shield-check' }],
+
     equipment: [
         { name: 'مزيل دهون صناعي Alkaline Degreaser', use: 'تركيز 10x أقوى من منظفات السوبر — يذيب الدهون المتصلبة في 5 دقائق' },
         { name: 'فرشة ميكانيكية دوّارة (Scrubber)', use: 'إزالة الدهون من فواصل البلاط والجدران بدون جهد يدوي' },
@@ -103,6 +105,8 @@ export const override: PageOverride = {
             source: 'تحليل مناخي',
         },
     ],
+
+        saudiRegulations: [REGULATIONS.BALADI_HEALTH],
 
     counterNarratives: [
         { myth: 'منظفات السوبر تكفي للمطبخ', truth: 'منظفات السوبر: تركيز منخفض مصمم للأوساخ اليومية. الدهون المتصلبة (أكثر من شهر) تحتاج Alkaline Degreaser بتركيز 10x أعلى + فرش ميكانيكية. في جدة (رطوبة): الدهون تتكثف على الأسطح بدل التبخر = تصلب أسرع' },

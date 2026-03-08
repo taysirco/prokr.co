@@ -41,7 +41,7 @@ export const override: PageOverride = {
     trustAnchors: [{ ...GOV.TGA, role: 'ترخيص النقل' },
         { entity: AMANA.TABUK.entity, url: AMANA.TABUK.url, role: 'اشتراطات أمانة تبوك' },
     ],
-        expertReviewer: EXPERTS.ALZUWAYED,
+        expertReviewer: EXPERTS.ALSHABNAN,
     expertCitations: [
         { expert: EXPERTS.ALZUWAYED.name, quote: 'نقل أجهزة تبوك = أخطر نقل سعودي. -2°م = كمبريسور يتجمد + PVAc يتجمد. + ثلوج حقيقية. + 250 كم. شاحنة مغطاة + EPE + 6-8 ساعات = الحد الأدنى.', source: 'هيئة النقل — نقل الأجهزة في مناطق الصقيع' },
     ],

@@ -43,7 +43,7 @@ export const override: PageOverride = {
         { ...GOV.LOGISTI, role: 'بيان حمولة رسمي — توثيق النقل بين المدن' },
         { entity: AMANA.HAIL.entity, url: AMANA.HAIL.url, role: 'اشتراطات أمانة حائل' },
     ],
-    expertReviewer: EXPERTS.ALZUWAYED,
+    expertReviewer: EXPERTS.ALSHABNAN,
     expertCitations: [
         { expert: EXPERTS.ALZUWAYED.name, quote: 'نقل العفش في حائل يحتاج بروتوكولاً رباعياً — الصدمة الحرارية (صيف/شتاء) + المسافات الطويلة (155 كم+) + العواصف المفاجئة + الصقيع = أربعة مخاطر متزامنة لا تجدها في أي مدينة أخرى. الشاحنة المغطاة + EPE + Ratchet = الحد الأدنى.', source: 'هيئة النقل — اشتراطات نقل الأمتعة في المناطق القارية' },
     ],

@@ -78,6 +78,8 @@ export const override: PageOverride = {
 
 
 
+        verificationBadges: [{ badge: '✔️ شركة مرخصة من بلدي', authority: 'وزارة البلديات', icon: 'shield-check' }],
+
     equipment: [
         { name: 'مكينة جلي أرضيات صناعية', use: 'تنظف + تفرك + تشفط في خطوة واحدة — 10x أسرع من المسح اليدوي' },
         { name: 'منظف أرضيات pH محايد', use: 'يزيل الأوساخ بدون إتلاف الرخام أو السيراميك أو الجراوت' },
@@ -102,6 +104,8 @@ export const override: PageOverride = {
             source: 'خبير تشطيبات',
         },
     ],
+
+        saudiRegulations: [REGULATIONS.BALADI_HEALTH],
 
     counterNarratives: [
         { myth: 'ممسحة وكلور = أرضية نظيفة', truth: 'الكلور ينظف لكن: يُتلف الرخام + يبهت الجرانيت + يذيب الجراوت. في جدة: ملوحة الهواء تترك طبقة NaCl على الأرضيات — تحتاج منظف pH محايد (6.5-7.5) يذيب الملح بدون ضرر' },

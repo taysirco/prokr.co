@@ -67,6 +67,8 @@ export const override: PageOverride = {
         'الكلور ممنوع على الخشب الطبيعي — يبيّض اللون ويتلف الطلاء. منظف pH محايد فقط',
     ],
 
+        verificationBadges: [{ badge: '✔️ شركة مرخصة من بلدي', authority: 'وزارة البلديات', icon: 'shield-check' }],
+
     equipment: [
         { name: 'جهاز بخار جاف متخصص للأثاث (150°م)', use: 'ينظف الأقمشة والخشب المعالج بدون تبليل — يقتل العث والبكتيريا في العمق' },
         { name: 'مرطب جلد احترافي (Leather Conditioner)', use: 'يعيد المرونة للجلد المتشقق من ملوحة جدة — يمنع التقشر 3 أشهر' },
@@ -93,6 +95,8 @@ export const override: PageOverride = {
             source: 'مؤلف موسوعة أخطاء في البناء',
         },
     ],
+
+        saudiRegulations: [REGULATIONS.BALADI_HEALTH],
 
     counterNarratives: [
         { myth: 'ملمع الأثاث الرش (Spray Polish) يكفي', truth: 'ملمع الرش: لمعان مؤقت 48 ساعة + يجمع الغبار أسرع (طبقة لزجة). التنظيف الاحترافي: يزيل الرطوبة المخزنة في الخشب + يضيف Wood Sealer يحمي 6 أشهر + يفحص علامات النمل الأبيض. فرق النتيجة: مؤقت vs دائم' },

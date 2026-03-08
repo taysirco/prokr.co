@@ -43,7 +43,7 @@ export const override: PageOverride = {
         { ...GOV.NWC, role: 'معايير الصرف الصحي ومحطات المعالجة المعتمدة' },
         { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
-    expertReviewer: EXPERTS.SHIHATA,
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
         { expert: EXPERTS.SHIHATA.name, quote: 'في القصيم: 50% من حالات الامتلاء السريع للبيارات سببها جذور نخيل تسد أنابيب التصريف. الشفط بدون فحص CCTV = معالجة مؤقتة. كشف الجذور وقصها + حاجز HDPE = حل جذري يُقلل الشفط 70%.', source: 'أنظمة الصرف والمياه — الكود السعودي SBC' },
         { expert: EXPERTS.ALJUND.name, quote: 'غاز H₂S في بيارات القصيم الحارة خطير جداً — 300 ppm يسبب فقدان وعي فوري. شركات الشفط العشوائية لا تملك كاشف غازات. اختر شركة مرخصة تملك معدات سلامة كاملة.', source: 'موسوعة أخطاء في البناء — الفصل السابع: أخطاء الصرف' },

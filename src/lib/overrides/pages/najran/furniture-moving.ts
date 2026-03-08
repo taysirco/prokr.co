@@ -43,7 +43,7 @@ export const override: PageOverride = {
         { ...GOV.CIVILDEFENSE, role: 'إنذارات السيول وتحذيرات الطرق المقطوعة بنجران' },
         { entity: AMANA.NAJRAN.entity, url: AMANA.NAJRAN.url, role: 'اشتراطات النقل والسلامة بمنطقة نجران' },
     ],
-    expertReviewer: EXPERTS.ALZUWAYED,
+    expertReviewer: EXPERTS.ALSHABNAN,
     expertCitations: [
         { expert: EXPERTS.ALZUWAYED.name, quote: 'نقل عفش نجران = 4 مخاطر لا تجتمع في غيرها: سيل أكبر وادي + 60°م داخل المُغلقة + 280 كم اهتزاز + كوارتز يومي. مُغلقة + تهوية + EPE + Ratchet + وعي بالطقس = الحد الأدنى الآمن.', source: 'هيئة النقل — النقل في مناطق الأودية الكبرى' },
     ],

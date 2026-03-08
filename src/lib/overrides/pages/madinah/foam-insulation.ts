@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.SCE, role: 'كفاءة الطاقة — العزل يُخفض فاتورة الكهرباء 30-40%' },
         { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'اشتراطات عزل المباني الجديدة والقائمة', acronym: 'أمانة المدينة' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALJUND,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'في المدينة المنورة: Open-Cell = كارثة. حرارة 80°م تُبخّر المياه الممتصة ← يتفتت. Closed-Cell فقط + UV Coat خلال 24 ساعة = القاعدة التي لا تقبل استثناء.', source: 'نصائح هندسية — عزل المناطق الحارة' },
     ],

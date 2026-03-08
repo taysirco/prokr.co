@@ -43,7 +43,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص مقاولي العزل' },
         { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'حراري الخرج: ΔT 48°م أعلى فارق. أعلى عائد. حراري فقط. SBC 601.', source: 'موسوعة أخطاء — عزل صحراوي' },
     ],

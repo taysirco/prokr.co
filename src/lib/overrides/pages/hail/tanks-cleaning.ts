@@ -43,7 +43,7 @@ export const override: PageOverride = {
         { ...GOV.NWC, role: 'معايير جودة مياه الشرب' },
         { entity: AMANA.HAIL.entity, url: AMANA.HAIL.url, role: 'اشتراطات أمانة حائل' },
     ],
-    expertReviewer: EXPERTS.ALMISNID,
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
         { expert: EXPERTS.ALMISNID.name, quote: 'خزان حائل يتكلس 2-3× أسرع من الرياض بسبب التبخر + العُسرة. + التكاثف الصقيعي يُلوّث. + الأنابيب تتجمد. ثلاثي قاري فريد يحتاج Descaling كل 6 أشهر + تعقيم + عزل أنابيب.', source: 'جغرافيا المناخ — تأثير المناخ القاري على البنية التحتية المائية' },
     ],

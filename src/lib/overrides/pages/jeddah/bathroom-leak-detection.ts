@@ -43,7 +43,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات كشف تسربات' },
         { entity: AMANA.JEDDAH.entity, url: AMANA.JEDDAH.url, role: 'اشتراطات أمانة جدة' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALJUND,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'حمامات جدة أخطر بيئة تسرب في السعودية. 48 ساعة بين التسرب والعفن الأسود. في الرياض: يجف. في جدة: يتكاثر. الكشف الفوري ليس خياراً — إنه إلزام صحي.', source: 'نصائح هندسية — مباني ساحلية' },
     ],

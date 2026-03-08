@@ -67,6 +67,8 @@ export const override: PageOverride = {
         'بعد الجلي: امنع المشي 4-6 ساعات حتى يجف التشميع. المشي على تشميع رطب = خطوط دائمة',
     ],
 
+        verificationBadges: [{ badge: '✔️ شركة مرخصة من بلدي', authority: 'وزارة البلديات', icon: 'shield-check' }],
+
     equipment: [
         { name: 'مكينة جلي دوّارة بألماس (Diamond Pad Grinder)', use: 'تصقل سطح البلاط بأحجار ماسية — تزيل 0.1-0.3 مم من الطبقة الباهتة. 3 مراحل: خشن → وسط → ناعم' },
         { name: 'منظف فواصل Grout متخصص', use: 'محلول حمضي خفيف pH 5-6 ينظف الفواصل المتغيرة اللون بدون إتلاف البلاط المحيط' },
@@ -83,7 +85,7 @@ export const override: PageOverride = {
         { entity: AMANA.JEDDAH.entity, url: AMANA.JEDDAH.url, role: 'اشتراطات أمانة جدة' },
     ],
 
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
 
     expertCitations: [
         {
@@ -92,6 +94,8 @@ export const override: PageOverride = {
             source: 'خبير جودة تشطيبات وعزل',
         },
     ],
+
+        saudiRegulations: [REGULATIONS.BALADI_HEALTH],
 
     counterNarratives: [
         { myth: 'التلميع رفاهية — الأرضية نظيفة تكفي', truth: 'التلميع يغلق مسامات البلاط = يمنع تسرب السوائل والبكتيريا. في جدة: الرطوبة تتسرب في المسامات المفتوحة ← عفن Aspergillus تحت السطح خلال 3-4 أسابيع. التلميع = حماية صحية وليس تجميلية' },

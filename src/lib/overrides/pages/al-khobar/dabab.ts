@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.TGA, role: 'ترخيص النقل' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات النقل بالشرقية' },
     ],
-    expertReviewer: EXPERTS.ALZUWAYED,
+    expertReviewer: EXPERTS.ALSHABNAN,
     expertCitations: [
         { expert: EXPERTS.ALZUWAYED.name, quote: 'دباب الخبر = ساحلي: NaCl يصل في دقائق + 85-95% تكثّف على إلكترونيات + Sabkha. غطاء + Silica + EPE = بروتوكول ساحلي.', source: 'هيئة النقل — النقل الخفيف في البيئات الساحلية' },
     ],

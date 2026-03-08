@@ -43,7 +43,7 @@ export const override: PageOverride = {
         { ...GOV.LOGISTI, role: 'بيان حمولة رسمي لنقل بين المدن' },
         { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
-    expertReviewer: EXPERTS.ALZUWAYED,
+    expertReviewer: EXPERTS.ALSHABNAN,
     expertCitations: [
         { expert: EXPERTS.ALZUWAYED.name, quote: 'نقل الأجهزة الثقيلة بين مدن القصيم (25-85 كم) يحتاج تثبيتاً ميكانيكياً بـ Ratchet وعزلاً حرارياً. الحبل العادي ينفك والحرارة تُتلف الإلكترونيات. حادثة انزلاق واحدة تُكلف أكثر من 100 رحلة مُؤمّنة.', source: 'هيئة النقل — اشتراطات نقل الأمتعة والأجهزة' },
     ],

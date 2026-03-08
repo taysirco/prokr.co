@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.TGA, role: 'ترخيص النقل البري — تأمين الحمولة إلزامي' },
         { entity: AMANA.HAIL.entity, url: AMANA.HAIL.url, role: 'اشتراطات أمانة حائل' },
     ],
-    expertReviewer: EXPERTS.ALZUWAYED,
+    expertReviewer: EXPERTS.ALSHABNAN,
     expertCitations: [
         { expert: EXPERTS.ALZUWAYED.name, quote: 'نقل الأجهزة الثقيلة في حائل = 4 مخاطر: Thermal Shock على زيت الكمبريسور + 155 كم اهتزاز + عواصف مفاجئة + صقيع يجمد الزيت ← EPE + Ratchet + غطاء + فترة تأقلم = الحد الأدنى.', source: 'هيئة النقل — اشتراطات نقل الأجهزة الكهربائية في المناطق القارية' },
     ],

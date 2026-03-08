@@ -78,6 +78,8 @@ export const override: PageOverride = {
 
 
 
+        verificationBadges: [{ badge: '✔️ شركة مرخصة من بلدي', authority: 'وزارة البلديات', icon: 'shield-check' }],
+
     equipment: [
         { name: 'جهاز بخار سيارات محمول', use: 'بخار 150°م — ينظف داخلية السيارة ويقتل البكتيريا بدون ماء' },
         { name: 'مكنسة سيارات بفرش دوّارة', use: 'تشفط الغبار والرمل من شقوق المقاعد وأسفل السجاد' },
@@ -102,6 +104,8 @@ export const override: PageOverride = {
             source: 'تحليل مناخي',
         },
     ],
+
+        saudiRegulations: [REGULATIONS.BALADI_HEALTH],
 
     counterNarratives: [
         { myth: 'غسيل السيارة بالماء يكفي', truth: 'الماء يزيل الغبار. لكن: ملح NaCl الساحلي في جدة يتكرب على الطلاء ويسبب أكسدة (Oxidation). بخار السيارة يذيب الملح + ينظف الداخلية بدون كيماويات + يقتل البكتيريا في المقاعد والمكيف' },

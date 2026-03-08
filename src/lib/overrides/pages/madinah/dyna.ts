@@ -81,7 +81,7 @@ export const override: PageOverride = {
         { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'ضمان التزام أسطول النقل بالمسارات المحددة في المخططات الحضرية دون إعاقة للأحياء', acronym: 'أمانة المدينة' },
     ],
 
-    expertReviewer: EXPERTS.ALZUWAYED,
+    expertReviewer: EXPERTS.ALSHABNAN,
 
     expertCitations: [
         {

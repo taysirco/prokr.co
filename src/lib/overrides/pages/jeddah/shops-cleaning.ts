@@ -66,6 +66,8 @@ export const override: PageOverride = {
         'الواجهات فوق 3 أمتار: لا تستخدم سلم عادي — رافعة أو حبال أمان إلزامية',
     ],
 
+        verificationBadges: [{ badge: '✔️ شركة مرخصة من بلدي', authority: 'وزارة البلديات', icon: 'shield-check' }],
+
     equipment: [
         { name: 'مكينة جلي أرضيات Walk-Behind Scrubber', use: 'تنظف وتجفف الأرضية في خطوة واحدة — المحل يفتح فوراً بعد التنظيف' },
         { name: 'محلول إزالة أملاح واجهات (Glass Descaler)', use: 'يذيب ملح NaCl المتصلب على الزجاج بدون خدش — نتيجة مرآة' },
@@ -92,6 +94,8 @@ export const override: PageOverride = {
             source: 'تحليل مناخي',
         },
     ],
+
+        saudiRegulations: [REGULATIONS.BALADI_HEALTH],
 
     counterNarratives: [
         { myth: 'العامل ينظف المحل يومياً — يكفي', truth: 'التنظيف اليومي للأرضيات والواجهات: ضروري. لكن: أنظمة التكييف + الأسقف + الأرفف العليا + خلف المنتجات = تحتاج تنظيف عميق شهري بمعدات صناعية. الشهادة الصحية من بلدي تتطلب تنظيف احترافي موثق' },

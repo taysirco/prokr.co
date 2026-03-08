@@ -41,7 +41,7 @@ export const override: PageOverride = {
     trustAnchors: [{ ...GOV.TGA, role: 'ترخيص النقل البري' },
         { entity: AMANA.JAZAN.entity, url: AMANA.JAZAN.url, role: 'اشتراطات أمانة جازان' },
     ],
-        expertReviewer: EXPERTS.ALZUWAYED,
+        expertReviewer: EXPERTS.ALSHABNAN,
     expertCitations: [
         { expert: EXPERTS.ALZUWAYED.name, quote: 'نقل جازان: أخطر نقل استوائي. العفن ينتقل بين الأثاث في 80%. MDF ينتفخ. الملح يُصدئ. PVAc يلين. شاحنة مُغلقة + مُهوّأة + فحص عفن = الحد الأدنى.', source: 'هيئة النقل — النقل في المناطق الاستوائية' },
     ],

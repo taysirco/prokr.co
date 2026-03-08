@@ -45,7 +45,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'اشتراطات بلدية لصيانة الخزانات' },
         { entity: AMANA.ASIR.entity, url: AMANA.ASIR.url, role: 'اشتراطات أمانة عسير' },
     ],
-    expertReviewer: { name: EXPERTS.ALJUND.name, title: EXPERTS.ALJUND.title, credential: EXPERTS.ALJUND.credential, profileUrl: EXPERTS.ALJUND.profileUrl },
+    expertReviewer: { name: EXPERTS.ALMOHAIMED.name, title: EXPERTS.ALMOHAIMED.title, credential: EXPERTS.ALMOHAIMED.credential, profileUrl: EXPERTS.ALMOHAIMED.profileUrl },
     expertCitations: [{ expert: EXPERTS.ALJUND.name, quote: 'خزانات أبها تُكوّن Biofilm أسرع من أي مدينة سعودية — المناخ المعتدل والرطوبة = طحالب + بكتيريا في أسابيع. الكلور وحده لا يخترق Biofilm ← الفرك الميكانيكي قبل التعقيم = إلزامي. وفحص بكتيري بعد الأمطار = خط أمان ضد التسرب الجوفي.', source: EXPERTS.ALJUND.title, url: EXPERTS.ALJUND.profileUrl }],
     saudiRegulations: [REGULATIONS.NWC_REPORT, REGULATIONS.BALADI_HEALTH],
     verificationBadges: [{ badge: '✔️ فرك Biofilm ميكانيكي', authority: 'ليس كلور فقط', icon: 'shield-check' }, { badge: '✔️ فحص بكتيري Coliform', authority: 'كشف تلوث جوفي', icon: 'badge-check' }],

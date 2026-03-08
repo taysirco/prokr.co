@@ -43,7 +43,7 @@ export const override: PageOverride = {
  role: 'اشتراطات نظافة المطابخ التجارية' }    ,
         { entity: AMANA.TAIF.entity, url: AMANA.TAIF.url, role: 'اشتراطات أمانة الطائف' },
     ],
-        expertReviewer: EXPERTS.ALMISNID,
+        expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [{ expert: EXPERTS.ALMISNID.name, quote: 'أفران الطائف تتكربن أسرع بسبب ساعات التشغيل الشتوية الطويلة. الخبز اليومي + المعجنات + "تدفئة المطبخ بالفرن" = 2-3× ساعات عمل أكثر من مدن حارة. تنظيف كل 2-3 أشهر = وقاية من PAH وتوفير طاقة.',
             source: EXPERTS.ALMISNID.title }],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],

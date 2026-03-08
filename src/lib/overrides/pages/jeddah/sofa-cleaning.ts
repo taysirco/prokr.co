@@ -79,6 +79,8 @@ export const override: PageOverride = {
     ],
 
 
+        verificationBadges: [{ badge: '✔️ شركة مرخصة من بلدي', authority: 'وزارة البلديات', icon: 'shield-check' }],
+
     equipment: [
         { name: 'جهاز بخار جاف Dupray Hill', use: 'بخار 170°م يقتل العث والبكتيريا في عمق الكنب بدون تبليل' },
         { name: 'مزيل بقع إنزيمي Bio-Enzyme', use: 'يحلل البقع العضوية (طعام، حليب، دم) بيولوجياً — آمن للأطفال' },
@@ -104,6 +106,8 @@ export const override: PageOverride = {
             source: 'تحليل مناخي',
         },
     ],
+
+        saudiRegulations: [REGULATIONS.BALADI_HEALTH],
 
     counterNarratives: [
         { myth: 'المكنسة الكهربائية تكفي لتنظيف الكنب', truth: 'المكنسة تزيل الغبار السطحي فقط. عث الغبار Dermatophagoides (0.3 مم) يتغلغل في ألياف النسيج — لا يخرج بالشفط. في جدة (رطوبة 70%): العث يتكاثر أسرع بمرتين. البخار 150°م = الطريقة الوحيدة لقتله' },

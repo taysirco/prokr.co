@@ -42,7 +42,7 @@ export const override: PageOverride = {
     trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص مستودعات التخزين — اشتراطات سلامة' },
         { entity: AMANA.ASIR.entity, url: AMANA.ASIR.url, role: 'اشتراطات أمانة عسير' },
     ],
-        expertReviewer: { name: EXPERTS.ALZUWAYED.name, title: EXPERTS.ALZUWAYED.title, credential: EXPERTS.ALZUWAYED.credential, profileUrl: EXPERTS.ALZUWAYED.profileUrl },
+        expertReviewer: { name: EXPERTS.ALMOHAIMED.name, title: EXPERTS.ALMOHAIMED.title, credential: EXPERTS.ALMOHAIMED.credential, profileUrl: EXPERTS.ALMOHAIMED.profileUrl },
     expertCitations: [{ expert: EXPERTS.ALZUWAYED.name, quote: 'تخزين في أبها بدون تحكم بالرطوبة = مقبرة أثاث. Dehumidifier صناعي 24/7 + Shrink Wrap + سيليكا = الثلاثي الإلزامي. وفحص شهري ← لأن Dehumidifier يتعطل أحياناً ← شهر واحد بدونه = بداية عفن.', source: EXPERTS.ALZUWAYED.title, url: EXPERTS.ALZUWAYED.profileUrl }],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
     verificationBadges: [{ badge: '✔️ Dehumidifier 24/7', authority: 'رطوبة <55%', icon: 'shield-check' }, { badge: '✔️ Shrink + Silica', authority: 'حماية مزدوجة', icon: 'badge-check' }],

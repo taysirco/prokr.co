@@ -92,6 +92,8 @@ export const override: PageOverride = {
     ],
 
 
+        verificationBadges: [{ badge: '✔️ شركة مرخصة من بلدي', authority: 'وزارة البلديات', icon: 'shield-check' }],
+
     equipment: [
         { name: 'مكنسة صناعية HEPA Filter', use: 'شفط الغبار الدقيق PM2.5 والعث — لا تعيد نشره في الهواء' },
         { name: 'جهاز بخار Karcher SC5', use: 'بخار 150°م للأرضيات والحمامات — يقتل 99.9% بكتيريا بدون كيماويات' },
@@ -106,13 +108,13 @@ export const override: PageOverride = {
     trustAnchors: [
         { entity: 'هيئة الغذاء والدواء', acronym: 'SFDA', url: 'https://sfda.gov.sa', role: 'اعتماد مواد التنظيف والتعقيم المستخدمة' },
         { entity: 'وزارة الموارد البشرية', url: 'https://hrsd.gov.sa', role: 'تنظيم عمالة التنظيف والتأمين الصحي' },
-    ],
+        { entity: AMANA.JEDDAH.entity, url: AMANA.JEDDAH.url, role: 'اشتراطات أمانة جدة' }],
 
     saudiRegulations: [
         { code: 'نظام العمل — المادة 40', description: 'إلزام صاحب العمل بتأمين صحي لكل عامل', url: 'https://hrsd.gov.sa' },
     ],
 
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
 
     expertCitations: [
         {

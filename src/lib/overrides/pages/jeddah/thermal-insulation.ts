@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.MOENERGY, role: 'كفاءة طاقة' },
         { entity: AMANA.JEDDAH.entity, url: AMANA.JEDDAH.url, role: 'اشتراطات أمانة جدة' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'العزل الحراري في جدة عملية معقدة. العزل الخاطئ يُنبت عفناً بدل أن يوفر كهرباء. Closed-Cell خارجي + تهوية = المعادلة الصحيحة.', source: 'أخطاء في البناء — عزل الساحل' },
     ],
@@ -53,6 +53,10 @@ export const override: PageOverride = {
         { name: 'Closed-Cell SPF', use: 'عزل + Vapor Barrier بطبقة واحدة' },
         { name: 'Mechanical Ventilation', use: 'يُزيل Latent Load — الرطوبة الزائدة' },
     ],
+        hiddenObjections: [
+        { fear: 'العزل مكلف — مش متأكد يستاهل.', solution: 'عزل SBC 601 يوفر 30-40% كهرباء سنوياً. يسترد تكلفته خلال 2-3 سنوات.' },
+    ],
+
     counterNarratives: [
         { myth: 'عزل داخلي أسهل.', truth: 'في جدة: أسهل ≠ أصح. تكثّف مخفي + عفن. ETICS أفضل.' },
         { myth: 'العزل يوفر 40%.', truth: 'في جدة: 15-20% (Sensible فقط). Latent Load يحتاج تهوية.' },

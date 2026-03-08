@@ -43,7 +43,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'رخصة تشغيل المطعم — اشتراطات النظافة والسلامة' },
         { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
-    expertReviewer: EXPERTS.ALMISNID,
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'مداخن مطاعم القصيم تحتاج تنظيفاً أكثر تكراراً بسبب الغبار الزراعي الذي يختلط مع الشحوم ويخلق مزيجاً أسهل اشتعالاً. والكلس العالي في المياه يسد فلاتر الشفط أسرع. التنظيف الشهري = الحد الأدنى للسلامة.', source: 'موسوعة أخطاء في البناء — أنظمة التهوية والمداخن التجارية' },
     ],

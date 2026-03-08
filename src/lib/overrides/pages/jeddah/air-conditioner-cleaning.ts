@@ -80,6 +80,8 @@ export const override: PageOverride = {
     ],
 
 
+        verificationBadges: [{ badge: '✔️ شركة مرخصة من بلدي', authority: 'وزارة البلديات', icon: 'shield-check' }],
+
     equipment: [
         { name: 'جهاز ضغط مياه خاص بالمبخر (Coil Jet)', use: 'ينظف المبخر (Evaporator Coil) بضغط محسوب لا يتلف الريش' },
         { name: 'مزيل ملح ومعادن (Descaler Spray)', use: 'يذيب ترسبات NaCl الساحلية المتصلبة على المبخر والفلاتر' },
@@ -105,6 +107,8 @@ export const override: PageOverride = {
             source: 'خبير جودة تشطيبات',
         },
     ],
+
+        saudiRegulations: [REGULATIONS.BALADI_HEALTH],
 
     counterNarratives: [
         { myth: 'تنظيف الفلتر يكفي', truth: 'الفلتر = 20% من المشكلة. المبخر (Evaporator Coil) يتراكم عليه ملح + عفن + غبار = 80% من فقدان الكفاءة. في جدة: ملح NaCl يتصلب على المبخر وبدون غسيل ضغط لا يخرج. الفلتر النظيف + مبخر متسخ = تبريد ضعيف + فاتورة عالية' },

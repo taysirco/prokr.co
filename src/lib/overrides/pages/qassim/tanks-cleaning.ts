@@ -43,7 +43,7 @@ export const override: PageOverride = {
         { ...GOV.MOH, role: 'اشتراطات النظافة والتعقيم — حماية الصحة العامة' },
         { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
-    expertReviewer: EXPERTS.SHIHATA,
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
         { expert: EXPERTS.SHIHATA.name, quote: 'في القصيم: 80% من خزانات المنازل فيها كلس 5 مم+ يُخفي Biofilm بكتيري. الغسل بالماء بدون إزالة ميكانيكية = تنظيف وهمي. أزل الكلس أولاً ← عقّم ← افحص.', source: 'أنظمة الصرف والمياه — معايير NWC' },
         { expert: EXPERTS.ALJUND.name, quote: 'شقوق مخفية تحت الكلس تُسبب تسرباً صامتاً لسنوات. التنظيف الميكانيكي يكشفها ← فرصة للإصلاح والعزل قبل أن يتفاقم الضرر.', source: 'موسوعة أخطاء في البناء — عزل الخزانات' },

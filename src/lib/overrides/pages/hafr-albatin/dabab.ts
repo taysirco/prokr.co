@@ -41,7 +41,7 @@ export const override: PageOverride = {
         { ...GOV.TGA, role: 'ترخيص النقل' },
         { entity: AMANA.HAFR.entity, url: AMANA.HAFR.url, role: 'اشتراطات النقل بحفر الباطن' },
     ],
-    expertReviewer: EXPERTS.ALZUWAYED,
+    expertReviewer: EXPERTS.ALSHABNAN,
     expertCitations: [
         { expert: EXPERTS.ALZUWAYED.name, quote: 'دباب حفر الباطن: SiO₂ عواصف + ΔT 54°م + UV. لا تكثّف (ميزة!). غطاء + EPE + توقيت.', source: 'هيئة النقل — النقل القاري' },
     ],

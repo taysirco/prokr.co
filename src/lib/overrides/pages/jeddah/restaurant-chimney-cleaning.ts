@@ -66,6 +66,8 @@ export const override: PageOverride = {
         'لا تحاول تنظيف الدكت بنفسك — ارتفاع + مساحة ضيقة + دهون ساخنة = خطر حقيقي. متخصصون فقط',
     ],
 
+        verificationBadges: [{ badge: '✔️ شركة مرخصة من بلدي', authority: 'وزارة البلديات', icon: 'shield-check' }],
+
     equipment: [
         { name: 'روبوت تنظيف دكتات (Duct Cleaning Robot)', use: 'يدخل مجرى الشفاط بفرش دوّارة — يصل أعماق 10+ أمتار لا يصلها الإنسان' },
         { name: 'كاميرا فحص دكتات (CCTV Duct Camera)', use: 'تصوير قبل/بعد للدكت — توثيق للعميل والدفاع المدني 998' },
@@ -83,7 +85,7 @@ export const override: PageOverride = {
         { entity: AMANA.JEDDAH.entity, url: AMANA.JEDDAH.url, role: 'اشتراطات أمانة جدة' },
     ],
 
-    expertReviewer: EXPERTS.ALMISNID,
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
@@ -92,6 +94,8 @@ export const override: PageOverride = {
             source: 'خبير جودة تشطيبات وعزل',
         },
     ],
+
+        saudiRegulations: [REGULATIONS.BALADI_HEALTH],
 
     counterNarratives: [
         { myth: 'المدخنة تشتغل تمام — ما تحتاج تنظيف', truth: 'الشفاط يشتغل حتى مع 3 سم دهون — بس بكفاءة 50% أقل (روائح أكثر + حرارة أعلى في المطبخ). المشكلة ليست الكفاءة — بل الأمان: 3 سم دهون = شرارة واحدة = حريق. الدفاع المدني لا يفحص الكفاءة — يفحص السلامة' },

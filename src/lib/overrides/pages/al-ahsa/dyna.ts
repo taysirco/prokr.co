@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.TGA, role: 'ترخيص النقل البري — تأمين الحمولة' },
         { entity: AMANA.AHSA.entity, url: AMANA.AHSA.url, role: 'اشتراطات النقل بمحافظة الأحساء' },
     ],
-    expertReviewer: EXPERTS.ALZUWAYED,
+    expertReviewer: EXPERTS.ALSHABNAN,
     expertCitations: [
         { expert: EXPERTS.ALZUWAYED.name, quote: 'دينا الأحساء = 3 تحديات: 60°م داخلية + طرق مزارع ثقيلة + 40 كم. مُغلقة + تهوية + Ratchet + Transit Bolts = الحد الأدنى. الطرق الترابية تُضاعف خطر الاهتزاز.', source: 'هيئة النقل — النقل في المناطق الزراعية' },
     ],

@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.TGA, role: 'ترخيص نقل الأثاث' },
         { entity: AMANA.HAFR.entity, url: AMANA.HAFR.url, role: 'اشتراطات النقل بحفر الباطن' },
     ],
-    expertReviewer: EXPERTS.ALZUWAYED,
+    expertReviewer: EXPERTS.ALSHABNAN,
     expertCitations: [
         { expert: EXPERTS.ALZUWAYED.name, quote: 'نقل حفر الباطن = قاري: ΔT 54°م + مسافات 500 كم + SiO₂ + UV. لا تكثّف (ميزة!). تغليف + توقيت + تخطيط.', source: 'هيئة النقل — النقل القاري' },
     ],

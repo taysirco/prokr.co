@@ -79,6 +79,8 @@ export const override: PageOverride = {
 
 
 
+        verificationBadges: [{ badge: '✔️ تعقيم معايير NWC', authority: 'شركة المياه الوطنية', icon: 'shield-check' }],
+
     equipment: [
         { name: 'روبوت تنظيف مسبح (Pool Robot)', use: 'ينظف جدران وأرضية المسبح آلياً — يشفط الطحالب والأوساخ' },
         { name: 'جهاز فحص pH/Chlorine الرقمي', use: 'يقيس مستوى الكلور والحموضة بدقة — يضمن مياه صحية' },
@@ -104,6 +106,8 @@ export const override: PageOverride = {
             source: 'خبير جودة تشطيبات',
         },
     ],
+
+        saudiRegulations: [REGULATIONS.BALADI_HEALTH],
 
     counterNarratives: [
         { myth: 'كلور المسبح يكفي للنظافة', truth: 'الكلور يقتل البكتيريا في الماء — لكن: جدران المسبح تتراكم عليها طحالب + كلس + ملح. في جدة: الرطوبة + الحرارة = نمو طحالب 3x أسرع. تنظيف فيزيائي لجدران المسبح كل شهر + موازنة pH أسبوعياً = مسبح صحي' },

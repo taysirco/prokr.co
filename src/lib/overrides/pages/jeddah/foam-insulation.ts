@@ -54,6 +54,10 @@ export const override: PageOverride = {
         { name: 'Anti-Fungal Coating', use: 'يحيِّد Stachybotrys على السطح' },
         { name: 'SBS Modified Bitumen', use: 'حزام مائي تحت الفوم — سيول' },
     ],
+        hiddenObjections: [
+        { fear: 'العزل مكلف — مش متأكد يستاهل.', solution: 'عزل SBC 601 يوفر 30-40% كهرباء سنوياً. يسترد تكلفته خلال 2-3 سنوات.' },
+    ],
+
     counterNarratives: [
         { myth: 'أي فوم يعزل.', truth: 'Open-Cell يفشل من الهواء في جدة. Closed-Cell 40+ = الوحيد المقبول.' },
         { myth: 'UV أهم من Anti-Fungal.', truth: 'في جدة: العفن أخطر من UV (الرطوبة تفلتر UV طبيعياً). Anti-Fungal = الأولوية.' },

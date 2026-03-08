@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.TGA, role: 'ترخيص النقل الثقيل' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات النقل بالشرقية' },
     ],
-    expertReviewer: EXPERTS.ALZUWAYED,
+    expertReviewer: EXPERTS.ALSHABNAN,
     expertCitations: [
         { expert: EXPERTS.ALZUWAYED.name, quote: 'دينا الظهران = مزدوجة+صناعية: NaCl+SiO₂ + أرامكو. Tarpaulin + VCI + تصاريح + Ratchet = بروتوكول.', source: 'هيئة النقل — النقل الثقيل المزدوج' },
     ],

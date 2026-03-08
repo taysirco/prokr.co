@@ -45,7 +45,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'كود البناء — معالجة أساسات ضد النمل' },
         { entity: AMANA.ASIR.entity, url: AMANA.ASIR.url, role: 'اشتراطات أمانة عسير' },
     ],
-    expertReviewer: { name: EXPERTS.ALKHODAIRY.name, title: EXPERTS.ALKHODAIRY.title, credential: EXPERTS.ALKHODAIRY.credential, profileUrl: EXPERTS.ALKHODAIRY.profileUrl },
+    expertReviewer: { name: EXPERTS.ALJUND.name, title: EXPERTS.ALJUND.title, credential: EXPERTS.ALJUND.credential, profileUrl: EXPERTS.ALJUND.profileUrl },
     expertCitations: [{ expert: EXPERTS.ALKHODAIRY.name, quote: 'أبها = أخطر بيئة نمل أبيض في المملكة. التربة لا تجف أبداً = الأنفاق مستمرة = الهجوم لا يتوقف. والعمارة العسيرية التقليدية بأخشابها المكشوفة = وليمة مفتوحة. حقن Fipronil + طعوم Sentricon + بوراكس للأخشاب = الثلاثي الوحيد الذي يحمي.', source: EXPERTS.ALKHODAIRY.title, url: EXPERTS.ALKHODAIRY.profileUrl }],
     saudiRegulations: [REGULATIONS.GHAD_SYSTEM],
     verificationBadges: [{ badge: '✔️ حقن Fipronil + طعوم', authority: 'ثنائي إلزامي', icon: 'shield-check' }, { badge: '✔️ بوراكس للأخشاب', authority: 'حماية وقائية', icon: 'badge-check' }],

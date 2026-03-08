@@ -41,7 +41,7 @@ export const override: PageOverride = {
         { ...GOV.TGA, role: 'ترخيص النقل' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات النقل بالشرقية' },
     ],
-    expertReviewer: EXPERTS.ALZUWAYED,
+    expertReviewer: EXPERTS.ALSHABNAN,
     expertCitations: [
         { expert: EXPERTS.ALZUWAYED.name, quote: 'دباب الجبيل: NaCl+VOC + 98% تكثّف = أخطر على إلكترونيات. Silica Gel + VCI + Stretch Marine.', source: 'هيئة النقل — النقل الصناعي-الساحلي' },
     ],

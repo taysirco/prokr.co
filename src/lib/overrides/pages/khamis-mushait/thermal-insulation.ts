@@ -43,7 +43,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص مقاولي العزل' },
         { entity: AMANA.ASIR.entity, url: AMANA.ASIR.url, role: 'اشتراطات أمانة عسير' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'عزل خميس: Closed-Cell مزدوج. أمطار+ضباب. Open-Cell كارثة. تدفئة الأولوية.', source: 'موسوعة أخطاء — عزل جبلي' },
     ],

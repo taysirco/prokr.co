@@ -43,7 +43,7 @@ export const override: PageOverride = {
         { ...GOV.NWC, role: 'معايير شبكات الصرف والتصريف' },
         { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
-    expertReviewer: EXPERTS.SHIHATA,
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
         { expert: EXPERTS.SHIHATA.name, quote: 'انسداد المجاري في القصيم مركّب: جذور + كلس + شحوم. السلك العادي يحل 10% فقط (يفتح ممراً). Hydro-Jetting 150 بار يُنظف ← CCTV يكشف ← Descaling يُذيب = حل 90% من الحالات لمدة 6-12 شهر.', source: 'أنظمة الصرف والمياه — الكود السعودي SBC' },
         { expert: EXPERTS.ALJUND.name, quote: 'أخطر خطأ في تسليك مجاري القصيم: كيماويات قوية بدون معرفة نوع الأنبوب. حمض كبريتيك مركّز يُذيب وصلات PVC ← تسرب صرف تحت المبنى. اترك الكيمياء للمتخصص.', source: 'موسوعة أخطاء في البناء — الفصل السابع: أخطاء الصرف' },

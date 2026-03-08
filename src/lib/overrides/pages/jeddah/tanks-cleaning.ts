@@ -81,6 +81,8 @@ export const override: PageOverride = {
     ],
 
 
+        verificationBadges: [{ badge: '✔️ تعقيم معايير NWC', authority: 'شركة المياه الوطنية', icon: 'shield-check' }],
+
     equipment: [
         { name: 'جهاز ضغط مياه للخزانات (Tank Pressure Washer)', use: 'ينظف جدران الخزان بضغط مياه — يزيل الطحالب والترسبات' },
         { name: 'مادة تعقيم كلورين (Chlorine Solution)', use: 'تعقيم بتركيز 0.5-1 PPM حسب معايير NWC — يقتل البكتيريا بدون ضرر' },
@@ -94,7 +96,7 @@ export const override: PageOverride = {
     trustAnchors: [
         { entity: 'شركة المياه الوطنية', acronym: 'NWC', url: 'https://www.nwc.com.sa', role: 'معايير جودة مياه الخزانات' },
         { entity: 'أمانة جدة', url: 'https://www.jeddah.gov.sa', role: 'اشتراط الشهادة الصحية للخزانات كل 6 أشهر' },
-    ],
+        { entity: AMANA.JEDDAH.entity, url: AMANA.JEDDAH.url, role: 'اشتراطات أمانة جدة' }],
 
     saudiRegulations: [
         { code: 'اشتراطات أمانة جدة — الخزانات', description: 'إلزام غسيل وتعقيم الخزانات كل 6 أشهر مع شهادة صحية', url: 'https://www.jeddah.gov.sa' },

@@ -44,7 +44,7 @@ export const override: PageOverride = {
         { ...GOV.TGA, role: 'تراخيص النقل — دباب نقل' },
         { entity: AMANA.ASIR.entity, url: AMANA.ASIR.url, role: 'أمانة منطقة عسير' },
     ],
-    expertReviewer: { name: EXPERTS.ALZUWAYED.name, title: EXPERTS.ALZUWAYED.title, credential: EXPERTS.ALZUWAYED.credential, profileUrl: EXPERTS.ALZUWAYED.profileUrl },
+    expertReviewer: { name: EXPERTS.ALSHABNAN.name, title: EXPERTS.ALSHABNAN.title, credential: EXPERTS.ALSHABNAN.credential, profileUrl: EXPERTS.ALSHABNAN.profileUrl },
     expertCitations: [{ expert: EXPERTS.ALZUWAYED.name, quote: 'الدباب في أبها ليس وسيلة عادية — بل ضرورة تفرضها الجغرافيا. أزقة الأحياء القديمة لا تدخلها مركبات عرض 2م+. الدباب بموتور قوي وفرامل ديسك = الخيار الآمن الوحيد في تضاريس السروات.', source: EXPERTS.ALZUWAYED.title, url: EXPERTS.ALZUWAYED.profileUrl }],
     saudiRegulations: [REGULATIONS.TGA_LICENSE],
     verificationBadges: [{ badge: '✔️ 250cc+ جبلي', authority: 'عزم كافٍ', icon: 'shield-check' }, { badge: '✔️ Ratchet Strap', authority: 'تثبيت حمولة', icon: 'badge-check' }],

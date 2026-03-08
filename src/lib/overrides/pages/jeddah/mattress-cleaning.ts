@@ -77,6 +77,8 @@ export const override: PageOverride = {
     ],
 
 
+        verificationBadges: [{ badge: '✔️ شركة مرخصة من بلدي', authority: 'وزارة البلديات', icon: 'shield-check' }],
+
     equipment: [
         { name: 'جهاز بخار جاف UV-C', use: 'بخار + أشعة فوق بنفسجية تقتل عث الغبار والبكتيريا في عمق المرتبة' },
         { name: 'مكنسة مراتب HEPA Mattress Vac', use: 'تشفط عث الغبار ومخلفاته من داخل المرتبة — فلتر HEPA يمنع النفاذ' },
@@ -101,6 +103,8 @@ export const override: PageOverride = {
             source: 'تحليل مناخي',
         },
     ],
+
+        saudiRegulations: [REGULATIONS.BALADI_HEALTH],
 
     counterNarratives: [
         { myth: 'المرتبة الجديدة ما تحتاج تنظيف', truth: 'المرتبة الجديدة تبدأ تجمع عث الغبار من الشهر الأول. في جدة (رطوبة 70%): العث يتكاثر 3x أسرع. بعد 6 أشهر بدون تنظيف: ملايين العث + مخلفاتها. القاعدة: مرتبة جديدة = تنظيف بعد 3 أشهر أول مرة' },

@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.TGA, role: 'ترخيص نقل الأثاث — تأمين الحمولة' },
         { entity: AMANA.AHSA.entity, url: AMANA.AHSA.url, role: 'اشتراطات النقل بالأحساء' },
     ],
-    expertReviewer: EXPERTS.ALZUWAYED,
+    expertReviewer: EXPERTS.ALSHABNAN,
     expertCitations: [
         { expert: EXPERTS.ALZUWAYED.name, quote: 'نقل الأحساء واحي: حرارة 60°م في المُغلقة + طرق مزارع + خنافس واحة. تهوية + EPE + فحص Anobium = 3 إضافات لا تجدها في نقل عادي — وتُحدث الفرق بين أثاث سليم وأثاث تالف.', source: 'هيئة النقل — نقل الأثاث في البيئات الحارة والزراعية' },
     ],

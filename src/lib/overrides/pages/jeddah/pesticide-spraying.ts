@@ -57,6 +57,10 @@ export const override: PageOverride = {
         { name: 'IGR', use: 'يكسر انسلاخ ← لا تكاثر' },
         { name: 'Fipronil Soil Injection', use: 'حاجز نمل أبيض 5م عمق — 5-8 سنوات' },
     ],
+        hiddenObjections: [
+        { fear: 'المبيدات خطرة على الأطفال.', solution: 'المبيدات المسجلة في SFDA آمنة بعد الجفاف (1-2 ساعة). إخلاء مؤقت + تهوية = أمان 100%.' },
+    ],
+
     counterNarratives: [
         { myth: 'صيف = حشرات، شتاء = راحة.', truth: 'جدة: 25-45°م + رطوبة = 12 شهراً.' },
         { myth: 'رش مرة يكفي.', truth: 'يتحلل في 4-5 أسابيع. عقد 8 زيارات = الحد الأدنى.' },

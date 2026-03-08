@@ -45,7 +45,7 @@ export const override: PageOverride = {
         { ...GOV.SCE, role: 'اعتماد مهندسي فحص المباني' },
         { entity: AMANA.JEDDAH.entity, url: AMANA.JEDDAH.url, role: 'اشتراطات أمانة جدة' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALJUND,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'في جدة — التسرب ليس مجرد فاتورة عالية. كلوريد + رطوبة 80% + تربة طينية = ثلاثي يهدد الأساسات والصحة. في 48 ساعة: عفن أسود. في 3 أشهر: تشقق أساسات.', source: 'نصائح هندسية — تحديات المباني الساحلية' },
     ],

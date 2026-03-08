@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.TGA, role: 'ترخيص النقل البري' },
         { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات النقل — أمانة القصيم' },
     ],
-    expertReviewer: EXPERTS.ALZUWAYED,
+    expertReviewer: EXPERTS.ALSHABNAN,
     expertCitations: [
         { expert: EXPERTS.ALZUWAYED.name, quote: 'دينات عنيزة: أطنان تمور بتبريد. بريدة 30 كم. لا NaCl. أرخص من الساحل. Tarpaulin إلزامي.', source: 'هيئة النقل — القصيم' },
     ],

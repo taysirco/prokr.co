@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.TGA, role: 'ترخيص النقل البري — تأمين الحمولة وحقوق الشحن' },
         { entity: AMANA.JAZAN.entity, url: AMANA.JAZAN.url, role: 'اشتراطات النقل والسلامة المرورية بمنطقة جازان' },
     ],
-    expertReviewer: EXPERTS.ALZUWAYED,
+    expertReviewer: EXPERTS.ALSHABNAN,
     expertCitations: [
         { expert: EXPERTS.ALZUWAYED.name, quote: 'نقل الأجهزة في جازان = أخطر نقل ساحلي في المملكة. ملح + أمطار + تكاثف PCB + كمبريسور حار = 4 مخاطر تحتاج 4 احتياطات. شاحنة مغلقة + Anti-Rust + فترة تأقلم + انتظار كمبريسور = الحد الأدنى الآمن.', source: 'هيئة النقل — معايير النقل في البيئات الساحلية الاستوائية' },
     ],

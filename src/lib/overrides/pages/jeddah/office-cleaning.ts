@@ -78,6 +78,8 @@ export const override: PageOverride = {
 
 
 
+        verificationBadges: [{ badge: '✔️ شركة مرخصة من بلدي', authority: 'وزارة البلديات', icon: 'shield-check' }],
+
     equipment: [
         { name: 'مكنسة صناعية هادئة (Low-Noise Vacuum)', use: 'تنظف بدون إزعاج الموظفين — مناسبة للمكاتب أثناء الدوام' },
         { name: 'معقم أسطح مكاتب (Surface Sanitizer)', use: 'يعقم الأسطح كثيرة اللمس: مقابض، مفاتيح، طاولات — يمنع انتشار الفيروسات' },
@@ -102,6 +104,8 @@ export const override: PageOverride = {
             source: 'تحليل مناخي',
         },
     ],
+
+        saudiRegulations: [REGULATIONS.BALADI_HEALTH],
 
     counterNarratives: [
         { myth: 'المكتب نظيف — ما يحتاج شركة', truth: 'المكتب يبدو نظيفاً لكن: موكيت المكتب يجمع 400x أكثر بكتيريا من مقعد الحمام (دراسة Arizona). في جدة الرطبة: العث يتكاثر في كراسي القماش. تنظيف احترافي كل شهر = إنتاجية أعلى + غياب مرضي أقل' },

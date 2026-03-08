@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.SCE, role: 'معايير عزل المباني — كود SBC' },
         { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'اشتراطات عزل مباني المدينة المنورة', acronym: 'أمانة المدينة' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALJUND,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'المدينة جافة — لكن تربتها البازلتية لا تمتص. كل مياه تتجمع على الأساسات. ضغط هيدروستاتيكي لا تعرفه المدن الرملية. Crystalline من الداخل = الحل الوحيد الذي يتحمل هذا الضغط.', source: 'نصائح هندسية — عزل مدن التربة الصخرية' },
     ],

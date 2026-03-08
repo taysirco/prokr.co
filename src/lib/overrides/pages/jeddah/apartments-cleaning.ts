@@ -67,6 +67,8 @@ export const override: PageOverride = {
         'بقع عفن متكررة على الجدار = مشكلة رطوبة هيكلية. لا تنظف فقط — اطلب فحص تسرب مياه',
     ],
 
+        verificationBadges: [{ badge: '✔️ شركة مرخصة من بلدي', authority: 'وزارة البلديات', icon: 'shield-check' }],
+
     equipment: [
         { name: 'مكنسة صناعية HEPA Filter', use: 'تشفط الغبار الدقيق PM2.5 وعث الغبار — الفلتر يحبسها بدل نشرها في الهواء' },
         { name: 'جهاز بخار جاف 150°م (Dry Steam)', use: 'يقتل 99.9% بكتيريا وعفن بدون ماء وبدون كيماويات — آمن على الأطفال' },
@@ -84,7 +86,7 @@ export const override: PageOverride = {
         { entity: AMANA.JEDDAH.entity, url: AMANA.JEDDAH.url, role: 'اشتراطات أمانة جدة' },
     ],
 
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
 
     expertCitations: [
         {
@@ -93,6 +95,8 @@ export const override: PageOverride = {
             source: 'تحليل مناخي — جامعة القصيم',
         },
     ],
+
+        saudiRegulations: [REGULATIONS.BALADI_HEALTH],
 
     counterNarratives: [
         { myth: 'الكلور أقوى منظف — يقتل كل شي', truth: 'الكلور يقتل البكتيريا: صحيح. لكنه يأكل الرخام (سطح خشن ← يتشرب الأوساخ أسرع) + يبيّض الخشب + يتلف مطاط العوازل + يضر الجلد والرئتين. البديل: بخار 150°م يقتل 99.9% بدون أي تلف. أو منظف pH محايد: فعّال + آمن' },

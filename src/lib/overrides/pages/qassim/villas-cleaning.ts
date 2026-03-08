@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف — الشهادة الصحية الإلزامية' },
         { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'فيلا القصيم بيئة مُعقّدة تحتاج تقسيماً هندسياً — كل منطقة مشكلة مختلفة. المجلس (بخور+لقاح) ≠ الحمام (كلس) ≠ المسبح (طحالب). بروتوكول واحد لا يحل 6 مشاكل مختلفة. الفريق المتخصص يُقسّم ويُخصص.', source: 'نصائح هندسية — صيانة الفلل في البيئات الزراعية' },
     ],

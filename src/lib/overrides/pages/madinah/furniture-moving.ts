@@ -82,7 +82,7 @@ export const override: PageOverride = {
         { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'التراخيص البلدية التي تضمن الالتزام بقواعد سلامة الشوارع والمباني', acronym: 'أمانة المدينة المنورة' },
     ],
 
-    expertReviewer: EXPERTS.ALZUWAYED,
+    expertReviewer: EXPERTS.ALSHABNAN,
 
     expertCitations: [
         {

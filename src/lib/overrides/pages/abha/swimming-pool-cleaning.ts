@@ -43,7 +43,7 @@ export const override: PageOverride = {
     trustAnchors: [{ ...GOV.BALADI, role: 'اشتراطات سلامة المسابح' },
         { entity: AMANA.ASIR.entity, url: AMANA.ASIR.url, role: 'اشتراطات أمانة عسير' },
     ],
-        expertReviewer: { name: EXPERTS.ALJUND.name, title: EXPERTS.ALJUND.title, credential: EXPERTS.ALJUND.credential, profileUrl: EXPERTS.ALJUND.profileUrl },
+        expertReviewer: { name: EXPERTS.ALMOHAIMED.name, title: EXPERTS.ALMOHAIMED.title, credential: EXPERTS.ALMOHAIMED.credential, profileUrl: EXPERTS.ALMOHAIMED.profileUrl },
     expertCitations: [{ expert: EXPERTS.ALJUND.name, quote: 'مسابح أبها = أصعب موازنة كيميائية في المملكة. 40-60 يوم مطر يُخفف الكلور + طحالب تنمو في 48 ساعة. الحل: فحص كلور بعد كل مطرة + Winterization شتوية + غطاء. بدون هذا = مسبح أخضر 8 أشهر من 12.', source: EXPERTS.ALJUND.title, url: EXPERTS.ALJUND.profileUrl }],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
     verificationBadges: [{ badge: '✔️ Winterization كاملة', authority: 'حماية شتوية', icon: 'shield-check' }, { badge: '✔️ موازنة كيمياء', authority: 'بعد كل مطرة', icon: 'badge-check' }],

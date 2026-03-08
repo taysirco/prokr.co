@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.TGA, role: 'ترخيص النقل البري — تأمين الحمولة' },
         { entity: AMANA.TABUK.entity, url: AMANA.TABUK.url, role: 'اشتراطات أمانة تبوك' },
     ],
-    expertReviewer: EXPERTS.ALZUWAYED,
+    expertReviewer: EXPERTS.ALSHABNAN,
     expertCitations: [
         { expert: EXPERTS.ALZUWAYED.name, quote: 'نقل العفش في تبوك = أخطر نقل سعودي. -2°م = PVAc يتجمد (ليس يتبلور). + ثلوج تتراكم. + 200 كم اهتزاز. + Thermal Shock 46°م. شاحنة مغطاة + EPE + Ratchet + نقل نهاري = الحد الأدنى.', source: 'هيئة النقل — معايير نقل الأثاث في المناطق ذات الصقيع' },
     ],

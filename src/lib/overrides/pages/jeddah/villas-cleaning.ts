@@ -78,6 +78,8 @@ export const override: PageOverride = {
 
 
 
+        verificationBadges: [{ badge: '✔️ شركة مرخصة من بلدي', authority: 'وزارة البلديات', icon: 'shield-check' }],
+
     equipment: [
         { name: 'فريق 4-6 عمال + مشرف جودة', use: 'الفيلا تحتاج فريق أكبر لإنجاز التنظيف في يوم واحد' },
         { name: 'رافعة واجهات أو سلم هيدروليكي', use: 'تنظيف واجهات وزجاج الارتفاعات بأمان' },
@@ -95,7 +97,7 @@ export const override: PageOverride = {
         { entity: AMANA.JEDDAH.entity, url: AMANA.JEDDAH.url, role: 'اشتراطات أمانة جدة' },
     ],
 
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
 
     expertCitations: [
         {
@@ -104,6 +106,8 @@ export const override: PageOverride = {
             source: 'تحليل مناخي',
         },
     ],
+
+        saudiRegulations: [REGULATIONS.BALADI_HEALTH],
 
     counterNarratives: [
         { myth: 'الفيلا تتنظف بعاملة منزلية فقط', truth: 'العاملة المنزلية تغطي التنظيف اليومي. تنظيف عميق للفيلا (واجهات زجاجية + مسبح + خزان + مكيفات مركزية + حديقة) يحتاج فريق متخصص بمعدات صناعية — الفيلا المتوسطة تحتاج 4-6 عمال ليوم كامل' },

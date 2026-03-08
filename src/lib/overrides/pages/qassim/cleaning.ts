@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف — مطابقة صحية' },
         { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'غبار القصيم مزيج فريد لا تجده في أي مدينة: عضوي لزج من المزارع + رملي خادش من النفود + كلس من المياه. التنظيف بمنتج واحد يحل 30% فقط. البروتوكول الثلاثي هو الحل الوحيد.', source: 'نصائح هندسية — جودة البيئة الداخلية' },
     ],

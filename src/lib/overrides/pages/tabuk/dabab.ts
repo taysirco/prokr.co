@@ -42,7 +42,7 @@ export const override: PageOverride = {
     trustAnchors: [{ ...GOV.TGA, role: 'ترخيص النقل' },
         { entity: AMANA.TABUK.entity, url: AMANA.TABUK.url, role: 'اشتراطات أمانة تبوك' },
     ],
-        expertReviewer: EXPERTS.ALZUWAYED,
+        expertReviewer: EXPERTS.ALSHABNAN,
     expertCitations: [
         { expert: EXPERTS.ALZUWAYED.name, quote: 'دباب تبوك: ثلوج + حسمى + -2°م = غطاء إلزامي. المكشوف = مقامرة.', source: 'هيئة النقل — النقل الخفيف' },
     ],

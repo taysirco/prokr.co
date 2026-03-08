@@ -44,7 +44,7 @@ export const override: PageOverride = {
         { ...GOV.SCE, role: 'اعتماد مهندسي العزل والفحص الحراري' },
         { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'في القصيم: 90% من المباني عزل سطح فقط. لكن 20-30 عموداً خرسانياً مكشوفاً = 40-60 م² جسور حرارية مفتوحة تُلغي 30-40% من فائدة العزل. ETICS هو الحل الوحيد الذي يقطع كل الجسور.', source: 'موسوعة أخطاء في البناء — الفصل الخامس: عيوب العزل' },
         { expert: EXPERTS.WISSAM.name, quote: 'المناخ القاري في القصيم يجعل العائد الاستثماري لـ ETICS الأعلى في السعودية: يوفر صيفاً + شتاءً. في الرياض: التوفير الشتوي 5%. في القصيم: 15-20%. الفرق يتراكم: 3,000-5,000 ريال إضافية سنوياً.', source: 'دراسات إنشائية — الكود السعودي والعزل' },

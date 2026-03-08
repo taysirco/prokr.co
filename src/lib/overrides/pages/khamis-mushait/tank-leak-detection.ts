@@ -43,7 +43,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص فنيي الخزانات' },
         { entity: AMANA.ASIR.entity, url: AMANA.ASIR.url, role: 'اشتراطات أمانة عسير' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'تسرب خزان خميس: أمطار+تكثّف+عفن. فحص حراري إلزامي. أعقد تشخيص.', source: 'موسوعة أخطاء — خزانات جبلية' },
     ],

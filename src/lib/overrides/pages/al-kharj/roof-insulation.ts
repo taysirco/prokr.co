@@ -43,7 +43,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص مقاولي العزل' },
         { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'أسطح الخرج: حراري فقط. لا مائي. ΔT 48°م. طلاء عاكس. أرخص 40%.', source: 'موسوعة أخطاء — عزل أسطح صحراوية' },
     ],

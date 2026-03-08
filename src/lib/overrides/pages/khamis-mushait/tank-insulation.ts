@@ -43,7 +43,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص مقاولي العزل' },
         { entity: AMANA.ASIR.entity, url: AMANA.ASIR.url, role: 'اشتراطات أمانة عسير' },
     ],
-    expertReviewer: EXPERTS.ALJUND,
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
         { expert: EXPERTS.ALJUND.name, quote: 'خزان خميس: أمطار+طحالب+ضباب. Closed-Cell+إحكام. أقوى من عزل الصحراء.', source: 'موسوعة أخطاء — خزانات جبلية' },
     ],

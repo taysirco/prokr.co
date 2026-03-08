@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.TGA, role: 'ترخيص نقل الأثاث' },
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات النقل بالشرقية' },
     ],
-    expertReviewer: EXPERTS.ALZUWAYED,
+    expertReviewer: EXPERTS.ALSHABNAN,
     expertCitations: [
         { expert: EXPERTS.ALZUWAYED.name, quote: 'نقل أثاث الخبر = بحري: NaCl يصل في دقائق + 85-95% تكثّف + Sabkha + ثلاثية. Stretch + VCI + Silica + Transit = بروتوكول ساحلي لا يُختصر.', source: 'هيئة النقل — نقل الأثاث الساحلي' },
     ],

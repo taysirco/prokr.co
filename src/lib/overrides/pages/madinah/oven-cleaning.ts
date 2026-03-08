@@ -75,7 +75,7 @@ export const override: PageOverride = {
         { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'الرقابة على نظافة المطابخ ومعايير السلامة الغذائية', acronym: 'أمانة المدينة' },
     ],
 
-    expertReviewer: EXPERTS.ALMISNID,
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {

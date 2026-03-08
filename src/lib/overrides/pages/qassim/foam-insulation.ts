@@ -44,7 +44,7 @@ export const override: PageOverride = {
         { ...GOV.SCE, role: 'اعتماد مقاولي ومهندسي العزل' },
         { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALJUND,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'في القصيم: Open-Cell على السطح = خطأ مكلف. رأيت حالات الفوم يتدلى بعد شتاء واحد لأنه امتص رطوبة الصقيع. Closed-Cell هو الخيار الوحيد المقبول هندسياً للأسطح في المناخ القاري.', source: 'نصائح هندسية — جودة البناء السعودي' },
         { expert: EXPERTS.ALJUND.name, quote: 'UV Coating في القصيم يحتاج سماكة مضاعفة (400-500 ميكرون). العواصف الرملية تحفّ الطبقة العادية (200 ميكرون) خلال سنة ← الفوم المكشوف يتفتت. التوفير في الـ UV = خسارة الاستثمار كاملاً.', source: 'موسوعة أخطاء في البناء — الفصل الخامس: عيوب العزل' },

@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.TGA, role: 'ترخيص النقل — حماية حقوق العميل' },
         { entity: AMANA.HAIL.entity, url: AMANA.HAIL.url, role: 'اشتراطات أمانة حائل' },
     ],
-    expertReviewer: EXPERTS.ALZUWAYED,
+    expertReviewer: EXPERTS.ALSHABNAN,
     expertCitations: [
         { expert: EXPERTS.ALZUWAYED.name, quote: 'الدباب في حائل = خيار ممتاز للقطع الخفيفة إذا كان مُجهزاً. الغطاء المحكم = إلزامي (ليس اختياري) بسبب عواصف النفود المفاجئة. + حقيبة حرارية للإلكترونيات شتاءً. الدباب المكشوف في حائل = مقامرة.', source: 'هيئة النقل — اشتراطات النقل الخفيف في المناطق القارية' },
     ],

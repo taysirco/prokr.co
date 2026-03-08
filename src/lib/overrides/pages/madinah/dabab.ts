@@ -81,7 +81,7 @@ export const override: PageOverride = {
         { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'تنظيم وضبط تنقل مركبات التوصيل والنقل الخفيف داخل الأحياء والمناطق الحيوية', acronym: 'أمانة المدينة' },
     ],
 
-    expertReviewer: EXPERTS.ALZUWAYED,
+    expertReviewer: EXPERTS.ALSHABNAN,
 
     expertCitations: [
         {

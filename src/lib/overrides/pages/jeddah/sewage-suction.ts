@@ -52,6 +52,10 @@ export const override: PageOverride = {
         { name: 'Vacuum Truck 10-15 م³', use: 'شفط' },
         { name: 'حصى تصريف', use: 'يُسرّع Soakaway 3-5×' },
     ],
+        hiddenObjections: [
+        { fear: 'الشفط يتم بدون نظافة.', solution: 'شفط + تنظيف + تعقيم = بروتوكول شامل. تقرير فني بعد كل خدمة.' },
+    ],
+
     counterNarratives: [
         { myth: 'بيارة جدة تعمل مثل الرياض.', truth: 'طين ≠ رمل. الامتصاص أبطأ 5-10×. شفط أكثر.' },
         { myth: 'الكلور يسلّك المجاري.', truth: 'الكلور يقتل بكتيريا لكن لا يفك انسداد دهون/شعر. Hydro-Jet أو Snake الميكانيكي = الحل.' },

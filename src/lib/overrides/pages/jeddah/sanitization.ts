@@ -80,6 +80,8 @@ export const override: PageOverride = {
     ],
 
 
+        verificationBadges: [{ badge: '✔️ شركة مرخصة من بلدي', authority: 'وزارة البلديات', icon: 'shield-check' }],
+
     equipment: [
         { name: 'جهاز تعقيم ضباب بارد (ULV Cold Fogger)', use: 'يرش رذاذ معقم دقيق يصل كل الأسطح والشقوق — تغطية 360°' },
         { name: 'مادة تعقيم مسجلة SFDA', use: 'معقم آمن على الأطفال والحيوانات الأليفة — مسجل ومعتمد من هيئة الغذاء والدواء' },
@@ -93,13 +95,13 @@ export const override: PageOverride = {
     trustAnchors: [
         { entity: 'هيئة الغذاء والدواء', acronym: 'SFDA', url: 'https://sfda.gov.sa', role: 'اعتماد مواد التعقيم والتطهير' },
         { entity: 'أمانة جدة', url: 'https://www.jeddah.gov.sa', role: 'اشتراط شهادة تعقيم دوري للمحلات التجارية' },
-    ],
+        { entity: AMANA.JEDDAH.entity, url: AMANA.JEDDAH.url, role: 'اشتراطات أمانة جدة' }],
 
     saudiRegulations: [
         { code: 'اشتراطات أمانة جدة — التعقيم الدوري', description: 'إلزام المحلات التجارية والمطاعم بشهادة تعقيم دوري', url: 'https://www.jeddah.gov.sa' },
     ],
 
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALMISNID,
 
     expertCitations: [
         {

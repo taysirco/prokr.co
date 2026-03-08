@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { entity: AMANA.TABUK.entity, url: AMANA.TABUK.url, role: 'تطبيق اشتراطات العزل المائي بتبوك', acronym: 'أمانة تبوك' },
     ],
 
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALJUND,
 
     expertCitations: [
         {

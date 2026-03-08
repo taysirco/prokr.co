@@ -43,7 +43,7 @@ export const override: PageOverride = {
     trustAnchors: [{ ...GOV.BALADI, role: 'اشتراطات الصحة البيئية' },
         { entity: AMANA.ASIR.entity, url: AMANA.ASIR.url, role: 'اشتراطات أمانة عسير' },
     ],
-        expertReviewer: { name: EXPERTS.ALKHODAIRY.name, title: EXPERTS.ALKHODAIRY.title, credential: EXPERTS.ALKHODAIRY.credential, profileUrl: EXPERTS.ALKHODAIRY.profileUrl },
+        expertReviewer: { name: EXPERTS.ALMISNID.name, title: EXPERTS.ALMISNID.title, credential: EXPERTS.ALMISNID.credential, profileUrl: EXPERTS.ALMISNID.profileUrl },
     expertCitations: [{ expert: EXPERTS.ALKHODAIRY.name, quote: 'أبها = أكثف تجمع طيور جبلية في المملكة. المواد الرخيصة (SS304 + شبك عادي) تفشل في أمطار وUV أبها. SS316 + HDPE+UV = المعيار الوحيد. والفضلات في رطوبة 90% = Cryptococcosis حقيقي — تنظيف بكمامة N95 فقط.', source: EXPERTS.ALKHODAIRY.title, url: EXPERTS.ALKHODAIRY.profileUrl }],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
     verificationBadges: [{ badge: '✔️ SS316 مقاوم أمطار', authority: '15+ سنة', icon: 'shield-check' }, { badge: '✔️ HDPE+UV', authority: '10 سنوات', icon: 'badge-check' }],

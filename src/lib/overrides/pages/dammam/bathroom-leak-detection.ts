@@ -64,7 +64,7 @@ export const override: PageOverride = {
         { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات العزل المائي للحمامات في المباني السكنية بالدمام', acronym: 'أمانة الشرقية' },
     ],
 
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALJUND,
 
     expertCitations: [
         {

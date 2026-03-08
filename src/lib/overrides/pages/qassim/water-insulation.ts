@@ -43,7 +43,7 @@ export const override: PageOverride = {
         { ...GOV.SCE, role: 'اعتماد مهندسي العزل والتشطيبات المعتمدين' },
         { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
-    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertReviewer: EXPERTS.ALJUND,
     expertCitations: [
         { expert: EXPERTS.ALMOHAIMED.name, quote: 'أكبر خطأ في القصيم: استخدام APP بدل SBS في الأساسات. التربة الزراعية تنتفخ 5-8% مع كل دورة ري — APP الصلب يتشقق خلال 3 مواسم. SBS مع مرونة 30%+ هو الحل الوحيد.', source: 'نصائح هندسية — جودة البناء السعودي' },
         { expert: EXPERTS.ALJUND.name, quote: 'الهجوم الملحي في القصيم يظهر كتقشّر أبيض في أسفل الجدران — 85% من الناس يعتقدون أنه دهان رديء. الحقيقة: أملاح متبلورة تأكل الخرسانة. المعالجة البلورية + SBS = الحل المزدوج.', source: 'موسوعة أخطاء في البناء — الفصل الثالث: عيوب الأساسات' },

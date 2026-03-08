@@ -79,6 +79,8 @@ export const override: PageOverride = {
 
 
 
+        verificationBadges: [{ badge: '✔️ شركة مرخصة من بلدي', authority: 'وزارة البلديات', icon: 'shield-check' }],
+
     equipment: [
         { name: 'مكينة جلي رخام 3 مراحل', use: 'حجر خشن (خدوش) → متوسط (تنعيم) → ناعم (تلميع مرآة) — 3 مراحل في زيارة واحدة' },
         { name: 'بودرة تلميع كريستالية (Crystallizer)', use: 'تفاعل كيميائي مع سطح الرخام ينتج طبقة صلبة لامعة تدوم 6-12 شهر' },
@@ -103,6 +105,8 @@ export const override: PageOverride = {
             source: 'خبير تشطيبات',
         },
     ],
+
+        saudiRegulations: [REGULATIONS.BALADI_HEALTH],
 
     counterNarratives: [
         { myth: 'الجلي يأكل طبقة من الرخام', truth: 'الجلي الاحترافي يزيل 0.1-0.3 مم فقط — أقل من سماكة ورقة. الرخام سماكته 20-30 مم. يمكن جلي الرخام 50+ مرة. المشكلة الحقيقية: استخدام كلور ومنظفات حمضية يومياً = تآكل كيميائي أخطر بكثير' },

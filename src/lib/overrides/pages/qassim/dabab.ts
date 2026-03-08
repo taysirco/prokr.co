@@ -42,7 +42,7 @@ export const override: PageOverride = {
         { ...GOV.TGA, role: 'ترخيص النقل — حماية حقوق العميل' },
         { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
-    expertReviewer: EXPERTS.ALZUWAYED,
+    expertReviewer: EXPERTS.ALSHABNAN,
     expertCitations: [
         { expert: EXPERTS.ALZUWAYED.name, quote: 'حتى النقل الخفيف بالدباب في القصيم يحتاج احتياطات حرارية — 70-85°م على سطح مكشوف تُتلف إلكترونيات وبلاستيك خلال دقائق. الغطاء العاكس + Stretch Film = حماية بسيطة تمنع خسائر كبيرة.', source: 'هيئة النقل — اشتراطات نقل البضائع الخفيفة' },
     ],

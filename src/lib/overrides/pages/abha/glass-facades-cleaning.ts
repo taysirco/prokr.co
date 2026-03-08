@@ -44,7 +44,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
         { entity: AMANA.ASIR.entity, url: AMANA.ASIR.url, role: 'أمانة منطقة عسير — اشتراطات الواجهات' },
     ],
-    expertReviewer: { name: EXPERTS.ALMOHAIMED.name, title: EXPERTS.ALMOHAIMED.title, credential: EXPERTS.ALMOHAIMED.credential, profileUrl: EXPERTS.ALMOHAIMED.profileUrl },
+    expertReviewer: { name: EXPERTS.ALMISNID.name, title: EXPERTS.ALMISNID.title, credential: EXPERTS.ALMISNID.credential, profileUrl: EXPERTS.ALMISNID.profileUrl },
     expertCitations: [{ expert: EXPERTS.ALMOHAIMED.name, quote: 'واجهات أبها = أسرع واجهات تتسخ في المملكة. لقاح العرعر حمضي ← يأكل الزجاج إذا تُرك. الضباب يومي ← Water Spots. Pure Water Fed Pole = الحل النظيف بدون بقع. وتنظيف شهري شتاءً = منع تلف دائم.', source: EXPERTS.ALMOHAIMED.title, url: EXPERTS.ALMOHAIMED.profileUrl }],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
     verificationBadges: [{ badge: '✔️ Pure Water TDS<10', authority: 'بدون بقع', icon: 'shield-check' }, { badge: '✔️ Rope Access مؤمن', authority: 'سلامة', icon: 'badge-check' }],

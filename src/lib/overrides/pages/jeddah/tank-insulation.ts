@@ -54,6 +54,10 @@ export const override: PageOverride = {
         { name: 'Anti-Rust Coating', use: 'يحيِّد Atmospheric Corrosion الخارجي' },
         { name: 'Anti-Algae Coating', use: 'يمنع طحالب في 80% رطوبة' },
     ],
+        hiddenObjections: [
+        { fear: 'العزل مكلف — مش متأكد يستاهل.', solution: 'عزل SBC 601 يوفر 30-40% كهرباء سنوياً. يسترد تكلفته خلال 2-3 سنوات.' },
+    ],
+
     counterNarratives: [
         { myth: 'Food-Grade العادي يكفي.', truth: 'لا يتحمل Cl⁻. Marine-Grade = الوحيد لجدة.' },
         { myth: 'الخزان الأرضي محمي.', truth: 'Cl⁻ في الماء + رطوبة تربة = يُهاجم أيضاً.' },
