@@ -13,7 +13,7 @@ import { getCityContext } from '@/lib/city-context';
 import { getServiceKeywordProfile, getCityKeyword } from '@/lib/keyword-strategy';
 import { resolveContentLayers, resolveMetadata, getOverrideForPage } from '@/lib/overrides';
 import { AbsorbedServiceSections } from '@/components/seo/AbsorbedServiceSection';
-import { getSuperPageGroup, isCanonicalSlug } from '@/lib/services/super-page-groups';
+import { getSuperPageGroup, isCanonicalSlug, getCanonicalSlug } from '@/lib/services/super-page-groups';
 import { SERVICES as ALL_SERVICES_LIST } from '@/lib/services';
 import Footer from '@/components/Footer';
 import type { Advertiser } from '@/types';
@@ -43,6 +43,11 @@ export async function generateMetadata({ params }: SiloPageProps): Promise<Metad
     // Use the override-aware resolver
     const meta = resolveMetadata(city, service);
 
+    // Defense-in-depth: Ensure canonical always points to the Super Page
+    // Even if middleware redirect is bypassed, canonical must be correct
+    const canonicalServiceSlug = getCanonicalSlug(resolvedParams.service) || resolvedParams.service;
+    const canonicalUrl = `https://prokr.co/${resolvedParams.city}/${canonicalServiceSlug}`;
+
     return {
         title: meta.title,
         description: meta.description,
@@ -52,7 +57,7 @@ export async function generateMetadata({ params }: SiloPageProps): Promise<Metad
             description: meta.ogDescription,
             locale: 'ar_SA',
             type: 'website',
-            url: `https://prokr.co/${resolvedParams.city}/${resolvedParams.service}`,
+            url: canonicalUrl,
             siteName: 'بروكر',
             images: [{
                 url: meta.ogImage || `https://prokr.co/${resolvedParams.city}/${resolvedParams.service}/opengraph-image`,
@@ -67,7 +72,7 @@ export async function generateMetadata({ params }: SiloPageProps): Promise<Metad
             description: meta.ogDescription,
         },
         alternates: {
-            canonical: `https://prokr.co/${resolvedParams.city}/${resolvedParams.service}`,
+            canonical: canonicalUrl,
         },
     };
 }
