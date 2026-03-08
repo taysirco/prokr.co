@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { Search, ArrowLeft } from 'lucide-react';
 import { CITIES, SERVICES } from '@/lib/seed';
+import { isAbsorbedSlug } from '@/lib/services/super-page-groups';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
@@ -18,14 +19,15 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
     const resolvedParams = await searchParams;
     const query = resolvedParams.q?.trim().toLowerCase() || '';
 
-    // Filter services and cities based on query
+    // Filter services and cities based on query (exclude absorbed slugs)
+    const canonicalServices = SERVICES.filter(s => !isAbsorbedSlug(s.slug));
     const matchedServices = query
-        ? SERVICES.filter(s =>
+        ? canonicalServices.filter(s =>
             s.name_ar.includes(query) ||
             s.name_en.toLowerCase().includes(query) ||
             s.slug.includes(query)
         )
-        : SERVICES;
+        : canonicalServices;
 
     const matchedCities = query
         ? CITIES.filter(c =>
