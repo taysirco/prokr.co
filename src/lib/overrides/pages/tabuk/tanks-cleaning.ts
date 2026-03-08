@@ -24,6 +24,8 @@ export const override: PageOverride = {
         { question: 'كلس في الخزان من أين؟', answer: 'ثلج/مطر + أملاح من الهواء + فتحات غير محكمة = ماء يدخل ← يحل معادن ← يجف ← CaCO₃. + مياه تبوك فيها أملاح. Descaling كل 6 أشهر.' },
         { question: 'هل أحتاج شهادة صحية بعد التنظيف؟', answer: 'للمباني التجارية والمطاعم: نعم إلزامي. الأمانة تشترط شهادة تنظيف كل 6 أشهر. المفتش يطلبها. شركات بروكر تصدر شهادة معتمدة.' },
         { question: 'كم مرة في السنة؟', answer: 'كل 6 أشهر كحد أدنى (اشتراط الأمانة). في الصيف (45°م+): كل 4 أشهر — الحرارة تنمّي الطحالب أسرع.' },
+    
+        { question: 'هل المياه آمنة للشرب بعد التنظيف؟', answer: 'نعم — بعد شطف + تعقيم 0.5-1 ppm (معيار NWC). انتظر 30 دقيقة + شطفة = مياه آمنة.' },
     ],
     expertTips: [
         'عزل كل أنبوب مكشوف قبل ديسمبر — 15-30 ريال/متر = يمنع انفجار.',
@@ -54,10 +56,17 @@ export const override: PageOverride = {
     hiddenObjections: [
         { fear: 'خزاني تحت الأرض — آمن.', solution: 'الخزان تحت الأرض أدفأ — لكن الأنابيب فوقه (سطح) مكشوفة. + تكاثف يحدث تحت الغطاء أيضاً.' },
     ],
-    counterNarratives: [{ myth: 'تبوك ما فيها مشكلة مياه.', truth: '-2°م = تجمد أنابيب. ثلج = كلس. تكاثف = عفن. 3 مشاكل.' }],
+    counterNarratives: [{ myth: 'تبوك ما فيها مشكلة مياه.', truth: '-2°م = تجمد أنابيب. ثلج = كلس. تكاثف = عفن. 3 مشاكل.' },
+        { myth: 'الخزان الجديد ما يحتاج تنظيف.', truth: 'الأملاح تترسب على أي سطح خلال 4-6 أشهر. الخزان الجديد ليس معفى.' },
+    ],
     relatedServices: [
         { slug: 'water-leak-detection', context: 'تسربات — بعد انفجار تجمد', priority: 1 },
         { slug: 'swimming-pool-cleaning', context: 'مسابح — نفس Winterization', priority: 2 },
         { slug: 'cleaning', context: 'تنظيف — المنزل كاملاً', priority: 3 },
+    
+        { slug: 'tank-insulation', context: 'خدمة مكملة — باقة شاملة.', priority: 4 },
+        { slug: 'tank-leak-detection', context: 'خدمة مكملة — باقة شاملة.', priority: 5 },
+        { slug: 'water-insulation', context: 'خدمة مكملة — باقة شاملة.', priority: 6 },
+        { slug: 'pest-control', context: 'خدمة مكملة — باقة شاملة.', priority: 7 },
     ],
 };

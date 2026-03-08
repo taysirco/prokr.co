@@ -67,5 +67,8 @@ export const override: PageOverride = {
         { slug: 'sewage-suction', context: 'بيارات', priority: 3 },
         { slug: 'water-leak-detection', context: 'رطوبة = حشرات', priority: 4 },
         { slug: 'bathroom-leak-detection', context: 'حمام رطب', priority: 5 },
+    
+        { slug: 'termite-control', context: 'خدمة مكملة — باقة شاملة.', priority: 6 },
+        { slug: 'bedbugs-control', context: 'خدمة مكملة — باقة شاملة.', priority: 7 },
     ],
 };

@@ -64,5 +64,8 @@ export const override: PageOverride = {
         { slug: 'water-insulation', context: 'أساسات', priority: 3 },
         { slug: 'thermal-insulation', context: 'حراري', priority: 4 },
         { slug: 'water-leak-detection', context: 'تسربات', priority: 5 },
+    
+        { slug: 'foam-insulation', context: 'خدمة مكملة — باقة شاملة.', priority: 6 },
+        { slug: 'cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 7 },
     ],
 };

@@ -23,6 +23,8 @@ export const override: PageOverride = {
         { question: 'زجاج مُعتم — ليس أوساخ؟', answer: 'Salt Fog Etching: ميكرو-ملح يُنتج محلول حمضي ← Micro-Etching. CeO₂ يملأ الخدوش ← يستعيد الشفافية. Hydrophobic يمنع التكرار.' },
         { question: 'كم تكلفة التنظيف العميق مقارنة بالتنظيف العادي؟', answer: 'التنظيف العميق أغلى 30-50% لكنه يشمل: HEPA + بخار 150°م + تعقيم. التنظيف العادي = مسح سطحي. العميق كل 3-4 أشهر + العادي أسبوعياً = أفضل معادلة تكلفة/نظافة.' },
         { question: 'هل المواد المستخدمة آمنة على الأطفال؟', answer: 'مواد معتمدة من هيئة الغذاء والدواء SFDA. بعد التنظيف: تهوية 30 دقيقة كافية. بخار 150°م = بديل للكيماويات — آمن 100% على الأطفال والحيوانات.' },
+    
+        { question: 'هل توفرون ضمان على التنظيف؟', answer: 'نعم — ضمان رضا 100%. إذا لم ترضِ عن النتيجة: إعادة التنظيف مجاناً خلال 48 ساعة. الشركات المعتمدة عبر بروكر ملزمة بسياسة الضمان.' },
     ],
     expertTips: [
         'Marine-Grade Sealant حصراً — السيلكون العادي يفنى خلال سنة.',
@@ -52,11 +54,17 @@ export const override: PageOverride = {
         { name: 'Biocide Anti-Moss', use: 'يقتل طحالب/أشنات + يمنع العودة 3 أشهر' },
     ],
     hiddenObjections: [{ fear: 'Marine-Grade أغلى.', solution: 'سيلكون عادي × تجديد كل سنة = أغلى على 5 سنوات. Marine-Grade × 3-4 سنوات = أرخص 40%.' }],
-    counterNarratives: [{ myth: 'الزجاج لا يتأثر.', truth: 'Salt Fog Micro-Etching يُعتمه تدريجياً. + الطحالب تنمو على السطح. + السيلكون يفنى = تسلل.' }],
+    counterNarratives: [{ myth: 'الزجاج لا يتأثر.', truth: 'Salt Fog Micro-Etching يُعتمه تدريجياً. + الطحالب تنمو على السطح. + السيلكون يفنى = تسلل.' },
+        { myth: 'التنظيف العميق يتلف الأثاث.', truth: 'المعدات الصناعية مصممة للأسطح الحساسة. البخار 150°م ينظف بدون كيماويات. التنظيف اليدوي بمواد خاطئة أخطر بكثير.' },
+    ],
     relatedServices: [
         { slug: 'marble-polishing', context: 'رخام — نفس ملح + طحالب', priority: 1 },
         { slug: 'cleaning', context: 'تنظيف — المبنى كاملاً', priority: 2 },
         { slug: 'villas-cleaning', context: 'فلل — واجهات الفيلا', priority: 3 },
         { slug: 'office-cleaning', context: 'مكاتب — واجهات المكتب', priority: 4 },
+    
+        { slug: 'carpet-cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 5 },
+        { slug: 'sofa-cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 6 },
+        { slug: 'steam-cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 7 },
     ],
 };

@@ -100,5 +100,7 @@ export const override: PageOverride = {
         { slug: 'cleaning', context: 'تنظيف شامل يُكمّل الخدمة الأساسية — بيئة نظيفة متكاملة.', priority: 5 },
         { slug: 'pest-control', context: 'مكافحة حشرات متكاملة مع خدمات النظافة والصيانة.', priority: 6 },
         { slug: 'air-conditioner-cleaning', context: 'تنظيف مكيفات لهواء نظيف — يُكمّل أي خدمة منزلية.', priority: 7 },
+    
+        { slug: 'tank-insulation', context: 'خدمة مكملة — باقة شاملة.', priority: 7 },
     ],
 };

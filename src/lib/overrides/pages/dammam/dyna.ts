@@ -58,8 +58,9 @@ export const override: PageOverride = {
         {
                 "question": "أفضل وقت لحجز دينا بالدمام؟",
                 "answer": "صباحاً قبل 9ص: أقل زحمة على طريق الظهران. تجنب 7-9ص إذا تنقل بين الدمام-الخبر (ذروة). نهاية الشهر: ازدحام — احجز مبكراً."
-        }
-],
+        },
+        { question: 'هل فيه تأمين على الأمتعة؟', answer: 'كل شركات بروكر مرخصة TGA = تأمين شامل. أي ضرر = تعويض فوري. بدون TGA = بدون تعويض.' },
+    ],
 
     expertTips: [
         "احجز دينا مغلقة — ضرورة في مناخ الدمام الخليجي",
@@ -135,8 +136,11 @@ export const override: PageOverride = {
         {
                 "myth": "الدينا الصغيرة أوفر — أسوي رحلتين",
                 "truth": "رحلتان بدينا 3 طن: 300-600 ريال + وقت مضاعف + خطر مضاعف. رحلة واحدة بدينا 5 طن: 250-450 ريال. الرحلة الواحدة: أرخص وأسرع وأسلم"
-        }
-],
+        },
+        { myth: 'النقل سهل — أسويه بنفسي.', truth: 'خدش واحد في خزانة = 500-2,000 ريال إصلاح. إصابة ظهر = آلاف. النقل المهني + التأمين = أرخص من المخاطرة.' },
+
+        { myth: 'النقل سهل — أسويه بنفسي.', truth: 'خدش خزانة = 500-2,000 ريال. إصابة ظهر = آلاف. النقل المهني + التأمين = أرخص من المخاطرة.' },
+    ],
 
     relatedServices: [
         {
@@ -183,6 +187,13 @@ export const override: PageOverride = {
                 "slug": "dammam-water-leak-detection",
                 "context": "كشف تسربات قبل النقل",
                 "priority": 9
-        }
+        },
+        { slug: 'furniture-moving', context: 'نقل أثاث — الخدمة الأساسية.', priority: 2 },
+        { slug: 'furniture-storage', context: 'تخزين أثاث — حل مرن.', priority: 3 },
+        { slug: 'dyna', context: 'دينا نقل — للقطع الكبيرة.', priority: 4 },
+        { slug: 'dabab', context: 'دباب نقل — للقطع الصغيرة.', priority: 5 },
+        { slug: 'cleaning', context: 'تنظيف المنزل الجديد بعد النقل.', priority: 6 },
+        { slug: 'pest-control', context: 'مكافحة حشرات المنزل الجديد.', priority: 7 },
+        { slug: 'air-conditioner-cleaning', context: 'تنظيف مكيفات المنزل الجديد.', priority: 8 },
 ],
 };

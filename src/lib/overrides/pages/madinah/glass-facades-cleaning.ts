@@ -109,5 +109,9 @@ export const override: PageOverride = {
         { slug: 'marble-polishing', context: 'جلي رخام الواجهات والأرضيات — إزالة خدوش الغبار البازلتي', priority: 2 },
         { slug: 'office-cleaning', context: 'تنظيف مكاتب بعد تنظيف الواجهات — نظافة شاملة', priority: 3 },
         { slug: 'air-conditioner-cleaning', context: 'غسيل مكيفات الواجهة — الغبار البازلتي يسد فلاتر الوحدات الخارجية', priority: 4 },
+    
+        { slug: 'carpet-cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 5 },
+        { slug: 'sofa-cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 6 },
+        { slug: 'steam-cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 7 },
     ],
 };

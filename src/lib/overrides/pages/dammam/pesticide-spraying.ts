@@ -108,5 +108,9 @@ export const override: PageOverride = {
         { slug: 'termite-control', context: 'مكافحة نمل أبيض متخصصة — حقن تربة + طعوم + مصائد مراقبة', priority: 2 },
         { slug: 'bird-control', context: 'طرد حمام — فضلاته تجذب حشرات إضافية', priority: 3 },
         { slug: 'cleaning', context: 'تنظيف وتعقيم بعد المكافحة — إزالة بقايا حشرات وبيض', priority: 4 },
+    
+        { slug: 'bedbugs-control', context: 'خدمة مكملة — باقة شاملة.', priority: 5 },
+        { slug: 'tanks-cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 6 },
+        { slug: 'sewage-unblocking', context: 'خدمة مكملة — باقة شاملة.', priority: 7 },
     ],
 };

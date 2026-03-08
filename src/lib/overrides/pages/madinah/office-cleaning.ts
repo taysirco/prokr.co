@@ -120,5 +120,7 @@ export const override: PageOverride = {
         { slug: 'glass-facades-cleaning', context: 'تنظيف واجهات المكتب الزجاجية من غبار الحرات.', priority: 4 },
         { slug: 'steam-cleaning', context: 'تعقيم مفروشات المكتب بالبخار — بدون كيميائيات تزعج الموظفين.', priority: 5 },
         { slug: 'pest-control', context: 'رش وقائي ضد الحشرات — خاصة في مكاتب الطابق الأرضي.', priority: 6 },
+    
+        { slug: 'cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 7 },
     ],
 };

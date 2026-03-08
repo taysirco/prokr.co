@@ -64,5 +64,8 @@ export const override: PageOverride = {
         { slug: 'glass-facades-cleaning', context: 'واجهات — واجهة المكتب', priority: 3 },
         { slug: 'air-conditioner-cleaning', context: 'مكيف — فلتر مسدود', priority: 4 },
         { slug: 'carpet-cleaning', context: 'سجاد — موكيت المكتب', priority: 5 },
+    
+        { slug: 'sofa-cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 6 },
+        { slug: 'steam-cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 7 },
     ],
 };

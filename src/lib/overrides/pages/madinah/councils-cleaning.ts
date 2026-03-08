@@ -115,5 +115,8 @@ export const override: PageOverride = {
         { slug: 'steam-cleaning', context: 'تعقيم مراتب وستائر بالبخار — يُكمل تنظيف المجلس.', priority: 3 },
         { slug: 'cleaning', context: 'تنظيف عميق للمنزل كاملاً — عرض موحد.', priority: 4 },
         { slug: 'pest-control', context: 'عث الغبار في المجالس = مكافحة وقائية ضرورية.', priority: 5 },
+    
+        { slug: 'air-conditioner-cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 6 },
+        { slug: 'tanks-cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 7 },
     ],
 };

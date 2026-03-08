@@ -69,5 +69,7 @@ export const override: PageOverride = {
         { slug: 'furniture-storage', context: 'تخزين — HVAC 12/12', priority: 3 },
         { slug: 'cleaning', context: 'تنظيف — بعد النقل', priority: 4 },
         { slug: 'air-conditioner-cleaning', context: 'مكيف — بعد النقل', priority: 5 },
+    
+        { slug: 'pest-control', context: 'خدمة مكملة — باقة شاملة.', priority: 6 },
     ],
 };

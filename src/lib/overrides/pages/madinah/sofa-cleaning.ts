@@ -124,5 +124,7 @@ export const override: PageOverride = {
         { slug: 'furniture-cleaning', context: 'تلميع أثاث خشبي وجلدي — مُكمّل لتنظيف الكنب القماشي.', priority: 4 },
         { slug: 'cleaning', context: 'تنظيف عميق للمنزل كاملاً مع غسيل الكنب — باقة شاملة.', priority: 5 },
         { slug: 'pest-control', context: 'عث الغبار في الكنب = مكافحة وقائية تحمي من حساسية الأطفال.', priority: 6 },
+    
+        { slug: 'air-conditioner-cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 7 },
     ],
 };

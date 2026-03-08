@@ -67,5 +67,8 @@ export const override: PageOverride = {
         { slug: 'water-leak-detection', context: 'تسربات', priority: 3 },
         { slug: 'water-insulation', context: 'عزل', priority: 4 },
         { slug: 'bird-control', context: 'طيور', priority: 5 },
+    
+        { slug: 'tank-leak-detection', context: 'خدمة مكملة — باقة شاملة.', priority: 6 },
+        { slug: 'tanks-cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 7 },
     ],
 };

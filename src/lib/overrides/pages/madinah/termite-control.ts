@@ -118,5 +118,9 @@ export const override: PageOverride = {
         { slug: 'pesticide-spraying', context: 'رش وقائي للحشرات السطحية — يُكمل حماية النمل الأبيض الجوفية.', priority: 2 },
         { slug: 'water-leak-detection', context: 'تسربات المياه تجذب النمل الأبيض — أصلح التسرب أولاً.', priority: 3 },
         { slug: 'roof-insulation', context: 'عزل أسطح يحمي الأخشاب من الرطوبة التي تجذب النمل.', priority: 4 },
+    
+        { slug: 'bedbugs-control', context: 'خدمة مكملة — باقة شاملة.', priority: 5 },
+        { slug: 'bird-control', context: 'خدمة مكملة — باقة شاملة.', priority: 6 },
+        { slug: 'cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 7 },
     ],
 };

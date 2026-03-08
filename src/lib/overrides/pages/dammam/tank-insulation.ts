@@ -106,5 +106,9 @@ export const override: PageOverride = {
         { slug: 'tank-leak-detection', context: 'فحص تسرب الخزان قبل العزل — لا فائدة من العزل فوق شق', priority: 2 },
         { slug: 'water-insulation', context: 'عزل مائي شامل للمبنى يُكمل عزل الخزان', priority: 3 },
         { slug: 'water-leak-detection', context: 'فحص شبكة المياه — التسرب قد يكون من الشبكة لا الخزان', priority: 4 },
+    
+        { slug: 'roof-insulation', context: 'خدمة مكملة — باقة شاملة.', priority: 5 },
+        { slug: 'foam-insulation', context: 'خدمة مكملة — باقة شاملة.', priority: 6 },
+        { slug: 'thermal-insulation', context: 'خدمة مكملة — باقة شاملة.', priority: 7 },
     ],
 };

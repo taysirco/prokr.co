@@ -111,5 +111,7 @@ export const override: PageOverride = {
         { slug: 'tank-insulation', context: 'عزل الخزان العلوي على السطح يحمي المياه من حرارة 80°م', priority: 4 },
         { slug: 'water-leak-detection', context: 'كشف تسربات المياه من السطح — فحص قبل وبعد العزل', priority: 5 },
         { slug: 'air-conditioner-cleaning', context: 'تنظيف مكيفات بعد العزل — حمل أقل = عمر أطول للمكيف', priority: 6 },
+    
+        { slug: 'cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 7 },
     ],
 };

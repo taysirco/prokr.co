@@ -123,5 +123,8 @@ export const override: PageOverride = {
         { slug: 'villas-cleaning', context: 'تنظيف فلل كاملة مع جلي الرخام — باقة متكاملة.', priority: 3 },
         { slug: 'swimming-pool-cleaning', context: 'إزالة ترسبات كلسية من رخام محيط المسبح.', priority: 4 },
         { slug: 'glass-facades-cleaning', context: 'تنظيف واجهات زجاجية من غبار الحرات — يتكامل مع جلي الأرضيات.', priority: 5 },
+    
+        { slug: 'carpet-cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 6 },
+        { slug: 'sofa-cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 7 },
     ],
 };

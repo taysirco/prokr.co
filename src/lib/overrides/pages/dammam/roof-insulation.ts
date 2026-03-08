@@ -103,5 +103,8 @@ export const override: PageOverride = {
         { slug: 'thermal-insulation', context: 'عزل حراري للجدران يُكمل عزل السطح', priority: 2 },
         { slug: 'water-insulation', context: 'عزل مائي شامل يحمي من الرطوبة البحرية', priority: 3 },
         { slug: 'water-leak-detection', context: 'فحص تسربات قبل العزل', priority: 4 },
+    
+        { slug: 'tank-insulation', context: 'خدمة مكملة — باقة شاملة.', priority: 5 },
+        { slug: 'cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 6 },
     ],
 };

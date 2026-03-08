@@ -101,5 +101,10 @@ export const override: PageOverride = {
         { slug: 'pest-control', context: 'الحمام يحمل براغيث وقراد — مكافحة حشرات بعد الطرد', priority: 1 },
         { slug: 'glass-facades-cleaning', context: 'تنظيف واجهات زجاجية من بقع الذرق الحمضية المتراكمة', priority: 2 },
         { slug: 'cleaning', context: 'تنظيف أسطح وشرفات من ذرق الحمام المتراكم', priority: 3 },
+    
+        { slug: 'pesticide-spraying', context: 'خدمة مكملة — باقة شاملة.', priority: 4 },
+        { slug: 'termite-control', context: 'خدمة مكملة — باقة شاملة.', priority: 5 },
+        { slug: 'bedbugs-control', context: 'خدمة مكملة — باقة شاملة.', priority: 6 },
+        { slug: 'tanks-cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 7 },
     ],
 };

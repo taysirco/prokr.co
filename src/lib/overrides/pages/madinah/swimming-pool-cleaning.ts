@@ -122,5 +122,8 @@ export const override: PageOverride = {
         { slug: 'pest-control', context: 'المسابح المهملة تجذب البعوض — مكافحة وقائية تمنع التكاثر.', priority: 3 },
         { slug: 'marble-polishing', context: 'جلي وتلميع الرخام المحيط بالمسبح — حماية من الترسبات الكلسية.', priority: 4 },
         { slug: 'cleaning', context: 'تنظيف شامل للمنزل مع صيانة المسبح — باقة متكاملة.', priority: 5 },
+    
+        { slug: 'tank-insulation', context: 'خدمة مكملة — باقة شاملة.', priority: 6 },
+        { slug: 'tank-leak-detection', context: 'خدمة مكملة — باقة شاملة.', priority: 7 },
     ],
 };

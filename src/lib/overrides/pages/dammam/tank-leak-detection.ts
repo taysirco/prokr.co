@@ -100,5 +100,9 @@ export const override: PageOverride = {
         { slug: 'tank-insulation', context: 'إعادة عزل الخزان بإيبوكسي بحري بعد الإصلاح', priority: 2 },
         { slug: 'water-leak-detection', context: 'كشف تسربات شبكة المياه الخارجية', priority: 3 },
         { slug: 'water-insulation', context: 'عزل مائي خارجي يحمي الخزان الأرضي من المياه الجوفية', priority: 4 },
+    
+        { slug: 'bathroom-leak-detection', context: 'خدمة مكملة — باقة شاملة.', priority: 5 },
+        { slug: 'roof-insulation', context: 'خدمة مكملة — باقة شاملة.', priority: 6 },
+        { slug: 'sewage-unblocking', context: 'خدمة مكملة — باقة شاملة.', priority: 7 },
     ],
 };

@@ -110,5 +110,8 @@ export const override: PageOverride = {
         { slug: 'water-insulation', context: 'عزل مائي يمنع ضغط المياه الجوفية على الأساسات', priority: 3 },
         { slug: 'pest-control', context: 'الرطوبة من التسرب تجذب الحشرات — مكافحة بعد الإصلاح', priority: 4 },
         { slug: 'cleaning', context: 'تنظيف وتعقيم بعد إزالة العفن الأسود — بيروكسيد هيدروجين', priority: 5 },
+    
+        { slug: 'roof-insulation', context: 'خدمة مكملة — باقة شاملة.', priority: 6 },
+        { slug: 'tanks-cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 7 },
     ],
 };

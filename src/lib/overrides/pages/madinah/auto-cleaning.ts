@@ -115,5 +115,10 @@ export const override: PageOverride = {
         { slug: 'cleaning', context: 'تنظيف منزل + غسيل سيارة = نظافة شاملة بباقة واحدة.', priority: 1 },
         { slug: 'furniture-cleaning', context: 'تلميع أثاث من غبار الحرات — نفس العدو بطريقة مختلفة.', priority: 2 },
         { slug: 'glass-facades-cleaning', context: 'تنظيف واجهات زجاجية من الغبار — يتكامل مع غسيل السيارة.', priority: 3 },
+    
+        { slug: 'carpet-cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 4 },
+        { slug: 'sofa-cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 5 },
+        { slug: 'steam-cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 7 },
     ],
 };

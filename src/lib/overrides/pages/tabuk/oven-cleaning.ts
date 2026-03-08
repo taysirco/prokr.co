@@ -68,5 +68,8 @@ export const override: PageOverride = {
         { slug: 'cleaning', context: 'تنظيف — المطبخ كاملاً', priority: 3 },
         { slug: 'pest-control', context: 'حشرات — صراصير المطبخ', priority: 4 },
         { slug: 'air-conditioner-cleaning', context: 'مكيف — شحوم تسد الفلتر', priority: 5 },
+    
+        { slug: 'carpet-cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 6 },
+        { slug: 'sofa-cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 7 },
     ],
 };

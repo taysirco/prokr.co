@@ -109,5 +109,8 @@ export const override: PageOverride = {
         { slug: 'cleaning', context: 'تنظيف بعد طفح المجاري — تعقيم وإزالة ملوثات', priority: 3 },
         { slug: 'kitchen-cleaning', context: 'تنظيف مطبخ + تسليك صرف المطبخ = حل شامل لمشكلة الدهون', priority: 4 },
         { slug: 'restaurant-chimney-cleaning', context: 'تنظيف مدخنة المطبخ التجاري يُكمل تسليك صرفه', priority: 5 },
+    
+        { slug: 'tank-leak-detection', context: 'خدمة مكملة — باقة شاملة.', priority: 6 },
+        { slug: 'water-leak-detection', context: 'خدمة مكملة — باقة شاملة.', priority: 7 },
     ],
 };

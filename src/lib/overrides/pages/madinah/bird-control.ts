@@ -111,5 +111,8 @@ export const override: PageOverride = {
         { slug: 'roof-insulation', context: 'فضلات الحمام تُتلف العزل المائي — أصلح العزل مع مكافحة الحمام.', priority: 3 },
         { slug: 'glass-facades-cleaning', context: 'تنظيف واجهات زجاجية من فضلات الحمام الحمضية.', priority: 4 },
         { slug: 'air-conditioner-cleaning', context: 'الحمام يعشش فوق وحدات التكييف — نظّفها بعد طرده.', priority: 5 },
+    
+        { slug: 'pesticide-spraying', context: 'خدمة مكملة — باقة شاملة.', priority: 6 },
+        { slug: 'termite-control', context: 'خدمة مكملة — باقة شاملة.', priority: 7 },
     ],
 };

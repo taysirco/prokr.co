@@ -126,5 +126,8 @@ export const override: PageOverride = {
         { slug: 'sofa-cleaning', context: 'إذا نقلت كنب مستعمل بالدباب، يمكن لمغاسلنا المتنقلة زيارتك لتنظيفه وتعقيمه في نفس اليوم.', priority: 3 },
         { slug: 'cleaning', context: 'قبل تركيب الأجهزة أو الأثاث الجديد المنقول، اطلب خدمة تنظيف الغرفة لضمان نظافة الزوايا الصعبة.', priority: 4 },
         { slug: 'pest-control', context: 'اطلب خدمة المكافحة لضمان خلو الأجهزة الكهربائية المستعملة المنقولة من أي صراصير ألمانية قديمة.', priority: 5 },
+    
+        { slug: 'furniture-storage', context: 'خدمة مكملة — باقة شاملة.', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 7 },
     ],
 };

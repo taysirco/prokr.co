@@ -116,5 +116,9 @@ export const override: PageOverride = {
         { slug: 'sofa-cleaning', context: 'عاملة الساعة تُرتّب الكنب — لكن الغسيل العميق يحتاج فريق متخصص.', priority: 2 },
         { slug: 'carpet-cleaning', context: 'المكنسة اليومية صيانة — غسيل السجاد العميق كل 6 أشهر = المكمّل.', priority: 3 },
         { slug: 'pest-control', context: 'النظافة اليومية تقلل الحشرات — لكن الرش الوقائي يمنعها تماماً.', priority: 4 },
+    
+        { slug: 'steam-cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 5 },
+        { slug: 'air-conditioner-cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 6 },
+        { slug: 'tanks-cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 7 },
     ],
 };

@@ -33,6 +33,8 @@ export const override: PageOverride = {
         },
         { question: 'هل فيه رائحة أثناء العمل؟', answer: 'الفريق يستخدم معدات مغلقة + مزيل روائح. الرائحة مؤقتة (15-30 دقيقة). تهوية بعد العمل تزيلها تماماً.' },
         { question: 'كم مدة العمل؟', answer: 'شفط: 30-60 دقيقة (حسب الحجم). تسليك: 1-3 ساعات (حسب الانسداد). الفريق يفحص بكاميرا CCTV قبل لتحديد المشكلة.' },
+    
+        { question: 'كم مرة أحتاج شفط؟', answer: 'منزل: كل 6-12 شهر. مطعم/محل: كل 3-4 أشهر. العلامات: بطء صرف + رائحة + فقاعات.' },
     ],
 
     expertTips: [
@@ -91,5 +93,8 @@ export const override: PageOverride = {
         { slug: 'cleaning', context: 'تنظيف شامل يُكمّل الخدمة الأساسية — بيئة نظيفة متكاملة.', priority: 5 },
         { slug: 'pest-control', context: 'مكافحة حشرات متكاملة مع خدمات النظافة والصيانة.', priority: 6 },
         { slug: 'air-conditioner-cleaning', context: 'تنظيف مكيفات لهواء نظيف — يُكمّل أي خدمة منزلية.', priority: 7 },
+    
+        { slug: 'tank-leak-detection', context: 'خدمة مكملة — باقة شاملة.', priority: 6 },
+        { slug: 'water-leak-detection', context: 'خدمة مكملة — باقة شاملة.', priority: 7 },
     ],
 };

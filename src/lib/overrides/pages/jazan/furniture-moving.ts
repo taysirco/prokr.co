@@ -23,6 +23,8 @@ export const override: PageOverride = {
         { question: 'MDF ينتفخ من الرطوبة بدون ماء مباشر؟', answer: '80% رطوبة هواء كافية لـ MDF يمتص ببطء. + مطر موسمي يوليو-سبتمبر = خطر مباشر. شاحنة مُغلقة + كرتون عزل = حماية.' },
         { question: 'هل الشركة مرخصة من هيئة النقل TGA؟', answer: 'كل شركات بروكر مرخصة TGA + بيان حمولة لوجستي. الترخيص = تأمين على الأمتعة + حقوق عميل. بدون ترخيص = لا تأمين = لا تعويض.' },
         { question: 'كم يوم قبل أحجز؟', answer: 'الأفضل 3-7 أيام مقدماً. في مواسم الذروة (نهاية العقود/إجازات): 10-14 يوم. الحجز المبكر = سعر أفضل + موعد مناسب.' },
+    
+        { question: 'هل فيه تأمين على الأمتعة؟', answer: 'كل شركات بروكر مرخصة TGA = تأمين شامل. أي ضرر = تعويض فوري. بدون TGA = بدون تعويض.' },
     ],
     expertTips: [
         'فحص عفن قبل التحميل — أثاث مُعفّن يُعالج أولاً أو يُفصل.',
@@ -63,5 +65,8 @@ export const override: PageOverride = {
         { slug: 'dabab', context: 'دباب — قطع خفيفة', priority: 3 },
         { slug: 'cleaning', context: 'تنظيف — بعد النقل', priority: 4 },
         { slug: 'furniture-cleaning', context: 'أثاث — Anti-Fungal بعد النقل', priority: 5 },
+    
+        { slug: 'pest-control', context: 'خدمة مكملة — باقة شاملة.', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 7 },
     ],
 };

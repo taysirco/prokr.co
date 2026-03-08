@@ -101,5 +101,9 @@ export const override: PageOverride = {
         { slug: 'water-insulation', context: 'إعادة عزل أرضية الحمام بعد إصلاح التسرب — يمنع التكرار', priority: 2 },
         { slug: 'cleaning', context: 'تنظيف وتعقيم الحمام بعد إزالة العفن — بيروكسيد هيدروجين', priority: 3 },
         { slug: 'tank-leak-detection', context: 'فحص خزان المياه — مصدر الملوحة التي تأكل الخلاطات', priority: 4 },
+    
+        { slug: 'roof-insulation', context: 'خدمة مكملة — باقة شاملة.', priority: 5 },
+        { slug: 'tanks-cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 6 },
+        { slug: 'sewage-unblocking', context: 'خدمة مكملة — باقة شاملة.', priority: 7 },
     ],
 };

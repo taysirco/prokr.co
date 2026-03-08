@@ -118,5 +118,8 @@ export const override: PageOverride = {
         { slug: 'pest-control', context: 'رش وقائي عند الانتقال لشقة جديدة — ابدأ بدون حشرات.', priority: 3 },
         { slug: 'air-conditioner-cleaning', context: 'غسيل مكيفات الشقة — هواء نظيف من أول يوم.', priority: 4 },
         { slug: 'furniture-moving', context: 'نقل أثاث + تنظيف شقة المغادرة = باقة متكاملة.', priority: 5 },
+    
+        { slug: 'steam-cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 6 },
+        { slug: 'cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 7 },
     ],
 };

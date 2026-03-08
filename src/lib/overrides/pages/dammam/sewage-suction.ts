@@ -100,5 +100,9 @@ export const override: PageOverride = {
         { slug: 'sewage-unblocking', context: 'تسليك مجاري + شفط = حل شامل لشبكة الصرف', priority: 1 },
         { slug: 'pest-control', context: 'مكافحة حشرات البيارة — صراصير نشطة 12 شهر', priority: 2 },
         { slug: 'cleaning', context: 'تنظيف وتعقيم بعد طفح — إزالة ملوثات وبكتيريا', priority: 3 },
+    
+        { slug: 'tank-leak-detection', context: 'خدمة مكملة — باقة شاملة.', priority: 4 },
+        { slug: 'water-leak-detection', context: 'خدمة مكملة — باقة شاملة.', priority: 5 },
+        { slug: 'tanks-cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 6 },
     ],
 };

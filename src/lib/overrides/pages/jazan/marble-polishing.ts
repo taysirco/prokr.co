@@ -65,5 +65,8 @@ export const override: PageOverride = {
         { slug: 'villas-cleaning', context: 'فلل — رخام الفيلا', priority: 3 },
         { slug: 'swimming-pool-cleaning', context: 'مسابح — رخام حول المسبح', priority: 4 },
         { slug: 'steam-cleaning', context: 'بخار — تعقيم بعد الجلي', priority: 5 },
+    
+        { slug: 'carpet-cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 6 },
+        { slug: 'sofa-cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 7 },
     ],
 };

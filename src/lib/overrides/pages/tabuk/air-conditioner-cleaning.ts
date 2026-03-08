@@ -64,5 +64,9 @@ export const override: PageOverride = {
         { slug: 'steam-cleaning', context: 'بخار — تعقيم مجاري المكيف', priority: 2 },
         { slug: 'office-cleaning', context: 'مكاتب — مكيفات المكتب', priority: 3 },
         { slug: 'thermal-insulation', context: 'عزل — يُقلل حمل المكيف', priority: 4 },
+    
+        { slug: 'carpet-cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 5 },
+        { slug: 'sofa-cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 6 },
+        { slug: 'pest-control', context: 'خدمة مكملة — باقة شاملة.', priority: 7 },
     ],
 };

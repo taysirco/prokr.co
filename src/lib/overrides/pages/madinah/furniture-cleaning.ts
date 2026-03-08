@@ -120,5 +120,8 @@ export const override: PageOverride = {
         { slug: 'steam-cleaning', context: 'تعقيم مفروشات بالبخار — بدون كيميائيات تضر الأثاث.', priority: 3 },
         { slug: 'cleaning', context: 'تنظيف شامل للمنزل مع تلميع الأثاث — عرض موحد.', priority: 4 },
         { slug: 'pest-control', context: 'حماية الأثاث من حشرة السوس (Woodworm) مع التلميع.', priority: 5 },
+    
+        { slug: 'air-conditioner-cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 6 },
+        { slug: 'tanks-cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 7 },
     ],
 };

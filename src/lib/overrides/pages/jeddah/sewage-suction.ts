@@ -60,5 +60,10 @@ export const override: PageOverride = {
         { slug: 'sewage-unblocking', context: 'تسليك', priority: 1 },
         { slug: 'pesticide-spraying', context: 'حشرات', priority: 2 },
         { slug: 'water-leak-detection', context: 'تسربات', priority: 3 },
+    
+        { slug: 'tank-leak-detection', context: 'خدمة مكملة — باقة شاملة.', priority: 4 },
+        { slug: 'tanks-cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 5 },
+        { slug: 'cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 6 },
+        { slug: 'pest-control', context: 'خدمة مكملة — باقة شاملة.', priority: 7 },
     ],
 };

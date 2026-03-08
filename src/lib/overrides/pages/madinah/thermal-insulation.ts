@@ -109,5 +109,7 @@ export const override: PageOverride = {
         { slug: 'tank-insulation', context: 'عزل خزان المياه يحمي من حرارة 80°م على السطح', priority: 4 },
         { slug: 'air-conditioner-cleaning', context: 'مكيف نظيف + عزل = أقصى كفاءة وأقل فاتورة', priority: 5 },
         { slug: 'glass-facades-cleaning', context: 'زجاج نظيف يعكس الحرارة أفضل — يُكمل أداء العزل', priority: 6 },
+    
+        { slug: 'water-leak-detection', context: 'خدمة مكملة — باقة شاملة.', priority: 7 },
     ],
 };

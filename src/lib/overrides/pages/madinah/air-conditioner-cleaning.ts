@@ -125,5 +125,7 @@ export const override: PageOverride = {
         { slug: 'thermal-insulation', context: 'عزل حراري للجدران = مكيف يعمل نصف الوقت ← وفر كهرباء 40%.', priority: 4 },
         { slug: 'pest-control', context: 'الحشرات تدخل من ثقوب تمديدات المكيف — اسدها واطلب رشاً وقائياً.', priority: 5 },
         { slug: 'water-leak-detection', context: 'تسريب مياه المكيف على الجدار = تلف خفي. اكشف وعالج قبل فوات الأوان.', priority: 6 },
+    
+        { slug: 'carpet-cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 7 },
     ],
 };

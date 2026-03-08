@@ -100,5 +100,9 @@ export const override: PageOverride = {
         { slug: 'sewage-suction', context: 'شفط بيارة — المياه الجوفية ترفع المنسوب بسرعة', priority: 1 },
         { slug: 'pest-control', context: 'مكافحة صراصير الصرف — نشطة 12 شهر بلا فترة خمول', priority: 2 },
         { slug: 'cleaning', context: 'تنظيف وتعقيم بعد طفح — إزالة ملوثات بكتيرية', priority: 3 },
+    
+        { slug: 'tank-leak-detection', context: 'خدمة مكملة — باقة شاملة.', priority: 4 },
+        { slug: 'water-leak-detection', context: 'خدمة مكملة — باقة شاملة.', priority: 5 },
+        { slug: 'tanks-cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 6 },
     ],
 };

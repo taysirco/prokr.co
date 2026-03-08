@@ -118,5 +118,8 @@ export const override: PageOverride = {
         { slug: 'steam-cleaning', context: 'تعقيم مراتب وكنب بالبخار — خطوة إضافية بعد المكافحة.', priority: 3 },
         { slug: 'sofa-cleaning', context: 'غسيل عميق للكنب بعد القضاء على البق — إزالة فضلات وبقع.', priority: 4 },
         { slug: 'furniture-moving', context: 'نقل أثاث مع فحص بق — حماية منزلك الجديد من الإصابة.', priority: 5 },
+    
+        { slug: 'termite-control', context: 'خدمة مكملة — باقة شاملة.', priority: 6 },
+        { slug: 'bird-control', context: 'خدمة مكملة — باقة شاملة.', priority: 7 },
     ],
 };

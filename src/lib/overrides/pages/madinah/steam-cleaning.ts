@@ -123,5 +123,7 @@ export const override: PageOverride = {
         { slug: 'pest-control', context: 'البخار يقتل العث — والمبيدات تحمي الزوايا. بروتوكول تكاملي.', priority: 4 },
         { slug: 'councils-cleaning', context: 'تعقيم مجالس أرضية بالبخار — حماية ضيوفك من العث والبكتيريا.', priority: 5 },
         { slug: 'oven-cleaning', context: 'بخار الأفران يُذيب الحروقات بدون خدش — أكمل نظافة مطبخك.', priority: 6 },
+    
+        { slug: 'air-conditioner-cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 7 },
     ],
 };

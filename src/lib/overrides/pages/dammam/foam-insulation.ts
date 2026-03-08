@@ -106,5 +106,8 @@ export const override: PageOverride = {
         { slug: 'thermal-insulation', context: 'عزل حراري للجدران يُكمل فوم السطح', priority: 2 },
         { slug: 'water-insulation', context: 'عزل مائي يحمي من الرطوبة البحرية والمياه الجوفية', priority: 3 },
         { slug: 'tank-insulation', context: 'عزل خزان مياه بفوم Closed-Cell — يمنع تسخين المياه', priority: 4 },
+    
+        { slug: 'water-leak-detection', context: 'خدمة مكملة — باقة شاملة.', priority: 5 },
+        { slug: 'cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 6 },
     ],
 };

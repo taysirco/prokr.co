@@ -124,5 +124,7 @@ export const override: PageOverride = {
         { slug: 'cleaning', context: 'تنظيف شامل للمنزل مع غسيل السجاد — باقة متكاملة.', priority: 4 },
         { slug: 'pest-control', context: 'مكافحة عث الغبار = حماية وقائية تُكمل تنظيف السجاد العميق.', priority: 5 },
         { slug: 'furniture-cleaning', context: 'تلميع الأثاث الخشبي من الغبار البركاني مع السجاد.', priority: 6 },
+    
+        { slug: 'air-conditioner-cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 7 },
     ],
 };

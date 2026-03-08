@@ -54,11 +54,17 @@ export const override: PageOverride = {
         { name: 'مصائد UV ليلية', use: 'عقارب Deathstalker — أطراف المدينة' },
     ],
     hiddenObjections: [{ fear: 'رش واحد يكفي.', solution: '4 مصادر مختلفة (نخيل + نمل + عقارب + حرارة). رش واحد ≠ يغطي. بروتوكول رباعي.' }],
-    counterNarratives: [{ myth: 'الحرارة تقتل الحشرات.', truth: '48°م = تُسرّع دورة الحياة. بق 21 يوم بدلاً من 45. الحرارة = صديقة الحشرات.' }],
+    counterNarratives: [{ myth: 'الحرارة تقتل الحشرات.', truth: '48°م = تُسرّع دورة الحياة. بق 21 يوم بدلاً من 45. الحرارة = صديقة الحشرات.' },
+        { myth: 'الحشرات تدل على قلة نظافة.', truth: 'الحشرات تبحث عن ماء ودفء وليس قذارة. أنظف بيت يجذب حشرات إذا فيه رطوبة أو شقوق.' },
+    ],
     relatedServices: [
         { slug: 'bedbugs-control', context: 'بق — دورة 21 يوم', priority: 1 },
         { slug: 'termite-control', context: 'نمل أبيض — نخيل سليلوز', priority: 2 },
         { slug: 'cleaning', context: 'تنظيف — بعد مكافحة', priority: 3 },
         { slug: 'tanks-cleaning', context: 'خزانات — CaCO₃', priority: 4 },
+    
+        { slug: 'pesticide-spraying', context: 'خدمة مكملة — باقة شاملة.', priority: 5 },
+        { slug: 'bird-control', context: 'خدمة مكملة — باقة شاملة.', priority: 6 },
+        { slug: 'sewage-unblocking', context: 'خدمة مكملة — باقة شاملة.', priority: 7 },
     ],
 };

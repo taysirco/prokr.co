@@ -71,5 +71,7 @@ export const override: PageOverride = {
         { slug: 'tanks-cleaning', context: 'خزانات — يرقات', priority: 4 },
         { slug: 'cleaning', context: 'تنظيف — بعد المكافحة', priority: 5 },
         { slug: 'villas-cleaning', context: 'فلل — حدائق = بيئة حشرات', priority: 6 },
+    
+        { slug: 'pesticide-spraying', context: 'خدمة مكملة — باقة شاملة.', priority: 7 },
     ],
 };

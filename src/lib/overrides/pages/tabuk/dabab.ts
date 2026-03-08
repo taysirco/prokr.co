@@ -23,6 +23,8 @@ export const override: PageOverride = {
         { question: 'لابتوب في -2°م — يتأثر؟', answer: 'بطارية ليثيوم -30-50%. + شحن في البرد = ضرر كيميائي. حقيبة حرارية ← أدخل ← انتظر 30 دقيقة ← ثم اشحن.' },
         { question: 'هل الشركة مرخصة من هيئة النقل TGA؟', answer: 'كل شركات بروكر مرخصة TGA + بيان حمولة لوجستي. الترخيص = تأمين على الأمتعة + حقوق عميل. بدون ترخيص = لا تأمين = لا تعويض.' },
         { question: 'كم يوم قبل أحجز؟', answer: 'الأفضل 3-7 أيام مقدماً. في مواسم الذروة (نهاية العقود/إجازات): 10-14 يوم. الحجز المبكر = سعر أفضل + موعد مناسب.' },
+    
+        { question: 'هل فيه تأمين على الأمتعة؟', answer: 'كل شركات بروكر مرخصة TGA = تأمين شامل. أي ضرر = تعويض فوري. بدون TGA = بدون تعويض.' },
     ],
     expertTips: [
         'غطاء دائم — ثلوج مفاجئة + رياح حسمى + غبار 24/7.',
@@ -50,10 +52,16 @@ export const override: PageOverride = {
         { name: 'حقيبة حرارية', use: 'إلكترونيات -2°م' },
     ],
     hiddenObjections: [{ fear: 'بلا غطاء أرخص.', solution: 'ثلج 5 دقائق = MDF تالف = 500-3,000 ريال.' }],
-    counterNarratives: [{ myth: 'رحلة قصيرة = لا خطر.', truth: 'ثلج + رياح = خطر أول دقيقة.' }],
+    counterNarratives: [{ myth: 'رحلة قصيرة = لا خطر.', truth: 'ثلج + رياح = خطر أول دقيقة.' },
+        { myth: 'النقل سهل — أسويه بنفسي.', truth: 'خدش خزانة = 500-2,000 ريال. إصابة ظهر = آلاف. النقل المهني + التأمين = أرخص من المخاطرة.' },
+    ],
     relatedServices: [
         { slug: 'dyna', context: 'دينا — قطع ثقيلة', priority: 1 },
         { slug: 'furniture-moving', context: 'نقل عفش — شاحنة مغطاة', priority: 2 },
         { slug: 'cleaning', context: 'تنظيف — بعد النقل', priority: 3 },
+    
+        { slug: 'furniture-storage', context: 'خدمة مكملة — باقة شاملة.', priority: 4 },
+        { slug: 'pest-control', context: 'خدمة مكملة — باقة شاملة.', priority: 5 },
+        { slug: 'air-conditioner-cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 6 },
     ],
 };

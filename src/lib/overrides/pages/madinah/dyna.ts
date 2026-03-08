@@ -127,5 +127,7 @@ export const override: PageOverride = {
         { slug: 'cleaning', context: 'سبق الدينا خطوة بتنظيف المنزل الجديد للحد من الأتربة وتجهيزه لاستقبال الأثاث نظيفاً.', priority: 4 },
         { slug: 'sofa-cleaning', context: 'إذا تسبب سوء تخزين سابق أو نقل عشوائي في اتساخ كنبك، نرسل الدينا لإحضاره وتقوم مغاسلنا بتجديده بالكامل.', priority: 5 },
         { slug: 'pest-control', context: 'فحص ورش المنزل الجديد قبل إدخال العفش المنقول، خطوة جوهرية لمنع استيطان الحشرات لاحقاً.', priority: 6 },
+    
+        { slug: 'air-conditioner-cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 7 },
     ],
 };

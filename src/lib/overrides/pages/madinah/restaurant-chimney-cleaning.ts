@@ -117,5 +117,9 @@ export const override: PageOverride = {
         { slug: 'cleaning', context: 'تنظيف شامل للمطعم مع المدخنة والأرضيات.', priority: 2 },
         { slug: 'pest-control', context: 'الدهون المتسربة تجذب الصراصير — نظّف وارش وقائياً.', priority: 3 },
         { slug: 'office-cleaning', context: 'عقد نظافة يومي للمطعم — يُكمل صيانة المداخن الربع سنوية.', priority: 4 },
+    
+        { slug: 'carpet-cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 5 },
+        { slug: 'sofa-cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 6 },
+        { slug: 'steam-cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 7 },
     ],
 };

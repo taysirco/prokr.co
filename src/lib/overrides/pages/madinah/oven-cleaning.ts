@@ -116,5 +116,8 @@ export const override: PageOverride = {
         { slug: 'steam-cleaning', context: 'تعقيم أسطح المطبخ بالبخار — يُكمل تنظيف الفرن.', priority: 3 },
         { slug: 'pest-control', context: 'الأفران المتسخة تجذب الصراصير — نظّف الفرن وارش وقائياً.', priority: 4 },
         { slug: 'kitchen-cleaning', context: 'تنظيف مطبخ كامل مع الفرن والشفاط — باقة مطبخ نظيف.', priority: 5 },
+    
+        { slug: 'carpet-cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 6 },
+        { slug: 'sofa-cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 7 },
     ],
 };

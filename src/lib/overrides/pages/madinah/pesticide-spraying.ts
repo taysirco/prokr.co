@@ -117,5 +117,8 @@ export const override: PageOverride = {
         { slug: 'bedbugs-control', context: 'بق الفراش يقاوم المبيدات العادية — يحتاج بروتوكول حراري متخصص.', priority: 3 },
         { slug: 'cleaning', context: 'النظافة العميقة + رش وقائي = حماية 360° من الحشرات.', priority: 4 },
         { slug: 'tanks-cleaning', context: 'خزانات مفتوحة تجذب الحشرات — نظّفها وارش حولها.', priority: 5 },
+    
+        { slug: 'bird-control', context: 'خدمة مكملة — باقة شاملة.', priority: 6 },
+        { slug: 'sewage-unblocking', context: 'خدمة مكملة — باقة شاملة.', priority: 7 },
     ],
 };

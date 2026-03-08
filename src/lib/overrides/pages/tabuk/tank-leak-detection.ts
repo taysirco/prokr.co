@@ -32,6 +32,8 @@ export const override: PageOverride = {
         },
         { question: 'هل الكشف بدون تكسير؟', answer: 'نعم 100% — أجهزة الأكوافون + التصوير الحراري تحدد الموقع بدقة ±10 سم بدون كسر حرف واحد.' },
         { question: 'كم تستغرق العملية؟', answer: 'فحص شامل: 1-3 ساعات. تقرير NWC: يصدر خلال 24 ساعة. بالتقرير: تقدّم طلب تعديل فاتورة بأثر رجعي.' },
+    
+        { question: 'هل التقرير يخفّض فاتورة المياه؟', answer: 'نعم — تقرير NWC المعتمد يُعدّل الفاتورة بأثر رجعي. عملاء استردوا آلاف الريالات.' },
     ],
 
     expertTips: [
@@ -93,5 +95,7 @@ export const override: PageOverride = {
         { slug: 'cleaning', context: 'تنظيف شامل يُكمّل الخدمة الأساسية — بيئة نظيفة متكاملة.', priority: 5 },
         { slug: 'pest-control', context: 'مكافحة حشرات متكاملة مع خدمات النظافة والصيانة.', priority: 6 },
         { slug: 'air-conditioner-cleaning', context: 'تنظيف مكيفات لهواء نظيف — يُكمّل أي خدمة منزلية.', priority: 7 },
+    
+        { slug: 'bathroom-leak-detection', context: 'خدمة مكملة — باقة شاملة.', priority: 7 },
     ],
 };

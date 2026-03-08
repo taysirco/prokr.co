@@ -105,5 +105,9 @@ export const override: PageOverride = {
         { slug: 'foam-insulation', context: 'فوم Closed-Cell — أقوى مادة عزل حراري للبيئة الساحلية', priority: 2 },
         { slug: 'water-insulation', context: 'عزل مائي يُكمل الحراري — حماية شاملة', priority: 3 },
         { slug: 'air-conditioner-cleaning', context: 'مكيف نظيف + مبنى معزول = أقصى كفاءة بأقل كهرباء', priority: 4 },
+    
+        { slug: 'tank-insulation', context: 'خدمة مكملة — باقة شاملة.', priority: 5 },
+        { slug: 'water-leak-detection', context: 'خدمة مكملة — باقة شاملة.', priority: 6 },
+        { slug: 'cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 7 },
     ],
 };

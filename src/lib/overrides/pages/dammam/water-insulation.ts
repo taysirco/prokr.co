@@ -106,5 +106,9 @@ export const override: PageOverride = {
         { slug: 'bathroom-leak-detection', context: 'كشف تسرب الحمام قبل إعادة العزل', priority: 2 },
         { slug: 'foam-insulation', context: 'Closed-Cell فوم يعزل حرارياً ومائياً — حل مزدوج', priority: 3 },
         { slug: 'tank-insulation', context: 'عزل خزان مائي بإيبوكسي بحري يحمي من الملوحة', priority: 4 },
+    
+        { slug: 'water-leak-detection', context: 'خدمة مكملة — باقة شاملة.', priority: 5 },
+        { slug: 'thermal-insulation', context: 'خدمة مكملة — باقة شاملة.', priority: 6 },
+        { slug: 'cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 7 },
     ],
 };
