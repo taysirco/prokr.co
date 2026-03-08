@@ -9,6 +9,7 @@ import { BreadcrumbJsonLd, ServiceJsonLd, ItemListJsonLd, WebPageJsonLd } from '
 import { getCityContext, getAdjustedPriceRange } from '@/lib/city-context';
 import { getServiceKeywordProfile } from '@/lib/keyword-strategy';
 import { hasPageOverride } from '@/lib/overrides/registry';
+import { isAbsorbedSlug } from '@/lib/services/super-page-groups';
 import Footer from '@/components/Footer';
 
 // Major cities for price comparison
@@ -346,7 +347,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <h2 className="text-xl font-bold text-gray-900 mb-6">خدمات أخرى</h2>
                         <div className="flex flex-wrap gap-3">
-                            {SERVICES.filter(s => s.slug !== service.slug).slice(0, 12).map(otherService => (
+                            {SERVICES.filter(s => s.slug !== service.slug && !isAbsorbedSlug(s.slug)).slice(0, 12).map(otherService => (
                                 <Link
                                     key={otherService.slug}
                                     href={`/${otherService.slug}`}
