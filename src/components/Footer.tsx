@@ -4,6 +4,7 @@ import { CITIES, SERVICES, getCityBySlug, getServiceBySlug } from '@/lib/seed';
 import { NAP } from '@/lib/nap';
 import { getCityKeyword } from '@/lib/keyword-strategy';
 import { hasPageOverride } from '@/lib/overrides/registry';
+import { isAbsorbedSlug, getCanonicalSlug } from '@/lib/services/super-page-groups';
 
 interface FooterProps {
     currentCity?: string;
@@ -18,14 +19,17 @@ export default function Footer({ currentCity, currentService }: FooterProps) {
     // Show services and cities that actually have valid E-E-A-T pages
     const currentValidCity = currentCity || 'riyadh';
     const currentValidService = currentService || 'furniture-moving';
+    // Resolve absorbed slug to canonical for city link generation
+    const canonicalService = getCanonicalSlug(currentValidService) || currentValidService;
 
     const allServices = SERVICES.filter(s =>
         s.slug !== currentService &&
-        hasPageOverride(currentValidCity, s.slug)
+        hasPageOverride(currentValidCity, s.slug) &&
+        !isAbsorbedSlug(s.slug)
     );
     const allCities = CITIES.filter(c =>
         c.slug !== currentCity &&
-        hasPageOverride(c.slug, currentValidService)
+        hasPageOverride(c.slug, canonicalService)
     );
 
     return (
@@ -62,7 +66,7 @@ export default function Footer({ currentCity, currentService }: FooterProps) {
                         {allCities.map(c => (
                             <Link
                                 key={c.slug}
-                                href={`/${c.slug}/${currentValidService}`}
+                                href={`/${c.slug}/${canonicalService}`}
                                 className="hover:text-emerald-400 transition-colors text-sm"
                             >
                                 {c.name_ar}
