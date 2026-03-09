@@ -16,6 +16,7 @@ import aiohttp
 import time
 import os
 import sys
+import re
 from pathlib import Path
 
 # ---------------------------------------------------------
@@ -42,10 +43,35 @@ HEADERS = {
 # نظام استخراج الحمض النووي (DNA Extraction — URL Auto-Discovery)
 # ---------------------------------------------------------
 
-def discover_all_urls(base_url: str) -> list[str]:
+def extract_absorbed_slugs() -> set[str]:
     """
-    يستخرج الـ 952 رابطاً مباشرة من نظام الملفات —
-    لا حاجة لقوائم يدوية. المصدر: src/lib/overrides/pages/
+    يقرأ super-page-groups.ts ويستخرج كل الـ absorbed slugs
+    التي تسبب 301 redirect → لا فائدة من تسخينها.
+    """
+    script_dir = Path(__file__).parent
+    groups_file = script_dir / "src" / "lib" / "services" / "super-page-groups.ts"
+
+    if not groups_file.exists():
+        print(f"\033[93m[!] WARNING: super-page-groups.ts not found, no filtering\033[0m")
+        return set()
+
+    content = groups_file.read_text()
+    # Extract all absorbed arrays: absorbed: ['slug1', 'slug2']
+    matches = re.findall(r"absorbed:\s*\[([^\]]+)\]", content)
+    absorbed = set()
+    for match in matches:
+        slugs = re.findall(r"'([^']+)'", match)
+        absorbed.update(slugs)
+
+    return absorbed
+
+
+def discover_all_urls(base_url: str) -> tuple[list[str], int]:
+    """
+    يستخرج الروابط النشطة مباشرة من نظام الملفات —
+    مع تصفية الـ absorbed slugs (301 redirects) لتجنب إهدار الخادم.
+    المصدر: src/lib/overrides/pages/
+    Returns: (urls, filtered_count)
     """
     # تحديد مسار مجلد الـ overrides
     script_dir = Path(__file__).parent
@@ -55,7 +81,11 @@ def discover_all_urls(base_url: str) -> list[str]:
         print(f"\033[91m[!] CRITICAL: Override directory not found: {overrides_dir}\033[0m")
         sys.exit(1)
 
+    # استخراج الـ absorbed slugs لتصفيتها
+    absorbed = extract_absorbed_slugs()
+
     urls = []
+    filtered_count = 0
 
     # ── المرحلة 1: الشرايين الرئيسية (Static Pages) ──
     static_pages = [
@@ -80,16 +110,20 @@ def discover_all_urls(base_url: str) -> list[str]:
         urls.append(f"{base_url}/{city}")
 
     # ── المرحلة 3: خلايا الاستهداف (City × Service Pages) ──
+    # ⚠️ تصفية الـ absorbed slugs + المجلدات الفرعية (مثل makkah/sharaia)
     for city in city_dirs:
         city_path = overrides_dir / city
         service_files = sorted([
             f.stem for f in city_path.iterdir()
-            if f.suffix == ".ts" and f.name != "index.ts"
+            if f.is_file() and f.suffix == ".ts" and f.name != "index.ts"
         ])
         for service in service_files:
+            if service in absorbed:
+                filtered_count += 1
+                continue  # ← Skip: 301 redirect = wasted request
             urls.append(f"{base_url}/{city}/{service}")
 
-    return urls
+    return urls, filtered_count
 
 # ---------------------------------------------------------
 # وحدة النبض الكهرومغناطيسي (Electromagnetic Pulse Unit)
@@ -239,8 +273,8 @@ if __name__ == "__main__":
     print("\033[91m╚═══════════════════════════════════════════════════════╝\033[0m")
     print("")
 
-    # استخراج الحمض النووي — 952 هدف
-    urls_to_warm = discover_all_urls(BASE_URL)
+    # استخراج الحمض النووي — مع تصفية الـ absorbed slugs
+    urls_to_warm, filtered_count = discover_all_urls(BASE_URL)
     total_warheads = len(urls_to_warm)
 
     # Count breakdown
@@ -253,6 +287,8 @@ if __name__ == "__main__":
     print(f"     Static arteries:   {static_count}")
     print(f"     Command centers:   {city_count} cities")
     print(f"     Target cells:      {service_count} service pages")
+    if filtered_count > 0:
+        print(f"     \033[93m🚫 Absorbed (301):    {filtered_count} filtered out\033[0m")
     print(f"     ────────────────────────────")
     print(f"     🎯 TOTAL WARHEADS: {total_warheads}")
     print(f"     ⚡ CONCURRENCY:    {MAX_CONCURRENCY} (Semaphore Safety Valve)")

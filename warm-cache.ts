@@ -12,7 +12,7 @@
 //   npx tsx warm-cache.ts --base=http://localhost:3000  # warm local dev
 // ============================================
 
-import { readdirSync, statSync, existsSync } from 'fs';
+import { readdirSync, statSync, existsSync, readFileSync } from 'fs';
 import { join, basename } from 'path';
 
 // ── Configuration ──
@@ -30,16 +30,46 @@ const baseArg = args.find(a => a.startsWith('--base='));
 const baseUrl = baseArg ? baseArg.split('=')[1].replace(/\/$/, '') : BASE_URL;
 
 // ============================================
-// URL DISCOVERY — Scans filesystem for valid override files
+// ABSORBED SLUG FILTER — Reads super-page-groups.ts to exclude 301 redirects
 // ============================================
 
-function discoverOverrideUrls(): string[] {
+function extractAbsorbedSlugs(): Set<string> {
+    const groupsFile = join(import.meta.dirname || __dirname, 'src/lib/services/super-page-groups.ts');
+
+    if (!existsSync(groupsFile)) {
+        console.warn('⚠️  super-page-groups.ts not found, no filtering');
+        return new Set();
+    }
+
+    const content = readFileSync(groupsFile, 'utf-8');
+    const absorbed = new Set<string>();
+
+    // Extract all absorbed arrays: absorbed: ['slug1', 'slug2']
+    const matches = content.matchAll(/absorbed:\s*\[([^\]]+)\]/g);
+    for (const match of matches) {
+        const slugs = match[1].matchAll(/'([^']+)'/g);
+        for (const slug of slugs) {
+            absorbed.add(slug[1]);
+        }
+    }
+
+    return absorbed;
+}
+
+// ============================================
+// URL DISCOVERY — Scans filesystem, filters absorbed slugs & subdirectories
+// ============================================
+
+function discoverOverrideUrls(): { urls: string[]; filtered: number } {
     const urls: string[] = [];
+    let filtered = 0;
 
     if (!existsSync(OVERRIDES_DIR)) {
         console.error(`❌ Override directory not found: ${OVERRIDES_DIR}`);
         process.exit(1);
     }
+
+    const absorbed = extractAbsorbedSlugs();
 
     const cityDirs = readdirSync(OVERRIDES_DIR).filter(name => {
         const fullPath = join(OVERRIDES_DIR, name);
@@ -48,17 +78,22 @@ function discoverOverrideUrls(): string[] {
 
     for (const city of cityDirs) {
         const cityPath = join(OVERRIDES_DIR, city);
-        const serviceFiles = readdirSync(cityPath).filter(
-            f => f.endsWith('.ts') && f !== 'index.ts'
-        );
+        const serviceFiles = readdirSync(cityPath).filter(f => {
+            const fullPath = join(cityPath, f);
+            return statSync(fullPath).isFile() && f.endsWith('.ts') && f !== 'index.ts';
+        });
 
         for (const file of serviceFiles) {
             const service = basename(file, '.ts');
+            if (absorbed.has(service)) {
+                filtered++;
+                continue; // Skip: 301 redirect = wasted request
+            }
             urls.push(`/${city}/${service}`);
         }
     }
 
-    return urls;
+    return { urls, filtered };
 }
 
 function discoverStaticUrls(): string[] {
@@ -244,7 +279,7 @@ async function main() {
     // Discover all URLs
     const staticUrls = discoverStaticUrls();
     const cityUrls = discoverCityUrls();
-    const overrideUrls = discoverOverrideUrls();
+    const { urls: overrideUrls, filtered } = discoverOverrideUrls();
 
     const allUrls = [...staticUrls, ...cityUrls, ...overrideUrls];
 
@@ -252,6 +287,9 @@ async function main() {
     console.log(`   Static pages:  ${staticUrls.length}`);
     console.log(`   City hubs:     ${cityUrls.length}`);
     console.log(`   Service pages: ${overrideUrls.length}`);
+    if (filtered > 0) {
+        console.log(`   🚫 Absorbed (301): ${filtered} filtered out`);
+    }
     console.log('');
 
     if (isDryRun) {
