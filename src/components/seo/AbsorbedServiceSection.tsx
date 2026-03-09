@@ -59,7 +59,7 @@ export function AbsorbedServiceSections({
                         <article
                             key={absorbedSlug}
                             id={absorbedSlug}
-                            className="scroll-mt-24 bg-white rounded-2xl border border-gray-200 p-6 lg:p-8 shadow-sm"
+                            className="absorbed-section scroll-mt-32 bg-white rounded-2xl border border-gray-200 p-6 lg:p-8 shadow-sm transition-all duration-300"
                         >
                             {/* Fragment Section Heading */}
                             <h3 className="text-lg lg:text-xl font-bold text-emerald-800 mb-4 flex items-center gap-2">
