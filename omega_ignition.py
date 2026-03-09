@@ -14,7 +14,6 @@
 import asyncio
 import aiohttp
 import time
-import os
 import sys
 import re
 from pathlib import Path
@@ -103,12 +102,15 @@ def discover_all_urls(base_url: str) -> tuple[list[str], int]:
         urls.append(f"{base_url}{page}")
 
     # ── المرحلة 1.5: مقالات المدونة (Blog Articles) ──
-    blog_data_file = script_dir / "src" / "lib" / "blog-data.ts"
-    if blog_data_file.exists():
-        blog_content = blog_data_file.read_text()
-        blog_slugs = re.findall(r"slug:\s*'([^']+)'", blog_content)
-        for slug in blog_slugs:
-            urls.append(f"{base_url}/blog/{slug}")
+    # ⚠️ المقالات الفعلية في src/lib/blog/*.ts وليس blog-data.ts
+    blog_dir = script_dir / "src" / "lib" / "blog"
+    if blog_dir.exists():
+        for blog_file in sorted(blog_dir.iterdir()):
+            if blog_file.is_file() and blog_file.suffix == ".ts":
+                blog_content = blog_file.read_text()
+                blog_slugs = re.findall(r"slug:\s*'([^']+)'", blog_content)
+                for slug in blog_slugs:
+                    urls.append(f"{base_url}/blog/{slug}")
 
     # ── المرحلة 2: مراكز القيادة (City Hubs) ──
     city_dirs = sorted([
@@ -290,9 +292,13 @@ if __name__ == "__main__":
     # Count breakdown
     static_count = 9
     overrides_dir = Path(__file__).parent / "src" / "lib" / "overrides" / "pages"
-    blog_data_file = Path(__file__).parent / "src" / "lib" / "blog-data.ts"
+    blog_dir = Path(__file__).parent / "src" / "lib" / "blog"
     city_count = len([d for d in overrides_dir.iterdir() if d.is_dir()])
-    blog_count = len(re.findall(r"slug:\s*'([^']+)'", blog_data_file.read_text())) if blog_data_file.exists() else 0
+    blog_count = 0
+    if blog_dir.exists():
+        for bf in blog_dir.iterdir():
+            if bf.is_file() and bf.suffix == ".ts":
+                blog_count += len(re.findall(r"slug:\s*'([^']+)'", bf.read_text()))
     service_count = total_warheads - static_count - city_count - blog_count
 
     print(f"  🧬 DNA EXTRACTION COMPLETE:")

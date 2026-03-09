@@ -13,7 +13,7 @@
 // ============================================
 
 import { readdirSync, statSync, existsSync, readFileSync } from 'fs';
-import { join, basename, dirname } from 'path';
+import { join, basename } from 'path';
 
 // ── Configuration ──
 const BASE_URL = 'https://prokr.co';
@@ -111,14 +111,18 @@ function discoverStaticUrls(): string[] {
 }
 
 function discoverBlogUrls(): string[] {
-    const blogDataFile = join(import.meta.dirname || __dirname, 'src/lib/blog-data.ts');
-    if (!existsSync(blogDataFile)) return [];
+    const blogDir = join(import.meta.dirname || __dirname, 'src/lib/blog');
+    if (!existsSync(blogDir)) return [];
 
-    const content = readFileSync(blogDataFile, 'utf-8');
     const slugs: string[] = [];
-    const matches = content.matchAll(/slug:\s*'([^']+)'/g);
-    for (const match of matches) {
-        slugs.push(`/blog/${match[1]}`);
+    // ⚠️ Article slugs are in src/lib/blog/*.ts, NOT blog-data.ts
+    const blogFiles = readdirSync(blogDir).filter(f => f.endsWith('.ts'));
+    for (const file of blogFiles) {
+        const content = readFileSync(join(blogDir, file), 'utf-8');
+        const matches = content.matchAll(/slug:\s*'([^']+)'/g);
+        for (const match of matches) {
+            slugs.push(`/blog/${match[1]}`);
+        }
     }
     return slugs;
 }
