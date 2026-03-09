@@ -17,6 +17,7 @@ import { getServiceEntities, getServiceSectorCategory } from './entities';
 import { getClimateChallenges, getEntityIntersection } from './city-climate';
 import { ARCHITECT_EQUATION_PROMPT } from './nlp-prompts';
 import { getPoisonCounterNarrative } from './counter-narratives-poison';
+import { injectCTRHook } from '../ctr-hooks';
 
 // ============================================
 // CONTENT LAYERS RESOLVER
@@ -120,11 +121,15 @@ export function resolveMetadata(city: City, service: Service): ResolvedMetadata 
 
     const m = override?.meta;
 
+    // Dual-Layer CTR: apply emotional hooks to ALL titles (override + auto)
+    const resolvedTitle = m?.title ?? auto.metaTitle;
+    const ctrTitle = injectCTRHook(resolvedTitle, service.slug);
+
     return {
-        title: m?.title ?? auto.metaTitle,
+        title: ctrTitle,
         description: m?.description ?? autoDescription,
         keywords: m?.keywords ?? autoKeywords,
-        ogTitle: m?.ogTitle ?? m?.title ?? auto.metaTitle,
+        ogTitle: m?.ogTitle ?? ctrTitle,
         ogDescription: m?.ogDescription ?? m?.description ?? autoDescription,
         ogImage: m?.ogImage,
     };
