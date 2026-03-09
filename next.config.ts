@@ -36,7 +36,7 @@ const nextConfig: NextConfig = {
           // Control referrer information leakage
           { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
           // Restrict browser feature access
-          { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=(self), interest-cohort=()' },
+          { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=(self)' },
           // Content Security Policy — strict but compatible
           { key: 'Content-Security-Policy', value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://connect.facebook.net https://analytics.tiktok.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https://www.google-analytics.com https://firebasestorage.googleapis.com https://prokr-84ca8.firebasestorage.app https://graph.facebook.com https://analytics.tiktok.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self'" },
         ],
