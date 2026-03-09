@@ -1,0 +1,4 @@
+Contact: mailto:security@prokr.co
+Expires: 2027-12-31T23:59:00.000Z
+Preferred-Languages: ar, en
+Canonical: https://prokr.co/.well-known/security.txt
