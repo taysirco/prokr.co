@@ -53,12 +53,14 @@ export default async function sitemap({ id }: { id: number }): Promise<MetadataR
             priority: 0.8,
         }));
 
-        const servicePages: MetadataRoute.Sitemap = SERVICES.map(service => ({
-            url: `${BASE_URL}/${service.slug}`,
-            lastModified: now,
-            changeFrequency: 'weekly' as const,
-            priority: 0.85,
-        }));
+        const servicePages: MetadataRoute.Sitemap = SERVICES
+            .filter(service => !isAbsorbedSlug(service.slug))
+            .map(service => ({
+                url: `${BASE_URL}/${service.slug}`,
+                lastModified: now,
+                changeFrequency: 'weekly' as const,
+                priority: 0.85,
+            }));
 
         return [...staticPages, ...cityPages, ...servicePages];
     }

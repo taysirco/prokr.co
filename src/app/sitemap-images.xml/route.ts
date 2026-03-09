@@ -39,8 +39,9 @@ export async function GET() {
         }
     }
 
-    // Service hub pages with their images
+    // Service hub pages with their images — only canonical services
     for (const service of SERVICES) {
+        if (isAbsorbedSlug(service.slug)) continue;
         const images = SERVICE_IMAGES[service.slug] || [getServiceImage(service.slug)];
         const pageUrl = `${BASE_URL}/${service.slug}`;
 
