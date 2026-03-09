@@ -75,9 +75,9 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
             locale: 'ar_SA',
             type: 'website',
             siteName: 'بروكر',
-            url: `https://prokr.co/${resolvedParams.service}`,
+            url: `https://prokr.co/${getCanonicalSlug(resolvedParams.service) || resolvedParams.service}`,
             images: [{
-                url: `https://prokr.co/${resolvedParams.service}/opengraph-image`,
+                url: `https://prokr.co/${getCanonicalSlug(resolvedParams.service) || resolvedParams.service}/opengraph-image`,
                 width: 1200,
                 height: 630,
                 alt: `شركات ${service.name_ar} في السعودية - بروكر`,
@@ -109,7 +109,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
     // Breadcrumb items
     const breadcrumbs = [
         { name: 'الرئيسية', url: 'https://prokr.co' },
-        { name: service.name_ar, url: `https://prokr.co/${service.slug}` },
+        { name: service.name_ar, url: `https://prokr.co/${getCanonicalSlug(service.slug) || service.slug}` },
     ];
 
     return (
@@ -119,7 +119,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
             <WebPageJsonLd
                 title={`${service.name_ar} في السعودية`}
                 description={`اكتشف أفضل شركات ${service.name_ar} في جميع مدن المملكة العربية السعودية`}
-                url={`https://prokr.co/${service.slug}`}
+                url={`https://prokr.co/${getCanonicalSlug(service.slug) || service.slug}`}
                 breadcrumbs={breadcrumbs}
             />
             <ServiceJsonLd
