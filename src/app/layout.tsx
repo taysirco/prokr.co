@@ -99,6 +99,27 @@ export default function RootLayout({
         <link rel="preconnect" href="https://firebasestorage.googleapis.com" />
         <link rel="preconnect" href="https://prokr-84ca8.firebasestorage.app" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        {/* ⚡ Speculation Rules API — Zero-latency navigation */}
+        <script
+          type="speculationrules"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              prerender: [
+                {
+                  source: "document",
+                  where: {
+                    and: [
+                      { href_matches: "/*" },
+                      { not: { href_matches: "/api/*" } },
+                      { not: { selector_matches: "[rel=external]" } },
+                    ],
+                  },
+                  eagerness: "moderate",
+                },
+              ],
+            }),
+          }}
+        />
       </head>
       <body className="font-sans antialiased bg-gray-50 text-gray-900">
         <Navbar />
