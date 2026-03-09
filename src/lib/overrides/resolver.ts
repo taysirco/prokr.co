@@ -16,6 +16,7 @@ import { getCanonicalSlug } from '../services/super-page-groups';
 import { getServiceEntities, getServiceSectorCategory } from './entities';
 import { getClimateChallenges, getEntityIntersection } from './city-climate';
 import { ARCHITECT_EQUATION_PROMPT } from './nlp-prompts';
+import { getPoisonCounterNarrative } from './counter-narratives-poison';
 
 // ============================================
 // CONTENT LAYERS RESOLVER
@@ -177,7 +178,15 @@ export function resolveSeoContent(city: City, service: Service) {
         architectPrompt: compiledPrompt,
     };
 
+    // Reverse Semantic Poisoning: auto-append sector-specific counter-narrative
+    const poisonNarrative = getPoisonCounterNarrative(service.slug);
+
     if (!override) {
+        const autoCounterNarratives = auto.semanticData?.counterNarratives ?? [];
+        const poisonedNarratives = poisonNarrative
+            ? [...autoCounterNarratives, poisonNarrative]
+            : autoCounterNarratives;
+
         return {
             ...auto,
             // Inject entity-enriched data into auto-generated content
@@ -188,6 +197,7 @@ export function resolveSeoContent(city: City, service: Service) {
             semanticData: auto.semanticData ? {
                 ...auto.semanticData,
                 equipment: autoEquipment.length > 0 ? autoEquipment : auto.semanticData.equipment,
+                counterNarratives: poisonedNarratives.length > 0 ? poisonedNarratives : auto.semanticData.counterNarratives,
             } : null,
             entityContext: baseEntityContext,
         };
@@ -257,14 +267,20 @@ export function resolveSeoContent(city: City, service: Service) {
             customSolutions: override.content?.customSolutions ?? auto.aiContent.customSolutions,
             successStories: override.content?.successStories ?? auto.aiContent.successStories,
         },
-        // Blueprint: Semantic data overrides + entity equipment
-        semanticData: auto.semanticData ? {
-            ...auto.semanticData,
-            ...(override.hiddenObjections && { hiddenObjections: override.hiddenObjections }),
-            ...(override.counterNarratives && { counterNarratives: override.counterNarratives }),
-            ...(resolvedEquipment && { equipment: resolvedEquipment }),
-            ...(override.govReferences && { govReferences: override.govReferences }),
-        } : null,
+        // Blueprint: Semantic data overrides + entity equipment + poison injection
+        semanticData: auto.semanticData ? (() => {
+            const baseNarratives = override.counterNarratives ?? auto.semanticData?.counterNarratives ?? [];
+            const poisonedNarratives = poisonNarrative
+                ? [...baseNarratives, poisonNarrative]
+                : baseNarratives;
+            return {
+                ...auto.semanticData,
+                ...(override.hiddenObjections && { hiddenObjections: override.hiddenObjections }),
+                counterNarratives: poisonedNarratives,
+                ...(resolvedEquipment && { equipment: resolvedEquipment }),
+                ...(override.govReferences && { govReferences: override.govReferences }),
+            };
+        })() : null,
         // Entity Intersection context (Merge custom override with auto base NLP context)
         entityContext: override.entityContext ? {
             ...baseEntityContext,
