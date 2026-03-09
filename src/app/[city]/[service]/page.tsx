@@ -16,6 +16,7 @@ import { AbsorbedServiceSections } from '@/components/seo/AbsorbedServiceSection
 import { getSuperPageGroup, isCanonicalSlug, getCanonicalSlug } from '@/lib/services/super-page-groups';
 import { SERVICES as ALL_SERVICES_LIST } from '@/lib/services';
 import Footer from '@/components/Footer';
+import SleeperCellCTA from '@/components/SleeperCellCTA';
 import type { Advertiser } from '@/types';
 
 // Disable static generation, use ISR instead
@@ -278,36 +279,48 @@ export default async function SiloPage({ params }: SiloPageProps) {
                     />
                 </section>
 
-                {/* Premium Advertisers Grid */}
-                <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-                    <div className="flex items-center gap-3 mb-8">
-                        <div className="w-1.5 h-8 bg-gradient-to-b from-amber-400 to-amber-600 rounded-full"></div>
-                        <h2 className="text-2xl font-bold text-gray-900">الشركات المعتمدة</h2>
-                        <span className="px-3 py-1 bg-amber-100 text-amber-700 text-sm font-medium rounded-full">
-                            أعلى تقييماً
-                        </span>
-                    </div>
+                {/* Companies or Sleeper Cell Lead Gen */}
+                {allAdvertisers.length === 0 ? (
+                    /* 🧬 Sleeper Cell Protocol — Scarcity-Framed Lead Gen */
+                    <SleeperCellCTA cityName={city.name_ar} serviceName={service.name_ar} />
+                ) : (
+                    <>
+                        {/* Premium Advertisers Grid */}
+                        {premium.length > 0 && (
+                            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                                <div className="flex items-center gap-3 mb-8">
+                                    <div className="w-1.5 h-8 bg-gradient-to-b from-amber-400 to-amber-600 rounded-full"></div>
+                                    <h2 className="text-2xl font-bold text-gray-900">الشركات المعتمدة</h2>
+                                    <span className="px-3 py-1 bg-amber-100 text-amber-700 text-sm font-medium rounded-full">
+                                        أعلى تقييماً
+                                    </span>
+                                </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {premium.map(advertiser => (
-                            <PremiumCard key={advertiser.id} advertiser={advertiser} />
-                        ))}
-                    </div>
-                </section>
+                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                    {premium.map(advertiser => (
+                                        <PremiumCard key={advertiser.id} advertiser={advertiser} />
+                                    ))}
+                                </div>
+                            </section>
+                        )}
 
-                {/* Standard Advertisers List */}
-                <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-gray-200">
-                    <div className="flex items-center gap-3 mb-8">
-                        <div className="w-1.5 h-8 bg-gradient-to-b from-gray-400 to-gray-600 rounded-full"></div>
-                        <h2 className="text-xl font-bold text-gray-900">مزيد من الشركات</h2>
-                    </div>
+                        {/* Standard Advertisers List */}
+                        {standard.length > 0 && (
+                            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-gray-200">
+                                <div className="flex items-center gap-3 mb-8">
+                                    <div className="w-1.5 h-8 bg-gradient-to-b from-gray-400 to-gray-600 rounded-full"></div>
+                                    <h2 className="text-xl font-bold text-gray-900">مزيد من الشركات</h2>
+                                </div>
 
-                    <div className="space-y-3">
-                        {standard.map(advertiser => (
-                            <StandardRow key={advertiser.id} advertiser={advertiser} />
-                        ))}
-                    </div>
-                </section>
+                                <div className="space-y-3">
+                                    {standard.map(advertiser => (
+                                        <StandardRow key={advertiser.id} advertiser={advertiser} />
+                                    ))}
+                                </div>
+                            </section>
+                        )}
+                    </>
+                )}
 
                 {/* Enhanced SEO Content with Pricing Table, FAQ, etc. */}
                 <SeoContentSection city={city} service={service} />
