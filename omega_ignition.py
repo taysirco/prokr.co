@@ -96,9 +96,19 @@ def discover_all_urls(base_url: str) -> tuple[list[str], int]:
         "/contact-us",
         "/advertise",
         "/blog",
+        "/privacy-policy",
+        "/terms-of-service",
     ]
     for page in static_pages:
         urls.append(f"{base_url}{page}")
+
+    # ── المرحلة 1.5: مقالات المدونة (Blog Articles) ──
+    blog_data_file = script_dir / "src" / "lib" / "blog-data.ts"
+    if blog_data_file.exists():
+        blog_content = blog_data_file.read_text()
+        blog_slugs = re.findall(r"slug:\s*'([^']+)'", blog_content)
+        for slug in blog_slugs:
+            urls.append(f"{base_url}/blog/{slug}")
 
     # ── المرحلة 2: مراكز القيادة (City Hubs) ──
     city_dirs = sorted([
@@ -278,13 +288,16 @@ if __name__ == "__main__":
     total_warheads = len(urls_to_warm)
 
     # Count breakdown
-    static_count = 7
+    static_count = 9
     overrides_dir = Path(__file__).parent / "src" / "lib" / "overrides" / "pages"
+    blog_data_file = Path(__file__).parent / "src" / "lib" / "blog-data.ts"
     city_count = len([d for d in overrides_dir.iterdir() if d.is_dir()])
-    service_count = total_warheads - static_count - city_count
+    blog_count = len(re.findall(r"slug:\s*'([^']+)'", blog_data_file.read_text())) if blog_data_file.exists() else 0
+    service_count = total_warheads - static_count - city_count - blog_count
 
     print(f"  🧬 DNA EXTRACTION COMPLETE:")
     print(f"     Static arteries:   {static_count}")
+    print(f"     Blog articles:     {blog_count}")
     print(f"     Command centers:   {city_count} cities")
     print(f"     Target cells:      {service_count} service pages")
     if filtered_count > 0:

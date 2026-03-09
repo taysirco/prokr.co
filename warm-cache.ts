@@ -13,7 +13,7 @@
 // ============================================
 
 import { readdirSync, statSync, existsSync, readFileSync } from 'fs';
-import { join, basename } from 'path';
+import { join, basename, dirname } from 'path';
 
 // ── Configuration ──
 const BASE_URL = 'https://prokr.co';
@@ -105,7 +105,22 @@ function discoverStaticUrls(): string[] {
         '/contact-us',
         '/advertise',
         '/blog',
+        '/privacy-policy',
+        '/terms-of-service',
     ];
+}
+
+function discoverBlogUrls(): string[] {
+    const blogDataFile = join(import.meta.dirname || __dirname, 'src/lib/blog-data.ts');
+    if (!existsSync(blogDataFile)) return [];
+
+    const content = readFileSync(blogDataFile, 'utf-8');
+    const slugs: string[] = [];
+    const matches = content.matchAll(/slug:\s*'([^']+)'/g);
+    for (const match of matches) {
+        slugs.push(`/blog/${match[1]}`);
+    }
+    return slugs;
 }
 
 function discoverCityUrls(): string[] {
@@ -278,13 +293,15 @@ async function main() {
 
     // Discover all URLs
     const staticUrls = discoverStaticUrls();
+    const blogUrls = discoverBlogUrls();
     const cityUrls = discoverCityUrls();
     const { urls: overrideUrls, filtered } = discoverOverrideUrls();
 
-    const allUrls = [...staticUrls, ...cityUrls, ...overrideUrls];
+    const allUrls = [...staticUrls, ...blogUrls, ...cityUrls, ...overrideUrls];
 
     console.log(`📊 Discovered ${allUrls.length} URLs:`);
     console.log(`   Static pages:  ${staticUrls.length}`);
+    console.log(`   Blog articles: ${blogUrls.length}`);
     console.log(`   City hubs:     ${cityUrls.length}`);
     console.log(`   Service pages: ${overrideUrls.length}`);
     if (filtered > 0) {
@@ -301,10 +318,10 @@ async function main() {
         return;
     }
 
-    // Phase 1: Warm static + city pages first (most important)
-    console.log('── Phase 1: Warming Static & City Pages ──\n');
+    // Phase 1: Warm static + blog + city pages first (most important)
+    console.log('── Phase 1: Warming Static, Blog & City Pages ──\n');
     const phase1Start = performance.now();
-    const phase1Urls = [...staticUrls, ...cityUrls];
+    const phase1Urls = [...staticUrls, ...blogUrls, ...cityUrls];
     const phase1Results = await warmBatch(phase1Urls, Math.min(CONCURRENCY, 5));
 
     // Phase 2: Warm all service pages (the bulk)
