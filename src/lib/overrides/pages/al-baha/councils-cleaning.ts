@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف مجالس بالباحة — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-baha/councils-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف مجالس بالباحة — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف مجالس بالباحة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف مجالس بالباحة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف مجالس بالباحة', 'تنظيف مجالس الباحة', 'شركة تنظيف مجالس بالباحة', 'أفضل تنظيف مجالس بالباحة'],
+        title: 'تنظيف مجالس بالباحة — 200 يوم ضباب عفن+عرعر لزج+Laterite+PVAc — Anti-Fungal+Dehumidifier! (2026)',
+        description: 'تنظيف مجالس الباحة. 200 يوم ضباب عفن! عرعر لزج. Laterite أحمر. PVAc Swelling. Anti-Fungal+Dehumidifier.',
+        h1: 'تنظيف مجالس بالباحة — ضباب عفن+عرعر+طين!',
+        keywords: ['تنظيف مجالس بالباحة', 'تنظيف مجلس الباحة', 'شركة تنظيف مجالس بالباحة'],
     },
-
     content: {
-        introduction: 'تنظيف مجالس بالباحة — خدمة متخصصة تراعي الظروف المناخية والبيئية في الباحة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف مجالس بالباحة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف مجالس بالباحة. خدمة احترافية. ضمان.',
+        introduction: 'مجلس الباحة = ضباب يدخل من الباب! 200 يوم ضباب: مجالس الباحة تفتح للضيوف = ضباب يدخل مباشرة ← عفن Penicillium في زوايا المجلس + أسفل الجلسات. Anti-Fungal. عرعر لزج: حبوب لقاح تدخل مع الضباب = طبقة صفراء لزجة على المساند. HEPA+Extraction. Laterite Fe₂O₃: زوار يجلبون الطين الأحمر بأحذيتهم ← على السجاد = بقع حمراء. Oxalic Pre-Treatment. PVAc مساند: خشب المساند يمتص رطوبة = ينتفخ. Anti-Humidity. 6-10h تجفيف: Dehumidifier. مقارنة: بريدة = CaCO₃ أثر قهوة+Nafud+جاف = أبسط. الباحة = عفن+عرعر+طين+PVAc = أعقد.',
+        shortAnswer: 'على عكس [المنظف العادي]، يعتمد بروتوكولنا في خدمة [تنظيف المجالس] بمدينة [الباحة] على [Oxalic ← HEPA ← Anti-Fungal ← Dehumidifier]. ففي ظل [200 يوم ضباب+عرعر+Laterite+PVAc]، تتفاقم ظاهرة [عفن+لزوجة+طين+انتفاخ]. لذا؛ يتدخل فريقنا عبر [4 ركائز مجلس جبلي].',
+        heroSubtitle: '200 يوم ضباب + عرعر + Laterite — 4 ركائز مجلس!',
     },
-
     pricing: [
-        { type: 'تنظيف مجالس — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف مجالس — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'مجلس صغير', unit: 'مجلس', minPrice: 150, maxPrice: 310, time: '2-3h' },
+        { type: 'مجلس كبير', unit: 'مجلس', minPrice: 250, maxPrice: 520, time: '3-5h' },
+        { type: '+ Dehumidifier', unit: 'خدمة', minPrice: 50, maxPrice: 100, time: 'يُقلّل لـ 3-4h' },
+        { type: 'ربع سنوي', unit: 'سنة', minPrice: 400, maxPrice: 800, time: '4 تنظيف' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف مجالس بالباحة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف مجالس؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف مجالس؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش مجلس الباحة يتعفّن أسرع؟', answer: 'باب مفتوح+ضباب يدخل = عفن. Anti-Fungal.' },
+        { question: 'ليش المبيّض ممنوع لسجاد المجلس؟', answer: 'Laterite Fe₂O₃ + مبيّض = حمراء دائمة. Oxalic.' },
+        { question: 'كم تجفيف مجلس بالباحة؟', answer: '6-10h! Dehumidifier يُقلّل لـ 3-4h.' },
+        { question: 'ما الطبقة الصفراء على المساند؟', answer: 'عرعر لزج. Extraction+HEPA يُزيل.' },
+        { question: 'كم تكلفة مجلس بالباحة مقابل بريدة؟', answer: 'أغلى 35-45% — Anti-Fungal+Dehumidifier+Oxalic.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Oxalic — Laterite أحذية زوار.',
+        'Anti-Fungal — ضباب يدخل.',
+        'Dehumidifier — 6-10h!',
+        'HEPA AC — عرعر مستمر.',
+        'Anti-Humidity — PVAc مساند.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'ضباب + باب مفتوح = عفن مجلس — Anti-Fungal YMYL.',
+        'مبيّض + Laterite = بقعة حمراء — Oxalic.',
+        'PVAc مساند + 60-85% × 3 سنوات = تفكك.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
+        { entity: AMANA.BAHA.entity, url: AMANA.BAHA.url, role: 'اشتراطات أمانة الباحة' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMISNID.name, quote: 'مجلس الباحة: ضباب يدخل. 4 ركائز. Anti-Fungal+Oxalic.', source: 'جغرافيا المناخ — مجالس جبلية' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف مجالس مرخص', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Oxalic Acid', use: 'Laterite Fe₂O₃ — أحذية' },
+        { name: 'Anti-Fungal', use: '200 يوم ضباب — عفن' },
+        { name: 'Dehumidifier', use: '6-10h — تجفيف' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'منظف عادي.', solution: '4 تحديات جبلية = 4 ركائز.' },
+        { fear: 'مثل بريدة.', solution: 'ضباب+عرعر+طين ≠ كلس.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'الباحة نظيفة.', truth: 'ضباب = عفن. عرعر = لزج.' },
+        { myth: 'مبيّض ينظّف.', truth: 'مبيّض + Laterite = أسوأ.' },
     ],
-
     relatedServices: [
-        { slug: 'al-baha-furniture-moving', context: 'نقل عفش بالباحة', priority: 1 },
-        { slug: 'al-baha-furniture-storage', context: 'تخزين عفش بالباحة', priority: 2 },
-        { slug: 'al-baha-dyna', context: 'دينا نقل بالباحة', priority: 3 },
-        { slug: 'al-baha-moving-out', context: 'نقل عفش خروج بالباحة', priority: 4 },
-        { slug: 'al-baha-dabab', context: 'دباب نقل بالباحة', priority: 5 },
-        { slug: 'al-baha-cleaning', context: 'تنظيف منازل بالباحة', priority: 6 },
-        { slug: 'al-baha-tanks-cleaning', context: 'تنظيف خزانات بالباحة', priority: 7 },
-        { slug: 'al-baha-sofa-cleaning', context: 'تنظيف كنب بالباحة', priority: 8 },
-        { slug: 'al-baha-carpet-cleaning', context: 'تنظيف سجاد بالباحة', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 1 },
+        { slug: 'carpet-cleaning', context: 'سجاد', priority: 2 },
+        { slug: 'sofa-cleaning', context: 'كنب', priority: 3 },
+        { slug: 'steam-cleaning', context: 'بخار', priority: 4 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 5 },
+        { slug: 'pest-control', context: 'حشرات', priority: 6 },
+        { slug: 'villas-cleaning', context: 'فلل', priority: 7 },
     ],
 };

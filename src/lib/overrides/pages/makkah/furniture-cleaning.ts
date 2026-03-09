@@ -79,10 +79,10 @@ export const override: PageOverride = {
     ],
 
     expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
+        name: EXPERTS.ALMISNID.name,
+        title: EXPERTS.ALMISNID.title,
+        credential: EXPERTS.ALMISNID.credential,
+        profileUrl: EXPERTS.ALMISNID.profileUrl,
     },
 
     expertCitations: [
@@ -90,7 +90,6 @@ export const override: PageOverride = {
             expert: 'م. ماجد المحيميد',
             quote: 'الأثاث الخشبي في مكة يحتاج تغذية بشمع عسل أو زيوت خشبية كل 6-12 شهراً. ملمعات السيليكون التجارية تُلمّع مؤقتاً لكن تسد المسام — الخشب يجف ويتشقق تحتها',
             source: 'خبير جودة البناء والتشطيبات',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
 
@@ -121,12 +120,12 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'makkah-furniture-moving', context: 'تنظيف وتلميع العفش بعد النقل — إزالة غبار التغليف والخدوش', priority: 1 },
-        { slug: 'makkah-furniture-storage', context: 'تنظيف وتغليف احترافي قبل التخزين — يمنع العفن والتلف', priority: 2 },
-        { slug: 'makkah-sofa-cleaning', context: 'غسيل كنب بالبخار — مكمل لتلميع الأذرع الخشبية', priority: 3 },
-        { slug: 'makkah-steam-cleaning', context: 'تعقيم مراتب ومفروشات بالبخار — يقتل عث الغبار', priority: 4 },
-        { slug: 'makkah-councils-cleaning', context: 'تنظيف مجالس — أويمة وأخشاب محفورة بنفس التقنية', priority: 5 },
-        { slug: 'makkah-marble-polishing', context: 'جلي رخام الطاولات والأرضيات — يُكمل تلميع الأثاث', priority: 6 },
-        { slug: 'makkah-pest-control', context: 'رش وقائي ضد حشرات الخشب والنمل الأبيض', priority: 7 },
+        { slug: 'furniture-moving', context: 'تنظيف وتلميع العفش بعد النقل — إزالة غبار التغليف والخدوش', priority: 1 },
+        { slug: 'furniture-storage', context: 'تنظيف وتغليف احترافي قبل التخزين — يمنع العفن والتلف', priority: 2 },
+        { slug: 'sofa-cleaning', context: 'غسيل كنب بالبخار — مكمل لتلميع الأذرع الخشبية', priority: 3 },
+        { slug: 'steam-cleaning', context: 'تعقيم مراتب ومفروشات بالبخار — يقتل عث الغبار', priority: 4 },
+        { slug: 'councils-cleaning', context: 'تنظيف مجالس — أويمة وأخشاب محفورة بنفس التقنية', priority: 5 },
+        { slug: 'marble-polishing', context: 'جلي رخام الطاولات والأرضيات — يُكمل تلميع الأثاث', priority: 6 },
+        { slug: 'pest-control', context: 'رش وقائي ضد حشرات الخشب والنمل الأبيض', priority: 7 },
     ],
 };

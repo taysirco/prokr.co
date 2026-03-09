@@ -1,5 +1,6 @@
 import type { Advertiser, City, Service, ServiceSchema } from '@/types';
 import { getServiceKeywordProfile, getCityKeyword } from '@/lib/keyword-strategy';
+import { getCanonicalSlug } from '@/lib/services/super-page-groups';
 
 // ============================================
 // SERVICE SCHEMA
@@ -13,6 +14,9 @@ interface ServiceJsonLdProps {
 }
 
 export function ServiceJsonLd({ service, city, advertisers, national }: ServiceJsonLdProps) {
+    // Defense-in-depth: always resolve to canonical slug for schema URLs
+    const canonicalSlug = getCanonicalSlug(service.slug) || service.slug;
+
     const schema: ServiceSchema & Record<string, unknown> = {
         '@context': 'https://schema.org',
         '@type': 'Service',
@@ -35,7 +39,7 @@ export function ServiceJsonLd({ service, city, advertisers, national }: ServiceJ
         ...(city && {
             availableChannel: {
                 '@type': 'ServiceChannel',
-                serviceUrl: `https://prokr.co/${city.slug}/${service.slug}`,
+                serviceUrl: `https://prokr.co/${city.slug}/${canonicalSlug}`,
                 serviceLocation: {
                     '@type': 'Place',
                     name: city.name_ar,

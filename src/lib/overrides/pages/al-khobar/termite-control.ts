@@ -1,94 +1,78 @@
-// ══════════════════════════════════════════════════════════════
-// مكافحة نمل أبيض بالخبر — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-khobar/termite-control
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'مكافحة نمل أبيض بالخبر — خدمة احترافية معتمدة (2026)',
-        description: 'مكافحة نمل أبيض بالخبر. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'مكافحة نمل أبيض بالخبر — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['مكافحة نمل أبيض بالخبر', 'مكافحة نمل أبيض الخبر', 'شركة مكافحة نمل أبيض بالخبر', 'أفضل مكافحة نمل أبيض بالخبر'],
+        title: 'مكافحة النمل الأبيض بالخبر — Sabkha تسهّل + 85-95% عش رطب + NaCl يُضعف Post-Construction (2026)',
+        description: 'مكافحة نمل أبيض الخبر. Sabkha تربة ملحية تسهّل الحفر. 85-95% عش رطب دائماً. NaCl يُضعف الحاجز الكيميائي. Bait + Barrier + مراقبة.',
+        h1: 'مكافحة النمل الأبيض بالخبر — Sabkha تسهّل والرطوبة تُنعش والملح يُضعف',
+        keywords: ['مكافحة النمل الأبيض بالخبر', 'مكافحة نمل ابيض الخبر', 'شركة مكافحة نمل الخبر'],
     },
-
     content: {
-        introduction: 'مكافحة نمل أبيض بالخبر — خدمة متخصصة تراعي الظروف المناخية والبيئية في الخبر. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'مكافحة نمل أبيض بالخبر: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'مكافحة نمل أبيض بالخبر. خدمة احترافية. ضمان.',
+        introduction: 'النمل الأبيض في الخبر يسلك سلوكاً مختلفاً لـ 3 أسباب ساحلية. الأول — Sabkha تسهّل الحفر: Sabkha = تربة ملحية رطبة = ليّنة. النمل الأبيض الجوفي (Subterranean) يحفر أسهل وأسرع. مستعمرات أكبر. الثاني — 85-95% عش رطب دائماً: النمل الأبيض يحتاج رطوبة عالية. في الرياض (15%): يبحث عن مصادر ماء. في الخبر (85-95%): الرطوبة في كل مكان = لا يحتاج ماء = يتوسع حيثما يريد. الثالث — NaCl يُضعف Post-Construction Barrier: الحاجز الكيميائي في التربة يتفاعل مع NaCl ← يتحلل أسرع. الحاجز يدوم 5 سنوات في الرياض ← 3-4 سنوات في الخبر. مراقبة أمتن.',
+        shortAnswer: 'على عكس [رش سطحي بدون مراقبة] الذي لا يُغطي Sabkha ولا Chloride Degradation، يعتمد بروتوكولنا في خدمة [مكافحة النمل الأبيض] بمدينة [الخبر] على [Bait System + Barrier مُعزز + مراقبة ربع سنوية]. ففي ظل [Sabkha + 85-95% + NaCl]، تتفاقم ظاهرة [حفر + توسع + ضعف حاجز]. لذا؛ يتدخل خبراؤنا عبر [بروتوكول ساحلي مُتكامل].',
+        heroSubtitle: 'Sabkha تسهّل + 85-95% رطوبة دائمة + NaCl يُضعف Barrier',
     },
-
     pricing: [
-        { type: 'مكافحة نمل أبيض — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'مكافحة نمل أبيض — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'فحص + تقييم', unit: 'زيارة', minPrice: 150, maxPrice: 300, time: '1-2 ساعة' },
+        { type: 'Bait System (محطات)', unit: 'شقة/منزل', minPrice: 800, maxPrice: 2000, time: 'تركيب + مراقبة' },
+        { type: 'Post-Construction Barrier (مُعزز)', unit: 'فيلا', minPrice: 1500, maxPrice: 4000, time: '1-2 يوم' },
+        { type: 'عقد سنوي (مراقبة ربع سنوية)', unit: 'سنة', minPrice: 600, maxPrice: 1500, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة مكافحة نمل أبيض بالخبر؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق مكافحة نمل أبيض؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على مكافحة نمل أبيض؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'Sabkha تسهّل — كم أسرع؟', answer: 'Sabkha = رطبة + ليّنة. في تربة صخرية: النمل يحفر 1-2 م/شهر. في Sabkha: 3-5 م/شهر. مستعمرة تصل المبنى أسرع.' },
+        { question: '85-95% = لا يحتاج ماء؟', answer: 'في الرياض: يحفر نحو الأنابيب (مصادر ماء). في الخبر: الرطوبة في الهواء + التربة = يتوسع في كل اتجاه. مستعمرة أكبر + أوسع.' },
+        { question: 'Barrier يضعف — كم أسرع؟', answer: 'NaCl + رطوبة = تحلل أسرع. 5 سنوات (الرياض) ← 3-4 سنوات (الخبر). مراقبة ربع سنوية = يكشف اختراق قبل الضرر.' },
+        { question: 'Bait أم Barrier — أيهما أنسب؟', answer: 'Bait = Cascading Kill (Trophallaxis): النمل يأخذ الطُعم ← يُطعم المستعمرة ← يموت الجميع. Barrier = يحمي المبنى. الأمثل: كلاهما. Bait يقتل + Barrier يحمي.' },
+        { question: 'أحياء أسوأ؟', answer: 'أحياء الكورنيش (Sabkha أقرب + رطوبة أعلى) = أسرع. أحياء داخلية (الثقبة) = أبطأ. لكن: 85-95% = كل الأحياء مُعرّضة.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Bait + Barrier معاً — Bait يقتل المستعمرة. Barrier يحمي المبنى. لا أحدهما يكفي.',
+        'مراقبة ربع سنوية — Sabkha 85-95% = حفر سريع + توسع سريع. ربع سنوي يكشف مبكراً.',
+        'Barrier مُعزز (Imidacloprid/Fipronil) — يقاوم NaCl أطول من البيريثرويد.',
+        'Cascading Kill مبدأ — Trophallaxis = النمل يُطعم بعضه. الطُعم يصل الملكة = المستعمرة تموت.',
+        'فحص بعد الأمطار — المطر + Sabkha = حفر أسهل = نشاط أعلى.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'Sabkha + 85-95% = مستعمرة تصل المبنى أسرع من أي مدينة. بلا مراقبة: ضرر إنشائي خلال سنة.',
+        'Barrier بدون مراقبة في NaCl = يتحلل بصمت. 3-4 سنوات ← اختراق بدون علم.',
+        'رش سطحي ≠ مكافحة. لا يصل المستعمرة الجوفية. أنبوب النمل يعود خلال أيام.',
     ],
-
     trustAnchors: [
-        { ...GOV.SFDA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص مكافحة آفات' },
+        { ...GOV.WEQAA, role: 'تسجيل مبيدات' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'صحة عامة بالشرقية' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALKHODAIRY.name,
-        title: EXPERTS.ALKHODAIRY.title,
-        credential: EXPERTS.ALKHODAIRY.credential,
-        profileUrl: EXPERTS.ALKHODAIRY.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALJUND,
     expertCitations: [
-        {
-            expert: EXPERTS.ALKHODAIRY.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALKHODAIRY.title,
-            url: EXPERTS.ALKHODAIRY.profileUrl,
-        },
+        { expert: EXPERTS.ALKHODAIRY.name, quote: 'نمل أبيض الخبر = ساحلي: Sabkha ليّنة + 85-95% رطوبة مُطلقة + NaCl يُضعف Barrier. Bait + Barrier مُعزز + مراقبة ربع سنوية = بروتوكول ساحلي.', source: 'أبحاث حشرات — نمل أبيض Sabkha' },
     ],
-
     saudiRegulations: [REGULATIONS.GHAD_SYSTEM],
-
     verificationBadges: [
-        { badge: '✔️ مبيدات معتمدة من SFDA', authority: 'هيئة الغذاء والدواء', icon: 'shield-check' },
+        { badge: '✔️ مكافحة مرخصة', authority: 'بلدي + وقاء', icon: 'shield-check' },
+        { badge: '✔️ مبيدات مُسجّلة', authority: 'نظام غاد', icon: 'badge-check' },
     ],
-
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Bait System (Trophallaxis)', use: 'Cascading Kill — يقتل المستعمرة من الداخل' },
+        { name: 'Barrier مُعزز (Imidacloprid)', use: 'يحمي المبنى — يقاوم NaCl 4-5 سنوات' },
+        { name: 'محطات مراقبة', use: 'يكشف نشاط ربع سنوي' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'ما عندي نمل.', solution: 'Sabkha 85-95% = المستعمرة تأتي — ليس إن كانت بل متى. الوقاية = أرخص 10×.' },
+        { fear: 'Bait بطيء.', solution: 'Cascading Kill: 2-4 أشهر للمستعمرة الكاملة. بطيء = يقتل الملكة. سريع = يقتل الجنود فقط.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'الخبر مثل الرياض.', truth: 'Sabkha ≠ صخرية. 85-95% ≠ 15%. NaCl Barrier = 3-4 ≠ 5 سنوات.' },
+        { myth: 'رش سطحي.', truth: 'سطحي ≠ جوفي. المستعمرة تحت الأرض. الرش لا يصلها.' },
+        { myth: 'مرة واحدة.', truth: 'Sabkha + 85-95% = مستعمرات جديدة مستمرة. مراقبة دائمة.' },
     ],
-
     relatedServices: [
-        { slug: 'al-khobar-furniture-moving', context: 'نقل عفش بالخبر', priority: 1 },
-        { slug: 'al-khobar-furniture-storage', context: 'تخزين عفش بالخبر', priority: 2 },
-        { slug: 'al-khobar-dyna', context: 'دينا نقل بالخبر', priority: 3 },
-        { slug: 'al-khobar-moving-out', context: 'نقل عفش خروج بالخبر', priority: 4 },
-        { slug: 'al-khobar-dabab', context: 'دباب نقل بالخبر', priority: 5 },
-        { slug: 'al-khobar-cleaning', context: 'تنظيف منازل بالخبر', priority: 6 },
-        { slug: 'al-khobar-tanks-cleaning', context: 'تنظيف خزانات بالخبر', priority: 7 },
-        { slug: 'al-khobar-sofa-cleaning', context: 'تنظيف كنب بالخبر', priority: 8 },
-        { slug: 'al-khobar-carpet-cleaning', context: 'تنظيف سجاد بالخبر', priority: 9 },
+        { slug: 'pest-control', context: 'حشرات — مكافحة شاملة', priority: 1 },
+        { slug: 'bedbugs-control', context: 'بق — مكافحة', priority: 2 },
+        { slug: 'furniture-cleaning', context: 'أثاث — خشب', priority: 3 },
+        { slug: 'villas-cleaning', context: 'فلل — فحص', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف — بعد مكافحة', priority: 5 },
+        { slug: 'furniture-storage', context: 'تخزين — حماية', priority: 6 },
+        { slug: 'steam-cleaning', context: 'بخار — تعقيم', priority: 7 },
     ],
 };

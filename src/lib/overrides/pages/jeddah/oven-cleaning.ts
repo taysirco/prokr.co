@@ -4,6 +4,7 @@
 // ============================================
 
 import type { PageOverride } from '../../types';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -76,6 +77,8 @@ export const override: PageOverride = {
 
 
 
+        verificationBadges: [{ badge: '✔️ شركة مرخصة من بلدي', authority: 'وزارة البلديات', icon: 'shield-check' }],
+
     equipment: [
         { name: 'مزيل دهون أفران صناعي (Oven Degreaser)', use: 'تركيز أقوى 20x من منظفات السوبر — يذيب الدهون المحروقة في 10 دقائق' },
         { name: 'فرشة سلكية ناعمة (Brass Brush)', use: 'تزيل الكربون المحروق بدون خدش طبقة المينا داخل الفرن' },
@@ -88,37 +91,35 @@ export const override: PageOverride = {
 
     trustAnchors: [
         { entity: 'المديرية العامة للدفاع المدني', acronym: '998', url: 'https://www.998.gov.sa', role: 'الوقاية من حرائق الزيوت والدهون في الأفران' },
+        { entity: AMANA.JEDDAH.entity, url: AMANA.JEDDAH.url, role: 'اشتراطات أمانة جدة' },
     ],
 
-    expertReviewer: {
-        name: 'أ.د. عبدالله المسند',
-        title: 'أستاذ جغرافيا المناخ',
-        credential: 'أستاذ جغرافيا المناخ — جامعة القصيم',
-        profileUrl: 'https://x.com/ALMISNID',
-    },
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
             expert: 'أ.د. عبدالله المسند',
             quote: 'الفرن المتسخ لا يسخّن بالتساوي — الكربون المحروق يحجب الحرارة = طبخ غير متساوي + استهلاك كهرباء أعلى + خطر دخان سام',
             source: 'تحليل مناخي',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
+        saudiRegulations: [REGULATIONS.BALADI_HEALTH],
+
     counterNarratives: [
         { myth: 'الفرن ينظف نفسه — Self-Clean يكفي', truth: 'Self-Clean يحرق البقع الخفيفة على الجدران الداخلية. لكن: دهون تحت العنصر الحراري + مؤخرة الفرن + مجرى الشفط = لا يصلها Self-Clean. هذه الدهون المتراكمة = خطر حريق حقيقي. تنظيف احترافي كل 3-6 أشهر إلزامي' },
+        { myth: 'المنظف العادي يكفي.', truth: 'المنظف العادي يزيل 40% من الأوساخ. HEPA + بخار = 99%+. الفرق = 59% غبار دقيق + بكتيريا + عث.' },
     ],
 
     relatedServices: [
-        { slug: 'jeddah-kitchen-cleaning', context: 'مطبخ شامل + فرن', priority: 1 },
-        { slug: 'jeddah-steam-cleaning', context: 'بخار الفرن', priority: 2 },
-        { slug: 'jeddah-cleaning', context: 'تنظيف شامل', priority: 3 },
-        { slug: 'jeddah-restaurant-chimney-cleaning', context: 'أفران المطاعم', priority: 4 },
-        { slug: 'jeddah-sanitization', context: 'تعقيم المطبخ', priority: 5 },
-        { slug: 'jeddah-cockroach-control', context: 'صراصير خلف الفرن', priority: 6 },
-        { slug: 'jeddah-air-conditioner-cleaning', context: 'دهون تسد الفلتر', priority: 7 },
-        { slug: 'jeddah-pest-control', context: 'رش المطبخ', priority: 8 },
-        { slug: 'jeddah-floor-cleaning', context: 'أرضية المطبخ', priority: 9 },
+        { slug: 'kitchen-cleaning', context: 'مطبخ شامل + فرن', priority: 1 },
+        { slug: 'steam-cleaning', context: 'بخار الفرن', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف شامل', priority: 3 },
+        { slug: 'restaurant-chimney-cleaning', context: 'أفران المطاعم', priority: 4 },
+        { slug: 'sanitization', context: 'تعقيم المطبخ', priority: 5 },
+        { slug: 'cockroach-control', context: 'صراصير خلف الفرن', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'دهون تسد الفلتر', priority: 7 },
+        { slug: 'pest-control', context: 'رش المطبخ', priority: 8 },
+        { slug: 'floor-cleaning', context: 'أرضية المطبخ', priority: 9 },
     ],
 };

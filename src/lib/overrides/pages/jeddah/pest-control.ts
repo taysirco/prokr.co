@@ -6,7 +6,7 @@
 // ══════════════════════════════════════════════════════════════
 
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -54,6 +54,7 @@ export const override: PageOverride = {
             question: 'المبيدات آمنة على الأطفال والحيوانات؟',
             answer: 'مبيدات الجيل الرابع (Pyrethroids) معتمدة SFDA: عديمة الرائحة وآمنة بعد الجفاف (ساعتين). الحيوانات الأليفة: آمنة بعد 3-4 ساعات. أسماك الزينة: غطِّ الحوض أثناء الرش. الإجراء: أخلِ المنزل ساعتين ← ارجع بأمان. لا تمسح الأرضيات 48 ساعة (المبيد يحتاج يثبت).',
         },
+        { question: 'هل المبيدات آمنة على الأطفال والحيوانات؟', answer: 'مبيدات مسجلة في نظام غد — SFDA. إخلاء 2-4 ساعات بعد الرش. طيور وأسماك: أبِلغ الشركة مسبقاً لاستخدام مواد أخف. الأسطح آمنة بعد الجفاف (1-2 ساعة).' },
     ],
 
     expertTips: [
@@ -73,13 +74,14 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.SFDA, role: 'اعتماد المبيدات الحشرية — ضمان الفعالية والمأمونية البشرية' },
         { ...GOV.BALADI, role: 'ترخيص شركات مكافحة الحشرات — اشتراطات صحة وسلامة' },
+        { entity: AMANA.JEDDAH.entity, url: AMANA.JEDDAH.url, role: 'اشتراطات أمانة جدة' },
     ],
 
     expertReviewer: {
-        name: EXPERTS.ALJUND.name,
-        title: EXPERTS.ALJUND.title,
-        credential: EXPERTS.ALJUND.credential,
-        profileUrl: EXPERTS.ALJUND.profileUrl,
+        name: EXPERTS.ALKHODAIRY.name,
+        title: EXPERTS.ALKHODAIRY.title,
+        credential: EXPERTS.ALKHODAIRY.credential,
+        profileUrl: EXPERTS.ALKHODAIRY.profileUrl,
     },
 
     expertCitations: [
@@ -87,7 +89,6 @@ export const override: PageOverride = {
             expert: 'د. سعد الجند',
             quote: 'الرطوبة الساحلية في جدة تُفسد المبيدات أسرع — العقد الربع سنوي هو الحد الأدنى. والجل الطعم أفضل من الرش في المطابخ: يبقى فعالاً مع الرطوبة ويقتل المستعمرة من جذرها',
             source: 'خبير مكافحة حشرات',
-            url: 'https://x.com/ALJUNDI',
         },
     ],
 
@@ -115,14 +116,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'jeddah-cockroach-control', context: 'الصراصير = أكثر الحشرات في جدة — معالجة متخصصة', priority: 1 },
-        { slug: 'jeddah-termite-control', context: 'النمل الأبيض يدمّر الأخشاب بصمت — فحص ضروري', priority: 2 },
-        { slug: 'jeddah-bedbugs-control', context: 'بق الفراش يحتاج معالجة حرارية خاصة', priority: 3 },
-        { slug: 'jeddah-rodent-control', context: 'الفئران مصدر أمراض — مكافحة متكاملة مع الحشرات', priority: 4 },
-        { slug: 'jeddah-sanitization', context: 'تعقيم بعد المكافحة يزيل البكتيريا والفطريات', priority: 5 },
-        { slug: 'jeddah-tanks-cleaning', context: 'الحشرات تلوث خزانات المياه المكشوفة', priority: 6 },
-        { slug: 'jeddah-cleaning', context: 'تنظيف شامل بعد المكافحة يزيل الفضلات والمخلفات', priority: 7 },
-        { slug: 'jeddah-sewage-unblocking', context: 'المجاري المسدودة = مصدر رئيسي لدخول الصراصير والفئران', priority: 8 },
-        { slug: 'jeddah-snakes-control', context: 'مكافحة ثعابين لفلل أطراف جدة — تتبع الفئران', priority: 9 },
+        { slug: 'cockroach-control', context: 'الصراصير = أكثر الحشرات في جدة — معالجة متخصصة', priority: 1 },
+        { slug: 'termite-control', context: 'النمل الأبيض يدمّر الأخشاب بصمت — فحص ضروري', priority: 2 },
+        { slug: 'bedbugs-control', context: 'بق الفراش يحتاج معالجة حرارية خاصة', priority: 3 },
+        { slug: 'rodent-control', context: 'الفئران مصدر أمراض — مكافحة متكاملة مع الحشرات', priority: 4 },
+        { slug: 'sanitization', context: 'تعقيم بعد المكافحة يزيل البكتيريا والفطريات', priority: 5 },
+        { slug: 'tanks-cleaning', context: 'الحشرات تلوث خزانات المياه المكشوفة', priority: 6 },
+        { slug: 'cleaning', context: 'تنظيف شامل بعد المكافحة يزيل الفضلات والمخلفات', priority: 7 },
+        { slug: 'sewage-unblocking', context: 'المجاري المسدودة = مصدر رئيسي لدخول الصراصير والفئران', priority: 8 },
+        { slug: 'snakes-control', context: 'مكافحة ثعابين لفلل أطراف جدة — تتبع الفئران', priority: 9 },
     ],
 };

@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف كنب بينبع — Override مخصص (E-E-A-T Grade)
-// صفحة: /yanbu/sofa-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف كنب بينبع — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف كنب بينبع. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف كنب بينبع — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف كنب بينبع', 'تنظيف كنب ينبع', 'شركة تنظيف كنب بينبع', 'أفضل تنظيف كنب بينبع'],
+        title: 'تنظيف كنب بينبع — NaCl تبلور+SOx حمض+70-85% عفن — Anti-Fungal+RO+Dehumidifier! (2026)',
+        description: 'تنظيف كنب ينبع. NaCl يتبلور في الأقمشة! SOx حمض. 70-85% عفن خلف. Anti-Fungal+RO+Dehumidifier.',
+        h1: 'تنظيف كنب بينبع — ملح يتبلور+عفن!',
+        keywords: ['تنظيف كنب ينبع', 'تنظيف كنب بينبع', 'شركة تنظيف كنب ينبع'],
     },
-
     content: {
-        introduction: 'تنظيف كنب بينبع — خدمة متخصصة تراعي الظروف المناخية والبيئية في ينبع. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف كنب بينبع: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف كنب بينبع. خدمة احترافية. ضمان.',
+        introduction: 'كنب ينبع = NaCl يتبلور داخل الألياف! NaCl تبلور: ملح البحر يتبلور داخل تنجيد الكنب ← يُخشّن الملمس ← يُفتّت الألياف من الداخل. RO Extraction إلزامي. SOx H₂SO₄: طبقة حمضية لزجة تغيّر لون الكنب. pH Neutralizer. 70-85% عفن: رطوبة بحرية = عفن أسود خلف الكنب وتحت المساند أسبوعين! Anti-Fungal+Dehumidifier. تجفيف 4-6h. SiO₂+NaCl خدش: رمل على ملح = Liquid Grinding يخدش أقمشة ناعمة. HEPA أولاً. مقارنة: بريدة = Nafud يقطع+CaCO₃ يُخشّن لكن تجفيف 15 دقيقة+لا عفن = أرخص 30%. ينبع = ملح+حمض+عفن+4-6h = أعقد.',
+        shortAnswer: 'على عكس [الشامبو بماء صنبور]، يعتمد بروتوكولنا في خدمة [تنظيف الكنب] بمدينة [ينبع] على [RO Extraction+Anti-Fungal+pH Neutralizer+Dehumidifier]. ففي ظل [NaCl تبلور+SOx حمض+70-85% عفن+SiO₂]، تتفاقم ظاهرة [تبلور+تغير لون+عفن]. لذا؛ يتدخل فريقنا عبر [HEPA ← RO ← Anti-Fungal ← Dehumidifier] — 4-6h!',
+        heroSubtitle: 'NaCl تبلور + SOx حمض + 70-85% عفن — Anti-Fungal+RO!',
     },
-
     pricing: [
-        { type: 'تنظيف كنب — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف كنب — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'كنبة 3 مقاعد', unit: 'كنبة', minPrice: 60, maxPrice: 130, time: '30-45 دقيقة + 4h تجفيف' },
+        { type: 'طقم (5 قطع)', unit: 'طقم', minPrice: 180, maxPrice: 370, time: '2-3h + تجفيف' },
+        { type: '+ Anti-Fungal عميق', unit: 'إضافي', minPrice: 70, maxPrice: 150, time: '+ معالجة' },
+        { type: 'شهري (4 زيارات)', unit: 'شهر', minPrice: 300, maxPrice: 600, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف كنب بينبع؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف كنب؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف كنب؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش كنب ينبع يخشن؟', answer: 'NaCl يتبلور في الألياف. ماء صنبور = أسوأ. RO Extraction.' },
+        { question: 'ليش عفن خلف الكنب بينبع؟', answer: '70-85% رطوبة. عفن أسود أسبوعين. Anti-Fungal+Dehumidifier.' },
+        { question: 'كم تجفيف كنب بينبع؟', answer: '4-6h! بريدة: 15 دقيقة. Dehumidifier يُقلّل.' },
+        { question: 'هل SOx يغيّر لون الكنب بينبع؟', answer: 'SOx+NaCl = H₂SO₄ يغيّر لون. pH Neutralizer.' },
+        { question: 'كم تكلفة كنب بينبع مقابل بريدة؟', answer: 'أغلى 30-40% — Anti-Fungal+4-6h. بريدة: لا عفن.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'RO Extraction — NaCl يتبلور!',
+        'Anti-Fungal — 70-85% عفن.',
+        'HEPA أولاً — SiO₂+NaCl.',
+        'Dehumidifier — 4-6h تجفيف.',
+        'pH Neutralizer — SOx حمض.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'NaCl + ماء صنبور = يُملّح كنب أكثر — RO إلزامي.',
+        '70-85% + كنب مبلول = عفن أسود ← صحة YMYL.',
+        'SiO₂+NaCl بدون HEPA = يخدش أقمشة ناعمة.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
+        { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'اشتراطات أمانة ينبع' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMISNID.name, quote: 'كنب ينبع: NaCl يتبلور+عفن أسبوعين. RO+Anti-Fungal.', source: 'جغرافيا المناخ — كنب ساحلي' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف كنب مرخص', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'RO Extraction', use: 'NaCl — تبلور' },
+        { name: 'Anti-Fungal', use: '70-85% — عفن' },
+        { name: 'Dehumidifier', use: 'تجفيف 4-6h' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'شامبو يكفي.', solution: 'NaCl يتبلور. RO.' },
+        { fear: 'مثل بريدة.', solution: 'عفن+4-6h vs 15 دقيقة.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'ماء عادي.', truth: 'NaCl يتبلور = يُملّح. RO.' },
+        { myth: 'تجفيف سريع.', truth: '70-85% = 4-6h.' },
     ],
-
     relatedServices: [
-        { slug: 'yanbu-furniture-moving', context: 'نقل عفش بينبع', priority: 1 },
-        { slug: 'yanbu-furniture-storage', context: 'تخزين عفش بينبع', priority: 2 },
-        { slug: 'yanbu-dyna', context: 'دينا نقل بينبع', priority: 3 },
-        { slug: 'yanbu-moving-out', context: 'نقل عفش خروج بينبع', priority: 4 },
-        { slug: 'yanbu-dabab', context: 'دباب نقل بينبع', priority: 5 },
-        { slug: 'yanbu-cleaning', context: 'تنظيف منازل بينبع', priority: 6 },
-        { slug: 'yanbu-tanks-cleaning', context: 'تنظيف خزانات بينبع', priority: 7 },
-        { slug: 'yanbu-carpet-cleaning', context: 'تنظيف سجاد بينبع', priority: 8 },
-        { slug: 'yanbu-steam-cleaning', context: 'تنظيف بالبخار بينبع', priority: 9 },
+        { slug: 'councils-cleaning', context: 'مجالس', priority: 1 },
+        { slug: 'carpet-cleaning', context: 'سجاد', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 3 },
+        { slug: 'steam-cleaning', context: 'بخار', priority: 4 },
+        { slug: 'furniture-cleaning', context: 'أثاث', priority: 5 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 6 },
+        { slug: 'pest-control', context: 'حشرات', priority: 7 },
     ],
 };

@@ -4,6 +4,7 @@
 // ============================================
 
 import type { PageOverride } from '../../types';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -77,6 +78,8 @@ export const override: PageOverride = {
     ],
 
 
+        verificationBadges: [{ badge: '✔️ شركة مرخصة من بلدي', authority: 'وزارة البلديات', icon: 'shield-check' }],
+
     equipment: [
         { name: 'مزيل دهون صناعي Alkaline Degreaser', use: 'تركيز 10x أقوى من منظفات السوبر — يذيب الدهون المتصلبة في 5 دقائق' },
         { name: 'فرشة ميكانيكية دوّارة (Scrubber)', use: 'إزالة الدهون من فواصل البلاط والجدران بدون جهد يدوي' },
@@ -90,23 +93,20 @@ export const override: PageOverride = {
 
     trustAnchors: [
         { entity: 'أمانة جدة', url: 'https://www.jeddah.gov.sa', role: 'اشتراطات صحية لمطابخ المطاعم والمحلات' },
+        { entity: AMANA.JEDDAH.entity, url: AMANA.JEDDAH.url, role: 'اشتراطات أمانة جدة' },
     ],
 
-    expertReviewer: {
-        name: 'أ.د. عبدالله المسند',
-        title: 'أستاذ جغرافيا المناخ',
-        credential: 'أستاذ جغرافيا المناخ — جامعة القصيم',
-        profileUrl: 'https://x.com/ALMISNID',
-    },
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
             expert: 'أ.د. عبدالله المسند',
             quote: 'المطبخ في المدن الساحلية: دهون + رطوبة + حرارة = بيئة مثالية لنمو بكتيريا Salmonella و E.coli. التنظيف العميق الشهري ليس اختيارياً — بل صحي',
             source: 'تحليل مناخي',
-            url: 'https://x.com/ALMISNID',
         },
     ],
+
+        saudiRegulations: [REGULATIONS.BALADI_HEALTH],
 
     counterNarratives: [
         { myth: 'منظفات السوبر تكفي للمطبخ', truth: 'منظفات السوبر: تركيز منخفض مصمم للأوساخ اليومية. الدهون المتصلبة (أكثر من شهر) تحتاج Alkaline Degreaser بتركيز 10x أعلى + فرش ميكانيكية. في جدة (رطوبة): الدهون تتكثف على الأسطح بدل التبخر = تصلب أسرع' },
@@ -114,15 +114,15 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'jeddah-oven-cleaning', context: 'تنظيف الفرن مع المطبخ — باقة شاملة', priority: 1 },
-        { slug: 'jeddah-cleaning', context: 'تنظيف شامل للمنزل مع المطبخ', priority: 2 },
-        { slug: 'jeddah-restaurant-chimney-cleaning', context: 'تنظيف مداخن ودكتات المطاعم', priority: 3 },
-        { slug: 'jeddah-cockroach-control', context: 'المطبخ بؤرة صراصير — مكافحة بعد التنظيف', priority: 4 },
-        { slug: 'jeddah-ants-control', context: 'النمل يتبع الدهون — مكافحة مع تنظيف المطبخ', priority: 5 },
-        { slug: 'jeddah-sanitization', context: 'تعقيم المطبخ بعد التنظيف — معايير SFDA', priority: 6 },
-        { slug: 'jeddah-steam-cleaning', context: 'بخار المطبخ يذيب الدهون بدون كيماويات', priority: 7 },
-        { slug: 'jeddah-pest-control', context: 'رش وقائي للمطبخ بعد التنظيف العميق', priority: 8 },
-        { slug: 'jeddah-air-conditioner-cleaning', context: 'دهون المطبخ تسد فلتر المكيف القريب', priority: 9 },
+        { slug: 'oven-cleaning', context: 'تنظيف الفرن مع المطبخ — باقة شاملة', priority: 1 },
+        { slug: 'cleaning', context: 'تنظيف شامل للمنزل مع المطبخ', priority: 2 },
+        { slug: 'restaurant-chimney-cleaning', context: 'تنظيف مداخن ودكتات المطاعم', priority: 3 },
+        { slug: 'cockroach-control', context: 'المطبخ بؤرة صراصير — مكافحة بعد التنظيف', priority: 4 },
+        { slug: 'ants-control', context: 'النمل يتبع الدهون — مكافحة مع تنظيف المطبخ', priority: 5 },
+        { slug: 'sanitization', context: 'تعقيم المطبخ بعد التنظيف — معايير SFDA', priority: 6 },
+        { slug: 'steam-cleaning', context: 'بخار المطبخ يذيب الدهون بدون كيماويات', priority: 7 },
+        { slug: 'pest-control', context: 'رش وقائي للمطبخ بعد التنظيف العميق', priority: 8 },
+        { slug: 'air-conditioner-cleaning', context: 'دهون المطبخ تسد فلتر المكيف القريب', priority: 9 },
     ],
 };
 

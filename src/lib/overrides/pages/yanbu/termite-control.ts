@@ -1,94 +1,74 @@
-// ══════════════════════════════════════════════════════════════
-// مكافحة نمل أبيض بينبع — Override مخصص (E-E-A-T Grade)
-// صفحة: /yanbu/termite-control
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'مكافحة نمل أبيض بينبع — خدمة احترافية معتمدة (2026)',
-        description: 'مكافحة نمل أبيض بينبع. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'مكافحة نمل أبيض بينبع — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['مكافحة نمل أبيض بينبع', 'مكافحة نمل أبيض ينبع', 'شركة مكافحة نمل أبيض بينبع', 'أفضل مكافحة نمل أبيض بينبع'],
+        title: 'مكافحة نمل أبيض بينبع — 70-85% رطوبة+NaCl أساسات+خشب ميناء — Termidor+VCI! (2026)',
+        description: 'مكافحة نمل أبيض ينبع. 70-85% رطوبة! NaCl أساسات. خشب ميناء. Termidor SC+حقن+VCI+SBC.',
+        h1: 'مكافحة نمل أبيض بينبع — رطوبة+ميناء+NaCl!',
+        keywords: ['مكافحة نمل أبيض ينبع', 'مكافحة أرضة بينبع', 'شركة مكافحة نمل أبيض ينبع'],
     },
-
     content: {
-        introduction: 'مكافحة نمل أبيض بينبع — خدمة متخصصة تراعي الظروف المناخية والبيئية في ينبع. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'مكافحة نمل أبيض بينبع: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'مكافحة نمل أبيض بينبع. خدمة احترافية. ضمان.',
+        introduction: 'نمل أبيض ينبع = رطوبة+ميناء! 70-85% رطوبة: أعلى رطوبة = بيئة مثالية للنمل الأبيض — خشب رطب = طعام سهل = مستعمرات ضخمة. NaCl أساسات: ملح يتراكم حول الأساسات ← رطوبة ملحية تجذب النمل. حقن أساسات + DPC. خشب ميناء: صناديق شحن خشبية من الميناء = مصدر نمل أبيض مُستورد! فحص كل حمولة خشبية. حرارة 45°م: صيف = نشاط. Termidor SC (Fipronil) — يقتل المستعمرة كاملة 5-8 سنوات. مقارنة: بريدة = نخيل 8M سيللوز+ΔT. ينبع = رطوبة+ميناء+NaCl = مختلف.',
+        shortAnswer: 'على عكس [الرش السطحي]، يعتمد بروتوكولنا في خدمة [مكافحة النمل الأبيض] بمدينة [ينبع] على [Termidor SC+حقن أساسات+فحص ميناء+DPC]. ففي ظل [70-85% رطوبة+NaCl أساسات+خشب ميناء+حرارة]، تتفاقم ظاهرة [خشب رطب+ميناء مُستورد+رطوبة ملحية]. لذا؛ يتدخل فنيونا عبر [Termidor ← حقن ← فحص خشب ← DPC] — SBC!',
+        heroSubtitle: '70-85% رطوبة + NaCl أساسات + خشب ميناء — Termidor+حقن!',
     },
-
     pricing: [
-        { type: 'مكافحة نمل أبيض — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'مكافحة نمل أبيض — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'فحص + شقة', unit: 'شقة', minPrice: 200, maxPrice: 420, time: '2-3h' },
+        { type: 'فيلا (حقن أساسات)', unit: 'فيلا', minPrice: 500, maxPrice: 1000, time: '1-2 يوم' },
+        { type: 'معالجة قبل بناء (SBC)', unit: 'م²', minPrice: 15, maxPrice: 35, time: '1-3 أيام' },
+        { type: 'ضمان 5 سنوات', unit: 'باقة', minPrice: 800, maxPrice: 1600, time: 'فحص سنوي' },
     ],
-
     faq: [
-        { question: 'كم تكلفة مكافحة نمل أبيض بينبع؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق مكافحة نمل أبيض؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على مكافحة نمل أبيض؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش نمل أبيض ينبع خطير؟', answer: '70-85% = خشب رطب = طعام سهل. ميناء = نمل مُستورد.' },
+        { question: 'كيف NaCl يجذب النمل بينبع؟', answer: 'ملح حول أساسات = رطوبة ملحية. حقن+DPC.' },
+        { question: 'هل الميناء مصدر نمل بينبع؟', answer: 'صناديق شحن خشبية = نمل مُستورد! فحص كل حمولة.' },
+        { question: 'كم يدوم Termidor بينبع؟', answer: '5-8 سنوات. رطوبة = فحص سنوي.' },
+        { question: 'كم تكلفة مكافحة نمل بينبع مقابل بريدة؟', answer: 'متقاربة. ينبع: ميناء. بريدة: نخيل 8M.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Termidor SC — يقتل مستعمرة كاملة.',
+        'حقن أساسات — NaCl رطوبة ملحية.',
+        'فحص خشب ميناء — مُستورد.',
+        'DPC — رطوبة أرضية.',
+        'SBC قبل بناء — إلزامي.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        '70-85% + خشب رطب = مستعمرة ضخمة — هيكل YMYL.',
+        'ميناء + خشب شحن = نمل مُستورد ← منزل قريب.',
+        'بدون DPC + NaCl = رطوبة ملحية تجذب ← اختراق.',
     ],
-
     trustAnchors: [
-        { ...GOV.SFDA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.SBC, role: 'كود البناء — معالجة قبل البناء' },
+        { ...GOV.BALADI, role: 'ترخيص شركات المكافحة' },
+        { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'اشتراطات أمانة ينبع' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALKHODAIRY.name,
-        title: EXPERTS.ALKHODAIRY.title,
-        credential: EXPERTS.ALKHODAIRY.credential,
-        profileUrl: EXPERTS.ALKHODAIRY.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALJUND,
     expertCitations: [
-        {
-            expert: EXPERTS.ALKHODAIRY.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALKHODAIRY.title,
-            url: EXPERTS.ALKHODAIRY.profileUrl,
-        },
+        { expert: EXPERTS.ALJUND.name, quote: 'نمل أبيض ينبع: 70-85% رطوبة+ميناء+NaCl. Termidor+حقن+DPC.', source: 'موسوعة أخطاء — نمل أبيض ساحلي' },
     ],
-
-    saudiRegulations: [REGULATIONS.GHAD_SYSTEM],
-
-    verificationBadges: [
-        { badge: '✔️ مبيدات معتمدة من SFDA', authority: 'هيئة الغذاء والدواء', icon: 'shield-check' },
-    ],
-
+    saudiRegulations: [REGULATIONS.SBC_601, REGULATIONS.GHAD_SYSTEM],
+    verificationBadges: [{ badge: '✔️ مكافحة نمل أبيض مرخصة', authority: 'بلدي + SBC', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Termidor SC (Fipronil)', use: 'يقتل مستعمرة — 5-8 سنوات' },
+        { name: 'حقن أساسات', use: 'NaCl رطوبة ملحية — حاجز' },
+        { name: 'DPC Membrane', use: 'رطوبة أرضية — أساسات' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'رش سطحي.', solution: 'مستعمرة تحت. Termidor+حقن.' },
+        { fear: 'مثل بريدة.', solution: 'رطوبة+ميناء vs نخيل+ΔT.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'رش عام.', truth: 'Termidor+حقن = مستعمرة.' },
+        { myth: 'مرة واحدة.', truth: 'فحص سنوي. رطوبة.' },
     ],
-
     relatedServices: [
-        { slug: 'yanbu-furniture-moving', context: 'نقل عفش بينبع', priority: 1 },
-        { slug: 'yanbu-furniture-storage', context: 'تخزين عفش بينبع', priority: 2 },
-        { slug: 'yanbu-dyna', context: 'دينا نقل بينبع', priority: 3 },
-        { slug: 'yanbu-moving-out', context: 'نقل عفش خروج بينبع', priority: 4 },
-        { slug: 'yanbu-dabab', context: 'دباب نقل بينبع', priority: 5 },
-        { slug: 'yanbu-cleaning', context: 'تنظيف منازل بينبع', priority: 6 },
-        { slug: 'yanbu-tanks-cleaning', context: 'تنظيف خزانات بينبع', priority: 7 },
-        { slug: 'yanbu-sofa-cleaning', context: 'تنظيف كنب بينبع', priority: 8 },
-        { slug: 'yanbu-carpet-cleaning', context: 'تنظيف سجاد بينبع', priority: 9 },
+        { slug: 'pest-control', context: 'حشرات', priority: 1 },
+        { slug: 'pesticide-spraying', context: 'رش', priority: 2 },
+        { slug: 'water-insulation', context: 'مائي', priority: 3 },
+        { slug: 'roof-insulation', context: 'أسطح', priority: 4 },
+        { slug: 'water-leak-detection', context: 'تسرب', priority: 5 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 6 },
+        { slug: 'furniture-storage', context: 'تخزين', priority: 7 },
     ],
 };

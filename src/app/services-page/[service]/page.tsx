@@ -9,6 +9,7 @@ import { BreadcrumbJsonLd, ServiceJsonLd, ItemListJsonLd, WebPageJsonLd } from '
 import { getCityContext, getAdjustedPriceRange } from '@/lib/city-context';
 import { getServiceKeywordProfile } from '@/lib/keyword-strategy';
 import { hasPageOverride } from '@/lib/overrides/registry';
+import { isAbsorbedSlug, getCanonicalSlug } from '@/lib/services/super-page-groups';
 import Footer from '@/components/Footer';
 
 // Major cities for price comparison
@@ -21,7 +22,7 @@ const BASE_PRICE: Record<string, { label: string; min: number; max: number }> = 
     'pest-control': { label: 'شقة متوسطة/كبيرة', min: 250, max: 400 },
     'water-leak-detection': { label: 'كشف بالأجهزة', min: 200, max: 400 },
     'tank-insulation': { label: 'خزان متوسط (4-8 طن)', min: 800, max: 1200 },
-    'sewer-cleaning': { label: 'تسليك بالكمبروسر', min: 250, max: 500 },
+    'sewage-unblocking': { label: 'تسليك بالكمبروسر', min: 250, max: 500 },
 };
 
 interface ServicePageProps {
@@ -30,9 +31,9 @@ interface ServicePageProps {
     }>;
 }
 
-// Generate static params for all services
+// Generate static params for canonical services only (absorbed slugs redirect via Super Pages)
 export async function generateStaticParams() {
-    return SERVICES.map(service => ({
+    return SERVICES.filter(s => !isAbsorbedSlug(s.slug)).map(service => ({
         service: service.slug,
     }));
 }
@@ -74,9 +75,9 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
             locale: 'ar_SA',
             type: 'website',
             siteName: 'بروكر',
-            url: `https://prokr.co/${resolvedParams.service}`,
+            url: `https://prokr.co/${getCanonicalSlug(resolvedParams.service) || resolvedParams.service}`,
             images: [{
-                url: `https://prokr.co/${resolvedParams.service}/opengraph-image`,
+                url: `https://prokr.co/${getCanonicalSlug(resolvedParams.service) || resolvedParams.service}/opengraph-image`,
                 width: 1200,
                 height: 630,
                 alt: `شركات ${service.name_ar} في السعودية - بروكر`,
@@ -88,7 +89,7 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
             description,
         },
         alternates: {
-            canonical: `https://prokr.co/${resolvedParams.service}`,
+            canonical: `https://prokr.co/${getCanonicalSlug(resolvedParams.service) || resolvedParams.service}`,
         },
     };
 }
@@ -108,7 +109,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
     // Breadcrumb items
     const breadcrumbs = [
         { name: 'الرئيسية', url: 'https://prokr.co' },
-        { name: service.name_ar, url: `https://prokr.co/${service.slug}` },
+        { name: service.name_ar, url: `https://prokr.co/${getCanonicalSlug(service.slug) || service.slug}` },
     ];
 
     return (
@@ -118,7 +119,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
             <WebPageJsonLd
                 title={`${service.name_ar} في السعودية`}
                 description={`اكتشف أفضل شركات ${service.name_ar} في جميع مدن المملكة العربية السعودية`}
-                url={`https://prokr.co/${service.slug}`}
+                url={`https://prokr.co/${getCanonicalSlug(service.slug) || service.slug}`}
                 breadcrumbs={breadcrumbs}
             />
             <ServiceJsonLd
@@ -130,9 +131,9 @@ export default async function ServicePage({ params }: ServicePageProps) {
                 type="cities"
                 listName={`${service.name_ar} في مدن السعودية`}
                 description={`قائمة المدن التي تتوفر فيها خدمة ${service.name_ar}`}
-                items={CITIES.filter(c => hasPageOverride(c.slug, service.slug)).map(c => ({
+                items={CITIES.filter(c => hasPageOverride(c.slug, getCanonicalSlug(service.slug) || service.slug)).map(c => ({
                     name: c.name_ar,
-                    url: `https://prokr.co/${c.slug}/${service.slug}`
+                    url: `https://prokr.co/${c.slug}/${getCanonicalSlug(service.slug) || service.slug}`
                 }))}
             />
 
@@ -214,10 +215,10 @@ export default async function ServicePage({ params }: ServicePageProps) {
                                     {REGION_NAMES[region] || region}
                                 </h3>
                                 <div className="space-y-2">
-                                    {cities.filter(city => hasPageOverride(city.slug, service.slug)).map(city => (
+                                    {cities.filter(city => hasPageOverride(city.slug, getCanonicalSlug(service.slug) || service.slug)).map(city => (
                                         <Link
                                             key={city.slug}
-                                            href={`/${city.slug}/${service.slug}`}
+                                            href={`/${city.slug}/${getCanonicalSlug(service.slug) || service.slug}`}
                                             className="flex items-center justify-between p-3 hover:bg-emerald-50 rounded-lg text-gray-700 hover:text-emerald-700 transition-colors group"
                                         >
                                             <span>{city.name_ar}</span>
@@ -270,7 +271,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                                             </tr>
                                         </thead>
                                         <tbody className="divide-y divide-gray-100">
-                                            {COMPARISON_CITIES.filter(cs => hasPageOverride(cs, service.slug)).map(citySlug => {
+                                            {COMPARISON_CITIES.filter(cs => hasPageOverride(cs, getCanonicalSlug(service.slug) || service.slug)).map(citySlug => {
                                                 const ctx = getCityContext(citySlug);
                                                 if (!ctx) return null;
                                                 return (
@@ -280,7 +281,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                                                             {getAdjustedPriceRange(basePrice.min, basePrice.max, citySlug)}
                                                         </td>
                                                         <td className="p-4">
-                                                            <Link href={`/${citySlug}/${service.slug}`} className="text-emerald-600 hover:text-emerald-800 underline text-sm">
+                                                            <Link href={`/${citySlug}/${getCanonicalSlug(service.slug) || service.slug}`} className="text-emerald-600 hover:text-emerald-800 underline text-sm">
                                                                 عرض الشركات
                                                             </Link>
                                                         </td>
@@ -346,7 +347,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <h2 className="text-xl font-bold text-gray-900 mb-6">خدمات أخرى</h2>
                         <div className="flex flex-wrap gap-3">
-                            {SERVICES.filter(s => s.slug !== service.slug).slice(0, 12).map(otherService => (
+                            {SERVICES.filter(s => s.slug !== service.slug && !isAbsorbedSlug(s.slug)).slice(0, 12).map(otherService => (
                                 <Link
                                     key={otherService.slug}
                                     href={`/${otherService.slug}`}

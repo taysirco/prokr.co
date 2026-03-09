@@ -6,6 +6,7 @@
 // ══════════════════════════════════════════════════════════════
 
 import type { PageOverride } from '../../types';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -66,6 +67,8 @@ export const override: PageOverride = {
         'الكلور ممنوع على الخشب الطبيعي — يبيّض اللون ويتلف الطلاء. منظف pH محايد فقط',
     ],
 
+        verificationBadges: [{ badge: '✔️ شركة مرخصة من بلدي', authority: 'وزارة البلديات', icon: 'shield-check' }],
+
     equipment: [
         { name: 'جهاز بخار جاف متخصص للأثاث (150°م)', use: 'ينظف الأقمشة والخشب المعالج بدون تبليل — يقتل العث والبكتيريا في العمق' },
         { name: 'مرطب جلد احترافي (Leather Conditioner)', use: 'يعيد المرونة للجلد المتشقق من ملوحة جدة — يمنع التقشر 3 أشهر' },
@@ -80,23 +83,20 @@ export const override: PageOverride = {
 
     trustAnchors: [
         { entity: 'الهيئة السعودية للمواصفات والمقاييس', acronym: 'SASO', url: 'https://www.saso.gov.sa', role: 'مواصفات مواد تنظيف وترطيب الأثاث — سلامة المواد' },
+        { entity: AMANA.JEDDAH.entity, url: AMANA.JEDDAH.url, role: 'اشتراطات أمانة جدة' },
     ],
 
-    expertReviewer: {
-        name: 'أ.د. عبدالله المسند',
-        title: 'أستاذ جغرافيا المناخ',
-        credential: 'أستاذ جغرافيا المناخ — جامعة القصيم',
-        profileUrl: 'https://x.com/ALMISNID',
-    },
+    expertReviewer: EXPERTS.ALMISNID,
 
     expertCitations: [
         {
             expert: 'م. عبدالغني الجند',
             quote: 'فحص الأثاث الخشبي للنمل الأبيض يجب أن يكون جزءاً من كل تنظيف دوري — العلامات لا تظهر بالعين حتى يكون التلف متقدماً. في المدن الساحلية الرطبة: الإصابة أعلى 4x',
             source: 'مؤلف موسوعة أخطاء في البناء',
-            url: 'https://x.com/ssrrr22',
         },
     ],
+
+        saudiRegulations: [REGULATIONS.BALADI_HEALTH],
 
     counterNarratives: [
         { myth: 'ملمع الأثاث الرش (Spray Polish) يكفي', truth: 'ملمع الرش: لمعان مؤقت 48 ساعة + يجمع الغبار أسرع (طبقة لزجة). التنظيف الاحترافي: يزيل الرطوبة المخزنة في الخشب + يضيف Wood Sealer يحمي 6 أشهر + يفحص علامات النمل الأبيض. فرق النتيجة: مؤقت vs دائم' },
@@ -104,14 +104,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'jeddah-sofa-cleaning', context: 'كنب + أثاث — باقة مشتركة', priority: 1 },
-        { slug: 'jeddah-steam-cleaning', context: 'بخار شامل لكل الأثاث', priority: 2 },
-        { slug: 'jeddah-cleaning', context: 'تنظيف شامل + أثاث', priority: 3 },
-        { slug: 'jeddah-mattress-cleaning', context: 'مراتب + أثاث غرفة النوم', priority: 4 },
-        { slug: 'jeddah-carpet-cleaning', context: 'سجاد + أثاث — منظومة متكاملة', priority: 5 },
-        { slug: 'jeddah-sanitization', context: 'تعقيم الأثاث من البكتيريا والعث', priority: 6 },
-        { slug: 'jeddah-termite-control', context: 'نمل أبيض — حماية الأثاث الخشبي', priority: 7 },
-        { slug: 'jeddah-furniture-moving', context: 'نقل + تنظيف — باقة انتقال', priority: 8 },
-        { slug: 'jeddah-pest-control', context: 'حشرات الأثاث (عث، بق، خنافس)', priority: 9 },
+        { slug: 'sofa-cleaning', context: 'كنب + أثاث — باقة مشتركة', priority: 1 },
+        { slug: 'steam-cleaning', context: 'بخار شامل لكل الأثاث', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف شامل + أثاث', priority: 3 },
+        { slug: 'mattress-cleaning', context: 'مراتب + أثاث غرفة النوم', priority: 4 },
+        { slug: 'carpet-cleaning', context: 'سجاد + أثاث — منظومة متكاملة', priority: 5 },
+        { slug: 'sanitization', context: 'تعقيم الأثاث من البكتيريا والعث', priority: 6 },
+        { slug: 'termite-control', context: 'نمل أبيض — حماية الأثاث الخشبي', priority: 7 },
+        { slug: 'furniture-moving', context: 'نقل + تنظيف — باقة انتقال', priority: 8 },
+        { slug: 'pest-control', context: 'حشرات الأثاث (عث، بق، خنافس)', priority: 9 },
     ],
 };

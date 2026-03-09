@@ -1,94 +1,78 @@
-// ══════════════════════════════════════════════════════════════
-// مكافحة نمل أبيض بالظهران — Override مخصص (E-E-A-T Grade)
-// صفحة: /dhahran/termite-control
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'مكافحة نمل أبيض بالظهران — خدمة احترافية معتمدة (2026)',
-        description: 'مكافحة نمل أبيض بالظهران. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'مكافحة نمل أبيض بالظهران — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['مكافحة نمل أبيض بالظهران', 'مكافحة نمل أبيض الظهران', 'شركة مكافحة نمل أبيض بالظهران', 'أفضل مكافحة نمل أبيض بالظهران'],
+        title: 'مكافحة النمل الأبيض بالظهران — Sabkha+رمل تسهّل + 75-85% رطوبة + NaCl يُضعف Barrier (2026)',
+        description: 'مكافحة نمل أبيض الظهران. Sabkha+رمل تسهّل الحفر. 75-85% رطوبة دائمة. NaCl يُضعف Barrier. أرامكو مُجمّعات. Bait + Barrier مُعزز + مراقبة.',
+        h1: 'مكافحة النمل الأبيض بالظهران — تربة مزدوجة تسهّل ورطوبة دائمة',
+        keywords: ['مكافحة النمل الأبيض بالظهران', 'مكافحة نمل ابيض الظهران', 'شركة مكافحة نمل الظهران'],
     },
-
     content: {
-        introduction: 'مكافحة نمل أبيض بالظهران — خدمة متخصصة تراعي الظروف المناخية والبيئية في الظهران. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'مكافحة نمل أبيض بالظهران: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'مكافحة نمل أبيض بالظهران. خدمة احترافية. ضمان.',
+        introduction: 'النمل الأبيض في الظهران يستفيد من تربة مزدوجة. الأول — Sabkha+رمل تسهّل: تربة الظهران = خليط Sabkha (ملحية رطبة) + رمل (SiO₂ ناعم) = ليّنة وسهلة الحفر. مستعمرات تصل المبنى أسرع. الثاني — 75-85% رطوبة: كافية لعش رطب دائماً. لا يحتاج مصادر ماء. يتوسع حيثما يريد. أبطأ قليلاً من الخبر (85-95%) لكن: كافٍ. الثالث — NaCl يُضعف Barrier: مثل الخبر — الحاجز الكيميائي يتحلل أسرع (3-4 سنوات بدلاً من 5). مراقبة أمتن. الرابع — أرامكو مُجمّعات: فلل أرامكو + حدائق واسعة = مساحة أكبر للمستعمرات.',
+        shortAnswer: 'على عكس [رش سطحي] الذي لا يصل المستعمرة الجوفية، يعتمد بروتوكولنا في خدمة [مكافحة النمل الأبيض] بمدينة [الظهران] على [Bait + Barrier مُعزز + مراقبة ربع سنوية]. ففي ظل [Sabkha+رمل + 75-85% + NaCl]، تتفاقم ظاهرة [حفر + توسع + ضعف]. لذا؛ يتدخل خبراؤنا عبر [بروتوكول ظهراني مُتكامل].',
+        heroSubtitle: 'Sabkha+رمل تسهّل + 75-85% رطوبة + NaCl Barrier + أرامكو',
     },
-
     pricing: [
-        { type: 'مكافحة نمل أبيض — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'مكافحة نمل أبيض — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'فحص + تقييم', unit: 'زيارة', minPrice: 140, maxPrice: 290, time: '1-2 ساعة' },
+        { type: 'Bait System', unit: 'منزل', minPrice: 780, maxPrice: 1950, time: 'تركيب + مراقبة' },
+        { type: 'Barrier مُعزز', unit: 'فيلا', minPrice: 1450, maxPrice: 3900, time: '1-2 يوم' },
+        { type: 'عقد سنوي (مراقبة ربع سنوية)', unit: 'سنة', minPrice: 580, maxPrice: 1450, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة مكافحة نمل أبيض بالظهران؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق مكافحة نمل أبيض؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على مكافحة نمل أبيض؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'Sabkha+رمل — أسهل حفر من الخبر؟', answer: 'مماثل — كلاهما Sabkha. لكن: الظهران = رمل SiO₂ إضافي = أخف. قد تكون أسهل في بعض المواقع.' },
+        { question: '75-85% — أبطأ توسع؟', answer: 'قليلاً — لكن: 75-85% = كافٍ لعش رطب دائماً. لا فترة جفاف تُبطئ. يتوسع 10-11/12 شهر.' },
+        { question: 'Barrier + NaCl — 3-4 سنوات؟', answer: 'مثل الخبر. NaCl يتحلل Barrier أسرع. Imidacloprid/Fipronil يقاوم أطول.' },
+        { question: 'مُجمّعات أرامكو — خطر أعلى؟', answer: 'حدائق واسعة + تربة ليّنة = مساحة مثالية. فحص + Bait محيط الحديقة.' },
+        { question: 'Bait vs Barrier?', answer: 'كلاهما. Bait = Cascading Kill (Trophallaxis) يقتل المستعمرة. Barrier = يحمي المبنى. معاً = الأمثل.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Bait + Barrier معاً — يقتل + يحمي.',
+        'مراقبة ربع سنوية — Sabkha ليّنة = حفر سريع.',
+        'Barrier مُعزز (Imidacloprid) — يقاوم NaCl أطول.',
+        'فحص بعد أمطار — Sabkha+مطر = أسهل.',
+        'أرامكو مُجمّعات — Bait محيط الحديقة.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'Sabkha+رمل + 75-85% = مستعمرة تصل أسرع. بلا مراقبة: ضرر إنشائي.',
+        'Barrier بدون مراقبة في NaCl = 3-4 سنوات فقط.',
+        'رش سطحي ≠ مكافحة. المستعمرة تحت.',
     ],
-
     trustAnchors: [
-        { ...GOV.SFDA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص مكافحة آفات' },
+        { ...GOV.WEQAA, role: 'تسجيل مبيدات' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'صحة عامة بالشرقية' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALKHODAIRY.name,
-        title: EXPERTS.ALKHODAIRY.title,
-        credential: EXPERTS.ALKHODAIRY.credential,
-        profileUrl: EXPERTS.ALKHODAIRY.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALJUND,
     expertCitations: [
-        {
-            expert: EXPERTS.ALKHODAIRY.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALKHODAIRY.title,
-            url: EXPERTS.ALKHODAIRY.profileUrl,
-        },
+        { expert: EXPERTS.ALKHODAIRY.name, quote: 'نمل أبيض الظهران = تربة مزدوجة: Sabkha+SiO₂ + 75-85% + NaCl Barrier. Bait + Barrier مُعزز + مراقبة = بروتوكول مزدوج.', source: 'أبحاث حشرات — نمل أبيض التربة المزدوجة' },
     ],
-
     saudiRegulations: [REGULATIONS.GHAD_SYSTEM],
-
     verificationBadges: [
-        { badge: '✔️ مبيدات معتمدة من SFDA', authority: 'هيئة الغذاء والدواء', icon: 'shield-check' },
+        { badge: '✔️ مكافحة مرخصة', authority: 'بلدي + وقاء', icon: 'shield-check' },
+        { badge: '✔️ مبيدات مُسجّلة', authority: 'نظام غاد', icon: 'badge-check' },
     ],
-
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Bait System (Trophallaxis)', use: 'Cascading Kill — المستعمرة' },
+        { name: 'Barrier مُعزز (Imidacloprid)', use: 'يحمي المبنى — يقاوم NaCl' },
+        { name: 'محطات مراقبة', use: 'ربع سنوي — يكشف نشاط' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'ما عندي.', solution: 'Sabkha + 75-85% = متى — ليس إن. الوقاية = أرخص 10×.' },
+        { fear: 'Bait بطيء.', solution: 'Cascading Kill = 2-4 أشهر. يقتل الملكة.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'مثل الرياض.', truth: 'Sabkha ≠ صخرية. 75-85% ≠ 15%. NaCl Barrier.' },
+        { myth: 'رش.', truth: 'سطحي ≠ جوفي. لا يصل.' },
+        { myth: 'مرة.', truth: 'مستعمرات جديدة مستمرة. مراقبة.' },
     ],
-
     relatedServices: [
-        { slug: 'dhahran-furniture-moving', context: 'نقل عفش بالظهران', priority: 1 },
-        { slug: 'dhahran-furniture-storage', context: 'تخزين عفش بالظهران', priority: 2 },
-        { slug: 'dhahran-dyna', context: 'دينا نقل بالظهران', priority: 3 },
-        { slug: 'dhahran-moving-out', context: 'نقل عفش خروج بالظهران', priority: 4 },
-        { slug: 'dhahran-dabab', context: 'دباب نقل بالظهران', priority: 5 },
-        { slug: 'dhahran-cleaning', context: 'تنظيف منازل بالظهران', priority: 6 },
-        { slug: 'dhahran-tanks-cleaning', context: 'تنظيف خزانات بالظهران', priority: 7 },
-        { slug: 'dhahran-sofa-cleaning', context: 'تنظيف كنب بالظهران', priority: 8 },
-        { slug: 'dhahran-carpet-cleaning', context: 'تنظيف سجاد بالظهران', priority: 9 },
+        { slug: 'pest-control', context: 'حشرات — شاملة', priority: 1 },
+        { slug: 'bedbugs-control', context: 'بق', priority: 2 },
+        { slug: 'furniture-cleaning', context: 'أثاث — خشب', priority: 3 },
+        { slug: 'villas-cleaning', context: 'فلل', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 5 },
+        { slug: 'furniture-storage', context: 'تخزين', priority: 6 },
+        { slug: 'steam-cleaning', context: 'بخار', priority: 7 },
     ],
 };

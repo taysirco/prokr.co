@@ -8,7 +8,7 @@
 // ══════════════════════════════════════════════════════════════
 
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -80,13 +80,14 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.CIVILDEFENSE, role: 'تراخيص ومعايير السلامة للعمل على المرتفعات' },
         { ...GOV.BALADI, role: 'ترخيص شركات النظافة والتشطيب ومراقبة معايير العمل' },
+        { entity: AMANA.MAKKAH.entity, url: AMANA.MAKKAH.url, role: 'اشتراطات أمانة مكة المكرمة' },
     ],
 
     expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
+        name: EXPERTS.ALMISNID.name,
+        title: EXPERTS.ALMISNID.title,
+        credential: EXPERTS.ALMISNID.credential,
+        profileUrl: EXPERTS.ALMISNID.profileUrl,
     },
 
     expertCitations: [
@@ -124,12 +125,12 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'makkah-villas-cleaning', context: 'تنظيف شامل للفيلا — داخلي + واجهات خارجية', priority: 1 },
-        { slug: 'makkah-marble-polishing', context: 'جلي رخام الأرضيات مع غسيل الواجهات — باقة تشطيب كاملة', priority: 2 },
-        { slug: 'makkah-office-cleaning', context: 'تنظيف مكاتب الأبراج التجارية مع واجهاتها', priority: 3 },
-        { slug: 'makkah-apartments-cleaning', context: 'تنظيف شقق أبراج سكنية + واجهات المبنى', priority: 4 },
-        { slug: 'makkah-floor-polishing', context: 'تلميع أرضيات اللوبي مع الواجهات الزجاجية', priority: 5 },
-        { slug: 'makkah-sanitization', context: 'تعقيم لوبيات الفنادق بعد غسيل الواجهات', priority: 6 },
-        { slug: 'makkah-shops-cleaning', context: 'تنظيف محلات تجارية — واجهة + داخلي', priority: 7 },
+        { slug: 'villas-cleaning', context: 'تنظيف شامل للفيلا — داخلي + واجهات خارجية', priority: 1 },
+        { slug: 'marble-polishing', context: 'جلي رخام الأرضيات مع غسيل الواجهات — باقة تشطيب كاملة', priority: 2 },
+        { slug: 'office-cleaning', context: 'تنظيف مكاتب الأبراج التجارية مع واجهاتها', priority: 3 },
+        { slug: 'apartments-cleaning', context: 'تنظيف شقق أبراج سكنية + واجهات المبنى', priority: 4 },
+        { slug: 'floor-polishing', context: 'تلميع أرضيات اللوبي مع الواجهات الزجاجية', priority: 5 },
+        { slug: 'sanitization', context: 'تعقيم لوبيات الفنادق بعد غسيل الواجهات', priority: 6 },
+        { slug: 'shops-cleaning', context: 'تنظيف محلات تجارية — واجهة + داخلي', priority: 7 },
     ],
 };

@@ -6,7 +6,7 @@
 // ══════════════════════════════════════════════════════════════
 
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -52,6 +52,7 @@ export const override: PageOverride = {
             question: 'العاملة تجيب أدواتها ولّا أوفر؟',
             answer: 'حسب الشركة: بعض الشركات توفر العاملة + الأدوات (أغلى قليلاً). أخرى: العاملة فقط وأنت توفر الأدوات (أرخص). نصيحة: إذا عندك أدوات + مكنسة: وفّر. إذا ما عندك: اختر باقة شاملة. الأهم: تأكد إذا فيه مكنسة HEPA — المكنسة العادية تنثر الغبار.',
         },
+        { question: 'كم تكلفة التنظيف العميق مقارنة بالتنظيف العادي؟', answer: 'التنظيف العميق أغلى 30-50% لكنه يشمل: HEPA + بخار 150°م + تعقيم. التنظيف العادي = مسح سطحي. العميق كل 3-4 أشهر + العادي أسبوعياً = أفضل معادلة تكلفة/نظافة.' },
     ],
 
     expertTips: [
@@ -70,6 +71,7 @@ export const override: PageOverride = {
 
     trustAnchors: [
         { ...GOV.BALADI, role: 'تنظيم عمل شركات الخدمات المنزلية — حماية حقوق العمالة والعملاء' },
+        { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
 
     expertReviewer: {
@@ -84,7 +86,6 @@ export const override: PageOverride = {
             expert: 'أ.د. عبدالله المسند',
             quote: 'مارس-مايو موسم الصريف في الرياض — الطلب على عاملات التنظيف يتضاعف. الحجز المبكر أو الباقة الأسبوعية = الحل الأذكى',
             source: 'أستاذ جغرافيا المناخ',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -111,14 +112,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'riyadh-cleaning', context: 'تنظيف بالجلسة أشمل', priority: 1 },
-        { slug: 'riyadh-apartments-cleaning', context: 'شقق بأسعار ثابتة', priority: 2 },
-        { slug: 'riyadh-kitchen-cleaning', context: 'مطبخ بالساعة', priority: 3 },
-        { slug: 'riyadh-steam-cleaning', context: 'بخار بالساعة', priority: 4 },
-        { slug: 'riyadh-sanitization', context: 'تعقيم سريع', priority: 5 },
-        { slug: 'riyadh-sofa-cleaning', context: 'كنب بالساعة', priority: 6 },
-        { slug: 'riyadh-carpet-cleaning', context: 'سجاد بجلسة منفصلة', priority: 7 },
-        { slug: 'riyadh-air-conditioner-cleaning', context: 'صيانة مكيف', priority: 8 },
-        { slug: 'riyadh-pest-control', context: 'رش سريع', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف بالجلسة أشمل', priority: 1 },
+        { slug: 'apartments-cleaning', context: 'شقق بأسعار ثابتة', priority: 2 },
+        { slug: 'kitchen-cleaning', context: 'مطبخ بالساعة', priority: 3 },
+        { slug: 'steam-cleaning', context: 'بخار بالساعة', priority: 4 },
+        { slug: 'sanitization', context: 'تعقيم سريع', priority: 5 },
+        { slug: 'sofa-cleaning', context: 'كنب بالساعة', priority: 6 },
+        { slug: 'carpet-cleaning', context: 'سجاد بجلسة منفصلة', priority: 7 },
+        { slug: 'air-conditioner-cleaning', context: 'صيانة مكيف', priority: 8 },
+        { slug: 'pest-control', context: 'رش سريع', priority: 9 },
     ],
 };

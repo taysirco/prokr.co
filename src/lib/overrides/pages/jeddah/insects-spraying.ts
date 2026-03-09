@@ -6,7 +6,7 @@
 // ══════════════════════════════════════════════════════════════
 
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -51,6 +51,7 @@ export const override: PageOverride = {
             question: 'الرش يقتل البعوض ولّا يطرده فقط؟',
             answer: 'الرش الاحترافي: يقتل فوراً (Knockdown) + يترك طبقة وقائية تقتل ما يدخل لاحقاً (Residual). ULV الضبابي: قتل فوري لكل ما يطير. لكن: الرش لا يقتل يرقات البعوض في الماء. الحل: أفرغ المياه الراكدة أولاً (يقتل اليرقات بإزالة بيئتها) + رش (يقتل البالغين).',
         },
+        { question: 'هل المبيدات آمنة على الأطفال والحيوانات؟', answer: 'مبيدات مسجلة في نظام غد — SFDA. إخلاء 2-4 ساعات بعد الرش. طيور وأسماك: أبِلغ الشركة مسبقاً لاستخدام مواد أخف. الأسطح آمنة بعد الجفاف (1-2 ساعة).' },
     ],
 
     expertTips: [
@@ -70,6 +71,7 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.SFDA, role: 'اعتماد المبيدات الحشرية — نظام غد لتسجيل المبيدات الآمنة' },
         { ...GOV.BALADI, role: 'ترخيص شركات المكافحة — الشهادة الصحية' },
+        { entity: AMANA.JEDDAH.entity, url: AMANA.JEDDAH.url, role: 'اشتراطات أمانة جدة' },
     ],
 
     expertReviewer: {
@@ -84,7 +86,6 @@ export const override: PageOverride = {
             expert: 'أ.د. فهد الخضيري',
             quote: 'المبيدات غير المعتمدة (Organophosphates القديمة) خطرة على الأطفال والحوامل. تأكد أن الشركة تستخدم الجيل الرابع المسجل في نظام غد — SFDA',
             source: 'عالم أبحاث طبي — سموم ومسرطنات',
-            url: 'https://x.com/DrAlkhodairy',
         },
     ],
 
@@ -111,14 +112,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'jeddah-pest-control', context: 'الرش الشامل جزء من مكافحة متكاملة لكل الحشرات', priority: 1 },
-        { slug: 'jeddah-pesticide-spraying', context: 'رش مبيدات الجيل الرابع — وقائي دوري كل 3 أشهر', priority: 2 },
-        { slug: 'jeddah-cockroach-control', context: 'الصراصير تحتاج جل طُعم إضافة للرش الشامل', priority: 3 },
-        { slug: 'jeddah-ants-control', context: 'النمل يحتاج جل طُعم — الرش وحده لا يصل العش', priority: 4 },
-        { slug: 'jeddah-rodent-control', context: 'البيئة التي تجذب حشرات = تجذب فئران أيضاً', priority: 5 },
-        { slug: 'jeddah-sewage-unblocking', context: 'المجاري المسدودة = بؤر تكاثر بعوض وصراصير', priority: 6 },
-        { slug: 'jeddah-sanitization', context: 'تعقيم بعد الرش — يزيل بقايا الحشرات والبكتيريا', priority: 7 },
-        { slug: 'jeddah-cleaning', context: 'تنظيف شامل بعد الرش يزيل مخلفات الحشرات', priority: 8 },
-        { slug: 'jeddah-bird-control', context: 'أعشاش الحمام = بؤر حشرات — شبك ورش معاً', priority: 9 },
+        { slug: 'pest-control', context: 'الرش الشامل جزء من مكافحة متكاملة لكل الحشرات', priority: 1 },
+        { slug: 'pesticide-spraying', context: 'رش مبيدات الجيل الرابع — وقائي دوري كل 3 أشهر', priority: 2 },
+        { slug: 'cockroach-control', context: 'الصراصير تحتاج جل طُعم إضافة للرش الشامل', priority: 3 },
+        { slug: 'ants-control', context: 'النمل يحتاج جل طُعم — الرش وحده لا يصل العش', priority: 4 },
+        { slug: 'rodent-control', context: 'البيئة التي تجذب حشرات = تجذب فئران أيضاً', priority: 5 },
+        { slug: 'sewage-unblocking', context: 'المجاري المسدودة = بؤر تكاثر بعوض وصراصير', priority: 6 },
+        { slug: 'sanitization', context: 'تعقيم بعد الرش — يزيل بقايا الحشرات والبكتيريا', priority: 7 },
+        { slug: 'cleaning', context: 'تنظيف شامل بعد الرش يزيل مخلفات الحشرات', priority: 8 },
+        { slug: 'bird-control', context: 'أعشاش الحمام = بؤر حشرات — شبك ورش معاً', priority: 9 },
     ],
 };

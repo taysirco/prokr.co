@@ -90,7 +90,6 @@ export const override: PageOverride = {
             expert: 'أ.د. عبدالله المسند',
             quote: 'غبار المناطق الجبلية كمكة أثقل وأكثر احتكاكاً بالألياف النسيجية — المكنسة وحدها لا تكفي. السجاد يحتاج غسيلاً مائياً عميقاً مرتين سنوياً كحد أدنى',
             source: 'أستاذ المناخ والبيئة',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -121,12 +120,12 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'makkah-steam-cleaning', context: 'تعقيم بالبخار للستائر والمفروشات — يُكمل غسيل السجاد', priority: 1 },
-        { slug: 'makkah-sofa-cleaning', context: 'تنظيف كنب مع السجاد — طقم غرفة معيشة نظيف متكامل', priority: 2 },
-        { slug: 'makkah-councils-cleaning', context: 'غسيل كنب المجالس مع سجاد المجلس — باقة شاملة', priority: 3 },
-        { slug: 'makkah-cleaning', context: 'تنظيف عميق للمنزل مع غسيل السجاد — خدمة متكاملة', priority: 4 },
-        { slug: 'makkah-pest-control', context: 'عث الغبار في السجاد = مكافحة وقائية تحمي من الحساسية', priority: 5 },
-        { slug: 'makkah-bedbugs-control', context: 'بق الفراش يختبئ في السجاد القريب من السرير — مكافحة شاملة', priority: 6 },
-        { slug: 'makkah-furniture-moving', context: 'غسيل السجاد بعد نقل الأثاث — إزالة غبار النقل', priority: 7 },
+        { slug: 'steam-cleaning', context: 'تعقيم بالبخار للستائر والمفروشات — يُكمل غسيل السجاد', priority: 1 },
+        { slug: 'sofa-cleaning', context: 'تنظيف كنب مع السجاد — طقم غرفة معيشة نظيف متكامل', priority: 2 },
+        { slug: 'councils-cleaning', context: 'غسيل كنب المجالس مع سجاد المجلس — باقة شاملة', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف عميق للمنزل مع غسيل السجاد — خدمة متكاملة', priority: 4 },
+        { slug: 'pest-control', context: 'عث الغبار في السجاد = مكافحة وقائية تحمي من الحساسية', priority: 5 },
+        { slug: 'bedbugs-control', context: 'بق الفراش يختبئ في السجاد القريب من السرير — مكافحة شاملة', priority: 6 },
+        { slug: 'furniture-moving', context: 'غسيل السجاد بعد نقل الأثاث — إزالة غبار النقل', priority: 7 },
     ],
 };

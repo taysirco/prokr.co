@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف أثاث بالباحة — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-baha/furniture-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف أثاث بالباحة — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف أثاث بالباحة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف أثاث بالباحة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف أثاث بالباحة', 'تنظيف أثاث الباحة', 'شركة تنظيف أثاث بالباحة', 'أفضل تنظيف أثاث بالباحة'],
+        title: 'تنظيف أثاث بالباحة — PVAc Swelling+200 يوم ضباب+عرعر+Laterite — Anti-Humidity+Dehumidifier! (2026)',
+        description: 'تنظيف أثاث الباحة. PVAc Swelling مفاصل! 200 يوم ضباب عفن. عرعر لزج. Anti-Humidity+Dehumidifier+Anti-Fungal.',
+        h1: 'تنظيف أثاث بالباحة — PVAc Swelling+عفن!',
+        keywords: ['تنظيف أثاث بالباحة', 'تنظيف موبيليا الباحة', 'شركة تنظيف أثاث بالباحة'],
     },
-
     content: {
-        introduction: 'تنظيف أثاث بالباحة — خدمة متخصصة تراعي الظروف المناخية والبيئية في الباحة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف أثاث بالباحة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف أثاث بالباحة. خدمة احترافية. ضمان.',
+        introduction: 'أثاث الباحة = PVAc ينتفخ+عفن داخلي! PVAc Swelling: غراء خشب الأثاث يمتص رطوبة 60-85% ← ينتفخ ← مفاصل تضعف ← أثاث يتفكك 3-5 سنوات! Anti-Humidity Sealing إلزامي. عكس بريدة: خشب يتشقق (جاف) = معاكس تماماً. 200 يوم ضباب عفن: رطوبة تتغلغل داخل الأدراج ← عفن Penicillium بين الملابس. Anti-Fungal+تهوية. عرعر لزج: حبوب لقاح تلتصق بالأسطح = طبقة صفراء. Microfiber مبلل. 6-10h تجفيف: بعد تنظيف رطب = Dehumidifier إلزامي. مقارنة: بريدة = CaCO₃+SiO₂ على الخشب+تشقق+تجفيف 15 دقيقة. الباحة = PVAc+عفن+عرعر+بطء = أعقد.',
+        shortAnswer: 'على عكس [المنظف دون Anti-Humidity]، يعتمد بروتوكولنا في خدمة [تنظيف الأثاث] بمدينة [الباحة] على [Anti-Humidity ← Anti-Fungal ← Dehumidifier ← Microfiber]. ففي ظل [PVAc Swelling+200 يوم ضباب+عرعر+6-10h]، تتفاقم ظاهرة [انتفاخ+عفن+لزوجة+بطء]. لذا؛ يتدخل فريقنا عبر [Anti-Humidity ← Anti-Fungal ← Dehumidifier ← Microfiber].',
+        heroSubtitle: 'PVAc ينتفخ + 200 يوم عفن + عرعر — Anti-Humidity!',
     },
-
     pricing: [
-        { type: 'تنظيف أثاث — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف أثاث — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'غرفة نوم', unit: 'غرفة', minPrice: 100, maxPrice: 210, time: '1-2h' },
+        { type: 'غرفة + Anti-Humidity', unit: 'غرفة', minPrice: 150, maxPrice: 310, time: '2-3h' },
+        { type: 'أثاث كامل (3 غرف)', unit: 'شقة', minPrice: 250, maxPrice: 520, time: '4-6h' },
+        { type: 'ربع سنوي', unit: 'سنة', minPrice: 350, maxPrice: 700, time: '4 تنظيف' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف أثاث بالباحة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف أثاث؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف أثاث؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش أثاث الباحة يتفكك؟', answer: 'PVAc Swelling: غراء يمتص 60-85% = ينتفخ = مفاصل. Anti-Humidity.' },
+        { question: 'ليش الأدراج تتعفّن بالباحة؟', answer: '200 يوم ضباب = رطوبة داخل الأدراج. Anti-Fungal+تهوية.' },
+        { question: 'ليش خشب بريدة يتشقق وخشب الباحة ينتفخ؟', answer: 'بريدة 10-20% = جاف يتشقق. الباحة 60-85% = رطب ينتفخ. عكس!' },
+        { question: 'كم تكلفة أثاث بالباحة مقابل بريدة؟', answer: 'أغلى 35-45% — Anti-Humidity+Dehumidifier. بريدة: ترطيب.' },
+        { question: 'كم مرة تنظيف أثاث بالباحة؟', answer: 'ربع سنوي + Anti-Humidity سنوي.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Anti-Humidity — PVAc مفاصل.',
+        'Anti-Fungal — أدراج عفن.',
+        'Dehumidifier — 6-10h!',
+        'Microfiber مبلل — عرعر.',
+        'تهوية — ضباب داخلي.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'PVAc + 60-85% × 3 سنوات = مفاصل تنتفخ ← تفكك.',
+        '200 يوم ضباب + أدراج مغلقة = عفن ← ملابس YMYL.',
+        'تنظيف رطب بدون Dehumidifier = 6-10h ← عفن يعود.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
+        { entity: AMANA.BAHA.entity, url: AMANA.BAHA.url, role: 'اشتراطات أمانة الباحة' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMISNID.name, quote: 'أثاث الباحة: PVAc Swelling عكس بريدة. Anti-Humidity+Anti-Fungal.', source: 'جغرافيا المناخ — أثاث جبلي' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف أثاث مرخص', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Anti-Humidity Sealing', use: 'PVAc — مفاصل خشب' },
+        { name: 'Anti-Fungal', use: '200 يوم ضباب — أدراج' },
+        { name: 'Dehumidifier', use: '6-10h — تجفيف' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'منظف عادي.', solution: 'PVAc+عفن = Anti-Humidity.' },
+        { fear: 'مثل بريدة.', solution: 'Swelling vs Cracking. عكس!' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'خشب مقاوم.', truth: 'PVAc يمتص. Anti-Humidity.' },
+        { myth: 'نصف سنوي.', truth: 'ربع سنوي. ضباب.' },
     ],
-
     relatedServices: [
-        { slug: 'al-baha-furniture-moving', context: 'نقل عفش بالباحة', priority: 1 },
-        { slug: 'al-baha-furniture-storage', context: 'تخزين عفش بالباحة', priority: 2 },
-        { slug: 'al-baha-dyna', context: 'دينا نقل بالباحة', priority: 3 },
-        { slug: 'al-baha-moving-out', context: 'نقل عفش خروج بالباحة', priority: 4 },
-        { slug: 'al-baha-dabab', context: 'دباب نقل بالباحة', priority: 5 },
-        { slug: 'al-baha-cleaning', context: 'تنظيف منازل بالباحة', priority: 6 },
-        { slug: 'al-baha-tanks-cleaning', context: 'تنظيف خزانات بالباحة', priority: 7 },
-        { slug: 'al-baha-sofa-cleaning', context: 'تنظيف كنب بالباحة', priority: 8 },
-        { slug: 'al-baha-carpet-cleaning', context: 'تنظيف سجاد بالباحة', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 1 },
+        { slug: 'sofa-cleaning', context: 'كنب', priority: 2 },
+        { slug: 'carpet-cleaning', context: 'سجاد', priority: 3 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 4 },
+        { slug: 'pest-control', context: 'حشرات', priority: 5 },
+        { slug: 'furniture-moving', context: 'نقل', priority: 6 },
+        { slug: 'furniture-storage', context: 'تخزين', priority: 7 },
     ],
 };

@@ -6,7 +6,7 @@
 // ══════════════════════════════════════════════════════════════
 
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -48,6 +48,8 @@ export const override: PageOverride = {
             question: 'أشياء ثمينة — أرسلها بالدباب؟',
             answer: 'للقيمة العالية (مجوهرات، نقود كبيرة، جوازات): لا — استخدم خدمة أمانات مع تأمين وتتبع. الدباب: لا خزنة ولا تأمين. مثالي للمستندات العادية وقطع الغيار. القاعدة: إذا فقدان الشحنة يسبب مشكلة كبيرة = خدمة مؤمنة. إذا قابل للاستبدال = دباب.',
         },
+        { question: 'هل الشركة مرخصة من هيئة النقل TGA؟', answer: 'كل شركات بروكر مرخصة TGA + بيان حمولة لوجستي. الترخيص = تأمين على الأمتعة + حقوق عميل. بدون ترخيص = لا تأمين = لا تعويض.' },
+        { question: 'كم يوم قبل أحجز؟', answer: 'الأفضل 3-7 أيام مقدماً. في مواسم الذروة (نهاية العقود/إجازات): 10-14 يوم. الحجز المبكر = سعر أفضل + موعد مناسب.' },
     ],
 
     expertTips: [
@@ -66,13 +68,14 @@ export const override: PageOverride = {
 
     trustAnchors: [
         { ...GOV.BALADI, role: 'تنظيم خدمات التوصيل — ضمان سلامة المندوبين والبضائع' },
+        { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
 
     expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
+        name: EXPERTS.ALSHABNAN.name,
+        title: EXPERTS.ALSHABNAN.title,
+        credential: EXPERTS.ALSHABNAN.credential,
+        profileUrl: EXPERTS.ALSHABNAN.profileUrl,
     },
 
     expertCitations: [
@@ -80,7 +83,6 @@ export const override: PageOverride = {
             expert: 'م. ماجد المحيميد',
             quote: 'الدباب عبقري لتجاوز زحمة الرياض — لكن احترم حدوده. في الصيف: حتى 20 دقيقة في 50°م كافية لإتلاف بضائع حساسة',
             source: 'خبير جودة البناء والتشطيبات',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
 
@@ -103,17 +105,18 @@ export const override: PageOverride = {
 
     counterNarratives: [
         { myth: 'السيارة أفضل من الدباب دائماً', truth: 'في الذروة: لا. 45 دقيقة سيارة vs 15 دقيقة دباب. خارج الذروة: ممكن. صيفاً وبضائع حساسة: السيارة أفضل (مكيّفة). كل وسيلة لها وقتها ومكانها' },
+        { myth: 'أي دينا تكفي.', truth: 'دينا بدون ترخيص TGA = بدون تأمين = أي ضرر يتحمله العميل. الترخيص = حماية قانونية.' },
     ],
 
     relatedServices: [
-        { slug: 'riyadh-dyna', context: 'دينا للنقل الثقيل', priority: 1 },
-        { slug: 'riyadh-furniture-moving', context: 'نقل عفش كامل', priority: 2 },
-        { slug: 'riyadh-furniture-storage', context: 'تخزين مع النقل', priority: 3 },
-        { slug: 'riyadh-moving-out', context: 'تنظيف بعد النقل', priority: 4 },
-        { slug: 'riyadh-cleaning', context: 'تنظيف البيت الجديد', priority: 5 },
-        { slug: 'riyadh-pest-control', context: 'رش البيت الجديد', priority: 6 },
-        { slug: 'riyadh-furniture-cleaning', context: 'تنظيف بعد النقل', priority: 7 },
-        { slug: 'riyadh-sanitization', context: 'تعقيم', priority: 8 },
-        { slug: 'riyadh-air-conditioner-cleaning', context: 'فحص مكيفات', priority: 9 },
+        { slug: 'dyna', context: 'دينا للنقل الثقيل', priority: 1 },
+        { slug: 'furniture-moving', context: 'نقل عفش كامل', priority: 2 },
+        { slug: 'furniture-storage', context: 'تخزين مع النقل', priority: 3 },
+        { slug: 'moving-out', context: 'تنظيف بعد النقل', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف البيت الجديد', priority: 5 },
+        { slug: 'pest-control', context: 'رش البيت الجديد', priority: 6 },
+        { slug: 'furniture-cleaning', context: 'تنظيف بعد النقل', priority: 7 },
+        { slug: 'sanitization', context: 'تعقيم', priority: 8 },
+        { slug: 'air-conditioner-cleaning', context: 'فحص مكيفات', priority: 9 },
     ],
 };

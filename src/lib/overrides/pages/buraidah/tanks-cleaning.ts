@@ -1,94 +1,76 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف خزانات ببريدة — Override مخصص (E-E-A-T Grade)
-// صفحة: /buraidah/tanks-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف خزانات ببريدة — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف خزانات ببريدة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف خزانات ببريدة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف خزانات ببريدة', 'تنظيف خزانات بريدة', 'شركة تنظيف خزانات ببريدة', 'أفضل تنظيف خزانات ببريدة'],
+        title: 'تنظيف خزانات ببريدة — CaCO₃ 600ppm Scale أعلى+Nafud ترسيب+ΔT — Descaler+RO! (2026)',
+        description: 'تنظيف خزانات بريدة. CaCO₃ 600ppm Scale أعلى! Nafud SiO₂ ترسيب. ΔT 45°م. Descaler+تعقيم NWC+RO.',
+        h1: 'تنظيف خزانات ببريدة — أعلى كلس Scale!',
+        keywords: ['تنظيف خزانات بريدة', 'تنظيف خزان ببريدة', 'شركة تنظيف خزانات بريدة'],
     },
-
     content: {
-        introduction: 'تنظيف خزانات ببريدة — خدمة متخصصة تراعي الظروف المناخية والبيئية في بريدة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف خزانات ببريدة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف خزانات ببريدة. خدمة احترافية. ضمان.',
+        introduction: 'خزان بريدة = أعلى كلس في المملكة! CaCO₃ 600ppm Scale: أعلى تركيز كلس = Scale أسرع على جدران الخزان 2× من الرياض. Descaler صناعي كل 6 أشهر. كلس يُصفّر الماء ويُخشّنه. Nafud SiO₂ ترسيب: رمل النفود الناعم يدخل من فتحة غير محكمة ← يترسب في قاع الخزان. شفط أسفل + إحكام. ΔT 45°م: صيف = مياه الخزان 35-40°م = بكتيريا تنشط أسرع. تعقيم كلور مضاعف (NWC 0.5-1 PPM). 10-20% = لا طحالب! لا عفن! ميزة كبيرة. مقارنة: خميس = طحالب+عفن+Anti-Algae. بريدة = Scale+Nafud لكن لا طحالب = أبسط.',
+        shortAnswer: 'على عكس [التنظيف بدون Descaler]، يعتمد بروتوكولنا في خدمة [تنظيف الخزانات] بمدينة [بريدة] على [Descaler+شفط Nafud+تعقيم NWC+إحكام]. ففي ظل [CaCO₃ 600ppm Scale+Nafud ترسيب+ΔT بكتيريا+لا طحالب]، تتفاقم ظاهرة [Scale+ترسيب+بكتيريا]. لذا؛ يتدخل فنيونا عبر [Descaler ← شفط ← تعقيم ← إحكام] — لا طحالب!',
+        heroSubtitle: 'CaCO₃ 600ppm Scale أعلى + Nafud ترسيب — Descaler+تعقيم! لا طحالب!',
     },
-
     pricing: [
-        { type: 'تنظيف خزانات — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف خزانات — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'خزان صغير (5 م³)', unit: 'خزان', minPrice: 150, maxPrice: 310, time: '2-3h' },
+        { type: 'خزان + Descaler عميق', unit: 'خزان', minPrice: 200, maxPrice: 420, time: '3-4h' },
+        { type: 'خزان كبير (15+ م³)', unit: 'خزان', minPrice: 300, maxPrice: 620, time: '4-6h' },
+        { type: 'عقد نصف سنوي', unit: 'سنة', minPrice: 300, maxPrice: 620, time: '2 تنظيف' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف خزانات ببريدة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف خزانات؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف خزانات؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش خزان بريدة يتكلّس أسرع؟', answer: 'CaCO₃ 600ppm أعلى بالمملكة. Scale 2× أسرع. Descaler كل 6 أشهر.' },
+        { question: 'هل Nafud يدخل الخزان ببريدة؟', answer: 'فتحة غير محكمة = Nafud يترسب. إحكام + شفط.' },
+        { question: 'كم تكلفة تنظيف خزان ببريدة مقارنة بخميس؟', answer: 'أرخص 15-20% — لا Anti-Algae+Anti-Fungal. Descaler+تعقيم فقط.' },
+        { question: 'هل الخزان يتعفّن ببريدة؟', answer: 'لا! 10-20% = لا طحالب لا عفن. خميس: طحالب أسبوعية.' },
+        { question: 'كم كلور تعقيم ببريدة؟', answer: 'NWC 0.5-1 PPM. صيف ΔT = مضاعف لأن بكتيريا تنشط.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Descaler كل 6 أشهر — 600ppm.',
+        'إحكام غطاء — Nafud يدخل.',
+        'تعقيم NWC — 0.5-1 PPM كلور.',
+        'صيف: مضاعف — ΔT بكتيريا.',
+        'لا طحالب! — 10-20% ميزة.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'CaCO₃ 600ppm × سنة = Scale صلب — Descaler صناعي لازم.',
+        'ΔT × صيف × بدون تعقيم = بكتيريا مياه شرب — YMYL.',
+        'Nafud + فتحة مفتوحة = ترسيب قاع — إحكام إلزامي.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.NWC, role: 'معايير تعقيم خزانات (كلور 0.5-1 PPM)' },
+        { ...GOV.MOH, role: 'بروتوكولات التعقيم' },
+        { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
+        { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'خزان بريدة: 600ppm Scale أعلى. Descaler 6 أشهر. لا طحالب.', source: 'نصائح هندسية — خزانات القصيم' },
+        { expert: EXPERTS.ALMISNID.name, quote: 'ΔT 45°م = بكتيريا تنشط صيفاً. تعقيم مضاعف.', source: 'جغرافيا المناخ — القصيم' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف خزانات NWC', authority: 'NWC + بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Descaler صناعي', use: 'CaCO₃ 600ppm — Scale' },
+        { name: 'شفط ترسيب', use: 'Nafud قاع — سحب' },
+        { name: 'كلور NWC', use: 'تعقيم 0.5-1 PPM' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'تعقيم يكفي.', solution: '600ppm Scale = Descaler أولاً.' },
+        { fear: 'مثل خميس.', solution: 'لا طحالب = أرخص 20%.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'سنوي يكفي.', truth: '600ppm = كل 6 أشهر. Scale.' },
+        { myth: 'ماء يكفي.', truth: 'Scale = Descaler صناعي.' },
     ],
-
     relatedServices: [
-        { slug: 'buraidah-furniture-moving', context: 'نقل عفش ببريدة', priority: 1 },
-        { slug: 'buraidah-furniture-storage', context: 'تخزين عفش ببريدة', priority: 2 },
-        { slug: 'buraidah-dyna', context: 'دينا نقل ببريدة', priority: 3 },
-        { slug: 'buraidah-moving-out', context: 'نقل عفش خروج ببريدة', priority: 4 },
-        { slug: 'buraidah-dabab', context: 'دباب نقل ببريدة', priority: 5 },
-        { slug: 'buraidah-cleaning', context: 'تنظيف منازل ببريدة', priority: 6 },
-        { slug: 'buraidah-sofa-cleaning', context: 'تنظيف كنب ببريدة', priority: 7 },
-        { slug: 'buraidah-carpet-cleaning', context: 'تنظيف سجاد ببريدة', priority: 8 },
-        { slug: 'buraidah-steam-cleaning', context: 'تنظيف بالبخار ببريدة', priority: 9 },
+        { slug: 'tank-insulation', context: 'عزل خزان', priority: 1 },
+        { slug: 'tank-leak-detection', context: 'تسرب خزان', priority: 2 },
+        { slug: 'swimming-pool-cleaning', context: 'مسابح', priority: 3 },
+        { slug: 'water-leak-detection', context: 'تسرب مياه', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 5 },
+        { slug: 'pest-control', context: 'حشرات', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 7 },
     ],
 };

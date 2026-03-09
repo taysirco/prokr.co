@@ -4,6 +4,7 @@
 // ============================================
 
 import type { PageOverride } from '../../types';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -77,6 +78,8 @@ export const override: PageOverride = {
 
 
 
+        verificationBadges: [{ badge: '✔️ شركة مرخصة من بلدي', authority: 'وزارة البلديات', icon: 'shield-check' }],
+
     equipment: [
         { name: 'مكنسة صناعية هادئة (Low-Noise Vacuum)', use: 'تنظف بدون إزعاج الموظفين — مناسبة للمكاتب أثناء الدوام' },
         { name: 'معقم أسطح مكاتب (Surface Sanitizer)', use: 'يعقم الأسطح كثيرة اللمس: مقابض، مفاتيح، طاولات — يمنع انتشار الفيروسات' },
@@ -89,37 +92,35 @@ export const override: PageOverride = {
 
     trustAnchors: [
         { entity: 'وزارة البلديات — منصة بلدي', acronym: 'بلدي', url: 'https://balady.gov.sa', role: 'الشهادة الصحية للمكاتب التجارية' },
+        { entity: AMANA.JEDDAH.entity, url: AMANA.JEDDAH.url, role: 'اشتراطات أمانة جدة' },
     ],
 
-    expertReviewer: {
-        name: 'أ.د. عبدالله المسند',
-        title: 'أستاذ جغرافيا المناخ',
-        credential: 'أستاذ جغرافيا المناخ — جامعة القصيم',
-        profileUrl: 'https://x.com/ALMISNID',
-    },
+    expertReviewer: EXPERTS.ALMISNID,
 
     expertCitations: [
         {
             expert: 'أ.د. عبدالله المسند',
             quote: 'مكاتب جدة تجمع ترسبات ملحية على الواجهات والأسطح أسرع من المدن الجافة — التنظيف الاحترافي الأسبوعي يحمي صحة الموظفين وانطباع العملاء',
             source: 'تحليل مناخي',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
+        saudiRegulations: [REGULATIONS.BALADI_HEALTH],
+
     counterNarratives: [
         { myth: 'المكتب نظيف — ما يحتاج شركة', truth: 'المكتب يبدو نظيفاً لكن: موكيت المكتب يجمع 400x أكثر بكتيريا من مقعد الحمام (دراسة Arizona). في جدة الرطبة: العث يتكاثر في كراسي القماش. تنظيف احترافي كل شهر = إنتاجية أعلى + غياب مرضي أقل' },
+        { myth: 'المنظف العادي يكفي.', truth: 'المنظف العادي يزيل 40% من الأوساخ. HEPA + بخار = 99%+. الفرق = 59% غبار دقيق + بكتيريا + عث.' },
     ],
 
     relatedServices: [
-        { slug: 'jeddah-sanitization', context: 'تعقيم — شهادة صحية', priority: 1 },
-        { slug: 'jeddah-cleaning', context: 'تنظيف شامل مكاتب', priority: 2 },
-        { slug: 'jeddah-air-conditioner-cleaning', context: 'مكيفات المكتب', priority: 3 },
-        { slug: 'jeddah-carpet-cleaning', context: 'موكيت المكتب', priority: 4 },
-        { slug: 'jeddah-glass-facades-cleaning', context: 'واجهات المبنى', priority: 5 },
-        { slug: 'jeddah-steam-cleaning', context: 'بخار كراسي + أرضيات', priority: 6 },
-        { slug: 'jeddah-sofa-cleaning', context: 'كراسي الاستقبال', priority: 7 },
-        { slug: 'jeddah-pest-control', context: 'رش وقائي للمكتب', priority: 8 },
-        { slug: 'jeddah-floor-polishing', context: 'تلميع أرضيات المكتب', priority: 9 },
+        { slug: 'sanitization', context: 'تعقيم — شهادة صحية', priority: 1 },
+        { slug: 'cleaning', context: 'تنظيف شامل مكاتب', priority: 2 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيفات المكتب', priority: 3 },
+        { slug: 'carpet-cleaning', context: 'موكيت المكتب', priority: 4 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات المبنى', priority: 5 },
+        { slug: 'steam-cleaning', context: 'بخار كراسي + أرضيات', priority: 6 },
+        { slug: 'sofa-cleaning', context: 'كراسي الاستقبال', priority: 7 },
+        { slug: 'pest-control', context: 'رش وقائي للمكتب', priority: 8 },
+        { slug: 'floor-polishing', context: 'تلميع أرضيات المكتب', priority: 9 },
     ],
 };

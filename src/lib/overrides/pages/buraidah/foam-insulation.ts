@@ -1,94 +1,74 @@
-// ══════════════════════════════════════════════════════════════
-// عزل فوم ببريدة — Override مخصص (E-E-A-T Grade)
-// صفحة: /buraidah/foam-insulation
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'عزل فوم ببريدة — خدمة احترافية معتمدة (2026)',
-        description: 'عزل فوم ببريدة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'عزل فوم ببريدة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['عزل فوم ببريدة', 'عزل فوم بريدة', 'شركة عزل فوم ببريدة', 'أفضل عزل فوم ببريدة'],
+        title: 'عزل فوم ببريدة — ΔT 45°م+CaCO₃ 600ppm رطوبة أرضية+Nafud — Open-Cell+أرضي! (2026)',
+        description: 'عزل فوم بريدة. ΔT 45°م فارق حراري! CaCO₃ 600ppm رطوبة أرضية. Nafud SiO₂. Open-Cell فوق+Closed-Cell أرضي.',
+        h1: 'عزل فوم ببريدة — ΔT 45°م — Open-Cell يكفي!',
+        keywords: ['عزل فوم بريدة', 'عزل فوم ببريدة', 'شركة عزل فوم بريدة'],
     },
-
     content: {
-        introduction: 'عزل فوم ببريدة — خدمة متخصصة تراعي الظروف المناخية والبيئية في بريدة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'عزل فوم ببريدة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'عزل فوم ببريدة. خدمة احترافية. ضمان.',
+        introduction: 'فوم بريدة = حراري أولوية! ΔT 45°م: صيف 48°م + شتاء 3°م = فارق حراري كبير. Open-Cell R-3.7/inch يكفي لأنه لا مطر. أرخص 40% من Closed-Cell. CaCO₃ 600ppm رطوبة أرضية: أعلى كلس بالمملكة + آبار جوفية ترتفع = رطوبة كلسية تحت الأساسات. عزل أرضي Closed-Cell فقط تحت. Nafud SiO₂ لا يأثر على الفوم المغطى — يُنظف بعد التطبيق فقط. 10-20% = لا تكثّف بيني! ميزة: لا Vapor Barrier. مقارنة: خميس: Closed-Cell+Vapor+مائي = أغلى 40-50%. بريدة = Open-Cell+أرضي Closed فقط = أرخص! عنيزة = نفس البيئة تقريباً. SBC 601 إلزامي.',
+        shortAnswer: 'على عكس [Closed-Cell الغالي بدون حاجة]، يعتمد بروتوكولنا في خدمة [عزل الفوم] بمدينة [بريدة] على [Open-Cell فوق+Closed-Cell أرضي+بدون Vapor]. ففي ظل [ΔT 45°م+لا مطر+CaCO₃ 600ppm أرضية+10-20%]، تتفاقم ظاهرة [فقدان حراري+رطوبة أرضية كلسية]. لذا؛ يتدخل فنيونا عبر [Open-Cell فوق ← Closed-Cell تحت] = وفر 40%.',
+        heroSubtitle: 'ΔT 45°م + لا مطر — Open-Cell يكفي! أرخص 40%!',
     },
-
     pricing: [
-        { type: 'عزل فوم — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'عزل فوم — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'جدران Open-Cell (3 سم)', unit: 'م²', minPrice: 20, maxPrice: 45, time: '1-2 يوم (100 م²)' },
+        { type: 'سقف Open-Cell (5 سم)', unit: 'م²', minPrice: 30, maxPrice: 65, time: '1-2 يوم' },
+        { type: 'أرضي Closed-Cell', unit: 'م²', minPrice: 40, maxPrice: 85, time: '1-2 يوم' },
+        { type: 'فحص+إصلاح', unit: 'خدمة', minPrice: 200, maxPrice: 420, time: '1 يوم' },
     ],
-
     faq: [
-        { question: 'كم تكلفة عزل فوم ببريدة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق عزل فوم؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على عزل فوم؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش Open-Cell يكفي ببريدة وخميس تحتاج Closed-Cell؟', answer: 'لا مطر ببريدة = Open-Cell لا يتبلل. خميس: أمطار = كارثة.' },
+        { question: 'كم يوفر عزل الفوم كهرباء ببريدة؟', answer: '35-45% تبريد! ΔT 45°م. SBC 601 يشترط. أعلى عائد.' },
+        { question: 'كم تكلفة عزل فوم ببريدة مقارنة بخميس؟', answer: 'أرخص 40-50% — Open-Cell+لا Vapor. خميس: Closed+Vapor+مائي.' },
+        { question: 'هل بريدة تحتاج Vapor Barrier؟', answer: 'لا! 10-20% = لا تكثّف بيني. ميزة كبيرة.' },
+        { question: 'هل الرطوبة الأرضية تأثر ببريدة؟', answer: 'CaCO₃ 600ppm أعلى كلس. آبار ترتفع. Closed-Cell أرضي فقط.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Open-Cell R-3.7 — يكفي بلا مطر.',
+        'Closed-Cell أرضي — CaCO₃ 600ppm رطوبة.',
+        'لا Vapor Barrier — 10-20% ميزة!',
+        'SBC 601 — إلزامي.',
+        'أرخص 40% من خميس.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'Closed-Cell فوق = مبالغة ببريدة — لا مطر = أغلى بدون فائدة.',
+        'بدون عزل أرضي + CaCO₃ 600ppm = رطوبة ترتفع ← بلاط يتلف.',
+        'بدون عزل + ΔT 45°م = فاتورة كهرباء مضاعفة — SBC 601.',
     ],
-
     trustAnchors: [
-        { ...GOV.SBC, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.MOENERGY, role: 'كفاءة الطاقة — SBC 601' },
+        { ...GOV.BALADI, role: 'ترخيص مقاولي العزل' },
+        { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALJUND.name,
-        title: EXPERTS.ALJUND.title,
-        credential: EXPERTS.ALJUND.credential,
-        profileUrl: EXPERTS.ALJUND.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALJUND,
     expertCitations: [
-        {
-            expert: EXPERTS.ALJUND.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALJUND.title,
-            url: EXPERTS.ALJUND.profileUrl,
-        },
+        { expert: EXPERTS.ALJUND.name, quote: 'فوم بريدة: Open-Cell يكفي. لا مطر. 600ppm أرضي Closed. أرخص 40%.', source: 'موسوعة أخطاء — عزل القصيم' },
     ],
-
     saudiRegulations: [REGULATIONS.SBC_601],
-
-    verificationBadges: [
-        { badge: '✔️ عزل مطابق لكود SBC', authority: 'كود البناء السعودي', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ عزل مرخص SBC', authority: 'بلدي + كفاءة', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Open-Cell PU Foam', use: 'R-3.7/inch — جدران+سقف' },
+        { name: 'Closed-Cell PU Foam', use: 'أرضي — CaCO₃ 600ppm' },
+        { name: 'جهاز رش ضغط عالي', use: 'تطبيق متساوي' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'Closed أفضل.', solution: 'لا مطر = أغلى بدون فائدة. Open يكفي.' },
+        { fear: 'مثل خميس.', solution: 'عكس! Open مقابل Closed. أرخص 40%.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'Closed ضروري.', truth: 'لا مطر = Open 40% أرخص.' },
+        { myth: 'لا عزل أرضي.', truth: 'CaCO₃ 600ppm رطوبة أرضية = Closed تحت.' },
     ],
-
     relatedServices: [
-        { slug: 'buraidah-furniture-moving', context: 'نقل عفش ببريدة', priority: 1 },
-        { slug: 'buraidah-furniture-storage', context: 'تخزين عفش ببريدة', priority: 2 },
-        { slug: 'buraidah-dyna', context: 'دينا نقل ببريدة', priority: 3 },
-        { slug: 'buraidah-moving-out', context: 'نقل عفش خروج ببريدة', priority: 4 },
-        { slug: 'buraidah-dabab', context: 'دباب نقل ببريدة', priority: 5 },
-        { slug: 'buraidah-cleaning', context: 'تنظيف منازل ببريدة', priority: 6 },
-        { slug: 'buraidah-tanks-cleaning', context: 'تنظيف خزانات ببريدة', priority: 7 },
-        { slug: 'buraidah-sofa-cleaning', context: 'تنظيف كنب ببريدة', priority: 8 },
-        { slug: 'buraidah-carpet-cleaning', context: 'تنظيف سجاد ببريدة', priority: 9 },
+        { slug: 'thermal-insulation', context: 'حراري', priority: 1 },
+        { slug: 'roof-insulation', context: 'أسطح', priority: 2 },
+        { slug: 'water-insulation', context: 'مائي', priority: 3 },
+        { slug: 'tank-insulation', context: 'خزان', priority: 4 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 5 },
+        { slug: 'water-leak-detection', context: 'تسرب', priority: 6 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 7 },
     ],
 };

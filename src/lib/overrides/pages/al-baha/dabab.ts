@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// دباب نقل بالباحة — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-baha/dabab
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'دباب نقل بالباحة — خدمة احترافية معتمدة (2026)',
-        description: 'دباب نقل بالباحة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'دباب نقل بالباحة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['دباب نقل بالباحة', 'دباب نقل الباحة', 'شركة دباب نقل بالباحة', 'أفضل دباب نقل بالباحة'],
+        title: 'دباب نقل بالباحة — طرق جبلية+ضباب+مطر+Laterite — Mountain-Spec+مغلق! (2026)',
+        description: 'دباب نقل الباحة. طرق جبلية وعرة! ضباب 200 يوم رؤية. مطر Laterite انزلاق. Mountain-Spec+مغلق+All-Terrain.',
+        h1: 'دباب نقل بالباحة — جبلي+ضباب+مطر!',
+        keywords: ['دباب نقل بالباحة', 'دباب نقل الباحة', 'خدمة دباب نقل بالباحة'],
     },
-
     content: {
-        introduction: 'دباب نقل بالباحة — خدمة متخصصة تراعي الظروف المناخية والبيئية في الباحة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'دباب نقل بالباحة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'دباب نقل بالباحة. خدمة احترافية. ضمان.',
+        introduction: 'دباب الباحة = جبلي+ضباب+مطر! طرق جبلية: منحدرات ← حمولة تنزلق. تثبيت Mountain-Spec. ضباب: رؤية محدودة 200 يوم. نقل أبطأ. مطر: Laterite طين = طرق زلقة. All-Terrain إطارات. حمولة مكشوفة: مطر+ضباب = تبلل. تغليف مانع مطر أو مغطى. مقارنة: بريدة = طرق مستوية+جاف+لا ضباب = أبسط بكثير. كل شركات بروكر مرخصة من هيئة النقل TGA مع تأمين شامل على الأمتعة. البروتوكول: فك احترافي ← تغليف بابل + كرتون مقوى ← تحميل منظم بأحزمة تثبيت ← نقل بسيارات مجهزة ← تركيب في الموقع الجديد.',
+        shortAnswer: 'على عكس [الدباب المكشوف بطرق مستوية]، يعتمد بروتوكولنا في خدمة [الدباب] بمدينة [الباحة] على [Mountain-Spec+تغليف مانع مطر+All-Terrain]. ففي ظل [طرق جبلية+ضباب+مطر+Laterite]، تتفاقم ظاهرة [انزلاق+رؤية+تبلل]. لذا؛ يتدخل فريقنا عبر [Mountain-Spec ← تغليف ← All-Terrain].',
+        heroSubtitle: 'طرق جبلية + 200 يوم ضباب + مطر — Mountain-Spec!',
     },
-
     pricing: [
-        { type: 'دباب نقل — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'دباب نقل — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'دباب صغير', unit: 'رحلة', minPrice: 80, maxPrice: 170, time: '1-2h' },
+        { type: '+ تغليف مانع مطر', unit: 'رحلة', minPrice: 110, maxPrice: 230, time: '2-3h' },
+        { type: 'دباب كبير', unit: 'رحلة', minPrice: 150, maxPrice: 310, time: '2-3h' },
+        { type: 'نقل رغدان/المندق', unit: 'رحلة', minPrice: 130, maxPrice: 270, time: '2-4h — جبلي' },
     ],
-
     faq: [
-        { question: 'كم تكلفة دباب نقل بالباحة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق دباب نقل؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على دباب نقل؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش دباب الباحة أصعب؟', answer: 'طرق جبلية+ضباب+مطر. Mountain-Spec تثبيت.' },
+        { question: 'هل المطر مشكلة للدباب بالباحة؟', answer: 'مكشوف = تبلل. تغليف مانع مطر أو مغطى.' },
+        { question: 'كم تكلفة دباب بالباحة مقابل بريدة؟', answer: 'أغلى 15-20% — Mountain-Spec. بريدة: طرق مستوية.' },
+        { question: 'هل الضباب يأخّر النقل؟', answer: '200 يوم رؤية محدودة = أبطأ. صباحي أفضل.' },
+        { question: 'ليش All-Terrain إطارات بالباحة؟', answer: 'Laterite طين بعد مطر = انزلاق. All-Terrain.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Mountain-Spec — منحدرات.',
+        'تغليف مانع مطر — مكشوف.',
+        'All-Terrain — Laterite طين.',
+        'صباحي — ضباب أقل.',
+        'تثبيت إضافي — منعطفات.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'مكشوف + مطر = حمولة تتبلل — تغليف.',
+        'طرق جبلية + تثبيت عادي = حمولة تنزلق.',
+        'ضباب + سرعة = خطر — أبطأ.',
     ],
-
     trustAnchors: [
-        { ...GOV.TGA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.TGA, role: 'ترخيص النقل' },
+        { entity: AMANA.BAHA.entity, url: AMANA.BAHA.url, role: 'اشتراطات أمانة الباحة' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALZUWAYED.name,
-        title: EXPERTS.ALZUWAYED.title,
-        credential: EXPERTS.ALZUWAYED.credential,
-        profileUrl: EXPERTS.ALZUWAYED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALSHABNAN,
     expertCitations: [
-        {
-            expert: EXPERTS.ALZUWAYED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALZUWAYED.title,
-            url: EXPERTS.ALZUWAYED.profileUrl,
-        },
+        { expert: EXPERTS.ALZUWAYED.name, quote: 'دباب الباحة: جبلي+ضباب. Mountain-Spec+مغطى.', source: 'معايير النقل — جبلي' },
     ],
-
     saudiRegulations: [REGULATIONS.TGA_LICENSE],
-
-    verificationBadges: [
-        { badge: '✔️ شركة نقل مرخصة من هيئة النقل TGA', authority: 'الهيئة العامة للنقل', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ نقل مرخص TGA', authority: 'TGA', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Mountain-Spec تثبيت', use: 'منحدرات — لا ينزلق' },
+        { name: 'تغليف مانع مطر', use: 'مطر+ضباب — حماية' },
+        { name: 'All-Terrain', use: 'Laterite — طين زلق' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'مكشوف.', solution: 'مطر = تبلل. تغليف.' },
+        { fear: 'مثل بريدة.', solution: 'جبلي+ضباب ≠ مستوي.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'أي دباب.', truth: 'Mountain-Spec+All-Terrain.' },
+        { myth: 'سريع.', truth: 'ضباب = أبطأ. أمان.' },
     ],
-
     relatedServices: [
-        { slug: 'al-baha-furniture-moving', context: 'نقل عفش بالباحة', priority: 1 },
-        { slug: 'al-baha-furniture-storage', context: 'تخزين عفش بالباحة', priority: 2 },
-        { slug: 'al-baha-dyna', context: 'دينا نقل بالباحة', priority: 3 },
-        { slug: 'al-baha-moving-out', context: 'نقل عفش خروج بالباحة', priority: 4 },
-        { slug: 'al-baha-cleaning', context: 'تنظيف منازل بالباحة', priority: 5 },
-        { slug: 'al-baha-tanks-cleaning', context: 'تنظيف خزانات بالباحة', priority: 6 },
-        { slug: 'al-baha-sofa-cleaning', context: 'تنظيف كنب بالباحة', priority: 7 },
-        { slug: 'al-baha-carpet-cleaning', context: 'تنظيف سجاد بالباحة', priority: 8 },
-        { slug: 'al-baha-steam-cleaning', context: 'تنظيف بالبخار بالباحة', priority: 9 },
+        { slug: 'dyna', context: 'دينا', priority: 1 },
+        { slug: 'furniture-moving', context: 'نقل', priority: 2 },
+        { slug: 'furniture-storage', context: 'تخزين', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 4 },
+        { slug: 'auto-cleaning', context: 'سيارات', priority: 5 },
+        { slug: 'pest-control', context: 'حشرات', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 7 },
     ],
 };

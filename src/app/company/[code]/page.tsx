@@ -20,6 +20,7 @@ import {
 import { getCityBySlug, getServiceBySlug } from '@/lib/seed';
 import { getCityKeyword } from '@/lib/keyword-strategy';
 import { getAdvertiserByCode } from '@/lib/db-actions';
+import { getCanonicalSlug } from '@/lib/services/super-page-groups';
 import { LocalBusinessJsonLd, BreadcrumbJsonLd, OrganizationJsonLd, WebPageJsonLd } from '@/components/JsonLd';
 import Footer from '@/components/Footer';
 import type { Review, City, Service } from '@/types';
@@ -117,7 +118,7 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
     const breadcrumbs = [
         { name: 'الرئيسية', url: 'https://prokr.co' },
         { name: mainCity?.name_ar || 'المدن', url: `https://prokr.co/${mainCity?.slug || ''}` },
-        { name: mainService?.name_ar || 'الخدمات', url: `https://prokr.co/${mainCity?.slug}/${mainService?.slug}` },
+        { name: mainService?.name_ar || 'الخدمات', url: `https://prokr.co/${mainCity?.slug}/${getCanonicalSlug(mainService?.slug || '') || mainService?.slug}` },
         { name: advertiser.business_name, url: `https://prokr.co/company/${advertiser.short_code}` },
     ];
 
@@ -159,7 +160,7 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                                 {mainCity?.name_ar}
                             </Link>
                             <ChevronLeft className="w-4 h-4" />
-                            <Link href={`/${mainCity?.slug}/${mainService?.slug}`} className="hover:text-white transition-colors">
+                            <Link href={`/${mainCity?.slug}/${getCanonicalSlug(mainService?.slug || '') || mainService?.slug}`} className="hover:text-white transition-colors">
                                 {mainService?.name_ar}
                             </Link>
                         </nav>
@@ -412,7 +413,7 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                                             return city ? (
                                                 <Link
                                                     key={citySlug}
-                                                    href={`/${citySlug}/${advertiser.targeted_services[0]}`}
+                                                    href={`/${citySlug}/${getCanonicalSlug(advertiser.targeted_services[0]) || advertiser.targeted_services[0]}`}
                                                     className="px-3 py-1.5 bg-gray-100 hover:bg-emerald-50 text-gray-700 hover:text-emerald-700 rounded-lg text-sm transition-colors"
                                                 >
                                                     {city.name_ar}
@@ -468,7 +469,7 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                         <h3 className="text-xl font-bold text-gray-900 mb-3">الخدمات المقدمة</h3>
                         <ul className="text-gray-600 space-y-1 mb-6">
                             {targetedServices.map(s => (
-                                <li key={s.slug}>✓ <Link href={`/${advertiser.targeted_cities[0]}/${s.slug}`} className="text-emerald-700 hover:underline">{s.name_ar}</Link></li>
+                                <li key={s.slug}>✓ <Link href={`/${advertiser.targeted_cities[0]}/${getCanonicalSlug(s.slug) || s.slug}`} className="text-emerald-700 hover:underline">{s.name_ar}</Link></li>
                             ))}
                         </ul>
 

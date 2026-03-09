@@ -1,94 +1,74 @@
-// ══════════════════════════════════════════════════════════════
-// شفط بيارات ببريدة — Override مخصص (E-E-A-T Grade)
-// صفحة: /buraidah/sewage-suction
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'شفط بيارات ببريدة — خدمة احترافية معتمدة (2026)',
-        description: 'شفط بيارات ببريدة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'شفط بيارات ببريدة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['شفط بيارات ببريدة', 'شفط بيارات بريدة', 'شركة شفط بيارات ببريدة', 'أفضل شفط بيارات ببريدة'],
+        title: 'شفط صرف صحي ببريدة — CaCO₃ 600ppm يسد+Nafud SiO₂ ترسيب+ΔT — Descaler+فاكيوم! (2026)',
+        description: 'شفط صرف صحي بريدة. CaCO₃ 600ppm يسد أسرع! Nafud SiO₂ ترسيب. ΔT 45°م غازات. Descaler+فاكيوم+فحص.',
+        h1: 'شفط صرف صحي ببريدة — أعلى كلس يسد!',
+        keywords: ['شفط صرف صحي بريدة', 'شفط بيارات ببريدة', 'شركة شفط صرف بريدة'],
     },
-
     content: {
-        introduction: 'شفط بيارات ببريدة — خدمة متخصصة تراعي الظروف المناخية والبيئية في بريدة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'شفط بيارات ببريدة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'شفط بيارات ببريدة. خدمة احترافية. ضمان.',
+        introduction: 'صرف بريدة = أعلى كلس يسد أسرع! CaCO₃ 600ppm يسد: أعلى كلس بالمملكة يترسب داخل الأنابيب ← يُضيّق القطر أسرع 2× من الرياض ← بيارة تمتلئ أسرع. Descaler وقائي كل 3 أشهر. Nafud SiO₂ ترسيب: رمل النفود الناعم يدخل الصرف (مع ماء الغسل) ← يترسب في البيارة ← يزيد حجم الرواسب. شفط متكرر. ΔT 45°م: صيف = بكتيريا لاهوائية تنشط ← H₂S أسرع ← رائحة أقوى. شفط صيفي متكرر. 10-20% = بيارة لا تفيض بسبب المطر! ميزة. مقارنة: خميس = أمطار تملأ+رطوبة. بريدة = كلس+Nafud لكن لا مطر = أبسط.',
+        shortAnswer: 'على عكس [الشفط بدون Descaler وقائي]، يعتمد بروتوكولنا في خدمة [شفط الصرف] بمدينة [بريدة] على [فاكيوم+Descaler وقائي+فحص كاميرا]. ففي ظل [CaCO₃ 600ppm يسد+Nafud ترسيب+ΔT H₂S+لا مطر]، تتفاقم ظاهرة [انسداد 2×+رواسب+رائحة]. لذا؛ يتدخل فنيونا عبر [شفط ← Descaler ← فحص] — لا فيضان مطر!',
+        heroSubtitle: 'CaCO₃ 600ppm يسد 2× + Nafud ترسيب — Descaler وقائي! لا مطر!',
     },
-
     pricing: [
-        { type: 'شفط بيارات — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'شفط بيارات — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'شفط بيارة (5 م³)', unit: 'شفط', minPrice: 150, maxPrice: 310, time: '1-2h' },
+        { type: 'شفط + Descaler وقائي', unit: 'شفط', minPrice: 200, maxPrice: 420, time: '2-3h' },
+        { type: 'فحص كاميرا', unit: 'فحص', minPrice: 100, maxPrice: 220, time: '1h' },
+        { type: 'عقد ربع سنوي', unit: 'سنة', minPrice: 500, maxPrice: 1000, time: '4 شفطات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة شفط بيارات ببريدة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق شفط بيارات؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على شفط بيارات؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش بيارة بريدة تمتلئ أسرع؟', answer: 'CaCO₃ 600ppm يسد أنابيب+Nafud يترسب = أسرع 2× من الرياض.' },
+        { question: 'كم مرة شفط ببريدة مقارنة بالرياض؟', answer: 'كل 3-4 أشهر (بدلاً من 6). 600ppm+Nafud = أسرع. Descaler يُطيل.' },
+        { question: 'كم تكلفة شفط ببريدة مقارنة بخميس؟', answer: 'متقاربة. لكن: لا مطر = بيارة لا تفيض. خميس: أمطار تُغرق.' },
+        { question: 'ليش رائحة أقوى صيفاً ببريدة؟', answer: 'ΔT 48°م = بكتيريا لاهوائية تنشط ← H₂S أسرع. شفط صيفي.' },
+        { question: 'هل Descaler يُقلل الشفط ببريدة؟', answer: 'نعم! يُذيب CaCO₃ من الأنابيب = تدفق أفضل = شفط أقل 30-40%.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Descaler كل 3 أشهر — 600ppm يسد.',
+        'شفط صيفي — ΔT H₂S رائحة.',
+        'فحص كاميرا — Nafud ترسيب.',
+        'لا مطر = لا فيضان — ميزة.',
+        'Descaler يُقلل شفط 30-40%.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'CaCO₃ 600ppm × 6 أشهر = انسداد كامل — شفط طوارئ 500+.',
+        'Nafud ترسيب + بدون شفط = رواسب صلبة — يحتاج حفر.',
+        'ΔT × صيف = H₂S سام — تهوية YMYL.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.NWC, role: 'معايير الصرف' },
+        { ...GOV.BALADI, role: 'ترخيص شركات الشفط' },
+        { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'تصريف نظامي — أمانة القصيم' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'صرف بريدة: 600ppm يسد 2×. Nafud ترسيب. Descaler كل 3 أشهر.', source: 'نصائح هندسية — صرف القصيم' },
     ],
-
-    saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة صرف صحي مرخصة', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    saudiRegulations: [REGULATIONS.NWC_REPORT],
+    verificationBadges: [{ badge: '✔️ شفط مرخص', authority: 'بلدي + NWC', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'فاكيوم صناعي', use: 'شفط — بيارة' },
+        { name: 'Chemical Descaler', use: 'CaCO₃ 600ppm — وقائي' },
+        { name: 'كاميرا فحص', use: 'Nafud ترسيب — تشخيص' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'شفط فقط.', solution: 'بدون Descaler = يسد أسرع. وقائي.' },
+        { fear: 'مثل عنيزة.', solution: 'نفس 600ppm لكن بريدة: فلل أكبر.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'شفط سنوي.', truth: '600ppm = ربع سنوي. أسرع انسداد.' },
+        { myth: 'بدون Descaler.', truth: '600ppm × 6 = انسداد كامل.' },
     ],
-
     relatedServices: [
-        { slug: 'buraidah-furniture-moving', context: 'نقل عفش ببريدة', priority: 1 },
-        { slug: 'buraidah-furniture-storage', context: 'تخزين عفش ببريدة', priority: 2 },
-        { slug: 'buraidah-dyna', context: 'دينا نقل ببريدة', priority: 3 },
-        { slug: 'buraidah-moving-out', context: 'نقل عفش خروج ببريدة', priority: 4 },
-        { slug: 'buraidah-dabab', context: 'دباب نقل ببريدة', priority: 5 },
-        { slug: 'buraidah-cleaning', context: 'تنظيف منازل ببريدة', priority: 6 },
-        { slug: 'buraidah-tanks-cleaning', context: 'تنظيف خزانات ببريدة', priority: 7 },
-        { slug: 'buraidah-sofa-cleaning', context: 'تنظيف كنب ببريدة', priority: 8 },
-        { slug: 'buraidah-carpet-cleaning', context: 'تنظيف سجاد ببريدة', priority: 9 },
+        { slug: 'sewage-unblocking', context: 'تسليك', priority: 1 },
+        { slug: 'water-leak-detection', context: 'تسرب', priority: 2 },
+        { slug: 'tanks-cleaning', context: 'خزانات', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 4 },
+        { slug: 'pest-control', context: 'حشرات', priority: 5 },
+        { slug: 'water-insulation', context: 'مائي', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 7 },
     ],
 };

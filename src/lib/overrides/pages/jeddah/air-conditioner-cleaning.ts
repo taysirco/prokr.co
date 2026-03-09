@@ -4,6 +4,7 @@
 // ============================================
 
 import type { PageOverride } from '../../types';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -79,6 +80,8 @@ export const override: PageOverride = {
     ],
 
 
+        verificationBadges: [{ badge: '✔️ شركة مرخصة من بلدي', authority: 'وزارة البلديات', icon: 'shield-check' }],
+
     equipment: [
         { name: 'جهاز ضغط مياه خاص بالمبخر (Coil Jet)', use: 'ينظف المبخر (Evaporator Coil) بضغط محسوب لا يتلف الريش' },
         { name: 'مزيل ملح ومعادن (Descaler Spray)', use: 'يذيب ترسبات NaCl الساحلية المتصلبة على المبخر والفلاتر' },
@@ -92,23 +95,20 @@ export const override: PageOverride = {
 
     trustAnchors: [
         { entity: 'هيئة تنظيم الكهرباء والإنتاج المزدوج', acronym: 'ECRA', url: 'https://www.ecra.gov.sa', role: 'معايير كفاءة الطاقة للمكيفات' },
+        { entity: AMANA.JEDDAH.entity, url: AMANA.JEDDAH.url, role: 'اشتراطات أمانة جدة' },
     ],
 
-    expertReviewer: {
-        name: 'م. ماجد المحيميد',
-        title: 'خبير جودة تشطيبات وعزل',
-        credential: 'مهندس جودة تشطيبات — المرجع الأول في جودة البناء',
-        profileUrl: 'https://x.com/majedalmohaimed',
-    },
+    expertReviewer: EXPERTS.ALMISNID,
 
     expertCitations: [
         {
             expert: 'م. ماجد المحيميد',
             quote: 'المكيف في جدة بيئة مثالية للعفن — الرطوبة 60-90% + تكثف على المبخر = عفن ينفخه المكيف في كل الغرفة. التنظيف كل 4-6 أشهر ليس ترفاً بل ضرورة صحية',
             source: 'خبير جودة تشطيبات',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
+
+        saudiRegulations: [REGULATIONS.BALADI_HEALTH],
 
     counterNarratives: [
         { myth: 'تنظيف الفلتر يكفي', truth: 'الفلتر = 20% من المشكلة. المبخر (Evaporator Coil) يتراكم عليه ملح + عفن + غبار = 80% من فقدان الكفاءة. في جدة: ملح NaCl يتصلب على المبخر وبدون غسيل ضغط لا يخرج. الفلتر النظيف + مبخر متسخ = تبريد ضعيف + فاتورة عالية' },
@@ -116,15 +116,15 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'jeddah-cleaning', context: 'تنظيف شامل مع صيانة المكيفات — بيت نظيف وبارد', priority: 1 },
-        { slug: 'jeddah-steam-cleaning', context: 'بخار المنزل يكمّل بخار المكيف — حماية مزدوجة', priority: 2 },
-        { slug: 'jeddah-sanitization', context: 'تعقيم مجاري التكييف يمنع انتشار الجراثيم', priority: 3 },
-        { slug: 'jeddah-water-leak-detection', context: 'تسرب مكيف = مصدر رطوبة يحتاج كشف', priority: 4 },
-        { slug: 'jeddah-thermal-insulation', context: 'عزل حراري يقلل تشغيل المكيف 30% = عمر أطول', priority: 5 },
-        { slug: 'jeddah-pest-control', context: 'عفن المكيف يجذب حشرات — تنظيف + مكافحة', priority: 6 },
-        { slug: 'jeddah-sofa-cleaning', context: 'غبار المكيف يستقر على الكنب — تنظيف شامل', priority: 7 },
-        { slug: 'jeddah-carpet-cleaning', context: 'السجاد يمتص غبار المكيف — غسيل دوري', priority: 8 },
-        { slug: 'jeddah-mattress-cleaning', context: 'المراتب تحت المكيف تجمع غبار — تنظيف معاً', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف شامل مع صيانة المكيفات — بيت نظيف وبارد', priority: 1 },
+        { slug: 'steam-cleaning', context: 'بخار المنزل يكمّل بخار المكيف — حماية مزدوجة', priority: 2 },
+        { slug: 'sanitization', context: 'تعقيم مجاري التكييف يمنع انتشار الجراثيم', priority: 3 },
+        { slug: 'water-leak-detection', context: 'تسرب مكيف = مصدر رطوبة يحتاج كشف', priority: 4 },
+        { slug: 'thermal-insulation', context: 'عزل حراري يقلل تشغيل المكيف 30% = عمر أطول', priority: 5 },
+        { slug: 'pest-control', context: 'عفن المكيف يجذب حشرات — تنظيف + مكافحة', priority: 6 },
+        { slug: 'sofa-cleaning', context: 'غبار المكيف يستقر على الكنب — تنظيف شامل', priority: 7 },
+        { slug: 'carpet-cleaning', context: 'السجاد يمتص غبار المكيف — غسيل دوري', priority: 8 },
+        { slug: 'mattress-cleaning', context: 'المراتب تحت المكيف تجمع غبار — تنظيف معاً', priority: 9 },
     ],
 };
 

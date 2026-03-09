@@ -1,94 +1,74 @@
-// ══════════════════════════════════════════════════════════════
-// نقل عفش بالباحة — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-baha/furniture-moving
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'نقل عفش بالباحة — خدمة احترافية معتمدة (2026)',
-        description: 'نقل عفش بالباحة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'نقل عفش بالباحة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['نقل عفش بالباحة', 'نقل عفش الباحة', 'شركة نقل عفش بالباحة', 'أفضل نقل عفش بالباحة'],
+        title: 'نقل عفش بالباحة — PVAc Swelling+طرق جبلية+ضباب+Laterite — Anti-Humidity+Mountain-Spec! (2026)',
+        description: 'نقل عفش الباحة. PVAc Swelling! طرق جبلية وعرة. ضباب رؤية. Laterite انزلاق. Anti-Humidity+Mountain-Spec+مغلق.',
+        h1: 'نقل عفش بالباحة — جبلي+ضباب+PVAc!',
+        keywords: ['نقل عفش بالباحة', 'نقل أثاث الباحة', 'شركة نقل عفش بالباحة'],
     },
-
     content: {
-        introduction: 'نقل عفش بالباحة — خدمة متخصصة تراعي الظروف المناخية والبيئية في الباحة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'نقل عفش بالباحة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'نقل عفش بالباحة. خدمة احترافية. ضمان.',
+        introduction: 'نقل عفش الباحة = طرق جبلية+ضباب+PVAc! طرق جبلية: منحدرات حادة+منعطفات ← الأثاث يتحرك أكثر أثناء النقل. تثبيت Mountain-Spec إلزامي. ضباب رؤية: 200 يوم ضباب = نقل أبطأ+أخطر. رؤية محدودة. PVAc Swelling: أثاث رطب أثناء النقل ← مفاصل ضعيفة تتكسر أكثر بالاهتزاز. Anti-Humidity+تغليف حماية. Laterite Fe₂O₃: طرق موحلة بعد المطر ← شاحنة تنزلق ← أثاث يتضرر. إطارات All-Terrain. مطر: أثاث يتبلل أثناء التحميل = عفن. مغلق 100%. مقارنة: بريدة = طرق صحراوية مستقيمة+جاف = أبسط. الباحة = جبلي+ضباب+PVAc+طين = أعقد.',
+        shortAnswer: 'على عكس [النقل المكشوف بطرق مستقيمة]، يعتمد بروتوكولنا في خدمة [نقل العفش] بمدينة [الباحة] على [Mountain-Spec تثبيت+مغلق+Anti-Humidity+All-Terrain]. ففي ظل [طرق جبلية+ضباب+PVAc+Laterite+مطر]، تتفاقم ظاهرة [اهتزاز+رؤية+كسر+انزلاق+عفن]. لذا؛ يتدخل فريقنا عبر [Mountain-Spec ← مغلق ← Anti-Humidity ← All-Terrain].',
+        heroSubtitle: 'طرق جبلية + ضباب + PVAc — Mountain-Spec إلزامي!',
     },
-
     pricing: [
-        { type: 'نقل عفش — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'نقل عفش — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'شقة (غرفتين)', unit: 'نقلة', minPrice: 700, maxPrice: 1400, time: '5-8h' },
+        { type: 'شقة (3-4 غرف)', unit: 'نقلة', minPrice: 1000, maxPrice: 2000, time: '7-10h' },
+        { type: 'فيلا كاملة', unit: 'نقلة', minPrice: 1800, maxPrice: 3600, time: '1-2 يوم' },
+        { type: '+ Anti-Humidity', unit: 'إضافي', minPrice: 200, maxPrice: 400, time: '+ 2h' },
     ],
-
     faq: [
-        { question: 'كم تكلفة نقل عفش بالباحة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق نقل عفش؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على نقل عفش؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش نقل عفش الباحة أصعب؟', answer: 'طرق جبلية+ضباب+PVAc+مطر. Mountain-Spec تثبيت.' },
+        { question: 'هل الأثاث يتكسر أكثر بالباحة؟', answer: 'PVAc رطب+اهتزاز جبلي = مفاصل. Anti-Humidity+تغليف.' },
+        { question: 'كم تكلفة نقل بالباحة مقابل بريدة؟', answer: 'أغلى 20-30% — Mountain-Spec+مغلق. بريدة: طرق مستقيمة.' },
+        { question: 'هل الضباب مشكلة للنقل؟', answer: 'رؤية محدودة = أبطأ+أخطر. 200 يوم!' },
+        { question: 'ليش مغلق إلزامي بالباحة؟', answer: 'مطر = أثاث يتبلل = عفن. ضباب = رطوبة. مغلق 100%.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Mountain-Spec تثبيت — منحدرات.',
+        'مغلق 100% — مطر+ضباب.',
+        'Anti-Humidity — PVAc مفاصل.',
+        'All-Terrain إطارات — Laterite.',
+        'نقل صباحي — ضباب أقل.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'طرق جبلية + تثبيت عادي = أثاث يتحرك ← كسر.',
+        'PVAc + اهتزاز + رطوبة = مفاصل تتكسر.',
+        'مكشوف + مطر = أثاث يتبلل ← عفن.',
     ],
-
     trustAnchors: [
-        { ...GOV.TGA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.TGA, role: 'ترخيص النقل' },
+        { ...GOV.BALADI, role: 'ترخيص شركات النقل' },
+        { entity: AMANA.BAHA.entity, url: AMANA.BAHA.url, role: 'اشتراطات أمانة الباحة' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALZUWAYED.name,
-        title: EXPERTS.ALZUWAYED.title,
-        credential: EXPERTS.ALZUWAYED.credential,
-        profileUrl: EXPERTS.ALZUWAYED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALSHABNAN,
     expertCitations: [
-        {
-            expert: EXPERTS.ALZUWAYED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALZUWAYED.title,
-            url: EXPERTS.ALZUWAYED.profileUrl,
-        },
+        { expert: EXPERTS.ALZUWAYED.name, quote: 'نقل الباحة: جبلي+ضباب+PVAc. Mountain-Spec+مغلق.', source: 'معايير النقل — جبلي' },
     ],
-
     saudiRegulations: [REGULATIONS.TGA_LICENSE],
-
-    verificationBadges: [
-        { badge: '✔️ شركة نقل مرخصة من هيئة النقل TGA', authority: 'الهيئة العامة للنقل', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ نقل مرخص TGA', authority: 'TGA', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Mountain-Spec تثبيت', use: 'منحدرات — لا يتحرك' },
+        { name: 'شاحنة مغلقة', use: 'مطر+ضباب — حماية' },
+        { name: 'Anti-Humidity', use: 'PVAc — مفاصل' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'مكشوف أرخص.', solution: 'مطر = عفن. مغلق.' },
+        { fear: 'مثل بريدة.', solution: 'جبلي+ضباب ≠ مستقيم+جاف.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'أي شاحنة.', truth: 'Mountain-Spec+مغلق.' },
+        { myth: 'PVAc ينجو.', truth: 'اهتزاز+رطوبة = كسر.' },
     ],
-
     relatedServices: [
-        { slug: 'al-baha-furniture-storage', context: 'تخزين عفش بالباحة', priority: 1 },
-        { slug: 'al-baha-dyna', context: 'دينا نقل بالباحة', priority: 2 },
-        { slug: 'al-baha-moving-out', context: 'نقل عفش خروج بالباحة', priority: 3 },
-        { slug: 'al-baha-dabab', context: 'دباب نقل بالباحة', priority: 4 },
-        { slug: 'al-baha-cleaning', context: 'تنظيف منازل بالباحة', priority: 5 },
-        { slug: 'al-baha-tanks-cleaning', context: 'تنظيف خزانات بالباحة', priority: 6 },
-        { slug: 'al-baha-sofa-cleaning', context: 'تنظيف كنب بالباحة', priority: 7 },
-        { slug: 'al-baha-carpet-cleaning', context: 'تنظيف سجاد بالباحة', priority: 8 },
-        { slug: 'al-baha-steam-cleaning', context: 'تنظيف بالبخار بالباحة', priority: 9 },
+        { slug: 'furniture-storage', context: 'تخزين', priority: 1 },
+        { slug: 'dabab', context: 'دباب', priority: 2 },
+        { slug: 'dyna', context: 'دينا', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 4 },
+        { slug: 'furniture-cleaning', context: 'أثاث', priority: 5 },
+        { slug: 'pest-control', context: 'حشرات', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 7 },
     ],
 };

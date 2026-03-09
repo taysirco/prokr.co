@@ -12,6 +12,9 @@ import { FaqJsonLd, ServiceOfferJsonLd } from '@/components/schema';
 import { getCityContext } from '@/lib/city-context';
 import { getServiceKeywordProfile, getCityKeyword } from '@/lib/keyword-strategy';
 import { resolveContentLayers, resolveMetadata, getOverrideForPage } from '@/lib/overrides';
+import { AbsorbedServiceSections } from '@/components/seo/AbsorbedServiceSection';
+import { getSuperPageGroup, isCanonicalSlug, getCanonicalSlug } from '@/lib/services/super-page-groups';
+import { SERVICES as ALL_SERVICES_LIST } from '@/lib/services';
 import Footer from '@/components/Footer';
 import type { Advertiser } from '@/types';
 
@@ -40,6 +43,11 @@ export async function generateMetadata({ params }: SiloPageProps): Promise<Metad
     // Use the override-aware resolver
     const meta = resolveMetadata(city, service);
 
+    // Defense-in-depth: Ensure canonical always points to the Super Page
+    // Even if middleware redirect is bypassed, canonical must be correct
+    const canonicalServiceSlug = getCanonicalSlug(resolvedParams.service) || resolvedParams.service;
+    const canonicalUrl = `https://prokr.co/${resolvedParams.city}/${canonicalServiceSlug}`;
+
     return {
         title: meta.title,
         description: meta.description,
@@ -49,7 +57,7 @@ export async function generateMetadata({ params }: SiloPageProps): Promise<Metad
             description: meta.ogDescription,
             locale: 'ar_SA',
             type: 'website',
-            url: `https://prokr.co/${resolvedParams.city}/${resolvedParams.service}`,
+            url: canonicalUrl,
             siteName: 'بروكر',
             images: [{
                 url: meta.ogImage || `https://prokr.co/${resolvedParams.city}/${resolvedParams.service}/opengraph-image`,
@@ -64,7 +72,7 @@ export async function generateMetadata({ params }: SiloPageProps): Promise<Metad
             description: meta.ogDescription,
         },
         alternates: {
-            canonical: `https://prokr.co/${resolvedParams.city}/${resolvedParams.service}`,
+            canonical: canonicalUrl,
         },
     };
 }
@@ -113,11 +121,15 @@ export default async function SiloPage({ params }: SiloPageProps) {
     // Hero image URL for ImageObject schema
     const heroImageUrl = getUniquePageImages(resolvedParams.city, resolvedParams.service, service.category, 1)[0];
 
+    // Defense-in-depth: canonical URL for schemas (consistent with generateMetadata)
+    const canonicalSlug = getCanonicalSlug(service.slug) || service.slug;
+    const canonicalPageUrl = `https://prokr.co/${city.slug}/${canonicalSlug}`;
+
     // Breadcrumb items
     const breadcrumbs = [
         { name: 'الرئيسية', url: 'https://prokr.co' },
         { name: city.name_ar, url: `https://prokr.co/${city.slug}` },
-        { name: service.name_ar, url: `https://prokr.co/${city.slug}/${service.slug}` },
+        { name: service.name_ar, url: canonicalPageUrl },
     ];
 
     return (
@@ -151,7 +163,7 @@ export default async function SiloPage({ params }: SiloPageProps) {
             <SpeakableWebPageJsonLd
                 title={aiContent.metaTitle}
                 description={aiContent.shortAnswer}
-                url={`https://prokr.co/${resolvedParams.city}/${resolvedParams.service}`}
+                url={canonicalPageUrl}
                 speakableSelectors={['.direct-answer', 'h1', '.seo-introduction']}
                 dateModified={new Date().toISOString()}
                 about={{ name: service.name_ar, type: 'Service' }}
@@ -298,6 +310,19 @@ export default async function SiloPage({ params }: SiloPageProps) {
                 {/* Enhanced SEO Content with Pricing Table, FAQ, etc. */}
                 <SeoContentSection city={city} service={service} />
                 <FaqJsonLd city={city} service={service} />
+
+                {/* Fragment URL Architecture: Absorbed Service Sections */}
+                {isCanonicalSlug(service.slug) && (() => {
+                    const group = getSuperPageGroup(service.slug);
+                    return group ? (
+                        <AbsorbedServiceSections
+                            city={city}
+                            service={service}
+                            group={group}
+                            allServices={ALL_SERVICES_LIST}
+                        />
+                    ) : null;
+                })()}
 
                 {/* Footer */}
                 <Footer currentCity={resolvedParams.city} currentService={resolvedParams.service} />

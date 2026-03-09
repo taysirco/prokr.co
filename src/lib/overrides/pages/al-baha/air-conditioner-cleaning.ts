@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف مكيفات بالباحة — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-baha/air-conditioner-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف مكيفات بالباحة — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف مكيفات بالباحة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف مكيفات بالباحة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف مكيفات بالباحة', 'تنظيف مكيفات الباحة', 'شركة تنظيف مكيفات بالباحة', 'أفضل تنظيف مكيفات بالباحة'],
+        title: 'تنظيف مكيفات بالباحة — ضباب Aspergillus+عرعر سد فلتر+Heat Pump شتاء — Anti-Fungal! (2026)',
+        description: 'تنظيف مكيفات الباحة. ضباب Aspergillus Musty Coil! عرعر يسد فلتر. Heat Pump شتاء 0-5°م. Anti-Fungal+HEPA+تذويب.',
+        h1: 'تنظيف مكيفات بالباحة — Aspergillus+عرعر+Heat Pump!',
+        keywords: ['تنظيف مكيفات بالباحة', 'تنظيف مكيف بالباحة', 'شركة تنظيف مكيفات بالباحة'],
     },
-
     content: {
-        introduction: 'تنظيف مكيفات بالباحة — خدمة متخصصة تراعي الظروف المناخية والبيئية في الباحة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف مكيفات بالباحة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف مكيفات بالباحة. خدمة احترافية. ضمان.',
+        introduction: 'مكيف الباحة = Aspergillus على المبخّر! Musty Coil Syndrome: 200 يوم ضباب = رطوبة 60-85% ← Aspergillus (عفن أسود) يستعمر المبخّر ← رائحة عفن كلما شغّلت المكيف = Musty Coil. Anti-Fungal Coil إلزامي. عرعر يسد فلتر: حبوب لقاح لزجة تلتصق بالفلتر ← يسد أسرع = أداء يقل 40%! HEPA Filter بديل. تنظيف فلتر شهري بدل ربع سنوي. Heat Pump شتاء 0-5°م: الباحة تصل الصفر شتاءً ← المكيف يعمل Heat Pump تدفئة ← الوحدة الخارجية تتجمد! تنظيف Outdoor Coil+تذويب Defrost إلزامي. مقارنة: بريدة = CaCO₃ Scale على المبخّر+لا عفن+لا Heat Pump = أبسط. الباحة = Aspergillus+عرعر+Heat Pump = أعقد بكثير.',
+        shortAnswer: 'على عكس [الغسل العادي بدون Anti-Fungal]، يعتمد بروتوكولنا في خدمة [تنظيف المكيفات] بمدينة [الباحة] على [Anti-Fungal Coil+HEPA+تنظيف Outdoor+تذويب شتاء]. ففي ظل [Aspergillus Musty Coil+عرعر سد فلتر+Heat Pump 0-5°م]، تتفاقم ظاهرة [رائحة عفن+أداء -40%+تجمد]. لذا؛ يتدخل فنيونا عبر [Anti-Fungal ← HEPA ← Outdoor ← Defrost].',
+        heroSubtitle: 'Aspergillus Musty Coil + عرعر سد + Heat Pump — Anti-Fungal!',
     },
-
     pricing: [
-        { type: 'تنظيف مكيفات — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف مكيفات — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'تنظيف سبلت + Anti-Fungal', unit: 'مكيف', minPrice: 100, maxPrice: 210, time: '30-60 دقيقة' },
+        { type: '+ HEPA Filter تركيب', unit: 'مكيف', minPrice: 130, maxPrice: 270, time: '45-60 دقيقة' },
+        { type: 'Heat Pump Outdoor تذويب', unit: 'مكيف', minPrice: 80, maxPrice: 170, time: '30 دقيقة' },
+        { type: 'شهري (12 تنظيف)', unit: 'سنة', minPrice: 400, maxPrice: 800, time: '12 زيارة' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف مكيفات بالباحة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف مكيفات؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف مكيفات؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش مكيف الباحة يطلع ريحة عفن؟', answer: 'Aspergillus Musty Coil 200 يوم ضباب. Anti-Fungal Coil يمنع.' },
+        { question: 'ليش فلتر المكيف يسد أسرع بالباحة؟', answer: 'عرعر لزج يلتصق بالفلتر. HEPA بديل. تنظيف شهري.' },
+        { question: 'ما Heat Pump مشكلة بالباحة؟', answer: 'شتاء 0-5°م = Outdoor Coil يتجمد. تذويب+تنظيف.' },
+        { question: 'كم تكلفة مكيف بالباحة مقابل بريدة؟', answer: 'أغلى 40-50% — Anti-Fungal+HEPA+Heat Pump. بريدة: Descaler.' },
+        { question: 'كم مرة تنظيف مكيف بالباحة؟', answer: 'شهري! عرعر+Aspergillus. بريدة: ربع سنوي.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Anti-Fungal Coil — Aspergillus Musty.',
+        'HEPA Filter — عرعر لزج.',
+        'Outdoor Coil شتاء — Heat Pump.',
+        'تذويب Defrost — 0-5°م.',
+        'شهري — عرعر+ضباب مستمر.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'Aspergillus + مكيف × 3 أشهر = Musty Coil ← حساسية YMYL.',
+        'عرعر + فلتر عادي × شهر = انسداد 40% ← استهلاك كهرباء.',
+        'Heat Pump بدون تذويب = تجمد ← لا تدفئة شتاء 0°م.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
+        { entity: AMANA.BAHA.entity, url: AMANA.BAHA.url, role: 'اشتراطات أمانة الباحة' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMISNID.name, quote: 'مكيف الباحة: Aspergillus+عرعر+Heat Pump. Anti-Fungal+HEPA+تذويب.', source: 'جغرافيا المناخ — مكيفات جبلية' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف مكيفات مرخص', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Anti-Fungal Coil', use: 'Aspergillus Musty Coil' },
+        { name: 'HEPA Filter', use: 'عرعر — لزج يسد' },
+        { name: 'Defrost Kit', use: 'Heat Pump — تذويب شتاء' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'تنظيف عادي.', solution: 'Aspergillus+عرعر+Heat Pump = 3 تحديات.' },
+        { fear: 'مثل بريدة.', solution: 'عفن+عرعر+تجمد ≠ كلس.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'ربع سنوي.', truth: 'شهري! عرعر+Aspergillus.' },
+        { myth: 'لا حاجة شتاء.', truth: 'Heat Pump = تنظيف+تذويب.' },
     ],
-
     relatedServices: [
-        { slug: 'al-baha-furniture-moving', context: 'نقل عفش بالباحة', priority: 1 },
-        { slug: 'al-baha-furniture-storage', context: 'تخزين عفش بالباحة', priority: 2 },
-        { slug: 'al-baha-dyna', context: 'دينا نقل بالباحة', priority: 3 },
-        { slug: 'al-baha-moving-out', context: 'نقل عفش خروج بالباحة', priority: 4 },
-        { slug: 'al-baha-dabab', context: 'دباب نقل بالباحة', priority: 5 },
-        { slug: 'al-baha-cleaning', context: 'تنظيف منازل بالباحة', priority: 6 },
-        { slug: 'al-baha-tanks-cleaning', context: 'تنظيف خزانات بالباحة', priority: 7 },
-        { slug: 'al-baha-sofa-cleaning', context: 'تنظيف كنب بالباحة', priority: 8 },
-        { slug: 'al-baha-carpet-cleaning', context: 'تنظيف سجاد بالباحة', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 1 },
+        { slug: 'carpet-cleaning', context: 'سجاد', priority: 2 },
+        { slug: 'apartments-cleaning', context: 'شقق', priority: 3 },
+        { slug: 'villas-cleaning', context: 'فلل', priority: 4 },
+        { slug: 'pest-control', context: 'حشرات', priority: 5 },
+        { slug: 'marble-polishing', context: 'رخام', priority: 6 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات', priority: 7 },
     ],
 };

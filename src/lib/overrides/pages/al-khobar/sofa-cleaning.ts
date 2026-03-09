@@ -1,94 +1,75 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف كنب بالخبر — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-khobar/sofa-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف كنب بالخبر — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف كنب بالخبر. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف كنب بالخبر — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف كنب بالخبر', 'تنظيف كنب الخبر', 'شركة تنظيف كنب بالخبر', 'أفضل تنظيف كنب بالخبر'],
+        title: 'تنظيف كنب بالخبر — NaCl يُصلّب + 85-95% عفن حشوة + عث مُتسارع + بخور بلمرة (2026)',
+        description: 'تنظيف كنب الخبر. NaCl يُصلّب البقع. 85-95% عفن حشوة حتمي. عث Dermatophagoides مُتسارع. بخور Olibanum بلمرة. استخلاص + Anti-Fungal + بخار + Enzymatic.',
+        h1: 'تنظيف كنب بالخبر — الملح يُصلّب والرطوبة تُعفّن الحشوة والعث يتكاثر',
+        keywords: ['تنظيف كنب بالخبر', 'غسيل كنب الخبر', 'شركة تنظيف كنب بالخبر'],
     },
-
     content: {
-        introduction: 'تنظيف كنب بالخبر — خدمة متخصصة تراعي الظروف المناخية والبيئية في الخبر. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف كنب بالخبر: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف كنب بالخبر. خدمة احترافية. ضمان.',
+        introduction: 'الكنب في الخبر يتعرض لـ 4 آليات تلف ساحلية. الأولى — NaCl يُصلّب البقع: أي سائل يُسكب = NaCl من الماء يتبلور حول البقعة ← يُثبتها. NaCl Hygroscopic = البقعة تبقى رطبة أطول = عفن حولها. RO + منظف فوراً. الثانية — 85-95% عفن حشوة حتمي: أعلى رطوبة في المملكة = الحشوة (فوم/قطن) تمتص ← Aspergillus في العمق ← رائحة + جراثيم. Anti-Fungal + تجفيف + رفع. الثالثة — عث Der p 1 مُتسارع: 85-95% = الأمثل لـ Dermatophagoides ← تكاثر أسرع من أي مدينة. بخار 130°م. الرابعة — بخور Olibanum بلمرة: 45°م كافية ← Ester Bonds ← طبقة شفافة. Enzymatic.',
+        shortAnswer: 'على عكس [بخاخ ومسح] الذي لا يجفف الحشوة ولا يقتل العث، يعتمد بروتوكولنا في خدمة [تنظيف الكنب] بمدينة [الخبر] على [RO + Anti-Fungal + بخار + Enzymatic + تجفيف]. ففي ظل [NaCl + 85-95% + عث + بخور]، تتفاقم ظاهرة [تصلب + عفن + حساسية + بلمرة]. لذا؛ يتدخل خبراؤنا عبر [بروتوكول كنب ساحلي].',
+        heroSubtitle: 'NaCl يُصلّب + 85-95% عفن حشوة + عث أسرع + بخور بلمرة',
     },
-
     pricing: [
-        { type: 'تنظيف كنب — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف كنب — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'كنب (3-5 مقاعد) — ساحلي', unit: 'طقم', minPrice: 200, maxPrice: 380, time: '2-3 ساعات' },
+        { type: 'كنب + Anti-Fungal عميق', unit: 'طقم', minPrice: 250, maxPrice: 450, time: '3-4 ساعات' },
+        { type: 'كنب جلد + Conditioner', unit: 'طقم', minPrice: 220, maxPrice: 400, time: '2-3 ساعات' },
+        { type: 'عقد ربع سنوي (4 زيارات)', unit: 'سنة', minPrice: 650, maxPrice: 1300, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف كنب بالخبر؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف كنب؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف كنب؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'عفن حشوة — حتى كنب جديد؟', answer: '85-95% = أي حشوة تمتص رطوبة خلال أسبوعين. جديد أو قديم = الرطوبة هي العامل. Anti-Fungal + رفع 5 سم + تهوية.' },
+        { question: 'NaCl يُصلّب — مختلف عن CaSO₄؟', answer: 'CaSO₄ = Scale صلب يحتاج Citric. NaCl = يتبلور + Hygroscopic = يبقى رطباً = عفن حول البقعة. NaCl أخطر صحياً (عفن) — CaSO₄ أصعب إزالة. RO + تجفيف = الحل.' },
+        { question: 'عث 85-95% — أسرع من أين؟', answer: '55-75% = الأمثل للعث. 85-95% = فوق الأمثل لكن يتكاثر. الفرق: في الخبر لا توجد فترة جفاف تُبطئه. عث 12/12 شهر = تراكم.' },
+        { question: 'تجفيف — كيف؟', answer: 'Turbo Dryer + Dehumidifier = 2-3 ساعات. بدون: الكنب يبقى رطباً 24+ ساعة في 85-95% = عفن. التجفيف = الخطوة الأهم.' },
+        { question: 'Conditioner جلد — ليش؟', answer: '85-95% = الجلد يمتص ← ينتفخ ← يتشقق. Conditioner يوازن الرطوبة. كل 4-6 أشهر.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Anti-Fungal على الحشوة من الأسفل — الأكثر عفناً.',
+        'بخار 130°م ← يقتل عث + يُلين بوليمر بخور ← Enzymatic أسهل.',
+        'رفع الكنب 5-10 سم — يمنع رطوبة الأرض.',
+        'Turbo Dryer فوراً بعد التنظيف — 85-95% = بدون تجفيف = عفن.',
+        'RO فقط لتنظيف البقع — ماء الخبر = NaCl = بقعة أسوأ.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'عفن حشوة 85-95% = جراثيم Aspergillus = حساسية + ربو. أخطر من الأحساء (85-95% > 60-70%).',
+        'بخور + رطوبة = بوليمر يمتص رطوبة = طبقة عفن فوق. قماش يتغير لوناً.',
+        'NaCl بقعة + رطوبة = بقعة لا تجف = بيئة بكتيرية مُستمرة. RO + تجفيف فوري.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات النظافة بالشرقية' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'كنب الخبر = أسوأ بيئة في المملكة: NaCl + 85-95% + عث 12/12 + بخور. RO + Anti-Fungal + بخار + Enzymatic + تجفيف = 5 خطوات لا تُختصر.', source: 'نصائح هندسية — أثاث ساحلي' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف كنب مرخص', authority: 'منصة بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'RO Water', use: 'تنظيف بصفر NaCl' },
+        { name: 'Anti-Fungal Treatment', use: 'حشوة — فعّال 3-4 أشهر' },
+        { name: 'Dry Vapor 130°م', use: 'يقتل عث + يُلين بوليمر' },
+        { name: 'Turbo Dryer + Dehumidifier', use: 'تجفيف 2-3 ساعات — إلزامي' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'الكنب نظيف.', solution: 'عفن حشوة مخفي. عث ميكروبي. NaCl لا يُرى. بوليمر شفاف. 4 مخفية.' },
+        { fear: 'منظف محل.', solution: 'لا يقتل عث. لا يُعالج عفن. لا يجفف. 3 فشلات.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'مثل الرياض.', truth: '85-95% ≠ 15%. NaCl ≠ SiO₂. عفن حتمي ≠ اختياري.' },
+        { myth: 'مرة بالسنة.', truth: 'عفن أسابيع + عث 12/12. سنوي = 11 شهراً. ربع سنوي.' },
+        { myth: 'بخور = عطر.', truth: 'في 45°م: بلمرة. في 85-95%: يمتص رطوبة = عفن فوق.' },
     ],
-
     relatedServices: [
-        { slug: 'al-khobar-furniture-moving', context: 'نقل عفش بالخبر', priority: 1 },
-        { slug: 'al-khobar-furniture-storage', context: 'تخزين عفش بالخبر', priority: 2 },
-        { slug: 'al-khobar-dyna', context: 'دينا نقل بالخبر', priority: 3 },
-        { slug: 'al-khobar-moving-out', context: 'نقل عفش خروج بالخبر', priority: 4 },
-        { slug: 'al-khobar-dabab', context: 'دباب نقل بالخبر', priority: 5 },
-        { slug: 'al-khobar-cleaning', context: 'تنظيف منازل بالخبر', priority: 6 },
-        { slug: 'al-khobar-tanks-cleaning', context: 'تنظيف خزانات بالخبر', priority: 7 },
-        { slug: 'al-khobar-carpet-cleaning', context: 'تنظيف سجاد بالخبر', priority: 8 },
-        { slug: 'al-khobar-steam-cleaning', context: 'تنظيف بالبخار بالخبر', priority: 9 },
+        { slug: 'carpet-cleaning', context: 'سجاد — NaCl + عث', priority: 1 },
+        { slug: 'councils-cleaning', context: 'مجالس — بخور + عث', priority: 2 },
+        { slug: 'steam-cleaning', context: 'بخار — يقتل عث', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف — ساحلي', priority: 4 },
+        { slug: 'furniture-cleaning', context: 'أثاث — NaCl', priority: 5 },
+        { slug: 'pest-control', context: 'حشرات — صراصير', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف — عفن', priority: 7 },
     ],
 };

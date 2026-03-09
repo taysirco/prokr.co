@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف مسابح بالباحة — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-baha/swimming-pool-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف مسابح بالباحة — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف مسابح بالباحة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف مسابح بالباحة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف مسابح بالباحة', 'تنظيف مسابح الباحة', 'شركة تنظيف مسابح بالباحة', 'أفضل تنظيف مسابح بالباحة'],
+        title: 'تنظيف مسابح بالباحة — أمطار غزيرة+ضباب Biofilm+Laterite — Algaecide+كلور 1.3×! (2026)',
+        description: 'تنظيف مسابح الباحة. أمطار تُخفف كلور! ضباب Biofilm. Laterite طين أحمر. Algaecide+كلور 1.3×+Anti-Biofilm.',
+        h1: 'تنظيف مسابح بالباحة — أمطار+Biofilm+طين!',
+        keywords: ['تنظيف مسابح بالباحة', 'تنظيف مسبح الباحة', 'شركة تنظيف مسابح بالباحة'],
     },
-
     content: {
-        introduction: 'تنظيف مسابح بالباحة — خدمة متخصصة تراعي الظروف المناخية والبيئية في الباحة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف مسابح بالباحة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف مسابح بالباحة. خدمة احترافية. ضمان.',
+        introduction: 'مسبح الباحة = مطر يُخفف الكلور! أمطار غزيرة: الباحة أكثر مطراً بالمملكة ← كل مطر يُخفف تركيز الكلور ← بكتيريا. كلور 1.3× baseline بعد كل مطر. ضباب Biofilm: 200 يوم ضباب = Biofilm (طبقة بكتيرية) على جدران المسبح أسرع 20-30% من أي مدينة. Anti-Biofilm+Algaecide أسبوعي. Laterite Fe₂O₃: طين أحمر ينجرف بالأمطار للمسبح ← يُعكّر+يُلوّن. فلتر Heavy-Duty. أشجار عرعر: أوراق+لقاح تسقط بالمسبح = عضويات. Skimmer مُعزَّز. مقارنة: بريدة = لا مطر+لا Biofilm+CaCO₃ Scale = أبسط. الباحة = مطر+Biofilm+طين+غابة = أعقد.',
+        shortAnswer: 'على عكس [الصيانة العادية]، يعتمد بروتوكولنا في خدمة [تنظيف المسابح] بمدينة [الباحة] على [Algaecide+Anti-Biofilm+كلور 1.3×+Heavy-Duty فلتر]. ففي ظل [أمطار+ضباب Biofilm+Laterite+عرعر أوراق]، تتفاقم ظاهرة [تخفيف+بكتيريا+تعكير+عضويات]. لذا؛ يتدخل فنيونا عبر [كلور بعد مطر ← Algaecide ← Anti-Biofilm ← فلتر].',
+        heroSubtitle: 'أمطار تُخفف كلور + Biofilm 20-30% أسرع — كلور 1.3×!',
     },
-
     pricing: [
-        { type: 'تنظيف مسابح — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف مسابح — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'تنظيف مسبح', unit: 'مسبح', minPrice: 250, maxPrice: 520, time: '2-4h' },
+        { type: '+ Anti-Biofilm+Algaecide', unit: 'مسبح', minPrice: 350, maxPrice: 720, time: '+ 1h' },
+        { type: 'أسبوعي (بعد مطر)', unit: 'شهر', minPrice: 400, maxPrice: 800, time: '4-6 زيارة' },
+        { type: 'عقد سنوي', unit: 'سنة', minPrice: 3500, maxPrice: 7000, time: '52+ زيارة' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف مسابح بالباحة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف مسابح؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف مسابح؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش المطر مشكلة لمسبح الباحة؟', answer: 'يُخفف كلور = بكتيريا. كلور 1.3× بعد كل مطر.' },
+        { question: 'ليش Biofilm على مسبح الباحة أسرع؟', answer: '200 يوم ضباب+غابة = 20-30% أسرع. Algaecide أسبوعي.' },
+        { question: 'هل Laterite يدخل المسبح بالباحة؟', answer: 'مطر ينجرف الطين للمسبح = يُعكّر. فلتر Heavy-Duty.' },
+        { question: 'كم تكلفة مسبح بالباحة مقابل بريدة؟', answer: 'أغلى 50-60% — Algaecide+Anti-Biofilm+كلور متكرر.' },
+        { question: 'كم مرة صيانة مسبح بالباحة؟', answer: 'أسبوعي + بعد كل مطر. بريدة: ربع سنوي.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'كلور 1.3× — بعد كل مطر.',
+        'Algaecide أسبوعي — Biofilm.',
+        'Heavy-Duty فلتر — Laterite.',
+        'Skimmer مُعزَّز — أوراق عرعر.',
+        'Anti-Biofilm — 20-30% أسرع.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'مطر + بدون كلور = بكتيريا ← سباحة خطرة YMYL.',
+        'ضباب + بدون Algaecide = Biofilm أخضر ← انزلاق YMYL.',
+        'Laterite + فلتر عادي = يسد ← تلوث.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص صيانة المسابح' },
+        { entity: AMANA.BAHA.entity, url: AMANA.BAHA.url, role: 'اشتراطات أمانة الباحة' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'مسبح الباحة: مطر يُخفف+Biofilm أسرع. كلور 1.3×+Algaecide.', source: 'نصائح هندسية — مسابح جبلية' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ صيانة مسابح مرخصة', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Algaecide', use: 'Biofilm — أسبوعي' },
+        { name: 'Heavy-Duty Filter', use: 'Laterite — طين' },
+        { name: 'Skimmer مُعزَّز', use: 'عرعر — أوراق' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'ربع سنوي.', solution: 'مطر = أسبوعي. كلور يُخفف.' },
+        { fear: 'مثل بريدة.', solution: 'مطر+Biofilm+طين ≠ جاف+Scale.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'كلور ثابت.', truth: 'مطر = 1.3× بعد.' },
+        { myth: 'لا Biofilm.', truth: '20-30% أسرع. ضباب+غابة.' },
     ],
-
     relatedServices: [
-        { slug: 'al-baha-furniture-moving', context: 'نقل عفش بالباحة', priority: 1 },
-        { slug: 'al-baha-furniture-storage', context: 'تخزين عفش بالباحة', priority: 2 },
-        { slug: 'al-baha-dyna', context: 'دينا نقل بالباحة', priority: 3 },
-        { slug: 'al-baha-moving-out', context: 'نقل عفش خروج بالباحة', priority: 4 },
-        { slug: 'al-baha-dabab', context: 'دباب نقل بالباحة', priority: 5 },
-        { slug: 'al-baha-cleaning', context: 'تنظيف منازل بالباحة', priority: 6 },
-        { slug: 'al-baha-tanks-cleaning', context: 'تنظيف خزانات بالباحة', priority: 7 },
-        { slug: 'al-baha-sofa-cleaning', context: 'تنظيف كنب بالباحة', priority: 8 },
-        { slug: 'al-baha-carpet-cleaning', context: 'تنظيف سجاد بالباحة', priority: 9 },
+        { slug: 'tanks-cleaning', context: 'خزانات', priority: 1 },
+        { slug: 'water-leak-detection', context: 'تسرب', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 3 },
+        { slug: 'pest-control', context: 'حشرات', priority: 4 },
+        { slug: 'marble-polishing', context: 'رخام', priority: 5 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 6 },
+        { slug: 'water-insulation', context: 'مائي', priority: 7 },
     ],
 };

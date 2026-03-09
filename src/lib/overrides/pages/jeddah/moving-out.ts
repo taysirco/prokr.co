@@ -4,6 +4,7 @@
 // ============================================
 
 import type { PageOverride } from '../../types';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -78,6 +79,8 @@ export const override: PageOverride = {
 
 
 
+        verificationBadges: [{ badge: '✔️ شركة مرخصة من بلدي', authority: 'وزارة البلديات', icon: 'shield-check' }],
+
     equipment: [
         { name: 'جهاز بخار صناعي لتعقيم الشقة', use: 'تعقيم حراري شامل — يقتل البكتيريا والعفن بدون كيماويات' },
         { name: 'مزيل كلس وترسبات أملاح', use: 'ينظف حنفيات ومرايا الحمامات من ترسبات مياه التحلية' },
@@ -90,37 +93,35 @@ export const override: PageOverride = {
 
     trustAnchors: [
         { entity: 'وزارة البلديات — منصة بلدي', acronym: 'بلدي', url: 'https://balady.gov.sa', role: 'اشتراطات تسليم العقار المؤجر' },
+        { entity: AMANA.JEDDAH.entity, url: AMANA.JEDDAH.url, role: 'اشتراطات أمانة جدة' },
     ],
 
-    expertReviewer: {
-        name: 'م. ماجد المحيميد',
-        title: 'خبير جودة تشطيبات وعزل',
-        credential: 'مهندس جودة تشطيبات — المرجع الأول في جودة البناء',
-        profileUrl: 'https://x.com/majedalmohaimed',
-    },
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
             expert: 'م. ماجد المحيميد',
             quote: 'تنظيف الإخلاء الاحترافي + صور قبل/بعد + فاتورة = دليلك القانوني لاسترداد تأمين الشقة كاملاً. بدونها: المؤجر يخصم ما يشاء',
             source: 'خبير جودة تشطيبات',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
 
+        saudiRegulations: [REGULATIONS.BALADI_HEALTH],
+
     counterNarratives: [
         { myth: 'تنظيف سريع بنفسك يكفي للتسليم', truth: 'المؤجر يحق له خصم من التأمين إذا الشقة غير نظيفة. التنظيف الاحترافي + صورة قبل/بعد + فاتورة = دليل يحمي حقك. في جدة: الرطوبة تترك علامات عفن — تحتاج تنظيف وتعقيم متخصص' },
+        { myth: 'أي دينا تكفي.', truth: 'دينا بدون ترخيص TGA = بدون تأمين = أي ضرر يتحمله العميل. الترخيص = حماية قانونية.' },
     ],
 
     relatedServices: [
-        { slug: 'jeddah-cleaning', context: 'تنظيف شامل بعد الخروج', priority: 1 },
-        { slug: 'jeddah-apartments-cleaning', context: 'تنظيف شقة للتسليم', priority: 2 },
-        { slug: 'jeddah-steam-cleaning', context: 'بخار شامل', priority: 3 },
-        { slug: 'jeddah-sanitization', context: 'تعقيم للساكن الجديد', priority: 4 },
-        { slug: 'jeddah-pest-control', context: 'رش قبل الدخول', priority: 5 },
-        { slug: 'jeddah-air-conditioner-cleaning', context: 'مكيفات قبل التسليم', priority: 6 },
-        { slug: 'jeddah-floor-polishing', context: 'تلميع أرضيات', priority: 7 },
-        { slug: 'jeddah-furniture-moving', context: 'نقل عفش', priority: 8 },
-        { slug: 'jeddah-tanks-cleaning', context: 'غسيل خزان', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف شامل بعد الخروج', priority: 1 },
+        { slug: 'apartments-cleaning', context: 'تنظيف شقة للتسليم', priority: 2 },
+        { slug: 'steam-cleaning', context: 'بخار شامل', priority: 3 },
+        { slug: 'sanitization', context: 'تعقيم للساكن الجديد', priority: 4 },
+        { slug: 'pest-control', context: 'رش قبل الدخول', priority: 5 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيفات قبل التسليم', priority: 6 },
+        { slug: 'floor-polishing', context: 'تلميع أرضيات', priority: 7 },
+        { slug: 'furniture-moving', context: 'نقل عفش', priority: 8 },
+        { slug: 'tanks-cleaning', context: 'غسيل خزان', priority: 9 },
     ],
 };

@@ -4,6 +4,7 @@
 // ============================================
 
 import type { PageOverride } from '../../types';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -77,6 +78,8 @@ export const override: PageOverride = {
 
 
 
+        verificationBadges: [{ badge: '✔️ شركة مرخصة من بلدي', authority: 'وزارة البلديات', icon: 'shield-check' }],
+
     equipment: [
         { name: 'مكينة جلي أرضيات صناعية', use: 'تنظف + تفرك + تشفط في خطوة واحدة — 10x أسرع من المسح اليدوي' },
         { name: 'منظف أرضيات pH محايد', use: 'يزيل الأوساخ بدون إتلاف الرخام أو السيراميك أو الجراوت' },
@@ -89,37 +92,35 @@ export const override: PageOverride = {
 
     trustAnchors: [
         { entity: 'الهيئة السعودية للمواصفات والمقاييس', acronym: 'SASO', url: 'https://www.saso.gov.sa', role: 'مواصفات مواد تنظيف الأرضيات' },
+        { entity: AMANA.JEDDAH.entity, url: AMANA.JEDDAH.url, role: 'اشتراطات أمانة جدة' },
     ],
 
-    expertReviewer: {
-        name: 'م. ماجد المحيميد',
-        title: 'خبير جودة تشطيبات وعزل',
-        credential: 'مهندس جودة تشطيبات — المرجع الأول في جودة البناء',
-        profileUrl: 'https://x.com/majedalmohaimed',
-    },
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
             expert: 'م. ماجد المحيميد',
             quote: 'تنظيف الأرضيات في جدة يحتاج معاملة خاصة — الماء الزائد يتبخر ويترسب ملح NaCl. الحل: ممسحة مايكروفايبر رطبة بمحلول pH محايد — لا كلور ولا ماء زائد',
             source: 'خبير تشطيبات',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
 
+        saudiRegulations: [REGULATIONS.BALADI_HEALTH],
+
     counterNarratives: [
         { myth: 'ممسحة وكلور = أرضية نظيفة', truth: 'الكلور ينظف لكن: يُتلف الرخام + يبهت الجرانيت + يذيب الجراوت. في جدة: ملوحة الهواء تترك طبقة NaCl على الأرضيات — تحتاج منظف pH محايد (6.5-7.5) يذيب الملح بدون ضرر' },
+        { myth: 'المنظف العادي يكفي.', truth: 'المنظف العادي يزيل 40% من الأوساخ. HEPA + بخار = 99%+. الفرق = 59% غبار دقيق + بكتيريا + عث.' },
     ],
 
     relatedServices: [
-        { slug: 'jeddah-floor-polishing', context: 'تلميع بعد التنظيف', priority: 1 },
-        { slug: 'jeddah-marble-polishing', context: 'جلي رخام', priority: 2 },
-        { slug: 'jeddah-steam-cleaning', context: 'بخار الأرضيات', priority: 3 },
-        { slug: 'jeddah-cleaning', context: 'تنظيف شامل', priority: 4 },
-        { slug: 'jeddah-carpet-cleaning', context: 'سجاد فوق الأرضيات', priority: 5 },
-        { slug: 'jeddah-sanitization', context: 'تعقيم الأرضيات', priority: 6 },
-        { slug: 'jeddah-villas-cleaning', context: 'أرضيات الفلل', priority: 7 },
-        { slug: 'jeddah-water-insulation', context: 'عزل أرضيات ضد الرطوبة', priority: 8 },
-        { slug: 'jeddah-pest-control', context: 'رش أرضيات', priority: 9 },
+        { slug: 'floor-polishing', context: 'تلميع بعد التنظيف', priority: 1 },
+        { slug: 'marble-polishing', context: 'جلي رخام', priority: 2 },
+        { slug: 'steam-cleaning', context: 'بخار الأرضيات', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف شامل', priority: 4 },
+        { slug: 'carpet-cleaning', context: 'سجاد فوق الأرضيات', priority: 5 },
+        { slug: 'sanitization', context: 'تعقيم الأرضيات', priority: 6 },
+        { slug: 'villas-cleaning', context: 'أرضيات الفلل', priority: 7 },
+        { slug: 'water-insulation', context: 'عزل أرضيات ضد الرطوبة', priority: 8 },
+        { slug: 'pest-control', context: 'رش أرضيات', priority: 9 },
     ],
 };

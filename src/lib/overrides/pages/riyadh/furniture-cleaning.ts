@@ -6,7 +6,7 @@
 // ══════════════════════════════════════════════════════════════
 
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -53,6 +53,7 @@ export const override: PageOverride = {
             question: 'كل كم أحتاج أنظف الأثاث بالرياض؟',
             answer: 'أقمشة: بخار كل 3 أشهر (+ Anti-Static بعد كل تنظيف). جلد: تنظيف + ترطيب كل شهرين. خشب: تلميع + تزييت كل 3-4 أشهر. بين التنظيفات: شفط HEPA أسبوعي بنفسك (5 دقائق/قطعة). البرنامج المثالي: احترافي كل 3 أشهر + صيانة أسبوعية بنفسك.',
         },
+        { question: 'كم تكلفة التنظيف العميق مقارنة بالتنظيف العادي؟', answer: 'التنظيف العميق أغلى 30-50% لكنه يشمل: HEPA + بخار 150°م + تعقيم. التنظيف العادي = مسح سطحي. العميق كل 3-4 أشهر + العادي أسبوعياً = أفضل معادلة تكلفة/نظافة.' },
     ],
 
     expertTips: [
@@ -71,6 +72,7 @@ export const override: PageOverride = {
 
     trustAnchors: [
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف — ضمان استخدام مواد آمنة على الأثاث' },
+        { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
 
     expertReviewer: {
@@ -85,7 +87,6 @@ export const override: PageOverride = {
             expert: 'أ.د. عبدالله المسند',
             quote: 'الجلد يتشقق 3 مرات أسرع في الرياض (رطوبة 10-20%) مقارنة بالمدن الساحلية. الترطيب الدوري — وليس التنظيف فقط — هو ما يحمي الأثاث',
             source: 'أستاذ جغرافيا المناخ',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -112,14 +113,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'riyadh-sofa-cleaning', context: 'كنب + أثاث', priority: 1 },
-        { slug: 'riyadh-steam-cleaning', context: 'بخار الأثاث', priority: 2 },
-        { slug: 'riyadh-cleaning', context: 'تنظيف شامل + أثاث', priority: 3 },
-        { slug: 'riyadh-mattress-cleaning', context: 'مراتب + أثاث', priority: 4 },
-        { slug: 'riyadh-carpet-cleaning', context: 'سجاد + أثاث', priority: 5 },
-        { slug: 'riyadh-sanitization', context: 'تعقيم الأثاث', priority: 6 },
-        { slug: 'riyadh-termite-control', context: 'نمل أبيض — أثاث خشبي', priority: 7 },
-        { slug: 'riyadh-furniture-moving', context: 'نقل + تنظيف', priority: 8 },
-        { slug: 'riyadh-pest-control', context: 'حشرات الأثاث', priority: 9 },
+        { slug: 'sofa-cleaning', context: 'كنب + أثاث', priority: 1 },
+        { slug: 'steam-cleaning', context: 'بخار الأثاث', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف شامل + أثاث', priority: 3 },
+        { slug: 'mattress-cleaning', context: 'مراتب + أثاث', priority: 4 },
+        { slug: 'carpet-cleaning', context: 'سجاد + أثاث', priority: 5 },
+        { slug: 'sanitization', context: 'تعقيم الأثاث', priority: 6 },
+        { slug: 'termite-control', context: 'نمل أبيض — أثاث خشبي', priority: 7 },
+        { slug: 'furniture-moving', context: 'نقل + تنظيف', priority: 8 },
+        { slug: 'pest-control', context: 'حشرات الأثاث', priority: 9 },
     ],
 };

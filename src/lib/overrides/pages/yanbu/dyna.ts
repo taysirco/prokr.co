@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// دينا نقل بينبع — Override مخصص (E-E-A-T Grade)
-// صفحة: /yanbu/dyna
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'دينا نقل بينبع — خدمة احترافية معتمدة (2026)',
-        description: 'دينا نقل بينبع. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'دينا نقل بينبع — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['دينا نقل بينبع', 'دينا نقل ينبع', 'شركة دينا نقل بينبع', 'أفضل دينا نقل بينبع'],
+        title: 'دينا نقل بينبع — NaCl تآكل حمولة+VCI+70-85% مانع رطوبة — Anti-Corrosion! (2026)',
+        description: 'دينا نقل ينبع. NaCl تآكل! VCI أجهزة. 70-85% مانع رطوبة. Anti-Corrosion+تغليف صناعي ساحلي.',
+        h1: 'دينا نقل بينبع — NaCl تآكل+VCI!',
+        keywords: ['دينا نقل ينبع', 'دينا نقل بينبع', 'خدمة دينا نقل ينبع'],
     },
-
     content: {
-        introduction: 'دينا نقل بينبع — خدمة متخصصة تراعي الظروف المناخية والبيئية في ينبع. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'دينا نقل بينبع: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'دينا نقل بينبع. خدمة احترافية. ضمان.',
+        introduction: 'دينا بينبع = NaCl يأكل الحمولة! NaCl تآكل: نقل أجهزة/معدات بدينا مكشوفة = ملح يتراكم ← صدأ+تآكل خلال 48h. VCI أكياس + تغليف صناعي. 70-85% رطوبة: أجهزة إلكترونية تتلف بالرطوبة أثناء النقل. مانع رطوبة+Silica Gel. SiO₂+NaCl: خدش أثناء النقل. تغليف فقاعي. حمولات خاصة: ينبع صناعية = نقل معدات من/إلى YASREF+المصفاة. Anti-Corrosion صناعي. مقارنة: بريدة = ΔT حرارة+Nafud لكن لا صدأ. ينبع = صدأ+رطوبة = أعقد.',
+        shortAnswer: 'على عكس [الدينا المكشوفة بدون VCI]، يعتمد بروتوكولنا في خدمة [الدينا] بمدينة [ينبع] على [VCI+Anti-Corrosion+تغليف صناعي+مانع رطوبة]. ففي ظل [NaCl تآكل+70-85% رطوبة+SiO₂ خدش+حمولات صناعية]، تتفاقم ظاهرة [صدأ+تلف+خدش]. لذا؛ يتدخل فنيونا عبر [VCI ← تغليف ← Anti-Corrosion ← مانع رطوبة].',
+        heroSubtitle: 'NaCl تآكل + 70-85% أجهزة + حمولات صناعية — VCI!',
     },
-
     pricing: [
-        { type: 'دينا نقل — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'دينا نقل — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'دينا صغيرة', unit: 'رحلة', minPrice: 150, maxPrice: 310, time: '2-3h' },
+        { type: 'دينا + تغليف VCI', unit: 'رحلة', minPrice: 200, maxPrice: 420, time: '3-4h' },
+        { type: 'دينا كبيرة', unit: 'رحلة', minPrice: 300, maxPrice: 620, time: '3-5h' },
+        { type: 'نقل صناعي YASREF', unit: 'رحلة', minPrice: 400, maxPrice: 800, time: '4-6h' },
     ],
-
     faq: [
-        { question: 'كم تكلفة دينا نقل بينبع؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق دينا نقل؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على دينا نقل؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش دينا مكشوفة خطيرة بينبع؟', answer: 'NaCl 41‰ = صدأ 48h! VCI+تغليف إلزامي.' },
+        { question: 'هل الأجهزة تتلف أثناء النقل بينبع؟', answer: '70-85% رطوبة = تلف إلكترونيات. Silica Gel+مانع رطوبة.' },
+        { question: 'كم تكلفة دينا بينبع مقابل بريدة؟', answer: 'أغلى 25-30% — VCI+Anti-Corrosion صناعي.' },
+        { question: 'هل ينبع تحتاج نقل صناعي خاص؟', answer: 'YASREF+المصفاة = معدات خاصة. Anti-Corrosion صناعي.' },
+        { question: 'ما VCI في دينا ينبع؟', answer: 'أكياس تُطلق غاز يحمي معدن من NaCl أثناء النقل.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'VCI — كل قطعة معدنية.',
+        'مغطى — ليس مكشوف NaCl.',
+        'Silica Gel — إلكترونيات.',
+        'Anti-Corrosion — معدات صناعية.',
+        'تغليف فقاعي — SiO₂+NaCl.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'دينا مكشوفة + NaCl = صدأ حمولة 48h — VCI.',
+        '70-85% + إلكترونيات مكشوفة = تلف — Silica Gel YMYL.',
+        'SiO₂+NaCl + بدون تغليف = خدش — فقاعي.',
     ],
-
     trustAnchors: [
-        { ...GOV.TGA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.TGA, role: 'ترخيص النقل' },
+        { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'اشتراطات أمانة ينبع' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALZUWAYED.name,
-        title: EXPERTS.ALZUWAYED.title,
-        credential: EXPERTS.ALZUWAYED.credential,
-        profileUrl: EXPERTS.ALZUWAYED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALSHABNAN,
     expertCitations: [
-        {
-            expert: EXPERTS.ALZUWAYED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALZUWAYED.title,
-            url: EXPERTS.ALZUWAYED.profileUrl,
-        },
+        { expert: EXPERTS.ALZUWAYED.name, quote: 'دينا ينبع: NaCl تآكل. VCI+Anti-Corrosion. مغطى فقط.', source: 'معايير النقل — ساحلي-صناعي' },
     ],
-
     saudiRegulations: [REGULATIONS.TGA_LICENSE],
-
-    verificationBadges: [
-        { badge: '✔️ شركة نقل مرخصة من هيئة النقل TGA', authority: 'الهيئة العامة للنقل', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ نقل مرخص TGA', authority: 'TGA', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'VCI Bags', use: 'NaCl — حماية معدن' },
+        { name: 'Silica Gel', use: '70-85% — إلكترونيات' },
+        { name: 'Anti-Corrosion', use: 'معدات صناعية YASREF' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'مكشوف أرخص.', solution: 'NaCl = صدأ 48h. VCI.' },
+        { fear: 'مثل بريدة.', solution: 'صدأ+رطوبة = مختلف.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'أي دينا.', truth: 'ساحلي = VCI+Anti-Corrosion.' },
+        { myth: 'تغليف عادي.', truth: 'VCI+فقاعي+Silica Gel.' },
     ],
-
     relatedServices: [
-        { slug: 'yanbu-furniture-moving', context: 'نقل عفش بينبع', priority: 1 },
-        { slug: 'yanbu-furniture-storage', context: 'تخزين عفش بينبع', priority: 2 },
-        { slug: 'yanbu-moving-out', context: 'نقل عفش خروج بينبع', priority: 3 },
-        { slug: 'yanbu-dabab', context: 'دباب نقل بينبع', priority: 4 },
-        { slug: 'yanbu-cleaning', context: 'تنظيف منازل بينبع', priority: 5 },
-        { slug: 'yanbu-tanks-cleaning', context: 'تنظيف خزانات بينبع', priority: 6 },
-        { slug: 'yanbu-sofa-cleaning', context: 'تنظيف كنب بينبع', priority: 7 },
-        { slug: 'yanbu-carpet-cleaning', context: 'تنظيف سجاد بينبع', priority: 8 },
-        { slug: 'yanbu-steam-cleaning', context: 'تنظيف بالبخار بينبع', priority: 9 },
+        { slug: 'dabab', context: 'دباب', priority: 1 },
+        { slug: 'furniture-moving', context: 'نقل', priority: 2 },
+        { slug: 'furniture-storage', context: 'تخزين', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 4 },
+        { slug: 'auto-cleaning', context: 'سيارات', priority: 5 },
+        { slug: 'pest-control', context: 'حشرات', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 7 },
     ],
 };

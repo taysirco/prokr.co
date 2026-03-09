@@ -1,94 +1,74 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف بالساعة بالباحة — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-baha/hourly-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف بالساعة بالباحة — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف بالساعة بالباحة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف بالساعة بالباحة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف بالساعة بالباحة', 'تنظيف بالساعة الباحة', 'شركة تنظيف بالساعة بالباحة', 'أفضل تنظيف بالساعة بالباحة'],
+        title: 'تنظيف بالساعة بالباحة — 200 يوم ضباب+عرعر+Laterite+6-10h — 4 ركائز جبلية! (2026)',
+        description: 'تنظيف بالساعة الباحة. 200 يوم ضباب! عرعر لزج. Laterite Fe₂O₃. 6-10h تجفيف. 4 ركائز+Dehumidifier.',
+        h1: 'تنظيف بالساعة بالباحة — 4 ركائز جبلية!',
+        keywords: ['تنظيف بالساعة بالباحة', 'تنظيف ساعة الباحة', 'خدمة تنظيف بالساعة بالباحة'],
     },
-
     content: {
-        introduction: 'تنظيف بالساعة بالباحة — خدمة متخصصة تراعي الظروف المناخية والبيئية في الباحة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف بالساعة بالباحة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف بالساعة بالباحة. خدمة احترافية. ضمان.',
+        introduction: 'تنظيف بالساعة بالباحة = 4 ركائز حتى بالساعة! 200 يوم ضباب: كل عاملة ساعية يجب أن تعرف: (1) Oxalic لـ Laterite Fe₂O₃ — المبيّض ممنوع! (2) HEPA AC لعرعر لزج. (3) Anti-Fungal لعفن الضباب. (4) Dehumidifier بعد أي غسيل رطب. العاملة الساعية بالباحة: تحتاج تدريب 4 ركائز — عاملة بدون تدريب تستخدم مبيّض = كارثة Laterite! 6-10h تجفيف: حتى المسح بالماء يحتاج وقت. Dehumidifier متوفر. مقارنة: بريدة = تدريب مختلف (CaCO₃+SiO₂). الباحة = Laterite+عرعر = تدريب فريد.',
+        shortAnswer: 'على عكس [العاملة بدون تدريب جبلي]، يعتمد بروتوكولنا في خدمة [التنظيف بالساعة] بمدينة [الباحة] على [4 ركائز: Oxalic+HEPA+Anti-Fungal+Dehumidifier]. ففي ظل [Laterite+عرعر+ضباب+6-10h]، تتفاقم ظاهرة [بقع+لزوجة+عفن+بطء]. لذا؛ يتدخل فريقنا بـ [عاملة مُدرّبة 4 ركائز جبلية].',
+        heroSubtitle: 'عاملة ساعية مُدرّبة 4 ركائز جبلية — لا مبيّض!',
     },
-
     pricing: [
-        { type: 'تنظيف بالساعة — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف بالساعة — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'ساعة واحدة', unit: 'ساعة', minPrice: 30, maxPrice: 60, time: '1h' },
+        { type: '3 ساعات', unit: 'جلسة', minPrice: 80, maxPrice: 170, time: '3h' },
+        { type: '6 ساعات', unit: 'جلسة', minPrice: 150, maxPrice: 310, time: '6h' },
+        { type: 'أسبوعي (4/شهر)', unit: 'شهر', minPrice: 250, maxPrice: 520, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف بالساعة بالباحة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف بالساعة؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف بالساعة؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش العاملة بالباحة تحتاج تدريب خاص؟', answer: '4 ركائز: Oxalic+HEPA+Anti-Fungal+Dehumidifier. مبيّض ممنوع!' },
+        { question: 'ليش المبيّض ممنوع للعاملة بالباحة؟', answer: 'Laterite Fe₂O₃ + مبيّض = بقعة حمراء. Oxalic فقط.' },
+        { question: 'كم تكلفة ساعية بالباحة مقابل بريدة؟', answer: 'أغلى 20-25% — تدريب 4 ركائز.' },
+        { question: 'هل العاملة تجلب Dehumidifier؟', answer: 'نعم! 6-10h بدونه = عفن بعد المسح.' },
+        { question: 'كم مرة ساعية بالباحة؟', answer: 'أسبوعي. ضباب+عرعر مستمر.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'تدريب 4 ركائز — إلزامي.',
+        'Oxalic فقط — لا مبيّض!',
+        'HEPA AC — عرعر.',
+        'Anti-Fungal — ضباب عفن.',
+        'Dehumidifier — 6-10h.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'عاملة غير مُدرّبة + مبيّض = Laterite بقعة — كارثة.',
+        'مسح رطب بدون Dehumidifier = 6-10h = عفن.',
+        'عرعر بدون HEPA = لزج يتراكم.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.HRSD, role: 'ترخيص العمالة الساعية' },
+        { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
+        { entity: AMANA.BAHA.entity, url: AMANA.BAHA.url, role: 'اشتراطات أمانة الباحة' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMISNID.name, quote: 'ساعية الباحة: تدريب 4 ركائز إلزامي. لا مبيّض!', source: 'جغرافيا المناخ — ساعية جبلية' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ عمالة ساعية مرخصة', authority: 'HRSD + بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Oxalic Acid', use: 'Laterite — لا مبيّض' },
+        { name: 'Dehumidifier محمول', use: '6-10h — تجفيف' },
+        { name: 'Anti-Fungal', use: '200 يوم ضباب — عفن' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'ساعية عادية.', solution: '4 ركائز = تدريب خاص.' },
+        { fear: 'مثل بريدة.', solution: 'Laterite+عرعر ≠ كلس.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'أي عاملة.', truth: 'مُدرّبة 4 ركائز.' },
+        { myth: 'مبيّض ينظّف.', truth: 'يُثبّت Laterite = كارثة.' },
     ],
-
     relatedServices: [
-        { slug: 'al-baha-furniture-moving', context: 'نقل عفش بالباحة', priority: 1 },
-        { slug: 'al-baha-furniture-storage', context: 'تخزين عفش بالباحة', priority: 2 },
-        { slug: 'al-baha-dyna', context: 'دينا نقل بالباحة', priority: 3 },
-        { slug: 'al-baha-moving-out', context: 'نقل عفش خروج بالباحة', priority: 4 },
-        { slug: 'al-baha-dabab', context: 'دباب نقل بالباحة', priority: 5 },
-        { slug: 'al-baha-cleaning', context: 'تنظيف منازل بالباحة', priority: 6 },
-        { slug: 'al-baha-tanks-cleaning', context: 'تنظيف خزانات بالباحة', priority: 7 },
-        { slug: 'al-baha-sofa-cleaning', context: 'تنظيف كنب بالباحة', priority: 8 },
-        { slug: 'al-baha-carpet-cleaning', context: 'تنظيف سجاد بالباحة', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 1 },
+        { slug: 'apartments-cleaning', context: 'شقق', priority: 2 },
+        { slug: 'carpet-cleaning', context: 'سجاد', priority: 3 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 4 },
+        { slug: 'pest-control', context: 'حشرات', priority: 5 },
+        { slug: 'office-cleaning', context: 'مكاتب', priority: 6 },
+        { slug: 'villas-cleaning', context: 'فلل', priority: 7 },
     ],
 };

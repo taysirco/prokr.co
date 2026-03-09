@@ -4,11 +4,12 @@ import Image from 'next/image';
 import { Home, ChevronLeft, Truck, Sparkles, Bug, Droplet, Wrench, Building2 } from 'lucide-react';
 import { SERVICES, CATEGORY_NAMES, getServicesByCategory, getServiceImage } from '@/lib/seed';
 import { BreadcrumbJsonLd, ServiceCatalogJsonLd, WebPageJsonLd } from '@/components/JsonLd';
+import { isAbsorbedSlug } from '@/lib/services/super-page-groups';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-    title: 'جميع الخدمات المنزلية في السعودية | 51 خدمة - بروكر',
-    description: 'تصفح جميع خدمات بروكر: نقل عفش، تنظيف منازل، مكافحة حشرات، كشف تسربات، عزل خزانات، صرف صحي وأكثر. 51 خدمة في 24 مدينة سعودية مع شركات معتمدة.',
+    title: 'جميع الخدمات المنزلية في السعودية - بروكر',
+    description: 'تصفح جميع خدمات بروكر: نقل عفش، تنظيف منازل، مكافحة حشرات، كشف تسربات، عزل خزانات، صرف صحي وأكثر. خدمات متخصصة في 24 مدينة سعودية مع شركات معتمدة.',
     keywords: [
         'خدمات منزلية السعودية',
         'شركات خدمات',
@@ -71,7 +72,7 @@ export default function ServicesPage() {
                 url="https://prokr.co/services"
                 breadcrumbs={breadcrumbs}
             />
-            <ServiceCatalogJsonLd services={SERVICES} />
+            <ServiceCatalogJsonLd services={SERVICES.filter(s => !isAbsorbedSlug(s.slug))} />
 
             <main className="min-h-screen bg-gray-50">
                 {/* Hero Section */}
@@ -96,7 +97,7 @@ export default function ServicesPage() {
                             جميع الخدمات
                         </h1>
                         <p className="text-lg text-emerald-100 max-w-2xl">
-                            تصفح أكثر من {SERVICES.length} خدمة متوفرة في جميع مدن المملكة العربية السعودية.
+                            تصفح خدماتنا المتخصصة المتوفرة في جميع مدن المملكة العربية السعودية.
                             من نقل العفش إلى التنظيف ومكافحة الحشرات.
                         </p>
                     </div>
@@ -119,7 +120,7 @@ export default function ServicesPage() {
                             </div>
 
                             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-                                {services.map(service => (
+                                {services.filter(s => !isAbsorbedSlug(s.slug)).map(service => (
                                     <Link
                                         key={service.slug}
                                         href={`/${service.slug}`}
@@ -155,7 +156,7 @@ export default function ServicesPage() {
                             دليل الخدمات المنزلية الشامل في السعودية
                         </h2>
                         <p className="text-gray-700 leading-relaxed mb-4">
-                            يقدم بروكر أكثر من {SERVICES.length} خدمة منزلية وتجارية تغطي 24 مدينة سعودية.
+                            يقدم بروكر خدمات منزلية وتجارية متخصصة تغطي 24 مدينة سعودية.
                             تشمل خدماتنا نقل العفش بجميع أنواعه، تنظيف المنازل والفلل والشقق،
                             مكافحة الحشرات ورش المبيدات، كشف تسربات المياه، عزل الخزانات والأسطح، وخدمات الصرف الصحي.
                         </p>
@@ -171,7 +172,7 @@ export default function ServicesPage() {
                         <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
                             <h4 className="font-bold text-gray-800 mb-2" itemProp="name">كم عدد الخدمات المتوفرة في بروكر؟</h4>
                             <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
-                                <p className="text-gray-600" itemProp="text">يوفر بروكر أكثر من {SERVICES.length} خدمة منزلية وتجارية تشمل نقل العفش، التنظيف بجميع أنواعه، مكافحة الحشرات، كشف تسربات المياه، عزل الخزانات والأسطح، وخدمات الصرف الصحي.</p>
+                                <p className="text-gray-600" itemProp="text">يوفر بروكر خدمات منزلية وتجارية متخصصة تشمل نقل العفش، التنظيف بجميع أنواعه، مكافحة الحشرات، كشف تسربات المياه، عزل الخزانات والأسطح، وخدمات الصرف الصحي.</p>
                             </div>
                         </div>
                         <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">

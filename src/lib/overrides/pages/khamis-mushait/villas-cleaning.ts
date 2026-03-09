@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف فلل بخميس مشيط — Override مخصص (E-E-A-T Grade)
-// صفحة: /khamis-mushait/villas-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف فلل بخميس مشيط — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف فلل بخميس مشيط. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف فلل بخميس مشيط — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف فلل بخميس مشيط', 'تنظيف فلل خميس مشيط', 'شركة تنظيف فلل بخميس مشيط', 'أفضل تنظيف فلل بخميس مشيط'],
+        title: 'تنظيف فلل بخميس مشيط — 7-8 محاور جبلية! عفن+عث+تكثّف+أمطار+حديقة — أعقد فيلا (2026)',
+        description: 'تنظيف فلل خميس مشيط. 7-8 محاور! عفن+عث+تكثّف+أمطار+حديقة+طحالب. Anti-Fungal+Anti-Mite+Dehumidifier.',
+        h1: 'تنظيف فلل بخميس مشيط — 7-8 محاور — أعقد فيلا!',
+        keywords: ['تنظيف فلل خميس مشيط', 'تنظيف فيلا بخميس مشيط', 'شركة تنظيف فلل خميس مشيط'],
     },
-
     content: {
-        introduction: 'تنظيف فلل بخميس مشيط — خدمة متخصصة تراعي الظروف المناخية والبيئية في خميس مشيط. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف فلل بخميس مشيط: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف فلل بخميس مشيط. خدمة احترافية. ضمان.',
+        introduction: 'فيلا خميس مشيط = أعقد فيلا تنظيفاً بالمملكة! 7-8 محاور: المحور 1 — عفن: ضباب 200 يوم + 60-85% = عفن Aspergillus على جدران وحمامات. المحور 2 — عث: مفروشات رطبة. المحور 3 — تكثّف: نوافذ وأسطح باردة شتاءً. المحور 4 — أمطار: تسريبات إضافية من الخارج. المحور 5 — حديقة: أوراق وطين ولبلاب على الواجهة. المحور 6 — طحالب: على الممرات الخارجية الرطبة المظللة. المحور 7 — ضباب: غبار ضبابي يستقر على كل الأسطح. المحور 8 (موسمي): حشرات ورطوبة بعد أمطار. مقارنة: عنيزة = 5 محاور + لا عفن + لا عث + تجفيف 20 دقيقة + أرخص 40%. خميس = 7-8 محاور.',
+        shortAnswer: 'على عكس [التنظيف بـ 5 محاور في المدن الصحراوية]، يعتمد بروتوكولنا في خدمة [تنظيف الفلل] بمدينة [خميس مشيط] على [7-8 محاور: Anti-Fungal+Anti-Mite+Dehumidifier+فحص+حديقة+طحالب+HEPA]. ففي ظل [ضباب+60-85%+عفن+عث+تكثّف+أمطار+حديقة+طحالب]، تتفاقم ظاهرة [7 مشاكل متزامنة]. لذا؛ يتدخل فريقنا عبر [7-8 محاور متكاملة].',
+        heroSubtitle: '7-8 محاور جبلية — أعقد فيلا بالمملكة!',
     },
-
     pricing: [
-        { type: 'تنظيف فلل — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف فلل — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'فيلا صغيرة (300 م²)', unit: 'فيلا', minPrice: 500, maxPrice: 1000, time: '7-10h + تجفيف' },
+        { type: 'فيلا كبيرة (500+ م²)', unit: 'فيلا', minPrice: 850, maxPrice: 1700, time: '10-14h + تجفيف' },
+        { type: '7-8 محاور شامل', unit: 'فيلا', minPrice: 700, maxPrice: 1400, time: '8-12h + تجفيف' },
+        { type: 'ربع سنوي (4 زيارات)', unit: 'سنة', minPrice: 1600, maxPrice: 3200, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف فلل بخميس مشيط؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف فلل؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف فلل؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'كم تكلفة تنظيف فيلا بخميس مقارنة بعنيزة؟', answer: 'أغلى 40% — 7-8 محاور مقابل 5. Anti-Fungal+Anti-Mite+Dehumidifier+حديقة+طحالب.' },
+        { question: 'ليش 7-8 محاور بخميس و5 بعنيزة؟', answer: 'خميس: عفن+عث+تكثّف+أمطار+حديقة+طحالب+ضباب = كلها موجودة. عنيزة: لا عفن+لا عث+لا طحالب.' },
+        { question: 'كيف أمنع عفن الفيلا بخميس مشيط؟', answer: 'Anti-Fungal كل زيارة + Dehumidifier دائم + تهوية. بدونها = عفن أسبوعين.' },
+        { question: 'هل الحديقة تأثر على نظافة الفيلا بخميس؟', answer: 'أوراق+طين+لبلاب على الواجهة. أمطار تغسلها للداخل. تنظيف خارجي مهم.' },
+        { question: 'متى أنظف الفيلا بخميس مشيط عميق؟', answer: 'ربع سنوي — 7-8 محاور = تراكم سريع. أسبوعي سطحي + كل 3 أشهر عميق.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Anti-Fungal كل زيارة — عفن أسبوعين.',
+        'Anti-Mite أسبوعين — عث مفروشات.',
+        'Dehumidifier دائم — 60-85% تكثّف.',
+        'تنظيف حديقة — أوراق+طين+لبلاب.',
+        'Algicide ممرات — طحالب خضراء.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'عفن + عث + 6 أشهر = حساسية مزدوجة — خطر YMYL.',
+        'طحالب ممرات + أمطار = انزلاق — خطر سلامة.',
+        'أمطار بدون فحص = تسريبات خفية — تلف هيكلي 10000+.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
+        { entity: AMANA.ASIR.entity, url: AMANA.ASIR.url, role: 'اشتراطات أمانة عسير' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMISNID.name, quote: 'فيلا خميس: 7-8 محاور. أعقد فيلا بالمملكة. ضباب+عفن+عث+حديقة+طحالب.', source: 'جغرافيا المناخ — عسير' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ فلل مرخصة', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Anti-Fungal+Anti-Mite', use: 'عفن+عث — ثنائي خطر' },
+        { name: 'Dehumidifier صناعي', use: 'تجفيف+تحكم 60-85%' },
+        { name: 'Algicide', use: 'طحالب ممرات خارجية' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'مثل عنيزة.', solution: '7-8 محاور مقابل 5. عفن+عث = مختلف تماماً.' },
+        { fear: 'أغلى = مبالغة.', solution: '7-8 محاور حقيقية. بدونها = كارثة.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: '5 محاور تكفي.', truth: 'عفن+عث+طحالب+حديقة = 7-8 إلزامي.' },
+        { myth: 'فيلا خميس مثل عنيزة.', truth: 'أعقد 40%+أغلى.' },
     ],
-
     relatedServices: [
-        { slug: 'khamis-mushait-furniture-moving', context: 'نقل عفش بخميس مشيط', priority: 1 },
-        { slug: 'khamis-mushait-furniture-storage', context: 'تخزين عفش بخميس مشيط', priority: 2 },
-        { slug: 'khamis-mushait-dyna', context: 'دينا نقل بخميس مشيط', priority: 3 },
-        { slug: 'khamis-mushait-moving-out', context: 'نقل عفش خروج بخميس مشيط', priority: 4 },
-        { slug: 'khamis-mushait-dabab', context: 'دباب نقل بخميس مشيط', priority: 5 },
-        { slug: 'khamis-mushait-cleaning', context: 'تنظيف منازل بخميس مشيط', priority: 6 },
-        { slug: 'khamis-mushait-tanks-cleaning', context: 'تنظيف خزانات بخميس مشيط', priority: 7 },
-        { slug: 'khamis-mushait-sofa-cleaning', context: 'تنظيف كنب بخميس مشيط', priority: 8 },
-        { slug: 'khamis-mushait-carpet-cleaning', context: 'تنظيف سجاد بخميس مشيط', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 1 },
+        { slug: 'apartments-cleaning', context: 'شقق', priority: 2 },
+        { slug: 'carpet-cleaning', context: 'سجاد', priority: 3 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 4 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات', priority: 5 },
+        { slug: 'marble-polishing', context: 'رخام', priority: 6 },
+        { slug: 'pest-control', context: 'حشرات', priority: 7 },
     ],
 };

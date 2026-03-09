@@ -1,94 +1,74 @@
-// ══════════════════════════════════════════════════════════════
-// كشف تسربات حمامات ببريدة — Override مخصص (E-E-A-T Grade)
-// صفحة: /buraidah/bathroom-leak-detection
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'كشف تسربات حمامات ببريدة — خدمة احترافية معتمدة (2026)',
-        description: 'كشف تسربات حمامات ببريدة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'كشف تسربات حمامات ببريدة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['كشف تسربات حمامات ببريدة', 'كشف تسربات حمامات بريدة', 'شركة كشف تسربات حمامات ببريدة', 'أفضل كشف تسربات حمامات ببريدة'],
+        title: 'كشف تسربات حمام ببريدة — CaCO₃ 600ppm يسد+يتلف Seal+ΔT — فحص Descaler! (2026)',
+        description: 'كشف تسربات حمام بريدة. CaCO₃ 600ppm أعلى كلس يسد ويتلف Seal! ΔT 45°م إجهاد. فحص ضغط+Descaler+حراري.',
+        h1: 'كشف تسربات حمام ببريدة — أعلى كلس يسد!',
+        keywords: ['كشف تسربات حمام بريدة', 'كشف تسرب حمام ببريدة', 'شركة كشف تسربات حمام بريدة'],
     },
-
     content: {
-        introduction: 'كشف تسربات حمامات ببريدة — خدمة متخصصة تراعي الظروف المناخية والبيئية في بريدة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'كشف تسربات حمامات ببريدة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'كشف تسربات حمامات ببريدة. خدمة احترافية. ضمان.',
+        introduction: 'حمام بريدة = أعلى كلس يُتلف! CaCO₃ 600ppm يسد المفاصل: أعلى تركيز كلس بالمملكة ← يتراكم عند المفاصل أسرع 2× ← يُضيّق ← ضغط يرتفع ← أضعف نقطة تتسرب. Descaler وقائي كل 3 أشهر إلزامي. CaCO₃ يتلف Seal: كلس يتراكم على O-rings والحشيات المطاطية ← يُصلّبها ← تتشقق ← تسرب بطيء لا يُلاحظ. فحص Seal سنوي. ΔT 45°م: أنابيب مياه ساخنة في جدار خارجي = تمدد/انكماش يومي ← إجهاد مفاصل. SiO₂ Nafud: لا يأثر مباشرة على الأنابيب الداخلية. 10-20% = لا تكثّف! بقع CaCO₃ بيضاء = دليل تسرب واضح. مقارنة: خميس = 3 مصادر مُضللة. بريدة = مصدر واحد+أعلى كلس.',
+        shortAnswer: 'على عكس [الفحص البصري بدون Descaler]، يعتمد بروتوكولنا في خدمة [كشف تسربات الحمام] بمدينة [بريدة] على [فحص ضغط+Descaler وقائي+حراري+فحص Seal]. ففي ظل [CaCO₃ 600ppm يسد+يتلف Seal+ΔT إجهاد+لا تكثّف]، تتفاقم ظاهرة [انسداد+تصلّب Seal+إجهاد حراري]. لذا؛ يتدخل فنيونا عبر [ضغط ← Descaler ← حراري ← Seal].',
+        heroSubtitle: 'CaCO₃ 600ppm يسد+يتلف Seal — لا تكثّف = دليل واضح!',
     },
-
     pricing: [
-        { type: 'كشف تسربات حمامات — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'كشف تسربات حمامات — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'فحص ضغط+حراري', unit: 'حمام', minPrice: 120, maxPrice: 260, time: '1-2 ساعة' },
+        { type: 'فحص + Descaler وقائي', unit: 'حمام', minPrice: 180, maxPrice: 380, time: '2-3 ساعات' },
+        { type: 'فحص شامل (كل الحمامات)', unit: 'بيت', minPrice: 300, maxPrice: 620, time: '3-5 ساعات' },
+        { type: 'عقد سنوي (2 فحص+Descaler)', unit: 'سنة', minPrice: 400, maxPrice: 800, time: '2 زيارة' },
     ],
-
     faq: [
-        { question: 'كم تكلفة كشف تسربات حمامات ببريدة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق كشف تسربات حمامات؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على كشف تسربات حمامات؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش تسربات حمام بريدة أكثر؟', answer: 'CaCO₃ 600ppm أعلى بالمملكة. يسد+يُصلّب Seal أسرع 2×. Descaler وقائي.' },
+        { question: 'كيف CaCO₃ يتلف Seal الحمام ببريدة؟', answer: 'كلس يتراكم على O-ring ← يُصلّبها ← تتشقق ← تسرب بطيء. فحص سنوي.' },
+        { question: 'كم تكلفة فحص حمام ببريدة مقارنة بخميس؟', answer: 'أرخص 20% — مصدر واحد (لا تكثّف لا مطر). أبسط تشخيصاً.' },
+        { question: 'هل التكثّف يخلط مع التسرب ببريدة؟', answer: 'لا! 10-20% = لا تكثّف. بقع CaCO₃ بيضاء = دليل تسرب واضح.' },
+        { question: 'كم مرة Descaler وقائي ببريدة؟', answer: 'كل 3 أشهر — 600ppm = أسرع تراكم. الرياض: كل 6 أشهر.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Descaler كل 3 أشهر — 600ppm أعلى.',
+        'فحص Seal سنوي — CaCO₃ يُصلّب.',
+        'بقع بيضاء = دليل — واضح.',
+        'لا تكثّف! — مصدر واحد = أبسط.',
+        'أنابيب خارجية = فحص ΔT.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'CaCO₃ 600ppm × 6 أشهر = Seal تالف ← تسرب بطيء — 3000+ إصلاح.',
+        'انسداد CaCO₃ + ضغط مرتفع = مفصل ينكسر — تسرب مفاجئ YMYL.',
+        'تسرب بطيء + 6 أشهر = عفن تحت البلاط — رغم جفاف السطح.',
     ],
-
     trustAnchors: [
-        { ...GOV.NWC, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.NWC, role: 'تقرير تسرب — تعديل فاتورة' },
+        { ...GOV.BALADI, role: 'ترخيص فنيي السباكة' },
+        { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALJUND.name,
-        title: EXPERTS.ALJUND.title,
-        credential: EXPERTS.ALJUND.credential,
-        profileUrl: EXPERTS.ALJUND.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALJUND,
     expertCitations: [
-        {
-            expert: EXPERTS.ALJUND.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALJUND.title,
-            url: EXPERTS.ALJUND.profileUrl,
-        },
+        { expert: EXPERTS.ALJUND.name, quote: 'حمام بريدة: 600ppm يسد+يُصلّب Seal. Descaler كل 3 أشهر. لا تكثّف.', source: 'موسوعة أخطاء — سباكة القصيم' },
     ],
-
     saudiRegulations: [REGULATIONS.NWC_REPORT],
-
-    verificationBadges: [
-        { badge: '✔️ تقرير معتمد NWC', authority: 'شركة المياه الوطنية', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ كشف تسربات مرخص', authority: 'بلدي + NWC', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'فاحص ضغط', use: 'يكشف تسرب CaCO₃ داخلي' },
+        { name: 'Chemical Descaler', use: 'يُذيب CaCO₃ 600ppm — وقائي' },
+        { name: 'كاميرا حرارية', use: 'يُحدد موقع التسرب' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'بصري يكفي.', solution: '600ppm داخلي = فحص ضغط.' },
+        { fear: 'مثل عنيزة.', solution: 'نفس 600ppm لكن بريدة: فلل أكبر.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'فحص بصري.', truth: 'CaCO₃ داخلي = ضغط+حراري.' },
+        { myth: 'Descaler سنوي.', truth: '600ppm = كل 3 أشهر.' },
     ],
-
     relatedServices: [
-        { slug: 'buraidah-furniture-moving', context: 'نقل عفش ببريدة', priority: 1 },
-        { slug: 'buraidah-furniture-storage', context: 'تخزين عفش ببريدة', priority: 2 },
-        { slug: 'buraidah-dyna', context: 'دينا نقل ببريدة', priority: 3 },
-        { slug: 'buraidah-moving-out', context: 'نقل عفش خروج ببريدة', priority: 4 },
-        { slug: 'buraidah-dabab', context: 'دباب نقل ببريدة', priority: 5 },
-        { slug: 'buraidah-cleaning', context: 'تنظيف منازل ببريدة', priority: 6 },
-        { slug: 'buraidah-tanks-cleaning', context: 'تنظيف خزانات ببريدة', priority: 7 },
-        { slug: 'buraidah-sofa-cleaning', context: 'تنظيف كنب ببريدة', priority: 8 },
-        { slug: 'buraidah-carpet-cleaning', context: 'تنظيف سجاد ببريدة', priority: 9 },
+        { slug: 'water-leak-detection', context: 'تسرب مياه', priority: 1 },
+        { slug: 'tank-leak-detection', context: 'خزان', priority: 2 },
+        { slug: 'sewage-unblocking', context: 'تسليك', priority: 3 },
+        { slug: 'water-insulation', context: 'عزل مائي', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 5 },
+        { slug: 'tanks-cleaning', context: 'خزانات', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 7 },
     ],
 };

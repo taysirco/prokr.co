@@ -6,7 +6,7 @@
 // ══════════════════════════════════════════════════════════════
 
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -52,6 +52,7 @@ export const override: PageOverride = {
             question: 'سجادة المدخل — فعلاً تنفع؟',
             answer: 'نعم — أفضل حماية بأقل تكلفة. سجادة مدخل بنعل مطاطي تلتقط 50-60% من الرمل قبل دخوله البيت. شرطان: 1) كبيرة بما يكفي لخطوتين على الأقل (80×120 سم minimum). 2) تُنظف أسبوعياً (تمتلئ بسرعة في الرياض). خلع الأحذية عند الباب: يمنع 90% من الرمل. السجادة + خلع أحذية = أقوى حماية لأرضيتك.',
         },
+        { question: 'كم تكلفة التنظيف العميق مقارنة بالتنظيف العادي؟', answer: 'التنظيف العميق أغلى 30-50% لكنه يشمل: HEPA + بخار 150°م + تعقيم. التنظيف العادي = مسح سطحي. العميق كل 3-4 أشهر + العادي أسبوعياً = أفضل معادلة تكلفة/نظافة.' },
     ],
 
     expertTips: [
@@ -70,6 +71,7 @@ export const override: PageOverride = {
 
     trustAnchors: [
         { ...GOV.BALADI, role: 'ترخيص شركات تنظيف الأرضيات — ضمان جودة المعدات والمواد' },
+        { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
 
     expertReviewer: {
@@ -84,7 +86,6 @@ export const override: PageOverride = {
             expert: 'أ.د. عبدالله المسند',
             quote: 'رمال الرياض غنية بالكوارتز (SiO₂) — Mohs 7 — أصلب معدن شائع في الطبيعة. يخدش البلاط والسيراميك. الشفط قبل المسح — وليس بعده — هو القاعدة الذهبية',
             source: 'أستاذ جغرافيا المناخ — بيانات جيولوجية',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -111,14 +112,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'riyadh-floor-polishing', context: 'تلميع بعد التنظيف', priority: 1 },
-        { slug: 'riyadh-marble-polishing', context: 'جلي رخام', priority: 2 },
-        { slug: 'riyadh-steam-cleaning', context: 'بخار الأرضيات', priority: 3 },
-        { slug: 'riyadh-cleaning', context: 'تنظيف شامل', priority: 4 },
-        { slug: 'riyadh-carpet-cleaning', context: 'سجاد فوق الأرضيات', priority: 5 },
-        { slug: 'riyadh-sanitization', context: 'تعقيم الأرضيات', priority: 6 },
-        { slug: 'riyadh-villas-cleaning', context: 'أرضيات الفلل', priority: 7 },
-        { slug: 'riyadh-water-insulation', context: 'عزل أرضيات ضد الرطوبة', priority: 8 },
-        { slug: 'riyadh-pest-control', context: 'رش أرضيات', priority: 9 },
+        { slug: 'floor-polishing', context: 'تلميع بعد التنظيف', priority: 1 },
+        { slug: 'marble-polishing', context: 'جلي رخام', priority: 2 },
+        { slug: 'steam-cleaning', context: 'بخار الأرضيات', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف شامل', priority: 4 },
+        { slug: 'carpet-cleaning', context: 'سجاد فوق الأرضيات', priority: 5 },
+        { slug: 'sanitization', context: 'تعقيم الأرضيات', priority: 6 },
+        { slug: 'villas-cleaning', context: 'أرضيات الفلل', priority: 7 },
+        { slug: 'water-insulation', context: 'عزل أرضيات ضد الرطوبة', priority: 8 },
+        { slug: 'pest-control', context: 'رش أرضيات', priority: 9 },
     ],
 };

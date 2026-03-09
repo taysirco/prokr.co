@@ -1,94 +1,74 @@
-// ══════════════════════════════════════════════════════════════
-// عزل خزانات بينبع — Override مخصص (E-E-A-T Grade)
-// صفحة: /yanbu/tank-insulation
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'عزل خزانات بينبع — خدمة احترافية معتمدة (2026)',
-        description: 'عزل خزانات بينبع. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'عزل خزانات بينبع — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['عزل خزانات بينبع', 'عزل خزانات ينبع', 'شركة عزل خزانات بينبع', 'أفضل عزل خزانات بينبع'],
+        title: 'عزل خزانات بينبع — تحلية TDS<150 تآكل+NaCl+70-85% طحالب — Epoxy Marine! (2026)',
+        description: 'عزل خزانات ينبع. تحلية تآكل! NaCl. 70-85% طحالب. Epoxy Marine-Grade+Anti-Algae+Anti-Corrosion.',
+        h1: 'عزل خزانات بينبع — تحلية تآكل+طحالب!',
+        keywords: ['عزل خزانات ينبع', 'عزل خزان بينبع', 'شركة عزل خزانات ينبع'],
     },
-
     content: {
-        introduction: 'عزل خزانات بينبع — خدمة متخصصة تراعي الظروف المناخية والبيئية في ينبع. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'عزل خزانات بينبع: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'عزل خزانات بينبع. خدمة احترافية. ضمان.',
+        introduction: 'خزان ينبع = تحلية تأكل+طحالب تنمو! تحلية TDS<150 تآكل: مياه محلاة "جائعة" تمتص معادن من جدران الخزان ← تآكل 40% أسرع. Epoxy Marine-Grade Food. NaCl 41‰: ملح يدخل الخزان ← يتآكل أنابيب+جسم. Anti-Corrosion خارجي. 70-85% طحالب: رطوبة = طحالب داخل الخزان! Anti-Algae Coating. عكس بريدة (10-20% = لا طحالب). SOx: لا يأثر على الخزان المغلق. مقارنة: بريدة = CaCO₃ 600ppm يتقشّر إسمنتي+لا طحالب. ينبع = تآكل+طحالب+NaCl = أعقد.',
+        shortAnswer: 'على عكس [العزل الإسمنتي]، يعتمد بروتوكولنا في خدمة [عزل الخزانات] بمدينة [ينبع] على [Epoxy Marine+Anti-Algae+Anti-Corrosion]. ففي ظل [تحلية تآكل+NaCl+70-85% طحالب]، تتفاقم ظاهرة [تآكل+طحالب+صدأ]. لذا؛ يتدخل فنيونا عبر [Anti-Corrosion ← Epoxy Marine ← Anti-Algae ← إحكام].',
+        heroSubtitle: 'تحلية تآكل + 70-85% طحالب + NaCl — Epoxy Marine!',
     },
-
     pricing: [
-        { type: 'عزل خزانات — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'عزل خزانات — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'خزان أرضي (10 م³)', unit: 'خزان', minPrice: 600, maxPrice: 1200, time: '1-2 يوم' },
+        { type: 'خزان + Anti-Algae', unit: 'خزان', minPrice: 700, maxPrice: 1400, time: '+ يوم' },
+        { type: 'Anti-Corrosion خارجي', unit: 'خزان', minPrice: 200, maxPrice: 420, time: '+ يوم' },
+        { type: 'فحص سنوي', unit: 'سنة', minPrice: 200, maxPrice: 420, time: '1-2h' },
     ],
-
     faq: [
-        { question: 'كم تكلفة عزل خزانات بينبع؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق عزل خزانات؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على عزل خزانات؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش عزل خزان ينبع يتآكل أسرع؟', answer: 'تحلية TDS<150 "جائعة" تمتص معادن. 40% أسرع. Epoxy Marine.' },
+        { question: 'هل خزان ينبع يُنتج طحالب؟', answer: '70-85% = طحالب! بريدة: لا طحالب. Anti-Algae Coating.' },
+        { question: 'كم تكلفة عزل خزان بينبع مقابل بريدة؟', answer: 'أغلى 25-35% — Anti-Algae+Anti-Corrosion. بريدة: Epoxy فقط.' },
+        { question: 'هل NaCl يأثر على الخزان بينبع؟', answer: 'ملح يصدئ جسم الخزان من خارج. Anti-Corrosion.' },
+        { question: 'كم مرة فحص عزل خزان بينبع؟', answer: 'سنوياً. تحلية+NaCl = أسرع تآكل.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Epoxy Marine-Grade — تحلية.',
+        'Anti-Algae Coating — 70-85%.',
+        'Anti-Corrosion خارجي — NaCl.',
+        'فحص سنوي — تآكل أسرع.',
+        'إحكام غطاء — NaCl يدخل.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'تحلية + عزل عادي = تآكل ← تلوث مياه شرب YMYL.',
+        '70-85% + بدون Anti-Algae = طحالب ← مياه ملوثة.',
+        'NaCl + جسم خزان بدون Anti-Corrosion = صدأ خارجي.',
     ],
-
     trustAnchors: [
-        { ...GOV.SBC, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.SBC, role: 'كود البناء — عزل خزانات' },
+        { ...GOV.NWC, role: 'معايير مياه الشرب' },
+        { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'اشتراطات أمانة ينبع' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALJUND.name,
-        title: EXPERTS.ALJUND.title,
-        credential: EXPERTS.ALJUND.credential,
-        profileUrl: EXPERTS.ALJUND.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
-        {
-            expert: EXPERTS.ALJUND.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALJUND.title,
-            url: EXPERTS.ALJUND.profileUrl,
-        },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'خزان ينبع: تحلية تآكل+طحالب. Epoxy Marine+Anti-Algae.', source: 'نصائح هندسية — خزانات ساحلية' },
     ],
-
-    saudiRegulations: [REGULATIONS.SBC_601],
-
-    verificationBadges: [
-        { badge: '✔️ عزل مطابق لكود SBC', authority: 'كود البناء السعودي', icon: 'shield-check' },
-    ],
-
+    saudiRegulations: [REGULATIONS.SBC_602],
+    verificationBadges: [{ badge: '✔️ عزل خزان مطابق SBC', authority: 'كود البناء + NWC', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Epoxy Marine-Grade', use: 'تحلية — مقاوم تآكل', },
+        { name: 'Anti-Algae Coating', use: '70-85% — يمنع طحالب' },
+        { name: 'Anti-Corrosion', use: 'NaCl — خارجي+أنابيب' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'Epoxy عادي.', solution: 'تحلية = Marine-Grade.' },
+        { fear: 'مثل بريدة.', solution: 'طحالب+تآكل vs CaCO₃.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'فحص 5 سنوات.', truth: 'تحلية+NaCl = سنوي.' },
+        { myth: 'لا طحالب.', truth: '70-85% = طحالب. Anti-Algae.' },
     ],
-
     relatedServices: [
-        { slug: 'yanbu-furniture-moving', context: 'نقل عفش بينبع', priority: 1 },
-        { slug: 'yanbu-furniture-storage', context: 'تخزين عفش بينبع', priority: 2 },
-        { slug: 'yanbu-dyna', context: 'دينا نقل بينبع', priority: 3 },
-        { slug: 'yanbu-moving-out', context: 'نقل عفش خروج بينبع', priority: 4 },
-        { slug: 'yanbu-dabab', context: 'دباب نقل بينبع', priority: 5 },
-        { slug: 'yanbu-cleaning', context: 'تنظيف منازل بينبع', priority: 6 },
-        { slug: 'yanbu-tanks-cleaning', context: 'تنظيف خزانات بينبع', priority: 7 },
-        { slug: 'yanbu-sofa-cleaning', context: 'تنظيف كنب بينبع', priority: 8 },
-        { slug: 'yanbu-carpet-cleaning', context: 'تنظيف سجاد بينبع', priority: 9 },
+        { slug: 'tanks-cleaning', context: 'تنظيف خزان', priority: 1 },
+        { slug: 'tank-leak-detection', context: 'تسرب خزان', priority: 2 },
+        { slug: 'water-insulation', context: 'مائي', priority: 3 },
+        { slug: 'water-leak-detection', context: 'تسرب مياه', priority: 4 },
+        { slug: 'roof-insulation', context: 'أسطح', priority: 5 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 7 },
     ],
 };

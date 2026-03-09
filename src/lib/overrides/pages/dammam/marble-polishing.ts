@@ -1,13 +1,5 @@
-// ══════════════════════════════════════════════════════════════
-// جلي رخام بالدمام — Override مخصص (E-E-A-T Grade)
-// صفحة: /dammam/marble-polishing
-// قطاع YMYL: مالي (رخام 200-500 ريال/م² — حماية استثمار فاخر)
-// خريطة 2.4: المسند (مناخ/تنظيف) → بلدي + SASO
-// NLP: CaCO₃ + HCl = تآكل، كلوريدات خليجية، PM2.5 خدش Mohs 5-7
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -77,21 +69,16 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.BALADI, role: 'ترخيص شركات الجلي — اشتراطات مواد ومعدات معتمدة' },
         { ...GOV.SASO, role: 'مواصفات مواد Crystallizer والتلميع المعتمدة — محاليل فلوروسيليكات' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات أمانة الشرقية' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMISNID.name,
-        title: EXPERTS.ALMISNID.title,
-        credential: EXPERTS.ALMISNID.credential,
-        profileUrl: EXPERTS.ALMISNID.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMISNID,
 
     expertCitations: [
         {
             expert: 'أ.د. عبدالله المسند',
             quote: 'الرخام في المنطقة الشرقية يعيش في بيئة حمضية مستمرة — ماء كلوريدي + رطوبة + غبار صناعي قاسٍ. الـ Crystallizer ليس تلميعاً — بل تعديل كيميائي يُحوّل السطح من CaCO₃ الهش إلى CaF₂ المقاوم',
             source: 'أستاذ جغرافيا المناخ — جامعة القصيم',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -119,14 +106,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'dammam-floor-polishing', context: 'جلي بلاط/سيراميك/جرانيت — نفس التقنية بمواد مختلفة', priority: 1 },
-        { slug: 'dammam-floor-cleaning', context: 'تنظيف عميق قبل الجلي — إزالة الطبقة اللزجة', priority: 2 },
-        { slug: 'dammam-cleaning', context: 'تنظيف شامل بعد الجلي لإزالة غبار الجلي', priority: 3 },
-        { slug: 'dammam-glass-facades-cleaning', context: 'نفس تحديات الملوحة — Citric Acid + DI Water', priority: 4 },
-        { slug: 'dammam-villas-cleaning', context: 'خدمة شاملة تتضمن جلي الرخام', priority: 5 },
-        { slug: 'dammam-water-leak-detection', context: 'تسرب تحت الرخام = رطوبة ترفع البلاط', priority: 6 },
-        { slug: 'dammam-thermal-insulation', context: 'عزل يقلل التكثف = أقل تآكل للرخام', priority: 7 },
-        { slug: 'dammam-steam-cleaning', context: 'بخار لتنظيف فوجات الرخام بعد الجلي', priority: 8 },
-        { slug: 'dammam-palaces-cleaning', context: 'قصور: رخام فاخر يحتاج جلي متخصص', priority: 9 },
+        { slug: 'floor-polishing', context: 'جلي بلاط/سيراميك/جرانيت — نفس التقنية بمواد مختلفة', priority: 1 },
+        { slug: 'floor-cleaning', context: 'تنظيف عميق قبل الجلي — إزالة الطبقة اللزجة', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف شامل بعد الجلي لإزالة غبار الجلي', priority: 3 },
+        { slug: 'glass-facades-cleaning', context: 'نفس تحديات الملوحة — Citric Acid + DI Water', priority: 4 },
+        { slug: 'villas-cleaning', context: 'خدمة شاملة تتضمن جلي الرخام', priority: 5 },
+        { slug: 'water-leak-detection', context: 'تسرب تحت الرخام = رطوبة ترفع البلاط', priority: 6 },
+        { slug: 'thermal-insulation', context: 'عزل يقلل التكثف = أقل تآكل للرخام', priority: 7 },
+        { slug: 'steam-cleaning', context: 'بخار لتنظيف فوجات الرخام بعد الجلي', priority: 8 },
+        { slug: 'palaces-cleaning', context: 'قصور: رخام فاخر يحتاج جلي متخصص', priority: 9 },
     ],
 };

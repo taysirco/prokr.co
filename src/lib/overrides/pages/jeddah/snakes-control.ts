@@ -6,7 +6,7 @@
 // ══════════════════════════════════════════════════════════════
 
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -51,6 +51,7 @@ export const override: PageOverride = {
             question: 'إذا لُدغت — إيش الإسعاف الأولي الصحيح؟',
             answer: 'الصحيح: 1) اتصل 997 أو توجه للطوارئ فوراً. 2) اجلس بهدوء — الحركة تنشر السم أسرع. 3) صوّر الثعبان إن أمكن (يساعد الطبيب في تحديد المصل). الخطأ القاتل: لا تمص السم (أسطورة). لا تربط الطرف بإحكام (يسبب غرغرينا). لا تضع ثلج على اللدغة. كل هذه أساطير خطيرة.',
         },
+        { question: 'هل المبيدات آمنة على الأطفال والحيوانات؟', answer: 'مبيدات مسجلة في نظام غد — SFDA. إخلاء 2-4 ساعات بعد الرش. طيور وأسماك: أبِلغ الشركة مسبقاً لاستخدام مواد أخف. الأسطح آمنة بعد الجفاف (1-2 ساعة).' },
     ],
 
     expertTips: [
@@ -69,6 +70,7 @@ export const override: PageOverride = {
 
     trustAnchors: [
         { ...GOV.BALADI, role: 'ترخيص شركات مكافحة الزواحف — اشتراطات سلامة' },
+        { entity: AMANA.JEDDAH.entity, url: AMANA.JEDDAH.url, role: 'اشتراطات أمانة جدة' },
     ],
 
     expertReviewer: {
@@ -83,7 +85,6 @@ export const override: PageOverride = {
             expert: 'أ.د. عبدالله المسند',
             quote: 'الثعابين كائنات ذوات دم بارد — تنشط عندما تتجاوز الحرارة 25°م. في جدة: 8 أشهر نشاط. الإنارة LED تقلل الحشرات = سحالي أقل = ثعابين أقل',
             source: 'أستاذ جغرافيا المناخ',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -110,14 +111,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'jeddah-rodent-control', context: 'الثعابين تتبع الفئران — بدون فئران لا ثعابين', priority: 1 },
-        { slug: 'jeddah-pest-control', context: 'مكافحة شاملة للحشرات والسحالي — غذاء الثعابين', priority: 2 },
-        { slug: 'jeddah-insects-spraying', context: 'رش حشرات يقلل السحالي ← يقلل الثعابين', priority: 3 },
-        { slug: 'jeddah-bird-control', context: 'أعشاش الحمام تجذب سحالي ← تجذب ثعابين', priority: 4 },
-        { slug: 'jeddah-cleaning', context: 'تنظيف الحديقة يزيل مخابئ الثعابين', priority: 5 },
-        { slug: 'jeddah-sewage-unblocking', context: 'فتحات المجاري المكشوفة = مدخل ثعابين', priority: 6 },
-        { slug: 'jeddah-cockroach-control', context: 'الصراصير تجذب سحالي ← السحالي تجذب ثعابين', priority: 7 },
-        { slug: 'jeddah-sanitization', context: 'تعقيم المنطقة بعد إزالة ثعبان — سلامة', priority: 8 },
-        { slug: 'jeddah-pesticide-spraying', context: 'رش وقائي حول السور يقلل دخول الثعابين', priority: 9 },
+        { slug: 'rodent-control', context: 'الثعابين تتبع الفئران — بدون فئران لا ثعابين', priority: 1 },
+        { slug: 'pest-control', context: 'مكافحة شاملة للحشرات والسحالي — غذاء الثعابين', priority: 2 },
+        { slug: 'insects-spraying', context: 'رش حشرات يقلل السحالي ← يقلل الثعابين', priority: 3 },
+        { slug: 'bird-control', context: 'أعشاش الحمام تجذب سحالي ← تجذب ثعابين', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف الحديقة يزيل مخابئ الثعابين', priority: 5 },
+        { slug: 'sewage-unblocking', context: 'فتحات المجاري المكشوفة = مدخل ثعابين', priority: 6 },
+        { slug: 'cockroach-control', context: 'الصراصير تجذب سحالي ← السحالي تجذب ثعابين', priority: 7 },
+        { slug: 'sanitization', context: 'تعقيم المنطقة بعد إزالة ثعبان — سلامة', priority: 8 },
+        { slug: 'pesticide-spraying', context: 'رش وقائي حول السور يقلل دخول الثعابين', priority: 9 },
     ],
 };

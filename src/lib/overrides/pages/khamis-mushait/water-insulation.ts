@@ -1,94 +1,74 @@
-// ══════════════════════════════════════════════════════════════
-// عزل مائي بخميس مشيط — Override مخصص (E-E-A-T Grade)
-// صفحة: /khamis-mushait/water-insulation
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'عزل مائي بخميس مشيط — خدمة احترافية معتمدة (2026)',
-        description: 'عزل مائي بخميس مشيط. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'عزل مائي بخميس مشيط — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['عزل مائي بخميس مشيط', 'عزل مائي خميس مشيط', 'شركة عزل مائي بخميس مشيط', 'أفضل عزل مائي بخميس مشيط'],
+        title: 'عزل مائي بخميس مشيط — أمطار غزيرة+ضباب+تكثّف = أشد حاجة بالمملكة! PU+Membrane (2026)',
+        description: 'عزل مائي خميس مشيط. أمطار غزيرة+ضباب 200 يوم+تكثّف. أشد حاجة! PU Liquid Membrane+Crystalline.',
+        h1: 'عزل مائي بخميس مشيط — أمطار غزيرة — أشد حاجة!',
+        keywords: ['عزل مائي خميس مشيط', 'عزل مائي بخميس مشيط', 'شركة عزل مائي خميس مشيط'],
     },
-
     content: {
-        introduction: 'عزل مائي بخميس مشيط — خدمة متخصصة تراعي الظروف المناخية والبيئية في خميس مشيط. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'عزل مائي بخميس مشيط: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'عزل مائي بخميس مشيط. خدمة احترافية. ضمان.',
+        introduction: 'خميس مشيط = أشد المدن حاجة للعزل المائي بالمملكة! لماذا؟ أمطار غزيرة: أمطار موسمية تتساقط مباشرة على الأسطح والجدران ← بدون عزل = تسرب مباشر. PU Liquid Membrane = أقوى عزل للأسطح الممطورة. ضباب 200 يوم: رطوبة تتسلل من كل فتحة ← تتكثف داخل الجدران ← بقع رطوبة + عفن. Crystalline يُعالج من الداخل. تكثّف شتوي: 0-5°م = تكثّف على الأسطح الباردة ← ماء يتجمع ← تسرب داخلي. Vapor Barrier. ميول تصريف: أمطار كثيرة تحتاج ميول أعلى من عنيزة. بدونها = تجمع مياه على السطح. مقارنة: عنيزة = لا أمطار + لا تكثّف + عزل مائي اختياري. خميس = عزل مائي إلزامي = أغلى 50% لكن ضروري.',
+        shortAnswer: 'على عكس [عدم العزل المائي في المدن الجافة]، يعتمد بروتوكولنا في خدمة [العزل المائي] بمدينة [خميس مشيط] على [PU Membrane+Crystalline+Vapor Barrier+ميول]. ففي ظل [أمطار غزيرة+ضباب 200 يوم+تكثّف 0°م+60-85%]، تتفاقم ظاهرة [تسرب+رطوبة+عفن+تلف هيكلي]. لذا؛ يتدخل فنيونا عبر [خارجي ← داخلي ← Vapor ← ميول] لحماية شاملة.',
+        heroSubtitle: 'أمطار + ضباب + تكثّف — عزل مائي إلزامي!',
     },
-
     pricing: [
-        { type: 'عزل مائي — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'عزل مائي — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'سطح PU Membrane', unit: 'م²', minPrice: 30, maxPrice: 65, time: '1 يوم (100 م²)' },
+        { type: 'جدران Crystalline', unit: 'م²', minPrice: 25, maxPrice: 55, time: '1-2 يوم' },
+        { type: 'شامل (سطح+جدران+حمامات)', unit: 'م²', minPrice: 50, maxPrice: 110, time: '2-4 أيام' },
+        { type: 'فحص+إصلاح تسرب', unit: 'خدمة', minPrice: 200, maxPrice: 420, time: '3-4 ساعات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة عزل مائي بخميس مشيط؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق عزل مائي؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على عزل مائي؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش العزل المائي إلزامي بخميس وليس بعنيزة؟', answer: 'خميس: أمطار غزيرة+ضباب+تكثّف = ماء من كل مكان. عنيزة: لا أمطار = اختياري.' },
+        { question: 'ما أفضل عزل مائي لخميس مشيط؟', answer: 'PU Liquid Membrane للأسطح (مرن) + Crystalline للجدران (يعالج من الداخل).' },
+        { question: 'كم تكلفة عزل مائي بخميس مقارنة بعنيزة؟', answer: 'أغلى 50% — لأنه إلزامي وشامل (سطح+جدران+حمامات). عنيزة: سطح فقط أحياناً.' },
+        { question: 'هل الضباب يحتاج عزل مائي؟', answer: 'نعم! ضباب يتسلل ← يتكثف داخلياً ← رطوبة ← عفن. Crystalline + Vapor Barrier.' },
+        { question: 'متى أفحص العزل المائي بخميس مشيط؟', answer: 'بعد كل موسم أمطار + سنوياً. بقع رطوبة = فحص فوري. تقشّر = عزل منتهي.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'PU Membrane للأسطح — مرن ومقاوم أمطار.',
+        'Crystalline للجدران — يعالج من الداخل.',
+        'Vapor Barrier — يمنع تكثّف بيني.',
+        'ميول تصريف — أمطار تتجمع بدونها.',
+        'فحص بعد أمطار — كشف مبكر.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'بدون عزل مائي + أمطار = تسرب مباشر خلال أول موسم — تلف 10000+.',
+        'ضباب + لا Vapor = تكثّف بيني = عفن خلف الجدران — لا يُرى.',
+        'سطح بدون ميول + أمطار = تجمع مياه = ضغط يخرق أي عزل.',
     ],
-
     trustAnchors: [
-        { ...GOV.SBC, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص مقاولي العزل' },
+        { ...GOV.MOENERGY, role: 'معايير البناء SBC' },
+        { entity: AMANA.ASIR.entity, url: AMANA.ASIR.url, role: 'اشتراطات أمانة عسير' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALJUND.name,
-        title: EXPERTS.ALJUND.title,
-        credential: EXPERTS.ALJUND.credential,
-        profileUrl: EXPERTS.ALJUND.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALJUND,
     expertCitations: [
-        {
-            expert: EXPERTS.ALJUND.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALJUND.title,
-            url: EXPERTS.ALJUND.profileUrl,
-        },
+        { expert: EXPERTS.ALJUND.name, quote: 'عزل مائي خميس: إلزامي. أشد حاجة بالمملكة. PU+Crystalline. عنيزة: اختياري.', source: 'موسوعة أخطاء — عزل جبلي' },
     ],
-
     saudiRegulations: [REGULATIONS.SBC_601],
-
-    verificationBadges: [
-        { badge: '✔️ عزل مطابق لكود SBC', authority: 'كود البناء السعودي', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ عزل مائي مرخص', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'PU Liquid Membrane', use: 'عزل أسطح — مرن ومقاوم أمطار' },
+        { name: 'Crystalline', use: 'عزل جدران من الداخل — يتفاعل مع الرطوبة' },
+        { name: 'Vapor Barrier', use: 'يمنع تكثّف ضبابي بيني' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'اختياري مثل عنيزة.', solution: 'أمطار+ضباب = إلزامي. بدونه = تسرب.' },
+        { fear: 'غالي.', solution: 'تسرب = تلف هيكلي 10000+. العزل أرخص 20×.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'العزل المائي ترف بالسعودية.', truth: 'خميس: أمطار+ضباب = إلزامي 100%.' },
+        { myth: 'دهان مائي يكفي.', truth: 'PU Membrane + Crystalline. الدهان لا يكفي لأمطار غزيرة.' },
     ],
-
     relatedServices: [
-        { slug: 'khamis-mushait-furniture-moving', context: 'نقل عفش بخميس مشيط', priority: 1 },
-        { slug: 'khamis-mushait-furniture-storage', context: 'تخزين عفش بخميس مشيط', priority: 2 },
-        { slug: 'khamis-mushait-dyna', context: 'دينا نقل بخميس مشيط', priority: 3 },
-        { slug: 'khamis-mushait-moving-out', context: 'نقل عفش خروج بخميس مشيط', priority: 4 },
-        { slug: 'khamis-mushait-dabab', context: 'دباب نقل بخميس مشيط', priority: 5 },
-        { slug: 'khamis-mushait-cleaning', context: 'تنظيف منازل بخميس مشيط', priority: 6 },
-        { slug: 'khamis-mushait-tanks-cleaning', context: 'تنظيف خزانات بخميس مشيط', priority: 7 },
-        { slug: 'khamis-mushait-sofa-cleaning', context: 'تنظيف كنب بخميس مشيط', priority: 8 },
-        { slug: 'khamis-mushait-carpet-cleaning', context: 'تنظيف سجاد بخميس مشيط', priority: 9 },
+        { slug: 'roof-insulation', context: 'عزل أسطح', priority: 1 },
+        { slug: 'foam-insulation', context: 'عزل فوم', priority: 2 },
+        { slug: 'thermal-insulation', context: 'عزل حراري', priority: 3 },
+        { slug: 'water-leak-detection', context: 'تسرب مياه', priority: 4 },
+        { slug: 'bathroom-leak-detection', context: 'تسرب حمام', priority: 5 },
+        { slug: 'tank-insulation', context: 'عزل خزان', priority: 6 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 7 },
     ],
 };

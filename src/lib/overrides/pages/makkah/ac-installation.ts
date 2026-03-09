@@ -91,7 +91,6 @@ export const override: PageOverride = {
             expert: 'م. ماجد المحيميد',
             quote: 'عدم إجراء الفاكيوم للنحاس قبل التشغيل الأول خيانة أمانة مهنية — يقصّر عمر الكمبريسور لثلثه من يومه الأول بسبب أكسدة زيوت التبريد الداخلية',
             source: 'خبير جودة البناء والتشطيبات',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
 
@@ -122,12 +121,12 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'makkah-ac-maintenance', context: 'بعد التركيب: صيانة كل 6 أشهر تُطيل عمر الكمبريسور', priority: 1 },
-        { slug: 'makkah-air-conditioner-cleaning', context: 'غسيل المكيف بعد النقل والتركيب — ضروري لأفضل أداء', priority: 2 },
-        { slug: 'makkah-furniture-moving', context: 'نقل مكيفات + أثاث في يوم واحد — باقة انتقال شاملة', priority: 3 },
-        { slug: 'makkah-roof-insulation', context: 'عزل السطح يُقلل حمل المكيف 60-70% ← عمر أطول', priority: 4 },
-        { slug: 'makkah-thermal-insulation', context: 'عزل حراري شامل = المكيف يعمل نصف الوقت', priority: 5 },
-        { slug: 'makkah-cleaning', context: 'تنظيف البيت الجديد + تركيب مكيفات = جاهز للسكن', priority: 6 },
-        { slug: 'makkah-foam-insulation', context: 'فوم السطح يقطع 85% حرارة ← تبريد أسرع + فاتورة أقل', priority: 7 },
+        { slug: 'ac-maintenance', context: 'بعد التركيب: صيانة كل 6 أشهر تُطيل عمر الكمبريسور', priority: 1 },
+        { slug: 'air-conditioner-cleaning', context: 'غسيل المكيف بعد النقل والتركيب — ضروري لأفضل أداء', priority: 2 },
+        { slug: 'furniture-moving', context: 'نقل مكيفات + أثاث في يوم واحد — باقة انتقال شاملة', priority: 3 },
+        { slug: 'roof-insulation', context: 'عزل السطح يُقلل حمل المكيف 60-70% ← عمر أطول', priority: 4 },
+        { slug: 'thermal-insulation', context: 'عزل حراري شامل = المكيف يعمل نصف الوقت', priority: 5 },
+        { slug: 'cleaning', context: 'تنظيف البيت الجديد + تركيب مكيفات = جاهز للسكن', priority: 6 },
+        { slug: 'foam-insulation', context: 'فوم السطح يقطع 85% حرارة ← تبريد أسرع + فاتورة أقل', priority: 7 },
     ],
 };

@@ -1,94 +1,74 @@
-// ══════════════════════════════════════════════════════════════
-// دينا نقل بالظهران — Override مخصص (E-E-A-T Grade)
-// صفحة: /dhahran/dyna
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'دينا نقل بالظهران — خدمة احترافية معتمدة (2026)',
-        description: 'دينا نقل بالظهران. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'دينا نقل بالظهران — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['دينا نقل بالظهران', 'دينا نقل الظهران', 'شركة دينا نقل بالظهران', 'أفضل دينا نقل بالظهران'],
+        title: 'دينا نقل بالظهران — NaCl+SiO₂ حمولات ثقيلة + 75-85% تكثّف + أرامكو تصاريح (2026)',
+        description: 'دينا نقل الظهران. NaCl+SiO₂ على حمولات ثقيلة مكشوفة. 75-85% تكثّف معدات. أرامكو تصاريح SAPMT. Tarpaulin + VCI + Ratchet + Transit Bolts.',
+        h1: 'دينا نقل بالظهران — حمولات ثقيلة مزدوجة: ملح+رمل+رطوبة',
+        keywords: ['دينا نقل بالظهران', 'دينا نقل الظهران', 'شركة دينا نقل بالظهران'],
     },
-
     content: {
-        introduction: 'دينا نقل بالظهران — خدمة متخصصة تراعي الظروف المناخية والبيئية في الظهران. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'دينا نقل بالظهران: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'دينا نقل بالظهران. خدمة احترافية. ضمان.',
+        introduction: 'الدينا في الظهران = نقل ثقيل في بيئة مزدوجة. السبب الأول — NaCl+SiO₂ على حمولة ثقيلة: معدات صناعية + مواد بناء + قطع أرامكو ← مكشوفة ← NaCl يتآكل + SiO₂ يخدش = تلف مُركّب. Tarpaulin + VCI. السبب الثاني — 75-85% تكثّف: معدات باردة تخرج لـ 45°م + 75-85% = تكثّف ← Short Circuit. VCI + Silica. السبب الثالث — أرامكو تصاريح: مواقع أرامكو = SAPMT + سلامة + فحص. نقل مُنظّم. السبب الرابع — طرق صناعية: الظهران ↔ الجبيل الصناعية / أبقيق = طرق ملحية+رملية. Tarpaulin إلزامي.',
+        shortAnswer: 'على عكس [دينا مكشوفة] التي تُعرّض الحمولة لأوساخ مزدوجة، يعتمد بروتوكولنا في خدمة [الدينا] بمدينة [الظهران] على [Tarpaulin + VCI + تصاريح + Ratchet]. ففي ظل [NaCl+SiO₂ + 75-85% + أرامكو]، تتفاقم ظاهرة [تآكل+خدش + تكثّف + تنظيم]. لذا؛ يتدخل خبراؤنا عبر [دينا مزدوجة مُجهّزة].',
+        heroSubtitle: 'NaCl+SiO₂ مزدوج + 75-85% تكثّف + أرامكو SAPMT',
     },
-
     pricing: [
-        { type: 'دينا نقل — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'دينا نقل — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'دينا داخل الظهران', unit: 'رحلة', minPrice: 130, maxPrice: 310, time: '1-2 ساعة' },
+        { type: 'الظهران ↔ الدمام/الخبر', unit: 'رحلة', minPrice: 190, maxPrice: 420, time: '1-2 ساعة' },
+        { type: 'نقل صناعي (مواقع أرامكو)', unit: 'رحلة', minPrice: 270, maxPrice: 650, time: '2-4 ساعات' },
+        { type: 'نقل مُنظّم + تصاريح', unit: 'رحلة', minPrice: 370, maxPrice: 850, time: '2-6 ساعات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة دينا نقل بالظهران؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق دينا نقل؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على دينا نقل؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'NaCl+SiO₂ — على حديد بناء؟', answer: 'SiO₂ يخدش Coating ← NaCl يتآكل المكشوف. حديد تسليح = صدأ قبل البناء. Tarpaulin = 20-50 ريال vs آلاف.' },
+        { question: 'VCI — للمعدات الصناعية؟', answer: 'Volatile Corrosion Inhibitor = بخاري يحمي بدون تلامس. مثالي لمعدات أرامكو الحساسة.' },
+        { question: 'تصاريح SAPMT — متى؟', answer: 'مواقع أرامكو + المناطق الصناعية المُقيّدة. نُجهّز كل التصاريح مُسبقاً.' },
+        { question: 'Transit Bolts — مطلوبة؟', answer: 'معدات بأجزاء متحركة + طرق صناعية = اهتزاز. Transit Bolts = تثبيت.' },
+        { question: 'الظهران ↔ الجبيل الصناعية؟', answer: '90 كم ← ساعة. طريق ساحلي+صناعي = NaCl+SiO₂ مُكثّف. Tarpaulin + VCI إلزامي.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Tarpaulin مُحكم — NaCl+SiO₂ في دقائق.',
+        'VCI للمعدات الصناعية — يحمي بدون تلامس.',
+        'Transit Bolts — أجزاء متحركة + طرق = تلف.',
+        'تصاريح مُسبقة — بدون تأخير.',
+        'Ratchet — لا حبال. ثابت.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'معدات أرامكو مكشوفة + NaCl+SiO₂ = تآكل+خدش = خسائر 10,000-100,000 ريال.',
+        'حديد بناء + مزدوج = صدأ+خدش خلال ساعات.',
+        'تكثّف + معدات إلكترونية = Short Circuit = تلف فوري.',
     ],
-
     trustAnchors: [
-        { ...GOV.TGA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.TGA, role: 'ترخيص النقل الثقيل' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات النقل بالشرقية' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALZUWAYED.name,
-        title: EXPERTS.ALZUWAYED.title,
-        credential: EXPERTS.ALZUWAYED.credential,
-        profileUrl: EXPERTS.ALZUWAYED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALSHABNAN,
     expertCitations: [
-        {
-            expert: EXPERTS.ALZUWAYED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALZUWAYED.title,
-            url: EXPERTS.ALZUWAYED.profileUrl,
-        },
+        { expert: EXPERTS.ALZUWAYED.name, quote: 'دينا الظهران = مزدوجة+صناعية: NaCl+SiO₂ + أرامكو. Tarpaulin + VCI + تصاريح + Ratchet = بروتوكول.', source: 'هيئة النقل — النقل الثقيل المزدوج' },
     ],
-
     saudiRegulations: [REGULATIONS.TGA_LICENSE],
-
-    verificationBadges: [
-        { badge: '✔️ شركة نقل مرخصة من هيئة النقل TGA', authority: 'الهيئة العامة للنقل', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ نقل ثقيل مرخص', authority: 'هيئة النقل', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Tarpaulin', use: 'يحمي من NaCl+SiO₂' },
+        { name: 'VCI', use: 'حماية بخارية للمعدات' },
+        { name: 'Ratchet + Transit Bolts', use: 'ربط + تثبيت' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'أي دينا.', solution: 'بدون Tarpaulin+VCI = مزدوج يصل. 50-200 ريال = يحمي آلاف.' },
+        { fear: 'قصيرة.', solution: 'NaCl+SiO₂ في دقائق. قصيرة ≠ آمنة.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'مثل الرياض.', truth: 'NaCl+SiO₂+رطوبة = 3 تهديدات. الرياض = SiO₂ فقط.' },
+        { myth: 'غطاء صعب.', truth: 'Tarpaulin 5 دقائق. 20-50 ريال. يحمي آلاف.' },
+        { myth: 'الدينا ما تتأثر.', truth: 'الحمولة تتأثر. الخسارة = الحمولة.' },
     ],
-
     relatedServices: [
-        { slug: 'dhahran-furniture-moving', context: 'نقل عفش بالظهران', priority: 1 },
-        { slug: 'dhahran-furniture-storage', context: 'تخزين عفش بالظهران', priority: 2 },
-        { slug: 'dhahran-moving-out', context: 'نقل عفش خروج بالظهران', priority: 3 },
-        { slug: 'dhahran-dabab', context: 'دباب نقل بالظهران', priority: 4 },
-        { slug: 'dhahran-cleaning', context: 'تنظيف منازل بالظهران', priority: 5 },
-        { slug: 'dhahran-tanks-cleaning', context: 'تنظيف خزانات بالظهران', priority: 6 },
-        { slug: 'dhahran-sofa-cleaning', context: 'تنظيف كنب بالظهران', priority: 7 },
-        { slug: 'dhahran-carpet-cleaning', context: 'تنظيف سجاد بالظهران', priority: 8 },
-        { slug: 'dhahran-steam-cleaning', context: 'تنظيف بالبخار بالظهران', priority: 9 },
+        { slug: 'dabab', context: 'دباب — أخف', priority: 1 },
+        { slug: 'furniture-moving', context: 'نقل عفش', priority: 2 },
+        { slug: 'furniture-storage', context: 'تخزين', priority: 3 },
+        { slug: 'auto-cleaning', context: 'غسيل', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 5 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 6 },
+        { slug: 'pest-control', context: 'حشرات', priority: 7 },
     ],
 };

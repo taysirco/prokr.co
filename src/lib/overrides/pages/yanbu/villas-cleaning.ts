@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف فلل بينبع — Override مخصص (E-E-A-T Grade)
-// صفحة: /yanbu/villas-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف فلل بينبع — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف فلل بينبع. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف فلل بينبع — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف فلل بينبع', 'تنظيف فلل ينبع', 'شركة تنظيف فلل بينبع', 'أفضل تنظيف فلل بينبع'],
+        title: 'تنظيف فلل بينبع — NaCl صدأ+SOx حمض+70-85% عفن حديقة+بعوض — Zone-Based ساحلي! (2026)',
+        description: 'تنظيف فلل ينبع. NaCl صدأ واجهة! SOx حمض. 70-85% عفن+بعوض حديقة. Zone-Based ساحلي.',
+        h1: 'تنظيف فلل بينبع — صدأ+حمض+عفن+بعوض!',
+        keywords: ['تنظيف فلل ينبع', 'تنظيف فيلا بينبع', 'شركة تنظيف فلل ينبع'],
     },
-
     content: {
-        introduction: 'تنظيف فلل بينبع — خدمة متخصصة تراعي الظروف المناخية والبيئية في ينبع. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف فلل بينبع: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف فلل بينبع. خدمة احترافية. ضمان.',
+        introduction: 'فيلا ينبع = 4 مناطق مختلفة! Zone-Based ساحلي: واجهة (NaCl صدأ + Anti-Rust) + حديقة (عفن+بعوض BTI) + خارجي (Biofilm ملحي+SiO₂) + داخل (Anti-Fungal+RO+HEPA AC+Dehumidifier). NaCl صدأ واجهة: ملح يأكل حديد الواجهة ← Pitting 48h. Anti-Rust كل 6 أشهر. SOx حمض: H₂SO₄ على الواجهات والأسطح. Chemical Wash. 70-85% عفن حديقة: رطوبة = عفن أسود حول المسبح وفي أحواض الزرع. بعوض BTI: ركود مياه الحديقة = بعوض. BTI (Bacillus thuringiensis). Biofilm: طبقة بيولوجية ملحية على الأسطح الخارجية. مقارنة: بريدة = 4 محاور (كلس+Nafud+نخيل+ΔT) بدون عفن+بعوض = أرخص 30-40%. ينبع = Zone-Based+عفن+بعوض = أعقد.',
+        shortAnswer: 'على عكس [التنظيف العادي المُوحّد]، يعتمد بروتوكولنا في خدمة [تنظيف الفلل] بمدينة [ينبع] على [Zone-Based ساحلي: واجهة+حديقة+خارجي+داخلي]. ففي ظل [NaCl صدأ+SOx حمض+70-85% عفن+بعوض+Biofilm]، تتفاقم ظاهرة [صدأ+حمض+عفن+بعوض]. لذا؛ يتدخل فريقنا عبر [Anti-Rust ← BTI ← Anti-Fungal ← RO ← HEPA AC].',
+        heroSubtitle: 'Zone-Based ساحلي — صدأ+حمض+عفن+بعوض — 4 مناطق!',
     },
-
     pricing: [
-        { type: 'تنظيف فلل — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف فلل — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'فيلا Zone-Based', unit: 'فيلا', minPrice: 550, maxPrice: 1100, time: '6-8h' },
+        { type: '+ Anti-Rust واجهة', unit: 'إضافي', minPrice: 150, maxPrice: 300, time: '+ 2h' },
+        { type: '+ BTI حديقة', unit: 'إضافي', minPrice: 100, maxPrice: 200, time: '+ 1h' },
+        { type: 'أسبوعي (4/شهر)', unit: 'شهر', minPrice: 800, maxPrice: 1600, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف فلل بينبع؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف فلل؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف فلل؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ما Zone-Based ساحلي؟', answer: '4 مناطق: واجهة (صدأ) + حديقة (عفن+بعوض) + خارجي (Biofilm) + داخل (عفن+SOx).' },
+        { question: 'ليش واجهة الفيلا تصدأ بينبع؟', answer: 'NaCl Pitting 48h. حديد واجهة = صدأ. Anti-Rust كل 6 أشهر.' },
+        { question: 'ليش بعوض في حديقة فيلا ينبع؟', answer: '70-85% + ركود مياه. BTI بيولوجي آمن يقتل يرقات.' },
+        { question: 'كم تكلفة فيلا بينبع مقابل بريدة؟', answer: 'أغلى 30-40% — Zone-Based+عفن+بعوض. بريدة: لا عفن+لا بعوض.' },
+        { question: 'هل Biofilm خطير بينبع؟', answer: 'طبقة بيولوجية ملحية زلقة. خطر انزلاق. Chemical Wash.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Zone-Based — 4 مناطق مختلفة.',
+        'Anti-Rust واجهة — NaCl Pitting.',
+        'BTI حديقة — بعوض بيولوجي.',
+        'Anti-Fungal داخل — 70-85%.',
+        'HEPA AC — SOx YASREF.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'NaCl × واجهة × سنة = صدأ هيكلي — Anti-Rust إلزامي YMYL.',
+        '70-85% + حديقة = بعوض ← أمراض YMYL.',
+        'Biofilm + أرضيات خارجية = انزلاق — Chemical Wash.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
+        { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'اشتراطات أمانة ينبع' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMISNID.name, quote: 'فيلا ينبع: Zone-Based ساحلي. صدأ+عفن+بعوض. 4 مناطق.', source: 'جغرافيا المناخ — فلل ساحلية' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف فلل مرخص', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Anti-Rust Coating', use: 'NaCl — واجهة' },
+        { name: 'BTI Granules', use: 'بعوض — حديقة بيولوجي' },
+        { name: 'Anti-Fungal+Dehumidifier', use: '70-85% — داخل' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'تنظيف مُوحّد.', solution: '4 مناطق مختلفة. Zone-Based.' },
+        { fear: 'مثل بريدة.', solution: 'صدأ+بعوض+عفن = مختلف.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'تنظيف شامل.', truth: 'Zone-Based = 4 مناطق.' },
+        { myth: 'شهري.', truth: 'NaCl+SOx يومي = أسبوعي.' },
     ],
-
     relatedServices: [
-        { slug: 'yanbu-furniture-moving', context: 'نقل عفش بينبع', priority: 1 },
-        { slug: 'yanbu-furniture-storage', context: 'تخزين عفش بينبع', priority: 2 },
-        { slug: 'yanbu-dyna', context: 'دينا نقل بينبع', priority: 3 },
-        { slug: 'yanbu-moving-out', context: 'نقل عفش خروج بينبع', priority: 4 },
-        { slug: 'yanbu-dabab', context: 'دباب نقل بينبع', priority: 5 },
-        { slug: 'yanbu-cleaning', context: 'تنظيف منازل بينبع', priority: 6 },
-        { slug: 'yanbu-tanks-cleaning', context: 'تنظيف خزانات بينبع', priority: 7 },
-        { slug: 'yanbu-sofa-cleaning', context: 'تنظيف كنب بينبع', priority: 8 },
-        { slug: 'yanbu-carpet-cleaning', context: 'تنظيف سجاد بينبع', priority: 9 },
+        { slug: 'apartments-cleaning', context: 'شقق', priority: 1 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 2 },
+        { slug: 'swimming-pool-cleaning', context: 'مسابح', priority: 3 },
+        { slug: 'pest-control', context: 'حشرات', priority: 4 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 5 },
+        { slug: 'carpet-cleaning', context: 'سجاد', priority: 6 },
+        { slug: 'marble-polishing', context: 'رخام', priority: 7 },
     ],
 };

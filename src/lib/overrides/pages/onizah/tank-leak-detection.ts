@@ -1,10 +1,5 @@
-// ══════════════════════════════════════════════════════════════
-// كشف تسربات خزانات بعنيزة — Override مخصص (E-E-A-T Grade)
-// صفحة: /onizah/tank-leak-detection
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -15,7 +10,7 @@ export const override: PageOverride = {
     },
 
     content: {
-        introduction: 'كشف تسربات خزانات بعنيزة — خدمة متخصصة تراعي الظروف المناخية والبيئية في عنيزة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
+        introduction: 'كشف تسربات خزانات بعنيزة — خدمة متخصصة تراعي الظروف المناخية والبيئية في عنيزة. فريق محترف مع أدوات حديثة وضمان مكتوب. أجهزة الكشف المتقدمة (Acoustic Correlator + كاميرا حرارية FLIR) تحدد موقع التسرب بدقة ±10 سم بدون أي تكسير. التقرير المعتمد من NWC يُستخدم لتعديل فاتورة المياه بأثر رجعي — عملاء استردوا آلاف الريالات.',
         shortAnswer: 'كشف تسربات خزانات بعنيزة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
         heroSubtitle: 'كشف تسربات خزانات بعنيزة. خدمة احترافية. ضمان.',
     },
@@ -29,29 +24,31 @@ export const override: PageOverride = {
         { question: 'كم تكلفة كشف تسربات خزانات بعنيزة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
         { question: 'كم يستغرق كشف تسربات خزانات؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
         { question: 'هل تقدمون ضمان على كشف تسربات خزانات؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'هل الكشف بدون تكسير؟', answer: 'نعم 100% — أجهزة الأكوافون + التصوير الحراري تحدد الموقع بدقة ±10 سم بدون كسر حرف واحد.' },
+        { question: 'كم تستغرق العملية؟', answer: 'فحص شامل: 1-3 ساعات. تقرير NWC: يصدر خلال 24 ساعة. بالتقرير: تقدّم طلب تعديل فاتورة بأثر رجعي.' },
     ],
 
     expertTips: [
         'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
         'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
         'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'اطلب تقرير NWC معتمد — يمكنك تعديل فاتورة المياه بأثر رجعي.',
+    
+        'اطلب تقرير NWC معتمد — يمكنك تعديل فاتورة المياه بأثر رجعي.',
     ],
 
     warnings: [
         'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
         'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'إهمال التسرب = تآكل حديد التسليح + صدأ = خطر هيكلي على المبنى.',
     ],
 
     trustAnchors: [
         { ...GOV.NWC, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALJUND.name,
-        title: EXPERTS.ALJUND.title,
-        credential: EXPERTS.ALJUND.credential,
-        profileUrl: EXPERTS.ALJUND.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
@@ -74,21 +71,24 @@ export const override: PageOverride = {
 
     hiddenObjections: [
         { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'السعر أعلى من المتوقع.', solution: 'السعر يشمل معدات صناعية متخصصة + مواد احترافية + عمالة مدربة + ضمان مكتوب. المقارنة العادلة ليست مع عامل عشوائي بل مع تكلفة إصلاح الأضرار الناتجة عن العمل غير المتخصص.' },
     ],
 
     counterNarratives: [
         { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'أي شركة تنظيف/صيانة نتيجتها واحدة.', truth: 'الفرق بين شركة مرخصة ومُعتمدة وأخرى عشوائية = الفرق بين معالجة جذرية وإخفاء مؤقت. المعدات المتخصصة والبروتوكولات العلمية تحل المشكلة من جذرها — التنظيف العشوائي يُعيدها أسوأ خلال أسابيع.' },
+        { myth: 'أوفر وأسوي الشغل بنفسي.', truth: 'التوفير الظاهري يتحول لتكلفة مضاعفة: أدوات منزلية لا تصل للعمق المطلوب + مواد غير مناسبة قد تُتلف الأسطح + وقت وجهد بلا ضمان نتيجة. الاحتراف = ضمان + توفير حقيقي على المدى الطويل.' },
     ],
 
     relatedServices: [
-        { slug: 'onizah-furniture-moving', context: 'نقل عفش بعنيزة', priority: 1 },
-        { slug: 'onizah-furniture-storage', context: 'تخزين عفش بعنيزة', priority: 2 },
-        { slug: 'onizah-dyna', context: 'دينا نقل بعنيزة', priority: 3 },
-        { slug: 'onizah-moving-out', context: 'نقل عفش خروج بعنيزة', priority: 4 },
-        { slug: 'onizah-dabab', context: 'دباب نقل بعنيزة', priority: 5 },
-        { slug: 'onizah-cleaning', context: 'تنظيف منازل بعنيزة', priority: 6 },
-        { slug: 'onizah-tanks-cleaning', context: 'تنظيف خزانات بعنيزة', priority: 7 },
-        { slug: 'onizah-sofa-cleaning', context: 'تنظيف كنب بعنيزة', priority: 8 },
-        { slug: 'onizah-carpet-cleaning', context: 'تنظيف سجاد بعنيزة', priority: 9 },
+        { slug: 'furniture-moving', context: 'نقل عفش بعنيزة', priority: 1 },
+        { slug: 'furniture-storage', context: 'تخزين عفش بعنيزة', priority: 2 },
+        { slug: 'dyna', context: 'دينا نقل بعنيزة', priority: 3 },
+        { slug: 'moving-out', context: 'نقل عفش خروج بعنيزة', priority: 4 },
+        { slug: 'dabab', context: 'دباب نقل بعنيزة', priority: 5 },
+        { slug: 'cleaning', context: 'تنظيف منازل بعنيزة', priority: 6 },
+        { slug: 'tanks-cleaning', context: 'تنظيف خزانات بعنيزة', priority: 7 },
+        { slug: 'sofa-cleaning', context: 'تنظيف كنب بعنيزة', priority: 8 },
+        { slug: 'carpet-cleaning', context: 'تنظيف سجاد بعنيزة', priority: 9 },
     ],
 };

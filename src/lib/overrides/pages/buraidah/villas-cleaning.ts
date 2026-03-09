@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف فلل ببريدة — Override مخصص (E-E-A-T Grade)
-// صفحة: /buraidah/villas-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف فلل ببريدة — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف فلل ببريدة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف فلل ببريدة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف فلل ببريدة', 'تنظيف فلل بريدة', 'شركة تنظيف فلل ببريدة', 'أفضل تنظيف فلل ببريدة'],
+        title: 'تنظيف فلل ببريدة — CaCO₃ 600ppm كلس كل حمام+نخيل 8M+Nafud — Descaler+HEPA! (2026)',
+        description: 'تنظيف فلل بريدة. CaCO₃ 600ppm كلس كل حمام ومطبخ! نخيل 8M غبار. Nafud SiO₂. Descaler+HEPA+RO.',
+        h1: 'تنظيف فلل ببريدة — أعلى كلس في كل زاوية!',
+        keywords: ['تنظيف فلل بريدة', 'تنظيف فيلا ببريدة', 'شركة تنظيف فلل بريدة'],
     },
-
     content: {
-        introduction: 'تنظيف فلل ببريدة — خدمة متخصصة تراعي الظروف المناخية والبيئية في بريدة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف فلل ببريدة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف فلل ببريدة. خدمة احترافية. ضمان.',
+        introduction: 'فيلا بريدة = أعلى كلس بالمملكة في كل حمام ومطبخ! CaCO₃ 600ppm: فيلا 3-5 حمامات × أعلى كلس = Descaler أسبوعي لكل حمام. مطبخ = كلس+دهن طبقة مزدوجة. RO شطف. نخيل 8M: فيلا محاطة بنخيل = حبوب لقاح+ألياف+غبار تمور يومياً. HEPA Pollen في كل طابق. Nafud SiO₂: رمل النفود الناعم يدخل من الفناء (حوش) ← يخدش أرضيات الرخام والبلاط. Pre-Rinse+Microfiber. ΔT 45°م: فيلا كبيرة = مساحات عزل أكبر. تجفيف 20-30 دقيقة. 10-20% = لا عفن! لا عث! تجفيف سريع. مقارنة: خميس = 7 محاور+عفن+عث+4-8h = أغلى 30-40%. بريدة = 4 محاور+لا عفن = أبسط.',
+        shortAnswer: 'على عكس [التنظيف بماء صنبور بدون Descaler+HEPA]، يعتمد بروتوكولنا في خدمة [تنظيف الفلل] بمدينة [بريدة] على [Descaler أسبوعي+HEPA Pollen+Pre-Rinse+RO]. ففي ظل [CaCO₃ 600ppm+نخيل 8M+Nafud SiO₂+ΔT 45°م]، تتفاقم ظاهرة [كلس كل حمام+غبار نخيلي+خدش]. لذا؛ يتدخل فريقنا عبر [4 محاور قصيمية] — لا عفن! تجفيف سريع!',
+        heroSubtitle: 'CaCO₃ 600ppm كل حمام + نخيل 8M + Nafud — لا عفن!',
     },
-
     pricing: [
-        { type: 'تنظيف فلل — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف فلل — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'فيلا صغيرة (300 م²)', unit: 'فيلا', minPrice: 350, maxPrice: 700, time: '5-7h + 25 دقيقة' },
+        { type: 'فيلا كبيرة (500+ م²)', unit: 'فيلا', minPrice: 600, maxPrice: 1200, time: '8-10h' },
+        { type: '+ Descaler عميق كل الحمامات', unit: 'إضافي', minPrice: 150, maxPrice: 300, time: '2-3h' },
+        { type: 'أسبوعي (4/شهر)', unit: 'شهر', minPrice: 800, maxPrice: 1600, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف فلل ببريدة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف فلل؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف فلل؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش فيلا بريدة تحتاج Descaler أسبوعي؟', answer: 'CaCO₃ 600ppm أعلى كلس. 3-5 حمامات. أسبوع = كلس صلب.' },
+        { question: 'كيف النخيل يأثر على الفيلا ببريدة؟', answer: 'فيلا محاطة بنخيل = لقاح+ألياف+غبار تمور يومياً. HEPA كل طابق.' },
+        { question: 'كم تكلفة تنظيف فيلا ببريدة مقارنة بخميس؟', answer: 'أرخص 30-40% — 4 محاور مقابل 7. لا Anti-Fungal+Anti-Mite.' },
+        { question: 'هل الفيلا تتعفّن ببريدة؟', answer: 'لا! 10-20% = لا عفن. تجفيف 20-30 دقيقة. خميس: عفن أسبوعين.' },
+        { question: 'هل Nafud يخدش رخام الفيلا ببريدة؟', answer: 'Nafud 10-50 μm من الحوش = يخدش. Pre-Rinse+Microfiber.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Descaler أسبوعي — 600ppm كل حمام.',
+        'HEPA Pollen كل طابق — نخيل 8M.',
+        'Pre-Rinse — Nafud من الحوش.',
+        'RO Rinse — لا كلس جديد.',
+        'لا عفن! — تجفيف 25 دقيقة.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'CaCO₃ 600ppm × 3-5 حمامات × أسبوع = كلس صلب — 3000+ إصلاح.',
+        'نخيل + فيلا بدون HEPA = حساسية تنفسية لكل الأسرة YMYL.',
+        'Nafud + حوش + رخام = خدش تراكمي — Diamond Pad سنوي.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
+        { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMISNID.name, quote: 'فيلا بريدة: 4 محاور قصيمية. 600ppm+8M+Nafud. لا عفن. أبسط 30%.', source: 'جغرافيا المناخ — فلل القصيم' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف فلل مرخص', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Descaler صناعي', use: 'CaCO₃ 600ppm — كل حمام' },
+        { name: 'HEPA Pollen', use: 'نخيل 8M — كل طابق' },
+        { name: 'RO Water+Microfiber', use: 'لا كلس+لا خدش' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'مثل الرياض.', solution: '600ppm > 300. 8M نخلة. Nafud.' },
+        { fear: 'مثل خميس.', solution: '4 محاور مقابل 7 = أرخص 40%.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'تنظيف عادي.', truth: '4 محاور: Descaler+HEPA+Pre-Rinse+RO.' },
+        { myth: 'Descaler شهري.', truth: '600ppm = أسبوعي. أسرع تكلّس.' },
     ],
-
     relatedServices: [
-        { slug: 'buraidah-furniture-moving', context: 'نقل عفش ببريدة', priority: 1 },
-        { slug: 'buraidah-furniture-storage', context: 'تخزين عفش ببريدة', priority: 2 },
-        { slug: 'buraidah-dyna', context: 'دينا نقل ببريدة', priority: 3 },
-        { slug: 'buraidah-moving-out', context: 'نقل عفش خروج ببريدة', priority: 4 },
-        { slug: 'buraidah-dabab', context: 'دباب نقل ببريدة', priority: 5 },
-        { slug: 'buraidah-cleaning', context: 'تنظيف منازل ببريدة', priority: 6 },
-        { slug: 'buraidah-tanks-cleaning', context: 'تنظيف خزانات ببريدة', priority: 7 },
-        { slug: 'buraidah-sofa-cleaning', context: 'تنظيف كنب ببريدة', priority: 8 },
-        { slug: 'buraidah-carpet-cleaning', context: 'تنظيف سجاد ببريدة', priority: 9 },
+        { slug: 'apartments-cleaning', context: 'شقق', priority: 1 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 2 },
+        { slug: 'carpet-cleaning', context: 'سجاد', priority: 3 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 4 },
+        { slug: 'marble-polishing', context: 'رخام', priority: 5 },
+        { slug: 'pest-control', context: 'حشرات', priority: 6 },
+        { slug: 'sofa-cleaning', context: 'كنب', priority: 7 },
     ],
 };

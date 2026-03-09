@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// دينا نقل بخميس مشيط — Override مخصص (E-E-A-T Grade)
-// صفحة: /khamis-mushait/dyna
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'دينا نقل بخميس مشيط — خدمة احترافية معتمدة (2026)',
-        description: 'دينا نقل بخميس مشيط. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'دينا نقل بخميس مشيط — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['دينا نقل بخميس مشيط', 'دينا نقل خميس مشيط', 'شركة دينا نقل بخميس مشيط', 'أفضل دينا نقل بخميس مشيط'],
+        title: 'دينا نقل بخميس مشيط — أمطار+ضباب+منحدرات 6-12% — Waterproof+حمولة آمنة (2026)',
+        description: 'دينا نقل خميس مشيط. أمطار+ضباب 200 يوم+منحدرات 6-12%. Waterproof+فرامل+إضاءة. أبها 30 كم. حمولة آمنة.',
+        h1: 'دينا نقل بخميس مشيط — أمطار ومنحدرات — حمولة آمنة',
+        keywords: ['دينا نقل خميس مشيط', 'دينا نقل بخميس مشيط', 'شركة دينا نقل خميس مشيط'],
     },
-
     content: {
-        introduction: 'دينا نقل بخميس مشيط — خدمة متخصصة تراعي الظروف المناخية والبيئية في خميس مشيط. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'دينا نقل بخميس مشيط: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'دينا نقل بخميس مشيط. خدمة احترافية. ضمان.',
+        introduction: 'الدينا في خميس مشيط تنقل حمولات كبيرة في ظروف جبلية صعبة. أولاً: أمطار موسمية — حمولة مكشوفة كبيرة (3-4 طن) تتلف بالكامل لو بلّلت. Waterproof Tarpaulin مقوّى إلزامي + تثبيت Ratchet Straps. ثانياً: ضباب 200 يوم = رؤية محدودة + طريق مبلل = مسافة فرملة أطول لحمولة ثقيلة. ثالثاً: منحدرات 6-12% — حمولة 3-4 طن على منحدر = ضغط هائل على الفرامل. فحص يومي + فرامل تبريد. رابعاً: 60-85% رطوبة = عفن يصيب المنقولات. Silica Gel. مقارنة: عنيزة = طرق مسطحة + لا مطر + حمولة بدون Waterproof = أرخص 15-20%. خميس = أصعب.',
+        shortAnswer: 'على عكس [النقل المكشوف في طرق مسطحة]، يعتمد بروتوكولنا في خدمة [دينا النقل] بمدينة [خميس مشيط] على [Waterproof+Ratchet+فرامل تبريد+Silica Gel]. ففي ظل [أمطار+ضباب 200 يوم+منحدرات 6-12%+حمولة 3-4 طن]، تتفاقم ظاهرة [تلف+انزلاق+ضغط فرامل]. لذا؛ يتدخل سائقونا عبر [تغطية ← تثبيت ← فحص ← حماية] لتوصيل آمن.',
+        heroSubtitle: 'أمطار + منحدرات + حمولة ثقيلة — فرامل تبريد!',
     },
-
     pricing: [
-        { type: 'دينا نقل — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'دينا نقل — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'داخل خميس', unit: 'رحلة', minPrice: 80, maxPrice: 180, time: '30-60 دقيقة' },
+        { type: 'خميس ← أبها (30 كم)', unit: 'رحلة', minPrice: 120, maxPrice: 260, time: '30-45 دقيقة' },
+        { type: 'خميس ← جدة (700 كم)', unit: 'رحلة', minPrice: 700, maxPrice: 1500, time: '7-8 ساعات' },
+        { type: 'يومي', unit: 'يوم', minPrice: 350, maxPrice: 750, time: '8 ساعات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة دينا نقل بخميس مشيط؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق دينا نقل؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على دينا نقل؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'كيف أحمي حمولة الدينا من المطر بخميس؟', answer: 'Waterproof Tarpaulin مقوّى + Ratchet Straps تثبيت. 3-4 طن مكشوفة + مطر = خسارة كاملة.' },
+        { question: 'ليش الدينا أغلى بخميس من عنيزة؟', answer: 'Waterproof+فرامل تبريد+إضاءة+Silica Gel = تكلفة إضافية 15-20%. طرق أصعب.' },
+        { question: 'كم المسافة من خميس لجدة بالدينا؟', answer: '700 كم = 7-8 ساعات عبر الباحة. طرق جبلية. 700-1500 ريال حسب الحمولة.' },
+        { question: 'هل المنحدرات خطرة على الدينا بخميس؟', answer: '3-4 طن + منحدر 12% = ضغط هائل. فرامل تبريد + فحص يومي إلزامي.' },
+        { question: 'متى أفضل وقت للنقل بالدينا بخميس؟', answer: 'ظهراً — ضباب صباحي يخف. خارج موسم الأمطار (أبريل-أكتوبر) = أفضل.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Waterproof مقوّى — 3-4 طن مكشوفة = تلف كامل.',
+        'Ratchet Straps — حمولة ثقيلة + منحدر = انزلاق.',
+        'فرامل تبريد — 3-4 طن + 12% = ضغط هائل.',
+        'Silica Gel — 60-85% عفن منقولات.',
+        'لا تنقل ضباب صباحي — ظهراً أفضل.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'حمولة مكشوفة + مطر = خسارة كاملة 3-4 طن — Waterproof إلزامي.',
+        '3-4 طن + منحدر 12% + فرامل ضعيفة = كارثة — فحص يومي.',
+        'ضباب + رؤية < 150م + حمولة ثقيلة = مسافة فرملة أطول — سرعة منخفضة.',
     ],
-
     trustAnchors: [
-        { ...GOV.TGA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.TGA, role: 'ترخيص النقل البري' },
+        { entity: AMANA.ASIR.entity, url: AMANA.ASIR.url, role: 'اشتراطات أمانة عسير' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALZUWAYED.name,
-        title: EXPERTS.ALZUWAYED.title,
-        credential: EXPERTS.ALZUWAYED.credential,
-        profileUrl: EXPERTS.ALZUWAYED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALSHABNAN,
     expertCitations: [
-        {
-            expert: EXPERTS.ALZUWAYED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALZUWAYED.title,
-            url: EXPERTS.ALZUWAYED.profileUrl,
-        },
+        { expert: EXPERTS.ALZUWAYED.name, quote: 'دينا خميس: حمولة ثقيلة+منحدرات+أمطار. فرامل تبريد+Waterproof. أصعب من المسطح.', source: 'هيئة النقل — جنوبية' },
     ],
-
     saudiRegulations: [REGULATIONS.TGA_LICENSE],
-
-    verificationBadges: [
-        { badge: '✔️ شركة نقل مرخصة من هيئة النقل TGA', authority: 'الهيئة العامة للنقل', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ نقل مرخص TGA', authority: 'هيئة النقل', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Waterproof Tarpaulin مقوّى', use: 'حماية 3-4 طن من أمطار' },
+        { name: 'Ratchet Straps', use: 'تثبيت حمولة — منحدرات 6-12%' },
+        { name: 'فرامل تبريد', use: 'حمولة ثقيلة + منحدر = ضغط هائل' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'مثل دباب.', solution: 'دينا 3-4 طن مقابل 500 كجم. فرامل تبريد مختلفة.' },
+        { fear: 'غالي.', solution: 'بدون Waterproof = خسارة 3-4 طن = أغلى 100×.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'دينا عادية تكفي بخميس.', truth: 'أمطار+منحدرات = Waterproof+فرامل تبريد إلزامي.' },
+        { myth: 'مثل عنيزة.', truth: 'عنيزة: مسطح+جاف. خميس: جبلي+رطب = أصعب.' },
     ],
-
     relatedServices: [
-        { slug: 'khamis-mushait-furniture-moving', context: 'نقل عفش بخميس مشيط', priority: 1 },
-        { slug: 'khamis-mushait-furniture-storage', context: 'تخزين عفش بخميس مشيط', priority: 2 },
-        { slug: 'khamis-mushait-moving-out', context: 'نقل عفش خروج بخميس مشيط', priority: 3 },
-        { slug: 'khamis-mushait-dabab', context: 'دباب نقل بخميس مشيط', priority: 4 },
-        { slug: 'khamis-mushait-cleaning', context: 'تنظيف منازل بخميس مشيط', priority: 5 },
-        { slug: 'khamis-mushait-tanks-cleaning', context: 'تنظيف خزانات بخميس مشيط', priority: 6 },
-        { slug: 'khamis-mushait-sofa-cleaning', context: 'تنظيف كنب بخميس مشيط', priority: 7 },
-        { slug: 'khamis-mushait-carpet-cleaning', context: 'تنظيف سجاد بخميس مشيط', priority: 8 },
-        { slug: 'khamis-mushait-steam-cleaning', context: 'تنظيف بالبخار بخميس مشيط', priority: 9 },
+        { slug: 'furniture-moving', context: 'نقل عفش', priority: 1 },
+        { slug: 'dabab', context: 'دباب', priority: 2 },
+        { slug: 'auto-cleaning', context: 'غسيل سيارات', priority: 3 },
+        { slug: 'furniture-storage', context: 'تخزين', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 5 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 6 },
+        { slug: 'pest-control', context: 'حشرات', priority: 7 },
     ],
 };

@@ -11,6 +11,7 @@ import { getCityContext } from '@/lib/city-context';
 import { getCityKeyword } from '@/lib/keyword-strategy';
 import { BLOG_ARTICLES } from '@/lib/blog-data';
 import { hasPageOverride } from '@/lib/overrides/registry';
+import { isAbsorbedSlug } from '@/lib/services/super-page-groups';
 import Footer from '@/components/Footer';
 
 interface CityPageProps {
@@ -126,7 +127,7 @@ export default async function CityPage({ params }: CityPageProps) {
                 type="services"
                 listName={`خدمات ${city.name_ar}`}
                 description={`قائمة الخدمات المتاحة ${cityKw}`}
-                items={SERVICES.filter(s => hasPageOverride(city.slug, s.slug)).map(s => ({
+                items={SERVICES.filter(s => hasPageOverride(city.slug, s.slug) && !isAbsorbedSlug(s.slug)).map(s => ({
                     name: s.name_ar,
                     url: `https://prokr.co/${city.slug}/${s.slug}`
                 }))}
@@ -180,7 +181,7 @@ export default async function CityPage({ params }: CityPageProps) {
                 {/* Services by Category */}
                 <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                     {Object.entries(servicesByCategory).map(([category, services]) => {
-                        const validServices = services.filter(service => hasPageOverride(city.slug, service.slug));
+                        const validServices = services.filter(service => hasPageOverride(city.slug, service.slug) && !isAbsorbedSlug(service.slug));
                         if (validServices.length === 0) return null;
 
                         return (

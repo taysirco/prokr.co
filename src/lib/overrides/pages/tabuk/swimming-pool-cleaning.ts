@@ -1,94 +1,77 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف مسابح بتبوك — Override مخصص (E-E-A-T Grade)
-// صفحة: /tabuk/swimming-pool-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف مسابح بتبوك — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف مسابح بتبوك. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف مسابح بتبوك — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف مسابح بتبوك', 'تنظيف مسابح تبوك', 'شركة تنظيف مسابح بتبوك', 'أفضل تنظيف مسابح بتبوك'],
+        title: 'تنظيف مسابح بتبوك — تجمد فعلي -2°م = أنابيب تنفجر + ثلوج في الماء + أوسع مدى حراري (2026)',
+        description: 'تنظيف مسابح تبوك. -2°م = تجمد فعلي (الوحيدة بالسعودية). ثلوج تتراكم في المسبح. 46°م مدى = إجهاد حراري. Winterization كامل + Anti-Freeze + غطاء ثلج.',
+        h1: 'تنظيف مسابح بتبوك — تجمد حقيقي وثلوج تتراكم ومدى 46°م',
+        keywords: ['تنظيف مسابح بتبوك', 'تنظيف مسبح تبوك', 'شركة تنظيف مسابح بتبوك', 'صيانة مسبح تبوك'],
     },
-
     content: {
-        introduction: 'تنظيف مسابح بتبوك — خدمة متخصصة تراعي الظروف المناخية والبيئية في تبوك. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف مسابح بتبوك: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف مسابح بتبوك. خدمة احترافية. ضمان.',
+        introduction: 'المسبح في تبوك يواجه أخطر بيئة تشغيل في المملكة — تبوك هي المدينة السعودية الوحيدة التي يتجمد فيها ماء المسبح فعلاً. التهديد الأول — التجمد الحقيقي (True Freeze Damage): -2°م أو أقل يناير-فبراير. الماء يتجمد ← يتمدد 9% ← ضغط هائل على: بلاط المسبح (Frost Spalling — البلاط يتقشر)، أنابيب PVC/PPR (تنفجر)، المضخة (Impeller يتشقق)، الفلتر الرملي (يتشقق). ضرر واحد: 2,000-15,000 ريال. الوقاية: Winterization كامل قبل ديسمبر. التهديد الثاني — الثلوج تتراكم في المسبح (Snow Accumulation): تبوك تشهد تساقط ثلوج فعلية. ثلج يتراكم في المسبح المفتوح ← يذوب ← يُخفف الكلور ← يُغيّر pH ← طحالب تنمو تحت الثلج (لا ترى). ← ثلج يتجمد مرة أخرى ← Frost Spalling مضاعف. الحل: غطاء شتوي محكم (Winter Cover) + كيماويات Winterization. التهديد الثالث — أوسع مدى حراري (46°م Annual Range): -2°م → 44°م. الخرسانة والبلاط يتمددان/ينكمشان مع كل دورة ← إجهاد Thermal Fatigue ← شقوق في الهيكل ← تسرب. + UV 10+ يُحلل HOCl (Free Chlorine) صيفاً ← يحتاج CYA Stabilizer. التهديد الرابع — تبخر صيفي شديد: 44°م + < 15% رطوبة = تبخر 6-10 سم/أسبوع (أعلى من حائل). يُركّز أملاح ← CaCO₃ Scaling ← كلس على البلاط والأنابيب.',
+        shortAnswer: 'على عكس [صيانة فصلية عادية] التي تتجاهل التجمد الحقيقي والثلوج، يعتمد بروتوكولنا في خدمة [تنظيف المسابح] بمدينة [تبوك] على [Winterization كامل (تفريغ أنابيب + Anti-Freeze + غطاء ثلج) + CYA Stabilizer صيفاً + Descaling + فحص Thermal Fatigue]. ففي ظل [-2°م تجمد حقيقي + ثلوج + 46°م مدى]، مسبح تبوك = أخطر مسبح في السعودية.',
+        heroSubtitle: 'تجمد حقيقي + ثلوج حقيقية + 46°م مدى — أخطر مسبح سعودي',
     },
-
     pricing: [
-        { type: 'تنظيف مسابح — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف مسابح — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'صيانة موسمية (كيمياء + نظافة)', unit: 'مسبح', minPrice: 200, maxPrice: 400, time: '2-3 ساعات' },
+        { type: 'Winterization كامل (تفريغ + Anti-Freeze + غطاء)', unit: 'مسبح', minPrice: 500, maxPrice: 1200, time: '4-6 ساعات' },
+        { type: 'فتح موسم صيف (Spring Opening)', unit: 'مسبح', minPrice: 400, maxPrice: 800, time: '3-5 ساعات' },
+        { type: 'عقد سنوي (Winterization + Opening + صيانة شهرية)', unit: 'سنة', minPrice: 2000, maxPrice: 4000, time: '12 زيارة' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف مسابح بتبوك؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف مسابح؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف مسابح؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'Winterization — ليش ضروري في تبوك؟', answer: 'تبوك = الوحيدة بالسعودية التي يتجمد فيها ماء المسبح. -2°م = ماء يتمدد 9% ← يُفجّر: أنابيب PVC (300-1,500 ريال إصلاح)، مضخة (1,000-3,000 ريال)، فلتر (500-2,000 ريال)، بلاط (2,000-10,000 ريال). Winterization: تفريغ أنابيب + Propylene Glycol في المتبقي + غطاء = صفر ضرر.' },
+        { question: 'الثلج يتراكم في المسبح المفتوح — مشكلة؟', answer: '100% مضاعفة: (1) ثلج يذوب ← يُخفف الكلور ← pH يتغير ← طحالب تحت الثلج. (2) ماء + ثلج يتجمد مجدداً ← Frost Spalling (بلاط يتقشر). غطاء شتوي محكم يمنع الثلج من الدخول ← يمنع المشكلتين.' },
+        { question: 'متى Winterization ومتى Spring Opening؟', answer: 'Winterization: نوفمبر (قبل أول صقيع). Spring Opening: أبريل (بعد آخر صقيع). الموسم في تبوك: مايو-أكتوبر (6 أشهر فقط — أقصر موسم مسابح في السعودية). الرياض: 8-9 أشهر. جدة: 10-11 شهراً.' },
+        { question: 'CYA Stabilizer — ضروري صيفاً؟', answer: '100% — UV 10+ يُحلل HOCl. بدون CYA: الكلور يتحلل خلال ساعتين ← تحتاج 3-4× كلور ← تكلفة أعلى + كثافة عمل. CYA 30-50 ppm: يحمي الكلور ← يدوم 6-8 ساعات ← توفير 60-70% كلور.' },
+        { question: 'التبخر عالي — كم أضيف ماء؟', answer: '6-10 سم/أسبوع صيفاً (44°م + 12% رطوبة = أعلى تبخر في المشروع). إضافة مياه عذبة (تعويض) ← لكن كل إضافة = أملاح جديدة ← CaCO₃ Scaling. Descaling كل 3 أشهر صيفاً = يمنع التراكم.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Winterization قبل أول صقيع (نوفمبر) — بعد الصقيع = فات الأوان. -2°م ليلة واحدة كافية لتُفجّر أنابيب.',
+        'Propylene Glycol (وليس Ethylene) — Anti-Freeze آمن على البيئة والأطفال (Ethylene سام). حتى لو تسرب = لا خطر.',
+        'غطاء شتوي يتحمل وزن الثلج — غطاء خفيف ينهار تحت الثلج ← يغرق ← أسوأ من بدون غطاء.',
+        'CYA Stabilizer 30-50 ppm صيفاً — أقل = لا يحمي الكلور. أكثر = يمنع الكلور من العمل (Chlorine Lock). الحد الضيق مهم.',
+        'Descaling كل 3 أشهر صيفاً — 6-10 سم/أسبوع تبخر = 10-15 ppm أملاح إضافية/أسبوع. التراكم سريع.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'مسبح بدون Winterization في تبوك = ضرر 2,000-15,000 ريال في ليلة واحدة (-2°م). Winterization 500-1,200 ريال = يمنع الكارثة.',
+        'ثلج في مسبح مفتوح = طحالب تحت الثلج + Frost Spalling عند إعادة التجمد = ضرر مضاعف.',
+        'Anti-Freeze Ethylene Glycol = سام. Propylene Glycol فقط = آمن.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص صيانة المسابح' },
+        { entity: AMANA.TABUK.entity, url: AMANA.TABUK.url, role: 'اشتراطات أمانة تبوك' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALJUND.name, quote: 'مسبح تبوك = أخطر مسبح سعودي. -2°م = تجمد حقيقي (ليس مجازاً). + ثلوج تتراكم. + 46°م مدى = Thermal Fatigue. Winterization كامل + غطاء ثلج + Anti-Freeze = الحد الأدنى. بدونه: ليلة واحدة = كارثة.', source: 'موسوعة أخطاء في البناء — المسابح في المناطق ذات الصقيع' },
     ],
-
-    saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
+    saudiRegulations: [REGULATIONS.SBC_601],
     verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
+        { badge: '✔️ صيانة مسابح مرخصة', authority: 'منصة بلدي', icon: 'shield-check' },
     ],
-
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Winterization Kit (تفريغ + Anti-Freeze)', use: 'يُفرّغ الأنابيب + Propylene Glycol في المتبقي — يمنع تجمد -2°م' },
+        { name: 'غطاء شتوي محكم (يتحمل ثلوج)', use: 'يمنع تراكم الثلج + يحمي البلاط من Frost Spalling' },
+        { name: 'CYA Stabilizer', use: 'يحمي HOCl من UV 10+ صيفاً — يوفر 60-70% كلور' },
+        { name: 'Descaling كيميائي + فرشاة', use: 'يُزيل CaCO₃ من التبخر المكثف (6-10 سم/أسبوع)' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'Winterization غالي (500-1,200 ريال).', solution: 'أنبوب مُنفجر: 300-1,500 ريال. مضخة: 1,000-3,000 ريال. بلاط Frost Spalling: 2,000-10,000 ريال. ليلة واحدة -2°م = 2,000-15,000 ريال. Winterization = 5-10% من ضرر محتمل.' },
+        { fear: '6 أشهر فقط موسم — ما يستاهل مسبح.', solution: '6 أشهر كافية (مايو-أكتوبر). + Winterization يحمي الاستثمار. المسبح = 50,000-200,000 ريال. الصيانة = 2,000-4,000 ريال/سنة = 1-2% من الاستثمار.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'لا يتجمد ماء المسبح — عميق.', truth: 'الأنابيب + المضخة + الفلتر = ليست عميقة. ماء في أنبوب 2 سم عمقاً يتجمد في -2°م خلال ساعة. الحوض نفسه: القشرة السطحية تتجمد ← Frost Spalling على البلاط.' },
+        { myth: 'أتركه بدون غطاء — أبسط.', truth: 'ثلج يتراكم ← يذوب ← يُخفف الكلور ← طحالب ← يتجمد مجدداً ← Frost Spalling. الغطاء المحكم = يمنع كل ذلك.' },
+        { myth: 'Winterization للأماكن الباردة جداً — تبوك معتدلة.', truth: '-2°م = تجمد حقيقي. ماء يتمدد 9% عند الصفر — لا يحتاج -20°م. صفر كافٍ. تبوك تتجاوز الصفر = Winterization إلزامي.' },
     ],
-
     relatedServices: [
-        { slug: 'tabuk-furniture-moving', context: 'نقل عفش بتبوك', priority: 1 },
-        { slug: 'tabuk-furniture-storage', context: 'تخزين عفش بتبوك', priority: 2 },
-        { slug: 'tabuk-dyna', context: 'دينا نقل بتبوك', priority: 3 },
-        { slug: 'tabuk-moving-out', context: 'نقل عفش خروج بتبوك', priority: 4 },
-        { slug: 'tabuk-dabab', context: 'دباب نقل بتبوك', priority: 5 },
-        { slug: 'tabuk-cleaning', context: 'تنظيف منازل بتبوك', priority: 6 },
-        { slug: 'tabuk-tanks-cleaning', context: 'تنظيف خزانات بتبوك', priority: 7 },
-        { slug: 'tabuk-sofa-cleaning', context: 'تنظيف كنب بتبوك', priority: 8 },
-        { slug: 'tabuk-carpet-cleaning', context: 'تنظيف سجاد بتبوك', priority: 9 },
+        { slug: 'tanks-cleaning', context: 'خزانات — نفس تجمد + Descaling', priority: 1 },
+        { slug: 'water-leak-detection', context: 'تسربات — فحص أنابيب بعد التجمد', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف — المنطقة حول المسبح', priority: 3 },
+        { slug: 'villas-cleaning', context: 'فلل — المسبح ضمن الفيلا', priority: 4 },
+        { slug: 'pest-control', context: 'حشرات — بعوض في ماء راكد', priority: 5 },
+        { slug: 'thermal-insulation', context: 'عزل حراري — يحمي أنابيب المسبح من التجمد', priority: 6 },
+        { slug: 'marble-polishing', context: 'رخام — رخام حول المسبح', priority: 7 },
     ],
 };

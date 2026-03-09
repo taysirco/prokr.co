@@ -1,94 +1,74 @@
-// ══════════════════════════════════════════════════════════════
-// عزل حراري بينبع — Override مخصص (E-E-A-T Grade)
-// صفحة: /yanbu/thermal-insulation
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'عزل حراري بينبع — خدمة احترافية معتمدة (2026)',
-        description: 'عزل حراري بينبع. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'عزل حراري بينبع — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['عزل حراري بينبع', 'عزل حراري ينبع', 'شركة عزل حراري بينبع', 'أفضل عزل حراري بينبع'],
+        title: 'عزل حراري بينبع — NaCl CUI+70-85% Vapor+SOx — Closed-Cell+Vapor+Marine! (2026)',
+        description: 'عزل حراري ينبع. NaCl CUI! 70-85% Vapor Barrier إلزامي. SOx حمض. Closed-Cell+Vapor+Marine+SBC 601.',
+        h1: 'عزل حراري بينبع — NaCl+Vapor+SOx!',
+        keywords: ['عزل حراري ينبع', 'عزل حراري بينبع', 'شركة عزل حراري ينبع'],
     },
-
     content: {
-        introduction: 'عزل حراري بينبع — خدمة متخصصة تراعي الظروف المناخية والبيئية في ينبع. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'عزل حراري بينبع: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'عزل حراري بينبع. خدمة احترافية. ضمان.',
+        introduction: 'عزل حراري ينبع = عكس بريدة تماماً! NaCl CUI (Corrosion Under Insulation): ملح بحري يتسلل تحت العزل ← يتآكل السطح المعدني = أخطر من الحرارة نفسها! Anti-Corrosion Primer قبل العزل. 70-85% Vapor Barrier إلزامي: تكثّف بيني = عفن+تلف بنيوي. بريدة 10-20% = لا Vapor = أرخص 40%. ينبع = Vapor إلزامي. Closed-Cell R-6/inch فقط: Open-Cell يمتص 70-85% = كارثة. Open-Cell ببريدة = ممتاز. Open-Cell بينبع = كارثة. SOx H₂SO₄: YASREF حمض يهاجم أسطح. Marine Coating. حرارة 45°م: وفر 25-30% كهرباء. لكن: ΔT أقل من بريدة (45°م). SBC 601.',
+        shortAnswer: 'على عكس [Open-Cell بدون Vapor — كما ببريدة]، يعتمد بروتوكولنا في خدمة [العزل الحراري] بمدينة [ينبع] على [Closed-Cell+Vapor Barrier+Anti-Corrosion+Marine Coating]. ففي ظل [NaCl CUI+70-85% تكثّف+SOx حمض]، تتفاقم ظاهرة [تآكل تحت+تكثّف+حمض]. لذا؛ يتدخل فنيونا عبر [Anti-Corrosion ← Closed ← Vapor ← Marine] = عكس بريدة!',
+        heroSubtitle: 'NaCl CUI + 70-85% Vapor إلزامي — Closed-Cell+Marine! عكس بريدة!',
     },
-
     pricing: [
-        { type: 'عزل حراري — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'عزل حراري — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'Closed-Cell جدران', unit: 'م²', minPrice: 40, maxPrice: 85, time: '1-3 أيام' },
+        { type: 'Closed-Cell سقف', unit: 'م²', minPrice: 50, maxPrice: 100, time: '1-2 يوم' },
+        { type: '+ Vapor Barrier', unit: 'م²', minPrice: 15, maxPrice: 30, time: '+ يوم' },
+        { type: 'فحص حراري + تقرير', unit: 'خدمة', minPrice: 250, maxPrice: 520, time: '1 يوم' },
     ],
-
     faq: [
-        { question: 'كم تكلفة عزل حراري بينبع؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق عزل حراري؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على عزل حراري؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش Open-Cell كارثة بينبع؟', answer: 'يمتص 70-85% رطوبة = عفن+تلف. ببريدة لا مشكلة (10-20%).' },
+        { question: 'ما CUI بينبع؟', answer: 'NaCl يتآكل تحت العزل. أخطر من الحرارة. Anti-Corrosion أولاً.' },
+        { question: 'كم يوفر عزل حراري بينبع كهرباء؟', answer: '25-30%. أقل من بريدة (35-45%) لأن ΔT أقل. لكن إلزامي.' },
+        { question: 'كم تكلفة حراري بينبع مقابل بريدة؟', answer: 'أغلى 40-50%! Closed+Vapor+Marine. بريدة: Open فقط.' },
+        { question: 'ليش Vapor Barrier إلزامي بينبع؟', answer: '70-85% = تكثّف بيني. بريدة 10-20% = لا حاجة.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Closed-Cell R-6 — 70-85% لا Open.',
+        'Vapor Barrier — تكثّف بيني إلزامي.',
+        'Anti-Corrosion Primer — NaCl CUI.',
+        'Marine Coating — SOx YASREF.',
+        'SBC 601 — إلزامي. غرامة.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'Open-Cell + 70-85% = يمتص = عفن ← تلف بنيوي YMYL.',
+        'NaCl + بدون Anti-Corrosion = CUI ← صدأ تحت العزل.',
+        'بدون Vapor + 70-85% = تكثّف بيني ← عفن.',
     ],
-
     trustAnchors: [
-        { ...GOV.SBC, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.MOENERGY, role: 'كفاءة الطاقة — SBC 601' },
+        { ...GOV.SBC, role: 'كود البناء السعودي' },
+        { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'اشتراطات أمانة ينبع' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALJUND.name,
-        title: EXPERTS.ALJUND.title,
-        credential: EXPERTS.ALJUND.credential,
-        profileUrl: EXPERTS.ALJUND.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
-        {
-            expert: EXPERTS.ALJUND.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALJUND.title,
-            url: EXPERTS.ALJUND.profileUrl,
-        },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'حراري ينبع: عكس بريدة! Closed+Vapor+Anti-Corrosion. Open كارثة.', source: 'نصائح هندسية — حراري ساحلي' },
     ],
-
     saudiRegulations: [REGULATIONS.SBC_601],
-
-    verificationBadges: [
-        { badge: '✔️ عزل مطابق لكود SBC', authority: 'كود البناء السعودي', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ عزل مطابق SBC 601', authority: 'كود البناء + كفاءة', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Closed-Cell PU Foam', use: 'R-6/inch — 70-85% مانع' },
+        { name: 'Vapor Barrier', use: '70-85% — تكثّف بيني' },
+        { name: 'Anti-Corrosion Primer', use: 'NaCl — CUI' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'Open أرخص.', solution: '70-85% = يمتص = عفن. Closed.' },
+        { fear: 'نفس بريدة.', solution: 'عكس! Closed+Vapor vs Open.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'Open يكفي.', truth: '70-85% = Closed. Open كارثة.' },
+        { myth: 'لا Vapor.', truth: '70-85% = Vapor إلزامي.' },
     ],
-
     relatedServices: [
-        { slug: 'yanbu-furniture-moving', context: 'نقل عفش بينبع', priority: 1 },
-        { slug: 'yanbu-furniture-storage', context: 'تخزين عفش بينبع', priority: 2 },
-        { slug: 'yanbu-dyna', context: 'دينا نقل بينبع', priority: 3 },
-        { slug: 'yanbu-moving-out', context: 'نقل عفش خروج بينبع', priority: 4 },
-        { slug: 'yanbu-dabab', context: 'دباب نقل بينبع', priority: 5 },
-        { slug: 'yanbu-cleaning', context: 'تنظيف منازل بينبع', priority: 6 },
-        { slug: 'yanbu-tanks-cleaning', context: 'تنظيف خزانات بينبع', priority: 7 },
-        { slug: 'yanbu-sofa-cleaning', context: 'تنظيف كنب بينبع', priority: 8 },
-        { slug: 'yanbu-carpet-cleaning', context: 'تنظيف سجاد بينبع', priority: 9 },
+        { slug: 'roof-insulation', context: 'أسطح', priority: 1 },
+        { slug: 'foam-insulation', context: 'فوم', priority: 2 },
+        { slug: 'water-insulation', context: 'مائي', priority: 3 },
+        { slug: 'tank-insulation', context: 'خزان', priority: 4 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 5 },
+        { slug: 'water-leak-detection', context: 'تسرب', priority: 6 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 7 },
     ],
 };

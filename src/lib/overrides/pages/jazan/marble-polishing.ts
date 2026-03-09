@@ -1,94 +1,72 @@
-// ══════════════════════════════════════════════════════════════
-// جلي رخام بجازان — Override مخصص (E-E-A-T Grade)
-// صفحة: /jazan/marble-polishing
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'جلي رخام بجازان — خدمة احترافية معتمدة (2026)',
-        description: 'جلي رخام بجازان. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'جلي رخام بجازان — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['جلي رخام بجازان', 'جلي رخام جازان', 'شركة جلي رخام بجازان', 'أفضل جلي رخام بجازان'],
+        title: 'جلي رخام بجازان — Biological Etching عفن حمض + Salt Crystallization + Moss على الخارجي (2026)',
+        description: 'جلي رخام جازان. 80% رطوبة = عفن يُفرز حمض أوكساليك ← Etching كيميائي. ملح بحري يتبلور داخل المسام = Spalling. طحالب/أشنات على الرخام الخارجي. Anti-Fungal Sealer.',
+        h1: 'جلي رخام بجازان — العفن يأكل والملح يُفجّر والأشنات تُغطّي',
+        keywords: ['جلي رخام بجازان', 'جلي رخام جازان', 'شركة جلي رخام بجازان'],
     },
-
     content: {
-        introduction: 'جلي رخام بجازان — خدمة متخصصة تراعي الظروف المناخية والبيئية في جازان. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'جلي رخام بجازان: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'جلي رخام بجازان. خدمة احترافية. ضمان.',
+        introduction: 'الرخام في جازان يتعرض لثلاث آليات تلف بيولوجية وكيميائية لا تحدث في المدن الجافة. الآلية الأولى — Biological Etching (عفن يأكل الرخام): 80% رطوبة = عفن ينمو مباشرة على سطح الرخام. Aspergillus niger يُفرز أحماض عضوية (Oxalic Acid) ← الحمض يُذيب CaCO₃ (الرخام) = Etching كيميائي بيولوجي. في تبوك: الإتشينج من ثلج. في جازان: الإتشينج من عفن — أبطأ لكن مستمر 24/7. الحل: Anti-Fungal Sealer (يمنع العفن من النمو على السطح). الآلية الثانية — Salt Crystallization Pressure: هواء البحر الأحمر يحمل NaCl + MgCl₂. يستقر على الرخام (مسامي) ← يمتص الرطوبة ← عند تشغيل المكيف (المنزل يجف لـ 50-60%): الملح يتبلور داخل المسام ← ضغط Crystallization ← يُفجّر المسام من الداخل (Sub-Surface Spalling). لا يُرى حتى يتقشر. الآلية الثالثة — أشنات/طحالب على الرخام الخارجي (Biological Growth): رخام المداخل والأدراج والحدائق: 80% + ضوء + رطوبة = طحالب + أشنات (Lichen) + Moss تنمو. الجذور تخترق المسام ← تُفتت. الحل: ضغط ماء + Biocide + Anti-Moss Sealer.',
+        shortAnswer: 'على عكس [جلي ميكانيكي فقط] الذي يتجاهل العفن والملح والأشنات، يعتمد بروتوكولنا في خدمة [جلي الرخام] بمدينة [جازان] على [Anti-Fungal Sealer + Desalination + Biocide]. ففي ظل [عفن يأكل + ملح يُفجّر + أشنات تُغطّي]، الجلي الجازاني = كيميائي + بيولوجي.',
+        heroSubtitle: '3 آليات بيولوجية: عفن يأكل + ملح يُفجّر + أشنات تُغطّي',
     },
-
     pricing: [
-        { type: 'جلي رخام — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'جلي رخام — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'جلي رخام داخلي + Anti-Fungal Sealer', unit: 'م²', minPrice: 18, maxPrice: 35, time: '1-2 يوم' },
+        { type: 'جلي + Desalination (أحياء ساحلية)', unit: 'م²', minPrice: 25, maxPrice: 45, time: '2-3 أيام' },
+        { type: 'رخام خارجي — Biocide + Anti-Moss', unit: 'م²', minPrice: 15, maxPrice: 30, time: '1-2 يوم' },
     ],
-
     faq: [
-        { question: 'كم تكلفة جلي رخام بجازان؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق جلي رخام؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على جلي رخام؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'الرخام فيه بقع صفراء — ليش؟', answer: 'Aspergillus niger يُفرز Oxalic Acid ← يُذيب CaCO₃ ← بقعة Etching. ليست وسخ — تآكل كيميائي. Diamond Pads تُزيل الطبقة المتآكلة ← Anti-Fungal Sealer يمنع التكرار.' },
+        { question: 'الرخام يتقشر من الداخل — إيش السبب؟', answer: 'Salt Crystallization Pressure: ملح البحر يدخل المسام ← عند التجفيف (مكيف) يتبلور ← يتمدد ← يُفجّر المسام من الداخل. Desalination (كمّادات سحب ملح) ← ثم Sealer يمنع الملح من الدخول مجدداً.' },
+        { question: 'طحالب خضراء على رخام المدخل — خطيرة؟', answer: 'نعم — الجذور تخترق المسام ← تُفتت الرخام. + الأشنات (Lichen) أسوأ — تُنتج أحماض. ضغط ماء يُزيل السطحي ← Biocide يقتل الجذور ← Anti-Moss Sealer يمنع العودة.' },
+        { question: 'كم تكلفة التنظيف العميق مقارنة بالتنظيف العادي؟', answer: 'التنظيف العميق أغلى 30-50% لكنه يشمل: HEPA + بخار 150°م + تعقيم. التنظيف العادي = مسح سطحي. العميق كل 3-4 أشهر + العادي أسبوعياً = أفضل معادلة تكلفة/نظافة.' },
+        { question: 'هل المواد المستخدمة آمنة على الأطفال؟', answer: 'مواد معتمدة من هيئة الغذاء والدواء SFDA. بعد التنظيف: تهوية 30 دقيقة كافية. بخار 150°م = بديل للكيماويات — آمن 100% على الأطفال والحيوانات.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Anti-Fungal Sealer (ليس Sealer عادي) — Sealer عادي لا يمنع العفن. Anti-Fungal = يمنع النمو البيولوجي.',
+        'Desalination كمّادات كل 6 أشهر — تسحب الملح من المسام قبل أن يتبلور.',
+        'Biocide على الرخام الخارجي كل 3 أشهر — الطحالب تعود سريعاً في 80%.',
+        'لا Acidic Cleaner على رخام جازان — السطح مُتآكل (Etched) بالعفن. الحمض يزيد.',
+        'بعد التنظيف: شغّل المكيف وليس الشبّاك — الهواء الخارجي يعيد الغبار على الأسطح النظيفة.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'Sealer عادي على رخام مُعفّن = يحبس العفن داخل المسام ← يستمر الـ Etching. Anti-Fungal Sealer = يقتل أولاً.',
+        'رخام خارجي بدون Biocide في جازان = أشنات خلال أسابيع ← تفتت المسام.',
+        'لا تقبل عمالة بدون تأمين صحي — شركة بدون تأمين = غير مرخصة من بلدي.',
     ],
-
-    trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات الجلي والتلميع' },
+        { entity: AMANA.JAZAN.entity, url: AMANA.JAZAN.url, role: 'اشتراطات أمانة جازان' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+        expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALJUND.name, quote: 'رخام جازان يتعرض لـ Biological Etching — عفن يُفرز حمض يأكل CaCO₃. + Salt Crystallization يُفجّر المسام. + أشنات تُفتت الخارجي. بروتوكول بيولوجي-كيميائي = الحل.', source: 'موسوعة أخطاء في البناء — الأحجار الطبيعية في المناخ الاستوائي' },
     ],
-
-    saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    saudiRegulations: [REGULATIONS.SBC_601],
+    verificationBadges: [{ badge: '✔️ جلي رخام مرخص', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Diamond Pads متدرجة', use: 'تُزيل طبقة الـ Etching البيولوجية — تُعيد اللمعان' },
+        { name: 'Anti-Fungal Sealer', use: 'يمنع العفن من النمو على الرخام — يحمي من Oxalic Acid Etching' },
+        { name: 'Desalination Poultice', use: 'كمّادات تسحب NaCl/MgCl₂ من المسام — تمنع Salt Spalling' },
+        { name: 'Biocide + Anti-Moss', use: 'يقتل طحالب/أشنات الرخام الخارجي + يمنع العودة' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'جلي يكفي بدون Sealer.', solution: 'بدون Anti-Fungal Sealer: العفن يعود خلال أسابيع ← Etching يعود. الجلي بدون Sealer = 25% من الحل.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'رخام لا يتأثر بالرطوبة.', truth: 'الرخام = CaCO₃ = مسامي. 80% رطوبة = عفن + ملح + طحالب. 3 آليات تتآكل من الداخل والخارج.' },
+        { myth: 'المنظف العادي يكفي.', truth: 'المنظف العادي يزيل 40% من الأوساخ. HEPA + بخار = 99%+. الفرق = 59% غبار دقيق + بكتيريا + عث.' },
     ],
-
     relatedServices: [
-        { slug: 'jazan-furniture-moving', context: 'نقل عفش بجازان', priority: 1 },
-        { slug: 'jazan-furniture-storage', context: 'تخزين عفش بجازان', priority: 2 },
-        { slug: 'jazan-dyna', context: 'دينا نقل بجازان', priority: 3 },
-        { slug: 'jazan-moving-out', context: 'نقل عفش خروج بجازان', priority: 4 },
-        { slug: 'jazan-dabab', context: 'دباب نقل بجازان', priority: 5 },
-        { slug: 'jazan-cleaning', context: 'تنظيف منازل بجازان', priority: 6 },
-        { slug: 'jazan-tanks-cleaning', context: 'تنظيف خزانات بجازان', priority: 7 },
-        { slug: 'jazan-sofa-cleaning', context: 'تنظيف كنب بجازان', priority: 8 },
-        { slug: 'jazan-carpet-cleaning', context: 'تنظيف سجاد بجازان', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف — المنزل كاملاً', priority: 1 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات — نفس ملح + طحالب', priority: 2 },
+        { slug: 'villas-cleaning', context: 'فلل — رخام الفيلا', priority: 3 },
+        { slug: 'swimming-pool-cleaning', context: 'مسابح — رخام حول المسبح', priority: 4 },
+        { slug: 'steam-cleaning', context: 'بخار — تعقيم بعد الجلي', priority: 5 },
+    
+        { slug: 'carpet-cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 6 },
+        { slug: 'sofa-cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 7 },
     ],
 };

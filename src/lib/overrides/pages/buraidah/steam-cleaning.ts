@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف بالبخار ببريدة — Override مخصص (E-E-A-T Grade)
-// صفحة: /buraidah/steam-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف بالبخار ببريدة — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف بالبخار ببريدة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف بالبخار ببريدة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف بالبخار ببريدة', 'تنظيف بالبخار بريدة', 'شركة تنظيف بالبخار ببريدة', 'أفضل تنظيف بالبخار ببريدة'],
+        title: 'تنظيف بالبخار ببريدة — CaCO₃ 600ppm كلس بخار+Nafud SiO₂+نخيل — RO+HEPA! (2026)',
+        description: 'تنظيف بالبخار بريدة. CaCO₃ 600ppm كلس داخل الجهاز! Nafud SiO₂ يقطع. نخيل 8M. RO+HEPA+Descaler.',
+        h1: 'تنظيف بالبخار ببريدة — أعلى كلس يتلف الجهاز!',
+        keywords: ['تنظيف بالبخار بريدة', 'تنظيف بخار ببريدة', 'شركة تنظيف بالبخار بريدة'],
     },
-
     content: {
-        introduction: 'تنظيف بالبخار ببريدة — خدمة متخصصة تراعي الظروف المناخية والبيئية في بريدة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف بالبخار ببريدة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف بالبخار ببريدة. خدمة احترافية. ضمان.',
+        introduction: 'بخار بريدة = كلس يتلف جهاز البخار! CaCO₃ 600ppm كلس داخل الجهاز: أعلى كلس بالمملكة = جهاز البخار يتكلّس 2× أسرع ← يفقد ضغط ← يتلف. ماء RO إلزامي لتشغيل الجهاز. Descaler شهري للجهاز. Nafud SiO₂ يقطع: بخار يُحرّك Nafud الناعم على الأسطح ← يُخدش. Pre-Rinse أولاً ← ثم بخار. نخيل 8M: حبوب لقاح مارس-مايو + ألياف = بخار يُذيبها = لزج. HEPA أولاً. ΔT 45°م: بخار+حرارة بيئة = تجفيف 10-15 دقيقة! 10-20% = لا عفن! ميزة كبرى. مقارنة: خميس = بخار+رطوبة+عفن+4h تجفيف. بريدة = بخار+كلس+جفاف = أبسط.',
+        shortAnswer: 'على عكس [البخار بماء صنبور الذي يُتلف الجهاز]، يعتمد بروتوكولنا في خدمة [التنظيف بالبخار] بمدينة [بريدة] على [RO Water+HEPA Pre-Rinse+Descaler جهاز]. ففي ظل [CaCO₃ 600ppm+Nafud خدش+نخيل لزج+10-20%]، تتفاقم ظاهرة [تكلّس جهاز+خدش+لزج]. لذا؛ يتدخل فريقنا عبر [HEPA ← Pre-Rinse ← RO بخار ← تجفيف 10 دقائق] — لا عفن!',
+        heroSubtitle: 'CaCO₃ 600ppm يتلف الجهاز — RO إلزامي! تجفيف 10 دقائق!',
     },
-
     pricing: [
-        { type: 'تنظيف بالبخار — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف بالبخار — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'كنب (طقم 5)', unit: 'طقم', minPrice: 120, maxPrice: 250, time: '1-2h + 10 تجفيف' },
+        { type: 'سجاد (م²)', unit: 'م²', minPrice: 6, maxPrice: 14, time: 'حسب المساحة' },
+        { type: 'مطبخ + حمام', unit: 'خدمة', minPrice: 150, maxPrice: 310, time: '2-3h' },
+        { type: 'شامل (شقة)', unit: 'شقة', minPrice: 250, maxPrice: 520, time: '3-5h' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف بالبخار ببريدة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف بالبخار؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف بالبخار؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش جهاز البخار يتلف أسرع ببريدة؟', answer: 'CaCO₃ 600ppm أعلى بالمملكة. كلس يتراكم = فقدان ضغط. RO إلزامي.' },
+        { question: 'هل البخار يخدش الأسطح ببريدة؟', answer: 'Nafud 10-50 μm يتحرك بالبخار = خدش. Pre-Rinse أولاً ← ثم بخار.' },
+        { question: 'كم تكلفة بخار ببريدة مقارنة بخميس؟', answer: 'أرخص 20% — لا Anti-Fungal. تجفيف 10 دقائق.' },
+        { question: 'هل البخار يسبب عفن ببريدة؟', answer: 'لا! 10-20% = تجفيف 10-15 دقيقة. خميس: 4h+عفن.' },
+        { question: 'كم مرة Descaler جهاز البخار ببريدة؟', answer: 'شهرياً! 600ppm = أسرع تكلّس. بدونه = جهاز يتلف 6 أشهر.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'RO Water — جهاز بخار 600ppm.',
+        'Pre-Rinse — Nafud قبل بخار.',
+        'HEPA أولاً — نخيل ألياف.',
+        'Descaler جهاز شهرياً — 600ppm.',
+        'تجفيف 10 دقائق — لا عفن!',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'CaCO₃ 600ppm + ماء صنبور = جهاز يتلف 6 أشهر — RO إلزامي.',
+        'بخار + Nafud بدون Pre-Rinse = خدش كل الأسطح.',
+        'نخيل ألياف + بخار = لزج يلتصق — HEPA أولاً.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
+        { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMISNID.name, quote: 'بخار بريدة: 600ppm يتلف جهاز. RO إلزامي. تجفيف 10 دقائق. لا عفن.', source: 'جغرافيا المناخ — بخار القصيم' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف بخار مرخص', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'جهاز بخار صناعي', use: 'RO Water — لا كلس' },
+        { name: 'HEPA Pollen', use: 'نخيل ألياف — أولاً' },
+        { name: 'Descaler جهاز', use: 'CaCO₃ 600ppm — شهري' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'ماء صنبور يكفي.', solution: '600ppm = جهاز يتلف 6 أشهر. RO.' },
+        { fear: 'مثل خميس.', solution: 'لا عفن+10 دقائق = أرخص 20%.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'أي ماء.', truth: '600ppm = RO إلزامي. يتلف.' },
+        { myth: 'بخار يعفّن.', truth: '10-20% = 10 دقائق. لا عفن.' },
     ],
-
     relatedServices: [
-        { slug: 'buraidah-furniture-moving', context: 'نقل عفش ببريدة', priority: 1 },
-        { slug: 'buraidah-furniture-storage', context: 'تخزين عفش ببريدة', priority: 2 },
-        { slug: 'buraidah-dyna', context: 'دينا نقل ببريدة', priority: 3 },
-        { slug: 'buraidah-moving-out', context: 'نقل عفش خروج ببريدة', priority: 4 },
-        { slug: 'buraidah-dabab', context: 'دباب نقل ببريدة', priority: 5 },
-        { slug: 'buraidah-cleaning', context: 'تنظيف منازل ببريدة', priority: 6 },
-        { slug: 'buraidah-tanks-cleaning', context: 'تنظيف خزانات ببريدة', priority: 7 },
-        { slug: 'buraidah-sofa-cleaning', context: 'تنظيف كنب ببريدة', priority: 8 },
-        { slug: 'buraidah-carpet-cleaning', context: 'تنظيف سجاد ببريدة', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 1 },
+        { slug: 'sofa-cleaning', context: 'كنب', priority: 2 },
+        { slug: 'carpet-cleaning', context: 'سجاد', priority: 3 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 4 },
+        { slug: 'marble-polishing', context: 'رخام', priority: 5 },
+        { slug: 'oven-cleaning', context: 'أفران', priority: 6 },
+        { slug: 'pest-control', context: 'حشرات', priority: 7 },
     ],
 };

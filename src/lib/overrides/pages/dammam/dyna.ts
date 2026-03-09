@@ -1,11 +1,5 @@
-// ══════════════════════════════════════════════════════════════
-// دينا نقل بالدمام — Override مخصص (E-E-A-T Grade)
-// صفحة: /dammam/dyna
-// قطاع YMYL: مالي (حماية ممتلكات)
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -64,15 +58,19 @@ export const override: PageOverride = {
         {
                 "question": "أفضل وقت لحجز دينا بالدمام؟",
                 "answer": "صباحاً قبل 9ص: أقل زحمة على طريق الظهران. تجنب 7-9ص إذا تنقل بين الدمام-الخبر (ذروة). نهاية الشهر: ازدحام — احجز مبكراً."
-        }
-],
+        },
+        { question: 'هل فيه تأمين على الأمتعة؟', answer: 'كل شركات بروكر مرخصة TGA = تأمين شامل. أي ضرر = تعويض فوري. بدون TGA = بدون تعويض.' },
+    
+        { question: 'كم يوم قبل أحجز؟', answer: 'الأفضل 3-7 أيام مقدماً. في مواسم الذروة (نهاية العقود/إجازات): 10-14 يوم. الحجز المبكر = سعر أفضل.' },
+    ],
 
     expertTips: [
         "احجز دينا مغلقة — ضرورة في مناخ الدمام الخليجي",
         "انقل صباحاً قبل 9ص لتفادي زحمة طريق الظهران",
         "حدد الحي بدقة — بعض الأحياء القديمة شوارع ضيقة تحتاج دينا 3 طن",
-        "للمناطق الصناعية: تأكد من توفر دينا 7 طن للمعدات الثقيلة"
-],
+        "للمناطق الصناعية: تأكد من توفر دينا 7 طن للمعدات الثقيلة",
+        'صوّر كل قطعة أثاث قبل النقل — توثيق بصري يحمي حقك في التعويض.',
+    ],
 
     warnings: [
         "دينا مفتوحة في 80% رطوبة = عفن وتلف. لا تخاطر بأثاثك",
@@ -83,14 +81,10 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.TGA, role: 'ترخيص شركات النقل والدينات' },
         { ...GOV.BALADI, role: 'الرخصة التجارية' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات أمانة الشرقية' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALZUWAYED.name,
-        title: EXPERTS.ALZUWAYED.title,
-        credential: EXPERTS.ALZUWAYED.credential,
-        profileUrl: EXPERTS.ALZUWAYED.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALSHABNAN,
 
     expertCitations: [
         {
@@ -145,8 +139,11 @@ export const override: PageOverride = {
         {
                 "myth": "الدينا الصغيرة أوفر — أسوي رحلتين",
                 "truth": "رحلتان بدينا 3 طن: 300-600 ريال + وقت مضاعف + خطر مضاعف. رحلة واحدة بدينا 5 طن: 250-450 ريال. الرحلة الواحدة: أرخص وأسرع وأسلم"
-        }
-],
+        },
+        { myth: 'النقل سهل — أسويه بنفسي.', truth: 'خدش واحد في خزانة = 500-2,000 ريال إصلاح. إصابة ظهر = آلاف. النقل المهني + التأمين = أرخص من المخاطرة.' },
+
+        { myth: 'النقل سهل — أسويه بنفسي.', truth: 'خدش خزانة = 500-2,000 ريال. إصابة ظهر = آلاف. النقل المهني + التأمين = أرخص من المخاطرة.' },
+    ],
 
     relatedServices: [
         {
@@ -193,6 +190,13 @@ export const override: PageOverride = {
                 "slug": "dammam-water-leak-detection",
                 "context": "كشف تسربات قبل النقل",
                 "priority": 9
-        }
+        },
+        { slug: 'furniture-moving', context: 'نقل أثاث — الخدمة الأساسية.', priority: 2 },
+        { slug: 'furniture-storage', context: 'تخزين أثاث — حل مرن.', priority: 3 },
+        { slug: 'dyna', context: 'دينا نقل — للقطع الكبيرة.', priority: 4 },
+        { slug: 'dabab', context: 'دباب نقل — للقطع الصغيرة.', priority: 5 },
+        { slug: 'cleaning', context: 'تنظيف المنزل الجديد بعد النقل.', priority: 6 },
+        { slug: 'pest-control', context: 'مكافحة حشرات المنزل الجديد.', priority: 7 },
+        { slug: 'air-conditioner-cleaning', context: 'تنظيف مكيفات المنزل الجديد.', priority: 8 },
 ],
 };

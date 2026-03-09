@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown, MapPin, Search, Phone, Sparkles, Truck, Bug, Droplet, Wrench, Building2, Shield, Home, Info, Mail, BookOpen } from 'lucide-react';
 import { SERVICES, getServicesByCategory, CATEGORY_NAMES, getCitiesByRegion, REGION_NAMES } from '@/lib/seed';
+import { isAbsorbedSlug } from '@/lib/services/super-page-groups';
 import SearchModal from './SearchModal';
 
 // Category icons
@@ -128,7 +129,7 @@ export default function Navbar() {
                                                             </h4>
                                                         </div>
                                                         <div className="space-y-1">
-                                                            {services.slice(0, 6).map(service => (
+                                                            {services.filter(s => !isAbsorbedSlug(s.slug)).slice(0, 6).map(service => (
                                                                 <Link
                                                                     key={service.slug}
                                                                     href={`/${service.slug}`}
@@ -146,7 +147,7 @@ export default function Navbar() {
                                         <div className="bg-gradient-to-l from-emerald-50 to-white px-6 py-4 border-t border-gray-100">
                                             <div className="flex items-center justify-between">
                                                 <div>
-                                                    <p className="font-bold text-gray-900">أكثر من 50 خدمة</p>
+                                                    <p className="font-bold text-gray-900">{SERVICES.filter(s => !isAbsorbedSlug(s.slug)).length} خدمة متخصصة</p>
                                                     <p className="text-sm text-gray-500">تصفح جميع الخدمات المتاحة</p>
                                                 </div>
                                                 <Link
@@ -344,7 +345,7 @@ export default function Navbar() {
                         <div className="pt-4 border-t border-gray-100">
                             <h4 className="text-sm font-bold text-gray-400 mb-3 px-1">الخدمات الشائعة</h4>
                             <div className="grid grid-cols-2 gap-2">
-                                {SERVICES.slice(0, 6).map(service => (
+                                {SERVICES.filter(s => !isAbsorbedSlug(s.slug)).slice(0, 6).map(service => (
                                     <Link
                                         key={service.slug}
                                         href={`/${service.slug}`}

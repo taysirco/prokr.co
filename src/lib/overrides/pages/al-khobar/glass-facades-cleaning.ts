@@ -1,94 +1,77 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف واجهات زجاجية بالخبر — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-khobar/glass-facades-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف واجهات زجاجية بالخبر — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف واجهات زجاجية بالخبر. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف واجهات زجاجية بالخبر — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف واجهات زجاجية بالخبر', 'تنظيف واجهات زجاجية الخبر', 'شركة تنظيف واجهات زجاجية بالخبر', 'أفضل تنظيف واجهات زجاجية بالخبر'],
+        title: 'تنظيف واجهات زجاجية بالخبر — NaCl ملح بحري + 85-95% Biofilm + Sealant تآكل + Sabkha (2026)',
+        description: 'تنظيف واجهات زجاجية الخبر. NaCl ملح يترسب بقع. 85-95% Biofilm عضوي. Sealant يتآكل بـ NaCl. Sabkha. Deionized + Squeegee + Anti-Biofilm + Marine Sealant.',
+        h1: 'تنظيف واجهات زجاجية بالخبر — الملح يُبقّع والرطوبة تُبلفم والختم يتآكل',
+        keywords: ['تنظيف واجهات زجاجية بالخبر', 'تنظيف واجهات الخبر', 'شركة تنظيف واجهات بالخبر'],
     },
-
     content: {
-        introduction: 'تنظيف واجهات زجاجية بالخبر — خدمة متخصصة تراعي الظروف المناخية والبيئية في الخبر. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف واجهات زجاجية بالخبر: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف واجهات زجاجية بالخبر. خدمة احترافية. ضمان.',
+        introduction: 'واجهات الخبر الزجاجية تتعرض لـ 3 تحديات ساحلية. الأولى — NaCl بقع ملحية: رذاذ بحري يترسب على الزجاج ← يجف ← بقع بيضاء ملحية ← مع الشمس: تتصلب. الفرق عن CaSO₄ (الأحساء): NaCl يمتص رطوبة (Hygroscopic) = يبقى رطباً أطول = يتآكل الألمنيوم حوله. Deionized Rinse + Squeegee. الثانية — 85-95% Biofilm: رطوبة مُستمرة = Biofilm بكتيري/طحلبي ينمو على الزجاج ← طبقة خضراء شفافة تُبهت الشفافية. Anti-Biofilm ربع سنوي. الثالثة — Sealant تآكل: NaCl يتآكل مع السيليكون حول الزجاج ← ماء يتسلل ← بقع رطوبة بين الطبقات. Marine-Grade Sealant يقاوم NaCl.',
+        shortAnswer: 'على عكس [ماء + قماش] الذي يترك NaCl ويُوزّع Biofilm، يعتمد بروتوكولنا في خدمة [تنظيف الواجهات] بمدينة [الخبر] على [Deionized + Anti-Biofilm + Marine Sealant]. ففي ظل [NaCl + 85-95% + تآكل ختم]، تتفاقم ظاهرة [بقع + طبقة + تسلل]. لذا؛ يتدخل خبراؤنا عبر [بروتوكول واجهات ساحلي].',
+        heroSubtitle: 'NaCl بقع + 85-95% Biofilm + Sealant تآكل ساحلي',
     },
-
     pricing: [
-        { type: 'تنظيف واجهات زجاجية — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف واجهات زجاجية — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'واجهة صغيرة (50 م²)', unit: 'خدمة', minPrice: 220, maxPrice: 450, time: '2-3 ساعات' },
+        { type: 'واجهة كبيرة (100+ م²)', unit: 'خدمة', minPrice: 450, maxPrice: 1000, time: '4-8 ساعات' },
+        { type: 'Anti-Biofilm + إزالة NaCl متراكم', unit: 'خدمة', minPrice: 350, maxPrice: 700, time: '3-5 ساعات' },
+        { type: 'عقد ربع سنوي (4 زيارات)', unit: 'سنة', minPrice: 700, maxPrice: 1600, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف واجهات زجاجية بالخبر؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف واجهات زجاجية؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف واجهات زجاجية؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'NaCl أسوأ من CaSO₄ على الزجاج؟', answer: 'مختلف: CaSO₄ = Scale صلب (بقع بيضاء ثابتة). NaCl = Hygroscopic (يمتص رطوبة = يبقى رطباً = يتآكل الألمنيوم حوله). NaCl أخطر للإطار — CaSO₄ أصعب إزالة من الزجاج.' },
+        { question: 'Biofilm — يختلف عن الأوساخ؟', answer: 'Biofilm = غشاء بكتيري/طحلبي حي = ينمو. الأوساخ = تراكم ميت. Biofilm يُعيد نموه بعد التنظيف السطحي. Anti-Biofilm = يقتله + يمنع إعادة النمو.' },
+        { question: 'Marine Sealant — أغلى؟', answer: 'أغلى 50-100% من السيليكون العادي. لكن: يقاوم NaCl 8-10 سنوات vs 3-5 سنوات. في الخبر: يُوفّر استبدال.' },
+        { question: 'كل 3 أشهر — السبب؟', answer: 'NaCl أسبوعي + Biofilm شهري. 3 أشهر = قبل أن يتصلب NaCl + يتأصل Biofilm. نصف سنوي = أصعب 3×.' },
+        { question: 'الكورنيش — أسوأ؟', answer: '500 م = NaCl 3-5× أعلى + Biofilm أسرع. أحياء داخلية = أقل. لكن: 85-95% = Biofilm في كل مكان.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Deionized Rinse بعد كل غسل — ماء الخبر = NaCl ← بقع. Deionized = صفر أملاح.',
+        'Anti-Biofilm كل ربع — يقتل الغشاء + يمنع إعادة النمو 3 أشهر.',
+        'فحص Sealant سنوي — NaCl يتآكل أسرع. Marine-Grade = يقاوم.',
+        'Squeegee — ليس قماش. NaCl على قماش = يخدش. Squeegee = حافة مطاطية نظيفة.',
+        'تنظيف صباحي — 85-95% + شمس ظهراً = ماء يتبخر = NaCl يتصلب فوراً.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'NaCl + ألمنيوم إطار + رطوبة = Galvanic Corrosion الإطار. تغيير إطار = 2,000-10,000 ريال/لوح.',
+        'Biofilm 85-95% متأصل = لا يُزال بالماء ← كشط ← خدوش. Anti-Biofilm ربع سنوي = يمنع.',
+        'Sealant متآكل = ماء بين طبقات الزجاج = بقع دائمة + عفن ← تغيير اللوح.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص شركات الواجهات' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات المباني بالشرقية' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'واجهات الخبر = ساحلية: NaCl Hygroscopic + Biofilm 85-95% + Sealant تآكل. 3 تحديات مختلفة عن الأحساء. Deionized + Anti-Biofilm + Marine Sealant.', source: 'نصائح هندسية — واجهات ساحلية' },
     ],
-
-    saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
+    saudiRegulations: [REGULATIONS.SBC_601],
     verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
+        { badge: '✔️ تنظيف واجهات مرخص', authority: 'منصة بلدي', icon: 'shield-check' },
     ],
-
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Deionized Water System', use: 'غسل بصفر أملاح — يمنع NaCl بقع' },
+        { name: 'Anti-Biofilm Treatment', use: 'يقتل Biofilm + يمنع إعادة النمو — 3 أشهر' },
+        { name: 'Marine-Grade Sealant', use: 'يقاوم NaCl — فعّال 8-10 سنوات' },
+        { name: 'Squeegee مهني', use: 'يرفع NaCl بدون خدش' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'الواجهة ما تتسخ.', solution: 'NaCl شفاف + Biofilm شفاف. \"ما تتسخ\" = لا تُلاحظ. ربع سنوي يكشف.' },
+        { fear: 'ماء وصابون.', solution: 'ماء الخبر = NaCl جديد. صابون لا يقتل Biofilm. 2 فشلات.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'واجهات الخبر مثل الأحساء.', truth: 'NaCl ≠ CaSO₄. Biofilm ≠ لقاح. Hygroscopic ≠ Scale. مختلف.' },
+        { myth: 'المطر يغسل.', truth: 'المطر في الخبر = NaCl + أملاح بحرية = بقع إضافية.' },
+        { myth: 'سنوي.', truth: 'NaCl أسبوعي + Biofilm شهري. سنوي = 11 شهراً. ربع سنوي.' },
     ],
-
     relatedServices: [
-        { slug: 'al-khobar-furniture-moving', context: 'نقل عفش بالخبر', priority: 1 },
-        { slug: 'al-khobar-furniture-storage', context: 'تخزين عفش بالخبر', priority: 2 },
-        { slug: 'al-khobar-dyna', context: 'دينا نقل بالخبر', priority: 3 },
-        { slug: 'al-khobar-moving-out', context: 'نقل عفش خروج بالخبر', priority: 4 },
-        { slug: 'al-khobar-dabab', context: 'دباب نقل بالخبر', priority: 5 },
-        { slug: 'al-khobar-cleaning', context: 'تنظيف منازل بالخبر', priority: 6 },
-        { slug: 'al-khobar-tanks-cleaning', context: 'تنظيف خزانات بالخبر', priority: 7 },
-        { slug: 'al-khobar-sofa-cleaning', context: 'تنظيف كنب بالخبر', priority: 8 },
-        { slug: 'al-khobar-carpet-cleaning', context: 'تنظيف سجاد بالخبر', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف — المبنى', priority: 1 },
+        { slug: 'marble-polishing', context: 'رخام — NaCl الأرضيات', priority: 2 },
+        { slug: 'office-cleaning', context: 'مكاتب — واجهات المكتب', priority: 3 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف — NaCl مشترك', priority: 4 },
+        { slug: 'auto-cleaning', context: 'سيارات — نفس NaCl', priority: 5 },
+        { slug: 'villas-cleaning', context: 'فلل — واجهات الفيلا', priority: 6 },
+        { slug: 'steam-cleaning', context: 'بخار — تعقيم داخلي', priority: 7 },
     ],
 };

@@ -5,6 +5,7 @@
 // ══════════════════════════════════════════════════════════════
 
 import type { PageOverride } from '../../types';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -91,6 +92,8 @@ export const override: PageOverride = {
     ],
 
 
+        verificationBadges: [{ badge: '✔️ شركة مرخصة من بلدي', authority: 'وزارة البلديات', icon: 'shield-check' }],
+
     equipment: [
         { name: 'مكنسة صناعية HEPA Filter', use: 'شفط الغبار الدقيق PM2.5 والعث — لا تعيد نشره في الهواء' },
         { name: 'جهاز بخار Karcher SC5', use: 'بخار 150°م للأرضيات والحمامات — يقتل 99.9% بكتيريا بدون كيماويات' },
@@ -105,25 +108,19 @@ export const override: PageOverride = {
     trustAnchors: [
         { entity: 'هيئة الغذاء والدواء', acronym: 'SFDA', url: 'https://sfda.gov.sa', role: 'اعتماد مواد التنظيف والتعقيم المستخدمة' },
         { entity: 'وزارة الموارد البشرية', url: 'https://hrsd.gov.sa', role: 'تنظيم عمالة التنظيف والتأمين الصحي' },
-    ],
+        { entity: AMANA.JEDDAH.entity, url: AMANA.JEDDAH.url, role: 'اشتراطات أمانة جدة' }],
 
     saudiRegulations: [
         { code: 'نظام العمل — المادة 40', description: 'إلزام صاحب العمل بتأمين صحي لكل عامل', url: 'https://hrsd.gov.sa' },
     ],
 
-    expertReviewer: {
-        name: 'أ.د. عبدالله المسند',
-        title: 'أستاذ جغرافيا المناخ',
-        credential: 'أستاذ جغرافيا المناخ — جامعة القصيم',
-        profileUrl: 'https://x.com/ALMISNID',
-    },
+    expertReviewer: EXPERTS.ALMISNID,
 
     expertCitations: [
         {
             expert: 'أ.د. عبدالله المسند',
             quote: 'في المدن الساحلية: النظافة ليست رفاهية — ملح NaCl يحوّل أي سطح متسخ لبؤرة بكتيرية خلال 48 ساعة. التنظيف الاحترافي بالبخار يقتل البكتيريا بدون كيماويات',
             source: 'تحليل مناخي',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -133,14 +130,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'jeddah-villas-cleaning', context: 'فلل جدة تحتاج تنظيف متخصص — مساحات أكبر + حدائق', priority: 1 },
-        { slug: 'jeddah-apartments-cleaning', context: 'تنظيف شقق بجدة — أسعار خاصة للشقق الصغيرة والمتوسطة', priority: 2 },
-        { slug: 'jeddah-hourly-cleaning', context: 'تنظيف بالساعة للصيانة الدورية الأسبوعية', priority: 3 },
-        { slug: 'jeddah-sanitization', context: 'تعقيم بعد التنظيف يكمّل الحماية ضد البكتيريا', priority: 4 },
-        { slug: 'jeddah-steam-cleaning', context: 'بخار 150°م يقتل 99.9% بكتيريا + يزيل ملوحة', priority: 5 },
-        { slug: 'jeddah-sofa-cleaning', context: 'تنظيف الكنب بالبخار مع تنظيف المنزل الشامل', priority: 6 },
-        { slug: 'jeddah-carpet-cleaning', context: 'غسيل السجاد — بؤرة العفن في رطوبة جدة', priority: 7 },
-        { slug: 'jeddah-air-conditioner-cleaning', context: 'تنظيف المكيف يمنع إعادة نشر الغبار بعد التنظيف', priority: 8 },
-        { slug: 'jeddah-pest-control', context: 'رش وقائي بعد التنظيف العميق — بيئة نظيفة تطرد الحشرات', priority: 9 },
+        { slug: 'villas-cleaning', context: 'فلل جدة تحتاج تنظيف متخصص — مساحات أكبر + حدائق', priority: 1 },
+        { slug: 'apartments-cleaning', context: 'تنظيف شقق بجدة — أسعار خاصة للشقق الصغيرة والمتوسطة', priority: 2 },
+        { slug: 'hourly-cleaning', context: 'تنظيف بالساعة للصيانة الدورية الأسبوعية', priority: 3 },
+        { slug: 'sanitization', context: 'تعقيم بعد التنظيف يكمّل الحماية ضد البكتيريا', priority: 4 },
+        { slug: 'steam-cleaning', context: 'بخار 150°م يقتل 99.9% بكتيريا + يزيل ملوحة', priority: 5 },
+        { slug: 'sofa-cleaning', context: 'تنظيف الكنب بالبخار مع تنظيف المنزل الشامل', priority: 6 },
+        { slug: 'carpet-cleaning', context: 'غسيل السجاد — بؤرة العفن في رطوبة جدة', priority: 7 },
+        { slug: 'air-conditioner-cleaning', context: 'تنظيف المكيف يمنع إعادة نشر الغبار بعد التنظيف', priority: 8 },
+        { slug: 'pest-control', context: 'رش وقائي بعد التنظيف العميق — بيئة نظيفة تطرد الحشرات', priority: 9 },
     ],
 };

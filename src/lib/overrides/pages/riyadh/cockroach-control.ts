@@ -5,7 +5,7 @@
 // ══════════════════════════════════════════════════════════════
 
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -80,6 +80,7 @@ export const override: PageOverride = {
         { ...GOV.SFDA, role: 'تسجيل مبيدات الصحة العامة عبر نظام "غد" — كل مبيد يُستخدم في بيتك يجب أن يحمل رقم تسجيل SFDA' },
         { ...GOV.WEQAA, role: 'بروتوكولات المكافحة المتكاملة (IPM) وإرشادات الوقاية من الآفات المنزلية' },
         { ...GOV.BALADI, role: 'الشهادة الصحية والترخيص التجاري لشركات المكافحة — ضمان المهنية والمسؤولية القانونية' },
+        { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
 
     expertReviewer: {
@@ -94,13 +95,11 @@ export const override: PageOverride = {
             expert: 'أ.د. فهد الخضيري',
             quote: 'لا تستخدموا أبداً مبيدات غير مسجلة في نظام غد — بعضها يحتوي مواد محظورة تسبب تسممات عصبية حقيقية. اسألوا دائماً عن رقم التسجيل',
             source: 'عالم أبحاث طبي — متخصص في السموم والمسرطنات (المرجع الأول في السعودية)',
-            url: 'https://x.com/DrAlkhodairy',
         },
         {
             expert: 'أ.د. عبدالله المسند',
             quote: 'أيام الأربعينية في الرياض (أبرد 40 يوماً — ديسمبر ويناير) تدفع الحشرات الاستوائية كالصراصير لغزو المنازل بحثاً عن الدفء',
             source: 'أستاذ جغرافيا المناخ — المرجع الأول للظواهر المناخية في السعودية',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -133,14 +132,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'riyadh-pest-control', context: 'مكافحة شاملة', priority: 1 },
-        { slug: 'riyadh-ants-control', context: 'نمل + صراصير', priority: 2 },
-        { slug: 'riyadh-kitchen-cleaning', context: 'المطبخ بؤرة صراصير', priority: 3 },
-        { slug: 'riyadh-cleaning', context: 'تنظيف يزيل مصادر غذاء', priority: 4 },
-        { slug: 'riyadh-sanitization', context: 'تعقيم بعد المكافحة', priority: 5 },
-        { slug: 'riyadh-sewage-unblocking', context: 'مجاري = مصدر صراصير', priority: 6 },
-        { slug: 'riyadh-insects-spraying', context: 'رش حشرات شامل', priority: 7 },
-        { slug: 'riyadh-pesticide-spraying', context: 'رش مبيدات متخصصة', priority: 8 },
-        { slug: 'riyadh-rodent-control', context: 'فئران + صراصير بؤر مشتركة', priority: 9 },
+        { slug: 'pest-control', context: 'مكافحة شاملة', priority: 1 },
+        { slug: 'ants-control', context: 'نمل + صراصير', priority: 2 },
+        { slug: 'kitchen-cleaning', context: 'المطبخ بؤرة صراصير', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف يزيل مصادر غذاء', priority: 4 },
+        { slug: 'sanitization', context: 'تعقيم بعد المكافحة', priority: 5 },
+        { slug: 'sewage-unblocking', context: 'مجاري = مصدر صراصير', priority: 6 },
+        { slug: 'insects-spraying', context: 'رش حشرات شامل', priority: 7 },
+        { slug: 'pesticide-spraying', context: 'رش مبيدات متخصصة', priority: 8 },
+        { slug: 'rodent-control', context: 'فئران + صراصير بؤر مشتركة', priority: 9 },
     ],
 };

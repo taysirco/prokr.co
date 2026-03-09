@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف سجاد بعنيزة — Override مخصص (E-E-A-T Grade)
-// صفحة: /onizah/carpet-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف سجاد بعنيزة — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف سجاد بعنيزة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف سجاد بعنيزة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف سجاد بعنيزة', 'تنظيف سجاد عنيزة', 'شركة تنظيف سجاد بعنيزة', 'أفضل تنظيف سجاد بعنيزة'],
+        title: 'تنظيف سجاد بعنيزة — Nafud SiO₂ خدش ألياف+CaCO₃ بقع+سكر تمور+لقاح — HEPA+Citric! (2026)',
+        description: 'تنظيف سجاد عنيزة. Nafud SiO₂ خدش ألياف! CaCO₃ بقع كلس. سكر تمور. لقاح نخيل. HEPA+Citric+Enzymatic.',
+        h1: 'تنظيف سجاد بعنيزة — Nafud+كلس+تمور!',
+        keywords: ['تنظيف سجاد بعنيزة', 'غسيل سجاد عنيزة', 'شركة تنظيف سجاد بعنيزة'],
     },
-
     content: {
-        introduction: 'تنظيف سجاد بعنيزة — خدمة متخصصة تراعي الظروف المناخية والبيئية في عنيزة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف سجاد بعنيزة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف سجاد بعنيزة. خدمة احترافية. ضمان.',
+        introduction: 'سجاد عنيزة = Nafud يقطع الألياف+كلس يصلبها! Nafud SiO₂ 7 Mohs: رمل النفود يتغلغل بين ألياف السجاد ← كل ضغط قدم = SiO₂ يقصّ الألياف من داخل! HEPA شفط عميق أولاً — أي غسيل بدون HEPA = ألياف مقطوعة. CaCO₃ 550ppm: ماء الغسيل يترك كلس ← ألياف تتصلب = سجاد خشن! Citric Acid+RO Water. سكر تمور: أغسطس-أكتوبر = سكر يلتصق بالألياف = لزوجة. Enzymatic Cleaner. لقاح: مارس-مايو = حبوب لقاح بين الألياف ← بخار 130°م يقتل+يفكك Van der Waals. يجف فوراً: 10-20% = سجاد يجف 15 دقيقة! ميزة عنيزة. مقارنة: الباحة = 6-10h تجفيف+عفن! عنيزة = يجف فوراً لكن Nafud+كلس.',
+        shortAnswer: 'على عكس [الفرك+ماء صنبور]، يعتمد بروتوكولنا في خدمة [تنظيف السجاد] بمدينة [عنيزة] على [HEPA ← Citric+RO ← Enzymatic ← بخار]. ففي ظل [Nafud SiO₂+CaCO₃ 550ppm+سكر+لقاح]، تتفاقم ظاهرة [قص ألياف+تصلب+لزوجة]. لذا؛ يتدخل فريقنا عبر [HEPA ← Citric+RO ← Enzymatic ← بخار] — يجف فوراً!',
+        heroSubtitle: 'Nafud يقصّ ألياف + CaCO₃ يُصلّب + تمور سكر — يجف 15 دقيقة!',
     },
-
     pricing: [
-        { type: 'تنظيف سجاد — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف سجاد — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'سجادة صغيرة (2×3م)', unit: 'قطعة', minPrice: 30, maxPrice: 60, time: '20 دقيقة — يجف فوراً!' },
+        { type: 'سجادة كبيرة (4×5م)', unit: 'قطعة', minPrice: 60, maxPrice: 120, time: '40 دقيقة' },
+        { type: '+ Enzymatic (تمور)', unit: 'قطعة', minPrice: 20, maxPrice: 40, time: '+ 15 دقيقة' },
+        { type: 'ربع سنوي', unit: 'سنة', minPrice: 200, maxPrice: 400, time: '4 غسلات + لقاح + تمور' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف سجاد بعنيزة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف سجاد؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف سجاد؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش سجاد عنيزة يتآكل أسرع؟', answer: 'Nafud SiO₂ 7 Mohs يقصّ ألياف من داخل. HEPA كل شهر.' },
+        { question: 'ليش سجاد عنيزة يصير خشن بعد الغسيل؟', answer: 'ماء 550ppm CaCO₃ = كلس يصلّب. Citric+RO.' },
+        { question: 'كم تجفيف سجاد بعنيزة مقابل الباحة؟', answer: '15 دقيقة! الباحة: 6-10h+Dehumidifier. عنيزة الأسرع.' },
+        { question: 'ما السكر اللزج على السجاد أغسطس-أكتوبر؟', answer: 'سوق التمور. Enzymatic Cleaner يُفكك.' },
+        { question: 'كم مرة تنظيف سجاد بعنيزة؟', answer: 'ربع سنوي + HEPA شهري + بعد لقاح+تمور = 6.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'HEPA شفط عميق — Nafud ألياف.',
+        'Citric+RO — لا ماء صنبور!',
+        'Enzymatic — تمور سكر.',
+        'بخار 130°م — لقاح Van der Waals.',
+        'يجف 15 دقيقة — ميزة!',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'فرك Nafud بالسجاد = قصّ ألياف — HEPA أولاً.',
+        'ماء صنبور 550ppm = سجاد خشن — Citric+RO.',
+        'سكر تمور على سجاد × أسبوع = حشرات — Enzymatic YMYL.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
+        { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMISNID.name, quote: 'سجاد عنيزة: Nafud يقصّ+CaCO₃ يصلّب. HEPA+Citric. يجف فوراً.', source: 'جغرافيا المناخ — سجاد القصيم' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف سجاد مرخص', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'HEPA شفط عميق', use: 'Nafud SiO₂ — ألياف' },
+        { name: 'Citric Acid + RO', use: 'CaCO₃ — لا تصلب' },
+        { name: 'Enzymatic Cleaner', use: 'سكر تمور — تفكيك' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'مكنسة عادية.', solution: 'HEPA عميق. Nafud.' },
+        { fear: 'ماء يكفي.', solution: '550ppm = خشن. RO.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'نصف سنوي.', truth: 'ربع سنوي+لقاح+تمور.' },
+        { myth: 'تجفيف مشكلة.', truth: '15 دقيقة! 10-20%.' },
     ],
-
     relatedServices: [
-        { slug: 'onizah-furniture-moving', context: 'نقل عفش بعنيزة', priority: 1 },
-        { slug: 'onizah-furniture-storage', context: 'تخزين عفش بعنيزة', priority: 2 },
-        { slug: 'onizah-dyna', context: 'دينا نقل بعنيزة', priority: 3 },
-        { slug: 'onizah-moving-out', context: 'نقل عفش خروج بعنيزة', priority: 4 },
-        { slug: 'onizah-dabab', context: 'دباب نقل بعنيزة', priority: 5 },
-        { slug: 'onizah-cleaning', context: 'تنظيف منازل بعنيزة', priority: 6 },
-        { slug: 'onizah-tanks-cleaning', context: 'تنظيف خزانات بعنيزة', priority: 7 },
-        { slug: 'onizah-sofa-cleaning', context: 'تنظيف كنب بعنيزة', priority: 8 },
-        { slug: 'onizah-steam-cleaning', context: 'تنظيف بالبخار بعنيزة', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 1 },
+        { slug: 'sofa-cleaning', context: 'كنب', priority: 2 },
+        { slug: 'steam-cleaning', context: 'بخار', priority: 3 },
+        { slug: 'councils-cleaning', context: 'مجالس', priority: 4 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 5 },
+        { slug: 'pest-control', context: 'حشرات', priority: 6 },
+        { slug: 'apartments-cleaning', context: 'شقق', priority: 7 },
     ],
 };

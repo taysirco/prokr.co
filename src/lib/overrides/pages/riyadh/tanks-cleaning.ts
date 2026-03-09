@@ -5,7 +5,7 @@
 // ══════════════════════════════════════════════════════════════
 
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -80,6 +80,7 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'إصدار الشهادة الصحية لخزانات المياه — مطلوبة للعمارات المؤجرة والمطاعم' },
         { ...GOV.NWC, role: 'معايير جودة المياه وتركيز الكلور المسموح (0.5-1 PPM)' },
         { ...GOV.MAWAI, role: 'معايير ترشيد المياه وصيانة شبكات التخزين المنزلية' },
+        { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
 
     expertReviewer: {
@@ -94,13 +95,11 @@ export const override: PageOverride = {
             expert: 'م. ماجد المحيميد',
             quote: 'خزان بدون عزل حراري في الرياض = بكتيريا مضمونة صيفاً. التنظيف يمسك 3 أشهر بدون عزل — ومع عزل يمسك 6 أشهر أو أكثر',
             source: 'خبير جودة البناء والتشطيبات — نصائح هندسية للصيانة المنزلية',
-            url: 'https://x.com/majedalmohaimed',
         },
         {
             expert: 'أ.د. عبدالله المسند',
             quote: 'الرياض تتعرض لـ 15-25 عاصفة غبارية سنوياً — الغبار يتسلل لخزانات المياه عبر فتحات التهوية ويلوث المياه',
             source: 'أستاذ جغرافيا المناخ — بيانات مناخية موثقة',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -132,14 +131,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'riyadh-sanitization', context: 'تعقيم بعد التنظيف', priority: 1 },
-        { slug: 'riyadh-tank-insulation', context: 'عزل الخزان', priority: 2 },
-        { slug: 'riyadh-tank-leak-detection', context: 'كشف تسرب', priority: 3 },
-        { slug: 'riyadh-water-leak-detection', context: 'كشف تسرب أنابيب', priority: 4 },
-        { slug: 'riyadh-water-insulation', context: 'عزل مائي', priority: 5 },
-        { slug: 'riyadh-cleaning', context: 'تنظيف شامل', priority: 6 },
-        { slug: 'riyadh-pest-control', context: 'حشرات الخزان', priority: 7 },
-        { slug: 'riyadh-roof-insulation', context: 'عزل سطح الخزان', priority: 8 },
-        { slug: 'riyadh-foam-insulation', context: 'فوم للخزان', priority: 9 },
+        { slug: 'sanitization', context: 'تعقيم بعد التنظيف', priority: 1 },
+        { slug: 'tank-insulation', context: 'عزل الخزان', priority: 2 },
+        { slug: 'tank-leak-detection', context: 'كشف تسرب', priority: 3 },
+        { slug: 'water-leak-detection', context: 'كشف تسرب أنابيب', priority: 4 },
+        { slug: 'water-insulation', context: 'عزل مائي', priority: 5 },
+        { slug: 'cleaning', context: 'تنظيف شامل', priority: 6 },
+        { slug: 'pest-control', context: 'حشرات الخزان', priority: 7 },
+        { slug: 'roof-insulation', context: 'عزل سطح الخزان', priority: 8 },
+        { slug: 'foam-insulation', context: 'فوم للخزان', priority: 9 },
     ],
 };

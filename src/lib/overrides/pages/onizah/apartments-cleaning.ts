@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف شقق بعنيزة — Override مخصص (E-E-A-T Grade)
-// صفحة: /onizah/apartments-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف شقق بعنيزة — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف شقق بعنيزة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف شقق بعنيزة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف شقق بعنيزة', 'تنظيف شقق عنيزة', 'شركة تنظيف شقق بعنيزة', 'أفضل تنظيف شقق بعنيزة'],
+        title: 'تنظيف شقق بعنيزة — Nafud SiO₂+CaCO₃ 550ppm+سكر تمور+لقاح — HEPA+Citric+Enzymatic! (2026)',
+        description: 'تنظيف شقق عنيزة. Nafud SiO₂ خدش! CaCO₃ 550ppm كلس. سكر تمور. لقاح مارس-مايو. HEPA+Citric+Enzymatic.',
+        h1: 'تنظيف شقق بعنيزة — Nafud+كلس+تمور!',
+        keywords: ['تنظيف شقق بعنيزة', 'تنظيف شقة بعنيزة', 'شركة تنظيف شقق بعنيزة'],
     },
-
     content: {
-        introduction: 'تنظيف شقق بعنيزة — خدمة متخصصة تراعي الظروف المناخية والبيئية في عنيزة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف شقق بعنيزة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف شقق بعنيزة. خدمة احترافية. ضمان.',
+        introduction: 'شقة عنيزة = Nafud يخدش+كلس يتراكم! Nafud SiO₂ 7 Mohs: رمل يدخل النوافذ ← يستقر على الأرضيات ← أي فرك بمسّاحة = خدوش على البلاط! HEPA أولاً. CaCO₃ 550ppm: كلس أبيض في المطبخ والحمام كل أسبوع ← Citric Acid. لا ماء صنبور! سوق التمور: أغسطس-أكتوبر = سكر لزج ينتقل بالهواء ← يلتصق بنوافذ الشقة. Enzymatic. لقاح: مارس-مايو = حبوب لقاح تدخل المكيف ← تنتشر بالشقة. HEPA AC. يجف فوراً: 10-20% = الشقة تجف خلال 15 دقيقة بعد المسح! ميزة كبيرة. مقابل ينبع: 6-10h! مقارنة: الباحة = عفن+6-10h+عرعر. عنيزة = Nafud+كلس+تمور+لقاح لكن يجف فوراً!',
+        shortAnswer: 'على عكس [الفرك+ماء صنبور]، يعتمد بروتوكولنا في خدمة [تنظيف الشقق] بمدينة [عنيزة] على [HEPA ← Citric ← Enzymatic ← HEPA AC]. ففي ظل [Nafud SiO₂+CaCO₃ 550ppm+سكر تمور+لقاح]، تتفاقم ظاهرة [خدش+كلس+لزوجة+التصاق]. لذا؛ يتدخل فريقنا عبر [4 ركائز قصيمية] — يجف فوراً!',
+        heroSubtitle: 'Nafud خدش + CaCO₃ كلس + تمور سكر + يجف فوراً 15 دقيقة!',
     },
-
     pricing: [
-        { type: 'تنظيف شقق — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف شقق — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'شقة غرفتين', unit: 'شقة', minPrice: 130, maxPrice: 270, time: '2-3h — يجف فوراً!' },
+        { type: 'شقة 3-4 غرف', unit: 'شقة', minPrice: 200, maxPrice: 420, time: '3-5h' },
+        { type: 'بعد تمور (أكتوبر)', unit: 'شقة', minPrice: 180, maxPrice: 370, time: '3-4h — Enzymatic' },
+        { type: 'ربع سنوي', unit: 'سنة', minPrice: 400, maxPrice: 800, time: '6 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف شقق بعنيزة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف شقق؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف شقق؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش شقة عنيزة تخدش بالمسّاحة؟', answer: 'Nafud SiO₂ 7 Mohs — رمل صلب. HEPA أولاً.' },
+        { question: 'ليش كلس الحمام لا يروح بالماء بعنيزة؟', answer: 'CaCO₃ 550ppm = كلس صلب. Citric Acid. لا ماء صنبور!' },
+        { question: 'ما السكر اللزج أغسطس-أكتوبر بعنيزة؟', answer: 'سوق التمور. Glucose+Fructose. Enzymatic Cleaner.' },
+        { question: 'كم تجفيف شقة بعنيزة مقابل الباحة؟', answer: '15 دقيقة! الباحة: 6-10h. عنيزة الأسرع.' },
+        { question: 'كم مرة تنظيف شقة بعنيزة؟', answer: 'ربع سنوي + لقاح + تمور = 6/سنة.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'HEPA أولاً — Nafud 7 Mohs.',
+        'Citric — CaCO₃ 550ppm.',
+        'Enzymatic — تمور سكر.',
+        'HEPA AC — لقاح مارس-مايو.',
+        'يجف 15 دقيقة — ميزة!',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'فرك Nafud = خدوش بلاط — HEPA أولاً.',
+        'ماء صنبور = كلس جديد — Citric+RO.',
+        'سكر تمور × 3 أسابيع = حشرات — Enzymatic YMYL.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
+        { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMISNID.name, quote: 'شقة عنيزة: Nafud+CaCO₃+تمور. HEPA+Citric+Enzymatic. يجف فوراً.', source: 'جغرافيا المناخ — شقق القصيم' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف مرخص', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'HEPA Filter', use: 'Nafud SiO₂ — شفط' },
+        { name: 'Citric Acid', use: 'CaCO₃ 550ppm — إذابة' },
+        { name: 'Enzymatic Cleaner', use: 'سكر تمور — تفكيك' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'جاف = نظيف.', solution: 'Nafud+كلس+تمور = 4 تحديات.' },
+        { fear: 'ماء يكفي.', solution: '550ppm = كلس. Citric.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'سنوي.', truth: 'ربع سنوي+لقاح+تمور = 6.' },
+        { myth: 'جاف نظيف.', truth: 'Nafud+CaCO₃+سكر.' },
     ],
-
     relatedServices: [
-        { slug: 'onizah-furniture-moving', context: 'نقل عفش بعنيزة', priority: 1 },
-        { slug: 'onizah-furniture-storage', context: 'تخزين عفش بعنيزة', priority: 2 },
-        { slug: 'onizah-dyna', context: 'دينا نقل بعنيزة', priority: 3 },
-        { slug: 'onizah-moving-out', context: 'نقل عفش خروج بعنيزة', priority: 4 },
-        { slug: 'onizah-dabab', context: 'دباب نقل بعنيزة', priority: 5 },
-        { slug: 'onizah-cleaning', context: 'تنظيف منازل بعنيزة', priority: 6 },
-        { slug: 'onizah-tanks-cleaning', context: 'تنظيف خزانات بعنيزة', priority: 7 },
-        { slug: 'onizah-sofa-cleaning', context: 'تنظيف كنب بعنيزة', priority: 8 },
-        { slug: 'onizah-carpet-cleaning', context: 'تنظيف سجاد بعنيزة', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 1 },
+        { slug: 'carpet-cleaning', context: 'سجاد', priority: 2 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 3 },
+        { slug: 'steam-cleaning', context: 'بخار', priority: 4 },
+        { slug: 'pest-control', context: 'حشرات', priority: 5 },
+        { slug: 'marble-polishing', context: 'رخام', priority: 6 },
+        { slug: 'villas-cleaning', context: 'فلل', priority: 7 },
     ],
 };

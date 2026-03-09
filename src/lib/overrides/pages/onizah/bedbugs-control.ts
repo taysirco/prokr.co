@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// مكافحة بق الفراش بعنيزة — Override مخصص (E-E-A-T Grade)
-// صفحة: /onizah/bedbugs-control
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'مكافحة بق الفراش بعنيزة — خدمة احترافية معتمدة (2026)',
-        description: 'مكافحة بق الفراش بعنيزة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'مكافحة بق الفراش بعنيزة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['مكافحة بق الفراش بعنيزة', 'مكافحة بق الفراش عنيزة', 'شركة مكافحة بق الفراش بعنيزة', 'أفضل مكافحة بق الفراش بعنيزة'],
+        title: 'مكافحة بق بعنيزة — 48°م تكاثر سريع+10-20% يجف=بخار مثالي+Nafud شقوق — بخار+مبيد! (2026)',
+        description: 'مكافحة بق عنيزة. 48°م تكاثر سريع! 10-20% بخار مثالي. Nafud شقوق. بخار 56°م+مبيد+HEPA+شفط.',
+        h1: 'مكافحة بق بعنيزة — حرارة+بخار مثالي!',
+        keywords: ['مكافحة بق بعنيزة', 'مكافحة بق الفراش عنيزة', 'شركة مكافحة بق عنيزة'],
     },
-
     content: {
-        introduction: 'مكافحة بق الفراش بعنيزة — خدمة متخصصة تراعي الظروف المناخية والبيئية في عنيزة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'مكافحة بق الفراش بعنيزة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'مكافحة بق الفراش بعنيزة. خدمة احترافية. ضمان.',
+        introduction: 'بق عنيزة = 48°م يسرّع+10-20% يُجفف = بخار مثالي! 48°م تكاثر: حرارة شديدة تسرّع دورة حياة البق صيفاً ← مستعمرات أسرع. لكن: ميزة! بخار 56°م يقتل بسهولة في بيئة حارة أصلاً. 10-20% يجف: بعد البخار يجف فوراً! عكس الباحة (6-10h = عفن بعد). عنيزة = بيئة مثالية للبخار. Nafud شقوق: رمل SiO₂ يتراكم بشقوق الأثاث ← البق يختبئ بين حبات الرمل. HEPA شفط عميق. نخيل 8M: 8 مليون نخلة بالقصيم = مأوى. مقارنة: الباحة = 60-85%+6-10h = بخار كارثة! عنيزة = 10-20%+48°م = بخار مثالي!',
+        shortAnswer: 'على عكس [المبيد فقط]، يعتمد بروتوكولنا في خدمة [مكافحة البق] بمدينة [عنيزة] على [بخار 56°م+مبيد+HEPA شفط+يجف فوراً]. ففي ظل [48°م+10-20%+Nafud شقوق+نخيل]، تتفاقم ظاهرة [تكاثر سريع+اختباء]. لكن ميزة: [بخار مثالي+يجف فوراً].',
+        heroSubtitle: '48°م + 10-20% = بخار مثالي يقتل ويجف فوراً!',
     },
-
     pricing: [
-        { type: 'مكافحة بق الفراش — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'مكافحة بق الفراش — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'غرفة واحدة', unit: 'غرفة', minPrice: 120, maxPrice: 250, time: '1-2h — يجف فوراً!' },
+        { type: 'شقة (3 غرف)', unit: 'شقة', minPrice: 250, maxPrice: 520, time: '3-4h' },
+        { type: 'فيلا', unit: 'فيلا', minPrice: 400, maxPrice: 800, time: '4-6h' },
+        { type: '2-3 جلسات ضمان', unit: 'باقة', minPrice: 350, maxPrice: 700, time: '3 جلسات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة مكافحة بق الفراش بعنيزة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق مكافحة بق الفراش؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على مكافحة بق الفراش؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش البخار المثالي بعنيزة؟', answer: '10-20% = يجف فوراً! بخار يقتل+لا عفن. عكس الباحة.' },
+        { question: 'ليش 48°م تسرّع البق بعنيزة؟', answer: 'حرارة = دورة حياة أقصر. لكن: بخار 56°م يقتل.' },
+        { question: 'ليش Nafud مشكلة للبق بعنيزة؟', answer: 'رمل بشقوق = مخبأ. HEPA شفط عميق.' },
+        { question: 'كم تكلفة بق بعنيزة مقابل الباحة؟', answer: 'أرخص 20% — لا Dehumidifier! يجف فوراً.' },
+        { question: 'كم جلسة بق بعنيزة؟', answer: '2-3 جلسات. أسبوعين بين كل جلسة. ضمان شهرين.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'بخار 56°م — مثالي بعنيزة!',
+        'HEPA شفط — Nafud شقوق.',
+        'يجف فوراً — لا Dehumidifier!',
+        '2-3 جلسات — بيض.',
+        'مبيد — باقي Residual.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        '48°م × صيف = تكاثر سريع — بخار فوري.',
+        'Nafud شقوق + مبيد سطحي = البق ينجو — HEPA.',
+        'مبيد فقط بدون بخار = بيض ينجو — أسبوعين.',
     ],
-
     trustAnchors: [
-        { ...GOV.SFDA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص شركات المكافحة' },
+        { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALKHODAIRY.name,
-        title: EXPERTS.ALKHODAIRY.title,
-        credential: EXPERTS.ALKHODAIRY.credential,
-        profileUrl: EXPERTS.ALKHODAIRY.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALKHODAIRY,
     expertCitations: [
-        {
-            expert: EXPERTS.ALKHODAIRY.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALKHODAIRY.title,
-            url: EXPERTS.ALKHODAIRY.profileUrl,
-        },
+        { expert: EXPERTS.ALKHODAIRY.name, quote: 'بق عنيزة: 48°م+10-20% = بخار مثالي. HEPA Nafud.', source: 'حشرات المملكة — بق القصيم' },
     ],
-
     saudiRegulations: [REGULATIONS.GHAD_SYSTEM],
-
-    verificationBadges: [
-        { badge: '✔️ مبيدات معتمدة من SFDA', authority: 'هيئة الغذاء والدواء', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ مكافحة بق مرخصة', authority: 'بلدي + SFDA', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'بخار 56°م', use: 'بيض+بالغ — مثالي' },
+        { name: 'HEPA شفط عميق', use: 'Nafud — شقوق' },
+        { name: 'مبيد Residual', use: 'باقي — حماية' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'مبيد يكفي.', solution: 'بخار مثالي بعنيزة! يجف فوراً.' },
+        { fear: 'بخار = عفن.', solution: '10-20% = يجف 15 دقيقة!' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'بخار خطر.', truth: 'بعنيزة = مثالي. 10-20%.' },
+        { myth: 'مرة واحدة.', truth: '2-3 جلسات. بيض.' },
     ],
-
     relatedServices: [
-        { slug: 'onizah-furniture-moving', context: 'نقل عفش بعنيزة', priority: 1 },
-        { slug: 'onizah-furniture-storage', context: 'تخزين عفش بعنيزة', priority: 2 },
-        { slug: 'onizah-dyna', context: 'دينا نقل بعنيزة', priority: 3 },
-        { slug: 'onizah-moving-out', context: 'نقل عفش خروج بعنيزة', priority: 4 },
-        { slug: 'onizah-dabab', context: 'دباب نقل بعنيزة', priority: 5 },
-        { slug: 'onizah-cleaning', context: 'تنظيف منازل بعنيزة', priority: 6 },
-        { slug: 'onizah-tanks-cleaning', context: 'تنظيف خزانات بعنيزة', priority: 7 },
-        { slug: 'onizah-sofa-cleaning', context: 'تنظيف كنب بعنيزة', priority: 8 },
-        { slug: 'onizah-carpet-cleaning', context: 'تنظيف سجاد بعنيزة', priority: 9 },
+        { slug: 'pest-control', context: 'حشرات', priority: 1 },
+        { slug: 'pesticide-spraying', context: 'رش', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 3 },
+        { slug: 'sofa-cleaning', context: 'كنب', priority: 4 },
+        { slug: 'carpet-cleaning', context: 'سجاد', priority: 5 },
+        { slug: 'steam-cleaning', context: 'بخار', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 7 },
     ],
 };

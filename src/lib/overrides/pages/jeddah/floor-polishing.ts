@@ -6,6 +6,7 @@
 // ══════════════════════════════════════════════════════════════
 
 import type { PageOverride } from '../../types';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -66,6 +67,8 @@ export const override: PageOverride = {
         'بعد الجلي: امنع المشي 4-6 ساعات حتى يجف التشميع. المشي على تشميع رطب = خطوط دائمة',
     ],
 
+        verificationBadges: [{ badge: '✔️ شركة مرخصة من بلدي', authority: 'وزارة البلديات', icon: 'shield-check' }],
+
     equipment: [
         { name: 'مكينة جلي دوّارة بألماس (Diamond Pad Grinder)', use: 'تصقل سطح البلاط بأحجار ماسية — تزيل 0.1-0.3 مم من الطبقة الباهتة. 3 مراحل: خشن → وسط → ناعم' },
         { name: 'منظف فواصل Grout متخصص', use: 'محلول حمضي خفيف pH 5-6 ينظف الفواصل المتغيرة اللون بدون إتلاف البلاط المحيط' },
@@ -79,23 +82,20 @@ export const override: PageOverride = {
 
     trustAnchors: [
         { entity: 'الهيئة السعودية للمواصفات والمقاييس', acronym: 'SASO', url: 'https://www.saso.gov.sa', role: 'مواصفات مواد الجلي والتلميع والتشميع — ضمان سلامة المواد' },
+        { entity: AMANA.JEDDAH.entity, url: AMANA.JEDDAH.url, role: 'اشتراطات أمانة جدة' },
     ],
 
-    expertReviewer: {
-        name: 'م. ماجد المحيميد',
-        title: 'خبير جودة تشطيبات وعزل',
-        credential: 'مهندس جودة تشطيبات — المرجع الأول في جودة البناء والتشطيبات',
-        profileUrl: 'https://x.com/majedalmohaimed',
-    },
+    expertReviewer: EXPERTS.ALMISNID,
 
     expertCitations: [
         {
             expert: 'م. ماجد المحيميد',
             quote: 'التشميع بعد الجلي ليس رفاهية في المدن الساحلية — هو الحاجز الوحيد بين البلاط وملوحة الهواء. بدونه: الجلي يفقد فعاليته خلال 3 أشهر فقط',
             source: 'خبير جودة تشطيبات وعزل',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
+
+        saudiRegulations: [REGULATIONS.BALADI_HEALTH],
 
     counterNarratives: [
         { myth: 'التلميع رفاهية — الأرضية نظيفة تكفي', truth: 'التلميع يغلق مسامات البلاط = يمنع تسرب السوائل والبكتيريا. في جدة: الرطوبة تتسرب في المسامات المفتوحة ← عفن Aspergillus تحت السطح خلال 3-4 أسابيع. التلميع = حماية صحية وليس تجميلية' },
@@ -103,14 +103,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'jeddah-floor-cleaning', context: 'تنظيف قبل التلميع', priority: 1 },
-        { slug: 'jeddah-marble-polishing', context: 'جلي رخام — مكائن مختلفة', priority: 2 },
-        { slug: 'jeddah-cleaning', context: 'تنظيف شامل + تلميع — باقة', priority: 3 },
-        { slug: 'jeddah-steam-cleaning', context: 'بخار لتعقيم الفواصل قبل الحشو', priority: 4 },
-        { slug: 'jeddah-villas-cleaning', context: 'أرضيات فلل فاخرة — مساحات كبيرة', priority: 5 },
-        { slug: 'jeddah-shops-cleaning', context: 'تلميع أرضية محل — واجهة تجارية', priority: 6 },
-        { slug: 'jeddah-office-cleaning', context: 'أرضية المكتب — انطباع احترافي', priority: 7 },
-        { slug: 'jeddah-palaces-cleaning', context: 'رخام القصور — معدات VIP', priority: 8 },
-        { slug: 'jeddah-water-insulation', context: 'عزل مائي يحمي الأرضيات من الرطوبة العكسية', priority: 9 },
+        { slug: 'floor-cleaning', context: 'تنظيف قبل التلميع', priority: 1 },
+        { slug: 'marble-polishing', context: 'جلي رخام — مكائن مختلفة', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف شامل + تلميع — باقة', priority: 3 },
+        { slug: 'steam-cleaning', context: 'بخار لتعقيم الفواصل قبل الحشو', priority: 4 },
+        { slug: 'villas-cleaning', context: 'أرضيات فلل فاخرة — مساحات كبيرة', priority: 5 },
+        { slug: 'shops-cleaning', context: 'تلميع أرضية محل — واجهة تجارية', priority: 6 },
+        { slug: 'office-cleaning', context: 'أرضية المكتب — انطباع احترافي', priority: 7 },
+        { slug: 'palaces-cleaning', context: 'رخام القصور — معدات VIP', priority: 8 },
+        { slug: 'water-insulation', context: 'عزل مائي يحمي الأرضيات من الرطوبة العكسية', priority: 9 },
     ],
 };

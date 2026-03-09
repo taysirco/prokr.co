@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// جلي رخام بالخرج — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-kharj/marble-polishing
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'جلي رخام بالخرج — خدمة احترافية معتمدة (2026)',
-        description: 'جلي رخام بالخرج. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'جلي رخام بالخرج — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['جلي رخام بالخرج', 'جلي رخام الخرج', 'شركة جلي رخام بالخرج', 'أفضل جلي رخام بالخرج'],
+        title: 'جلي رخام بالخرج — CaCO₃ كلس+SiO₂ خدش+NH₃ بقع — Descaler+Diamond Pad! (2026)',
+        description: 'جلي رخام الخرج. CaCO₃ 450ppm كلس على الرخام! SiO₂ خدش. NH₃ بقع عضوية. Descaler+Diamond Pad+RO. لا رطوبة!',
+        h1: 'جلي رخام بالخرج — كلس وخدش — لا رطوبة!',
+        keywords: ['جلي رخام الخرج', 'جلي رخام بالخرج', 'شركة جلي رخام الخرج'],
     },
-
     content: {
-        introduction: 'جلي رخام بالخرج — خدمة متخصصة تراعي الظروف المناخية والبيئية في الخرج. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'جلي رخام بالخرج: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'جلي رخام بالخرج. خدمة احترافية. ضمان.',
+        introduction: 'رخام الخرج يواجه تحديات مياه وغبار! CaCO₃ 450ppm كلس: ماء صنبور = ترسبات كلس على سطح الرخام ← يفقد اللمعان. Descaler حمضي مخصوص للرخام (pH 5-6 ← ليس حمضي قوي يآكل). SiO₂ خدش: رمل ناعم يُمشى عليه ← يخدش سطح الرخام ← يفقد اللمعان. Diamond Pad يُعيد اللمعان. NH₃ بقع عضوية: أمونيا مزارع ± فضلات حمام تترك بقع عضوية صفراء. Poultice يسحب. ΔT 48°م: فارق حراري يُسبب تشققات شعرية (Hairline Cracks) في الرخام الخارجي. Sealant يحمي. 15-25% = لا رطوبة! لا عفن تحت الرخام! تجفيف لمعان فوري. مقارنة: خميس = رطوبة+عفن تحت الرخام+طحالب. الخرج = كلس+خدش لكن لا عفن = أبسط.',
+        shortAnswer: 'على عكس [الجلي بماء صنبور الذي يترسّب كلس]، يعتمد بروتوكولنا في خدمة [جلي الرخام] بمدينة [الخرج] على [Descaler pH 5-6+Diamond Pad+RO+Poultice]. ففي ظل [CaCO₃ 450ppm+SiO₂ خدش+NH₃ بقع+ΔT تشقق]، تتفاقم ظاهرة [كلس+خدش+بقع+Hairline]. لذا؛ يتدخل فنيونا عبر [Descaler ← Diamond ← Poultice ← Sealant ← RO].',
+        heroSubtitle: 'CaCO₃ كلس + SiO₂ خدش + NH₃ بقع — Diamond Pad+RO!',
     },
-
     pricing: [
-        { type: 'جلي رخام — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'جلي رخام — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'جلي عادي (م²)', unit: 'م²', minPrice: 15, maxPrice: 30, time: 'حسب المساحة' },
+        { type: 'جلي + تلميع Diamond', unit: 'م²', minPrice: 25, maxPrice: 50, time: 'حسب المساحة' },
+        { type: '+ Poultice بقع NH₃', unit: 'بقعة', minPrice: 50, maxPrice: 100, time: '1-2 ساعة' },
+        { type: 'نصف سنوي (2 زيارتين)', unit: 'سنة', minPrice: 400, maxPrice: 800, time: '2 زيارتين' },
     ],
-
     faq: [
-        { question: 'كم تكلفة جلي رخام بالخرج؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق جلي رخام؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على جلي رخام؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش الرخام يفقد لمعانه بالخرج؟', answer: 'CaCO₃ كلس + SiO₂ خدش = سببان. Descaler+Diamond Pad يعيدان اللمعان.' },
+        { question: 'هل Descaler يآكل الرخام بالخرج؟', answer: 'Descaler مخصوص pH 5-6 = لا يآكل. حمض قوي (خل/ليمون) = يآكل!' },
+        { question: 'كم تكلفة جلي رخام بالخرج مقارنة بخميس؟', answer: 'أرخص 15-20% — لا عفن تحت الرخام = لا Anti-Fungal = أبسط.' },
+        { question: 'هل الرخام يتشقق بالخرج؟', answer: 'ΔT 48°م = Hairline Cracks في الرخام الخارجي. Sealant يحمي. داخلي: آمن.' },
+        { question: 'كيف أزيل بقع NH₃ صفراء من الرخام بالخرج؟', answer: 'Poultice يسحب البقعة من العمق. مسح سطحي لا يكفي. بقعة عضوية عميقة.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Descaler pH 5-6 — كلس بدون تآكل.',
+        'Diamond Pad — يُعيد لمعان SiO₂ خدش.',
+        'RO Rinse — لا كلس جديد بعد الجلي.',
+        'Poultice — بقع NH₃ عميقة.',
+        'Sealant خارجي — ΔT تشقق.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'خل/ليمون على الرخام = تآكل — Descaler مخصوص pH 5-6 فقط.',
+        'SiO₂ × سنة بدون جلي = خدوش تراكمية — يحتاج Diamond إعادة.',
+        'CaCO₃ + ماء صنبور بعد الجلي = كلس جديد فوراً — RO إلزامي.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص شركات الجلي' },
+        { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMISNID.name, quote: 'رخام الخرج: CaCO₃+SiO₂ = كلس+خدش. Descaler pH 5-6+Diamond. ميزة: لا عفن.', source: 'نصائح هندسية — رخام صحراوي' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ جلي رخام مرخص', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Descaler pH 5-6', use: 'CaCO₃ كلس — لا يآكل الرخام' },
+        { name: 'Diamond Pad', use: 'يُعيد لمعان — SiO₂ خدش' },
+        { name: 'RO Water', use: 'شطف بدون كلس جديد' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'خل يكفي.', solution: 'حمض قوي = يآكل الرخام! pH 5-6 فقط.' },
+        { fear: 'مثل خميس.', solution: 'لا عفن تحت الرخام = أبسط وأرخص.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'ماء صنبور يكفي.', truth: 'CaCO₃ 450ppm = كلس جديد فوراً. RO.' },
+        { myth: 'جلي مرة يكفي.', truth: 'SiO₂ يومي = نصف سنوي إلزامي.' },
     ],
-
     relatedServices: [
-        { slug: 'al-kharj-furniture-moving', context: 'نقل عفش بالخرج', priority: 1 },
-        { slug: 'al-kharj-furniture-storage', context: 'تخزين عفش بالخرج', priority: 2 },
-        { slug: 'al-kharj-dyna', context: 'دينا نقل بالخرج', priority: 3 },
-        { slug: 'al-kharj-moving-out', context: 'نقل عفش خروج بالخرج', priority: 4 },
-        { slug: 'al-kharj-dabab', context: 'دباب نقل بالخرج', priority: 5 },
-        { slug: 'al-kharj-cleaning', context: 'تنظيف منازل بالخرج', priority: 6 },
-        { slug: 'al-kharj-tanks-cleaning', context: 'تنظيف خزانات بالخرج', priority: 7 },
-        { slug: 'al-kharj-sofa-cleaning', context: 'تنظيف كنب بالخرج', priority: 8 },
-        { slug: 'al-kharj-carpet-cleaning', context: 'تنظيف سجاد بالخرج', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 1 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات', priority: 2 },
+        { slug: 'villas-cleaning', context: 'فلل', priority: 3 },
+        { slug: 'steam-cleaning', context: 'بخار', priority: 4 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 5 },
+        { slug: 'carpet-cleaning', context: 'سجاد', priority: 6 },
+        { slug: 'office-cleaning', context: 'مكاتب', priority: 7 },
     ],
 };

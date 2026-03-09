@@ -4,6 +4,7 @@
 // ============================================
 
 import type { PageOverride } from '../../types';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -78,6 +79,8 @@ export const override: PageOverride = {
 
 
 
+        verificationBadges: [{ badge: '✔️ تعقيم معايير NWC', authority: 'شركة المياه الوطنية', icon: 'shield-check' }],
+
     equipment: [
         { name: 'روبوت تنظيف مسبح (Pool Robot)', use: 'ينظف جدران وأرضية المسبح آلياً — يشفط الطحالب والأوساخ' },
         { name: 'جهاز فحص pH/Chlorine الرقمي', use: 'يقيس مستوى الكلور والحموضة بدقة — يضمن مياه صحية' },
@@ -91,37 +94,35 @@ export const override: PageOverride = {
     trustAnchors: [
         { entity: 'وزارة البلديات — منصة بلدي', acronym: 'بلدي', url: 'https://balady.gov.sa', role: 'اشتراطات صحية لمسابح الفلل والمنتجعات' },
         { entity: 'المركز الوطني لكفاءة وترشيد المياه', acronym: 'مائي', url: 'https://maee.gov.sa', role: 'ترشيد استهلاك مياه المسبح' },
+        { entity: AMANA.JEDDAH.entity, url: AMANA.JEDDAH.url, role: 'اشتراطات أمانة جدة' },
     ],
 
-    expertReviewer: {
-        name: 'م. ماجد المحيميد',
-        title: 'خبير جودة تشطيبات وعزل',
-        credential: 'مهندس جودة تشطيبات',
-        profileUrl: 'https://x.com/majedalmohaimed',
-    },
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
             expert: 'م. ماجد المحيميد',
             quote: 'المسبح في جدة يحتاج صيانة أكثر من المدن الجافة — الرطوبة العالية تنمّي الطحالب أسرع 3x + الأملاح تتراكم على البلاط والفلاتر. فحص pH والكلور أسبوعي إلزامي',
             source: 'خبير جودة تشطيبات',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
 
+        saudiRegulations: [REGULATIONS.BALADI_HEALTH],
+
     counterNarratives: [
         { myth: 'كلور المسبح يكفي للنظافة', truth: 'الكلور يقتل البكتيريا في الماء — لكن: جدران المسبح تتراكم عليها طحالب + كلس + ملح. في جدة: الرطوبة + الحرارة = نمو طحالب 3x أسرع. تنظيف فيزيائي لجدران المسبح كل شهر + موازنة pH أسبوعياً = مسبح صحي' },
+        { myth: 'الخزان نظيف — المياه صافية.', truth: 'المياه الصافية لا تعني خزان نظيف. الترسبات على الجدران + بكتيريا لا تُرى. فحص TDS يكشف الحقيقة.' },
     ],
 
     relatedServices: [
-        { slug: 'jeddah-villas-cleaning', context: 'فيلا + مسبح', priority: 1 },
-        { slug: 'jeddah-sanitization', context: 'تعقيم المسبح', priority: 2 },
-        { slug: 'jeddah-tanks-cleaning', context: 'خزان مياه المسبح', priority: 3 },
-        { slug: 'jeddah-pest-control', context: 'بعوض المسبح', priority: 4 },
-        { slug: 'jeddah-cleaning', context: 'تنظيف منطقة المسبح', priority: 5 },
-        { slug: 'jeddah-floor-cleaning', context: 'بلاط حول المسبح', priority: 6 },
-        { slug: 'jeddah-water-insulation', context: 'عزل حوض المسبح', priority: 7 },
-        { slug: 'jeddah-glass-facades-cleaning', context: 'سور المسبح الزجاجي', priority: 8 },
-        { slug: 'jeddah-palaces-cleaning', context: 'مسابح القصور', priority: 9 },
+        { slug: 'villas-cleaning', context: 'فيلا + مسبح', priority: 1 },
+        { slug: 'sanitization', context: 'تعقيم المسبح', priority: 2 },
+        { slug: 'tanks-cleaning', context: 'خزان مياه المسبح', priority: 3 },
+        { slug: 'pest-control', context: 'بعوض المسبح', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف منطقة المسبح', priority: 5 },
+        { slug: 'floor-cleaning', context: 'بلاط حول المسبح', priority: 6 },
+        { slug: 'water-insulation', context: 'عزل حوض المسبح', priority: 7 },
+        { slug: 'glass-facades-cleaning', context: 'سور المسبح الزجاجي', priority: 8 },
+        { slug: 'palaces-cleaning', context: 'مسابح القصور', priority: 9 },
     ],
 };

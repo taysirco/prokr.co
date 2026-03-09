@@ -6,7 +6,7 @@
 // ══════════════════════════════════════════════════════════════
 
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -77,6 +77,7 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.BALADI, role: 'ترخيص شركات صيانة وتنظيف المكيفات — ضمان المهنية' },
         { ...GOV.MOENERGY, role: 'معايير كفاءة الطاقة — تنظيف المكيف يحسن تصنيف الكفاءة' },
+        { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
 
     expertReviewer: {
@@ -91,7 +92,6 @@ export const override: PageOverride = {
             expert: 'أ.د. عبدالله المسند',
             quote: 'الرياض تتعرض لـ 15-25 عاصفة غبارية سنوياً. كل عاصفة تضخ كيلوغرامات غبار في مجاري التكييف. بدون تنظيف: أسرتك تتنفس غبار + عفن + بكتيريا 8 ساعات يومياً',
             source: 'أستاذ جغرافيا المناخ — المرجع الأول للمناخ السعودي',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -119,14 +119,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'riyadh-cleaning', context: 'تنظيف شامل مع صيانة المكيفات', priority: 1 },
-        { slug: 'riyadh-steam-cleaning', context: 'بخار المنزل يكمّل بخار المكيف', priority: 2 },
-        { slug: 'riyadh-sanitization', context: 'تعقيم مجاري التكييف', priority: 3 },
-        { slug: 'riyadh-water-leak-detection', context: 'تسرب مكيف يحتاج كشف', priority: 4 },
-        { slug: 'riyadh-thermal-insulation', context: 'عزل حراري يقلل تشغيل المكيف', priority: 5 },
-        { slug: 'riyadh-pest-control', context: 'عفن المكيف يجذب حشرات', priority: 6 },
-        { slug: 'riyadh-sofa-cleaning', context: 'غبار المكيف يستقر على الكنب', priority: 7 },
-        { slug: 'riyadh-carpet-cleaning', context: 'السجاد يمتص غبار المكيف', priority: 8 },
-        { slug: 'riyadh-mattress-cleaning', context: 'مراتب تحت المكيف تجمع غبار', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف شامل مع صيانة المكيفات', priority: 1 },
+        { slug: 'steam-cleaning', context: 'بخار المنزل يكمّل بخار المكيف', priority: 2 },
+        { slug: 'sanitization', context: 'تعقيم مجاري التكييف', priority: 3 },
+        { slug: 'water-leak-detection', context: 'تسرب مكيف يحتاج كشف', priority: 4 },
+        { slug: 'thermal-insulation', context: 'عزل حراري يقلل تشغيل المكيف', priority: 5 },
+        { slug: 'pest-control', context: 'عفن المكيف يجذب حشرات', priority: 6 },
+        { slug: 'sofa-cleaning', context: 'غبار المكيف يستقر على الكنب', priority: 7 },
+        { slug: 'carpet-cleaning', context: 'السجاد يمتص غبار المكيف', priority: 8 },
+        { slug: 'mattress-cleaning', context: 'مراتب تحت المكيف تجمع غبار', priority: 9 },
     ],
 };

@@ -1,94 +1,74 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف شقق بالقطيف — Override مخصص (E-E-A-T Grade)
-// صفحة: /qatif/apartments-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف شقق بالقطيف — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف شقق بالقطيف. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف شقق بالقطيف — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف شقق بالقطيف', 'تنظيف شقق القطيف', 'شركة تنظيف شقق بالقطيف', 'أفضل تنظيف شقق بالقطيف'],
+        title: 'تنظيف شقق بالقطيف — NaCl+واحي عفن مزدوج + تربة طينية + نخيل + عيون (2026)',
+        description: 'تنظيف شقق القطيف. NaCl+واحي عفن مزدوج. تربة طينية لزجة. نخيل ألياف. عيون رطوبة أرضية. RO + Anti-Fungal + Dehumidifier.',
+        h1: 'تنظيف شقق بالقطيف — ملح ساحلي وعفن واحي وتربة طينية وألياف نخيل',
+        keywords: ['تنظيف شقق القطيف', 'تنظيف شقة بالقطيف', 'شركة تنظيف شقق بالقطيف'],
     },
-
     content: {
-        introduction: 'تنظيف شقق بالقطيف — خدمة متخصصة تراعي الظروف المناخية والبيئية في القطيف. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف شقق بالقطيف: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف شقق بالقطيف. خدمة احترافية. ضمان.',
+        introduction: 'الشقة في القطيف تتسخ بطريقة ساحلية-زراعية فريدة. الأول — NaCl+عفن واحي مزدوج: ملح ساحلي + رطوبة واحية (عيون+ينابيع+نخيل) = مصدران مختلفان للعفن. ساحلي = Aspergillus على أسطح. واحي = Penicillium من التربة ← يصعد عبر الجدران. Anti-Fungal مزدوج. الثاني — تربة طينية لزجة: PM10 طيني يلتصق بالأسطح (لا ينتشر كـ SiO₂). + NaCl = طبقة لزجة ملحية. الثالث — نخيل: ألياف + غبار طلع = حساسية. HEPA. الرابع — عيون: شقق قرب عيون = رطوبة أرضية ← صعود رطوبة في الجدران ← عفن واحي من الأسفل.',
+        shortAnswer: 'على عكس [تنظيف عادي] الذي لا يُراعي عفن واحي+NaCl، يعتمد بروتوكولنا في خدمة [تنظيف الشقق] بمدينة [القطيف] على [RO + Anti-Fungal مزدوج + HEPA + Dehumidifier]. ففي ظل [NaCl + 80-95% + تربة طينية + نخيل + عيون]، تتفاقم ظاهرة [عفن مزدوج + لزوجة + ألياف + صعود]. لذا؛ يتدخل خبراؤنا عبر [بروتوكول شقة ساحلية-واحية].',
+        heroSubtitle: 'NaCl + عفن واحي مزدوج + تربة طينية + نخيل + عيون',
     },
-
     pricing: [
-        { type: 'تنظيف شقق — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف شقق — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'شقة — بروتوكول ساحلي-واحي', unit: 'شقة', minPrice: 180, maxPrice: 370, time: '3-5 ساعات' },
+        { type: 'عميق (Anti-Fungal مزدوج)', unit: 'شقة', minPrice: 250, maxPrice: 490, time: '4-6 ساعات' },
+        { type: 'بعد إجازة (عفن 80-95%)', unit: 'شقة', minPrice: 280, maxPrice: 550, time: '5-7 ساعات' },
+        { type: 'عقد أسبوعي', unit: 'شهر', minPrice: 310, maxPrice: 630, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف شقق بالقطيف؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف شقق؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف شقق؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'عفن واحي — ماذا يعني؟', answer: 'عيون وينابيع = رطوبة أرضية ← تصعد في الجدران ← عفن من الأسفل (Penicillium). مختلف عن عفن ساحلي (Aspergillus من الأعلى). مزدوج!' },
+        { question: '80-95% — أقل من الجبيل؟', answer: 'أقل (الجبيل 85-98%). لكن: واحة = رطوبة أرضية مُضافة = عفن واحي. ليس أقل خطراً — مختلف.' },
+        { question: 'تربة طينية — مختلفة عن الظهران؟', answer: 'الظهران: SiO₂ يخدش (7 Mohs). القطيف: طين يلتصق (لزج). مشكلة التصاق ≠ خدش.' },
+        { question: 'نخيل — في الشقة؟', answer: 'ألياف + غبار طلع يدخل من النوافذ + المكيف. موسم التلقيح = أسوأ. HEPA غرف النوم.' },
+        { question: 'أسبوعي — ليش؟', answer: 'NaCl يومي + عفن واحي أسبوعي + طين + نخيل. أسبوعي = يمنع التراكم.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Anti-Fungal مزدوج — واحي (أسفل) + ساحلي (أعلى).',
+        'RO شطف — NaCl+طين.',
+        'HEPA غرف نوم — غبار طلع نخيل.',
+        'Dehumidifier — قرب عيون = أعلى رطوبة.',
+        'فحص جدران سفلية — صعود رطوبة واحية.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'عفن واحي = يصعد من الأرض ← حساسية + تلف جدار سفلي.',
+        'NaCl + طين لزج = طبقة صعبة الإزالة 3 أشهر.',
+        'غبار طلع نخيل × موسم = حساسية تنفسية.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص التنظيف' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات النظافة بالشرقية' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMISNID.name, quote: 'شقة القطيف: NaCl ساحلي + عفن واحي مزدوج (أعلى+أسفل) + تربة طينية + نخيل. ساحلي-زراعي فريد. Anti-Fungal مزدوج + RO + HEPA.', source: 'جغرافيا المناخ — تنظيف الواحات الساحلية' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف مرخص', authority: 'منصة بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'RO Rinse', use: 'NaCl + طين — يُزيل' },
+        { name: 'Anti-Fungal مزدوج', use: 'واحي+ساحلي — أعلى+أسفل' },
+        { name: 'HEPA', use: 'نخيل غبار طلع — حساسية' },
+        { name: 'Dehumidifier', use: '80-95% + عيون — يخفض' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'مثل الخبر.', solution: 'واحة = تربة+نخيل+عيون+عفن واحي. مختلف.' },
+        { fear: 'مثل الأحساء.', solution: 'NaCl ساحلي إضافي. الأحساء: واحة داخلية.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'ساحلي فقط.', truth: 'ساحلي+واحي = ثنائي فريد.' },
+        { myth: 'شهري.', truth: 'عفن واحي+NaCl+طين+نخيل. أسبوعي.' },
     ],
-
     relatedServices: [
-        { slug: 'qatif-furniture-moving', context: 'نقل عفش بالقطيف', priority: 1 },
-        { slug: 'qatif-furniture-storage', context: 'تخزين عفش بالقطيف', priority: 2 },
-        { slug: 'qatif-dyna', context: 'دينا نقل بالقطيف', priority: 3 },
-        { slug: 'qatif-moving-out', context: 'نقل عفش خروج بالقطيف', priority: 4 },
-        { slug: 'qatif-dabab', context: 'دباب نقل بالقطيف', priority: 5 },
-        { slug: 'qatif-cleaning', context: 'تنظيف منازل بالقطيف', priority: 6 },
-        { slug: 'qatif-tanks-cleaning', context: 'تنظيف خزانات بالقطيف', priority: 7 },
-        { slug: 'qatif-sofa-cleaning', context: 'تنظيف كنب بالقطيف', priority: 8 },
-        { slug: 'qatif-carpet-cleaning', context: 'تنظيف سجاد بالقطيف', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف — NaCl+واحي', priority: 1 },
+        { slug: 'carpet-cleaning', context: 'سجاد — عفن', priority: 2 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف — فلتر', priority: 3 },
+        { slug: 'steam-cleaning', context: 'بخار — تعقيم', priority: 4 },
+        { slug: 'pest-control', context: 'حشرات — بعوض', priority: 5 },
+        { slug: 'marble-polishing', context: 'رخام — NaCl', priority: 6 },
+        { slug: 'villas-cleaning', context: 'فلل', priority: 7 },
     ],
 };

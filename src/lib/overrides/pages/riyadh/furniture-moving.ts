@@ -5,7 +5,7 @@
 // ══════════════════════════════════════════════════════════════
 
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -81,13 +81,14 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.TGA, role: 'ترخيص شركات النقل البري — الضمان القانوني الأساسي لحماية ممتلكاتك' },
         { ...GOV.LOGISTI, role: 'إصدار بيان الحمولة إلكترونياً — الوثيقة الرسمية التي تحمي حقوق العميل' },
+        { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
 
     expertReviewer: {
-        name: EXPERTS.ALZUWAYED.name,
-        title: EXPERTS.ALZUWAYED.title,
-        credential: EXPERTS.ALZUWAYED.credential,
-        profileUrl: EXPERTS.ALZUWAYED.profileUrl,
+        name: EXPERTS.ALSHABNAN.name,
+        title: EXPERTS.ALSHABNAN.title,
+        credential: EXPERTS.ALSHABNAN.credential,
+        profileUrl: EXPERTS.ALSHABNAN.profileUrl,
     },
 
     expertCitations: [
@@ -95,13 +96,11 @@ export const override: PageOverride = {
             expert: 'أ. صالح الزويد',
             quote: 'كل شركة نقل ملزمة بترخيص من الهيئة العامة للنقل وإصدار بيان حمولة عبر منصة لوجستي — هذا يحمي حقوق العميل قانونياً في حال التلف أو الفقدان',
             source: 'المتحدث الرسمي للهيئة العامة للنقل في السعودية',
-            url: 'https://x.com/SalehAlZuwayed',
         },
         {
             expert: 'م. صالح الشبنان',
             quote: 'النقل في الرياض يحتاج حساب المسافة الفعلية — رحلة الشفا للنرجس ساعة ونصف في أحسن الأحوال. التسعير بالرحلة أوفر من الساعة للمسافات الطويلة',
             source: 'خبير خدمات لوجستية وسلاسل إمداد — السوق السعودي',
-            url: 'https://x.com/SalehAlshabnan',
         },
     ],
 
@@ -132,14 +131,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'riyadh-furniture-storage', context: 'نقل + تخزين', priority: 1 },
-        { slug: 'riyadh-cleaning', context: 'تنظيف البيت الجديد', priority: 2 },
-        { slug: 'riyadh-moving-out', context: 'تنظيف الشقة القديمة', priority: 3 },
-        { slug: 'riyadh-dabab', context: 'دباب للنقل الخفيف', priority: 4 },
-        { slug: 'riyadh-dyna', context: 'دينا للنقل الثقيل', priority: 5 },
-        { slug: 'riyadh-furniture-cleaning', context: 'تنظيف بعد النقل', priority: 6 },
-        { slug: 'riyadh-pest-control', context: 'رش البيت الجديد', priority: 7 },
-        { slug: 'riyadh-air-conditioner-cleaning', context: 'فك وتركيب مكيفات', priority: 8 },
-        { slug: 'riyadh-sanitization', context: 'تعقيم البيت الجديد', priority: 9 },
+        { slug: 'furniture-storage', context: 'نقل + تخزين', priority: 1 },
+        { slug: 'cleaning', context: 'تنظيف البيت الجديد', priority: 2 },
+        { slug: 'moving-out', context: 'تنظيف الشقة القديمة', priority: 3 },
+        { slug: 'dabab', context: 'دباب للنقل الخفيف', priority: 4 },
+        { slug: 'dyna', context: 'دينا للنقل الثقيل', priority: 5 },
+        { slug: 'furniture-cleaning', context: 'تنظيف بعد النقل', priority: 6 },
+        { slug: 'pest-control', context: 'رش البيت الجديد', priority: 7 },
+        { slug: 'air-conditioner-cleaning', context: 'فك وتركيب مكيفات', priority: 8 },
+        { slug: 'sanitization', context: 'تعقيم البيت الجديد', priority: 9 },
     ],
 };

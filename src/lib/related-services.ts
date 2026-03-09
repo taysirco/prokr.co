@@ -15,6 +15,7 @@ import { RELATIONS_CLEANING } from './services/cleaning-relations';
 import { RELATIONS_SEWAGE } from './services/sewage-relations';
 import { RELATIONS_PEST_CONTROL } from './services/pest-control-relations';
 import { RELATIONS_LEAK_DETECTION_INSULATION } from './services/leak-detection-insulation-relations';
+import { getCanonicalSlug } from './services/super-page-groups';
 
 // Aggregated service relationships map
 export const SERVICE_RELATIONS: Record<string, RelatedService[]> = {
@@ -30,13 +31,56 @@ export const SERVICE_RELATIONS: Record<string, RelatedService[]> = {
 // ============================================
 
 /**
- * Get related services for a given service
+ * Get related services for a given service.
+ * Resolves absorbed slugs to their canonical Super Page slugs.
+ * Deduplicates if both canonical and absorbed appear in the relations.
  */
 export function getRelatedServices(serviceSlug: string, limit: number = 3): RelatedService[] {
-    const relations = SERVICE_RELATIONS[serviceSlug] || [];
-    return relations
+    // If this is an absorbed slug, merge its relations into the canonical's
+    const canonical = getCanonicalSlug(serviceSlug);
+    const lookupSlug = canonical || serviceSlug;
+
+    const relations = SERVICE_RELATIONS[lookupSlug] || [];
+
+    // Resolve absorbed target slugs → canonical target slugs
+    const seen = new Set<string>();
+    const resolved: RelatedService[] = [];
+
+    for (const rel of relations) {
+        const targetCanonical = getCanonicalSlug(rel.slug);
+        const effectiveSlug = targetCanonical || rel.slug;
+
+        // Skip if we already have this canonical/slug
+        if (seen.has(effectiveSlug)) continue;
+        // Don't link to self
+        if (effectiveSlug === lookupSlug) continue;
+
+        seen.add(effectiveSlug);
+        resolved.push({
+            ...rel,
+            slug: effectiveSlug, // Always use canonical slug for the link
+        });
+    }
+
+    return resolved
         .sort((a, b) => b.priority - a.priority)
         .slice(0, limit);
+}
+
+/**
+ * Generate internal link URL for a related service.
+ * For absorbed slugs, produces /{city}/{canonical}#{absorbed-slug}
+ * For canonical/standalone slugs, produces /{city}/{slug}
+ */
+export function generateServiceUrl(
+    slug: string,
+    citySlug: string,
+): string {
+    const canonical = getCanonicalSlug(slug);
+    if (canonical) {
+        return `/${citySlug}/${canonical}#${slug}`;
+    }
+    return `/${citySlug}/${slug}`;
 }
 
 /**
@@ -47,7 +91,8 @@ export function generateInternalLink(
     citySlug: string,
     serviceName: string
 ): string {
-    return `<a href="/${citySlug}/${related.slug}" class="text-emerald-600 hover:text-emerald-700 font-medium">${serviceName}</a>`;
+    const url = generateServiceUrl(related.slug, citySlug);
+    return `<a href="${url}" class="text-emerald-600 hover:text-emerald-700 font-medium">${serviceName}</a>`;
 }
 
 /**

@@ -1,10 +1,5 @@
-// ══════════════════════════════════════════════════════════════
-// عزل فوم بعنيزة — Override مخصص (E-E-A-T Grade)
-// صفحة: /onizah/foam-insulation
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -15,7 +10,7 @@ export const override: PageOverride = {
     },
 
     content: {
-        introduction: 'عزل فوم بعنيزة — خدمة متخصصة تراعي الظروف المناخية والبيئية في عنيزة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
+        introduction: 'عزل فوم بعنيزة — خدمة متخصصة تراعي الظروف المناخية والبيئية في عنيزة. فريق محترف مع أدوات حديثة وضمان مكتوب. العزل المطابق لكود SBC 601 يوفر 30-40% من فاتورة الكهرباء سنوياً. المواد المستخدمة: فوم Closed-Cell بكثافة 32+ كجم/م³ أو رولات بيتومين SBS بسمك 4 مم. فحص حراري بكاميرا FLIR قبل وبعد العزل لقياس الفعالية.',
         shortAnswer: 'عزل فوم بعنيزة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
         heroSubtitle: 'عزل فوم بعنيزة. خدمة احترافية. ضمان.',
     },
@@ -29,29 +24,31 @@ export const override: PageOverride = {
         { question: 'كم تكلفة عزل فوم بعنيزة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
         { question: 'كم يستغرق عزل فوم؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
         { question: 'هل تقدمون ضمان على عزل فوم؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'كم توفّر فاتورة الكهرباء؟', answer: 'عزل مطابق لكود SBC 601 يوفر 30-40% من فاتورة الكهرباء سنوياً. منزل 300 م²: توفير 1,500-2,500 ريال/سنة. العزل يسترد تكلفته خلال 2-3 سنوات.' },
+        { question: 'كم يدوم العزل؟', answer: 'فوم بولييوريثين: 15-25 سنة. SBS مائي: 10-15 سنة. صوف صخري: 20-30 سنة. العمر يعتمد على جودة التركيب + الحماية من الأشعة.' },
     ],
 
     expertTips: [
         'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
         'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
         'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'اطلب شهادة مطابقة SBC 601 — بدونها لا يُعتد العزل رسمياً.',
+    
+        'اطلب صورة حرارية FLIR قبل وبعد العزل — تثبت فعالية العزل بالأرقام.',
     ],
 
     warnings: [
         'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
         'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'عزل بدون كشف تسربات أولاً = حبس المياه تحت العزل — يزيد الضرر.',
     ],
 
     trustAnchors: [
         { ...GOV.SBC, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALJUND.name,
-        title: EXPERTS.ALJUND.title,
-        credential: EXPERTS.ALJUND.credential,
-        profileUrl: EXPERTS.ALJUND.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALJUND,
 
     expertCitations: [
         {
@@ -74,21 +71,24 @@ export const override: PageOverride = {
 
     hiddenObjections: [
         { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'السعر أعلى من المتوقع.', solution: 'السعر يشمل معدات صناعية متخصصة + مواد احترافية + عمالة مدربة + ضمان مكتوب. المقارنة العادلة ليست مع عامل عشوائي بل مع تكلفة إصلاح الأضرار الناتجة عن العمل غير المتخصص.' },
     ],
 
     counterNarratives: [
         { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'أي شركة تنظيف/صيانة نتيجتها واحدة.', truth: 'الفرق بين شركة مرخصة ومُعتمدة وأخرى عشوائية = الفرق بين معالجة جذرية وإخفاء مؤقت. المعدات المتخصصة والبروتوكولات العلمية تحل المشكلة من جذرها — التنظيف العشوائي يُعيدها أسوأ خلال أسابيع.' },
+        { myth: 'أوفر وأسوي الشغل بنفسي.', truth: 'التوفير الظاهري يتحول لتكلفة مضاعفة: أدوات منزلية لا تصل للعمق المطلوب + مواد غير مناسبة قد تُتلف الأسطح + وقت وجهد بلا ضمان نتيجة. الاحتراف = ضمان + توفير حقيقي على المدى الطويل.' },
     ],
 
     relatedServices: [
-        { slug: 'onizah-furniture-moving', context: 'نقل عفش بعنيزة', priority: 1 },
-        { slug: 'onizah-furniture-storage', context: 'تخزين عفش بعنيزة', priority: 2 },
-        { slug: 'onizah-dyna', context: 'دينا نقل بعنيزة', priority: 3 },
-        { slug: 'onizah-moving-out', context: 'نقل عفش خروج بعنيزة', priority: 4 },
-        { slug: 'onizah-dabab', context: 'دباب نقل بعنيزة', priority: 5 },
-        { slug: 'onizah-cleaning', context: 'تنظيف منازل بعنيزة', priority: 6 },
-        { slug: 'onizah-tanks-cleaning', context: 'تنظيف خزانات بعنيزة', priority: 7 },
-        { slug: 'onizah-sofa-cleaning', context: 'تنظيف كنب بعنيزة', priority: 8 },
-        { slug: 'onizah-carpet-cleaning', context: 'تنظيف سجاد بعنيزة', priority: 9 },
+        { slug: 'furniture-moving', context: 'نقل عفش بعنيزة', priority: 1 },
+        { slug: 'furniture-storage', context: 'تخزين عفش بعنيزة', priority: 2 },
+        { slug: 'dyna', context: 'دينا نقل بعنيزة', priority: 3 },
+        { slug: 'moving-out', context: 'نقل عفش خروج بعنيزة', priority: 4 },
+        { slug: 'dabab', context: 'دباب نقل بعنيزة', priority: 5 },
+        { slug: 'cleaning', context: 'تنظيف منازل بعنيزة', priority: 6 },
+        { slug: 'tanks-cleaning', context: 'تنظيف خزانات بعنيزة', priority: 7 },
+        { slug: 'sofa-cleaning', context: 'تنظيف كنب بعنيزة', priority: 8 },
+        { slug: 'carpet-cleaning', context: 'تنظيف سجاد بعنيزة', priority: 9 },
     ],
 };

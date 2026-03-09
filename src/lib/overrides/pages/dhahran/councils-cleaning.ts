@@ -1,94 +1,75 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف مجالس بالظهران — Override مخصص (E-E-A-T Grade)
-// صفحة: /dhahran/councils-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف مجالس بالظهران — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف مجالس بالظهران. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف مجالس بالظهران — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف مجالس بالظهران', 'تنظيف مجالس الظهران', 'شركة تنظيف مجالس بالظهران', 'أفضل تنظيف مجالس بالظهران'],
+        title: 'تنظيف مجالس بالظهران — بخور يتبلمر + NaCl+SiO₂ بقع + 75-85% عفن حشوة + عث (2026)',
+        description: 'تنظيف مجالس الظهران. بخور Olibanum بلمرة 45°م. NaCl+SiO₂ بقع مزدوجة. 75-85% عفن حشوة. عث مُتسارع. Enzymatic + استخلاص + Anti-Fungal + تجفيف.',
+        h1: 'تنظيف مجالس بالظهران — بخور يتبلمر وأوساخ مزدوجة والرطوبة تُعفّن',
+        keywords: ['تنظيف مجالس بالظهران', 'تنظيف مجلس الظهران', 'شركة تنظيف مجالس بالظهران'],
     },
-
     content: {
-        introduction: 'تنظيف مجالس بالظهران — خدمة متخصصة تراعي الظروف المناخية والبيئية في الظهران. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف مجالس بالظهران: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف مجالس بالظهران. خدمة احترافية. ضمان.',
+        introduction: 'المجلس الظهراني يتعرض لـ 4 تلفيات مزدوجة. الأولى — بخور يتبلمر: 45°م كافية لبلمرة Olibanum (Ester Bonds). طبقة شفافة تراكمية. Enzymatic (Lipase + Esterase). الثانية — NaCl+SiO₂ بقع مزدوجة: قهوة بماء الظهران = NaCl يتبلور حول البقعة + SiO₂ من الغبار يخدش القماش حولها. RO فوراً + منظف. الثالثة — 75-85% عفن حشوة: أقل من الخبر لكن: مجلس أرضي + 75-85% = حشوة تمتص ← Aspergillus خلال 3-4 أسابيع. Anti-Fungal + رفع. الرابعة — عث: 75-85% = تكاثر مُتسارع Dermatophagoides. مجلس قليل الحركة = مصنع Der p 1. بخار 130°م.',
+        shortAnswer: 'على عكس [شامبو + مسح] الذي لا يُكسر البوليمر ولا يُعالج المزدوج، يعتمد بروتوكولنا في خدمة [تنظيف المجالس] بمدينة [الظهران] على [Enzymatic + استخلاص + بخار + Anti-Fungal + تجفيف]. ففي ظل [بخور + NaCl+SiO₂ + 75-85% + عث]، تتفاقم ظاهرة [بلمرة + مزدوج + عفن + حساسية]. لذا؛ يتدخل خبراؤنا عبر [بروتوكول مجلس مزدوج].',
+        heroSubtitle: 'بخور بلمرة + NaCl+SiO₂ مزدوج + 75-85% عفن حشوة + عث',
     },
-
     pricing: [
-        { type: 'تنظيف مجالس — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف مجالس — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'مجلس — مزدوج', unit: 'مجلس', minPrice: 230, maxPrice: 440, time: '2-4 ساعات' },
+        { type: 'مجلس + سجاد', unit: 'مجلس', minPrice: 340, maxPrice: 670, time: '3-5 ساعات' },
+        { type: 'مجلس + Anti-Fungal عميق', unit: 'مجلس', minPrice: 400, maxPrice: 730, time: '4-6 ساعات' },
+        { type: 'عقد ربع سنوي', unit: 'سنة', minPrice: 720, maxPrice: 1450, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف مجالس بالظهران؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف مجالس؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف مجالس؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'NaCl+SiO₂ بقعة — أسوأ من NaCl وحده؟', answer: 'NaCl يُصلّب + SiO₂ يخدش القماش حول البقعة. الخبر: NaCl = يُصلّب فقط. الظهران: يُصلّب + يخدش = ألياف تالفة.' },
+        { question: 'عفن حشوة — 75-85% يكفي؟', answer: '3-4 أسابيع (بدلاً من أسبوعين في الخبر). أبطأ لكن حتمي. Anti-Fungal كل 5 أشهر.' },
+        { question: 'رفع المجلس — يساعد؟', answer: 'طبليات 5-10 سم = هواء تحت = يمنع رطوبة الأرض. أبسط + أكثر فعالية.' },
+        { question: 'Enzymatic — لماذا قبل كل شيء؟', answer: 'Ester Bonds بخور = حماية فوق البقعة. Enzymatic يُكسرها ← المنظف يصل البقعة. بدون Enzymatic = تنظيف فوق بوليمر.' },
+        { question: 'ربع سنوي؟', answer: 'بخور تراكمي + مزدوج شهري + عفن 3-4 أسابيع + عث مستمر. ربع سنوي = قبل التأصّل.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Enzymatic أولاً — يُكسر بوليمر بخور قبل أي منظف.',
+        'بخار 130°م — يقتل عث + يُلين بوليمر قديم.',
+        'Anti-Fungal على الحشوة من الأسفل — الأكثر عفناً.',
+        'رفع 5-10 سم — يمنع رطوبة الأرض.',
+        'RO فوري على بقع القهوة — يمنع NaCl+SiO₂ تصلب+خدش.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'عفن حشوة 75-85% = جراثيم Aspergillus = ضيف يعاني حساسية.',
+        'بخور مُتبلمر + مزدوج + رطوبة = لون متغير + رائحة + ألياف تالفة.',
+        'NaCl+SiO₂ بقعة بدون RO فوري = بقعة دائمة + خدش دائم.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص التنظيف' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات النظافة بالشرقية' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'مجلس الظهران = 4 مزدوجة: بخور بلمرة + NaCl+SiO₂ بقع + 75-85% عفن + عث. Enzymatic + استخلاص + بخار + Anti-Fungal = تسلسل.', source: 'نصائح هندسية — مجالس البيئة المزدوجة' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف مجالس مرخص', authority: 'منصة بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Enzymatic (Lipase + Esterase)', use: 'يُكسر بوليمر بخور' },
+        { name: 'Hot Water Extraction', use: 'يُذيب NaCl + يسحب SiO₂' },
+        { name: 'Dry Vapor 130°م', use: 'يقتل عث + يُلين بوليمر' },
+        { name: 'Anti-Fungal', use: 'حشوة — فعّال 4-5 أشهر' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'المجلس نظيف.', solution: 'بوليمر شفاف. عفن مخفي. عث ميكروبي. NaCl+SiO₂ لا يُرى. 4 مخفية.' },
+        { fear: 'شامبو يكفي.', solution: 'لا يُكسر Ester Bonds. لا يقتل عث. لا يُعالج مزدوج. 3 فشلات.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'مثل الخبر.', truth: 'SiO₂ إضافي = خدش ألياف. 75-85% ≠ 85-95%. مختلف.' },
+        { myth: 'نصف سنوي.', truth: 'مزدوج + بخور + عفن 3-4 أسابيع. ربع سنوي = الحد.' },
+        { myth: 'منظف قوي.', truth: 'لا يُكسر Ester Bonds. Enzymatic = الوحيد الفعّال.' },
     ],
-
     relatedServices: [
-        { slug: 'dhahran-furniture-moving', context: 'نقل عفش بالظهران', priority: 1 },
-        { slug: 'dhahran-furniture-storage', context: 'تخزين عفش بالظهران', priority: 2 },
-        { slug: 'dhahran-dyna', context: 'دينا نقل بالظهران', priority: 3 },
-        { slug: 'dhahran-moving-out', context: 'نقل عفش خروج بالظهران', priority: 4 },
-        { slug: 'dhahran-dabab', context: 'دباب نقل بالظهران', priority: 5 },
-        { slug: 'dhahran-cleaning', context: 'تنظيف منازل بالظهران', priority: 6 },
-        { slug: 'dhahran-tanks-cleaning', context: 'تنظيف خزانات بالظهران', priority: 7 },
-        { slug: 'dhahran-sofa-cleaning', context: 'تنظيف كنب بالظهران', priority: 8 },
-        { slug: 'dhahran-carpet-cleaning', context: 'تنظيف سجاد بالظهران', priority: 9 },
+        { slug: 'carpet-cleaning', context: 'سجاد — مزدوج', priority: 1 },
+        { slug: 'sofa-cleaning', context: 'كنب — بخور + عث', priority: 2 },
+        { slug: 'steam-cleaning', context: 'بخار — عث عميق', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف — مزدوج', priority: 4 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف — مزدوج', priority: 5 },
+        { slug: 'pest-control', context: 'حشرات — رطوبة', priority: 6 },
+        { slug: 'apartments-cleaning', context: 'شقق — مزدوج', priority: 7 },
     ],
 };

@@ -1,11 +1,5 @@
-// ══════════════════════════════════════════════════════════════
-// نقل عفش بالدمام — Override مخصص (E-E-A-T Grade)
-// صفحة: /dammam/furniture-moving
-// قطاع YMYL: مالي (حماية أثاث) + لوجستي
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -75,8 +69,11 @@ export const override: PageOverride = {
         {
                 "question": "أفضل وقت للنقل بالدمام؟",
                 "answer": "الصباح الباكر (6-9ص): أقل حرارة + أقل رطوبة + قبل زحمة طريق الظهران. تجنب الظهيرة (48°م + 80% رطوبة). أيام الأحد-الثلاثاء أقل ازدحاماً."
-        }
-],
+        },
+        { question: 'هل فيه تأمين على الأمتعة؟', answer: 'كل شركات بروكر مرخصة TGA = تأمين شامل. أي ضرر = تعويض فوري. بدون TGA = بدون تعويض.' },
+    
+        { question: 'كم يوم قبل أحجز؟', answer: 'الأفضل 3-7 أيام مقدماً. في مواسم الذروة (نهاية العقود/إجازات): 10-14 يوم. الحجز المبكر = سعر أفضل.' },
+    ],
 
     expertTips: [
         "احجز قبل أسبوع — خاصة نهاية الشهر وموسم نقل موظفي الشركات النفطية",
@@ -95,14 +92,10 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.TGA, role: 'ترخيص شركات نقل العفش — ضمان التأمين والسلامة' },
         { ...GOV.BALADI, role: 'الرخصة التجارية وضمان جودة الخدمة' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات أمانة الشرقية' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALZUWAYED.name,
-        title: EXPERTS.ALZUWAYED.title,
-        credential: EXPERTS.ALZUWAYED.credential,
-        profileUrl: EXPERTS.ALZUWAYED.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALSHABNAN,
 
     expertCitations: [
         {
@@ -157,8 +150,11 @@ export const override: PageOverride = {
         {
                 "myth": "التأمين ما يلزم — الشركة ثقة",
                 "truth": "حفرة في طريق الظهران + حمولة ثقيلة = كسور. حتى المطر المفاجئ = تلف رطوبة. بوليصة تأمين (100-200 ريال) تغطي كل السيناريوهات"
-        }
-],
+        },
+        { myth: 'النقل سهل — أسويه بنفسي.', truth: 'خدش واحد في خزانة = 500-2,000 ريال إصلاح. إصابة ظهر = آلاف. النقل المهني + التأمين = أرخص من المخاطرة.' },
+
+        { myth: 'النقل سهل — أسويه بنفسي.', truth: 'خدش خزانة = 500-2,000 ريال. إصابة ظهر = آلاف. النقل المهني + التأمين = أرخص من المخاطرة.' },
+    ],
 
     relatedServices: [
         {
@@ -205,6 +201,13 @@ export const override: PageOverride = {
                 "slug": "dammam-water-leak-detection",
                 "context": "كشف تسربات البيت الجديد قبل ترتيب الأثاث",
                 "priority": 9
-        }
+        },
+        { slug: 'furniture-moving', context: 'نقل أثاث — الخدمة الأساسية.', priority: 2 },
+        { slug: 'furniture-storage', context: 'تخزين أثاث — حل مرن.', priority: 3 },
+        { slug: 'dyna', context: 'دينا نقل — للقطع الكبيرة.', priority: 4 },
+        { slug: 'dabab', context: 'دباب نقل — للقطع الصغيرة.', priority: 5 },
+        { slug: 'cleaning', context: 'تنظيف المنزل الجديد بعد النقل.', priority: 6 },
+        { slug: 'pest-control', context: 'مكافحة حشرات المنزل الجديد.', priority: 7 },
+        { slug: 'air-conditioner-cleaning', context: 'تنظيف مكيفات المنزل الجديد.', priority: 8 },
 ],
 };

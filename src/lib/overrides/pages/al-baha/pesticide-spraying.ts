@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// رش مبيدات بالباحة — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-baha/pesticide-spraying
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'رش مبيدات بالباحة — خدمة احترافية معتمدة (2026)',
-        description: 'رش مبيدات بالباحة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'رش مبيدات بالباحة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['رش مبيدات بالباحة', 'رش مبيدات الباحة', 'شركة رش مبيدات بالباحة', 'أفضل رش مبيدات بالباحة'],
+        title: 'رش مبيدات بالباحة — 200 يوم ضباب يُخفف Residual+غابة حشرات+بعوض مطر — IGR+BTI+IPM Forest! (2026)',
+        description: 'رش مبيدات الباحة. 200 يوم ضباب يُخفف Residual! غابة حشرات فريدة. بعوض مطر. IGR+BTI+IPM Forest+Anti-Mite.',
+        h1: 'رش مبيدات بالباحة — ضباب يُخفف+غابة!',
+        keywords: ['رش مبيدات بالباحة', 'رش حشرات الباحة', 'شركة رش مبيدات بالباحة'],
     },
-
     content: {
-        introduction: 'رش مبيدات بالباحة — خدمة متخصصة تراعي الظروف المناخية والبيئية في الباحة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'رش مبيدات بالباحة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'رش مبيدات بالباحة. خدمة احترافية. ضمان.',
+        introduction: 'رش الباحة = ضباب يُخفف Residual! 200 يوم ضباب: رطوبة 60-85% تُخفف الأثر الباقي للمبيد (Residual Effect) ← يتبخر أسرع = حماية أقصر! تكرار أكثر. مبيد مقاوم رطوبة. غابة حشرات: عرعر ← خنافس+نمل غابة فريدة = IPM Forest Transition. لا يكفي رش عام! بعوض مطر: ركود مياه أمطار جبلية = بعوض. BTI مخصص. عث الرطوبة: Dermatophagoides أكثر بالمملكة! Anti-Mite معالجة. مقارنة: بريدة = جاف 10-20% = Residual يدوم أطول+لا غابة+لا بعوض = أبسط. الباحة = ضباب يُخفف+غابة+بعوض+عث = أعقد.',
+        shortAnswer: 'على عكس [الرش العام+Residual طويل]، يعتمد بروتوكولنا في خدمة [رش المبيدات] بمدينة [الباحة] على [مبيد مقاوم رطوبة+IGR+IPM Forest+BTI+Anti-Mite]. ففي ظل [ضباب يُخفف Residual+غابة+بعوض+عث]، تتفاقم ظاهرة [حماية أقصر+حشرات فريدة+تكاثر]. لذا؛ يتدخل فنيونا عبر [مقاوم رطوبة ← IGR ← IPM Forest ← BTI ← Anti-Mite].',
+        heroSubtitle: 'ضباب يُخفف Residual + غابة + بعوض + عث — IPM Forest!',
     },
-
     pricing: [
-        { type: 'رش مبيدات — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'رش مبيدات — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'شقة — رش شامل', unit: 'شقة', minPrice: 100, maxPrice: 210, time: '1-2h' },
+        { type: '+ Anti-Mite + BTI', unit: 'خدمة', minPrice: 80, maxPrice: 170, time: '+ 1h' },
+        { type: 'فيلا قريبة من الغابة', unit: 'فيلا', minPrice: 250, maxPrice: 520, time: '3-4h' },
+        { type: 'شهري (12/سنة)', unit: 'سنة', minPrice: 600, maxPrice: 1200, time: '12 رشة' },
     ],
-
     faq: [
-        { question: 'كم تكلفة رش مبيدات بالباحة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق رش مبيدات؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على رش مبيدات؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش المبيد لا يدوم بالباحة؟', answer: '60-85% ضباب يُخفف Residual = حماية أقصر. مقاوم رطوبة.' },
+        { question: 'ما IPM Forest بالباحة؟', answer: 'خنافس+نمل من غابة العرعر. بروتوكول فريد.' },
+        { question: 'ليش بعوض بالباحة أكثر؟', answer: 'ركود مياه أمطار جبلية = بعوض. BTI.' },
+        { question: 'كم تكلفة رش بالباحة مقابل بريدة؟', answer: 'أغلى 30-35% — Residual أقصر+IPM+BTI+Anti-Mite.' },
+        { question: 'كم مرة رش بالباحة؟', answer: 'شهري! Residual أقصر. بريدة: ربع سنوي.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'مبيد مقاوم رطوبة — Residual أطول.',
+        'IPM Forest — غابة حشرات.',
+        'BTI — بعوض مطر.',
+        'Anti-Mite — أكثر عث.',
+        'شهري — ضباب يُخفف.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'ضباب + مبيد عادي = Residual يتبخر ← لا حماية — مقاوم رطوبة.',
+        'غابة + بدون IPM = حشرات فريدة — Forest Transition.',
+        'ركود مطر + بدون BTI = بعوض ← أمراض YMYL.',
     ],
-
     trustAnchors: [
-        { ...GOV.SFDA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص شركات الرش' },
+        { entity: AMANA.BAHA.entity, url: AMANA.BAHA.url, role: 'اشتراطات أمانة الباحة' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALKHODAIRY.name,
-        title: EXPERTS.ALKHODAIRY.title,
-        credential: EXPERTS.ALKHODAIRY.credential,
-        profileUrl: EXPERTS.ALKHODAIRY.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALKHODAIRY,
     expertCitations: [
-        {
-            expert: EXPERTS.ALKHODAIRY.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALKHODAIRY.title,
-            url: EXPERTS.ALKHODAIRY.profileUrl,
-        },
+        { expert: EXPERTS.ALKHODAIRY.name, quote: 'رش الباحة: ضباب يُخفف Residual. مقاوم رطوبة+IPM Forest.', source: 'حشرات المملكة — رش جبلي' },
     ],
-
     saudiRegulations: [REGULATIONS.GHAD_SYSTEM],
-
-    verificationBadges: [
-        { badge: '✔️ مبيدات معتمدة من SFDA', authority: 'هيئة الغذاء والدواء', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ رش مبيدات مرخص', authority: 'بلدي + SFDA', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'مبيد مقاوم رطوبة', use: 'Residual — ضباب' },
+        { name: 'IPM Forest Kit', use: 'خنافس+نمل — غابة' },
+        { name: 'BTI', use: 'بعوض — ركود مطر' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'رش عام.', solution: 'IPM Forest+مقاوم. ليس عام.' },
+        { fear: 'مثل بريدة.', solution: 'Residual أقصر+غابة.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'ربع سنوي.', truth: 'شهري! Residual أقصر.' },
+        { myth: 'مبيد يكفي.', truth: 'مقاوم رطوبة مطلوب.' },
     ],
-
     relatedServices: [
-        { slug: 'al-baha-furniture-moving', context: 'نقل عفش بالباحة', priority: 1 },
-        { slug: 'al-baha-furniture-storage', context: 'تخزين عفش بالباحة', priority: 2 },
-        { slug: 'al-baha-dyna', context: 'دينا نقل بالباحة', priority: 3 },
-        { slug: 'al-baha-moving-out', context: 'نقل عفش خروج بالباحة', priority: 4 },
-        { slug: 'al-baha-dabab', context: 'دباب نقل بالباحة', priority: 5 },
-        { slug: 'al-baha-cleaning', context: 'تنظيف منازل بالباحة', priority: 6 },
-        { slug: 'al-baha-tanks-cleaning', context: 'تنظيف خزانات بالباحة', priority: 7 },
-        { slug: 'al-baha-sofa-cleaning', context: 'تنظيف كنب بالباحة', priority: 8 },
-        { slug: 'al-baha-carpet-cleaning', context: 'تنظيف سجاد بالباحة', priority: 9 },
+        { slug: 'pest-control', context: 'حشرات', priority: 1 },
+        { slug: 'bedbugs-control', context: 'بق', priority: 2 },
+        { slug: 'termite-control', context: 'نمل أبيض', priority: 3 },
+        { slug: 'bird-control', context: 'طيور', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 5 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 6 },
+        { slug: 'tanks-cleaning', context: 'خزانات', priority: 7 },
     ],
 };

@@ -4,6 +4,7 @@
 // ============================================
 
 import type { PageOverride } from '../../types';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -77,6 +78,8 @@ export const override: PageOverride = {
     ],
 
 
+        verificationBadges: [{ badge: '✔️ شركة مرخصة من بلدي', authority: 'وزارة البلديات', icon: 'shield-check' }],
+
     equipment: [
         { name: 'جهاز بخار صناعي Dupray Carmen', use: 'بخار 180°م + ضغط 6 بار — يقتل البكتيريا ويذيب الدهون والأوساخ بدون كيماويات' },
         { name: 'فوهات متخصصة (Nozzle Kit)', use: 'فوهة أرضيات + فوهة كنب + فوهة فواصل + فوهة زجاج — كل سطح بالأداة المناسبة' },
@@ -89,23 +92,20 @@ export const override: PageOverride = {
 
     trustAnchors: [
         { entity: 'هيئة الغذاء والدواء', acronym: 'SFDA', url: 'https://sfda.gov.sa', role: 'اعتماد أجهزة البخار الصناعية' },
+        { entity: AMANA.JEDDAH.entity, url: AMANA.JEDDAH.url, role: 'اشتراطات أمانة جدة' },
     ],
 
-    expertReviewer: {
-        name: 'أ.د. عبدالله المسند',
-        title: 'أستاذ جغرافيا المناخ',
-        credential: 'أستاذ جغرافيا المناخ — جامعة القصيم',
-        profileUrl: 'https://x.com/ALMISNID',
-    },
+    expertReviewer: EXPERTS.ALMISNID,
 
     expertCitations: [
         {
             expert: 'أ.د. عبدالله المسند',
             quote: 'البخار هو السلاح الأفضل ضد بكتيريا المناخ الساحلي — يقتل العفن والبكتيريا بحرارة 150-180°م بدون كيماويات تتفاعل مع الملوحة الجوية',
             source: 'تحليل مناخي',
-            url: 'https://x.com/ALMISNID',
         },
     ],
+
+        saudiRegulations: [REGULATIONS.BALADI_HEALTH],
 
     counterNarratives: [
         { myth: 'جهاز بخار منزلي صغير يكفي', truth: 'أجهزة البخار المنزلية: ضغط 1-2 بار + 100°م. البخار الصناعي: 4-8 بار + 150-180°م. الفرق = 10x قوة تنظيف. المنزلي: ينظف أسطح بسيطة. الصناعي: يخترق أعماق الأقمشة ويقتل العث والبكتيريا في الداخل' },
@@ -113,15 +113,15 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'jeddah-sofa-cleaning', context: 'بخار الكنب — الخدمة الأكثر طلباً مع البخار الشامل', priority: 1 },
-        { slug: 'jeddah-carpet-cleaning', context: 'غسيل السجاد بالبخار — يجف أسرع من الماء', priority: 2 },
-        { slug: 'jeddah-mattress-cleaning', context: 'بخار المراتب — يقتل عث الغبار بدون كيماويات', priority: 3 },
-        { slug: 'jeddah-cleaning', context: 'تنظيف شامل بالبخار لكل المنزل', priority: 4 },
-        { slug: 'jeddah-sanitization', context: 'تعقيم كيميائي يكمّل البخار — حماية مزدوجة', priority: 5 },
-        { slug: 'jeddah-air-conditioner-cleaning', context: 'بخار على وحدة المكيف الخارجية — يزيل العفن', priority: 6 },
-        { slug: 'jeddah-kitchen-cleaning', context: 'بخار المطبخ — يذيب الدهون بدون كيماويات', priority: 7 },
-        { slug: 'jeddah-oven-cleaning', context: 'بخار الفرن — يزيل الدهون المتصلبة', priority: 8 },
-        { slug: 'jeddah-floor-cleaning', context: 'بخار الأرضيات — بلاط + سيراميك + رخام', priority: 9 },
+        { slug: 'sofa-cleaning', context: 'بخار الكنب — الخدمة الأكثر طلباً مع البخار الشامل', priority: 1 },
+        { slug: 'carpet-cleaning', context: 'غسيل السجاد بالبخار — يجف أسرع من الماء', priority: 2 },
+        { slug: 'mattress-cleaning', context: 'بخار المراتب — يقتل عث الغبار بدون كيماويات', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف شامل بالبخار لكل المنزل', priority: 4 },
+        { slug: 'sanitization', context: 'تعقيم كيميائي يكمّل البخار — حماية مزدوجة', priority: 5 },
+        { slug: 'air-conditioner-cleaning', context: 'بخار على وحدة المكيف الخارجية — يزيل العفن', priority: 6 },
+        { slug: 'kitchen-cleaning', context: 'بخار المطبخ — يذيب الدهون بدون كيماويات', priority: 7 },
+        { slug: 'oven-cleaning', context: 'بخار الفرن — يزيل الدهون المتصلبة', priority: 8 },
+        { slug: 'floor-cleaning', context: 'بخار الأرضيات — بلاط + سيراميك + رخام', priority: 9 },
     ],
 };
 

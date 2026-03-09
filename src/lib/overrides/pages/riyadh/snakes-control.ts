@@ -5,7 +5,7 @@
 // ══════════════════════════════════════════════════════════════
 
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -76,6 +76,7 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.BALADI, role: 'ترخيص شركات مكافحة الآفات — ضمان الأداء المهني والأمان' },
         { ...GOV.WEQAA, role: 'إرشادات الوقاية من لدغات العقارب والثعابين وبروتوكولات الطوارئ' },
+        { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
 
     expertReviewer: {
@@ -90,7 +91,6 @@ export const override: PageOverride = {
             expert: 'أ.د. عبدالله المسند',
             quote: 'نشاط الثعابين والعقارب يرتبط بحرارة سطح الأرض — تنشط حين يبرد السطح بعد الغروب (70°م نهاراً → 30°م ليلاً). كل الحوادث تقريباً بعد المغرب حتى الفجر',
             source: 'أستاذ جغرافيا المناخ — بيانات مناخية وبيئية',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -117,14 +117,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'riyadh-pest-control', context: 'مكافحة شاملة', priority: 1 },
-        { slug: 'riyadh-rodent-control', context: 'فئران تجذب ثعابين', priority: 2 },
-        { slug: 'riyadh-insects-spraying', context: 'حشرات = غذاء ثعابين', priority: 3 },
-        { slug: 'riyadh-cleaning', context: 'تنظيف الحديقة', priority: 4 },
-        { slug: 'riyadh-sanitization', context: 'تعقيم بعد المكافحة', priority: 5 },
-        { slug: 'riyadh-bird-control', context: 'أعشاش تجذب ثعابين', priority: 6 },
-        { slug: 'riyadh-sewage-unblocking', context: 'فتحات المجاري', priority: 7 },
-        { slug: 'riyadh-pesticide-spraying', context: 'رش طارد ثعابين', priority: 8 },
-        { slug: 'riyadh-termite-control', context: 'كائنات تحت الأرض', priority: 9 },
+        { slug: 'pest-control', context: 'مكافحة شاملة', priority: 1 },
+        { slug: 'rodent-control', context: 'فئران تجذب ثعابين', priority: 2 },
+        { slug: 'insects-spraying', context: 'حشرات = غذاء ثعابين', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف الحديقة', priority: 4 },
+        { slug: 'sanitization', context: 'تعقيم بعد المكافحة', priority: 5 },
+        { slug: 'bird-control', context: 'أعشاش تجذب ثعابين', priority: 6 },
+        { slug: 'sewage-unblocking', context: 'فتحات المجاري', priority: 7 },
+        { slug: 'pesticide-spraying', context: 'رش طارد ثعابين', priority: 8 },
+        { slug: 'termite-control', context: 'كائنات تحت الأرض', priority: 9 },
     ],
 };

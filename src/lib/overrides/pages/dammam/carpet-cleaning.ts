@@ -1,12 +1,5 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف سجاد بالدمام — Override مخصص (E-E-A-T Grade)
-// صفحة: /dammam/carpet-cleaning
-// قطاع YMYL: صحة (PM2.5 محبوس + عث + عفن) + مالي (حماية سجاد مكلف)
-// خريطة 2.4: المسند → بلدي
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -53,6 +46,7 @@ export const override: PageOverride = {
             question: 'PM2.5 الصناعي — كيف أعرف إنه في سجادي؟',
             answer: 'لا تراه — لكن تشعر بأعراضه: حساسية صباحية (عطس، رشح)، سعال جاف في البيت يختفي بالخارج، عيون حمراء. اختبر: اضرب السجاد بقوة في الشمس — الغبار المتطاير ليس رملاً عادياً. في الدمام (قرب مصانع): PM2.5 يمثل 30-40% من غبار البيت. لا يخرج بالمكنسة — يحتاج HEPA + بخار.',
         },
+        { question: 'كم تكلفة التنظيف العميق مقارنة بالتنظيف العادي؟', answer: 'التنظيف العميق أغلى 30-50% لكنه يشمل: HEPA + بخار 150°م + تعقيم. التنظيف العادي = مسح سطحي. العميق كل 3-4 أشهر + العادي أسبوعياً = أفضل معادلة تكلفة/نظافة.' },
     ],
 
     expertTips: [
@@ -71,21 +65,16 @@ export const override: PageOverride = {
 
     trustAnchors: [
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف — اشتراطات صحية ومواد معتمدة' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات أمانة الشرقية' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMISNID.name,
-        title: EXPERTS.ALMISNID.title,
-        credential: EXPERTS.ALMISNID.credential,
-        profileUrl: EXPERTS.ALMISNID.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMISNID,
 
     expertCitations: [
         {
             expert: 'أ.د. عبدالله المسند',
             quote: 'السجاد في المنطقة الشرقية = مستودع ملوثات صامت. PM2.5 صناعي + عث + ملوحة — كلها مختبئة في الألياف. الغسيل العميق + التجفيف السريع هو الحل الوحيد الفعلي',
             source: 'أستاذ المناخ والبيئة',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -113,14 +102,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'dammam-sofa-cleaning', context: 'الكنب يحبس نفس الملوثات — نظفهم معاً', priority: 1 },
-        { slug: 'dammam-steam-cleaning', context: 'بخار شامل لكل الأسطح والأثاث — ليس فقط السجاد', priority: 2 },
-        { slug: 'dammam-mattress-cleaning', context: 'المراتب = ثاني أكبر حاضنة للعث بعد السجاد والكنب', priority: 3 },
-        { slug: 'dammam-floor-polishing', context: 'جلي الأرضيات تحت السجاد — يمنع تراكم الرطوبة', priority: 4 },
-        { slug: 'dammam-cleaning', context: 'تنظيف منازل شامل يشمل السجاد والأثاث', priority: 5 },
-        { slug: 'dammam-sanitization', context: 'تعقيم بعد غسيل السجاد يقتل البكتيريا المتبقية', priority: 6 },
-        { slug: 'dammam-air-conditioner-cleaning', context: 'المكيف يوزع PM2.5 — نظفه مع السجاد', priority: 7 },
-        { slug: 'dammam-pest-control', context: 'العث قد يتطلب مكافحة متخصصة إذا كان التراكم شديداً', priority: 8 },
-        { slug: 'dammam-councils-cleaning', context: 'مجالس عربية على الأرض = نفس مشكلة السجاد', priority: 9 },
+        { slug: 'sofa-cleaning', context: 'الكنب يحبس نفس الملوثات — نظفهم معاً', priority: 1 },
+        { slug: 'steam-cleaning', context: 'بخار شامل لكل الأسطح والأثاث — ليس فقط السجاد', priority: 2 },
+        { slug: 'mattress-cleaning', context: 'المراتب = ثاني أكبر حاضنة للعث بعد السجاد والكنب', priority: 3 },
+        { slug: 'floor-polishing', context: 'جلي الأرضيات تحت السجاد — يمنع تراكم الرطوبة', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف منازل شامل يشمل السجاد والأثاث', priority: 5 },
+        { slug: 'sanitization', context: 'تعقيم بعد غسيل السجاد يقتل البكتيريا المتبقية', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'المكيف يوزع PM2.5 — نظفه مع السجاد', priority: 7 },
+        { slug: 'pest-control', context: 'العث قد يتطلب مكافحة متخصصة إذا كان التراكم شديداً', priority: 8 },
+        { slug: 'councils-cleaning', context: 'مجالس عربية على الأرض = نفس مشكلة السجاد', priority: 9 },
     ],
 };

@@ -1,94 +1,74 @@
-// ══════════════════════════════════════════════════════════════
-// عزل مائي ببريدة — Override مخصص (E-E-A-T Grade)
-// صفحة: /buraidah/water-insulation
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'عزل مائي ببريدة — خدمة احترافية معتمدة (2026)',
-        description: 'عزل مائي ببريدة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'عزل مائي ببريدة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['عزل مائي ببريدة', 'عزل مائي بريدة', 'شركة عزل مائي ببريدة', 'أفضل عزل مائي ببريدة'],
+        title: 'عزل مائي ببريدة — لا مطر! CaCO₃ 600ppm رطوبة أرضية+ΔT مفاصل+Nafud — Closed-Cell! (2026)',
+        description: 'عزل مائي بريدة. لا مطر = لا SBS سطح! CaCO₃ 600ppm رطوبة أرضية. ΔT 45°م. Closed-Cell أساسات فقط.',
+        h1: 'عزل مائي ببريدة — لا مطر! Closed-Cell أساسات!',
+        keywords: ['عزل مائي بريدة', 'عزل مائي ببريدة', 'شركة عزل مائي بريدة'],
     },
-
     content: {
-        introduction: 'عزل مائي ببريدة — خدمة متخصصة تراعي الظروف المناخية والبيئية في بريدة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'عزل مائي ببريدة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'عزل مائي ببريدة. خدمة احترافية. ضمان.',
+        introduction: 'عزل مائي بريدة = عكس المدن الممطرة! لا مطر: لا حاجة لعزل مائي أسطح (SBS Membrane). وفر 50-60% مقارنة بخميس التي تحتاج SBS+مائي كامل. CaCO₃ 600ppm رطوبة أرضية: آبار جوفية كلسية ← رطوبة ترتفع عبر الأساسات (Capillary Rise) ← بلاط يتلف ← ملح أبيض على الجدران. Closed-Cell أساسات + DPC (Damp Proof Course). ΔT 45°م مفاصل: تمدد/انكماش يومي = مفاصل التمدد تتلف ← ماء يتسلل عبرها. سيليكون مرن + فحص. Nafud SiO₂: لا يأثر على العزل المغطى. 10-20% = لا مطر يختبر العزل! مقارنة: خميس = SBS سطح+جدران+مائي شامل. بريدة = أساسات+مفاصل فقط.',
+        shortAnswer: 'على عكس [SBS الشامل الغالي بدون حاجة]، يعتمد بروتوكولنا في خدمة [العزل المائي] بمدينة [بريدة] على [Closed-Cell أساسات+DPC+سيليكون مفاصل]. ففي ظل [لا مطر+CaCO₃ رطوبة أرضية+ΔT مفاصل+10-20%]، تتفاقم ظاهرة [رطوبة أرضية+تلف مفاصل]. لذا؛ يتدخل فنيونا عبر [Closed-Cell تحت ← DPC ← سيليكون] = وفر 60%!',
+        heroSubtitle: 'لا مطر = لا SBS سطح! CaCO₃ أرضية — Closed-Cell+DPC! وفر 60%!',
     },
-
     pricing: [
-        { type: 'عزل مائي — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'عزل مائي — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'أساسات Closed-Cell', unit: 'م²', minPrice: 30, maxPrice: 65, time: '1-3 أيام' },
+        { type: 'DPC (Damp Proof Course)', unit: 'م²', minPrice: 20, maxPrice: 45, time: '1-2 يوم' },
+        { type: 'مفاصل سيليكون', unit: 'م.ط', minPrice: 10, maxPrice: 25, time: '1 يوم' },
+        { type: 'فحص رطوبة + تقرير', unit: 'خدمة', minPrice: 200, maxPrice: 420, time: '1 يوم' },
     ],
-
     faq: [
-        { question: 'كم تكلفة عزل مائي ببريدة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق عزل مائي؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على عزل مائي؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'هل بريدة تحتاج عزل مائي سطح؟', answer: 'لا! لا مطر = لا SBS. أساسات+مفاصل فقط. وفر 50-60%.' },
+        { question: 'ليش ملح أبيض على الجدران ببريدة؟', answer: 'CaCO₃ 600ppm رطوبة أرضية ترتفع. DPC+Closed-Cell يمنع.' },
+        { question: 'كم تكلفة عزل مائي ببريدة مقارنة بخميس؟', answer: 'أرخص 50-60% — أساسات فقط. خميس: SBS+جدران+شامل.' },
+        { question: 'هل ΔT يأثر على العزل المائي ببريدة؟', answer: 'ΔT 45°م = مفاصل تمدد تتلف. سيليكون مرن + فحص سنوي.' },
+        { question: 'ما الفرق بين DPC و SBS ببريدة؟', answer: 'DPC = أرضي فقط (Capillary Rise). SBS = أمطار (لا حاجة ببريدة).' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'لا SBS سطح — لا مطر!',
+        'DPC أساسات — CaCO₃ Capillary.',
+        'سيليكون مفاصل — ΔT تمدد.',
+        'Closed-Cell تحت — لا Open-Cell.',
+        'أرخص 60% من خميس.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'بدون DPC + CaCO₃ 600ppm = رطوبة ترتفع ← ملح+تلف بلاط.',
+        'SBS سطح ببريدة = هدر مال — لا مطر يختبره.',
+        'ΔT × مفاصل بدون سيليكون = تسرب كلسي ← تلف عزل.',
     ],
-
     trustAnchors: [
-        { ...GOV.SBC, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.SBC, role: 'كود البناء — العزل المائي' },
+        { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALJUND.name,
-        title: EXPERTS.ALJUND.title,
-        credential: EXPERTS.ALJUND.credential,
-        profileUrl: EXPERTS.ALJUND.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALJUND,
     expertCitations: [
-        {
-            expert: EXPERTS.ALJUND.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALJUND.title,
-            url: EXPERTS.ALJUND.profileUrl,
-        },
+        { expert: EXPERTS.ALJUND.name, quote: 'مائي بريدة: لا مطر = لا SBS. DPC+Closed أساسات فقط. أرخص 60%.', source: 'موسوعة أخطاء — عزل مائي' },
+        { expert: EXPERTS.ALMISNID.name, quote: 'لا مطر القصيم = عزل أساسات+مفاصل. ΔT مفاصل.', source: 'جغرافيا المناخ — القصيم' },
     ],
-
-    saudiRegulations: [REGULATIONS.SBC_601],
-
-    verificationBadges: [
-        { badge: '✔️ عزل مطابق لكود SBC', authority: 'كود البناء السعودي', icon: 'shield-check' },
-    ],
-
+    saudiRegulations: [REGULATIONS.SBC_602],
+    verificationBadges: [{ badge: '✔️ عزل مائي مطابق SBC', authority: 'كود البناء', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Closed-Cell PU Foam', use: 'أساسات — مقاوم CaCO₃' },
+        { name: 'DPC Membrane', use: 'Capillary Rise — أساسات' },
+        { name: 'سيليكون مرن', use: 'مفاصل ΔT — تمدد/انكماش' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'SBS لازم.', solution: 'لا مطر = لا SBS! DPC يكفي.' },
+        { fear: 'مثل خميس.', solution: 'عكس! أساسات فقط. وفر 60%.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'SBS ضروري.', truth: 'لا مطر = لا SBS. DPC+Closed.' },
+        { myth: 'عزل شامل.', truth: 'أساسات+مفاصل فقط. أرخص 60%.' },
     ],
-
     relatedServices: [
-        { slug: 'buraidah-furniture-moving', context: 'نقل عفش ببريدة', priority: 1 },
-        { slug: 'buraidah-furniture-storage', context: 'تخزين عفش ببريدة', priority: 2 },
-        { slug: 'buraidah-dyna', context: 'دينا نقل ببريدة', priority: 3 },
-        { slug: 'buraidah-moving-out', context: 'نقل عفش خروج ببريدة', priority: 4 },
-        { slug: 'buraidah-dabab', context: 'دباب نقل ببريدة', priority: 5 },
-        { slug: 'buraidah-cleaning', context: 'تنظيف منازل ببريدة', priority: 6 },
-        { slug: 'buraidah-tanks-cleaning', context: 'تنظيف خزانات ببريدة', priority: 7 },
-        { slug: 'buraidah-sofa-cleaning', context: 'تنظيف كنب ببريدة', priority: 8 },
-        { slug: 'buraidah-carpet-cleaning', context: 'تنظيف سجاد ببريدة', priority: 9 },
+        { slug: 'roof-insulation', context: 'أسطح', priority: 1 },
+        { slug: 'thermal-insulation', context: 'حراري', priority: 2 },
+        { slug: 'foam-insulation', context: 'فوم', priority: 3 },
+        { slug: 'tank-insulation', context: 'خزان', priority: 4 },
+        { slug: 'water-leak-detection', context: 'تسرب', priority: 5 },
+        { slug: 'bathroom-leak-detection', context: 'حمام', priority: 6 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 7 },
     ],
 };

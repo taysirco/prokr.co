@@ -1,6 +1,7 @@
 import { CITIES, SERVICES, SERVICE_IMAGES, getServiceImage } from '@/lib/seed';
 import { getServiceKeywordProfile, getCityKeyword } from '@/lib/keyword-strategy';
 import { hasPageOverride } from '@/lib/overrides/registry';
+import { isAbsorbedSlug } from '@/lib/services/super-page-groups';
 
 const BASE_URL = 'https://prokr.co';
 
@@ -12,10 +13,10 @@ export async function GET() {
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 `;
 
-    // Silo pages (city + service) with their images — only pages with overrides
+    // Silo pages (city + service) with their images — only canonical pages with overrides
     for (const city of CITIES) {
         for (const service of SERVICES) {
-            if (!hasPageOverride(city.slug, service.slug)) continue;
+            if (!hasPageOverride(city.slug, service.slug) || isAbsorbedSlug(service.slug)) continue;
             const images = SERVICE_IMAGES[service.slug] || [getServiceImage(service.slug)];
             const pageUrl = `${BASE_URL}/${city.slug}/${service.slug}`;
 
@@ -38,8 +39,9 @@ export async function GET() {
         }
     }
 
-    // Service hub pages with their images
+    // Service hub pages with their images — only canonical services
     for (const service of SERVICES) {
+        if (isAbsorbedSlug(service.slug)) continue;
         const images = SERVICE_IMAGES[service.slug] || [getServiceImage(service.slug)];
         const pageUrl = `${BASE_URL}/${service.slug}`;
 

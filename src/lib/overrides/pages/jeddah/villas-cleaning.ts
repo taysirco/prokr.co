@@ -4,6 +4,7 @@
 // ============================================
 
 import type { PageOverride } from '../../types';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -77,6 +78,8 @@ export const override: PageOverride = {
 
 
 
+        verificationBadges: [{ badge: '✔️ شركة مرخصة من بلدي', authority: 'وزارة البلديات', icon: 'shield-check' }],
+
     equipment: [
         { name: 'فريق 4-6 عمال + مشرف جودة', use: 'الفيلا تحتاج فريق أكبر لإنجاز التنظيف في يوم واحد' },
         { name: 'رافعة واجهات أو سلم هيدروليكي', use: 'تنظيف واجهات وزجاج الارتفاعات بأمان' },
@@ -91,23 +94,20 @@ export const override: PageOverride = {
     trustAnchors: [
         { entity: 'وزارة البلديات — منصة بلدي', acronym: 'بلدي', url: 'https://balady.gov.sa', role: 'ترخيص شركات التنظيف' },
         { entity: 'الهيئة السعودية للمواصفات والمقاييس', acronym: 'SASO', url: 'https://www.saso.gov.sa', role: 'اعتماد مواد التنظيف' },
+        { entity: AMANA.JEDDAH.entity, url: AMANA.JEDDAH.url, role: 'اشتراطات أمانة جدة' },
     ],
 
-    expertReviewer: {
-        name: 'أ.د. عبدالله المسند',
-        title: 'أستاذ جغرافيا المناخ',
-        credential: 'أستاذ جغرافيا المناخ — جامعة القصيم',
-        profileUrl: 'https://x.com/ALMISNID',
-    },
+    expertReviewer: EXPERTS.ALMISNID,
 
     expertCitations: [
         {
             expert: 'أ.د. عبدالله المسند',
             quote: 'فلل جدة تحتاج صيانة تنظيفية مضاعفة — الملوحة الساحلية تبهّت الواجهات أسبوعياً + الرطوبة تنمّي العفن في المساحات المغلقة. العقد الشهري هو الحل الاقتصادي الأمثل',
             source: 'تحليل مناخي',
-            url: 'https://x.com/ALMISNID',
         },
     ],
+
+        saudiRegulations: [REGULATIONS.BALADI_HEALTH],
 
     counterNarratives: [
         { myth: 'الفيلا تتنظف بعاملة منزلية فقط', truth: 'العاملة المنزلية تغطي التنظيف اليومي. تنظيف عميق للفيلا (واجهات زجاجية + مسبح + خزان + مكيفات مركزية + حديقة) يحتاج فريق متخصص بمعدات صناعية — الفيلا المتوسطة تحتاج 4-6 عمال ليوم كامل' },
@@ -115,14 +115,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'jeddah-cleaning', context: 'تنظيف شامل للفيلا', priority: 1 },
-        { slug: 'jeddah-swimming-pool-cleaning', context: 'مسبح الفيلا', priority: 2 },
-        { slug: 'jeddah-glass-facades-cleaning', context: 'واجهات الفيلا', priority: 3 },
-        { slug: 'jeddah-steam-cleaning', context: 'بخار شامل للفيلا', priority: 4 },
-        { slug: 'jeddah-sanitization', context: 'تعقيم الفيلا', priority: 5 },
-        { slug: 'jeddah-carpet-cleaning', context: 'سجاد الفيلا', priority: 6 },
-        { slug: 'jeddah-air-conditioner-cleaning', context: 'مكيفات الفيلا', priority: 7 },
-        { slug: 'jeddah-pest-control', context: 'مكافحة حشرات الحديقة', priority: 8 },
-        { slug: 'jeddah-tanks-cleaning', context: 'خزان الفيلا', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف شامل للفيلا', priority: 1 },
+        { slug: 'swimming-pool-cleaning', context: 'مسبح الفيلا', priority: 2 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات الفيلا', priority: 3 },
+        { slug: 'steam-cleaning', context: 'بخار شامل للفيلا', priority: 4 },
+        { slug: 'sanitization', context: 'تعقيم الفيلا', priority: 5 },
+        { slug: 'carpet-cleaning', context: 'سجاد الفيلا', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيفات الفيلا', priority: 7 },
+        { slug: 'pest-control', context: 'مكافحة حشرات الحديقة', priority: 8 },
+        { slug: 'tanks-cleaning', context: 'خزان الفيلا', priority: 9 },
     ],
 };

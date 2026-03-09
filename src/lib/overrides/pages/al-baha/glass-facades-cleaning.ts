@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف واجهات زجاجية بالباحة — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-baha/glass-facades-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف واجهات زجاجية بالباحة — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف واجهات زجاجية بالباحة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف واجهات زجاجية بالباحة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف واجهات زجاجية بالباحة', 'تنظيف واجهات زجاجية الباحة', 'شركة تنظيف واجهات زجاجية بالباحة', 'أفضل تنظيف واجهات زجاجية بالباحة'],
+        title: 'تنظيف واجهات زجاجية بالباحة — ضباب Biofilm+Dew Point+Laterite+عرعر — Anti-Biofilm+Marine Sealant! (2026)',
+        description: 'تنظيف واجهات الباحة. ضباب 200 يوم Biofilm أسرع! Dew Point 0-5°م. Laterite بقع. عرعر لزج. Anti-Biofilm+Sealant.',
+        h1: 'تنظيف واجهات بالباحة — Biofilm+Dew Point+Laterite!',
+        keywords: ['تنظيف واجهات زجاجية بالباحة', 'تنظيف واجهات الباحة', 'شركة تنظيف واجهات بالباحة'],
     },
-
     content: {
-        introduction: 'تنظيف واجهات زجاجية بالباحة — خدمة متخصصة تراعي الظروف المناخية والبيئية في الباحة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف واجهات زجاجية بالباحة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف واجهات زجاجية بالباحة. خدمة احترافية. ضمان.',
+        introduction: 'واجهات الباحة = Biofilm الأسرع نمواً بالمملكة! ضباب Biofilm: 200 يوم ضباب+قرب الغابة = Biofilm (طبقة بكتيرية خضراء) تنمو على الزجاج 20-30% أسرع من أي مدينة! Algae+Biofilm. Anti-Biofilm ربع سنوي. Dew Point 0-5°م: شتاء = تكثّف على الزجاج ← ماء بين الزجاج والإطار ← عفن إطار خشب. Marine Sealant. Laterite Fe₂O₃: طين أحمر ينتشر بالمطر على الواجهات ← بقع بنية. Oxalic Acid. عرعر لزج: حبوب لقاح صفراء تلتصق بالزجاج الرطب. قشط+Microfiber. مقارنة: بريدة = SiO₂ خدش+CaCO₃ بقع+لا Biofilm = أبسط. الباحة = Biofilm+Dew Point+طين+عرعر = فريدة.',
+        shortAnswer: 'على عكس [المسح العادي]، يعتمد بروتوكولنا في خدمة [تنظيف الواجهات] بمدينة [الباحة] على [Anti-Biofilm+Marine Sealant+Oxalic+قشط عرعر]. ففي ظل [Biofilm 20-30% أسرع+Dew Point+Laterite+عرعر]، تتفاقم ظاهرة [طبقة خضراء+عفن إطار+بقع+لزوجة]. لذا؛ يتدخل فريقنا عبر [Anti-Biofilm ← Marine Sealant ← Oxalic ← قشط].',
+        heroSubtitle: 'Biofilm 20-30% أسرع + Dew Point عفن إطار — Anti-Biofilm!',
     },
-
     pricing: [
-        { type: 'تنظيف واجهات زجاجية — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف واجهات زجاجية — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'واجهة صغيرة', unit: 'م²', minPrice: 15, maxPrice: 35, time: '1-2 يوم' },
+        { type: '+ Anti-Biofilm+Sealant', unit: 'م²', minPrice: 20, maxPrice: 45, time: '+ يوم' },
+        { type: 'واجهة كبيرة إدارية', unit: 'م²', minPrice: 20, maxPrice: 45, time: '2-4 أيام' },
+        { type: 'ربع سنوي', unit: 'سنة', minPrice: 400, maxPrice: 800, time: '4 تنظيف' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف واجهات زجاجية بالباحة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف واجهات زجاجية؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف واجهات زجاجية؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش واجهات الباحة تخضر أسرع؟', answer: '200 يوم ضباب+غابة = Biofilm 20-30% أسرع. Anti-Biofilm ربع سنوي.' },
+        { question: 'هل الشتاء مشكلة للواجهات بالباحة؟', answer: 'Dew Point 0-5°م = تكثّف = عفن إطار. Marine Sealant.' },
+        { question: 'ما البقع البنية على الواجهات بالباحة؟', answer: 'Laterite Fe₂O₃ طين بالمطر. Oxalic يُزيل.' },
+        { question: 'كم تكلفة واجهات بالباحة مقابل بريدة؟', answer: 'أغلى 30-40% — Anti-Biofilm+Sealant. بريدة: SiO₂+Descaler.' },
+        { question: 'كم مرة تنظيف واجهات بالباحة؟', answer: 'ربع سنوي. بريدة: نصف سنوي.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Anti-Biofilm — 20-30% أسرع.',
+        'Marine Sealant — Dew Point شتاء.',
+        'Oxalic — Laterite بقع.',
+        'قشط عرعر — لزج.',
+        'ربع سنوي — ضباب مستمر.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'Biofilm + واجهة × 3 أشهر = خضراء ← مظهر — Anti-Biofilm.',
+        'Dew Point + إطار خشب بدون Sealant = عفن ← تلف بنيوي.',
+        'مبيّض + Laterite = بقعة بنية ← Oxalic.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'اشتراطات واجهات' },
+        { entity: AMANA.BAHA.entity, url: AMANA.BAHA.url, role: 'اشتراطات واجهات — أمانة الباحة' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMISNID.name, quote: 'واجهات الباحة: Biofilm الأسرع بالمملكة. Anti-Biofilm+Sealant.', source: 'جغرافيا المناخ — واجهات جبلية' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف واجهات مرخص', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Anti-Biofilm', use: '20-30% أسرع — ضباب+غابة' },
+        { name: 'Marine Sealant', use: 'Dew Point — إطار خشب' },
+        { name: 'Oxalic Acid', use: 'Laterite — بقع بنية' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'مسح يكفي.', solution: 'Biofilm = Anti-Biofilm.' },
+        { fear: 'مثل بريدة.', solution: 'Biofilm+Dew Point ≠ SiO₂.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'نصف سنوي.', truth: 'ربع سنوي. Biofilm.' },
+        { myth: 'ماء يكفي.', truth: 'Anti-Biofilm+Oxalic+Sealant.' },
     ],
-
     relatedServices: [
-        { slug: 'al-baha-furniture-moving', context: 'نقل عفش بالباحة', priority: 1 },
-        { slug: 'al-baha-furniture-storage', context: 'تخزين عفش بالباحة', priority: 2 },
-        { slug: 'al-baha-dyna', context: 'دينا نقل بالباحة', priority: 3 },
-        { slug: 'al-baha-moving-out', context: 'نقل عفش خروج بالباحة', priority: 4 },
-        { slug: 'al-baha-dabab', context: 'دباب نقل بالباحة', priority: 5 },
-        { slug: 'al-baha-cleaning', context: 'تنظيف منازل بالباحة', priority: 6 },
-        { slug: 'al-baha-tanks-cleaning', context: 'تنظيف خزانات بالباحة', priority: 7 },
-        { slug: 'al-baha-sofa-cleaning', context: 'تنظيف كنب بالباحة', priority: 8 },
-        { slug: 'al-baha-carpet-cleaning', context: 'تنظيف سجاد بالباحة', priority: 9 },
+        { slug: 'marble-polishing', context: 'رخام', priority: 1 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 2 },
+        { slug: 'villas-cleaning', context: 'فلل', priority: 3 },
+        { slug: 'bird-control', context: 'طيور', priority: 4 },
+        { slug: 'roof-insulation', context: 'أسطح', priority: 5 },
+        { slug: 'water-insulation', context: 'مائي', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 7 },
     ],
 };

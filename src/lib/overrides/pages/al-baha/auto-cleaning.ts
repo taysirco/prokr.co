@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف سيارات بالباحة — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-baha/auto-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف سيارات بالباحة — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف سيارات بالباحة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف سيارات بالباحة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف سيارات بالباحة', 'تنظيف سيارات الباحة', 'شركة تنظيف سيارات بالباحة', 'أفضل تنظيف سيارات بالباحة'],
+        title: 'تنظيف سيارات بالباحة — Laterite Fe₂O₃ Red Mud+ضباب+عرعر — pH Foam+Pre-Rinse! (2026)',
+        description: 'تنظيف سيارات الباحة. Laterite Red Mud يأكل الطلاء! ضباب 200 يوم. عرعر لزج. pH Foam+Pre-Rinse+No-Touch.',
+        h1: 'تنظيف سيارات بالباحة — Red Mud+ضباب+عرعر!',
+        keywords: ['تنظيف سيارات بالباحة', 'غسيل سيارة بالباحة', 'شركة تنظيف سيارات بالباحة'],
     },
-
     content: {
-        introduction: 'تنظيف سيارات بالباحة — خدمة متخصصة تراعي الظروف المناخية والبيئية في الباحة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف سيارات بالباحة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف سيارات بالباحة. خدمة احترافية. ضمان.',
+        introduction: 'سيارة الباحة = Red Mud يأكل الطلاء! Laterite Fe₂O₃ Red Mud: طين بازلتي أحمر (أكسيد حديد) يلتصق بالسيارة أثناء المطر ← لو جف = يحُك Clear Coat بالإسفنج = خدوش. pH-Balanced Foam يُذيب قبل المسح. Pre-Rinse ضغط إلزامي. ضباب: 200 يوم = رطوبة تُبقي الطين رطباً أطول = يخترق الشقوق. عرعر لزج: حبوب لقاح صفراء تلتصق بالطلاء الرطب ← طبقة لزجة. Microfiber مبلل. الأمطار: الباحة أكثر مطراً بالمملكة ← Laterite ينتشر أكثر. غسل بعد كل مطر. مقارنة: بريدة = Nafud SiO₂ يخدش لكن لا Red Mud+لا عرعر. الباحة = Red Mud+عرعر = فريد.',
+        shortAnswer: 'على عكس [الإسفنج+ماء الذي يخدش Red Mud]، يعتمد بروتوكولنا في خدمة [تنظيف السيارات] بمدينة [الباحة] على [pH Foam+Pre-Rinse+No-Touch+Wax]. ففي ظل [Laterite Red Mud+200 يوم ضباب+عرعر لزج+أمطار]، تتفاقم ظاهرة [خدش+لزوجة+اختراق]. لذا؛ يتدخل فريقنا عبر [Pre-Rinse ← pH Foam ← No-Touch ← Wax].',
+        heroSubtitle: 'Laterite Red Mud + 200 يوم ضباب + عرعر — pH Foam!',
     },
-
     pricing: [
-        { type: 'تنظيف سيارات — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف سيارات — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'غسيل pH Foam', unit: 'سيارة', minPrice: 35, maxPrice: 70, time: '20-30 دقيقة' },
+        { type: '+ Wax حماية', unit: 'سيارة', minPrice: 55, maxPrice: 110, time: '30-45 دقيقة' },
+        { type: 'بعد مطر — عميق', unit: 'سيارة', minPrice: 45, maxPrice: 90, time: '30 دقيقة' },
+        { type: 'أسبوعي (4/شهر)', unit: 'شهر', minPrice: 120, maxPrice: 240, time: '4 غسلات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف سيارات بالباحة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف سيارات؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف سيارات؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش سيارة الباحة يتلف طلاؤها أسرع؟', answer: 'Laterite Fe₂O₃ = Red Mud يحُك Clear Coat. pH Foam يُذيب قبل المسح.' },
+        { question: 'ليش Pre-Rinse إلزامي بالباحة؟', answer: 'Red Mud جاف = خشن. إسفنج مباشر = خدوش. ضغط يُزيل أولاً.' },
+        { question: 'كم تكلفة غسيل بالباحة مقارنة ببريدة؟', answer: 'أغلى 25-30% — pH Foam+Pre-Rinse. بريدة: No-Touch SiO₂ فقط.' },
+        { question: 'هل العرعر يأثر على السيارة بالباحة؟', answer: 'لقاح لزج يلتصق بالطلاء الرطب. Microfiber مبلل.' },
+        { question: 'كم مرة غسيل بالباحة؟', answer: 'بعد كل مطر + أسبوعي موسم ضباب. Red Mud+عرعر مستمر.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'pH Foam — Laterite يُذيب.',
+        'Pre-Rinse ضغط — Red Mud جاف.',
+        'No-Touch — لا إسفنج!',
+        'Wax — حماية Clear Coat.',
+        'بعد كل مطر — Laterite.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'إسفنج + Laterite جاف = خدوش حلقات دائمة — Pre-Rinse.',
+        'مبيّض + Laterite = بقعة حمراء على الطلاء — pH Foam.',
+        'عرعر + ضباب × أسبوع = طبقة لزجة — Microfiber.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص مغاسل السيارات' },
+        { entity: AMANA.BAHA.entity, url: AMANA.BAHA.url, role: 'اشتراطات أمانة الباحة' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMISNID.name, quote: 'سيارة الباحة: Laterite Red Mud+عرعر. pH Foam+Pre-Rinse. لا إسفنج!', source: 'جغرافيا المناخ — سيارات جبلية' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ مغسلة مرخصة', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'pH-Balanced Foam', use: 'Laterite — يُذيب Red Mud' },
+        { name: 'Pre-Rinse ضغط', use: 'Red Mud جاف — قبل مسح' },
+        { name: 'Wax Protection', use: 'Clear Coat — حماية' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'إسفنج يكفي.', solution: 'Laterite = خدوش. pH Foam+No-Touch.' },
+        { fear: 'مثل بريدة.', solution: 'Red Mud+عرعر ≠ SiO₂.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'ماء يكفي.', truth: 'Red Mud يحتاج pH Foam.' },
+        { myth: 'شهري.', truth: 'بعد كل مطر. أسبوعي ضباب.' },
     ],
-
     relatedServices: [
-        { slug: 'al-baha-furniture-moving', context: 'نقل عفش بالباحة', priority: 1 },
-        { slug: 'al-baha-furniture-storage', context: 'تخزين عفش بالباحة', priority: 2 },
-        { slug: 'al-baha-dyna', context: 'دينا نقل بالباحة', priority: 3 },
-        { slug: 'al-baha-moving-out', context: 'نقل عفش خروج بالباحة', priority: 4 },
-        { slug: 'al-baha-dabab', context: 'دباب نقل بالباحة', priority: 5 },
-        { slug: 'al-baha-cleaning', context: 'تنظيف منازل بالباحة', priority: 6 },
-        { slug: 'al-baha-tanks-cleaning', context: 'تنظيف خزانات بالباحة', priority: 7 },
-        { slug: 'al-baha-sofa-cleaning', context: 'تنظيف كنب بالباحة', priority: 8 },
-        { slug: 'al-baha-carpet-cleaning', context: 'تنظيف سجاد بالباحة', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 1 },
+        { slug: 'furniture-moving', context: 'نقل', priority: 2 },
+        { slug: 'dyna', context: 'دينا', priority: 3 },
+        { slug: 'dabab', context: 'دباب', priority: 4 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 5 },
+        { slug: 'pest-control', context: 'حشرات', priority: 6 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات', priority: 7 },
     ],
 };

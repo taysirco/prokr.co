@@ -1,94 +1,75 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف شقق بالجبيل — Override مخصص (E-E-A-T Grade)
-// صفحة: /jubail/apartments-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف شقق بالجبيل — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف شقق بالجبيل. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف شقق بالجبيل — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف شقق بالجبيل', 'تنظيف شقق الجبيل', 'شركة تنظيف شقق بالجبيل', 'أفضل تنظيف شقق بالجبيل'],
+        title: 'تنظيف شقق بالجبيل — NaCl+VOC ترسبات + 85-98% عفن أقصى + SABIC PM2.5 (2026)',
+        description: 'تنظيف شقق الجبيل. NaCl+VOC ترسبات مُركّبة. 85-98% عفن أسبوع. SABIC PM2.5. تكثّف أقصى. Marine Degreaser + Anti-Fungal + HEPA AC.',
+        h1: 'تنظيف شقق بالجبيل — ملح+بتروكيماويات وعفن أقصى وPM2.5 صناعي',
+        keywords: ['تنظيف شقق الجبيل', 'تنظيف شقة بالجبيل', 'شركة تنظيف شقق بالجبيل'],
     },
-
     content: {
-        introduction: 'تنظيف شقق بالجبيل — خدمة متخصصة تراعي الظروف المناخية والبيئية في الجبيل. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف شقق بالجبيل: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف شقق بالجبيل. خدمة احترافية. ضمان.',
+        introduction: 'الشقة في الجبيل تتعرض لتلويث ثلاثي فريد. الأول — NaCl+VOC: رذاذ ملحي من الخليج + أبخرة بتروكيماوية من SABIC = ترسبات مُركّبة (ملح+دهن كيميائي) على كل سطح. منظف عادي لا يُزيلها. Marine Degreaser. الثاني — 85-98% عفن أقصى: أعلى رطوبة في المملكة = عفن خلال أسبوع على أي سطح رطب. حمامات + مطابخ + خلف أثاث + خزائن = بؤر. Anti-Fungal كل زيارة. الثالث — SABIC PM2.5: جزيئات بتروكيماوية تدخل من النوافذ + المكيف. HEPA Activated Carbon في غرف النوم. التكثّف: 98% = نقطة ندى أقصى = ماء على زجاج + جدران + سقف = أقصى تلف.',
+        shortAnswer: 'على عكس [تنظيف عادي] الذي لا يُراعي VOC+NaCl، يعتمد بروتوكولنا في خدمة [تنظيف الشقق] بمدينة [الجبيل] على [Marine Degreaser + Anti-Fungal + HEPA AC + تجفيف]. ففي ظل [NaCl+VOC + 85-98% + PM2.5]، تتفاقم ظاهرة [ترسبات + عفن + تنفسي]. لذا؛ يتدخل خبراؤنا عبر [بروتوكول شقة صناعية-ساحلية].',
+        heroSubtitle: 'NaCl+VOC ترسبات + 85-98% عفن أقصى + SABIC PM2.5',
     },
-
     pricing: [
-        { type: 'تنظيف شقق — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف شقق — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'شقة — بروتوكول صناعي-ساحلي', unit: 'شقة', minPrice: 200, maxPrice: 400, time: '3-5 ساعات' },
+        { type: 'عميق (Anti-Fungal + Degreaser)', unit: 'شقة', minPrice: 280, maxPrice: 530, time: '4-6 ساعات' },
+        { type: 'بعد إجازة (عفن 98%)', unit: 'شقة', minPrice: 310, maxPrice: 600, time: '5-8 ساعات' },
+        { type: 'عقد أسبوعي', unit: 'شهر', minPrice: 340, maxPrice: 680, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف شقق بالجبيل؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف شقق؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف شقق؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'VOC — يترسب على الأسطح؟', answer: 'نعم — طبقة دهنية كيميائية. + NaCl = مُركّبة. منظف عادي = ينزلق. Marine Degreaser = يُكسر الطبقة.' },
+        { question: '85-98% — أعلى من الخبر؟', answer: 'الخبر 85-95%. الجبيل 85-98% (قرب أحواض SABIC). فرق 3-5% = عفن أسرع + تكثّف أقصى.' },
+        { question: 'بعد إجازة — ليش أسوأ؟', answer: '98% + سقة مُغلقة + مكيف مُطفأ = عفن على كل سطح 7-14 يوم. إعادة = Anti-Fungal شامل.' },
+        { question: 'PM2.5 — في الشقة؟', answer: 'SABIC PM2.5 يدخل من نوافذ + مكيف + ثغرات. HEPA AC في غرف النوم = حماية 8 ساعات.' },
+        { question: 'أسبوعي — ليش؟', answer: 'NaCl+VOC يومي + 85-98% عفن أسبوعي + PM2.5. أسبوعي = يمنع التراكم.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Marine Degreaser — يُكسر NaCl+VOC المُركّبة.',
+        'Anti-Fungal كل زيارة — 98% = أسبوع عفن.',
+        'HEPA Activated Carbon غرف نوم — PM2.5.',
+        'تجفيف قبل إقفال — 98% = تكثّف = عفن.',
+        'فتحات تهوية مُفلترة — PM2.5 + NaCl.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'NaCl+VOC بدون Degreaser = تراكم لا يُزال 3-6 أشهر.',
+        '98% + إجازة = عفن شامل 7-14 يوم.',
+        'PM2.5 × 8 ساعات نوم = خطر تنفسي. HEPA AC.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص التنظيف' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات النظافة بالشرقية' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMISNID.name, quote: 'شقة الجبيل: NaCl+VOC مُركّبة + 85-98% أقصى + SABIC PM2.5. ثلاثي صناعي-ساحلي فريد. Marine Degreaser + Anti-Fungal + HEPA AC.', source: 'جغرافيا المناخ — تنظيف البيئة الصناعية' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف مرخص', authority: 'منصة بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Marine Degreaser', use: 'NaCl+VOC — يُكسر المُركّبة' },
+        { name: 'Anti-Fungal Industrial', use: '85-98% — عفن أقصى' },
+        { name: 'HEPA Activated Carbon', use: 'PM2.5 + VOC — غرف نوم' },
+        { name: 'Dehumidifier 50%', use: 'تكثّف — يمنع عفن' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'مثل الخبر.', solution: 'VOC إضافي + 98% > 95% + PM2.5 صناعي. مختلف.' },
+        { fear: 'منظف عادي.', solution: 'NaCl+VOC = مُركّبة. عادي = ينزلق. Degreaser.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'ساحلي فقط.', truth: 'ساحلي + صناعي = VOC + NaCl + PM2.5. ثلاثي.' },
+        { myth: 'شهري.', truth: '98% = عفن أسبوعي. أسبوعي.' },
+        { myth: 'HEPA عادي.', truth: 'لا يحجز VOC. Activated Carbon.' },
     ],
-
     relatedServices: [
-        { slug: 'jubail-furniture-moving', context: 'نقل عفش بالجبيل', priority: 1 },
-        { slug: 'jubail-furniture-storage', context: 'تخزين عفش بالجبيل', priority: 2 },
-        { slug: 'jubail-dyna', context: 'دينا نقل بالجبيل', priority: 3 },
-        { slug: 'jubail-moving-out', context: 'نقل عفش خروج بالجبيل', priority: 4 },
-        { slug: 'jubail-dabab', context: 'دباب نقل بالجبيل', priority: 5 },
-        { slug: 'jubail-cleaning', context: 'تنظيف منازل بالجبيل', priority: 6 },
-        { slug: 'jubail-tanks-cleaning', context: 'تنظيف خزانات بالجبيل', priority: 7 },
-        { slug: 'jubail-sofa-cleaning', context: 'تنظيف كنب بالجبيل', priority: 8 },
-        { slug: 'jubail-carpet-cleaning', context: 'تنظيف سجاد بالجبيل', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف — NaCl+VOC', priority: 1 },
+        { slug: 'carpet-cleaning', context: 'سجاد — عفن', priority: 2 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف — VOC', priority: 3 },
+        { slug: 'steam-cleaning', context: 'بخار — تعقيم', priority: 4 },
+        { slug: 'pest-control', context: 'حشرات — بعوض', priority: 5 },
+        { slug: 'marble-polishing', context: 'رخام — NaCl', priority: 6 },
+        { slug: 'villas-cleaning', context: 'فلل', priority: 7 },
     ],
 };

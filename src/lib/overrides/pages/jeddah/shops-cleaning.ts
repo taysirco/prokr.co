@@ -6,6 +6,7 @@
 // ══════════════════════════════════════════════════════════════
 
 import type { PageOverride } from '../../types';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -65,6 +66,8 @@ export const override: PageOverride = {
         'الواجهات فوق 3 أمتار: لا تستخدم سلم عادي — رافعة أو حبال أمان إلزامية',
     ],
 
+        verificationBadges: [{ badge: '✔️ شركة مرخصة من بلدي', authority: 'وزارة البلديات', icon: 'shield-check' }],
+
     equipment: [
         { name: 'مكينة جلي أرضيات Walk-Behind Scrubber', use: 'تنظف وتجفف الأرضية في خطوة واحدة — المحل يفتح فوراً بعد التنظيف' },
         { name: 'محلول إزالة أملاح واجهات (Glass Descaler)', use: 'يذيب ملح NaCl المتصلب على الزجاج بدون خدش — نتيجة مرآة' },
@@ -79,23 +82,20 @@ export const override: PageOverride = {
     trustAnchors: [
         { entity: 'وزارة البلديات — منصة بلدي', acronym: 'بلدي', url: 'https://balady.gov.sa', role: 'الشهادة الصحية + ترخيص المحلات التجارية' },
         { entity: 'الهيئة السعودية للمواصفات والمقاييس', acronym: 'SASO', url: 'https://www.saso.gov.sa', role: 'مواصفات مواد التنظيف التجارية' },
+        { entity: AMANA.JEDDAH.entity, url: AMANA.JEDDAH.url, role: 'اشتراطات أمانة جدة' },
     ],
 
-    expertReviewer: {
-        name: 'أ.د. عبدالله المسند',
-        title: 'أستاذ جغرافيا المناخ',
-        credential: 'أستاذ جغرافيا المناخ — جامعة القصيم',
-        profileUrl: 'https://x.com/ALMISNID',
-    },
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
             expert: 'أ.د. عبدالله المسند',
             quote: 'في المدن الساحلية الرطبة: المحل التجاري يحتاج تنظيف احترافي ضعف المدن الجافة. الملح والرطوبة يحولان أي سطح متسخ لبؤرة بكتيرية خلال 48 ساعة',
             source: 'تحليل مناخي',
-            url: 'https://x.com/ALMISNID',
         },
     ],
+
+        saudiRegulations: [REGULATIONS.BALADI_HEALTH],
 
     counterNarratives: [
         { myth: 'العامل ينظف المحل يومياً — يكفي', truth: 'التنظيف اليومي للأرضيات والواجهات: ضروري. لكن: أنظمة التكييف + الأسقف + الأرفف العليا + خلف المنتجات = تحتاج تنظيف عميق شهري بمعدات صناعية. الشهادة الصحية من بلدي تتطلب تنظيف احترافي موثق' },
@@ -103,14 +103,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'jeddah-cleaning', context: 'تنظيف شامل — محل + مستودع', priority: 1 },
-        { slug: 'jeddah-glass-facades-cleaning', context: 'واجهات زجاجية كبيرة', priority: 2 },
-        { slug: 'jeddah-floor-polishing', context: 'جلي أرضية المحل', priority: 3 },
-        { slug: 'jeddah-sanitization', context: 'تعقيم محلات غذائية', priority: 4 },
-        { slug: 'jeddah-air-conditioner-cleaning', context: 'مكيفات المحل', priority: 5 },
-        { slug: 'jeddah-pest-control', context: 'مكافحة حشرات — محل غذائي', priority: 6 },
-        { slug: 'jeddah-office-cleaning', context: 'مكتب المحل الخلفي', priority: 7 },
-        { slug: 'jeddah-oven-cleaning', context: 'أفران المخابز', priority: 8 },
-        { slug: 'jeddah-restaurant-chimney-cleaning', context: 'مداخن المطاعم', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف شامل — محل + مستودع', priority: 1 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات زجاجية كبيرة', priority: 2 },
+        { slug: 'floor-polishing', context: 'جلي أرضية المحل', priority: 3 },
+        { slug: 'sanitization', context: 'تعقيم محلات غذائية', priority: 4 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيفات المحل', priority: 5 },
+        { slug: 'pest-control', context: 'مكافحة حشرات — محل غذائي', priority: 6 },
+        { slug: 'office-cleaning', context: 'مكتب المحل الخلفي', priority: 7 },
+        { slug: 'oven-cleaning', context: 'أفران المخابز', priority: 8 },
+        { slug: 'restaurant-chimney-cleaning', context: 'مداخن المطاعم', priority: 9 },
     ],
 };

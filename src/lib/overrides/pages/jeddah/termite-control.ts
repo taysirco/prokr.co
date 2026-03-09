@@ -6,7 +6,7 @@
 // ══════════════════════════════════════════════════════════════
 
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -52,6 +52,7 @@ export const override: PageOverride = {
             question: 'بيتي جديد — هل يحتاج معالجة نمل أبيض؟',
             answer: 'إذا المقاول عالج التربة وعندك شهادة SBC: افحص كل 3-5 سنوات. إذا ما في شهادة (مباني قبل 2010 غالباً): حقن وقائي ضرورة حتى لو المبنى جديد. في تربة جدة الرملية: النمل يصل المبنى خلال 3-5 سنوات بدون حاجز. الاستثمار الوقائي: 1,500-3,000 ريال. إصلاح الضرر: 10,000-30,000+ ريال.',
         },
+        { question: 'هل المبيدات آمنة على الأطفال والحيوانات؟', answer: 'مبيدات مسجلة في نظام غد — SFDA. إخلاء 2-4 ساعات بعد الرش. طيور وأسماك: أبِلغ الشركة مسبقاً لاستخدام مواد أخف. الأسطح آمنة بعد الجفاف (1-2 ساعة).' },
     ],
 
     expertTips: [
@@ -71,6 +72,7 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.SBC, role: 'كود البناء السعودي يشترط معالجة التربة قبل البناء — شهادة معالجة إلزامية' },
         { ...GOV.BALADI, role: 'ترخيص شركات مكافحة النمل الأبيض — اشتراطات فنية' },
+        { entity: AMANA.JEDDAH.entity, url: AMANA.JEDDAH.url, role: 'اشتراطات أمانة جدة' },
     ],
 
     expertReviewer: {
@@ -85,7 +87,6 @@ export const override: PageOverride = {
             expert: 'م. عبدالغني الجند',
             quote: 'النمل الأبيض في جدة ليس احتمال — بل مسألة وقت. كل مبنى بدون حاجز كيميائي في تربة جدة الرملية: يُصاب خلال 3-5 سنوات. الحقن الوقائي أرخص 10 أضعاف من إصلاح الضرر',
             source: 'مؤلف موسوعة أخطاء في البناء',
-            url: 'https://x.com/ssrrr22',
         },
     ],
 
@@ -112,14 +113,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'jeddah-pest-control', context: 'فحص حشرات شامل يكشف نمل أبيض مبكراً', priority: 1 },
-        { slug: 'jeddah-water-leak-detection', context: 'تسرب المياه يبلل الخشب ← يجذب النمل الأبيض', priority: 2 },
-        { slug: 'jeddah-water-insulation', context: 'العزل المائي يمنع الرطوبة ← يحمي الأخشاب', priority: 3 },
-        { slug: 'jeddah-ants-control', context: 'التمييز بين النمل العادي والنمل الأبيض — فحص متخصص', priority: 4 },
-        { slug: 'jeddah-roof-insulation', context: 'عزل السطح يمنع تسرب المياه ← يحمي الأخشاب', priority: 5 },
-        { slug: 'jeddah-cockroach-control', context: 'الصراصير تشارك النمل الأبيض بيئة الرطوبة', priority: 6 },
-        { slug: 'jeddah-bathroom-leak-detection', context: 'تسرب الحمام يبلل إطارات الأبواب ← هدف للأرضة', priority: 7 },
-        { slug: 'jeddah-furniture-moving', context: 'نقل أثاث خشبي من بيت مصاب يحتاج فحص قبل النقل', priority: 8 },
-        { slug: 'jeddah-thermal-insulation', context: 'التكثيف من ضعف العزل = رطوبة = بيئة أرضة', priority: 9 },
+        { slug: 'pest-control', context: 'فحص حشرات شامل يكشف نمل أبيض مبكراً', priority: 1 },
+        { slug: 'water-leak-detection', context: 'تسرب المياه يبلل الخشب ← يجذب النمل الأبيض', priority: 2 },
+        { slug: 'water-insulation', context: 'العزل المائي يمنع الرطوبة ← يحمي الأخشاب', priority: 3 },
+        { slug: 'ants-control', context: 'التمييز بين النمل العادي والنمل الأبيض — فحص متخصص', priority: 4 },
+        { slug: 'roof-insulation', context: 'عزل السطح يمنع تسرب المياه ← يحمي الأخشاب', priority: 5 },
+        { slug: 'cockroach-control', context: 'الصراصير تشارك النمل الأبيض بيئة الرطوبة', priority: 6 },
+        { slug: 'bathroom-leak-detection', context: 'تسرب الحمام يبلل إطارات الأبواب ← هدف للأرضة', priority: 7 },
+        { slug: 'furniture-moving', context: 'نقل أثاث خشبي من بيت مصاب يحتاج فحص قبل النقل', priority: 8 },
+        { slug: 'thermal-insulation', context: 'التكثيف من ضعف العزل = رطوبة = بيئة أرضة', priority: 9 },
     ],
 };

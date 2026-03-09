@@ -6,7 +6,7 @@
 // ══════════════════════════════════════════════════════════════
 
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -47,6 +47,8 @@ export const override: PageOverride = {
             question: 'واجهة الزجاج — كل كم أحتاج أنظفها؟',
             answer: 'بدون نانو: كل أسبوع (بعد كل عاصفة + تنظيف دوري). مع نانو Hydrophobic: كل 3-4 أسابيع. الفرق: نانو يجعل الغبار لا يلتصق + المطر/الماء يزيله تلقائياً. واجهة نظيفة = إضاءة طبيعية = منتجات تبدو أفضل = زبائن أكثر.',
         },
+        { question: 'كم تكلفة التنظيف العميق مقارنة بالتنظيف العادي؟', answer: 'التنظيف العميق أغلى 30-50% لكنه يشمل: HEPA + بخار 150°م + تعقيم. التنظيف العادي = مسح سطحي. العميق كل 3-4 أشهر + العادي أسبوعياً = أفضل معادلة تكلفة/نظافة.' },
+        { question: 'هل المواد المستخدمة آمنة على الأطفال؟', answer: 'مواد معتمدة من هيئة الغذاء والدواء SFDA. بعد التنظيف: تهوية 30 دقيقة كافية. بخار 150°م = بديل للكيماويات — آمن 100% على الأطفال والحيوانات.' },
     ],
 
     expertTips: [
@@ -65,6 +67,7 @@ export const override: PageOverride = {
 
     trustAnchors: [
         { ...GOV.BALADI, role: 'اشتراطات النظافة للمحلات التجارية — تجديد الرخصة مشروط بالنظافة' },
+        { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
 
     expertReviewer: {
@@ -79,7 +82,6 @@ export const override: PageOverride = {
             expert: 'أ.د. عبدالله المسند',
             quote: 'المحلات المفتوحة على الشارع في الرياض تتلقى ضعف الحمل الغباري عن المولات المغلقة. Air Curtain = أفضل استثمار لمحل تجاري في مناخ الرياض',
             source: 'أستاذ جغرافيا المناخ',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -106,14 +108,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'riyadh-sanitization', context: 'شهادة تعقيم إلزامية', priority: 1 },
-        { slug: 'riyadh-glass-facades-cleaning', context: 'واجهة المحل', priority: 2 },
-        { slug: 'riyadh-cleaning', context: 'تنظيف شامل', priority: 3 },
-        { slug: 'riyadh-floor-polishing', context: 'تلميع أرضيات المحل', priority: 4 },
-        { slug: 'riyadh-air-conditioner-cleaning', context: 'مكيف المحل', priority: 5 },
-        { slug: 'riyadh-pest-control', context: 'رش وقائي', priority: 6 },
-        { slug: 'riyadh-steam-cleaning', context: 'بخار أرضيات وكراسي', priority: 7 },
-        { slug: 'riyadh-office-cleaning', context: 'مكتب المحل الإداري', priority: 8 },
-        { slug: 'riyadh-marble-polishing', context: 'جلي رخام المحل', priority: 9 },
+        { slug: 'sanitization', context: 'شهادة تعقيم إلزامية', priority: 1 },
+        { slug: 'glass-facades-cleaning', context: 'واجهة المحل', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف شامل', priority: 3 },
+        { slug: 'floor-polishing', context: 'تلميع أرضيات المحل', priority: 4 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف المحل', priority: 5 },
+        { slug: 'pest-control', context: 'رش وقائي', priority: 6 },
+        { slug: 'steam-cleaning', context: 'بخار أرضيات وكراسي', priority: 7 },
+        { slug: 'office-cleaning', context: 'مكتب المحل الإداري', priority: 8 },
+        { slug: 'marble-polishing', context: 'جلي رخام المحل', priority: 9 },
     ],
 };

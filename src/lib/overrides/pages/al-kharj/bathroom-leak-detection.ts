@@ -1,94 +1,74 @@
-// ══════════════════════════════════════════════════════════════
-// كشف تسربات حمامات بالخرج — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-kharj/bathroom-leak-detection
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'كشف تسربات حمامات بالخرج — خدمة احترافية معتمدة (2026)',
-        description: 'كشف تسربات حمامات بالخرج. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'كشف تسربات حمامات بالخرج — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['كشف تسربات حمامات بالخرج', 'كشف تسربات حمامات الخرج', 'شركة كشف تسربات حمامات بالخرج', 'أفضل كشف تسربات حمامات بالخرج'],
+        title: 'كشف تسربات حمامات بالخرج — CaCO₃ يسد+SiO₂ يآكل Seal — Descaler+فحص ضغط (2026)',
+        description: 'كشف تسربات حمامات الخرج. CaCO₃ 450ppm يسد مفاصل! SiO₂ يآكل Seal. ΔT 48°م يُتعب مواسير. Descaler+فحص ضغط+حراري.',
+        h1: 'كشف تسربات حمامات بالخرج — كلس يسد ورمل يآكل',
+        keywords: ['كشف تسربات حمامات الخرج', 'كشف تسرب حمام بالخرج', 'شركة كشف تسربات حمامات الخرج'],
     },
-
     content: {
-        introduction: 'كشف تسربات حمامات بالخرج — خدمة متخصصة تراعي الظروف المناخية والبيئية في الخرج. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'كشف تسربات حمامات بالخرج: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'كشف تسربات حمامات بالخرج. خدمة احترافية. ضمان.',
+        introduction: 'تسربات حمامات الخرج تختلف عن المدن الأخرى! أولاً — CaCO₃ 450ppm يسد المفاصل: آبار جوفية = ترسبات كلس تتراكم داخل المواسير ← تضيّق القُطر ← ضغط يرتفع ← المفصل الأضعف يتسرب. Descaler دوري يمنع. ثانياً — SiO₂ صحراوي يآكل Seal: رمل ناعم يدخل مع ماء الصنبور ← يآكل الحلقات المطاطية (O-rings) ← تسرب بطيء. فحص Seal سنوي. ثالثاً — ΔT 48°م: فارق حراري كبير بين صيف 50°م وشتاء 2°م = تمدد وانكماش مواسير ← إجهاد حراري Thermal Fatigue ← كسر مفاصل. رابعاً — لا تكثّف! 15-25% = جاف. التسرب واضح بصرياً — لا خلط مع تكثّف مثل خميس مشيط. ميزة كبيرة! مقارنة: خميس = 3 مصادر (تسرب+مطر+تكثّف). الخرج = مصدر واحد (تسرب) = أبسط تشخيصاً.',
+        shortAnswer: 'على عكس [الفحص البصري بدون Descaler]، يعتمد بروتوكولنا في خدمة [كشف تسربات الحمامات] بمدينة [الخرج] على [فحص ضغط+حراري+Descaler+فحص Seal]. ففي ظل [CaCO₃ 450ppm+SiO₂ يآكل+ΔT 48°م+لا تكثّف]، تتفاقم ظاهرة [انسداد+تآكل+إجهاد حراري]. لذا؛ يتدخل فنيونا عبر [ضغط ← حراري ← Descaler ← Seal].',
+        heroSubtitle: 'CaCO₃ يسد + SiO₂ يآكل + ΔT 48°م — لا تكثّف = أبسط!',
     },
-
     pricing: [
-        { type: 'كشف تسربات حمامات — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'كشف تسربات حمامات — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'فحص حراري+ضغط', unit: 'حمام', minPrice: 120, maxPrice: 260, time: '1-2 ساعة' },
+        { type: 'كشف + Descaler', unit: 'حمام', minPrice: 180, maxPrice: 380, time: '2-3 ساعات' },
+        { type: 'كشف + إصلاح', unit: 'حمام', minPrice: 300, maxPrice: 650, time: '3-5 ساعات' },
+        { type: 'فحص شامل (كل الحمامات)', unit: 'بيت', minPrice: 350, maxPrice: 720, time: '3-5 ساعات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة كشف تسربات حمامات بالخرج؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق كشف تسربات حمامات؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على كشف تسربات حمامات؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش حمام الخرج يتسرب أكثر من الرياض؟', answer: 'CaCO₃ 450ppm يسد المفاصل + SiO₂ يآكل Seal + ΔT 48°م = إجهاد أكثر.' },
+        { question: 'هل الكلس يسبب تسرب بالخرج؟', answer: 'CaCO₃ يتراكم داخل المواسير ← يضيّق ← ضغط يرتفع ← أضعف مفصل يتسرب. Descaler يمنع.' },
+        { question: 'كم تكلفة كشف تسرب حمام بالخرج مقارنة بخميس؟', answer: 'أرخص 20% — مصدر واحد (لا تكثّف لا مطر). خميس: 3 مصادر = فحص حراري أعقد.' },
+        { question: 'هل التكثّف يخلط مع التسرب بالخرج؟', answer: 'لا! 15-25% = لا تكثّف. التسرب واضح بصرياً. ميزة كبيرة — خميس: 3 مصادر مُضللة.' },
+        { question: 'متى أفحص تسربات الحمامات بالخرج؟', answer: 'سنوياً Seal + نصف سنوي Descaler. بداية الصيف = ΔT أعلى = إجهاد أكثر.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Descaler نصف سنوي — CaCO₃ يسد المفاصل.',
+        'فحص Seal سنوي — SiO₂ يآكل O-rings.',
+        'فحص ضغط — ΔT 48°م إجهاد حراري.',
+        'لا تكثّف — التسرب واضح بصرياً.',
+        'بداية الصيف = فحص — ΔT أعلى.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'CaCO₃ × سنة بدون Descaler = انسداد جزئي ← ضغط ← تسرب مفاجئ.',
+        'SiO₂ × سنتين = Seal تالف ← تسرب بطيء لا يُلاحظ ← عفن تحت البلاط.',
+        'ΔT 48°م × 10 سنوات = Thermal Fatigue ← كسر مفصل — 1000+ ريال إصلاح.',
     ],
-
     trustAnchors: [
-        { ...GOV.NWC, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.NWC, role: 'تقارير تسرب معتمدة' },
+        { ...GOV.BALADI, role: 'ترخيص فنيي السباكة' },
+        { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALJUND.name,
-        title: EXPERTS.ALJUND.title,
-        credential: EXPERTS.ALJUND.credential,
-        profileUrl: EXPERTS.ALJUND.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALJUND,
     expertCitations: [
-        {
-            expert: EXPERTS.ALJUND.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALJUND.title,
-            url: EXPERTS.ALJUND.profileUrl,
-        },
+        { expert: EXPERTS.ALJUND.name, quote: 'حمام الخرج: CaCO₃ يسد+SiO₂ يآكل+ΔT يُتعب. لكن: لا تكثّف = أبسط تشخيصاً.', source: 'موسوعة أخطاء — سباكة زراعية' },
     ],
-
     saudiRegulations: [REGULATIONS.NWC_REPORT],
-
-    verificationBadges: [
-        { badge: '✔️ تقرير معتمد NWC', authority: 'شركة المياه الوطنية', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ فني سباكة مرخص', authority: 'بلدي + NWC', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'فاحص ضغط', use: 'يكشف تسرب داخلي — CaCO₃ ضغط' },
+        { name: 'كاميرا حرارية', use: 'يُحدد موقع التسرب بدقة' },
+        { name: 'Chemical Descaler', use: 'يُذيب CaCO₃ — يمنع انسداد' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'مثل الرياض.', solution: 'CaCO₃+SiO₂+ΔT = مختلف. الرياض: لا كلس.' },
+        { fear: 'غالي.', solution: 'تسرب خفي × سنة = عفن تحت البلاط = 5000+ إصلاح.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'فحص بصري يكفي.', truth: 'CaCO₃ انسداد داخلي. فحص ضغط.' },
+        { myth: 'مثل خميس.', truth: 'أبسط! لا تكثّف. مصدر واحد.' },
     ],
-
     relatedServices: [
-        { slug: 'al-kharj-furniture-moving', context: 'نقل عفش بالخرج', priority: 1 },
-        { slug: 'al-kharj-furniture-storage', context: 'تخزين عفش بالخرج', priority: 2 },
-        { slug: 'al-kharj-dyna', context: 'دينا نقل بالخرج', priority: 3 },
-        { slug: 'al-kharj-moving-out', context: 'نقل عفش خروج بالخرج', priority: 4 },
-        { slug: 'al-kharj-dabab', context: 'دباب نقل بالخرج', priority: 5 },
-        { slug: 'al-kharj-cleaning', context: 'تنظيف منازل بالخرج', priority: 6 },
-        { slug: 'al-kharj-tanks-cleaning', context: 'تنظيف خزانات بالخرج', priority: 7 },
-        { slug: 'al-kharj-sofa-cleaning', context: 'تنظيف كنب بالخرج', priority: 8 },
-        { slug: 'al-kharj-carpet-cleaning', context: 'تنظيف سجاد بالخرج', priority: 9 },
+        { slug: 'water-leak-detection', context: 'تسرب مياه', priority: 1 },
+        { slug: 'tank-leak-detection', context: 'تسرب خزان', priority: 2 },
+        { slug: 'water-insulation', context: 'عزل مائي', priority: 3 },
+        { slug: 'tanks-cleaning', context: 'خزانات', priority: 4 },
+        { slug: 'sewage-unblocking', context: 'تسليك', priority: 5 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 7 },
     ],
 };

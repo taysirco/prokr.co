@@ -91,7 +91,6 @@ export const override: PageOverride = {
             expert: 'أ.د. عبدالله المسند',
             quote: 'غبار مكة الكلسي أثقل وأصلب من الغبار الرملي — يعمل كورق صنفرة ناعم على أنسجة المفروشات. التنظيف الدوري كل 3-6 أشهر = حماية لعمر المفروشات الفاخرة',
             source: 'أستاذ المناخ والبيئة',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -122,12 +121,12 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'makkah-sofa-cleaning', context: 'غسيل كنب الصالة — نفس تقنية الرغوة الجافة', priority: 1 },
-        { slug: 'makkah-carpet-cleaning', context: 'غسيل سجاد وزوالي المجلس — تنظيف + تعقيم', priority: 2 },
-        { slug: 'makkah-steam-cleaning', context: 'تعقيم مراتب ومساند بالبخار — إزالة عث الغبار', priority: 3 },
-        { slug: 'makkah-villas-cleaning', context: 'تنظيف فيلا شامل — المجلس + باقي الغرف', priority: 4 },
-        { slug: 'makkah-marble-polishing', context: 'جلي رخام مدخل الديوانية — يُكمل فخامة المجلس', priority: 5 },
-        { slug: 'makkah-cleaning', context: 'تنظيف منزل عام — باقة شاملة مع المجلس', priority: 6 },
-        { slug: 'makkah-pest-control', context: 'رش وقائي ضد عث الغبار والحشرات — يحمي المفروشات', priority: 7 },
+        { slug: 'sofa-cleaning', context: 'غسيل كنب الصالة — نفس تقنية الرغوة الجافة', priority: 1 },
+        { slug: 'carpet-cleaning', context: 'غسيل سجاد وزوالي المجلس — تنظيف + تعقيم', priority: 2 },
+        { slug: 'steam-cleaning', context: 'تعقيم مراتب ومساند بالبخار — إزالة عث الغبار', priority: 3 },
+        { slug: 'villas-cleaning', context: 'تنظيف فيلا شامل — المجلس + باقي الغرف', priority: 4 },
+        { slug: 'marble-polishing', context: 'جلي رخام مدخل الديوانية — يُكمل فخامة المجلس', priority: 5 },
+        { slug: 'cleaning', context: 'تنظيف منزل عام — باقة شاملة مع المجلس', priority: 6 },
+        { slug: 'pest-control', context: 'رش وقائي ضد عث الغبار والحشرات — يحمي المفروشات', priority: 7 },
     ],
 };

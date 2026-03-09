@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// شفط بيارات بينبع — Override مخصص (E-E-A-T Grade)
-// صفحة: /yanbu/sewage-suction
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'شفط بيارات بينبع — خدمة احترافية معتمدة (2026)',
-        description: 'شفط بيارات بينبع. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'شفط بيارات بينبع — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['شفط بيارات بينبع', 'شفط بيارات ينبع', 'شركة شفط بيارات بينبع', 'أفضل شفط بيارات بينبع'],
+        title: 'شفط بيارات بينبع — تحلية TDS<150+NaCl+70-85% H₂S — شفط+تعقيم+تهوية! (2026)',
+        description: 'شفط بيارات ينبع. تحلية TDS<150! NaCl 41‰. 70-85% H₂S أخطر. شفط+تعقيم+تهوية ساحلي.',
+        h1: 'شفط بيارات بينبع — تحلية+NaCl+H₂S!',
+        keywords: ['شفط بيارات ينبع', 'شفط بيارة بينبع', 'شركة شفط بيارات ينبع'],
     },
-
     content: {
-        introduction: 'شفط بيارات بينبع — خدمة متخصصة تراعي الظروف المناخية والبيئية في ينبع. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'شفط بيارات بينبع: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'شفط بيارات بينبع. خدمة احترافية. ضمان.',
+        introduction: 'بيارات ينبع = رطوبة تُنتج H₂S أخطر! 70-85% H₂S: رطوبة = تحلل عضوي أسرع = H₂S (كبريتيد الهيدروجين) أعلى تركيز = سام! تهوية إلزامية. تحلية TDS<150: مياه محلاة تنتج حمأة مختلفة عن الجوفية. NaCl 41‰: ملح بحري يدخل مع مياه الأرض ← يزيد ملوحة البيارة = تآكل خرسانة أسرع. SOx: لا يأثر مباشرة. حرارة 45°م: صيف = تحلل أسرع = رائحة أقوى. شفط صيفي. مقارنة: بريدة = CaCO₃ كلس+ΔT رائحة لكن لا H₂S خطير. ينبع = H₂S+NaCl تآكل = أخطر.',
+        shortAnswer: 'على عكس [الشفط بدون تهوية]، يعتمد بروتوكولنا في خدمة [شفط البيارات] بمدينة [ينبع] على [شفط+تهوية H₂S+تعقيم+Anti-Corrosion خرسانة]. ففي ظل [70-85% H₂S+NaCl تآكل+تحلية+حرارة]، تتفاقم ظاهرة [سُمّية+تآكل+رائحة]. لذا؛ يتدخل فنيونا عبر [تهوية ← شفط ← تعقيم ← Anti-Corrosion] — H₂S!',
+        heroSubtitle: '70-85% H₂S سام + NaCl تآكل خرسانة — تهوية+شفط!',
     },
-
     pricing: [
-        { type: 'شفط بيارات — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'شفط بيارات — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'شفط بيارة صغيرة', unit: 'خدمة', minPrice: 150, maxPrice: 310, time: '1-2h' },
+        { type: 'شفط + تعقيم', unit: 'خدمة', minPrice: 200, maxPrice: 420, time: '2-3h' },
+        { type: 'شفط كبير (20+ م³)', unit: 'خدمة', minPrice: 300, maxPrice: 620, time: '3-5h' },
+        { type: 'عقد ربع سنوي', unit: 'سنة', minPrice: 500, maxPrice: 1000, time: '4 شفط' },
     ],
-
     faq: [
-        { question: 'كم تكلفة شفط بيارات بينبع؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق شفط بيارات؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على شفط بيارات؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش بيارة ينبع أخطر؟', answer: '70-85% = H₂S أعلى = سام. تهوية إلزامية قبل الشفط.' },
+        { question: 'هل NaCl يأثر على البيارة بينبع؟', answer: 'ملح يتآكل خرسانة أسرع. Anti-Corrosion Coating.' },
+        { question: 'كم تكلفة شفط بينبع مقابل بريدة؟', answer: 'أغلى 15-20% — تهوية+Anti-Corrosion.' },
+        { question: 'ليش الرائحة أقوى صيفاً بينبع؟', answer: '70-85%+حرارة 45°م = تحلل أسرع = H₂S+رائحة.' },
+        { question: 'كم مرة شفط بينبع؟', answer: 'ربع سنوي. 70-85% = تحلل أسرع من بريدة.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'تهوية — H₂S سام 70-85%.',
+        'Anti-Corrosion — NaCl خرسانة.',
+        'تعقيم — تحلية حمأة.',
+        'صيفي — حرارة تحلل.',
+        'ربع سنوي — رطوبة تسرّع.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        '70-85% + H₂S سام = خطر مميت بدون تهوية — YMYL.',
+        'NaCl × خرسانة × سنوات = تآكل بيارة = انهيار.',
+        'صيف + بدون شفط = H₂S + رائحة = جيران YMYL.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص شركات الشفط' },
+        { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'اشتراطات أمانة ينبع' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'بيارة ينبع: H₂S 70-85% أخطر. NaCl تآكل. تهوية+Anti-Corrosion.', source: 'نصائح هندسية — بيارات ساحلية' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة صرف صحي مرخصة', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ شفط مرخص', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'تهوية صناعية', use: 'H₂S — سلامة إلزامية' },
+        { name: 'شاحنة شفط', use: 'شفط حمأة — ساحلي' },
+        { name: 'Anti-Corrosion', use: 'NaCl — خرسانة' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'شفط عادي.', solution: 'H₂S 70-85% = تهوية.' },
+        { fear: 'مثل بريدة.', solution: 'H₂S+NaCl = أخطر.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'نصف سنوي.', truth: '70-85% = ربع سنوي.' },
+        { myth: 'شفط يكفي.', truth: 'تهوية+تعقيم+Anti-Corrosion.' },
     ],
-
     relatedServices: [
-        { slug: 'yanbu-furniture-moving', context: 'نقل عفش بينبع', priority: 1 },
-        { slug: 'yanbu-furniture-storage', context: 'تخزين عفش بينبع', priority: 2 },
-        { slug: 'yanbu-dyna', context: 'دينا نقل بينبع', priority: 3 },
-        { slug: 'yanbu-moving-out', context: 'نقل عفش خروج بينبع', priority: 4 },
-        { slug: 'yanbu-dabab', context: 'دباب نقل بينبع', priority: 5 },
-        { slug: 'yanbu-cleaning', context: 'تنظيف منازل بينبع', priority: 6 },
-        { slug: 'yanbu-tanks-cleaning', context: 'تنظيف خزانات بينبع', priority: 7 },
-        { slug: 'yanbu-sofa-cleaning', context: 'تنظيف كنب بينبع', priority: 8 },
-        { slug: 'yanbu-carpet-cleaning', context: 'تنظيف سجاد بينبع', priority: 9 },
+        { slug: 'sewage-unblocking', context: 'تسليك', priority: 1 },
+        { slug: 'tanks-cleaning', context: 'خزانات', priority: 2 },
+        { slug: 'water-leak-detection', context: 'تسرب', priority: 3 },
+        { slug: 'bathroom-leak-detection', context: 'حمام', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 5 },
+        { slug: 'pest-control', context: 'حشرات', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 7 },
     ],
 };

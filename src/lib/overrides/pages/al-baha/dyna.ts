@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// دينا نقل بالباحة — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-baha/dyna
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'دينا نقل بالباحة — خدمة احترافية معتمدة (2026)',
-        description: 'دينا نقل بالباحة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'دينا نقل بالباحة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['دينا نقل بالباحة', 'دينا نقل الباحة', 'شركة دينا نقل بالباحة', 'أفضل دينا نقل بالباحة'],
+        title: 'دينا نقل بالباحة — طرق جبلية وعرة+ضباب رؤية+مطر Laterite — Mountain-Spec+مغلقة! (2026)',
+        description: 'دينا نقل الباحة. طرق جبلية وعرة! ضباب 200 يوم. مطر Laterite. Mountain-Spec+مغلقة+All-Terrain.',
+        h1: 'دينا نقل بالباحة — جبلي+ضباب+مطر!',
+        keywords: ['دينا نقل بالباحة', 'دينا نقل الباحة', 'خدمة دينا نقل بالباحة'],
     },
-
     content: {
-        introduction: 'دينا نقل بالباحة — خدمة متخصصة تراعي الظروف المناخية والبيئية في الباحة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'دينا نقل بالباحة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'دينا نقل بالباحة. خدمة احترافية. ضمان.',
+        introduction: 'دينا الباحة = جبلي أخطر! طرق جبلية: منحدرات+منعطفات = حمولة دينا ثقيلة تتحرك. Mountain-Spec تثبيت مزدوج. ضباب: 200 يوم = قيادة بطيئة. دينا أكبر = أخطر بالضباب. مطر: طرق Laterite = انزلاق. All-Terrain+Chains صيفي. PVAc: أثاث رطب+اهتزاز جبلي = كسر. Anti-Humidity+تغليف حماية. مغلقة: مطر+ضباب = حمولة تتبلل. مغلقة 100% إلزامي. مقارنة: بريدة = طرق صحراوية+جاف = أبسط بكثير.',
+        shortAnswer: 'على عكس [الدينا المكشوفة بطرق مستوية]، يعتمد بروتوكولنا في خدمة [الدينا] بمدينة [الباحة] على [Mountain-Spec مزدوج+مغلقة+Anti-Humidity+All-Terrain]. ففي ظل [طرق جبلية+ضباب+مطر+PVAc]، تتفاقم ظاهرة [انزلاق+رؤية+تبلل+كسر]. لذا؛ يتدخل فريقنا عبر [Mountain-Spec ← مغلقة ← Anti-Humidity ← All-Terrain].',
+        heroSubtitle: 'طرق جبلية + ضباب + مطر — Mountain-Spec مزدوج!',
     },
-
     pricing: [
-        { type: 'دينا نقل — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'دينا نقل — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'دينا صغيرة', unit: 'رحلة', minPrice: 200, maxPrice: 420, time: '3-4h' },
+        { type: 'دينا + تغليف مغلق', unit: 'رحلة', minPrice: 250, maxPrice: 520, time: '3-5h' },
+        { type: 'دينا كبيرة', unit: 'رحلة', minPrice: 350, maxPrice: 720, time: '4-6h' },
+        { type: 'نقل جبلي رغدان', unit: 'ترقية', minPrice: 100, maxPrice: 200, time: '+ 2h' },
     ],
-
     faq: [
-        { question: 'كم تكلفة دينا نقل بالباحة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق دينا نقل؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على دينا نقل؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش دينا الباحة أخطر؟', answer: 'حمولة ثقيلة+منحدرات+ضباب = Mountain-Spec مزدوج.' },
+        { question: 'هل المطر مشكلة للدينا بالباحة؟', answer: 'Laterite = انزلاق. مكشوفة = تبلل. مغلقة+All-Terrain.' },
+        { question: 'كم تكلفة دينا بالباحة مقابل بريدة؟', answer: 'أغلى 20-30% — Mountain-Spec+مغلقة. طرق أصعب.' },
+        { question: 'هل الضباب يأخّر الدينا؟', answer: '200 يوم = قيادة بطيئة. دينا كبيرة = أبطأ.' },
+        { question: 'ليش Anti-Humidity بالدينا بالباحة؟', answer: 'PVAc+اهتزاز = كسر. Anti-Humidity يحمي مفاصل.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Mountain-Spec مزدوج — دينا ثقيلة.',
+        'مغلقة — مطر+ضباب.',
+        'All-Terrain — Laterite.',
+        'Anti-Humidity — PVAc أثاث.',
+        'صباحي — ضباب أقل.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'دينا ثقيلة + منحدرات + تثبيت عادي = كارثة.',
+        'مكشوفة + مطر = حمولة تتبلل = عفن.',
+        'Laterite + إطارات عادية = انزلاق — All-Terrain.',
     ],
-
     trustAnchors: [
-        { ...GOV.TGA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.TGA, role: 'ترخيص النقل' },
+        { entity: AMANA.BAHA.entity, url: AMANA.BAHA.url, role: 'اشتراطات أمانة الباحة' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALZUWAYED.name,
-        title: EXPERTS.ALZUWAYED.title,
-        credential: EXPERTS.ALZUWAYED.credential,
-        profileUrl: EXPERTS.ALZUWAYED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALSHABNAN,
     expertCitations: [
-        {
-            expert: EXPERTS.ALZUWAYED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALZUWAYED.title,
-            url: EXPERTS.ALZUWAYED.profileUrl,
-        },
+        { expert: EXPERTS.ALZUWAYED.name, quote: 'دينا الباحة: Mountain-Spec مزدوج+مغلقة. جبلي الأخطر.', source: 'معايير النقل — جبلي' },
     ],
-
     saudiRegulations: [REGULATIONS.TGA_LICENSE],
-
-    verificationBadges: [
-        { badge: '✔️ شركة نقل مرخصة من هيئة النقل TGA', authority: 'الهيئة العامة للنقل', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ نقل مرخص TGA', authority: 'TGA', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Mountain-Spec مزدوج', use: 'منحدرات — حمولة ثقيلة' },
+        { name: 'شاحنة مغلقة', use: 'مطر+ضباب — حماية' },
+        { name: 'All-Terrain', use: 'Laterite — انزلاق' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'مكشوفة أرخص.', solution: 'مطر = تبلل. مغلقة.' },
+        { fear: 'مثل بريدة.', solution: 'جبلي ≠ مستوي.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'أي دينا.', truth: 'Mountain-Spec+مغلقة.' },
+        { myth: 'طرق عادية.', truth: 'منحدرات+Laterite.' },
     ],
-
     relatedServices: [
-        { slug: 'al-baha-furniture-moving', context: 'نقل عفش بالباحة', priority: 1 },
-        { slug: 'al-baha-furniture-storage', context: 'تخزين عفش بالباحة', priority: 2 },
-        { slug: 'al-baha-moving-out', context: 'نقل عفش خروج بالباحة', priority: 3 },
-        { slug: 'al-baha-dabab', context: 'دباب نقل بالباحة', priority: 4 },
-        { slug: 'al-baha-cleaning', context: 'تنظيف منازل بالباحة', priority: 5 },
-        { slug: 'al-baha-tanks-cleaning', context: 'تنظيف خزانات بالباحة', priority: 6 },
-        { slug: 'al-baha-sofa-cleaning', context: 'تنظيف كنب بالباحة', priority: 7 },
-        { slug: 'al-baha-carpet-cleaning', context: 'تنظيف سجاد بالباحة', priority: 8 },
-        { slug: 'al-baha-steam-cleaning', context: 'تنظيف بالبخار بالباحة', priority: 9 },
+        { slug: 'dabab', context: 'دباب', priority: 1 },
+        { slug: 'furniture-moving', context: 'نقل', priority: 2 },
+        { slug: 'furniture-storage', context: 'تخزين', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 4 },
+        { slug: 'auto-cleaning', context: 'سيارات', priority: 5 },
+        { slug: 'pest-control', context: 'حشرات', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 7 },
     ],
 };

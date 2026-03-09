@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف مسابح بعنيزة — Override مخصص (E-E-A-T Grade)
-// صفحة: /onizah/swimming-pool-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف مسابح بعنيزة — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف مسابح بعنيزة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف مسابح بعنيزة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف مسابح بعنيزة', 'تنظيف مسابح عنيزة', 'شركة تنظيف مسابح بعنيزة', 'أفضل تنظيف مسابح بعنيزة'],
+        title: 'تنظيف مسابح بعنيزة — CaCO₃ Scale+48°م طحالب+Nafud فلتر — Descaler+Algaecide! (2026)',
+        description: 'تنظيف مسابح عنيزة. CaCO₃ Scale! 48°م طحالب. Nafud سد فلتر. Descaler+Algaecide+كلور يومي.',
+        h1: 'تنظيف مسابح بعنيزة — Scale+طحالب+Nafud!',
+        keywords: ['تنظيف مسابح بعنيزة', 'تنظيف مسبح عنيزة', 'شركة تنظيف مسابح بعنيزة'],
     },
-
     content: {
-        introduction: 'تنظيف مسابح بعنيزة — خدمة متخصصة تراعي الظروف المناخية والبيئية في عنيزة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف مسابح بعنيزة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف مسابح بعنيزة. خدمة احترافية. ضمان.',
+        introduction: 'مسبح عنيزة = CaCO₃ Scale يسد+48°م طحالب! CaCO₃ Scale 550ppm: ماء عسر يترسب كلس على جدران المسبح+أنابيب+مضخة ← يسد! Descaler ربع سنوي. 48°م طحالب: حرارة = كلور يتبخر 40% أسرع. Algaecide أسبوعي. Nafud SiO₂: رمل يسقط بالمسبح ← يسد الفلتر. Heavy-Duty Filter. سكر تمور: أغسطس-أكتوبر = طحالب تتغذى! مقارنة: الباحة = مطر+Biofilm ≠ Scale+طحالب.',
+        shortAnswer: 'على عكس [الصيانة العادية]، يعتمد بروتوكولنا في خدمة [تنظيف المسابح] بمدينة [عنيزة] على [Descaler+Algaecide+Heavy-Duty+كلور يومي]. ففي ظل [CaCO₃+48°م+Nafud+تمور]، تتفاقم ظاهرة [ترسب+تكاثر+انسداد]. لذا؛ يتدخل فنيونا عبر [Descaler ← Algaecide ← فلتر ← كلور].',
+        heroSubtitle: 'CaCO₃ Scale + 48°م طحالب + Nafud — Descaler+Algaecide!',
     },
-
     pricing: [
-        { type: 'تنظيف مسابح — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف مسابح — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'تنظيف + Descaler', unit: 'مسبح', minPrice: 200, maxPrice: 420, time: '2-4h' },
+        { type: 'Algaecide أسبوعي', unit: 'شهر', minPrice: 150, maxPrice: 310, time: '4 زيارة' },
+        { type: 'ربع سنوي', unit: 'سنة', minPrice: 600, maxPrice: 1200, time: '4 Descaler' },
+        { type: 'عقد سنوي', unit: 'سنة', minPrice: 3000, maxPrice: 6000, time: '52+ زيارة' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف مسابح بعنيزة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف مسابح؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف مسابح؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش Scale بمسبح عنيزة؟', answer: 'CaCO₃ 550ppm = كلس. Descaler ربع سنوي.' },
+        { question: 'ليش كلور يتبخر أسرع بعنيزة؟', answer: '48°م = 40% أسرع. يومي.' },
+        { question: 'ليش فلتر يسد أسرع بعنيزة؟', answer: 'Nafud SiO₂ = رمل. Heavy-Duty.' },
+        { question: 'كم تكلفة مسبح بعنيزة مقابل الباحة؟', answer: 'أرخص 10% — لا Biofilm. لكن Scale.' },
+        { question: 'هل التمور تأثر على المسبح؟', answer: 'سكر = طحالب أغسطس-أكتوبر. تنظيف أكثر.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Descaler ربع سنوي — Scale.',
+        'كلور يومي — 48°م.',
+        'Algaecide أسبوعي — طحالب.',
+        'Heavy-Duty فلتر — Nafud.',
+        'تنظيف إضافي — تمور.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'Scale × 6 أشهر = مضخة تسد — YMYL.',
+        '48°م + كلور ثابت = بكتيريا — YMYL.',
+        'Nafud + فلتر عادي = يسد يومياً.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص مسابح' },
+        { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'مسبح عنيزة: Scale+48°م. Descaler+Algaecide+كلور يومي.', source: 'نصائح هندسية — مسابح القصيم' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ صيانة مسابح مرخصة', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Descaler', use: 'CaCO₃ Scale — ربع سنوي' },
+        { name: 'Algaecide', use: '48°م — أسبوعي' },
+        { name: 'Heavy-Duty Filter', use: 'Nafud SiO₂' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'ربع سنوي كافي.', solution: 'Scale+طحالب = أسبوعي+ربع.' },
+        { fear: 'مثل الباحة.', solution: 'Scale ≠ Biofilm.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'كلور ثابت.', truth: '48°م = يومي.' },
+        { myth: 'لا Scale.', truth: '550ppm = Scale.' },
     ],
-
     relatedServices: [
-        { slug: 'onizah-furniture-moving', context: 'نقل عفش بعنيزة', priority: 1 },
-        { slug: 'onizah-furniture-storage', context: 'تخزين عفش بعنيزة', priority: 2 },
-        { slug: 'onizah-dyna', context: 'دينا نقل بعنيزة', priority: 3 },
-        { slug: 'onizah-moving-out', context: 'نقل عفش خروج بعنيزة', priority: 4 },
-        { slug: 'onizah-dabab', context: 'دباب نقل بعنيزة', priority: 5 },
-        { slug: 'onizah-cleaning', context: 'تنظيف منازل بعنيزة', priority: 6 },
-        { slug: 'onizah-tanks-cleaning', context: 'تنظيف خزانات بعنيزة', priority: 7 },
-        { slug: 'onizah-sofa-cleaning', context: 'تنظيف كنب بعنيزة', priority: 8 },
-        { slug: 'onizah-carpet-cleaning', context: 'تنظيف سجاد بعنيزة', priority: 9 },
+        { slug: 'tanks-cleaning', context: 'خزانات', priority: 1 },
+        { slug: 'water-leak-detection', context: 'تسرب', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 3 },
+        { slug: 'pest-control', context: 'حشرات', priority: 4 },
+        { slug: 'marble-polishing', context: 'رخام', priority: 5 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 6 },
+        { slug: 'water-insulation', context: 'مائي', priority: 7 },
     ],
 };

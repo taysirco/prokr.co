@@ -6,7 +6,7 @@
 // ══════════════════════════════════════════════════════════════
 
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -47,6 +47,8 @@ export const override: PageOverride = {
             question: 'البخار أفضل من الغسيل العادي بالماء؟',
             answer: 'للسيارات في الرياض: نعم. البخار: 1) يرفع الغبار بدون تلامس (لا خدوش). 2) يستهلك 5 لتر ماء فقط (vs 150 لتر غسيل عادي). 3) يعقم الداخلية (يقتل بكتيريا). 4) يجف فوراً (لا بقع كلسية). الغسيل العادي: ماء الرياض العسر يترك بقع كلسية + الإسفنج يسحب الرمل ← خدوش.',
         },
+        { question: 'كم تكلفة التنظيف العميق مقارنة بالتنظيف العادي؟', answer: 'التنظيف العميق أغلى 30-50% لكنه يشمل: HEPA + بخار 150°م + تعقيم. التنظيف العادي = مسح سطحي. العميق كل 3-4 أشهر + العادي أسبوعياً = أفضل معادلة تكلفة/نظافة.' },
+        { question: 'هل المواد المستخدمة آمنة على الأطفال؟', answer: 'مواد معتمدة من هيئة الغذاء والدواء SFDA. بعد التنظيف: تهوية 30 دقيقة كافية. بخار 150°م = بديل للكيماويات — آمن 100% على الأطفال والحيوانات.' },
     ],
 
     expertTips: [
@@ -65,6 +67,7 @@ export const override: PageOverride = {
 
     trustAnchors: [
         { ...GOV.BALADI, role: 'ترخيص خدمات غسيل السيارات المتنقلة — تنظيم النشاط التجاري' },
+        { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
 
     expertReviewer: {
@@ -79,7 +82,6 @@ export const override: PageOverride = {
             expert: 'أ.د. عبدالله المسند',
             quote: 'الرياض من أعلى المدن تعرضاً للأشعة فوق البنفسجية في العالم — 3,200+ ساعة شمس سنوياً. حماية طلاء السيارة ضرورة وليس ترف',
             source: 'أستاذ جغرافيا المناخ',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -102,17 +104,18 @@ export const override: PageOverride = {
 
     counterNarratives: [
         { myth: 'غسالة الشارع (يدوي) أرخص وأحسن', truth: 'غسالة الشارع تستخدم إسفنجة واحدة لكل السيارات — محمّلة برمل من سيارات سابقة = خدوش. ماء صنبور عَسِر = بقع كلسية. لا حماية. البخار: بدون تلامس + ماء RO + يعقم. الفرق: 80 ريال بخار vs 30 ريال شارع + خدوش + بقع + بدون تعقيم' },
+        { myth: 'المنظف العادي يكفي.', truth: 'المنظف العادي يزيل 40% من الأوساخ. HEPA + بخار = 99%+. الفرق = 59% غبار دقيق + بكتيريا + عث.' },
     ],
 
     relatedServices: [
-        { slug: 'riyadh-steam-cleaning', context: 'بخار السيارة', priority: 1 },
-        { slug: 'riyadh-sofa-cleaning', context: 'مقاعد السيارة', priority: 2 },
-        { slug: 'riyadh-carpet-cleaning', context: 'فرش السيارة', priority: 3 },
-        { slug: 'riyadh-sanitization', context: 'تعقيم داخلية السيارة', priority: 4 },
-        { slug: 'riyadh-cleaning', context: 'منزل + سيارة', priority: 5 },
-        { slug: 'riyadh-air-conditioner-cleaning', context: 'مكيف السيارة', priority: 6 },
-        { slug: 'riyadh-mattress-cleaning', context: 'نفس تقنية البخار', priority: 7 },
-        { slug: 'riyadh-floor-cleaning', context: 'أرضية الكراج', priority: 8 },
-        { slug: 'riyadh-pest-control', context: 'حشرات الكراج', priority: 9 },
+        { slug: 'steam-cleaning', context: 'بخار السيارة', priority: 1 },
+        { slug: 'sofa-cleaning', context: 'مقاعد السيارة', priority: 2 },
+        { slug: 'carpet-cleaning', context: 'فرش السيارة', priority: 3 },
+        { slug: 'sanitization', context: 'تعقيم داخلية السيارة', priority: 4 },
+        { slug: 'cleaning', context: 'منزل + سيارة', priority: 5 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف السيارة', priority: 6 },
+        { slug: 'mattress-cleaning', context: 'نفس تقنية البخار', priority: 7 },
+        { slug: 'floor-cleaning', context: 'أرضية الكراج', priority: 8 },
+        { slug: 'pest-control', context: 'حشرات الكراج', priority: 9 },
     ],
 };

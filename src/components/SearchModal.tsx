@@ -4,6 +4,7 @@ import { useState, useEffect, useRef, useMemo } from 'react';
 import Link from 'next/link';
 import { Search, X, MapPin, Briefcase, BookOpen } from 'lucide-react';
 import { CITIES, SERVICES } from '@/lib/seed';
+import { isAbsorbedSlug } from '@/lib/services/super-page-groups';
 import { BLOG_ARTICLES } from '@/lib/blog-data';
 
 interface SearchModalProps {
@@ -52,7 +53,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
         ).slice(0, 5);
 
         const matchedServices = SERVICES.filter(
-            service => service.name_ar.includes(query) || service.name_en.toLowerCase().includes(q) || service.slug.includes(q)
+            service => !isAbsorbedSlug(service.slug) && (service.name_ar.includes(query) || service.name_en.toLowerCase().includes(q) || service.slug.includes(q))
         ).slice(0, 8);
 
         const matchedArticles = BLOG_ARTICLES.filter(

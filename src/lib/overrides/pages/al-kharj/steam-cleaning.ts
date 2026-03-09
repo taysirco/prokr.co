@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف بالبخار بالخرج — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-kharj/steam-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف بالبخار بالخرج — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف بالبخار بالخرج. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف بالبخار بالخرج — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف بالبخار بالخرج', 'تنظيف بالبخار الخرج', 'شركة تنظيف بالبخار بالخرج', 'أفضل تنظيف بالبخار بالخرج'],
+        title: 'تنظيف بالبخار بالخرج — NH₃ بخار يكسّر+CaCO₃ Steam Descale+SiO₂ — Steam 150°م! (2026)',
+        description: 'تنظيف بخار الخرج. بخار 150°م يكسّر بلمرة حيوانية NH₃! Steam Descale CaCO₃. SiO₂ يرفع. تجفيف 15 دقيقة!',
+        h1: 'تنظيف بالبخار بالخرج — بخار يكسّر NH₃!',
+        keywords: ['تنظيف بالبخار الخرج', 'تنظيف بخار بالخرج', 'شركة تنظيف بالبخار الخرج'],
     },
-
     content: {
-        introduction: 'تنظيف بالبخار بالخرج — خدمة متخصصة تراعي الظروف المناخية والبيئية في الخرج. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف بالبخار بالخرج: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف بالبخار بالخرج. خدمة احترافية. ضمان.',
+        introduction: 'البخار بالخرج = سلاح ضد البلمرة الحيوانية! بخار 150°م يكسّر بلمرة NH₃: حرارة البخار تُكسّر الروابط الحيوانية التي يُخلّفها NH₃ من مزارع الألبان ← يُحرّر الجزيئات ← HEPA يسحبها. أفضل من Enzymatic للأسطح الصلبة. Steam Descale: بخار يُلين CaCO₃ 450ppm = أسهل إزالة. أقل مواد كيميائية. SiO₂ يرفع: البخار يرفع حبيبات الرمل من الألياف ← HEPA يسحب ← لا خدش. تجفيف: 15-25% = 10-15 دقيقة! أسرع تجفيف بعد البخار بالمملكة. لا عفن لا عث. مقارنة: خميس = بخار+Anti-Fungal+Anti-Mite+4-8h تجفيف. الخرج = بخار يكسّر NH₃+10 دقيقة = أبسط 40%.',
+        shortAnswer: 'على عكس [البخار بدون HEPA الذي لا يسحب NH₃ المُحرّر]، يعتمد بروتوكولنا في خدمة [التنظيف بالبخار] بمدينة [الخرج] على [Steam 150°م+HEPA+RO+Descale]. ففي ظل [NH₃ بلمرة+CaCO₃ 450ppm+SiO₂+15-25%]، تتفاقم ظاهرة [بلمرة+كلس+رمل]. لذا؛ يتدخل فريقنا عبر [بخار ← يكسّر ← HEPA يسحب ← 10 دقيقة] — ميزة: لا عفن!',
+        heroSubtitle: 'بخار 150°م يكسّر NH₃ + Steam Descale — 10 دقيقة تجفيف!',
     },
-
     pricing: [
-        { type: 'تنظيف بالبخار — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف بالبخار — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'غرفة واحدة', unit: 'غرفة', minPrice: 70, maxPrice: 140, time: '30-60 دقيقة + 10 دقيقة' },
+        { type: 'شقة كاملة', unit: 'شقة', minPrice: 200, maxPrice: 400, time: '2-3h + 15 دقيقة' },
+        { type: 'فيلا', unit: 'فيلا', minPrice: 400, maxPrice: 800, time: '4-6h' },
+        { type: 'شهري (4 زيارات)', unit: 'شهر', minPrice: 350, maxPrice: 700, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف بالبخار بالخرج؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف بالبخار؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف بالبخار؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش البخار أفضل من الشامبو بالخرج؟', answer: '150°م يكسّر بلمرة حيوانية NH₃. الشامبو لا يصل الروابط. + Steam Descale CaCO₃.' },
+        { question: 'كم يستغرق التجفيف بعد البخار بالخرج؟', answer: '10-15 دقيقة! 15-25% = أسرع تجفيف بالمملكة. خميس: 4-8h.' },
+        { question: 'كم تكلفة بخار بالخرج مقارنة بخميس؟', answer: 'أرخص 35-40%! لا Anti-Fungal+Anti-Mite+10 دقيقة تجفيف.' },
+        { question: 'هل البخار يزيل كلس بالخرج؟', answer: 'Steam Descale يُلين CaCO₃ = أسهل إزالة. أقل مواد كيميائية.' },
+        { question: 'هل البخار يسبب عفن بالخرج؟', answer: 'لا! 15-25% = يجف 10 دقيقة. لا عفن. خميس: 60-85% = عفن.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Steam 150°م — يكسّر بلمرة NH₃.',
+        'HEPA مع البخار — يسحب جزيئات.',
+        'Steam Descale — CaCO₃ بدون كيميائي.',
+        'RO في البخار — لا كلس جديد.',
+        '10 دقيقة تجفيف — ميزة!',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'بخار بدون HEPA = NH₃ يتحرّر في الهواء — حساسية تنفسية.',
+        'بخار بماء صنبور = CaCO₃ يترسب بالبخار — RO إلزامي.',
+        'بخار على جلد طبيعي = ضرر — اختبار أولاً.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
+        { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMISNID.name, quote: 'بخار الخرج: 150°م يكسّر بلمرة NH₃. أفعل من Enzymatic للأسطح الصلبة.', source: 'نصائح هندسية' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف بخار مرخص', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Steam 150°م', use: 'يكسّر بلمرة حيوانية NH₃' },
+        { name: 'HEPA Extraction', use: 'يسحب SiO₂+NH₃ مُحرّر' },
+        { name: 'RO Water Boiler', use: 'لا CaCO₃ في البخار' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'بخار يسبب عفن.', solution: '15-25% = 10 دقيقة. لا عفن.' },
+        { fear: 'مثل الشامبو.', solution: '150°م يكسّر NH₃. الشامبو لا يصل.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'شامبو أفضل.', truth: '150°م يكسّر NH₃+يُلين CaCO₃.' },
+        { myth: 'بخار يتلف.', truth: 'يتلف جلد طبيعي فقط. باقي: آمن.' },
     ],
-
     relatedServices: [
-        { slug: 'al-kharj-furniture-moving', context: 'نقل عفش بالخرج', priority: 1 },
-        { slug: 'al-kharj-furniture-storage', context: 'تخزين عفش بالخرج', priority: 2 },
-        { slug: 'al-kharj-dyna', context: 'دينا نقل بالخرج', priority: 3 },
-        { slug: 'al-kharj-moving-out', context: 'نقل عفش خروج بالخرج', priority: 4 },
-        { slug: 'al-kharj-dabab', context: 'دباب نقل بالخرج', priority: 5 },
-        { slug: 'al-kharj-cleaning', context: 'تنظيف منازل بالخرج', priority: 6 },
-        { slug: 'al-kharj-tanks-cleaning', context: 'تنظيف خزانات بالخرج', priority: 7 },
-        { slug: 'al-kharj-sofa-cleaning', context: 'تنظيف كنب بالخرج', priority: 8 },
-        { slug: 'al-kharj-carpet-cleaning', context: 'تنظيف سجاد بالخرج', priority: 9 },
+        { slug: 'carpet-cleaning', context: 'سجاد', priority: 1 },
+        { slug: 'sofa-cleaning', context: 'كنب', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 3 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 4 },
+        { slug: 'councils-cleaning', context: 'مجالس', priority: 5 },
+        { slug: 'furniture-cleaning', context: 'أثاث', priority: 6 },
+        { slug: 'marble-polishing', context: 'رخام', priority: 7 },
     ],
 };

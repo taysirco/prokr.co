@@ -28,7 +28,7 @@ export const RELATIONS_PEST_CONTROL: Record<string, RelatedService[]> = {
     ],
     'rodent-control': [
         { slug: 'pest-control', context: 'مكافحة شاملة للحشرات والقوارض', priority: 2 },
-        { slug: 'sewer-cleaning', context: 'تسليك المجاري لسد مداخل الفئران', priority: 1 },
+        { slug: 'sewage-unblocking', context: 'تسليك المجاري لسد مداخل الفئران', priority: 1 },
     ],
     'ants-control': [
         { slug: 'termite-control', context: 'لمكافحة النمل الأبيض المدمر', priority: 3 },

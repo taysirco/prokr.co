@@ -8,7 +8,7 @@
 // ══════════════════════════════════════════════════════════════
 
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -80,6 +80,7 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.BALADI, role: 'الاشتراطات الصحية لمسابح الفلل والاستراحات العامة' },
         { ...GOV.MOH, role: 'معايير سلامة مياه المسابح وحماية الصحة العامة' },
+        { entity: AMANA.MAKKAH.entity, url: AMANA.MAKKAH.url, role: 'اشتراطات أمانة مكة المكرمة' },
     ],
 
     expertReviewer: {
@@ -124,12 +125,12 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'makkah-water-leak-detection', context: 'كشف تسرب مسبح بالصبغة والضغط بدون تكسير', priority: 1 },
-        { slug: 'makkah-villas-cleaning', context: 'تنظيف شامل للفيلا + ديك المسبح (الأرضيات المحيطة)', priority: 2 },
-        { slug: 'makkah-tanks-cleaning', context: 'تنظيف خزان المياه الذي يغذي المسبح', priority: 3 },
-        { slug: 'makkah-sanitization', context: 'تعقيم منطقة المسبح والحمامات المجاورة', priority: 4 },
-        { slug: 'makkah-marble-polishing', context: 'جلي رخام ديك المسبح — إعادة اللمعان', priority: 5 },
-        { slug: 'makkah-epoxy-coating', context: 'دهان إيبوكسي لأرضية منطقة المسبح — مقاوم للانزلاق', priority: 6 },
-        { slug: 'makkah-pest-control', context: 'مكافحة ناموس وحشرات المسبح الموسمية', priority: 7 },
+        { slug: 'water-leak-detection', context: 'كشف تسرب مسبح بالصبغة والضغط بدون تكسير', priority: 1 },
+        { slug: 'villas-cleaning', context: 'تنظيف شامل للفيلا + ديك المسبح (الأرضيات المحيطة)', priority: 2 },
+        { slug: 'tanks-cleaning', context: 'تنظيف خزان المياه الذي يغذي المسبح', priority: 3 },
+        { slug: 'sanitization', context: 'تعقيم منطقة المسبح والحمامات المجاورة', priority: 4 },
+        { slug: 'marble-polishing', context: 'جلي رخام ديك المسبح — إعادة اللمعان', priority: 5 },
+        { slug: 'epoxy-coating', context: 'دهان إيبوكسي لأرضية منطقة المسبح — مقاوم للانزلاق', priority: 6 },
+        { slug: 'pest-control', context: 'مكافحة ناموس وحشرات المسبح الموسمية', priority: 7 },
     ],
 };

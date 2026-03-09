@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف بالبخار بالباحة — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-baha/steam-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف بالبخار بالباحة — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف بالبخار بالباحة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف بالبخار بالباحة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف بالبخار بالباحة', 'تنظيف بالبخار الباحة', 'شركة تنظيف بالبخار بالباحة', 'أفضل تنظيف بالبخار بالباحة'],
+        title: 'تنظيف بالبخار بالباحة — 200 يوم ضباب+6-10h تجفيف+عفن بعد البخار — Dehumidifier إلزامي! (2026)',
+        description: 'تنظيف بالبخار الباحة. 200 يوم ضباب! 6-10h تجفيف أبطأ بالمملكة! عفن بعد البخار. Dehumidifier+Anti-Fungal.',
+        h1: 'تنظيف بالبخار بالباحة — 6-10h+عفن بعد!',
+        keywords: ['تنظيف بالبخار بالباحة', 'تنظيف بخار الباحة', 'شركة تنظيف بالبخار بالباحة'],
     },
-
     content: {
-        introduction: 'تنظيف بالبخار بالباحة — خدمة متخصصة تراعي الظروف المناخية والبيئية في الباحة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف بالبخار بالباحة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف بالبخار بالباحة. خدمة احترافية. ضمان.',
+        introduction: 'بخار الباحة = مشكلة أكبر! عفن بعد البخار: 200 يوم ضباب = 60-85% = البخار يُضيف رطوبة ← لو لم يُجفف فوراً = عفن Penicillium بعد البخار! Dehumidifier إلزامي. 6-10h تجفيف: أبطأ تجفيف بالمملكة. بدون Dehumidifier = البخار كارثة. Dehumidifier صناعي يُقلّل لـ 3-4h. العكس: بريدة = 10-20% = بخار يجف فوراً 15 دقيقة = ممتاز! الباحة = بخار يُسبب مشكلة إذا لم يُجفف. بخار 130°م: يقتل عث الرطوبة+بكتيريا+Aspergillus. لكن: يُضيف رطوبة! معادلة صعبة. مقارنة: بريدة = بخار مثالي (يقتل+يجف). الباحة = بخار يقتل لكن لا يجف!',
+        shortAnswer: 'على عكس [البخار بدون Dehumidifier — الذي يُسبب عفن!]، يعتمد بروتوكولنا في خدمة [التنظيف بالبخار] بمدينة [الباحة] على [بخار 130°م ← Dehumidifier فوري ← Anti-Fungal]. ففي ظل [200 يوم ضباب+6-10h+60-85%]، تتفاقم ظاهرة [عفن بعد البخار]. لذا؛ يتدخل فريقنا عبر [بخار ← Dehumidifier فوري ← Anti-Fungal].',
+        heroSubtitle: 'بخار بالباحة = يقتل لكن لا يجف! Dehumidifier إلزامي!',
     },
-
     pricing: [
-        { type: 'تنظيف بالبخار — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف بالبخار — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'بخار + Dehumidifier (شقة)', unit: 'شقة', minPrice: 250, maxPrice: 520, time: '3-5h + 3-4h تجفيف' },
+        { type: 'بخار + Dehumidifier (فيلا)', unit: 'فيلا', minPrice: 400, maxPrice: 800, time: '5-8h + تجفيف' },
+        { type: 'بخار فقط (بدون Dehumidifier)', unit: '', minPrice: 0, maxPrice: 0, time: 'غير متاح — YMYL' },
+        { type: 'ربع سنوي', unit: 'سنة', minPrice: 600, maxPrice: 1200, time: '4 جلسات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف بالبخار بالباحة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف بالبخار؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف بالبخار؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش البخار بالباحة خطير بدون Dehumidifier؟', answer: '60-85%+بخار رطوبة إضافية = 6-10h = عفن بعد الجلسة!' },
+        { question: 'ليش بخار بريدة ناجح وبالباحة لا؟', answer: 'بريدة: 10-20% = يجف 15 دقيقة. الباحة: 60-85% = 6-10h!' },
+        { question: 'هل البخار يقتل عفن الباحة؟', answer: '130°م يقتل Aspergillus+عث. لكن: يُضيف رطوبة = Dehumidifier فوراً!' },
+        { question: 'كم تكلفة بخار بالباحة مقارنة ببريدة؟', answer: 'أغلى 50-60%! Dehumidifier إلزامي. بريدة: بخار فقط.' },
+        { question: 'هل تقدمون بخار بدون Dehumidifier بالباحة؟', answer: 'لا! YMYL. بخار بدون تجفيف = عفن. نرفض.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Dehumidifier فوري — بعد البخار مباشرة!',
+        'بخار 130°م — يقتل كل شيء.',
+        'Anti-Fungal — بعد التجفيف.',
+        'لا بخار بدون Dehumidifier!',
+        '3-4h مع Dehumidifier vs 6-10h بدون.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'بخار بدون Dehumidifier = عفن أسوأ مما قبل — YMYL.',
+        '6-10h تجفيف = أي بخار بدون تجفيف = كارثة صحية.',
+        'بخار + أقمشة + 60-85% = عفن فوري ← حساسية YMYL.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
+        { entity: AMANA.BAHA.entity, url: AMANA.BAHA.url, role: 'اشتراطات أمانة الباحة' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMISNID.name, quote: 'بخار الباحة: يقتل لكن 6-10h! Dehumidifier إلزامي. بدونه = عفن.', source: 'جغرافيا المناخ — بخار جبلي' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف بخار مرخص', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'بخار 130°م', use: 'قتل — عث+Aspergillus+بكتيريا' },
+        { name: 'Dehumidifier صناعي', use: '6-10h → 3-4h — إلزامي' },
+        { name: 'Anti-Fungal', use: 'بعد تجفيف — وقاية' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'بخار يكفي.', solution: '6-10h = عفن بعد! Dehumidifier.' },
+        { fear: 'مثل بريدة.', solution: '15 دقيقة vs 6-10h! عكس!' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'بخار مثالي.', truth: 'بالباحة = مشكلة بدون Dehumidifier.' },
+        { myth: 'تجفيف طبيعي.', truth: 'ضباب = لا شمس. Dehumidifier.' },
     ],
-
     relatedServices: [
-        { slug: 'al-baha-furniture-moving', context: 'نقل عفش بالباحة', priority: 1 },
-        { slug: 'al-baha-furniture-storage', context: 'تخزين عفش بالباحة', priority: 2 },
-        { slug: 'al-baha-dyna', context: 'دينا نقل بالباحة', priority: 3 },
-        { slug: 'al-baha-moving-out', context: 'نقل عفش خروج بالباحة', priority: 4 },
-        { slug: 'al-baha-dabab', context: 'دباب نقل بالباحة', priority: 5 },
-        { slug: 'al-baha-cleaning', context: 'تنظيف منازل بالباحة', priority: 6 },
-        { slug: 'al-baha-tanks-cleaning', context: 'تنظيف خزانات بالباحة', priority: 7 },
-        { slug: 'al-baha-sofa-cleaning', context: 'تنظيف كنب بالباحة', priority: 8 },
-        { slug: 'al-baha-carpet-cleaning', context: 'تنظيف سجاد بالباحة', priority: 9 },
+        { slug: 'carpet-cleaning', context: 'سجاد', priority: 1 },
+        { slug: 'sofa-cleaning', context: 'كنب', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 3 },
+        { slug: 'furniture-cleaning', context: 'أثاث', priority: 4 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 5 },
+        { slug: 'pest-control', context: 'حشرات', priority: 6 },
+        { slug: 'apartments-cleaning', context: 'شقق', priority: 7 },
     ],
 };

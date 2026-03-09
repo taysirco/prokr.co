@@ -6,6 +6,7 @@
 // ══════════════════════════════════════════════════════════════
 
 import type { PageOverride } from '../../types';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -65,6 +66,8 @@ export const override: PageOverride = {
         'تأمين ضد الأضرار إلزامي — قيمة أثاث ومقتنيات القصر تستحق الحماية. بدون تأمين = بدون عمل',
     ],
 
+        verificationBadges: [{ badge: '✔️ شركة مرخصة من بلدي', authority: 'وزارة البلديات', icon: 'shield-check' }],
+
     equipment: [
         { name: 'مكينة جلي رخام صناعية كبيرة', use: 'للمساحات 500+ م² — سرعة فندقية بجودة مرآة. أحجار ماسية 3 مراحل + بودرة كريستالية' },
         { name: 'جهاز بخار ثريات بدون فك (Steam Cleaner)', use: 'بخار موجّه 150°م ينظف الكريستال والنحاس في مكانه — بدون لمس أو خطر سقوط' },
@@ -79,23 +82,20 @@ export const override: PageOverride = {
     trustAnchors: [
         { entity: 'وزارة البلديات — منصة بلدي', acronym: 'بلدي', url: 'https://balady.gov.sa', role: 'ترخيص شركات التنظيف المتخصصة' },
         { entity: 'الهيئة السعودية للمواصفات والمقاييس', acronym: 'SASO', url: 'https://www.saso.gov.sa', role: 'اعتماد مواد جلي وتلميع الرخام والأسطح الحساسة' },
+        { entity: AMANA.JEDDAH.entity, url: AMANA.JEDDAH.url, role: 'اشتراطات أمانة جدة' },
     ],
 
-    expertReviewer: {
-        name: 'م. ماجد المحيميد',
-        title: 'خبير جودة تشطيبات وعزل',
-        credential: 'مهندس جودة تشطيبات — المرجع الأول في جودة البناء',
-        profileUrl: 'https://x.com/majedalmohaimed',
-    },
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
             expert: 'م. ماجد المحيميد',
             quote: 'القصور تحتاج معاملة فندقية — كل سطح فيه مادة مختلفة تحتاج pH مختلف. الكلور ممنوع كلياً على الرخام والجلد والنحاس والفضة. الخطأ ثمنه آلاف الريالات',
             source: 'خبير جودة تشطيبات وعزل',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
+
+        saudiRegulations: [REGULATIONS.BALADI_HEALTH],
 
     counterNarratives: [
         { myth: 'فريق النظافة الداخلي يكفي للقصر', truth: 'الفريق الداخلي: يومي + سطحي. القصر يحتاج شهرياً: جلي رخام (مكينة صناعية) + تنظيف ثريات (بخار) + مسبح (كيميائي) + واجهات (رافعة) + مفروشات (بخار صناعي). الفريق الداخلي لا يملك هذه المعدات' },
@@ -103,14 +103,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'jeddah-villas-cleaning', context: 'فلل فاخرة — نفس المعايير على مساحة أصغر', priority: 1 },
-        { slug: 'jeddah-glass-facades-cleaning', context: 'واجهات القصر الزجاجية — ملح NaCl', priority: 2 },
-        { slug: 'jeddah-swimming-pool-cleaning', context: 'مسابح القصر — صيانة أسبوعية', priority: 3 },
-        { slug: 'jeddah-marble-polishing', context: 'جلي رخام القصر — فندقي', priority: 4 },
-        { slug: 'jeddah-carpet-cleaning', context: 'سجاد فاخر يدوي — معاملة خاصة', priority: 5 },
-        { slug: 'jeddah-sofa-cleaning', context: 'مجالس القصر — بخار جاف', priority: 6 },
-        { slug: 'jeddah-air-conditioner-cleaning', context: 'مكيفات مركزية + دكتات', priority: 7 },
-        { slug: 'jeddah-sanitization', context: 'تعقيم بعد المناسبات', priority: 8 },
-        { slug: 'jeddah-tanks-cleaning', context: 'خزانات كبيرة 10,000+ لتر', priority: 9 },
+        { slug: 'villas-cleaning', context: 'فلل فاخرة — نفس المعايير على مساحة أصغر', priority: 1 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات القصر الزجاجية — ملح NaCl', priority: 2 },
+        { slug: 'swimming-pool-cleaning', context: 'مسابح القصر — صيانة أسبوعية', priority: 3 },
+        { slug: 'marble-polishing', context: 'جلي رخام القصر — فندقي', priority: 4 },
+        { slug: 'carpet-cleaning', context: 'سجاد فاخر يدوي — معاملة خاصة', priority: 5 },
+        { slug: 'sofa-cleaning', context: 'مجالس القصر — بخار جاف', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيفات مركزية + دكتات', priority: 7 },
+        { slug: 'sanitization', context: 'تعقيم بعد المناسبات', priority: 8 },
+        { slug: 'tanks-cleaning', context: 'خزانات كبيرة 10,000+ لتر', priority: 9 },
     ],
 };

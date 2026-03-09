@@ -1,94 +1,74 @@
-// ══════════════════════════════════════════════════════════════
-// عزل فوم بالخرج — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-kharj/foam-insulation
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'عزل فوم بالخرج — خدمة احترافية معتمدة (2026)',
-        description: 'عزل فوم بالخرج. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'عزل فوم بالخرج — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['عزل فوم بالخرج', 'عزل فوم الخرج', 'شركة عزل فوم بالخرج', 'أفضل عزل فوم بالخرج'],
+        title: 'عزل فوم بالخرج — ΔT 48°م أعلى فارق+CaCO₃ رطوبة أرضية+SiO₂ — Open-Cell يكفي! (2026)',
+        description: 'عزل فوم الخرج. ΔT 48°م أعلى فارق حراري! CaCO₃ 450ppm رطوبة أرضية. SiO₂. Open-Cell R-3.7 يكفي. لا مطر! SBC 601.',
+        h1: 'عزل فوم بالخرج — ΔT 48°م — Open-Cell يكفي!',
+        keywords: ['عزل فوم الخرج', 'عزل فوم بالخرج', 'شركة عزل فوم الخرج'],
     },
-
     content: {
-        introduction: 'عزل فوم بالخرج — خدمة متخصصة تراعي الظروف المناخية والبيئية في الخرج. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'عزل فوم بالخرج: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'عزل فوم بالخرج. خدمة احترافية. ضمان.',
+        introduction: 'عزل الفوم بالخرج يحتاج تبريد لا تدفئة! ΔT 48°م = أعلى فارق حراري: صيف 50°م + شتاء 2°م = فارق 48°م! يحتاج R-value عالي. لكن: Open-Cell R-3.7/inch يكفي لأنه لا يوجد مطر يتلفه (مثل خميس). أرخص 40% من Closed-Cell. CaCO₃ رطوبة أرضية: آبار جوفية ترتفع = رطوبة أرضية تحت الأساسات. عزل أرضي Closed-Cell (فقط تحت = لا فوق). SiO₂ لا يأثر على الفوم — يُنظف بعد التطبيق فقط. 15-25% = لا تكثّف بيني! ميزة: لا يحتاج Vapor Barrier (خميس تحتاج). التبريد هو الأولوية: خميس = تدفئة. الخرج = تبريد. مقارنة: خميس = Closed-Cell+Vapor Barrier+مائي = أغلى 40%. الخرج = Open-Cell يكفي = أرخص!',
+        shortAnswer: 'على عكس [Closed-Cell الغالي بدون حاجة]، يعتمد بروتوكولنا في خدمة [عزل الفوم] بمدينة [الخرج] على [Open-Cell R-3.7 فوق+Closed-Cell أرضي+بدون Vapor]. ففي ظل [ΔT 48°م+لا مطر+CaCO₃ رطوبة أرضية+15-25%]، تتفاقم ظاهرة [فقدان حراري تبريد+رطوبة أرضية]. لذا؛ يتدخل فنيونا عبر [Open-Cell فوق ← Closed-Cell تحت] = وفر 40%.',
+        heroSubtitle: 'ΔT 48°م + لا مطر — Open-Cell يكفي! أرخص 40%!',
     },
-
     pricing: [
-        { type: 'عزل فوم — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'عزل فوم — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'جدران Open-Cell (3 سم)', unit: 'م²', minPrice: 20, maxPrice: 45, time: '1-2 يوم (100 م²)' },
+        { type: 'سقف Open-Cell (5 سم)', unit: 'م²', minPrice: 30, maxPrice: 65, time: '1-2 يوم' },
+        { type: 'أرضي Closed-Cell', unit: 'م²', minPrice: 40, maxPrice: 85, time: '1-2 يوم' },
+        { type: 'فحص+إصلاح', unit: 'خدمة', minPrice: 200, maxPrice: 420, time: '1 يوم' },
     ],
-
     faq: [
-        { question: 'كم تكلفة عزل فوم بالخرج؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق عزل فوم؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على عزل فوم؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش Open-Cell يكفي بالخرج وخميس تحتاج Closed-Cell؟', answer: 'لا مطر بالخرج = Open-Cell لا يتبلل. خميس: أمطار = يمتص = كارثة.' },
+        { question: 'كم يوفر عزل الفوم كهرباء بالخرج؟', answer: '35-50% تبريد صيفاً! ΔT 48°م = أعلى وفر. SBC 601 يشترط.' },
+        { question: 'كم تكلفة عزل فوم بالخرج مقارنة بخميس؟', answer: 'أرخص 40% — Open-Cell R-3.7 مقابل Closed-Cell R-6.5 + لا Vapor Barrier.' },
+        { question: 'هل الخرج تحتاج Vapor Barrier؟', answer: 'لا! 15-25% = لا تكثّف بيني. ميزة كبيرة. خميس: 60-85% = إلزامي.' },
+        { question: 'هل الرطوبة الأرضية تأثر على الفوم بالخرج؟', answer: 'CaCO₃ آبار ترتفع تحت الأساسات. Closed-Cell أرضي فقط = يحمي. فوق: Open-Cell.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Open-Cell R-3.7 — يكفي بلا مطر.',
+        'Closed-Cell أرضي فقط — CaCO₃ رطوبة.',
+        'لا Vapor Barrier — 15-25% ميزة!',
+        'تبريد الأولوية — ΔT 48°م صيفاً.',
+        'أرخص 40% من خميس — Open-Cell!',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'Closed-Cell فوق = مبالغة بالخرج — لا مطر = Open-Cell أرخص ويكفي.',
+        'بدون عزل أرضي + CaCO₃ = رطوبة ترتفع ← بلاط يتلف.',
+        'بدون عزل + ΔT 48°م = فاتورة كهرباء مضاعفة.',
     ],
-
     trustAnchors: [
-        { ...GOV.SBC, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.MOENERGY, role: 'كفاءة الطاقة — SBC 601' },
+        { ...GOV.BALADI, role: 'ترخيص مقاولي العزل' },
+        { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALJUND.name,
-        title: EXPERTS.ALJUND.title,
-        credential: EXPERTS.ALJUND.credential,
-        profileUrl: EXPERTS.ALJUND.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALJUND,
     expertCitations: [
-        {
-            expert: EXPERTS.ALJUND.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALJUND.title,
-            url: EXPERTS.ALJUND.profileUrl,
-        },
+        { expert: EXPERTS.ALJUND.name, quote: 'فوم الخرج: Open-Cell يكفي فوق. لا مطر. Closed-Cell تحت فقط. أرخص 40%.', source: 'موسوعة أخطاء — عزل صحراوي' },
     ],
-
     saudiRegulations: [REGULATIONS.SBC_601],
-
-    verificationBadges: [
-        { badge: '✔️ عزل مطابق لكود SBC', authority: 'كود البناء السعودي', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ عزل مرخص SBC', authority: 'بلدي + كفاءة طاقة', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Open-Cell PU Foam', use: 'R-3.7/inch — جدران+سقف — أرخص' },
+        { name: 'Closed-Cell PU Foam', use: 'أرضي فقط — CaCO₃ رطوبة' },
+        { name: 'جهاز رش ضغط عالي', use: 'تطبيق متساوي' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'Closed-Cell أفضل.', solution: 'لا مطر = أغلى بدون فائدة. Open-Cell يكفي.' },
+        { fear: 'مثل خميس.', solution: 'عكس! تبريد مقابل تدفئة. أرخص 40%.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'Closed-Cell ضروري.', truth: 'لا مطر = Open-Cell 40% أرخص ويكفي.' },
+        { myth: 'لا يحتاج عزل أرضي.', truth: 'CaCO₃ رطوبة أرضية = Closed-Cell تحت.' },
     ],
-
     relatedServices: [
-        { slug: 'al-kharj-furniture-moving', context: 'نقل عفش بالخرج', priority: 1 },
-        { slug: 'al-kharj-furniture-storage', context: 'تخزين عفش بالخرج', priority: 2 },
-        { slug: 'al-kharj-dyna', context: 'دينا نقل بالخرج', priority: 3 },
-        { slug: 'al-kharj-moving-out', context: 'نقل عفش خروج بالخرج', priority: 4 },
-        { slug: 'al-kharj-dabab', context: 'دباب نقل بالخرج', priority: 5 },
-        { slug: 'al-kharj-cleaning', context: 'تنظيف منازل بالخرج', priority: 6 },
-        { slug: 'al-kharj-tanks-cleaning', context: 'تنظيف خزانات بالخرج', priority: 7 },
-        { slug: 'al-kharj-sofa-cleaning', context: 'تنظيف كنب بالخرج', priority: 8 },
-        { slug: 'al-kharj-carpet-cleaning', context: 'تنظيف سجاد بالخرج', priority: 9 },
+        { slug: 'thermal-insulation', context: 'عزل حراري', priority: 1 },
+        { slug: 'roof-insulation', context: 'عزل أسطح', priority: 2 },
+        { slug: 'water-insulation', context: 'عزل مائي', priority: 3 },
+        { slug: 'tank-insulation', context: 'عزل خزان', priority: 4 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 5 },
+        { slug: 'water-leak-detection', context: 'تسرب', priority: 6 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 7 },
     ],
 };

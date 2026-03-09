@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف بالساعة بالقطيف — Override مخصص (E-E-A-T Grade)
-// صفحة: /qatif/hourly-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف بالساعة بالقطيف — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف بالساعة بالقطيف. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف بالساعة بالقطيف — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف بالساعة بالقطيف', 'تنظيف بالساعة القطيف', 'شركة تنظيف بالساعة بالقطيف', 'أفضل تنظيف بالساعة بالقطيف'],
+        title: 'تنظيف بالساعة بالقطيف — عاملة ساحلية-واحية: RO + Anti-Fungal مزدوج + طين + طلع (2026)',
+        description: 'تنظيف بالساعة القطيف. عاملة ساحلية-واحية. RO+Anti-Fungal مزدوج+طين+طلع. أعقد من الرياض أبسط من الجبيل.',
+        h1: 'تنظيف بالساعة بالقطيف — عاملة ساحلية-واحية: 4 خطوات',
+        keywords: ['تنظيف بالساعة القطيف', 'عاملة تنظيف بالقطيف', 'شركة تنظيف بالساعة بالقطيف'],
     },
-
     content: {
-        introduction: 'تنظيف بالساعة بالقطيف — خدمة متخصصة تراعي الظروف المناخية والبيئية في القطيف. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف بالساعة بالقطيف: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف بالساعة بالقطيف. خدمة احترافية. ضمان.',
+        introduction: 'العاملة بالساعة في القطيف تحتاج 4 خطوات ساحلية-واحية. الخطوة 1 — RO شطف: NaCl+طين = طبقة لزجة ملحية. RO. الخطوة 2 — Microfiber: طين لزج. Microfiber رطب. الخطوة 3 — Anti-Fungal مزدوج: عفن ساحلي+واحي. أعلى+أسفل. الخطوة 4 — HEPA: غبار طلع نخيل. المقارنة: الرياض = 2 خطوات. الجبيل = 5. القطيف = 4. الشركات المعتمدة عبر بروكر مرخصة من منصة بلدي وتستخدم معدات صناعية ومواد تنظيف معتمدة SASO. التنظيف العميق يشمل: تعقيم بالبخار 150°م + شفط HEPA + تجفيف كامل. النتيجة: بيئة صحية خالية من البكتيريا والمسببات.',
+        shortAnswer: 'على عكس [عاملة بممسحة] في 80-95%، يعتمد بروتوكولنا في خدمة [التنظيف بالساعة] بمدينة [القطيف] على [عاملة 4 خطوات ساحلية-واحية]. ففي ظل [NaCl+طين + 80-95% + طلع]، تتفاقم ظاهرة [لزوجة + عفن مزدوج + حساسية]. لذا؛ يتدخل خبراؤنا عبر [عاملة ساحلية-واحية].',
+        heroSubtitle: '4 خطوات: RO ← Microfiber ← Anti-Fungal مزدوج ← HEPA طلع',
     },
-
     pricing: [
-        { type: 'تنظيف بالساعة — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف بالساعة — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'ساعة — عاملة ساحلية-واحية', unit: 'ساعة', minPrice: 30, maxPrice: 50, time: '1 ساعة' },
+        { type: '4 ساعات', unit: 'حصة', minPrice: 100, maxPrice: 170, time: '4 ساعات' },
+        { type: '8 ساعات', unit: 'يوم', minPrice: 175, maxPrice: 300, time: '8 ساعات' },
+        { type: 'عقد أسبوعي', unit: 'شهر', minPrice: 330, maxPrice: 660, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف بالساعة بالقطيف؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف بالساعة؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف بالساعة؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: '4 خطوات — أكثر من الرياض؟', answer: 'نعم — الرياض: 2. القطيف: 4. لكن: أقل من الجبيل (5). ساحلي-واحي.' },
+        { question: 'Anti-Fungal مزدوج — كل مرة؟', answer: 'كل مرة — عفن واحي+ساحلي = أسبوعي. بدون = رجوع.' },
+        { question: 'HEPA — ضروري؟', answer: 'موسم تلقيح = ضروري. باقي السنة = مُستحسن.' },
+        { question: 'كم تكلفة التنظيف العميق مقارنة بالتنظيف العادي؟', answer: 'التنظيف العميق أغلى 30-50% لكنه يشمل: HEPA + بخار 150°م + تعقيم. التنظيف العادي = مسح سطحي. العميق كل 3-4 أشهر + العادي أسبوعياً = أفضل معادلة تكلفة/نظافة.' },
+        { question: 'هل المواد المستخدمة آمنة على الأطفال؟', answer: 'مواد معتمدة من هيئة الغذاء والدواء SFDA. بعد التنظيف: تهوية 30 دقيقة كافية. بخار 150°م = بديل للكيماويات — آمن 100% على الأطفال والحيوانات.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'RO أولاً — NaCl+طين.',
+        'Microfiber رطب — طين لزج.',
+        'Anti-Fungal مزدوج — أعلى+أسفل.',
+        'HEPA طلع — حساسية.',
+        'بعد التنظيف: شغّل المكيف وليس الشبّاك — الهواء الخارجي يعيد الغبار على الأسطح النظيفة.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'ممسحة عادية = تنقل NaCl+طين.',
+        'بدون Anti-Fungal = عفن أسبوعي.',
+        'طلع × موسم = حساسية شديدة.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.HRSD, role: 'تنظيم العمالة' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات النظافة بالشرقية' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMISNID.name, quote: 'عاملة القطيف: 4 خطوات ساحلية-واحية. NaCl+طين+عفن مزدوج+طلع. أعقد من الرياض أبسط من الجبيل.', source: 'جغرافيا المناخ — تنظيف بالساعة واحي' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ عمالة مرخصة', authority: 'HRSD + بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'RO + Microfiber', use: 'NaCl+طين — 1+2' },
+        { name: 'Anti-Fungal مزدوج', use: 'واحي+ساحلي — 3' },
+        { name: 'HEPA', use: 'نخيل طلع — 4' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'أغلى.', solution: '4 خطوات = أعقد = أغلى. لكن: فعالية.' },
+        { fear: 'عاملة عادية.', solution: '4 خطوات + مواد. تدريب.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'ممسحة.', truth: 'NaCl+طين = 0%.' },
+        { myth: 'مثل الرياض.', truth: '4 خطوات vs 2.' },
     ],
-
     relatedServices: [
-        { slug: 'qatif-furniture-moving', context: 'نقل عفش بالقطيف', priority: 1 },
-        { slug: 'qatif-furniture-storage', context: 'تخزين عفش بالقطيف', priority: 2 },
-        { slug: 'qatif-dyna', context: 'دينا نقل بالقطيف', priority: 3 },
-        { slug: 'qatif-moving-out', context: 'نقل عفش خروج بالقطيف', priority: 4 },
-        { slug: 'qatif-dabab', context: 'دباب نقل بالقطيف', priority: 5 },
-        { slug: 'qatif-cleaning', context: 'تنظيف منازل بالقطيف', priority: 6 },
-        { slug: 'qatif-tanks-cleaning', context: 'تنظيف خزانات بالقطيف', priority: 7 },
-        { slug: 'qatif-sofa-cleaning', context: 'تنظيف كنب بالقطيف', priority: 8 },
-        { slug: 'qatif-carpet-cleaning', context: 'تنظيف سجاد بالقطيف', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 1 },
+        { slug: 'apartments-cleaning', context: 'شقق', priority: 2 },
+        { slug: 'carpet-cleaning', context: 'سجاد', priority: 3 },
+        { slug: 'steam-cleaning', context: 'بخار', priority: 4 },
+        { slug: 'sofa-cleaning', context: 'كنب', priority: 5 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 6 },
+        { slug: 'pest-control', context: 'حشرات', priority: 7 },
     ],
 };

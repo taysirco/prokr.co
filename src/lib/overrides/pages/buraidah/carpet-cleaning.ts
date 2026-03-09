@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف سجاد ببريدة — Override مخصص (E-E-A-T Grade)
-// صفحة: /buraidah/carpet-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف سجاد ببريدة — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف سجاد ببريدة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف سجاد ببريدة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف سجاد ببريدة', 'تنظيف سجاد بريدة', 'شركة تنظيف سجاد ببريدة', 'أفضل تنظيف سجاد ببريدة'],
+        title: 'تنظيف سجاد ببريدة — Nafud SiO₂ ناعم يقطع+CaCO₃ 600ppm خشونة+نخيل — HEPA! (2026)',
+        description: 'تنظيف سجاد بريدة. Nafud SiO₂ ناعم يقطع ألياف! CaCO₃ 600ppm خشونة. حبوب نخيل. HEPA+RO+Pollen Filter.',
+        h1: 'تنظيف سجاد ببريدة — Nafud يقطع+أعلى كلس!',
+        keywords: ['تنظيف سجاد بريدة', 'غسيل سجاد ببريدة', 'شركة تنظيف سجاد بريدة'],
     },
-
     content: {
-        introduction: 'تنظيف سجاد ببريدة — خدمة متخصصة تراعي الظروف المناخية والبيئية في بريدة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف سجاد ببريدة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف سجاد ببريدة. خدمة احترافية. ضمان.',
+        introduction: 'سجاد بريدة = Nafud يقطع الألياف! Nafud SiO₂ ناعم 10-50 μm: رمل النفود أنعم وأخطر من الرمل العادي = يتغلغل بين ألياف السجاد ← كل مشي يقطع الألياف من الداخل. HEPA Extraction يسحب قبل أن يقطع. CaCO₃ 600ppm خشونة: لو غُسل بماء صنبور = أعلى كلس بالمملكة يترسب في الألياف ← يُخشّن السجاد حتى السجاد الناعم. RO Rinse إلزامي. حبوب نخيل 8M: حبوب لقاح (مارس-مايو) تتراكم في السجاد ← مسبب حساسية رقم 1 ببريدة. HEPA Pollen Filter. ΔT 45°م: تجفيف 15-20 دقيقة! 10-20% = لا عفن لا عث! ميزة كبيرة. مقارنة: خميس = عفن+عث+4-8h تجفيف+Anti-Fungal+Anti-Mite. بريدة = Nafud+كلس+نخيل لكن لا عفن = أبسط.',
+        shortAnswer: 'على عكس [الشامبو بماء صنبور بدون HEPA]، يعتمد بروتوكولنا في خدمة [تنظيف السجاد] بمدينة [بريدة] على [HEPA Extraction+RO+Pollen Filter]. ففي ظل [Nafud يقطع+CaCO₃ 600ppm+نخيل 8M+10-20%]، تتفاقم ظاهرة [قطع ألياف+خشونة+حساسية]. لذا؛ يتدخل فريقنا عبر [HEPA سحب ← غسل ← RO ← تجفيف 15 دقيقة] — لا عفن!',
+        heroSubtitle: 'Nafud يقطع ألياف + CaCO₃ 600ppm خشونة + نخيل — HEPA+RO!',
     },
-
     pricing: [
-        { type: 'تنظيف سجاد — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف سجاد — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'سجادة عادية (2×3)', unit: 'سجادة', minPrice: 30, maxPrice: 60, time: '30 دقيقة + 15 تجفيف' },
+        { type: 'سجادة كبيرة (4×6)', unit: 'سجادة', minPrice: 60, maxPrice: 120, time: '45 دقيقة' },
+        { type: 'موكيت (م²)', unit: 'م²', minPrice: 8, maxPrice: 18, time: 'حسب المساحة' },
+        { type: 'شهري (4 HEPA)', unit: 'شهر', minPrice: 200, maxPrice: 400, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف سجاد ببريدة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف سجاد؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف سجاد؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش سجاد بريدة يتلف أسرع؟', answer: 'Nafud 10-50 μm ناعم يتغلغل ← يقطع الألياف من الداخل. HEPA يسحب قبل القطع.' },
+        { question: 'ليش السجاد يخشن بعد الغسل ببريدة؟', answer: 'CaCO₃ 600ppm أعلى كلس بالمملكة. RO Rinse = لا كلس = ناعم.' },
+        { question: 'كم تكلفة تنظيف سجاد ببريدة مقارنة بخميس؟', answer: 'أرخص 25-30% — لا Anti-Fungal+Anti-Mite+تجفيف 15 دقيقة.' },
+        { question: 'هل السجاد يتعفّن ببريدة؟', answer: 'لا! 10-20% = لا عفن. تجفيف 15-20 دقيقة. أفضل بيئة تجفيف.' },
+        { question: 'هل حبوب النخيل تأثر على السجاد ببريدة؟', answer: '8M نخلة = حبوب لقاح. حساسية تنفسية. HEPA Pollen = يُزيل. مارس-مايو أخطر.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'HEPA Extraction — Nafud يقطع ألياف.',
+        'RO Rinse — CaCO₃ 600ppm خشونة.',
+        'HEPA Pollen — نخيل مارس-مايو.',
+        'تجفيف 15 دقيقة — لا عفن!',
+        'HEPA شهري — يمنع قطع تراكمي.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'Nafud × 6 أشهر بدون HEPA = ألياف مقطوعة — سجاد تالف.',
+        'CaCO₃ 600ppm + ماء صنبور = أعلى خشونة — RO إلزامي.',
+        'نخيل × ربيع + سجاد بدون HEPA = حساسية تنفسية YMYL.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
+        { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMISNID.name, quote: 'سجاد بريدة: Nafud يقطع ألياف. 600ppm خشونة. نخيل حساسية. HEPA+RO.', source: 'جغرافيا المناخ — القصيم' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف سجاد مرخص', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'HEPA Extraction', use: 'يسحب Nafud — يمنع قطع ألياف' },
+        { name: 'RO Water', use: 'شطف بدون CaCO₃ 600ppm' },
+        { name: 'HEPA Pollen', use: 'حبوب لقاح نخيل 8M' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'مكنسة عادية تكفي.', solution: 'Nafud 10 μm يمر. HEPA يوقف.' },
+        { fear: 'مثل عنيزة.', solution: 'نفس 600ppm لكن بريدة: 8M نخلة = لقاح أعلى.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'شامبو يكفي.', truth: 'Nafud يقطع. HEPA أولاً.' },
+        { myth: 'ماء عادي.', truth: '600ppm = أعلى خشونة. RO.' },
     ],
-
     relatedServices: [
-        { slug: 'buraidah-furniture-moving', context: 'نقل عفش ببريدة', priority: 1 },
-        { slug: 'buraidah-furniture-storage', context: 'تخزين عفش ببريدة', priority: 2 },
-        { slug: 'buraidah-dyna', context: 'دينا نقل ببريدة', priority: 3 },
-        { slug: 'buraidah-moving-out', context: 'نقل عفش خروج ببريدة', priority: 4 },
-        { slug: 'buraidah-dabab', context: 'دباب نقل ببريدة', priority: 5 },
-        { slug: 'buraidah-cleaning', context: 'تنظيف منازل ببريدة', priority: 6 },
-        { slug: 'buraidah-tanks-cleaning', context: 'تنظيف خزانات ببريدة', priority: 7 },
-        { slug: 'buraidah-sofa-cleaning', context: 'تنظيف كنب ببريدة', priority: 8 },
-        { slug: 'buraidah-steam-cleaning', context: 'تنظيف بالبخار ببريدة', priority: 9 },
+        { slug: 'sofa-cleaning', context: 'كنب', priority: 1 },
+        { slug: 'councils-cleaning', context: 'مجالس', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 3 },
+        { slug: 'steam-cleaning', context: 'بخار', priority: 4 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 5 },
+        { slug: 'furniture-cleaning', context: 'أثاث', priority: 6 },
+        { slug: 'marble-polishing', context: 'رخام', priority: 7 },
     ],
 };

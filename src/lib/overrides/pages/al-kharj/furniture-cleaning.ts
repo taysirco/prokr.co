@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف أثاث بالخرج — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-kharj/furniture-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف أثاث بالخرج — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف أثاث بالخرج. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف أثاث بالخرج — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف أثاث بالخرج', 'تنظيف أثاث الخرج', 'شركة تنظيف أثاث بالخرج', 'أفضل تنظيف أثاث بالخرج'],
+        title: 'تنظيف أثاث بالخرج — NH₃ بلمرة حيوانية+CaCO₃ كلس خشب+SiO₂ خدش — AC+Descaler! (2026)',
+        description: 'تنظيف أثاث الخرج. NH₃ بلمرة حيوانية أقمشة! CaCO₃ كلس خشب. SiO₂ خدش. Enzymatic+AC+Descaler. تجفيف سريع.',
+        h1: 'تنظيف أثاث بالخرج — NH₃ مزارع ألبان — لا عفن!',
+        keywords: ['تنظيف أثاث الخرج', 'تنظيف أثاث بالخرج', 'شركة تنظيف أثاث الخرج'],
     },
-
     content: {
-        introduction: 'تنظيف أثاث بالخرج — خدمة متخصصة تراعي الظروف المناخية والبيئية في الخرج. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف أثاث بالخرج: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف أثاث بالخرج. خدمة احترافية. ضمان.',
+        introduction: 'أثاث الخرج يواجه تحديات زراعية فريدة! NH₃ بلمرة حيوانية بالأقمشة: أمونيا مزارع ألبان تتراكم في تنجيد الأثاث ← تتفاعل مع الأوساخ ← بلمرة حيوانية عميقة. الشامبو لا يصل — Enzymatic+بخار+HEPA AC. CaCO₃ كلس على الخشب: لو مُسح الأثاث الخشبي بماء صنبور = بقع كلس بيضاء. RO Rinse. SiO₂ خدش: رمل ناعم يخدش الأسطح اللامعة (طاولات+خزائن). Microfiber فقط. ΔT 48°م: فارق حراري يُجفف الخشب ← تشققات. Oil Polish يحمي. تجفيف: 15-25% = 20-40 دقيقة — ميزة! لا عفن لا عث. مقارنة: خميس = عفن+عث+4-8h تجفيف+Anti-Fungal+Anti-Mite = أغلى 30%. الخرج = NH₃+CaCO₃ لكن أبسط.',
+        shortAnswer: 'على عكس [الشامبو بدون Enzymatic والمسح بماء صنبور]، يعتمد بروتوكولنا في خدمة [تنظيف الأثاث] بمدينة [الخرج] على [Enzymatic+AC+RO+Oil Polish+Microfiber]. ففي ظل [NH₃ بلمرة+CaCO₃ كلس+SiO₂ خدش+ΔT تشقق]، تتفاقم ظاهرة [رائحة+بقع+خدش+تشقق]. لذا؛ يتدخل فريقنا عبر [إنزيم ← بخار ← RO ← حماية] — ميزة: لا عفن!',
+        heroSubtitle: 'NH₃ بلمرة + CaCO₃ كلس + SiO₂ خدش — لا عفن! تجفيف سريع!',
     },
-
     pricing: [
-        { type: 'تنظيف أثاث — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف أثاث — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'غرفة نوم كاملة', unit: 'غرفة', minPrice: 130, maxPrice: 260, time: '2-3h + تجفيف 30 دقيقة' },
+        { type: 'صالة + AC عميق', unit: 'صالة', minPrice: 170, maxPrice: 340, time: '3-4h' },
+        { type: 'خشب + Oil Polish', unit: 'إضافي', minPrice: 80, maxPrice: 160, time: '1-2h' },
+        { type: 'ربع سنوي', unit: 'سنة', minPrice: 400, maxPrice: 800, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف أثاث بالخرج؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف أثاث؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف أثاث؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش أثاث الخرج له رائحة مزارع؟', answer: 'NH₃ من مزارع ألبان. بلمرة حيوانية في التنجيد. Enzymatic+AC يُزيل.' },
+        { question: 'ليش بقع بيضاء على خشب الأثاث بالخرج؟', answer: 'CaCO₃ 450ppm في ماء الصنبور. RO Rinse = لا بقع. + Oil Polish.' },
+        { question: 'كم تكلفة تنظيف أثاث بالخرج مقارنة بخميس؟', answer: 'أرخص 25-30% — لا Anti-Fungal+Anti-Mite+تجفيف 30 دقيقة.' },
+        { question: 'هل الأثاث يتعفّن بالخرج؟', answer: 'لا! 15-25% = لا عفن. ميزة كبيرة. خميس: عفن أسبوعين.' },
+        { question: 'كيف أحمي خشب الأثاث من ΔT بالخرج؟', answer: 'ΔT 48°م يُجفف الخشب ← تشققات. Oil Polish كل 3 أشهر. مكيف = يحمي.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Enzymatic — بلمرة حيوانية NH₃.',
+        'RO Rinse — CaCO₃ بقع خشب.',
+        'Microfiber — SiO₂ خدش.',
+        'Oil Polish — ΔT تشقق خشب.',
+        'لا عفن! — تجفيف 20-40 دقيقة.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'NH₃ × 6 أشهر = بلمرة حيوانية لا تُزال — تغيير تنجيد.',
+        'CaCO₃ + ماء صنبور = بقع بيضاء تراكمية على خشب.',
+        'ΔT × سنة بدون Oil Polish = تشققات خشب — إصلاح 2000+.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
+        { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMISNID.name, quote: 'أثاث الخرج: NH₃ بلمرة+CaCO₃ كلس. Enzymatic+RO. ميزة: لا عفن.', source: 'نصائح هندسية — أثاث زراعي' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف أثاث مرخص', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Enzymatic+بخار', use: 'يكسّر بلمرة حيوانية NH₃' },
+        { name: 'RO Water+Microfiber', use: 'لا CaCO₃+لا خدش SiO₂' },
+        { name: 'Oil Polish', use: 'يحمي خشب من ΔT تشقق' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'مثل الرياض.', solution: 'NH₃ مزارع+CaCO₃ آبار. الرياض: لا.' },
+        { fear: 'مثل خميس.', solution: 'لا عفن+20 دقيقة = أرخص 30%.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'شامبو يكفي.', truth: 'بلمرة حيوانية = Enzymatic.' },
+        { myth: 'ماء صنبور للخشب.', truth: 'CaCO₃ بقع. RO.' },
     ],
-
     relatedServices: [
-        { slug: 'al-kharj-furniture-moving', context: 'نقل عفش بالخرج', priority: 1 },
-        { slug: 'al-kharj-furniture-storage', context: 'تخزين عفش بالخرج', priority: 2 },
-        { slug: 'al-kharj-dyna', context: 'دينا نقل بالخرج', priority: 3 },
-        { slug: 'al-kharj-moving-out', context: 'نقل عفش خروج بالخرج', priority: 4 },
-        { slug: 'al-kharj-dabab', context: 'دباب نقل بالخرج', priority: 5 },
-        { slug: 'al-kharj-cleaning', context: 'تنظيف منازل بالخرج', priority: 6 },
-        { slug: 'al-kharj-tanks-cleaning', context: 'تنظيف خزانات بالخرج', priority: 7 },
-        { slug: 'al-kharj-sofa-cleaning', context: 'تنظيف كنب بالخرج', priority: 8 },
-        { slug: 'al-kharj-carpet-cleaning', context: 'تنظيف سجاد بالخرج', priority: 9 },
+        { slug: 'sofa-cleaning', context: 'كنب', priority: 1 },
+        { slug: 'carpet-cleaning', context: 'سجاد', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 3 },
+        { slug: 'marble-polishing', context: 'رخام', priority: 4 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 5 },
+        { slug: 'steam-cleaning', context: 'بخار', priority: 6 },
+        { slug: 'councils-cleaning', context: 'مجالس', priority: 7 },
     ],
 };

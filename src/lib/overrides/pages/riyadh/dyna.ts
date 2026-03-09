@@ -6,7 +6,7 @@
 // ══════════════════════════════════════════════════════════════
 
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -53,6 +53,7 @@ export const override: PageOverride = {
             question: 'كيف أحدد حجم الدينا الصحيح؟',
             answer: '3 طن: غرفة نوم كاملة / أثاث مجلس صغير / بضائع تجارية قليلة. 7 طن: شقة 2-3 غرف / نقل تجاري متوسط. 10 طن: شقة كبيرة / فيلا / مواد بناء كبيرة. اختيار الحجم الصحيح = رحلة واحدة. أصغر من اللازم = رحلتين = ضعف التكلفة.',
         },
+        { question: 'هل الشركة مرخصة من هيئة النقل TGA؟', answer: 'كل شركات بروكر مرخصة TGA + بيان حمولة لوجستي. الترخيص = تأمين على الأمتعة + حقوق عميل. بدون ترخيص = لا تأمين = لا تعويض.' },
     ],
 
     expertTips: [
@@ -71,13 +72,14 @@ export const override: PageOverride = {
 
     trustAnchors: [
         { ...GOV.BALADI, role: 'ترخيص خدمات النقل — ضمان سلامة السائق والحمولة والمرور' },
+        { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
 
     expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
+        name: EXPERTS.ALSHABNAN.name,
+        title: EXPERTS.ALSHABNAN.title,
+        credential: EXPERTS.ALSHABNAN.credential,
+        profileUrl: EXPERTS.ALSHABNAN.profileUrl,
     },
 
     expertCitations: [
@@ -85,7 +87,6 @@ export const override: PageOverride = {
             expert: 'م. ماجد المحيميد',
             quote: 'لا تحمّل الدينا المفتوحة بعد 10ص صيفاً — الحرارة تبدأ تؤثر على كل شيء. والأهم: ثبّت الحمولة بالحبال — طرقات الرياض الطويلة مليئة بالمطبات',
             source: 'خبير جودة البناء والتشطيبات',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
 
@@ -108,17 +109,18 @@ export const override: PageOverride = {
 
     counterNarratives: [
         { myth: 'أنقل بسيارتي الخاصة وأوفر', truth: 'سيارة: 3-5 رحلات × وقود (50 ريال) = 150-250 ريال + 4-6 ساعات. دينا 3 طن: 100-200 ريال × رحلة واحدة × ساعة-ساعتين. أوفر بالمال والوقت + حمولة أكبر + سائق محترف' },
+        { myth: 'أي دينا تكفي.', truth: 'دينا بدون ترخيص TGA = بدون تأمين = أي ضرر يتحمله العميل. الترخيص = حماية قانونية.' },
     ],
 
     relatedServices: [
-        { slug: 'riyadh-dabab', context: 'دباب للنقل الخفيف', priority: 1 },
-        { slug: 'riyadh-furniture-moving', context: 'نقل عفش كامل', priority: 2 },
-        { slug: 'riyadh-furniture-storage', context: 'تخزين', priority: 3 },
-        { slug: 'riyadh-moving-out', context: 'تنظيف بعد التحميل', priority: 4 },
-        { slug: 'riyadh-cleaning', context: 'تنظيف البيت الجديد', priority: 5 },
-        { slug: 'riyadh-pest-control', context: 'رش البيت الجديد', priority: 6 },
-        { slug: 'riyadh-furniture-cleaning', context: 'تنظيف بعد النقل', priority: 7 },
-        { slug: 'riyadh-sanitization', context: 'تعقيم', priority: 8 },
-        { slug: 'riyadh-air-conditioner-cleaning', context: 'فك وتركيب مكيفات', priority: 9 },
+        { slug: 'dabab', context: 'دباب للنقل الخفيف', priority: 1 },
+        { slug: 'furniture-moving', context: 'نقل عفش كامل', priority: 2 },
+        { slug: 'furniture-storage', context: 'تخزين', priority: 3 },
+        { slug: 'moving-out', context: 'تنظيف بعد التحميل', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف البيت الجديد', priority: 5 },
+        { slug: 'pest-control', context: 'رش البيت الجديد', priority: 6 },
+        { slug: 'furniture-cleaning', context: 'تنظيف بعد النقل', priority: 7 },
+        { slug: 'sanitization', context: 'تعقيم', priority: 8 },
+        { slug: 'air-conditioner-cleaning', context: 'فك وتركيب مكيفات', priority: 9 },
     ],
 };

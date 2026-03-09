@@ -6,6 +6,7 @@
 // ══════════════════════════════════════════════════════════════
 
 import type { PageOverride } from '../../types';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -66,6 +67,8 @@ export const override: PageOverride = {
         'بقع عفن متكررة على الجدار = مشكلة رطوبة هيكلية. لا تنظف فقط — اطلب فحص تسرب مياه',
     ],
 
+        verificationBadges: [{ badge: '✔️ شركة مرخصة من بلدي', authority: 'وزارة البلديات', icon: 'shield-check' }],
+
     equipment: [
         { name: 'مكنسة صناعية HEPA Filter', use: 'تشفط الغبار الدقيق PM2.5 وعث الغبار — الفلتر يحبسها بدل نشرها في الهواء' },
         { name: 'جهاز بخار جاف 150°م (Dry Steam)', use: 'يقتل 99.9% بكتيريا وعفن بدون ماء وبدون كيماويات — آمن على الأطفال' },
@@ -80,23 +83,20 @@ export const override: PageOverride = {
     trustAnchors: [
         { entity: 'وزارة البلديات — منصة بلدي', acronym: 'بلدي', url: 'https://balady.gov.sa', role: 'ترخيص شركات التنظيف + تسجيل العمالة' },
         { entity: 'الهيئة السعودية للمواصفات والمقاييس', acronym: 'SASO', url: 'https://www.saso.gov.sa', role: 'اعتماد مواد التنظيف الآمنة' },
+        { entity: AMANA.JEDDAH.entity, url: AMANA.JEDDAH.url, role: 'اشتراطات أمانة جدة' },
     ],
 
-    expertReviewer: {
-        name: 'أ.د. عبدالله المسند',
-        title: 'أستاذ جغرافيا المناخ',
-        credential: 'أستاذ جغرافيا المناخ — جامعة القصيم',
-        profileUrl: 'https://x.com/ALMISNID',
-    },
+    expertReviewer: EXPERTS.ALMISNID,
 
     expertCitations: [
         {
             expert: 'أ.د. عبدالله المسند',
             quote: 'المدن الساحلية الرطبة تحتاج تنظيف احترافي ضعف المدن الجافة — الملح والرطوبة يحولان أي سطح متسخ لبؤرة صحية خلال 48 ساعة',
             source: 'تحليل مناخي — جامعة القصيم',
-            url: 'https://x.com/ALMISNID',
         },
     ],
+
+        saudiRegulations: [REGULATIONS.BALADI_HEALTH],
 
     counterNarratives: [
         { myth: 'الكلور أقوى منظف — يقتل كل شي', truth: 'الكلور يقتل البكتيريا: صحيح. لكنه يأكل الرخام (سطح خشن ← يتشرب الأوساخ أسرع) + يبيّض الخشب + يتلف مطاط العوازل + يضر الجلد والرئتين. البديل: بخار 150°م يقتل 99.9% بدون أي تلف. أو منظف pH محايد: فعّال + آمن' },
@@ -104,14 +104,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'jeddah-cleaning', context: 'تنظيف شامل — منزل كامل', priority: 1 },
-        { slug: 'jeddah-steam-cleaning', context: 'بخار للشقة كاملة', priority: 2 },
-        { slug: 'jeddah-mattress-cleaning', context: 'مراتب — عث الغبار', priority: 3 },
-        { slug: 'jeddah-sofa-cleaning', context: 'كنب الشقة', priority: 4 },
-        { slug: 'jeddah-carpet-cleaning', context: 'سجاد وموكيت', priority: 5 },
-        { slug: 'jeddah-kitchen-cleaning', context: 'مطبخ — دهون ورطوبة', priority: 6 },
-        { slug: 'jeddah-air-conditioner-cleaning', context: 'مكيفات — عفن الدكت', priority: 7 },
-        { slug: 'jeddah-sanitization', context: 'تعقيم بعد التنظيف', priority: 8 },
-        { slug: 'jeddah-moving-out', context: 'تنظيف إخلاء — تسليم الشقة', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف شامل — منزل كامل', priority: 1 },
+        { slug: 'steam-cleaning', context: 'بخار للشقة كاملة', priority: 2 },
+        { slug: 'mattress-cleaning', context: 'مراتب — عث الغبار', priority: 3 },
+        { slug: 'sofa-cleaning', context: 'كنب الشقة', priority: 4 },
+        { slug: 'carpet-cleaning', context: 'سجاد وموكيت', priority: 5 },
+        { slug: 'kitchen-cleaning', context: 'مطبخ — دهون ورطوبة', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيفات — عفن الدكت', priority: 7 },
+        { slug: 'sanitization', context: 'تعقيم بعد التنظيف', priority: 8 },
+        { slug: 'moving-out', context: 'تنظيف إخلاء — تسليم الشقة', priority: 9 },
     ],
 };

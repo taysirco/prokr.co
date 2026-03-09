@@ -1,94 +1,78 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف منازل بالخبر — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-khobar/cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف منازل بالخبر — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف منازل بالخبر. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف منازل بالخبر — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف منازل بالخبر', 'تنظيف منازل الخبر', 'شركة تنظيف منازل بالخبر', 'أفضل تنظيف منازل بالخبر'],
+        title: 'تنظيف منازل بالخبر — بروتوكول ساحلي: NaCl إزالة + Anti-Fungal 85-95% + Anti-Corrosion + تجفيف (2026)',
+        description: 'تنظيف منازل الخبر. NaCl ملح بحري يترسب يومياً. 85-95% عفن Aspergillus حتمي. Sabkha ملحية. صراصير رطوبة. غسل + Anti-Fungal + Anti-Corrosion + Dehumidifier.',
+        h1: 'تنظيف منازل بالخبر — بروتوكول ساحلي: 4 خطوات ضد الملح والعفن',
+        keywords: ['تنظيف منازل بالخبر', 'تنظيف بيت الخبر', 'شركة تنظيف منازل بالخبر'],
     },
-
     content: {
-        introduction: 'تنظيف منازل بالخبر — خدمة متخصصة تراعي الظروف المناخية والبيئية في الخبر. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف منازل بالخبر: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف منازل بالخبر. خدمة احترافية. ضمان.',
+        introduction: 'المنزل في الخبر يتسخ بـ 3 طبقات ساحلية مختلفة. الخطوة الأولى — غسل NaCl: ملح بحري يترسب على كل سطح يومياً (نوافذ + بلاط + أثاث + أجهزة). لا يُرى بالعين — لكنه يمتص رطوبة ← يُسبب تآكل معادن. غسل بماء RO/مُقطر + تجفيف. الخطوة الثانية — Anti-Fungal: 85-95% = عفن Aspergillus في الحمام + المطبخ + الخزائن + زوايا النوافذ + خلف الثلاجة. Anti-Fungal كل 3-4 أشهر. الخطوة الثالثة — Anti-Corrosion: رش حماية على المعادن (صنابير + مقابض + أجهزة + مفصلات). يمنع NaCl + رطوبة من تآكل. الخطوة الرابعة — تجفيف: 85-95% = الأسطح لا تجف طبيعياً. Dehumidifier + مراوح بعد التنظيف. بدون تجفيف = تنظيف يُغذي العفن.',
+        shortAnswer: 'على عكس [ممسحة ومنظف] الذي لا يمنع عفن ولا تآكل، يعتمد بروتوكولنا في خدمة [تنظيف المنازل] بمدينة [الخبر] على [غسل NaCl + Anti-Fungal + Anti-Corrosion + تجفيف]. ففي ظل [NaCl + 85-95% + Sabkha]، تتفاقم ظاهرة [تآكل + عفن + ملح]. لذا؛ يتدخل خبراؤنا عبر [بروتوكول ساحلي مُرتّب].',
+        heroSubtitle: 'NaCl يُزال + Anti-Fungal 85-95% + Anti-Corrosion معادن + تجفيف',
     },
-
     pricing: [
-        { type: 'تنظيف منازل — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف منازل — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'شقة ساحلية — بروتوكول كامل', unit: 'شقة', minPrice: 200, maxPrice: 400, time: '3-5 ساعات' },
+        { type: 'منزل/فيلا صغيرة', unit: 'منزل', minPrice: 350, maxPrice: 700, time: '5-8 ساعات' },
+        { type: 'بعد إخلاء — مكافحة عفن عميقة', unit: 'وحدة', minPrice: 400, maxPrice: 800, time: '6-10 ساعات' },
+        { type: 'عقد أسبوعي (4 زيارات/شهر)', unit: 'شهر', minPrice: 350, maxPrice: 700, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف منازل بالخبر؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف منازل؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف منازل؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'NaCl لا يُرى — ليش أزيله؟', answer: 'NaCl = Hygroscopic (يمتص رطوبة). يترسب ← يمتص 85-95% ← يُسبب تآكل معادن + عفن أسرع + أسطح رطبة دائماً. إزالته = يُقلل رطوبة فعلية على الأسطح.' },
+        { question: 'عفن كل الأحياء — أو الكورنيش فقط؟', answer: '85-95% = كل الأحياء. الكورنيش = أسرع (NaCl أكثر). الثقبة/العقربية = أبطأ. لكن: 85-95% = عفن حتمي في كل الأحياء. الفرق = أسابيع — ليس أشهر.' },
+        { question: 'Anti-Corrosion — كل الأسطح؟', answer: 'المعادن فقط: صنابير + مقابض أبواب + مفصلات + أجهزة مكشوفة. البلاط والرخام لا يتآكلان بـ NaCl — لكن يترسب عليهما (غسل عادي يكفي).' },
+        { question: 'تجفيف إلزامي — ما المكيف يكفي؟', answer: 'المكيف يُبرّد — لا يُجفف. 85-95% = المكيف نفسه ينتج تكثّف. Dehumidifier = يسحب الرطوبة فعلياً. + مراوح أرضية = تيار يُسرّع التجفيف.' },
+        { question: 'كم مرة تنظيف — أسبوعي؟', answer: 'أسبوعي = الأمثل. كل أسبوعين = مقبول. شهري = بعد تراكم ملح + عفن = أصعب. أسبوعي = يمنع التراكم = أسهل كل مرة.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'غسل NaCl بماء RO/مُقطر — ماء الخبر نفسه يحتوي NaCl. استخدم ماء مُفلتر.',
+        'Anti-Fungal على 5 نقاط: حمام + مطبخ + خزائن + زوايا نوافذ + خلف ثلاجة.',
+        'Anti-Corrosion Spray على صنابير بعد كل تنظيف — 10-20 ريال = يحمي صنبور 200-500 ريال.',
+        'تجفيف Dehumidifier 2-3 ساعات بعد التنظيف — يمنع عفن جديد.',
+        'فتح نوافذ في الصباح الباكر (6-7 AM) — رطوبة أقل = تهوية فعّالة.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'NaCl + 85-95% على صنابير = صدأ خلال 6-12 شهراً. Anti-Corrosion = يمنع.',
+        'تنظيف بدون تجفيف في 85-95% = الأسطح تبقى رطبة 24 ساعة+ = عفن. التنظيف بلا تجفيف = تغذية العفن.',
+        'عفن Aspergillus = جراثيم 24/7 في الهواء = حساسية + ربو مزمن. Anti-Fungal = حماية صحية.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات النظافة بالشرقية' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMISNID.name, quote: 'منزل الخبر = ساحلي: NaCl يومي + 85-95% عفن حتمي + Sabkha. بروتوكول ساحلي = غسل + Anti-Fungal + Anti-Corrosion + تجفيف. 4 خطوات لا تُختصر.', source: 'جغرافيا المناخ — التنظيف الساحلي' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
     verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
+        { badge: '✔️ تنظيف منازل مرخص', authority: 'منصة بلدي', icon: 'shield-check' },
+        { badge: '✔️ بروتوكول ساحلي', authority: 'معتمد داخلياً', icon: 'badge-check' },
     ],
-
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'RO Water System', use: 'غسل بلا NaCl — ماء مُفلتر' },
+        { name: 'Anti-Fungal Spray', use: 'يمنع Aspergillus — فعّال 3-4 أشهر' },
+        { name: 'Anti-Corrosion Spray', use: 'يحمي المعادن من NaCl — فعّال 3-6 أشهر' },
+        { name: 'Dehumidifier + مراوح', use: 'تجفيف بعد التنظيف — إلزامي في 85-95%' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'منظف عادي يكفي.', solution: 'يُنظف — لا يحمي. NaCl يعود غداً. عفن يعود بعد أسبوع. تآكل يستمر. الحماية = الفرق.' },
+        { fear: 'المكيف يُجفف.', solution: 'المكيف يُبرّد + يُكثّف. لا يسحب رطوبة. Dehumidifier = يسحب. مختلفان.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'الخبر مثل الرياض.', truth: 'NaCl ≠ SiO₂. 85-95% ≠ 15%. عفن ≠ غبار. 3 فروقات جذرية.' },
+        { myth: 'ممسحة مبللة تكفي.', truth: 'ممسحة بماء الخبر = NaCl جديد. + لا تجفيف = عفن. 2 خطأين.' },
+        { myth: 'شهري.', truth: 'NaCl يومي + عفن أسبوعي. شهري = 3 أسابيع تراكم.' },
     ],
-
     relatedServices: [
-        { slug: 'al-khobar-furniture-moving', context: 'نقل عفش بالخبر', priority: 1 },
-        { slug: 'al-khobar-furniture-storage', context: 'تخزين عفش بالخبر', priority: 2 },
-        { slug: 'al-khobar-dyna', context: 'دينا نقل بالخبر', priority: 3 },
-        { slug: 'al-khobar-moving-out', context: 'نقل عفش خروج بالخبر', priority: 4 },
-        { slug: 'al-khobar-dabab', context: 'دباب نقل بالخبر', priority: 5 },
-        { slug: 'al-khobar-tanks-cleaning', context: 'تنظيف خزانات بالخبر', priority: 6 },
-        { slug: 'al-khobar-sofa-cleaning', context: 'تنظيف كنب بالخبر', priority: 7 },
-        { slug: 'al-khobar-carpet-cleaning', context: 'تنظيف سجاد بالخبر', priority: 8 },
-        { slug: 'al-khobar-steam-cleaning', context: 'تنظيف بالبخار بالخبر', priority: 9 },
+        { slug: 'apartments-cleaning', context: 'شقق — ساحلي', priority: 1 },
+        { slug: 'carpet-cleaning', context: 'سجاد — NaCl + عث', priority: 2 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف — NaCl + عفن', priority: 3 },
+        { slug: 'steam-cleaning', context: 'بخار — تعقيم', priority: 4 },
+        { slug: 'pest-control', context: 'حشرات — صراصير رطوبة', priority: 5 },
+        { slug: 'marble-polishing', context: 'رخام — NaCl', priority: 6 },
+        { slug: 'villas-cleaning', context: 'فلل — ساحلي', priority: 7 },
     ],
 };

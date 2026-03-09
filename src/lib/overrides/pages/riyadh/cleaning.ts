@@ -5,7 +5,7 @@
 // ══════════════════════════════════════════════════════════════
 
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -81,6 +81,7 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف وإصدار الشهادة الصحية — ضمان المهنية والنظافة' },
         { ...GOV.WEQAA, role: 'إرشادات الصحة المهنية والوقاية من الأمراض المنقولة بالغبار' },
+        { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
 
     expertReviewer: {
@@ -95,7 +96,6 @@ export const override: PageOverride = {
             expert: 'أ.د. عبدالله المسند',
             quote: 'الرياض تتعرض لـ 15-25 عاصفة غبارية سنوياً. كل عاصفة تترسب خلالها 8-12 غرام غبار لكل متر مربع — فيلا 300م² تستقبل 3 كيلوغرام غبار في عاصفة واحدة',
             source: 'أستاذ جغرافيا المناخ — بيانات مناخية موثقة',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -125,14 +125,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'riyadh-sanitization', context: 'تعقيم بعد التنظيف', priority: 1 },
-        { slug: 'riyadh-steam-cleaning', context: 'بخار شامل للمنزل', priority: 2 },
-        { slug: 'riyadh-sofa-cleaning', context: 'تنظيف كنب مع المنزل', priority: 3 },
-        { slug: 'riyadh-carpet-cleaning', context: 'غسيل سجاد', priority: 4 },
-        { slug: 'riyadh-air-conditioner-cleaning', context: 'صيانة مكيفات', priority: 5 },
-        { slug: 'riyadh-kitchen-cleaning', context: 'تنظيف المطبخ', priority: 6 },
-        { slug: 'riyadh-pest-control', context: 'رش وقائي', priority: 7 },
-        { slug: 'riyadh-tanks-cleaning', context: 'غسيل خزان', priority: 8 },
-        { slug: 'riyadh-floor-polishing', context: 'تلميع أرضيات', priority: 9 },
+        { slug: 'sanitization', context: 'تعقيم بعد التنظيف', priority: 1 },
+        { slug: 'steam-cleaning', context: 'بخار شامل للمنزل', priority: 2 },
+        { slug: 'sofa-cleaning', context: 'تنظيف كنب مع المنزل', priority: 3 },
+        { slug: 'carpet-cleaning', context: 'غسيل سجاد', priority: 4 },
+        { slug: 'air-conditioner-cleaning', context: 'صيانة مكيفات', priority: 5 },
+        { slug: 'kitchen-cleaning', context: 'تنظيف المطبخ', priority: 6 },
+        { slug: 'pest-control', context: 'رش وقائي', priority: 7 },
+        { slug: 'tanks-cleaning', context: 'غسيل خزان', priority: 8 },
+        { slug: 'floor-polishing', context: 'تلميع أرضيات', priority: 9 },
     ],
 };

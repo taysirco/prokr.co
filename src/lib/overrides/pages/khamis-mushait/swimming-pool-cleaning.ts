@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف مسابح بخميس مشيط — Override مخصص (E-E-A-T Grade)
-// صفحة: /khamis-mushait/swimming-pool-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف مسابح بخميس مشيط — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف مسابح بخميس مشيط. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف مسابح بخميس مشيط — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف مسابح بخميس مشيط', 'تنظيف مسابح خميس مشيط', 'شركة تنظيف مسابح بخميس مشيط', 'أفضل تنظيف مسابح بخميس مشيط'],
+        title: 'تنظيف مسابح بخميس مشيط — أمطار+60-85% طحالب 2× + أوراق أشجار — Algicide! (2026)',
+        description: 'تنظيف مسابح خميس مشيط. أمطار تُخفف الكلور! 60-85% طحالب 2×. أوراق أشجار. Algicide+فلتر+pH.',
+        h1: 'تنظيف مسابح بخميس مشيط — أمطار وطحالب وأوراق',
+        keywords: ['تنظيف مسابح خميس مشيط', 'تنظيف مسبح بخميس مشيط', 'شركة تنظيف مسابح خميس مشيط'],
     },
-
     content: {
-        introduction: 'تنظيف مسابح بخميس مشيط — خدمة متخصصة تراعي الظروف المناخية والبيئية في خميس مشيط. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف مسابح بخميس مشيط: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف مسابح بخميس مشيط. خدمة احترافية. ضمان.',
+        introduction: 'مسبح خميس مشيط يواجه تحديات بيولوجية مختلفة! أولاً: أمطار تُخفف الكلور! أمطار موسمية غزيرة ← تخفيف تركيز الكلور في المسبح ← طحالب تنمو بعد كل مطر. يحتاج ضبط pH+كلور فوري بعد المطر. ثانياً: 60-85% = طحالب تنمو 2× أسرع. في عنيزة (15-25%): الشمس تقتل الطحالب + كلور يكفي. في خميس: رطوبة+ظل ضبابي = طحالب أسرع. Algicide أسبوعي. ثالثاً: أشجار! خميس مدينة خضراء = أوراق وحطام تسقط في المسبح ← تتحلل ← تُغذي الطحالب. شبك تغطية+فلتر. رابعاً: تكثّف ضبابي — ضباب يحمل أبواغ وغبار للمسبح. مقارنة: عنيزة = شمس+كلور+لا أمطار+لا أشجار = أبسط. خميس = Algicide+pH ضبط+فلتر = أغلى 25%.',
+        shortAnswer: 'على عكس [الكلور فقط بدون Algicide]، يعتمد بروتوكولنا في خدمة [تنظيف المسابح] بمدينة [خميس مشيط] على [Algicide+ضبط pH بعد مطر+فلتر+شبك]. ففي ظل [أمطار تُخفف كلور+60-85% طحالب 2×+أوراق+ضباب]، تتفاقم ظاهرة [طحالب سريعة+كلور ضعيف+حطام]. لذا؛ يتدخل فريقنا عبر [ضبط ← Algicide ← فلتر ← تغطية].',
+        heroSubtitle: 'أمطار تُخفف كلور + طحالب 2× + أوراق — Algicide!',
     },
-
     pricing: [
-        { type: 'تنظيف مسابح — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف مسابح — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'تنظيف + ضبط كيميائي', unit: 'مسبح', minPrice: 180, maxPrice: 370, time: '2-3 ساعات' },
+        { type: 'بعد مطر (طوارئ)', unit: 'مسبح', minPrice: 120, maxPrice: 250, time: '1-2 ساعة' },
+        { type: 'أسبوعي (4 زيارات/شهر)', unit: 'شهر', minPrice: 400, maxPrice: 820, time: '4 زيارات' },
+        { type: 'سنوي (صيانة كاملة)', unit: 'سنة', minPrice: 3500, maxPrice: 7500, time: '52 زيارة' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف مسابح بخميس مشيط؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف مسابح؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف مسابح؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش المسبح يخضرّ بعد المطر بخميس مشيط؟', answer: 'الأمطار تُخفف الكلور ← الطحالب تنمو فوراً. ضبط pH+كلور+Algicide بعد كل مطر.' },
+        { question: 'كم مرة يحتاج المسبح صيانة بخميس مشيط؟', answer: 'أسبوعي! طحالب 2× + أوراق + أمطار. عنيزة: كل أسبوعين.' },
+        { question: 'كيف أمنع أوراق الأشجار من المسبح بخميس؟', answer: 'شبك تغطية + فلتر قوي. خميس خضراء = أوراق مستمرة. تنظيف يومي.' },
+        { question: 'كم تكلفة صيانة مسبح بخميس مقارنة بعنيزة؟', answer: 'أغلى 25% — Algicide+ضبط بعد مطر+فلتر. 180-820 مقابل 140-650.' },
+        { question: 'هل الضباب يأثر على المسبح بخميس مشيط؟', answer: 'يحمل أبواغ طحالب وغبار. يُغذي الطحالب + يُعكّر الماء. Algicide أسبوعي.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Algicide أسبوعي — طحالب 2× بالرطوبة.',
+        'ضبط pH+كلور بعد مطر — الأمطار تُخفف.',
+        'شبك تغطية — أوراق أشجار.',
+        'فلتر قوي — حطام+أبواغ.',
+        'فحص بعد مطر — طوارئ كيميائية.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'أمطار + بدون ضبط = كلور ضعيف = طحالب خلال 24 ساعة.',
+        'أوراق متحللة + 48h = طحالب تتغذى = مسبح أخضر.',
+        'طفل يسبح في ماء طحالب = عدوى جلدية — YMYL.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص صيانة مسابح' },
+        { entity: AMANA.ASIR.entity, url: AMANA.ASIR.url, role: 'اشتراطات أمانة عسير' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'مسبح خميس: أمطار تُخفف كلور+طحالب 2×+أوراق. Algicide+ضبط بعد مطر.', source: 'موسوعة أخطاء — مسابح جبلية' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ صيانة مسابح مرخصة', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Algicide', use: 'يقتل طحالب — 60-85% تكاثر سريع' },
+        { name: 'جهاز pH+كلور', use: 'ضبط بعد مطر — الأمطار تُخفف' },
+        { name: 'شبك تغطية', use: 'يمنع أوراق أشجار من الدخول' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'كلور يكفي.', solution: 'أمطار تُخففه + طحالب 2×. Algicide إلزامي.' },
+        { fear: 'مثل عنيزة.', solution: 'عنيزة: شمس+لا مطر+لا أشجار = أبسط.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'المسبح ما يحتاج Algicide.', truth: '60-85% = طحالب 2×. Algicide أسبوعي.' },
+        { myth: 'كل أسبوعين يكفي.', truth: 'أمطار+طحالب+أوراق = أسبوعي إلزامي.' },
     ],
-
     relatedServices: [
-        { slug: 'khamis-mushait-furniture-moving', context: 'نقل عفش بخميس مشيط', priority: 1 },
-        { slug: 'khamis-mushait-furniture-storage', context: 'تخزين عفش بخميس مشيط', priority: 2 },
-        { slug: 'khamis-mushait-dyna', context: 'دينا نقل بخميس مشيط', priority: 3 },
-        { slug: 'khamis-mushait-moving-out', context: 'نقل عفش خروج بخميس مشيط', priority: 4 },
-        { slug: 'khamis-mushait-dabab', context: 'دباب نقل بخميس مشيط', priority: 5 },
-        { slug: 'khamis-mushait-cleaning', context: 'تنظيف منازل بخميس مشيط', priority: 6 },
-        { slug: 'khamis-mushait-tanks-cleaning', context: 'تنظيف خزانات بخميس مشيط', priority: 7 },
-        { slug: 'khamis-mushait-sofa-cleaning', context: 'تنظيف كنب بخميس مشيط', priority: 8 },
-        { slug: 'khamis-mushait-carpet-cleaning', context: 'تنظيف سجاد بخميس مشيط', priority: 9 },
+        { slug: 'tanks-cleaning', context: 'خزانات', priority: 1 },
+        { slug: 'pest-control', context: 'حشرات — بعوض', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 3 },
+        { slug: 'water-insulation', context: 'عزل مائي', priority: 4 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 5 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات', priority: 6 },
+        { slug: 'marble-polishing', context: 'رخام', priority: 7 },
     ],
 };

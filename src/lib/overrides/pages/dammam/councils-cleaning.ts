@@ -1,13 +1,5 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف مجالس بالدمام — Override مخصص (E-E-A-T Grade)
-// صفحة: /dammam/councils-cleaning
-// قطاع YMYL: صحة (عث + PM2.5 في مجالس أرضية) + اجتماعي (ضيافة)
-// خريطة 2.4: المسند (مناخ/تنظيف) → بلدي
-// NLP: مجالس أرضية، جلسات عربية، ضيافة خليجية، بخور، رطوبة ساحلية
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -76,21 +68,16 @@ export const override: PageOverride = {
 
     trustAnchors: [
         { ...GOV.BALADI, role: 'ترخيص شركات تنظيف المفروشات — مواد معتمدة وسلامة أقمشة' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات أمانة الشرقية' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMISNID.name,
-        title: EXPERTS.ALMISNID.title,
-        credential: EXPERTS.ALMISNID.credential,
-        profileUrl: EXPERTS.ALMISNID.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMISNID,
 
     expertCitations: [
         {
             expert: 'أ.د. عبدالله المسند',
             quote: 'المجلس الأرضي في مناخ ساحلي رطب يجمع ملوثات بتركيز أعلى من أي أثاث آخر — أقرب للأرض حيث يتكثف PM2.5 والرطوبة. بخار 180°م فقط يخترق إسفنج 10-15 سم ويقتل العث في العمق',
             source: 'أستاذ جغرافيا المناخ — جامعة القصيم',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -118,14 +105,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'dammam-sofa-cleaning', context: 'الكنب العادي — نفس التقنية بارتفاع مختلف', priority: 1 },
-        { slug: 'dammam-carpet-cleaning', context: 'سجاد المجلس — ينظف مع الجلسات الأرضية', priority: 2 },
-        { slug: 'dammam-mattress-cleaning', context: 'إسفنج المرتبة — نفس مشكلة العث', priority: 3 },
-        { slug: 'dammam-steam-cleaning', context: 'بخار شامل لكل أسطح المجلس', priority: 4 },
-        { slug: 'dammam-cleaning', context: 'تنظيف شامل يشمل المجالس', priority: 5 },
-        { slug: 'dammam-sanitization', context: 'تعقيم مجلس قبل مناسبة كبيرة', priority: 6 },
-        { slug: 'dammam-floor-cleaning', context: 'أرضية تحت المجلس الأرضي', priority: 7 },
-        { slug: 'dammam-air-conditioner-cleaning', context: 'المكيف يوزع PM2.5 على المجلس', priority: 8 },
-        { slug: 'dammam-furniture-cleaning', context: 'تنظيف شامل لكل أثاث الغرفة', priority: 9 },
+        { slug: 'sofa-cleaning', context: 'الكنب العادي — نفس التقنية بارتفاع مختلف', priority: 1 },
+        { slug: 'carpet-cleaning', context: 'سجاد المجلس — ينظف مع الجلسات الأرضية', priority: 2 },
+        { slug: 'mattress-cleaning', context: 'إسفنج المرتبة — نفس مشكلة العث', priority: 3 },
+        { slug: 'steam-cleaning', context: 'بخار شامل لكل أسطح المجلس', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف شامل يشمل المجالس', priority: 5 },
+        { slug: 'sanitization', context: 'تعقيم مجلس قبل مناسبة كبيرة', priority: 6 },
+        { slug: 'floor-cleaning', context: 'أرضية تحت المجلس الأرضي', priority: 7 },
+        { slug: 'air-conditioner-cleaning', context: 'المكيف يوزع PM2.5 على المجلس', priority: 8 },
+        { slug: 'furniture-cleaning', context: 'تنظيف شامل لكل أثاث الغرفة', priority: 9 },
     ],
 };

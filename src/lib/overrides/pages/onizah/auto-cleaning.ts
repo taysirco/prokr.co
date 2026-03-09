@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف سيارات بعنيزة — Override مخصص (E-E-A-T Grade)
-// صفحة: /onizah/auto-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف سيارات بعنيزة — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف سيارات بعنيزة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف سيارات بعنيزة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف سيارات بعنيزة', 'تنظيف سيارات عنيزة', 'شركة تنظيف سيارات بعنيزة', 'أفضل تنظيف سيارات بعنيزة'],
+        title: 'تنظيف سيارات بعنيزة — Nafud SiO₂ خدش Clear Coat+سكر تمور+لقاح لزج — No-Touch+Enzymatic! (2026)',
+        description: 'تنظيف سيارات عنيزة. Nafud SiO₂ خدش Clear Coat! سكر تمور لزج. لقاح نخيل. No-Touch+Enzymatic+Pre-Rinse.',
+        h1: 'تنظيف سيارات بعنيزة — Nafud خدش+تمور!',
+        keywords: ['تنظيف سيارات بعنيزة', 'غسيل سيارة بعنيزة', 'شركة تنظيف سيارات بعنيزة'],
     },
-
     content: {
-        introduction: 'تنظيف سيارات بعنيزة — خدمة متخصصة تراعي الظروف المناخية والبيئية في عنيزة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف سيارات بعنيزة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف سيارات بعنيزة. خدمة احترافية. ضمان.',
+        introduction: 'سيارة عنيزة = Nafud يخدش+تمور تلصق! Nafud SiO₂ 7 Mohs: رمل النفود الصلب يستقر على السيارة ← أي إسفنج = خدوش حلقات (Swirl Marks) على Clear Coat! No-Touch Pre-Rinse ضغط أولاً. سكر تمور: أغسطس-أكتوبر = سوق التمور يُطلق سكر Glucose+Fructose بالهواء ← يلتصق بالطلاء = طبقة لزجة تجذب الذباب. Enzymatic Cleaner. لقاح النخيل: مارس-مايو = حبوب لقاح صفراء تلتصق بالطلاء الساخن (48°م) ← Van der Waals. محلول خاص. CaCO₃ 550ppm: ماء غسيل = بقع كلس بيضاء ← RO Water فقط. مقارنة: ينبع = NaCl ملح Pitting. عنيزة = Nafud SiO₂ خدش+تمور+لقاح = مختلف.',
+        shortAnswer: 'على عكس [الإسفنج+ماء صنبور الذي يخدش+يكلس]، يعتمد بروتوكولنا في خدمة [تنظيف السيارات] بمدينة [عنيزة] على [Pre-Rinse ← No-Touch ← Enzymatic ← RO]. ففي ظل [Nafud SiO₂+سكر تمور+لقاح+CaCO₃]، تتفاقم ظاهرة [خدش+لزوجة+التصاق+كلس]. لذا؛ يتدخل فريقنا عبر [Pre-Rinse ← No-Touch ← Enzymatic ← RO].',
+        heroSubtitle: 'Nafud خدش Clear Coat + سكر تمور + لقاح — No-Touch!',
     },
-
     pricing: [
-        { type: 'تنظيف سيارات — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف سيارات — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'غسيل No-Touch+RO', unit: 'سيارة', minPrice: 35, maxPrice: 70, time: '20-30 دقيقة' },
+        { type: '+ Enzymatic (تمور)', unit: 'سيارة', minPrice: 50, maxPrice: 100, time: '30 دقيقة' },
+        { type: '+ Wax حماية', unit: 'سيارة', minPrice: 55, maxPrice: 110, time: '30-45 دقيقة' },
+        { type: 'أسبوعي (4/شهر)', unit: 'شهر', minPrice: 100, maxPrice: 200, time: '4 غسلات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف سيارات بعنيزة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف سيارات؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف سيارات؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش سيارة عنيزة تخدش بالإسفنج؟', answer: 'Nafud SiO₂ 7 Mohs. أصلب من Clear Coat. No-Touch+Pre-Rinse.' },
+        { question: 'ما السكر اللزج على السيارة أغسطس-أكتوبر؟', answer: 'سوق التمور Glucose+Fructose. Enzymatic Cleaner.' },
+        { question: 'ليش بقع بيضاء بعد الغسيل بعنيزة؟', answer: 'CaCO₃ 550ppm ماء عسر. RO Water فقط.' },
+        { question: 'كم تكلفة غسيل بعنيزة مقارنة بينبع؟', answer: 'أرخص 10-15% — لا NaCl+يجف فوراً. ينبع: pH Foam.' },
+        { question: 'كم مرة غسيل بعنيزة؟', answer: 'أسبوعي Nafud + يومي موسم تمور.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Pre-Rinse ضغط — Nafud 7 Mohs.',
+        'No-Touch — لا إسفنج!',
+        'Enzymatic — تمور سكر.',
+        'RO Water — CaCO₃ بقع.',
+        'Wax — حماية Clear Coat.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'إسفنج + Nafud = خدوش حلقات دائمة — No-Touch.',
+        'ماء صنبور 550ppm = بقع كلس بيضاء — RO.',
+        'سكر تمور × أسبوع = ذباب+بقعة — Enzymatic.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص مغاسل السيارات' },
+        { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMISNID.name, quote: 'سيارة عنيزة: Nafud+تمور+لقاح. No-Touch+Enzymatic+RO.', source: 'جغرافيا المناخ — سيارات القصيم' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ مغسلة مرخصة', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Pre-Rinse ضغط', use: 'Nafud SiO₂ — إزالة قبل مسح' },
+        { name: 'Enzymatic Cleaner', use: 'سكر تمور — تفكيك' },
+        { name: 'RO Water', use: 'CaCO₃ — لا بقع' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'إسفنج يكفي.', solution: 'Nafud = خدوش. No-Touch.' },
+        { fear: 'ماء عادي.', solution: '550ppm = بقع. RO.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'شهري.', truth: 'أسبوعي Nafud. يومي تمور.' },
+        { myth: 'أي ماء.', truth: 'RO فقط. 550ppm = كلس.' },
     ],
-
     relatedServices: [
-        { slug: 'onizah-furniture-moving', context: 'نقل عفش بعنيزة', priority: 1 },
-        { slug: 'onizah-furniture-storage', context: 'تخزين عفش بعنيزة', priority: 2 },
-        { slug: 'onizah-dyna', context: 'دينا نقل بعنيزة', priority: 3 },
-        { slug: 'onizah-moving-out', context: 'نقل عفش خروج بعنيزة', priority: 4 },
-        { slug: 'onizah-dabab', context: 'دباب نقل بعنيزة', priority: 5 },
-        { slug: 'onizah-cleaning', context: 'تنظيف منازل بعنيزة', priority: 6 },
-        { slug: 'onizah-tanks-cleaning', context: 'تنظيف خزانات بعنيزة', priority: 7 },
-        { slug: 'onizah-sofa-cleaning', context: 'تنظيف كنب بعنيزة', priority: 8 },
-        { slug: 'onizah-carpet-cleaning', context: 'تنظيف سجاد بعنيزة', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 1 },
+        { slug: 'dabab', context: 'دباب', priority: 2 },
+        { slug: 'dyna', context: 'دينا', priority: 3 },
+        { slug: 'furniture-moving', context: 'نقل', priority: 4 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 5 },
+        { slug: 'pest-control', context: 'حشرات', priority: 6 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات', priority: 7 },
     ],
 };

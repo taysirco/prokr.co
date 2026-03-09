@@ -83,10 +83,10 @@ export const override: PageOverride = {
     ],
 
     expertReviewer: {
-        name: EXPERTS.ALZUWAYED.name,
-        title: EXPERTS.ALZUWAYED.title,
-        credential: EXPERTS.ALZUWAYED.credential,
-        profileUrl: EXPERTS.ALZUWAYED.profileUrl,
+        name: EXPERTS.ALSHABNAN.name,
+        title: EXPERTS.ALSHABNAN.title,
+        credential: EXPERTS.ALSHABNAN.credential,
+        profileUrl: EXPERTS.ALSHABNAN.profileUrl,
     },
 
     expertCitations: [
@@ -94,13 +94,11 @@ export const override: PageOverride = {
             expert: 'أ. صالح الزويد',
             quote: 'حقوق العميل في النقل محمية بنظام الهيئة العامة للنقل TGA — كل شركة نقل ملزمة بترخيص وبيان حمولة رسمي عبر منصة لوجستي. بدون ترخيص: لا تأمين ولا حماية قانونية لممتلكاتك',
             source: 'المتحدث الرسمي للهيئة العامة للنقل',
-            url: 'https://x.com/SalehAlZuwayed',
         },
         {
             expert: 'م. صالح الشبنان',
             quote: 'التغليف المتخصص يُقلل أضرار النقل بنسبة 95% — بطانية نقل + ستريتش فيلم + كرتون مقوى = حماية ثلاثية تمتص الصدمات والاهتزازات',
             source: 'خبير لوجستيات وسلاسل إمداد',
-            url: 'https://x.com/SalehAlshabnan',
         },
     ],
 
@@ -131,13 +129,13 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'makkah-furniture-storage', context: 'تخزين عفش بمكة — مستودعات مكيّفة لحماية الأثاث من حرارة 50°م', priority: 1 },
-        { slug: 'makkah-dyna', context: 'دينا نقل مكة — أحجام مختلفة حسب كمية العفش', priority: 2 },
-        { slug: 'makkah-dabab', context: 'دباب نقل بمكة — مناسب للقطع الصغيرة والأجهزة', priority: 3 },
-        { slug: 'makkah-cleaning', context: 'تنظيف المنزل الجديد قبل إدخال العفش — تنظيف عميق يوم قبل النقل', priority: 4 },
-        { slug: 'makkah-pest-control', context: 'رش الشقة الفارغة قبل الأثاث — فرصة ذهبية للمكافحة الشاملة', priority: 5 },
-        { slug: 'makkah-air-conditioner-cleaning', context: 'تنظيف مكيفات المنزل الجديد قبل التشغيل — يحسن جودة الهواء', priority: 6 },
-        { slug: 'makkah-sofa-cleaning', context: 'تنظيف كنب ومجالس بعد النقل — إزالة غبار التغليف والنقل', priority: 7 },
-        { slug: 'makkah-carpet-cleaning', context: 'غسيل سجاد بعد النقل — إزالة أوساخ الطريق والتغليف', priority: 8 },
+        { slug: 'furniture-storage', context: 'تخزين عفش بمكة — مستودعات مكيّفة لحماية الأثاث من حرارة 50°م', priority: 1 },
+        { slug: 'dyna', context: 'دينا نقل مكة — أحجام مختلفة حسب كمية العفش', priority: 2 },
+        { slug: 'dabab', context: 'دباب نقل بمكة — مناسب للقطع الصغيرة والأجهزة', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف المنزل الجديد قبل إدخال العفش — تنظيف عميق يوم قبل النقل', priority: 4 },
+        { slug: 'pest-control', context: 'رش الشقة الفارغة قبل الأثاث — فرصة ذهبية للمكافحة الشاملة', priority: 5 },
+        { slug: 'air-conditioner-cleaning', context: 'تنظيف مكيفات المنزل الجديد قبل التشغيل — يحسن جودة الهواء', priority: 6 },
+        { slug: 'sofa-cleaning', context: 'تنظيف كنب ومجالس بعد النقل — إزالة غبار التغليف والنقل', priority: 7 },
+        { slug: 'carpet-cleaning', context: 'غسيل سجاد بعد النقل — إزالة أوساخ الطريق والتغليف', priority: 8 },
     ],
 };

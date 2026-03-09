@@ -90,7 +90,6 @@ export const override: PageOverride = {
             expert: 'أ.د. عبدالله المسند',
             quote: 'البخار الجاف (رطوبة أقل من 5%) يقتل البكتيريا بالحرارة لا بالكيمياء — لا يترك رواسب سامة. الطريقة الأنسب لتعقيم بيئة مغلقة كمنازل مكة المكيّفة 10+ أشهر',
             source: 'أستاذ المناخ والبيئة',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -121,12 +120,12 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'makkah-sofa-cleaning', context: 'غسيل عميق للكنب بالبخار + Extraction — تنظيف وتعقيم معاً', priority: 1 },
-        { slug: 'makkah-carpet-cleaning', context: 'غسيل سجاد بالبخار — إزالة عث الغبار من الألياف', priority: 2 },
-        { slug: 'makkah-bedbugs-control', context: 'البخار 180°م يقتل بق الفراش — جزء أساسي من بروتوكول المكافحة', priority: 3 },
-        { slug: 'makkah-cleaning', context: 'تنظيف عميق للمنزل + تعقيم بالبخار — باقة صحية شاملة', priority: 4 },
-        { slug: 'makkah-councils-cleaning', context: 'تعقيم كنب المجالس بالبخار — خاصة بعد التجمعات', priority: 5 },
-        { slug: 'makkah-mattress-cleaning', context: 'تعقيم مراتب بالبخار — قتل عث الغبار المسبب للحساسية', priority: 6 },
-        { slug: 'makkah-pest-control', context: 'تعقيم بالبخار + مكافحة حشرات = حماية صحية شاملة', priority: 7 },
+        { slug: 'sofa-cleaning', context: 'غسيل عميق للكنب بالبخار + Extraction — تنظيف وتعقيم معاً', priority: 1 },
+        { slug: 'carpet-cleaning', context: 'غسيل سجاد بالبخار — إزالة عث الغبار من الألياف', priority: 2 },
+        { slug: 'bedbugs-control', context: 'البخار 180°م يقتل بق الفراش — جزء أساسي من بروتوكول المكافحة', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف عميق للمنزل + تعقيم بالبخار — باقة صحية شاملة', priority: 4 },
+        { slug: 'councils-cleaning', context: 'تعقيم كنب المجالس بالبخار — خاصة بعد التجمعات', priority: 5 },
+        { slug: 'mattress-cleaning', context: 'تعقيم مراتب بالبخار — قتل عث الغبار المسبب للحساسية', priority: 6 },
+        { slug: 'pest-control', context: 'تعقيم بالبخار + مكافحة حشرات = حماية صحية شاملة', priority: 7 },
     ],
 };

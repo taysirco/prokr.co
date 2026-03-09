@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تخزين عفش بينبع — Override مخصص (E-E-A-T Grade)
-// صفحة: /yanbu/furniture-storage
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تخزين عفش بينبع — خدمة احترافية معتمدة (2026)',
-        description: 'تخزين عفش بينبع. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تخزين عفش بينبع — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تخزين عفش بينبع', 'تخزين عفش ينبع', 'شركة تخزين عفش بينبع', 'أفضل تخزين عفش بينبع'],
+        title: 'تخزين أثاث بينبع — NaCl صدأ+70-85% عفن خشب+SOx — VCI+Dehumidifier+Anti-Fungal! (2026)',
+        description: 'تخزين أثاث ينبع. NaCl صدأ! 70-85% عفن خشب+أقمشة. SOx تآكل. VCI+Dehumidifier+Anti-Fungal.',
+        h1: 'تخزين أثاث بينبع — صدأ+عفن+حمض!',
+        keywords: ['تخزين أثاث ينبع', 'تخزين عفش بينبع', 'شركة تخزين أثاث ينبع'],
     },
-
     content: {
-        introduction: 'تخزين عفش بينبع — خدمة متخصصة تراعي الظروف المناخية والبيئية في ينبع. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تخزين عفش بينبع: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تخزين عفش بينبع. خدمة احترافية. ضمان.',
+        introduction: 'تخزين بينبع = NaCl يصدئ+الرطوبة تُعفّن! NaCl صدأ: ملح بحري يدخل المستودع ← يتراكم على المعدن ← Pitting. VCI أكياس+مستودع مُحكم. 70-85% عفن: أعلى رطوبة = خشب يتعفّن+أقمشة تتعفّن خلال أسبوعين! Dehumidifier مُستمر+Anti-Fungal. SOx YASREF: أكاسيد تدخل المستودع ← H₂SO₄ يتآكل. مستودع صناعي مُفلتر. SiO₂: رمل يخدش. إحكام. مقارنة: بريدة = ΔT تشقق خشب+Nafud لكن 10-20% = لا عفن = أبسط. ينبع = صدأ+عفن+حمض = الأصعب.',
+        shortAnswer: 'على عكس [المستودع العادي بدون Dehumidifier+VCI]، يعتمد بروتوكولنا في خدمة [التخزين] بمدينة [ينبع] على [VCI+Dehumidifier+Anti-Fungal+مستودع مُحكم]. ففي ظل [NaCl صدأ+70-85% عفن+SOx تآكل]، تتفاقم ظاهرة [Pitting+عفن+حمض]. لذا؛ يتدخل فريقنا عبر [VCI ← Dehumidifier ← Anti-Fungal ← إحكام].',
+        heroSubtitle: 'NaCl صدأ + 70-85% عفن + SOx حمض — VCI+Dehumidifier!',
     },
-
     pricing: [
-        { type: 'تخزين عفش — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تخزين عفش — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'مستودع صغير (10 م³)', unit: 'شهر', minPrice: 250, maxPrice: 520, time: 'شهري' },
+        { type: 'مستودع كبير (30 م³)', unit: 'شهر', minPrice: 500, maxPrice: 1000, time: 'شهري' },
+        { type: '+ VCI+Anti-Fungal', unit: 'إضافي', minPrice: 100, maxPrice: 200, time: 'معالجة' },
+        { type: 'سنوي', unit: 'سنة', minPrice: 2500, maxPrice: 5000, time: 'سنوي' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تخزين عفش بينبع؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تخزين عفش؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تخزين عفش؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش تخزين ينبع أصعب؟', answer: 'NaCl صدأ+70-85% عفن+SOx حمض. ثلاثي. بريدة: ΔT فقط.' },
+        { question: 'هل الخشب يتعفّن بالمستودع بينبع؟', answer: '70-85% = عفن أسبوعين. Dehumidifier+Anti-Fungal مُستمر.' },
+        { question: 'كم تكلفة تخزين بينبع مقابل بريدة؟', answer: 'أغلى 40-50% — Dehumidifier+VCI+Anti-Fungal.' },
+        { question: 'ما VCI في التخزين بينبع؟', answer: 'أكياس تحمي المعدن من NaCl طوال فترة التخزين.' },
+        { question: 'هل SOx يأثر على المستودع بينبع؟', answer: 'YASREF أكاسيد = حمض. مستودع مُفلتر+مُحكم.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Dehumidifier مُستمر — 70-85%.',
+        'VCI — كل قطعة معدنية.',
+        'Anti-Fungal — خشب+أقمشة.',
+        'مستودع مُحكم — NaCl+SOx.',
+        'فحص شهري — رطوبة+عفن.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'مستودع عادي + 70-85% = عفن كل الأثاث — Dehumidifier YMYL.',
+        'NaCl + تخزين طويل = صدأ شامل — VCI إلزامي.',
+        'SOx + مستودع مفتوح = حمض يتآكل — مُحكم+مُفلتر.',
     ],
-
     trustAnchors: [
-        { ...GOV.TGA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص مستودعات التخزين' },
+        { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'اشتراطات أمانة ينبع' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALZUWAYED.name,
-        title: EXPERTS.ALZUWAYED.title,
-        credential: EXPERTS.ALZUWAYED.credential,
-        profileUrl: EXPERTS.ALZUWAYED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
-        {
-            expert: EXPERTS.ALZUWAYED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALZUWAYED.title,
-            url: EXPERTS.ALZUWAYED.profileUrl,
-        },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'تخزين ينبع: NaCl+70-85%+SOx. VCI+Dehumidifier+Anti-Fungal.', source: 'نصائح هندسية — تخزين ساحلي' },
     ],
-
-    saudiRegulations: [REGULATIONS.TGA_LICENSE],
-
-    verificationBadges: [
-        { badge: '✔️ شركة نقل مرخصة من هيئة النقل TGA', authority: 'الهيئة العامة للنقل', icon: 'shield-check' },
-    ],
-
+    saudiRegulations: [REGULATIONS.BALADI_HEALTH],
+    verificationBadges: [{ badge: '✔️ تخزين مرخص', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Dehumidifier صناعي', use: '70-85% — مُستمر' },
+        { name: 'VCI Bags', use: 'NaCl — حماية معدن' },
+        { name: 'Anti-Fungal', use: '70-85% — خشب+أقمشة' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'مستودع عادي.', solution: '70-85% = عفن. Dehumidifier.' },
+        { fear: 'مثل بريدة.', solution: 'صدأ+عفن+حمض ≠ ΔT.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'أي مستودع.', truth: 'ساحلي = Dehumidifier+VCI.' },
+        { myth: 'فحص سنوي.', truth: '70-85% = شهري.' },
     ],
-
     relatedServices: [
-        { slug: 'yanbu-furniture-moving', context: 'نقل عفش بينبع', priority: 1 },
-        { slug: 'yanbu-dyna', context: 'دينا نقل بينبع', priority: 2 },
-        { slug: 'yanbu-moving-out', context: 'نقل عفش خروج بينبع', priority: 3 },
-        { slug: 'yanbu-dabab', context: 'دباب نقل بينبع', priority: 4 },
-        { slug: 'yanbu-cleaning', context: 'تنظيف منازل بينبع', priority: 5 },
-        { slug: 'yanbu-tanks-cleaning', context: 'تنظيف خزانات بينبع', priority: 6 },
-        { slug: 'yanbu-sofa-cleaning', context: 'تنظيف كنب بينبع', priority: 7 },
-        { slug: 'yanbu-carpet-cleaning', context: 'تنظيف سجاد بينبع', priority: 8 },
-        { slug: 'yanbu-steam-cleaning', context: 'تنظيف بالبخار بينبع', priority: 9 },
+        { slug: 'furniture-moving', context: 'نقل', priority: 1 },
+        { slug: 'dabab', context: 'دباب', priority: 2 },
+        { slug: 'dyna', context: 'دينا', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 4 },
+        { slug: 'furniture-cleaning', context: 'أثاث', priority: 5 },
+        { slug: 'pest-control', context: 'حشرات', priority: 6 },
+        { slug: 'termite-control', context: 'نمل أبيض', priority: 7 },
     ],
 };

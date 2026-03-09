@@ -6,7 +6,7 @@
 // ══════════════════════════════════════════════════════════════
 
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -52,6 +52,7 @@ export const override: PageOverride = {
             question: 'الخل يطرد النمل — صحيح؟',
             answer: 'الخل يزيل مسار الفيرمونات (Pheromone Trail) مؤقتاً — النمل يختار مسار ثاني. لم يقتل نملة واحدة. المستعمرة (آلاف) حية تحت الأرض. الخل = مسكّن مؤقت ساعات. الجل الطُعم = علاج جذري 7-14 يوم. نظّف المسار بالخل بعد القضاء على المستعمرة — يمنع نمل جديد من اتباع نفس المسار.',
         },
+        { question: 'هل المبيدات آمنة على الأطفال والحيوانات؟', answer: 'مبيدات مسجلة في نظام غد — SFDA. إخلاء 2-4 ساعات بعد الرش. طيور وأسماك: أبِلغ الشركة مسبقاً لاستخدام مواد أخف. الأسطح آمنة بعد الجفاف (1-2 ساعة).' },
     ],
 
     expertTips: [
@@ -71,6 +72,7 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.SFDA, role: 'اعتماد المبيدات وأنظمة الجل الطُعم — نظام غد' },
         { ...GOV.BALADI, role: 'ترخيص شركات المكافحة واشتراطات المطاعم والمطابخ' },
+        { entity: AMANA.JEDDAH.entity, url: AMANA.JEDDAH.url, role: 'اشتراطات أمانة جدة' },
     ],
 
     expertReviewer: {
@@ -85,7 +87,6 @@ export const override: PageOverride = {
             expert: 'أ.د. عبدالله المسند',
             quote: 'في المدن الساحلية الرطبة كجدة — النمل يتكاثر 12 شهراً بلا توقف. المكافحة الوقائية الدورية هي الحل وليس الرش بعد الانتشار',
             source: 'أستاذ جغرافيا المناخ',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -112,14 +113,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'jeddah-pest-control', context: 'مكافحة شاملة لكل الحشرات — النمل جزء من منظومة', priority: 1 },
-        { slug: 'jeddah-termite-control', context: 'نمل أبيض (أرضة) يختلف عن النمل العادي — فحص مطلوب', priority: 2 },
-        { slug: 'jeddah-cockroach-control', context: 'الصراصير والنمل يتشاركون بيئة الرطوبة — مكافحة مزدوجة', priority: 3 },
-        { slug: 'jeddah-insects-spraying', context: 'رش وقائي شامل بعد إبادة النمل يمنع عودته', priority: 4 },
-        { slug: 'jeddah-pesticide-spraying', context: 'رش مبيدات الجيل الرابع — حماية دورية ربع سنوية', priority: 5 },
-        { slug: 'jeddah-sanitization', context: 'تعقيم بعد المكافحة — النمل ينقل بكتيريا للطعام', priority: 6 },
-        { slug: 'jeddah-kitchen-cleaning', context: 'تنظيف المطبخ يزيل مصادر جذب النمل (سكر/ماء)', priority: 7 },
-        { slug: 'jeddah-water-leak-detection', context: 'تسرب = رطوبة = نمل نجار يحفر خشب — علاج السبب', priority: 8 },
-        { slug: 'jeddah-cleaning', context: 'تنظيف شامل يزيل مسارات فيرمونات النمل', priority: 9 },
+        { slug: 'pest-control', context: 'مكافحة شاملة لكل الحشرات — النمل جزء من منظومة', priority: 1 },
+        { slug: 'termite-control', context: 'نمل أبيض (أرضة) يختلف عن النمل العادي — فحص مطلوب', priority: 2 },
+        { slug: 'cockroach-control', context: 'الصراصير والنمل يتشاركون بيئة الرطوبة — مكافحة مزدوجة', priority: 3 },
+        { slug: 'insects-spraying', context: 'رش وقائي شامل بعد إبادة النمل يمنع عودته', priority: 4 },
+        { slug: 'pesticide-spraying', context: 'رش مبيدات الجيل الرابع — حماية دورية ربع سنوية', priority: 5 },
+        { slug: 'sanitization', context: 'تعقيم بعد المكافحة — النمل ينقل بكتيريا للطعام', priority: 6 },
+        { slug: 'kitchen-cleaning', context: 'تنظيف المطبخ يزيل مصادر جذب النمل (سكر/ماء)', priority: 7 },
+        { slug: 'water-leak-detection', context: 'تسرب = رطوبة = نمل نجار يحفر خشب — علاج السبب', priority: 8 },
+        { slug: 'cleaning', context: 'تنظيف شامل يزيل مسارات فيرمونات النمل', priority: 9 },
     ],
 };

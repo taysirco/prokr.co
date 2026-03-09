@@ -6,7 +6,7 @@
 // ══════════════════════════════════════════════════════════════
 
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -75,6 +75,7 @@ export const override: PageOverride = {
 
     trustAnchors: [
         { ...GOV.BALADI, role: 'ترخيص شركات جلي وتلميع الأرضيات — ضمان جودة المعدات والمواد' },
+        { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
 
     expertReviewer: {
@@ -89,7 +90,6 @@ export const override: PageOverride = {
             expert: 'أ.د. عبدالله المسند',
             quote: 'رمال الرياض غنية بالكوارتز (SiO₂) — Mohs 7 — أصلب معدن شائع في الطبيعة. يخدش الحديد والصلب فما بالك بالرخام (Mohs 3)',
             source: 'أستاذ جغرافيا المناخ — بيانات جيولوجية',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -116,14 +116,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'riyadh-floor-polishing', context: 'تلميع + جلي معاً', priority: 1 },
-        { slug: 'riyadh-floor-cleaning', context: 'تنظيف قبل الجلي', priority: 2 },
-        { slug: 'riyadh-villas-cleaning', context: 'رخام الفيلا', priority: 3 },
-        { slug: 'riyadh-palaces-cleaning', context: 'رخام القصور', priority: 4 },
-        { slug: 'riyadh-cleaning', context: 'تنظيف شامل + جلي', priority: 5 },
-        { slug: 'riyadh-glass-facades-cleaning', context: 'واجهات رخامية', priority: 6 },
-        { slug: 'riyadh-steam-cleaning', context: 'بخار بعد الجلي', priority: 7 },
-        { slug: 'riyadh-water-insulation', context: 'عزل الرخام', priority: 8 },
-        { slug: 'riyadh-shops-cleaning', context: 'رخام المحلات', priority: 9 },
+        { slug: 'floor-polishing', context: 'تلميع + جلي معاً', priority: 1 },
+        { slug: 'floor-cleaning', context: 'تنظيف قبل الجلي', priority: 2 },
+        { slug: 'villas-cleaning', context: 'رخام الفيلا', priority: 3 },
+        { slug: 'palaces-cleaning', context: 'رخام القصور', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف شامل + جلي', priority: 5 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات رخامية', priority: 6 },
+        { slug: 'steam-cleaning', context: 'بخار بعد الجلي', priority: 7 },
+        { slug: 'water-insulation', context: 'عزل الرخام', priority: 8 },
+        { slug: 'shops-cleaning', context: 'رخام المحلات', priority: 9 },
     ],
 };

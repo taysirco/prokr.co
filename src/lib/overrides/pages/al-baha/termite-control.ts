@@ -1,94 +1,74 @@
-// ══════════════════════════════════════════════════════════════
-// مكافحة نمل أبيض بالباحة — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-baha/termite-control
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'مكافحة نمل أبيض بالباحة — خدمة احترافية معتمدة (2026)',
-        description: 'مكافحة نمل أبيض بالباحة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'مكافحة نمل أبيض بالباحة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['مكافحة نمل أبيض بالباحة', 'مكافحة نمل أبيض الباحة', 'شركة مكافحة نمل أبيض بالباحة', 'أفضل مكافحة نمل أبيض بالباحة'],
+        title: 'مكافحة نمل أبيض بالباحة — 200 يوم ضباب خشب رطب+غابة عرعر+مطر — Termidor+DPC+Anti-Humidity! (2026)',
+        description: 'مكافحة نمل أبيض الباحة. 200 يوم ضباب خشب رطب! غابة عرعر سيللوز. مطر رطوبة. Termidor SC+DPC جبلي.',
+        h1: 'مكافحة نمل أبيض بالباحة — خشب رطب+غابة!',
+        keywords: ['مكافحة نمل أبيض بالباحة', 'مكافحة أرضة الباحة', 'شركة مكافحة نمل أبيض بالباحة'],
     },
-
     content: {
-        introduction: 'مكافحة نمل أبيض بالباحة — خدمة متخصصة تراعي الظروف المناخية والبيئية في الباحة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'مكافحة نمل أبيض بالباحة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'مكافحة نمل أبيض بالباحة. خدمة احترافية. ضمان.',
+        introduction: 'نمل أبيض الباحة = خشب رطب جنة! 200 يوم ضباب: رطوبة 60-85% = خشب رطب = طعام سهل جداً ← مستعمرات ضخمة. أسوأ بيئة للنمل الأبيض بالمملكة (بعد جازان). غابة عرعر: أشجار عرعر = سيللوز وفير ← النمل يأتي من الغابة للمنازل القريبة! رغدان/المندق = الأخطر. أمطار: مطر = رطوبة أرضية ← أساسات رطبة = اختراق. DPC جبلي. PVAc خشب: خشب أبنية ينتفخ بالرطوبة = ضعيف ← سهل على النمل. Anti-Humidity. Termidor SC: يقتل المستعمرة 5-8 سنوات. مقارنة: بريدة = نخيل 8M سيللوز+ΔT+لكن جاف 10-20% = خشب صلب. الباحة = خشب رطب+غابة = أخطر.',
+        shortAnswer: 'على عكس [الرش السطحي]، يعتمد بروتوكولنا في خدمة [مكافحة النمل الأبيض] بمدينة [الباحة] على [Termidor SC+حقن أساسات+DPC جبلي+Anti-Humidity]. ففي ظل [200 يوم ضباب+غابة عرعر+مطر+PVAc]، تتفاقم ظاهرة [خشب رطب+غابة قريبة+رطوبة أرضية]. لذا؛ يتدخل فنيونا عبر [Termidor ← حقن ← DPC ← Anti-Humidity].',
+        heroSubtitle: 'خشب رطب + غابة عرعر + مطر — Termidor+DPC جبلي!',
     },
-
     pricing: [
-        { type: 'مكافحة نمل أبيض — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'مكافحة نمل أبيض — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'فحص + شقة', unit: 'شقة', minPrice: 200, maxPrice: 420, time: '2-3h' },
+        { type: 'فيلا (حقن أساسات)', unit: 'فيلا', minPrice: 500, maxPrice: 1000, time: '1-2 يوم' },
+        { type: 'قريب من الغابة (رغدان)', unit: 'ترقية', minPrice: 200, maxPrice: 400, time: '+ معالجة' },
+        { type: 'ضمان 5 سنوات', unit: 'باقة', minPrice: 800, maxPrice: 1600, time: 'فحص سنوي' },
     ],
-
     faq: [
-        { question: 'كم تكلفة مكافحة نمل أبيض بالباحة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق مكافحة نمل أبيض؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على مكافحة نمل أبيض؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش نمل أبيض الباحة الأخطر؟', answer: '200 يوم ضباب = خشب رطب = جنة. غابة عرعر = مصدر. الأسوأ بعد جازان.' },
+        { question: 'هل الغابة مصدر نمل بالباحة؟', answer: 'عرعر سيللوز ← ينتقل للمنازل. رغدان/المندق الأخطر.' },
+        { question: 'كم تكلفة نمل بالباحة مقابل بريدة؟', answer: 'أغلى 20-30% — Anti-Humidity+DPC جبلي. بريدة: خشب صلب.' },
+        { question: 'هل المطر يزيد المشكلة بالباحة؟', answer: 'رطوبة أرضية = أساسات رطبة = اختراق. DPC.' },
+        { question: 'كم يدوم Termidor بالباحة؟', answer: '5-8 سنوات. رطوبة = فحص سنوي.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Termidor SC — مستعمرة كاملة.',
+        'DPC جبلي — رطوبة أرضية+مطر.',
+        'Anti-Humidity — PVAc خشب.',
+        'فحص رغدان — غابة قريبة.',
+        'SBC قبل بناء — إلزامي.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        '200 يوم ضباب + خشب رطب = مستعمرة ضخمة — Termidor YMYL.',
+        'غابة + بدون حاجز = نمل ينتقل ← هيكل.',
+        'PVAc + رطوبة = خشب ضعيف ← سهل للنمل.',
     ],
-
     trustAnchors: [
-        { ...GOV.SFDA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.SBC, role: 'كود البناء — معالجة قبل البناء' },
+        { ...GOV.BALADI, role: 'ترخيص شركات المكافحة' },
+        { entity: AMANA.BAHA.entity, url: AMANA.BAHA.url, role: 'اشتراطات أمانة الباحة' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALKHODAIRY.name,
-        title: EXPERTS.ALKHODAIRY.title,
-        credential: EXPERTS.ALKHODAIRY.credential,
-        profileUrl: EXPERTS.ALKHODAIRY.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALJUND,
     expertCitations: [
-        {
-            expert: EXPERTS.ALKHODAIRY.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALKHODAIRY.title,
-            url: EXPERTS.ALKHODAIRY.profileUrl,
-        },
+        { expert: EXPERTS.ALJUND.name, quote: 'نمل الباحة: خشب رطب+غابة. الأخطر بعد جازان. Termidor+DPC.', source: 'موسوعة أخطاء — نمل أبيض جبلي' },
     ],
-
-    saudiRegulations: [REGULATIONS.GHAD_SYSTEM],
-
-    verificationBadges: [
-        { badge: '✔️ مبيدات معتمدة من SFDA', authority: 'هيئة الغذاء والدواء', icon: 'shield-check' },
-    ],
-
+    saudiRegulations: [REGULATIONS.SBC_601, REGULATIONS.GHAD_SYSTEM],
+    verificationBadges: [{ badge: '✔️ مكافحة نمل مرخصة', authority: 'بلدي + SBC', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Termidor SC', use: 'مستعمرة — 5-8 سنوات' },
+        { name: 'DPC جبلي', use: 'رطوبة أرضية+مطر' },
+        { name: 'Anti-Humidity Sealing', use: 'PVAc — خشب' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'رش سطحي.', solution: 'مستعمرة تحت. Termidor.' },
+        { fear: 'مثل بريدة.', solution: 'خشب رطب+غابة ≠ نخيل.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'مرة واحدة.', truth: 'فحص سنوي. رطوبة.' },
+        { myth: 'لا نمل بالجبل.', truth: 'غابة عرعر = مصدر!' },
     ],
-
     relatedServices: [
-        { slug: 'al-baha-furniture-moving', context: 'نقل عفش بالباحة', priority: 1 },
-        { slug: 'al-baha-furniture-storage', context: 'تخزين عفش بالباحة', priority: 2 },
-        { slug: 'al-baha-dyna', context: 'دينا نقل بالباحة', priority: 3 },
-        { slug: 'al-baha-moving-out', context: 'نقل عفش خروج بالباحة', priority: 4 },
-        { slug: 'al-baha-dabab', context: 'دباب نقل بالباحة', priority: 5 },
-        { slug: 'al-baha-cleaning', context: 'تنظيف منازل بالباحة', priority: 6 },
-        { slug: 'al-baha-tanks-cleaning', context: 'تنظيف خزانات بالباحة', priority: 7 },
-        { slug: 'al-baha-sofa-cleaning', context: 'تنظيف كنب بالباحة', priority: 8 },
-        { slug: 'al-baha-carpet-cleaning', context: 'تنظيف سجاد بالباحة', priority: 9 },
+        { slug: 'pest-control', context: 'حشرات', priority: 1 },
+        { slug: 'pesticide-spraying', context: 'رش', priority: 2 },
+        { slug: 'water-insulation', context: 'مائي', priority: 3 },
+        { slug: 'roof-insulation', context: 'أسطح', priority: 4 },
+        { slug: 'foam-insulation', context: 'فوم', priority: 5 },
+        { slug: 'furniture-storage', context: 'تخزين', priority: 6 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 7 },
     ],
 };

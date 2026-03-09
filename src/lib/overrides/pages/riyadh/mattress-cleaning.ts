@@ -6,7 +6,7 @@
 // ══════════════════════════════════════════════════════════════
 
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -75,6 +75,7 @@ export const override: PageOverride = {
 
     trustAnchors: [
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف — ضمان استخدام مواد آمنة صحياً' },
+        { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
 
     expertReviewer: {
@@ -89,7 +90,6 @@ export const override: PageOverride = {
             expert: 'أ.د. عبدالله المسند',
             quote: '90% من حالات العطاس الصباحي والحكة الليلية في الرياض سببها المرتبة — ليس الطقس. الغبار + عث + 8 ساعات تنفس مباشر = حساسية أكيدة',
             source: 'أستاذ جغرافيا المناخ — بيانات بيئية',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -116,14 +116,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'riyadh-sofa-cleaning', context: 'كنب + مراتب', priority: 1 },
-        { slug: 'riyadh-carpet-cleaning', context: 'سجاد + مراتب', priority: 2 },
-        { slug: 'riyadh-steam-cleaning', context: 'بخار شامل', priority: 3 },
-        { slug: 'riyadh-cleaning', context: 'تنظيف شامل', priority: 4 },
-        { slug: 'riyadh-sanitization', context: 'تعقيم', priority: 5 },
-        { slug: 'riyadh-bedbugs-control', context: 'بق الفراش في المراتب', priority: 6 },
-        { slug: 'riyadh-pest-control', context: 'مكافحة عث', priority: 7 },
-        { slug: 'riyadh-air-conditioner-cleaning', context: 'غبار المكيف على المراتب', priority: 8 },
-        { slug: 'riyadh-furniture-cleaning', context: 'أثاث غرفة النوم', priority: 9 },
+        { slug: 'sofa-cleaning', context: 'كنب + مراتب', priority: 1 },
+        { slug: 'carpet-cleaning', context: 'سجاد + مراتب', priority: 2 },
+        { slug: 'steam-cleaning', context: 'بخار شامل', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف شامل', priority: 4 },
+        { slug: 'sanitization', context: 'تعقيم', priority: 5 },
+        { slug: 'bedbugs-control', context: 'بق الفراش في المراتب', priority: 6 },
+        { slug: 'pest-control', context: 'مكافحة عث', priority: 7 },
+        { slug: 'air-conditioner-cleaning', context: 'غبار المكيف على المراتب', priority: 8 },
+        { slug: 'furniture-cleaning', context: 'أثاث غرفة النوم', priority: 9 },
     ],
 };

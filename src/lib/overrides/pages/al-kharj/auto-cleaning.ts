@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف سيارات بالخرج — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-kharj/auto-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف سيارات بالخرج — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف سيارات بالخرج. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف سيارات بالخرج — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف سيارات بالخرج', 'تنظيف سيارات الخرج', 'شركة تنظيف سيارات بالخرج', 'أفضل تنظيف سيارات بالخرج'],
+        title: 'تنظيف سيارات بالخرج — غبار مزارع+NH₃ رائحة+SiO₂ خدش+CaCO₃ بقع — RO+AC! (2026)',
+        description: 'تنظيف سيارات الخرج. غبار مزارع ألبان/دواجن+NH₃ رائحة كبينة+SiO₂ خدش+CaCO₃ بقع. RO+Activated Carbon+Microfiber.',
+        h1: 'تنظيف سيارات بالخرج — غبار مزارع ورائحة NH₃',
+        keywords: ['تنظيف سيارات الخرج', 'غسيل سيارات بالخرج', 'شركة تنظيف سيارات الخرج'],
     },
-
     content: {
-        introduction: 'تنظيف سيارات بالخرج — خدمة متخصصة تراعي الظروف المناخية والبيئية في الخرج. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف سيارات بالخرج: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف سيارات بالخرج. خدمة احترافية. ضمان.',
+        introduction: 'سيارة الخرج تتسخ بطريقة زراعية فريدة! أولاً — غبار مزارع: الخرج محاطة بمزارع ألبان/دواجن كبرى = غبار عضوي (سماد+تبن+أعلاف) يلتصق بالسيارة أكثر من الغبار الصحراوي العادي. ماء عادي لا يكفي — فرشاة ناعمة+شامبو pH محايد. ثانياً — NH₃ رائحة كبينة: أمونيا من المزارع تدخل الكبينة أثناء القيادة ← تتراكم في المقاعد والسقف. المعطر يُخفي — Activated Carbon يمتص. ثالثاً — SiO₂ صحراوي: رمل يخدش الطلاء لو غُسل بدون شطف أولي. Pre-Rinse ← Microfiber ← Two-Bucket Method. رابعاً — CaCO₃ 450ppm: لو غُسلت بماء الصنبور = بقع بيضاء. RO Rinse أخير. تجفيف: 15-25% = سريع — ميزة! مقارنة: الرياض = لا NH₃ لا غبار مزارع. خميس = عفن بالكبينة! الخرج = زراعي فقط.',
+        shortAnswer: 'على عكس [الغسل بماء صنبور يترك بقع CaCO₃]، يعتمد بروتوكولنا في خدمة [تنظيف السيارات] بمدينة [الخرج] على [Pre-Rinse+Microfiber+AC+RO]. ففي ظل [غبار مزارع+NH₃ رائحة+SiO₂ خدش+CaCO₃ بقع]، تتفاقم ظاهرة [التصاق+رائحة+خدش+بقع]. لذا؛ يتدخل فريقنا عبر [شطف ← غسل ← امتصاص ← شطف RO].',
+        heroSubtitle: 'غبار مزارع + NH₃ رائحة + SiO₂ خدش + CaCO₃ بقع — RO!',
     },
-
     pricing: [
-        { type: 'تنظيف سيارات — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف سيارات — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'غسل خارجي + RO', unit: 'سيارة', minPrice: 35, maxPrice: 70, time: '30-45 دقيقة' },
+        { type: 'شامل (خارج+داخل+AC)', unit: 'سيارة', minPrice: 70, maxPrice: 150, time: '1-2 ساعة' },
+        { type: 'تفصيلي (Detailing)', unit: 'سيارة', minPrice: 200, maxPrice: 420, time: '4-6 ساعات' },
+        { type: 'أسبوعي (4 غسلات/شهر)', unit: 'شهر', minPrice: 110, maxPrice: 220, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف سيارات بالخرج؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف سيارات؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف سيارات؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش سيارة الخرج تتسخ أسرع من الرياض؟', answer: 'غبار مزارع عضوي (سماد+تبن) يلتصق أكثر من غبار صحراوي. + NH₃ يدخل الكبينة.' },
+        { question: 'كيف أزيل رائحة NH₃ من كبينة السيارة؟', answer: 'Activated Carbon Filter يمتص الجزيئات. المعطر يُخفي مؤقتاً — AC يُزيل.' },
+        { question: 'ليش بقع بيضاء بعد الغسل بالخرج؟', answer: 'CaCO₃ 450ppm في ماء الصنبور. RO Rinse أخير = لا بقع. ماء صنبور = بقع.' },
+        { question: 'كم تكلفة غسل سيارة بالخرج مقارنة بالرياض؟', answer: 'متقارب — 35-150. لكن Pre-Rinse+RO يُفضّل = أفضل نتيجة بنفس السعر.' },
+        { question: 'هل SiO₂ يخدش طلاء السيارة؟', answer: 'لو غسلت بدون شطف أولي = SiO₂ يخدش. Pre-Rinse ← Microfiber ← Two-Bucket.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Pre-Rinse أولاً — SiO₂ يخدش بدونه.',
+        'RO Rinse أخير — CaCO₃ بقع بيضاء.',
+        'Activated Carbon كبينة — NH₃ مزارع.',
+        'Two-Bucket Method — غبار عضوي لزج.',
+        'أسبوعي — غبار مزارع يومي.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'غسل بدون Pre-Rinse = SiO₂ يخدش الطلاء — Swirl Marks.',
+        'ماء صنبور بدون RO = CaCO₃ بقع بيضاء على سيارة سوداء.',
+        'NH₃ + معطر = مؤقت — الرائحة تعود خلال يومين.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص مغاسل السيارات' },
+        { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMISNID.name, quote: 'سيارة الخرج: غبار مزارع عضوي لزج + NH₃ كبينة. Pre-Rinse+RO+AC.', source: 'جغرافيا المناخ — زراعي' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ مغسلة مرخصة', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Pre-Rinse ضغط', use: 'يُزيل SiO₂ قبل اللمس' },
+        { name: 'Activated Carbon Filter', use: 'يمتص NH₃ من الكبينة' },
+        { name: 'RO Water', use: 'شطف أخير بدون CaCO₃' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'مثل الرياض.', solution: 'غبار مزارع+NH₃. الرياض: غبار عادي فقط.' },
+        { fear: 'RO مبالغة.', solution: 'CaCO₃ 450ppm = بقع على سيارة سوداء. RO يمنع.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'ماء صنبور يكفي.', truth: 'CaCO₃ 450ppm = بقع. RO.' },
+        { myth: 'شهري يكفي.', truth: 'غبار مزارع يومي. أسبوعي.' },
     ],
-
     relatedServices: [
-        { slug: 'al-kharj-furniture-moving', context: 'نقل عفش بالخرج', priority: 1 },
-        { slug: 'al-kharj-furniture-storage', context: 'تخزين عفش بالخرج', priority: 2 },
-        { slug: 'al-kharj-dyna', context: 'دينا نقل بالخرج', priority: 3 },
-        { slug: 'al-kharj-moving-out', context: 'نقل عفش خروج بالخرج', priority: 4 },
-        { slug: 'al-kharj-dabab', context: 'دباب نقل بالخرج', priority: 5 },
-        { slug: 'al-kharj-cleaning', context: 'تنظيف منازل بالخرج', priority: 6 },
-        { slug: 'al-kharj-tanks-cleaning', context: 'تنظيف خزانات بالخرج', priority: 7 },
-        { slug: 'al-kharj-sofa-cleaning', context: 'تنظيف كنب بالخرج', priority: 8 },
-        { slug: 'al-kharj-carpet-cleaning', context: 'تنظيف سجاد بالخرج', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 1 },
+        { slug: 'dabab', context: 'دباب', priority: 2 },
+        { slug: 'dyna', context: 'دينا', priority: 3 },
+        { slug: 'furniture-moving', context: 'نقل عفش', priority: 4 },
+        { slug: 'carpet-cleaning', context: 'سجاد', priority: 5 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 6 },
+        { slug: 'pest-control', context: 'حشرات', priority: 7 },
     ],
 };

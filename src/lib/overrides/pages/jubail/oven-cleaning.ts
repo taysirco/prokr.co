@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف أفران بالجبيل — Override مخصص (E-E-A-T Grade)
-// صفحة: /jubail/oven-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف أفران بالجبيل — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف أفران بالجبيل. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف أفران بالجبيل — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف أفران بالجبيل', 'تنظيف أفران الجبيل', 'شركة تنظيف أفران بالجبيل', 'أفضل تنظيف أفران بالجبيل'],
+        title: 'تنظيف أفران بالجبيل — كربنة رطبة لزجة 98% + NaCl تصلب ملحي + Biofilm (2026)',
+        description: 'تنظيف أفران الجبيل. كربنة رطبة لزجة (98%) أصعب كشط. NaCl تصلب ملحي. Biofilm 98%. VOC مستمر. Alkaline Marine + Anti-Biofilm.',
+        h1: 'تنظيف أفران بالجبيل — كربنة لزجة لا تجف وملح يُصلّب وBiofilm يغطي',
+        keywords: ['تنظيف أفران الجبيل', 'تنظيف فرن بالجبيل', 'شركة تنظيف أفران بالجبيل'],
     },
-
     content: {
-        introduction: 'تنظيف أفران بالجبيل — خدمة متخصصة تراعي الظروف المناخية والبيئية في الجبيل. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف أفران بالجبيل: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف أفران بالجبيل. خدمة احترافية. ضمان.',
+        introduction: 'الفرن في الجبيل = عكس حفر الباطن تماماً. الأول — كربنة رطبة لزجة: 98% = الكربنة لا تجف = لزجة = تمتص أكثر = أسمك. أصعب كشط (لزجة > صلبة). Alkaline + Degreaser. الثاني — NaCl تصلب ملحي: ملح من أسماك + NaCl الهواء = بلورات ملحية. الثالث — Biofilm 98%: Biofilm شحمي على كل سطح = طبقة إضافية. Anti-Biofilm قبل Alkaline. الرابع — VOC مستمر: بتروكيماويات في الهواء ← تدخل المطبخ ← تترسب.',
+        shortAnswer: 'على عكس [بخاخ] الذي لا يُعالج كربنة لزجة ولا Biofilm 98%، يعتمد بروتوكولنا في خدمة [تنظيف الأفران] بمدينة [الجبيل] على [Anti-Biofilm ← Alkaline Marine ← Degreaser]. ففي ظل [كربنة لزجة + NaCl + Biofilm + VOC]، تتفاقم ظاهرة [لزوجة + تصلب + طبقات]. لذا؛ يتدخل خبراؤنا عبر [بروتوكول فرن صناعي-ساحلي].',
+        heroSubtitle: 'كربنة لزجة 98% + NaCl تصلب + Biofilm + VOC',
     },
-
     pricing: [
-        { type: 'تنظيف أفران — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف أفران — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'فرن عادي', unit: 'فرن', minPrice: 80, maxPrice: 170, time: '1-2 ساعة' },
+        { type: 'عميق (Biofilm + لزجة)', unit: 'فرن', minPrice: 130, maxPrice: 260, time: '2-3 ساعات' },
+        { type: 'فرن + شفاط + مطبخ', unit: 'باقة', minPrice: 210, maxPrice: 420, time: '3-5 ساعات' },
+        { type: 'ربع سنوي', unit: 'سنة', minPrice: 390, maxPrice: 780, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف أفران بالجبيل؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف أفران؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف أفران؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'لزجة > صلبة — أصعب؟', answer: 'أصعب كشط — لزجة = Scraper ينزلق. حفر الباطن: صلبة = يُكسر. الجبيل: لزجة = يحتاج Alkaline + Degreaser + صبر.' },
+        { question: 'Biofilm فرن — حقيقي؟', answer: '98% = Biofilm على كل سطح — حتى داخل الفرن. طبقة عضوية إضافية. Anti-Biofilm قبل الكربنة.' },
+        { question: 'NaCl — في الفرن؟', answer: 'أسماك خليجية + NaCl هوائي = بلورات ملحية + كربنة = مُركّبة. Acid Rinse.' },
+        { question: 'ربع سنوي — مثل حفر الباطن؟', answer: 'نعم — لكن لأسباب مختلفة! حفر الباطن: تجف فوراً. الجبيل: تتراكم لزجة. نفس التكرار — سبب مختلف.' },
+        { question: 'كم تكلفة التنظيف العميق مقارنة بالتنظيف العادي؟', answer: 'التنظيف العميق أغلى 30-50% لكنه يشمل: HEPA + بخار 150°م + تعقيم. التنظيف العادي = مسح سطحي. العميق كل 3-4 أشهر + العادي أسبوعياً = أفضل معادلة تكلفة/نظافة.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Anti-Biofilm أولاً — يكشف الكربنة تحت.',
+        'Alkaline + Marine Degreaser — لزجة + VOC.',
+        'Acid Rinse — بلورات NaCl ملحية.',
+        'ماء RO — لا ترسبات شطف.',
+        'بعد التنظيف: شغّل المكيف وليس الشبّاك — الهواء الخارجي يعيد الغبار على الأسطح النظيفة.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'كربنة لزجة × 6 أشهر = طبقات × Biofilm = لا تُزال بسهولة.',
+        'Biofilm يحمي الكربنة = بخاخ لا يصل. Anti-Biofilm أولاً.',
+        'NaCl بلوري + كربنة = مُركّبة أقسى.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص التنظيف' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات الصحة بالشرقية' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'فرن الجبيل: كربنة لزجة 98% + NaCl + Biofilm. عكس حفر الباطن الصلبة. Anti-Biofilm ← Alkaline Marine.', source: 'نصائح هندسية — أفران ساحلية-صناعية' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف أفران مرخص', authority: 'منصة بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Anti-Biofilm', use: '98% Biofilm — يكشف الكربنة' },
+        { name: 'Alkaline Marine', use: 'كربنة لزجة + VOC' },
+        { name: 'Acid Rinse', use: 'NaCl بلوري — ملحي' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'مثل حفر الباطن.', solution: 'لزجة ≠ صلبة. 98% ≠ 10-15%. Biofilm ≠ لا Biofilm. عكس.' },
+        { fear: 'بخاخ.', solution: 'Biofilm يحمي. لا يصل. Anti-Biofilm أولاً.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'مثل الرياض.', truth: '98% لزجة + Biofilm + NaCl. رياض جافة.' },
+        { myth: 'نصف سنوي.', truth: 'لزجة تتراكم أسرع. ربع سنوي.' },
     ],
-
     relatedServices: [
-        { slug: 'jubail-furniture-moving', context: 'نقل عفش بالجبيل', priority: 1 },
-        { slug: 'jubail-furniture-storage', context: 'تخزين عفش بالجبيل', priority: 2 },
-        { slug: 'jubail-dyna', context: 'دينا نقل بالجبيل', priority: 3 },
-        { slug: 'jubail-moving-out', context: 'نقل عفش خروج بالجبيل', priority: 4 },
-        { slug: 'jubail-dabab', context: 'دباب نقل بالجبيل', priority: 5 },
-        { slug: 'jubail-cleaning', context: 'تنظيف منازل بالجبيل', priority: 6 },
-        { slug: 'jubail-tanks-cleaning', context: 'تنظيف خزانات بالجبيل', priority: 7 },
-        { slug: 'jubail-sofa-cleaning', context: 'تنظيف كنب بالجبيل', priority: 8 },
-        { slug: 'jubail-carpet-cleaning', context: 'تنظيف سجاد بالجبيل', priority: 9 },
+        { slug: 'restaurant-chimney-cleaning', context: 'مداخن — كربنة', priority: 1 },
+        { slug: 'cleaning', context: 'تنظيف — مطبخ', priority: 2 },
+        { slug: 'pest-control', context: 'حشرات — بعوض', priority: 3 },
+        { slug: 'steam-cleaning', context: 'بخار', priority: 4 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 5 },
+        { slug: 'hourly-cleaning', context: 'بالساعة', priority: 6 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات', priority: 7 },
     ],
 };

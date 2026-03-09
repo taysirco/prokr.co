@@ -4,6 +4,7 @@ import { Home, ChevronLeft, Clock, User, Calendar, Tag, ArrowLeft } from 'lucide
 import { BLOG_ARTICLES, getBlogArticle } from '@/lib/blog-data';
 import { getServiceBySlug } from '@/lib/seed';
 import { BreadcrumbJsonLd } from '@/components/JsonLd';
+import { isAbsorbedSlug } from '@/lib/services/super-page-groups';
 import Footer from '@/components/Footer';
 import { notFound } from 'next/navigation';
 
@@ -244,7 +245,7 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
                         <div className="bg-gradient-to-bl from-emerald-50 to-emerald-100 rounded-xl p-6 border border-emerald-200 mb-10">
                             <h3 className="font-bold text-emerald-900 mb-4">ابحث عن أفضل الشركات</h3>
                             <div className="flex flex-wrap gap-2">
-                                {article.relatedServices.map(serviceSlug => {
+                                {article.relatedServices.filter(s => !isAbsorbedSlug(s)).map(serviceSlug => {
                                     const service = getServiceBySlug(serviceSlug);
                                     return service ? (
                                         <Link

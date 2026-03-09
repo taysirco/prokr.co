@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تخزين عفش بالباحة — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-baha/furniture-storage
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تخزين عفش بالباحة — خدمة احترافية معتمدة (2026)',
-        description: 'تخزين عفش بالباحة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تخزين عفش بالباحة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تخزين عفش بالباحة', 'تخزين عفش الباحة', 'شركة تخزين عفش بالباحة', 'أفضل تخزين عفش بالباحة'],
+        title: 'تخزين أثاث بالباحة — 60-85% عفن PVAc+ضباب+حشرات غابة — Dehumidifier+Anti-Fungal+IPM! (2026)',
+        description: 'تخزين أثاث الباحة. 60-85% عفن PVAc! ضباب 200 يوم. حشرات غابة. Dehumidifier+Anti-Fungal+Anti-Humidity+IPM.',
+        h1: 'تخزين أثاث بالباحة — عفن+PVAc+غابة!',
+        keywords: ['تخزين أثاث بالباحة', 'تخزين عفش الباحة', 'شركة تخزين أثاث بالباحة'],
     },
-
     content: {
-        introduction: 'تخزين عفش بالباحة — خدمة متخصصة تراعي الظروف المناخية والبيئية في الباحة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تخزين عفش بالباحة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تخزين عفش بالباحة. خدمة احترافية. ضمان.',
+        introduction: 'تخزين الباحة = أعقد تخزين بالمملكة! 60-85% عفن: رطوبة ضباب تتسلل للمستودع ← عفن على كل شيء أسبوعين! Dehumidifier مُستمر إلزامي. PVAc Swelling: خشب أثاث ينتفخ بالرطوبة ← مفاصل تنكسر أثناء التخزين! Anti-Humidity Sealing. حشرات غابة: خنافس+نمل من الغابة يدخل المستودع ← يهاجم الخشب. IPM Forest. أمطار: تسرب مطر للمستودع ← تلف. Waterproof. مقارنة: بريدة = 10-20% = لا عفن! لكن: ΔT خشب يتشقق. الباحة = عفن+PVAc+حشرات+مطر = أعقد!',
+        shortAnswer: 'على عكس [المستودع العادي]، يعتمد بروتوكولنا في خدمة [التخزين] بمدينة [الباحة] على [Dehumidifier مُستمر+Anti-Fungal+Anti-Humidity+IPM]. ففي ظل [60-85% عفن+PVAc+حشرات غابة+مطر]، تتفاقم ظاهرة [عفن+انتفاخ+هجوم+تسرب]. لذا؛ يتدخل فريقنا عبر [Dehumidifier ← Anti-Fungal ← Anti-Humidity ← IPM].',
+        heroSubtitle: '60-85% عفن + PVAc ينتفخ + حشرات غابة — Dehumidifier مُستمر!',
     },
-
     pricing: [
-        { type: 'تخزين عفش — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تخزين عفش — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'مستودع صغير (10 م³)', unit: 'شهر', minPrice: 300, maxPrice: 620, time: 'شهري' },
+        { type: 'مستودع كبير (30 م³)', unit: 'شهر', minPrice: 600, maxPrice: 1200, time: 'شهري' },
+        { type: '+ Anti-Humidity معالجة', unit: 'أثاث', minPrice: 150, maxPrice: 310, time: 'معالجة' },
+        { type: 'سنوي', unit: 'سنة', minPrice: 3000, maxPrice: 6000, time: 'سنوي' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تخزين عفش بالباحة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تخزين عفش؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تخزين عفش؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش تخزين الباحة الأعقد؟', answer: 'عفن+PVAc+حشرات+مطر = 4 تحديات. بريدة: ΔT فقط.' },
+        { question: 'هل الأثاث يتعفّن بالمستودع بالباحة؟', answer: '60-85% = عفن أسبوعين! Dehumidifier مُستمر إلزامي.' },
+        { question: 'هل حشرات الغابة تدخل المستودع بالباحة؟', answer: 'خنافس+نمل. IPM Forest+إحكام.' },
+        { question: 'كم تكلفة تخزين بالباحة مقابل بريدة؟', answer: 'أغلى 50-60% — Dehumidifier+IPM. الأغلى بالمملكة.' },
+        { question: 'كم يستمر الخشب بمستودع الباحة؟', answer: 'بدون Anti-Humidity: PVAc 3-5 سنوات ← يتفكك.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Dehumidifier مُستمر — 60-85%.',
+        'Anti-Fungal شهري — عفن.',
+        'Anti-Humidity — PVAc خشب.',
+        'IPM — حشرات غابة.',
+        'Waterproof — مطر تسرب.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'مستودع بدون Dehumidifier = عفن كل الأثاث ← YMYL.',
+        'PVAc + رطوبة × 3 سنوات = تفكك — Anti-Humidity.',
+        'حشرات غابة + مستودع مفتوح = هجوم خشب — IPM.',
     ],
-
     trustAnchors: [
-        { ...GOV.TGA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص مستودعات التخزين' },
+        { entity: AMANA.BAHA.entity, url: AMANA.BAHA.url, role: 'اشتراطات أمانة الباحة' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALZUWAYED.name,
-        title: EXPERTS.ALZUWAYED.title,
-        credential: EXPERTS.ALZUWAYED.credential,
-        profileUrl: EXPERTS.ALZUWAYED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
-        {
-            expert: EXPERTS.ALZUWAYED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALZUWAYED.title,
-            url: EXPERTS.ALZUWAYED.profileUrl,
-        },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'تخزين الباحة: الأعقد! Dehumidifier+IPM+Anti-Humidity. 4 تحديات.', source: 'نصائح هندسية — تخزين جبلي' },
     ],
-
-    saudiRegulations: [REGULATIONS.TGA_LICENSE],
-
-    verificationBadges: [
-        { badge: '✔️ شركة نقل مرخصة من هيئة النقل TGA', authority: 'الهيئة العامة للنقل', icon: 'shield-check' },
-    ],
-
+    saudiRegulations: [REGULATIONS.BALADI_HEALTH],
+    verificationBadges: [{ badge: '✔️ تخزين مرخص', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Dehumidifier صناعي', use: '60-85% — مُستمر' },
+        { name: 'IPM Forest', use: 'خنافس+نمل — غابة' },
+        { name: 'Anti-Humidity Sealing', use: 'PVAc — خشب' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'مستودع عادي.', solution: '60-85% = عفن. Dehumidifier.' },
+        { fear: 'مثل بريدة.', solution: 'عفن+PVAc+غابة ≠ ΔT.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'فحص سنوي.', truth: 'Anti-Fungal شهري. غابة.' },
+        { myth: 'مستودع يكفي.', truth: 'Dehumidifier+IPM+Waterproof.' },
     ],
-
     relatedServices: [
-        { slug: 'al-baha-furniture-moving', context: 'نقل عفش بالباحة', priority: 1 },
-        { slug: 'al-baha-dyna', context: 'دينا نقل بالباحة', priority: 2 },
-        { slug: 'al-baha-moving-out', context: 'نقل عفش خروج بالباحة', priority: 3 },
-        { slug: 'al-baha-dabab', context: 'دباب نقل بالباحة', priority: 4 },
-        { slug: 'al-baha-cleaning', context: 'تنظيف منازل بالباحة', priority: 5 },
-        { slug: 'al-baha-tanks-cleaning', context: 'تنظيف خزانات بالباحة', priority: 6 },
-        { slug: 'al-baha-sofa-cleaning', context: 'تنظيف كنب بالباحة', priority: 7 },
-        { slug: 'al-baha-carpet-cleaning', context: 'تنظيف سجاد بالباحة', priority: 8 },
-        { slug: 'al-baha-steam-cleaning', context: 'تنظيف بالبخار بالباحة', priority: 9 },
+        { slug: 'furniture-moving', context: 'نقل', priority: 1 },
+        { slug: 'dabab', context: 'دباب', priority: 2 },
+        { slug: 'dyna', context: 'دينا', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 4 },
+        { slug: 'furniture-cleaning', context: 'أثاث', priority: 5 },
+        { slug: 'pest-control', context: 'حشرات', priority: 6 },
+        { slug: 'termite-control', context: 'نمل أبيض', priority: 7 },
     ],
 };

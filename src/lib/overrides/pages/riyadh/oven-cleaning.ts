@@ -6,7 +6,7 @@
 // ══════════════════════════════════════════════════════════════
 
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -52,6 +52,7 @@ export const override: PageOverride = {
             question: 'مزيل الكربون الصناعي آمن على الطعام بعدين؟',
             answer: 'المزيل الصناعي قلوي قوي (pH 13-14) — يُطبّق ← يُنقع ← يُشطف بالماء الساخن بالكامل. بعد الشطف الكامل: لا أثر كيميائي — الحرارة العالية للفرن (250°م+) تبخّر أي بقايا. الفنيون يرتدون قفازات ونظارات أثناء التطبيق. بعد الشطف + تسخين الفرن 10 دقائق: آمن 100% للطبخ.',
         },
+        { question: 'كم تكلفة التنظيف العميق مقارنة بالتنظيف العادي؟', answer: 'التنظيف العميق أغلى 30-50% لكنه يشمل: HEPA + بخار 150°م + تعقيم. التنظيف العادي = مسح سطحي. العميق كل 3-4 أشهر + العادي أسبوعياً = أفضل معادلة تكلفة/نظافة.' },
     ],
 
     expertTips: [
@@ -71,13 +72,14 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.BALADI, role: 'ترخيص شركات تنظيف المطابخ — اشتراطات نظافة للمنشآت التجارية' },
         { ...GOV.SFDA, role: 'معايير سلامة الغذاء — نظافة أدوات تحضير الطعام' },
+        { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
 
     expertReviewer: {
-        name: EXPERTS.ALMISNID.name,
-        title: EXPERTS.ALMISNID.title,
-        credential: EXPERTS.ALMISNID.credential,
-        profileUrl: EXPERTS.ALMISNID.profileUrl,
+        name: EXPERTS.ALMOHAIMED.name,
+        title: EXPERTS.ALMOHAIMED.title,
+        credential: EXPERTS.ALMOHAIMED.credential,
+        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
     },
 
     expertCitations: [
@@ -85,7 +87,6 @@ export const override: PageOverride = {
             expert: 'أ.د. عبدالله المسند',
             quote: 'الغبار الصحراوي يدخل كل مكان — المطبخ ليس استثناء. في الأفران والشفاطات يختلط مع الدهون ويخلق مادة مركّبة لا تُزال بالوسائل المنزلية',
             source: 'أستاذ جغرافيا المناخ',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -112,14 +113,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'riyadh-kitchen-cleaning', context: 'مطبخ شامل + فرن', priority: 1 },
-        { slug: 'riyadh-steam-cleaning', context: 'بخار الفرن', priority: 2 },
-        { slug: 'riyadh-cleaning', context: 'تنظيف شامل', priority: 3 },
-        { slug: 'riyadh-restaurant-chimney-cleaning', context: 'أفران المطاعم', priority: 4 },
-        { slug: 'riyadh-sanitization', context: 'تعقيم المطبخ', priority: 5 },
-        { slug: 'riyadh-cockroach-control', context: 'صراصير خلف الفرن', priority: 6 },
-        { slug: 'riyadh-air-conditioner-cleaning', context: 'دهون تسد الفلتر', priority: 7 },
-        { slug: 'riyadh-pest-control', context: 'رش المطبخ', priority: 8 },
-        { slug: 'riyadh-floor-cleaning', context: 'أرضية المطبخ', priority: 9 },
+        { slug: 'kitchen-cleaning', context: 'مطبخ شامل + فرن', priority: 1 },
+        { slug: 'steam-cleaning', context: 'بخار الفرن', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف شامل', priority: 3 },
+        { slug: 'restaurant-chimney-cleaning', context: 'أفران المطاعم', priority: 4 },
+        { slug: 'sanitization', context: 'تعقيم المطبخ', priority: 5 },
+        { slug: 'cockroach-control', context: 'صراصير خلف الفرن', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'دهون تسد الفلتر', priority: 7 },
+        { slug: 'pest-control', context: 'رش المطبخ', priority: 8 },
+        { slug: 'floor-cleaning', context: 'أرضية المطبخ', priority: 9 },
     ],
 };

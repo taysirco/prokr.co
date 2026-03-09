@@ -6,7 +6,7 @@
 // ══════════════════════════════════════════════════════════════
 
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -53,6 +53,7 @@ export const override: PageOverride = {
             question: 'كل كم أنظف المجلس بالرياض؟',
             answer: 'مجلس يُستخدم أسبوعياً (الخميس): تنظيف بخار شهري + Anti-Static. مجلس مناسبات فقط: كل 3 أشهر. بين التنظيفات: شفط HEPA أسبوعي بنفسك (10-15 دقيقة). قبل المناسبات الكبيرة: احجز قبل 3-5 أيام — المواسم يزيد الطلب.',
         },
+        { question: 'كم تكلفة التنظيف العميق مقارنة بالتنظيف العادي؟', answer: 'التنظيف العميق أغلى 30-50% لكنه يشمل: HEPA + بخار 150°م + تعقيم. التنظيف العادي = مسح سطحي. العميق كل 3-4 أشهر + العادي أسبوعياً = أفضل معادلة تكلفة/نظافة.' },
     ],
 
     expertTips: [
@@ -71,6 +72,7 @@ export const override: PageOverride = {
 
     trustAnchors: [
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف — ضمان استخدام مواد آمنة على الأقمشة' },
+        { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
 
     expertReviewer: {
@@ -85,7 +87,6 @@ export const override: PageOverride = {
             expert: 'أ.د. عبدالله المسند',
             quote: 'الجلسات الأرضية في الرياض = أقل مستوى في الغرفة = أعلى تراكم غبار. بخار 150°م يستخرج الغبار ويجف خلال 30 دقيقة — ميزة مناخ الرياض الجاف',
             source: 'أستاذ جغرافيا المناخ',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -112,14 +113,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'riyadh-sofa-cleaning', context: 'كنب المجلس', priority: 1 },
-        { slug: 'riyadh-carpet-cleaning', context: 'سجاد المجلس', priority: 2 },
-        { slug: 'riyadh-steam-cleaning', context: 'بخار شامل للمجلس', priority: 3 },
-        { slug: 'riyadh-sanitization', context: 'تعقيم بعد التجمعات', priority: 4 },
-        { slug: 'riyadh-cleaning', context: 'تنظيف شامل مع المجلس', priority: 5 },
-        { slug: 'riyadh-air-conditioner-cleaning', context: 'مكيف المجلس', priority: 6 },
-        { slug: 'riyadh-mattress-cleaning', context: 'مساند المجلس الأرضي', priority: 7 },
-        { slug: 'riyadh-pest-control', context: 'رش وقائي', priority: 8 },
-        { slug: 'riyadh-floor-polishing', context: 'أرضية المجلس', priority: 9 },
+        { slug: 'sofa-cleaning', context: 'كنب المجلس', priority: 1 },
+        { slug: 'carpet-cleaning', context: 'سجاد المجلس', priority: 2 },
+        { slug: 'steam-cleaning', context: 'بخار شامل للمجلس', priority: 3 },
+        { slug: 'sanitization', context: 'تعقيم بعد التجمعات', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف شامل مع المجلس', priority: 5 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف المجلس', priority: 6 },
+        { slug: 'mattress-cleaning', context: 'مساند المجلس الأرضي', priority: 7 },
+        { slug: 'pest-control', context: 'رش وقائي', priority: 8 },
+        { slug: 'floor-polishing', context: 'أرضية المجلس', priority: 9 },
     ],
 };

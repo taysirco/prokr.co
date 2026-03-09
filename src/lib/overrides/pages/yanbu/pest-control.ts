@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// مكافحة حشرات بينبع — Override مخصص (E-E-A-T Grade)
-// صفحة: /yanbu/pest-control
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'مكافحة حشرات بينبع — خدمة احترافية معتمدة (2026)',
-        description: 'مكافحة حشرات بينبع. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'مكافحة حشرات بينبع — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['مكافحة حشرات بينبع', 'مكافحة حشرات ينبع', 'شركة مكافحة حشرات بينبع', 'أفضل مكافحة حشرات بينبع'],
+        title: 'مكافحة حشرات بينبع — 70-85% بعوض+صراصير+NaCl+SOx+ميناء — IGR+BTI! (2026)',
+        description: 'مكافحة حشرات ينبع. 70-85% بعوض تكاثر+صراصير عفن! NaCl+SOx. ميناء PM2.5. IGR+BTI+رش مُركّز.',
+        h1: 'مكافحة حشرات بينبع — بعوض+صراصير+عفن!',
+        keywords: ['مكافحة حشرات ينبع', 'مكافحة حشرات بينبع', 'شركة مكافحة حشرات ينبع'],
     },
-
     content: {
-        introduction: 'مكافحة حشرات بينبع — خدمة متخصصة تراعي الظروف المناخية والبيئية في ينبع. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'مكافحة حشرات بينبع: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'مكافحة حشرات بينبع. خدمة احترافية. ضمان.',
+        introduction: 'حشرات ينبع = رطوبة+ميناء+صناعي! 70-85% بعوض: رطوبة بحرية = بعوض Aedes aegypti يتكاثر في أي ركود مياه! BTI (Bacillus thuringiensis) بيولوجي آمن. 70-85% صراصير: رطوبة = صراصير ألمانية أسرع تكاثراً + تتغذى على عفن. IGR (Insect Growth Regulator) + Gel Bait. ميناء: سفن تنقل حشرات غريبة. PM2.5 + حشرات. NaCl: ملح لا يقتل حشرات. SOx: YASREF لا يأثر مباشرة. التحدي: رطوبة × حرارة = تكاثر مضاعف. بريدة: جافة 10-20% = لا بعوض! ينبع: بعوض+صراصير+ميناء = أعقد.',
+        shortAnswer: 'على عكس [الرش السطحي]، يعتمد بروتوكولنا في خدمة [مكافحة الحشرات] بمدينة [ينبع] على [IGR+BTI+Gel Bait+رش مُركّز]. ففي ظل [70-85% بعوض+صراصير+ميناء+حرارة]، تتفاقم ظاهرة [تكاثر مضاعف+أنواع غريبة]. لذا؛ يتدخل فنيونا عبر [IGR ← BTI ← Gel ← رش].',
+        heroSubtitle: '70-85% بعوض + صراصير + ميناء — IGR+BTI+Gel!',
     },
-
     pricing: [
-        { type: 'مكافحة حشرات — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'مكافحة حشرات — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'شقة — مكافحة شاملة', unit: 'شقة', minPrice: 120, maxPrice: 250, time: '1-2h' },
+        { type: 'فيلا — شاملة + BTI', unit: 'فيلا', minPrice: 250, maxPrice: 520, time: '2-4h' },
+        { type: 'مستودع/ميناء', unit: 'م²', minPrice: 5, maxPrice: 12, time: 'حسب المساحة' },
+        { type: 'شهري (4 رشات)', unit: 'شهر', minPrice: 200, maxPrice: 420, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة مكافحة حشرات بينبع؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق مكافحة حشرات؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على مكافحة حشرات؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش بعوض ينبع أكثر من بريدة بكثير؟', answer: '70-85% = ركود مياه. بريدة: 10-20% = لا بعوض. BTI بيولوجي.' },
+        { question: 'ليش صراصير أكثر بينبع؟', answer: '70-85% = عفن = طعام. صراصير ألمانية تتكاثر أسرع. IGR+Gel.' },
+        { question: 'هل الميناء يجلب حشرات بينبع؟', answer: 'سفن تنقل أنواع غريبة. مستودعات = بيئة تكاثر.' },
+        { question: 'كم تكلفة مكافحة بينبع مقابل بريدة؟', answer: 'أغلى 25-30% — بعوض+صراصير. بريدة: لا بعوض.' },
+        { question: 'ما BTI ببينبع؟', answer: 'بكتيريا بيولوجية تقتل يرقات بعوض. آمنة 100%. ركود مياه.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'BTI — بعوض ركود مياه.',
+        'IGR — صراصير مانع نمو.',
+        'Gel Bait — صراصير ألمانية.',
+        'شهري — 70-85% تكاثر.',
+        'فحص ميناء — أنواع غريبة.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        '70-85% + ركود × أسبوع = بعوض — BTI فوري YMYL.',
+        'صراصير + عفن × شهر = مستعمرات — IGR+Gel.',
+        'ميناء + مستودعات = حشرات غريبة — فحص دوري.',
     ],
-
     trustAnchors: [
-        { ...GOV.SFDA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص شركات المكافحة' },
+        { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'اشتراطات أمانة ينبع' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALKHODAIRY.name,
-        title: EXPERTS.ALKHODAIRY.title,
-        credential: EXPERTS.ALKHODAIRY.credential,
-        profileUrl: EXPERTS.ALKHODAIRY.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALKHODAIRY,
     expertCitations: [
-        {
-            expert: EXPERTS.ALKHODAIRY.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALKHODAIRY.title,
-            url: EXPERTS.ALKHODAIRY.profileUrl,
-        },
+        { expert: EXPERTS.ALKHODAIRY.name, quote: 'حشرات ينبع: 70-85% بعوض+صراصير. BTI+IGR. ميناء أنواع غريبة.', source: 'حشرات المملكة — ساحلي-صناعي' },
     ],
-
     saudiRegulations: [REGULATIONS.GHAD_SYSTEM],
-
-    verificationBadges: [
-        { badge: '✔️ مبيدات معتمدة من SFDA', authority: 'هيئة الغذاء والدواء', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ مكافحة حشرات مرخصة', authority: 'بلدي + SFDA', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'BTI Granules', use: 'بعوض — يرقات بيولوجي' },
+        { name: 'IGR', use: 'صراصير — مانع نمو' },
+        { name: 'Gel Bait', use: 'صراصير ألمانية — طُعم' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'رش عام.', solution: 'BTI+IGR+Gel = متخصص.' },
+        { fear: 'مثل بريدة.', solution: 'بعوض+صراصير+عفن = مختلف.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'رش عام.', truth: 'BTI+IGR+Gel = ثلاثي متخصص.' },
+        { myth: 'ربع سنوي.', truth: '70-85% = شهري. تكاثر.' },
     ],
-
     relatedServices: [
-        { slug: 'yanbu-furniture-moving', context: 'نقل عفش بينبع', priority: 1 },
-        { slug: 'yanbu-furniture-storage', context: 'تخزين عفش بينبع', priority: 2 },
-        { slug: 'yanbu-dyna', context: 'دينا نقل بينبع', priority: 3 },
-        { slug: 'yanbu-moving-out', context: 'نقل عفش خروج بينبع', priority: 4 },
-        { slug: 'yanbu-dabab', context: 'دباب نقل بينبع', priority: 5 },
-        { slug: 'yanbu-cleaning', context: 'تنظيف منازل بينبع', priority: 6 },
-        { slug: 'yanbu-tanks-cleaning', context: 'تنظيف خزانات بينبع', priority: 7 },
-        { slug: 'yanbu-sofa-cleaning', context: 'تنظيف كنب بينبع', priority: 8 },
-        { slug: 'yanbu-carpet-cleaning', context: 'تنظيف سجاد بينبع', priority: 9 },
+        { slug: 'pesticide-spraying', context: 'رش', priority: 1 },
+        { slug: 'bedbugs-control', context: 'بق', priority: 2 },
+        { slug: 'termite-control', context: 'نمل أبيض', priority: 3 },
+        { slug: 'bird-control', context: 'طيور', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 5 },
+        { slug: 'tanks-cleaning', context: 'خزانات', priority: 6 },
+        { slug: 'sewage-suction', context: 'شفط', priority: 7 },
     ],
 };

@@ -94,13 +94,11 @@ export const override: PageOverride = {
             expert: 'أ.د. فهد الخضيري',
             quote: 'المبيدات غير المسجلة في نظام غد SFDA تحتوي مواد فعالة محظورة دولياً — استنشاقها في غرفة مغلقة بحرارة مكة يُعرّض الأطفال وكبار السن لتسمم تنفسي حاد. لا تقبل أي مبيد بدون رقم تسجيل SFDA',
             source: 'عالم أبحاث طبي — متخصص في السموم والمسرطنات',
-            url: 'https://x.com/DrAlkhodairy',
         },
         {
             expert: 'أ.د. عبدالله المسند',
             quote: 'مناخ مكة الحار المستمر يعني غياب فترة السكون الحشري — الحشرات نشطة 12 شهراً. المكافحة الموسمية وحدها لا تكفي — تحتاج برنامج دوري',
             source: 'أستاذ المناخ والبيئة',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -131,14 +129,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'makkah-bedbugs-control', context: 'بق الفراش المشكلة الأكبر في فنادق مكة — يحتاج بروتوكول إبادة منفصل', priority: 1 },
-        { slug: 'makkah-termite-control', context: 'النمل الأبيض يهدد أساسات مباني مكة القديمة — حقن تربة بضمان 10 سنوات', priority: 2 },
-        { slug: 'makkah-pesticide-spraying', context: 'رش وقائي دوري للفلل والأحواش — يمنع دخول الحشرات من الخارج', priority: 3 },
-        { slug: 'makkah-bird-control', context: 'الحمام يجذب الحشرات بفضلاته — طارد حمام + شبك نوافذ', priority: 4 },
-        { slug: 'makkah-cleaning', context: 'تنظيف عميق بعد المكافحة يزيل بقايا الحشرات والبيض الميت', priority: 5 },
-        { slug: 'makkah-sewage-unblocking', context: 'بيارات مسدودة = بؤرة تكاثر ذباب وبعوض — تسليك فوري', priority: 6 },
-        { slug: 'makkah-tanks-cleaning', context: 'خزانات مفتوحة أو متشققة = مداخل للحشرات — تنظيف وتغطية', priority: 7 },
-        { slug: 'makkah-water-leak-detection', context: 'الرطوبة المخفية من التسربات تجذب الصراصير والنمل — كشف وإصلاح', priority: 8 },
-        { slug: 'makkah-sanitization', context: 'تعقيم بعد إبادة بق الفراش — مراتب وأقمشة ومفروشات', priority: 9 },
+        { slug: 'bedbugs-control', context: 'بق الفراش المشكلة الأكبر في فنادق مكة — يحتاج بروتوكول إبادة منفصل', priority: 1 },
+        { slug: 'termite-control', context: 'النمل الأبيض يهدد أساسات مباني مكة القديمة — حقن تربة بضمان 10 سنوات', priority: 2 },
+        { slug: 'pesticide-spraying', context: 'رش وقائي دوري للفلل والأحواش — يمنع دخول الحشرات من الخارج', priority: 3 },
+        { slug: 'bird-control', context: 'الحمام يجذب الحشرات بفضلاته — طارد حمام + شبك نوافذ', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف عميق بعد المكافحة يزيل بقايا الحشرات والبيض الميت', priority: 5 },
+        { slug: 'sewage-unblocking', context: 'بيارات مسدودة = بؤرة تكاثر ذباب وبعوض — تسليك فوري', priority: 6 },
+        { slug: 'tanks-cleaning', context: 'خزانات مفتوحة أو متشققة = مداخل للحشرات — تنظيف وتغطية', priority: 7 },
+        { slug: 'water-leak-detection', context: 'الرطوبة المخفية من التسربات تجذب الصراصير والنمل — كشف وإصلاح', priority: 8 },
+        { slug: 'sanitization', context: 'تعقيم بعد إبادة بق الفراش — مراتب وأقمشة ومفروشات', priority: 9 },
     ],
 };

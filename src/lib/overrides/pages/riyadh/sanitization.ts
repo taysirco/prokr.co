@@ -6,7 +6,7 @@
 // ══════════════════════════════════════════════════════════════
 
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -77,6 +77,7 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.SFDA, role: 'اعتماد مواد التعقيم — ضمان الفعالية والمأمونية الصحية' },
         { ...GOV.BALADI, role: 'اشتراط شهادة تعقيم لتجديد الرخص التجارية' },
+        { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
 
     expertReviewer: {
@@ -91,7 +92,6 @@ export const override: PageOverride = {
             expert: 'أ.د. عبدالله المسند',
             quote: 'المباني المغلقة في الرياض تُعيد تدوير الهواء — فيروس واحد في الطابق الأول يصل العاشر عبر التكييف. التعقيم التقليدي لا يعالج الهواء. ULV يعقم الأسطح والهواء معاً',
             source: 'أستاذ جغرافيا المناخ',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -119,14 +119,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'riyadh-cleaning', context: 'تنظيف + تعقيم', priority: 1 },
-        { slug: 'riyadh-steam-cleaning', context: 'بخار تعقيم حراري', priority: 2 },
-        { slug: 'riyadh-pest-control', context: 'مكافحة + تعقيم', priority: 3 },
-        { slug: 'riyadh-tanks-cleaning', context: 'تعقيم خزانات', priority: 4 },
-        { slug: 'riyadh-air-conditioner-cleaning', context: 'تعقيم مجاري تكييف', priority: 5 },
-        { slug: 'riyadh-sofa-cleaning', context: 'تعقيم مفروشات', priority: 6 },
-        { slug: 'riyadh-carpet-cleaning', context: 'تعقيم سجاد', priority: 7 },
-        { slug: 'riyadh-kitchen-cleaning', context: 'تعقيم مطبخ', priority: 8 },
-        { slug: 'riyadh-mattress-cleaning', context: 'تعقيم مراتب', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف + تعقيم', priority: 1 },
+        { slug: 'steam-cleaning', context: 'بخار تعقيم حراري', priority: 2 },
+        { slug: 'pest-control', context: 'مكافحة + تعقيم', priority: 3 },
+        { slug: 'tanks-cleaning', context: 'تعقيم خزانات', priority: 4 },
+        { slug: 'air-conditioner-cleaning', context: 'تعقيم مجاري تكييف', priority: 5 },
+        { slug: 'sofa-cleaning', context: 'تعقيم مفروشات', priority: 6 },
+        { slug: 'carpet-cleaning', context: 'تعقيم سجاد', priority: 7 },
+        { slug: 'kitchen-cleaning', context: 'تعقيم مطبخ', priority: 8 },
+        { slug: 'mattress-cleaning', context: 'تعقيم مراتب', priority: 9 },
     ],
 };

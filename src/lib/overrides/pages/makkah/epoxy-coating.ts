@@ -91,7 +91,6 @@ export const override: PageOverride = {
             expert: 'م. ماجد المحيميد',
             quote: 'أرضية خرسانة بدون إيبوكسي في مواقف مكة تتفتت خلال سنتين من الحرارة والضغط. الإيبوكسي يحمي لعقود — لكن الجلخ والتحضير الصحيح = 80% من جودة النتيجة',
             source: 'خبير جودة البناء والتشطيبات',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
 
@@ -122,12 +121,12 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'makkah-tank-insulation', context: 'عزل خزان بإيبوكسي Food Grade — حماية مياه الشرب', priority: 1 },
-        { slug: 'makkah-tank-leak-detection', context: 'كشف تسربات خزان قبل عزل الإيبوكسي — تحديد الشقوق', priority: 2 },
-        { slug: 'makkah-roof-insulation', context: 'عزل سطح المستودع — يُكمل حماية الأرضية', priority: 3 },
-        { slug: 'makkah-water-insulation', context: 'عزل مائي للأساسات — يحمي من الرطوبة تحت الإيبوكسي', priority: 4 },
-        { slug: 'makkah-cleaning', context: 'تنظيف المنطقة بعد تركيب الإيبوكسي — إزالة غبار الجلخ', priority: 5 },
-        { slug: 'makkah-marble-polishing', context: 'جلي رخام المداخل — يُكمل فخامة إيبوكسي الموقف', priority: 6 },
-        { slug: 'makkah-thermal-insulation', context: 'عزل حراري للمستودع — يحمي البضائع + يُطيل عمر الإيبوكسي', priority: 7 },
+        { slug: 'tank-insulation', context: 'عزل خزان بإيبوكسي Food Grade — حماية مياه الشرب', priority: 1 },
+        { slug: 'tank-leak-detection', context: 'كشف تسربات خزان قبل عزل الإيبوكسي — تحديد الشقوق', priority: 2 },
+        { slug: 'roof-insulation', context: 'عزل سطح المستودع — يُكمل حماية الأرضية', priority: 3 },
+        { slug: 'water-insulation', context: 'عزل مائي للأساسات — يحمي من الرطوبة تحت الإيبوكسي', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف المنطقة بعد تركيب الإيبوكسي — إزالة غبار الجلخ', priority: 5 },
+        { slug: 'marble-polishing', context: 'جلي رخام المداخل — يُكمل فخامة إيبوكسي الموقف', priority: 6 },
+        { slug: 'thermal-insulation', context: 'عزل حراري للمستودع — يحمي البضائع + يُطيل عمر الإيبوكسي', priority: 7 },
     ],
 };

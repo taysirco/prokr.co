@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف أفران بالقطيف — Override مخصص (E-E-A-T Grade)
-// صفحة: /qatif/oven-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف أفران بالقطيف — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف أفران بالقطيف. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف أفران بالقطيف — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف أفران بالقطيف', 'تنظيف أفران القطيف', 'شركة تنظيف أفران بالقطيف', 'أفضل تنظيف أفران بالقطيف'],
+        title: 'تنظيف أفران بالقطيف — كربنة رطبة واحية + NaCl أسماك + Biofilm واحي (2026)',
+        description: 'تنظيف أفران القطيف. كربنة رطبة واحية لزجة. NaCl أسماك خليجية. Biofilm واحي. Alkaline + Anti-Biofilm + Acid Rinse.',
+        h1: 'تنظيف أفران بالقطيف — كربنة واحية لزجة وملح أسماك وBiofilm',
+        keywords: ['تنظيف أفران القطيف', 'تنظيف فرن بالقطيف', 'شركة تنظيف أفران بالقطيف'],
     },
-
     content: {
-        introduction: 'تنظيف أفران بالقطيف — خدمة متخصصة تراعي الظروف المناخية والبيئية في القطيف. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف أفران بالقطيف: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف أفران بالقطيف. خدمة احترافية. ضمان.',
+        introduction: 'الفرن في القطيف = ساحلي-واحي. الأول — كربنة رطبة واحية: 80-95% = كربنة لا تجف تماماً = لزجة. أصعب كشط. Alkaline. الثاني — NaCl أسماك: القطيف = صيد أسماك تاريخي. أسماك خليجية = NaCl عالي في الشحم ← بلورات ملحية. Acid Rinse. الثالث — Biofilm واحي: 80-95% = Biofilm على أسطح الفرن. Anti-Biofilm قبل Alkaline.',
+        shortAnswer: 'على عكس [بخاخ] فوق كربنة لزجة+Biofilm، يعتمد بروتوكولنا في خدمة [تنظيف الأفران] بمدينة [القطيف] على [Anti-Biofilm ← Alkaline ← Acid Rinse]. ففي ظل [كربنة لزجة + NaCl أسماك + Biofilm]، تتفاقم ظاهرة [لزوجة + تصلب ملحي + طبقات]. لذا؛ يتدخل خبراؤنا عبر [بروتوكول فرن ساحلي-واحي].',
+        heroSubtitle: 'كربنة واحية لزجة + NaCl أسماك + Biofilm واحي',
     },
-
     pricing: [
-        { type: 'تنظيف أفران — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف أفران — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'فرن عادي', unit: 'فرن', minPrice: 70, maxPrice: 150, time: '1-2 ساعة' },
+        { type: 'عميق (Biofilm + لزجة)', unit: 'فرن', minPrice: 115, maxPrice: 230, time: '2-3 ساعات' },
+        { type: 'فرن + شفاط + مطبخ', unit: 'باقة', minPrice: 190, maxPrice: 380, time: '3-5 ساعات' },
+        { type: 'ربع سنوي', unit: 'سنة', minPrice: 350, maxPrice: 700, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف أفران بالقطيف؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف أفران؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف أفران؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'أسماك — فرق؟', answer: 'القطيف صيد تاريخي. أسماك = NaCl عالي في الشحم ← بلورات ملحية+كربنة = مُركّبة.' },
+        { question: 'Biofilm فرن — واحي؟', answer: '80-95% = Biofilm. طبقة عضوية فوق الكربنة. Anti-Biofilm يكشف.' },
+        { question: 'مقابل الجبيل — أبسط؟', answer: 'لا VOC. أبسط. لكن: أسماك+واحي فريد.' },
+        { question: 'كم تكلفة التنظيف العميق مقارنة بالتنظيف العادي؟', answer: 'التنظيف العميق أغلى 30-50% لكنه يشمل: HEPA + بخار 150°م + تعقيم. التنظيف العادي = مسح سطحي. العميق كل 3-4 أشهر + العادي أسبوعياً = أفضل معادلة تكلفة/نظافة.' },
+        { question: 'هل المواد المستخدمة آمنة على الأطفال؟', answer: 'مواد معتمدة من هيئة الغذاء والدواء SFDA. بعد التنظيف: تهوية 30 دقيقة كافية. بخار 150°م = بديل للكيماويات — آمن 100% على الأطفال والحيوانات.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Anti-Biofilm أولاً — يكشف الكربنة.',
+        'Alkaline — كربنة لزجة.',
+        'Acid Rinse — بلورات NaCl أسماك.',
+        'RO شطف — لا ترسبات.',
+        'بعد التنظيف: شغّل المكيف وليس الشبّاك — الهواء الخارجي يعيد الغبار على الأسطح النظيفة.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'Biofilm يحمي الكربنة = بخاخ لا يصل.',
+        'أسماك NaCl × 6 أشهر = بلورات قاسية.',
+        'كربنة لزجة = أصعب من جافة.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص التنظيف' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات الصحة بالشرقية' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'فرن القطيف: كربنة واحية + NaCl أسماك + Biofilm. Anti-Biofilm ← Alkaline ← Acid Rinse.', source: 'نصائح هندسية — أفران الواحات الساحلية' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف أفران مرخص', authority: 'منصة بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Anti-Biofilm', use: '80-95% — يكشف الكربنة' },
+        { name: 'Alkaline', use: 'كربنة واحية لزجة' },
+        { name: 'Acid Rinse', use: 'NaCl أسماك — بلوري' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'مثل الخبر.', solution: 'واحي+أسماك. مختلف.' },
+        { fear: 'بخاخ.', solution: 'Biofilm يحمي. Anti-Biofilm أولاً.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'مثل الرياض.', truth: '80-95% لزجة + Biofilm + أسماك.' },
+        { myth: 'نصف سنوي.', truth: 'لزجة تتراكم. ربع سنوي.' },
     ],
-
     relatedServices: [
-        { slug: 'qatif-furniture-moving', context: 'نقل عفش بالقطيف', priority: 1 },
-        { slug: 'qatif-furniture-storage', context: 'تخزين عفش بالقطيف', priority: 2 },
-        { slug: 'qatif-dyna', context: 'دينا نقل بالقطيف', priority: 3 },
-        { slug: 'qatif-moving-out', context: 'نقل عفش خروج بالقطيف', priority: 4 },
-        { slug: 'qatif-dabab', context: 'دباب نقل بالقطيف', priority: 5 },
-        { slug: 'qatif-cleaning', context: 'تنظيف منازل بالقطيف', priority: 6 },
-        { slug: 'qatif-tanks-cleaning', context: 'تنظيف خزانات بالقطيف', priority: 7 },
-        { slug: 'qatif-sofa-cleaning', context: 'تنظيف كنب بالقطيف', priority: 8 },
-        { slug: 'qatif-carpet-cleaning', context: 'تنظيف سجاد بالقطيف', priority: 9 },
+        { slug: 'restaurant-chimney-cleaning', context: 'مداخن', priority: 1 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 2 },
+        { slug: 'pest-control', context: 'حشرات', priority: 3 },
+        { slug: 'steam-cleaning', context: 'بخار', priority: 4 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 5 },
+        { slug: 'hourly-cleaning', context: 'بالساعة', priority: 6 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات', priority: 7 },
     ],
 };

@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف مكيفات بينبع — Override مخصص (E-E-A-T Grade)
-// صفحة: /yanbu/air-conditioner-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف مكيفات بينبع — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف مكيفات بينبع. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف مكيفات بينبع — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف مكيفات بينبع', 'تنظيف مكيفات ينبع', 'شركة تنظيف مكيفات بينبع', 'أفضل تنظيف مكيفات بينبع'],
+        title: 'تنظيف مكيفات بينبع — NaCl صدأ زعانف+SOx حمض+70-85% عفن بخاخ — Zinc Coating! (2026)',
+        description: 'تنظيف مكيفات ينبع. NaCl يصدئ زعانف ألمنيوم! SOx حمض. 70-85% عفن بخاخ. Zinc Coating+Anti-Fungal+RO.',
+        h1: 'تنظيف مكيفات بينبع — NaCl صدأ+SOx حمض+عفن!',
+        keywords: ['تنظيف مكيفات ينبع', 'تنظيف مكيف بينبع', 'شركة تنظيف مكيفات ينبع'],
     },
-
     content: {
-        introduction: 'تنظيف مكيفات بينبع — خدمة متخصصة تراعي الظروف المناخية والبيئية في ينبع. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف مكيفات بينبع: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف مكيفات بينبع. خدمة احترافية. ضمان.',
+        introduction: 'مكيف ينبع = NaCl يأكل الزعانف! NaCl صدأ: ملح البحر الأحمر 41‰ يدخل الوحدة الخارجية ← يتراكم على زعانف الألمنيوم ← Pitting Corrosion ← يقل أداء المكيف 30-40% خلال سنة! Zinc Coating إلزامي للوحدات خلال 3 كم من الساحل. SOx حمض: YASREF أكاسيد تدخل مع الهواء ← H₂SO₄ يتفاعل مع المعدن ← تآكل مسّرع. Anti-Corrosion Spray. 70-85% عفن: رطوبة بحرية = عفن أسود داخل البخاخ والفلتر خلال أسبوعين! Anti-Fungal Coil + فلتر HEPA. عفن بخاخ = رائحة + حساسية YMYL. مقارنة: بريدة = CaCO₃ كلس + Nafud بدون عفن = أبسط. ينبع = صدأ+حمض+عفن = أعقد بكثير.',
+        shortAnswer: 'على عكس [الغسل بماء صنبور بدون Zinc Coating]، يعتمد بروتوكولنا في خدمة [تنظيف المكيفات] بمدينة [ينبع] على [Zinc Coating+Anti-Fungal Coil+Anti-Corrosion+RO]. ففي ظل [NaCl Pitting+SOx حمض+70-85% عفن بخاخ]، تتفاقم ظاهرة [صدأ زعانف+تآكل+عفن]. لذا؛ يتدخل فنيونا عبر [Zinc ← Anti-Fungal ← Anti-Corrosion ← RO] — مكيف ساحلي!',
+        heroSubtitle: 'NaCl صدأ + SOx حمض + 70-85% عفن بخاخ — Zinc Coating!',
     },
-
     pricing: [
-        { type: 'تنظيف مكيفات — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف مكيفات — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'تنظيف سبلت عادي', unit: 'مكيف', minPrice: 80, maxPrice: 170, time: '30-45 دقيقة' },
+        { type: 'تنظيف + Anti-Fungal', unit: 'مكيف', minPrice: 120, maxPrice: 250, time: '45-60 دقيقة' },
+        { type: '+ Zinc Coating خارجي', unit: 'مكيف', minPrice: 150, maxPrice: 310, time: '1-2h' },
+        { type: 'عقد ربع سنوي (4 تنظيف)', unit: 'مكيف', minPrice: 350, maxPrice: 700, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف مكيفات بينبع؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف مكيفات؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف مكيفات؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش مكيف ينبع يفقد أداء أسرع؟', answer: 'NaCl Pitting = زعانف تصدأ ← أداء يقل 30-40% سنة. Zinc Coating يحمي.' },
+        { question: 'ليش عفن داخل المكيف بينبع؟', answer: '70-85% رطوبة = عفن أسود داخل البخاخ أسبوعين. Anti-Fungal Coil.' },
+        { question: 'كم تكلفة تنظيف مكيف بينبع مقارنة ببريدة؟', answer: 'أغلى 40-50% — Zinc+Anti-Fungal+Anti-Corrosion. بريدة: Descaler فقط.' },
+        { question: 'هل Zinc Coating ضروري بينبع؟', answer: 'إلزامي خلال 3 كم من الساحل. بدونه = صدأ سنة. بريدة: لا حاجة.' },
+        { question: 'هل SOx يتلف المكيف بينبع؟', answer: 'SOx YASREF + رطوبة = H₂SO₄ يتآكل معدن. Anti-Corrosion Spray.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Zinc Coating — NaCl Pitting إلزامي.',
+        'Anti-Fungal Coil — 70-85% عفن.',
+        'Anti-Corrosion — SOx YASREF.',
+        'RO غسل — NaCl لا يعود.',
+        'ربع سنوي — ساحلي-صناعي.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'NaCl Pitting × سنة = فقدان 30-40% أداء — Zinc إلزامي.',
+        '70-85% + عفن بخاخ = حساسية تنفسية لكل الأسرة — YMYL.',
+        'SOx + زعانف × 6 أشهر = تآكل — Anti-Corrosion إلزامي.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
+        { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'اشتراطات أمانة ينبع' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMISNID.name, quote: 'مكيف ينبع: NaCl Pitting+SOx حمض+عفن. Zinc+Anti-Fungal. ساحلي-صناعي.', source: 'جغرافيا المناخ — مكيفات ساحلية' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف مكيفات مرخص', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Zinc Coating', use: 'NaCl Pitting — زعانف خارجية' },
+        { name: 'Anti-Fungal Coil', use: '70-85% — عفن بخاخ' },
+        { name: 'Anti-Corrosion Spray', use: 'SOx — حمض' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'تنظيف عادي.', solution: 'NaCl+SOx+عفن = 3 معالجات خاصة.' },
+        { fear: 'مثل بريدة.', solution: 'صدأ+حمض+عفن vs كلس. مختلف.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'سنوي.', truth: 'NaCl+SOx = ربع سنوي.' },
+        { myth: 'ماء عادي.', truth: 'NaCl يعود. RO.' },
     ],
-
     relatedServices: [
-        { slug: 'yanbu-furniture-moving', context: 'نقل عفش بينبع', priority: 1 },
-        { slug: 'yanbu-furniture-storage', context: 'تخزين عفش بينبع', priority: 2 },
-        { slug: 'yanbu-dyna', context: 'دينا نقل بينبع', priority: 3 },
-        { slug: 'yanbu-moving-out', context: 'نقل عفش خروج بينبع', priority: 4 },
-        { slug: 'yanbu-dabab', context: 'دباب نقل بينبع', priority: 5 },
-        { slug: 'yanbu-cleaning', context: 'تنظيف منازل بينبع', priority: 6 },
-        { slug: 'yanbu-tanks-cleaning', context: 'تنظيف خزانات بينبع', priority: 7 },
-        { slug: 'yanbu-sofa-cleaning', context: 'تنظيف كنب بينبع', priority: 8 },
-        { slug: 'yanbu-carpet-cleaning', context: 'تنظيف سجاد بينبع', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 1 },
+        { slug: 'carpet-cleaning', context: 'سجاد', priority: 2 },
+        { slug: 'apartments-cleaning', context: 'شقق', priority: 3 },
+        { slug: 'villas-cleaning', context: 'فلل', priority: 4 },
+        { slug: 'pest-control', context: 'حشرات', priority: 5 },
+        { slug: 'marble-polishing', context: 'رخام', priority: 6 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات', priority: 7 },
     ],
 };

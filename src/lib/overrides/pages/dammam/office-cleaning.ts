@@ -1,13 +1,5 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف مكاتب بالدمام — Override مخصص (E-E-A-T Grade)
-// صفحة: /dammam/office-cleaning
-// قطاع YMYL: صحة (Sick Building Syndrome + PM2.5) + مالي (إنتاجية موظفين)
-// خريطة 2.4: المسند (مناخ/تنظيف) → بلدي + SASO
-// NLP: مجمع الراشد، أبراج الدمام التجارية، مناطق صناعية، أرامكو HQ
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -77,21 +69,16 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف — الشهادة الصحية لمزاولة النشاط التجاري' },
         { ...GOV.SASO, role: 'مواصفات مواد التنظيف — معايير السلامة في بيئة العمل' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات أمانة الشرقية' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMISNID.name,
-        title: EXPERTS.ALMISNID.title,
-        credential: EXPERTS.ALMISNID.credential,
-        profileUrl: EXPERTS.ALMISNID.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMISNID,
 
     expertCitations: [
         {
             expert: 'أ.د. عبدالله المسند',
             quote: 'المكتب في الدمام حيث الموظف يقضي 8-10 ساعات يومياً في هواء مُعاد تدويره محمّل بـ PM2.5 صناعي — التنظيف العميق بـ HEPA + تعقيم دكتات المكيف ليس تكلفة تشغيلية بل استثمار في صحة وإنتاجية الموظفين',
             source: 'أستاذ جغرافيا المناخ — جامعة القصيم',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -119,14 +106,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'dammam-cleaning', context: 'خدمة تنظيف عامة — أساس للمكاتب', priority: 1 },
-        { slug: 'dammam-air-conditioner-cleaning', context: 'مكيف مركزي المكتب — مصدر SBS #1', priority: 2 },
-        { slug: 'dammam-carpet-cleaning', context: 'سجاد المكتب يحبس PM2.5 — غسيل ربع سنوي', priority: 3 },
-        { slug: 'dammam-sanitization', context: 'تعقيم مكتب بعد موسم إنفلونزا', priority: 4 },
-        { slug: 'dammam-glass-facades-cleaning', context: 'واجهات المبنى التجاري — ملوحة + PM2.5', priority: 5 },
-        { slug: 'dammam-floor-cleaning', context: 'أرضيات ممرات المكتب', priority: 6 },
-        { slug: 'dammam-floor-polishing', context: 'جلي رخام لوبي المكتب', priority: 7 },
-        { slug: 'dammam-shops-cleaning', context: 'محلات تجارية — نفس المنهجية', priority: 8 },
-        { slug: 'dammam-pest-control', context: 'مكتب مهمل = صراصير + فئران', priority: 9 },
+        { slug: 'cleaning', context: 'خدمة تنظيف عامة — أساس للمكاتب', priority: 1 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف مركزي المكتب — مصدر SBS #1', priority: 2 },
+        { slug: 'carpet-cleaning', context: 'سجاد المكتب يحبس PM2.5 — غسيل ربع سنوي', priority: 3 },
+        { slug: 'sanitization', context: 'تعقيم مكتب بعد موسم إنفلونزا', priority: 4 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات المبنى التجاري — ملوحة + PM2.5', priority: 5 },
+        { slug: 'floor-cleaning', context: 'أرضيات ممرات المكتب', priority: 6 },
+        { slug: 'floor-polishing', context: 'جلي رخام لوبي المكتب', priority: 7 },
+        { slug: 'shops-cleaning', context: 'محلات تجارية — نفس المنهجية', priority: 8 },
+        { slug: 'pest-control', context: 'مكتب مهمل = صراصير + فئران', priority: 9 },
     ],
 };

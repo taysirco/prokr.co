@@ -1,94 +1,79 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف فلل بحفر الباطن — Override مخصص (E-E-A-T Grade)
-// صفحة: /hafr-albatin/villas-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف فلل بحفر الباطن — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف فلل بحفر الباطن. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف فلل بحفر الباطن — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف فلل بحفر الباطن', 'تنظيف فلل حفر الباطن', 'شركة تنظيف فلل بحفر الباطن', 'أفضل تنظيف فلل بحفر الباطن'],
+        title: 'تنظيف فلل بحفر الباطن — بروتوكول قاري 5 محاور: SiO₂ + ΔT 54°م + UV + كهرباء + حشرات (2026)',
+        description: 'تنظيف فلل حفر الباطن. 5 محاور قارية: SiO₂ عواصف. ΔT 54°م. UV قاري. كهرباء ساكنة. حشرات Deathstalker. لا عفن/عث (ميزتين!). HEPA + Anti-Static.',
+        h1: 'تنظيف فلل بحفر الباطن — 5 محاور قارية + ميزتين + فريق مُتخصص',
+        keywords: ['تنظيف فلل حفر الباطن', 'تنظيف فيلا حفر الباطن', 'شركة تنظيف فلل حفر الباطن'],
     },
-
     content: {
-        introduction: 'تنظيف فلل بحفر الباطن — خدمة متخصصة تراعي الظروف المناخية والبيئية في حفر الباطن. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف فلل بحفر الباطن: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف فلل بحفر الباطن. خدمة احترافية. ضمان.',
+        introduction: 'الفيلا في حفر الباطن = أكبر مساحة قارية × 5 محاور + ميزتين. المحور 1 — SiO₂ عواصف كل سطح: أكثف عواصف = كل سطح مُغطى. HEPA ← Anti-Static ← غسل. المحور 2 — ΔT 54°م كل مادة: 52°م يمدد ← -2°م ينكمش = Micro-Cracks حول كل نافذة + باب + سيليكون + بلاط. ختم سنوي. المحور 3 — UV قاري: أصفى سماء = واجهات تتقصّف + ألوان تبهت + Sealant يتشقق. UV Film + UV Sealer. المحور 4 — كهرباء ساكنة: 10-15% = SiO₂ يلتصق بكل شيء. Anti-Static شامل. المحور 5 — حشرات Deathstalker: حافة الصحراء = عقارب + أفاعي + Fire Ant + هجرة شتوية -2°م. مكافحة دورية. الميزة 1 — لا عفن!: لا Anti-Fungal. الميزة 2 — لا عث!: لا بخار عث. توفير محورين كاملين عن الشرقية!',
+        shortAnswer: 'على عكس [عاملة بممسحة] في بيئة قارية، يعتمد بروتوكولنا في خدمة [تنظيف الفلل] بمدينة [حفر الباطن] على [فريق 5 محاور: HEPA + Anti-Static + ختم ΔT + UV + مكافحة]. ففي ظل [SiO₂ + ΔT 54°م + UV + 10-15% + Deathstalker]، تتفاقم ظاهرة [5 محاور]. لذا؛ يتدخل خبراؤنا عبر [بروتوكول فيلا قاري].',
+        heroSubtitle: '5 محاور + ميزتين: SiO₂+ΔT+UV+كهرباء+حشرات — لا عفن/عث',
     },
-
     pricing: [
-        { type: 'تنظيف فلل — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف فلل — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'فيلا — بروتوكول قاري', unit: 'فيلا', minPrice: 440, maxPrice: 950, time: '5-8 ساعات' },
+        { type: 'فيلا + حديقة + واجهات', unit: 'فيلا', minPrice: 630, maxPrice: 1450, time: '7-12 ساعة' },
+        { type: 'بعد عاصفة — طوارئ', unit: 'فيلا', minPrice: 530, maxPrice: 1100, time: '6-10 ساعات' },
+        { type: 'عقد أسبوعي', unit: 'شهر', minPrice: 560, maxPrice: 1150, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف فلل بحفر الباطن؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف فلل؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف فلل؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: '5 محاور فقط — أقل من الشرقية (7)?', answer: 'نعم! لا عفن + لا عث = حذف محورين. 5 بدلاً من 7. أبسط + أقل تكلفة. لكن: ΔT 54°م + UV + Deathstalker = تحديات فريدة.' },
+        { question: 'فريق — كم شخص؟', answer: 'فيلا صغيرة: 3-4. فيلا كبيرة: 5-6. أقل من الشرقية (5-8). أسرع (لا عفن/عث = وقت أقل).' },
+        { question: 'أرخص من الشرقية؟', answer: 'نعم 10-20% — لا Dehumidifier + لا Anti-Fungal + لا بخار عث = توفير 3 أدوات.' },
+        { question: 'أسبوعي — ليش؟', answer: 'SiO₂ عواصف 2-4/شهر + كهرباء ساكنة يومي. أسبوعي = يمنع التراكم.' },
+        { question: 'حشرات — كل زيارة؟', answer: 'فحص كل زيارة. مكافحة حسب الحاجة. شتاء = هجرة = أهم.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'HEPA + Anti-Static في كل غرفة — 5 محاور × كل زيارة.',
+        'ختم ΔT سنوي — 52°م/-2°م = Micro-Cracks تتجدد.',
+        'UV Film + UV Sealer — واجهات + حديقة.',
+        'فحص حشرات شتاء — -2°م = هجرة Deathstalker.',
+        'لا Anti-Fungal ولا بخار عث — توفير 30%!',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'فيلا بدون بروتوكول قاري = 5 محاور تلف × 12 شهر = ترميم.',
+        'ΔT 54°م + Micro-Cracks + SiO₂ = يدخل أكثر فأكثر.',
+        'Deathstalker في -2°م = يدخل من أي شقة. ختم + مكافحة.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص التنظيف' },
+        { entity: AMANA.HAFR.entity, url: AMANA.HAFR.url, role: 'اشتراطات الفلل بحفر الباطن' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMISNID.name, quote: 'فيلا حفر الباطن: 5 محاور قارية (SiO₂+ΔT+UV+كهرباء+حشرات). لا عفن ولا عث = ميزتين! أبسط من الشرقية لكن: ΔT 54°م + Deathstalker = فريد.', source: 'جغرافيا المناخ — فلل قارية' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
     verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
+        { badge: '✔️ تنظيف فلل مرخص', authority: 'منصة بلدي', icon: 'shield-check' },
+        { badge: '✔️ بروتوكول قاري 5 محاور', authority: 'معتمد داخلياً', icon: 'badge-check' },
     ],
-
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'HEPA Vacuum', use: 'يحجز SiO₂ — المحور 1' },
+        { name: 'Anti-Static', use: 'يُفرّغ شحنة — المحور 4' },
+        { name: 'سيليكون ختم ΔT', use: 'Micro-Cracks — المحور 2' },
+        { name: 'UV Film + UV Sealer', use: 'واجهات — المحور 3' },
+        { name: 'مكافحة حشرات', use: 'Deathstalker — المحور 5' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'لا عفن = سهل.', solution: '5 محاور قارية: ΔT 54°م + Deathstalker + UV + SiO₂ + كهرباء ≠ سهل.' },
+        { fear: 'فريق أصغر.', solution: 'أصغر (-2) لكن: مُدرّب على 5 محاور + حشرات. تخصص ≠ عدد.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'مثل الرياض.', truth: 'ΔT 54°م > 35°م. -2°م. Deathstalker. UV أعلى. عواصف أكثف.' },
+        { myth: 'مثل الشرقية.', truth: 'لا عفن + لا عث = ميزتين. لكن: ΔT + UV + Deathstalker = فريد.' },
+        { myth: 'شهري.', truth: 'عواصف 2-4/شهر + كهرباء ساكنة. أسبوعي.' },
     ],
-
     relatedServices: [
-        { slug: 'hafr-albatin-furniture-moving', context: 'نقل عفش بحفر الباطن', priority: 1 },
-        { slug: 'hafr-albatin-furniture-storage', context: 'تخزين عفش بحفر الباطن', priority: 2 },
-        { slug: 'hafr-albatin-dyna', context: 'دينا نقل بحفر الباطن', priority: 3 },
-        { slug: 'hafr-albatin-moving-out', context: 'نقل عفش خروج بحفر الباطن', priority: 4 },
-        { slug: 'hafr-albatin-dabab', context: 'دباب نقل بحفر الباطن', priority: 5 },
-        { slug: 'hafr-albatin-cleaning', context: 'تنظيف منازل بحفر الباطن', priority: 6 },
-        { slug: 'hafr-albatin-tanks-cleaning', context: 'تنظيف خزانات بحفر الباطن', priority: 7 },
-        { slug: 'hafr-albatin-sofa-cleaning', context: 'تنظيف كنب بحفر الباطن', priority: 8 },
-        { slug: 'hafr-albatin-carpet-cleaning', context: 'تنظيف سجاد بحفر الباطن', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف — SiO₂', priority: 1 },
+        { slug: 'swimming-pool-cleaning', context: 'مسبح — CaCO₃', priority: 2 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات — SiO₂+UV', priority: 3 },
+        { slug: 'carpet-cleaning', context: 'سجاد — SiO₂', priority: 4 },
+        { slug: 'furniture-cleaning', context: 'أثاث — ΔT', priority: 5 },
+        { slug: 'pest-control', context: 'حشرات — Deathstalker', priority: 6 },
+        { slug: 'termite-control', context: 'نمل أبيض', priority: 7 },
     ],
 };

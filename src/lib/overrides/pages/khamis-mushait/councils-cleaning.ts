@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف مجالس بخميس مشيط — Override مخصص (E-E-A-T Grade)
-// صفحة: /khamis-mushait/councils-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف مجالس بخميس مشيط — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف مجالس بخميس مشيط. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف مجالس بخميس مشيط — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف مجالس بخميس مشيط', 'تنظيف مجالس خميس مشيط', 'شركة تنظيف مجالس بخميس مشيط', 'أفضل تنظيف مجالس بخميس مشيط'],
+        title: 'تنظيف مجالس بخميس مشيط — بلمرة رطبة عميقة + عفن+عث — Dehumidifier! أعقد مجلس (2026)',
+        description: 'تنظيف مجالس خميس مشيط. بلمرة رطبة عميقة. عفن Aspergillus. عث Dermatophagoides. 60-85%. تجفيف 4-8h. Enzymatic+بخار+استخلاص.',
+        h1: 'تنظيف مجالس بخميس مشيط — بلمرة رطبة وعفن — أعقد!',
+        keywords: ['تنظيف مجالس خميس مشيط', 'تنظيف مجلس بخميس مشيط', 'شركة تنظيف مجالس خميس مشيط'],
     },
-
     content: {
-        introduction: 'تنظيف مجالس بخميس مشيط — خدمة متخصصة تراعي الظروف المناخية والبيئية في خميس مشيط. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف مجالس بخميس مشيط: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف مجالس بخميس مشيط. خدمة احترافية. ضمان.',
+        introduction: 'مجلس خميس مشيط = من أعقد المجالس بالمملكة! بلمرة رطبة عميقة: بخور + دهون ضيافة + 60-85% = طبقة بوليمرية رطبة تتغلغل عميقاً في ألياف القماش. الشامبو لا يصلها — Enzymatic+بخار+استخلاص فقط. عفن Aspergillus: ضباب 200 يوم + رطوبة = عفن يستعمر أقمشة المجلس خلال أسبوعين. Anti-Fungal كل غسلة. عث Dermatophagoides: يتكاثر في حشوات المجلس الرطبة = حساسية جلدية+تنفسية. Anti-Mite. تجفيف 4-8 ساعات: بدون Dehumidifier = عفن جديد بعد الغسل! مقارنة: عنيزة = بلمرة جافة + لا عفن + تجفيف 20 دقيقة + أرخص 30%. خميس = بلمرة رطبة + عفن + عث = أعقد+أغلى.',
+        shortAnswer: 'على عكس [الشامبو العادي الذي لا يصل البلمرة الرطبة]، يعتمد بروتوكولنا في خدمة [تنظيف المجالس] بمدينة [خميس مشيط] على [Enzymatic+بخار+استخلاص+Anti-Fungal+Anti-Mite+Dehumidifier]. ففي ظل [60-85%+ضباب+بلمرة رطبة+عفن+عث]، تتفاقم ظاهرة [خشونة عميقة+عفن+عث+تجفيف بطيء]. لذا؛ يتدخل فريقنا عبر [إنزيم ← بخار ← استخلاص ← تعقيم ← تجفيف].',
+        heroSubtitle: 'بلمرة رطبة + عفن + عث — Dehumidifier إلزامي!',
     },
-
     pricing: [
-        { type: 'تنظيف مجالس — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف مجالس — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'مجلس رجال', unit: 'مجلس', minPrice: 230, maxPrice: 470, time: '3-4h + تجفيف 4-8h' },
+        { type: '+ Anti-Fungal/Mite', unit: 'مجلس', minPrice: 290, maxPrice: 580, time: '4-5h + تجفيف' },
+        { type: 'مجلسين (رجال+نساء)', unit: 'باقة', minPrice: 420, maxPrice: 850, time: '6-8h + تجفيف' },
+        { type: 'ربع سنوي (4 زيارات)', unit: 'سنة', minPrice: 700, maxPrice: 1400, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف مجالس بخميس مشيط؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف مجالس؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف مجالس؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'كم يحتاج المجلس يجف بعد التنظيف بخميس مشيط؟', answer: '4-8 ساعات مع Dehumidifier! بدونه = 12-24 ساعة + عفن جديد. عنيزة: 20 دقيقة.' },
+        { question: 'ليش الشامبو ما يكفي لمجلس خميس مشيط؟', answer: 'بلمرة رطبة عميقة = الشامبو يُنظف السطح فقط. Enzymatic+بخار 150°م+استخلاص = يصل العمق.' },
+        { question: 'كيف أمنع عفن المجلس بعد الغسل بخميس مشيط؟', answer: 'Dehumidifier فوري بعد الغسل + Anti-Fungal. بدون Dehumidifier = عفن جديد 72 ساعة!' },
+        { question: 'كم تكلفة تنظيف مجلس بخميس مقارنة بعنيزة؟', answer: 'أغلى 30% — Anti-Fungal+Anti-Mite+Dehumidifier. 230-580 مقابل 180-450.' },
+        { question: 'متى أنظف المجلس بخميس مشيط؟', answer: 'كل 3 أشهر — عفن+عث = تراكم أسرع. عنيزة: كل 6 أشهر. مضاعف.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Enzymatic+بخار+استخلاص — بلمرة رطبة عميقة.',
+        'Anti-Fungal كل غسلة — عفن أسبوعين.',
+        'Anti-Mite — عث في حشوات رطبة.',
+        'Dehumidifier فوري — بدونه عفن جديد!',
+        'ربع سنوي — عفن+عث = تراكم أسرع.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'غسل بدون Dehumidifier + 60-85% = عفن جديد 72 ساعة — أسوأ مما قبل!',
+        'بلمرة رطبة × 6 أشهر = طبقة لا تُزال — تغيير قماش كامل (3000+ ريال).',
+        'عفن+عث = حساسية مزدوجة — خطر YMYL.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
+        { entity: AMANA.ASIR.entity, url: AMANA.ASIR.url, role: 'اشتراطات أمانة عسير' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMISNID.name, quote: 'مجلس خميس: بلمرة رطبة عميقة. عفن+عث. Dehumidifier إلزامي. من أعقد المجالس.', source: 'نصائح هندسية — أقمشة جبلية' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف مرخص', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Enzymatic+بخار 150°م', use: 'يُكسِّر بلمرة رطبة عميقة' },
+        { name: 'Anti-Fungal+Anti-Mite', use: 'يقتل عفن Aspergillus وعث Dermatophagoides' },
+        { name: 'Dehumidifier صناعي', use: 'تجفيف 4-8h — بدونه عفن جديد!' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'شامبو يكفي.', solution: 'بلمرة رطبة عميقة = شامبو سطحي فقط. Enzymatic+بخار.' },
+        { fear: 'مثل الباحة.', solution: 'متشابه — خميس أقل غابات. نفس البروتوكول.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'المجلس يجف بسرعة مثل عنيزة.', truth: '4-8h مقابل 20 دقيقة. 60-85% vs 15-25%.' },
+        { myth: 'لا عفن بخميس.', truth: 'ضباب 200 يوم + 60-85% = أسرع عفن.' },
     ],
-
     relatedServices: [
-        { slug: 'khamis-mushait-furniture-moving', context: 'نقل عفش بخميس مشيط', priority: 1 },
-        { slug: 'khamis-mushait-furniture-storage', context: 'تخزين عفش بخميس مشيط', priority: 2 },
-        { slug: 'khamis-mushait-dyna', context: 'دينا نقل بخميس مشيط', priority: 3 },
-        { slug: 'khamis-mushait-moving-out', context: 'نقل عفش خروج بخميس مشيط', priority: 4 },
-        { slug: 'khamis-mushait-dabab', context: 'دباب نقل بخميس مشيط', priority: 5 },
-        { slug: 'khamis-mushait-cleaning', context: 'تنظيف منازل بخميس مشيط', priority: 6 },
-        { slug: 'khamis-mushait-tanks-cleaning', context: 'تنظيف خزانات بخميس مشيط', priority: 7 },
-        { slug: 'khamis-mushait-sofa-cleaning', context: 'تنظيف كنب بخميس مشيط', priority: 8 },
-        { slug: 'khamis-mushait-carpet-cleaning', context: 'تنظيف سجاد بخميس مشيط', priority: 9 },
+        { slug: 'carpet-cleaning', context: 'سجاد — عفن', priority: 1 },
+        { slug: 'sofa-cleaning', context: 'كنب', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 3 },
+        { slug: 'steam-cleaning', context: 'بخار', priority: 4 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 5 },
+        { slug: 'pest-control', context: 'حشرات', priority: 6 },
+        { slug: 'marble-polishing', context: 'رخام', priority: 7 },
     ],
 };

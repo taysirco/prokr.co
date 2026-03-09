@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف سيارات بينبع — Override مخصص (E-E-A-T Grade)
-// صفحة: /yanbu/auto-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف سيارات بينبع — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف سيارات بينبع. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف سيارات بينبع — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف سيارات بينبع', 'تنظيف سيارات ينبع', 'شركة تنظيف سيارات بينبع', 'أفضل تنظيف سيارات بينبع'],
+        title: 'تنظيف سيارات بينبع — NaCl Pitting 48h+SOx H₂SO₄+SiO₂ خدش — No-Touch+RO! (2026)',
+        description: 'تنظيف سيارات ينبع. NaCl Pitting 48h تآكل! SOx H₂SO₄ حمض. SiO₂+NaCl خدش. No-Touch+RO+Anti-Salt+Wax.',
+        h1: 'تنظيف سيارات بينبع — NaCl Pitting+SOx حمض!',
+        keywords: ['تنظيف سيارات ينبع', 'غسيل سيارة بينبع', 'شركة تنظيف سيارات ينبع'],
     },
-
     content: {
-        introduction: 'تنظيف سيارات بينبع — خدمة متخصصة تراعي الظروف المناخية والبيئية في ينبع. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف سيارات بينبع: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف سيارات بينبع. خدمة احترافية. ضمان.',
+        introduction: 'سيارة ينبع = NaCl يأكل الطلاء! NaCl Pitting 48h: ملح البحر الأحمر 41‰ يسبب Pitting Corrosion (تآكل نقطي) على الأسطح المعدنية خلال 48 ساعة فقط! غسل No-Touch بضغط + RO كل 3-5 أيام. SOx H₂SO₄: أكاسيد YASREF تتحول مع رطوبة إلى H₂SO₄ مُخفف ← يتفاعل مع Clear Coat ← تلف طلاء. Pre-Rinse ← RO ← Wax حماية. SiO₂+NaCl خدش: رمل صحراوي يستقر على ملح = Liquid Grinding Paste. No-Touch فقط — لا إسفنج! 70-85%: رطوبة تُسرّع صدأ خدوش الطلاء. Wax يحمي. Anti-Salt Coating كل 3 أشهر. مقارنة: بريدة = Nafud يخدش بدون ملح. ينبع = NaCl+SOx+خدش = أخطر بكثير.',
+        shortAnswer: 'على عكس [الإسفنج الذي يخدش بـ SiO₂+NaCl]، يعتمد بروتوكولنا في خدمة [تنظيف السيارات] بمدينة [ينبع] على [No-Touch ضغط+RO+Anti-Salt+Wax]. ففي ظل [NaCl Pitting 48h+SOx حمض+SiO₂ خدش+70-85%]، تتفاقم ظاهرة [تآكل نقطي+تلف طلاء+خدش+صدأ]. لذا؛ يتدخل فريقنا عبر [No-Touch ← RO ← Anti-Salt ← Wax].',
+        heroSubtitle: 'NaCl Pitting 48h + SOx حمض + SiO₂ خدش — No-Touch RO!',
     },
-
     pricing: [
-        { type: 'تنظيف سيارات — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف سيارات — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'غسيل No-Touch RO', unit: 'سيارة', minPrice: 30, maxPrice: 60, time: '20-30 دقيقة' },
+        { type: '+ Wax حماية', unit: 'سيارة', minPrice: 50, maxPrice: 100, time: '30-45 دقيقة' },
+        { type: '+ Anti-Salt Coating', unit: 'سيارة', minPrice: 80, maxPrice: 170, time: '1h' },
+        { type: 'أسبوعي (4/شهر)', unit: 'شهر', minPrice: 100, maxPrice: 200, time: '4 غسلات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف سيارات بينبع؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف سيارات؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف سيارات؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش سيارة ينبع تصدأ أسرع بكثير؟', answer: 'NaCl 41‰ = Pitting Corrosion 48h! غسل كل 3-5 أيام. Anti-Salt.' },
+        { question: 'ليش No-Touch فقط بينبع؟', answer: 'SiO₂+NaCl = Liquid Grinding Paste. إسفنج = خدوش. ضغط فقط.' },
+        { question: 'ما H₂SO₄ على الطلاء بينبع؟', answer: 'SOx YASREF+رطوبة = حمض مُخفف. يتلف Clear Coat. Wax يحمي.' },
+        { question: 'كم تكلفة غسيل بينبع مقارنة بالرياض؟', answer: 'أغلى 40-50% — No-Touch+RO+Anti-Salt. الرياض: إسفنج عادي.' },
+        { question: 'كم مرة Anti-Salt Coating بينبع؟', answer: 'كل 3 أشهر. ربع سنوي. يحمي من Pitting 90%.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'No-Touch فقط — SiO₂+NaCl يخدش.',
+        'RO Water — NaCl يعود بالتبخر.',
+        'Anti-Salt ربع سنوي — Pitting.',
+        'Wax حماية — SOx Clear Coat.',
+        'غسل كل 3-5 أيام — 48h Pitting.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'NaCl × 48h بدون غسل = Pitting Corrosion = صدأ نقطي دائم.',
+        'إسفنج + SiO₂+NaCl = Liquid Grinding = خدوش حلقات دائمة.',
+        'SOx × Clear Coat × شهر = تآكل طلاء — Wax إلزامي.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص مغاسل السيارات' },
+        { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'اشتراطات أمانة ينبع' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMISNID.name, quote: 'سيارة ينبع: NaCl Pitting 48h! No-Touch+RO. Anti-Salt ربع سنوي.', source: 'جغرافيا المناخ — سيارات ساحلية' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ مغسلة مرخصة', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'No-Touch ضغط', use: 'SiO₂+NaCl — لا إسفنج' },
+        { name: 'RO Water', use: 'NaCl — لا ملح جديد' },
+        { name: 'Anti-Salt Coating', use: 'Pitting — ربع سنوي' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'إسفنج يكفي.', solution: 'SiO₂+NaCl = Liquid Grinding = خدش.' },
+        { fear: 'مثل جدة.', solution: 'SOx YASREF إضافي. أعقد.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'ماء عادي.', truth: 'NaCl يعود بالتبخر. RO.' },
+        { myth: 'شهري.', truth: '48h Pitting. كل 3-5 أيام.' },
     ],
-
     relatedServices: [
-        { slug: 'yanbu-furniture-moving', context: 'نقل عفش بينبع', priority: 1 },
-        { slug: 'yanbu-furniture-storage', context: 'تخزين عفش بينبع', priority: 2 },
-        { slug: 'yanbu-dyna', context: 'دينا نقل بينبع', priority: 3 },
-        { slug: 'yanbu-moving-out', context: 'نقل عفش خروج بينبع', priority: 4 },
-        { slug: 'yanbu-dabab', context: 'دباب نقل بينبع', priority: 5 },
-        { slug: 'yanbu-cleaning', context: 'تنظيف منازل بينبع', priority: 6 },
-        { slug: 'yanbu-tanks-cleaning', context: 'تنظيف خزانات بينبع', priority: 7 },
-        { slug: 'yanbu-sofa-cleaning', context: 'تنظيف كنب بينبع', priority: 8 },
-        { slug: 'yanbu-carpet-cleaning', context: 'تنظيف سجاد بينبع', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 1 },
+        { slug: 'furniture-moving', context: 'نقل', priority: 2 },
+        { slug: 'dyna', context: 'دينا', priority: 3 },
+        { slug: 'dabab', context: 'دباب', priority: 4 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 5 },
+        { slug: 'pest-control', context: 'حشرات', priority: 6 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات', priority: 7 },
     ],
 };

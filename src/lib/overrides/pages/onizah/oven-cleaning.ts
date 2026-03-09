@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف أفران بعنيزة — Override مخصص (E-E-A-T Grade)
-// صفحة: /onizah/oven-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف أفران بعنيزة — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف أفران بعنيزة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف أفران بعنيزة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف أفران بعنيزة', 'تنظيف أفران عنيزة', 'شركة تنظيف أفران بعنيزة', 'أفضل تنظيف أفران بعنيزة'],
+        title: 'تنظيف أفران بعنيزة — كربنة جافة + تمور كرملة سكر فريد — لا Biofilm! أبسط! (2026)',
+        description: 'تنظيف أفران عنيزة. كربنة جافة. تمور = كرملة سكر فريدة. لا Biofilm! Alkaline مباشر. أبسط من خميس والباحة.',
+        h1: 'تنظيف أفران بعنيزة — كربنة جافة وتمور كرملة',
+        keywords: ['تنظيف أفران عنيزة', 'تنظيف فرن بعنيزة', 'شركة تنظيف أفران عنيزة'],
     },
-
     content: {
-        introduction: 'تنظيف أفران بعنيزة — خدمة متخصصة تراعي الظروف المناخية والبيئية في عنيزة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف أفران بعنيزة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف أفران بعنيزة. خدمة احترافية. ضمان.',
+        introduction: 'فرن عنيزة = أبسط فرن بالمملكة + تحدٍ فريد! الأبسط: كربنة جافة (15-25% رطوبة = الشحوم تتكربن جافة بدون Biofilm). في خميس مشيط والباحة: كربنة رطبة + Biofilm يحمي الكربنة = خطوة إضافية (Anti-Biofilm أولاً). هنا: Alkaline مباشر يُذيب الكربنة = أسرع+أرخص. التحدي الفريد — كرملة التمور!: ضيافة التمور القصيمية = سكر تمور يسقط في الفرن. تحت حرارة 200°م+ = Caramelized Sugar = طبقة سوداء صلبة مختلفة عن الكربنة العادية. Alkaline لا يُكسِّرها — يجب Enzymatic يُكسِّر السكر أولاً ← ثم Alkaline للكربنة. SiO₂ يدخل فتحات التهوية = خشونة على أسطح الفرن الداخلية. فرشاة ناعمة بعد شطف.',
+        shortAnswer: 'على عكس [الفرك بسلك الجلي الذي يخدش]، يعتمد بروتوكولنا في خدمة [تنظيف الأفران] بمدينة [عنيزة] على [Enzymatic تمور ← Alkaline ← شطف]. ففي ظل [كربنة جافة + كرملة تمور + SiO₂ + لا Biofilm]، تتفاقم ظاهرة [طبقة سوداء مزدوجة]. لذا؛ يتدخل فنيونا عبر [إنزيم ← قلوي ← فرشاة ناعمة] لضمان فرن نظيف بدون خدش.',
+        heroSubtitle: 'كربنة جافة + كرملة تمور — Enzymatic+Alkaline! لا Biofilm!',
     },
-
     pricing: [
-        { type: 'تنظيف أفران — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف أفران — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'فرن عادي', unit: 'فرن', minPrice: 55, maxPrice: 120, time: '1-2 ساعة' },
+        { type: 'فرن + إزالة كرملة تمور', unit: 'فرن', minPrice: 70, maxPrice: 150, time: '1.5-2.5 ساعة' },
+        { type: 'فرن + شفاط', unit: 'باقة', minPrice: 140, maxPrice: 290, time: '3-4 ساعات' },
+        { type: 'نصف سنوي (زيارتين)', unit: 'سنة', minPrice: 200, maxPrice: 400, time: '2 زيارة' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف أفران بعنيزة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف أفران؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف أفران؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'كيف أنظف فرن من بقايا تمور متكرملة؟', answer: 'Enzymatic يُكسِّر السكر المتكرمل (15 دقيقة نقع) ← ثم Alkaline للكربنة العادية. لا فرك بسلك!' },
+        { question: 'ليش فرن عنيزة أبسط من خميس مشيط؟', answer: 'لا Biofilm — 15-25% رطوبة = Alkaline مباشر. خميس: Anti-Biofilm أولاً ← ثم Alkaline = خطوة إضافية+تكلفة.' },
+        { question: 'كم المدة لتنظيف فرن بعنيزة؟', answer: '1-2 ساعة بدون تمور. 1.5-2.5 ساعة مع كرملة تمور. أسرع من خميس (2-3 ساعات بسبب Biofilm).' },
+        { question: 'هل سلك الجلي يصلح لتنظيف الفرن؟', answer: 'لا! SiO₂ في السلك + سطح الفرن = خدش لا يُصلح. فرشاة ناعمة + Alkaline فقط.' },
+        { question: 'متى أنظف الفرن بعنيزة؟', answer: 'بعد موسم التمور (نوفمبر) — كرملة متراكمة. وقبل رمضان — استخدام مكثف. نصف سنوي مثالي.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Enzymatic أولاً — يُكسِّر كرملة التمور التي لا يُذيبها Alkaline.',
+        'Alkaline ثانياً — يُذيب الكربنة الجافة مباشرة (لا Biofilm!).',
+        'فرشاة ناعمة — SiO₂ في السلك يخدش.',
+        'لا Anti-Biofilm — 15-25% = صفر Biofilm. وفّر.',
+        'نصف سنوي — بعد تمور + قبل رمضان.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'سلك جلي + SiO₂ = خدش سطح الفرن الداخلي — طبقة غير لاصقة تتلف.',
+        'كرملة تمور + Alkaline فقط = لا يُزيلها — Enzymatic إلزامي أولاً.',
+        'فرن مهمل 6+ أشهر بدون تنظيف = كربنة سميكة تحتاج جلسة مزدوجة.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
+        { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'فرن عنيزة: كربنة جافة + كرملة تمور = فريد. Enzymatic+Alkaline. لا Biofilm = أبسط.', source: 'نصائح هندسية — مطابخ قصيمية' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف أفران مرخص', authority: 'منصة بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Enzymatic Sugar Breaker', use: 'يُكسِّر كرملة التمور — لا يُذيبها Alkaline' },
+        { name: 'Alkaline Degreaser', use: 'يُذيب الكربنة الجافة مباشرة (لا Biofilm!)' },
+        { name: 'فرشاة ناعمة', use: 'تنظيف بدون خدش — SiO₂ في السلك يخدش' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'مثل خميس.', solution: 'أبسط — لا Biofilm = خطوة أقل.' },
+        { fear: 'Alkaline يكفي.', solution: 'كرملة تمور مختلفة — Enzymatic أولاً.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'سلك جلي أسرع.', truth: 'يخدش سطح الفرن. Alkaline+Enzymatic أبطأ لكن بدون خدش.' },
+        { myth: 'الفرن ما يحتاج Enzymatic.', truth: 'كرملة تمور ≠ كربنة عادية. Alkaline لا يُكسِّر السكر.' },
     ],
-
     relatedServices: [
-        { slug: 'onizah-furniture-moving', context: 'نقل عفش بعنيزة', priority: 1 },
-        { slug: 'onizah-furniture-storage', context: 'تخزين عفش بعنيزة', priority: 2 },
-        { slug: 'onizah-dyna', context: 'دينا نقل بعنيزة', priority: 3 },
-        { slug: 'onizah-moving-out', context: 'نقل عفش خروج بعنيزة', priority: 4 },
-        { slug: 'onizah-dabab', context: 'دباب نقل بعنيزة', priority: 5 },
-        { slug: 'onizah-cleaning', context: 'تنظيف منازل بعنيزة', priority: 6 },
-        { slug: 'onizah-tanks-cleaning', context: 'تنظيف خزانات بعنيزة', priority: 7 },
-        { slug: 'onizah-sofa-cleaning', context: 'تنظيف كنب بعنيزة', priority: 8 },
-        { slug: 'onizah-carpet-cleaning', context: 'تنظيف سجاد بعنيزة', priority: 9 },
+        { slug: 'restaurant-chimney-cleaning', context: 'مداخن — كربنة', priority: 1 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 2 },
+        { slug: 'pest-control', context: 'حشرات — تمور', priority: 3 },
+        { slug: 'steam-cleaning', context: 'بخار', priority: 4 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 5 },
+        { slug: 'hourly-cleaning', context: 'بالساعة', priority: 6 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات', priority: 7 },
     ],
 };

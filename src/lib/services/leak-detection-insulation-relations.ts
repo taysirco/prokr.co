@@ -12,7 +12,7 @@ export const RELATIONS_LEAK_DETECTION_INSULATION: Record<string, RelatedService[
     ],
     'bathroom-leak-detection': [
         { slug: 'water-leak-detection', context: 'فحص شامل لتسربات المبنى', priority: 2 },
-        { slug: 'floor-insulation', context: 'عزل أرضيات الحمام', priority: 2 },
+        { slug: 'water-insulation', context: 'عزل مائي لأرضيات الحمام', priority: 2 },
     ],
     'tank-insulation': [
         { slug: 'tanks-cleaning', context: 'تنظيف الخزان قبل العزل', priority: 3 },
@@ -22,14 +22,17 @@ export const RELATIONS_LEAK_DETECTION_INSULATION: Record<string, RelatedService[
         { slug: 'water-leak-detection', context: 'فحص التسربات قبل العزل', priority: 2 },
         { slug: 'tank-insulation', context: 'عزل الخزانات على السطح', priority: 2 },
     ],
-    'floor-insulation': [
-        { slug: 'bathroom-leak-detection', context: 'فحص التسربات في الأرضيات', priority: 2 },
+    'foam-insulation': [
+        { slug: 'roof-insulation', context: 'عزل اسطح شامل مع الفوم', priority: 3 },
+        { slug: 'thermal-insulation', context: 'عزل حراري متكامل', priority: 2 },
     ],
-    'swimming-pool-insulation': [
-        { slug: 'swimming-pool-cleaning', context: 'تنظيف المسبح مع العزل', priority: 2 },
+    'thermal-insulation': [
+        { slug: 'roof-insulation', context: 'عزل الأسطح من الحرارة', priority: 3 },
+        { slug: 'foam-insulation', context: 'الفوم أفضل عازل حراري', priority: 2 },
     ],
-    'foundation-insulation': [
-        { slug: 'water-leak-detection', context: 'كشف تسربات الأساسات', priority: 2 },
-        { slug: 'termite-control', context: 'مكافحة النمل الأبيض في الأساسات', priority: 2 },
+    'water-insulation': [
+        { slug: 'tank-insulation', context: 'عزل الخزانات من التسربات', priority: 3 },
+        { slug: 'water-leak-detection', context: 'فحص التسربات قبل العزل', priority: 2 },
     ],
 };
+

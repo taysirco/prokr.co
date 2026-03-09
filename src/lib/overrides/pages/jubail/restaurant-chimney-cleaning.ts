@@ -1,94 +1,75 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف مداخن مطاعم بالجبيل — Override مخصص (E-E-A-T Grade)
-// صفحة: /jubail/restaurant-chimney-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف مداخن مطاعم بالجبيل — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف مداخن مطاعم بالجبيل. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف مداخن مطاعم بالجبيل — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف مداخن مطاعم بالجبيل', 'تنظيف مداخن مطاعم الجبيل', 'شركة تنظيف مداخن مطاعم بالجبيل', 'أفضل تنظيف مداخن مطاعم بالجبيل'],
+        title: 'تنظيف مداخن مطاعم بالجبيل — كربنة لزجة + Biofilm أقصى + NaCl أسماك + NFPA أسرع (2026)',
+        description: 'تنظيف مداخن الجبيل. كربنة لزجة 98%. Biofilm أقصى يُسرّع NFPA. NaCl أسماك. VOC يُضاف. Alkaline Marine + Anti-Biofilm + Scraper.',
+        h1: 'تنظيف مداخن مطاعم بالجبيل — كربنة لزجة وBiofilm يُسرّع الاشتعال',
+        keywords: ['تنظيف مداخن مطاعم الجبيل', 'تنظيف مداخن بالجبيل', 'شركة تنظيف مداخن بالجبيل'],
     },
-
     content: {
-        introduction: 'تنظيف مداخن مطاعم بالجبيل — خدمة متخصصة تراعي الظروف المناخية والبيئية في الجبيل. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف مداخن مطاعم بالجبيل: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف مداخن مطاعم بالجبيل. خدمة احترافية. ضمان.',
+        introduction: 'مداخن الجبيل = الأخطر في المملكة بسبب Biofilm. الأول — كربنة لزجة 98%: لا تجف = لزجة = أسمك = أسرع وصول NFPA 6,000 ميكرون. الثاني — Biofilm أقصى: 98% = Biofilm شحمي = طبقة إضافية فوق الكربنة = يُسرّع NFPA. أخطر عامل. الثالث — NaCl أسماك: مطاعم خليجية = أسماك = NaCl شحم = تصلب ملحي+كربنة. الرابع — VOC: بتروكيماويات في الهواء ← تدخل المدخنة ← طبقة إضافية.',
+        shortAnswer: 'على عكس [تنظيف سطحي] الذي لا يصل Biofilm تحت الكربنة، يعتمد بروتوكولنا في خدمة [تنظيف المداخن] بمدينة [الجبيل] على [Anti-Biofilm ← Alkaline Marine ← Scraper ← مقياس]. ففي ظل [كربنة لزجة + Biofilm + NaCl + VOC]، تتفاقم ظاهرة [لزوجة + طبقات + NFPA أسرع]. لذا؛ يتدخل خبراؤنا عبر [بروتوكول مدخنة صناعي-ساحلي].',
+        heroSubtitle: 'كربنة لزجة + Biofilm أسرع NFPA + NaCl أسماك + VOC',
     },
-
     pricing: [
-        { type: 'تنظيف مداخن مطاعم — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف مداخن مطاعم — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'مدخنة (Anti-Biofilm + Alkaline)', unit: 'مدخنة', minPrice: 290, maxPrice: 680, time: '3-5 ساعات' },
+        { type: 'فحص ميكرون + Biofilm', unit: 'فحص', minPrice: 150, maxPrice: 310, time: '1-2 ساعة' },
+        { type: 'ربع سنوي', unit: 'سنة', minPrice: 930, maxPrice: 2300, time: '4 زيارات' },
+        { type: 'طوارئ', unit: 'خدمة', minPrice: 370, maxPrice: 780, time: '2-4 ساعات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف مداخن مطاعم بالجبيل؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف مداخن مطاعم؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف مداخن مطاعم؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'Biofilm — يُسرّع NFPA؟', answer: 'نعم! Biofilm = طبقة عضوية قابلة للاشتعال = يُضاف فوق الكربنة = أسرع وصول 6,000 ميكرون. أخطر عامل في الجبيل.' },
+        { question: 'لزجة — أسوأ من صلبة؟', answer: 'مختلفة — لزجة = أسمك أسرع (لا تجف = تمتص أكثر). صلبة (حفر الباطن) = أصعب كشط لكن أبطأ نمو.' },
+        { question: 'NaCl أسماك — فرق؟', answer: 'أسماك خليجية = NaCl عالي في الشحم ← يتصلّب ← يُركّب مع الكربنة = أقسى.' },
+        { question: 'ربع سنوي — مثل حفر الباطن؟', answer: 'نفس التكرار لكن: Biofilm يُسرّع. ربع سنوي = الحد الأقصى. شهرين أفضل لمطاعم أسماك.' },
+        { question: 'كم تكلفة التنظيف العميق مقارنة بالتنظيف العادي؟', answer: 'التنظيف العميق أغلى 30-50% لكنه يشمل: HEPA + بخار 150°م + تعقيم. التنظيف العادي = مسح سطحي. العميق كل 3-4 أشهر + العادي أسبوعياً = أفضل معادلة تكلفة/نظافة.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Anti-Biofilm أولاً — يكشف الكربنة.',
+        'Alkaline Marine — لزجة + VOC.',
+        'مقياس ميكرون شهري — Biofilm يُسرّع.',
+        'Baffle فلاتر أسبوعي —  98% Biofilm يسد.',
+        'بعد التنظيف: شغّل المكيف وليس الشبّاك — الهواء الخارجي يعيد الغبار على الأسطح النظيفة.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'Biofilm + كربنة لزجة = أسرع NFPA في المملكة.',
+        'Anti-Biofilm قبل Alkaline — بدونه = لا يصل.',
+        'مطعم أسماك خليجي = NaCl أعلى = أقسى.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص مطاعم' },
+        { ...GOV.CIVILDEFENSE, role: 'السلامة — NFPA 96' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات مطاعم بالشرقية' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'مدخنة الجبيل: Biofilm يُسرّع NFPA + كربنة لزجة + NaCl أسماك. Anti-Biofilm ← Alkaline Marine = الترتيب الحاسم.', source: 'نصائح هندسية — مداخن ساحلية-صناعية' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ مداخن مرخصة', authority: 'بلدي + دفاع مدني', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Anti-Biofilm', use: '98% Biofilm — يكشف الكربنة' },
+        { name: 'Alkaline Marine', use: 'كربنة لزجة + VOC' },
+        { name: 'Scraper', use: 'NaCl بلوري' },
+        { name: 'مقياس ميكرون', use: 'NFPA — Biofilm يُسرّع' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'مثل حفر الباطن.', solution: 'Biofilm أقصى + لزجة ≠ صلبة. NFPA أسرع.' },
+        { fear: 'ربع سنوي كافٍ.', solution: 'مطاعم أسماك: شهرين. Biofilm يُسرّع.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'كيميائي يكفي.', truth: 'Biofilm يحمي الكربنة. Anti-Biofilm أولاً.' },
+        { myth: 'مثل الرياض.', truth: 'Biofilm + NaCl + لزجة. مختلف.' },
     ],
-
     relatedServices: [
-        { slug: 'jubail-furniture-moving', context: 'نقل عفش بالجبيل', priority: 1 },
-        { slug: 'jubail-furniture-storage', context: 'تخزين عفش بالجبيل', priority: 2 },
-        { slug: 'jubail-dyna', context: 'دينا نقل بالجبيل', priority: 3 },
-        { slug: 'jubail-moving-out', context: 'نقل عفش خروج بالجبيل', priority: 4 },
-        { slug: 'jubail-dabab', context: 'دباب نقل بالجبيل', priority: 5 },
-        { slug: 'jubail-cleaning', context: 'تنظيف منازل بالجبيل', priority: 6 },
-        { slug: 'jubail-tanks-cleaning', context: 'تنظيف خزانات بالجبيل', priority: 7 },
-        { slug: 'jubail-sofa-cleaning', context: 'تنظيف كنب بالجبيل', priority: 8 },
-        { slug: 'jubail-carpet-cleaning', context: 'تنظيف سجاد بالجبيل', priority: 9 },
+        { slug: 'oven-cleaning', context: 'أفران — كربنة', priority: 1 },
+        { slug: 'cleaning', context: 'تنظيف — مطعم', priority: 2 },
+        { slug: 'pest-control', context: 'حشرات — بعوض', priority: 3 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 4 },
+        { slug: 'steam-cleaning', context: 'بخار', priority: 5 },
+        { slug: 'office-cleaning', context: 'مكاتب', priority: 6 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات', priority: 7 },
     ],
 };

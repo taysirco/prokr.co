@@ -6,7 +6,7 @@
 // ══════════════════════════════════════════════════════════════
 
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -53,6 +53,7 @@ export const override: PageOverride = {
             question: 'كل كم أحتاج أنظف الشقة بالرياض؟',
             answer: 'تنظيف أسبوعي (أنت بنفسك): مسح أسطح + كنس + حمامات. تنظيف عميق احترافي: كل 2-3 أشهر (بخار + HEPA + حمامات). بعد كل عاصفة غبارية: تنظيف إضافي (الكمية تتضاعف 5 مرات). فلاتر مكيف: كل شهر. مجاري تكييف مركزي: سنوياً. لا تعتمد على جدول مدن ساحلية — الرياض أسرع تراكماً.',
         },
+        { question: 'كم تكلفة التنظيف العميق مقارنة بالتنظيف العادي؟', answer: 'التنظيف العميق أغلى 30-50% لكنه يشمل: HEPA + بخار 150°م + تعقيم. التنظيف العادي = مسح سطحي. العميق كل 3-4 أشهر + العادي أسبوعياً = أفضل معادلة تكلفة/نظافة.' },
     ],
 
     expertTips: [
@@ -71,6 +72,7 @@ export const override: PageOverride = {
 
     trustAnchors: [
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف — ضمان جودة الخدمة واستخدام مواد آمنة' },
+        { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
 
     expertReviewer: {
@@ -85,7 +87,6 @@ export const override: PageOverride = {
             expert: 'أ.د. عبدالله المسند',
             quote: 'مجاري التكييف المركزي هي الناقل #1 للغبار داخل الشقق المغلقة في الرياض. بدون فلاتر HEPA أو تنظيف مجاري سنوياً: الشقة تتنفس غباراً مستمراً',
             source: 'أستاذ جغرافيا المناخ',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -112,14 +113,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'riyadh-cleaning', context: 'تنظيف شامل للشقق', priority: 1 },
-        { slug: 'riyadh-steam-cleaning', context: 'بخار الشقة — كنب + أرضيات', priority: 2 },
-        { slug: 'riyadh-sofa-cleaning', context: 'تنظيف الكنب مع الشقة', priority: 3 },
-        { slug: 'riyadh-carpet-cleaning', context: 'غسيل السجاد مع الشقة', priority: 4 },
-        { slug: 'riyadh-sanitization', context: 'تعقيم بعد التنظيف', priority: 5 },
-        { slug: 'riyadh-air-conditioner-cleaning', context: 'غسيل مكيفات الشقة', priority: 6 },
-        { slug: 'riyadh-kitchen-cleaning', context: 'تنظيف مطبخ الشقة', priority: 7 },
-        { slug: 'riyadh-pest-control', context: 'رش وقائي بعد التنظيف', priority: 8 },
-        { slug: 'riyadh-moving-out', context: 'تنظيف شقة بعد خروج المستأجر', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف شامل للشقق', priority: 1 },
+        { slug: 'steam-cleaning', context: 'بخار الشقة — كنب + أرضيات', priority: 2 },
+        { slug: 'sofa-cleaning', context: 'تنظيف الكنب مع الشقة', priority: 3 },
+        { slug: 'carpet-cleaning', context: 'غسيل السجاد مع الشقة', priority: 4 },
+        { slug: 'sanitization', context: 'تعقيم بعد التنظيف', priority: 5 },
+        { slug: 'air-conditioner-cleaning', context: 'غسيل مكيفات الشقة', priority: 6 },
+        { slug: 'kitchen-cleaning', context: 'تنظيف مطبخ الشقة', priority: 7 },
+        { slug: 'pest-control', context: 'رش وقائي بعد التنظيف', priority: 8 },
+        { slug: 'moving-out', context: 'تنظيف شقة بعد خروج المستأجر', priority: 9 },
     ],
 };

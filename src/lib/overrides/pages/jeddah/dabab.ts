@@ -4,6 +4,7 @@
 // ============================================
 
 import type { PageOverride } from '../../types';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -79,6 +80,8 @@ export const override: PageOverride = {
 
 
 
+        verificationBadges: [{ badge: '✔️ مرخص من هيئة النقل TGA', authority: 'الهيئة العامة للنقل', icon: 'shield-check' }],
+
     equipment: [
         { name: 'دباب حجم 1-2 طن', use: 'مناسب لنقل أثاث غرفة أو قطع منفردة — يدخل الشوارع الضيقة' },
         { name: 'أربطة تثبيت صناعية (Ratchet Straps)', use: 'تثبّت الأثاث ومنع الحركة أثناء النقل — تمنع الخدوش والكسر' },
@@ -91,37 +94,35 @@ export const override: PageOverride = {
 
     trustAnchors: [
         { entity: 'الهيئة العامة للنقل', acronym: 'TGA', url: 'https://tga.gov.sa', role: 'ترخيص مركبات النقل' },
+        { entity: AMANA.JEDDAH.entity, url: AMANA.JEDDAH.url, role: 'اشتراطات أمانة جدة' },
     ],
 
-    expertReviewer: {
-        name: 'م. ماجد المحيميد',
-        title: 'خبير جودة تشطيبات وعزل',
-        credential: 'مهندس جودة تشطيبات — المرجع الأول في جودة البناء',
-        profileUrl: 'https://x.com/majedalmohaimed',
-    },
+    expertReviewer: EXPERTS.ALSHABNAN,
 
     expertCitations: [
         {
             expert: 'م. ماجد المحيميد',
             quote: 'نقل الأثاث بدون تغليف في جدة = خدوش + ملوحة. ملح الهواء الساحلي يتصلب على الأثاث المكشوف أثناء النقل — التغليف ليس اختيارياً',
             source: 'خبير جودة تشطيبات',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
 
+        saudiRegulations: [REGULATIONS.TGA_LICENSE],
+
     counterNarratives: [
         { myth: 'الدباب نفس الدينا', truth: 'الدباب: حمولة 1-2 طن، أثاث شقة صغيرة أو جزء من الأثاث. الدينا: 4-10 طن، أثاث شقة كاملة أو أكثر. استخدام الدباب لحمولة كبيرة = رحلتين-ثلاث = تكلفة أعلى من الدينا' },
+        { myth: 'أي دينا تكفي.', truth: 'دينا بدون ترخيص TGA = بدون تأمين = أي ضرر يتحمله العميل. الترخيص = حماية قانونية.' },
     ],
 
     relatedServices: [
-        { slug: 'jeddah-dyna', context: 'دينا للنقل الثقيل', priority: 1 },
-        { slug: 'jeddah-furniture-moving', context: 'نقل عفش كامل', priority: 2 },
-        { slug: 'jeddah-furniture-storage', context: 'تخزين مع النقل', priority: 3 },
-        { slug: 'jeddah-moving-out', context: 'تنظيف بعد النقل', priority: 4 },
-        { slug: 'jeddah-cleaning', context: 'تنظيف البيت الجديد', priority: 5 },
-        { slug: 'jeddah-pest-control', context: 'رش البيت الجديد', priority: 6 },
-        { slug: 'jeddah-furniture-cleaning', context: 'تنظيف بعد النقل', priority: 7 },
-        { slug: 'jeddah-sanitization', context: 'تعقيم', priority: 8 },
-        { slug: 'jeddah-air-conditioner-cleaning', context: 'فحص مكيفات', priority: 9 },
+        { slug: 'dyna', context: 'دينا للنقل الثقيل', priority: 1 },
+        { slug: 'furniture-moving', context: 'نقل عفش كامل', priority: 2 },
+        { slug: 'furniture-storage', context: 'تخزين مع النقل', priority: 3 },
+        { slug: 'moving-out', context: 'تنظيف بعد النقل', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف البيت الجديد', priority: 5 },
+        { slug: 'pest-control', context: 'رش البيت الجديد', priority: 6 },
+        { slug: 'furniture-cleaning', context: 'تنظيف بعد النقل', priority: 7 },
+        { slug: 'sanitization', context: 'تعقيم', priority: 8 },
+        { slug: 'air-conditioner-cleaning', context: 'فحص مكيفات', priority: 9 },
     ],
 };

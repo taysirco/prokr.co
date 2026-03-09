@@ -4,6 +4,7 @@
 // ============================================
 
 import type { PageOverride } from '../../types';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -78,6 +79,8 @@ export const override: PageOverride = {
 
 
 
+        verificationBadges: [{ badge: '✔️ شركة مرخصة من بلدي', authority: 'وزارة البلديات', icon: 'shield-check' }],
+
     equipment: [
         { name: 'مكينة جلي رخام 3 مراحل', use: 'حجر خشن (خدوش) → متوسط (تنعيم) → ناعم (تلميع مرآة) — 3 مراحل في زيارة واحدة' },
         { name: 'بودرة تلميع كريستالية (Crystallizer)', use: 'تفاعل كيميائي مع سطح الرخام ينتج طبقة صلبة لامعة تدوم 6-12 شهر' },
@@ -90,37 +93,35 @@ export const override: PageOverride = {
 
     trustAnchors: [
         { entity: 'الهيئة السعودية للمواصفات والمقاييس', acronym: 'SASO', url: 'https://www.saso.gov.sa', role: 'اعتماد مواد جلي وتلميع الرخام' },
+        { entity: AMANA.JEDDAH.entity, url: AMANA.JEDDAH.url, role: 'اشتراطات أمانة جدة' },
     ],
 
-    expertReviewer: {
-        name: 'م. ماجد المحيميد',
-        title: 'خبير جودة تشطيبات وعزل',
-        credential: 'مهندس جودة تشطيبات — المرجع الأول في جودة البناء',
-        profileUrl: 'https://x.com/majedalmohaimed',
-    },
+    expertReviewer: EXPERTS.ALMISNID,
 
     expertCitations: [
         {
             expert: 'م. ماجد المحيميد',
             quote: 'الرخام مادة مسامية — في جدة: ملح البحر يتسرب في المسامات ← بقع بيضاء تحت السطح. مانع تسرب (Marble Sealer) بعد كل جلي إلزامي للمدن الساحلية',
             source: 'خبير تشطيبات',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
 
+        saudiRegulations: [REGULATIONS.BALADI_HEALTH],
+
     counterNarratives: [
         { myth: 'الجلي يأكل طبقة من الرخام', truth: 'الجلي الاحترافي يزيل 0.1-0.3 مم فقط — أقل من سماكة ورقة. الرخام سماكته 20-30 مم. يمكن جلي الرخام 50+ مرة. المشكلة الحقيقية: استخدام كلور ومنظفات حمضية يومياً = تآكل كيميائي أخطر بكثير' },
+        { myth: 'المنظف العادي يكفي.', truth: 'المنظف العادي يزيل 40% من الأوساخ. HEPA + بخار = 99%+. الفرق = 59% غبار دقيق + بكتيريا + عث.' },
     ],
 
     relatedServices: [
-        { slug: 'jeddah-floor-polishing', context: 'تلميع + جلي معاً', priority: 1 },
-        { slug: 'jeddah-floor-cleaning', context: 'تنظيف قبل الجلي', priority: 2 },
-        { slug: 'jeddah-villas-cleaning', context: 'رخام الفيلا', priority: 3 },
-        { slug: 'jeddah-palaces-cleaning', context: 'رخام القصور', priority: 4 },
-        { slug: 'jeddah-cleaning', context: 'تنظيف شامل + جلي', priority: 5 },
-        { slug: 'jeddah-glass-facades-cleaning', context: 'واجهات رخامية', priority: 6 },
-        { slug: 'jeddah-steam-cleaning', context: 'بخار بعد الجلي', priority: 7 },
-        { slug: 'jeddah-water-insulation', context: 'عزل الرخام', priority: 8 },
-        { slug: 'jeddah-shops-cleaning', context: 'رخام المحلات', priority: 9 },
+        { slug: 'floor-polishing', context: 'تلميع + جلي معاً', priority: 1 },
+        { slug: 'floor-cleaning', context: 'تنظيف قبل الجلي', priority: 2 },
+        { slug: 'villas-cleaning', context: 'رخام الفيلا', priority: 3 },
+        { slug: 'palaces-cleaning', context: 'رخام القصور', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف شامل + جلي', priority: 5 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات رخامية', priority: 6 },
+        { slug: 'steam-cleaning', context: 'بخار بعد الجلي', priority: 7 },
+        { slug: 'water-insulation', context: 'عزل الرخام', priority: 8 },
+        { slug: 'shops-cleaning', context: 'رخام المحلات', priority: 9 },
     ],
 };

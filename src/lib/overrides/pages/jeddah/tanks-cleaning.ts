@@ -5,6 +5,7 @@
 // ══════════════════════════════════════════════════════════════
 
 import type { PageOverride } from '../../types';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -80,6 +81,8 @@ export const override: PageOverride = {
     ],
 
 
+        verificationBadges: [{ badge: '✔️ تعقيم معايير NWC', authority: 'شركة المياه الوطنية', icon: 'shield-check' }],
+
     equipment: [
         { name: 'جهاز ضغط مياه للخزانات (Tank Pressure Washer)', use: 'ينظف جدران الخزان بضغط مياه — يزيل الطحالب والترسبات' },
         { name: 'مادة تعقيم كلورين (Chlorine Solution)', use: 'تعقيم بتركيز 0.5-1 PPM حسب معايير NWC — يقتل البكتيريا بدون ضرر' },
@@ -93,25 +96,19 @@ export const override: PageOverride = {
     trustAnchors: [
         { entity: 'شركة المياه الوطنية', acronym: 'NWC', url: 'https://www.nwc.com.sa', role: 'معايير جودة مياه الخزانات' },
         { entity: 'أمانة جدة', url: 'https://www.jeddah.gov.sa', role: 'اشتراط الشهادة الصحية للخزانات كل 6 أشهر' },
-    ],
+        { entity: AMANA.JEDDAH.entity, url: AMANA.JEDDAH.url, role: 'اشتراطات أمانة جدة' }],
 
     saudiRegulations: [
         { code: 'اشتراطات أمانة جدة — الخزانات', description: 'إلزام غسيل وتعقيم الخزانات كل 6 أشهر مع شهادة صحية', url: 'https://www.jeddah.gov.sa' },
     ],
 
-    expertReviewer: {
-        name: 'م. ماجد المحيميد',
-        title: 'خبير جودة تشطيبات وعزل',
-        credential: 'مهندس جودة تشطيبات — المرجع الأول في جودة البناء',
-        profileUrl: 'https://x.com/majedalmohaimed',
-    },
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
             expert: 'م. ماجد المحيميد',
             quote: 'خزان المياه في جدة يحتاج تنظيف كل 6 أشهر — مياه التحلية عالية الأملاح (TDS 300-500) تترسب على الجدران وتنمي بكتيريا. التعقيم بالكلور بدون تنظيف جدران = حل ناقص',
             source: 'خبير جودة تشطيبات',
-            url: 'https://x.com/majedalmohaimed',
         },
     ],
 
@@ -121,14 +118,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'jeddah-tank-insulation', context: 'عزل الخزان يمنع التسخين = أقل طحالب وبكتيريا', priority: 1 },
-        { slug: 'jeddah-tank-leak-detection', context: 'فحص تسرب الخزان أثناء التنظيف — كشف مبكر', priority: 2 },
-        { slug: 'jeddah-water-leak-detection', context: 'تسرب من أنابيب الخزان يحتاج كشف بالأجهزة', priority: 3 },
-        { slug: 'jeddah-water-insulation', context: 'عزل مائي للخزان الأرضي يحميه من المياه الجوفية', priority: 4 },
-        { slug: 'jeddah-sanitization', context: 'تعقيم المنزل مع تنظيف الخزان — حماية شاملة', priority: 5 },
-        { slug: 'jeddah-sewage-unblocking', context: 'خطوط الصرف قريبة من الخزان الأرضي — فحص ضروري', priority: 6 },
-        { slug: 'jeddah-roof-insulation', context: 'عزل السطح يحمي الخزان العلوي من حرارة الشمس', priority: 7 },
-        { slug: 'jeddah-pest-control', context: 'خزان مكشوف يجذب بعوض — إحكام الغطاء + مكافحة', priority: 8 },
-        { slug: 'jeddah-cleaning', context: 'تنظيف شامل مع غسيل الخزان — مياه نظيفة + بيت نظيف', priority: 9 },
+        { slug: 'tank-insulation', context: 'عزل الخزان يمنع التسخين = أقل طحالب وبكتيريا', priority: 1 },
+        { slug: 'tank-leak-detection', context: 'فحص تسرب الخزان أثناء التنظيف — كشف مبكر', priority: 2 },
+        { slug: 'water-leak-detection', context: 'تسرب من أنابيب الخزان يحتاج كشف بالأجهزة', priority: 3 },
+        { slug: 'water-insulation', context: 'عزل مائي للخزان الأرضي يحميه من المياه الجوفية', priority: 4 },
+        { slug: 'sanitization', context: 'تعقيم المنزل مع تنظيف الخزان — حماية شاملة', priority: 5 },
+        { slug: 'sewage-unblocking', context: 'خطوط الصرف قريبة من الخزان الأرضي — فحص ضروري', priority: 6 },
+        { slug: 'roof-insulation', context: 'عزل السطح يحمي الخزان العلوي من حرارة الشمس', priority: 7 },
+        { slug: 'pest-control', context: 'خزان مكشوف يجذب بعوض — إحكام الغطاء + مكافحة', priority: 8 },
+        { slug: 'cleaning', context: 'تنظيف شامل مع غسيل الخزان — مياه نظيفة + بيت نظيف', priority: 9 },
     ],
 };

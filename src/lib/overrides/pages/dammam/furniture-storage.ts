@@ -1,11 +1,5 @@
-// ══════════════════════════════════════════════════════════════
-// تخزين عفش بالدمام — Override مخصص (E-E-A-T Grade)
-// صفحة: /dammam/furniture-storage
-// قطاع YMYL: مالي (حماية أثاث مكلف)
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -64,8 +58,11 @@ export const override: PageOverride = {
         {
                 "question": "كم مدة التخزين الآمنة؟",
                 "answer": "في مستودع مكيّف: سنوات بدون مشاكل. بدون تكييف في الدمام: أسابيع فقط قبل ظهور عفن. الحل: عقد سنوي مع فحص دوري كل 3 أشهر."
-        }
-],
+        },
+        { question: 'هل فيه تأمين على الأمتعة؟', answer: 'كل شركات بروكر مرخصة TGA = تأمين شامل. أي ضرر = تعويض فوري. بدون TGA = بدون تعويض.' },
+    
+        { question: 'كم يوم قبل أحجز؟', answer: 'الأفضل 3-7 أيام مقدماً. في مواسم الذروة (نهاية العقود/إجازات): 10-14 يوم. الحجز المبكر = سعر أفضل.' },
+    ],
 
     expertTips: [
         "زُر المستودع قبل التعاقد — تأكد من التكييف والنظافة",
@@ -84,14 +81,10 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.TGA, role: 'ترخيص مستودعات تخزين العفش' },
         { ...GOV.BALADI, role: 'الرخصة التجارية للمستودعات' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات أمانة الشرقية' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALSHABNAN.name,
-        title: EXPERTS.ALSHABNAN.title,
-        credential: EXPERTS.ALSHABNAN.credential,
-        profileUrl: EXPERTS.ALSHABNAN.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
@@ -146,8 +139,11 @@ export const override: PageOverride = {
         {
                 "myth": "أي مستودع يكفي",
                 "truth": "مستودع بدون تحكم رطوبة في المنطقة الشرقية = خسارة مؤكدة. اسأل: هل فيه Hygrometer؟ كم نسبة الرطوبة؟ التكييف 24/7؟ إذا لا = لا تخزن"
-        }
-],
+        },
+        { myth: 'النقل سهل — أسويه بنفسي.', truth: 'خدش واحد في خزانة = 500-2,000 ريال إصلاح. إصابة ظهر = آلاف. النقل المهني + التأمين = أرخص من المخاطرة.' },
+
+        { myth: 'النقل سهل — أسويه بنفسي.', truth: 'خدش خزانة = 500-2,000 ريال. إصابة ظهر = آلاف. النقل المهني + التأمين = أرخص من المخاطرة.' },
+    ],
 
     relatedServices: [
         {
@@ -194,6 +190,13 @@ export const override: PageOverride = {
                 "slug": "dammam-water-leak-detection",
                 "context": "كشف تسربات قبل إدخال الأثاث",
                 "priority": 9
-        }
+        },
+        { slug: 'furniture-moving', context: 'نقل أثاث — الخدمة الأساسية.', priority: 2 },
+        { slug: 'furniture-storage', context: 'تخزين أثاث — حل مرن.', priority: 3 },
+        { slug: 'dyna', context: 'دينا نقل — للقطع الكبيرة.', priority: 4 },
+        { slug: 'dabab', context: 'دباب نقل — للقطع الصغيرة.', priority: 5 },
+        { slug: 'cleaning', context: 'تنظيف المنزل الجديد بعد النقل.', priority: 6 },
+        { slug: 'pest-control', context: 'مكافحة حشرات المنزل الجديد.', priority: 7 },
+        { slug: 'air-conditioner-cleaning', context: 'تنظيف مكيفات المنزل الجديد.', priority: 8 },
 ],
 };

@@ -8,7 +8,7 @@
 // ══════════════════════════════════════════════════════════════
 
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -79,13 +79,14 @@ export const override: PageOverride = {
 
     trustAnchors: [
         { ...GOV.BALADI, role: 'تراخيص خدمات الغسيل المتنقل والاشتراطات البيئية لاستخدام المياه' },
+        { entity: AMANA.MAKKAH.entity, url: AMANA.MAKKAH.url, role: 'اشتراطات أمانة مكة المكرمة' },
     ],
 
     expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
+        name: EXPERTS.ALMISNID.name,
+        title: EXPERTS.ALMISNID.title,
+        credential: EXPERTS.ALMISNID.credential,
+        profileUrl: EXPERTS.ALMISNID.profileUrl,
     },
 
     expertCitations: [
@@ -123,12 +124,12 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'makkah-cleaning', context: 'تنظيف منزل + غسيل سيارة — باقة مجمعة بخصم', priority: 1 },
-        { slug: 'makkah-steam-cleaning', context: 'تعقيم بالبخار للمنزل مع مركبتك في نفس الزيارة', priority: 2 },
-        { slug: 'makkah-sofa-cleaning', context: 'غسيل كنب المنزل مع مراتب السيارة — نفس التقنية', priority: 3 },
-        { slug: 'makkah-carpet-cleaning', context: 'غسيل سجاد + موكيت سيارة — نفس الفريق', priority: 4 },
-        { slug: 'makkah-sanitization', context: 'تعقيم سيارة بعد حالة مرضية', priority: 5 },
-        { slug: 'makkah-furniture-moving', context: 'نقل أثاث + غسيل سيارة النقل بعد الانتهاء', priority: 6 },
-        { slug: 'makkah-hourly-cleaning', context: 'عاملة بالساعة لتنظيف منزل مع غسيل سيارة', priority: 7 },
+        { slug: 'cleaning', context: 'تنظيف منزل + غسيل سيارة — باقة مجمعة بخصم', priority: 1 },
+        { slug: 'steam-cleaning', context: 'تعقيم بالبخار للمنزل مع مركبتك في نفس الزيارة', priority: 2 },
+        { slug: 'sofa-cleaning', context: 'غسيل كنب المنزل مع مراتب السيارة — نفس التقنية', priority: 3 },
+        { slug: 'carpet-cleaning', context: 'غسيل سجاد + موكيت سيارة — نفس الفريق', priority: 4 },
+        { slug: 'sanitization', context: 'تعقيم سيارة بعد حالة مرضية', priority: 5 },
+        { slug: 'furniture-moving', context: 'نقل أثاث + غسيل سيارة النقل بعد الانتهاء', priority: 6 },
+        { slug: 'hourly-cleaning', context: 'عاملة بالساعة لتنظيف منزل مع غسيل سيارة', priority: 7 },
     ],
 };

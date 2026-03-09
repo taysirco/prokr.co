@@ -1,94 +1,74 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف أفران بالباحة — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-baha/oven-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف أفران بالباحة — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف أفران بالباحة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف أفران بالباحة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف أفران بالباحة', 'تنظيف أفران الباحة', 'شركة تنظيف أفران بالباحة', 'أفضل تنظيف أفران بالباحة'],
+        title: 'تنظيف أفران بالباحة — رطوبة Bio-Creosote+ضباب+عرعر رطوبة مطبخ — NFPA 96! (2026)',
+        description: 'تنظيف أفران الباحة. رطوبة Bio-Creosote! ضباب 200 يوم مطبخ رطب. 60-85%. NFPA 96+Anti-Fungal+Dehumidifier.',
+        h1: 'تنظيف أفران بالباحة — Bio-Creosote+ضباب!',
+        keywords: ['تنظيف أفران بالباحة', 'تنظيف فرن الباحة', 'شركة تنظيف أفران بالباحة'],
     },
-
     content: {
-        introduction: 'تنظيف أفران بالباحة — خدمة متخصصة تراعي الظروف المناخية والبيئية في الباحة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف أفران بالباحة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف أفران بالباحة. خدمة احترافية. ضمان.',
+        introduction: 'فرن الباحة = Bio-Creosote! رطوبة Bio-Creosote: 200 يوم ضباب = 60-85% داخل المطبخ ← كربنة رطبة (Wet Carbonization) = Bio-Creosote — دهن لزج حمضي نقطة اشتعال أقل من الدهن الجاف! NFPA 96. خطر حريق أعلى. ضباب مطبخ: رطوبة تدخل المطبخ ← تُبطئ تبخر الشحوم ← تتراكم أكثر. تنظيف أكثر تكراراً. عرعر رطوبة: حبوب لقاح تدخل المطبخ = عضويات ← عفن على الشحوم = طبقة بيولوجية. Anti-Fungal. Dehumidifier: مطبخ الباحة يحتاج Dehumidifier أثناء الطبخ! مقارنة: بريدة = جاف+كربنة جافة عادية = Flash Point أعلى = أقل خطر.',
+        shortAnswer: 'على عكس [التنظيف ربع السنوي]، يعتمد بروتوكولنا في خدمة [تنظيف الأفران] بمدينة [الباحة] على [NFPA 96+Anti-Fungal+Dehumidifier+تنظيف شهري]. ففي ظل [Bio-Creosote+ضباب+عرعر+60-85%]، تتفاقم ظاهرة [نقطة اشتعال أقل+تراكم أكثر+عفن]. لذا؛ يتدخل فنيونا عبر [NFPA 96 ← Anti-Fungal ← Dehumidifier ← شهري].',
+        heroSubtitle: 'Bio-Creosote خطر أعلى + ضباب تراكم — NFPA 96 شهري!',
     },
-
     pricing: [
-        { type: 'تنظيف أفران — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف أفران — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'فرن منزلي', unit: 'فرن', minPrice: 80, maxPrice: 170, time: '1-2h' },
+        { type: 'فرن + Hood', unit: 'فرن', minPrice: 120, maxPrice: 250, time: '2-3h' },
+        { type: 'فرن تجاري NFPA', unit: 'فرن', minPrice: 200, maxPrice: 420, time: '3-4h' },
+        { type: 'شهري (12/سنة)', unit: 'سنة', minPrice: 700, maxPrice: 1400, time: '12 تنظيف' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف أفران بالباحة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف أفران؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف أفران؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ما Bio-Creosote بفرن الباحة؟', answer: 'كربنة رطبة = دهن لزج حمضي. نقطة اشتعال أقل = خطر أعلى!' },
+        { question: 'ليش فرن الباحة أخطر من بريدة؟', answer: '60-85% = Bio-Creosote vs كربنة جافة. Flash Point أقل.' },
+        { question: 'كم مرة تنظيف فرن بالباحة؟', answer: 'شهري تجاري! ربع سنوي منزلي. بريدة: ربع سنوي.' },
+        { question: 'كم تكلفة فرن بالباحة مقابل بريدة؟', answer: 'أغلى 20-30% — Bio-Creosote أعقد.' },
+        { question: 'هل Dehumidifier مهم بمطبخ الباحة؟', answer: '60-85% = شحوم لا تتبخر = تتراكم أكثر. Dehumidifier.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'NFPA 96 — Bio-Creosote خطر.',
+        'Anti-Fungal — عفن شحوم.',
+        'Dehumidifier مطبخ — 60-85%.',
+        'شهري تجاري — تراكم.',
+        'لا تُهمل Hood — كربنة رطبة.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'Bio-Creosote + بدون NFPA = حريق Flash Point أقل — YMYL.',
+        'ضباب + شحوم × 3 أشهر = تراكم خطير ← حريق.',
+        'عرعر + شحوم = عفن بيولوجي ← صحة طعام YMYL.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.CIVILDEFENSE, role: 'اشتراطات السلامة — NFPA 96' },
+        { ...GOV.BALADI, role: 'ترخيص مطاعم' },
+        { entity: AMANA.BAHA.entity, url: AMANA.BAHA.url, role: 'اشتراطات أمانة الباحة' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'فرن الباحة: Bio-Creosote. Flash Point أقل. NFPA 96 شهري.', source: 'نصائح هندسية — أفران جبلية' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف NFPA 96', authority: 'الدفاع المدني', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'NFPA 96 Tools', use: 'Bio-Creosote — كربنة رطبة' },
+        { name: 'Anti-Fungal', use: 'عفن شحوم — بيولوجي' },
+        { name: 'Dehumidifier', use: '60-85% — مطبخ' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'ربع سنوي.', solution: 'Bio-Creosote = شهري.' },
+        { fear: 'مثل بريدة.', solution: 'كربنة رطبة ≠ جافة.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'دهن عادي.', truth: 'Bio-Creosote = حمضي لزج.' },
+        { myth: 'ربع سنوي.', truth: 'شهري تجاري. ضباب.' },
     ],
-
     relatedServices: [
-        { slug: 'al-baha-furniture-moving', context: 'نقل عفش بالباحة', priority: 1 },
-        { slug: 'al-baha-furniture-storage', context: 'تخزين عفش بالباحة', priority: 2 },
-        { slug: 'al-baha-dyna', context: 'دينا نقل بالباحة', priority: 3 },
-        { slug: 'al-baha-moving-out', context: 'نقل عفش خروج بالباحة', priority: 4 },
-        { slug: 'al-baha-dabab', context: 'دباب نقل بالباحة', priority: 5 },
-        { slug: 'al-baha-cleaning', context: 'تنظيف منازل بالباحة', priority: 6 },
-        { slug: 'al-baha-tanks-cleaning', context: 'تنظيف خزانات بالباحة', priority: 7 },
-        { slug: 'al-baha-sofa-cleaning', context: 'تنظيف كنب بالباحة', priority: 8 },
-        { slug: 'al-baha-carpet-cleaning', context: 'تنظيف سجاد بالباحة', priority: 9 },
+        { slug: 'restaurant-chimney-cleaning', context: 'مداخن', priority: 1 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 2 },
+        { slug: 'pest-control', context: 'حشرات', priority: 3 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 4 },
+        { slug: 'marble-polishing', context: 'رخام', priority: 5 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات', priority: 6 },
+        { slug: 'apartments-cleaning', context: 'شقق', priority: 7 },
     ],
 };

@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف مكاتب بالباحة — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-baha/office-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف مكاتب بالباحة — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف مكاتب بالباحة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف مكاتب بالباحة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف مكاتب بالباحة', 'تنظيف مكاتب الباحة', 'شركة تنظيف مكاتب بالباحة', 'أفضل تنظيف مكاتب بالباحة'],
+        title: 'تنظيف مكاتب بالباحة — أسوأ SBS بالمملكة! ضباب+عرعر+60-85%+عفن — Anti-Allergen+HEPA+Anti-Mite! (2026)',
+        description: 'تنظيف مكاتب الباحة — أسوأ Sick Building Syndrome! 200 يوم ضباب. عرعر لقاح. 60-85%. Anti-Allergen+HEPA+Anti-Mite.',
+        h1: 'تنظيف مكاتب بالباحة — أسوأ SBS بالمملكة!',
+        keywords: ['تنظيف مكاتب بالباحة', 'تنظيف مكتب الباحة', 'شركة تنظيف مكاتب بالباحة'],
     },
-
     content: {
-        introduction: 'تنظيف مكاتب بالباحة — خدمة متخصصة تراعي الظروف المناخية والبيئية في الباحة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف مكاتب بالباحة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف مكاتب بالباحة. خدمة احترافية. ضمان.',
+        introduction: 'مكتب الباحة = أسوأ Sick Building Syndrome بالمملكة! SBS: 200 يوم ضباب+60-85% رطوبة+عرعر لقاح محبوس 8 ساعات بمكتب مغلق = مستويات مسببات حساسية ضعف أي مدينة! Anti-Allergen+HEPA+Anti-Mite بروتوكولات صحة مهنية. عرعر لقاح: حبوب لقاح صفراء تدخل بنظام HVAC ← تنتشر بالمكتب. HEPA في كل مخرج. Aspergillus: عفن على ملفات المكيف ← ينتشر بالهواء ← أعراض تنفسية. Anti-Fungal Coil. عث الرطوبة: Dermatophagoides في الكراسي المكتبية ← حساسية. Anti-Mite. مقارنة: بريدة = SiO₂ داخل+CaCO₃+لكن 10-20% = لا SBS! الباحة = أسوأ SBS ← صحة مهنية YMYL!',
+        shortAnswer: 'على عكس [التنظيف العادي]، يعتمد بروتوكولنا في خدمة [تنظيف المكاتب] بمدينة [الباحة] على [Anti-Allergen+HEPA+Anti-Mite+Anti-Fungal Coil]. ففي ظل [أسوأ SBS+ضباب+عرعر+60-85%+Aspergillus]، تتفاقم ظاهرة [حساسية×2+عفن+عث]. لذا؛ يتدخل فريقنا عبر [Anti-Allergen ← HEPA ← Anti-Mite ← Anti-Fungal] — صحة مهنية!',
+        heroSubtitle: 'أسوأ SBS بالمملكة! ضباب+عرعر+عفن — Anti-Allergen!',
     },
-
     pricing: [
-        { type: 'تنظيف مكاتب — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف مكاتب — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'مكتب صغير (50م²)', unit: 'مكتب', minPrice: 150, maxPrice: 310, time: '2-3h' },
+        { type: 'مكتب + Anti-Allergen', unit: 'مكتب', minPrice: 200, maxPrice: 420, time: '3-4h' },
+        { type: 'مكتب كبير (200م²)', unit: 'مكتب', minPrice: 350, maxPrice: 720, time: '4-6h' },
+        { type: 'أسبوعي (4/شهر)', unit: 'شهر', minPrice: 400, maxPrice: 800, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف مكاتب بالباحة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف مكاتب؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف مكاتب؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش مكاتب الباحة الأسوأ بالمملكة؟', answer: '200 يوم ضباب+عرعر+60-85% = SBS ← حساسية ×2 أي مدينة.' },
+        { question: 'ما SBS بمكاتب الباحة؟', answer: 'Sick Building Syndrome: عرعر+عفن+عث محبوس 8h = أعراض تنفسية.' },
+        { question: 'كم تكلفة مكتب بالباحة مقابل بريدة؟', answer: 'أغلى 40-50% — Anti-Allergen+HEPA+Anti-Mite. بريدة: لا SBS.' },
+        { question: 'هل HEPA ضروري بكل مكيف مكتب بالباحة؟', answer: 'نعم! عرعر لقاح يدخل HVAC ← ينتشر. HEPA يحبس.' },
+        { question: 'كم مرة تنظيف مكتب بالباحة؟', answer: 'أسبوعي! SBS = صحة مهنية. بريدة: نصف شهري.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Anti-Allergen — SBS أسوأ.',
+        'HEPA كل مكيف — عرعر.',
+        'Anti-Mite — كراسي مكتبية.',
+        'Anti-Fungal Coil — Aspergillus.',
+        'أسبوعي — صحة مهنية!',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'بدون Anti-Allergen+HEPA = SBS ← حساسية موظفين YMYL.',
+        'عرعر + HVAC بدون HEPA = لقاح ينتشر ← أعراض تنفسية.',
+        'Aspergillus + ملفات مكيف = عفن ينتشر ← مرض YMYL.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
+        { entity: AMANA.BAHA.entity, url: AMANA.BAHA.url, role: 'اشتراطات أمانة الباحة' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMISNID.name, quote: 'مكاتب الباحة: أسوأ SBS بالمملكة. Anti-Allergen+HEPA+Anti-Mite.', source: 'جغرافيا المناخ — SBS جبلي' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف مكاتب مرخص', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Anti-Allergen System', use: 'SBS — حساسية ×2' },
+        { name: 'HEPA Filter', use: 'عرعر — كل مكيف' },
+        { name: 'Anti-Mite', use: 'كراسي — Dermatophagoides' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'تنظيف عادي.', solution: 'أسوأ SBS = Anti-Allergen.' },
+        { fear: 'مثل بريدة.', solution: 'لا SBS ببريدة. ×2 هنا.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'شهري.', truth: 'أسبوعي! SBS = صحة مهنية.' },
+        { myth: 'HEPA اختياري.', truth: 'عرعر HVAC = إلزامي.' },
     ],
-
     relatedServices: [
-        { slug: 'al-baha-furniture-moving', context: 'نقل عفش بالباحة', priority: 1 },
-        { slug: 'al-baha-furniture-storage', context: 'تخزين عفش بالباحة', priority: 2 },
-        { slug: 'al-baha-dyna', context: 'دينا نقل بالباحة', priority: 3 },
-        { slug: 'al-baha-moving-out', context: 'نقل عفش خروج بالباحة', priority: 4 },
-        { slug: 'al-baha-dabab', context: 'دباب نقل بالباحة', priority: 5 },
-        { slug: 'al-baha-cleaning', context: 'تنظيف منازل بالباحة', priority: 6 },
-        { slug: 'al-baha-tanks-cleaning', context: 'تنظيف خزانات بالباحة', priority: 7 },
-        { slug: 'al-baha-sofa-cleaning', context: 'تنظيف كنب بالباحة', priority: 8 },
-        { slug: 'al-baha-carpet-cleaning', context: 'تنظيف سجاد بالباحة', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 1 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 2 },
+        { slug: 'carpet-cleaning', context: 'سجاد', priority: 3 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات', priority: 4 },
+        { slug: 'pest-control', context: 'حشرات', priority: 5 },
+        { slug: 'marble-polishing', context: 'رخام', priority: 6 },
+        { slug: 'hourly-cleaning', context: 'ساعية', priority: 7 },
     ],
 };

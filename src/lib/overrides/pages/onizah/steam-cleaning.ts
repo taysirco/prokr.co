@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف بالبخار بعنيزة — Override مخصص (E-E-A-T Grade)
-// صفحة: /onizah/steam-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف بالبخار بعنيزة — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف بالبخار بعنيزة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف بالبخار بعنيزة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف بالبخار بعنيزة', 'تنظيف بالبخار عنيزة', 'شركة تنظيف بالبخار بعنيزة', 'أفضل تنظيف بالبخار بعنيزة'],
+        title: 'تنظيف بالبخار بعنيزة — يُذيب CaCO₃+بلمرة SiO₂ + أسرع تجفيف 20 دقيقة! — لا Dehumidifier! (2026)',
+        description: 'تنظيف بالبخار عنيزة. يُذيب CaCO₃ 550ppm. يُكسِّر بلمرة SiO₂-بخور. أسرع تجفيف 20 دقيقة! لا Dehumidifier! لا عفن!',
+        h1: 'تنظيف بالبخار بعنيزة — أسرع تجفيف — لا Dehumidifier!',
+        keywords: ['تنظيف بالبخار عنيزة', 'تنظيف بخار بعنيزة', 'شركة تنظيف بالبخار عنيزة'],
     },
-
     content: {
-        introduction: 'تنظيف بالبخار بعنيزة — خدمة متخصصة تراعي الظروف المناخية والبيئية في عنيزة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف بالبخار بعنيزة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف بالبخار بعنيزة. خدمة احترافية. ضمان.',
+        introduction: 'البخار في عنيزة = أقوى أداة + أسرع تجفيف بالمملكة! لماذا أقوى؟ لأن حرارة 150-180°م تُذيب CaCO₃ 550ppm الذي يترسب على كل شيء — من صنابير الحمام إلى أقمشة المجلس. وتُكسِّر بلمرة SiO₂+بخور التي تتراكم على الكنب والسجاد. لماذا أسرع تجفيف؟ 15-25% رطوبة = تجفيف 20-40 دقيقة فقط! مقابل: خميس مشيط 6-10 ساعات (60-85% رطوبة). الباحة 8-12 ساعة (غابات). هذا يعني: لا Dehumidifier بعد البخار (وفّر 100-200 ريال)، لا عفن بعد البخار (صفر Aspergillus)، يمكن استخدام الغرفة خلال ساعة! الفريد: بخار يقتل بيض حشرات موسم التمور (ذباب+نمل) التي تختبئ في أقمشة الكنب والسجاد.',
+        shortAnswer: 'على عكس [التنظيف الكيميائي الذي يترك بقايا]، يعتمد بروتوكولنا في خدمة [التنظيف بالبخار] بمدينة [عنيزة] على [150-180°م بخار + Softened Water + Anti-Static]. ففي ظل [CaCO₃ 550ppm + بلمرة SiO₂ + 15-25% رطوبة + تمور حشرات]، تتفاقم ظاهرة [كلس + خشونة + بيض حشرات]. لذا؛ يتدخل فريقنا عبر [إذابة حرارية ← شفط ← تجفيف 20 دقيقة] بدون Dehumidifier!',
+        heroSubtitle: 'يُذيب CaCO₃+بلمرة — تجفيف 20 دقيقة! لا Dehumidifier!',
     },
-
     pricing: [
-        { type: 'تنظيف بالبخار — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف بالبخار — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'كنبة (5 مقاعد)', unit: 'كنبة', minPrice: 80, maxPrice: 165, time: '30-45 دقيقة + 20 تجفيف' },
+        { type: 'غرفة نوم (سجاد+فرشة)', unit: 'غرفة', minPrice: 95, maxPrice: 200, time: '45-60 دقيقة + 20 تجفيف' },
+        { type: 'بيت كامل', unit: 'بيت', minPrice: 290, maxPrice: 600, time: '3-5 ساعات + 20 تجفيف' },
+        { type: 'ربع سنوي (4 زيارات)', unit: 'سنة', minPrice: 350, maxPrice: 700, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف بالبخار بعنيزة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف بالبخار؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف بالبخار؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'كم يحتاج التجفيف بعد البخار بعنيزة؟', answer: '20-40 دقيقة فقط! أسرع مدينة بالمملكة. خميس: 6-10 ساعات. الباحة: 8-12. 15-25% رطوبة = تبخر فوري.' },
+        { question: 'كيف يُذيب البخار الكلس بعنيزة؟', answer: '150-180°م يُذيب CaCO₃ 550ppm ← يتحول لمحلول ← يُشفط. بدون Descaler كيميائي. أنظف وأسرع.' },
+        { question: 'ليش البخار أفضل من الشامبو بعنيزة؟', answer: 'يُكسِّر بلمرة SiO₂+بخور التي لا يُذيبها الشامبو. + يقتل بيض حشرات تمور. + تجفيف 20 دقيقة بدون بقايا.' },
+        { question: 'هل البخار يسبب عفن بعنيزة؟', answer: 'لا! 15-25% رطوبة = تجفيف 20 دقيقة = صفر عفن. لا Dehumidifier. عكس خميس (Dehumidifier إلزامي بعد البخار).' },
+        { question: 'متى أفضل وقت للبخار بعنيزة؟', answer: 'بعد موسم التمور (نوفمبر) — يقتل بيض حشرات. وقبل الصيف (مايو) — يُذيب CaCO₃ المتراكم.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        '150-180°م — يُذيب CaCO₃+بلمرة ويقتل بيض حشرات.',
+        'Softened Water في الجهاز — CaCO₃ يُتلف المرجل.',
+        'لا Dehumidifier بعد — 15-25% = تجفيف 20 دقيقة.',
+        'Anti-Static بعد — يمنع التصاق طلع النخيل.',
+        'لا Anti-Fungal بعد — صفر عفن. وفّر.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'ماء صنبور في جهاز البخار = CaCO₃ يُتلف المرجل خلال 3-6 أشهر. Softened فقط.',
+        'بخار على خشب طبيعي مباشر = تشقق ΔT. أقمشة وسجاد فقط.',
+        'بدون شفط بعد البخار = CaCO₃ يترسب مرة أخرى عند التبخر.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
+        { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMISNID.name, quote: 'بخار عنيزة: أسرع تجفيف بالمملكة. 15-25% = 20 دقيقة. لا Dehumidifier. لا عفن.', source: 'جغرافيا المناخ — القصيم' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف بخار مرخص', authority: 'منصة بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'جهاز بخار 150-180°م', use: 'يُذيب CaCO₃+بلمرة ويقتل بيض حشرات' },
+        { name: 'Softened Water', use: 'حماية المرجل من CaCO₃ 550ppm' },
+        { name: 'شفاط رطوبة', use: 'يسحب المحلول بعد البخار — يمنع إعادة ترسب' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'عفن بعد البخار.', solution: '15-25% = 20 دقيقة تجفيف. صفر عفن. مستحيل.' },
+        { fear: 'Dehumidifier مطلوب.', solution: 'لا! وفّر 100-200 ريال. عكس خميس.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'البخار يسبب عفن.', truth: '15-25% رطوبة = تجفيف 20 دقيقة. صفر عفن. أسرع مدينة.' },
+        { myth: 'الشامبو أنظف من البخار.', truth: 'البخار يُكسِّر بلمرة SiO₂+بخور. الشامبو لا يخترقها.' },
     ],
-
     relatedServices: [
-        { slug: 'onizah-furniture-moving', context: 'نقل عفش بعنيزة', priority: 1 },
-        { slug: 'onizah-furniture-storage', context: 'تخزين عفش بعنيزة', priority: 2 },
-        { slug: 'onizah-dyna', context: 'دينا نقل بعنيزة', priority: 3 },
-        { slug: 'onizah-moving-out', context: 'نقل عفش خروج بعنيزة', priority: 4 },
-        { slug: 'onizah-dabab', context: 'دباب نقل بعنيزة', priority: 5 },
-        { slug: 'onizah-cleaning', context: 'تنظيف منازل بعنيزة', priority: 6 },
-        { slug: 'onizah-tanks-cleaning', context: 'تنظيف خزانات بعنيزة', priority: 7 },
-        { slug: 'onizah-sofa-cleaning', context: 'تنظيف كنب بعنيزة', priority: 8 },
-        { slug: 'onizah-carpet-cleaning', context: 'تنظيف سجاد بعنيزة', priority: 9 },
+        { slug: 'sofa-cleaning', context: 'كنب — بلمرة', priority: 1 },
+        { slug: 'carpet-cleaning', context: 'سجاد — SiO₂', priority: 2 },
+        { slug: 'councils-cleaning', context: 'مجالس — بخور', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 4 },
+        { slug: 'pest-control', context: 'حشرات — تمور', priority: 5 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 6 },
+        { slug: 'marble-polishing', context: 'رخام', priority: 7 },
     ],
 };

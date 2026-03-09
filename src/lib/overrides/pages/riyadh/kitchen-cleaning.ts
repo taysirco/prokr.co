@@ -6,7 +6,7 @@
 // ══════════════════════════════════════════════════════════════
 
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -76,13 +76,14 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.BALADI, role: 'اشتراطات النظافة للمطابخ التجارية — شهادة صحية وتقارير تنظيف دورية' },
         { ...GOV.SFDA, role: 'معايير سلامة الغذاء — المطبخ النظيف شرط أساسي لمنع التلوث' },
+        { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
 
     expertReviewer: {
-        name: EXPERTS.ALMISNID.name,
-        title: EXPERTS.ALMISNID.title,
-        credential: EXPERTS.ALMISNID.credential,
-        profileUrl: EXPERTS.ALMISNID.profileUrl,
+        name: EXPERTS.ALMOHAIMED.name,
+        title: EXPERTS.ALMOHAIMED.title,
+        credential: EXPERTS.ALMOHAIMED.credential,
+        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
     },
 
     expertCitations: [
@@ -90,7 +91,6 @@ export const override: PageOverride = {
             expert: 'أ.د. عبدالله المسند',
             quote: 'في الرياض: الغبار الصحراوي يدخل المطبخ حتى لو النوافذ مغلقة — عبر التكييف والشقوق. يختلط مع بخار القلي ويشكّل طبقة لا تزيلها إلا مذيبات صناعية',
             source: 'أستاذ جغرافيا المناخ — بيانات بيئية',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -117,14 +117,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'riyadh-oven-cleaning', context: 'فرن + مطبخ', priority: 1 },
-        { slug: 'riyadh-cleaning', context: 'تنظيف شامل', priority: 2 },
-        { slug: 'riyadh-restaurant-chimney-cleaning', context: 'مداخن المطاعم', priority: 3 },
-        { slug: 'riyadh-cockroach-control', context: 'صراصير المطبخ', priority: 4 },
-        { slug: 'riyadh-ants-control', context: 'نمل المطبخ', priority: 5 },
-        { slug: 'riyadh-sanitization', context: 'تعقيم المطبخ', priority: 6 },
-        { slug: 'riyadh-steam-cleaning', context: 'بخار يذيب الدهون', priority: 7 },
-        { slug: 'riyadh-pest-control', context: 'رش المطبخ', priority: 8 },
-        { slug: 'riyadh-air-conditioner-cleaning', context: 'دهون تسد الفلتر', priority: 9 },
+        { slug: 'oven-cleaning', context: 'فرن + مطبخ', priority: 1 },
+        { slug: 'cleaning', context: 'تنظيف شامل', priority: 2 },
+        { slug: 'restaurant-chimney-cleaning', context: 'مداخن المطاعم', priority: 3 },
+        { slug: 'cockroach-control', context: 'صراصير المطبخ', priority: 4 },
+        { slug: 'ants-control', context: 'نمل المطبخ', priority: 5 },
+        { slug: 'sanitization', context: 'تعقيم المطبخ', priority: 6 },
+        { slug: 'steam-cleaning', context: 'بخار يذيب الدهون', priority: 7 },
+        { slug: 'pest-control', context: 'رش المطبخ', priority: 8 },
+        { slug: 'air-conditioner-cleaning', context: 'دهون تسد الفلتر', priority: 9 },
     ],
 };

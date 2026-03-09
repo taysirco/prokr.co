@@ -4,6 +4,7 @@
 // ============================================
 
 import type { PageOverride } from '../../types';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -77,6 +78,8 @@ export const override: PageOverride = {
 
 
 
+        verificationBadges: [{ badge: '✔️ شركة مرخصة من بلدي', authority: 'وزارة البلديات', icon: 'shield-check' }],
+
     equipment: [
         { name: 'جهاز بخار جاف للمجالس الأرضية', use: 'ينظف المساند والسجاد بدون تبليل — المجلس جاهز للاستخدام خلال ساعة' },
         { name: 'مكنسة صناعية بفرشة سجاد', use: 'تشفط الغبار والفتات من ألياف السجاد العميقة' },
@@ -89,37 +92,35 @@ export const override: PageOverride = {
 
     trustAnchors: [
         { entity: 'وزارة البلديات — منصة بلدي', acronym: 'بلدي', url: 'https://balady.gov.sa', role: 'اشتراطات النظافة' },
+        { entity: AMANA.JEDDAH.entity, url: AMANA.JEDDAH.url, role: 'اشتراطات أمانة جدة' },
     ],
 
-    expertReviewer: {
-        name: 'أ.د. عبدالله المسند',
-        title: 'أستاذ جغرافيا المناخ',
-        credential: 'أستاذ جغرافيا المناخ — جامعة القصيم',
-        profileUrl: 'https://x.com/ALMISNID',
-    },
+    expertReviewer: EXPERTS.ALMISNID,
 
     expertCitations: [
         {
             expert: 'أ.د. عبدالله المسند',
             quote: 'المجالس الأرضية في جدة تجمع رطوبة من الجدران والأرضية — السجاد والمساند تمتص الملوحة الساحلية. بخار جاف كل 3 أشهر يمنع العفن والعث',
             source: 'تحليل مناخي',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
+        saudiRegulations: [REGULATIONS.BALADI_HEALTH],
+
     counterNarratives: [
         { myth: 'المجلس يُنظف بالمكنسة والمسّاحة', truth: 'المجلس العربي: سجاد يدوي + كنب أرضي + مساند = بيئة مثالية لعث الغبار في رطوبة جدة. المكنسة تزيل السطحي فقط. البخار 150°م يقتل العث في العمق — ضروري كل 3 أشهر في جدة' },
+        { myth: 'المنظف العادي يكفي.', truth: 'المنظف العادي يزيل 40% من الأوساخ. HEPA + بخار = 99%+. الفرق = 59% غبار دقيق + بكتيريا + عث.' },
     ],
 
     relatedServices: [
-        { slug: 'jeddah-sofa-cleaning', context: 'كنب المجلس', priority: 1 },
-        { slug: 'jeddah-carpet-cleaning', context: 'سجاد المجلس', priority: 2 },
-        { slug: 'jeddah-steam-cleaning', context: 'بخار شامل للمجلس', priority: 3 },
-        { slug: 'jeddah-sanitization', context: 'تعقيم بعد التجمعات', priority: 4 },
-        { slug: 'jeddah-cleaning', context: 'تنظيف شامل مع المجلس', priority: 5 },
-        { slug: 'jeddah-air-conditioner-cleaning', context: 'مكيف المجلس', priority: 6 },
-        { slug: 'jeddah-mattress-cleaning', context: 'مساند المجلس الأرضي', priority: 7 },
-        { slug: 'jeddah-pest-control', context: 'رش وقائي', priority: 8 },
-        { slug: 'jeddah-floor-polishing', context: 'أرضية المجلس', priority: 9 },
+        { slug: 'sofa-cleaning', context: 'كنب المجلس', priority: 1 },
+        { slug: 'carpet-cleaning', context: 'سجاد المجلس', priority: 2 },
+        { slug: 'steam-cleaning', context: 'بخار شامل للمجلس', priority: 3 },
+        { slug: 'sanitization', context: 'تعقيم بعد التجمعات', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف شامل مع المجلس', priority: 5 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف المجلس', priority: 6 },
+        { slug: 'mattress-cleaning', context: 'مساند المجلس الأرضي', priority: 7 },
+        { slug: 'pest-control', context: 'رش وقائي', priority: 8 },
+        { slug: 'floor-polishing', context: 'أرضية المجلس', priority: 9 },
     ],
 };

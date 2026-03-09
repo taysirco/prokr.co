@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف واجهات زجاجية بخميس مشيط — Override مخصص (E-E-A-T Grade)
-// صفحة: /khamis-mushait/glass-facades-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف واجهات زجاجية بخميس مشيط — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف واجهات زجاجية بخميس مشيط. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف واجهات زجاجية بخميس مشيط — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف واجهات زجاجية بخميس مشيط', 'تنظيف واجهات زجاجية خميس مشيط', 'شركة تنظيف واجهات زجاجية بخميس مشيط', 'أفضل تنظيف واجهات زجاجية بخميس مشيط'],
+        title: 'تنظيف واجهات زجاجية بخميس مشيط — ضباب Biofilm + أمطار أحماض + 60-85% طحالب — أعقد! (2026)',
+        description: 'تنظيف واجهات خميس مشيط. ضباب Biofilm أسبوعين. أمطار أحماض خفيفة. 60-85% طحالب. Anti-Biofilm+Algicide+Marine Sealant.',
+        h1: 'تنظيف واجهات بخميس مشيط — ضباب وأمطار وطحالب',
+        keywords: ['تنظيف واجهات خميس مشيط', 'تنظيف واجهات بخميس مشيط', 'شركة تنظيف واجهات خميس مشيط'],
     },
-
     content: {
-        introduction: 'تنظيف واجهات زجاجية بخميس مشيط — خدمة متخصصة تراعي الظروف المناخية والبيئية في خميس مشيط. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف واجهات زجاجية بخميس مشيط: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف واجهات زجاجية بخميس مشيط. خدمة احترافية. ضمان.',
+        introduction: 'واجهات خميس مشيط الزجاجية تواجه تلوثاً بيولوجياً سريعاً! أولاً: ضباب 200 يوم + 60-85% = Biofilm (غشاء بيولوجي) يتكوّن خلال أسبوعين — من أسرع المدن. Anti-Biofilm إلزامي بعد كل تنظيف. ثانياً: أمطار موسمية تحمل أبواغ طحالب ← تنمو على الواجهات الرطبة المظللة كبقع خضراء. Algicide متخصص. ثالثاً: تكثّف شتوي — برد 0-5°م = تكثّف على الزجاج الخارجي ← يُغذي Biofilm. رابعاً: أمطار تحمل أحماض خفيفة من التربة الجبلية ← تآكل Sealant الواجهة ← تسرب مائي. فحص Sealant سنوي. مقارنة: عنيزة = لا Biofilm + ربع سنوي + SiO₂ Pitting فقط. خميس = Biofilm+طحالب+شهري = أغلى 35-45%.',
+        shortAnswer: 'على عكس [التنظيف بالماء فقط بدون Anti-Biofilm]، يعتمد بروتوكولنا في خدمة [تنظيف الواجهات] بمدينة [خميس مشيط] على [Anti-Biofilm+Algicide+Marine Sealant+فحص تسريب]. ففي ظل [ضباب 200 يوم+60-85%+أمطار طحالب+تكثّف شتوي]، تتفاقم ظاهرة [Biofilm أسبوعين+طحالب+تآكل Sealant]. لذا؛ يتدخل فريقنا عبر [قتل ← إزالة ← حماية ← فحص].',
+        heroSubtitle: 'ضباب Biofilm + أمطار طحالب + تكثّف — شهري إلزامي!',
     },
-
     pricing: [
-        { type: 'تنظيف واجهات زجاجية — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف واجهات زجاجية — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'واجهة صغيرة (< 50 م²)', unit: 'خدمة', minPrice: 190, maxPrice: 400, time: '3-4 ساعات' },
+        { type: 'واجهة كبيرة (100+ م²)', unit: 'خدمة', minPrice: 400, maxPrice: 850, time: '5-8 ساعات' },
+        { type: 'شهري (إلزامي)', unit: 'شهر', minPrice: 150, maxPrice: 320, time: 'زيارة شهرية' },
+        { type: 'سنوي (12 زيارة)', unit: 'سنة', minPrice: 1400, maxPrice: 3000, time: '12 زيارة' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف واجهات زجاجية بخميس مشيط؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف واجهات زجاجية؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف واجهات زجاجية؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'كم مرة تحتاج الواجهة تنظيف بخميس مشيط؟', answer: 'شهرياً! Biofilm يتكوّن خلال أسبوعين. عنيزة: ربع سنوي. خميس 3× أكثر.' },
+        { question: 'كيف أمنع Biofilm على الواجهات بخميس؟', answer: 'Anti-Biofilm بعد كل تنظيف + Marine Sealant يُبطئ النمو. بدونهما = Biofilm أسبوعين.' },
+        { question: 'ليش طحالب على الواجهات بخميس مشيط؟', answer: 'أمطار تحمل أبواغ + 60-85% + ظل = بيئة مثالية للطحالب الخضراء.' },
+        { question: 'كم تكلفة تنظيف واجهات بخميس مقارنة بعنيزة؟', answer: 'أغلى 35-45% — Anti-Biofilm+Algicide+شهري. عنيزة: لا Biofilm+ربع سنوي.' },
+        { question: 'هل الأمطار تُتلف Sealant الواجهة بخميس؟', answer: 'أحماض خفيفة في الأمطار الجبلية تُتآكل Sealant ← تسرب مائي. فحص سنوي إلزامي.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Anti-Biofilm شهري — يتكوّن خلال أسبوعين.',
+        'Algicide — طحالب خضراء من أمطار.',
+        'Marine Sealant — يُبطئ Biofilm.',
+        'فحص Sealant سنوي — أحماض أمطار تُتآكل.',
+        'شهري إلزامي — ربع سنوي لا يكفي بخميس.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'Biofilm × 3 أشهر = طبقة لا تُزال بالماء — Acid Wash (500+ ريال).',
+        'طحالب + أمطار = تسرب مائي لو تآكل Sealant.',
+        'تكثّف شتوي + Biofilm = طبقة مزدوجة تمنع الرؤية.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص شركات النظافة' },
+        { entity: AMANA.ASIR.entity, url: AMANA.ASIR.url, role: 'اشتراطات أمانة عسير' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMISNID.name, quote: 'واجهات خميس: Biofilm أسبوعين+طحالب. Anti-Biofilm+Algicide شهري. من أسرع المدن تلوثاً بيولوجياً.', source: 'نصائح هندسية — واجهات جبلية' },
     ],
-
-    saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    saudiRegulations: [REGULATIONS.SBC_601],
+    verificationBadges: [{ badge: '✔️ واجهات مرخصة', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Anti-Biofilm', use: 'يقتل غشاء بيولوجي — يتكوّن أسبوعين' },
+        { name: 'Algicide', use: 'يقتل طحالب خضراء من أمطار' },
+        { name: 'Marine Sealant', use: 'يُبطئ نمو Biofilm على الزجاج' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'مثل الباحة.', solution: 'متشابه — خميس أقل غابات لكن ضباب أكثر. تكلفة متقاربة.' },
+        { fear: 'شهري غالي.', solution: 'ربع سنوي = Biofilm سميك = Acid Wash = أغلى 5×.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'الواجهات ما تحتاج Anti-Biofilm.', truth: 'ضباب 200 يوم = أسبوعين = أسرع Biofilm.' },
+        { myth: 'مثل عنيزة.', truth: 'عنيزة: لا Biofilm+ربع سنوي. عكس!' },
     ],
-
     relatedServices: [
-        { slug: 'khamis-mushait-furniture-moving', context: 'نقل عفش بخميس مشيط', priority: 1 },
-        { slug: 'khamis-mushait-furniture-storage', context: 'تخزين عفش بخميس مشيط', priority: 2 },
-        { slug: 'khamis-mushait-dyna', context: 'دينا نقل بخميس مشيط', priority: 3 },
-        { slug: 'khamis-mushait-moving-out', context: 'نقل عفش خروج بخميس مشيط', priority: 4 },
-        { slug: 'khamis-mushait-dabab', context: 'دباب نقل بخميس مشيط', priority: 5 },
-        { slug: 'khamis-mushait-cleaning', context: 'تنظيف منازل بخميس مشيط', priority: 6 },
-        { slug: 'khamis-mushait-tanks-cleaning', context: 'تنظيف خزانات بخميس مشيط', priority: 7 },
-        { slug: 'khamis-mushait-sofa-cleaning', context: 'تنظيف كنب بخميس مشيط', priority: 8 },
-        { slug: 'khamis-mushait-carpet-cleaning', context: 'تنظيف سجاد بخميس مشيط', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 1 },
+        { slug: 'marble-polishing', context: 'رخام', priority: 2 },
+        { slug: 'office-cleaning', context: 'مكاتب', priority: 3 },
+        { slug: 'villas-cleaning', context: 'فلل', priority: 4 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 5 },
+        { slug: 'pest-control', context: 'حشرات', priority: 6 },
+        { slug: 'steam-cleaning', context: 'بخار', priority: 7 },
     ],
 };

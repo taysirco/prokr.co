@@ -1,94 +1,75 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف مسابح بحفر الباطن — Override مخصص (E-E-A-T Grade)
-// صفحة: /hafr-albatin/swimming-pool-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف مسابح بحفر الباطن — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف مسابح بحفر الباطن. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف مسابح بحفر الباطن — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف مسابح بحفر الباطن', 'تنظيف مسابح حفر الباطن', 'شركة تنظيف مسابح بحفر الباطن', 'أفضل تنظيف مسابح بحفر الباطن'],
+        title: 'تنظيف مسابح بحفر الباطن — SiO₂ يخدش + تبخر 52°م أسرع + ΔT 54°م بلاط + لا طحالب (2026)',
+        description: 'تنظيف مسابح حفر الباطن. SiO₂ يخدش بلاط. تبخر 52°م أسرع. ΔT 54°م بلاط يتشقق. CaCO₃ Scale. لا طحالب (ميزة!). فلتر + تعبئة + CYA.',
+        h1: 'تنظيف مسابح بحفر الباطن — رمل يخدش وحرارة تُبخر وبرد يُشقق',
+        keywords: ['تنظيف مسابح حفر الباطن', 'تنظيف مسبح حفر الباطن', 'شركة تنظيف مسابح حفر الباطن'],
     },
-
     content: {
-        introduction: 'تنظيف مسابح بحفر الباطن — خدمة متخصصة تراعي الظروف المناخية والبيئية في حفر الباطن. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف مسابح بحفر الباطن: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف مسابح بحفر الباطن. خدمة احترافية. ضمان.',
+        introduction: 'مسبح حفر الباطن يواجه تحديات قارية + ميزات. الأولى — SiO₂ يخدش: عواصف = SiO₂ يترسب على البلاط. مشي = خدش. فرشاة Nylon. الثانية — تبخر 52°م أسرع: أسرع تبخر = تعبئة أكثر + تركيز كيميائي أسرع. تعبئة أسبوعية. الثالثة — ΔT 54°م: بلاط يتمدد ← ينكمش = Micro-Cracks. Flexible Grout. الرابعة — CaCO₃ Scale: ماء عسر = ترسبات بيضاء. Acid Wash دوري. الميزة — لا طحالب!: 10-15% = تبخر أسرع = طحالب لا تنمو بنفس القوة. Algaecide أقل. الميزة 2 — لا بعوض خطير: أقل من الشرقية.',
+        shortAnswer: 'على عكس [صيانة عادية] التي تتجاهل SiO₂+ΔT، يعتمد بروتوكولنا في خدمة [تنظيف المسابح] بمدينة [حفر الباطن] على [فلتر SiO₂ + تعبئة + CYA + Flexible Grout]. ففي ظل [SiO₂ + تبخر + ΔT + CaCO₃]، تتفاقم ظاهرة [خدش + تركيز + تشقق + Scale]. لذا؛ يتدخل خبراؤنا عبر [بروتوكول مسبح قاري].',
+        heroSubtitle: 'SiO₂ خدش + تبخر 52°م + ΔT 54°م + CaCO₃ + لا طحالب',
     },
-
     pricing: [
-        { type: 'تنظيف مسابح — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف مسابح — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'صيانة أسبوعية', unit: 'مسبح', minPrice: 110, maxPrice: 220, time: '1-2 ساعة' },
+        { type: 'Acid Wash (CaCO₃)', unit: 'مسبح', minPrice: 240, maxPrice: 480, time: '2-3 ساعات' },
+        { type: 'عقد شهري', unit: 'شهر', minPrice: 380, maxPrice: 760, time: '4 زيارات' },
+        { type: 'تجهيز شتاء (ΔT)', unit: 'مسبح', minPrice: 290, maxPrice: 580, time: '2-4 ساعات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف مسابح بحفر الباطن؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف مسابح؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف مسابح؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'CaCO₃ Scale — مثل الأحساء؟', answer: 'ماء عسر = Scale. لكن أقل من الأحساء. Acid Wash ربع سنوي = كافٍ.' },
+        { question: 'تبخر — كم أسرع؟', answer: '52°م + 10-15% = أسرع تبخر في المملكة. يخسر 5-10 سم/أسبوع صيفاً. تعبئة أسبوعية.' },
+        { question: 'ΔT — بلاط يتشقق؟', answer: '52°م ← -2°م = 54°م Cycling. بلاط مسبح يتمدد ← ينكمش ← Micro-Cracks. Flexible Grout يتحمل.' },
+        { question: 'لا طحالب — ميزة؟', answer: 'ميزة! 10-15% + تبخر = طحالب أقل كثيراً. Algaecide أقل. لكن: CYA للـ UV (أصفى سماء).' },
+        { question: 'شتاء — -2°م؟', answer: 'تجميد سطح ممكن! تجهيز شتاء: تخفيض مستوى + سخان + غطاء عازل.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'فرشاة Nylon — SiO₂ + حديدية = خدش مُركّب.',
+        'تعبئة أسبوعية — تبخر 52°م أسرع.',
+        'CYA 40-60 ppm — UV أعلى = كلور يتحلل أسرع.',
+        'Flexible Grout — ΔT 54°م.',
+        'غطاء — يُقلل SiO₂ + تبخر + UV.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'SiO₂ + فرشاة حديدية = خدش مُركّب. Nylon فقط.',
+        'تبخر + تركيز = pH يتغير أسرع. فحص يومي صيفاً.',
+        'ΔT 54°م + بلاط = تشقق. Flexible Grout.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص المسابح' },
+        { entity: AMANA.HAFR.entity, url: AMANA.HAFR.url, role: 'اشتراطات المسابح بحفر الباطن' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALJUND.name, quote: 'مسبح حفر الباطن: SiO₂ + تبخر أسرع + ΔT 54°م + CaCO₃. قاري. لا طحالب (ميزة!). تجهيز شتاء -2°م.', source: 'موسوعة أخطاء — مسابح قارية' },
     ],
-
-    saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    saudiRegulations: [REGULATIONS.SBC_601],
+    verificationBadges: [{ badge: '✔️ صيانة مسابح مرخصة', authority: 'منصة بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'فرشاة Nylon', use: 'SiO₂ — بلا خدش مُركّب' },
+        { name: 'Acid Wash', use: 'CaCO₃ Scale — ربع سنوي' },
+        { name: 'CYA', use: 'UV أعلى — حماية كلور' },
+        { name: 'Flexible Grout', use: 'ΔT 54°م — بلاط' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'لا طحالب = سهل.', solution: 'تبخر + ΔT + CaCO₃ + SiO₂. 4 تحديات.' },
+        { fear: 'مثل الرياض.', solution: 'ΔT 54°م > 35°م. -2°م = تجميد.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'لا يتجمد.', truth: '-2°م = سطح يتجمد. تجهيز شتاء.' },
+        { myth: 'شهري.', truth: 'تبخر 52°م = تعبئة أسبوعية.' },
+        { myth: 'فرشاة عادية.', truth: 'SiO₂ + حديدية = خدش. Nylon.' },
     ],
-
     relatedServices: [
-        { slug: 'hafr-albatin-furniture-moving', context: 'نقل عفش بحفر الباطن', priority: 1 },
-        { slug: 'hafr-albatin-furniture-storage', context: 'تخزين عفش بحفر الباطن', priority: 2 },
-        { slug: 'hafr-albatin-dyna', context: 'دينا نقل بحفر الباطن', priority: 3 },
-        { slug: 'hafr-albatin-moving-out', context: 'نقل عفش خروج بحفر الباطن', priority: 4 },
-        { slug: 'hafr-albatin-dabab', context: 'دباب نقل بحفر الباطن', priority: 5 },
-        { slug: 'hafr-albatin-cleaning', context: 'تنظيف منازل بحفر الباطن', priority: 6 },
-        { slug: 'hafr-albatin-tanks-cleaning', context: 'تنظيف خزانات بحفر الباطن', priority: 7 },
-        { slug: 'hafr-albatin-sofa-cleaning', context: 'تنظيف كنب بحفر الباطن', priority: 8 },
-        { slug: 'hafr-albatin-carpet-cleaning', context: 'تنظيف سجاد بحفر الباطن', priority: 9 },
+        { slug: 'tanks-cleaning', context: 'خزانات — CaCO₃', priority: 1 },
+        { slug: 'pest-control', context: 'حشرات', priority: 2 },
+        { slug: 'villas-cleaning', context: 'فلل — مسبح', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 4 },
+        { slug: 'marble-polishing', context: 'رخام — حول', priority: 5 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات', priority: 6 },
+        { slug: 'thermal-insulation', context: 'عزل — ΔT', priority: 7 },
     ],
 };

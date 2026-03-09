@@ -4,6 +4,7 @@
 // ============================================
 
 import type { PageOverride } from '../../types';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -76,6 +77,8 @@ export const override: PageOverride = {
     ],
 
 
+        verificationBadges: [{ badge: '✔️ شركة مرخصة من بلدي', authority: 'وزارة البلديات', icon: 'shield-check' }],
+
     equipment: [
         { name: 'جهاز بخار جاف UV-C', use: 'بخار + أشعة فوق بنفسجية تقتل عث الغبار والبكتيريا في عمق المرتبة' },
         { name: 'مكنسة مراتب HEPA Mattress Vac', use: 'تشفط عث الغبار ومخلفاته من داخل المرتبة — فلتر HEPA يمنع النفاذ' },
@@ -88,23 +91,20 @@ export const override: PageOverride = {
 
     trustAnchors: [
         { entity: 'الجمعية الأمريكية لعلم الحساسية', acronym: 'ACAAI', url: 'https://acaai.org', role: 'أبحاث عث الغبار وتأثيره على الجهاز التنفسي' },
+        { entity: AMANA.JEDDAH.entity, url: AMANA.JEDDAH.url, role: 'اشتراطات أمانة جدة' },
     ],
 
-    expertReviewer: {
-        name: 'أ.د. عبدالله المسند',
-        title: 'أستاذ جغرافيا المناخ',
-        credential: 'أستاذ جغرافيا المناخ — جامعة القصيم',
-        profileUrl: 'https://x.com/ALMISNID',
-    },
+    expertReviewer: EXPERTS.ALMOHAIMED,
 
     expertCitations: [
         {
             expert: 'أ.د. عبدالله المسند',
             quote: 'عث الغبار يتكاثر بالملايين في المراتب بالمناخ الساحلي — الرطوبة المثالية لعث الغبار 70-80% وجدة تحققها 8 أشهر/سنة. التنظيف كل 3 أشهر إلزامي',
             source: 'تحليل مناخي',
-            url: 'https://x.com/ALMISNID',
         },
     ],
+
+        saudiRegulations: [REGULATIONS.BALADI_HEALTH],
 
     counterNarratives: [
         { myth: 'المرتبة الجديدة ما تحتاج تنظيف', truth: 'المرتبة الجديدة تبدأ تجمع عث الغبار من الشهر الأول. في جدة (رطوبة 70%): العث يتكاثر 3x أسرع. بعد 6 أشهر بدون تنظيف: ملايين العث + مخلفاتها. القاعدة: مرتبة جديدة = تنظيف بعد 3 أشهر أول مرة' },
@@ -112,15 +112,15 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'jeddah-sofa-cleaning', context: 'كنب + مراتب = باقة مفروشات بخصم', priority: 1 },
-        { slug: 'jeddah-carpet-cleaning', context: 'السجاد بؤرة عث ثانية — تنظيف شامل', priority: 2 },
-        { slug: 'jeddah-steam-cleaning', context: 'بخار 150°م شامل للمنزل — مراتب + كنب + أرضيات', priority: 3 },
-        { slug: 'jeddah-cleaning', context: 'تنظيف شامل مع تنظيف المراتب', priority: 4 },
-        { slug: 'jeddah-sanitization', context: 'تعقيم بعد تنظيف المراتب — حماية مزدوجة', priority: 5 },
-        { slug: 'jeddah-bedbugs-control', context: 'بق الفراش يختبئ في المراتب — فحص أثناء التنظيف', priority: 6 },
-        { slug: 'jeddah-pest-control', context: 'مكافحة عث وحشرات المفروشات', priority: 7 },
-        { slug: 'jeddah-air-conditioner-cleaning', context: 'المكيف ينشر غبار العث — تنظيفه مع المراتب', priority: 8 },
-        { slug: 'jeddah-furniture-cleaning', context: 'تنظيف أثاث غرفة النوم مع المراتب', priority: 9 },
+        { slug: 'sofa-cleaning', context: 'كنب + مراتب = باقة مفروشات بخصم', priority: 1 },
+        { slug: 'carpet-cleaning', context: 'السجاد بؤرة عث ثانية — تنظيف شامل', priority: 2 },
+        { slug: 'steam-cleaning', context: 'بخار 150°م شامل للمنزل — مراتب + كنب + أرضيات', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف شامل مع تنظيف المراتب', priority: 4 },
+        { slug: 'sanitization', context: 'تعقيم بعد تنظيف المراتب — حماية مزدوجة', priority: 5 },
+        { slug: 'bedbugs-control', context: 'بق الفراش يختبئ في المراتب — فحص أثناء التنظيف', priority: 6 },
+        { slug: 'pest-control', context: 'مكافحة عث وحشرات المفروشات', priority: 7 },
+        { slug: 'air-conditioner-cleaning', context: 'المكيف ينشر غبار العث — تنظيفه مع المراتب', priority: 8 },
+        { slug: 'furniture-cleaning', context: 'تنظيف أثاث غرفة النوم مع المراتب', priority: 9 },
     ],
 };
 

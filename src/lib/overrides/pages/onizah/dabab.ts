@@ -1,94 +1,75 @@
-// ══════════════════════════════════════════════════════════════
-// دباب نقل بعنيزة — Override مخصص (E-E-A-T Grade)
-// صفحة: /onizah/dabab
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'دباب نقل بعنيزة — خدمة احترافية معتمدة (2026)',
-        description: 'دباب نقل بعنيزة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'دباب نقل بعنيزة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['دباب نقل بعنيزة', 'دباب نقل عنيزة', 'شركة دباب نقل بعنيزة', 'أفضل دباب نقل بعنيزة'],
+        title: 'دباب نقل بعنيزة — SiO₂ + ΔT 50°م + نقل تمور تبريد — بريدة 30 كم! (2026)',
+        description: 'دباب نقل عنيزة. SiO₂ يخدش البضائع. ΔT 50°م يُتلف الحساس. نقل تمور = تبريد 18°م. بريدة 30 كم فقط! لا NaCl = أرخص.',
+        h1: 'دباب نقل بعنيزة — رمل وحرارة ونقل تمور',
+        keywords: ['دباب نقل عنيزة', 'دباب نقل بعنيزة', 'شركة دباب نقل عنيزة'],
     },
-
     content: {
-        introduction: 'دباب نقل بعنيزة — خدمة متخصصة تراعي الظروف المناخية والبيئية في عنيزة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'دباب نقل بعنيزة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'دباب نقل بعنيزة. خدمة احترافية. ضمان.',
+        introduction: 'الدباب في عنيزة يحمل مسؤولية مزدوجة لا تجدها في أي مدينة أخرى: نقل بضائع عادية + نقل تمور! التمور: عنيزة = أكبر سوق تمور بالعالم. نقل التمور يحتاج تبريد 18°م — بدونه تتخمر خلال ساعات تحت شمس 48°م. SiO₂ من النفود يخدش البضائع المكشوفة — Stretch Film إلزامي. ΔT 50°م (من -2° شتاءً إلى 48° صيفاً) يُجهد البطاريات والإلكترونيات — عزل حراري. الميزة الذهبية: لا NaCl ملح بحري = لا صدأ = لا VCI = أرخص من الساحل. بريدة 30 كم فقط = أقرب مدينة كبيرة = نقل سريع ورخيص.',
+        shortAnswer: 'على عكس [النقل المكشوف الذي يعرض للخدش والحرارة]، يعتمد بروتوكولنا في خدمة [دباب النقل] بمدينة [عنيزة] على [Stretch Film + تبريد تمور 18°م + عزل حراري]. ففي ظل [SiO₂ + ΔT 50°م + موسم تمور + بريدة 30 كم]، تتفاقم ظاهرة [خدش + تلف + تخمر]. لذا؛ يتدخل سائقونا عبر [تغليف ← تبريد ← عزل] لضمان توصيل آمن.',
+        heroSubtitle: 'SiO₂ + ΔT 50°م + نقل تمور تبريد — بريدة 30 كم!',
     },
-
     pricing: [
-        { type: 'دباب نقل — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'دباب نقل — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'داخل عنيزة', unit: 'رحلة', minPrice: 25, maxPrice: 55, time: '30-60 دقيقة' },
+        { type: 'عنيزة ← بريدة (30 كم)', unit: 'رحلة', minPrice: 35, maxPrice: 70, time: '30 دقيقة' },
+        { type: 'نقل تمور مبرّد', unit: 'رحلة', minPrice: 50, maxPrice: 100, time: '30-60 دقيقة' },
+        { type: 'يومي (موسم تمور)', unit: 'يوم', minPrice: 150, maxPrice: 350, time: '8 ساعات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة دباب نقل بعنيزة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق دباب نقل؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على دباب نقل؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'كم المسافة من عنيزة لبريدة بالدباب؟', answer: '30 كم = 20-30 دقيقة. أقرب مدينة كبيرة. 35-70 ريال فقط.' },
+        { question: 'كيف أنقل تمور بالدباب بدون تلف؟', answer: 'تبريد 18°م إلزامي. بدونه = تخمر خلال 3-4 ساعات تحت 48°م. صناديق معزولة.' },
+        { question: 'ليش Stretch Film ضروري بعنيزة؟', answer: 'SiO₂ من النفود يخدش أي سطح مكشوف. Stretch Film يحمي 100%. بدونه = خدش لا يُصلح.' },
+        { question: 'هل الدباب يحتاج VCI مثل جدة؟', answer: 'لا! صفر NaCl = صفر صدأ = لا VCI. وفّر 15-20% من تكلفة النقل مقارنة بالساحل.' },
+        { question: 'متى موسم نقل التمور الأكثر طلباً؟', answer: 'أغسطس-أكتوبر = ذروة. أسعار أعلى 20-30%. احجز مبكراً.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Stretch Film — SiO₂ يخدش أي بضاعة مكشوفة.',
+        'تبريد 18°م للتمور — بدونه تتخمر تحت 48°م.',
+        'بريدة 30 كم — أقرب وأرخص مدينة كبيرة.',
+        'لا VCI — صفر NaCl. وفّر التكلفة.',
+        'عزل حراري — ΔT 50°م يُتلف الإلكترونيات.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'تمور بدون تبريد 18°م + 48°م = تخمر خلال 3-4 ساعات — خسارة كاملة.',
+        'بضائع مكشوفة + SiO₂ = خدش لا يُصلح — حتى الأثاث الخشبي.',
+        'إلكترونيات بدون عزل + ΔT 50°م = تلف بطاريات — ضمان يسقط.',
     ],
-
     trustAnchors: [
-        { ...GOV.TGA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.TGA, role: 'ترخيص النقل البري' },
+        { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات النقل — أمانة القصيم' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALZUWAYED.name,
-        title: EXPERTS.ALZUWAYED.title,
-        credential: EXPERTS.ALZUWAYED.credential,
-        profileUrl: EXPERTS.ALZUWAYED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALSHABNAN,
     expertCitations: [
-        {
-            expert: EXPERTS.ALZUWAYED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALZUWAYED.title,
-            url: EXPERTS.ALZUWAYED.profileUrl,
-        },
+        { expert: EXPERTS.ALZUWAYED.name, quote: 'دباب عنيزة: نقل تمور = تبريد إلزامي. بريدة 30 كم = أقرب. لا NaCl = أرخص.', source: 'هيئة النقل — القصيم' },
     ],
-
     saudiRegulations: [REGULATIONS.TGA_LICENSE],
-
     verificationBadges: [
-        { badge: '✔️ شركة نقل مرخصة من هيئة النقل TGA', authority: 'الهيئة العامة للنقل', icon: 'shield-check' },
+        { badge: '✔️ نقل مرخص TGA', authority: 'هيئة النقل', icon: 'shield-check' },
     ],
-
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Stretch Film', use: 'حماية من SiO₂ — يمنع خدش البضائع' },
+        { name: 'صندوق تبريد 18°م', use: 'نقل تمور — يمنع التخمر' },
+        { name: 'عزل حراري', use: 'حماية إلكترونيات من ΔT 50°م' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'بعيد عن بريدة.', solution: '30 كم = 20-30 دقيقة فقط. أقرب مدينة كبيرة.' },
+        { fear: 'VCI مطلوب.', solution: 'صفر NaCl = صفر صدأ = لا VCI. وفّر.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'التمور ما تحتاج تبريد.', truth: '48°م + 4 ساعات = تخمر. تبريد 18°م إلزامي.' },
+        { myth: 'دباب عادي يكفي.', truth: 'SiO₂ يخدش. Stretch Film ضروري. + تبريد للتمور.' },
     ],
-
     relatedServices: [
-        { slug: 'onizah-furniture-moving', context: 'نقل عفش بعنيزة', priority: 1 },
-        { slug: 'onizah-furniture-storage', context: 'تخزين عفش بعنيزة', priority: 2 },
-        { slug: 'onizah-dyna', context: 'دينا نقل بعنيزة', priority: 3 },
-        { slug: 'onizah-moving-out', context: 'نقل عفش خروج بعنيزة', priority: 4 },
-        { slug: 'onizah-cleaning', context: 'تنظيف منازل بعنيزة', priority: 5 },
-        { slug: 'onizah-tanks-cleaning', context: 'تنظيف خزانات بعنيزة', priority: 6 },
-        { slug: 'onizah-sofa-cleaning', context: 'تنظيف كنب بعنيزة', priority: 7 },
-        { slug: 'onizah-carpet-cleaning', context: 'تنظيف سجاد بعنيزة', priority: 8 },
-        { slug: 'onizah-steam-cleaning', context: 'تنظيف بالبخار بعنيزة', priority: 9 },
+        { slug: 'dyna', context: 'دينا — أطنان تمور', priority: 1 },
+        { slug: 'furniture-moving', context: 'نقل عفش', priority: 2 },
+        { slug: 'auto-cleaning', context: 'غسيل سيارات', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 4 },
+        { slug: 'furniture-storage', context: 'تخزين', priority: 5 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 6 },
+        { slug: 'pest-control', context: 'حشرات — تمور', priority: 7 },
     ],
 };

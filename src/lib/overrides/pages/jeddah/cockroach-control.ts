@@ -6,7 +6,7 @@
 // ══════════════════════════════════════════════════════════════
 
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -51,6 +51,7 @@ export const override: PageOverride = {
             question: 'المطبخ نظيف تماماً — ليش فيه صراصير؟',
             answer: 'الصراصير تحتاج ماء أكثر من الطعام. في جدة: الرطوبة الساحلية 60-90% + تقطير المكيفات + رطوبة أنابيب أسفل المغسلة = مصادر ماء كافية حتى لو المطبخ نظيف 100%. الحل: إصلاح أي تسريب + تجفيف أسفل المغسلة + شبك على المصارف. الصرصور يعيش 3 أشهر بدون أكل — لكن أسبوع واحد فقط بدون ماء.',
         },
+        { question: 'هل المبيدات آمنة على الأطفال والحيوانات؟', answer: 'مبيدات مسجلة في نظام غد — SFDA. إخلاء 2-4 ساعات بعد الرش. طيور وأسماك: أبِلغ الشركة مسبقاً لاستخدام مواد أخف. الأسطح آمنة بعد الجفاف (1-2 ساعة).' },
     ],
 
     expertTips: [
@@ -70,6 +71,7 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.SFDA, role: 'اعتماد المبيدات والجل الطُعم — نظام غد لتسجيل المبيدات الآمنة' },
         { ...GOV.BALADI, role: 'ترخيص شركات المكافحة — اشتراطات صحية للمطابخ التجارية' },
+        { entity: AMANA.JEDDAH.entity, url: AMANA.JEDDAH.url, role: 'اشتراطات أمانة جدة' },
     ],
 
     expertReviewer: {
@@ -84,7 +86,6 @@ export const override: PageOverride = {
             expert: 'أ.د. فهد الخضيري',
             quote: 'المبيدات غير المنتقاة تقتل الصراصير الظاهرة فقط وتنفّرها لغرف أخرى. الجل الطُعم هو الحل العلمي الوحيد الذي يصل المستعمرة ويقتل الملكة',
             source: 'عالم أبحاث طبي — سموم ومسرطنات',
-            url: 'https://x.com/DrAlkhodairy',
         },
     ],
 
@@ -111,14 +112,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'jeddah-pest-control', context: 'مكافحة شاملة لكل الحشرات — ليس فقط الصراصير', priority: 1 },
-        { slug: 'jeddah-ants-control', context: 'النمل يشارك الصراصير نفس البيئة الرطبة — مكافحة مزدوجة', priority: 2 },
-        { slug: 'jeddah-insects-spraying', context: 'رش وقائي شامل بعد إبادة الصراصير يمنع عودتها', priority: 3 },
-        { slug: 'jeddah-pesticide-spraying', context: 'رش مبيدات الجيل الرابع — حماية دورية ربع سنوية', priority: 4 },
-        { slug: 'jeddah-rodent-control', context: 'الفئران والصراصير تتشارك المجاري — مكافحة مترابطة', priority: 5 },
-        { slug: 'jeddah-sewage-unblocking', context: 'المجاري المسدودة = المدخل الرئيسي للصراصير الأمريكية', priority: 6 },
-        { slug: 'jeddah-sanitization', context: 'تعقيم المطبخ بعد إبادة الصراصير — يزيل البكتيريا', priority: 7 },
-        { slug: 'jeddah-kitchen-cleaning', context: 'تنظيف عميق للمطبخ — يزيل مصادر جذب الصراصير', priority: 8 },
-        { slug: 'jeddah-cleaning', context: 'تنظيف شامل بعد المكافحة يزيل فضلات ومخلفات', priority: 9 },
+        { slug: 'pest-control', context: 'مكافحة شاملة لكل الحشرات — ليس فقط الصراصير', priority: 1 },
+        { slug: 'ants-control', context: 'النمل يشارك الصراصير نفس البيئة الرطبة — مكافحة مزدوجة', priority: 2 },
+        { slug: 'insects-spraying', context: 'رش وقائي شامل بعد إبادة الصراصير يمنع عودتها', priority: 3 },
+        { slug: 'pesticide-spraying', context: 'رش مبيدات الجيل الرابع — حماية دورية ربع سنوية', priority: 4 },
+        { slug: 'rodent-control', context: 'الفئران والصراصير تتشارك المجاري — مكافحة مترابطة', priority: 5 },
+        { slug: 'sewage-unblocking', context: 'المجاري المسدودة = المدخل الرئيسي للصراصير الأمريكية', priority: 6 },
+        { slug: 'sanitization', context: 'تعقيم المطبخ بعد إبادة الصراصير — يزيل البكتيريا', priority: 7 },
+        { slug: 'kitchen-cleaning', context: 'تنظيف عميق للمطبخ — يزيل مصادر جذب الصراصير', priority: 8 },
+        { slug: 'cleaning', context: 'تنظيف شامل بعد المكافحة يزيل فضلات ومخلفات', priority: 9 },
     ],
 };

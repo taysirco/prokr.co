@@ -1,12 +1,5 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف بالبخار بالدمام — Override مخصص (E-E-A-T Grade)
-// صفحة: /dammam/steam-cleaning
-// قطاع YMYL: صحة (تعقيم بدون كيماويات — أطفال وحساسية)
-// خريطة 2.4: المسند → بلدي
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -53,6 +46,7 @@ export const override: PageOverride = {
             question: 'كل الأسطح تتحمل البخار 180°م؟',
             answer: 'معظمها — لكن: 1) الخشب المطلي: بخار من مسافة + سريع (لا تثبت في نقطة). 2) الجلد الطبيعي: بخار خفيف + تجفيف + ترطيب فوري. 3) البلاستيك الرخيص: قد يتشوه. الفني المحترف يعرف: كل سطح ← ضغط وحرارة ومسافة مختلفة. لا تجرب بنفسك على أسطح حساسة.',
         },
+        { question: 'كم تكلفة التنظيف العميق مقارنة بالتنظيف العادي؟', answer: 'التنظيف العميق أغلى 30-50% لكنه يشمل: HEPA + بخار 150°م + تعقيم. التنظيف العادي = مسح سطحي. العميق كل 3-4 أشهر + العادي أسبوعياً = أفضل معادلة تكلفة/نظافة.' },
     ],
 
     expertTips: [
@@ -71,21 +65,16 @@ export const override: PageOverride = {
 
     trustAnchors: [
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف بالبخار — اشتراطات سلامة ومعدات معتمدة' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات أمانة الشرقية' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMISNID.name,
-        title: EXPERTS.ALMISNID.title,
-        credential: EXPERTS.ALMISNID.credential,
-        profileUrl: EXPERTS.ALMISNID.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMISNID,
 
     expertCitations: [
         {
             expert: 'أ.د. عبدالله المسند',
             quote: 'بخار 180°م هو الطريقة الوحيدة التي تعالج ملوثات الدمام الثلاثة (صناعي + بيولوجي + ملحي) بدون إضافة مواد كيميائية. الحل الأنظف علمياً',
             source: 'أستاذ المناخ والبيئة',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -113,14 +102,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'dammam-cleaning', context: 'تنظيف منازل شامل يتضمن بخار', priority: 1 },
-        { slug: 'dammam-sofa-cleaning', context: 'تنظيف كنب بالبخار — ضد عث الرطوبة', priority: 2 },
-        { slug: 'dammam-carpet-cleaning', context: 'غسيل سجاد بالبخار — إزالة PM2.5 والعث', priority: 3 },
-        { slug: 'dammam-mattress-cleaning', context: 'تنظيف مراتب بالبخار — تعقيم ضد العث', priority: 4 },
-        { slug: 'dammam-kitchen-cleaning', context: 'بخار المطبخ — أفضل طريقة لإزالة الدهون اللزجة', priority: 5 },
-        { slug: 'dammam-sanitization', context: 'تعقيم إضافي بعد البخار للحالات الحرجة (بعد مرض)', priority: 6 },
-        { slug: 'dammam-air-conditioner-cleaning', context: 'تنظيف مكيفات يكمّل البخار — يمنع إعادة التلوث', priority: 7 },
-        { slug: 'dammam-oven-cleaning', context: 'البخار يذيب دهون الأفران بدون كيماويات', priority: 8 },
-        { slug: 'dammam-glass-facades-cleaning', context: 'بخار النوافذ يزيل الملوحة بدون هالات', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف منازل شامل يتضمن بخار', priority: 1 },
+        { slug: 'sofa-cleaning', context: 'تنظيف كنب بالبخار — ضد عث الرطوبة', priority: 2 },
+        { slug: 'carpet-cleaning', context: 'غسيل سجاد بالبخار — إزالة PM2.5 والعث', priority: 3 },
+        { slug: 'mattress-cleaning', context: 'تنظيف مراتب بالبخار — تعقيم ضد العث', priority: 4 },
+        { slug: 'kitchen-cleaning', context: 'بخار المطبخ — أفضل طريقة لإزالة الدهون اللزجة', priority: 5 },
+        { slug: 'sanitization', context: 'تعقيم إضافي بعد البخار للحالات الحرجة (بعد مرض)', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'تنظيف مكيفات يكمّل البخار — يمنع إعادة التلوث', priority: 7 },
+        { slug: 'oven-cleaning', context: 'البخار يذيب دهون الأفران بدون كيماويات', priority: 8 },
+        { slug: 'glass-facades-cleaning', context: 'بخار النوافذ يزيل الملوحة بدون هالات', priority: 9 },
     ],
 };

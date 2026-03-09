@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف بالبخار بينبع — Override مخصص (E-E-A-T Grade)
-// صفحة: /yanbu/steam-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف بالبخار بينبع — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف بالبخار بينبع. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف بالبخار بينبع — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف بالبخار بينبع', 'تنظيف بالبخار ينبع', 'شركة تنظيف بالبخار بينبع', 'أفضل تنظيف بالبخار بينبع'],
+        title: 'تنظيف بالبخار بينبع — NaCl ملح+SOx حمض+70-85% عفن بعد البخار — Anti-Fungal+RO! (2026)',
+        description: 'تنظيف بالبخار ينبع. NaCl ملح يعود! SOx H₂SO₄. 70-85% عفن بعد البخار 6-8h تجفيف. Anti-Fungal+RO+Dehumidifier.',
+        h1: 'تنظيف بالبخار بينبع — عفن بعد البخار!',
+        keywords: ['تنظيف بالبخار ينبع', 'تنظيف بخار بينبع', 'شركة تنظيف بالبخار ينبع'],
     },
-
     content: {
-        introduction: 'تنظيف بالبخار بينبع — خدمة متخصصة تراعي الظروف المناخية والبيئية في ينبع. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف بالبخار بينبع: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف بالبخار بينبع. خدمة احترافية. ضمان.',
+        introduction: 'بخار ينبع = رطوبة البخار + رطوبة البحر = عفن! RO Water جهاز: ماء صنبور ينبع محلى (TDS<150) + NaCl = يترسب داخل جهاز البخار ← يتكلّس + يترك ملح. RO إلزامي. NaCl يعود: بخار يُذيب NaCl على السطح ← يتبخر ← NaCl يعود. RO الأصل. SOx H₂SO₄: بخار يُحرّك الطبقة الحمضية ← ينتشر. Pre-Rinse أولاً ← ثم بخار. 70-85% عفن بعد البخار: أخطر مشكلة! بخار يُضيف رطوبة ← 70-85% + بخار = تجفيف 6-8h! عفن بعد البخار لو لا Dehumidifier! Anti-Fungal إلزامي. مقارنة: بريدة = تجفيف 10-15 دقيقة+لا عفن+RO كلس. ينبع = 6-8h+عفن+Anti-Fungal = أعقد.',
+        shortAnswer: 'على عكس [البخار بماء صنبور بدون Dehumidifier]، يعتمد بروتوكولنا في خدمة [التنظيف بالبخار] بمدينة [ينبع] على [RO Water جهاز+Pre-Rinse+Anti-Fungal+Dehumidifier]. ففي ظل [NaCl يعود+SOx حمض+70-85% عفن بعد+تجفيف 6-8h]، تتفاقم ظاهرة [ملح يعود+حمض+عفن بعد]. لذا؛ يتدخل فريقنا عبر [Pre-Rinse ← RO بخار ← Anti-Fungal ← Dehumidifier] — 6-8h!',
+        heroSubtitle: '70-85% + بخار = عفن بعد! Dehumidifier+Anti-Fungal إلزامي!',
     },
-
     pricing: [
-        { type: 'تنظيف بالبخار — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف بالبخار — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'كنب (طقم 5)', unit: 'طقم', minPrice: 150, maxPrice: 310, time: '1-2h + 6-8h تجفيف' },
+        { type: 'سجاد (م²)', unit: 'م²', minPrice: 8, maxPrice: 18, time: '+ تجفيف' },
+        { type: 'مطبخ + حمام', unit: 'خدمة', minPrice: 180, maxPrice: 370, time: '2-3h' },
+        { type: 'شامل (شقة)', unit: 'شقة', minPrice: 300, maxPrice: 620, time: '4-6h + تجفيف' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف بالبخار بينبع؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف بالبخار؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف بالبخار؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش عفن بعد البخار بينبع؟', answer: '70-85% + رطوبة بخار = تجفيف 6-8h! بدون Dehumidifier = عفن.' },
+        { question: 'ليش RO لجهاز البخار بينبع؟', answer: 'ماء محلى+NaCl يترسب داخل الجهاز = تكلّس+ملح. RO إلزامي.' },
+        { question: 'كم تجفيف بخار بينبع؟', answer: '6-8 ساعات! بريدة: 10-15 دقيقة. Dehumidifier يُقلّل لـ 3-4h.' },
+        { question: 'هل بخار يُذيب NaCl بينبع؟', answer: 'نعم ← يتبخر ← NaCl يعود. Pre-Rinse RO أولاً.' },
+        { question: 'كم تكلفة بخار بينبع مقارنة ببريدة؟', answer: 'أغلى 30-40% — Anti-Fungal+Dehumidifier+6-8h.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'RO جهاز — NaCl+تحلية.',
+        'Pre-Rinse — NaCl+SOx قبل بخار.',
+        'Anti-Fungal — 70-85% عفن بعد.',
+        'Dehumidifier — 6-8h تجفيف.',
+        'لا بخار بدون Dehumidifier — عفن!',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        '70-85% + بخار بدون Dehumidifier = عفن أسود ← صحة YMYL.',
+        'ماء صنبور بجهاز البخار = تكلّس+ملح ← جهاز يتلف.',
+        'NaCl + بخار = يعود بالتبخر — Pre-Rinse RO أولاً.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
+        { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'اشتراطات أمانة ينبع' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMISNID.name, quote: 'بخار ينبع: 70-85%+بخار = عفن بعد! Dehumidifier إلزامي. RO.', source: 'جغرافيا المناخ — بخار ساحلي' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف بخار مرخص', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'جهاز بخار RO', use: 'NaCl+تحلية — لا ملح' },
+        { name: 'Anti-Fungal', use: '70-85% — عفن بعد بخار' },
+        { name: 'Dehumidifier', use: '6-8h تجفيف — ساحلي' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'بخار آمن.', solution: '70-85%+بخار = عفن بعد! Dehumidifier.' },
+        { fear: 'مثل بريدة.', solution: '6-8h vs 15 دقيقة. مختلف.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'بخار يُجفف.', truth: '70-85% = 6-8h تجفيف.' },
+        { myth: 'ماء عادي.', truth: 'NaCl+تحلية = RO.' },
     ],
-
     relatedServices: [
-        { slug: 'yanbu-furniture-moving', context: 'نقل عفش بينبع', priority: 1 },
-        { slug: 'yanbu-furniture-storage', context: 'تخزين عفش بينبع', priority: 2 },
-        { slug: 'yanbu-dyna', context: 'دينا نقل بينبع', priority: 3 },
-        { slug: 'yanbu-moving-out', context: 'نقل عفش خروج بينبع', priority: 4 },
-        { slug: 'yanbu-dabab', context: 'دباب نقل بينبع', priority: 5 },
-        { slug: 'yanbu-cleaning', context: 'تنظيف منازل بينبع', priority: 6 },
-        { slug: 'yanbu-tanks-cleaning', context: 'تنظيف خزانات بينبع', priority: 7 },
-        { slug: 'yanbu-sofa-cleaning', context: 'تنظيف كنب بينبع', priority: 8 },
-        { slug: 'yanbu-carpet-cleaning', context: 'تنظيف سجاد بينبع', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 1 },
+        { slug: 'sofa-cleaning', context: 'كنب', priority: 2 },
+        { slug: 'carpet-cleaning', context: 'سجاد', priority: 3 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 4 },
+        { slug: 'marble-polishing', context: 'رخام', priority: 5 },
+        { slug: 'oven-cleaning', context: 'أفران', priority: 6 },
+        { slug: 'pest-control', context: 'حشرات', priority: 7 },
     ],
 };

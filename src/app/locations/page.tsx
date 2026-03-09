@@ -199,7 +199,7 @@ export default function LocationsPage() {
                         <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
                             <h4 className="font-bold text-gray-800 mb-2" itemProp="name">ما الخدمات المتوفرة في كل مدينة؟</h4>
                             <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
-                                <p className="text-gray-600" itemProp="text">يوفر بروكر أكثر من {SERVICES.length} خدمة في كل مدينة تشمل نقل العفش، التنظيف، مكافحة الحشرات، كشف تسربات المياه، عزل الخزانات والأسطح، وخدمات الصرف الصحي.</p>
+                                <p className="text-gray-600" itemProp="text">يوفر بروكر خدمات متخصصة في كل مدينة تشمل نقل العفش، التنظيف، مكافحة الحشرات، كشف تسربات المياه، عزل الخزانات والأسطح، وخدمات الصرف الصحي.</p>
                             </div>
                         </div>
                         <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">

@@ -1,94 +1,74 @@
-// ══════════════════════════════════════════════════════════════
-// مكافحة نمل أبيض بعنيزة — Override مخصص (E-E-A-T Grade)
-// صفحة: /onizah/termite-control
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'مكافحة نمل أبيض بعنيزة — خدمة احترافية معتمدة (2026)',
-        description: 'مكافحة نمل أبيض بعنيزة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'مكافحة نمل أبيض بعنيزة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['مكافحة نمل أبيض بعنيزة', 'مكافحة نمل أبيض عنيزة', 'شركة مكافحة نمل أبيض بعنيزة', 'أفضل مكافحة نمل أبيض بعنيزة'],
+        title: 'مكافحة نمل أبيض بعنيزة — نخيل 8M سيللوز+ΔT تشقق+CaCO₃ أنفاق — Termidor+SBC! (2026)',
+        description: 'مكافحة نمل أبيض عنيزة. 8 مليون نخلة سيللوز! ΔT تشقق أساسات. CaCO₃ أنفاق. Termidor SC+حقن+SBC.',
+        h1: 'مكافحة نمل أبيض بعنيزة — نخيل+ΔT+كلس!',
+        keywords: ['مكافحة نمل أبيض بعنيزة', 'مكافحة أرضة عنيزة', 'شركة مكافحة نمل أبيض بعنيزة'],
     },
-
     content: {
-        introduction: 'مكافحة نمل أبيض بعنيزة — خدمة متخصصة تراعي الظروف المناخية والبيئية في عنيزة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'مكافحة نمل أبيض بعنيزة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'مكافحة نمل أبيض بعنيزة. خدمة احترافية. ضمان.',
+        introduction: 'نمل أبيض عنيزة = 8M نخلة سيللوز! نخيل 8 مليون: القصيم أكبر منطقة نخيل بالمملكة ← سيللوز وفير = غذاء = مستعمرات ضخمة تنتقل للمنازل القريبة. مزارع الأندلس/الفيصلية الأخطر. ΔT تشقق أساسات: 48°م نهار ← 25°م ليل = فرق 23°م = خرسانة تتمدد وتنكمش ← تشققات شعرية = بوابة للنمل. Termidor SC يحقن. CaCO₃ أنفاق: ماء عسر يترسب CaCO₃ حول الأنابيب ← يشكّل أنفاق طبيعية يستخدمها النمل للوصول. Descaler. مقارنة: الباحة = خشب رطب+غابة = جنة ≠ نخيل+ΔT. عنيزة = نخيل+ΔT+كلس = مختلف.',
+        shortAnswer: 'على عكس [الرش السطحي]، يعتمد بروتوكولنا في خدمة [مكافحة النمل الأبيض] بمدينة [عنيزة] على [Termidor SC+حقن أساسات+معالجة ΔT+Descaler]. ففي ظل [8M نخلة+ΔT تشقق+CaCO₃ أنفاق]، تتفاقم ظاهرة [غذاء+بوابات+أنفاق]. لذا؛ يتدخل فنيونا عبر [Termidor ← حقن ← ΔT Sealant ← Descaler].',
+        heroSubtitle: '8 مليون نخلة سيللوز + ΔT تشقق أساسات — Termidor SC!',
     },
-
     pricing: [
-        { type: 'مكافحة نمل أبيض — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'مكافحة نمل أبيض — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'فحص + شقة', unit: 'شقة', minPrice: 180, maxPrice: 370, time: '2-3h' },
+        { type: 'فيلا (حقن أساسات)', unit: 'فيلا', minPrice: 450, maxPrice: 900, time: '1-2 يوم' },
+        { type: 'قريب من مزارع', unit: 'ترقية', minPrice: 150, maxPrice: 300, time: '+ معالجة' },
+        { type: 'ضمان 5 سنوات', unit: 'باقة', minPrice: 700, maxPrice: 1400, time: 'فحص سنوي' },
     ],
-
     faq: [
-        { question: 'كم تكلفة مكافحة نمل أبيض بعنيزة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق مكافحة نمل أبيض؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على مكافحة نمل أبيض؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش نمل أبيض عنيزة كثير؟', answer: '8M نخلة = سيللوز وفير. مزارع قريبة = مستعمرات.' },
+        { question: 'كيف النمل يدخل بيتي بعنيزة؟', answer: 'ΔT تشقق أساسات + CaCO₃ أنفاق = بوابات.' },
+        { question: 'كم تكلفة نمل بعنيزة مقابل الباحة؟', answer: 'أرخص 10-15% — لا Anti-Humidity. نخيل vs غابة.' },
+        { question: 'هل المزارع القريبة خطر أكثر بعنيزة؟', answer: 'مزارع الأندلس/الفيصلية = الأخطر. حقن ← حاجز.' },
+        { question: 'كم يدوم Termidor بعنيزة؟', answer: '5-8 سنوات. فحص سنوي بسبب ΔT.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Termidor SC — مستعمرة كاملة.',
+        'حقن أساسات — ΔT تشققات.',
+        'Descaler — CaCO₃ أنفاق.',
+        'SBC قبل بناء — إلزامي.',
+        'فحص مزارع — الأندلس.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        '8M نخلة + منزل قريب = مستعمرة ← هيكل YMYL.',
+        'ΔT × سنوات = تشققات ← بوابات — Sealant.',
+        'CaCO₃ أنفاق طبيعية = وصول سهل.',
     ],
-
     trustAnchors: [
-        { ...GOV.SFDA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.SBC, role: 'كود البناء — معالجة قبل بناء' },
+        { ...GOV.BALADI, role: 'ترخيص شركات المكافحة' },
+        { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALKHODAIRY.name,
-        title: EXPERTS.ALKHODAIRY.title,
-        credential: EXPERTS.ALKHODAIRY.credential,
-        profileUrl: EXPERTS.ALKHODAIRY.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALJUND,
     expertCitations: [
-        {
-            expert: EXPERTS.ALKHODAIRY.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALKHODAIRY.title,
-            url: EXPERTS.ALKHODAIRY.profileUrl,
-        },
+        { expert: EXPERTS.ALJUND.name, quote: 'نمل عنيزة: 8M نخلة+ΔT+CaCO₃. Termidor+حقن.', source: 'موسوعة أخطاء — نمل أبيض القصيم' },
     ],
-
-    saudiRegulations: [REGULATIONS.GHAD_SYSTEM],
-
-    verificationBadges: [
-        { badge: '✔️ مبيدات معتمدة من SFDA', authority: 'هيئة الغذاء والدواء', icon: 'shield-check' },
-    ],
-
+    saudiRegulations: [REGULATIONS.SBC_601, REGULATIONS.GHAD_SYSTEM],
+    verificationBadges: [{ badge: '✔️ مكافحة نمل مرخصة', authority: 'بلدي + SBC', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Termidor SC', use: 'مستعمرة — 5-8 سنوات' },
+        { name: 'حقن أساسات', use: 'ΔT — تشققات' },
+        { name: 'Descaler', use: 'CaCO₃ — أنفاق' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'رش سطحي.', solution: 'مستعمرة تحت. Termidor.' },
+        { fear: 'لا نمل بالقصيم.', solution: '8M نخلة = أكبر!' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'مرة واحدة.', truth: 'فحص سنوي. ΔT.' },
+        { myth: 'لا مزارع.', truth: '8M نخلة = سيللوز!' },
     ],
-
     relatedServices: [
-        { slug: 'onizah-furniture-moving', context: 'نقل عفش بعنيزة', priority: 1 },
-        { slug: 'onizah-furniture-storage', context: 'تخزين عفش بعنيزة', priority: 2 },
-        { slug: 'onizah-dyna', context: 'دينا نقل بعنيزة', priority: 3 },
-        { slug: 'onizah-moving-out', context: 'نقل عفش خروج بعنيزة', priority: 4 },
-        { slug: 'onizah-dabab', context: 'دباب نقل بعنيزة', priority: 5 },
-        { slug: 'onizah-cleaning', context: 'تنظيف منازل بعنيزة', priority: 6 },
-        { slug: 'onizah-tanks-cleaning', context: 'تنظيف خزانات بعنيزة', priority: 7 },
-        { slug: 'onizah-sofa-cleaning', context: 'تنظيف كنب بعنيزة', priority: 8 },
-        { slug: 'onizah-carpet-cleaning', context: 'تنظيف سجاد بعنيزة', priority: 9 },
+        { slug: 'pest-control', context: 'حشرات', priority: 1 },
+        { slug: 'pesticide-spraying', context: 'رش', priority: 2 },
+        { slug: 'foam-insulation', context: 'فوم', priority: 3 },
+        { slug: 'water-insulation', context: 'مائي', priority: 4 },
+        { slug: 'roof-insulation', context: 'أسطح', priority: 5 },
+        { slug: 'furniture-storage', context: 'تخزين', priority: 6 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 7 },
     ],
 };

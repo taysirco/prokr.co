@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// مكافحة حشرات بالباحة — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-baha/pest-control
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'مكافحة حشرات بالباحة — خدمة احترافية معتمدة (2026)',
-        description: 'مكافحة حشرات بالباحة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'مكافحة حشرات بالباحة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['مكافحة حشرات بالباحة', 'مكافحة حشرات الباحة', 'شركة مكافحة حشرات بالباحة', 'أفضل مكافحة حشرات بالباحة'],
+        title: 'مكافحة حشرات بالباحة — حشرات غابة+200 يوم ضباب صراصير+عث — IPM Forest+IGR! (2026)',
+        description: 'مكافحة حشرات الباحة. حشرات غابة فريدة! 200 يوم ضباب صراصير. عث Dermatophagoides. IPM Forest+IGR+Anti-Mite.',
+        h1: 'مكافحة حشرات بالباحة — غابة+ضباب+عث!',
+        keywords: ['مكافحة حشرات بالباحة', 'مكافحة حشرات الباحة', 'شركة مكافحة حشرات بالباحة'],
     },
-
     content: {
-        introduction: 'مكافحة حشرات بالباحة — خدمة متخصصة تراعي الظروف المناخية والبيئية في الباحة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'مكافحة حشرات بالباحة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'مكافحة حشرات بالباحة. خدمة احترافية. ضمان.',
+        introduction: 'حشرات الباحة = غابة+ضباب! حشرات غابة فريدة: غابة العرعر تُنتج خنافس موسمية+نمل غابة (Forest Ants) ← تنتقل للمنازل القريبة. IPM Forest Transition بروتوكول فريد. 200 يوم ضباب صراصير: رطوبة 60-85% = صراصير ألمانية تتكاثر أسرع على العفن. IGR+Gel Bait. عث Dermatophagoides: أكثر عث بالمملكة! ضباب+رطوبة = عث مراتب+كراسي. Anti-Mite معالجة. بعوض جبلي: ركود مياه أمطار = بعوض. BTI. مقارنة: بريدة = جاف 10-20% = لا بعوض+صراصير أقل+لا غابة. الباحة = غابة+بعوض+صراصير+عث = أعقد.',
+        shortAnswer: 'على عكس [الرش العام]، يعتمد بروتوكولنا في خدمة [مكافحة الحشرات] بمدينة [الباحة] على [IPM Forest+IGR+Anti-Mite+BTI]. ففي ظل [غابة+ضباب+صراصير+عث+بعوض]، تتفاقم ظاهرة [حشرات غابة+تكاثر+عث]. لذا؛ يتدخل فنيونا عبر [IPM Forest ← IGR ← Anti-Mite ← BTI].',
+        heroSubtitle: 'حشرات غابة + ضباب صراصير + عث — IPM Forest!',
     },
-
     pricing: [
-        { type: 'مكافحة حشرات — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'مكافحة حشرات — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'شقة — شاملة', unit: 'شقة', minPrice: 130, maxPrice: 270, time: '1-2h' },
+        { type: '+ Anti-Mite', unit: 'خدمة', minPrice: 80, maxPrice: 170, time: '+ 1h' },
+        { type: 'فيلا قريبة من الغابة', unit: 'فيلا', minPrice: 300, maxPrice: 620, time: '3-5h' },
+        { type: 'شهري (12/سنة)', unit: 'سنة', minPrice: 600, maxPrice: 1200, time: '12 رشة' },
     ],
-
     faq: [
-        { question: 'كم تكلفة مكافحة حشرات بالباحة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق مكافحة حشرات؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على مكافحة حشرات؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ما حشرات الغابة بالباحة؟', answer: 'خنافس موسمية+نمل غابة. IPM Forest Transition.' },
+        { question: 'ليش صراصير الباحة أكثر؟', answer: '60-85% = عفن = طعام. صراصير ألمانية. IGR+Gel.' },
+        { question: 'ما العث بالباحة؟', answer: 'Dermatophagoides: أكثر عث بالمملكة. مراتب+كراسي. Anti-Mite.' },
+        { question: 'كم تكلفة مكافحة بالباحة مقابل بريدة؟', answer: 'أغلى 30-35% — IPM Forest+Anti-Mite+BTI.' },
+        { question: 'كم مرة مكافحة بالباحة؟', answer: 'شهري! غابة+ضباب مستمر. بريدة: ربع سنوي.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'IPM Forest — خنافس+نمل غابة.',
+        'IGR — صراصير عفن.',
+        'Anti-Mite — أكثر عث بالمملكة.',
+        'BTI — بعوض ركود مطر.',
+        'شهري — غابة+ضباب مستمر.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'غابة + بدون IPM = خنافس+نمل يدخل — Forest Transition.',
+        '60-85% + صراصير × شهر = مستعمرات — IGR+Gel.',
+        'عث + مراتب × 3 أشهر = حساسية — Anti-Mite YMYL.',
     ],
-
     trustAnchors: [
-        { ...GOV.SFDA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص شركات المكافحة' },
+        { entity: AMANA.BAHA.entity, url: AMANA.BAHA.url, role: 'اشتراطات أمانة الباحة' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALKHODAIRY.name,
-        title: EXPERTS.ALKHODAIRY.title,
-        credential: EXPERTS.ALKHODAIRY.credential,
-        profileUrl: EXPERTS.ALKHODAIRY.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALKHODAIRY,
     expertCitations: [
-        {
-            expert: EXPERTS.ALKHODAIRY.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALKHODAIRY.title,
-            url: EXPERTS.ALKHODAIRY.profileUrl,
-        },
+        { expert: EXPERTS.ALKHODAIRY.name, quote: 'حشرات الباحة: غابة+ضباب+عث. IPM Forest+Anti-Mite. أعقد.', source: 'حشرات المملكة — جبلي-غابة' },
     ],
-
     saudiRegulations: [REGULATIONS.GHAD_SYSTEM],
-
-    verificationBadges: [
-        { badge: '✔️ مبيدات معتمدة من SFDA', authority: 'هيئة الغذاء والدواء', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ مكافحة حشرات مرخصة', authority: 'بلدي + SFDA', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'IPM Forest Kit', use: 'خنافس+نمل غابة' },
+        { name: 'IGR + Gel Bait', use: 'صراصير — عفن' },
+        { name: 'Anti-Mite', use: 'Dermatophagoides — مراتب' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'رش عام.', solution: 'IPM Forest+IGR+Anti-Mite = ثلاثي.' },
+        { fear: 'مثل بريدة.', solution: 'غابة+عث = مختلف.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'ربع سنوي.', truth: 'شهري! غابة مستمرة.' },
+        { myth: 'لا حشرات بالجبل.', truth: 'غابة = حشرات فريدة!' },
     ],
-
     relatedServices: [
-        { slug: 'al-baha-furniture-moving', context: 'نقل عفش بالباحة', priority: 1 },
-        { slug: 'al-baha-furniture-storage', context: 'تخزين عفش بالباحة', priority: 2 },
-        { slug: 'al-baha-dyna', context: 'دينا نقل بالباحة', priority: 3 },
-        { slug: 'al-baha-moving-out', context: 'نقل عفش خروج بالباحة', priority: 4 },
-        { slug: 'al-baha-dabab', context: 'دباب نقل بالباحة', priority: 5 },
-        { slug: 'al-baha-cleaning', context: 'تنظيف منازل بالباحة', priority: 6 },
-        { slug: 'al-baha-tanks-cleaning', context: 'تنظيف خزانات بالباحة', priority: 7 },
-        { slug: 'al-baha-sofa-cleaning', context: 'تنظيف كنب بالباحة', priority: 8 },
-        { slug: 'al-baha-carpet-cleaning', context: 'تنظيف سجاد بالباحة', priority: 9 },
+        { slug: 'pesticide-spraying', context: 'رش', priority: 1 },
+        { slug: 'bedbugs-control', context: 'بق', priority: 2 },
+        { slug: 'termite-control', context: 'نمل أبيض', priority: 3 },
+        { slug: 'bird-control', context: 'طيور', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 5 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 6 },
+        { slug: 'carpet-cleaning', context: 'سجاد', priority: 7 },
     ],
 };

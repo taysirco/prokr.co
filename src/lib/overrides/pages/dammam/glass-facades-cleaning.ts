@@ -1,14 +1,5 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف واجهات زجاجية بالدمام — Override مخصص (E-E-A-T Grade)
-// صفحة: /dammam/glass-facades-cleaning
-// قطاع YMYL: مالي (واجهة 50,000+ ريال) + سلامة (عمل على ارتفاع)
-// خريطة 2.4: المسند (مناخ/تنظيف) → بلدي + SASO
-// NLP: رذاذ ملحي خليجي NaCl، غبار PM2.5 صناعي، كلوريدات تحلية،
-//      الشاطئ الشرقي، أبراج الدمام، مجمع الراشد، كورنيش الدمام
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -78,21 +69,16 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف + تصاريح العمل على ارتفاعات' },
         { ...GOV.SASO, role: 'مواصفات مواد التنظيف ومحاليل الأحماض المعتمدة للاستخدام التجاري' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات أمانة الشرقية' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMISNID.name,
-        title: EXPERTS.ALMISNID.title,
-        credential: EXPERTS.ALMISNID.credential,
-        profileUrl: EXPERTS.ALMISNID.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMISNID,
 
     expertCitations: [
         {
             expert: 'أ.د. عبدالله المسند',
             quote: 'الواجهات الزجاجية في المنطقة الشرقية تتآكل بصرياً أسرع 3 مرات من الرياض. الملوحة البحرية + الغبار الصناعي = معادلة كيميائية تحتاج معالجة متخصصة وليس مسح بالماء',
             source: 'أستاذ جغرافيا المناخ — جامعة القصيم',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -121,14 +107,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'dammam-cleaning', context: 'تنظيف شامل يشمل النوافذ والواجهات', priority: 1 },
-        { slug: 'dammam-floor-polishing', context: 'جلي رخام وبلاط — نفس تحديات الملوحة والكلوريدات', priority: 2 },
-        { slug: 'dammam-steam-cleaning', context: 'بخار 180°م يُنظف إطارات الألمنيوم حول الزجاج', priority: 3 },
-        { slug: 'dammam-water-leak-detection', context: 'تسرب حول إطار النافذة = رطوبة + عفن داخلي', priority: 4 },
-        { slug: 'dammam-roof-insulation', context: 'عزل يحمي الواجهة العلوية من التكثف', priority: 5 },
-        { slug: 'dammam-sanitization', context: 'تعقيم بعد تنظيف للنوافذ — يمنع عفن الإطارات', priority: 6 },
-        { slug: 'dammam-villas-cleaning', context: 'تنظيف فيلا شامل يتضمن الواجهات', priority: 7 },
-        { slug: 'dammam-swimming-pool-cleaning', context: 'واجهات زجاج حول المسبح = ملوحة مضاعفة', priority: 8 },
-        { slug: 'dammam-air-conditioner-cleaning', context: 'وحدة خارجية على الواجهة — تنظيفها مع الزجاج', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف شامل يشمل النوافذ والواجهات', priority: 1 },
+        { slug: 'floor-polishing', context: 'جلي رخام وبلاط — نفس تحديات الملوحة والكلوريدات', priority: 2 },
+        { slug: 'steam-cleaning', context: 'بخار 180°م يُنظف إطارات الألمنيوم حول الزجاج', priority: 3 },
+        { slug: 'water-leak-detection', context: 'تسرب حول إطار النافذة = رطوبة + عفن داخلي', priority: 4 },
+        { slug: 'roof-insulation', context: 'عزل يحمي الواجهة العلوية من التكثف', priority: 5 },
+        { slug: 'sanitization', context: 'تعقيم بعد تنظيف للنوافذ — يمنع عفن الإطارات', priority: 6 },
+        { slug: 'villas-cleaning', context: 'تنظيف فيلا شامل يتضمن الواجهات', priority: 7 },
+        { slug: 'swimming-pool-cleaning', context: 'واجهات زجاج حول المسبح = ملوحة مضاعفة', priority: 8 },
+        { slug: 'air-conditioner-cleaning', context: 'وحدة خارجية على الواجهة — تنظيفها مع الزجاج', priority: 9 },
     ],
 };

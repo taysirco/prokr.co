@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف واجهات زجاجية بينبع — Override مخصص (E-E-A-T Grade)
-// صفحة: /yanbu/glass-facades-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف واجهات زجاجية بينبع — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف واجهات زجاجية بينبع. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف واجهات زجاجية بينبع — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف واجهات زجاجية بينبع', 'تنظيف واجهات زجاجية ينبع', 'شركة تنظيف واجهات زجاجية بينبع', 'أفضل تنظيف واجهات زجاجية بينبع'],
+        title: 'تنظيف واجهات زجاجية بينبع — NaCl+SOx = Salt-SOx Etching+SiO₂ خدش — Marine Sealer! (2026)',
+        description: 'تنظيف واجهات زجاجية ينبع. NaCl+SOx = Salt-SOx Etching! SiO₂ خدش. Marine Sealer+RO+Pre-Rinse.',
+        h1: 'تنظيف واجهات زجاجية بينبع — Salt-SOx Etching!',
+        keywords: ['تنظيف واجهات زجاجية ينبع', 'تنظيف واجهات بينبع', 'شركة تنظيف واجهات ينبع'],
     },
-
     content: {
-        introduction: 'تنظيف واجهات زجاجية بينبع — خدمة متخصصة تراعي الظروف المناخية والبيئية في ينبع. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف واجهات زجاجية بينبع: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف واجهات زجاجية بينبع. خدمة احترافية. ضمان.',
+        introduction: 'واجهات ينبع = NaCl+SOx يأكل الزجاج! Salt-SOx Etching: NaCl+SOx+رطوبة 70-85% = تفاعل كيميائي يُنتج طبقة حمضية-ملحية تأكل سطح الزجاج تدريجياً = Etching. Marine Sealer (Hydrophobic Coating) يحمي. SiO₂+NaCl = Liquid Grinding: رمل صحراوي يستقر على ملح = ورق صنفرة سائل! لو مُسح مباشرة = خدوش دائمة. Pre-Rinse ضغط إلزامي. RO Water: ماء صنبور يترك NaCl ← يعود. RO نقي. 70-85%: رطوبة تُبقي الملح رطباً = أسوأ. لكن: لا مطر = وقت أكثر للتنظيف. مقارنة: بريدة = Nafud+CaCO₃ بدون حمض. ينبع = ملح+حمض+Etching = أخطر.',
+        shortAnswer: 'على عكس [المسح بماء صنبور]، يعتمد بروتوكولنا في خدمة [تنظيف الواجهات] بمدينة [ينبع] على [Pre-Rinse+RO+Marine Sealer]. ففي ظل [NaCl+SOx Etching+SiO₂ Liquid Grinding+70-85%]، تتفاقم ظاهرة [حفر زجاج+خدش+رطوبة]. لذا؛ يتدخل فريقنا عبر [Pre-Rinse ← RO ← Clean ← Marine Sealer].',
+        heroSubtitle: 'NaCl+SOx = Salt-SOx Etching + SiO₂ خدش — Marine Sealer!',
     },
-
     pricing: [
-        { type: 'تنظيف واجهات زجاجية — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف واجهات زجاجية — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'فيلا (واجهة)', unit: 'م²', minPrice: 8, maxPrice: 18, time: '2-4h' },
+        { type: 'تجاري (برج)', unit: 'م²', minPrice: 12, maxPrice: 25, time: 'حسب الارتفاع' },
+        { type: '+ Marine Sealer', unit: 'م²', minPrice: 15, maxPrice: 30, time: '+ يوم' },
+        { type: 'أسبوعي (4/شهر)', unit: 'شهر', minPrice: 350, maxPrice: 700, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف واجهات زجاجية بينبع؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف واجهات زجاجية؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف واجهات زجاجية؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ما Salt-SOx Etching بينبع؟', answer: 'NaCl+SOx+رطوبة = حمض يأكل سطح الزجاج. Marine Sealer يحمي.' },
+        { question: 'ليش واجهات ينبع تُخدش بسهولة؟', answer: 'SiO₂+NaCl = Liquid Grinding Paste. Pre-Rinse ضغط أولاً = لا خدش.' },
+        { question: 'كم تكلفة واجهات بينبع مقابل بريدة؟', answer: 'أغلى 50-60% — Marine Sealer+حمض. بريدة: كلس+Nafud فقط.' },
+        { question: 'هل Marine Sealer ضروري بينبع؟', answer: 'إلزامي! بدونه = Etching يأكل زجاج. يدوم 6-12 شهر.' },
+        { question: 'كم مرة تنظيف واجهات بينبع؟', answer: 'أسبوعي! NaCl+SOx يومي. شهري = Etching.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Pre-Rinse — SiO₂+NaCl Liquid Grinding!',
+        'RO Water — NaCl يعود.',
+        'Marine Sealer — Salt-SOx Etching.',
+        'أسبوعي — NaCl+SOx يومي.',
+        'لا مسح مباشر — Pre-Rinse أولاً!',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'مسح بدون Pre-Rinse = SiO₂+NaCl = خدوش دائمة.',
+        'NaCl+SOx × 3 أشهر بدون Sealer = Etching = زجاج تالف.',
+        'ماء صنبور = NaCl يعود بالتبخر — RO إلزامي.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
+        { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'اشتراطات أمانة ينبع' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMISNID.name, quote: 'واجهات ينبع: Salt-SOx Etching+SiO₂ Liquid Grinding. Marine Sealer إلزامي.', source: 'جغرافيا المناخ — واجهات ساحلية' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف واجهات مرخص', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Pre-Rinse ضغط', use: 'SiO₂+NaCl — قبل المسح' },
+        { name: 'RO Water', use: 'NaCl — لا ملح جديد' },
+        { name: 'Marine Sealer', use: 'Salt-SOx Etching — حماية' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'ماء وقماش.', solution: 'SiO₂+NaCl = Liquid Grinding = خدش.' },
+        { fear: 'مثل جدة.', solution: 'SOx YASREF = حمض إضافي. Etching.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'شهري.', truth: 'NaCl+SOx يومي = أسبوعي.' },
+        { myth: 'ماء عادي.', truth: 'NaCl يعود. RO.' },
     ],
-
     relatedServices: [
-        { slug: 'yanbu-furniture-moving', context: 'نقل عفش بينبع', priority: 1 },
-        { slug: 'yanbu-furniture-storage', context: 'تخزين عفش بينبع', priority: 2 },
-        { slug: 'yanbu-dyna', context: 'دينا نقل بينبع', priority: 3 },
-        { slug: 'yanbu-moving-out', context: 'نقل عفش خروج بينبع', priority: 4 },
-        { slug: 'yanbu-dabab', context: 'دباب نقل بينبع', priority: 5 },
-        { slug: 'yanbu-cleaning', context: 'تنظيف منازل بينبع', priority: 6 },
-        { slug: 'yanbu-tanks-cleaning', context: 'تنظيف خزانات بينبع', priority: 7 },
-        { slug: 'yanbu-sofa-cleaning', context: 'تنظيف كنب بينبع', priority: 8 },
-        { slug: 'yanbu-carpet-cleaning', context: 'تنظيف سجاد بينبع', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 1 },
+        { slug: 'marble-polishing', context: 'رخام', priority: 2 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 3 },
+        { slug: 'bird-control', context: 'طيور', priority: 4 },
+        { slug: 'roof-insulation', context: 'أسطح', priority: 5 },
+        { slug: 'water-leak-detection', context: 'تسرب', priority: 6 },
+        { slug: 'pest-control', context: 'حشرات', priority: 7 },
     ],
 };

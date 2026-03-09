@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف مكيفات ببريدة — Override مخصص (E-E-A-T Grade)
-// صفحة: /buraidah/air-conditioner-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف مكيفات ببريدة — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف مكيفات ببريدة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف مكيفات ببريدة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف مكيفات ببريدة', 'تنظيف مكيفات بريدة', 'شركة تنظيف مكيفات ببريدة', 'أفضل تنظيف مكيفات ببريدة'],
+        title: 'تنظيف مكيفات ببريدة — CaCO₃ 600ppm أعلى كلس+غبار نخيل 8 مليون — Acid Flush! (2026)',
+        description: 'تنظيف مكيفات بريدة. CaCO₃ 600ppm أعلى كلس بالمملكة! غبار نخيل 8M. Nafud SiO₂. Acid Flush+HEPA+Descaler.',
+        h1: 'تنظيف مكيفات ببريدة — أعلى كلس بالمملكة!',
+        keywords: ['تنظيف مكيفات بريدة', 'تنظيف مكيف ببريدة', 'شركة تنظيف مكيفات بريدة'],
     },
-
     content: {
-        introduction: 'تنظيف مكيفات ببريدة — خدمة متخصصة تراعي الظروف المناخية والبيئية في بريدة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف مكيفات ببريدة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف مكيفات ببريدة. خدمة احترافية. ضمان.',
+        introduction: 'مكيف بريدة = أعلى كلس بالمملكة! CaCO₃ 600ppm: بريدة عندها أعلى تركيز كلس في المياه بالمملكة = 600ppm (الخرج: 450، الرياض: 300). المبخر يتكلّس أسرع 2× = كفاءة تبريد تنخفض 40% خلال 3 أشهر. Acid Flush إلزامي وليس اختياري. غبار نخيل 8 مليون: القصيم = 8M نخلة = حبوب لقاح+ألياف نخيل تسد الفلتر أسرع من أي مدينة. HEPA Pollen Filter. Nafud SiO₂: رمل النفود الأحمر ناعم جداً (10-50 μm) = يمر من الفلتر العادي ← يتراكم على المبخر. HEPA إلزامي. ΔT 45°م: صيف 48°م + شتاء 3°م. المكيف يعمل 10+ ساعات يومياً صيفاً = CaCO₃ يتراكم أسرع. RO في التبريد التبخيري. مقارنة: الخرج: 450ppm+NH₃. بريدة: 600ppm+نخيل = أعلى كلس!',
+        shortAnswer: 'على عكس [التنظيف بدون Acid Flush الذي يترك CaCO₃]، يعتمد بروتوكولنا في خدمة [تنظيف المكيفات] بمدينة [بريدة] على [Acid Flush+HEPA Pollen+Descaler+RO]. ففي ظل [CaCO₃ 600ppm أعلى+غبار نخيل 8M+Nafud SiO₂+ΔT 45°م]، تتفاقم ظاهرة [كلس مضاعف+حبوب لقاح+رمل ناعم]. لذا؛ يتدخل فنيونا عبر [Acid Flush ← HEPA ← RO ← فحص].',
+        heroSubtitle: 'CaCO₃ 600ppm أعلى كلس + نخيل 8M + Nafud — Acid Flush!',
     },
-
     pricing: [
-        { type: 'تنظيف مكيفات — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف مكيفات — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'سبليت (تنظيف+Acid)', unit: 'وحدة', minPrice: 100, maxPrice: 200, time: '1-1.5 ساعة' },
+        { type: 'مركزي (Acid Flush)', unit: 'وحدة', minPrice: 250, maxPrice: 500, time: '3-5 ساعات' },
+        { type: 'دولابي + Descaler', unit: 'وحدة', minPrice: 120, maxPrice: 250, time: '1-2 ساعة' },
+        { type: 'ربع سنوي (4 زيارات)', unit: 'سنة', minPrice: 300, maxPrice: 620, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف مكيفات ببريدة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف مكيفات؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف مكيفات؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش كلس بريدة أعلى من باقي المدن؟', answer: 'CaCO₃ 600ppm — أعلى بالمملكة. الخرج: 450. الرياض: 300. Acid Flush إلزامي.' },
+        { question: 'كيف النخيل يأثر على المكيف ببريدة؟', answer: '8M نخلة = حبوب لقاح+ألياف تسد الفلتر أسرع. HEPA Pollen Filter شهري.' },
+        { question: 'كم تكلفة تنظيف مكيف ببريدة مقارنة بالرياض؟', answer: 'أغلى 25-30% — Acid Flush+HEPA. لكن: بدونهما = تبريد ينخفض 40%.' },
+        { question: 'كم مرة تنظيف مكيف ببريدة؟', answer: 'ربع سنوي — CaCO₃ 600ppm = أسرع تكلّس. عنيزة: مثل. الرياض: نصف سنوي.' },
+        { question: 'هل Nafud يأثر على المكيف ببريدة؟', answer: 'رمل النفود 10-50 μm يمر من الفلتر العادي. HEPA يوقفه. بدونه = مبخر مسدود.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Acid Flush — CaCO₃ 600ppm الأعلى.',
+        'HEPA Pollen — نخيل 8M حبوب لقاح.',
+        'HEPA Fine — Nafud 10-50 μm.',
+        'RO — تبريد تبخيري بلا كلس.',
+        'ربع سنوي — أسرع تكلّس بالمملكة.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'CaCO₃ 600ppm × 3 أشهر = كفاءة تنخفض 40% — فاتورة كهرباء مضاعفة.',
+        'نخيل + فلتر عادي = حبوب لقاح تدخل ← حساسية تنفسية YMYL.',
+        'Nafud × سنة بدون HEPA = مبخر مسدود — ضاغط يحترق 3000+.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
+        { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMISNID.name, quote: 'مكيف بريدة: CaCO₃ 600ppm أعلى كلس. Acid Flush إلزامي. نخيل 8M: HEPA.', source: 'جغرافيا المناخ — القصيم' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف مكيفات مرخص', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Acid Flush System', use: 'يُذيب CaCO₃ 600ppm — إلزامي' },
+        { name: 'HEPA Pollen Filter', use: 'يوقف حبوب نخيل 8M' },
+        { name: 'HEPA Fine (10 μm)', use: 'يوقف Nafud SiO₂ الناعم' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'Acid Flush غالي.', solution: '600ppm = بدونه تبريد -40%. فاتورة أعلى.' },
+        { fear: 'مثل عنيزة.', solution: 'عنيزة أقل نخيل. بريدة: 8M = أعلى.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'تنظيف عادي.', truth: '600ppm = Acid Flush إلزامي.' },
+        { myth: 'نصف سنوي.', truth: '600ppm = ربع سنوي. أسرع تكلّس.' },
     ],
-
     relatedServices: [
-        { slug: 'buraidah-furniture-moving', context: 'نقل عفش ببريدة', priority: 1 },
-        { slug: 'buraidah-furniture-storage', context: 'تخزين عفش ببريدة', priority: 2 },
-        { slug: 'buraidah-dyna', context: 'دينا نقل ببريدة', priority: 3 },
-        { slug: 'buraidah-moving-out', context: 'نقل عفش خروج ببريدة', priority: 4 },
-        { slug: 'buraidah-dabab', context: 'دباب نقل ببريدة', priority: 5 },
-        { slug: 'buraidah-cleaning', context: 'تنظيف منازل ببريدة', priority: 6 },
-        { slug: 'buraidah-tanks-cleaning', context: 'تنظيف خزانات ببريدة', priority: 7 },
-        { slug: 'buraidah-sofa-cleaning', context: 'تنظيف كنب ببريدة', priority: 8 },
-        { slug: 'buraidah-carpet-cleaning', context: 'تنظيف سجاد ببريدة', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 1 },
+        { slug: 'steam-cleaning', context: 'بخار', priority: 2 },
+        { slug: 'carpet-cleaning', context: 'سجاد', priority: 3 },
+        { slug: 'sofa-cleaning', context: 'كنب', priority: 4 },
+        { slug: 'pest-control', context: 'حشرات', priority: 5 },
+        { slug: 'tanks-cleaning', context: 'خزانات', priority: 6 },
+        { slug: 'marble-polishing', context: 'رخام', priority: 7 },
     ],
 };

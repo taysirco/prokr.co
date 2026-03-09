@@ -288,8 +288,7 @@ export const SECTOR_ENTITIES: Record<string, SectorEntities> = {
 
     // الصرف الصحي (يستخدم كيانات التسربات جزئياً)
     'sewage-unblocking': LEAK_DETECTION_ENTITIES,
-    'sewage-vacuuming': LEAK_DETECTION_ENTITIES,
-    'sewer-cleaning': LEAK_DETECTION_ENTITIES,
+    'sewage-suction': LEAK_DETECTION_ENTITIES,
 } as const;
 
 
@@ -310,6 +309,6 @@ export function getServiceSectorCategory(serviceSlug: string): ServiceCategory |
     if (['pest-control', 'cockroach-control', 'bed-bug-control', 'ant-control', 'termite-control', 'snake-scorpion-control', 'pigeon-control', 'rat-control', 'pesticide-spraying'].includes(serviceSlug)) return 'pest-control';
     if (['cleaning', 'apartments-cleaning', 'villas-cleaning', 'hourly-cleaning', 'sofa-cleaning', 'carpet-cleaning', 'mattress-cleaning', 'marble-polishing', 'tanks-cleaning', 'pool-cleaning', 'oven-cleaning', 'kitchen-chimney-cleaning', 'councils-cleaning', 'mosque-cleaning', 'facade-cleaning', 'auto-cleaning', 'ac-duct-cleaning', 'steam-cleaning'].includes(serviceSlug)) return 'cleaning';
     if (['furniture-moving', 'furniture-storage', 'dyna', 'international-moving', 'crane-rental', 'moving-out', 'dabab'].includes(serviceSlug)) return 'moving';
-    if (['sewage-unblocking', 'sewage-vacuuming', 'sewer-cleaning'].includes(serviceSlug)) return 'sewage';
+    if (['sewage-unblocking', 'sewage-suction'].includes(serviceSlug)) return 'sewage';
     return null;
 }

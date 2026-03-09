@@ -1,94 +1,74 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف بالبخار بالظهران — Override مخصص (E-E-A-T Grade)
-// صفحة: /dhahran/steam-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف بالبخار بالظهران — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف بالبخار بالظهران. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف بالبخار بالظهران — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف بالبخار بالظهران', 'تنظيف بالبخار الظهران', 'شركة تنظيف بالبخار بالظهران', 'أفضل تنظيف بالبخار بالظهران'],
+        title: 'تنظيف بالبخار بالظهران — يُذيب NaCl+SiO₂ مزدوج + يقتل عث 75-85% — تجفيف إلزامي (2026)',
+        description: 'تنظيف بالبخار الظهران. بخار 130°م يُذيب NaCl + يرفع SiO₂ + يقتل عث + يُكسر Biofilm. 75-85% تجفيف Dehumidifier إلزامي. Dry Vapor مزدوج.',
+        h1: 'تنظيف بالبخار بالظهران — يُذيب المزدوج ويقتل العث — تجفيف إلزامي',
+        keywords: ['تنظيف بالبخار بالظهران', 'تنظيف بخار الظهران', 'شركة تنظيف بالبخار بالظهران'],
     },
-
     content: {
-        introduction: 'تنظيف بالبخار بالظهران — خدمة متخصصة تراعي الظروف المناخية والبيئية في الظهران. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف بالبخار بالظهران: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف بالبخار بالظهران. خدمة احترافية. ضمان.',
+        introduction: 'البخار في الظهران = أداة رباعية مزدوجة — مع تحذير. الأول — يُذيب NaCl: بخار 130°م يُعيد إذابة NaCl المتبلور ← يُمسح بـ RO. الثاني — يرفع SiO₂: بعد إذابة NaCl بالبخار = SiO₂ يُرفع بلا خدش ← يُمسح. البخار يحل مشكلة الترتيب المزدوج. الثالث — يقتل عث 75-85%: أبطأ تكاثراً من الخبر لكن: يتكاثر. بخار 130°م = Protein Denaturation. الرابع — يُكسر Biofilm: 75-85% = Biofilm أبطأ لكن ينمو. بخار يُكسره. التحذير — تجفيف إلزامي: 75-85% = البخار يتبخر أبطأ من الرياض (15%) لكن أسرع من الخبر (85-95%). Dehumidifier = يُسرّع. بدون تجفيف = عفن.',
+        shortAnswer: 'على عكس [ممسحة بماء الظهران] التي تخدش بـ SiO₂ وتُضيف NaCl، يعتمد بروتوكولنا في خدمة [التنظيف بالبخار] بمدينة [الظهران] على [بخار 130°م رباعي + Dehumidifier]. ففي ظل [NaCl+SiO₂ + 75-85% + عث]، تتفاقم ظاهرة [مزدوج + حساسية + غشاء]. لذا؛ يتدخل خبراؤنا عبر [بخار مزدوج].',
+        heroSubtitle: 'يُذيب NaCl + يرفع SiO₂ + يقتل عث + يُكسر Biofilm — تجفيف',
     },
-
     pricing: [
-        { type: 'تنظيف بالبخار — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف بالبخار — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'غرفة واحدة', unit: 'غرفة', minPrice: 85, maxPrice: 170, time: '30-60 دقيقة' },
+        { type: 'شقة + Dehumidifier', unit: 'شقة', minPrice: 270, maxPrice: 530, time: '2-4 ساعات' },
+        { type: 'عميق + Anti-Biofilm', unit: 'شقة', minPrice: 340, maxPrice: 630, time: '3-5 ساعات' },
+        { type: 'ربع سنوي', unit: 'سنة', minPrice: 830, maxPrice: 1630, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف بالبخار بالظهران؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف بالبخار؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف بالبخار؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'البخار يحل المزدوج — كيف؟', answer: '130°م يُذيب NaCl ← يُحرر SiO₂ ← يُمسح بلا خدش. بدون بخار: تحتاج RO ← Microfiber (ترتيب). البخار = يختصر الترتيب.' },
+        { question: 'تجفيف — أسرع من الخبر؟', answer: '75-85% < 85-95% = أسرع قليلاً. Dehumidifier = 2-3 ساعات (بدلاً من 3-4 في الخبر). لكن: بدون تجفيف = 12-18 ساعة = عفن.' },
+        { question: 'عث — 75-85% أبطأ؟', answer: 'أبطأ من الخبر — لكن أسرع كثيراً من الرياض. بخار 130°م = يقتل كل المراحل.' },
+        { question: 'Biofilm — أبطأ نمو؟', answer: '4-6 أسابيع (بدلاً من 2-3 في الخبر). بخار يُكسره + Anti-Biofilm يمنع.' },
+        { question: 'ربع سنوي؟', answer: 'عث 10-11/12 شهر + NaCl+SiO₂ يومي + Biofilm شهري. ربع سنوي = 4 جلسات مزدوجة.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'بخار يحل ترتيب NaCl→SiO₂ — يُذيب NaCl ← SiO₂ يُرفع = خطوة واحدة.',
+        'Dehumidifier بعد البخار — 75-85% = إلزامي. بدونه = عفن.',
+        'Anti-Biofilm بعد بخار — يمنع نمو جديد.',
+        'بخار على سجاد وكنب ربع سنوي— يقتل عث 75-85%.',
+        'لا نوافذ — 75-85% خارجي = رطوبة إضافية. Dehumidifier مُغلق.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'بخار بدون Dehumidifier = 12-18 ساعة رطب = عفن. أسوأ من عدم التنظيف.',
+        'عث بدون بخار = Der p 1 متراكم = حساسية.',
+        'NaCl+SiO₂ بدون بخار = يحتاج ترتيب RO→Microfiber = خطأ محتمل.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص التنظيف' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات النظافة بالشرقية' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'بخار الظهران = مزدوج: يحل NaCl+SiO₂ في خطوة + يقتل عث + يُكسر Biofilm. 75-85% = تجفيف إلزامي لكن أسرع من الخبر.', source: 'نصائح هندسية — بخار مزدوج' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ بخار مرخص', authority: 'منصة بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Dry Vapor 130°م', use: 'يُذيب NaCl + يرفع SiO₂ + يقتل عث' },
+        { name: 'Dehumidifier', use: 'تجفيف — 2-3 ساعات' },
+        { name: 'Anti-Biofilm', use: 'يمنع — 4 أشهر' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'يبلل.', solution: 'Dry Vapor 5%. + Dehumidifier = 2-3 ساعات.' },
+        { fear: 'ممسحة أسهل.', solution: 'ممسحة = ترتيب + خطأ محتمل. بخار = خطوة واحدة.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'بخار = ماء.', truth: '130°م ≠ ماء. يقتل + يُذيب + يرفع.' },
+        { myth: 'يجف.', truth: '75-85% = 12-18 ساعة بدون. Dehumidifier = 2-3.' },
+        { myth: 'سنوي.', truth: 'مزدوج + عث + Biofilm. ربع سنوي.' },
     ],
-
     relatedServices: [
-        { slug: 'dhahran-furniture-moving', context: 'نقل عفش بالظهران', priority: 1 },
-        { slug: 'dhahran-furniture-storage', context: 'تخزين عفش بالظهران', priority: 2 },
-        { slug: 'dhahran-dyna', context: 'دينا نقل بالظهران', priority: 3 },
-        { slug: 'dhahran-moving-out', context: 'نقل عفش خروج بالظهران', priority: 4 },
-        { slug: 'dhahran-dabab', context: 'دباب نقل بالظهران', priority: 5 },
-        { slug: 'dhahran-cleaning', context: 'تنظيف منازل بالظهران', priority: 6 },
-        { slug: 'dhahran-tanks-cleaning', context: 'تنظيف خزانات بالظهران', priority: 7 },
-        { slug: 'dhahran-sofa-cleaning', context: 'تنظيف كنب بالظهران', priority: 8 },
-        { slug: 'dhahran-carpet-cleaning', context: 'تنظيف سجاد بالظهران', priority: 9 },
+        { slug: 'carpet-cleaning', context: 'سجاد — مزدوج', priority: 1 },
+        { slug: 'sofa-cleaning', context: 'كنب — عث', priority: 2 },
+        { slug: 'councils-cleaning', context: 'مجالس', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف — مزدوج', priority: 4 },
+        { slug: 'marble-polishing', context: 'رخام', priority: 5 },
+        { slug: 'pest-control', context: 'حشرات', priority: 6 },
+        { slug: 'apartments-cleaning', context: 'شقق', priority: 7 },
     ],
 };

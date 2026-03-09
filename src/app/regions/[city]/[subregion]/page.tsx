@@ -9,6 +9,7 @@ import { BreadcrumbJsonLd, ItemListJsonLd, WebPageJsonLd, ServiceAreaJsonLd } fr
 import { getCityContext } from '@/lib/city-context';
 import { getCityKeyword } from '@/lib/keyword-strategy';
 import { hasPageOverride } from '@/lib/overrides/registry';
+import { isAbsorbedSlug } from '@/lib/services/super-page-groups';
 import Footer from '@/components/Footer';
 
 interface SubRegionPageProps {
@@ -98,7 +99,7 @@ export default async function SubRegionPage({ params }: SubRegionPageProps) {
     const availableServices = subRegion.services
         .map(slug => getServiceBySlug(slug))
         .filter(Boolean)
-        .filter(service => service && hasPageOverride(city.slug, service.slug));
+        .filter(service => service && hasPageOverride(city.slug, service.slug) && !isAbsorbedSlug(service.slug));
 
     const servicesByCategory = availableServices.reduce((acc, service) => {
         if (!service) return acc;

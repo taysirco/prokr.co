@@ -6,7 +6,7 @@
 // ══════════════════════════════════════════════════════════════
 
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -52,6 +52,7 @@ export const override: PageOverride = {
             question: 'المبيدات آمنة على الأطفال والحيوانات؟',
             answer: 'المبيدات المعتمدة من SFDA: مُختبرة وآمنة بعد الجفاف/التبخر. الإجراء: 1) أخرج العائلة والحيوانات. 2) يُرش. 3) انتظر 1-2 ساعة. 4) هوّي 30 دقيقة. 5) ادخل بأمان. لا تلمس الأسطح المرشوشة قبل الجفاف. أطباق الطعام والأواني: تُغطى قبل الرش.',
         },
+        { question: 'هل المبيدات آمنة على الأطفال والحيوانات؟', answer: 'مبيدات مسجلة في نظام غد — SFDA. إخلاء 2-4 ساعات بعد الرش. طيور وأسماك: أبِلغ الشركة مسبقاً لاستخدام مواد أخف. الأسطح آمنة بعد الجفاف (1-2 ساعة).' },
     ],
 
     expertTips: [
@@ -71,6 +72,7 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.SFDA, role: 'اعتماد المبيدات الحشرية — ضمان الفعالية والمأمونية البشرية' },
         { ...GOV.BALADI, role: 'ترخيص شركات مكافحة ورش الحشرات — اشتراطات صحة وسلامة' },
+        { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
 
     expertReviewer: {
@@ -85,7 +87,6 @@ export const override: PageOverride = {
             expert: 'د. سعد الجند',
             quote: 'الرش الوقائي قبل الموسم (مارس وأكتوبر) يمنع 80% من مشكلات الحشرات. الانتظار حتى ظهور الحشرات = حل علاجي أصعب وأغلى',
             source: 'خبير مكافحة حشرات',
-            url: 'https://x.com/ALJUNDI',
         },
     ],
 
@@ -113,14 +114,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'riyadh-pest-control', context: 'مكافحة حشرات شاملة', priority: 1 },
-        { slug: 'riyadh-cockroach-control', context: 'صراصير — الأكثر طلباً', priority: 2 },
-        { slug: 'riyadh-ants-control', context: 'نمل منازل وحدائق', priority: 3 },
-        { slug: 'riyadh-bedbugs-control', context: 'بق الفراش', priority: 4 },
-        { slug: 'riyadh-pesticide-spraying', context: 'رش مبيدات متخصصة', priority: 5 },
-        { slug: 'riyadh-termite-control', context: 'نمل أبيض', priority: 6 },
-        { slug: 'riyadh-cleaning', context: 'تنظيف بعد الرش', priority: 7 },
-        { slug: 'riyadh-sanitization', context: 'تعقيم بعد المكافحة', priority: 8 },
-        { slug: 'riyadh-snakes-control', context: 'ثعابين بعد المكافحة', priority: 9 },
+        { slug: 'pest-control', context: 'مكافحة حشرات شاملة', priority: 1 },
+        { slug: 'cockroach-control', context: 'صراصير — الأكثر طلباً', priority: 2 },
+        { slug: 'ants-control', context: 'نمل منازل وحدائق', priority: 3 },
+        { slug: 'bedbugs-control', context: 'بق الفراش', priority: 4 },
+        { slug: 'pesticide-spraying', context: 'رش مبيدات متخصصة', priority: 5 },
+        { slug: 'termite-control', context: 'نمل أبيض', priority: 6 },
+        { slug: 'cleaning', context: 'تنظيف بعد الرش', priority: 7 },
+        { slug: 'sanitization', context: 'تعقيم بعد المكافحة', priority: 8 },
+        { slug: 'snakes-control', context: 'ثعابين بعد المكافحة', priority: 9 },
     ],
 };

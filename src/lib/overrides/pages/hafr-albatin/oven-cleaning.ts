@@ -1,94 +1,74 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف أفران بحفر الباطن — Override مخصص (E-E-A-T Grade)
-// صفحة: /hafr-albatin/oven-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف أفران بحفر الباطن — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف أفران بحفر الباطن. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف أفران بحفر الباطن — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف أفران بحفر الباطن', 'تنظيف أفران حفر الباطن', 'شركة تنظيف أفران بحفر الباطن', 'أفضل تنظيف أفران بحفر الباطن'],
+        title: 'تنظيف أفران بحفر الباطن — كربنة جافة صلبة 52°م + SiO₂ يُخشّن + 10-15% لا Biofilm (ميزة!) (2026)',
+        description: 'تنظيف أفران حفر الباطن. كربنة جافة أصلب (52°م + 10-15%). SiO₂ يُخشّن الكربنة. لا Biofilm (ميزة!). Alkaline pH 12+ وقت أطول.',
+        h1: 'تنظيف أفران بحفر الباطن — كربنة جافة أصلب ورمل يُخشّن',
+        keywords: ['تنظيف أفران حفر الباطن', 'تنظيف فرن حفر الباطن', 'شركة تنظيف أفران حفر الباطن'],
     },
-
     content: {
-        introduction: 'تنظيف أفران بحفر الباطن — خدمة متخصصة تراعي الظروف المناخية والبيئية في حفر الباطن. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف أفران بحفر الباطن: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف أفران بحفر الباطن. خدمة احترافية. ضمان.',
+        introduction: 'الفرن في حفر الباطن يواجه كربنة قارية + ميزة. الأولى — كربنة جافة أصلب: 52°م + 10-15% = أجف = كربنة تجف أسرع = أصلب. صلبة > الرياض > الشرقية. أصعب كشط. Alkaline pH 12+ وقت أطول. الثانية — SiO₂ يُخشّن: SiO₂ يدخل المطبخ ← يترسب على الشحوم ← يُخشّن الكربنة = صلبة+خشنة. الثالثة — لا NaCl: لا مأكولات بحرية NaCl = لا تصلب ملحي (ميزة!) = كربنة عادية + SiO₂ فقط. الميزة — لا Biofilm!: 10-15% = لا Biofilm شحمي. لا Anti-Biofilm. أنظف. توفير!',
+        shortAnswer: 'على عكس [بخاخ عادي] الذي لا يُعالج كربنة صلبة قارية، يعتمد بروتوكولنا في خدمة [تنظيف الأفران] بمدينة [حفر الباطن] على [Alkaline pH 12+ طويل + HEPA]. ففي ظل [كربنة 52°م + SiO₂ + 10-15%]، تتفاقم ظاهرة [صلابة + خشونة]. لذا؛ يتدخل خبراؤنا عبر [بروتوكول فرن قاري].',
+        heroSubtitle: 'كربنة جافة أصلب + SiO₂ خشونة + لا Biofilm + لا NaCl',
     },
-
     pricing: [
-        { type: 'تنظيف أفران — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف أفران — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'فرن عادي', unit: 'فرن', minPrice: 75, maxPrice: 155, time: '1-2 ساعة' },
+        { type: 'عميق (كربنة صلبة)', unit: 'فرن', minPrice: 120, maxPrice: 240, time: '2-3 ساعات' },
+        { type: 'فرن + شفاط + مطبخ', unit: 'باقة', minPrice: 190, maxPrice: 380, time: '3-5 ساعات' },
+        { type: 'ربع سنوي', unit: 'سنة', minPrice: 350, maxPrice: 700, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف أفران بحفر الباطن؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف أفران؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف أفران؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'كربنة أصلب — أصعب؟', answer: '52°م + 10-15% = تجف فوراً = أصلب كربنة في المملكة. الشرقية: رطبة+لزجة. الرياض: جافة. حفر الباطن: أجف+أحر = أصلب.' },
+        { question: 'لا Biofilm — ميزة حقيقية؟', answer: 'كبيرة! 10-15% = لا Biofilm شحمي. لا Anti-Biofilm = توفير. لا طبقة عضوية.' },
+        { question: 'لا NaCl — فرق؟', answer: 'فرق — لا تصلب ملحي. كربنة عادية+SiO₂ فقط. أبسط من الظهران. لكن: أصلب من الشرقية.' },
+        { question: 'Alkaline — وقت أطول؟', answer: 'كربنة صلبة = 25-30 دقيقة (بدلاً من 15-20 في الشرقية). + خشونة SiO₂ = يحتاج Mechanical أيضاً.' },
+        { question: 'ربع سنوي؟', answer: 'كربنة صلبة تتراكم أسرع (تجف فوراً). ربع سنوي = قبل التصلب العميق.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Alkaline pH 12+ × 30 دقيقة — كربنة صلبة تحتاج وقت.',
+        'HEPA شفط قبل — SiO₂ على المطبخ.',
+        'لا Anti-Biofilm — 10-15% = توفير!',
+        'Mechanical بعد Alkaline — خشونة SiO₂ يحتاج.',
+        'ماء مُفلتر — CaCO₃ بقع.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'كربنة صلبة 6 أشهر = تحتاج Mechanical. ربع سنوي = أسهل.',
+        'SiO₂ يُخشّن ← كربنة جديدة تلتصق أسرع.',
+        'بخاخ pH 9-10 = لا يُعالج كربنة 52°م صلبة.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص التنظيف' },
+        { entity: AMANA.HAFR.entity, url: AMANA.HAFR.url, role: 'اشتراطات الصحة بحفر الباطن' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'فرن حفر الباطن: كربنة أصلب (52°م + 10-15%) + SiO₂ خشونة. لا Biofilm ولا NaCl (ميزتين!). Alkaline أطول.', source: 'نصائح هندسية — أفران قارية' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف أفران مرخص', authority: 'منصة بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Alkaline pH 12+', use: 'كربنة صلبة — 30 دقيقة' },
+        { name: 'Mechanical Scraper', use: 'خشونة SiO₂' },
+        { name: 'ماء مُفلتر', use: 'لا CaCO₃' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'لا Biofilm = سهل.', solution: 'كربنة أصلب + SiO₂ خشونة. 2 تحديات.' },
+        { fear: 'بخاخ.', solution: 'pH 9-10 لا يعمل على كربنة 52°م.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'مثل الرياض.', truth: '52°م > 45°م. أصلب كربنة.' },
+        { myth: 'مثل الشرقية.', truth: 'لا NaCl + لا Biofilm. أصلب لكن أبسط.' },
+        { myth: 'نصف سنوي.', truth: 'كربنة تجف فوراً. ربع سنوي.' },
     ],
-
     relatedServices: [
-        { slug: 'hafr-albatin-furniture-moving', context: 'نقل عفش بحفر الباطن', priority: 1 },
-        { slug: 'hafr-albatin-furniture-storage', context: 'تخزين عفش بحفر الباطن', priority: 2 },
-        { slug: 'hafr-albatin-dyna', context: 'دينا نقل بحفر الباطن', priority: 3 },
-        { slug: 'hafr-albatin-moving-out', context: 'نقل عفش خروج بحفر الباطن', priority: 4 },
-        { slug: 'hafr-albatin-dabab', context: 'دباب نقل بحفر الباطن', priority: 5 },
-        { slug: 'hafr-albatin-cleaning', context: 'تنظيف منازل بحفر الباطن', priority: 6 },
-        { slug: 'hafr-albatin-tanks-cleaning', context: 'تنظيف خزانات بحفر الباطن', priority: 7 },
-        { slug: 'hafr-albatin-sofa-cleaning', context: 'تنظيف كنب بحفر الباطن', priority: 8 },
-        { slug: 'hafr-albatin-carpet-cleaning', context: 'تنظيف سجاد بحفر الباطن', priority: 9 },
+        { slug: 'restaurant-chimney-cleaning', context: 'مداخن — كربنة', priority: 1 },
+        { slug: 'cleaning', context: 'تنظيف — مطبخ', priority: 2 },
+        { slug: 'pest-control', context: 'حشرات — عقارب', priority: 3 },
+        { slug: 'steam-cleaning', context: 'بخار', priority: 4 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف — ΔT', priority: 5 },
+        { slug: 'hourly-cleaning', context: 'بالساعة', priority: 6 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات', priority: 7 },
     ],
 };

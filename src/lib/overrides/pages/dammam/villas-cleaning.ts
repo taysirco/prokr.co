@@ -1,13 +1,5 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف فلل بالدمام — Override مخصص (E-E-A-T Grade)
-// صفحة: /dammam/villas-cleaning
-// قطاع YMYL: صحة (PM2.5 + عفن) + مالي (فيلا 1-5 مليون — حماية عقار)
-// خريطة 2.4: المسند (مناخ/تنظيف) → بلدي
-// NLP: مجمعات أرامكو/سابك، الراكة، الشاطئ الشرقي، الفيصلية، الحمراء
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -76,21 +68,16 @@ export const override: PageOverride = {
 
     trustAnchors: [
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف والشهادة الصحية — حماية المستهلك من العمالة السائبة' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات أمانة الشرقية' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMISNID.name,
-        title: EXPERTS.ALMISNID.title,
-        credential: EXPERTS.ALMISNID.credential,
-        profileUrl: EXPERTS.ALMISNID.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMISNID,
 
     expertCitations: [
         {
             expert: 'أ.د. عبدالله المسند',
             quote: 'فيلا الدمام = منظومة بيئية مغلقة في رطوبة 80%. كل سطح يؤثر على الآخر. التنظيف الجزئي = نتيجة جزئية تختفي سريعاً. التنظيف المتكامل بتسلسل صحيح = النتيجة الوحيدة المستدامة',
             source: 'أستاذ جغرافيا المناخ — جامعة القصيم',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -118,14 +105,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'dammam-cleaning', context: 'تنظيف شقق ومنازل — نفس المنهجية بمساحة أصغر', priority: 1 },
-        { slug: 'dammam-steam-cleaning', context: 'بخار شامل — جزء من التنظيف المتكامل', priority: 2 },
-        { slug: 'dammam-air-conditioner-cleaning', context: 'الخطوة الأولى في تسلسل تنظيف الفيلا', priority: 3 },
-        { slug: 'dammam-sofa-cleaning', context: 'كنب ومجالس — تنظيف ضمن الخدمة الشاملة', priority: 4 },
-        { slug: 'dammam-carpet-cleaning', context: 'سجاد — جزء من تنظيف الفيلا المتكامل', priority: 5 },
-        { slug: 'dammam-sanitization', context: 'الخطوة الأخيرة: تعقيم ULV بعد إنهاء التنظيف', priority: 6 },
-        { slug: 'dammam-glass-facades-cleaning', context: 'واجهات الفيلا الزجاجية — ملوحة خليجية', priority: 7 },
-        { slug: 'dammam-floor-polishing', context: 'جلي أرضيات الفيلا — ترميم اللمعان', priority: 8 },
-        { slug: 'dammam-tanks-cleaning', context: 'خزان الفيلا — جزء من الصيانة الشاملة', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف شقق ومنازل — نفس المنهجية بمساحة أصغر', priority: 1 },
+        { slug: 'steam-cleaning', context: 'بخار شامل — جزء من التنظيف المتكامل', priority: 2 },
+        { slug: 'air-conditioner-cleaning', context: 'الخطوة الأولى في تسلسل تنظيف الفيلا', priority: 3 },
+        { slug: 'sofa-cleaning', context: 'كنب ومجالس — تنظيف ضمن الخدمة الشاملة', priority: 4 },
+        { slug: 'carpet-cleaning', context: 'سجاد — جزء من تنظيف الفيلا المتكامل', priority: 5 },
+        { slug: 'sanitization', context: 'الخطوة الأخيرة: تعقيم ULV بعد إنهاء التنظيف', priority: 6 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات الفيلا الزجاجية — ملوحة خليجية', priority: 7 },
+        { slug: 'floor-polishing', context: 'جلي أرضيات الفيلا — ترميم اللمعان', priority: 8 },
+        { slug: 'tanks-cleaning', context: 'خزان الفيلا — جزء من الصيانة الشاملة', priority: 9 },
     ],
 };

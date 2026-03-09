@@ -1,13 +1,5 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف بالساعة بالدمام — Override مخصص (E-E-A-T Grade)
-// صفحة: /dammam/hourly-cleaning
-// قطاع YMYL: صحة (PM2.5 + بكتيريا) + مالي (تسعير شفاف بالساعة)
-// خريطة 2.4: المسند (مناخ/تنظيف) → بلدي
-// NLP: الراكة، الفيصلية، العزيزية، مجمعات أرامكو، خدمة عند الطلب
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -78,21 +70,16 @@ export const override: PageOverride = {
 
     trustAnchors: [
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف وخدمات التنظيف بالساعة — الشهادة الصحية الإلزامية' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات أمانة الشرقية' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMISNID.name,
-        title: EXPERTS.ALMISNID.title,
-        credential: EXPERTS.ALMISNID.credential,
-        profileUrl: EXPERTS.ALMISNID.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMISNID,
 
     expertCitations: [
         {
             expert: 'أ.د. عبدالله المسند',
             quote: 'التنظيف في المنطقة الشرقية يحتاج منهجية مختلفة — أدوات Microfiber بدل القطن، محاليل تكسر الطبقة اللزجة بدل الماء والصابون، وتجفيف فوري بدل ترك الأرضية تجف طبيعياً في رطوبة 80%. العاملة المدرّبة على مناخ الخليج تُنجز في 3 ساعات ما تفشل عاملة عادية في إنجازه في 6 ساعات',
             source: 'أستاذ جغرافيا المناخ — جامعة القصيم',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -122,14 +109,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'dammam-cleaning', context: 'تنظيف منازل شامل — خدمة كاملة بدل بالساعة', priority: 1 },
-        { slug: 'dammam-apartments-cleaning', context: 'تنظيف شقق — خدمة مخصصة للمساحات الصغيرة', priority: 2 },
-        { slug: 'dammam-villas-cleaning', context: 'تنظيف فلل — خدمة شاملة لمساحات كبيرة', priority: 3 },
-        { slug: 'dammam-steam-cleaning', context: 'بخار عميق يُكمّل تنظيف بالساعة', priority: 4 },
-        { slug: 'dammam-sanitization', context: 'تعقيم بعد التنظيف — ضروري بالدمام', priority: 5 },
-        { slug: 'dammam-sofa-cleaning', context: 'كنب يحتاج متخصص — ليس عاملة بالساعة', priority: 6 },
-        { slug: 'dammam-carpet-cleaning', context: 'سجاد عميق — يحتاج أجهزة خاصة', priority: 7 },
-        { slug: 'dammam-air-conditioner-cleaning', context: 'المكيف يوزع ما تنظفه العاملة — نظفه أيضاً', priority: 8 },
-        { slug: 'dammam-mattress-cleaning', context: 'مراتب تحتاج HEPA + بخار — ليس مسح', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف منازل شامل — خدمة كاملة بدل بالساعة', priority: 1 },
+        { slug: 'apartments-cleaning', context: 'تنظيف شقق — خدمة مخصصة للمساحات الصغيرة', priority: 2 },
+        { slug: 'villas-cleaning', context: 'تنظيف فلل — خدمة شاملة لمساحات كبيرة', priority: 3 },
+        { slug: 'steam-cleaning', context: 'بخار عميق يُكمّل تنظيف بالساعة', priority: 4 },
+        { slug: 'sanitization', context: 'تعقيم بعد التنظيف — ضروري بالدمام', priority: 5 },
+        { slug: 'sofa-cleaning', context: 'كنب يحتاج متخصص — ليس عاملة بالساعة', priority: 6 },
+        { slug: 'carpet-cleaning', context: 'سجاد عميق — يحتاج أجهزة خاصة', priority: 7 },
+        { slug: 'air-conditioner-cleaning', context: 'المكيف يوزع ما تنظفه العاملة — نظفه أيضاً', priority: 8 },
+        { slug: 'mattress-cleaning', context: 'مراتب تحتاج HEPA + بخار — ليس مسح', priority: 9 },
     ],
 };

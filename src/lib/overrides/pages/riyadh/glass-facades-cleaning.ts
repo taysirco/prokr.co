@@ -6,7 +6,7 @@
 // ══════════════════════════════════════════════════════════════
 
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -51,6 +51,7 @@ export const override: PageOverride = {
             question: 'كل كم أحتاج أنظف الواجهة بالرياض؟',
             answer: 'بدون نانو: كل 2-4 أسابيع (بعد كل عاصفة + تنظيف دوري). مع نانو: كل 6-8 أسابيع (الغبار ينزلق بسهولة). عقد شهري: أوفر 30% من التنظيفات الفردية. للمعارض التجارية: الواجهة النظيفة = انطباع أول = مبيعات. إهمالها ≠ توفير.',
         },
+        { question: 'كم تكلفة التنظيف العميق مقارنة بالتنظيف العادي؟', answer: 'التنظيف العميق أغلى 30-50% لكنه يشمل: HEPA + بخار 150°م + تعقيم. التنظيف العادي = مسح سطحي. العميق كل 3-4 أشهر + العادي أسبوعياً = أفضل معادلة تكلفة/نظافة.' },
     ],
 
     expertTips: [
@@ -69,6 +70,7 @@ export const override: PageOverride = {
 
     trustAnchors: [
         { ...GOV.BALADI, role: 'تصاريح أعمال الارتفاعات والسقالات — ضمان سلامة العمال والمباني' },
+        { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
 
     expertReviewer: {
@@ -83,7 +85,6 @@ export const override: PageOverride = {
             expert: 'أ.د. عبدالله المسند',
             quote: '15-25 عاصفة غبارية سنوياً في الرياض. واجهة برج بدون عقد تنظيف = تفقد شفافيتها خلال أسابيع. Nano-Coating يقلل التنظيفات 50%',
             source: 'أستاذ جغرافيا المناخ',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -110,14 +111,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'riyadh-cleaning', context: 'تنظيف شامل + واجهات', priority: 1 },
-        { slug: 'riyadh-villas-cleaning', context: 'واجهات الفلل', priority: 2 },
-        { slug: 'riyadh-office-cleaning', context: 'واجهات أبراج المكاتب', priority: 3 },
-        { slug: 'riyadh-bird-control', context: 'حمام الواجهات', priority: 4 },
-        { slug: 'riyadh-shops-cleaning', context: 'واجهة المحل', priority: 5 },
-        { slug: 'riyadh-floor-polishing', context: 'واجهات + أرضيات', priority: 6 },
-        { slug: 'riyadh-water-insulation', context: 'عزل حول الواجهات', priority: 7 },
-        { slug: 'riyadh-palaces-cleaning', context: 'واجهات القصور', priority: 8 },
-        { slug: 'riyadh-air-conditioner-cleaning', context: 'مكيفات خلف الواجهات', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف شامل + واجهات', priority: 1 },
+        { slug: 'villas-cleaning', context: 'واجهات الفلل', priority: 2 },
+        { slug: 'office-cleaning', context: 'واجهات أبراج المكاتب', priority: 3 },
+        { slug: 'bird-control', context: 'حمام الواجهات', priority: 4 },
+        { slug: 'shops-cleaning', context: 'واجهة المحل', priority: 5 },
+        { slug: 'floor-polishing', context: 'واجهات + أرضيات', priority: 6 },
+        { slug: 'water-insulation', context: 'عزل حول الواجهات', priority: 7 },
+        { slug: 'palaces-cleaning', context: 'واجهات القصور', priority: 8 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيفات خلف الواجهات', priority: 9 },
     ],
 };

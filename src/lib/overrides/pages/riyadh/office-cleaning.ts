@@ -6,7 +6,7 @@
 // ══════════════════════════════════════════════════════════════
 
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -53,6 +53,7 @@ export const override: PageOverride = {
             question: 'تنظيف المجاري (Duct Cleaning) — كل كم؟',
             answer: 'مجاري التكييف المركزي: كل سنة في الرياض (كل سنتين في مدن أقل غباراً). النظام: فرشاة ميكانيكية تزيل الغبار المتراكم + شفط HEPA يحبسه + تعقيم بالبخار. التكلفة: 2,000-5,000 ريال حسب عدد الأدوار. بدون تنظيف: المجاري تراكم غبار + عفن + بكتيريا ← توزّع لكل طابق ← SBS.',
         },
+        { question: 'كم تكلفة التنظيف العميق مقارنة بالتنظيف العادي؟', answer: 'التنظيف العميق أغلى 30-50% لكنه يشمل: HEPA + بخار 150°م + تعقيم. التنظيف العادي = مسح سطحي. العميق كل 3-4 أشهر + العادي أسبوعياً = أفضل معادلة تكلفة/نظافة.' },
     ],
 
     expertTips: [
@@ -71,6 +72,7 @@ export const override: PageOverride = {
 
     trustAnchors: [
         { ...GOV.BALADI, role: 'ترخيص شركات النظافة التجارية — اشتراطات صحة وسلامة بيئة العمل' },
+        { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
 
     expertReviewer: {
@@ -85,7 +87,6 @@ export const override: PageOverride = {
             expert: 'أ.د. عبدالله المسند',
             quote: 'أبراج المكاتب في الرياض مبانٍ مغلقة — جودة الهواء تعتمد 100% على التكييف. فلتر MERV 8 في مناخ غباري = تنفس غبار مستمر. MERV 13 هو الحد الأدنى لصحة الموظفين',
             source: 'أستاذ جغرافيا المناخ',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -112,14 +113,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'riyadh-sanitization', context: 'تعقيم — شهادة صحية', priority: 1 },
-        { slug: 'riyadh-cleaning', context: 'تنظيف شامل مكاتب', priority: 2 },
-        { slug: 'riyadh-air-conditioner-cleaning', context: 'مكيفات المكتب', priority: 3 },
-        { slug: 'riyadh-carpet-cleaning', context: 'موكيت المكتب', priority: 4 },
-        { slug: 'riyadh-glass-facades-cleaning', context: 'واجهات المبنى', priority: 5 },
-        { slug: 'riyadh-steam-cleaning', context: 'بخار كراسي + أرضيات', priority: 6 },
-        { slug: 'riyadh-sofa-cleaning', context: 'كراسي الاستقبال', priority: 7 },
-        { slug: 'riyadh-pest-control', context: 'رش وقائي للمكتب', priority: 8 },
-        { slug: 'riyadh-floor-polishing', context: 'تلميع أرضيات المكتب', priority: 9 },
+        { slug: 'sanitization', context: 'تعقيم — شهادة صحية', priority: 1 },
+        { slug: 'cleaning', context: 'تنظيف شامل مكاتب', priority: 2 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيفات المكتب', priority: 3 },
+        { slug: 'carpet-cleaning', context: 'موكيت المكتب', priority: 4 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات المبنى', priority: 5 },
+        { slug: 'steam-cleaning', context: 'بخار كراسي + أرضيات', priority: 6 },
+        { slug: 'sofa-cleaning', context: 'كراسي الاستقبال', priority: 7 },
+        { slug: 'pest-control', context: 'رش وقائي للمكتب', priority: 8 },
+        { slug: 'floor-polishing', context: 'تلميع أرضيات المكتب', priority: 9 },
     ],
 };

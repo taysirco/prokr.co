@@ -1,94 +1,74 @@
-// ══════════════════════════════════════════════════════════════
-// شفط بيارات بالخرج — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-kharj/sewage-suction
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'شفط بيارات بالخرج — خدمة احترافية معتمدة (2026)',
-        description: 'شفط بيارات بالخرج. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'شفط بيارات بالخرج — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['شفط بيارات بالخرج', 'شفط بيارات الخرج', 'شركة شفط بيارات بالخرج', 'أفضل شفط بيارات بالخرج'],
+        title: 'شفط صرف صحي بالخرج — CaCO₃ يسد+NH₃ رائحة مزارع+SiO₂ — شفط+Descaler! (2026)',
+        description: 'شفط صرف صحي الخرج. CaCO₃ 450ppm يسد أنابيب! NH₃ رائحة مزدوجة. SiO₂ ترسيب. شفط+Descaler+تهوية AC.',
+        h1: 'شفط صرف صحي بالخرج — كلس يسد + NH₃ رائحة!',
+        keywords: ['شفط صرف صحي الخرج', 'شفط بيارة بالخرج', 'شركة شفط صرف صحي الخرج'],
     },
-
     content: {
-        introduction: 'شفط بيارات بالخرج — خدمة متخصصة تراعي الظروف المناخية والبيئية في الخرج. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'شفط بيارات بالخرج: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'شفط بيارات بالخرج. خدمة احترافية. ضمان.',
+        introduction: 'صرف صحي الخرج = تحديات مياه وزراعية! CaCO₃ يسد الأنابيب: 450ppm كلس يتراكم داخل أنابيب الصرف ← يُضيّق القُطر ← يحتاج شفط+Jetting+Descaler = 3 خطوات بدل 1. NH₃ رائحة مزدوجة: أمونيا الصرف + أمونيا مزارع ألبان = رائحة أقوى 2× من المدن العادية. تهوية مقوّاة+AC. SiO₂ ترسيب: رمل يدخل عبر صرف الفناء ← يتراكم في البيارة ← يحتاج شفط أعمق. ΔT 48°م: حرارة تسارع التحلل البكتيري صيفاً = رائحة أسرع = شفط أكثر تواتراً. 15-25% = لا تكثّف في المجاري! مياه تجري بسلاسة — لا تكثّف يُبطئ. مقارنة: خميس = أمطار تملأ البيارة. الخرج = كلس+رمل+NH₃ لكن لا أمطار = أبسط جزئياً.',
+        shortAnswer: 'على عكس [الشفط بدون Descaler الذي يترك الكلس]، يعتمد بروتوكولنا في خدمة [شفط الصرف] بمدينة [الخرج] على [شفط+Jetting+Descaler+تهوية AC]. ففي ظل [CaCO₃ يسد+NH₃ مزدوجة+SiO₂ ترسيب+ΔT 48°م]، تتفاقم ظاهرة [انسداد+رائحة+ترسيب]. لذا؛ يتدخل فريقنا عبر [شفط ← جيتنغ ← Descaler ← تهوية] — ميزة: لا أمطار!',
+        heroSubtitle: 'CaCO₃ يسد + NH₃ رائحة مزدوجة + SiO₂ — Descaler!',
     },
-
     pricing: [
-        { type: 'شفط بيارات — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'شفط بيارات — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'شفط بيارة عادي', unit: 'رحلة', minPrice: 200, maxPrice: 400, time: '1-2 ساعة' },
+        { type: 'شفط + Jetting', unit: 'رحلة', minPrice: 350, maxPrice: 700, time: '2-3 ساعات' },
+        { type: 'شفط + Descaler + Jetting', unit: 'رحلة', minPrice: 450, maxPrice: 900, time: '3-4 ساعات' },
+        { type: 'عقد سنوي (4 شفطات)', unit: 'سنة', minPrice: 700, maxPrice: 1400, time: '4 رحلات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة شفط بيارات بالخرج؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق شفط بيارات؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على شفط بيارات؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش البيارة بالخرج تمتلئ أسرع من الرياض؟', answer: 'SiO₂ رمل يتراكم + CaCO₃ كلس يُضيّق الأنابيب = تصريف أبطأ = امتلاء أسرع.' },
+        { question: 'ليش الرائحة أقوى بالخرج؟', answer: 'NH₃ صرف + NH₃ مزارع = مزدوجة 2×. تهوية مقوّاة+AC.' },
+        { question: 'كم تكلفة شفط بالخرج مقارنة بالرياض؟', answer: 'أغلى 15-20% — Descaler+Jetting إضافي. لكن: بدونهما = انسداد سريع.' },
+        { question: 'هل الأمطار تأثر على البيارة بالخرج؟', answer: 'لا! لا أمطار = ميزة. خميس: أمطار تملأ البيارة = شفط أكثر.' },
+        { question: 'كم مرة شفط بالخرج؟', answer: 'ربع سنوي (4/سنة). CaCO₃+SiO₂ يتراكمان. Descaler كل شفطة يمنع الانسداد.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Descaler كل شفطة — CaCO₃ يسد.',
+        'Jetting — يُزيل ترسيب SiO₂.',
+        'تهوية AC — NH₃ مزدوجة.',
+        'ربع سنوي — كلس+رمل يتراكمان.',
+        'لا أمطار! — ميزة.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'شفط بدون Descaler = CaCO₃ يسد خلال أشهر — انسداد كامل.',
+        'NH₃ مزدوجة + حرارة = رائحة أسرع — شفط متأخر = أقوى.',
+        'SiO₂ × سنة بدون Jetting = ترسيب صلب — يحتاج حفر.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.NWC, role: 'تنظيم الصرف الصحي' },
+        { ...GOV.BALADI, role: 'ترخيص شفط الصرف' },
+        { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'صرف الخرج: CaCO₃ يسد+NH₃ مزدوجة. Descaler+Jetting. ميزة: لا أمطار.', source: 'موسوعة أخطاء — صرف زراعي' },
     ],
-
-    saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة صرف صحي مرخصة', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    saudiRegulations: [REGULATIONS.NWC_REPORT],
+    verificationBadges: [{ badge: '✔️ شفط مرخص', authority: 'بلدي + NWC', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'شاحنة شفط', use: 'شفط بيارة — سعة كبيرة' },
+        { name: 'Jetting ضغط عالي', use: 'يُزيل SiO₂+CaCO₃ ترسيب' },
+        { name: 'Chemical Descaler', use: 'يُذيب CaCO₃ — يمنع انسداد' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'شفط عادي يكفي.', solution: 'CaCO₃ يسد = Descaler+Jetting.' },
+        { fear: 'كل 6 أشهر.', solution: 'كلس+رمل = ربع سنوي.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'شفط بس.', truth: 'CaCO₃ يسد = Descaler+Jetting.' },
+        { myth: 'مرتين بالسنة.', truth: 'كلس+رمل = 4. ربع سنوي.' },
     ],
-
     relatedServices: [
-        { slug: 'al-kharj-furniture-moving', context: 'نقل عفش بالخرج', priority: 1 },
-        { slug: 'al-kharj-furniture-storage', context: 'تخزين عفش بالخرج', priority: 2 },
-        { slug: 'al-kharj-dyna', context: 'دينا نقل بالخرج', priority: 3 },
-        { slug: 'al-kharj-moving-out', context: 'نقل عفش خروج بالخرج', priority: 4 },
-        { slug: 'al-kharj-dabab', context: 'دباب نقل بالخرج', priority: 5 },
-        { slug: 'al-kharj-cleaning', context: 'تنظيف منازل بالخرج', priority: 6 },
-        { slug: 'al-kharj-tanks-cleaning', context: 'تنظيف خزانات بالخرج', priority: 7 },
-        { slug: 'al-kharj-sofa-cleaning', context: 'تنظيف كنب بالخرج', priority: 8 },
-        { slug: 'al-kharj-carpet-cleaning', context: 'تنظيف سجاد بالخرج', priority: 9 },
+        { slug: 'sewage-unblocking', context: 'تسليك', priority: 1 },
+        { slug: 'tanks-cleaning', context: 'خزانات', priority: 2 },
+        { slug: 'water-leak-detection', context: 'تسرب', priority: 3 },
+        { slug: 'bathroom-leak-detection', context: 'حمام', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 5 },
+        { slug: 'pest-control', context: 'حشرات', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 7 },
     ],
 };

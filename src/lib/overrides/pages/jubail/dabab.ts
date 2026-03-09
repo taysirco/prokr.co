@@ -1,94 +1,72 @@
-// ══════════════════════════════════════════════════════════════
-// دباب نقل بالجبيل — Override مخصص (E-E-A-T Grade)
-// صفحة: /jubail/dabab
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'دباب نقل بالجبيل — خدمة احترافية معتمدة (2026)',
-        description: 'دباب نقل بالجبيل. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'دباب نقل بالجبيل — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['دباب نقل بالجبيل', 'دباب نقل الجبيل', 'شركة دباب نقل بالجبيل', 'أفضل دباب نقل بالجبيل'],
+        title: 'دباب نقل بالجبيل — NaCl+VOC تآكل + 85-98% تكثّف + سخام SABIC + Short Circuit (2026)',
+        description: 'دباب نقل الجبيل. NaCl+VOC تآكل. 85-98% تكثّف Short Circuit. سخام SABIC. Stretch Marine + Silica Gel + VCI. لا UV ميزة (غيوم!).',
+        h1: 'دباب نقل بالجبيل — ملح+بتروكيماويات وتكثّف يُعطّل',
+        keywords: ['دباب نقل الجبيل', 'دباب نقل بالجبيل', 'شركة دباب نقل بالجبيل'],
     },
-
     content: {
-        introduction: 'دباب نقل بالجبيل — خدمة متخصصة تراعي الظروف المناخية والبيئية في الجبيل. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'دباب نقل بالجبيل: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'دباب نقل بالجبيل. خدمة احترافية. ضمان.',
+        introduction: 'الدباب في الجبيل يواجه تحديات صناعية-ساحلية. الأول — NaCl+VOC تآكل: حمولة مكشوفة = NaCl+VOC يترسب ← تآكل أسرع 2×. Stretch Marine. الثاني — 85-98% تكثّف: أقصى تكثّف = Short Circuit إلكترونيات. Silica Gel + VCI إلزامي. الثالث — سخام SABIC: طبقة سوداء دهنية على الحمولة. تنظيف بعد النقل. الميزة — أقل UV: غيوم رطوبة = UV أقل من حفر الباطن. لا UV Cover.',
+        shortAnswer: 'على عكس [دباب مكشوف] في بيئة NaCl+VOC، يعتمد بروتوكولنا في خدمة [الدباب] بمدينة [الجبيل] على [Stretch Marine + Silica Gel + VCI]. ففي ظل [NaCl+VOC + 85-98% + سخام]، تتفاقم ظاهرة [تآكل + Short Circuit + سخام]. لذا؛ يتدخل خبراؤنا عبر [دباب صناعي-ساحلي].',
+        heroSubtitle: 'NaCl+VOC تآكل + 98% تكثّف + سخام + أقل UV (ميزة!)',
     },
-
     pricing: [
-        { type: 'دباب نقل — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'دباب نقل — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'نقل داخل الجبيل', unit: 'رحلة', minPrice: 35, maxPrice: 80, time: '30-60 دقيقة' },
+        { type: '+ Stretch Marine + Silica Gel', unit: 'رحلة', minPrice: 50, maxPrice: 110, time: '30-60 دقيقة' },
+        { type: 'اشتراك شهري (8 رحلات)', unit: 'شهر', minPrice: 210, maxPrice: 500, time: '8 رحلات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة دباب نقل بالجبيل؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق دباب نقل؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على دباب نقل؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'Short Circuit — حقيقي؟', answer: '85-98% = تكثّف على إلكترونيات = Short Circuit. Silica Gel + VCI = حماية. أخطر من أي مدينة.' },
+        { question: 'NaCl+VOC — أسرع تآكل؟', answer: 'أسرع 2× من الخبر (NaCl فقط). VOC يُسرّع Galvanic. Stretch Marine = حاجز.' },
+        { question: 'سخام — يتلف؟', answer: 'طبقة دهنية كربونية. لا يُتلف لكن يُلوّث. تنظيف بعد النقل.' },
+        { question: 'أقل UV — ميزة؟', answer: 'رطوبة = غيوم = UV أقل 30-40% من حفر الباطن. لا UV Cover. ميزة!' },
+        { question: 'هل الشركة مرخصة من هيئة النقل TGA؟', answer: 'كل شركات بروكر مرخصة TGA + بيان حمولة لوجستي. الترخيص = تأمين على الأمتعة + حقوق عميل. بدون ترخيص = لا تأمين = لا تعويض.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Silica Gel + VCI — 98% = Short Circuit. إلزامي.',
+        'Stretch Marine — NaCl+VOC. عادي لا يكفي.',
+        'أقل UV — لا UV Cover. توفير!',
+        'تنظيف بعد نقل — سخام SABIC.',
+        'صوّر كل قطعة أثاث قبل النقل — توثيق بصري يحمي حقك في التعويض لو حصل ضرر.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        '98% + إلكترونيات مكشوفة = Short Circuit فوري.',
+        'NaCl+VOC + حديد = تآكل أسرع 2×.',
+        'سخام + حمولة بيضاء = تلوّث مرئي.',
     ],
-
     trustAnchors: [
-        { ...GOV.TGA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.TGA, role: 'ترخيص النقل' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات النقل بالشرقية' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALZUWAYED.name,
-        title: EXPERTS.ALZUWAYED.title,
-        credential: EXPERTS.ALZUWAYED.credential,
-        profileUrl: EXPERTS.ALZUWAYED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALSHABNAN,
     expertCitations: [
-        {
-            expert: EXPERTS.ALZUWAYED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALZUWAYED.title,
-            url: EXPERTS.ALZUWAYED.profileUrl,
-        },
+        { expert: EXPERTS.ALZUWAYED.name, quote: 'دباب الجبيل: NaCl+VOC + 98% تكثّف = أخطر على إلكترونيات. Silica Gel + VCI + Stretch Marine.', source: 'هيئة النقل — النقل الصناعي-الساحلي' },
     ],
-
     saudiRegulations: [REGULATIONS.TGA_LICENSE],
-
-    verificationBadges: [
-        { badge: '✔️ شركة نقل مرخصة من هيئة النقل TGA', authority: 'الهيئة العامة للنقل', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ نقل مرخص', authority: 'هيئة النقل', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Stretch Marine', use: 'NaCl+VOC — حاجز' },
+        { name: 'Silica Gel', use: '98% — يمتص رطوبة' },
+        { name: 'VCI', use: 'تكثّف — يمنع صدأ' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'مسافة قصيرة.', solution: '98% تكثّف = دقائق. قصيرة ≠ آمنة.' },
+        { fear: 'مثل الخبر.', solution: 'VOC + 98% > 95% + سخام. مختلف.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'Stretch عادي.', truth: 'لا يقاوم NaCl+VOC. Marine.' },
+        { myth: 'لا Silica.', truth: '98% = Short Circuit. Silica إلزامي.' },
     ],
-
     relatedServices: [
-        { slug: 'jubail-furniture-moving', context: 'نقل عفش بالجبيل', priority: 1 },
-        { slug: 'jubail-furniture-storage', context: 'تخزين عفش بالجبيل', priority: 2 },
-        { slug: 'jubail-dyna', context: 'دينا نقل بالجبيل', priority: 3 },
-        { slug: 'jubail-moving-out', context: 'نقل عفش خروج بالجبيل', priority: 4 },
-        { slug: 'jubail-cleaning', context: 'تنظيف منازل بالجبيل', priority: 5 },
-        { slug: 'jubail-tanks-cleaning', context: 'تنظيف خزانات بالجبيل', priority: 6 },
-        { slug: 'jubail-sofa-cleaning', context: 'تنظيف كنب بالجبيل', priority: 7 },
-        { slug: 'jubail-carpet-cleaning', context: 'تنظيف سجاد بالجبيل', priority: 8 },
-        { slug: 'jubail-steam-cleaning', context: 'تنظيف بالبخار بالجبيل', priority: 9 },
+        { slug: 'dyna', context: 'دينا — أثقل', priority: 1 },
+        { slug: 'furniture-moving', context: 'نقل عفش', priority: 2 },
+        { slug: 'auto-cleaning', context: 'غسيل', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 4 },
+        { slug: 'furniture-storage', context: 'تخزين', priority: 5 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 6 },
+        { slug: 'pest-control', context: 'حشرات', priority: 7 },
     ],
 };

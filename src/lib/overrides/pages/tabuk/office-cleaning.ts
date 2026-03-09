@@ -1,94 +1,71 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف مكاتب بتبوك — Override مخصص (E-E-A-T Grade)
-// صفحة: /tabuk/office-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف مكاتب بتبوك — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف مكاتب بتبوك. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف مكاتب بتبوك — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف مكاتب بتبوك', 'تنظيف مكاتب تبوك', 'شركة تنظيف مكاتب بتبوك', 'أفضل تنظيف مكاتب بتبوك'],
+        title: 'تنظيف مكاتب بتبوك — غبار حسمى يسد إلكترونيات + تكاثف صقيعي Short Circuit + ESD في 12% (2026)',
+        description: 'تنظيف مكاتب تبوك. حسمى يسد فلاتر = Thermal Throttling. تكاثف -2°م على خوادم = Short Circuit. ESD أعلى في 12% رطوبة. ESD-Safe + HEPA + Deionized.',
+        h1: 'تنظيف مكاتب بتبوك — حسمى يسد والصقيع يُكثّف والجفاف يُشرّر',
+        keywords: ['تنظيف مكاتب بتبوك', 'تنظيف مكتب تبوك', 'شركة تنظيف مكاتب بتبوك'],
     },
-
     content: {
-        introduction: 'تنظيف مكاتب بتبوك — خدمة متخصصة تراعي الظروف المناخية والبيئية في تبوك. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف مكاتب بتبوك: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف مكاتب بتبوك. خدمة احترافية. ضمان.',
+        introduction: 'المكتب التبوكي يواجه 3 تهديدات: (1) Thermal Throttling: حسمى يسد فلاتر الأجهزة ← المعالج يُبطئ نفسه. (2) تكاثف -2°م على إلكترونيات باردة (نافذة مفتوحة شتاءً) = Short Circuit. (3) ESD: 12% رطوبة = كهرباء ساكنة أعلى 3× من جدة ← شرارة تُتلف المعالج. الحل: ESD-Safe HEPA + Deionized شاشات + تهوية ميكانيكية (لا نوافذ شتاءً).',
+        shortAnswer: 'بروتوكول تقني: ESD-Safe HEPA + Deionized + تحكم رطوبة. 3 تهديدات × 3 حلول.',
+        heroSubtitle: 'Thermal Throttling + Short Circuit + ESD — المكتب التبوكي يحتاج بروتوكولاً تقنياً',
     },
-
     pricing: [
-        { type: 'تنظيف مكاتب — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف مكاتب — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'تنظيف مكتب — صغير (حتى 100 م²)', unit: 'مكتب', minPrice: 200, maxPrice: 400, time: '2-3 ساعات' },
+        { type: 'تنظيف + ESD-Safe أجهزة', unit: 'مكتب', minPrice: 300, maxPrice: 600, time: '3-5 ساعات' },
+        { type: 'عقد أسبوعي', unit: 'شهر', minPrice: 600, maxPrice: 1200, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف مكاتب بتبوك؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف مكاتب؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف مكاتب؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'أجهزة بطيئة — ليش؟', answer: 'حسمى يسد الفلاتر = Thermal Throttling. تنظيف ESD-Safe كل 3 أشهر = يُعيد الأداء.' },
+        { question: 'تكاثف على الشاشات شتاءً؟', answer: '-2°م خارج + 22°م داخل = تكاثف فوري عند فتح النافذة. لا نوافذ شتاءً + تهوية ميكانيكية.' },
+        { question: 'ESD في تبوك أخطر؟', answer: '12% رطوبة = أعلى كهرباء ساكنة. سوار ESD مُؤرّض إلزامي قبل لمس الأجهزة.' },
+        { question: 'كم تكلفة التنظيف العميق مقارنة بالتنظيف العادي؟', answer: 'التنظيف العميق أغلى 30-50% لكنه يشمل: HEPA + بخار 150°م + تعقيم. التنظيف العادي = مسح سطحي. العميق كل 3-4 أشهر + العادي أسبوعياً = أفضل معادلة تكلفة/نظافة.' },
+        { question: 'هل المواد المستخدمة آمنة على الأطفال؟', answer: 'مواد معتمدة من هيئة الغذاء والدواء SFDA. بعد التنظيف: تهوية 30 دقيقة كافية. بخار 150°م = بديل للكيماويات — آمن 100% على الأطفال والحيوانات.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'ESD-Safe كل 3 أشهر — حسمى يسد المشعات خلال 3-4 أشهر.',
+        'Deionized للشاشات — ماء صنبور = كلس ثلجي.',
+        'لا نوافذ شتاءً — -2°م + 22°م = تكاثف على الإلكترونيات.',
+        'غرفة خوادم: تحكم رطوبة 40-55% — < 30%: ESD. > 60%: تكاثف.',
+        'بعد التنظيف: شغّل المكيف وليس الشبّاك — الهواء الخارجي يعيد الغبار على الأسطح النظيفة.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'تنظيف أجهزة بدون ESD في 12% = شرارة = تلف معالج/ذاكرة.',
+        'نافذة مفتوحة -2°م على مكتب 22°م = تكاثف = Short Circuit.',
+        'لا تقبل عمالة بدون تأمين صحي — شركة بدون تأمين = غير مرخصة من بلدي.',
     ],
-
-    trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+    trustAnchors: [{ ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
+        { entity: AMANA.TABUK.entity, url: AMANA.TABUK.url, role: 'اشتراطات أمانة تبوك' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+        expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'المكتب التبوكي: Thermal Throttling + Short Circuit + ESD 3×. حسمى + -2°م + 12% = ثلاثي تقني فريد.', source: 'نصائح هندسية — بيئة العمل المكتبية' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف مكاتب مرخص', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'HEPA + ESD-Safe Kit', use: 'يسحب حسمى من الأجهزة بدون شرارة' },
+        { name: 'Deionized Water', use: 'شاشات بدون كلس ثلجي' },
+        { name: 'سوار ESD مُؤرّض', use: 'يُفرّغ الكهرباء الساكنة في 12% رطوبة' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'عامل المبنى يكفي.', solution: 'بدون ESD: شرارة = تلف. بدون HEPA: Throttling. بدون Deionized: كلس.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'أجهزة حديثة ما تحتاج.', truth: 'حسمى 3 أشهر = Throttling حتى جديد.' },
+        { myth: 'المنظف العادي يكفي.', truth: 'المنظف العادي يزيل 40% من الأوساخ. HEPA + بخار = 99%+. الفرق = 59% غبار دقيق + بكتيريا + عث.' },
     ],
-
     relatedServices: [
-        { slug: 'tabuk-furniture-moving', context: 'نقل عفش بتبوك', priority: 1 },
-        { slug: 'tabuk-furniture-storage', context: 'تخزين عفش بتبوك', priority: 2 },
-        { slug: 'tabuk-dyna', context: 'دينا نقل بتبوك', priority: 3 },
-        { slug: 'tabuk-moving-out', context: 'نقل عفش خروج بتبوك', priority: 4 },
-        { slug: 'tabuk-dabab', context: 'دباب نقل بتبوك', priority: 5 },
-        { slug: 'tabuk-cleaning', context: 'تنظيف منازل بتبوك', priority: 6 },
-        { slug: 'tabuk-tanks-cleaning', context: 'تنظيف خزانات بتبوك', priority: 7 },
-        { slug: 'tabuk-sofa-cleaning', context: 'تنظيف كنب بتبوك', priority: 8 },
-        { slug: 'tabuk-carpet-cleaning', context: 'تنظيف سجاد بتبوك', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف — المبنى كاملاً', priority: 1 },
+        { slug: 'hourly-cleaning', context: 'بالساعة — عاملة مُدرّبة', priority: 2 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات — واجهة المكتب', priority: 3 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف — فلتر مسدود', priority: 4 },
+        { slug: 'carpet-cleaning', context: 'سجاد — موكيت المكتب', priority: 5 },
+    
+        { slug: 'sofa-cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 6 },
+        { slug: 'steam-cleaning', context: 'خدمة مكملة — باقة شاملة.', priority: 7 },
     ],
 };

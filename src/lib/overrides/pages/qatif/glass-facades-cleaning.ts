@@ -1,94 +1,74 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف واجهات زجاجية بالقطيف — Override مخصص (E-E-A-T Grade)
-// صفحة: /qatif/glass-facades-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف واجهات زجاجية بالقطيف — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف واجهات زجاجية بالقطيف. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف واجهات زجاجية بالقطيف — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف واجهات زجاجية بالقطيف', 'تنظيف واجهات زجاجية القطيف', 'شركة تنظيف واجهات زجاجية بالقطيف', 'أفضل تنظيف واجهات زجاجية بالقطيف'],
+        title: 'تنظيف واجهات زجاجية بالقطيف — NaCl إبهات + طين لزج + Biofilm واحي + Sealant (2026)',
+        description: 'تنظيف واجهات القطيف. NaCl إبهات. طين لزج يلتصق. Biofilm واحي. Sealant يتآكل. Squeegee + RO + Anti-Biofilm.',
+        h1: 'تنظيف واجهات زجاجية بالقطيف — ملح يُبهت وطين يلتصق وBiofilm واحي',
+        keywords: ['تنظيف واجهات زجاجية القطيف', 'تنظيف واجهات بالقطيف', 'شركة تنظيف واجهات بالقطيف'],
     },
-
     content: {
-        introduction: 'تنظيف واجهات زجاجية بالقطيف — خدمة متخصصة تراعي الظروف المناخية والبيئية في القطيف. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف واجهات زجاجية بالقطيف: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف واجهات زجاجية بالقطيف. خدمة احترافية. ضمان.',
+        introduction: 'واجهات القطيف تواجه تحديات ساحلية-واحية. الأول — NaCl إبهات: رذاذ ملحي يُبهت الزجاج. Squeegee + RO. الثاني — طين لزج: PM10 طيني يلتصق (لا ينتشر كـ SiO₂). فرك + RO. الثالث — Biofilm واحي: 80-95% + عيون = Biofilm + طحالب على الواجهات. Anti-Biofilm. الرابع — Sealant: NaCl يُسرّع تآكل. Marine Sealant. الشركات المعتمدة عبر بروكر مرخصة من منصة بلدي وتستخدم معدات صناعية ومواد تنظيف معتمدة SASO. التنظيف العميق يشمل: تعقيم بالبخار 150°م + شفط HEPA + تجفيف كامل. النتيجة: بيئة صحية خالية من البكتيريا والمسببات.',
+        shortAnswer: 'على عكس [ماء وقماش] فوق NaCl+طين، يعتمد بروتوكولنا في خدمة [تنظيف الواجهات] بمدينة [القطيف] على [Squeegee + RO + Anti-Biofilm + Marine Sealant]. ففي ظل [NaCl + طين + Biofilm + Sealant]، تتفاقم ظاهرة [إبهات + التصاق + طحالب + تآكل]. لذا؛ يتدخل خبراؤنا عبر [بروتوكول واجهات ساحلي-واحي].',
+        heroSubtitle: 'NaCl إبهات + طين لزج + Biofilm واحي + Sealant تآكل',
     },
-
     pricing: [
-        { type: 'تنظيف واجهات زجاجية — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف واجهات زجاجية — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'واجهة صغيرة (50 م²)', unit: 'خدمة', minPrice: 190, maxPrice: 380, time: '2-4 ساعات' },
+        { type: 'واجهة كبيرة (100+ م²)', unit: 'خدمة', minPrice: 380, maxPrice: 860, time: '4-8 ساعات' },
+        { type: 'شهري (Biofilm+طين)', unit: 'شهر', minPrice: 280, maxPrice: 560, time: 'زيارة' },
+        { type: 'ربع سنوي + Sealant', unit: 'سنة', minPrice: 570, maxPrice: 1200, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف واجهات زجاجية بالقطيف؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف واجهات زجاجية؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف واجهات زجاجية؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'Biofilm واحي — ماذا؟', answer: '80-95% + عيون قريبة = Biofilm + طحالب على واجهات. Anti-Biofilm شهري.' },
+        { question: 'طين — يلتصق بالزجاج؟', answer: 'PM10 طيني + رطوبة = طبقة لزجة. ماء لا يكفي. فرك + RO.' },
+        { question: 'مقابل الجبيل — أبسط؟', answer: 'لا سخام SABIC ولا VOC. أبسط. لكن: طين+Biofilm واحي.' },
+        { question: 'كم تكلفة التنظيف العميق مقارنة بالتنظيف العادي؟', answer: 'التنظيف العميق أغلى 30-50% لكنه يشمل: HEPA + بخار 150°م + تعقيم. التنظيف العادي = مسح سطحي. العميق كل 3-4 أشهر + العادي أسبوعياً = أفضل معادلة تكلفة/نظافة.' },
+        { question: 'هل المواد المستخدمة آمنة على الأطفال؟', answer: 'مواد معتمدة من هيئة الغذاء والدواء SFDA. بعد التنظيف: تهوية 30 دقيقة كافية. بخار 150°م = بديل للكيماويات — آمن 100% على الأطفال والحيوانات.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Squeegee مطاطي — NaCl+طين.',
+        'Anti-Biofilm شهري — واحي.',
+        'Marine Sealant — NaCl.',
+        'RO شطف — لا ترسبات.',
+        'بعد التنظيف: شغّل المكيف وليس الشبّاك — الهواء الخارجي يعيد الغبار على الأسطح النظيفة.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'NaCl + Sealant عادي = تآكل سنة.',
+        'Biofilm واحي = طحالب ← انزلاق.',
+        'طين + ماء = ينتشر. فرك + RO.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص شركات الواجهات' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات المباني بالشرقية' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'واجهات القطيف: NaCl + طين لزج + Biofilm واحي. Squeegee + Anti-Biofilm + Marine Sealant.', source: 'نصائح هندسية — واجهات الواحات الساحلية' },
     ],
-
-    saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    saudiRegulations: [REGULATIONS.SBC_601],
+    verificationBadges: [{ badge: '✔️ واجهات مرخصة', authority: 'منصة بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Squeegee مطاطي', use: 'NaCl+طين' },
+        { name: 'RO Rinse', use: 'لا ترسبات' },
+        { name: 'Anti-Biofilm', use: 'واحي — طحالب' },
+        { name: 'Marine Sealant', use: 'NaCl — مُقاوم' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'مثل الخبر.', solution: 'Biofilm واحي + طين. مختلف.' },
+        { fear: 'ماء يكفي.', solution: 'طين لزج = ينتشر. فرك+RO.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'ساحلي فقط.', truth: 'واحي = Biofilm+طين.' },
+        { myth: 'ربع سنوي.', truth: 'طين+Biofilm. شهري.' },
     ],
-
     relatedServices: [
-        { slug: 'qatif-furniture-moving', context: 'نقل عفش بالقطيف', priority: 1 },
-        { slug: 'qatif-furniture-storage', context: 'تخزين عفش بالقطيف', priority: 2 },
-        { slug: 'qatif-dyna', context: 'دينا نقل بالقطيف', priority: 3 },
-        { slug: 'qatif-moving-out', context: 'نقل عفش خروج بالقطيف', priority: 4 },
-        { slug: 'qatif-dabab', context: 'دباب نقل بالقطيف', priority: 5 },
-        { slug: 'qatif-cleaning', context: 'تنظيف منازل بالقطيف', priority: 6 },
-        { slug: 'qatif-tanks-cleaning', context: 'تنظيف خزانات بالقطيف', priority: 7 },
-        { slug: 'qatif-sofa-cleaning', context: 'تنظيف كنب بالقطيف', priority: 8 },
-        { slug: 'qatif-carpet-cleaning', context: 'تنظيف سجاد بالقطيف', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 1 },
+        { slug: 'marble-polishing', context: 'رخام', priority: 2 },
+        { slug: 'office-cleaning', context: 'مكاتب', priority: 3 },
+        { slug: 'villas-cleaning', context: 'فلل', priority: 4 },
+        { slug: 'auto-cleaning', context: 'سيارات', priority: 5 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 6 },
+        { slug: 'pest-control', context: 'حشرات', priority: 7 },
     ],
 };

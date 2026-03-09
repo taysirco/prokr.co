@@ -22,6 +22,7 @@ import {
   BookOpen,
 } from 'lucide-react';
 import { CITIES, SERVICES, getCitiesByRegion, REGION_NAMES } from '@/lib/seed';
+import { isAbsorbedSlug } from '@/lib/services/super-page-groups';
 import { BLOG_ARTICLES } from '@/lib/blog-data';
 import Footer from '@/components/Footer';
 import { WebsiteJsonLd, ProkrOrganizationJsonLd, BreadcrumbJsonLd } from '@/components/JsonLd';
@@ -45,8 +46,9 @@ const serviceIcons: Record<string, React.ReactNode> = {
 export default function HomePage() {
   const citiesByRegion = getCitiesByRegion();
 
-  // Featured services (most popular)
-  const featuredServices = SERVICES.slice(0, 8);
+  // Featured services (most popular, canonical only)
+  const canonicalServices = SERVICES.filter(s => !isAbsorbedSlug(s.slug));
+  const featuredServices = canonicalServices.slice(0, 8);
 
   // Major cities
   const majorCities = CITIES.filter(c =>
@@ -270,7 +272,7 @@ export default function HomePage() {
                   <div className="w-14 h-14 bg-gradient-to-br from-purple-400 to-purple-500 rounded-2xl flex items-center justify-center mb-4 shadow-lg shadow-purple-500/30 group-hover:scale-110 transition-transform">
                     <Wrench className="w-7 h-7 text-white" />
                   </div>
-                  <p className="text-4xl font-bold mb-1">53</p>
+                  <p className="text-4xl font-bold mb-1">{canonicalServices.length}</p>
                   <p className="text-emerald-200">خدمة متنوعة</p>
                 </div>
 
@@ -388,7 +390,7 @@ export default function HomePage() {
               href="/services"
               className="inline-flex items-center gap-2 px-8 py-4 bg-emerald-600 text-white font-bold rounded-2xl hover:bg-emerald-700 shadow-lg shadow-emerald-500/30 transition-all hover:scale-105"
             >
-              عرض جميع الخدمات (53 خدمة)
+              عرض جميع الخدمات ({canonicalServices.length} خدمة)
               <ArrowLeft className="w-5 h-5" />
             </Link>
           </div>

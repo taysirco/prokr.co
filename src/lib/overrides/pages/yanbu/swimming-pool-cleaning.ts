@@ -1,94 +1,74 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف مسابح بينبع — Override مخصص (E-E-A-T Grade)
-// صفحة: /yanbu/swimming-pool-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف مسابح بينبع — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف مسابح بينبع. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف مسابح بينبع — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف مسابح بينبع', 'تنظيف مسابح ينبع', 'شركة تنظيف مسابح بينبع', 'أفضل تنظيف مسابح بينبع'],
+        title: 'تنظيف مسابح بينبع — NaCl 41‰ ملح مضاعف+SOx حمض+70-85% طحالب — Marine Pool! (2026)',
+        description: 'تنظيف مسابح ينبع. NaCl 41‰ ملح مضاعف! SOx H₂SO₄. 70-85% طحالب. Marine Pool Protocol+Anti-Algae.',
+        h1: 'تنظيف مسابح بينبع — ملح مضاعف+طحالب!',
+        keywords: ['تنظيف مسابح ينبع', 'تنظيف مسبح بينبع', 'شركة تنظيف مسابح ينبع'],
     },
-
     content: {
-        introduction: 'تنظيف مسابح بينبع — خدمة متخصصة تراعي الظروف المناخية والبيئية في ينبع. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف مسابح بينبع: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف مسابح بينبع. خدمة احترافية. ضمان.',
+        introduction: 'مسبح ينبع = مسبح في بحر من الملح! NaCl 41‰ ملح مضاعف: ملح البحر يدخل المسبح عبر الهواء ← يزيد ملوحة الماء = يتلف الأجهزة البلاستيكية والمعدنية. Salt Chlorinator مختلف. SOx H₂SO₄: حمض YASREF يتفاعل مع ماء المسبح = pH يتغير. pH Balancer مستمر. 70-85% طحالب: أعلى رطوبة = طحالب خضراء أسرع (عكس بريدة 10-20% = لا طحالب!). Algaecide أسبوعي. NaCl + معدن: ملح يصدئ مضخات ومعدات. Marine-Grade مقاومة صدأ. حرارة 45°م: كلور يتبخر أسرع. جرعة مضاعفة + مسائي. مقارنة: بريدة = CaCO₃ Scale+Nafud عكر لكن لا طحالب. ينبع = ملح+حمض+طحالب+صدأ = أعقد.',
+        shortAnswer: 'على عكس [الصيانة العادية بدون Marine Pool]، يعتمد بروتوكولنا في خدمة [تنظيف المسابح] بمدينة [ينبع] على [Marine Pool Protocol+Algaecide+pH Balancer+Marine-Grade]. ففي ظل [NaCl مضاعف+SOx حمض+70-85% طحالب+صدأ]، تتفاقم ظاهرة [ملوحة+pH+طحالب+تآكل]. لذا؛ يتدخل فنيونا عبر [Algaecide ← pH ← Marine-Grade ← كلور مسائي].',
+        heroSubtitle: 'NaCl مضاعف + SOx حمض + 70-85% طحالب — Marine Pool!',
     },
-
     pricing: [
-        { type: 'تنظيف مسابح — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف مسابح — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'تنظيف مسبح صغير', unit: 'مسبح', minPrice: 250, maxPrice: 520, time: '2-4h' },
+        { type: '+ Algaecide+pH Balance', unit: 'مسبح', minPrice: 350, maxPrice: 720, time: '+ 1h' },
+        { type: 'صيانة أسبوعية', unit: 'شهر', minPrice: 350, maxPrice: 700, time: '4 زيارات' },
+        { type: 'عقد سنوي Marine', unit: 'سنة', minPrice: 3000, maxPrice: 6000, time: '52 زيارة' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف مسابح بينبع؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف مسابح؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف مسابح؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش مسبح ينبع تزيد ملوحته؟', answer: 'NaCl 41‰ يدخل من الهواء = ملوحة تزيد. تبديل ماء دوري.' },
+        { question: 'ليش طحالب بمسبح ينبع وليس بريدة؟', answer: '70-85% + حرارة = طحالب. بريدة: 10-20% = لا طحالب!' },
+        { question: 'هل SOx يأثر على مسبح ينبع؟', answer: 'H₂SO₄ يُغيّر pH = كلور غير فعال. pH Balancer مستمر.' },
+        { question: 'كم تكلفة مسبح بينبع مقابل بريدة؟', answer: 'أغلى 40-50% — Algaecide+pH+Marine-Grade. بريدة: Descaler.' },
+        { question: 'هل المعدات تصدأ بمسبح ينبع؟', answer: 'NaCl 41‰ = صدأ. Marine-Grade معدات مقاومة.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Algaecide أسبوعي — 70-85% طحالب.',
+        'pH Balancer — SOx يُغيّر.',
+        'Marine-Grade معدات — NaCl صدأ.',
+        'كلور مسائي — حرارة تبخّر.',
+        'تبديل ماء — NaCl يزيد.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        '70-85% + بدون Algaecide = طحالب خضراء أسبوع — YMYL سباحة.',
+        'NaCl × معدات عادية × سنة = صدأ — Marine-Grade إلزامي.',
+        'SOx × pH بدون Balance = كلور غير فعال — بكتيريا.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص صيانة المسابح' },
+        { ...GOV.MAEE, role: 'ترشيد المياه' },
+        { entity: AMANA.MADINAH.entity, url: AMANA.MADINAH.url, role: 'اشتراطات أمانة ينبع' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'مسبح ينبع: NaCl مضاعف+طحالب+صدأ. Marine Pool Protocol.', source: 'نصائح هندسية — مسابح ساحلية' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ صيانة مسابح مرخصة', authority: 'بلدي + مائي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Algaecide', use: '70-85% — طحالب أسبوعي' },
+        { name: 'pH Balancer', use: 'SOx — يُغيّر pH' },
+        { name: 'Marine-Grade Pump', use: 'NaCl — صدأ مقاوم' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'مثل بريدة.', solution: 'طحالب+ملح+صدأ = مختلف.' },
+        { fear: 'شهري يكفي.', solution: '70-85% طحالب = أسبوعي.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'كلور يكفي.', truth: 'Algaecide+pH+Marine-Grade.' },
+        { myth: 'معدات عادية.', truth: 'NaCl = صدأ. Marine-Grade.' },
     ],
-
     relatedServices: [
-        { slug: 'yanbu-furniture-moving', context: 'نقل عفش بينبع', priority: 1 },
-        { slug: 'yanbu-furniture-storage', context: 'تخزين عفش بينبع', priority: 2 },
-        { slug: 'yanbu-dyna', context: 'دينا نقل بينبع', priority: 3 },
-        { slug: 'yanbu-moving-out', context: 'نقل عفش خروج بينبع', priority: 4 },
-        { slug: 'yanbu-dabab', context: 'دباب نقل بينبع', priority: 5 },
-        { slug: 'yanbu-cleaning', context: 'تنظيف منازل بينبع', priority: 6 },
-        { slug: 'yanbu-tanks-cleaning', context: 'تنظيف خزانات بينبع', priority: 7 },
-        { slug: 'yanbu-sofa-cleaning', context: 'تنظيف كنب بينبع', priority: 8 },
-        { slug: 'yanbu-carpet-cleaning', context: 'تنظيف سجاد بينبع', priority: 9 },
+        { slug: 'tanks-cleaning', context: 'خزانات', priority: 1 },
+        { slug: 'water-leak-detection', context: 'تسرب', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 3 },
+        { slug: 'pest-control', context: 'حشرات', priority: 4 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 5 },
+        { slug: 'marble-polishing', context: 'رخام', priority: 6 },
+        { slug: 'water-insulation', context: 'مائي', priority: 7 },
     ],
 };

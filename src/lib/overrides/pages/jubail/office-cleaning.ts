@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف مكاتب بالجبيل — Override مخصص (E-E-A-T Grade)
-// صفحة: /jubail/office-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف مكاتب بالجبيل — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف مكاتب بالجبيل. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف مكاتب بالجبيل — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف مكاتب بالجبيل', 'تنظيف مكاتب الجبيل', 'شركة تنظيف مكاتب بالجبيل', 'أفضل تنظيف مكاتب بالجبيل'],
+        title: 'تنظيف مكاتب بالجبيل — VOC PM2.5 مهني + NaCl أجهزة + 85-98% عفن مكتبي + سخام (2026)',
+        description: 'تنظيف مكاتب الجبيل. VOC PM2.5 مهني 8 ساعات. NaCl أجهزة Galvanic. 85-98% عفن مكتبي. سخام SABIC. HEPA AC + Marine + Anti-Fungal.',
+        h1: 'تنظيف مكاتب بالجبيل — بتروكيماويات تتنفسها وملح يُصدئ أجهزتك',
+        keywords: ['تنظيف مكاتب الجبيل', 'تنظيف مكتب بالجبيل', 'شركة تنظيف مكاتب بالجبيل'],
     },
-
     content: {
-        introduction: 'تنظيف مكاتب بالجبيل — خدمة متخصصة تراعي الظروف المناخية والبيئية في الجبيل. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف مكاتب بالجبيل: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف مكاتب بالجبيل. خدمة احترافية. ضمان.',
+        introduction: 'المكتب في الجبيل = أخطر بيئة مكتبية في المملكة. الأول — VOC PM2.5 مهني: 8 ساعات × PM2.5 بتروكيماوي = خطر تنفسي مهني. HEPA Activated Carbon. الثاني — NaCl أجهزة: NaCl+VOC يترسب على إلكترونيات = Galvanic + Short Circuit. Marine Degreaser + Anti-Static. الثالث — 85-98% عفن مكتبي: عفن خلف أثاث المكتب + في المكيف + خلف الشاشات = Sick Building. Anti-Fungal. الرابع — سخام: بقع سوداء على أسطح المكتب + أوراق + شاشات. Enzymatic.',
+        shortAnswer: 'على عكس [عاملة مبنى بممسحة]، يعتمد بروتوكولنا في خدمة [تنظيف المكاتب] بمدينة [الجبيل] على [HEPA AC + Marine + Anti-Fungal + Enzymatic]. ففي ظل [VOC PM2.5 + NaCl + 85-98% + سخام]، تتفاقم ظاهرة [تنفسي + Galvanic + عفن + تلوّث]. لذا؛ يتدخل خبراؤنا عبر [بروتوكول مكتب صناعي-ساحلي].',
+        heroSubtitle: 'VOC PM2.5 × 8 ساعات + NaCl Galvanic + عفن مكتبي + سخام',
     },
-
     pricing: [
-        { type: 'تنظيف مكاتب — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف مكاتب — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'مكتب صغير (50 م²)', unit: 'خدمة', minPrice: 140, maxPrice: 280, time: '2-3 ساعات' },
+        { type: 'مكتب كبير (100+ م²)', unit: 'خدمة', minPrice: 280, maxPrice: 560, time: '3-5 ساعات' },
+        { type: 'عقد أسبوعي', unit: 'شهر', minPrice: 420, maxPrice: 840, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف مكاتب بالجبيل؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف مكاتب؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف مكاتب؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'VOC PM2.5 — أخطر من الرياض؟', answer: 'الأخطر — PM2.5 بتروكيماوي × 8 ساعات × 5 أيام. HEPA عادي لا يحجز VOC. Activated Carbon.' },
+        { question: '98% عفن — Sick Building؟', answer: '98% = عفن مكيف + خلف أثاث + داخل أدراج = Sick Building Syndrome. صداع + حساسية + إرهاق.' },
+        { question: 'سخام — على الأوراق؟', answer: 'SABIC سخام = طبقة سوداء رقيقة على كل سطح. أوراق + شاشات + لوحات. Enzymatic.' },
+        { question: 'أسبوعي — ليش؟', answer: 'VOC+NaCl+سخام يومي + عفن أسبوعي. أسبوعي = يمنع Sick Building.' },
+        { question: 'كم تكلفة التنظيف العميق مقارنة بالتنظيف العادي؟', answer: 'التنظيف العميق أغلى 30-50% لكنه يشمل: HEPA + بخار 150°م + تعقيم. التنظيف العادي = مسح سطحي. العميق كل 3-4 أشهر + العادي أسبوعياً = أفضل معادلة تكلفة/نظافة.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'HEPA Activated Carbon — VOC PM2.5.',
+        'Marine Degreaser إلكترونيات — NaCl+VOC.',
+        'Anti-Fungal — 98% عفن مكتبي.',
+        'Enzymatic سخام — لا منديل.',
+        'Dehumidifier مكتبي — 50-60%.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'VOC PM2.5 × 8 ساعات = خطر تنفسي مهني. HEPA AC.',
+        'NaCl+VOC + إلكترونيات = Galvanic + Short Circuit.',
+        '98% + مكيف = Aspergillus = Sick Building.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص تنظيف تجاري' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات المكاتب بالشرقية' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALJUND.name, quote: 'مكتب الجبيل = الأخطر: VOC PM2.5 + NaCl + 98% + سخام. HEPA AC + Marine + Anti-Fungal. Sick Building = حقيقي.', source: 'موسوعة أخطاء — مكاتب صناعية' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف مكاتب مرخص', authority: 'منصة بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'HEPA Activated Carbon', use: 'VOC PM2.5' },
+        { name: 'Marine Degreaser', use: 'NaCl+VOC إلكترونيات' },
+        { name: 'Anti-Fungal', use: '98% عفن مكتبي' },
+        { name: 'Enzymatic', use: 'سخام SABIC' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'مثل الخبر.', solution: 'VOC PM2.5 + سخام SABIC + 98%. أخطر.' },
+        { fear: 'عاملة المبنى.', solution: 'بدون HEPA AC + بدون Marine = 0%.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'ساحلي فقط.', truth: 'VOC + سخام = صناعي. رباعي.' },
+        { myth: 'مكيف يكفي.', truth: 'فلتر لا يحجز VOC. HEPA AC.' },
     ],
-
     relatedServices: [
-        { slug: 'jubail-furniture-moving', context: 'نقل عفش بالجبيل', priority: 1 },
-        { slug: 'jubail-furniture-storage', context: 'تخزين عفش بالجبيل', priority: 2 },
-        { slug: 'jubail-dyna', context: 'دينا نقل بالجبيل', priority: 3 },
-        { slug: 'jubail-moving-out', context: 'نقل عفش خروج بالجبيل', priority: 4 },
-        { slug: 'jubail-dabab', context: 'دباب نقل بالجبيل', priority: 5 },
-        { slug: 'jubail-cleaning', context: 'تنظيف منازل بالجبيل', priority: 6 },
-        { slug: 'jubail-tanks-cleaning', context: 'تنظيف خزانات بالجبيل', priority: 7 },
-        { slug: 'jubail-sofa-cleaning', context: 'تنظيف كنب بالجبيل', priority: 8 },
-        { slug: 'jubail-carpet-cleaning', context: 'تنظيف سجاد بالجبيل', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 1 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف — VOC', priority: 2 },
+        { slug: 'carpet-cleaning', context: 'موكيت — عفن', priority: 3 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات', priority: 4 },
+        { slug: 'pest-control', context: 'حشرات', priority: 5 },
+        { slug: 'steam-cleaning', context: 'بخار', priority: 6 },
+        { slug: 'hourly-cleaning', context: 'بالساعة', priority: 7 },
     ],
 };

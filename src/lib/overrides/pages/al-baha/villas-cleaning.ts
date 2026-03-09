@@ -1,94 +1,73 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف فلل بالباحة — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-baha/villas-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف فلل بالباحة — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف فلل بالباحة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف فلل بالباحة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف فلل بالباحة', 'تنظيف فلل الباحة', 'شركة تنظيف فلل بالباحة', 'أفضل تنظيف فلل بالباحة'],
+        title: 'تنظيف فلل بالباحة — 7 محاور جبلية! ضباب+عرعر+Laterite+Biofilm+عث+Dew Point+حراري — أعقد بالمملكة! (2026)',
+        description: 'تنظيف فلل الباحة — أعقد بروتوكول بالمملكة! 7 محاور: Anti-Fungal+Anti-Mite+Dehumidifier+عزل مطر+HEPA+Anti-Biofilm+حراري.',
+        h1: 'تنظيف فلل بالباحة — 7 محاور! الأعقد بالمملكة!',
+        keywords: ['تنظيف فلل بالباحة', 'تنظيف فيلا الباحة', 'شركة تنظيف فلل بالباحة'],
     },
-
     content: {
-        introduction: 'تنظيف فلل بالباحة — خدمة متخصصة تراعي الظروف المناخية والبيئية في الباحة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف فلل بالباحة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف فلل بالباحة. خدمة احترافية. ضمان.',
+        introduction: 'فيلا الباحة = أعقد بروتوكول تنظيف بالمملكة! 7 محاور: (1) Anti-Fungal: 200 يوم ضباب = عفن Aspergillus+Penicillium في كل زاوية. (2) Anti-Mite: عث الرطوبة يتكاثر بالضباب = أكثر من أي مدينة. (3) Dehumidifier: 6-10h تجفيف+60-85% = يجب تجفيف كل شيء. (4) Waterproofing: الباحة ممطرة = مياه تتسلل ← تنظيف بعد المطر. (5) HEPA: عرعر لقاح+ضباب غبار غابة = فلتر HEPA في كل مكيف. (6) Anti-Biofilm: واجهات+أرضيات خارجية = Biofilm أخضر 20-30% أسرع. (7) Thermal Check: شتاء 0-5°م = تكثّف نوافذ+عفن إطارات. مقارنة: بريدة = 4 محاور فقط! الباحة = 7 محاور = الأغلى والأعقد.',
+        shortAnswer: 'على عكس [4 محاور بريدة]، يعتمد بروتوكولنا في خدمة [تنظيف الفلل] بمدينة [الباحة] على [7 محاور جبلية]. ففي ظل [ضباب+عرعر+Laterite+Biofilm+عث+Dew Point+مطر]، تتفاقم ظاهرة [أعقد بيئة تنظيف بالمملكة]. لذا؛ يتدخل فريقنا عبر [7 محاور = Anti-Fungal+Anti-Mite+Dehumidifier+Waterproof+HEPA+Anti-Biofilm+Thermal].',
+        heroSubtitle: '7 محاور جبلية — أعقد بروتوكول تنظيف فلل بالمملكة!',
     },
-
     pricing: [
-        { type: 'تنظيف فلل — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف فلل — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'فيلا صغيرة (7 محاور)', unit: 'فيلا', minPrice: 600, maxPrice: 1200, time: '8-12h' },
+        { type: 'فيلا كبيرة (7 محاور)', unit: 'فيلا', minPrice: 1000, maxPrice: 2000, time: '1-2 يوم' },
+        { type: 'بعد موسم ضباب — عميق', unit: 'فيلا', minPrice: 800, maxPrice: 1600, time: '1-2 يوم' },
+        { type: 'ربع سنوي (4+ضباب)', unit: 'سنة', minPrice: 2000, maxPrice: 4000, time: '5 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف فلل بالباحة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف فلل؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف فلل؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش فيلا الباحة 7 محاور وبريدة 4؟', answer: 'ضباب+عرعر+Biofilm+Dew Point = 3 محاور إضافية فريدة.' },
+        { question: 'كم تكلفة فيلا بالباحة مقارنة ببريدة؟', answer: 'أغلى 60-80%! 7 vs 4 محاور. الأغلى بالمملكة.' },
+        { question: 'ما أهم محور بفيلا الباحة؟', answer: 'Anti-Fungal. 200 يوم ضباب = عفن في كل مكان.' },
+        { question: 'هل الـ Thermal Check مهم بالباحة؟', answer: 'شتاء 0-5°م = تكثّف نوافذ = عفن إطارات خشب.' },
+        { question: 'كم مرة تنظيف فيلا بالباحة؟', answer: 'ربع سنوي (4) + عميق بعد الضباب = 5. رغدان: شهري.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        '7 محاور — لا تحذف أي واحد.',
+        'Anti-Fungal — أهم محور. ضباب.',
+        'Dehumidifier — 6-10h كل شيء.',
+        'HEPA — عرعر كل مكيف.',
+        'Anti-Biofilm — واجهات خارجية.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        '4 محاور فقط (بدون 3 الجبلية) = عفن+Biofilm+تكثّف — 7 محاور إلزامي.',
+        'بدون Anti-Mite = عث مضاعف ← حساسية YMYL.',
+        'بدون Thermal Check شتاء = عفن إطارات نوافذ.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },
+        { entity: AMANA.BAHA.entity, url: AMANA.BAHA.url, role: 'اشتراطات أمانة الباحة' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMISNID.name, quote: 'فيلا الباحة: 7 محاور. الأعقد بالمملكة. لا تحذف أي محور.', source: 'جغرافيا المناخ — فلل جبلية' },
     ],
-
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ تنظيف فلل مرخص', authority: 'بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Anti-Fungal System', use: '200 يوم ضباب — كل زاوية' },
+        { name: 'Dehumidifier صناعي', use: '6-10h — كل شيء' },
+        { name: 'HEPA Filter', use: 'عرعر — كل مكيف' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: '7 محاور كثير.', solution: '7 تحديات فريدة = 7 حلول.' },
+        { fear: 'مثل بريدة.', solution: '4 vs 7. الأعقد بالمملكة.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: '4 محاور.', truth: '7. الباحة فريدة.' },
+        { myth: 'نصف سنوي.', truth: 'ربع سنوي+ضباب = 5.' },
     ],
-
     relatedServices: [
-        { slug: 'al-baha-furniture-moving', context: 'نقل عفش بالباحة', priority: 1 },
-        { slug: 'al-baha-furniture-storage', context: 'تخزين عفش بالباحة', priority: 2 },
-        { slug: 'al-baha-dyna', context: 'دينا نقل بالباحة', priority: 3 },
-        { slug: 'al-baha-moving-out', context: 'نقل عفش خروج بالباحة', priority: 4 },
-        { slug: 'al-baha-dabab', context: 'دباب نقل بالباحة', priority: 5 },
-        { slug: 'al-baha-cleaning', context: 'تنظيف منازل بالباحة', priority: 6 },
-        { slug: 'al-baha-tanks-cleaning', context: 'تنظيف خزانات بالباحة', priority: 7 },
-        { slug: 'al-baha-sofa-cleaning', context: 'تنظيف كنب بالباحة', priority: 8 },
-        { slug: 'al-baha-carpet-cleaning', context: 'تنظيف سجاد بالباحة', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 1 },
+        { slug: 'apartments-cleaning', context: 'شقق', priority: 2 },
+        { slug: 'carpet-cleaning', context: 'سجاد', priority: 3 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 4 },
+        { slug: 'pest-control', context: 'حشرات', priority: 5 },
+        { slug: 'marble-polishing', context: 'رخام', priority: 6 },
+        { slug: 'glass-facades-cleaning', context: 'واجهات', priority: 7 },
     ],
 };

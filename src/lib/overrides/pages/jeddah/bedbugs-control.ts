@@ -6,7 +6,7 @@
 // ══════════════════════════════════════════════════════════════
 
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -51,6 +51,7 @@ export const override: PageOverride = {
             question: 'بعد المعالجة — كيف أمنع رجوع البق نهائياً؟',
             answer: '4 خطوات: 1) غلاف مرتبة ضد البق (Bed Bug Encasement) — يمنع اختباءه في المرتبة. 2) بعد السفر: افحص الحقيبة في الحمام على البلاط الأبيض. 3) لا تشتري أثاث مستعمل من سوق الحراج بدون فحص دقيق. 4) في فنادق جدة: ارفع الحقيبة عن الأرض + افحص حواف المرتبة عند الوصول.',
         },
+        { question: 'هل المبيدات آمنة على الأطفال والحيوانات؟', answer: 'مبيدات مسجلة في نظام غد — SFDA. إخلاء 2-4 ساعات بعد الرش. طيور وأسماك: أبِلغ الشركة مسبقاً لاستخدام مواد أخف. الأسطح آمنة بعد الجفاف (1-2 ساعة).' },
     ],
 
     expertTips: [
@@ -70,6 +71,7 @@ export const override: PageOverride = {
     trustAnchors: [
         { ...GOV.SFDA, role: 'اعتماد المبيدات المسجلة لبق الفراش — نظام غد' },
         { ...GOV.BALADI, role: 'اشتراطات النظافة والمكافحة للفنادق والشقق المفروشة' },
+        { entity: AMANA.JEDDAH.entity, url: AMANA.JEDDAH.url, role: 'اشتراطات أمانة جدة' },
     ],
 
     expertReviewer: {
@@ -84,7 +86,6 @@ export const override: PageOverride = {
             expert: 'أ.د. فهد الخضيري',
             quote: 'رش المبيدات العادية على بق الفراش ينقله لغرف ثانية ولا يقتل البيض. المعالجة الحرارية هي الحل الوحيد المضمون علمياً',
             source: 'عالم أبحاث طبي — سموم ومسرطنات',
-            url: 'https://x.com/DrAlkhodairy',
         },
     ],
 
@@ -111,14 +112,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'jeddah-mattress-cleaning', context: 'تنظيف المراتب بالبخار بعد معالجة البق — يزيل الجثث والفضلات', priority: 1 },
-        { slug: 'jeddah-sofa-cleaning', context: 'البق يختبئ في الكنب — تنظيف بخار بعد المعالجة', priority: 2 },
-        { slug: 'jeddah-pest-control', context: 'مكافحة شاملة — البق قد يكون مع حشرات أخرى', priority: 3 },
-        { slug: 'jeddah-sanitization', context: 'تعقيم الغرفة بعد المعالجة الحرارية — نظافة كاملة', priority: 4 },
-        { slug: 'jeddah-steam-cleaning', context: 'بخار 100°م على المراتب والأثاث يقتل أي بق متبقي', priority: 5 },
-        { slug: 'jeddah-carpet-cleaning', context: 'البق يختبئ في حواف السجاد — غسيل عميق', priority: 6 },
-        { slug: 'jeddah-furniture-cleaning', context: 'تنظيف أثاث مستعمل قبل إدخاله البيت يمنع العدوى', priority: 7 },
-        { slug: 'jeddah-cleaning', context: 'تنظيف شامل بعد المعالجة — بيئة نظيفة تمنع العودة', priority: 8 },
-        { slug: 'jeddah-furniture-moving', context: 'نقل أثاث مصاب يحتاج احتياطات — لا ينقل البق', priority: 9 },
+        { slug: 'mattress-cleaning', context: 'تنظيف المراتب بالبخار بعد معالجة البق — يزيل الجثث والفضلات', priority: 1 },
+        { slug: 'sofa-cleaning', context: 'البق يختبئ في الكنب — تنظيف بخار بعد المعالجة', priority: 2 },
+        { slug: 'pest-control', context: 'مكافحة شاملة — البق قد يكون مع حشرات أخرى', priority: 3 },
+        { slug: 'sanitization', context: 'تعقيم الغرفة بعد المعالجة الحرارية — نظافة كاملة', priority: 4 },
+        { slug: 'steam-cleaning', context: 'بخار 100°م على المراتب والأثاث يقتل أي بق متبقي', priority: 5 },
+        { slug: 'carpet-cleaning', context: 'البق يختبئ في حواف السجاد — غسيل عميق', priority: 6 },
+        { slug: 'furniture-cleaning', context: 'تنظيف أثاث مستعمل قبل إدخاله البيت يمنع العدوى', priority: 7 },
+        { slug: 'cleaning', context: 'تنظيف شامل بعد المعالجة — بيئة نظيفة تمنع العودة', priority: 8 },
+        { slug: 'furniture-moving', context: 'نقل أثاث مصاب يحتاج احتياطات — لا ينقل البق', priority: 9 },
     ],
 };

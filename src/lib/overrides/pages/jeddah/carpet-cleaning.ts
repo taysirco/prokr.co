@@ -4,6 +4,7 @@
 // ============================================
 
 import type { PageOverride } from '../../types';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -78,6 +79,8 @@ export const override: PageOverride = {
     ],
 
 
+        verificationBadges: [{ badge: '✔️ شركة مرخصة من بلدي', authority: 'وزارة البلديات', icon: 'shield-check' }],
+
     equipment: [
         { name: 'جهاز غسيل سجاد Karcher Puzzi', use: 'حقن محلول تنظيف + شفط — تنظيف عميق بدون نقع' },
         { name: 'مجفف هواء صناعي (Air Mover)', use: 'يجفف السجاد في 2 ساعة بدل 12 ساعة — يمنع العفن في رطوبة جدة' },
@@ -91,23 +94,20 @@ export const override: PageOverride = {
 
     trustAnchors: [
         { entity: 'هيئة الغذاء والدواء', acronym: 'SFDA', url: 'https://sfda.gov.sa', role: 'اعتماد مواد غسيل السجاد' },
+        { entity: AMANA.JEDDAH.entity, url: AMANA.JEDDAH.url, role: 'اشتراطات أمانة جدة' },
     ],
 
-    expertReviewer: {
-        name: 'أ.د. عبدالله المسند',
-        title: 'أستاذ جغرافيا المناخ',
-        credential: 'أستاذ جغرافيا المناخ — جامعة القصيم',
-        profileUrl: 'https://x.com/ALMISNID',
-    },
+    expertReviewer: EXPERTS.ALMISNID,
 
     expertCitations: [
         {
             expert: 'أ.د. عبدالله المسند',
             quote: 'السجاد في جدة يجمع ملح NaCl بحري في أليافه — الممسحة العادية توزعه فقط. غسيل عميق كل 3-4 أشهر يزيل الملح المتراكم ويحمي الألياف',
             source: 'تحليل مناخي',
-            url: 'https://x.com/ALMISNID',
         },
     ],
+
+        saudiRegulations: [REGULATIONS.BALADI_HEALTH],
 
     counterNarratives: [
         { myth: 'الغسيل بالماء والصابون يكفي للسجاد', truth: 'الماء والصابون: يزيل البقع السطحية. لكن: الغبار الناعم (2.5 ميكرون) والعث يتغلغل في قاعدة السجاد — لا يخرج بالفرك. في جدة: الماء الزائد = 24-48 ساعة جفاف = عفن مضمون. البخار الجاف: أقل ماء + يصل القاعدة + يجف 4-6 ساعات' },
@@ -115,15 +115,15 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'jeddah-sofa-cleaning', context: 'غسيل الكنب مع السجاد — خصم الباقة', priority: 1 },
-        { slug: 'jeddah-mattress-cleaning', context: 'المراتب تجمع نفس العث — غسيل شامل', priority: 2 },
-        { slug: 'jeddah-steam-cleaning', context: 'بخار 150°م شامل للمنزل', priority: 3 },
-        { slug: 'jeddah-cleaning', context: 'تنظيف شامل مع غسيل السجاد — بيت نظيف 100%', priority: 4 },
-        { slug: 'jeddah-floor-cleaning', context: 'تنظيف الأرضية تحت السجاد — يمنع الرطوبة', priority: 5 },
-        { slug: 'jeddah-floor-polishing', context: 'تلميع البلاط بعد غسيل الموكيت المثبّت', priority: 6 },
-        { slug: 'jeddah-sanitization', context: 'تعقيم بعد غسيل السجاد — حماية شاملة', priority: 7 },
-        { slug: 'jeddah-pest-control', context: 'رش وقائي للسجاد ضد العث والحشرات', priority: 8 },
-        { slug: 'jeddah-furniture-moving', context: 'نقل أثاث لغسيل السجاد تحته', priority: 9 },
+        { slug: 'sofa-cleaning', context: 'غسيل الكنب مع السجاد — خصم الباقة', priority: 1 },
+        { slug: 'mattress-cleaning', context: 'المراتب تجمع نفس العث — غسيل شامل', priority: 2 },
+        { slug: 'steam-cleaning', context: 'بخار 150°م شامل للمنزل', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف شامل مع غسيل السجاد — بيت نظيف 100%', priority: 4 },
+        { slug: 'floor-cleaning', context: 'تنظيف الأرضية تحت السجاد — يمنع الرطوبة', priority: 5 },
+        { slug: 'floor-polishing', context: 'تلميع البلاط بعد غسيل الموكيت المثبّت', priority: 6 },
+        { slug: 'sanitization', context: 'تعقيم بعد غسيل السجاد — حماية شاملة', priority: 7 },
+        { slug: 'pest-control', context: 'رش وقائي للسجاد ضد العث والحشرات', priority: 8 },
+        { slug: 'furniture-moving', context: 'نقل أثاث لغسيل السجاد تحته', priority: 9 },
     ],
 };
 

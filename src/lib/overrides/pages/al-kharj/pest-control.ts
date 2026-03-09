@@ -1,94 +1,74 @@
-// ══════════════════════════════════════════════════════════════
-// مكافحة حشرات بالخرج — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-kharj/pest-control
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'مكافحة حشرات بالخرج — خدمة احترافية معتمدة (2026)',
-        description: 'مكافحة حشرات بالخرج. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'مكافحة حشرات بالخرج — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['مكافحة حشرات بالخرج', 'مكافحة حشرات الخرج', 'شركة مكافحة حشرات بالخرج', 'أفضل مكافحة حشرات بالخرج'],
+        title: 'مكافحة حشرات بالخرج — حشرات مزارع ألبان+صوامع أعلاف+NH₃ — بروتوكول زراعي! (2026)',
+        description: 'مكافحة حشرات الخرج. ذباب مزارع ألبان! سوس صوامع أعلاف. صراصير NH₃. بروتوكول زراعي-حيواني. SFDA غد.',
+        h1: 'مكافحة حشرات بالخرج — حشرات مزارع — بروتوكول زراعي!',
+        keywords: ['مكافحة حشرات الخرج', 'مكافحة حشرات بالخرج', 'شركة مكافحة حشرات الخرج'],
     },
-
     content: {
-        introduction: 'مكافحة حشرات بالخرج — خدمة متخصصة تراعي الظروف المناخية والبيئية في الخرج. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'مكافحة حشرات بالخرج: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'مكافحة حشرات بالخرج. خدمة احترافية. ضمان.',
+        introduction: 'حشرات الخرج = حشرات زراعية-حيوانية فريدة! ذباب مزارع ألبان/دواجن: الخرج عاصمة الألبان = روث+سماد+أعلاف = ذباب بأعداد 5-10× من الرياض. ΔT 48°م تسارع دورة حياة الذباب صيفاً. شبك+طرد+مبيد. سوس صوامع أعلاف: صوامع = Stored Product Insects (سوس+خنافس) تنتقل للمنازل القريبة. فحص أعلاف حيوانات أليفة. صراصير تتغذى على NH₃: أمونيا = مصدر نيتروجين = صراصير أكثر حول المنازل القريبة من مزارع. Gel Bait+Residual. عقارب حرارية: 15-25% + ΔT = عقارب تبحث عن رطوبة داخل المنازل. سد فتحات. مقارنة: خميس = حشرات رطوبة (عث+نمل). الخرج = حشرات زراعية (ذباب+سوس+صراصير).',
+        shortAnswer: 'على عكس [الرش العام بدون بروتوكول زراعي]، يعتمد بروتوكولنا في خدمة [مكافحة الحشرات] بمدينة [الخرج] على [Gel Bait+Residual+شبك+فحص صوامع+سد فتحات]. ففي ظل [ذباب مزارع 5-10×+سوس صوامع+صراصير NH₃+عقارب ΔT]، تتفاقم ظاهرة [أعداد ضخمة+أنواع فريدة]. لذا؛ يتدخل فريقنا عبر [بروتوكول زراعي-حيواني متخصص].',
+        heroSubtitle: 'ذباب مزارع 5-10× + سوس صوامع + صراصير NH₃ — زراعي!',
     },
-
     pricing: [
-        { type: 'مكافحة حشرات — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'مكافحة حشرات — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'شقة — زراعي', unit: 'شقة', minPrice: 100, maxPrice: 220, time: '1-2 ساعة' },
+        { type: 'فيلا — شامل', unit: 'فيلا', minPrice: 220, maxPrice: 450, time: '2-4 ساعات' },
+        { type: '+ شبك ذباب', unit: 'إضافي', minPrice: 80, maxPrice: 170, time: '1-2 ساعة' },
+        { type: 'ربع سنوي (4 زيارات)', unit: 'سنة', minPrice: 300, maxPrice: 620, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة مكافحة حشرات بالخرج؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق مكافحة حشرات؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على مكافحة حشرات؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'ليش ذباب الخرج أكثر 5-10× من الرياض؟', answer: 'مزارع ألبان+دواجن = روث+سماد+أعلاف = مصدر تكاثر. ΔT يسارع الدورة.' },
+        { question: 'ما هي حشرات الصوامع بالخرج؟', answer: 'سوس+خنافس Stored Product Insects. تنتقل للمنازل القريبة من صوامع.' },
+        { question: 'كم تكلفة مكافحة حشرات بالخرج مقارنة بالرياض؟', answer: 'أغلى 20-30% — ذباب 5-10× + أنواع زراعية = بروتوكول أعقد.' },
+        { question: 'ليش صراصير أكثر قرب مزارع الخرج؟', answer: 'NH₃ = نيتروجين = غذاء. صراصير تتجمع حول مصادر NH₃. Gel Bait.' },
+        { question: 'هل عقارب موجودة بالخرج؟', answer: '15-25% + ΔT = عقارب تبحث عن رطوبة داخلياً. سد فتحات + شبك.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'شبك — ذباب مزارع 5-10×.',
+        'Gel Bait — صراصير NH₃.',
+        'فحص أعلاف أليفة — سوس صوامع.',
+        'سد فتحات — عقارب حرارية.',
+        'ربع سنوي — تكاثر سريع بالحرارة.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'ذباب مزارع × صيف = دورة حياة أسرع — أعداد تتضاعف أسبوعياً.',
+        'سوس صوامع في أعلاف حيوانات أليفة = انتشار داخل المنزل.',
+        'عقارب + فتحات مفتوحة = لدغة — خطر صحي YMYL.',
     ],
-
     trustAnchors: [
-        { ...GOV.SFDA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.SFDA, role: 'تسجيل المبيدات — نظام غد' },
+        { ...GOV.BALADI, role: 'ترخيص شركات المكافحة' },
+        { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات أمانة الرياض' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALKHODAIRY.name,
-        title: EXPERTS.ALKHODAIRY.title,
-        credential: EXPERTS.ALKHODAIRY.credential,
-        profileUrl: EXPERTS.ALKHODAIRY.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALKHODAIRY,
     expertCitations: [
-        {
-            expert: EXPERTS.ALKHODAIRY.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALKHODAIRY.title,
-            url: EXPERTS.ALKHODAIRY.profileUrl,
-        },
+        { expert: EXPERTS.ALKHODAIRY.name, quote: 'حشرات الخرج: زراعية-حيوانية. ذباب 5-10×+سوس صوامع. بروتوكول مختلف.', source: 'أبحاث سموم — حشرات زراعية' },
     ],
-
     saudiRegulations: [REGULATIONS.GHAD_SYSTEM],
-
-    verificationBadges: [
-        { badge: '✔️ مبيدات معتمدة من SFDA', authority: 'هيئة الغذاء والدواء', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ مكافحة مرخصة', authority: 'بلدي + SFDA', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Gel Bait', use: 'صراصير — NH₃ جذب' },
+        { name: 'Residual Spray', use: 'ذباب + سوس — حماية طويلة' },
+        { name: 'شبك صناعي', use: 'ذباب مزارع — حاجز فيزيائي' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'مثل الرياض.', solution: 'ذباب 5-10×+سوس+NH₃ = مختلف.' },
+        { fear: 'رش عام يكفي.', solution: '4 أنواع مختلفة = بروتوكول متخصص.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'رش واحد.', truth: 'ذباب+صراصير+سوس+عقارب = 4 بروتوكولات.' },
+        { myth: 'مرتين بالسنة.', truth: 'ΔT = تكاثر سريع. ربع سنوي.' },
     ],
-
     relatedServices: [
-        { slug: 'al-kharj-furniture-moving', context: 'نقل عفش بالخرج', priority: 1 },
-        { slug: 'al-kharj-furniture-storage', context: 'تخزين عفش بالخرج', priority: 2 },
-        { slug: 'al-kharj-dyna', context: 'دينا نقل بالخرج', priority: 3 },
-        { slug: 'al-kharj-moving-out', context: 'نقل عفش خروج بالخرج', priority: 4 },
-        { slug: 'al-kharj-dabab', context: 'دباب نقل بالخرج', priority: 5 },
-        { slug: 'al-kharj-cleaning', context: 'تنظيف منازل بالخرج', priority: 6 },
-        { slug: 'al-kharj-tanks-cleaning', context: 'تنظيف خزانات بالخرج', priority: 7 },
-        { slug: 'al-kharj-sofa-cleaning', context: 'تنظيف كنب بالخرج', priority: 8 },
-        { slug: 'al-kharj-carpet-cleaning', context: 'تنظيف سجاد بالخرج', priority: 9 },
+        { slug: 'pesticide-spraying', context: 'رش مبيدات', priority: 1 },
+        { slug: 'bedbugs-control', context: 'بق فراش', priority: 2 },
+        { slug: 'termite-control', context: 'نمل أبيض', priority: 3 },
+        { slug: 'bird-control', context: 'طيور', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 5 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 6 },
+        { slug: 'tanks-cleaning', context: 'خزانات', priority: 7 },
     ],
 };

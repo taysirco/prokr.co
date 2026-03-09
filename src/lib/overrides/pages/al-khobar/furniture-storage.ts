@@ -1,94 +1,78 @@
-// ══════════════════════════════════════════════════════════════
-// تخزين عفش بالخبر — Override مخصص (E-E-A-T Grade)
-// صفحة: /al-khobar/furniture-storage
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تخزين عفش بالخبر — خدمة احترافية معتمدة (2026)',
-        description: 'تخزين عفش بالخبر. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تخزين عفش بالخبر — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تخزين عفش بالخبر', 'تخزين عفش الخبر', 'شركة تخزين عفش بالخبر', 'أفضل تخزين عفش بالخبر'],
+        title: 'تخزين أثاث بالخبر — NaCl يُصدّئ المخزّن + 85-95% عفن + PVAc تفكك + تكثّف أجهزة (2026)',
+        description: 'تخزين أثاث الخبر. NaCl يترسب داخل المستودع. 85-95% عفن حتمي على أثاث مخزّن. PVAc يتفكك. تكثّف أجهزة. مستودع مُكيّف + Dehumidifier + VCI + Anti-Fungal.',
+        h1: 'تخزين أثاث بالخبر — مستودع ساحلي: مُحكم + جاف + Anti-Corrosion',
+        keywords: ['تخزين أثاث بالخبر', 'تخزين عفش الخبر', 'شركة تخزين أثاث بالخبر'],
     },
-
     content: {
-        introduction: 'تخزين عفش بالخبر — خدمة متخصصة تراعي الظروف المناخية والبيئية في الخبر. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تخزين عفش بالخبر: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تخزين عفش بالخبر. خدمة احترافية. ضمان.',
+        introduction: 'تخزين الأثاث في الخبر يحتاج مستودع ساحلي — ليس مجرد غرفة. الشرط الأول — محكم ضد NaCl: مستودع بدون إحكام = NaCl يدخل ← يُصدّئ كل معدن مخزّن خلال أسابيع. ختم كامل + فلاتر على فتحات التهوية. الشرط الثاني — Dehumidifier 24/7: 85-95% = عفن على كل سطح خلال أسبوعين. مستودع بدون Dehumidifier في الخبر = مستودع عفن. Dehumidifier يُخفض ← 40-50% = آمن. الشرط الثالث — Anti-Corrosion + VCI: المعادن تحتاج حماية مُضاعفة في التخزين الطويل. VCI داخل التغليف + Anti-Corrosion على المكشوف. الشرط الرابع — تبريد مُعتدل: 45°م + 85-95% = PVAc أسوأ مكان (يلين + يمتص رطوبة). مُبرّد < 35°م = آمن.',
+        shortAnswer: 'على عكس [مستودع عادي بدون Dehumidifier] الذي يُعفّن ويُصدّئ، يعتمد بروتوكولنا في خدمة [تخزين الأثاث] بمدينة [الخبر] على [مُحكم + Dehumidifier + VCI + مُبرّد]. ففي ظل [NaCl + 85-95% + PVAc]، تتفاقم ظاهرة [صدأ + عفن + تفكك]. لذا؛ يتدخل خبراؤنا عبر [مستودع ساحلي مُتحكّم].',
+        heroSubtitle: 'مُحكم NaCl + Dehumidifier 85-95% + VCI + مُبرّد PVAc',
     },
-
     pricing: [
-        { type: 'تخزين عفش — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تخزين عفش — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'تخزين — غرفة صغيرة (10 م²)', unit: 'شهر', minPrice: 300, maxPrice: 600, time: 'شهري' },
+        { type: 'تخزين — غرفة كبيرة (20 م²)', unit: 'شهر', minPrice: 500, maxPrice: 1000, time: 'شهري' },
+        { type: 'تغليف بحري + نقل + تخزين', unit: 'باقة', minPrice: 1000, maxPrice: 2500, time: 'حسب الحجم' },
+        { type: 'عقد سنوي (خصم 15%)', unit: 'سنة', minPrice: 3000, maxPrice: 6000, time: 'سنوي' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تخزين عفش بالخبر؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تخزين عفش؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تخزين عفش؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'Dehumidifier 24/7 — ضروري؟', answer: '85-95% = أعلى رطوبة في المملكة. بدون Dehumidifier: عفن خلال أسبوعين. كل مستودع بدون Dehumidifier في الخبر = مستودع تلف.' },
+        { question: 'NaCl يدخل المستودع — كيف؟', answer: 'فتحات تهوية + شقوق + أبواب تُفتح = NaCl من الهواء. ختم + فلاتر = يُقلل 90%+. VCI داخل تغليف = حماية إضافية.' },
+        { question: 'PVAc في الخبر — أسوأ من الأحساء؟', answer: 'الأحساء 48°م + 30-40% = حرارة عالية + جفاف. الخبر 45°م + 85-95% = حرارة + رطوبة = PVAc يلين + يمتص ← أسوأ مزيج. مُبرّد + Dehumidifier.' },
+        { question: 'فحص شهري — ماذا يشمل؟', answer: 'حرارة (< 35°م) + رطوبة (40-50%) + فحص صدأ + فحص عفن + سلامة تغليف. تقرير بالصور.' },
+        { question: 'أرخص من الأحساء؟', answer: 'أغلى — Dehumidifier 24/7 = كهرباء أعلى. إحكام NaCl = تكلفة أعلى. لكن: الخسارة بدون حماية = أعلى بكثير.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Dehumidifier 24/7 = الشرط رقم 1. بدونه: كل شيء آخر لا يكفي.',
+        'VCI داخل تغليف كل قطعة معدنية — Anti-Corrosion + VCI = حماية مُزدوجة.',
+        'فحص شهري — 85-95% = العفن ينمو بسرعة. شهري = يكشف مبكراً.',
+        'تغليف Stretch Film + EPE — يعزل NaCl + يحمي من خدش + يعزل تكثّف.',
+        'اختر مستودع مُكيّف + Dehumidifier — ليس كل مستودعات الخبر مُجهّزة.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'مستودع بدون Dehumidifier في 85-95% = عفن على كل سطح خلال أسبوعين. أثاث أخضر/أسود = تالف.',
+        'NaCl بدون إحكام = صدأ على كل معدن مخزّن. مفصلات + أسرّة + طاولات = تالفة.',
+        'PVAc في 45°م + 85-95% بدون تبريد = مفاصل تنفك خلال أشهر. أثاث مُفكّك.',
     ],
-
     trustAnchors: [
-        { ...GOV.TGA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص مستودعات' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات التخزين بالشرقية' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALZUWAYED.name,
-        title: EXPERTS.ALZUWAYED.title,
-        credential: EXPERTS.ALZUWAYED.credential,
-        profileUrl: EXPERTS.ALZUWAYED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
-        {
-            expert: EXPERTS.ALZUWAYED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALZUWAYED.title,
-            url: EXPERTS.ALZUWAYED.profileUrl,
-        },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'تخزين الخبر = أصعب في المملكة: NaCl + 85-95% + PVAc. Dehumidifier 24/7 + إحكام + VCI + تبريد = المستودع الساحلي الوحيد الآمن.', source: 'نصائح هندسية — تخزين الأثاث الساحلي' },
     ],
-
-    saudiRegulations: [REGULATIONS.TGA_LICENSE],
-
+    saudiRegulations: [REGULATIONS.BALADI_HEALTH],
     verificationBadges: [
-        { badge: '✔️ شركة نقل مرخصة من هيئة النقل TGA', authority: 'الهيئة العامة للنقل', icon: 'shield-check' },
+        { badge: '✔️ مستودع مرخص', authority: 'منصة بلدي', icon: 'shield-check' },
+        { badge: '✔️ تحكّم مناخي', authority: 'معتمد داخلياً', icon: 'badge-check' },
     ],
-
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Dehumidifier مركزي (24/7)', use: 'يُخفض 85-95% إلى 40-50% — الشرط الأول' },
+        { name: 'ختم + فلاتر NaCl', use: 'يمنع ملح بحري من الدخول' },
+        { name: 'VCI + Anti-Corrosion', use: 'حماية مُزدوجة للمعادن المخزّنة' },
+        { name: 'تبريد < 35°م', use: 'يحمي PVAc من التلين + الامتصاص' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'مستودع عادي أرخص.', solution: 'عادي في 85-95% = عفن + صدأ = تالف. أرخص بـ 200-300/شهر — أغلى بـ 10,000-50,000 في التلف.' },
+        { fear: 'تخزين قصير.', solution: 'أسبوعان كافية لعفن في 85-95%. صدأ يبدأ في ساعات. قصير ≠ آمن.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'أي مستودع.', truth: 'بدون Dehumidifier = عفن. بدون إحكام = صدأ. بدون تبريد = تفكك. 3 = تلف.' },
+        { myth: 'مثل الأحساء.', truth: '85-95% ≠ 30-40%. NaCl ≠ CaSO₄. أسوأ بيئة تخزين في المملكة.' },
+        { myth: 'البيت أفضل.', truth: 'غرفة مُغلقة بدون Dehumidifier في 85-95% = عفن. نفس المشكلة.' },
     ],
-
     relatedServices: [
-        { slug: 'al-khobar-furniture-moving', context: 'نقل عفش بالخبر', priority: 1 },
-        { slug: 'al-khobar-dyna', context: 'دينا نقل بالخبر', priority: 2 },
-        { slug: 'al-khobar-moving-out', context: 'نقل عفش خروج بالخبر', priority: 3 },
-        { slug: 'al-khobar-dabab', context: 'دباب نقل بالخبر', priority: 4 },
-        { slug: 'al-khobar-cleaning', context: 'تنظيف منازل بالخبر', priority: 5 },
-        { slug: 'al-khobar-tanks-cleaning', context: 'تنظيف خزانات بالخبر', priority: 6 },
-        { slug: 'al-khobar-sofa-cleaning', context: 'تنظيف كنب بالخبر', priority: 7 },
-        { slug: 'al-khobar-carpet-cleaning', context: 'تنظيف سجاد بالخبر', priority: 8 },
-        { slug: 'al-khobar-steam-cleaning', context: 'تنظيف بالبخار بالخبر', priority: 9 },
+        { slug: 'furniture-moving', context: 'نقل — من البيت للمستودع', priority: 1 },
+        { slug: 'furniture-cleaning', context: 'أثاث — تنظيف قبل التخزين', priority: 2 },
+        { slug: 'pest-control', context: 'حشرات — فحص مستودع', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف — المكان بعد التخزين', priority: 4 },
+        { slug: 'dyna', context: 'دينا — نقل ثقيل', priority: 5 },
+        { slug: 'dabab', context: 'دباب — نقل خفيف', priority: 6 },
+        { slug: 'termite-control', context: 'نمل أبيض — حماية', priority: 7 },
     ],
 };

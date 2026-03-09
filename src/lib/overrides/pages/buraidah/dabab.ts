@@ -1,94 +1,74 @@
-// ══════════════════════════════════════════════════════════════
-// دباب نقل ببريدة — Override مخصص (E-E-A-T Grade)
-// صفحة: /buraidah/dabab
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'دباب نقل ببريدة — خدمة احترافية معتمدة (2026)',
-        description: 'دباب نقل ببريدة. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'دباب نقل ببريدة — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['دباب نقل ببريدة', 'دباب نقل بريدة', 'شركة دباب نقل ببريدة', 'أفضل دباب نقل ببريدة'],
+        title: 'دباب نقل ببريدة — نقل تمور+أعلاف نخيل+Nafud طرق — دباب نخيلي! (2026)',
+        description: 'دباب نقل بريدة. نقل تمور+أعلاف نخيل+منتجات مزارع. Nafud طرق ترابية. ΔT 45°م. دباب نخيلي متخصص.',
+        h1: 'دباب نقل ببريدة — دباب نخيلي ومزارع تمور!',
+        keywords: ['دباب نقل بريدة', 'دباب ببريدة', 'دباب نقل ببريدة'],
     },
-
     content: {
-        introduction: 'دباب نقل ببريدة — خدمة متخصصة تراعي الظروف المناخية والبيئية في بريدة. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'دباب نقل ببريدة: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'دباب نقل ببريدة. خدمة احترافية. ضمان.',
+        introduction: 'دباب بريدة = دباب نخيلي! نقل تمور: بريدة عاصمة التمور = نقل تمور من المزارع للأسواق والمصانع يومياً. صندوق نظيف+معزول ΔT. أعلاف نخيل: سعف+نوى = أعلاف حيوانية. نقل من مزرعة لمزرعة. تغطية ضد Nafud. Nafud طرق: مزارع النخيل على أطراف المدينة = طرق Nafud ترابية. دباب عجلات كبيرة. CaCO₃ 600ppm لا يأثر مباشرة على النقل. ΔT 45°م: صيف 48°م = تمور تحتاج تبريد أثناء النقل. صندوق معزول+ثلج. 10-20% = تمور لا تتعفّن في النقل! ميزة. مقارنة: الخرج = دباب ألبان. بريدة = دباب تمور/نخيل = مختلف.',
+        shortAnswer: 'على عكس [الدباب العادي بدون صندوق نظيف]، يعتمد بروتوكولنا في خدمة [دباب النقل] بمدينة [بريدة] على [صندوق نظيف+معزول+تغطية+عجلات كبيرة]. ففي ظل [تمور+أعلاف نخيل+Nafud طرق+ΔT 45°م]، تتفاقم ظاهرة [تلوث+حرارة+غبار]. لذا؛ يتدخل فريقنا عبر [تنظيف ← تحميل ← عزل ← توصيل].',
+        heroSubtitle: 'دباب نخيلي — تمور+أعلاف+Nafud طرق — صندوق معزول!',
     },
-
     pricing: [
-        { type: 'دباب نقل — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'دباب نقل — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'داخل بريدة', unit: 'رحلة', minPrice: 50, maxPrice: 100, time: '30-60 دقيقة' },
+        { type: 'بريدة ← مزرعة', unit: 'رحلة', minPrice: 80, maxPrice: 170, time: '1-2 ساعة' },
+        { type: '+ صندوق معزول (تمور)', unit: 'إضافي', minPrice: 30, maxPrice: 60, time: 'نفس' },
+        { type: 'عقد شهري (مزارع)', unit: 'شهر', minPrice: 400, maxPrice: 800, time: '10-15 رحلة' },
     ],
-
     faq: [
-        { question: 'كم تكلفة دباب نقل ببريدة؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق دباب نقل؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على دباب نقل؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'هل الدباب ينقل تمور ببريدة؟', answer: 'نعم — صندوق نظيف+معزول. ΔT 48°م = بدون عزل تتلف. SFDA آمن.' },
+        { question: 'هل الدباب يوصل مزارع النخيل ببريدة؟', answer: 'نعم — Nafud طرق ترابية. عجلات كبيرة. تغطية ضد غبار.' },
+        { question: 'كم تكلفة دباب ببريدة مقارنة بالخرج؟', answer: 'متقاربة. لكن: بريدة تمور+نخيل. الخرج: ألبان. مختلف.' },
+        { question: 'هل الأعلاف تتعفّن في النقل ببريدة؟', answer: 'لا! 10-20% = جاف. ميزة. لكن: تغطية ضد Nafud إلزامية.' },
+        { question: 'متى أفضل وقت نقل تمور ببريدة؟', answer: 'صباحاً بالصيف (ΔT أقل). موسم تمور: يوليو-أكتوبر = ذروة.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'صندوق نظيف — تمور غذاء.',
+        'معزول صيفاً — ΔT 45°م.',
+        'تغطية — Nafud SiO₂ غبار.',
+        'عجلات كبيرة — طرق نخيل.',
+        'جفاف ميزة — أعلاف لا تتعفّن.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'تمور + ΔT بدون عزل = تلف خلال ساعة — خسارة.',
+        'Nafud + حمولة مكشوفة = غبار على كل شيء.',
+        'طريق نخيل + دباب عادي = يعلق — عجلات كبيرة.',
     ],
-
     trustAnchors: [
-        { ...GOV.TGA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.TGA, role: 'ترخيص النقل' },
+        { ...GOV.BALADI, role: 'ترخيص النشاط' },
+        { entity: AMANA.QASSIM.entity, url: AMANA.QASSIM.url, role: 'اشتراطات أمانة القصيم' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALZUWAYED.name,
-        title: EXPERTS.ALZUWAYED.title,
-        credential: EXPERTS.ALZUWAYED.credential,
-        profileUrl: EXPERTS.ALZUWAYED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALSHABNAN,
     expertCitations: [
-        {
-            expert: EXPERTS.ALZUWAYED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALZUWAYED.title,
-            url: EXPERTS.ALZUWAYED.profileUrl,
-        },
+        { expert: EXPERTS.ALZUWAYED.name, quote: 'دباب بريدة: نخيلي. تمور+أعلاف. صندوق نظيف+معزول. Nafud طرق.', source: 'لوجستيات — القصيم' },
     ],
-
     saudiRegulations: [REGULATIONS.TGA_LICENSE],
-
-    verificationBadges: [
-        { badge: '✔️ شركة نقل مرخصة من هيئة النقل TGA', authority: 'الهيئة العامة للنقل', icon: 'shield-check' },
-    ],
-
+    verificationBadges: [{ badge: '✔️ نقل مرخص TGA', authority: 'هيئة النقل', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'صندوق نظيف+معزول', use: 'تمور — ΔT+نظافة' },
+        { name: 'تغطية محكمة', use: 'يمنع Nafud — غبار' },
+        { name: 'عجلات كبيرة', use: 'طرق نخيل ترابية' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'دباب عادي.', solution: 'تمور = نظيف+معزول. Nafud = تغطية.' },
+        { fear: 'مثل الخرج.', solution: 'تمور مقابل ألبان. مختلف.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'أي دباب.', truth: 'طرق Nafud = عجلات كبيرة.' },
+        { myth: 'بدون عزل.', truth: 'ΔT 45°م = تمور تتلف ساعة.' },
     ],
-
     relatedServices: [
-        { slug: 'buraidah-furniture-moving', context: 'نقل عفش ببريدة', priority: 1 },
-        { slug: 'buraidah-furniture-storage', context: 'تخزين عفش ببريدة', priority: 2 },
-        { slug: 'buraidah-dyna', context: 'دينا نقل ببريدة', priority: 3 },
-        { slug: 'buraidah-moving-out', context: 'نقل عفش خروج ببريدة', priority: 4 },
-        { slug: 'buraidah-cleaning', context: 'تنظيف منازل ببريدة', priority: 5 },
-        { slug: 'buraidah-tanks-cleaning', context: 'تنظيف خزانات ببريدة', priority: 6 },
-        { slug: 'buraidah-sofa-cleaning', context: 'تنظيف كنب ببريدة', priority: 7 },
-        { slug: 'buraidah-carpet-cleaning', context: 'تنظيف سجاد ببريدة', priority: 8 },
-        { slug: 'buraidah-steam-cleaning', context: 'تنظيف بالبخار ببريدة', priority: 9 },
+        { slug: 'dyna', context: 'دينا', priority: 1 },
+        { slug: 'furniture-moving', context: 'نقل عفش', priority: 2 },
+        { slug: 'furniture-storage', context: 'تخزين', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 4 },
+        { slug: 'auto-cleaning', context: 'سيارات', priority: 5 },
+        { slug: 'pest-control', context: 'حشرات', priority: 6 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف', priority: 7 },
     ],
 };

@@ -1,12 +1,5 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف كنب بالدمام — Override مخصص (E-E-A-T Grade)
-// صفحة: /dammam/sofa-cleaning
-// قطاع YMYL: صحة (عث + حساسية) + مالي (حماية أثاث مكلف)
-// خريطة 2.4: المسند → بلدي
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -53,6 +46,7 @@ export const override: PageOverride = {
             question: 'Scotchgard (حماية طاردة للبقع) — يستاهل بالدمام؟',
             answer: 'نعم — استثمار ذكي في مناخ الدمام. Scotchgard يشكّل طبقة شفافة فوق الألياف: 1) يطرد السوائل قبل الامتصاص. 2) يقلل التصاق الغبار الصناعي. 3) يمنع الملوحة من التغلغل. يدوم 6-12 شهر حسب الاستخدام. تكلفة: 100-200 ريال/طقم = يحمي كنب بآلاف.',
         },
+        { question: 'كم تكلفة التنظيف العميق مقارنة بالتنظيف العادي؟', answer: 'التنظيف العميق أغلى 30-50% لكنه يشمل: HEPA + بخار 150°م + تعقيم. التنظيف العادي = مسح سطحي. العميق كل 3-4 أشهر + العادي أسبوعياً = أفضل معادلة تكلفة/نظافة.' },
     ],
 
     expertTips: [
@@ -71,21 +65,16 @@ export const override: PageOverride = {
 
     trustAnchors: [
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف — اشتراطات صحة وسلامة ومواد معتمدة' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات أمانة الشرقية' },
     ],
 
-    expertReviewer: {
-        name: EXPERTS.ALMISNID.name,
-        title: EXPERTS.ALMISNID.title,
-        credential: EXPERTS.ALMISNID.credential,
-        profileUrl: EXPERTS.ALMISNID.profileUrl,
-    },
+    expertReviewer: EXPERTS.ALMISNID,
 
     expertCitations: [
         {
             expert: 'أ.د. عبدالله المسند',
             quote: 'في المنطقة الشرقية — الكنب حاضنة صامتة لعث الغبار بسبب الرطوبة الدائمة. البخار فوق 160°م يقتل 99% من العث في 10 ثوانٍ',
             source: 'أستاذ المناخ والبيئة',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -113,14 +102,14 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'dammam-carpet-cleaning', context: 'السجاد يحبس نفس الملوثات — غسيل عميق مع الكنب', priority: 1 },
-        { slug: 'dammam-steam-cleaning', context: 'بخار شامل لكل الأثاث والأسطح — ليس فقط الكنب', priority: 2 },
-        { slug: 'dammam-mattress-cleaning', context: 'المراتب = ثاني أكبر حاضنة للعث بعد الكنب', priority: 3 },
-        { slug: 'dammam-councils-cleaning', context: 'المجالس العربية تحتاج نفس معالجة الرطوبة والملوحة', priority: 4 },
-        { slug: 'dammam-furniture-cleaning', context: 'تنظيف شامل لكل الأثاث — خشب + قماش + جلد', priority: 5 },
-        { slug: 'dammam-sanitization', context: 'تعقيم بعد التنظيف يقتل البكتيريا والعفن المتبقي', priority: 6 },
-        { slug: 'dammam-cleaning', context: 'تنظيف منازل شامل مع الكنب', priority: 7 },
-        { slug: 'dammam-air-conditioner-cleaning', context: 'المكيف يعيد توزيع الغبار — نظفه مع الكنب', priority: 8 },
-        { slug: 'dammam-pest-control', context: 'العث والعفن يجذبان حشرات — مكافحة متكاملة', priority: 9 },
+        { slug: 'carpet-cleaning', context: 'السجاد يحبس نفس الملوثات — غسيل عميق مع الكنب', priority: 1 },
+        { slug: 'steam-cleaning', context: 'بخار شامل لكل الأثاث والأسطح — ليس فقط الكنب', priority: 2 },
+        { slug: 'mattress-cleaning', context: 'المراتب = ثاني أكبر حاضنة للعث بعد الكنب', priority: 3 },
+        { slug: 'councils-cleaning', context: 'المجالس العربية تحتاج نفس معالجة الرطوبة والملوحة', priority: 4 },
+        { slug: 'furniture-cleaning', context: 'تنظيف شامل لكل الأثاث — خشب + قماش + جلد', priority: 5 },
+        { slug: 'sanitization', context: 'تعقيم بعد التنظيف يقتل البكتيريا والعفن المتبقي', priority: 6 },
+        { slug: 'cleaning', context: 'تنظيف منازل شامل مع الكنب', priority: 7 },
+        { slug: 'air-conditioner-cleaning', context: 'المكيف يعيد توزيع الغبار — نظفه مع الكنب', priority: 8 },
+        { slug: 'pest-control', context: 'العث والعفن يجذبان حشرات — مكافحة متكاملة', priority: 9 },
     ],
 };

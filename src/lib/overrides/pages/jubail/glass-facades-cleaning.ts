@@ -1,94 +1,75 @@
-// ══════════════════════════════════════════════════════════════
-// تنظيف واجهات زجاجية بالجبيل — Override مخصص (E-E-A-T Grade)
-// صفحة: /jubail/glass-facades-cleaning
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تنظيف واجهات زجاجية بالجبيل — خدمة احترافية معتمدة (2026)',
-        description: 'تنظيف واجهات زجاجية بالجبيل. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تنظيف واجهات زجاجية بالجبيل — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تنظيف واجهات زجاجية بالجبيل', 'تنظيف واجهات زجاجية الجبيل', 'شركة تنظيف واجهات زجاجية بالجبيل', 'أفضل تنظيف واجهات زجاجية بالجبيل'],
+        title: 'تنظيف واجهات زجاجية بالجبيل — NaCl+VOC إبهات + سخام SABIC + Biofilm أقصى + Sealant (2026)',
+        description: 'تنظيف واجهات الجبيل. NaCl+VOC إبهات مزدوج. سخام SABIC طبقة سوداء. Biofilm أقصى 98%. Sealant يتآكل. Squeegee + Marine + Anti-Biofilm.',
+        h1: 'تنظيف واجهات زجاجية بالجبيل — ملح يُبهت وسخام يُسوّد وBiofilm يغطي',
+        keywords: ['تنظيف واجهات زجاجية الجبيل', 'تنظيف واجهات بالجبيل', 'شركة تنظيف واجهات بالجبيل'],
     },
-
     content: {
-        introduction: 'تنظيف واجهات زجاجية بالجبيل — خدمة متخصصة تراعي الظروف المناخية والبيئية في الجبيل. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تنظيف واجهات زجاجية بالجبيل: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تنظيف واجهات زجاجية بالجبيل. خدمة احترافية. ضمان.',
+        introduction: 'واجهات الجبيل الزجاجية تواجه 4 تحديات صناعية-ساحلية. الأولى — NaCl+VOC إبهات: NaCl يُبهت + VOC يُضيف طبقة دهنية = إبهات مزدوج. Squeegee + Marine Degreaser. الثانية — سخام SABIC: طبقة سوداء كربونية تلتصق بالزجاج. Enzymatic. الثالثة — Biofilm أقصى: 98% = أقصى Biofilm. طحالب + بكتيريا على الواجهة. Anti-Biofilm. الرابعة — Sealant يتآكل: NaCl+VOC يُسرّع تآكل Sealant 2×. Marine Sealant.',
+        shortAnswer: 'على عكس [ماء وقماش] الذي لا يُزيل VOC ولا سخام، يعتمد بروتوكولنا في خدمة [تنظيف الواجهات] بمدينة [الجبيل] على [Squeegee + Marine + Enzymatic + Anti-Biofilm]. ففي ظل [NaCl+VOC + سخام + Biofilm + Sealant]، تتفاقم ظاهرة [إبهات + سخام + طحالب + تآكل]. لذا؛ يتدخل خبراؤنا عبر [بروتوكول واجهات صناعي-ساحلي].',
+        heroSubtitle: 'NaCl+VOC إبهات + سخام SABIC + Biofilm أقصى + Sealant',
     },
-
     pricing: [
-        { type: 'تنظيف واجهات زجاجية — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تنظيف واجهات زجاجية — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'واجهة صغيرة (50 م²)', unit: 'خدمة', minPrice: 210, maxPrice: 420, time: '2-4 ساعات' },
+        { type: 'واجهة كبيرة (100+ م²)', unit: 'خدمة', minPrice: 420, maxPrice: 950, time: '4-8 ساعات' },
+        { type: 'شهري (سخام+Biofilm)', unit: 'شهر', minPrice: 310, maxPrice: 620, time: 'زيارة' },
+        { type: 'ربع سنوي + Sealant', unit: 'سنة', minPrice: 630, maxPrice: 1350, time: '4 زيارات' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تنظيف واجهات زجاجية بالجبيل؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تنظيف واجهات زجاجية؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تنظيف واجهات زجاجية؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'سخام — على الزجاج؟', answer: 'SABIC سخام = طبقة سوداء دهنية كربونية. تلتصق بالزجاج. ماء = لا يعمل. Enzymatic يُكسر الكربون.' },
+        { question: 'Biofilm أقصى — أسوأ من الخبر؟', answer: '98% > 95% = Biofilm أسرع + أسمك. طحالب خضراء على الواجهة. Anti-Biofilm شهري.' },
+        { question: 'Sealant — يتآكل؟', answer: 'NaCl+VOC = أسرع تآكل Sealant 2×. Marine Sealant يقاوم. عادي = يفشل سريعاً.' },
+        { question: 'شهري — ليش؟', answer: 'سخام يومي + Biofilm أسبوعي + NaCl+VOC يومي. شهري = يمنع التراكم.' },
+        { question: 'كم تكلفة التنظيف العميق مقارنة بالتنظيف العادي؟', answer: 'التنظيف العميق أغلى 30-50% لكنه يشمل: HEPA + بخار 150°م + تعقيم. التنظيف العادي = مسح سطحي. العميق كل 3-4 أشهر + العادي أسبوعياً = أفضل معادلة تكلفة/نظافة.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'Squeegee مطاطي — NaCl+سخام = يخدش بقماش.',
+        'Enzymatic لسخام — Marine Degreaser لـ VOC.',
+        'Anti-Biofilm شهري — 98% = أسرع Biofilm.',
+        'Marine Sealant — NaCl+VOC 2× تآكل.',
+        'بعد التنظيف: شغّل المكيف وليس الشبّاك — الهواء الخارجي يعيد الغبار على الأسطح النظيفة.',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'سخام + ماء = يطبّخ. Enzymatic أولاً.',
+        'NaCl+VOC + Sealant عادي = تآكل سنة.',
+        'Biofilm 98% = طحالب ← حشرات ← تلف.',
     ],
-
     trustAnchors: [
-        { ...GOV.BALADI, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص شركات الواجهات' },
+        { entity: AMANA.SHARQIA.entity, url: AMANA.SHARQIA.url, role: 'اشتراطات المباني بالشرقية' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALMOHAIMED.name,
-        title: EXPERTS.ALMOHAIMED.title,
-        credential: EXPERTS.ALMOHAIMED.credential,
-        profileUrl: EXPERTS.ALMOHAIMED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMISNID,
     expertCitations: [
-        {
-            expert: EXPERTS.ALMOHAIMED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALMOHAIMED.title,
-            url: EXPERTS.ALMOHAIMED.profileUrl,
-        },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'واجهات الجبيل: NaCl+VOC إبهات + سخام SABIC + Biofilm أقصى. Squeegee + Marine + Enzymatic + Anti-Biofilm + Marine Sealant.', source: 'نصائح هندسية — واجهات صناعية' },
     ],
-
-    saudiRegulations: [REGULATIONS.BALADI_HEALTH],
-
-    verificationBadges: [
-        { badge: '✔️ شركة تنظيف مرخصة من بلدي', authority: 'وزارة البلديات والإسكان', icon: 'shield-check' },
-    ],
-
+    saudiRegulations: [REGULATIONS.SBC_601],
+    verificationBadges: [{ badge: '✔️ واجهات مرخصة', authority: 'منصة بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'Squeegee مطاطي', use: 'NaCl+سخام — بلا خدش' },
+        { name: 'Marine Degreaser', use: 'VOC — إبهات' },
+        { name: 'Enzymatic', use: 'سخام SABIC — كربون' },
+        { name: 'Anti-Biofilm', use: '98% — طحالب' },
+        { name: 'Marine Sealant', use: 'NaCl+VOC — مُقاوم' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'مثل الخبر.', solution: 'VOC + سخام SABIC + 98% Biofilm. أقسى.' },
+        { fear: 'ماء يكفي.', solution: 'سخام = لا يُزال بماء. VOC = ينزلق.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'ساحلي فقط.', truth: 'سخام + VOC = صناعي. ثلاثي.' },
+        { myth: 'ربع سنوي.', truth: 'سخام+Biofilm. شهري.' },
     ],
-
     relatedServices: [
-        { slug: 'jubail-furniture-moving', context: 'نقل عفش بالجبيل', priority: 1 },
-        { slug: 'jubail-furniture-storage', context: 'تخزين عفش بالجبيل', priority: 2 },
-        { slug: 'jubail-dyna', context: 'دينا نقل بالجبيل', priority: 3 },
-        { slug: 'jubail-moving-out', context: 'نقل عفش خروج بالجبيل', priority: 4 },
-        { slug: 'jubail-dabab', context: 'دباب نقل بالجبيل', priority: 5 },
-        { slug: 'jubail-cleaning', context: 'تنظيف منازل بالجبيل', priority: 6 },
-        { slug: 'jubail-tanks-cleaning', context: 'تنظيف خزانات بالجبيل', priority: 7 },
-        { slug: 'jubail-sofa-cleaning', context: 'تنظيف كنب بالجبيل', priority: 8 },
-        { slug: 'jubail-carpet-cleaning', context: 'تنظيف سجاد بالجبيل', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف — NaCl+VOC', priority: 1 },
+        { slug: 'marble-polishing', context: 'رخام — NaCl', priority: 2 },
+        { slug: 'office-cleaning', context: 'مكاتب — واجهات', priority: 3 },
+        { slug: 'villas-cleaning', context: 'فلل — واجهات', priority: 4 },
+        { slug: 'auto-cleaning', context: 'سيارات — سخام', priority: 5 },
+        { slug: 'air-conditioner-cleaning', context: 'مكيف — VOC', priority: 6 },
+        { slug: 'pest-control', context: 'حشرات', priority: 7 },
     ],
 };

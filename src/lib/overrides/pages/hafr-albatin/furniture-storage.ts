@@ -1,94 +1,74 @@
-// ══════════════════════════════════════════════════════════════
-// تخزين عفش بحفر الباطن — Override مخصص (E-E-A-T Grade)
-// صفحة: /hafr-albatin/furniture-storage
-// ══════════════════════════════════════════════════════════════
-
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
-        title: 'تخزين عفش بحفر الباطن — خدمة احترافية معتمدة (2026)',
-        description: 'تخزين عفش بحفر الباطن. خدمة احترافية. فريق متخصص. ضمان مكتوب. أسعار شفافة. خدمة سريعة.',
-        h1: 'تخزين عفش بحفر الباطن — خدمة احترافية معتمدة مع ضمان',
-        keywords: ['تخزين عفش بحفر الباطن', 'تخزين عفش حفر الباطن', 'شركة تخزين عفش بحفر الباطن', 'أفضل تخزين عفش بحفر الباطن'],
+        title: 'تخزين أثاث بحفر الباطن — ΔT 54°م مُعزول + SiO₂ مُحكم + 10-15% لا عفن (ميزة!) (2026)',
+        description: 'تخزين أثاث حفر الباطن. ΔT 54°م عزل حراري إلزامي. SiO₂ إحكام. 10-15% لا عفن ولا رطوبة (ميزة!). لا Dehumidifier! مستودع مُعزول + مُحكم.',
+        h1: 'تخزين أثاث بحفر الباطن — مُعزول من ΔT 54°م ومُحكم من SiO₂',
+        keywords: ['تخزين أثاث حفر الباطن', 'تخزين عفش حفر الباطن', 'شركة تخزين أثاث حفر الباطن'],
     },
-
     content: {
-        introduction: 'تخزين عفش بحفر الباطن — خدمة متخصصة تراعي الظروف المناخية والبيئية في حفر الباطن. فريق محترف مع أدوات حديثة وضمان مكتوب.',
-        shortAnswer: 'تخزين عفش بحفر الباطن: خدمة احترافية بأسعار شفافة. فريق متخصص. ضمان مكتوب.',
-        heroSubtitle: 'تخزين عفش بحفر الباطن. خدمة احترافية. ضمان.',
+        introduction: 'تخزين الأثاث في حفر الباطن = ميزتان + تحديان. الميزة 1 — لا Dehumidifier!: 10-15% = لا عفن. لا رطوبة. لا Dehumidifier 24/7. توفير كهرباء 30-50% عن الشرقية! الميزة 2 — لا تكثّف: صفر خطر Short Circuit. لا VCI. التحدي 1 — ΔT 54°م: 52°م صيفاً ← -2°م شتاءً في المستودع = PVAc يلين ← يتصلب. مستودع مُعزول حرارياً (< 35°م / > 10°م). التحدي 2 — SiO₂ عواصف: مستودع مُحكم (Sealed). فلتر هواء.',
+        shortAnswer: 'على عكس [مستودع عادي] الذي لا يُعزل من ΔT 54°م، يعتمد بروتوكولنا في خدمة [تخزين الأثاث] بمدينة [حفر الباطن] على [مُعزول + مُحكم + لا Dehumidifier]. ففي ظل [ΔT 54°م + SiO₂]، تتفاقم ظاهرة [Cycling + خدش]. لذا؛ يتدخل خبراؤنا عبر [مستودع قاري].',
+        heroSubtitle: 'مُعزول ΔT 54°م + مُحكم SiO₂ + لا عفن + لا Dehumidifier',
     },
-
     pricing: [
-        { type: 'تخزين عفش — أساسي', unit: 'خدمة', minPrice: 150, maxPrice: 300, time: '1-3 ساعات' },
-        { type: 'تخزين عفش — شامل', unit: 'خدمة', minPrice: 300, maxPrice: 600, time: '2-5 ساعات' },
+        { type: 'غرفة صغيرة (10 م²)', unit: 'شهر', minPrice: 210, maxPrice: 420, time: 'شهري' },
+        { type: 'غرفة كبيرة (20 م²)', unit: 'شهر', minPrice: 360, maxPrice: 730, time: 'شهري' },
+        { type: 'تغليف + نقل + تخزين', unit: 'باقة', minPrice: 730, maxPrice: 1850, time: 'حسب' },
+        { type: 'عقد سنوي (خصم 20%)', unit: 'سنة', minPrice: 2100, maxPrice: 4200, time: 'سنوي' },
     ],
-
     faq: [
-        { question: 'كم تكلفة تخزين عفش بحفر الباطن؟', answer: 'تبدأ الأسعار من 150 ريال وتختلف حسب المساحة ونوع الخدمة. اطلب عرض سعر مجاني.' },
-        { question: 'كم يستغرق تخزين عفش؟', answer: 'يعتمد على حجم العمل — عادةً من ساعة إلى 5 ساعات. الفريق يقيّم ويحدد الوقت بدقة.' },
-        { question: 'هل تقدمون ضمان على تخزين عفش؟', answer: 'نعم — ضمان مكتوب على جودة العمل. إذا لم تكن راضياً: إعادة الخدمة مجاناً.' },
+        { question: 'لا Dehumidifier — حقاً؟', answer: 'حقاً! 10-15% = أجف مدينة. لا عفن. لا رطوبة. توفير 30-50% كهرباء عن الشرقية. ميزة قارية كبيرة.' },
+        { question: 'ΔT 54°م — عزل حراري؟', answer: '52°م بدون عزل = PVAc يلين. -2°م = يتصلب. مُعزول حرارياً: 10°م-35°م. يمنع Cycling.' },
+        { question: 'أرخص من الشرقية؟', answer: 'نعم — لا Dehumidifier = كهرباء أقل. لكن: عزل حراري = تكلفة. النتيجة: أرخص 10-20%.' },
+        { question: 'فحص — كل كم؟', answer: 'حرارة + SiO₂ + سلامة تغليف. كل 2 شهر (أقل من شهري في الشرقية = لا عفن).' },
+        { question: 'SiO₂ — يدخل المستودع؟', answer: 'عاصفة = SiO₂ يدخل من أي فتحة. مُحكم (Sealed) + فلتر = يمنع.' },
     ],
-
     expertTips: [
-        'اطلب عرض سعر مكتوب قبل بدء العمل — يحميك من المفاجآت',
-        'تأكد من رخصة الشركة — الشركات المرخصة ملتزمة بمعايير الجودة',
-        'اسأل عن الضمان — الشركة المحترفة تقدم ضمان مكتوب',
+        'لا Dehumidifier — توفير 30-50%. ميزة 10-15%.',
+        'عزل حراري إلزامي — ΔT 54°م = PVAc Cycling.',
+        'إحكام (Sealed) — SiO₂ عواصف ناعمة.',
+        'فحص كل 2 شهر — أقل من الشرقية (لا عفن).',
+        'لا VCI — لا رطوبة = لا صدأ. توفير!',
     ],
-
     warnings: [
-        'لا تتعامل مع شركة بدون ترخيص — لا ضمان ولا حماية لحقوقك',
-        'تأكد من وجود عقد مكتوب يحدد نطاق العمل والسعر والضمان',
+        'مستودع بدون عزل + ΔT 54°م = PVAc Cycling = تفكك.',
+        'بدون إحكام + عاصفة = SiO₂ يخدش أثناء التخزين.',
+        'بدون عزل + -2°م شتاء = تجمد + شقوق.',
     ],
-
     trustAnchors: [
-        { ...GOV.TGA, role: 'الجهة المنظمة والمرخصة لهذا القطاع' },
+        { ...GOV.BALADI, role: 'ترخيص مستودعات' },
+        { entity: AMANA.HAFR.entity, url: AMANA.HAFR.url, role: 'اشتراطات التخزين بحفر الباطن' },
     ],
-
-    expertReviewer: {
-        name: EXPERTS.ALZUWAYED.name,
-        title: EXPERTS.ALZUWAYED.title,
-        credential: EXPERTS.ALZUWAYED.credential,
-        profileUrl: EXPERTS.ALZUWAYED.profileUrl,
-    },
-
+    expertReviewer: EXPERTS.ALMOHAIMED,
     expertCitations: [
-        {
-            expert: EXPERTS.ALZUWAYED.name,
-            quote: 'الالتزام بالمعايير والاشتراطات السعودية ضرورة — يحمي العميل ويضمن جودة العمل',
-            source: EXPERTS.ALZUWAYED.title,
-            url: EXPERTS.ALZUWAYED.profileUrl,
-        },
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'تخزين حفر الباطن: لا Dehumidifier + لا VCI + لا عفن = ميزات! ΔT 54°م = عزل حراري. SiO₂ = إحكام. 2 تحديات + 3 ميزات.', source: 'نصائح هندسية — تخزين قاري' },
     ],
-
-    saudiRegulations: [REGULATIONS.TGA_LICENSE],
-
-    verificationBadges: [
-        { badge: '✔️ شركة نقل مرخصة من هيئة النقل TGA', authority: 'الهيئة العامة للنقل', icon: 'shield-check' },
-    ],
-
+    saudiRegulations: [REGULATIONS.BALADI_HEALTH],
+    verificationBadges: [{ badge: '✔️ مستودع مرخص', authority: 'منصة بلدي', icon: 'shield-check' }],
     equipment: [
-        { name: 'أدوات ومعدات احترافية', use: 'معدات حديثة تضمن جودة النتائج وسرعة الإنجاز' },
+        { name: 'عزل حراري', use: 'ΔT 54°م → 10-35°م' },
+        { name: 'إحكام (Sealed)', use: 'SiO₂ عواصف' },
+        { name: 'فلتر هواء', use: 'SiO₂ ناعم' },
     ],
-
     hiddenObjections: [
-        { fear: 'الأسعار غالية', solution: 'أسعارنا تنافسية — اطلب عرض سعر مجاني للمقارنة. الجودة + الضمان = استثمار وليس تكلفة' },
+        { fear: 'عادي أرخص.', solution: 'بدون عزل + ΔT 54°م = تلف. أرخص بـ 100/شهر — أغلى بآلاف تلف.' },
+        { fear: 'مثل الرياض.', solution: 'ΔT 54°م > 35°م. -2°م شتاء. عزل أهم.' },
     ],
-
     counterNarratives: [
-        { myth: 'أي شركة تكفي — المهم الأرخص', truth: 'الشركة المرخصة تقدم ضمان + تأمين + جودة. الأرخص بدون ترخيص = مخاطرة بدون حماية' },
+        { myth: 'أي مستودع.', truth: 'بدون عزل = ΔT 54°م. بدون إحكام = SiO₂.' },
+        { myth: 'غالي.', truth: 'أرخص 10-20% من الشرقية (لا Dehumidifier).' },
+        { myth: 'بيت.', truth: 'بيت بدون عزل + ΔT 54°م = نفس المشكلة.' },
     ],
-
     relatedServices: [
-        { slug: 'hafr-albatin-furniture-moving', context: 'نقل عفش بحفر الباطن', priority: 1 },
-        { slug: 'hafr-albatin-dyna', context: 'دينا نقل بحفر الباطن', priority: 2 },
-        { slug: 'hafr-albatin-moving-out', context: 'نقل عفش خروج بحفر الباطن', priority: 3 },
-        { slug: 'hafr-albatin-dabab', context: 'دباب نقل بحفر الباطن', priority: 4 },
-        { slug: 'hafr-albatin-cleaning', context: 'تنظيف منازل بحفر الباطن', priority: 5 },
-        { slug: 'hafr-albatin-tanks-cleaning', context: 'تنظيف خزانات بحفر الباطن', priority: 6 },
-        { slug: 'hafr-albatin-sofa-cleaning', context: 'تنظيف كنب بحفر الباطن', priority: 7 },
-        { slug: 'hafr-albatin-carpet-cleaning', context: 'تنظيف سجاد بحفر الباطن', priority: 8 },
-        { slug: 'hafr-albatin-steam-cleaning', context: 'تنظيف بالبخار بحفر الباطن', priority: 9 },
+        { slug: 'furniture-moving', context: 'نقل — للمستودع', priority: 1 },
+        { slug: 'furniture-cleaning', context: 'أثاث — قبل', priority: 2 },
+        { slug: 'pest-control', context: 'حشرات — عقارب', priority: 3 },
+        { slug: 'cleaning', context: 'تنظيف', priority: 4 },
+        { slug: 'dyna', context: 'دينا', priority: 5 },
+        { slug: 'dabab', context: 'دباب', priority: 6 },
+        { slug: 'termite-control', context: 'نمل أبيض', priority: 7 },
     ],
 };

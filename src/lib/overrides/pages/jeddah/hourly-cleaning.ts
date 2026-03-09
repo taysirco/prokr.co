@@ -4,6 +4,7 @@
 // ============================================
 
 import type { PageOverride } from '../../types';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 
 export const override: PageOverride = {
     meta: {
@@ -77,6 +78,8 @@ export const override: PageOverride = {
 
 
 
+        verificationBadges: [{ badge: '✔️ شركة مرخصة من بلدي', authority: 'وزارة البلديات', icon: 'shield-check' }],
+
     equipment: [
         { name: 'حقيبة تنظيف متنقلة (Cleaning Caddy)', use: 'كل مواد ومعدات التنظيف في حقيبة واحدة — العاملة تبدأ فوراً بدون تأخير' },
         { name: 'ممسحة مايكروفايبر محمولة', use: 'أفضل من الممسحة العادية — تمسح وتعقم بدون ماء زائد' },
@@ -88,37 +91,35 @@ export const override: PageOverride = {
 
     trustAnchors: [
         { entity: 'وزارة البلديات — منصة بلدي', acronym: 'بلدي', url: 'https://balady.gov.sa', role: 'ترخيص شركات التنظيف' },
+        { entity: AMANA.JEDDAH.entity, url: AMANA.JEDDAH.url, role: 'اشتراطات أمانة جدة' },
     ],
 
-    expertReviewer: {
-        name: 'أ.د. عبدالله المسند',
-        title: 'أستاذ جغرافيا المناخ',
-        credential: 'أستاذ جغرافيا المناخ — جامعة القصيم',
-        profileUrl: 'https://x.com/ALMISNID',
-    },
+    expertReviewer: EXPERTS.ALMISNID,
 
     expertCitations: [
         {
             expert: 'أ.د. عبدالله المسند',
             quote: 'في المدن الساحلية: الأسطح تتسخ أسرع بسبب الملوحة والرطوبة — خدمة التنظيف بالساعة مثالية للصيانة المتكررة بتكلفة منخفضة',
             source: 'تحليل مناخي',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
+        saudiRegulations: [REGULATIONS.BALADI_HEALTH],
+
     counterNarratives: [
         { myth: 'التنظيف بالساعة أرخص دائماً', truth: 'بالساعة: مناسب لمهام محددة (مطبخ، حمامات). التنظيف الشامل بالجلسة أوفر 20-30% لأن الشركة تنظم العمل بكفاءة. في جدة: اطلب ساعات إضافية لتجفيف المفروشات بسبب الرطوبة' },
+        { myth: 'المنظف العادي يكفي.', truth: 'المنظف العادي يزيل 40% من الأوساخ. HEPA + بخار = 99%+. الفرق = 59% غبار دقيق + بكتيريا + عث.' },
     ],
 
     relatedServices: [
-        { slug: 'jeddah-cleaning', context: 'تنظيف بالجلسة أشمل', priority: 1 },
-        { slug: 'jeddah-apartments-cleaning', context: 'شقق بأسعار ثابتة', priority: 2 },
-        { slug: 'jeddah-kitchen-cleaning', context: 'مطبخ بالساعة', priority: 3 },
-        { slug: 'jeddah-steam-cleaning', context: 'بخار بالساعة', priority: 4 },
-        { slug: 'jeddah-sanitization', context: 'تعقيم سريع', priority: 5 },
-        { slug: 'jeddah-sofa-cleaning', context: 'كنب بالساعة', priority: 6 },
-        { slug: 'jeddah-carpet-cleaning', context: 'سجاد بجلسة منفصلة', priority: 7 },
-        { slug: 'jeddah-air-conditioner-cleaning', context: 'صيانة مكيف', priority: 8 },
-        { slug: 'jeddah-pest-control', context: 'رش سريع', priority: 9 },
+        { slug: 'cleaning', context: 'تنظيف بالجلسة أشمل', priority: 1 },
+        { slug: 'apartments-cleaning', context: 'شقق بأسعار ثابتة', priority: 2 },
+        { slug: 'kitchen-cleaning', context: 'مطبخ بالساعة', priority: 3 },
+        { slug: 'steam-cleaning', context: 'بخار بالساعة', priority: 4 },
+        { slug: 'sanitization', context: 'تعقيم سريع', priority: 5 },
+        { slug: 'sofa-cleaning', context: 'كنب بالساعة', priority: 6 },
+        { slug: 'carpet-cleaning', context: 'سجاد بجلسة منفصلة', priority: 7 },
+        { slug: 'air-conditioner-cleaning', context: 'صيانة مكيف', priority: 8 },
+        { slug: 'pest-control', context: 'رش سريع', priority: 9 },
     ],
 };

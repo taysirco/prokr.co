@@ -90,7 +90,6 @@ export const override: PageOverride = {
             expert: 'أ.د. عبدالله المسند',
             quote: 'غبار مكة يحمل جزيئات معدنية دقيقة PM2.5 تعلق بألياف الكنب — استنشاقها يومياً يُسبب تهيجاً تنفسياً مزمناً. تنظيف البخار يُزيل PM2.5 من العمق',
             source: 'أستاذ المناخ والبيئة',
-            url: 'https://x.com/ALMISNID',
         },
     ],
 
@@ -121,12 +120,12 @@ export const override: PageOverride = {
     ],
 
     relatedServices: [
-        { slug: 'makkah-steam-cleaning', context: 'تنظيف بالبخار للستائر والمراتب — يُكمل تنظيف الكنب', priority: 1 },
-        { slug: 'makkah-carpet-cleaning', context: 'غسيل سجاد غرفة المعيشة مع الكنب — طقم نظيف متكامل', priority: 2 },
-        { slug: 'makkah-councils-cleaning', context: 'تنظيف كنب المجالس العربية — أقمشة خاصة تحتاج عناية', priority: 3 },
-        { slug: 'makkah-furniture-cleaning', context: 'تنظيف أثاث خشبي وجلدي — مكمل لتنظيف الكنب القماشي', priority: 4 },
-        { slug: 'makkah-cleaning', context: 'تنظيف عميق للمنزل كاملاً مع غسيل الكنب — باقة شاملة', priority: 5 },
-        { slug: 'makkah-bedbugs-control', context: 'بق الفراش يختبئ في الكنب — مكافحة + تنظيف في نفس الزيارة', priority: 6 },
-        { slug: 'makkah-pest-control', context: 'عث الغبار في الكنب = مكافحة وقائية تحمي من الحساسية', priority: 7 },
+        { slug: 'steam-cleaning', context: 'تنظيف بالبخار للستائر والمراتب — يُكمل تنظيف الكنب', priority: 1 },
+        { slug: 'carpet-cleaning', context: 'غسيل سجاد غرفة المعيشة مع الكنب — طقم نظيف متكامل', priority: 2 },
+        { slug: 'councils-cleaning', context: 'تنظيف كنب المجالس العربية — أقمشة خاصة تحتاج عناية', priority: 3 },
+        { slug: 'furniture-cleaning', context: 'تنظيف أثاث خشبي وجلدي — مكمل لتنظيف الكنب القماشي', priority: 4 },
+        { slug: 'cleaning', context: 'تنظيف عميق للمنزل كاملاً مع غسيل الكنب — باقة شاملة', priority: 5 },
+        { slug: 'bedbugs-control', context: 'بق الفراش يختبئ في الكنب — مكافحة + تنظيف في نفس الزيارة', priority: 6 },
+        { slug: 'pest-control', context: 'عث الغبار في الكنب = مكافحة وقائية تحمي من الحساسية', priority: 7 },
     ],
 };
