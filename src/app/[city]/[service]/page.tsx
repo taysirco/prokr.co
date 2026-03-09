@@ -160,11 +160,13 @@ export default async function SiloPage({ params }: SiloPageProps) {
             {/* HowTo Schema for rich snippets */}
             <HowToJsonLd service={service} city={city} />
             {/* Speakable + Entity Markup for AEO/GEO */}
+            {/* ⚡ Atomic SGE Sync: speakableText = same variable as DirectAnswer.answer */}
             <SpeakableWebPageJsonLd
                 title={aiContent.metaTitle}
                 description={aiContent.shortAnswer}
                 url={canonicalPageUrl}
                 speakableSelectors={['.direct-answer', 'h1', '.seo-introduction']}
+                speakableText={aiContent.shortAnswer}
                 dateModified={new Date().toISOString()}
                 about={{ name: service.name_ar, type: 'Service' }}
                 mentions={[

@@ -1,18 +1,21 @@
 // ============================================
 // SPEAKABLE WEB PAGE SCHEMA
 // For voice search and AI engine optimization
+// ⚡ Atomic SGE Sync: speakableText must be the EXACT same
+//    variable rendered in .direct-answer div
 // ============================================
 interface SpeakableWebPageJsonLdProps {
     title: string;
     description: string;
     url: string;
     speakableSelectors: string[];
+    speakableText?: string;  // ⚡ Atomic binding — same variable as DirectAnswer
     dateModified?: string;
     about?: { name: string; type: string };
     mentions?: { name: string; type: string }[];
 }
 
-export function SpeakableWebPageJsonLd({ title, description, url, speakableSelectors, dateModified, about, mentions }: SpeakableWebPageJsonLdProps) {
+export function SpeakableWebPageJsonLd({ title, description, url, speakableSelectors, speakableText, dateModified, about, mentions }: SpeakableWebPageJsonLdProps) {
     const schema = {
         '@context': 'https://schema.org',
         '@type': 'WebPage',
@@ -31,6 +34,10 @@ export function SpeakableWebPageJsonLd({ title, description, url, speakableSelec
             '@type': 'SpeakableSpecification',
             cssSelector: speakableSelectors,
         },
+        // ⚡ Atomic SGE Sync: Inject the EXACT DirectAnswer text
+        // into the schema as abstract — byte-for-byte match with
+        // what the user sees in .direct-answer div
+        ...(speakableText && { abstract: speakableText }),
         ...(dateModified && { dateModified }),
         ...(about && {
             about: {
@@ -53,3 +60,4 @@ export function SpeakableWebPageJsonLd({ title, description, url, speakableSelec
         />
     );
 }
+
