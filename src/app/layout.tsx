@@ -142,6 +142,84 @@ export default function RootLayout({
 })();`,
           }}
         />
+        {/* 🌙 Smart Dark Mode — time-based + OS preference */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){
+  var css = [
+    /* Base overrides */
+    '.prokr-dark{color-scheme:dark}',
+    '.prokr-dark body{background:#0f172a!important;color:#e2e8f0!important}',
+    /* Cards & containers */
+    '.prokr-dark [class*="bg-white"]{background:#1e293b!important;color:#e2e8f0!important}',
+    '.prokr-dark [class*="bg-gray-50"]{background:#0f172a!important}',
+    '.prokr-dark [class*="bg-gray-100"]{background:#1e293b!important}',
+    '.prokr-dark [class*="bg-blue-50"]{background:#1e293b!important}',
+    /* Text */
+    '.prokr-dark [class*="text-gray-900"]{color:#f1f5f9!important}',
+    '.prokr-dark [class*="text-gray-800"]{color:#e2e8f0!important}',
+    '.prokr-dark [class*="text-gray-700"]{color:#cbd5e1!important}',
+    '.prokr-dark [class*="text-gray-600"]{color:#94a3b8!important}',
+    '.prokr-dark [class*="text-gray-500"]{color:#94a3b8!important}',
+    '.prokr-dark [class*="text-gray-400"]{color:#64748b!important}',
+    '.prokr-dark [class*="text-blue-900"]{color:#93c5fd!important}',
+    '.prokr-dark [class*="text-blue-800"]{color:#60a5fa!important}',
+    /* Borders */
+    '.prokr-dark [class*="border-gray-100"]{border-color:#334155!important}',
+    '.prokr-dark [class*="border-gray-200"]{border-color:#334155!important}',
+    '.prokr-dark [class*="border-gray-300"]{border-color:#475569!important}',
+    /* Navbar */
+    '.prokr-dark nav{background:#1e293b!important}',
+    '.prokr-dark [class*="bg-white/95"]{background:rgba(30,41,59,0.95)!important}',
+    /* Shadows → glow effect */
+    '.prokr-dark [class*="shadow-lg"],.prokr-dark [class*="shadow-xl"],.prokr-dark [class*="shadow-2xl"]{box-shadow:0 4px 20px rgba(0,0,0,0.4)!important}',
+    /* Emerald keeps vibrant */
+    '.prokr-dark [class*="bg-emerald-50"]{background:#064e3b!important}',
+    '.prokr-dark [class*="hover\\\\:bg-emerald-50"]:hover{background:#064e3b!important}',
+    /* Input fields */
+    '.prokr-dark input,.prokr-dark select,.prokr-dark textarea{background:#1e293b!important;color:#e2e8f0!important;border-color:#475569!important}',
+    /* Gradients */
+    '.prokr-dark [class*="from-emerald-50"]{--tw-gradient-from:#064e3b!important}',
+    '.prokr-dark [class*="to-white"]{--tw-gradient-to:#1e293b!important}',
+    /* Hero section */
+    '.prokr-dark [class*="from-emerald-800"]{--tw-gradient-from:#064e3b!important}',
+    /* Direct Answer SGE box */
+    '.prokr-dark .direct-answer{background:#1e293b!important}',
+    /* Footer */
+    '.prokr-dark footer{background:#0f172a!important;color:#e2e8f0!important}',
+    /* Smooth transition */
+    'html{transition:background-color 0.5s ease,color 0.3s ease}',
+    'html *{transition:background-color 0.3s ease,color 0.2s ease,border-color 0.3s ease}'
+  ].join('');
+  var s=document.createElement('style');
+  s.id='prokr-dark-css';
+  s.textContent=css;
+  document.head.appendChild(s);
+  function isDark(){
+    var saved=localStorage.getItem('prokr-theme');
+    if(saved==='dark') return true;
+    if(saved==='light') return false;
+    if(window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches) return true;
+    var h=new Date().getHours();
+    return h>=20||h<6;
+  }
+  function apply(){
+    if(isDark()) document.documentElement.classList.add('prokr-dark');
+    else document.documentElement.classList.remove('prokr-dark');
+  }
+  apply();
+  if(window.matchMedia){
+    window.matchMedia('(prefers-color-scheme:dark)').addEventListener('change',apply);
+  }
+  setInterval(apply,3600000);
+  window.__prokrToggleDark=function(){
+    var on=document.documentElement.classList.contains('prokr-dark');
+    localStorage.setItem('prokr-theme',on?'light':'dark');
+    apply();
+  };
+})();`,
+          }}
+        />
       </head>
       <body className="font-sans antialiased bg-gray-50 text-gray-900">
         <Navbar />
