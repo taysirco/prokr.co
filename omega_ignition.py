@@ -16,7 +16,14 @@ import aiohttp
 import time
 import sys
 import re
+import ssl
 from pathlib import Path
+
+try:
+    import certifi
+    SSL_CONTEXT = ssl.create_default_context(cafile=certifi.where())
+except ImportError:
+    SSL_CONTEXT = None  # Fall back to system certs
 
 # ---------------------------------------------------------
 # الغرفة صفر: إعدادات مفاعل بروكر (Prokr.co Reactor Settings)
@@ -208,7 +215,7 @@ async def omega_ignition_sequence(urls: list[str], concurrency: int):
     semaphore = asyncio.Semaphore(concurrency)
 
     # فتح قناة اتصال TCP عالية الأداء
-    connector = aiohttp.TCPConnector(limit=concurrency, limit_per_host=concurrency)
+    connector = aiohttp.TCPConnector(limit=concurrency, limit_per_host=concurrency, ssl=SSL_CONTEXT)
     async with aiohttp.ClientSession(connector=connector) as session:
         total = len(urls)
         # تجهيز الرؤوس الحربية
