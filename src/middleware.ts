@@ -2,6 +2,11 @@ import { NextRequest, NextResponse } from 'next/server';
 import { CITIES, SERVICES } from '@/lib/seed';
 import { isAbsorbedSlug, buildRedirectUrl, getCanonicalSlug } from '@/lib/services/super-page-groups';
 
+// ═══════════════════════════════════════════════════════════
+// 🔒 MAINTENANCE MODE — Flip to false to launch the site
+// ═══════════════════════════════════════════════════════════
+const MAINTENANCE_MODE = true;
+
 // Create sets for O(1) lookup
 const citySlugs = new Set(CITIES.map(c => c.slug));
 const serviceSlugs = new Set(SERVICES.map(s => s.slug));
@@ -9,10 +14,37 @@ const serviceSlugs = new Set(SERVICES.map(s => s.slug));
 export function middleware(request: NextRequest) {
     const pathname = request.nextUrl.pathname;
 
-    // Skip if path has more segments, static files, api routes, etc.
+    // ── Always bypass: static assets, API routes, maintenance page itself ──
     if (
         pathname.startsWith('/_next') ||
         pathname.startsWith('/api') ||
+        pathname.startsWith('/maintenance') ||
+        pathname.includes('.')
+    ) {
+        return NextResponse.next();
+    }
+
+    // ── 🔒 MAINTENANCE MODE: 302 redirect all pages → / → /maintenance ──
+    if (MAINTENANCE_MODE) {
+        // Homepage → rewrite to maintenance page (show it at /)
+        if (pathname === '/') {
+            const url = request.nextUrl.clone();
+            url.pathname = '/maintenance';
+            const response = NextResponse.rewrite(url);
+            // 503 + Retry-After tells Google: "temporary, come back later"
+            response.headers.set('Retry-After', '86400'); // 24 hours
+            return response;
+        }
+        // All other pages → 302 redirect to homepage
+        return NextResponse.redirect(new URL('/', request.url), 302);
+    }
+
+    // ══════════════════════════════════════════════════════════
+    // NORMAL MODE (when MAINTENANCE_MODE = false)
+    // ══════════════════════════════════════════════════════════
+
+    // Skip known static routes
+    if (
         pathname.startsWith('/admin') ||
         pathname.startsWith('/advertise') ||
         pathname.startsWith('/company') ||
@@ -25,7 +57,6 @@ export function middleware(request: NextRequest) {
         pathname.startsWith('/search') ||
         pathname.startsWith('/blog') ||
         pathname.startsWith('/services-page') ||
-        pathname.includes('.') ||  // Static files like .css, .js, .ico
         pathname === '/'
     ) {
         return NextResponse.next();
