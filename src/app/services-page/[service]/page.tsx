@@ -215,10 +215,10 @@ export default async function ServicePage({ params }: ServicePageProps) {
                                     {REGION_NAMES[region] || region}
                                 </h3>
                                 <div className="space-y-2">
-                                    {cities.filter(city => hasPageOverride(city.slug, service.slug)).map(city => (
+                                    {cities.filter(city => hasPageOverride(city.slug, getCanonicalSlug(service.slug) || service.slug)).map(city => (
                                         <Link
                                             key={city.slug}
-                                            href={`/${city.slug}/${service.slug}`}
+                                            href={`/${city.slug}/${getCanonicalSlug(service.slug) || service.slug}`}
                                             className="flex items-center justify-between p-3 hover:bg-emerald-50 rounded-lg text-gray-700 hover:text-emerald-700 transition-colors group"
                                         >
                                             <span>{city.name_ar}</span>
@@ -271,7 +271,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                                             </tr>
                                         </thead>
                                         <tbody className="divide-y divide-gray-100">
-                                            {COMPARISON_CITIES.filter(cs => hasPageOverride(cs, service.slug)).map(citySlug => {
+                                            {COMPARISON_CITIES.filter(cs => hasPageOverride(cs, getCanonicalSlug(service.slug) || service.slug)).map(citySlug => {
                                                 const ctx = getCityContext(citySlug);
                                                 if (!ctx) return null;
                                                 return (
@@ -281,7 +281,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                                                             {getAdjustedPriceRange(basePrice.min, basePrice.max, citySlug)}
                                                         </td>
                                                         <td className="p-4">
-                                                            <Link href={`/${citySlug}/${service.slug}`} className="text-emerald-600 hover:text-emerald-800 underline text-sm">
+                                                            <Link href={`/${citySlug}/${getCanonicalSlug(service.slug) || service.slug}`} className="text-emerald-600 hover:text-emerald-800 underline text-sm">
                                                                 عرض الشركات
                                                             </Link>
                                                         </td>
