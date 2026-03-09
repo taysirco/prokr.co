@@ -282,7 +282,7 @@ export default async function SiloPage({ params }: SiloPageProps) {
                 {/* Companies or Sleeper Cell Lead Gen */}
                 {allAdvertisers.length === 0 ? (
                     /* 🧬 Sleeper Cell Protocol — Scarcity-Framed Lead Gen */
-                    <SleeperCellCTA cityName={city.name_ar} serviceName={service.name_ar} />
+                    <SleeperCellCTA cityName={city.name_ar} serviceName={service.name_ar} serviceSlug={service.slug} citySlug={resolvedParams.city} />
                 ) : (
                     <>
                         {/* Premium Advertisers Grid */}
