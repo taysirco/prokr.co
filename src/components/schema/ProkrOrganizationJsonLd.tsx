@@ -7,8 +7,8 @@ export function ProkrOrganizationJsonLd() {
         '@context': 'https://schema.org',
         '@type': 'Organization',
         '@id': 'https://prokr.co/#organization',
-        name: 'بروكر',
-        alternateName: 'Prokr',
+        name: 'دليل بروكر للخدمات المنزلية',
+        alternateName: ['Prokr', 'بروكر', 'Prokr.co'],
         url: 'https://prokr.co',
         logo: {
             '@type': 'ImageObject',
@@ -23,10 +23,32 @@ export function ProkrOrganizationJsonLd() {
             name: 'المملكة العربية السعودية',
             sameAs: 'https://en.wikipedia.org/wiki/Saudi_Arabia',
         },
+        // ⚡ Entity Consolidation: Social + Domain Variants
         sameAs: [
             'https://twitter.com/prokr_sa',
             'https://www.instagram.com/prokr_sa',
             'https://www.facebook.com/prokr.sa',
+            'https://prokr.com',
+            'https://prokr.net',
+            'https://prokr.org',
+        ],
+        // ⚡ Entity Acquisition Declaration — Knowledge Graph Priming
+        acquires: [
+            {
+                '@type': 'WebSite',
+                name: 'بروكر دوت كوم (الكيان التاريخي)',
+                url: 'https://prokr.com',
+            },
+            {
+                '@type': 'WebSite',
+                name: 'بروكر دوت نت',
+                url: 'https://prokr.net',
+            },
+            {
+                '@type': 'WebSite',
+                name: 'بروكر دوت أورج',
+                url: 'https://prokr.org',
+            },
         ],
         contactPoint: {
             '@type': 'ContactPoint',
