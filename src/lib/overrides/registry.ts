@@ -356,6 +356,8 @@ import { override as madinahWaterInsulation } from './pages/madinah/water-insula
 import { override as madinahThermalInsulation } from './pages/madinah/thermal-insulation';
 import { override as madinahSewageUnblocking } from './pages/madinah/sewage-unblocking';
 import { override as madinahSewageSuction } from './pages/madinah/sewage-suction';
+import { override as madinahFloorPolishing } from './pages/madinah/floor-polishing';
+import { override as madinahKitchenCleaning } from './pages/madinah/kitchen-cleaning';
 
 // ─── TAIF (50) ───
 import { override as taifFurnitureMoving } from './pages/taif/furniture-moving';
@@ -395,6 +397,7 @@ import { override as taifWaterInsulation } from './pages/taif/water-insulation';
 import { override as taifThermalInsulation } from './pages/taif/thermal-insulation';
 import { override as taifSewageUnblocking } from './pages/taif/sewage-unblocking';
 import { override as taifSewageSuction } from './pages/taif/sewage-suction';
+import { override as taifFloorPolishing } from './pages/taif/floor-polishing';
 
 // ─── YANBU (50) ───
 import { override as yanbuFurnitureMoving } from './pages/yanbu/furniture-moving';
@@ -830,6 +833,7 @@ import { override as abhaWaterInsulation } from './pages/abha/water-insulation';
 import { override as abhaThermalInsulation } from './pages/abha/thermal-insulation';
 import { override as abhaSewageUnblocking } from './pages/abha/sewage-unblocking';
 import { override as abhaSewageSuction } from './pages/abha/sewage-suction';
+import { override as abhaFloorPolishing } from './pages/abha/floor-polishing';
 
 // ─── KHAMIS-MUSHAIT (50) ───
 import { override as khamisMushaitFurnitureMoving } from './pages/khamis-mushait/furniture-moving';
@@ -1338,6 +1342,8 @@ const PAGE_OVERRIDES: Record<OverrideKey, PageOverride> = {
     [makeOverrideKey('madinah', 'thermal-insulation')]: madinahThermalInsulation,
     [makeOverrideKey('madinah', 'sewage-unblocking')]: madinahSewageUnblocking,
     [makeOverrideKey('madinah', 'sewage-suction')]: madinahSewageSuction,
+    [makeOverrideKey('madinah', 'floor-polishing')]: madinahFloorPolishing,
+    [makeOverrideKey('madinah', 'kitchen-cleaning')]: madinahKitchenCleaning,
 
     // ─── taif (50) ───
     [makeOverrideKey('taif', 'furniture-moving')]: taifFurnitureMoving,
@@ -1377,6 +1383,7 @@ const PAGE_OVERRIDES: Record<OverrideKey, PageOverride> = {
     [makeOverrideKey('taif', 'thermal-insulation')]: taifThermalInsulation,
     [makeOverrideKey('taif', 'sewage-unblocking')]: taifSewageUnblocking,
     [makeOverrideKey('taif', 'sewage-suction')]: taifSewageSuction,
+    [makeOverrideKey('taif', 'floor-polishing')]: taifFloorPolishing,
 
     // ─── yanbu (50) ───
     [makeOverrideKey('yanbu', 'furniture-moving')]: yanbuFurnitureMoving,
@@ -1812,6 +1819,7 @@ const PAGE_OVERRIDES: Record<OverrideKey, PageOverride> = {
     [makeOverrideKey('abha', 'thermal-insulation')]: abhaThermalInsulation,
     [makeOverrideKey('abha', 'sewage-unblocking')]: abhaSewageUnblocking,
     [makeOverrideKey('abha', 'sewage-suction')]: abhaSewageSuction,
+    [makeOverrideKey('abha', 'floor-polishing')]: abhaFloorPolishing,
 
     // ─── khamis-mushait (50) ───
     [makeOverrideKey('khamis-mushait', 'furniture-moving')]: khamisMushaitFurnitureMoving,
