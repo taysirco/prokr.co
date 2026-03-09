@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { CITIES, SERVICES } from '@/lib/seed';
-import { isAbsorbedSlug, buildRedirectUrl } from '@/lib/services/super-page-groups';
+import { isAbsorbedSlug, buildRedirectUrl, getCanonicalSlug } from '@/lib/services/super-page-groups';
 
 // Create sets for O(1) lookup
 const citySlugs = new Set(CITIES.map(c => c.slug));
@@ -68,7 +68,14 @@ export function middleware(request: NextRequest) {
     }
 
     // If it's a service slug at root level, rewrite to /services-page/[service]
+    // But if it's an absorbed slug, 301 redirect to the canonical
     if (serviceSlugs.has(firstSegment) && segments.length === 1) {
+        if (isAbsorbedSlug(firstSegment)) {
+            const canonicalSlug = getCanonicalSlug(firstSegment);
+            if (canonicalSlug) {
+                return NextResponse.redirect(new URL(`/${canonicalSlug}`, request.url), 301);
+            }
+        }
         const url = request.nextUrl.clone();
         url.pathname = `/services-page/${firstSegment}`;
         return NextResponse.rewrite(url);
