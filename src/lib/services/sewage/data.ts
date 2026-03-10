@@ -7,11 +7,11 @@ export const sewageServices: Service[] = [
 
 export const sewageImages: Record<string, string[]> = {
     'sewage-suction': [
-        '/images/sewage/sewage-truck-saudi-arabia.jpg',
-        '/images/sewage/sewage-tanker-riyadh.jpg',
+        '/images/general-services/Tabuk toilet drain pipe installation Saudi Arabia.jpg',
+        '/images/general-services/Riyadh plumbing services Saudi Arabia.jpg',
     ],
     'sewage-unblocking': [
-        '/images/sewage/pipe-unblocking-plumber-saudi.jpg',
-        '/images/sewage/drain-cleaning-service-riyadh.jpg',
+        '/images/general-services/Riyadh plumbing services Saudi Arabia.jpg',
+        '/images/general-services/Tabuk toilet drain pipe installation Saudi Arabia.jpg',
     ],
 };

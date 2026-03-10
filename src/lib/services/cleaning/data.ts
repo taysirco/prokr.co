@@ -117,7 +117,7 @@ export const cleaningImages: Record<string, string[]> = {
         '/images/cleaning/kitchen_cleaning_maid_riyadh.jpg',
     ],
     'swimming-pool-cleaning': [
-        '/images/cleaning/swimming_pool_cleaning.jpg',
+        '/images/general-services/water_tank_cleaning_saudi_arabia.jpg',
     ],
     'councils-cleaning': [
         '/images/cleaning/arabic_majlis_cleaning.jpg',

@@ -87,7 +87,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ar" dir="rtl" className={ibmPlexArabic.variable} suppressHydrationWarning>
+    <html lang="ar" dir="rtl" className={ibmPlexArabic.variable} suppressHydrationWarning data-scroll-behavior="smooth">
       <head>
         {/* PWA Manifest */}
         <link rel="manifest" href="/manifest.json" />
