@@ -13,4 +13,9 @@ export const leakDetectionPricing: Record<string, PricingItem[]> = {
         { type: 'كشف تسرب خزان علوي', unit: 'وحدة', minPrice: 150, maxPrice: 300 },
         { type: 'إصلاح تسرب خزان + إعادة عزل', unit: 'خزان', minPrice: 500, maxPrice: 1500 },
     ],
+    'bathroom-leak-detection': [
+        { type: 'كشف تسرب حمام — فحص بالكاميرا الحرارية', unit: 'حمام', minPrice: 150, maxPrice: 300, time: '1-2 ساعة' },
+        { type: 'كشف + إصلاح نقطة تسرب أرضية (بدون تكسير كامل)', unit: 'نقطة', minPrice: 300, maxPrice: 700, time: '2-4 ساعات' },
+        { type: 'إعادة عزل حمام كامل + تبليط', unit: 'حمام', minPrice: 1500, maxPrice: 3500, time: '2-3 أيام' },
+    ],
 };
