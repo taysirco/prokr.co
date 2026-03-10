@@ -19,4 +19,15 @@ export const movingPricing: Record<string, PricingItem[]> = {
         { type: 'دينا متوسطة (5 طن)', unit: 'رحلة داخل المدينة', minPrice: 300, maxPrice: 500 },
         { type: 'دينا كبيرة (7 طن)', unit: 'رحلة داخل المدينة', minPrice: 450, maxPrice: 700 },
     ],
+    'moving-out': [
+        { type: 'نقل بين مدينتين (حتى 300 كم)', unit: 'شاحنة مغلقة', minPrice: 2000, maxPrice: 4000, time: 'يوم واحد' },
+        { type: 'نقل بين مدينتين (300-700 كم)', unit: 'شاحنة مغلقة', minPrice: 4000, maxPrice: 7000, time: '1-2 يوم' },
+        { type: 'نقل مسافات طويلة (700+ كم)', unit: 'شاحنة مغلقة', minPrice: 7000, maxPrice: 12000, time: '2-3 أيام' },
+        { type: 'تغليف + فك + تركيب', unit: 'شقة متوسطة', minPrice: 1500, maxPrice: 3000 },
+    ],
+    'dabab': [
+        { type: 'دباب نقل صغير — داخل الحي', unit: 'رحلة', minPrice: 50, maxPrice: 100 },
+        { type: 'دباب نقل — داخل المدينة', unit: 'رحلة', minPrice: 100, maxPrice: 200 },
+        { type: 'دباب نقل — قطعة أثاث كبيرة', unit: 'قطعة', minPrice: 80, maxPrice: 150 },
+    ],
 };
