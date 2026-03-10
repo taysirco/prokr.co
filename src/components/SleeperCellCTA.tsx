@@ -1,4 +1,4 @@
-'use client';
+
 
 import { Rocket, ShieldCheck, Clock, Users, Phone, Building2, Star, TrendingUp, CheckCircle2, Thermometer, MapPin, AlertTriangle, Zap } from 'lucide-react';
 
@@ -123,7 +123,7 @@ function getCategory(serviceSlug: string): string {
         'water-heater-repair': 'leak-detection',
         'roof-insulation': 'insulation', 'thermal-insulation': 'insulation',
         'water-insulation': 'insulation', 'foam-insulation': 'insulation',
-        'swimming-pool-insulation': 'insulation',
+        'swimming-pool-insulation': 'insulation', 'tank-insulation': 'insulation',
     };
     return categoryMap[serviceSlug] || 'cleaning';
 }
