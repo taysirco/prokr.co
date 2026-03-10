@@ -46,6 +46,8 @@ function generateIntroduction(city: City, service: Service, context: any): strin
     const templates = templatesTemplate.map((t: string) =>
         t.replace(/\{cityKw\}/g, cityKw)
             .replace(/\{location\}/g, city.name_ar)
+            .replace(/\{city\.name_ar\}/g, city.name_ar)
+            .replace(/\{serviceName\}/g, service.name_ar)
             .replace(/\{count\}/g, count.toString())
             .replace(/\{climateNote\}/g, climateNote)
             .replace(/\{responseTime\}/g, context.responseTime || 'السريع')
