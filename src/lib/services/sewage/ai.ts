@@ -23,7 +23,7 @@ export const sewageAiSolutions: Record<string, string> = {
 export const sewageAiSuccessStories = [
     {
         title: `تسليك طوارئ في {neighborhood}`,
-        result: `استجابة لنداء طوارئ في {neighborhood} تم الوصول خلال {context.responseTime} وحل مشكلة انسداد رئيسي في الصرف باستخدام ضغط الماء في أقل من ساعة.`
+        result: `استجابة لنداء طوارئ في {neighborhood} تم الوصول خلال {responseTime} وحل مشكلة انسداد رئيسي في الصرف باستخدام ضغط الماء في أقل من ساعة.`
     },
     {
         title: `شفط بيارة لفيلا {cityKw}`,
