@@ -47,4 +47,7 @@ export const riyadhContext: CityContext = {
     },
     responseTime: 'خلال ساعة في معظم أحياء الرياض',
     nearbyCities: ['الخرج', 'الدرعية', 'المجمعة'],
+    majorLandmark: 'برج المملكة',
+    majorLandmarkEn: 'Kingdom+Tower+Riyadh',
+    coverageRadius: '45 كم',
 };

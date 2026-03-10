@@ -32,4 +32,7 @@ export const yanbuContext: CityContext = {
     },
     responseTime: 'خلال ساعتين',
     nearbyCities: ['المدينة المنورة', 'رابغ'],
+    majorLandmark: 'كورنيش ينبع',
+    majorLandmarkEn: 'Yanbu+Corniche',
+    coverageRadius: '20 كم',
 };

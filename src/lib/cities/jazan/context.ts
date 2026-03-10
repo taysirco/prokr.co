@@ -34,4 +34,7 @@ export const jazanContext: CityContext = {
     },
     responseTime: 'نفس اليوم',
     nearbyCities: ['صبيا', 'أبو عريش'],
+    majorLandmark: 'جزر فرسان',
+    majorLandmarkEn: 'Farasan+Islands+Jazan',
+    coverageRadius: '30 كم',
 };

@@ -42,4 +42,7 @@ export const abhaContext: CityContext = {
     },
     responseTime: 'خلال ساعتين',
     nearbyCities: ['خميس مشيط', 'النماص'],
+    majorLandmark: 'جبل السودة',
+    majorLandmarkEn: 'Al+Soudah+Mountain+Abha',
+    coverageRadius: '30 كم',
 };

@@ -23,4 +23,7 @@ export const najranContext: CityContext = {
     serviceNuances: {},
     responseTime: 'نفس اليوم',
     nearbyCities: ['أبها', 'شرورة'],
+    majorLandmark: 'سد وادي نجران',
+    majorLandmarkEn: 'Najran+Dam+Saudi+Arabia',
+    coverageRadius: '25 كم',
 };

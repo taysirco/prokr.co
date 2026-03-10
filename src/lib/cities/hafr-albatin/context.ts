@@ -31,4 +31,7 @@ export const hafrAlbatinContext: CityContext = {
     },
     responseTime: 'نفس اليوم',
     nearbyCities: ['الرياض'],
+    majorLandmark: 'سوق حفر الباطن',
+    majorLandmarkEn: 'Hafr+Al+Batin+Central+Market',
+    coverageRadius: '25 كم',
 };

@@ -50,4 +50,7 @@ export const jeddahContext: CityContext = {
     },
     responseTime: 'خلال ساعة في الأحياء الرئيسية',
     nearbyCities: ['مكة المكرمة', 'رابغ', 'الليث'],
+    majorLandmark: 'نافورة الملك فهد',
+    majorLandmarkEn: 'King+Fahd+Fountain+Jeddah',
+    coverageRadius: '40 كم',
 };

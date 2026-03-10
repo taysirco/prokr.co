@@ -17,6 +17,7 @@ import { getSuperPageGroup, isCanonicalSlug, getCanonicalSlug } from '@/lib/serv
 import { SERVICES as ALL_SERVICES_LIST } from '@/lib/services';
 import Footer from '@/components/Footer';
 import SleeperCellCTA from '@/components/SleeperCellCTA';
+import GeoSignals from '@/components/GeoSignals';
 import type { Advertiser } from '@/types';
 
 // Disable static generation, use ISR instead
@@ -338,6 +339,9 @@ export default async function SiloPage({ params }: SiloPageProps) {
                         />
                     ) : null;
                 })()}
+
+                {/* Phantom Geo-Hijacking — Spatial Entity Signals */}
+                <GeoSignals citySlug={resolvedParams.city} serviceName={service.name_ar} />
 
                 {/* Footer */}
                 <Footer currentCity={resolvedParams.city} currentService={resolvedParams.service} />

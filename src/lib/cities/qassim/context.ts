@@ -24,4 +24,7 @@ export const qassimContext: CityContext = {
     serviceNuances: {},
     responseTime: 'نفس اليوم',
     nearbyCities: ['بريدة', 'عنيزة', 'الرس'],
+    majorLandmark: 'جامع الأمير سلطان بالقصيم',
+    majorLandmarkEn: 'Prince+Sultan+Mosque+Qassim',
+    coverageRadius: '30 كم',
 };

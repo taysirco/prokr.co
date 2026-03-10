@@ -28,4 +28,7 @@ export const dhahranContext: CityContext = {
     },
     responseTime: 'حسب التصريح',
     nearbyCities: ['الخبر', 'الدمام'],
+    majorLandmark: 'مركز الملك عبدالعزيز الثقافي (إثراء)',
+    majorLandmarkEn: 'Ithra+Center+Dhahran',
+    coverageRadius: '20 كم',
 };

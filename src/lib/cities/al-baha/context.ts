@@ -32,4 +32,7 @@ export const alBahaContext: CityContext = {
     },
     responseTime: 'نفس اليوم',
     nearbyCities: ['أبها', 'الطائف'],
+    majorLandmark: 'منتزه غابة رغدان',
+    majorLandmarkEn: 'Raghadan+Forest+Park+Al+Baha',
+    coverageRadius: '20 كم',
 };

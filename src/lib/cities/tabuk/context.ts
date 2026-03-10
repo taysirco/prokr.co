@@ -33,4 +33,7 @@ export const tabukContext: CityContext = {
     },
     responseTime: 'نفس اليوم',
     nearbyCities: ['حائل', 'العلا'],
+    majorLandmark: 'قلعة تبوك',
+    majorLandmarkEn: 'Tabuk+Castle+Saudi+Arabia',
+    coverageRadius: '30 كم',
 };

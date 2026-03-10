@@ -30,4 +30,7 @@ export const hailContext: CityContext = {
     },
     responseTime: 'نفس اليوم',
     nearbyCities: ['تبوك', 'القصيم'],
+    majorLandmark: 'قلعة أعيرف',
+    majorLandmarkEn: 'Aarif+Fort+Hail',
+    coverageRadius: '25 كم',
 };

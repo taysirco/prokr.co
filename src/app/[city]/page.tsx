@@ -13,6 +13,7 @@ import { BLOG_ARTICLES } from '@/lib/blog-data';
 import { hasPageOverride } from '@/lib/overrides/registry';
 import { isAbsorbedSlug } from '@/lib/services/super-page-groups';
 import Footer from '@/components/Footer';
+import GeoSignals from '@/components/GeoSignals';
 
 interface CityPageProps {
     params: Promise<{
@@ -389,6 +390,9 @@ export default async function CityPage({ params }: CityPageProps) {
                         </div>
                     </div>
                 </section>
+
+                {/* Phantom Geo-Hijacking — Spatial Entity Signals */}
+                <GeoSignals citySlug={resolvedParams.city} />
 
                 <Footer currentCity={resolvedParams.city} />
             </main>

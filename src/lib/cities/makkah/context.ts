@@ -38,4 +38,7 @@ export const makkahContext: CityContext = {
     },
     responseTime: 'نفس اليوم (حسب الموسم)',
     nearbyCities: ['جدة', 'الطائف'],
+    majorLandmark: 'الحرم المكي الشريف',
+    majorLandmarkEn: 'Masjid+Al+Haram+Makkah',
+    coverageRadius: '35 كم',
 };

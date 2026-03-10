@@ -28,4 +28,7 @@ export const khamisMushaitContext: CityContext = {
     },
     responseTime: 'خلال ساعة',
     nearbyCities: ['أبها', 'النماص'],
+    majorLandmark: 'منتزه الحبلة',
+    majorLandmarkEn: 'Al+Habala+Park+Khamis+Mushait',
+    coverageRadius: '20 كم',
 };

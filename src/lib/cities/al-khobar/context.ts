@@ -34,4 +34,7 @@ export const alKhobarContext: CityContext = {
     },
     responseTime: 'خلال 45 دقيقة',
     nearbyCities: ['الدمام', 'الظهران'],
+    majorLandmark: 'كورنيش الخبر',
+    majorLandmarkEn: 'Al+Khobar+Corniche',
+    coverageRadius: '25 كم',
 };

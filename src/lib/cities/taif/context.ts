@@ -37,4 +37,7 @@ export const taifContext: CityContext = {
     },
     responseTime: 'نفس اليوم',
     nearbyCities: ['مكة المكرمة', 'جدة'],
+    majorLandmark: 'تلفريك الهدا',
+    majorLandmarkEn: 'Al+Hada+Cable+Car+Taif',
+    coverageRadius: '25 كم',
 };

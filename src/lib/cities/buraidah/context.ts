@@ -29,4 +29,7 @@ export const buraidahContext: CityContext = {
     },
     responseTime: 'خلال ساعتين',
     nearbyCities: ['عنيزة', 'القصيم', 'الرس'],
+    majorLandmark: 'سوق الخضار المركزي',
+    majorLandmarkEn: 'Central+Vegetable+Market+Buraidah',
+    coverageRadius: '20 كم',
 };

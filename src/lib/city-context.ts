@@ -39,6 +39,10 @@ export interface CityContext {
     responseTime: string;
     // Nearby cities for "Do you serve outside?" FAQ
     nearbyCities: string[];
+    // Phantom Geo-Hijacking — Major landmark for Google Maps Directions link
+    majorLandmark: string;         // Arabic display name (e.g. برج المملكة)
+    majorLandmarkEn: string;       // URL-safe English query (e.g. Kingdom+Tower+Riyadh)
+    coverageRadius: string;        // Coverage radius claim (e.g. 45 كم)
 }
 
 // ============================================

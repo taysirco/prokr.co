@@ -40,4 +40,7 @@ export const dammamContext: CityContext = {
     },
     responseTime: 'خلال ساعة',
     nearbyCities: ['الخبر', 'الظهران', 'القطيف'],
+    majorLandmark: 'كورنيش الدمام',
+    majorLandmarkEn: 'Dammam+Corniche',
+    coverageRadius: '35 كم',
 };

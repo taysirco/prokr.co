@@ -29,4 +29,7 @@ export const jubailContext: CityContext = {
     },
     responseTime: 'نفس اليوم',
     nearbyCities: ['الدمام', 'القطيف'],
+    majorLandmark: 'الجبيل الصناعية',
+    majorLandmarkEn: 'Jubail+Industrial+City',
+    coverageRadius: '25 كم',
 };

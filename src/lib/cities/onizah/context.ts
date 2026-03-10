@@ -22,4 +22,7 @@ export const onizahContext: CityContext = {
     serviceNuances: {},
     responseTime: 'نفس اليوم',
     nearbyCities: ['بريدة', 'الرس'],
+    majorLandmark: 'قلعة عنيزة التراثية',
+    majorLandmarkEn: 'Unaizah+Heritage+Castle',
+    coverageRadius: '15 كم',
 };

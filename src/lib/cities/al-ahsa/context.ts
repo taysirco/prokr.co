@@ -31,4 +31,7 @@ export const alAhsaContext: CityContext = {
     },
     responseTime: 'خلال ساعتين',
     nearbyCities: ['الدمام', 'القطيف', 'الجبيل'],
+    majorLandmark: 'واحة الأحساء',
+    majorLandmarkEn: 'Al+Ahsa+Oasis+Saudi+Arabia',
+    coverageRadius: '30 كم',
 };

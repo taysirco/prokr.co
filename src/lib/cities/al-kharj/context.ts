@@ -30,4 +30,7 @@ export const alKharjContext: CityContext = {
     },
     responseTime: 'خلال ساعتين',
     nearbyCities: ['الرياض', 'الدلم', 'حوطة بني تميم'],
+    majorLandmark: 'قصر أبو جفان التاريخي',
+    majorLandmarkEn: 'Abu+Jifan+Palace+Al+Kharj',
+    coverageRadius: '25 كم',
 };

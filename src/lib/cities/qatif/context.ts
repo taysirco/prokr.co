@@ -29,4 +29,7 @@ export const qatifContext: CityContext = {
     },
     responseTime: 'خلال ساعة',
     nearbyCities: ['الدمام', 'الجبيل'],
+    majorLandmark: 'قلعة القطيف',
+    majorLandmarkEn: 'Qatif+Castle+Saudi+Arabia',
+    coverageRadius: '20 كم',
 };

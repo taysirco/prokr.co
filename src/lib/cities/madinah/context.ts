@@ -30,4 +30,7 @@ export const madinahContext: CityContext = {
     },
     responseTime: 'خلال ساعتين',
     nearbyCities: ['ينبع', 'الحناكية', 'بدر'],
+    majorLandmark: 'المسجد النبوي الشريف',
+    majorLandmarkEn: 'Al+Masjid+an+Nabawi+Madinah',
+    coverageRadius: '30 كم',
 };
