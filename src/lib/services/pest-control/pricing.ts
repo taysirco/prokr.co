@@ -9,10 +9,10 @@ export const pestControlPricing: Record<string, PricingItem[]> = {
         { type: 'عقد سنوي (4 زيارات)', unit: '4 زيارات', minPrice: 800, maxPrice: 1500 },
     ],
     'termite-control': [
+        { type: 'حماية ما قبل البناء — مانع نمل أبيض', unit: 'للمتر المربع', minPrice: 20, maxPrice: 40 },
         { type: 'معالجة موضعية — نقطة إصابة', unit: 'نقطة', minPrice: 300, maxPrice: 500 },
         { type: 'معالجة شاملة (شقة) — حقن أرضي', unit: 'وحدة', minPrice: 1000, maxPrice: 2000 },
         { type: 'معالجة شاملة (فيلا) — حقن + حاجز كيميائي', unit: 'وحدة', minPrice: 2000, maxPrice: 5000 },
-        { type: 'حماية ما قبل البناء — مانع نمل أبيض', unit: 'للمتر المربع', minPrice: 20, maxPrice: 40 },
     ],
     'pesticide-spraying': [
         { type: 'رش مبيدات — شقة', unit: 'جلسة', minPrice: 150, maxPrice: 250 },

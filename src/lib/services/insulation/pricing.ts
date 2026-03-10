@@ -7,9 +7,9 @@ export const insulationPricing: Record<string, PricingItem[]> = {
         { type: 'عزل إيبوكسي + طبقة حماية UV', unit: 'للمتر المربع', minPrice: 30, maxPrice: 50 },
     ],
     'tank-insulation': [
-        { type: 'عزل إيبوكسي لخزان أرضي — غذائي', unit: 'خزان', minPrice: 1500, maxPrice: 3000 },
-        { type: 'عزل أسمنتي لخزان أرضي', unit: 'خزان', minPrice: 1000, maxPrice: 2000 },
         { type: 'عزل خزان علوي — إيبوكسي', unit: 'خزان', minPrice: 800, maxPrice: 1500 },
+        { type: 'عزل أسمنتي لخزان أرضي', unit: 'خزان', minPrice: 1000, maxPrice: 2000 },
+        { type: 'عزل إيبوكسي لخزان أرضي — غذائي', unit: 'خزان', minPrice: 1500, maxPrice: 3000 },
     ],
     'foam-insulation': [
         { type: 'عزل فوم — سطح شقة', unit: 'للمتر المربع', minPrice: 25, maxPrice: 40 },

@@ -14,16 +14,16 @@ export const cleaningPricing: Record<string, PricingItem[]> = {
         { type: 'خزان كبير (10+ طن)', unit: 'تنظيف + تعقيم', minPrice: 400, maxPrice: 700 },
     ],
     'sofa-cleaning': [
+        { type: 'مجلس عربي', unit: 'للمتر الطولي', minPrice: 30, maxPrice: 50 },
         { type: 'كنبة 3 مقاعد', unit: 'قطعة', minPrice: 80, maxPrice: 120 },
         { type: 'كنبة 4 مقاعد', unit: 'قطعة', minPrice: 100, maxPrice: 150 },
         { type: 'طقم كنب كامل (L-shape)', unit: 'طقم', minPrice: 300, maxPrice: 500 },
-        { type: 'مجلس عربي', unit: 'للمتر الطولي', minPrice: 30, maxPrice: 50 },
     ],
     'carpet-cleaning': [
+        { type: 'موكيت', unit: 'للمتر المربع', minPrice: 8, maxPrice: 15 },
         { type: 'سجادة صغيرة (2×3 م)', unit: 'قطعة', minPrice: 50, maxPrice: 80 },
         { type: 'سجادة متوسطة (3×4 م)', unit: 'قطعة', minPrice: 80, maxPrice: 120 },
         { type: 'سجادة كبيرة (4×6 م)', unit: 'قطعة', minPrice: 120, maxPrice: 180 },
-        { type: 'موكيت', unit: 'للمتر المربع', minPrice: 8, maxPrice: 15 },
     ],
     'air-conditioner-cleaning': [
         { type: 'مكيف سبليت — غسيل داخلي بالبخار', unit: 'وحدة', minPrice: 80, maxPrice: 120 },
@@ -31,10 +31,10 @@ export const cleaningPricing: Record<string, PricingItem[]> = {
         { type: 'مكيف مركزي — تنظيف فلاتر + مجاري', unit: 'وحدة', minPrice: 150, maxPrice: 300 },
     ],
     'steam-cleaning': [
+        { type: 'تعقيم بالبخار — سيارة', unit: 'سيارة', minPrice: 100, maxPrice: 180 },
         { type: 'تنظيف بالبخار — شقة صغيرة', unit: 'شقة', minPrice: 250, maxPrice: 400, time: '2-3 ساعات' },
         { type: 'تنظيف بالبخار — شقة متوسطة', unit: 'شقة', minPrice: 400, maxPrice: 600, time: '3-5 ساعات' },
         { type: 'تنظيف بالبخار — فيلا', unit: 'فيلا', minPrice: 600, maxPrice: 1000, time: '5-8 ساعات' },
-        { type: 'تعقيم بالبخار — سيارة', unit: 'سيارة', minPrice: 100, maxPrice: 180 },
     ],
     'sanitization': [
         { type: 'تعقيم شقة — ضبابي ULV', unit: 'شقة', minPrice: 200, maxPrice: 350 },
@@ -49,24 +49,24 @@ export const cleaningPricing: Record<string, PricingItem[]> = {
         { type: 'تنظيف مرتبة بالبخار + تعقيم مضاد للعث', unit: 'قطعة', minPrice: 120, maxPrice: 180 },
     ],
     'glass-facades-cleaning': [
-        { type: 'واجهات زجاجية — مبنى صغير (3 طوابق)', unit: 'واجهة', minPrice: 500, maxPrice: 1000 },
         { type: 'واجهات زجاجية — برج تجاري', unit: 'للمتر المربع', minPrice: 5, maxPrice: 12 },
         { type: 'واجهات ألمنيوم + كلادينج', unit: 'للمتر المربع', minPrice: 8, maxPrice: 15 },
+        { type: 'واجهات زجاجية — مبنى صغير (3 طوابق)', unit: 'واجهة', minPrice: 500, maxPrice: 1000 },
     ],
     'floor-cleaning': [
+        { type: 'تنظيف أرضيات — مستودع / معرض', unit: 'للمتر المربع', minPrice: 5, maxPrice: 10 },
         { type: 'تنظيف أرضيات — شقة', unit: 'شقة', minPrice: 150, maxPrice: 300 },
         { type: 'تنظيف أرضيات — فيلا', unit: 'فيلا', minPrice: 300, maxPrice: 600 },
-        { type: 'تنظيف أرضيات — مستودع / معرض', unit: 'للمتر المربع', minPrice: 5, maxPrice: 10 },
     ],
     'floor-polishing': [
+        { type: 'جلي + تلميع أرضيات', unit: 'للمتر المربع', minPrice: 10, maxPrice: 20 },
         { type: 'جلي بلاط سيراميك — شقة', unit: 'شقة', minPrice: 300, maxPrice: 600 },
         { type: 'جلي بلاط بورسلان — فيلا', unit: 'فيلا', minPrice: 600, maxPrice: 1200 },
-        { type: 'جلي + تلميع أرضيات', unit: 'للمتر المربع', minPrice: 10, maxPrice: 20 },
     ],
     'marble-polishing': [
+        { type: 'جلي + تلميع كريستال', unit: 'للمتر المربع', minPrice: 15, maxPrice: 30 },
         { type: 'جلي رخام — شقة', unit: 'شقة', minPrice: 500, maxPrice: 1000 },
         { type: 'جلي رخام — فيلا أو قصر', unit: 'فيلا', minPrice: 1000, maxPrice: 2500 },
-        { type: 'جلي + تلميع كريستال', unit: 'للمتر المربع', minPrice: 15, maxPrice: 30 },
     ],
     'villas-cleaning': [
         { type: 'فيلا صغيرة (3 غرف + صالة)', unit: 'فيلا', minPrice: 500, maxPrice: 800, time: '5-7 ساعات' },
@@ -94,9 +94,9 @@ export const cleaningPricing: Record<string, PricingItem[]> = {
         { type: 'عقد تنظيف مكاتب يومي', unit: 'شهرياً', minPrice: 2000, maxPrice: 4000 },
     ],
     'furniture-cleaning': [
-        { type: 'طقم كنب (5-7 قطع)', unit: 'طقم', minPrice: 250, maxPrice: 450 },
-        { type: 'مجلس عربي كامل', unit: 'مجلس', minPrice: 200, maxPrice: 400 },
         { type: 'ستائر (للمتر)', unit: 'للمتر الطولي', minPrice: 15, maxPrice: 30 },
+        { type: 'مجلس عربي كامل', unit: 'مجلس', minPrice: 200, maxPrice: 400 },
+        { type: 'طقم كنب (5-7 قطع)', unit: 'طقم', minPrice: 250, maxPrice: 450 },
     ],
     'kitchen-cleaning': [
         { type: 'تنظيف مطبخ — عادي', unit: 'مطبخ', minPrice: 100, maxPrice: 200 },

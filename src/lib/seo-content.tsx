@@ -59,13 +59,13 @@ export function generateSeoContent({ city, service }: SeoContentProps) {
 
     // E-E-A-T Signals — Category-specific
     const expertTipsTemplate = EXPERT_TIPS[service.category] || EXPERT_TIPS['cleaning'] || [];
-    const expertTips = expertTipsTemplate.map(t => t.replace(/\{cityKw\}/g, cityKw));
+    const expertTips = expertTipsTemplate.map(t => t.replace(/\{cityKw\}/g, cityKw).replace(/\{serviceName\}/g, service.name_ar));
 
     const warningsTemplate = WARNINGS[service.category] || WARNINGS['cleaning'] || [];
-    const warnings = warningsTemplate.map(w => w.replace(/\{cityKw\}/g, cityKw));
+    const warnings = warningsTemplate.map(w => w.replace(/\{cityKw\}/g, cityKw).replace(/\{serviceName\}/g, service.name_ar));
 
     const checklistTemplate = CHECKLISTS[service.category] || CHECKLISTS['cleaning'] || [];
-    const checklist = checklistTemplate.map(c => c.replace(/\{cityKw\}/g, cityKw));
+    const checklist = checklistTemplate.map(c => c.replace(/\{cityKw\}/g, cityKw).replace(/\{serviceName\}/g, service.name_ar));
 
     // Service-specific PAA questions from keyword strategy
     const resolveQ = (q: string) => resolveKeywordTemplate(q, { city: cityKw, cityName: city.name_ar, serviceName: service.name_ar });
