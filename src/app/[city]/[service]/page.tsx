@@ -340,8 +340,8 @@ export default async function SiloPage({ params }: SiloPageProps) {
                     ) : null;
                 })()}
 
-                {/* Phantom Geo-Hijacking — Spatial Entity Signals */}
-                <GeoSignals citySlug={resolvedParams.city} serviceName={service.name_ar} />
+                {/* Phantom Geo-Hijacking — Unique Per City+Service */}
+                <GeoSignals citySlug={resolvedParams.city} serviceName={service.name_ar} serviceCategory={service.category} />
 
                 {/* Footer */}
                 <Footer currentCity={resolvedParams.city} currentService={resolvedParams.service} />
