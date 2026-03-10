@@ -2,13 +2,15 @@ import { PricingItem } from '../types';
 
 export const sewagePricing: Record<string, PricingItem[]> = {
     'sewage-suction': [
-        { type: 'وايت شفط صغير (4 طن)', unit: 'نقلة', minPrice: 100, maxPrice: 150 },
-        { type: 'وايت شفط متوسط (8 طن)', unit: 'نقلة', minPrice: 150, maxPrice: 250 },
-        { type: 'وايت شفط كبير (12 طن)', unit: 'نقلة', minPrice: 250, maxPrice: 400 },
+        { type: 'وايت شفط صغير (4 طن) — سكني', unit: 'نقلة', minPrice: 100, maxPrice: 150 },
+        { type: 'وايت شفط متوسط (8 طن) — فيلا / مبنى', unit: 'نقلة', minPrice: 150, maxPrice: 250 },
+        { type: 'وايت شفط كبير (12 طن) — تجاري / مجمع', unit: 'نقلة', minPrice: 250, maxPrice: 400 },
+        { type: 'خدمة شفط طوارئ — خارج أوقات الدوام', unit: 'نقلة', minPrice: 200, maxPrice: 400 },
     ],
     'sewage-unblocking': [
-        { type: 'تسليك بالضغط', unit: 'نقطة', minPrice: 150, maxPrice: 300 },
-        { type: 'تسليك بسوستة كهربائية', unit: 'نقطة', minPrice: 200, maxPrice: 400 },
-        { type: 'تنظيف غرف التفتيش', unit: 'غرفة', minPrice: 100, maxPrice: 200 },
+        { type: 'تسليك بالضغط العالي (Jet Wash)', unit: 'نقطة', minPrice: 150, maxPrice: 300 },
+        { type: 'تسليك بسوستة كهربائية — مجرى رئيسي', unit: 'نقطة', minPrice: 200, maxPrice: 400 },
+        { type: 'تنظيف غرف التفتيش + شفط رواسب', unit: 'غرفة', minPrice: 100, maxPrice: 200 },
+        { type: 'كشف انسداد بكاميرا CCTV', unit: 'فحص', minPrice: 200, maxPrice: 350 },
     ],
 };

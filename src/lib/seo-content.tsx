@@ -282,7 +282,7 @@ export function SeoContentSection({ city, service }: SeoContentProps) {
                 <h3 className="text-xl font-bold text-gray-900 mb-4">
                     📊 مقارنة أسعار {service.name_ar} {cityKw} (تحديث 2026)
                 </h3>
-                <div className="overflow-hidden rounded-2xl border border-gray-200 shadow-lg mb-2" itemScope itemType="https://schema.org/Table">
+                <div className="overflow-x-auto rounded-2xl border border-gray-200 shadow-lg mb-2" itemScope itemType="https://schema.org/Table">
                     <table className="w-full text-right">
                         <caption className="bg-gradient-to-l from-gray-50 to-gray-100 font-bold p-4 border-b border-gray-200 text-gray-800 text-sm">
                             مقارنة بين أسعار السوق العشوائية وأسعار بروكر المعتمدة لخدمة {service.name_ar} {cityKw} — بيانات محدّثة لعام 2026
@@ -290,11 +290,11 @@ export function SeoContentSection({ city, service }: SeoContentProps) {
                         <thead>
                             <tr className="bg-gray-100 text-sm">
                                 <th className="p-4 font-bold text-gray-700">نوع الخدمة</th>
-                                <th className="p-4 font-bold text-gray-700">الوحدة</th>
+                                <th className="p-4 font-bold text-gray-700" style={{ display: 'table-cell' }}>الوحدة</th>
                                 <th className="p-4 font-bold text-red-600">متوسط سعر السوق ⚠️</th>
                                 <th className="p-4 font-bold text-emerald-700">سعر بروكر المعتمد ✔️</th>
-                                <th className="p-4 font-bold text-gray-700 hidden sm:table-cell">التوفير</th>
-                                {pricing.some(i => i.time) && <th className="p-4 font-bold text-gray-700 hidden md:table-cell">المدة</th>}
+                                <th className="p-4 font-bold text-emerald-700">التوفير</th>
+                                {pricing.some(i => i.time) && <th className="p-4 font-bold text-gray-700">المدة</th>}
                             </tr>
                         </thead>
                         <tbody className="divide-y divide-gray-100">
@@ -315,13 +315,13 @@ export function SeoContentSection({ city, service }: SeoContentProps) {
                                         <td className="p-4 text-emerald-700 font-bold text-sm" dir="ltr">
                                             {item.price} ريال
                                         </td>
-                                        <td className="p-4 hidden sm:table-cell">
-                                            <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800">
+                                        <td className="p-4">
+                                            <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800 whitespace-nowrap">
                                                 وفّر {savingPercent}%
                                             </span>
                                         </td>
                                         {pricing.some(i => i.time) && (
-                                            <td className="p-4 text-gray-500 text-sm hidden md:table-cell">{item.time || '-'}</td>
+                                            <td className="p-4 text-gray-500 text-sm whitespace-nowrap">{item.time || '-'}</td>
                                         )}
                                     </tr>
                                 );
