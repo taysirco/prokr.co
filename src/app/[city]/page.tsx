@@ -391,8 +391,8 @@ export default async function CityPage({ params }: CityPageProps) {
                     </div>
                 </section>
 
-                {/* Phantom Geo-Hijacking — Spatial Entity Signals */}
-                <GeoSignals citySlug={resolvedParams.city} />
+                {/* Phantom Geo-Hijacking — City-Level Landmark Signal */}
+                <GeoSignals citySlug={resolvedParams.city} serviceSlug="city-hub" serviceName="خدمات منزلية" serviceCategory="cleaning" />
 
                 <Footer currentCity={resolvedParams.city} />
             </main>
