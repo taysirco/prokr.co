@@ -1,5 +1,4 @@
 import { getCityContext } from '@/lib/city-context';
-import { getGeoNarrative, SERVICE_ZONE_MAP } from '@/lib/geo-dispatch-data';
 import { getServiceGeoProfile } from '@/lib/service-geo-profiles';
 import { getNeighborhoodCoords } from '@/lib/neighborhood-coords';
 import { MapPin, Navigation, Clock, Truck, Wrench } from 'lucide-react';
