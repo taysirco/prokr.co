@@ -16,3 +16,4 @@ export { AggregateRatingJsonLd } from './AggregateRatingJsonLd';
 export { FaqJsonLd } from './FaqJsonLd';
 export { ServiceOfferJsonLd } from './ServiceOfferJsonLd';
 export { DatasetJsonLd } from './DatasetJsonLd';
+export { LiveBlogPostingJsonLd } from './LiveBlogPostingJsonLd';

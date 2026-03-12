@@ -8,7 +8,7 @@ import { getAdvertisersBySilo } from '@/lib/db-actions';
 import { ServiceJsonLd, BreadcrumbJsonLd, ItemListJsonLd, ServiceAreaJsonLd, HowToJsonLd, SpeakableWebPageJsonLd, AggregateRatingJsonLd, ImageObjectJsonLd } from '@/components/JsonLd';
 import { DirectAnswer } from '@/components/seo/DirectAnswer';
 import { SeoContentSection } from '@/lib/seo-content';
-import { FaqJsonLd, ServiceOfferJsonLd } from '@/components/schema';
+import { FaqJsonLd, ServiceOfferJsonLd, LiveBlogPostingJsonLd } from '@/components/schema';
 import { getCityContext } from '@/lib/city-context';
 import { getServiceKeywordProfile, getCityKeyword } from '@/lib/keyword-strategy';
 import { resolveContentLayers, resolveMetadata, getOverrideForPage } from '@/lib/overrides';
@@ -17,6 +17,7 @@ import { getSuperPageGroup, isCanonicalSlug, getCanonicalSlug } from '@/lib/serv
 import { SERVICES as ALL_SERVICES_LIST } from '@/lib/services';
 import Footer from '@/components/Footer';
 import SleeperCellCTA from '@/components/SleeperCellCTA';
+import { LiveAvailabilityBanner } from '@/components/LiveAvailabilityBanner';
 import GeoSignals from '@/components/GeoSignals';
 import type { Advertiser } from '@/types';
 
@@ -179,6 +180,14 @@ export default async function SiloPage({ params }: SiloPageProps) {
             <AggregateRatingJsonLd service={service} city={city} advertisers={allAdvertisers} />
             {/* ImageObject Schema for hero image */}
             <ImageObjectJsonLd imageUrl={heroImageUrl} service={service} city={city} />
+            {/* LiveBlogPosting — QDF Freshness Signal */}
+            <LiveBlogPostingJsonLd
+                cityNameAr={cityKw}
+                serviceNameAr={service.name_ar}
+                citySlug={city.slug}
+                serviceSlug={service.slug}
+                availableTeams={Math.max(2, Math.min(premium.length + standard.length, Math.ceil((premium.length + standard.length) * 0.7)))}
+            />
 
             <main className="min-h-screen bg-gray-50">
                 {/* Hero Section with Image */}
@@ -269,6 +278,13 @@ export default async function SiloPage({ params }: SiloPageProps) {
                         </div>
                     </div>
                 </section>
+
+                {/* ── Live Availability Banner — QDF Visual Signal ── */}
+                <LiveAvailabilityBanner
+                    cityNameAr={cityKw}
+                    serviceNameAr={service.name_ar}
+                    totalCompanies={premium.length + standard.length}
+                />
 
                 {/* Direct Answer for AEO - Featured Snippet Optimization */}
                 <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">

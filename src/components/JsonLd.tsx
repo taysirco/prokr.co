@@ -24,4 +24,5 @@ export { AggregateRatingJsonLd } from './schema/AggregateRatingJsonLd';
 export { FaqJsonLd } from './schema/FaqJsonLd';
 export { ServiceOfferJsonLd } from './schema/ServiceOfferJsonLd';
 export { DatasetJsonLd } from './schema/DatasetJsonLd';
+export { LiveBlogPostingJsonLd } from './schema/LiveBlogPostingJsonLd';
 
