@@ -63,7 +63,27 @@ interface AdvertiserForm {
     targeted_cities: string[];
     targeted_services: string[];
     description: string;
+    // Enhanced LocalBusiness Schema fields
+    crn: string;
+    sbc_number: string;
+    street_address: string;
+    postal_code: string;
+    google_maps_url: string;
+    google_maps_place_id: string;
+    payment_methods: string[];
+    has_verified_employees: boolean;
 }
+
+const PAYMENT_OPTIONS = [
+    { value: 'Cash', label: 'نقدي (Cash)' },
+    { value: 'Credit Card', label: 'بطاقة ائتمان' },
+    { value: 'مدى (Mada)', label: 'مدى (Mada)' },
+    { value: 'STC Pay', label: 'STC Pay' },
+    { value: 'Apple Pay', label: 'Apple Pay' },
+    { value: 'تحويل بنكي مؤسسي (SADAD)', label: 'سداد (SADAD)' },
+    { value: 'Tabby', label: 'تابي (Tabby)' },
+    { value: 'Tamara', label: 'تمارا (Tamara)' },
+];
 
 const initialForm: AdvertiserForm = {
     business_name: '',
@@ -74,6 +94,14 @@ const initialForm: AdvertiserForm = {
     targeted_cities: [],
     targeted_services: [],
     description: '',
+    crn: '',
+    sbc_number: '',
+    street_address: '',
+    postal_code: '',
+    google_maps_url: '',
+    google_maps_place_id: '',
+    payment_methods: [],
+    has_verified_employees: false,
 };
 
 
@@ -364,6 +392,14 @@ export default function AdminDashboard() {
                     targeted_cities: form.targeted_cities,
                     targeted_services: form.targeted_services,
                     description: form.description,
+                    crn: form.crn || undefined,
+                    sbc_number: form.sbc_number || undefined,
+                    street_address: form.street_address || undefined,
+                    postal_code: form.postal_code || undefined,
+                    google_maps_url: form.google_maps_url || undefined,
+                    google_maps_place_id: form.google_maps_place_id || undefined,
+                    payment_methods: form.payment_methods.length > 0 ? form.payment_methods : undefined,
+                    has_verified_employees: form.has_verified_employees,
                 });
                 setSuccessMessage('تم تحديث المعلن بنجاح!');
                 setEditingId(null);
@@ -395,6 +431,14 @@ export default function AdminDashboard() {
                     targeted_services: form.targeted_services,
                     description: form.description,
                     gallery: galleryUrls,
+                    crn: form.crn || undefined,
+                    sbc_number: form.sbc_number || undefined,
+                    street_address: form.street_address || undefined,
+                    postal_code: form.postal_code || undefined,
+                    google_maps_url: form.google_maps_url || undefined,
+                    google_maps_place_id: form.google_maps_place_id || undefined,
+                    payment_methods: form.payment_methods.length > 0 ? form.payment_methods : undefined,
+                    has_verified_employees: form.has_verified_employees,
                 });
 
                 setSuccessMessage(`تم إضافة المعلن بنجاح! الكود: ${advertiser.short_code}`);
@@ -426,6 +470,14 @@ export default function AdminDashboard() {
             targeted_cities: advertiser.targeted_cities,
             targeted_services: advertiser.targeted_services,
             description: advertiser.description,
+            crn: advertiser.crn || '',
+            sbc_number: advertiser.sbc_number || '',
+            street_address: advertiser.street_address || '',
+            postal_code: advertiser.postal_code || '',
+            google_maps_url: advertiser.google_maps_url || '',
+            google_maps_place_id: advertiser.google_maps_place_id || '',
+            payment_methods: advertiser.payment_methods || [],
+            has_verified_employees: advertiser.has_verified_employees || false,
         });
         setActiveTab('add');
     };
@@ -1136,6 +1188,162 @@ export default function AdminDashboard() {
                                         className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 resize-none"
                                         placeholder="اكتب وصفاً تفصيلياً للشركة..."
                                     />
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Sovereign Verification & Address */}
+                        <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
+                            <h2 className="text-lg font-bold text-gray-900 mb-6 flex items-center gap-2">
+                                <Check className="w-5 h-5 text-emerald-500" />
+                                بيانات التوثيق والعنوان
+                                <span className="text-xs font-normal text-gray-400 mr-1">(اختياري — يعزز ترتيب SEO)</span>
+                            </h2>
+
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                {/* CRN */}
+                                <div>
+                                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                                        رقم السجل التجاري (CRN)
+                                    </label>
+                                    <input
+                                        type="text"
+                                        value={form.crn}
+                                        onChange={(e) => setForm(prev => ({ ...prev, crn: e.target.value }))}
+                                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                                        placeholder="مثال: 1010XXXXXX"
+                                        dir="ltr"
+                                        maxLength={10}
+                                    />
+                                </div>
+
+                                {/* SBC */}
+                                <div>
+                                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                                        شهادة المركز السعودي للأعمال (SBC)
+                                    </label>
+                                    <input
+                                        type="text"
+                                        value={form.sbc_number}
+                                        onChange={(e) => setForm(prev => ({ ...prev, sbc_number: e.target.value }))}
+                                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                                        placeholder="مثال: XXXXX"
+                                        dir="ltr"
+                                    />
+                                </div>
+
+                                {/* National Address */}
+                                <div>
+                                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                                        <MapPin className="w-4 h-4 inline ml-1" />
+                                        العنوان الوطني
+                                    </label>
+                                    <input
+                                        type="text"
+                                        value={form.street_address}
+                                        onChange={(e) => setForm(prev => ({ ...prev, street_address: e.target.value }))}
+                                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                                        placeholder="مثال: RRMA2929"
+                                    />
+                                </div>
+
+                                {/* Postal Code */}
+                                <div>
+                                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                                        الرمز البريدي
+                                    </label>
+                                    <input
+                                        type="text"
+                                        value={form.postal_code}
+                                        onChange={(e) => setForm(prev => ({ ...prev, postal_code: e.target.value }))}
+                                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                                        placeholder="مثال: 12211"
+                                        dir="ltr"
+                                        maxLength={5}
+                                    />
+                                </div>
+
+                                {/* Google Maps URL */}
+                                <div>
+                                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                                        <ExternalLink className="w-4 h-4 inline ml-1" />
+                                        رابط خرائط جوجل
+                                    </label>
+                                    <input
+                                        type="url"
+                                        value={form.google_maps_url}
+                                        onChange={(e) => setForm(prev => ({ ...prev, google_maps_url: e.target.value }))}
+                                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                                        placeholder="https://maps.google.com/..."
+                                        dir="ltr"
+                                    />
+                                </div>
+
+                                {/* Google Maps Place ID */}
+                                <div>
+                                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                                        Google Place ID
+                                    </label>
+                                    <input
+                                        type="text"
+                                        value={form.google_maps_place_id}
+                                        onChange={(e) => setForm(prev => ({ ...prev, google_maps_place_id: e.target.value }))}
+                                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                                        placeholder="مثال: ChIJXXXXXXX"
+                                        dir="ltr"
+                                    />
+                                </div>
+
+                                {/* Payment Methods */}
+                                <div className="md:col-span-2">
+                                    <label className="block text-sm font-medium text-gray-700 mb-3">
+                                        طرق الدفع المقبولة
+                                    </label>
+                                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                                        {PAYMENT_OPTIONS.map(option => (
+                                            <label
+                                                key={option.value}
+                                                className={`flex items-center gap-2 p-2.5 border rounded-xl cursor-pointer transition-colors text-sm ${
+                                                    form.payment_methods.includes(option.value)
+                                                        ? 'bg-emerald-50 border-emerald-300 text-emerald-700'
+                                                        : 'bg-white border-gray-200 text-gray-600 hover:bg-gray-50'
+                                                }`}
+                                            >
+                                                <input
+                                                    type="checkbox"
+                                                    checked={form.payment_methods.includes(option.value)}
+                                                    onChange={() => {
+                                                        setForm(prev => ({
+                                                            ...prev,
+                                                            payment_methods: prev.payment_methods.includes(option.value)
+                                                                ? prev.payment_methods.filter(m => m !== option.value)
+                                                                : [...prev.payment_methods, option.value]
+                                                        }));
+                                                    }}
+                                                    className="w-4 h-4 text-emerald-600 rounded"
+                                                />
+                                                {option.label}
+                                            </label>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                {/* Verified Employees */}
+                                <div className="md:col-span-2">
+                                    <label className="flex items-center gap-3 p-4 border border-gray-200 rounded-xl cursor-pointer hover:bg-gray-50 transition-colors">
+                                        <input
+                                            type="checkbox"
+                                            checked={form.has_verified_employees}
+                                            onChange={(e) => setForm(prev => ({ ...prev, has_verified_employees: e.target.checked }))}
+                                            className="w-5 h-5 text-emerald-600 rounded"
+                                        />
+                                        <div>
+                                            <span className="font-medium text-gray-900">فريق عمل معتمد بتحقق أمني (نفاذ)</span>
+                                            <p className="text-xs text-gray-500 mt-0.5">
+                                                الموظفون تم التحقق منهم عبر منصة نفاذ بسجل جنائي نظيف
+                                            </p>
+                                        </div>
+                                    </label>
                                 </div>
                             </div>
                         </div>

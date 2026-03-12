@@ -21,3 +21,7 @@ export { WebsiteJsonLd } from './schema/WebsiteJsonLd';
 export { ProkrOrganizationJsonLd } from './schema/ProkrOrganizationJsonLd';
 export { ImageObjectJsonLd } from './schema/ImageObjectJsonLd';
 export { AggregateRatingJsonLd } from './schema/AggregateRatingJsonLd';
+export { FaqJsonLd } from './schema/FaqJsonLd';
+export { ServiceOfferJsonLd } from './schema/ServiceOfferJsonLd';
+export { DatasetJsonLd } from './schema/DatasetJsonLd';
+

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لا يوجد اتصال بالإنترنت | بروكر</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" href="/favicon.ico">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'IBM Plex Sans Arabic', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+        }
+
+        .container {
+            max-width: 480px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Animated wifi-off icon */
+        .icon-wrapper {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #059669, #047857);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(5, 150, 105, 0.3); }
+            50% { transform: scale(1.05); box-shadow: 0 0 0 20px rgba(5, 150, 105, 0); }
+        }
+
+        .icon-wrapper svg {
+            width: 56px;
+            height: 56px;
+            fill: none;
+            stroke: white;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        h1 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            color: #0f172a;
+        }
+
+        .subtitle {
+            font-size: 1.05rem;
+            color: #64748b;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        /* Retry button */
+        .retry-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.875rem 2rem;
+            background: linear-gradient(135deg, #059669, #047857);
+            color: white;
+            font-weight: 600;
+            font-size: 1rem;
+            border: none;
+            border-radius: 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            margin-bottom: 2.5rem;
+            font-family: inherit;
+        }
+
+        .retry-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 16px rgba(5, 150, 105, 0.35);
+        }
+
+        .retry-btn:active { transform: translateY(0); }
+
+        .retry-btn.loading {
+            opacity: 0.7;
+            pointer-events: none;
+        }
+
+        .retry-btn svg {
+            width: 20px;
+            height: 20px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .retry-btn.loading svg {
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* Cached cities */
+        .cached-section {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            text-align: right;
+        }
+
+        .cached-title {
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: #334155;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .cached-title svg {
+            width: 18px;
+            height: 18px;
+            fill: none;
+            stroke: #059669;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .cities-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.5rem;
+        }
+
+        .city-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.625rem 0.875rem;
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-radius: 0.5rem;
+            color: #047857;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.15s;
+        }
+
+        .city-link:hover {
+            background: #dcfce7;
+            border-color: #86efac;
+        }
+
+        .city-link svg {
+            width: 14px;
+            height: 14px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            flex-shrink: 0;
+        }
+
+        /* Online banner */
+        .online-banner {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, #059669, #047857);
+            color: white;
+            text-align: center;
+            padding: 0.75rem;
+            font-weight: 600;
+            font-size: 0.95rem;
+            z-index: 1000;
+            animation: slideDown 0.3s ease;
+        }
+
+        .online-banner.show { display: block; }
+
+        @keyframes slideDown {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 2.5rem;
+            font-size: 0.85rem;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+<body>
+    <div class="online-banner" id="onlineBanner">
+        ✅ عاد الاتصال! جاري إعادة التحميل...
+    </div>
+
+    <div class="container">
+        <!-- Wifi Off Icon -->
+        <div class="icon-wrapper">
+            <svg viewBox="0 0 24 24">
+                <line x1="2" y1="2" x2="22" y2="22"></line>
+                <path d="M8.5 16.5a5 5 0 0 1 7 0"></path>
+                <path d="M2 8.82a15 15 0 0 1 4.17-2.65"></path>
+                <path d="M10.66 5c4.01-.36 8.14.9 11.34 3.76"></path>
+                <path d="M16.85 11.25a10 10 0 0 1 2.22 1.68"></path>
+                <path d="M5 13a10 10 0 0 1 5.24-2.76"></path>
+                <line x1="12" y1="20" x2="12.01" y2="20"></line>
+            </svg>
+        </div>
+
+        <h1>لا يوجد اتصال بالإنترنت</h1>
+        <p class="subtitle">
+            يبدو أن الاتصال بالإنترنت غير متوفر حالياً.
+            <br>تحقق من اتصالك بالشبكة وحاول مرة أخرى.
+        </p>
+
+        <button class="retry-btn" id="retryBtn" onclick="retryConnection()">
+            <svg viewBox="0 0 24 24">
+                <polyline points="23 4 23 10 17 10"></polyline>
+                <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+            </svg>
+            أعد المحاولة
+        </button>
+
+        <!-- Cached city pages -->
+        <div class="cached-section">
+            <div class="cached-title">
+                <svg viewBox="0 0 24 24">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                هذه الصفحات متاحة بدون إنترنت:
+            </div>
+            <div class="cities-grid">
+                <a href="/riyadh" class="city-link">
+                    <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    الرياض
+                </a>
+                <a href="/jeddah" class="city-link">
+                    <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    جدة
+                </a>
+                <a href="/dammam" class="city-link">
+                    <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    الدمام
+                </a>
+                <a href="/makkah" class="city-link">
+                    <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    مكة المكرمة
+                </a>
+                <a href="/madinah" class="city-link">
+                    <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    المدينة المنورة
+                </a>
+                <a href="/al-khobar" class="city-link">
+                    <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    الخبر
+                </a>
+                <a href="/tabuk" class="city-link">
+                    <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    تبوك
+                </a>
+                <a href="/abha" class="city-link">
+                    <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    أبها
+                </a>
+            </div>
+        </div>
+
+        <p class="footer">بروكر — دليل الخدمات السعودي الشامل ⚡</p>
+    </div>
+
+    <script>
+        // Auto-retry when connection is restored
+        window.addEventListener('online', () => {
+            document.getElementById('onlineBanner').classList.add('show');
+            setTimeout(() => window.location.reload(), 1500);
+        });
+
+        function retryConnection() {
+            const btn = document.getElementById('retryBtn');
+            btn.classList.add('loading');
+            btn.querySelector('svg').style.animation = 'spin 1s linear infinite';
+
+            // Attempt to fetch the homepage
+            fetch('/', { cache: 'no-store' })
+                .then(response => {
+                    if (response.ok) {
+                        window.location.reload();
+                    } else {
+                        resetBtn(btn);
+                    }
+                })
+                .catch(() => {
+                    resetBtn(btn);
+                });
+        }
+
+        function resetBtn(btn) {
+            setTimeout(() => {
+                btn.classList.remove('loading');
+                btn.querySelector('svg').style.animation = '';
+            }, 1000);
+        }
+    </script>
+</body>
+</html>

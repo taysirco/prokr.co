@@ -45,6 +45,15 @@ export interface Advertiser {
   is_active: boolean; // Whether the advertiser is visible
   created_at: Date;
   updated_at: Date;
+  // Enhanced LocalBusiness Schema fields
+  crn?: string;                    // رقم السجل التجاري السعودي (Commercial Registration Number)
+  sbc_number?: string;             // رقم شهادة المركز السعودي للأعمال (SBC)
+  street_address?: string;         // العنوان الوطني (National Address / Street)
+  postal_code?: string;            // الرمز البريدي
+  google_maps_url?: string;        // رابط الشركة على خرائط جوجل
+  google_maps_place_id?: string;   // Google Maps Place ID
+  payment_methods?: string[];      // طرق الدفع المقبولة
+  has_verified_employees?: boolean; // فريق معتمد بتحقق أمني (نفاذ)
 }
 
 // Form data for creating/editing advertisers
@@ -60,6 +69,15 @@ export interface AdvertiserFormData {
   targeted_services: string[];
   description: string;
   gallery?: string[];
+  // Enhanced LocalBusiness Schema fields
+  crn?: string;
+  sbc_number?: string;
+  street_address?: string;
+  postal_code?: string;
+  google_maps_url?: string;
+  google_maps_place_id?: string;
+  payment_methods?: string[];
+  has_verified_employees?: boolean;
 }
 
 // Silo page params
@@ -104,7 +122,22 @@ export interface LocalBusinessSchema {
     addressCountry: 'SA';
     addressRegion: string;
     addressLocality?: string;
+    streetAddress?: string;
+    postalCode?: string;
   };
+  identifier?: {
+    '@type': 'PropertyValue';
+    propertyID: string;
+    value: string;
+    url?: string;
+  }[];
+  location?: {
+    '@type': 'Place';
+    sameAs?: string;
+    hasMap?: string;
+  };
+  paymentAccepted?: string[];
+  employee?: Record<string, unknown>;
   aggregateRating?: {
     '@type': 'AggregateRating';
     ratingValue: number;
@@ -170,8 +203,22 @@ export interface ItemListSchema {
   itemListElement: {
     '@type': 'ListItem';
     position: number;
-    name: string;
-    url: string;
+    name?: string;
+    url?: string;
+    item?: {
+      '@type': 'LocalBusiness';
+      name: string;
+      url: string;
+      telephone?: string;
+      image?: string;
+      aggregateRating?: {
+        '@type': 'AggregateRating';
+        ratingValue: number;
+        reviewCount: number;
+        bestRating: number;
+        worstRating: number;
+      };
+    };
   }[];
 }
 

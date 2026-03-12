@@ -44,6 +44,7 @@ export default async function sitemap({ id }: { id: number }): Promise<MetadataR
             { url: `${BASE_URL}/advertise`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
             { url: `${BASE_URL}/privacy-policy`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
             { url: `${BASE_URL}/terms-of-service`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
+            { url: `${BASE_URL}/research/pricing-index`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
         ];
 
         const cityPages: MetadataRoute.Sitemap = CITIES.map(city => ({

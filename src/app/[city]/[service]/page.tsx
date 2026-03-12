@@ -141,12 +141,11 @@ export default async function SiloPage({ params }: SiloPageProps) {
             <BreadcrumbJsonLd items={breadcrumbs} />
             <ItemListJsonLd
                 type="companies"
-                listName={`شركات ${service.name_ar} ${cityKw}`}
+                advertisers={allAdvertisers}
+                cityNameAr={cityKw}
+                serviceNameAr={service.name_ar}
+                listName={`أفضل شركات ${service.name_ar} ${cityKw}`}
                 description={`قائمة أفضل شركات ${service.name_ar} المعتمدة ${cityKw}`}
-                items={allAdvertisers.map(ad => ({
-                    name: ad.business_name,
-                    url: `https://prokr.co/company/${ad.short_code}`
-                }))}
             />
             <FaqJsonLd city={city} service={service} />
             <ServiceOfferJsonLd city={city} service={service} />

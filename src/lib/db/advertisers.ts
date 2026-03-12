@@ -139,6 +139,15 @@ export async function createAdvertiser(data: AdvertiserFormData): Promise<Advert
         is_active: true,
         created_at: now,
         updated_at: now,
+        // Enhanced LocalBusiness Schema fields
+        ...(data.crn && { crn: data.crn }),
+        ...(data.sbc_number && { sbc_number: data.sbc_number }),
+        ...(data.street_address && { street_address: data.street_address }),
+        ...(data.postal_code && { postal_code: data.postal_code }),
+        ...(data.google_maps_url && { google_maps_url: data.google_maps_url }),
+        ...(data.google_maps_place_id && { google_maps_place_id: data.google_maps_place_id }),
+        ...(data.payment_methods && data.payment_methods.length > 0 && { payment_methods: data.payment_methods }),
+        ...(data.has_verified_employees !== undefined && { has_verified_employees: data.has_verified_employees }),
     };
 
     const docRef = doc(collection(db, ADVERTISERS_COLLECTION));

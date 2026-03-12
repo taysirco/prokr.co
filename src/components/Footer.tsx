@@ -122,6 +122,11 @@ export default function Footer({ currentCity, currentService }: FooterProps) {
                                     المدونة
                                 </Link>
                             </li>
+                            <li>
+                                <Link href="/research/pricing-index" className="hover:text-emerald-400 transition-colors text-sm">
+                                    📊 مؤشر الأسعار
+                                </Link>
+                            </li>
                         </ul>
                     </div>
 

@@ -5,6 +5,7 @@ import { Suspense } from "react";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Analytics from "@/components/Analytics";
+import ServiceWorkerRegistrar from "@/components/ServiceWorkerRegistrar";
 
 const ibmPlexArabic = IBM_Plex_Sans_Arabic({
   variable: "--font-ibm-plex-arabic",
@@ -226,6 +227,7 @@ export default function RootLayout({
         {children}
         <Suspense fallback={null}>
           <Analytics />
+          <ServiceWorkerRegistrar />
         </Suspense>
       </body>
       <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || 'G-H1W3HDFHS0'} />

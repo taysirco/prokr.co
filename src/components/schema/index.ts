@@ -15,3 +15,4 @@ export { ImageObjectJsonLd } from './ImageObjectJsonLd';
 export { AggregateRatingJsonLd } from './AggregateRatingJsonLd';
 export { FaqJsonLd } from './FaqJsonLd';
 export { ServiceOfferJsonLd } from './ServiceOfferJsonLd';
+export { DatasetJsonLd } from './DatasetJsonLd';
