@@ -1,15 +1,8 @@
 import type {
     Advertiser,
     City,
-    Service,
     LocalBusinessSchema,
-    ServiceSchema,
-    OrganizationSchema,
-    ItemListSchema,
-    WebPageSchema,
-    ServiceCatalogSchema
 } from '@/types';
-import { getServiceKeywordProfile, getCityKeyword } from '@/lib/keyword-strategy';
 
 // ============================================
 // ENHANCED LOCAL BUSINESS SCHEMA
@@ -26,7 +19,7 @@ export function LocalBusinessJsonLd({ advertiser, city }: LocalBusinessJsonLdPro
         ? reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.length
         : undefined;
 
-    // Build identifier array (CRN + SBC)
+    // Build identifier array (CRN + SBC) — kept for PropertyValue compatibility
     const identifiers: { '@type': 'PropertyValue'; propertyID: string; value: string; url?: string }[] = [];
     if (advertiser.crn) {
         identifiers.push({
@@ -44,9 +37,85 @@ export function LocalBusinessJsonLd({ advertiser, city }: LocalBusinessJsonLdPro
         });
     }
 
+    // 🚨 السجل السيادي الموحد (Unified Sovereign Credential Ledger) 🚨
+    // جميع الاعتمادات الحكومية في مصفوفة واحدة — بدون تعارضات spread
+    const sovereignCredentials: Record<string, unknown>[] = [];
+
+    // 1. السجل التجاري — وزارة التجارة
+    if (advertiser.crn) {
+        sovereignCredentials.push({
+            '@type': 'EducationalOccupationalCredential',
+            credentialCategory: 'Commercial Registration (CRN)',
+            name: `سجل تجاري رقم ${advertiser.crn}`,
+            recognizedBy: {
+                '@type': 'GovernmentOrganization',
+                name: 'وزارة التجارة — المملكة العربية السعودية',
+                url: 'https://mc.gov.sa',
+            },
+        });
+    }
+
+    // 2. المركز السعودي للأعمال (SBC)
+    if (advertiser.sbc_number) {
+        sovereignCredentials.push({
+            '@type': 'EducationalOccupationalCredential',
+            credentialCategory: 'Saudi Business Center Certificate',
+            name: `شهادة SBC رقم ${advertiser.sbc_number}`,
+            recognizedBy: {
+                '@type': 'GovernmentOrganization',
+                name: 'المركز السعودي للأعمال (SBC)',
+                url: 'https://business.sa',
+            },
+        });
+    }
+
+    // 3. الفوترة الإلكترونية — ZATCA المرحلة الثانية
+    if (advertiser.zatca_registered) {
+        sovereignCredentials.push({
+            '@type': 'EducationalOccupationalCredential',
+            credentialCategory: 'Tax Compliance — ZATCA Phase 2',
+            name: 'الفوترة الإلكترونية — المرحلة الثانية (الربط والتكامل)',
+            recognizedBy: {
+                '@type': 'GovernmentOrganization',
+                name: 'هيئة الزكاة والضريبة والجمارك (ZATCA)',
+                url: 'https://zatca.gov.sa',
+            },
+        });
+    }
+
+    // 4. فريق بتحقق أمني — نفاذ (Nafath)
+    if (advertiser.has_verified_employees) {
+        sovereignCredentials.push({
+            '@type': 'EducationalOccupationalCredential',
+            credentialCategory: 'Security Clearance — National Information Center',
+            name: 'تحقق أمني وسجل جنائي نظيف',
+            recognizedBy: {
+                '@type': 'GovernmentOrganization',
+                name: 'مركز المعلومات الوطني — منصة نفاذ (Nafath)',
+                url: 'https://www.iam.gov.sa/',
+            },
+        });
+    }
+
+    // 5. تصنيف نطاقات — وزارة الموارد البشرية
+    if (advertiser.nitaqat_band) {
+        const bandLabel = advertiser.nitaqat_band === 'platinum' ? 'بلاتيني' :
+                          advertiser.nitaqat_band === 'green' ? 'أخضر' : 'أخضر منخفض';
+        sovereignCredentials.push({
+            '@type': 'EducationalOccupationalCredential',
+            credentialCategory: `Saudization Tier: ${advertiser.nitaqat_band}`,
+            name: `تصنيف نطاقات: ${bandLabel}`,
+            recognizedBy: {
+                '@type': 'GovernmentOrganization',
+                name: 'وزارة الموارد البشرية والتنمية الاجتماعية (HRSD)',
+                url: 'https://hrsd.gov.sa',
+            },
+        });
+    }
+
     const schema: LocalBusinessSchema & Record<string, unknown> = {
         '@context': 'https://schema.org',
-        '@type': 'LocalBusiness',
+        '@type': 'HomeAndConstructionBusiness',
         '@id': `https://prokr.co/company/${advertiser.short_code}#business`,
         name: advertiser.business_name,
         telephone: advertiser.phone_number,
@@ -78,46 +147,10 @@ export function LocalBusinessJsonLd({ advertiser, city }: LocalBusinessJsonLdPro
         ...(advertiser.payment_methods && advertiser.payment_methods.length > 0 && {
             paymentAccepted: advertiser.payment_methods,
         }),
-        // Verified employees (Nafath)
-        ...(advertiser.has_verified_employees && {
-            employee: {
-                '@type': 'Person',
-                name: 'فريق العمل المعتمد',
-                hasCredential: {
-                    '@type': 'EducationalOccupationalCredential',
-                    credentialCategory: 'تحقق أمني وسجل جنائي نظيف',
-                    recognizedBy: {
-                        '@type': 'GovernmentOrganization',
-                        name: 'مركز المعلومات الوطني - منصة نفاذ (Nafath)',
-                        url: 'https://www.iam.gov.sa/',
-                    },
-                },
-            },
-        }),
-        // ZATCA e-invoicing compliance
-        ...(advertiser.zatca_registered && {
-            hasCredential: [
-                ...(advertiser.has_verified_employees ? [{
-                    '@type': 'EducationalOccupationalCredential',
-                    credentialCategory: 'تحقق أمني وسجل جنائي نظيف',
-                    recognizedBy: {
-                        '@type': 'GovernmentOrganization',
-                        name: 'مركز المعلومات الوطني - منصة نفاذ (Nafath)',
-                        url: 'https://www.iam.gov.sa/',
-                    },
-                }] : []),
-                {
-                    '@type': 'EducationalOccupationalCredential',
-                    credentialCategory: 'الفوترة الإلكترونية — المرحلة الثانية (الربط والتكامل)',
-                    recognizedBy: {
-                        '@type': 'GovernmentOrganization',
-                        name: 'هيئة الزكاة والضريبة والجمارك (ZATCA)',
-                        url: 'https://zatca.gov.sa',
-                    },
-                },
-            ],
-        }),
-        // Qiwa workforce compliance
+        // 🚨 السجل السيادي الموحد — Unified Sovereign Credential Ledger 🚨
+        // جميع الاعتمادات الحكومية في مصفوفة واحدة بدون تعارضات
+        ...(sovereignCredentials.length > 0 && { hasCredential: sovereignCredentials }),
+        // Qiwa workforce compliance (ProgramMembership — separate from credentials)
         ...(advertiser.qiwa_registered && {
             memberOf: {
                 '@type': 'ProgramMembership',
@@ -127,16 +160,6 @@ export function LocalBusinessJsonLd({ advertiser, city }: LocalBusinessJsonLdPro
                     name: 'وزارة الموارد البشرية والتنمية الاجتماعية',
                     url: 'https://qiwa.sa',
                 },
-            },
-        }),
-        // Nitaqat classification band
-        ...(advertiser.nitaqat_band && {
-            additionalProperty: {
-                '@type': 'PropertyValue',
-                propertyID: 'تصنيف نطاقات — وزارة الموارد البشرية',
-                value: advertiser.nitaqat_band === 'platinum' ? 'بلاتيني' :
-                       advertiser.nitaqat_band === 'green' ? 'أخضر' : 'أخضر منخفض',
-                url: 'https://hrsd.gov.sa',
             },
         }),
         openingHoursSpecification: {

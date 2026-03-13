@@ -115,7 +115,7 @@ export interface SeoContent {
 // JSON-LD Schema types
 export interface LocalBusinessSchema {
   '@context': 'https://schema.org';
-  '@type': 'LocalBusiness';
+  '@type': 'LocalBusiness' | 'HomeAndConstructionBusiness';
   '@id'?: string;
   name: string;
   telephone: string;
