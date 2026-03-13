@@ -94,6 +94,51 @@ export function LocalBusinessJsonLd({ advertiser, city }: LocalBusinessJsonLdPro
                 },
             },
         }),
+        // ZATCA e-invoicing compliance
+        ...(advertiser.zatca_registered && {
+            hasCredential: [
+                ...(advertiser.has_verified_employees ? [{
+                    '@type': 'EducationalOccupationalCredential',
+                    credentialCategory: 'تحقق أمني وسجل جنائي نظيف',
+                    recognizedBy: {
+                        '@type': 'GovernmentOrganization',
+                        name: 'مركز المعلومات الوطني - منصة نفاذ (Nafath)',
+                        url: 'https://www.iam.gov.sa/',
+                    },
+                }] : []),
+                {
+                    '@type': 'EducationalOccupationalCredential',
+                    credentialCategory: 'الفوترة الإلكترونية — المرحلة الثانية (الربط والتكامل)',
+                    recognizedBy: {
+                        '@type': 'GovernmentOrganization',
+                        name: 'هيئة الزكاة والضريبة والجمارك (ZATCA)',
+                        url: 'https://zatca.gov.sa',
+                    },
+                },
+            ],
+        }),
+        // Qiwa workforce compliance
+        ...(advertiser.qiwa_registered && {
+            memberOf: {
+                '@type': 'ProgramMembership',
+                programName: 'منصة قوى — عقود عمل موثقة ومنصة أجير للتأجير النظامي',
+                hostingOrganization: {
+                    '@type': 'GovernmentOrganization',
+                    name: 'وزارة الموارد البشرية والتنمية الاجتماعية',
+                    url: 'https://qiwa.sa',
+                },
+            },
+        }),
+        // Nitaqat classification band
+        ...(advertiser.nitaqat_band && {
+            additionalProperty: {
+                '@type': 'PropertyValue',
+                propertyID: 'تصنيف نطاقات — وزارة الموارد البشرية',
+                value: advertiser.nitaqat_band === 'platinum' ? 'بلاتيني' :
+                       advertiser.nitaqat_band === 'green' ? 'أخضر' : 'أخضر منخفض',
+                url: 'https://hrsd.gov.sa',
+            },
+        }),
         openingHoursSpecification: {
             '@type': 'OpeningHoursSpecification',
             dayOfWeek: ['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday'],

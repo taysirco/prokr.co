@@ -54,6 +54,9 @@ export interface Advertiser {
   google_maps_place_id?: string;   // Google Maps Place ID
   payment_methods?: string[];      // طرق الدفع المقبولة
   has_verified_employees?: boolean; // فريق معتمد بتحقق أمني (نفاذ)
+  zatca_registered?: boolean;        // ملتزمة بنظام الفوترة الإلكترونية (ZATCA)
+  qiwa_registered?: boolean;         // عقود موثقة في منصة قوى / أجير
+  nitaqat_band?: 'green' | 'platinum' | 'low-green'; // تصنيف نطاقات
 }
 
 // Form data for creating/editing advertisers
@@ -78,6 +81,9 @@ export interface AdvertiserFormData {
   google_maps_place_id?: string;
   payment_methods?: string[];
   has_verified_employees?: boolean;
+  zatca_registered?: boolean;
+  qiwa_registered?: boolean;
+  nitaqat_band?: 'green' | 'platinum' | 'low-green';
 }
 
 // Silo page params

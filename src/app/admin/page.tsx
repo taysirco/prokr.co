@@ -72,6 +72,9 @@ interface AdvertiserForm {
     google_maps_place_id: string;
     payment_methods: string[];
     has_verified_employees: boolean;
+    zatca_registered: boolean;
+    qiwa_registered: boolean;
+    nitaqat_band: string;
 }
 
 const PAYMENT_OPTIONS = [
@@ -102,6 +105,9 @@ const initialForm: AdvertiserForm = {
     google_maps_place_id: '',
     payment_methods: [],
     has_verified_employees: false,
+    zatca_registered: false,
+    qiwa_registered: false,
+    nitaqat_band: '',
 };
 
 
@@ -400,6 +406,9 @@ export default function AdminDashboard() {
                     google_maps_place_id: form.google_maps_place_id || undefined,
                     payment_methods: form.payment_methods.length > 0 ? form.payment_methods : undefined,
                     has_verified_employees: form.has_verified_employees,
+                    zatca_registered: form.zatca_registered,
+                    qiwa_registered: form.qiwa_registered,
+                    nitaqat_band: (form.nitaqat_band || undefined) as 'green' | 'platinum' | 'low-green' | undefined,
                 });
                 setSuccessMessage('تم تحديث المعلن بنجاح!');
                 setEditingId(null);
@@ -439,6 +448,9 @@ export default function AdminDashboard() {
                     google_maps_place_id: form.google_maps_place_id || undefined,
                     payment_methods: form.payment_methods.length > 0 ? form.payment_methods : undefined,
                     has_verified_employees: form.has_verified_employees,
+                    zatca_registered: form.zatca_registered,
+                    qiwa_registered: form.qiwa_registered,
+                    nitaqat_band: (form.nitaqat_band || undefined) as 'green' | 'platinum' | 'low-green' | undefined,
                 });
 
                 setSuccessMessage(`تم إضافة المعلن بنجاح! الكود: ${advertiser.short_code}`);
@@ -478,6 +490,9 @@ export default function AdminDashboard() {
             google_maps_place_id: advertiser.google_maps_place_id || '',
             payment_methods: advertiser.payment_methods || [],
             has_verified_employees: advertiser.has_verified_employees || false,
+            zatca_registered: advertiser.zatca_registered || false,
+            qiwa_registered: advertiser.qiwa_registered || false,
+            nitaqat_band: advertiser.nitaqat_band || '',
         });
         setActiveTab('add');
     };
@@ -1344,6 +1359,59 @@ export default function AdminDashboard() {
                                             </p>
                                         </div>
                                     </label>
+                                </div>
+
+                                {/* ZATCA E-Invoicing */}
+                                <div className="md:col-span-2">
+                                    <label className="flex items-center gap-3 p-4 border border-gray-200 rounded-xl cursor-pointer hover:bg-gray-50 transition-colors">
+                                        <input
+                                            type="checkbox"
+                                            checked={form.zatca_registered}
+                                            onChange={(e) => setForm(prev => ({ ...prev, zatca_registered: e.target.checked }))}
+                                            className="w-5 h-5 text-emerald-600 rounded"
+                                        />
+                                        <div>
+                                            <span className="font-medium text-gray-900">⚡ ملتزمة بالفوترة الإلكترونية (ZATCA)</span>
+                                            <p className="text-xs text-gray-500 mt-0.5">
+                                                الشركة تصدر فواتير إلكترونية متوافقة مع هيئة الزكاة والضريبة والجمارك
+                                            </p>
+                                        </div>
+                                    </label>
+                                </div>
+
+                                {/* Qiwa / Ajeer */}
+                                <div className="md:col-span-2">
+                                    <label className="flex items-center gap-3 p-4 border border-gray-200 rounded-xl cursor-pointer hover:bg-gray-50 transition-colors">
+                                        <input
+                                            type="checkbox"
+                                            checked={form.qiwa_registered}
+                                            onChange={(e) => setForm(prev => ({ ...prev, qiwa_registered: e.target.checked }))}
+                                            className="w-5 h-5 text-emerald-600 rounded"
+                                        />
+                                        <div>
+                                            <span className="font-medium text-gray-900">📋 عقود موثقة في منصة قوى / أجير</span>
+                                            <p className="text-xs text-gray-500 mt-0.5">
+                                                عمالة مسجلة بعقود موثقة عبر منصة قوى والتأجير النظامي عبر أجير
+                                            </p>
+                                        </div>
+                                    </label>
+                                </div>
+
+                                {/* Nitaqat Band */}
+                                <div className="md:col-span-2">
+                                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                                        🏅 تصنيف نطاقات — وزارة الموارد البشرية
+                                    </label>
+                                    <select
+                                        value={form.nitaqat_band}
+                                        onChange={(e) => setForm(prev => ({ ...prev, nitaqat_band: e.target.value }))}
+                                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                                    >
+                                        <option value="">لم يُحدد</option>
+                                        <option value="platinum">بلاتيني — نسبة توطين ممتازة</option>
+                                        <option value="green">أخضر — ملتزم بالتوطين</option>
+                                        <option value="low-green">أخضر منخفض</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>

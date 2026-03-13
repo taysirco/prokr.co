@@ -72,7 +72,27 @@ export function ServiceOfferJsonLd({ city, service }: ServiceOfferJsonLdProps) {
         "provider": {
             "@type": "Organization",
             "name": "بروكر",
-            "url": "https://prokr.co"
+            "url": "https://prokr.co",
+            "knowsAbout": [
+                {
+                    "@type": "GovernmentOrganization",
+                    "name": "هيئة الزكاة والضريبة والجمارك (ZATCA)",
+                    "url": "https://zatca.gov.sa",
+                    "description": "الفوترة الإلكترونية — جميع شركاتنا ملتزمة بنظام فاتورة"
+                },
+                {
+                    "@type": "GovernmentOrganization",
+                    "name": "منصة قوى — أجير (Qiwa)",
+                    "url": "https://qiwa.sa",
+                    "description": "عقود عمالة موثقة — التأجير النظامي عبر منصة أجير"
+                },
+                {
+                    "@type": "GovernmentOrganization",
+                    "name": "برنامج نطاقات — وزارة الموارد البشرية",
+                    "url": "https://hrsd.gov.sa",
+                    "description": "شركات مصنفة في النطاق الأخضر — نسبة توطين عالية"
+                }
+            ]
         },
         // ── AggregateOffer with WarrantyPromise (YMYL Shield) ──
         "offers": {

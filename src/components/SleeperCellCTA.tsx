@@ -299,6 +299,37 @@ export default function SleeperCellCTA({ cityName, serviceName, serviceSlug, cit
                     </div>
                 </div>
             </div>
+
+            {/* Sovereign Compliance Badges — ZATCA + قوى/أجير + نطاقات */}
+            <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="flex items-center gap-4 bg-gradient-to-br from-green-50 to-white rounded-2xl p-6 border border-green-200 shadow-sm">
+                    <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center text-lg font-bold text-green-700">
+                        ⚡
+                    </div>
+                    <div>
+                        <p className="font-bold text-gray-900">فوترة إلكترونية ZATCA</p>
+                        <p className="text-sm text-gray-500">شركات ملتزمة بنظام فاتورة — هيئة الزكاة والضريبة</p>
+                    </div>
+                </div>
+                <div className="flex items-center gap-4 bg-gradient-to-br from-purple-50 to-white rounded-2xl p-6 border border-purple-200 shadow-sm">
+                    <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center text-lg font-bold text-purple-700">
+                        📋
+                    </div>
+                    <div>
+                        <p className="font-bold text-gray-900">عقود موثقة — منصة قوى</p>
+                        <p className="text-sm text-gray-500">عمالة نظامية مسجلة عبر قوى وأجير</p>
+                    </div>
+                </div>
+                <div className="flex items-center gap-4 bg-gradient-to-br from-teal-50 to-white rounded-2xl p-6 border border-teal-200 shadow-sm">
+                    <div className="w-12 h-12 bg-teal-100 rounded-xl flex items-center justify-center text-lg font-bold text-teal-700">
+                        🏅
+                    </div>
+                    <div>
+                        <p className="font-bold text-gray-900">نطاق أخضر — نطاقات</p>
+                        <p className="text-sm text-gray-500">شركات ذات نسبة توطين عالية</p>
+                    </div>
+                </div>
+            </div>
         </section>
     );
 }

@@ -148,6 +148,9 @@ export async function createAdvertiser(data: AdvertiserFormData): Promise<Advert
         ...(data.google_maps_place_id && { google_maps_place_id: data.google_maps_place_id }),
         ...(data.payment_methods && data.payment_methods.length > 0 && { payment_methods: data.payment_methods }),
         ...(data.has_verified_employees !== undefined && { has_verified_employees: data.has_verified_employees }),
+        ...(data.zatca_registered !== undefined && { zatca_registered: data.zatca_registered }),
+        ...(data.qiwa_registered !== undefined && { qiwa_registered: data.qiwa_registered }),
+        ...(data.nitaqat_band && { nitaqat_band: data.nitaqat_band }),
     };
 
     const docRef = doc(collection(db, ADVERTISERS_COLLECTION));

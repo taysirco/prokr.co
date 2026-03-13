@@ -15,6 +15,9 @@ export const metadata: Metadata = {
         'مكافحة حشرات نصائح',
         'كشف تسربات المياه',
         'أسعار الخدمات المنزلية',
+        'حماية المستهلك',
+        'شركات وهمية',
+        'كشف احتيال خدمات',
         'بروكر مدونة',
     ],
     openGraph: {
@@ -43,6 +46,28 @@ export default function BlogPage() {
             articlesByCategory[article.category] = [];
         }
         articlesByCategory[article.category].push(article);
+    }
+
+    // Helper: category-specific colors (full strings for Tailwind JIT scanner)
+    function getCategoryAccent(slug: string) {
+        if (slug === 'consumer-protection') return 'bg-rose-500';
+        if (slug === 'pest-control') return 'bg-red-500';
+        if (slug === 'leak-detection') return 'bg-cyan-500';
+        if (slug === 'insulation') return 'bg-amber-500';
+        if (slug === 'sewage') return 'bg-purple-500';
+        if (slug === 'moving') return 'bg-blue-500';
+        if (slug === 'cleaning') return 'bg-emerald-500';
+        return 'bg-emerald-500';
+    }
+    function getCategoryBadge(slug: string) {
+        if (slug === 'consumer-protection') return 'bg-rose-50 text-rose-700';
+        if (slug === 'pest-control') return 'bg-red-50 text-red-700';
+        if (slug === 'leak-detection') return 'bg-cyan-50 text-cyan-700';
+        if (slug === 'insulation') return 'bg-amber-50 text-amber-700';
+        if (slug === 'sewage') return 'bg-purple-50 text-purple-700';
+        if (slug === 'moving') return 'bg-blue-50 text-blue-700';
+        if (slug === 'cleaning') return 'bg-emerald-50 text-emerald-700';
+        return 'bg-emerald-50 text-emerald-700';
     }
 
     return (
@@ -126,18 +151,20 @@ export default function BlogPage() {
                     {BLOG_CATEGORIES.filter(c => articlesByCategory[c.slug]).map(cat => (
                         <section key={cat.slug} id={`cat-${cat.slug}`} className="mb-12">
                             <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                                <span className="w-1.5 h-8 bg-emerald-500 rounded-full"></span>
+                                <span className={`w-1.5 h-8 ${getCategoryAccent(cat.slug)} rounded-full`}></span>
                                 مقالات {cat.label}
                             </h2>
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                {articlesByCategory[cat.slug].map(article => (
+                                {articlesByCategory[cat.slug].map(article => {
+                                    const badgeClass = getCategoryBadge(article.category);
+                                    return (
                                     <Link
                                         key={article.slug}
                                         href={`/blog/${article.slug}`}
                                         className="group bg-white rounded-2xl border border-gray-200 overflow-hidden hover:border-emerald-300 hover:shadow-xl transition-all"
                                     >
                                         <div className="p-6">
-                                            <span className="inline-block px-3 py-1 bg-emerald-50 text-emerald-700 rounded-full text-xs font-medium mb-3">
+                                            <span className={`inline-block px-3 py-1 ${badgeClass} rounded-full text-xs font-medium mb-3`}>
                                                 {article.categoryLabel}
                                             </span>
                                             <h3 className="font-bold text-gray-900 mb-2 group-hover:text-emerald-700 transition-colors line-clamp-2">
@@ -159,7 +186,8 @@ export default function BlogPage() {
                                             </span>
                                         </div>
                                     </Link>
-                                ))}
+                                    );
+                                })}
                             </div>
                         </section>
                     ))}

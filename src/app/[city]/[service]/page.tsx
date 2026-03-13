@@ -19,6 +19,8 @@ import Footer from '@/components/Footer';
 import SleeperCellCTA from '@/components/SleeperCellCTA';
 import { LiveAvailabilityBanner } from '@/components/LiveAvailabilityBanner';
 import GeoSignals from '@/components/GeoSignals';
+import FraudAlertBanner from '@/components/FraudAlertBanner';
+import GeoPricingTable from '@/components/GeoPricingTable';
 import type { Advertiser } from '@/types';
 
 // Disable static generation, use ISR instead
@@ -222,8 +224,10 @@ export default async function SiloPage({ params }: SiloPageProps) {
                                     {aiContent.h1}
                                 </h1>
                                 <p className="text-lg text-emerald-100 max-w-xl">
-                                    قارن بين أفضل شركات {service.name_ar} المعتمدة {cityKw}.
-                                    احصل على أسعار تنافسية وخدمة احترافية.
+                                    {aiContent.heroSubtitle
+                                        ? aiContent.heroSubtitle
+                                        : `${cityContext?.responseTime ? `استجابة ${cityContext.responseTime} — ` : ''}قارن بين أفضل شركات ${service.name_ar} المعتمدة ${cityKw}${cityContext?.neighborhoods?.[0] ? ` في ${cityContext.neighborhoods[0].name_ar} والأحياء المجاورة` : ''}. أسعار ${new Date().getFullYear()}.`
+                                    }
                                 </p>
 
                                 {/* Stats */}
@@ -342,6 +346,16 @@ export default async function SiloPage({ params }: SiloPageProps) {
                 <SeoContentSection city={city} service={service} />
                 <FaqJsonLd city={city} service={service} />
 
+                {/* 📊 Geo-Pricing Table — التسعير الجغرافي المتقاطع */}
+                <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                    <GeoPricingTable
+                        citySlug={resolvedParams.city}
+                        cityName={city.name_ar}
+                        serviceSlug={resolvedParams.service}
+                        serviceName={service.name_ar}
+                    />
+                </section>
+
                 {/* Fragment URL Architecture: Absorbed Service Sections */}
                 {isCanonicalSlug(service.slug) && (() => {
                     const group = getSuperPageGroup(service.slug);
@@ -354,6 +368,11 @@ export default async function SiloPage({ params }: SiloPageProps) {
                         />
                     ) : null;
                 })()}
+
+                {/* 🛡️ Anti-Scam YMYL Trap — Consumer Protection Banner */}
+                <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                    <FraudAlertBanner serviceName={service.name_ar} serviceSlug={service.slug} cityName={city.name_ar} />
+                </section>
 
                 {/* Phantom Geo-Hijacking — Unique Per City+Service Slug */}
                 <GeoSignals citySlug={resolvedParams.city} serviceSlug={resolvedParams.service} serviceName={service.name_ar} serviceCategory={service.category} />

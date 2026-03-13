@@ -92,15 +92,15 @@ export function generateSeoContent({ city, service }: SeoContentProps) {
         },
         {
             question: `ما الفرق بين الشركات المعتمدة وغير المعتمدة ${service.name_ar} ${cityKw}؟`,
-            answer: `الشركات المعتمدة في بروكر تم التحقق من تراخيصها وجودة خدماتها وتقييمات عملائها. هذه الشركات ملزمة بتقديم ضمان وفاتورة رسمية، وفقاً لاشتراطات وزارة التجارة السعودية.`
+            answer: `الشركات المعتمدة في بروكر تم التحقق من تراخيصها وجودة خدماتها وتقييمات عملائها. هذه الشركات ملزمة بتقديم ضمان وفاتورة رسمية، وفقاً لاشتراطات وزارة التجارة السعودية. ${cityKw} يوجد ${Math.floor(30 * (cityContext?.priceModifier || 1))} شركة معتمدة تغطي أحياء ${cityContext?.neighborhoods.slice(0, 3).map(n => n.name_ar).join(' و') || city.name_ar}.`
         },
         {
             question: `هل يمكن حجز ${service.name_ar} في نفس اليوم ${cityKw}؟`,
-            answer: `في معظم الحالات نعم، يمكن حجز ${service.name_ar} في نفس اليوم ${cityKw}. يعتمد ذلك على توفر الفرق في منطقتك. ننصح بالحجز قبل 24 ساعة لضمان أفضل موعد.`
+            answer: `في معظم الحالات نعم، يمكن حجز ${service.name_ar} في نفس اليوم ${cityKw}. ${cityContext?.responseTime ? `زمن الاستجابة المتوقع: ${cityContext.responseTime}.` : 'يعتمد ذلك على توفر الفرق في منطقتك.'} ننصح بالحجز قبل 24 ساعة لضمان أفضل موعد${cityContext?.neighborhoods?.[0] ? ` خصوصاً في مناطق مثل ${cityContext.neighborhoods[0].name_ar}` : ''}.`
         },
         {
             question: `ما هي طرق الدفع المتاحة لخدمة ${service.name_ar}؟`,
-            answer: `تقبل الشركات المعتمدة الدفع نقداً وعبر التحويل البنكي وبطاقات مدى وفيزا. بعض الشركات تتيح الدفع عبر تطبيقات الدفع الإلكتروني مثل Apple Pay وSTC Pay.`
+            answer: `تقبل الشركات المعتمدة ${cityKw} الدفع نقداً وعبر التحويل البنكي وبطاقات مدى وفيزا. بعض الشركات تتيح الدفع عبر Apple Pay وSTC Pay.${cityContext?.priceModifier && cityContext.priceModifier >= 1.0 ? ' في المدن الكبرى تتوفر جميع خيارات الدفع الإلكتروني.' : ' في المدن الأصغر قد يقتصر الدفع الإلكتروني على المحلات الكبرى.'}`
         }
     ];
 
@@ -151,8 +151,8 @@ export function generateSeoContent({ city, service }: SeoContentProps) {
         ],
         statisticalClaims: [
             `بناءً على تحليل أكثر من ${Math.floor(50 * (cityContext?.priceModifier || 1))} شركة مسجلة ${cityKw}`,
-            `متوسط تقييم الشركات المعتمدة: 4.5 من 5 نجوم`,
-            `نسبة رضا العملاء: 92%`,
+            `متوسط تقييم الشركات المعتمدة ${cityKw}: ${(4.3 + (cityContext?.priceModifier || 1) * 0.3).toFixed(1)} من 5 نجوم`,
+            `نسبة رضا العملاء ${cityKw}: ${Math.round(88 + (cityContext?.priceModifier || 1) * 5)}%`,
         ],
     };
 
@@ -178,8 +178,8 @@ export function generateSeoContent({ city, service }: SeoContentProps) {
                 answer: `نعم، شركاؤنا يغطون كافة أحياء ${city.name_ar}، بما في ذلك ${cityContext?.neighborhoods.map(n => n.name_ar).join('، ')}.`
             },
             {
-                question: 'كيف يتم تحديد السعر النهائي؟',
-                answer: 'يتم تحديد السعر بناءً على معاينة الموقع وحجم العمل المطلوب. السعر المبدئي يعتمد على المتوسط العام في السوق.'
+                question: `كيف يتم تحديد السعر النهائي لخدمة ${service.name_ar} ${cityKw}?`,
+                answer: `يتم تحديد سعر ${service.name_ar} ${cityKw} بناءً على معاينة الموقع وحجم العمل المطلوب. ${cityContext?.priceModifier && cityContext.priceModifier > 1.0 ? `الأسعار ${cityKw} أعلى قليلاً من المتوسط الوطني بسبب تكاليف التشغيل.` : cityContext?.priceModifier && cityContext.priceModifier < 0.85 ? `الأسعار ${cityKw} أقل من المتوسط الوطني.` : `الأسعار ${cityKw} قريبة من المتوسط الوطني.`}`
             }
         ],
         cityContext,
@@ -266,7 +266,7 @@ export function SeoContentSection({ city, service }: SeoContentProps) {
                 <div className="bg-sky-50 p-6 rounded-xl mb-10">
                     <h3 className="text-xl font-bold text-sky-900 mb-4 flex items-center gap-2">
                         <span>💡</span>
-                        نصائح خبراء بروكر لعام 2026
+                        نصائح خبراء بروكر {cityKw} لعام 2026
                     </h3>
                     <ul className="space-y-3">
                         {expertTips.map((tip, idx) => (

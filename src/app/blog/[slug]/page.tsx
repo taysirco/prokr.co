@@ -72,6 +72,8 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
         .filter(a => a.slug !== slug && a.category === article.category)
         .slice(0, 3);
 
+    const isProtection = article.category === 'consumer-protection';
+
     return (
         <>
             <BreadcrumbJsonLd items={breadcrumbs} />
@@ -139,9 +141,9 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
 
             <main className="min-h-screen bg-gray-50">
                 {/* Hero */}
-                <section className="bg-gradient-to-bl from-emerald-600 via-emerald-700 to-emerald-900 text-white">
+                <section className="text-white" style={{ background: isProtection ? 'linear-gradient(to bottom left, #e11d48, #be123c, #881337)' : 'linear-gradient(to bottom left, #059669, #047857, #064e3b)' }}>
                     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-                        <nav className="flex items-center gap-2 text-emerald-100 text-sm mb-6">
+                        <nav className="flex items-center gap-2 text-sm mb-6" style={{ color: isProtection ? '#ffe4e6' : '#d1fae5' }}>
                             <Link href="/" className="hover:text-white transition-colors flex items-center gap-1">
                                 <Home className="w-4 h-4" />
                                 الرئيسية
@@ -160,7 +162,7 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
                             {article.title}
                         </h1>
 
-                        <div className="flex flex-wrap items-center gap-4 text-emerald-100 text-sm">
+                        <div className="flex flex-wrap items-center gap-4 text-sm" style={{ color: isProtection ? '#ffe4e6' : '#d1fae5' }}>
                             <span className="flex items-center gap-1.5">
                                 <User className="w-4 h-4" />
                                 {article.author}
@@ -180,7 +182,7 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
                 {/* Article Body */}
                 <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                     {/* Intro */}
-                    <div className="bg-emerald-50 border-r-4 border-emerald-500 rounded-xl p-6 mb-10">
+                    <div className="border-r-4 rounded-xl p-6 mb-10" style={{ backgroundColor: isProtection ? '#fff1f2' : '#ecfdf5', borderColor: isProtection ? '#f43f5e' : '#10b981' }}>
                         <p className="text-gray-700 text-lg leading-relaxed">{article.excerpt}</p>
                     </div>
 

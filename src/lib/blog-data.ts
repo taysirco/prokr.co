@@ -4,7 +4,7 @@ export interface BlogArticle {
     metaTitle: string;
     metaDescription: string;
     excerpt: string;
-    category: 'moving' | 'cleaning' | 'pest-control' | 'leak-detection' | 'insulation' | 'sewage' | 'general';
+    category: 'moving' | 'cleaning' | 'pest-control' | 'leak-detection' | 'insulation' | 'sewage' | 'general' | 'consumer-protection';
     categoryLabel: string;
     publishDate: string;
     updateDate: string;
@@ -33,6 +33,7 @@ export const BLOG_CATEGORIES = [
     { slug: 'insulation', label: 'عزل', color: 'amber' },
     { slug: 'sewage', label: 'صرف صحي', color: 'purple' },
     { slug: 'general', label: 'عام', color: 'gray' },
+    { slug: 'consumer-protection', label: 'حماية المستهلك', color: 'rose' },
 ];
 
 // Per-category article imports
@@ -43,6 +44,7 @@ import { BLOG_ARTICLES_LEAK_DETECTION } from './blog/leak-detection';
 import { BLOG_ARTICLES_INSULATION } from './blog/insulation';
 import { BLOG_ARTICLES_SEWAGE } from './blog/sewage';
 import { BLOG_ARTICLES_GENERAL } from './blog/general';
+import { BLOG_ARTICLES_CONSUMER_PROTECTION } from './blog/consumer-protection';
 
 // Aggregated blog articles
 export const BLOG_ARTICLES: BlogArticle[] = [
@@ -53,4 +55,5 @@ export const BLOG_ARTICLES: BlogArticle[] = [
     ...BLOG_ARTICLES_INSULATION,
     ...BLOG_ARTICLES_SEWAGE,
     ...BLOG_ARTICLES_GENERAL,
+    ...BLOG_ARTICLES_CONSUMER_PROTECTION,
 ];
