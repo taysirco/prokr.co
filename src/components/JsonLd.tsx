@@ -26,4 +26,5 @@ export { ServiceOfferJsonLd } from './schema/ServiceOfferJsonLd';
 export { DatasetJsonLd } from './schema/DatasetJsonLd';
 export { LiveBlogPostingJsonLd } from './schema/LiveBlogPostingJsonLd';
 export { AiVoiceJsonLd } from './schema/AiVoiceJsonLd';
+export { UnifiedGraphCompiler } from './schema/UnifiedGraphCompiler';
 

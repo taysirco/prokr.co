@@ -5,10 +5,10 @@ import Image from 'next/image';
 import { Home, ChevronLeft, Star, Phone, MessageCircle, BadgeCheck, MapPin, Shield } from 'lucide-react';
 import { getCityBySlug, getServiceBySlug, getUniquePageImages } from '@/lib/seed';
 import { getAdvertisersBySilo } from '@/lib/db-actions';
-import { ServiceJsonLd, BreadcrumbJsonLd, ItemListJsonLd, ServiceAreaJsonLd, HowToJsonLd, SpeakableWebPageJsonLd, AggregateRatingJsonLd, ImageObjectJsonLd, AiVoiceJsonLd } from '@/components/JsonLd';
+import { UnifiedGraphCompiler, AiVoiceJsonLd } from '@/components/JsonLd';
 import { DirectAnswer } from '@/components/seo/DirectAnswer';
 import { SeoContentSection } from '@/lib/seo-content';
-import { FaqJsonLd, ServiceOfferJsonLd, LiveBlogPostingJsonLd } from '@/components/schema';
+import { LiveBlogPostingJsonLd } from '@/components/schema';
 import { pricingData } from '@/lib/pricing-data';
 import { getCityContext } from '@/lib/city-context';
 import { getServiceKeywordProfile, getCityKeyword } from '@/lib/keyword-strategy';
@@ -146,49 +146,17 @@ export default async function SiloPage({ params }: SiloPageProps) {
 
     return (
         <>
-            {/* JSON-LD Schemas - Companies Links Only (full data on company page) */}
-            <ServiceJsonLd service={service} city={city} advertisers={allAdvertisers} />
-            <BreadcrumbJsonLd items={breadcrumbs} />
-            <ItemListJsonLd
-                type="companies"
+            {/* 🚨 @graph Singularity — كل الـ JSON-LD في سكريبت واحد مترابط بـ @id */}
+            <UnifiedGraphCompiler
+                city={city}
+                service={service}
                 advertisers={allAdvertisers}
-                cityNameAr={cityKw}
-                serviceNameAr={service.name_ar}
-                listName={`أفضل شركات ${service.name_ar} ${cityKw}`}
-                description={`قائمة أفضل شركات ${service.name_ar} المعتمدة ${cityKw}`}
+                aiContent={aiContent}
+                breadcrumbs={breadcrumbs}
+                heroImageUrl={heroImageUrl}
+                canonicalPageUrl={canonicalPageUrl}
+                cityContext={cityContext}
             />
-            <FaqJsonLd city={city} service={service} />
-            <ServiceOfferJsonLd city={city} service={service} />
-            {/* Local SEO: ServiceArea with GeoCoordinates */}
-            {cityContext?.coordinates && (
-                <ServiceAreaJsonLd
-                    service={service}
-                    city={city}
-                    coordinates={cityContext.coordinates}
-                    neighborhoods={cityContext.neighborhoods.map(n => n.name_ar)}
-                />
-            )}
-            {/* HowTo Schema for rich snippets */}
-            <HowToJsonLd service={service} city={city} />
-            {/* Speakable + Entity Markup for AEO/GEO */}
-            {/* ⚡ Atomic SGE Sync: speakableText = same variable as DirectAnswer.answer */}
-            <SpeakableWebPageJsonLd
-                title={aiContent.metaTitle}
-                description={aiContent.shortAnswer}
-                url={canonicalPageUrl}
-                speakableSelectors={['.direct-answer', 'h1', '.seo-introduction']}
-                speakableText={aiContent.shortAnswer}
-                dateModified={new Date().toISOString()}
-                about={{ name: service.name_ar, type: 'Service' }}
-                mentions={[
-                    { name: city.name_ar, type: 'City' },
-                    { name: 'المملكة العربية السعودية', type: 'Country' },
-                ]}
-            />
-            {/* AggregateRating from all advertisers' reviews */}
-            <AggregateRatingJsonLd service={service} city={city} advertisers={allAdvertisers} />
-            {/* ImageObject Schema for hero image */}
-            <ImageObjectJsonLd imageUrl={heroImageUrl} service={service} city={city} />
             {/* 🎙️🤖 AI Voice + RAG Dataset — Agentic Voice Search Hack */}
             <AiVoiceJsonLd
                 city={city}
@@ -365,7 +333,7 @@ export default async function SiloPage({ params }: SiloPageProps) {
 
                 {/* Enhanced SEO Content with Pricing Table, FAQ, etc. */}
                 <SeoContentSection city={city} service={service} />
-                <FaqJsonLd city={city} service={service} />
+                {/* FAQ schema now inside UnifiedGraphCompiler @graph */}
 
                 {/* 📊 Geo-Pricing Table — التسعير الجغرافي المتقاطع */}
                 <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">

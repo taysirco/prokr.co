@@ -40,10 +40,12 @@ export function AiVoiceJsonLd({ city, service, aiContent, entityContext, pricing
             {
                 // 🎙️ اختراق البحث الصوتي (Voice Search)
                 // نأمر Siri/Google بقراءة #ai-voice-payload فقط
+                // ⚠️ @id مختلف عن #webpage لتجنب التعارض مع UnifiedGraphCompiler
                 '@type': 'WebPage',
-                '@id': `${pageUrl}#webpage`,
+                '@id': `${pageUrl}#voice-agent`,
                 url: pageUrl,
                 name: `${service.name_ar} في ${city.name_ar}`,
+                isPartOf: { '@id': `${pageUrl}#webpage` },
                 speakable: {
                     '@type': 'SpeakableSpecification',
                     cssSelector: ['#ai-voice-payload'],
