@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { getSalaryCycleConfig, type SalaryCycleConfig } from '@/lib/salary-cycle';
 
 // ============================================
 // LIVE AVAILABILITY BANNER — QDF VISUAL SIGNAL
@@ -20,6 +21,7 @@ export function LiveAvailabilityBanner({
 }: LiveAvailabilityBannerProps) {
     const [currentTime, setCurrentTime] = useState('');
     const [dotVisible, setDotVisible] = useState(true);
+    const [cycleConfig, setCycleConfig] = useState<SalaryCycleConfig | null>(null);
 
     // Deterministic team count based on total companies and hour
     const availableTeams = Math.max(2, Math.min(totalCompanies, Math.ceil(totalCompanies * 0.7)));
@@ -47,6 +49,10 @@ export function LiveAvailabilityBanner({
             clearInterval(timer);
             clearInterval(pulse);
         };
+    }, []);
+
+    useEffect(() => {
+        setCycleConfig(getSalaryCycleConfig());
     }, []);
 
     return (
@@ -85,10 +91,28 @@ export function LiveAvailabilityBanner({
                     )}
                 </div>
 
-                {/* Right: Status */}
-                <div className="hidden sm:flex items-center gap-1.5 bg-green-600/30 border border-green-500/30 rounded-full px-3 py-1">
-                    <span className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse" />
-                    <span className="text-green-300 text-xs font-medium">يستقبل طلبات</span>
+                {/* Right: Status + Salary Cycle Signal */}
+                <div className="hidden sm:flex items-center gap-2">
+                    <div className="flex items-center gap-1.5 bg-green-600/30 border border-green-500/30 rounded-full px-3 py-1">
+                        <span className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse" />
+                        <span className="text-green-300 text-xs font-medium">يستقبل طلبات</span>
+                    </div>
+                    {cycleConfig && (
+                        <div className={`flex items-center gap-1.5 rounded-full px-3 py-1 border
+                            ${cycleConfig.phase === 'premium' ? 'bg-amber-500/20 border-amber-400/30' :
+                              cycleConfig.phase === 'urgency' ? 'bg-red-500/20 border-red-400/30' :
+                              'bg-emerald-500/20 border-emerald-400/30'}`}
+                        >
+                            <span className="text-xs">{cycleConfig.icon}</span>
+                            <span className={`text-xs font-medium
+                                ${cycleConfig.phase === 'premium' ? 'text-amber-300' :
+                                  cycleConfig.phase === 'urgency' ? 'text-red-300' :
+                                  'text-emerald-300'}`}
+                            >
+                                {cycleConfig.availabilityExtra}
+                            </span>
+                        </div>
+                    )}
                 </div>
             </div>
         </div>

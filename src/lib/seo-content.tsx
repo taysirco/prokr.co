@@ -7,6 +7,7 @@ import { generateContentLayers } from './ai-content-layers';
 import { getServiceKeywordProfile, getCityKeyword, resolveKeywordTemplate } from './keyword-strategy';
 import { BLOG_ARTICLES } from './blog-data';
 import { resolveSeoContent } from './overrides';
+import { SalaryCycleNote } from '@/components/SalaryCycleBadge';
 
 // ============================================
 // AI-Ready SEO Content Generator
@@ -338,9 +339,10 @@ export function SeoContentSection({ city, service }: SeoContentProps) {
                         </p>
                     </div>
                 </div>
-                <p className="text-sm text-gray-500 mb-8 italic">
+                <p className="text-sm text-gray-500 mb-2 italic">
                     * الأسعار تقريبية ومبنية على متوسط السوق {cityKw}. السعر النهائي يُحدد بعد المعاينة الميدانية. أسعار السوق العشوائية تعكس متوسط أسعار الشركات غير المعتمدة.
                 </p>
+                <SalaryCycleNote className="mb-8" />
 
                 {/* 5. SUCCESS STORIES */}
                 <div className="mb-10">

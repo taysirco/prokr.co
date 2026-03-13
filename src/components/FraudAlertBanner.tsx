@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { getSalaryCycleConfig } from '@/lib/salary-cycle';
 
 interface FraudAlertBannerProps {
     serviceName: string;
@@ -58,6 +59,7 @@ function getServiceCategory(slug: string): string {
 export default function FraudAlertBanner({ serviceName, serviceSlug, cityName }: FraudAlertBannerProps) {
     const category = getServiceCategory(serviceSlug);
     const warnings = SCAM_WARNINGS[category] || SCAM_WARNINGS.moving;
+    const cycleConfig = getSalaryCycleConfig();
 
     return (
         <section className="bg-gradient-to-br from-rose-50 via-white to-amber-50 border-2 border-rose-200 rounded-2xl p-6 sm:p-8 shadow-sm">
@@ -114,6 +116,16 @@ export default function FraudAlertBanner({ serviceName, serviceSlug, cityName }:
                     </p>
                 </div>
             </div>
+
+            {/* 💰 Salary Cycle Urgency Warning */}
+            {cycleConfig.fraudWarningExtra && (
+                <div className="bg-red-50 border border-red-200 rounded-xl p-4 mb-4 flex items-start gap-3">
+                    <span className="text-lg">🚨</span>
+                    <p className="text-red-800 text-sm font-bold leading-relaxed">
+                        {cycleConfig.fraudWarningExtra}
+                    </p>
+                </div>
+            )}
 
             <script
                 type="application/ld+json"

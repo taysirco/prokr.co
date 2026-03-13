@@ -14,12 +14,16 @@ import { hasPageOverride } from '@/lib/overrides/registry';
 import { isAbsorbedSlug } from '@/lib/services/super-page-groups';
 import Footer from '@/components/Footer';
 import GeoSignals from '@/components/GeoSignals';
+import { getSalaryCycleConfig } from '@/lib/salary-cycle';
 
 interface CityPageProps {
     params: Promise<{
         city: string;
     }>;
 }
+
+// Revalidate every hour — salary cycle and availability data change daily
+export const revalidate = 3600;
 
 // Generate static params for all cities
 export async function generateStaticParams() {
@@ -105,6 +109,7 @@ export default async function CityPage({ params }: CityPageProps) {
     const aiContent = generateCityMeta(city);
     const cityContext = getCityContext(city.slug);
     const cityKw = getCityKeyword(city.name_ar, 'ba');
+    const cycleConfig = getSalaryCycleConfig();
 
     // Breadcrumb items
     const breadcrumbs = [
@@ -170,6 +175,26 @@ export default async function CityPage({ params }: CityPageProps) {
                                 </h1>
                                 <p className="text-emerald-100 mt-1">{city.name_en}</p>
                             </div>
+                        </div>
+
+                        {/* 💰 Salary Cycle Badge (server-rendered) */}
+                        <div className="mt-3">
+                            <span
+                                style={{
+                                    display: 'inline-flex',
+                                    alignItems: 'center',
+                                    gap: '0.375rem',
+                                    padding: '0.375rem 0.75rem',
+                                    borderRadius: '9999px',
+                                    fontSize: '0.875rem',
+                                    fontWeight: 700,
+                                    backgroundColor: cycleConfig.phase === 'premium' ? '#fef3c7' : cycleConfig.phase === 'urgency' ? '#fee2e2' : '#d1fae5',
+                                    color: cycleConfig.phase === 'premium' ? '#92400e' : cycleConfig.phase === 'urgency' ? '#991b1b' : '#065f46',
+                                    border: `1px solid ${cycleConfig.phase === 'premium' ? '#fcd34d' : cycleConfig.phase === 'urgency' ? '#fca5a5' : '#6ee7b7'}`,
+                                }}
+                            >
+                                {cycleConfig.icon} {cycleConfig.badgeText}
+                            </span>
                         </div>
 
                         <p className="text-lg text-emerald-100 max-w-2xl mt-4">

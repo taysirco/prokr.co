@@ -1,6 +1,7 @@
 
 
 import { Rocket, ShieldCheck, Clock, Users, Phone, Building2, Star, TrendingUp, CheckCircle2, Thermometer, MapPin, AlertTriangle, Zap } from 'lucide-react';
+import { getSalaryCycleConfig } from '@/lib/salary-cycle';
 
 interface SleeperCellCTAProps {
     cityName: string;
@@ -142,6 +143,7 @@ export default function SleeperCellCTA({ cityName, serviceName, serviceSlug, cit
     const category = getCategory(serviceSlug);
     const criteria = SERVICE_CRITERIA[category] || SERVICE_CRITERIA['cleaning'];
     const scarcityText = SCARCITY_TEXTS[category] || SCARCITY_TEXTS['cleaning'];
+    const cycleConfig = getSalaryCycleConfig();
 
     // Derive unique content seed from city+service combination
     const seed = `${citySlug}-${serviceSlug}`;
@@ -207,6 +209,14 @@ export default function SleeperCellCTA({ cityName, serviceName, serviceSlug, cit
                         <span>{criteria.icon} الطلب على {serviceName} يفوق العرض في {cityName}</span>
                     </div>
 
+                    {/* 💰 Salary Cycle Banner */}
+                    <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold mb-6
+                        ${cycleConfig.colors.badgeBg} ${cycleConfig.colors.badgeText} border ${cycleConfig.colors.badgeBorder}`}
+                    >
+                        <span>{cycleConfig.icon}</span>
+                        <span>{cycleConfig.badgeText}</span>
+                    </div>
+
                     {/* Title — unique per city+service */}
                     <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-4 leading-tight">
                         <Rocket className="w-8 h-8 text-amber-500 inline-block ml-2" />
@@ -255,8 +265,14 @@ export default function SleeperCellCTA({ cityName, serviceName, serviceSlug, cit
                             className="group flex items-center justify-center gap-3 px-8 py-4 bg-gray-900 text-white rounded-2xl font-bold text-lg hover:bg-gray-800 transition-all hover:shadow-xl hover:shadow-gray-900/20 hover:-translate-y-0.5"
                         >
                             <Phone className="w-5 h-5 group-hover:animate-pulse" />
-                            <span>{customerCtas[idx]}</span>
+                            <span>{cycleConfig.ctaText}</span>
                         </a>
+
+                        {cycleConfig.showInstallment && (
+                            <div className="flex items-center gap-2 px-6 py-3 bg-red-50 border-2 border-red-200 text-red-800 rounded-2xl font-bold text-sm">
+                                💳 {cycleConfig.ctaSubtext}
+                            </div>
+                        )}
 
                         <a
                             href="/advertise"

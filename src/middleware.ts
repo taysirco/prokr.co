@@ -7,7 +7,41 @@ const citySlugs = new Set(CITIES.map(c => c.slug));
 const serviceSlugs = new Set(SERVICES.map(s => s.slug));
 
 export function middleware(request: NextRequest) {
-    const pathname = request.nextUrl.pathname;
+    const url = request.nextUrl.clone();
+    const pathname = url.pathname;
+    const hostname = request.headers.get('host') || '';
+
+    // ════════════════════════════════════════════════════════════════
+    // 🚨 بروتوكول غسيل الكيانات — Entity Laundering Shield 🚨
+    // Absorbs all equity from legacy toxic domains (.com/.net/.org)
+    // and neutralizes poisoned anchor text before it touches
+    // clean silo paths /{city}/{service}
+    // ════════════════════════════════════════════════════════════════
+    const toxicDomains = [
+        'prokr.com', 'prokr.net', 'prokr.org',
+        'www.prokr.com', 'www.prokr.net', 'www.prokr.org',
+    ];
+
+    if (toxicDomains.some(domain => hostname.includes(domain))) {
+        // 🔥 Kill crawlers hunting for legacy spam files → 410 (permanently gone)
+        if (pathname.match(/\.(xml|txt|php|html)$/i)) {
+            return new NextResponse('Gone - Legacy Asset Terminated', {
+                status: 410,
+                headers: {
+                    'X-Robots-Tag': 'noindex, nofollow',
+                    'Cache-Control': 'public, max-age=31536000, immutable',
+                },
+            });
+        }
+
+        // 🔒 Route 100% of raw domain energy to quarantine chamber
+        // 301 is safe here: context shift from "service" to "corporate statement"
+        // algorithmically cleanses toxic anchor text associations
+        if (pathname !== '/corporate/acquisition') {
+            const cleanUrl = new URL('/corporate/acquisition', 'https://prokr.co');
+            return NextResponse.redirect(cleanUrl, 301);
+        }
+    }
 
     // Skip if path has more segments, static files, api routes, etc.
     if (
@@ -16,6 +50,7 @@ export function middleware(request: NextRequest) {
         pathname.startsWith('/admin') ||
         pathname.startsWith('/advertise') ||
         pathname.startsWith('/company') ||
+        pathname.startsWith('/corporate') ||
         pathname.startsWith('/about-us') ||
         pathname.startsWith('/contact-us') ||
         pathname.startsWith('/privacy-policy') ||

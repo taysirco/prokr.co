@@ -21,6 +21,7 @@ import { LiveAvailabilityBanner } from '@/components/LiveAvailabilityBanner';
 import GeoSignals from '@/components/GeoSignals';
 import FraudAlertBanner from '@/components/FraudAlertBanner';
 import GeoPricingTable from '@/components/GeoPricingTable';
+import SalaryCycleBadge from '@/components/SalaryCycleBadge';
 import type { Advertiser } from '@/types';
 
 // Disable static generation, use ISR instead
@@ -223,6 +224,11 @@ export default async function SiloPage({ params }: SiloPageProps) {
                                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
                                     {aiContent.h1}
                                 </h1>
+
+                                {/* 💰 Salary Cycle Badge — النبض المالي */}
+                                <div className="mb-3">
+                                    <SalaryCycleBadge compact />
+                                </div>
                                 <p className="text-lg text-emerald-100 max-w-xl">
                                     {aiContent.heroSubtitle
                                         ? aiContent.heroSubtitle
