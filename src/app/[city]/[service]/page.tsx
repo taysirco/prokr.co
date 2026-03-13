@@ -5,10 +5,11 @@ import Image from 'next/image';
 import { Home, ChevronLeft, Star, Phone, MessageCircle, BadgeCheck, MapPin, Shield } from 'lucide-react';
 import { getCityBySlug, getServiceBySlug, getUniquePageImages } from '@/lib/seed';
 import { getAdvertisersBySilo } from '@/lib/db-actions';
-import { ServiceJsonLd, BreadcrumbJsonLd, ItemListJsonLd, ServiceAreaJsonLd, HowToJsonLd, SpeakableWebPageJsonLd, AggregateRatingJsonLd, ImageObjectJsonLd } from '@/components/JsonLd';
+import { ServiceJsonLd, BreadcrumbJsonLd, ItemListJsonLd, ServiceAreaJsonLd, HowToJsonLd, SpeakableWebPageJsonLd, AggregateRatingJsonLd, ImageObjectJsonLd, AiVoiceJsonLd } from '@/components/JsonLd';
 import { DirectAnswer } from '@/components/seo/DirectAnswer';
 import { SeoContentSection } from '@/lib/seo-content';
 import { FaqJsonLd, ServiceOfferJsonLd, LiveBlogPostingJsonLd } from '@/components/schema';
+import { pricingData } from '@/lib/pricing-data';
 import { getCityContext } from '@/lib/city-context';
 import { getServiceKeywordProfile, getCityKeyword } from '@/lib/keyword-strategy';
 import { resolveContentLayers, resolveMetadata, getOverrideForPage } from '@/lib/overrides';
@@ -127,6 +128,11 @@ export default async function SiloPage({ params }: SiloPageProps) {
     // Hero image URL for ImageObject schema
     const heroImageUrl = getUniquePageImages(resolvedParams.city, resolvedParams.service, service.category, 1)[0];
 
+    // 🤖 AI Voice Schema: lookup pricing for this city+service
+    const aiPricingEntry = pricingData.find(
+        p => p.citySlug === city.slug && p.serviceSlug === service.slug
+    ) ?? null;
+
     // Defense-in-depth: canonical URL for schemas (consistent with generateMetadata)
     const canonicalSlug = getCanonicalSlug(service.slug) || service.slug;
     const canonicalPageUrl = `https://prokr.co/${city.slug}/${canonicalSlug}`;
@@ -183,6 +189,15 @@ export default async function SiloPage({ params }: SiloPageProps) {
             <AggregateRatingJsonLd service={service} city={city} advertisers={allAdvertisers} />
             {/* ImageObject Schema for hero image */}
             <ImageObjectJsonLd imageUrl={heroImageUrl} service={service} city={city} />
+            {/* 🎙️🤖 AI Voice + RAG Dataset — Agentic Voice Search Hack */}
+            <AiVoiceJsonLd
+                city={city}
+                service={service}
+                aiContent={override?.content}
+                entityContext={override?.entityContext}
+                pricingEntry={aiPricingEntry}
+                pageUrl={canonicalPageUrl}
+            />
             {/* LiveBlogPosting — QDF Freshness Signal */}
             <LiveBlogPostingJsonLd
                 cityNameAr={cityKw}
@@ -261,7 +276,7 @@ export default async function SiloPage({ params }: SiloPageProps) {
 
                             {/* Hero Image */}
                             <div className="hidden lg:block relative">
-                                <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+                                <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl" suppressHydrationWarning>
                                     <Image
                                         src={heroImageUrl}
                                         alt={`أفضل شركة ${service.name_ar} ${cityKw} - خدمات احترافية ومعتمدة 2026`}

@@ -17,3 +17,4 @@ export { FaqJsonLd } from './FaqJsonLd';
 export { ServiceOfferJsonLd } from './ServiceOfferJsonLd';
 export { DatasetJsonLd } from './DatasetJsonLd';
 export { LiveBlogPostingJsonLd } from './LiveBlogPostingJsonLd';
+export { AiVoiceJsonLd } from './AiVoiceJsonLd';

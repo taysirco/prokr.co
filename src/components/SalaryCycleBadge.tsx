@@ -22,8 +22,8 @@ export default function SalaryCycleBadge({ compact = false, className = '' }: Sa
         setConfig(getSalaryCycleConfig());
     }, []);
 
-    // SSR: render invisible placeholder (ensures hydration target exists)
-    if (!config) return <div className={className} aria-hidden="true" />;
+    // SSR: return null to avoid hydration mismatch (div→span type change in compact mode)
+    if (!config) return null;
 
     if (compact) {
         return (
@@ -75,7 +75,7 @@ export function SalaryCycleNote({ className = '' }: { className?: string }) {
         setConfig(getSalaryCycleConfig());
     }, []);
 
-    if (!config) return <div className={className} aria-hidden="true" />;
+    if (!config) return null;
 
     return (
         <p className={`text-xs font-medium mt-2 px-3 py-1.5 rounded-lg border

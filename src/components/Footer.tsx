@@ -11,6 +11,17 @@ interface FooterProps {
     currentService?: string;
 }
 
+// 🚨 [محرك روبن هود لتوجيه الـ PageRank - Deterministic Slicing] 🚨
+// توليد رقم عشوائي ثابت (Seed) بناءً على مسار الصفحة لكي لا ينهار كاش السيرفر
+const getDeterministicLinks = <T,>(items: T[], seedString: string, limit: number): T[] => {
+    if (!items.length) return [];
+    const seed = Array.from(seedString).reduce((acc, char) => acc + char.charCodeAt(0), 0);
+    // دوران رياضي ذكي — قص دائري
+    const startIndex = seed % items.length;
+    const rotated = [...items, ...items];
+    return rotated.slice(startIndex, startIndex + limit);
+};
+
 export default function Footer({ currentCity, currentService }: FooterProps) {
     // Get current city and service objects
     const city = currentCity ? getCityBySlug(currentCity) : null;
@@ -22,6 +33,7 @@ export default function Footer({ currentCity, currentService }: FooterProps) {
     // Resolve absorbed slug to canonical for city link generation
     const canonicalService = getCanonicalSlug(currentValidService) || currentValidService;
 
+    // 1. فلترة الخدمات والمدن المتاحة (كما كانت)
     const allServices = SERVICES.filter(s =>
         s.slug !== currentService &&
         hasPageOverride(currentValidCity, s.slug) &&
@@ -32,6 +44,10 @@ export default function Footer({ currentCity, currentService }: FooterProps) {
         hasPageOverride(c.slug, canonicalService)
     );
 
+    // 2. 🎯 تطبيق الحقن المركز (6 روابط فقط!) — بدل نزيف 24+ رابط
+    const targetedServices = getDeterministicLinks(allServices, currentCity || 'root', 6);
+    const targetedCities = getDeterministicLinks(allCities, canonicalService || 'root', 6);
+
     return (
         <footer className="bg-gradient-to-b from-gray-900 to-gray-950 text-gray-300">
             {/* Sitemap-Style Links: All Services */}
@@ -39,10 +55,10 @@ export default function Footer({ currentCity, currentService }: FooterProps) {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
                     <h3 className="text-white font-bold text-lg mb-4 flex items-center gap-2">
                         <span className="w-1 h-6 bg-emerald-500 rounded-full"></span>
-                        {city ? `جميع الخدمات ${getCityKeyword(city.name_ar, 'ba')}` : 'جميع خدماتنا'}
+                        {city ? `خدمات مقترحة ${getCityKeyword(city.name_ar, 'ba')}` : 'خدمات مقترحة'}
                     </h3>
                     <div className="flex flex-wrap gap-x-4 gap-y-2">
-                        {allServices.map(s => (
+                        {targetedServices.map(s => (
                             <Link
                                 key={s.slug}
                                 href={`/${currentValidCity}/${s.slug}`}
@@ -60,10 +76,10 @@ export default function Footer({ currentCity, currentService }: FooterProps) {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
                     <h3 className="text-white font-bold text-lg mb-4 flex items-center gap-2">
                         <span className="w-1 h-6 bg-emerald-500 rounded-full"></span>
-                        {service ? `${service.name_ar} في جميع المدن` : 'جميع المدن'}
+                        {service ? `${service.name_ar} في مدن أخرى` : 'مدن أخرى'}
                     </h3>
                     <div className="flex flex-wrap gap-x-4 gap-y-2">
-                        {allCities.map(c => (
+                        {targetedCities.map(c => (
                             <Link
                                 key={c.slug}
                                 href={`/${c.slug}/${canonicalService}`}
