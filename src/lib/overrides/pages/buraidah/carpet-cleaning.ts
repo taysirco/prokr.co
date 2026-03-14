@@ -36,7 +36,7 @@ export const override: PageOverride = {
     warnings: [
         'Nafud × 6 أشهر بدون HEPA = ألياف مقطوعة — سجاد تالف.',
         'CaCO₃ 600ppm + ماء صنبور = أعلى خشونة — RO إلزامي.',
-        'نخيل × ربيع + سجاد بدون HEPA = حساسية تنفسية YMYL.',
+        'نخيل × ربيع + سجاد بدون HEPA = حساسية تنفسية خطيرة.',
     ],
     trustAnchors: [
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },

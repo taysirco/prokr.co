@@ -12,7 +12,7 @@ import { getMarketTimingConfig } from '@/lib/market-timing';
 import { verifyOrigin } from './content-integrity';
 
 // ============================================
-// AI-Ready SEO Content Generator
+// SEO Content Generator
 // ============================================
 
 interface SeoContentProps {

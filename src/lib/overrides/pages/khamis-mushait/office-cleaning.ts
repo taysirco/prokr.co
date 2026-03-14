@@ -35,7 +35,7 @@ export const override: PageOverride = {
     ],
     warnings: [
         'Sick Building + إهمال = إجازات مرضية مزمنة + دعاوى محتملة.',
-        'عفن+عث = حساسية مزدوجة — خطر YMYL.',
+        'عفن+عث = حساسية مزدوجة — خطر صحي.',
         'ضباب×8h بدون HEPA = 20-30% من الموظفين يتأثرون.',
     ],
     trustAnchors: [

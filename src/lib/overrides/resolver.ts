@@ -243,7 +243,7 @@ export function resolveSeoContent(city: City, service: Service) {
         slangTerms: autoEntities?.slangTerms,
         activeVerbs: autoEntities?.activeVerbs,
         wrongPractices: autoEntities?.wrongPractices?.map(w => ({ name: w.name, use: w.use })),
-        architectPrompt: compiledPrompt,
+        contentTemplate: compiledPrompt,
     };
 
     // Consumer Myth Correction: auto-append sector-specific consumer-education

@@ -36,7 +36,7 @@ export const override: PageOverride = {
     warnings: [
         'Nafud × 6 أشهر = ألياف مقطوعة — تغيير تنجيد 2000+.',
         'CaCO₃ 600ppm + ماء صنبور = أعلى خشونة — RO إلزامي.',
-        'لقاح × ربيع + كنب بدون HEPA = حساسية تنفسية YMYL.',
+        'لقاح × ربيع + كنب بدون HEPA = حساسية تنفسية خطيرة.',
     ],
     trustAnchors: [
         { ...GOV.BALADI, role: 'ترخيص شركات التنظيف' },

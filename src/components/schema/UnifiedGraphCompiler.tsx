@@ -1,8 +1,8 @@
 // ============================================
-// 🚨 UNIFIED GRAPH COMPILER — JSON-LD Structured Data 🚨
+// 🚨 Unified JSON-LD Structured Data 🚨
 // Merges 10 separate JSON-LD scripts into ONE
 // interconnected @graph with @id cross-references.
-// Result: Google digests the page in 0.01s!
+// Optimized for structured data processing.
 // ============================================
 
 import type { Advertiser, City, Service } from '@/types';
@@ -189,7 +189,7 @@ export function UnifiedGraphCompiler({
             '@type': 'ReserveAction',
             target: {
                 '@type': 'EntryPoint',
-                urlTemplate: `${baseUrl}?action=book&ai_agent=true`,
+                urlTemplate: `${baseUrl}?action=book&source=web`,
                 inLanguage: 'ar-SA',
                 actionPlatform: [
                     'http://schema.org/DesktopWebPlatform',
@@ -327,7 +327,7 @@ export function UnifiedGraphCompiler({
     });
 
     // ============================================
-    // 💥 OUTPUT: سكريبت واحد يحكمهم جميعاً
+    // 💥 OUTPUT: النتيجة النهائية: JSON-LD موحد
     // ============================================
     const unifiedSchema = {
         '@context': 'https://schema.org',

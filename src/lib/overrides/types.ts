@@ -39,7 +39,7 @@ export interface PageOverride {
         time: string;
     }[];
 
-    // ─── FAQ (YMYL-grade, 3+ minimum) ───
+    // ─── FAQ items ───
     faq?: { question: string; answer: string }[];
 
     // ─── Expert Tips, Warnings, Checklist ───
@@ -135,7 +135,7 @@ export interface PageOverride {
 
     // ─── Entity Intersection ───
     /**
-     * كيانات علمية + مناخية محقونة في المحتوى.
+     * كيانات علمية + مناخية مدمجة في المحتوى.
      * تُستخدم لبناء Entity Intersection = محتوى فريد لكل مدينة.
      */
     entityContext?: {
@@ -147,14 +147,14 @@ export interface PageOverride {
         intersectionParagraph?: string;
 
         // ─── Content Signals ───
-        /** مصطلحات دارجة من العميل للربط الدلالي */
+        /** مصطلحات دارجة من العميل */
         slangTerms?: string[];
-        /** أفعال مسار قوي للتحليل النحوي */
+        /** أفعال نشطة لتحسين النص */
         activeVerbs?: string[];
-        /** أخطاء المنافسين للتأطير التناقضي (Negative Entities) */
+        /** ممارسات خاطئة شائعة للتحذير منها */
         wrongPractices?: { name: string; use: string }[];
-        /** البرومبت الهندسي المعماري المخصص لهذه المدينة والخدمة */
-        architectPrompt?: string;
+        /** قالب المحتوى المخصص لهذه المدينة والخدمة */
+        contentTemplate?: string;
     };
 }
 
