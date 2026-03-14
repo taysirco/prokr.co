@@ -281,7 +281,7 @@ export default async function SiloPage({ params }: SiloPageProps) {
                     totalCompanies={premium.length + standard.length}
                 />
 
-                {/* 🎯 Price Quick View — فخ الإشارة التفاعلية */}
+                {/* 💰 Price Quick View — عنصر التفاعل السريع */}
                 {aiPricingEntry && (
                     <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
                         <PriceDisclosure avgPrice={aiPricingEntry.avgPrice} unit={aiPricingEntry.unit} />

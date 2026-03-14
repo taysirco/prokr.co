@@ -18,7 +18,7 @@ import { useEffect } from 'react';
 const LITE_MODE_CSS = `
 /* ═══ Network-Aware Lite Mode ═══ */
 
-/* 1. Kill ALL animations and transitions */
+/* 1. Disable animations and transitions */
 .prokr-lite-mode *,
 .prokr-lite-mode *::before,
 .prokr-lite-mode *::after {
@@ -62,7 +62,7 @@ const LITE_MODE_CSS = `
   display: none !important;
 }
 
-/* 7. Kill backdrop-blur and gradients */
+/* 7. Simplify backdrop-blur and gradients */
 .prokr-lite-mode [class*="backdrop-blur"] {
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;

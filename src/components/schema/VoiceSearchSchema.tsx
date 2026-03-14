@@ -23,7 +23,7 @@ export function VoiceSearchSchema({ city, service, aiContent, entityContext, pri
     if (!aiContent?.shortAnswer) return null;
 
     // 🧠 صياغة النص الذي سينطقه الذكاء الاصطناعي/Siri حرفياً
-    // مزود بالعامية السعودية (slangTerms) كطعم دلالي
+    // مزود بالعامية السعودية (slangTerms) لتغطية المرادفات المحلية
     const slangTrigger = entityContext?.slangTerms?.length
         ? `(والمعروفة بـ ${entityContext.slangTerms.join(' أو ')})`
         : '';

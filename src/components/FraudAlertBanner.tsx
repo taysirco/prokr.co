@@ -16,7 +16,7 @@ interface FraudAlertBannerProps {
 const CONSUMER_ALERTS: Record<string, { title: string; warning: string; link: string }[]> = {
     moving: [
         { title: 'احتجاز الأثاث والفدية', warning: '"شالوا أثاثي وقالوا ادفع 3,800 بدل 500 والا ما ننزّل" — هالقصة تتكرر يومياً في الرياض وجدة.', link: '/blog/furniture-theft-ransom-scam' },
-        { title: 'أسعار أقل من السوق بالنص', warning: 'نقل شقة 3 غرف بـ 400 ريال؟ السعر الحقيقي 1,200-1,800. السعر الرخيص = فخ 90% من الحالات.', link: '/blog/scam-companies-warning-signs' },
+        { title: 'أسعار أقل من السوق بالنص', warning: 'نقل شقة 3 غرف بـ 400 ريال؟ السعر الحقيقي 1,200-1,800. السعر المنخفض جداً = علامة تحذير في 90% من الحالات.', link: '/blog/scam-companies-warning-signs' },
     ],
     cleaning: [
         { title: 'مواد تنظيف مغشوشة', warning: 'شركات تجيب مواد من الباطن — لا معتمدة من SFDA ولا آمنة على أطفالك. أم سعود اكتشفت بعد ما بنتها تحسست.', link: '/blog/scam-companies-warning-signs' },
