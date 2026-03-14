@@ -11,6 +11,9 @@ import { getServiceKeywordProfile } from '@/lib/keyword-strategy';
 import { hasPageOverride } from '@/lib/overrides/registry';
 import { isAbsorbedSlug, getCanonicalSlug } from '@/lib/services/super-page-groups';
 import Footer from '@/components/Footer';
+import FraudAlertBanner from '@/components/FraudAlertBanner';
+import SalaryCycleBadge from '@/components/SalaryCycleBadge';
+import GeoSignals from '@/components/GeoSignals';
 
 // Major cities for price comparison
 const COMPARISON_CITIES = ['riyadh', 'jeddah', 'dammam', 'makkah', 'madinah', 'taif'];
@@ -166,6 +169,11 @@ export default async function ServicePage({ params }: ServicePageProps) {
                                     اكتشف أفضل شركات {service.name_ar} في جميع مدن المملكة.
                                     شركات معتمدة، أسعار تنافسية، وخدمة احترافية.
                                 </p>
+
+                                {/* 💰 Salary Cycle Badge — النبض المالي */}
+                                <div className="mt-4">
+                                    <SalaryCycleBadge compact />
+                                </div>
 
                                 {/* Stats */}
                                 <div className="flex flex-wrap gap-6 mt-8">
@@ -359,6 +367,14 @@ export default async function ServicePage({ params }: ServicePageProps) {
                         </div>
                     </div>
                 </section>
+
+                {/* 🛡️ Anti-Scam YMYL Trap — Consumer Protection Banner */}
+                <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                    <FraudAlertBanner serviceName={service.name_ar} serviceSlug={service.slug} cityName="السعودية" />
+                </section>
+
+                {/* Phantom Geo-Hijacking — National Service Signal */}
+                <GeoSignals citySlug="riyadh" serviceSlug={resolvedParams.service} serviceName={service.name_ar} serviceCategory={service.category} />
 
                 <Footer currentService={resolvedParams.service} />
             </main>

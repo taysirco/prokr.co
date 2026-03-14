@@ -14,7 +14,10 @@ import { hasPageOverride } from '@/lib/overrides/registry';
 import { isAbsorbedSlug } from '@/lib/services/super-page-groups';
 import Footer from '@/components/Footer';
 import GeoSignals from '@/components/GeoSignals';
-import { getSalaryCycleConfig } from '@/lib/salary-cycle';
+import FraudAlertBanner from '@/components/FraudAlertBanner';
+import { LiveAvailabilityBanner } from '@/components/LiveAvailabilityBanner';
+import SalaryCycleBadge from '@/components/SalaryCycleBadge';
+import SleeperCellCTA from '@/components/SleeperCellCTA';
 
 interface CityPageProps {
     params: Promise<{
@@ -109,7 +112,7 @@ export default async function CityPage({ params }: CityPageProps) {
     const aiContent = generateCityMeta(city);
     const cityContext = getCityContext(city.slug);
     const cityKw = getCityKeyword(city.name_ar, 'ba');
-    const cycleConfig = getSalaryCycleConfig();
+
 
     // Breadcrumb items
     const breadcrumbs = [
@@ -177,24 +180,9 @@ export default async function CityPage({ params }: CityPageProps) {
                             </div>
                         </div>
 
-                        {/* 💰 Salary Cycle Badge (server-rendered) */}
+                        {/* 💰 Salary Cycle Badge — النبض المالي */}
                         <div className="mt-3">
-                            <span
-                                style={{
-                                    display: 'inline-flex',
-                                    alignItems: 'center',
-                                    gap: '0.375rem',
-                                    padding: '0.375rem 0.75rem',
-                                    borderRadius: '9999px',
-                                    fontSize: '0.875rem',
-                                    fontWeight: 700,
-                                    backgroundColor: cycleConfig.phase === 'premium' ? '#fef3c7' : cycleConfig.phase === 'urgency' ? '#fee2e2' : '#d1fae5',
-                                    color: cycleConfig.phase === 'premium' ? '#92400e' : cycleConfig.phase === 'urgency' ? '#991b1b' : '#065f46',
-                                    border: `1px solid ${cycleConfig.phase === 'premium' ? '#fcd34d' : cycleConfig.phase === 'urgency' ? '#fca5a5' : '#6ee7b7'}`,
-                                }}
-                            >
-                                {cycleConfig.icon} {cycleConfig.badgeText}
-                            </span>
+                            <SalaryCycleBadge compact />
                         </div>
 
                         <p className="text-lg text-emerald-100 max-w-2xl mt-4">
@@ -203,6 +191,13 @@ export default async function CityPage({ params }: CityPageProps) {
                         </p>
                     </div>
                 </section>
+
+                {/* ── Live Availability Banner — QDF Visual Signal ── */}
+                <LiveAvailabilityBanner
+                    cityNameAr={cityKw}
+                    serviceNameAr="خدمات منزلية"
+                    totalCompanies={0}
+                />
 
                 {/* Services by Category */}
                 <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -380,6 +375,9 @@ export default async function CityPage({ params }: CityPageProps) {
                     </article>
                 </section>
 
+                {/* 🧬 Sleeper Cell Protocol — Scarcity-Framed Lead Gen */}
+                <SleeperCellCTA cityName={city.name_ar} serviceName="خدمات منزلية" serviceSlug="cleaning" citySlug={resolvedParams.city} />
+
                 {/* Related Blog Articles */}
                 <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                     <h2 className="text-xl font-bold text-gray-900 mb-6">مقالات وأدلة مفيدة</h2>
@@ -414,6 +412,11 @@ export default async function CityPage({ params }: CityPageProps) {
                             ))}
                         </div>
                     </div>
+                </section>
+
+                {/* 🛡️ Anti-Scam YMYL Trap — Consumer Protection Banner */}
+                <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                    <FraudAlertBanner serviceName="خدمات منزلية" serviceSlug="cleaning" cityName={city.name_ar} />
                 </section>
 
                 {/* Phantom Geo-Hijacking — City-Level Landmark Signal */}

@@ -2,9 +2,15 @@ import { ImageResponse } from 'next/og';
 import { getCityBySlug, getServiceBySlug } from '@/lib/seed';
 
 export const runtime = 'edge';
-export const alt = 'بروكر - دليل الخدمات السعودي';
+export const alt = 'خدمات بروكر المعتمدة';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
+
+// Cairo Bold TTF — confirmed working with satori Arabic rendering
+const FONT_URL = 'https://fonts.gstatic.com/s/cairo/v31/SLXgc1nY6HkvangtZmpQdkhzfH5lkSs2SgRjCAGMQ1z0hAc5W1Q.ttf';
+
+// Satori renders Arabic words LTR — reverse word order so RTL readers see correct text
+const rtl = (text: string) => text.split(' ').reverse().join(' ');
 
 export default async function OgImage({ params }: { params: Promise<{ city: string; service: string }> }) {
     const resolvedParams = await params;
@@ -13,108 +19,117 @@ export default async function OgImage({ params }: { params: Promise<{ city: stri
 
     const cityName = city?.name_ar || resolvedParams.city;
     const serviceName = service?.name_ar || resolvedParams.service;
+    const currentMonth = new Date().toLocaleString('ar-SA', { month: 'long', year: 'numeric' });
+
+    const fontData = await fetch(FONT_URL).then(res => res.arrayBuffer()).catch(() => null);
 
     return new ImageResponse(
         (
             <div
                 style={{
-                    background: 'linear-gradient(135deg, #059669 0%, #064e3b 100%)',
+                    background: 'linear-gradient(to bottom right, #0f172a, #064e3b)',
                     width: '100%',
                     height: '100%',
                     display: 'flex',
                     flexDirection: 'column',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    fontFamily: 'sans-serif',
-                    padding: '60px',
+                    padding: '80px',
+                    color: 'white',
+                    fontFamily: '"Cairo"',
                 }}
             >
-                {/* Logo area */}
+                {/* شارة سيادية — Trust Badge — top-right */}
                 <div
                     style={{
                         display: 'flex',
                         alignItems: 'center',
-                        gap: '16px',
-                        marginBottom: '40px',
+                        alignSelf: 'flex-end',
+                        background: '#10b981',
+                        color: '#022c22',
+                        padding: '12px 32px',
+                        borderRadius: '100px',
+                        fontSize: '28px',
+                        fontWeight: 'bold',
+                        boxShadow: '0 10px 25px rgba(0,0,0,0.5)',
+                    }}
+                >
+                    {rtl('كيان موثق ومطابق للاشتراطات')}
+                </div>
+
+                {/* المحتوى الرئيسي — right-aligned */}
+                <div
+                    style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'flex-end',
+                        marginTop: 'auto',
+                        marginBottom: 'auto',
                     }}
                 >
                     <div
                         style={{
-                            width: '60px',
-                            height: '60px',
-                            background: 'white',
-                            borderRadius: '16px',
+                            fontSize: '72px',
+                            fontWeight: 700,
+                            margin: '0 0 20px 0',
+                            lineHeight: 1.2,
                             display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            fontSize: '32px',
-                            fontWeight: 'bold',
-                            color: '#059669',
+                            flexWrap: 'wrap',
+                            justifyContent: 'flex-end',
+                            gap: '16px',
+                            textAlign: 'right',
                         }}
                     >
-                        بـ
+                        <span style={{ color: '#34d399' }}>{rtl(serviceName)}</span>
+                        <span style={{ color: '#ffffff' }}>{rtl('افضل شركات')}</span>
                     </div>
-                    <span style={{ color: 'white', fontSize: '36px', fontWeight: 'bold' }}>
-                        بروكر
-                    </span>
+                    <div
+                        style={{
+                            fontSize: '56px',
+                            color: '#e2e8f0',
+                            fontWeight: 700,
+                            display: 'flex',
+                            textAlign: 'right',
+                        }}
+                    >
+                        {rtl(`في ${cityName}`)}
+                    </div>
                 </div>
 
-                {/* Service name */}
+                {/* الشريط السفلي — PROKR.CO right, QDF left */}
                 <div
                     style={{
-                        color: 'white',
-                        fontSize: '64px',
-                        fontWeight: 'bold',
-                        textAlign: 'center',
-                        lineHeight: 1.3,
-                        marginBottom: '20px',
-                        direction: 'rtl',
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        alignItems: 'flex-end',
+                        borderTop: '2px solid #334155',
+                        paddingTop: '40px',
                     }}
                 >
-                    {serviceName}
-                </div>
-
-                {/* City name */}
-                <div
-                    style={{
-                        color: '#a7f3d0',
-                        fontSize: '42px',
-                        fontWeight: '600',
-                        textAlign: 'center',
-                        direction: 'rtl',
-                        marginBottom: '30px',
-                    }}
-                >
-                    في {cityName}
-                </div>
-
-                {/* Tagline */}
-                <div
-                    style={{
-                        background: 'rgba(255,255,255,0.15)',
-                        borderRadius: '12px',
-                        padding: '12px 32px',
-                        color: '#d1fae5',
-                        fontSize: '24px',
-                        direction: 'rtl',
-                    }}
-                >
-                    شركات معتمدة • أسعار تنافسية • ضمان شامل
-                </div>
-
-                {/* Bottom bar */}
-                <div
-                    style={{
-                        position: 'absolute',
-                        bottom: '30px',
-                        color: 'rgba(255,255,255,0.6)',
-                        fontSize: '20px',
-                    }}
-                >
-                    prokr.co
+                    <div style={{ fontSize: '36px', color: '#94a3b8', fontWeight: 700, display: 'flex' }}>
+                        {rtl(`تحديث: ${currentMonth}`)}
+                    </div>
+                    <div
+                        style={{
+                            fontSize: '48px',
+                            fontWeight: 700,
+                            color: '#ffffff',
+                            letterSpacing: '2px',
+                        }}
+                    >
+                        PROKR.CO
+                    </div>
                 </div>
             </div>
         ),
-        { ...size }
+        {
+            ...size,
+            fonts: fontData ? [
+                {
+                    name: 'Cairo',
+                    data: fontData,
+                    style: 'normal' as const,
+                    weight: 700 as const,
+                },
+            ] : [],
+        }
     );
 }

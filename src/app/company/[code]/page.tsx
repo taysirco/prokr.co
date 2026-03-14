@@ -23,6 +23,8 @@ import { getAdvertiserByCode } from '@/lib/db-actions';
 import { getCanonicalSlug } from '@/lib/services/super-page-groups';
 import { LocalBusinessJsonLd, BreadcrumbJsonLd, OrganizationJsonLd, WebPageJsonLd } from '@/components/JsonLd';
 import Footer from '@/components/Footer';
+import FraudAlertBanner from '@/components/FraudAlertBanner';
+import GeoSignals from '@/components/GeoSignals';
 import type { Review, City, Service } from '@/types';
 
 // ISR: revalidate every hour for fresh data + fast TTFB
@@ -512,6 +514,23 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                         </div>
                     </article>
                 </section>
+
+                {/* 🛡️ Anti-Scam YMYL Trap — Consumer Protection Banner */}
+                <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                    <FraudAlertBanner
+                        serviceName={mainService?.name_ar || 'خدمات'}
+                        serviceSlug={mainService?.slug || 'cleaning'}
+                        cityName={mainCity?.name_ar || 'السعودية'}
+                    />
+                </section>
+
+                {/* Phantom Geo-Hijacking — Company Signal */}
+                <GeoSignals
+                    citySlug={advertiser.targeted_cities[0] || 'riyadh'}
+                    serviceSlug={advertiser.targeted_services[0] || 'cleaning'}
+                    serviceName={mainService?.name_ar || 'خدمات'}
+                    serviceCategory={mainService?.category || 'cleaning'}
+                />
 
                 {/* Footer */}
                 <Footer

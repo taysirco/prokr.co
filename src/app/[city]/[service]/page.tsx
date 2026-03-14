@@ -23,6 +23,7 @@ import GeoSignals from '@/components/GeoSignals';
 import FraudAlertBanner from '@/components/FraudAlertBanner';
 import GeoPricingTable from '@/components/GeoPricingTable';
 import SalaryCycleBadge from '@/components/SalaryCycleBadge';
+import { PriceRevealTrap } from '@/components/PriceRevealTrap';
 import type { Advertiser } from '@/types';
 
 // Disable static generation, use ISR instead
@@ -278,6 +279,13 @@ export default async function SiloPage({ params }: SiloPageProps) {
                     serviceNameAr={service.name_ar}
                     totalCompanies={premium.length + standard.length}
                 />
+
+                {/* 🎯 CrUX INP Hijacker — فخ الإشارة التفاعلية */}
+                {aiPricingEntry && (
+                    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
+                        <PriceRevealTrap avgPrice={aiPricingEntry.avgPrice} unit={aiPricingEntry.unit} />
+                    </section>
+                )}
 
                 {/* Direct Answer for AEO - Featured Snippet Optimization */}
                 <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">

@@ -6,107 +6,123 @@ export const alt = 'بروكر - دليل الخدمات السعودي';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
+// Cairo Bold TTF — confirmed working with satori Arabic rendering
+const FONT_URL = 'https://fonts.gstatic.com/s/cairo/v31/SLXgc1nY6HkvangtZmpQdkhzfH5lkSs2SgRjCAGMQ1z0hAc5W1Q.ttf';
+
+// Satori renders Arabic words LTR — reverse word order so RTL readers see correct text
+const rtl = (text: string) => text.split(' ').reverse().join(' ');
+
 export default async function OgImage({ params }: { params: Promise<{ service: string }> }) {
     const resolvedParams = await params;
     const service = getServiceBySlug(resolvedParams.service);
     const serviceName = service?.name_ar || resolvedParams.service;
+    const currentMonth = new Date().toLocaleString('ar-SA', { month: 'long', year: 'numeric' });
+
+    const fontData = await fetch(FONT_URL).then(res => res.arrayBuffer()).catch(() => null);
 
     return new ImageResponse(
         (
             <div
                 style={{
-                    background: 'linear-gradient(135deg, #d97706 0%, #92400e 100%)',
+                    background: 'linear-gradient(to bottom right, #0f172a, #92400e)',
                     width: '100%',
                     height: '100%',
                     display: 'flex',
                     flexDirection: 'column',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    fontFamily: 'sans-serif',
-                    padding: '60px',
+                    padding: '80px',
+                    color: 'white',
+                    fontFamily: '"Cairo"',
                 }}
             >
+                {/* شارة سيادية — top-right */}
                 <div
                     style={{
                         display: 'flex',
                         alignItems: 'center',
-                        gap: '16px',
-                        marginBottom: '40px',
+                        alignSelf: 'flex-end',
+                        background: '#d97706',
+                        color: '#ffffff',
+                        padding: '12px 32px',
+                        borderRadius: '100px',
+                        fontSize: '28px',
+                        fontWeight: 'bold',
+                        boxShadow: '0 10px 25px rgba(0,0,0,0.5)',
+                    }}
+                >
+                    {rtl('شركات معتمدة في كل المدن')}
+                </div>
+
+                {/* المحتوى الرئيسي — right-aligned */}
+                <div
+                    style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'flex-end',
+                        marginTop: 'auto',
+                        marginBottom: 'auto',
                     }}
                 >
                     <div
                         style={{
-                            width: '60px',
-                            height: '60px',
-                            background: 'white',
-                            borderRadius: '16px',
+                            fontSize: '72px',
+                            fontWeight: 700,
+                            margin: '0 0 20px 0',
+                            lineHeight: 1.2,
                             display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            fontSize: '32px',
-                            fontWeight: 'bold',
-                            color: '#d97706',
+                            textAlign: 'right',
                         }}
                     >
-                        بـ
+                        {rtl(serviceName)}
                     </div>
-                    <span style={{ color: 'white', fontSize: '36px', fontWeight: 'bold' }}>
-                        بروكر
-                    </span>
+                    <div
+                        style={{
+                            fontSize: '56px',
+                            color: '#fde68a',
+                            fontWeight: 700,
+                            display: 'flex',
+                            textAlign: 'right',
+                        }}
+                    >
+                        {rtl('في جميع مدن المملكة')}
+                    </div>
                 </div>
 
+                {/* الشريط السفلي */}
                 <div
                     style={{
-                        color: 'white',
-                        fontSize: '64px',
-                        fontWeight: 'bold',
-                        textAlign: 'center',
-                        lineHeight: 1.3,
-                        marginBottom: '20px',
-                        direction: 'rtl',
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        alignItems: 'flex-end',
+                        borderTop: '2px solid #334155',
+                        paddingTop: '40px',
                     }}
                 >
-                    {serviceName}
-                </div>
-
-                <div
-                    style={{
-                        color: '#fde68a',
-                        fontSize: '42px',
-                        fontWeight: '600',
-                        textAlign: 'center',
-                        direction: 'rtl',
-                        marginBottom: '30px',
-                    }}
-                >
-                    في جميع مدن المملكة
-                </div>
-
-                <div
-                    style={{
-                        background: 'rgba(255,255,255,0.15)',
-                        borderRadius: '12px',
-                        padding: '12px 32px',
-                        color: '#fef3c7',
-                        fontSize: '24px',
-                        direction: 'rtl',
-                    }}
-                >
-                    24 مدينة • شركات معتمدة • أسعار تنافسية
-                </div>
-
-                <div
-                    style={{
-                        position: 'absolute',
-                        bottom: '30px',
-                        color: 'rgba(255,255,255,0.6)',
-                        fontSize: '20px',
-                    }}
-                >
-                    prokr.co
+                    <div style={{ fontSize: '36px', color: '#94a3b8', fontWeight: 700, display: 'flex' }}>
+                        {rtl(`تحديث: ${currentMonth}`)}
+                    </div>
+                    <div
+                        style={{
+                            fontSize: '48px',
+                            fontWeight: 700,
+                            color: '#ffffff',
+                            letterSpacing: '2px',
+                        }}
+                    >
+                        PROKR.CO
+                    </div>
                 </div>
             </div>
         ),
-        { ...size }
+        {
+            ...size,
+            fonts: fontData ? [
+                {
+                    name: 'Cairo',
+                    data: fontData,
+                    style: 'normal' as const,
+                    weight: 700 as const,
+                },
+            ] : [],
+        }
     );
 }

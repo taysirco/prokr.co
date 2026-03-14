@@ -4,6 +4,7 @@ import { Home, ChevronLeft, MapPin } from 'lucide-react';
 import { CITIES, SERVICES, REGION_NAMES, getCitiesByRegion } from '@/lib/seed';
 import { BreadcrumbJsonLd, ItemListJsonLd, WebPageJsonLd } from '@/components/JsonLd';
 import Footer from '@/components/Footer';
+import SalaryCycleBadge from '@/components/SalaryCycleBadge';
 
 export const metadata: Metadata = {
     title: 'مناطق الخدمة في السعودية | 24 مدينة - بروكر',
@@ -100,6 +101,11 @@ export default function LocationsPage() {
                             نغطي {CITIES.length} مدينة في جميع مناطق المملكة العربية السعودية.
                             اختر مدينتك للوصول لأفضل مقدمي الخدمات.
                         </p>
+
+                        {/* 💰 Salary Cycle Badge — النبض المالي */}
+                        <div className="mt-3">
+                            <SalaryCycleBadge compact />
+                        </div>
                     </div>
                 </section>
 

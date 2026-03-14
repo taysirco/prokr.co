@@ -6,6 +6,7 @@ import { SERVICES, CATEGORY_NAMES, getServicesByCategory, getServiceImage } from
 import { BreadcrumbJsonLd, ServiceCatalogJsonLd, WebPageJsonLd } from '@/components/JsonLd';
 import { isAbsorbedSlug } from '@/lib/services/super-page-groups';
 import Footer from '@/components/Footer';
+import SalaryCycleBadge from '@/components/SalaryCycleBadge';
 
 export const metadata: Metadata = {
     title: 'جميع الخدمات المنزلية في السعودية - بروكر',
@@ -100,6 +101,11 @@ export default function ServicesPage() {
                             تصفح خدماتنا المتخصصة المتوفرة في جميع مدن المملكة العربية السعودية.
                             من نقل العفش إلى التنظيف ومكافحة الحشرات.
                         </p>
+
+                        {/* 💰 Salary Cycle Badge — النبض المالي */}
+                        <div className="mt-4">
+                            <SalaryCycleBadge compact />
+                        </div>
                     </div>
                 </section>
 

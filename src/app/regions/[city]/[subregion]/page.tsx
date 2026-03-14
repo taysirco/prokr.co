@@ -11,6 +11,9 @@ import { getCityKeyword } from '@/lib/keyword-strategy';
 import { hasPageOverride } from '@/lib/overrides/registry';
 import { isAbsorbedSlug } from '@/lib/services/super-page-groups';
 import Footer from '@/components/Footer';
+import FraudAlertBanner from '@/components/FraudAlertBanner';
+import SalaryCycleBadge from '@/components/SalaryCycleBadge';
+import GeoSignals from '@/components/GeoSignals';
 
 interface SubRegionPageProps {
     params: Promise<{
@@ -188,6 +191,11 @@ export default async function SubRegionPage({ params }: SubRegionPageProps) {
                         <p className="text-lg text-emerald-100 max-w-2xl mt-4">
                             {availableServices.length} خدمة متوفرة في {subRegion.name_ar} من شركات معتمدة.
                         </p>
+
+                        {/* 💰 Salary Cycle Badge — النبض المالي */}
+                        <div className="mt-3">
+                            <SalaryCycleBadge compact />
+                        </div>
                     </div>
                 </section>
 
@@ -308,6 +316,14 @@ export default async function SubRegionPage({ params }: SubRegionPageProps) {
                         جميع خدمات {city.name_ar}
                     </Link>
                 </section>
+
+                {/* 🛡️ Anti-Scam YMYL Trap — Consumer Protection Banner */}
+                <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                    <FraudAlertBanner serviceName="خدمات منزلية" serviceSlug="cleaning" cityName={`${subRegion.name_ar}، ${city.name_ar}`} />
+                </section>
+
+                {/* Phantom Geo-Hijacking — SubRegion Signal */}
+                <GeoSignals citySlug={resolvedParams.city} serviceSlug="city-hub" serviceName="خدمات منزلية" serviceCategory="cleaning" />
 
                 <Footer currentCity={resolvedParams.city} />
             </main>

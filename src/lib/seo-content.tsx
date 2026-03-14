@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import type { City, Service } from '@/types';
 import { getCityContext, getAdjustedPriceRange, getServiceNuances, getClimateContent } from './city-context';
-import { getRelatedServices, generateServiceUrl } from './related-services';
+import { getRelatedServices, generateServiceUrl, applyContextualLinks, escapeHtml } from './related-services';
 import { getServiceBySlug, getCityBySlug } from './seed';
 import { generateContentLayers } from './ai-content-layers';
 import { getServiceKeywordProfile, getCityKeyword, resolveKeywordTemplate } from './keyword-strategy';
@@ -229,6 +229,11 @@ export function SeoContentSection({ city, service }: SeoContentProps) {
     const pageSlug = `${city.slug}-${service.slug}`;
     const wm = (text: string) => watermarkText(text, pageSlug);
 
+    // 🧠 Neural Linking — watermark → escape → inject contextual links
+    const link = (text: string) => applyContextualLinks(
+        escapeHtml(wm(text)), city.slug, service.slug
+    );
+
     return (
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <article className="prose prose-lg prose-emerald max-w-none">
@@ -238,9 +243,9 @@ export function SeoContentSection({ city, service }: SeoContentProps) {
                     دليل شامل لخدمة {service.name_ar} {cityKw} (2026)
                 </h2>
                 <div className="seo-introduction bg-emerald-50 p-6 rounded-xl border-r-4 border-emerald-500 mb-8" suppressHydrationWarning>
-                    <p className="text-gray-700 leading-relaxed font-medium">
-                        {wm(aiContent.introduction)}
-                    </p>
+                    <p className="text-gray-700 leading-relaxed font-medium"
+                       dangerouslySetInnerHTML={{ __html: link(aiContent.introduction) }}
+                    />
                     <p className="text-xs text-gray-500 mt-3">
                         {geoSignals.statisticalClaims[0]} | {geoSignals.authorityReferences[0]} | آخر تحديث: {geoSignals.lastUpdated}
                     </p>
@@ -259,7 +264,9 @@ export function SeoContentSection({ city, service }: SeoContentProps) {
                                         <span className="text-amber-500 text-xl">⚠️</span>
                                         <div>
                                             <h4 className="font-bold text-gray-800 mb-1">{wm(challenge)}</h4>
-                                            <p className="text-gray-600 text-sm">{wm(aiContent.customSolutions[idx])}</p>
+                                            <p className="text-gray-600 text-sm"
+                                               dangerouslySetInnerHTML={{ __html: link(aiContent.customSolutions[idx]) }}
+                                            />
                                         </div>
                                     </div>
                                 </div>
@@ -278,7 +285,7 @@ export function SeoContentSection({ city, service }: SeoContentProps) {
                         {expertTips.map((tip, idx) => (
                             <li key={idx} className="flex items-start gap-2 text-sky-800">
                                 <span className="font-bold">•</span>
-                                <span>{wm(tip)}</span>
+                                <span dangerouslySetInnerHTML={{ __html: link(tip) }} />
                             </li>
                         ))}
                     </ul>
@@ -367,7 +374,9 @@ export function SeoContentSection({ city, service }: SeoContentProps) {
                         {aiContent.successStories.map((story, idx) => (
                             <div key={idx} className="bg-emerald-50/50 p-4 rounded-xl border border-emerald-100">
                                 <h4 className="font-bold text-emerald-800 mb-2">{story.title}</h4>
-                                <p className="text-gray-700 text-sm leading-relaxed">{wm(story.result)}</p>
+                                <p className="text-gray-700 text-sm leading-relaxed"
+                                   dangerouslySetInnerHTML={{ __html: link(story.result) }}
+                                />
                             </div>
                         ))}
                     </div>
@@ -377,7 +386,7 @@ export function SeoContentSection({ city, service }: SeoContentProps) {
                 <div className="border-l-4 border-red-500 bg-red-50 p-4 rounded-r-xl mb-10" suppressHydrationWarning>
                     <h3 className="text-lg font-bold text-red-800 mb-2">تنبيهات هامة</h3>
                     <ul className="list-disc list-inside space-y-1 text-red-700 text-sm">
-                        {warnings.map((w, i) => <li key={i}>{wm(w)}</li>)}
+                        {warnings.map((w, i) => <li key={i} dangerouslySetInnerHTML={{ __html: link(w) }} />)}
                     </ul>
                 </div>
 
@@ -500,7 +509,9 @@ export function SeoContentSection({ city, service }: SeoContentProps) {
                         <div key={index} className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
                             <h4 className="font-bold text-gray-900 mb-2" itemProp="name">{faq.question}</h4>
                             <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
-                                <p className="text-gray-600 text-sm leading-relaxed" itemProp="text">{wm(faq.answer)}</p>
+                                <p className="text-gray-600 text-sm leading-relaxed" itemProp="text"
+                                   dangerouslySetInnerHTML={{ __html: link(faq.answer) }}
+                                />
                             </div>
                         </div>
                     ))}
