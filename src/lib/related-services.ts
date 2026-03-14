@@ -3,6 +3,8 @@
 // Provides contextual links between related services
 // ============================================
 
+import { hasPageOverride } from '@/lib/overrides/registry';
+
 export interface RelatedService {
     slug: string;
     context: string; // Natural sentence context for the link
@@ -35,7 +37,7 @@ export const SERVICE_RELATIONS: Record<string, RelatedService[]> = {
  * Resolves absorbed slugs to their canonical Super Page slugs.
  * Deduplicates if both canonical and absorbed appear in the relations.
  */
-export function getRelatedServices(serviceSlug: string, limit: number = 3): RelatedService[] {
+export function getRelatedServices(serviceSlug: string, limit: number = 3, citySlug?: string): RelatedService[] {
     // If this is an absorbed slug, merge its relations into the canonical's
     const canonical = getCanonicalSlug(serviceSlug);
     const lookupSlug = canonical || serviceSlug;
@@ -54,6 +56,9 @@ export function getRelatedServices(serviceSlug: string, limit: number = 3): Rela
         if (seen.has(effectiveSlug)) continue;
         // Don't link to self
         if (effectiveSlug === lookupSlug) continue;
+
+        // 🛡️ Skip if target page doesn't exist for this city (prevents 404s)
+        if (citySlug && !hasPageOverride(citySlug, effectiveSlug)) continue;
 
         seen.add(effectiveSlug);
         resolved.push({
@@ -170,6 +175,10 @@ export function applyContextualLinks(
         if (regex.test(result)) {
             const canonical = getCanonicalSlug(trigger.slug);
             const targetSlug = canonical || trigger.slug;
+
+            // 🛡️ Skip if target page doesn't exist for this city (prevents 404s)
+            if (!hasPageOverride(citySlug, targetSlug)) continue;
+
             const url = `/${citySlug}/${targetSlug}`;
 
             result = result.replace(regex,

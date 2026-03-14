@@ -21,6 +21,7 @@ import { getCityBySlug, getServiceBySlug } from '@/lib/seed';
 import { getCityKeyword } from '@/lib/keyword-strategy';
 import { getAdvertiserByCode } from '@/lib/db-actions';
 import { getCanonicalSlug } from '@/lib/services/super-page-groups';
+import { hasPageOverride } from '@/lib/overrides/registry';
 import { LocalBusinessJsonLd, BreadcrumbJsonLd, OrganizationJsonLd, WebPageJsonLd } from '@/components/JsonLd';
 import Footer from '@/components/Footer';
 import FraudAlertBanner from '@/components/FraudAlertBanner';
@@ -162,9 +163,17 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                                 {mainCity?.name_ar}
                             </Link>
                             <ChevronLeft className="w-4 h-4" />
-                            <Link href={`/${mainCity?.slug}/${getCanonicalSlug(mainService?.slug || '') || mainService?.slug}`} className="hover:text-white transition-colors">
-                                {mainService?.name_ar}
-                            </Link>
+                            {(() => {
+                                const serviceSlug = getCanonicalSlug(mainService?.slug || '') || mainService?.slug;
+                                const hasOverride = mainCity && serviceSlug && hasPageOverride(mainCity.slug, serviceSlug);
+                                return hasOverride ? (
+                                    <Link href={`/${mainCity?.slug}/${serviceSlug}`} className="hover:text-white transition-colors">
+                                        {mainService?.name_ar}
+                                    </Link>
+                                ) : (
+                                    <span className="text-emerald-200">{mainService?.name_ar}</span>
+                                );
+                            })()}
                         </nav>
 
                         {/* Profile Header */}
@@ -412,10 +421,12 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                                     <div className="flex flex-wrap gap-2">
                                         {advertiser.targeted_cities.map(citySlug => {
                                             const city = getCityBySlug(citySlug);
+                                            const serviceSlug = getCanonicalSlug(advertiser.targeted_services[0]) || advertiser.targeted_services[0];
+                                            const hasOverride = city && hasPageOverride(citySlug, serviceSlug);
                                             return city ? (
                                                 <Link
                                                     key={citySlug}
-                                                    href={`/${citySlug}/${getCanonicalSlug(advertiser.targeted_services[0]) || advertiser.targeted_services[0]}`}
+                                                    href={hasOverride ? `/${citySlug}/${serviceSlug}` : `/${citySlug}`}
                                                     className="px-3 py-1.5 bg-gray-100 hover:bg-emerald-50 text-gray-700 hover:text-emerald-700 rounded-lg text-sm transition-colors"
                                                 >
                                                     {city.name_ar}
@@ -470,9 +481,18 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
 
                         <h3 className="text-xl font-bold text-gray-900 mb-3">الخدمات المقدمة</h3>
                         <ul className="text-gray-600 space-y-1 mb-6">
-                            {targetedServices.map(s => (
-                                <li key={s.slug}>✓ <Link href={`/${advertiser.targeted_cities[0]}/${getCanonicalSlug(s.slug) || s.slug}`} className="text-emerald-700 hover:underline">{s.name_ar}</Link></li>
-                            ))}
+                            {targetedServices.map(s => {
+                                const slug = getCanonicalSlug(s.slug) || s.slug;
+                                const citySlug = advertiser.targeted_cities[0];
+                                const hasOverride = hasPageOverride(citySlug, slug);
+                                return (
+                                    <li key={s.slug}>✓ {hasOverride ? (
+                                        <Link href={`/${citySlug}/${slug}`} className="text-emerald-700 hover:underline">{s.name_ar}</Link>
+                                    ) : (
+                                        <span className="text-gray-600">{s.name_ar}</span>
+                                    )}</li>
+                                );
+                            })}
                         </ul>
 
                         <h3 className="text-xl font-bold text-gray-900 mb-3">مناطق التغطية</h3>

@@ -6,7 +6,7 @@
 
 import type { City, Service } from '@/types';
 import type { PageOverride } from './types';
-import { getPageOverride } from './registry';
+import { getPageOverride, hasPageOverride } from './registry';
 import { generateContentLayers, type ContentLayers } from '../ai-content-layers';
 import { generateSeoContent } from '../seo-content';
 import { getServiceKeywordProfile, getCityKeyword, resolveKeywordTemplate } from '../keyword-strategy';
@@ -281,6 +281,7 @@ export function resolveSeoContent(city: City, service: Service) {
 
     // Blueprint Rule #13: Resolve related services (7-11) from override or auto
     // Apply canonical slug resolution even for override-custom relations
+    // 🛡️ CRITICAL: Filter by hasPageOverride to prevent broken links (61-link fix)
     const resolvedRelated = override.relatedServices
         ? (() => {
             const seen = new Set<string>();
@@ -289,6 +290,8 @@ export function resolveSeoContent(city: City, service: Service) {
                     const canonical = getCanonicalSlug(rel.slug);
                     const effectiveSlug = canonical || rel.slug;
                     if (seen.has(effectiveSlug) || effectiveSlug === service.slug) return null;
+                    // 🛡️ Skip if target page doesn't exist for this city
+                    if (!hasPageOverride(city.slug, effectiveSlug)) return null;
                     seen.add(effectiveSlug);
                     return { ...rel, slug: effectiveSlug };
                 })
@@ -378,6 +381,8 @@ export function resolveRelatedServices(serviceSlug: string, citySlug: string, li
             const effectiveSlug = canonical || rel.slug;
             if (seen.has(effectiveSlug)) continue;
             if (effectiveSlug === serviceSlug) continue;
+            // 🛡️ Skip if target page doesn't exist for this city (prevents 404s)
+            if (!hasPageOverride(citySlug, effectiveSlug)) continue;
             seen.add(effectiveSlug);
             resolved.push({ ...rel, slug: effectiveSlug });
         }
@@ -387,7 +392,7 @@ export function resolveRelatedServices(serviceSlug: string, citySlug: string, li
             .slice(0, limit);
     }
 
-    return getRelatedServices(serviceSlug, limit);
+    return getRelatedServices(serviceSlug, limit, citySlug);
 }
 
 // ============================================

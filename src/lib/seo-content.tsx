@@ -2,6 +2,7 @@ import Link from 'next/link';
 import type { City, Service } from '@/types';
 import { getCityContext, getAdjustedPriceRange, getServiceNuances, getClimateContent } from './city-context';
 import { getRelatedServices, generateServiceUrl, applyContextualLinks, escapeHtml } from './related-services';
+import { hasPageOverride } from './overrides/registry';
 import { getServiceBySlug, getCityBySlug } from './seed';
 import { generateContentLayers } from './ai-content-layers';
 import { getServiceKeywordProfile, getCityKeyword, resolveKeywordTemplate } from './keyword-strategy';
@@ -49,7 +50,7 @@ export function generateSeoContent({ city, service }: SeoContentProps) {
     const basePricing = BASE_PRICING[service.slug] || DEFAULT_BASE_PRICING;
     const trustFactors = TRUST_FACTORS[service.category] || DEFAULT_TRUST_FACTORS;
     const serviceNuances = getServiceNuances(city.slug, service.category);
-    const relatedServices = getRelatedServices(service.slug, 11);
+    const relatedServices = getRelatedServices(service.slug, 11, city.slug);
     const climateContent = cityContext ? getClimateContent(cityContext.climate) : null;
 
     // AI Content Layers
@@ -125,7 +126,8 @@ export function generateSeoContent({ city, service }: SeoContentProps) {
                 .replace(/\s+/g, '-')
                 .replace(/^ال/, '')
         );
-        return nearbyCity ? {
+        // 🛡️ Only link to nearby cities that have an override for this service
+        return nearbyCity && hasPageOverride(nearbyCity.slug, service.slug) ? {
             name_ar: nearbyCity.name_ar,
             slug: nearbyCity.slug,
             url: `/${nearbyCity.slug}/${service.slug}`,
