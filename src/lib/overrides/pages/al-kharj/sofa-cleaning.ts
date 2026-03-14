@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'HEPA AC', use: 'يمتص NH₃ — رائحة' },
         { name: 'RO Water', use: 'لا CaCO₃ — لا خشونة' },
     ],
-    hiddenObjections: [
-        { fear: 'شامبو يكفي.', solution: 'بلمرة حيوانية = Enzymatic.' },
-        { fear: 'مثل خميس.', solution: 'لا عفن+20 دقيقة = أرخص 30%.' },
+    commonConcerns: [
+        { concern: 'شامبو يكفي.', solution: 'بلمرة حيوانية = Enzymatic.' },
+        { concern: 'مثل خميس.', solution: 'لا عفن+20 دقيقة = أرخص 30%.' },
     ],
     consumerEducation: [
         { myth: 'معطر.', truth: 'AC يمتص NH₃ لا يُعطّر.' },

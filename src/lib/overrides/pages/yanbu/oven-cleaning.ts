@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'RO Water', use: 'NaCl — لا ملح يعود' },
         { name: 'Anti-Fungal', use: '70-85% — عفن فرن' },
     ],
-    hiddenObjections: [
-        { fear: 'منظف عادي.', solution: 'NaCl+دهن=صلب. Degreaser صناعي.' },
-        { fear: 'مثل بريدة.', solution: 'ملح+حمض+عفن = أعقد.' },
+    commonConcerns: [
+        { concern: 'منظف عادي.', solution: 'NaCl+دهن=صلب. Degreaser صناعي.' },
+        { concern: 'مثل بريدة.', solution: 'ملح+حمض+عفن = أعقد.' },
     ],
     consumerEducation: [
         { myth: 'سنوي.', truth: 'ربع سنوي. ملح+دهن.' },

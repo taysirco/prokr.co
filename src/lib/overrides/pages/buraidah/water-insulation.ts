@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'DPC Membrane', use: 'Capillary Rise — أساسات' },
         { name: 'سيليكون مرن', use: 'مفاصل ΔT — تمدد/انكماش' },
     ],
-    hiddenObjections: [
-        { fear: 'SBS لازم.', solution: 'لا مطر = لا SBS! DPC يكفي.' },
-        { fear: 'مثل خميس.', solution: 'عكس! أساسات فقط. وفر 60%.' },
+    commonConcerns: [
+        { concern: 'SBS لازم.', solution: 'لا مطر = لا SBS! DPC يكفي.' },
+        { concern: 'مثل خميس.', solution: 'عكس! أساسات فقط. وفر 60%.' },
     ],
     consumerEducation: [
         { myth: 'SBS ضروري.', truth: 'لا مطر = لا SBS. DPC+Closed.' },

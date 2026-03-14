@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'HDPE Membrane', use: 'فوق اللبشة — حاجز رطوبة' },
         { name: 'حماية ميكانيكية', use: 'فوق العزل — SiO₂ تآكل' },
     ],
-    hiddenObjections: [
-        { fear: 'يحتاج سطحي.', solution: 'لا أمطار = أرضي فقط = 50% أرخص.' },
-        { fear: 'مثل خميس.', solution: 'عكس! أرضي فقط مقابل مزدوج.' },
+    commonConcerns: [
+        { concern: 'يحتاج سطحي.', solution: 'لا أمطار = أرضي فقط = 50% أرخص.' },
+        { concern: 'مثل خميس.', solution: 'عكس! أرضي فقط مقابل مزدوج.' },
     ],
     consumerEducation: [
         { myth: 'عزل سطحي.', truth: 'لا أمطار بالخرج. أرضي فقط.' },

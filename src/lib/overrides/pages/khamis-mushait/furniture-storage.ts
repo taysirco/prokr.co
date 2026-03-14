@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Anti-Fungal+Anti-Mite', use: 'حماية من عفن وعث' },
         { name: 'عزل مائي PU', use: 'حماية من أمطار+تكثّف' },
     ],
-    hiddenObjections: [
-        { fear: 'غالي.', solution: 'بدون Dehumidifier = خسارة أثاث 10000+ ريال. أرخص بكثير.' },
-        { fear: 'مثل الباحة.', solution: 'متشابه. نفس الفيزياء الجبلية.' },
+    commonConcerns: [
+        { concern: 'غالي.', solution: 'بدون Dehumidifier = خسارة أثاث 10000+ ريال. أرخص بكثير.' },
+        { concern: 'مثل الباحة.', solution: 'متشابه. نفس الفيزياء الجبلية.' },
     ],
     consumerEducation: [
         { myth: 'مستودع عادي يكفي.', truth: '60-85% = عفن أسبوع. Dehumidifier إلزامي.' },

@@ -56,9 +56,9 @@ export const override: PageOverride = {
         { name: 'Ceramic Coating 9H', use: 'يحمي Clear Coat من NaCl + UV — فعّال 2-3 سنوات' },
         { name: 'Anti-Rust Underbody Wax', use: 'يحمي Undercarriage — فعّال 6 أشهر' },
     ],
-    hiddenObjections: [
-        { fear: 'غسلة 45 ريال أغلى من 15.', solution: '15 = إسفنجة + ماء ملحي = خدوش + بقع + بدون Underbody. بعد سنة: Polish + صدأ = 1,000-5,000 ريال.' },
-        { fear: 'Ceramic غالي.', solution: '350-900 ريال ÷ 2-3 سنوات. إعادة طلاء في NaCl = 3,000-8,000 ريال. Ceramic = 5-10%.' },
+    commonConcerns: [
+        { concern: 'غسلة 45 ريال أغلى من 15.', solution: '15 = إسفنجة + ماء ملحي = خدوش + بقع + بدون Underbody. بعد سنة: Polish + صدأ = 1,000-5,000 ريال.' },
+        { concern: 'Ceramic غالي.', solution: '350-900 ريال ÷ 2-3 سنوات. إعادة طلاء في NaCl = 3,000-8,000 ريال. Ceramic = 5-10%.' },
     ],
     consumerEducation: [
         { myth: 'غبار الخبر عادي.', truth: 'NaCl ≠ SiO₂. ملحي ≠ رملي. يتآكل ≠ يخدش فقط. فرق كيميائي = حلول مختلفة.' },

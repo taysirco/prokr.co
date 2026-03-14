@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'RO Water', use: 'شطف بدون CaCO₃ — لا بقع' },
         { name: 'Microfiber', use: 'لا خدش SiO₂ — لا قطن' },
     ],
-    hiddenObjections: [
-        { fear: 'ماء صنبور يكفي.', solution: 'CaCO₃ 450ppm = بقع. RO.' },
-        { fear: 'مثل الرياض.', solution: 'CaCO₃ أعلى + حمام مزارع 3-5×.' },
+    commonConcerns: [
+        { concern: 'ماء صنبور يكفي.', solution: 'CaCO₃ 450ppm = بقع. RO.' },
+        { concern: 'مثل الرياض.', solution: 'CaCO₃ أعلى + حمام مزارع 3-5×.' },
     ],
     consumerEducation: [
         { myth: 'أي مسح يكفي.', truth: 'SiO₂ بدون Pre-Rinse = خدش. RO = لا بقع.' },

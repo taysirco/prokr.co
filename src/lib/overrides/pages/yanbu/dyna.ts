@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Silica Gel', use: '70-85% — إلكترونيات' },
         { name: 'Anti-Corrosion', use: 'معدات صناعية YASREF' },
     ],
-    hiddenObjections: [
-        { fear: 'مكشوف أرخص.', solution: 'NaCl = صدأ 48h. VCI.' },
-        { fear: 'مثل بريدة.', solution: 'صدأ+رطوبة = مختلف.' },
+    commonConcerns: [
+        { concern: 'مكشوف أرخص.', solution: 'NaCl = صدأ 48h. VCI.' },
+        { concern: 'مثل بريدة.', solution: 'صدأ+رطوبة = مختلف.' },
     ],
     consumerEducation: [
         { myth: 'أي دينا.', truth: 'ساحلي = VCI+Anti-Corrosion.' },

@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Silica Gel', use: 'يمتص تكثّف 75-85%' },
         { name: 'GPS تتبع', use: 'ثلاثية = طرق متعددة' },
     ],
-    hiddenObjections: [
-        { fear: 'مسافة قصيرة.', solution: 'NaCl+SiO₂ في دقائق. قصيرة ≠ آمنة.' },
-        { fear: 'أي دباب.', solution: 'بدون غطاء + EPE = مزدوج يصل. 10-20 ريال = يحمي آلاف.' },
+    commonConcerns: [
+        { concern: 'مسافة قصيرة.', solution: 'NaCl+SiO₂ في دقائق. قصيرة ≠ آمنة.' },
+        { concern: 'أي دباب.', solution: 'بدون غطاء + EPE = مزدوج يصل. 10-20 ريال = يحمي آلاف.' },
     ],
     consumerEducation: [
         { myth: 'مثل الخبر.', truth: 'SiO₂ إضافي = خدش مزدوج. مختلف.' },

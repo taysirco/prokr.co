@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Descaler', use: 'CaCO₃ — حمام مكتب' },
         { name: 'Microfiber', use: 'SiO₂ — مكاتب زجاجية' },
     ],
-    hiddenObjections: [
-        { fear: 'معطر يكفي.', solution: 'NH₃ يتراكم. AC يمتص = فرق.' },
-        { fear: 'يومي غالي.', solution: 'NH₃+SiO₂ يومي. رائحة = عملاء يخسرون.' },
+    commonConcerns: [
+        { concern: 'معطر يكفي.', solution: 'NH₃ يتراكم. AC يمتص = فرق.' },
+        { concern: 'يومي غالي.', solution: 'NH₃+SiO₂ يومي. رائحة = عملاء يخسرون.' },
     ],
     consumerEducation: [
         { myth: 'مرتين بالأسبوع.', truth: 'NH₃+SiO₂ يومي. يومي أو 3 أيام.' },

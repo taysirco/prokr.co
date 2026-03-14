@@ -57,9 +57,9 @@ export const override: PageOverride = {
         { name: 'HEPA', use: 'PM10 طيني — يحجز' },
         { name: 'Anti-Corrosion', use: 'NaCl — Galvanic' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل الخبر.', solution: 'واحة = تربة طينية + نخيل + عيون. عفن مختلف.' },
-        { fear: 'مثل الجبيل.', solution: 'لا VOC ولا سخام SABIC. لكن: واحة.' },
+    commonConcerns: [
+        { concern: 'مثل الخبر.', solution: 'واحة = تربة طينية + نخيل + عيون. عفن مختلف.' },
+        { concern: 'مثل الجبيل.', solution: 'لا VOC ولا سخام SABIC. لكن: واحة.' },
     ],
     consumerEducation: [
         { myth: 'ساحلي فقط.', truth: 'ساحلي + واحي = ثنائي فريد.' },

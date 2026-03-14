@@ -9,7 +9,7 @@ interface SpeakableWebPageJsonLdProps {
     description: string;
     url: string;
     speakableSelectors: string[];
-    speakableText?: string;  // ⚡ Atomic binding — same variable as DirectAnswer
+    speakableText?: string;  // ⚡ Synced with DirectAnswer text
     dateModified?: string;
     about?: { name: string; type: string };
     mentions?: { name: string; type: string }[];

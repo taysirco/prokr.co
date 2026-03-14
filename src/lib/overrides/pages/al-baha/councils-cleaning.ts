@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Anti-Fungal', use: '200 يوم ضباب — عفن' },
         { name: 'Dehumidifier', use: '6-10h — تجفيف' },
     ],
-    hiddenObjections: [
-        { fear: 'منظف عادي.', solution: '4 تحديات جبلية = 4 ركائز.' },
-        { fear: 'مثل بريدة.', solution: 'ضباب+عرعر+طين ≠ كلس.' },
+    commonConcerns: [
+        { concern: 'منظف عادي.', solution: '4 تحديات جبلية = 4 ركائز.' },
+        { concern: 'مثل بريدة.', solution: 'ضباب+عرعر+طين ≠ كلس.' },
     ],
     consumerEducation: [
         { myth: 'الباحة نظيفة.', truth: 'ضباب = عفن. عرعر = لزج.' },

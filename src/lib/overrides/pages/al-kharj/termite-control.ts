@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Silicone Caulk', use: 'سد تشققات ΔT — ممرات' },
         { name: 'Monitoring Stations', use: 'مراقبة — كشف مبكر' },
     ],
-    hiddenObjections: [
-        { fear: 'جاف = لا نمل.', solution: 'رطوبة CaCO₃ تحت الأرض.' },
-        { fear: 'رش سطحي.', solution: 'النمل تحت. حاجز عميق.' },
+    commonConcerns: [
+        { concern: 'جاف = لا نمل.', solution: 'رطوبة CaCO₃ تحت الأرض.' },
+        { concern: 'رش سطحي.', solution: 'النمل تحت. حاجز عميق.' },
     ],
     consumerEducation: [
         { myth: 'جاف = آمن.', truth: 'تحت الأرض رطب. CaCO₃.' },

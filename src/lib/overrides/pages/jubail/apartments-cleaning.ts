@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'HEPA Activated Carbon', use: 'PM2.5 + VOC — غرف نوم' },
         { name: 'Dehumidifier 50%', use: 'تكثّف — يمنع عفن' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل الخبر.', solution: 'VOC إضافي + 98% > 95% + PM2.5 صناعي. مختلف.' },
-        { fear: 'منظف عادي.', solution: 'NaCl+VOC = مُركّبة. عادي = ينزلق. Degreaser.' },
+    commonConcerns: [
+        { concern: 'مثل الخبر.', solution: 'VOC إضافي + 98% > 95% + PM2.5 صناعي. مختلف.' },
+        { concern: 'منظف عادي.', solution: 'NaCl+VOC = مُركّبة. عادي = ينزلق. Degreaser.' },
     ],
     consumerEducation: [
         { myth: 'ساحلي فقط.', truth: 'ساحلي + صناعي = VOC + NaCl + PM2.5. ثلاثي.' },

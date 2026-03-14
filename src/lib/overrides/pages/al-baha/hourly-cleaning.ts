@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Dehumidifier محمول', use: '6-10h — تجفيف' },
         { name: 'Anti-Fungal', use: '200 يوم ضباب — عفن' },
     ],
-    hiddenObjections: [
-        { fear: 'ساعية عادية.', solution: '4 ركائز = تدريب خاص.' },
-        { fear: 'مثل بريدة.', solution: 'Laterite+عرعر ≠ كلس.' },
+    commonConcerns: [
+        { concern: 'ساعية عادية.', solution: '4 ركائز = تدريب خاص.' },
+        { concern: 'مثل بريدة.', solution: 'Laterite+عرعر ≠ كلس.' },
     ],
     consumerEducation: [
         { myth: 'أي عاملة.', truth: 'مُدرّبة 4 ركائز.' },

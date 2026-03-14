@@ -54,8 +54,8 @@ export const override: PageOverride = {
         { name: 'Anti-Fungal Coating', use: 'يحيِّد Stachybotrys على السطح' },
         { name: 'SBS Modified Bitumen', use: 'حزام مائي تحت الفوم — سيول' },
     ],
-        hiddenObjections: [
-        { fear: 'العزل مكلف — مش متأكد يستاهل.', solution: 'عزل SBC 601 يوفر 30-40% كهرباء سنوياً. يسترد تكلفته خلال 2-3 سنوات.' },
+        commonConcerns: [
+        { concern: 'العزل مكلف — مش متأكد يستاهل.', solution: 'عزل SBC 601 يوفر 30-40% كهرباء سنوياً. يسترد تكلفته خلال 2-3 سنوات.' },
     ],
 
     consumerEducation: [

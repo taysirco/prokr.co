@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Alkaline Degreaser', use: 'يُذيب كربنة بعد Enzymatic' },
         { name: 'Descaler', use: 'كلس أفران بخار — CaCO₃' },
     ],
-    hiddenObjections: [
-        { fear: 'Alkaline يكفي.', solution: 'كربنة حيوانية = Enzymatic أولاً.' },
-        { fear: 'مثل الرياض.', solution: 'NH₃ = روابط حيوانية أقوى.' },
+    commonConcerns: [
+        { concern: 'Alkaline يكفي.', solution: 'كربنة حيوانية = Enzymatic أولاً.' },
+        { concern: 'مثل الرياض.', solution: 'NH₃ = روابط حيوانية أقوى.' },
     ],
     consumerEducation: [
         { myth: 'تنظيف عادي.', truth: 'كربنة حيوانية = Enzymatic ← Alkaline.' },

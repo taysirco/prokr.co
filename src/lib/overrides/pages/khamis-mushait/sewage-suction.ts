@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'جهاز ضغط ماء', use: 'تنظيف مخرج من طين' },
         { name: 'معالجة بيولوجية', use: 'تُسرّع تحلل في تربة صخرية' },
     ],
-    hiddenObjections: [
-        { fear: 'شهري يكفي.', solution: 'أمطار + تربة = 3 أسابيع. شهري = فيضان.' },
-        { fear: 'مثل عنيزة.', solution: 'أمطار+تربة = مختلف تماماً.' },
+    commonConcerns: [
+        { concern: 'شهري يكفي.', solution: 'أمطار + تربة = 3 أسابيع. شهري = فيضان.' },
+        { concern: 'مثل عنيزة.', solution: 'أمطار+تربة = مختلف تماماً.' },
     ],
     consumerEducation: [
         { myth: 'البيارة مثل عنيزة.', truth: 'أمطار+صخر = أسرع امتلاءً. 3 أسابيع.' },

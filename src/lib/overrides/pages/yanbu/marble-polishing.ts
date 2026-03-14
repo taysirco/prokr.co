@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Marine Sealer', use: 'NaCl Etching — حماية' },
         { name: 'Anti-Fungal', use: '70-85% — عفن تحت رخام' },
     ],
-    hiddenObjections: [
-        { fear: 'Descaler يكفي.', solution: 'NaCl Etching ≠ كلس. Marine Sealer.' },
-        { fear: 'مثل بريدة.', solution: 'Etching+حمض+عفن vs كلس+Nafud.' },
+    commonConcerns: [
+        { concern: 'Descaler يكفي.', solution: 'NaCl Etching ≠ كلس. Marine Sealer.' },
+        { concern: 'مثل بريدة.', solution: 'Etching+حمض+عفن vs كلس+Nafud.' },
     ],
     consumerEducation: [
         { myth: 'سنوي.', truth: 'NaCl Etching = نصف سنوي Sealer.' },

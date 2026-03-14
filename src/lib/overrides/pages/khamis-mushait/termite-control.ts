@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'حقن تربة', use: 'يصل المستعمرة تحت الأرض' },
         { name: 'محطات مراقبة', use: 'كشف مبكر — فحص دوري' },
     ],
-    hiddenObjections: [
-        { fear: 'مبيد عادي يكفي.', solution: 'Termidor = يصل المستعمرة. مبيد عادي سطحي.' },
-        { fear: 'مثل عنيزة.', solution: 'أسرع 50% بالرطوبة. خشب لين = أخطر.' },
+    commonConcerns: [
+        { concern: 'مبيد عادي يكفي.', solution: 'Termidor = يصل المستعمرة. مبيد عادي سطحي.' },
+        { concern: 'مثل عنيزة.', solution: 'أسرع 50% بالرطوبة. خشب لين = أخطر.' },
     ],
     consumerEducation: [
         { myth: 'النمل الأبيض بطيء.', truth: '60-85% = أسرع 50%. خشب رطب = طعام سهل.' },

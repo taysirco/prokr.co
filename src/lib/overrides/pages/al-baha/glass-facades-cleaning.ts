@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Marine Sealant', use: 'Dew Point — إطار خشب' },
         { name: 'Oxalic Acid', use: 'Laterite — بقع بنية' },
     ],
-    hiddenObjections: [
-        { fear: 'مسح يكفي.', solution: 'Biofilm = Anti-Biofilm.' },
-        { fear: 'مثل بريدة.', solution: 'Biofilm+Dew Point ≠ SiO₂.' },
+    commonConcerns: [
+        { concern: 'مسح يكفي.', solution: 'Biofilm = Anti-Biofilm.' },
+        { concern: 'مثل بريدة.', solution: 'Biofilm+Dew Point ≠ SiO₂.' },
     ],
     consumerEducation: [
         { myth: 'نصف سنوي.', truth: 'ربع سنوي. Biofilm.' },

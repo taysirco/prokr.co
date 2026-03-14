@@ -56,9 +56,9 @@ export const override: PageOverride = {
         { name: 'Drain Pan Cleaner', use: 'تصريف تكثّف 60-85% — يمنع تسريب' },
         { name: 'فاحص Heat Pump', use: 'فحص Defrost Cycle — 0°م شتاءً' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل الرياض بالضبط.', solution: 'ضباب+عفن+برد+أمطار = مختلف تماماً. الرياض: SiO₂+حر.' },
-        { fear: 'صيانة عادية تكفي.', solution: 'Anti-Fungal + Heat Pump + Drain = 3 خطوات إضافية.' },
+    commonConcerns: [
+        { concern: 'مثل الرياض بالضبط.', solution: 'ضباب+عفن+برد+أمطار = مختلف تماماً. الرياض: SiO₂+حر.' },
+        { concern: 'صيانة عادية تكفي.', solution: 'Anti-Fungal + Heat Pump + Drain = 3 خطوات إضافية.' },
     ],
     consumerEducation: [
         { myth: 'المكيف يحتاج صيانة مرتين/سنة.', truth: '4 مرات — ضباب 200 يوم = عفن كل 3 أشهر.' },

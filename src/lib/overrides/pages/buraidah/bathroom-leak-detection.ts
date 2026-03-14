@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Chemical Descaler', use: 'يُذيب CaCO₃ 600ppm — وقائي' },
         { name: 'كاميرا حرارية', use: 'يُحدد موقع التسرب' },
     ],
-    hiddenObjections: [
-        { fear: 'بصري يكفي.', solution: '600ppm داخلي = فحص ضغط.' },
-        { fear: 'مثل عنيزة.', solution: 'نفس 600ppm لكن بريدة: فلل أكبر.' },
+    commonConcerns: [
+        { concern: 'بصري يكفي.', solution: '600ppm داخلي = فحص ضغط.' },
+        { concern: 'مثل عنيزة.', solution: 'نفس 600ppm لكن بريدة: فلل أكبر.' },
     ],
     consumerEducation: [
         { myth: 'فحص بصري.', truth: 'CaCO₃ داخلي = ضغط+حراري.' },

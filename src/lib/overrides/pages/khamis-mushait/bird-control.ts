@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'شبك ستانلس', use: 'يمنع تعشيش في فتحات' },
         { name: 'Anti-Fungal صناعي', use: 'يقتل Histoplasma في فضلات رطبة' },
     ],
-    hiddenObjections: [
-        { fear: 'تسميم أسرع.', solution: 'الأنظمة تمنع. طارد+شبك = حل دائم ومشروع.' },
-        { fear: 'مثل عنيزة.', solution: 'فضلات رطبة = Histoplasma. أخطر. Anti-Fungal إلزامي.' },
+    commonConcerns: [
+        { concern: 'تسميم أسرع.', solution: 'الأنظمة تمنع. طارد+شبك = حل دائم ومشروع.' },
+        { concern: 'مثل عنيزة.', solution: 'فضلات رطبة = Histoplasma. أخطر. Anti-Fungal إلزامي.' },
     ],
     consumerEducation: [
         { myth: 'فضلات طيور غير خطيرة.', truth: '60-85% = Histoplasma فطر تنفسي. خطير بالرطوبة.' },

@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Pure Water RO+DI', use: 'بدون CaCO₃ 600ppm' },
         { name: 'Chemical Remover', use: 'صمغ نخيل — لا حك' },
     ],
-    hiddenObjections: [
-        { fear: 'ماء عادي يكفي.', solution: '600ppm = بقع فوراً. Pure Water.' },
-        { fear: 'مثل الرياض.', solution: 'Nafud أنعم + 600ppm أعلى + نخيل.' },
+    commonConcerns: [
+        { concern: 'ماء عادي يكفي.', solution: '600ppm = بقع فوراً. Pure Water.' },
+        { concern: 'مثل الرياض.', solution: 'Nafud أنعم + 600ppm أعلى + نخيل.' },
     ],
     consumerEducation: [
         { myth: 'قطن وماء.', truth: 'Nafud يعلق بالقطن = خدش. Microfiber.' },

@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Ratchet Straps', use: 'تثبيت حمولة — منحدرات 6-12%' },
         { name: 'فرامل تبريد', use: 'حمولة ثقيلة + منحدر = ضغط هائل' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل دباب.', solution: 'دينا 3-4 طن مقابل 500 كجم. فرامل تبريد مختلفة.' },
-        { fear: 'غالي.', solution: 'بدون Waterproof = خسارة 3-4 طن = أغلى 100×.' },
+    commonConcerns: [
+        { concern: 'مثل دباب.', solution: 'دينا 3-4 طن مقابل 500 كجم. فرامل تبريد مختلفة.' },
+        { concern: 'غالي.', solution: 'بدون Waterproof = خسارة 3-4 طن = أغلى 100×.' },
     ],
     consumerEducation: [
         { myth: 'دينا عادية تكفي بخميس.', truth: 'أمطار+منحدرات = Waterproof+فرامل تبريد إلزامي.' },

@@ -56,9 +56,9 @@ export const override: PageOverride = {
         { name: 'جهاز صوتي', use: 'يسمع تسرب داخل الجدران' },
         { name: 'Descaler وقائي', use: 'CaCO₃ 600ppm — يمنع انسداد' },
     ],
-    hiddenObjections: [
-        { fear: 'بصري يكفي.', solution: 'بقع واضحة+حراري = دقيق.' },
-        { fear: 'مثل عنيزة.', solution: 'نفس 600ppm لكن بريدة أكبر.' },
+    commonConcerns: [
+        { concern: 'بصري يكفي.', solution: 'بقع واضحة+حراري = دقيق.' },
+        { concern: 'مثل عنيزة.', solution: 'نفس 600ppm لكن بريدة أكبر.' },
     ],
     consumerEducation: [
         { myth: 'تسرب عادي.', truth: '600ppm+ΔT = مزدوج. أكثر.' },

@@ -56,9 +56,9 @@ export const override: PageOverride = {
         { name: 'Sealer (مانع تسرب)', use: 'يسد مسام — يحمي 1-2 سنة' },
         { name: 'Anti-Biofilm Treatment', use: 'يقتل طحالب 85-95%' },
     ],
-    hiddenObjections: [
-        { fear: 'الرخام جديد.', solution: 'NaCl من اليوم الأول. 85-95% من الساعة الأولى. Sealer فوراً = حماية الاستثمار.' },
-        { fear: 'ملمّع من المحل.', solution: 'الملمّع = طبقة فوق NaCl الرطب. يلمع مؤقتاً. NaCl تحته = يُبهت بسرعة. غسل + جلي = لمعان حقيقي.' },
+    commonConcerns: [
+        { concern: 'الرخام جديد.', solution: 'NaCl من اليوم الأول. 85-95% من الساعة الأولى. Sealer فوراً = حماية الاستثمار.' },
+        { concern: 'ملمّع من المحل.', solution: 'الملمّع = طبقة فوق NaCl الرطب. يلمع مؤقتاً. NaCl تحته = يُبهت بسرعة. غسل + جلي = لمعان حقيقي.' },
     ],
     consumerEducation: [
         { myth: 'رخام الخبر مثل الأحساء.', truth: 'NaCl Hygroscopic ≠ CaSO₄ Scale. عفن مسامي ≠ Silt Staining. Biofilm ≠ لقاح. مختلف.' },

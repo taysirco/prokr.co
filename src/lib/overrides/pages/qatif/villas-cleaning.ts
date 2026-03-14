@@ -60,9 +60,9 @@ export const override: PageOverride = {
         { name: 'HEPA', use: 'طين+طلع — المحور 5+6' },
         { name: 'Dehumidifier', use: '80-95% — تكثّف' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل الخبر.', solution: 'واحة = 6 محاور. عفن مزدوج+طين+نخيل+عيون.' },
-        { fear: 'غالي.', solution: '6 محاور = 6 أدوات. بدون = تلف أغلى.' },
+    commonConcerns: [
+        { concern: 'مثل الخبر.', solution: 'واحة = 6 محاور. عفن مزدوج+طين+نخيل+عيون.' },
+        { concern: 'غالي.', solution: '6 محاور = 6 أدوات. بدون = تلف أغلى.' },
     ],
     consumerEducation: [
         { myth: 'ساحلي فقط.', truth: 'واحي = طين+نخيل+عيون+عفن واحي. ثنائي.' },

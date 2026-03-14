@@ -52,9 +52,9 @@ export const override: PageOverride = {
         { name: 'Silica Gel', use: '80-95% — تكثّف' },
         { name: 'VCI', use: 'NaCl — حديد' },
     ],
-    hiddenObjections: [
-        { fear: 'مسافة قصيرة.', solution: '80-95% تكثّف = دقائق. Silica.' },
-        { fear: 'مثل الخبر.', solution: 'أزقة تاريخية + طين. مختلف.' },
+    commonConcerns: [
+        { concern: 'مسافة قصيرة.', solution: '80-95% تكثّف = دقائق. Silica.' },
+        { concern: 'مثل الخبر.', solution: 'أزقة تاريخية + طين. مختلف.' },
     ],
     consumerEducation: [
         { myth: 'شاحنة.', truth: 'أزقة = دباب فقط.' },

@@ -56,9 +56,9 @@ export const override: PageOverride = {
         { name: 'Microfiber ناعم', use: 'الخطوة 2 — يرفع SiO₂ بلا خدش' },
         { name: 'Anti-Fungal + Anti-Corrosion', use: 'الخطوات 3-4 — حماية مزدوجة' },
     ],
-    hiddenObjections: [
-        { fear: 'أنظف بنفسي.', solution: 'بماء الظهران = NaCl + SiO₂ خدش = تلف مزدوج. 5 خطوات = تحتاج تدريب.' },
-        { fear: 'أرخص.', solution: 'أرخص = بدون ترتيب = خدش + ملح + عفن = 3 أخطاء كل زيارة.' },
+    commonConcerns: [
+        { concern: 'أنظف بنفسي.', solution: 'بماء الظهران = NaCl + SiO₂ خدش = تلف مزدوج. 5 خطوات = تحتاج تدريب.' },
+        { concern: 'أرخص.', solution: 'أرخص = بدون ترتيب = خدش + ملح + عفن = 3 أخطاء كل زيارة.' },
     ],
     consumerEducation: [
         { myth: 'ممسحة.', truth: 'ممسحة + SiO₂ = خدش. + ماء الظهران = NaCl. 2 أخطاء.' },

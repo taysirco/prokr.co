@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Closed-Cell PU Foam', use: 'R-6.5/inch — عزل حراري لا يمتص ماء' },
         { name: 'جهاز رش ضغط عالي', use: 'تطبيق متساوي — سماكة دقيقة' },
     ],
-    hiddenObjections: [
-        { fear: 'حراري يكفي مثل عنيزة.', solution: 'أمطار خميس = مائي إلزامي. عنيزة: لا مطر.' },
-        { fear: 'غالي.', solution: 'تسرب مائي = تلف هيكلي 10000+. العزل أرخص.' },
+    commonConcerns: [
+        { concern: 'حراري يكفي مثل عنيزة.', solution: 'أمطار خميس = مائي إلزامي. عنيزة: لا مطر.' },
+        { concern: 'غالي.', solution: 'تسرب مائي = تلف هيكلي 10000+. العزل أرخص.' },
     ],
     consumerEducation: [
         { myth: 'سطح خميس مثل عنيزة.', truth: 'أمطار+ضباب = مائي إلزامي. عنيزة: حراري فقط.' },

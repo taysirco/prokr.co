@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'RO Water', use: 'شطف بدون CaCO₃ 600ppm' },
         { name: 'Clay Bar', use: 'صمغ نخيل — كيميائي لا حك' },
     ],
-    hiddenObjections: [
-        { fear: 'غسل عادي يكفي.', solution: 'Nafud+600ppm+نخيل = خدش+بقع+لزج.' },
-        { fear: 'مثل الرياض.', solution: '600ppm مقابل 300. Nafud أنعم. نخيل 8M.' },
+    commonConcerns: [
+        { concern: 'غسل عادي يكفي.', solution: 'Nafud+600ppm+نخيل = خدش+بقع+لزج.' },
+        { concern: 'مثل الرياض.', solution: '600ppm مقابل 300. Nafud أنعم. نخيل 8M.' },
     ],
     consumerEducation: [
         { myth: 'أي غسل.', truth: 'Pre-Rinse+RO+Clay Bar = 3 خطوات إلزامية.' },

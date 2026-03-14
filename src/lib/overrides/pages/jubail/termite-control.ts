@@ -56,9 +56,9 @@ export const override: PageOverride = {
         { name: 'Barrier Marine', use: 'يدوم 3× في 98%' },
         { name: 'Anti-Biofilm', use: '98% — يكشف أنفاق' },
     ],
-    hiddenObjections: [
-        { fear: 'جاف أسوأ.', solution: 'عكس! 98% = أسرع نمو. 10-15% = أبطأ.' },
-        { fear: 'رش بعوض يكفي.', solution: 'بعوض ≠ نمل أبيض. آليات مختلفة.' },
+    commonConcerns: [
+        { concern: 'جاف أسوأ.', solution: 'عكس! 98% = أسرع نمو. 10-15% = أبطأ.' },
+        { concern: 'رش بعوض يكفي.', solution: 'بعوض ≠ نمل أبيض. آليات مختلفة.' },
     ],
     consumerEducation: [
         { myth: 'مثل حفر الباطن.', truth: '98% vs 10-15%. أسرع vs أبطأ. عكس كامل.' },

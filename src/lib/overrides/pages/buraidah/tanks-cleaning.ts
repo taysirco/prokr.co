@@ -56,9 +56,9 @@ export const override: PageOverride = {
         { name: 'شفط ترسيب', use: 'Nafud قاع — سحب' },
         { name: 'كلور NWC', use: 'تعقيم 0.5-1 PPM' },
     ],
-    hiddenObjections: [
-        { fear: 'تعقيم يكفي.', solution: '600ppm Scale = Descaler أولاً.' },
-        { fear: 'مثل خميس.', solution: 'لا طحالب = أرخص 20%.' },
+    commonConcerns: [
+        { concern: 'تعقيم يكفي.', solution: '600ppm Scale = Descaler أولاً.' },
+        { concern: 'مثل خميس.', solution: 'لا طحالب = أرخص 20%.' },
     ],
     consumerEducation: [
         { myth: 'سنوي يكفي.', truth: '600ppm = كل 6 أشهر. Scale.' },

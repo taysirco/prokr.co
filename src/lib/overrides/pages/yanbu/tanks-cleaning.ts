@@ -55,9 +55,9 @@ export const override: PageOverride = {
         { name: 'Anti-Corrosion Coating', use: 'تحلية — تآكل' },
         { name: 'Epoxy Food-Grade', use: 'جدران — حماية' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل بريدة.', solution: 'طحالب+تآكل vs Scale. مختلف.' },
-        { fear: 'تعقيم يكفي.', solution: 'Anti-Algae+Anti-Corrosion إضافي.' },
+    commonConcerns: [
+        { concern: 'مثل بريدة.', solution: 'طحالب+تآكل vs Scale. مختلف.' },
+        { concern: 'تعقيم يكفي.', solution: 'Anti-Algae+Anti-Corrosion إضافي.' },
     ],
     consumerEducation: [
         { myth: 'سنوي.', truth: '70-85% = ربع سنوي. طحالب.' },

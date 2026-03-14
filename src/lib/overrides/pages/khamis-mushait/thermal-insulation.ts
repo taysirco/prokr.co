@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Vapor Barrier', use: 'يمنع تكثّف بيني — 60-85%' },
         { name: 'PU مائي', use: 'عزل مائي مزدوج — أمطار' },
     ],
-    hiddenObjections: [
-        { fear: 'Open-Cell أرخص.', solution: 'يمتص ← يفقد R-value. Closed-Cell أرخص طويلاً.' },
-        { fear: 'مثل عنيزة.', solution: 'عكس! تدفئة مقابل تبريد. أمطار مقابل لا مطر.' },
+    commonConcerns: [
+        { concern: 'Open-Cell أرخص.', solution: 'يمتص ← يفقد R-value. Closed-Cell أرخص طويلاً.' },
+        { concern: 'مثل عنيزة.', solution: 'عكس! تدفئة مقابل تبريد. أمطار مقابل لا مطر.' },
     ],
     consumerEducation: [
         { myth: 'خميس حارة مثل عنيزة.', truth: '0-5°م شتاءً! تدفئة الأولوية.' },

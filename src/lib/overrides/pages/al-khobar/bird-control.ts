@@ -55,9 +55,9 @@ export const override: PageOverride = {
         { name: 'SS316 Marine Bird Spikes', use: 'أشواك بحرية للأحياء الساحلية (كورنيش، عقربية)' },
         { name: 'SS316 Bird Netting', use: 'شبك لإغلاق الفتحات الكبيرة في البيئة الملحية' },
     ],
-    hiddenObjections: [
-        { fear: 'SS316 أغلى من SS304 بـ 30-40%.', solution: 'SS316: 20+ سنة ساحل. SS304: 3-4 سنوات ساحل. SS316 أوفر بمراحل.' },
-        { fear: 'أنا في حي داخلي — هل أحتاج SS316؟', solution: 'إذا أبعد من 2 كم عن البحر: SS304 يكفي ويوفر 30-40%.' },
+    commonConcerns: [
+        { concern: 'SS316 أغلى من SS304 بـ 30-40%.', solution: 'SS316: 20+ سنة ساحل. SS304: 3-4 سنوات ساحل. SS316 أوفر بمراحل.' },
+        { concern: 'أنا في حي داخلي — هل أحتاج SS316؟', solution: 'إذا أبعد من 2 كم عن البحر: SS304 يكفي ويوفر 30-40%.' },
     ],
     consumerEducation: [
         { myth: 'هلام طارد يكفي.', truth: '50°م = يذوب خلال أيام. لا يعمل في الخبر صيفاً.' },

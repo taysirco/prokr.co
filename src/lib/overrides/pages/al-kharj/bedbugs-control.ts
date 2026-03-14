@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Residual Insecticide', use: 'حماية طويلة في التشققات' },
         { name: 'Silicone Caulk', use: 'سد تشققات ΔT — مخابئ' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل الرياض.', solution: 'تشققات ΔT أعمق + عمالة مزارع = مختلف.' },
-        { fear: 'حرارة تكفي.', solution: 'تشققات تحمي البق من الحرارة. Steam+سد.' },
+    commonConcerns: [
+        { concern: 'مثل الرياض.', solution: 'تشققات ΔT أعمق + عمالة مزارع = مختلف.' },
+        { concern: 'حرارة تكفي.', solution: 'تشققات تحمي البق من الحرارة. Steam+سد.' },
     ],
     consumerEducation: [
         { myth: 'رش عادي يكفي.', truth: 'تشققات عميقة = الرش لا يصل. Steam+Residual.' },

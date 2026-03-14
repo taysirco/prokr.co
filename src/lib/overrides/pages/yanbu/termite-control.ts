@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'حقن أساسات', use: 'NaCl رطوبة ملحية — حاجز' },
         { name: 'DPC Membrane', use: 'رطوبة أرضية — أساسات' },
     ],
-    hiddenObjections: [
-        { fear: 'رش سطحي.', solution: 'مستعمرة تحت. Termidor+حقن.' },
-        { fear: 'مثل بريدة.', solution: 'رطوبة+ميناء vs نخيل+ΔT.' },
+    commonConcerns: [
+        { concern: 'رش سطحي.', solution: 'مستعمرة تحت. Termidor+حقن.' },
+        { concern: 'مثل بريدة.', solution: 'رطوبة+ميناء vs نخيل+ΔT.' },
     ],
     consumerEducation: [
         { myth: 'رش عام.', truth: 'Termidor+حقن = مستعمرة.' },

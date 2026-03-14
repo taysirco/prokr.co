@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Pre-Rinse ضغط', use: 'Red Mud جاف — قبل مسح' },
         { name: 'Wax Protection', use: 'Clear Coat — حماية' },
     ],
-    hiddenObjections: [
-        { fear: 'إسفنج يكفي.', solution: 'Laterite = خدوش. pH Foam+No-Touch.' },
-        { fear: 'مثل بريدة.', solution: 'Red Mud+عرعر ≠ SiO₂.' },
+    commonConcerns: [
+        { concern: 'إسفنج يكفي.', solution: 'Laterite = خدوش. pH Foam+No-Touch.' },
+        { concern: 'مثل بريدة.', solution: 'Red Mud+عرعر ≠ SiO₂.' },
     ],
     consumerEducation: [
         { myth: 'ماء يكفي.', truth: 'Red Mud يحتاج pH Foam.' },

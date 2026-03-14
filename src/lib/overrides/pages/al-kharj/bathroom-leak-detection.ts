@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'كاميرا حرارية', use: 'يُحدد موقع التسرب بدقة' },
         { name: 'Chemical Descaler', use: 'يُذيب CaCO₃ — يمنع انسداد' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل الرياض.', solution: 'CaCO₃+SiO₂+ΔT = مختلف. الرياض: لا كلس.' },
-        { fear: 'غالي.', solution: 'تسرب خفي × سنة = عفن تحت البلاط = 5000+ إصلاح.' },
+    commonConcerns: [
+        { concern: 'مثل الرياض.', solution: 'CaCO₃+SiO₂+ΔT = مختلف. الرياض: لا كلس.' },
+        { concern: 'غالي.', solution: 'تسرب خفي × سنة = عفن تحت البلاط = 5000+ إصلاح.' },
     ],
     consumerEducation: [
         { myth: 'فحص بصري يكفي.', truth: 'CaCO₃ انسداد داخلي. فحص ضغط.' },

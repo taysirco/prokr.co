@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'تغطية محكمة', use: 'يمنع Nafud — غبار' },
         { name: 'عجلات كبيرة', use: 'طرق نخيل ترابية' },
     ],
-    hiddenObjections: [
-        { fear: 'دباب عادي.', solution: 'تمور = نظيف+معزول. Nafud = تغطية.' },
-        { fear: 'مثل الخرج.', solution: 'تمور مقابل ألبان. مختلف.' },
+    commonConcerns: [
+        { concern: 'دباب عادي.', solution: 'تمور = نظيف+معزول. Nafud = تغطية.' },
+        { concern: 'مثل الخرج.', solution: 'تمور مقابل ألبان. مختلف.' },
     ],
     consumerEducation: [
         { myth: 'أي دباب.', truth: 'طرق Nafud = عجلات كبيرة.' },

@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Dry Vapor 130°م', use: 'عث + بوليمر' },
         { name: 'Anti-Fungal + Turbo Dryer', use: 'حشوة + تجفيف' },
     ],
-    hiddenObjections: [
-        { fear: 'نظيف.', solution: 'عفن مخفي + عث ميكروبي + NaCl+SiO₂ ناعم + بوليمر شفاف.' },
-        { fear: 'منظف محل.', solution: 'لا يقتل عث. لا يجفف. لا يُكسر بوليمر.' },
+    commonConcerns: [
+        { concern: 'نظيف.', solution: 'عفن مخفي + عث ميكروبي + NaCl+SiO₂ ناعم + بوليمر شفاف.' },
+        { concern: 'منظف محل.', solution: 'لا يقتل عث. لا يجفف. لا يُكسر بوليمر.' },
     ],
     consumerEducation: [
         { myth: 'مثل الخبر.', truth: 'SiO₂ إضافي = Fiber Cutting. أسوأ على الألياف.' },

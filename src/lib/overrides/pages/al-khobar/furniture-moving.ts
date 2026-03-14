@@ -57,9 +57,9 @@ export const override: PageOverride = {
         { name: 'Silica Gel', use: 'يمتص تكثّف 85-95% — يحمي الإلكترونيات' },
         { name: 'Transit Bolts', use: 'يُثبّت أجزاء متحركة (غسالات/معدات)' },
     ],
-    hiddenObjections: [
-        { fear: 'المسافة قصيرة.', solution: 'NaCl في دقائق. 85-95% تكثّف في دقائق. قصيرة ≠ آمنة.' },
-        { fear: 'شاحنة مُغلقة.', solution: 'ليست مُحكمة 100%. فتحات = NaCl. Stretch = حماية ثانية.' },
+    commonConcerns: [
+        { concern: 'المسافة قصيرة.', solution: 'NaCl في دقائق. 85-95% تكثّف في دقائق. قصيرة ≠ آمنة.' },
+        { concern: 'شاحنة مُغلقة.', solution: 'ليست مُحكمة 100%. فتحات = NaCl. Stretch = حماية ثانية.' },
     ],
     consumerEducation: [
         { myth: 'نقل الخبر مثل الرياض.', truth: 'NaCl + 85-95% + Sabkha = 3 تهديدات لا توجد في الرياض. مختلف.' },

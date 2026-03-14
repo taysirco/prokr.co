@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Sealer', use: '98% — يسد المسام' },
         { name: 'Turbo Dry', use: '98% — تجفيف إلزامي' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل الخبر.', solution: 'VOC بقع إضافي + 98% > 95% + Biofilm. أقسى.' },
-        { fear: 'ملمّع.', solution: 'فوق VOC + عفن مسامي. سطحي.' },
+    commonConcerns: [
+        { concern: 'مثل الخبر.', solution: 'VOC بقع إضافي + 98% > 95% + Biofilm. أقسى.' },
+        { concern: 'ملمّع.', solution: 'فوق VOC + عفن مسامي. سطحي.' },
     ],
     consumerEducation: [
         { myth: 'ساحلي فقط.', truth: 'VOC بقع = صناعي. ثنائي.' },

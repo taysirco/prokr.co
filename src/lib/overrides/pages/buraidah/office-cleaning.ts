@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Descaler صناعي', use: 'CaCO₃ 600ppm — حمام' },
         { name: 'HEPA Pollen', use: 'نخيل — تكييف مركزي' },
     ],
-    hiddenObjections: [
-        { fear: 'مكنسة تكفي.', solution: 'Nafud 10 μm يمر = HEPA. أجهزة.' },
-        { fear: 'مثل الرياض.', solution: '600ppm+Nafud+نخيل = 3 تحديات فريدة.' },
+    commonConcerns: [
+        { concern: 'مكنسة تكفي.', solution: 'Nafud 10 μm يمر = HEPA. أجهزة.' },
+        { concern: 'مثل الرياض.', solution: '600ppm+Nafud+نخيل = 3 تحديات فريدة.' },
     ],
     consumerEducation: [
         { myth: 'تنظيف عادي.', truth: 'Nafud يتلف أجهزة+600ppm كلس. HEPA+Descaler.' },

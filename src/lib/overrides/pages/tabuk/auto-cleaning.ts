@@ -52,8 +52,8 @@ export const override: PageOverride = {
         { name: 'Deionized Water', use: 'بدون كلس ثلجي — ماء نقي 100%' },
         { name: 'Ceramic SiO₂ 9H', use: 'يعمل -10°م → 80°م × 2-3 سنوات — أصلب من حسمى' },
     ],
-    hiddenObjections: [
-        { fear: 'Ceramic غالي.', solution: '800-2,000 ÷ 3 سنوات = 267-667 ريال/سنة. شمع: 100-200 × 6-8 مرات = 600-1,600 ريال/سنة. + Clear Coat إصلاح: 2,000-5,000. Ceramic = أرخص.' },
+    commonConcerns: [
+        { concern: 'Ceramic غالي.', solution: '800-2,000 ÷ 3 سنوات = 267-667 ريال/سنة. شمع: 100-200 × 6-8 مرات = 600-1,600 ريال/سنة. + Clear Coat إصلاح: 2,000-5,000. Ceramic = أرخص.' },
     ],
     consumerEducation: [
         { myth: 'الشمع يكفي.', truth: '-2°م = يتجمد. 44°م = يلين. 46°م مدى = 0% فعالية. Ceramic = 100%.' },

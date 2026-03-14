@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Anti-Fungal', use: 'عفن شحوم — بيولوجي' },
         { name: 'Dehumidifier', use: '60-85% — مطبخ' },
     ],
-    hiddenObjections: [
-        { fear: 'ربع سنوي.', solution: 'Bio-Creosote = شهري.' },
-        { fear: 'مثل بريدة.', solution: 'كربنة رطبة ≠ جافة.' },
+    commonConcerns: [
+        { concern: 'ربع سنوي.', solution: 'Bio-Creosote = شهري.' },
+        { concern: 'مثل بريدة.', solution: 'كربنة رطبة ≠ جافة.' },
     ],
     consumerEducation: [
         { myth: 'دهن عادي.', truth: 'Bio-Creosote = حمضي لزج.' },

@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Anti-Algae Coating', use: '70-85% — يمنع طحالب' },
         { name: 'Anti-Corrosion', use: 'NaCl — خارجي+أنابيب' },
     ],
-    hiddenObjections: [
-        { fear: 'Epoxy عادي.', solution: 'تحلية = Marine-Grade.' },
-        { fear: 'مثل بريدة.', solution: 'طحالب+تآكل vs CaCO₃.' },
+    commonConcerns: [
+        { concern: 'Epoxy عادي.', solution: 'تحلية = Marine-Grade.' },
+        { concern: 'مثل بريدة.', solution: 'طحالب+تآكل vs CaCO₃.' },
     ],
     consumerEducation: [
         { myth: 'فحص 5 سنوات.', truth: 'تحلية+NaCl = سنوي.' },

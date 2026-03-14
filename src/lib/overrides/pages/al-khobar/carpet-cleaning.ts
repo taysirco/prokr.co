@@ -56,9 +56,9 @@ export const override: PageOverride = {
         { name: 'Turbo Dryer + Dehumidifier', use: 'تجفيف سريع 2-3 ساعات — يمنع عفن جديد' },
         { name: 'Anti-Fungal Treatment', use: 'حماية قاعدة السجاد — فعّال 3-4 أشهر' },
     ],
-    hiddenObjections: [
-        { fear: 'شفط يكفي.', solution: 'الشفط يُزيل السطحي. NaCl في العمق. عفن في القاعدة. عث 10-15 سم. استخلاص ساخن = يصل.' },
-        { fear: 'التنظيف يتلف.', solution: 'العكس: NaCl يُصلّب بدون تنظيف. عفن يُحلل بدون Anti-Fungal. ترك = يتلف. التنظيف = يحمي.' },
+    commonConcerns: [
+        { concern: 'شفط يكفي.', solution: 'الشفط يُزيل السطحي. NaCl في العمق. عفن في القاعدة. عث 10-15 سم. استخلاص ساخن = يصل.' },
+        { concern: 'التنظيف يتلف.', solution: 'العكس: NaCl يُصلّب بدون تنظيف. عفن يُحلل بدون Anti-Fungal. ترك = يتلف. التنظيف = يحمي.' },
     ],
     consumerEducation: [
         { myth: 'سجاد الخبر مثل الرياض.', truth: 'NaCl ≠ SiO₂. 85-95% ≠ 15%. عفن حتمي ≠ اختياري. 3 فروقات = بروتوكول مختلف.' },

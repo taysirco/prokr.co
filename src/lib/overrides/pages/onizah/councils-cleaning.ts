@@ -55,9 +55,9 @@ export const override: PageOverride = {
         { name: 'HEPA H13', use: 'شفط SiO₂+طلع من ألياف القماش — 99.97%' },
         { name: 'Softened Water', use: 'شطف بدون CaCO₃ — صفر بقع كلسية' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل بريدة بالضبط.', solution: 'بقع تمور أكثر — أكبر سوق. Enzymatic مزدوج ضروري.' },
-        { fear: 'عفن بعد الغسل.', solution: '15-25% رطوبة = تجفيف 20 دقيقة. صفر عفن.' },
+    commonConcerns: [
+        { concern: 'مثل بريدة بالضبط.', solution: 'بقع تمور أكثر — أكبر سوق. Enzymatic مزدوج ضروري.' },
+        { concern: 'عفن بعد الغسل.', solution: '15-25% رطوبة = تجفيف 20 دقيقة. صفر عفن.' },
     ],
     consumerEducation: [
         { myth: 'شامبو ينظف المجلس.', truth: 'بلمرة SiO₂+بخور = طبقة بوليمرية. الشامبو لا يخترقها.' },

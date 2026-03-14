@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'HEPA Filter', use: 'عرعر — كل مكيف' },
         { name: 'Anti-Mite', use: 'كراسي — Dermatophagoides' },
     ],
-    hiddenObjections: [
-        { fear: 'تنظيف عادي.', solution: 'أسوأ SBS = Anti-Allergen.' },
-        { fear: 'مثل بريدة.', solution: 'لا SBS ببريدة. ×2 هنا.' },
+    commonConcerns: [
+        { concern: 'تنظيف عادي.', solution: 'أسوأ SBS = Anti-Allergen.' },
+        { concern: 'مثل بريدة.', solution: 'لا SBS ببريدة. ×2 هنا.' },
     ],
     consumerEducation: [
         { myth: 'شهري.', truth: 'أسبوعي! SBS = صحة مهنية.' },

@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'VCI', use: 'NaCl — حديد' },
         { name: 'Silica Gel', use: '80-95% — تكثّف' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل الخبر.', solution: 'أزقة + طين زراعي. مختلف.' },
-        { fear: 'VCI غالي.', solution: '5-10 ريال = يحمي آلاف.' },
+    commonConcerns: [
+        { concern: 'مثل الخبر.', solution: 'أزقة + طين زراعي. مختلف.' },
+        { concern: 'VCI غالي.', solution: '5-10 ريال = يحمي آلاف.' },
     ],
     consumerEducation: [
         { myth: 'Tarpaulin عادي.', truth: 'طين + NaCl = أسرع تلف.' },

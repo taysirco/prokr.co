@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'جهاز رطوبة', use: 'قياس في الجدران' },
         { name: 'فاحص ضغط', use: 'كشف كسر مفاصل — برد' },
     ],
-    hiddenObjections: [
-        { fear: 'تكثّف مو تسرب.', solution: 'ممكن! فحص حراري يُميّز بدقة.' },
-        { fear: 'بصري يكفي.', solution: '3 مصادر+عفن = بصري مُضلل. حراري.' },
+    commonConcerns: [
+        { concern: 'تكثّف مو تسرب.', solution: 'ممكن! فحص حراري يُميّز بدقة.' },
+        { concern: 'بصري يكفي.', solution: '3 مصادر+عفن = بصري مُضلل. حراري.' },
     ],
     consumerEducation: [
         { myth: 'كشف خميس مثل عنيزة.', truth: '3 مصادر+عفن = أعقد. حراري إلزامي.' },

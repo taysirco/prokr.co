@@ -57,9 +57,9 @@ export const override: PageOverride = {
         { name: 'Microfiber ناعم جاف', use: 'شاشات بلا خدش' },
         { name: 'Anti-Fungal', use: '5 نقاط عفن — 5 أشهر' },
     ],
-    hiddenObjections: [
-        { fear: 'المكتب نظيف.', solution: 'NaCl شفاف + SiO₂ ناعم + عفن مخفي. \"نظيف\" = لا تُلاحظ.' },
-        { fear: 'عاملة المبنى.', solution: 'بدون ترتيب + بدون HEPA + بدون Anti-Corrosion = 3 أخطاء.' },
+    commonConcerns: [
+        { concern: 'المكتب نظيف.', solution: 'NaCl شفاف + SiO₂ ناعم + عفن مخفي. \"نظيف\" = لا تُلاحظ.' },
+        { concern: 'عاملة المبنى.', solution: 'بدون ترتيب + بدون HEPA + بدون Anti-Corrosion = 3 أخطاء.' },
     ],
     consumerEducation: [
         { myth: 'مثل الرياض.', truth: 'NaCl إضافي = تآكل. 75-85% = عفن. مختلف.' },

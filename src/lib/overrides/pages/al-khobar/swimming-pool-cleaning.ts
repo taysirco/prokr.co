@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'CYA Stabilizer', use: 'يحمي الكلور من UV — يدوم أطول' },
         { name: 'BTI Larvicide', use: 'يقتل يرقات بعوض ساحلي حول المسبح' },
     ],
-    hiddenObjections: [
-        { fear: 'لا Scale = لا مشكلة.', solution: 'لا Scale = ميزة! لكن: Chloride Demand + طحالب + Biofilm = 3 مشاكل أخرى.' },
-        { fear: 'كلور زيادة = غالي.', solution: '20-30% أكثر = 50-100 ريال/شهر. مسبح أخضر = 300-500 ريال Shock + يوم بدون سباحة.' },
+    commonConcerns: [
+        { concern: 'لا Scale = لا مشكلة.', solution: 'لا Scale = ميزة! لكن: Chloride Demand + طحالب + Biofilm = 3 مشاكل أخرى.' },
+        { concern: 'كلور زيادة = غالي.', solution: '20-30% أكثر = 50-100 ريال/شهر. مسبح أخضر = 300-500 ريال Shock + يوم بدون سباحة.' },
     ],
     consumerEducation: [
         { myth: 'مسبح الخبر مثل الأحساء.', truth: 'NaCl ≠ CaSO₄. لا Scale = ميزة. لكن Chloride Demand = تحدٍ مختلف. مختلف.' },

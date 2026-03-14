@@ -57,9 +57,9 @@ export const override: PageOverride = {
         { name: 'UV-Stabilized Netting', use: 'شبك مكيفات وفتحات' },
         { name: 'H₂O₂ 3% Solution', use: 'تنظيف حمضي آمن' },
     ],
-    hiddenObjections: [
-        { fear: 'أشواك مكلفة.', solution: 'استبدال مكيف: 3,000-6,000. أشواك مرة: 500-1,000. توفير 5-10×.' },
-        { fear: 'تشوه المبنى.', solution: 'غير مرئية من 3م. أجمل من فضلات بيضاء.' },
+    commonConcerns: [
+        { concern: 'أشواك مكلفة.', solution: 'استبدال مكيف: 3,000-6,000. أشواك مرة: 500-1,000. توفير 5-10×.' },
+        { concern: 'تشوه المبنى.', solution: 'غير مرئية من 3م. أجمل من فضلات بيضاء.' },
     ],
     consumerEducation: [
         { myth: 'الحمام لا يضر.', truth: 'pH 3 يأكل معدن ودهان. + بكتيريا وفطريات.' },

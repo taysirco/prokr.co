@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Gel Bait', use: 'صراصير NH₃ — أفعل من رش' },
         { name: 'Residual Dust', use: 'عقارب — شقوق ΔT' },
     ],
-    hiddenObjections: [
-        { fear: 'مبيد واحد يكفي.', solution: '4 أنواع = 4 مبيدات. واحد لا يكفي.' },
-        { fear: 'مثل الرياض.', solution: 'ذباب 5-10×+سوس+عقارب = أعقد.' },
+    commonConcerns: [
+        { concern: 'مبيد واحد يكفي.', solution: '4 أنواع = 4 مبيدات. واحد لا يكفي.' },
+        { concern: 'مثل الرياض.', solution: 'ذباب 5-10×+سوس+عقارب = أعقد.' },
     ],
     consumerEducation: [
         { myth: 'رش عام.', truth: '4 أنواع = 4 بروتوكولات مختلفة.' },

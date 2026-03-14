@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Sealer', use: 'يسد مسام — يحمي من SiO₂+NaCl+عفن' },
         { name: 'Anti-Biofilm', use: 'رخام خارجي — 4 أشهر' },
     ],
-    hiddenObjections: [
-        { fear: 'رخام جديد.', solution: 'SiO₂ من اليوم الأول = خدش. Sealer فوراً = حماية الاستثمار.' },
-        { fear: 'ملمّع محل.', solution: 'طبقة فوق SiO₂ + NaCl. يلمع مؤقتاً. تحته = خدش+إبهات. غسل+جلي = حقيقي.' },
+    commonConcerns: [
+        { concern: 'رخام جديد.', solution: 'SiO₂ من اليوم الأول = خدش. Sealer فوراً = حماية الاستثمار.' },
+        { concern: 'ملمّع محل.', solution: 'طبقة فوق SiO₂ + NaCl. يلمع مؤقتاً. تحته = خدش+إبهات. غسل+جلي = حقيقي.' },
     ],
     consumerEducation: [
         { myth: 'مثل الخبر.', truth: 'SiO₂ 7 Mohs = خدش حقيقي. الخبر = NaCl إبهات فقط. مختلف.' },

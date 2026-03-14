@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'VCI', use: 'Galvanic — معادن' },
         { name: 'Silica Gel', use: '98% — تكثّف' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل الخبر.', solution: 'VOC + 98% > 95% + SABIC. أخطر.' },
-        { fear: 'غالي.', solution: 'VCI + Silica = 50-100. تلف = آلاف.' },
+    commonConcerns: [
+        { concern: 'مثل الخبر.', solution: 'VOC + 98% > 95% + SABIC. أخطر.' },
+        { concern: 'غالي.', solution: 'VCI + Silica = 50-100. تلف = آلاف.' },
     ],
     consumerEducation: [
         { myth: 'شاحنة مُغلقة.', truth: '98% = تكثّف حتى مُغلقة. Silica.' },

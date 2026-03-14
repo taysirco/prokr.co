@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Descaler خفيف', use: 'CaCO₃ يومي — يمنع تصلّب' },
         { name: 'Microfiber', use: 'SiO₂ — لا خدش' },
     ],
-    hiddenObjections: [
-        { fear: 'معطر يكفي.', solution: 'NH₃ يتراكم يومياً. AC يمتص.' },
-        { fear: 'مثل الرياض.', solution: 'NH₃+CaCO₃ = خطوات إضافية.' },
+    commonConcerns: [
+        { concern: 'معطر يكفي.', solution: 'NH₃ يتراكم يومياً. AC يمتص.' },
+        { concern: 'مثل الرياض.', solution: 'NH₃+CaCO₃ = خطوات إضافية.' },
     ],
     consumerEducation: [
         { myth: 'مسح عادي.', truth: 'NH₃+CaCO₃+SiO₂ = AC+Descaler+Microfiber.' },

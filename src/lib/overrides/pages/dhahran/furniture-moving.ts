@@ -57,9 +57,9 @@ export const override: PageOverride = {
         { name: 'Silica Gel', use: 'يمتص تكثّف 75-85%' },
         { name: 'EPE Foam', use: 'يمنع خدش SiO₂ بين القطع' },
     ],
-    hiddenObjections: [
-        { fear: 'قصيرة.', solution: 'NaCl+SiO₂ في دقائق. 75-85% تكثّف في دقائق. قصيرة ≠ آمنة.' },
-        { fear: 'شاحنة مُغلقة.', solution: 'ليست 100% مُحكمة. NaCl+SiO₂ يدخل. Stretch = حماية ثانية.' },
+    commonConcerns: [
+        { concern: 'قصيرة.', solution: 'NaCl+SiO₂ في دقائق. 75-85% تكثّف في دقائق. قصيرة ≠ آمنة.' },
+        { concern: 'شاحنة مُغلقة.', solution: 'ليست 100% مُحكمة. NaCl+SiO₂ يدخل. Stretch = حماية ثانية.' },
     ],
     consumerEducation: [
         { myth: 'مثل الخبر.', truth: 'SiO₂ إضافي = خدش. EPE = خطوة إضافية. مختلف.' },

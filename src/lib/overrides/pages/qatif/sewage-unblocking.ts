@@ -55,9 +55,9 @@ export const override: PageOverride = {
         { name: 'CCTV Pipe Camera', use: 'فحص أنابيب أحياء الصيد القديمة 40+ سنة' },
         { name: 'HDPE Marine-Grade Pipe', use: 'بديل PVC يقاوم ملوحة 35,000 ppm' },
     ],
-    hiddenObjections: [
-        { fear: 'Jetting 250 بار (350-650) أغلى.', solution: 'السبرنق لا يُذيب زيت السمك = يعود الانسداد خلال أسبوع. Jetting = تنظيف حقيقي يدوم.' },
-        { fear: 'HDPE (100-180/م) أغلى من PVC.', solution: 'PVC يتآكل في 8-12 سنة هنا = استبدال متكرر. HDPE 20+ سنة.' },
+    commonConcerns: [
+        { concern: 'Jetting 250 بار (350-650) أغلى.', solution: 'السبرنق لا يُذيب زيت السمك = يعود الانسداد خلال أسبوع. Jetting = تنظيف حقيقي يدوم.' },
+        { concern: 'HDPE (100-180/م) أغلى من PVC.', solution: 'PVC يتآكل في 8-12 سنة هنا = استبدال متكرر. HDPE 20+ سنة.' },
     ],
     consumerEducation: [
         { myth: 'كل انسداد = دهون.', truth: 'في القطيف: حراشف + زيت سمك = مادة مختلفة. تحتاج معاملة مختلفة (ضغط أعلى + مذيب لزوجة).' },

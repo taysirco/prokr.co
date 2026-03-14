@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Dehumidifier صناعي', use: 'تجفيف+تحكم 60-85%' },
         { name: 'Algicide', use: 'طحالب ممرات خارجية' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل عنيزة.', solution: '7-8 محاور مقابل 5. عفن+عث = مختلف تماماً.' },
-        { fear: 'أغلى = مبالغة.', solution: '7-8 محاور حقيقية. بدونها = كارثة.' },
+    commonConcerns: [
+        { concern: 'مثل عنيزة.', solution: '7-8 محاور مقابل 5. عفن+عث = مختلف تماماً.' },
+        { concern: 'أغلى = مبالغة.', solution: '7-8 محاور حقيقية. بدونها = كارثة.' },
     ],
     consumerEducation: [
         { myth: '5 محاور تكفي.', truth: 'عفن+عث+طحالب+حديقة = 7-8 إلزامي.' },

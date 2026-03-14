@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Anti-Fungal', use: '98% عفن حشوة' },
         { name: 'Turbo + Dehumidifier', use: '98% تجفيف' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل الخبر.', solution: 'VOC بلمرة + 98%>95% + سخام. أقسى.' },
-        { fear: 'شامبو.', solution: 'لا يُكسر VOC+بخور Bonds.' },
+    commonConcerns: [
+        { concern: 'مثل الخبر.', solution: 'VOC بلمرة + 98%>95% + سخام. أقسى.' },
+        { concern: 'شامبو.', solution: 'لا يُكسر VOC+بخور Bonds.' },
     ],
     consumerEducation: [
         { myth: 'بخار لعفن.', truth: 'بخار = عث + تعقيم + NaCl. ثلاثي.' },

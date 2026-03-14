@@ -55,9 +55,9 @@ export const override: PageOverride = {
         { name: 'Abrasion-Resistant Ceramic Coating', use: 'سيراميك يتحمل كشط رمل النفود' },
         { name: 'Surface Moisture Meter', use: 'قياس رطوبة السطح قبل الرش' },
     ],
-    hiddenObjections: [
-        { fear: '38 كجم أغلى من 30.', solution: '30 يفشل في 95% رطوبة = خسارة كاملة. 38 يعمل 10+ سنوات.' },
-        { fear: 'النظام الثلاثي مكلف.', solution: 'يوفر 30-40% كهرباء × 9 أشهر = يسترد خلال 2-3 سنوات.' },
+    commonConcerns: [
+        { concern: '38 كجم أغلى من 30.', solution: '30 يفشل في 95% رطوبة = خسارة كاملة. 38 يعمل 10+ سنوات.' },
+        { concern: 'النظام الثلاثي مكلف.', solution: 'يوفر 30-40% كهرباء × 9 أشهر = يسترد خلال 2-3 سنوات.' },
     ],
     consumerEducation: [
         { myth: 'الخبر أسهل من الجبيل فأي فوم يعمل.', truth: 'أسهل قليلاً (لا سبخة) لكن 95% رطوبة + رمل كاشط = لا تساهل.' },

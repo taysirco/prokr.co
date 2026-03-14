@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'مبيد مُركّز', use: 'مستعمرات أكبر — رطوبة' },
         { name: 'HEPA فحص', use: 'بيض دقيق — شقوق' },
     ],
-    hiddenObjections: [
-        { fear: 'مبيد يكفي.', solution: 'بخار 56°م يقتل بيض. مبيد لا يصل.' },
-        { fear: 'مثل بريدة.', solution: '70-85% = تكاثر أسرع.' },
+    commonConcerns: [
+        { concern: 'مبيد يكفي.', solution: 'بخار 56°م يقتل بيض. مبيد لا يصل.' },
+        { concern: 'مثل بريدة.', solution: '70-85% = تكاثر أسرع.' },
     ],
     consumerEducation: [
         { myth: 'مرة واحدة.', truth: '2-3 جلسات. بيض أسبوعين.' },

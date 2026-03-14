@@ -57,9 +57,9 @@ export const override: PageOverride = {
         { name: 'Anti-Fungal Spray', use: 'يمنع Aspergillus 75-85% — فعّال 5 أشهر' },
         { name: 'HEPA فلتر', use: 'يحجز SiO₂ < 10 ميكرون في غرف النوم' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل الخبر.', solution: 'الخبر = NaCl 90%. الظهران = NaCl+SiO₂ 60/40. المزيج = خدش+تآكل معاً.' },
-        { fear: 'ممسحة عادية.', solution: 'ممسحة + SiO₂ تحت NaCl = خدش مُبلّل. أسوأ من جاف.' },
+    commonConcerns: [
+        { concern: 'مثل الخبر.', solution: 'الخبر = NaCl 90%. الظهران = NaCl+SiO₂ 60/40. المزيج = خدش+تآكل معاً.' },
+        { concern: 'ممسحة عادية.', solution: 'ممسحة + SiO₂ تحت NaCl = خدش مُبلّل. أسوأ من جاف.' },
     ],
     consumerEducation: [
         { myth: 'الظهران مثل الخبر.', truth: 'SiO₂ إضافي = خدش مزدوج. 75-85% ≠ 85-95%. مختلف.' },

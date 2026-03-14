@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Heavy-Duty Filter', use: 'Laterite — طين' },
         { name: 'Skimmer مُعزَّز', use: 'عرعر — أوراق' },
     ],
-    hiddenObjections: [
-        { fear: 'ربع سنوي.', solution: 'مطر = أسبوعي. كلور يُخفف.' },
-        { fear: 'مثل بريدة.', solution: 'مطر+Biofilm+طين ≠ جاف+Scale.' },
+    commonConcerns: [
+        { concern: 'ربع سنوي.', solution: 'مطر = أسبوعي. كلور يُخفف.' },
+        { concern: 'مثل بريدة.', solution: 'مطر+Biofilm+طين ≠ جاف+Scale.' },
     ],
     consumerEducation: [
         { myth: 'كلور ثابت.', truth: 'مطر = 1.3× بعد.' },

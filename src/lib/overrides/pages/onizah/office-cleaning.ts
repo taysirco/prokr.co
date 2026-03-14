@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'HEPA H13', use: 'شفط طلع — 99.97% حماية مهنية' },
         { name: 'Descaler حمضي', use: 'إذابة CaCO₃ من صنابير المكتب' },
     ],
-    hiddenObjections: [
-        { fear: 'Sick Building مثل خميس.', solution: '15-25% = صفر عفن+عث. لا Sick Building.' },
-        { fear: 'حشرات تمور في المكتب.', solution: 'فحص مداخل + مصائد = حماية 99%.' },
+    commonConcerns: [
+        { concern: 'Sick Building مثل خميس.', solution: '15-25% = صفر عفن+عث. لا Sick Building.' },
+        { concern: 'حشرات تمور في المكتب.', solution: 'فحص مداخل + مصائد = حماية 99%.' },
     ],
     consumerEducation: [
         { myth: 'أي قطعة قماش تكفي للأجهزة.', truth: 'SiO₂ يخدش. Anti-Static Cloth فقط.' },

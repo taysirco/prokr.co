@@ -57,9 +57,9 @@ export const override: PageOverride = {
         { name: 'UV-C 254nm (داخلي)', use: 'يُكسر Biofilm + يقتل بكتيريا 24/7 — لا يصل الغرفة' },
         { name: 'فلتر MERV 13+', use: 'يحجز جراثيم العفن + ملح NaCl الناعم' },
     ],
-    hiddenObjections: [
-        { fear: 'مكيف الرياض نفسه.', solution: 'الرياض = غبار SiO₂ + 15% رطوبة = لا صدأ ولا عفن. الخبر = NaCl + 85-95% = صدأ + عفن حتمي. مكيفان مختلفان تماماً.' },
-        { fear: 'Anti-Rust غالي.', solution: '100-200 ريال/سنة vs استبدال Condenser 1,500-4,000 ريال vs مكيف جديد 3,000-8,000 ريال. Anti-Rust = 2-5% من الاستبدال.' },
+    commonConcerns: [
+        { concern: 'مكيف الرياض نفسه.', solution: 'الرياض = غبار SiO₂ + 15% رطوبة = لا صدأ ولا عفن. الخبر = NaCl + 85-95% = صدأ + عفن حتمي. مكيفان مختلفان تماماً.' },
+        { concern: 'Anti-Rust غالي.', solution: '100-200 ريال/سنة vs استبدال Condenser 1,500-4,000 ريال vs مكيف جديد 3,000-8,000 ريال. Anti-Rust = 2-5% من الاستبدال.' },
     ],
     consumerEducation: [
         { myth: 'غسل بالماء يكفي.', truth: 'الماء يُزيل الأملاح مؤقتاً — لا يحمي من الصدأ. Anti-Rust Coating = حاجز دائم. الغسل بدون Coating = يتكرر الصدأ.' },

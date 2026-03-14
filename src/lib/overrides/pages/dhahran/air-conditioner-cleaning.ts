@@ -56,9 +56,9 @@ export const override: PageOverride = {
         { name: 'HEPA Filter', use: 'يحجز SiO₂ < 10 ميكرون — 99.97% كفاءة' },
         { name: 'Anti-Fungal Coil Coating', use: 'يمنع Aspergillus 75-85% — فعّال 5 أشهر' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل الخبر.', solution: 'الخبر = NaCl. الظهران = NaCl+SiO₂ مزدوج. SiO₂ يخدش ← NaCl يتآكل = أسوأ.' },
-        { fear: 'HEPA غالي.', solution: 'HEPA = 50-100 ريال/فلتر. أمراض تنفسية = آلاف. استثمار صحي.' },
+    commonConcerns: [
+        { concern: 'مثل الخبر.', solution: 'الخبر = NaCl. الظهران = NaCl+SiO₂ مزدوج. SiO₂ يخدش ← NaCl يتآكل = أسوأ.' },
+        { concern: 'HEPA غالي.', solution: 'HEPA = 50-100 ريال/فلتر. أمراض تنفسية = آلاف. استثمار صحي.' },
     ],
     consumerEducation: [
         { myth: 'الظهران مثل الخبر.', truth: 'الخبر = NaCl 90%. الظهران = NaCl 60% + SiO₂ 40%. المزيج = أسوأ.' },

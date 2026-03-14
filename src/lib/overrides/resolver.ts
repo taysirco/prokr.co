@@ -346,7 +346,7 @@ export function resolveSeoContent(city: City, service: Service) {
                 : baseNarratives;
             return {
                 ...auto.semanticData,
-                ...(override.hiddenObjections && { hiddenObjections: override.hiddenObjections }),
+                ...(override.commonConcerns && { commonConcerns: override.commonConcerns }),
                 consumerEducation: correctedNarratives,
                 ...(resolvedEquipment && { equipment: resolvedEquipment }),
                 ...(override.govReferences && { govReferences: override.govReferences }),

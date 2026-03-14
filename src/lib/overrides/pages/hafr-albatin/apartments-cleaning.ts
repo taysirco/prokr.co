@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Anti-Static Spray', use: 'يُفرّغ كهرباء ساكنة — SiO₂ لا يلتصق' },
         { name: 'ختم سيليكون', use: 'شقوق ΔT حول النوافذ' },
     ],
-    hiddenObjections: [
-        { fear: 'لا عفن = سهل.', solution: 'SiO₂ PM10 = تنفسي. كهرباء ساكنة = يلتصق. ΔT = شقوق. 3 تحديات ≠ سهل.' },
-        { fear: 'ممسحة.', solution: 'كهرباء ساكنة = تنقل ولا تزيل. HEPA + Anti-Static = الحل.' },
+    commonConcerns: [
+        { concern: 'لا عفن = سهل.', solution: 'SiO₂ PM10 = تنفسي. كهرباء ساكنة = يلتصق. ΔT = شقوق. 3 تحديات ≠ سهل.' },
+        { concern: 'ممسحة.', solution: 'كهرباء ساكنة = تنقل ولا تزيل. HEPA + Anti-Static = الحل.' },
     ],
     consumerEducation: [
         { myth: 'مثل الرياض.', truth: 'ΔT 54°م > 35°م. -2°م شتاء. عواصف أكثر. مختلف.' },

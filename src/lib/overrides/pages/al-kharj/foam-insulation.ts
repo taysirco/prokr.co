@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Closed-Cell PU Foam', use: 'أرضي فقط — CaCO₃ رطوبة' },
         { name: 'جهاز رش ضغط عالي', use: 'تطبيق متساوي' },
     ],
-    hiddenObjections: [
-        { fear: 'Closed-Cell أفضل.', solution: 'لا مطر = أغلى بدون فائدة. Open-Cell يكفي.' },
-        { fear: 'مثل خميس.', solution: 'عكس! تبريد مقابل تدفئة. أرخص 40%.' },
+    commonConcerns: [
+        { concern: 'Closed-Cell أفضل.', solution: 'لا مطر = أغلى بدون فائدة. Open-Cell يكفي.' },
+        { concern: 'مثل خميس.', solution: 'عكس! تبريد مقابل تدفئة. أرخص 40%.' },
     ],
     consumerEducation: [
         { myth: 'Closed-Cell ضروري.', truth: 'لا مطر = Open-Cell 40% أرخص ويكفي.' },

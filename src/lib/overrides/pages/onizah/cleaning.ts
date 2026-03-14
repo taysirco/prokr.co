@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Citric Acid', use: 'CaCO₃ 550ppm — حمام+مطبخ' },
         { name: 'Enzymatic Cleaner', use: 'سوق التمور — سكر Glucose' },
     ],
-    hiddenObjections: [
-        { fear: 'جاف = نظيف.', solution: 'CaCO₃+Nafud+تمور+لقاح = 4 تحديات.' },
-        { fear: 'مثل ينبع.', solution: 'Nafud+كلس ≠ NaCl+SOx.' },
+    commonConcerns: [
+        { concern: 'جاف = نظيف.', solution: 'CaCO₃+Nafud+تمور+لقاح = 4 تحديات.' },
+        { concern: 'مثل ينبع.', solution: 'Nafud+كلس ≠ NaCl+SOx.' },
     ],
     consumerEducation: [
         { myth: 'ماء يكفي.', truth: '550ppm = كلس جديد. Citric.' },

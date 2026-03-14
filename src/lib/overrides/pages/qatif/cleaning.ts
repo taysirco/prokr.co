@@ -58,9 +58,9 @@ export const override: PageOverride = {
         { name: 'HEPA', use: 'نخيل طلع — الخطوة 4' },
         { name: 'Dehumidifier', use: 'عيون — الخطوة 5' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل الخبر.', solution: 'واحة = عفن واحي+طين+نخيل+عيون. مختلف.' },
-        { fear: 'منظف عادي.', solution: 'NaCl+طين = ينزلق. RO+Microfiber.' },
+    commonConcerns: [
+        { concern: 'مثل الخبر.', solution: 'واحة = عفن واحي+طين+نخيل+عيون. مختلف.' },
+        { concern: 'منظف عادي.', solution: 'NaCl+طين = ينزلق. RO+Microfiber.' },
     ],
     consumerEducation: [
         { myth: 'ساحلي فقط.', truth: 'واحي = طين+نخيل+عيون. ثنائي.' },

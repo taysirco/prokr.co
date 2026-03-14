@@ -70,7 +70,7 @@ export const override: PageOverride = {
         { name: 'Thermal Heat Treatment Gun', use: 'مدافع ضخ البخار بـ 120 درجة لتفجير بيض بق الفراش في المراتب العميقة' },
         { name: 'Scorpion Blacklight UV', use: 'كشافات أشعة فوق بنفسجية تعكس لون العقارب في الليل لاصطياد الأعشاش' }
     ],
-    hiddenObjections: [
+    commonConcerns: [
 
     ],
     consumerEducation: [

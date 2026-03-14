@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'RO Water', use: 'NaCl — لا ملح جديد' },
         { name: 'Anti-Salt Coating', use: 'Pitting — ربع سنوي' },
     ],
-    hiddenObjections: [
-        { fear: 'إسفنج يكفي.', solution: 'SiO₂+NaCl = Liquid Grinding = خدش.' },
-        { fear: 'مثل جدة.', solution: 'SOx YASREF إضافي. أعقد.' },
+    commonConcerns: [
+        { concern: 'إسفنج يكفي.', solution: 'SiO₂+NaCl = Liquid Grinding = خدش.' },
+        { concern: 'مثل جدة.', solution: 'SOx YASREF إضافي. أعقد.' },
     ],
     consumerEducation: [
         { myth: 'ماء عادي.', truth: 'NaCl يعود بالتبخر. RO.' },

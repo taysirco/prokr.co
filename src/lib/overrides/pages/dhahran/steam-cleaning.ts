@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Dehumidifier', use: 'تجفيف — 2-3 ساعات' },
         { name: 'Anti-Biofilm', use: 'يمنع — 4 أشهر' },
     ],
-    hiddenObjections: [
-        { fear: 'يبلل.', solution: 'Dry Vapor 5%. + Dehumidifier = 2-3 ساعات.' },
-        { fear: 'ممسحة أسهل.', solution: 'ممسحة = ترتيب + خطأ محتمل. بخار = خطوة واحدة.' },
+    commonConcerns: [
+        { concern: 'يبلل.', solution: 'Dry Vapor 5%. + Dehumidifier = 2-3 ساعات.' },
+        { concern: 'ممسحة أسهل.', solution: 'ممسحة = ترتيب + خطأ محتمل. بخار = خطوة واحدة.' },
     ],
     consumerEducation: [
         { myth: 'بخار = ماء.', truth: '130°م ≠ ماء. يقتل + يُذيب + يرفع.' },

@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Dehumidifier', use: '98% → 50-60% — إلزامي' },
         { name: 'Anti-Mite', use: 'بعد البخار — عث أقصى' },
     ],
-    hiddenObjections: [
-        { fear: 'يبلل.', solution: '98% = يبلل أكثر. Dehumidifier = يحل.' },
-        { fear: 'بدون Dehumidifier أوفر.', solution: 'عفن 24 ساعة = أغلى بكثير.' },
+    commonConcerns: [
+        { concern: 'يبلل.', solution: '98% = يبلل أكثر. Dehumidifier = يحل.' },
+        { concern: 'بدون Dehumidifier أوفر.', solution: 'عفن 24 ساعة = أغلى بكثير.' },
     ],
     consumerEducation: [
         { myth: 'يجف طبيعي.', truth: '98% = 6-10 ساعات بدون Dehumidifier.' },

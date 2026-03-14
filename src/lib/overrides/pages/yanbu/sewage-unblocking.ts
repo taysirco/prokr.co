@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Anti-Bacterial', use: '70-85% — يمنع عودة' },
         { name: 'Anti-Corrosion', use: 'NaCl — أنابيب خارجية' },
     ],
-    hiddenObjections: [
-        { fear: 'سبرنج يكفي.', solution: 'Biofilm لزج. Hydro.' },
-        { fear: 'مثل بريدة.', solution: 'Biofilm (لا Scale). مختلف.' },
+    commonConcerns: [
+        { concern: 'سبرنج يكفي.', solution: 'Biofilm لزج. Hydro.' },
+        { concern: 'مثل بريدة.', solution: 'Biofilm (لا Scale). مختلف.' },
     ],
     consumerEducation: [
         { myth: 'Descaler.', truth: 'لا Scale! Biofilm = Anti-Bacterial.' },

@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'VCI', use: 'تآكل — حديد+معادن' },
         { name: 'Silica Gel', use: '98% — Short Circuit' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل الخبر.', solution: 'VOC + طرق SABIC + 98%. مختلف.' },
-        { fear: 'VCI غالي.', solution: '5-10 ريال = يحمي حديد آلاف.' },
+    commonConcerns: [
+        { concern: 'مثل الخبر.', solution: 'VOC + طرق SABIC + 98%. مختلف.' },
+        { concern: 'VCI غالي.', solution: '5-10 ريال = يحمي حديد آلاف.' },
     ],
     consumerEducation: [
         { myth: 'Tarpaulin عادي.', truth: 'NaCl+VOC يُتلفه. Marine.' },

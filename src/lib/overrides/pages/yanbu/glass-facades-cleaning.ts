@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'RO Water', use: 'NaCl — لا ملح جديد' },
         { name: 'Marine Sealer', use: 'Salt-SOx Etching — حماية' },
     ],
-    hiddenObjections: [
-        { fear: 'ماء وقماش.', solution: 'SiO₂+NaCl = Liquid Grinding = خدش.' },
-        { fear: 'مثل جدة.', solution: 'SOx YASREF = حمض إضافي. Etching.' },
+    commonConcerns: [
+        { concern: 'ماء وقماش.', solution: 'SiO₂+NaCl = Liquid Grinding = خدش.' },
+        { concern: 'مثل جدة.', solution: 'SOx YASREF = حمض إضافي. Etching.' },
     ],
     consumerEducation: [
         { myth: 'شهري.', truth: 'NaCl+SOx يومي = أسبوعي.' },

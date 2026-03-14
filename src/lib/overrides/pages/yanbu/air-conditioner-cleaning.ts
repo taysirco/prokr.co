@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Anti-Fungal Coil', use: '70-85% — عفن بخاخ' },
         { name: 'Anti-Corrosion Spray', use: 'SOx — حمض' },
     ],
-    hiddenObjections: [
-        { fear: 'تنظيف عادي.', solution: 'NaCl+SOx+عفن = 3 معالجات خاصة.' },
-        { fear: 'مثل بريدة.', solution: 'صدأ+حمض+عفن vs كلس. مختلف.' },
+    commonConcerns: [
+        { concern: 'تنظيف عادي.', solution: 'NaCl+SOx+عفن = 3 معالجات خاصة.' },
+        { concern: 'مثل بريدة.', solution: 'صدأ+حمض+عفن vs كلس. مختلف.' },
     ],
     consumerEducation: [
         { myth: 'سنوي.', truth: 'NaCl+SOx = ربع سنوي.' },

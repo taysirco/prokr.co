@@ -55,9 +55,9 @@ export const override: PageOverride = {
         { name: 'حقن أساسات', use: 'CaCO₃ رطوبة — حاجز' },
         { name: 'كاشف حرارة/صوت', use: 'يكشف نشاط داخل الخشب' },
     ],
-    hiddenObjections: [
-        { fear: 'رش سطحي يكفي.', solution: 'المستعمرة تحت الأرض. Termidor+حقن.' },
-        { fear: 'مثل خميس.', solution: 'نخيل 8M = سيللوز أكثر. نطاق أوسع.' },
+    commonConcerns: [
+        { concern: 'رش سطحي يكفي.', solution: 'المستعمرة تحت الأرض. Termidor+حقن.' },
+        { concern: 'مثل خميس.', solution: 'نخيل 8M = سيللوز أكثر. نطاق أوسع.' },
     ],
     consumerEducation: [
         { myth: 'رش عام.', truth: 'مستعمرة = Termidor. سطحي لا يصل.' },

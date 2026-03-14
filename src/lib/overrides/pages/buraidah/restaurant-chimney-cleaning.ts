@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Degreaser صناعي', use: 'دهون — بعد Descaler' },
         { name: 'كاميرا فحص', use: 'فحص 998 — تقرير' },
     ],
-    hiddenObjections: [
-        { fear: 'Degreaser يكفي.', solution: '600ppm كلس يغطي. Descaler أولاً.' },
-        { fear: 'سنوي يكفي.', solution: 'ΔT = شهري صيفاً. 998 دوري.' },
+    commonConcerns: [
+        { concern: 'Degreaser يكفي.', solution: '600ppm كلس يغطي. Descaler أولاً.' },
+        { concern: 'سنوي يكفي.', solution: 'ΔT = شهري صيفاً. 998 دوري.' },
     ],
     consumerEducation: [
         { myth: 'Degreaser فقط.', truth: '600ppm = Descaler أولاً.' },

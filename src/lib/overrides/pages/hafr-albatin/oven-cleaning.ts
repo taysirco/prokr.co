@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Mechanical Scraper', use: 'خشونة SiO₂' },
         { name: 'ماء مُفلتر', use: 'لا CaCO₃' },
     ],
-    hiddenObjections: [
-        { fear: 'لا Biofilm = سهل.', solution: 'كربنة أصلب + SiO₂ خشونة. 2 تحديات.' },
-        { fear: 'بخاخ.', solution: 'pH 9-10 لا يعمل على كربنة 52°م.' },
+    commonConcerns: [
+        { concern: 'لا Biofilm = سهل.', solution: 'كربنة أصلب + SiO₂ خشونة. 2 تحديات.' },
+        { concern: 'بخاخ.', solution: 'pH 9-10 لا يعمل على كربنة 52°م.' },
     ],
     consumerEducation: [
         { myth: 'مثل الرياض.', truth: '52°م > 45°م. أصلب كربنة.' },

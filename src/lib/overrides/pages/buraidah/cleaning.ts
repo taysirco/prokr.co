@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'HEPA Pollen+Fine', use: 'نخيل 8M+Nafud 10 μm' },
         { name: 'RO Water+Microfiber', use: 'لا كلس+لا خدش' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل الرياض.', solution: '600ppm مقابل 300. 8M نخلة. Nafud.' },
-        { fear: 'مثل خميس.', solution: 'لا عفن+15 دقيقة = أرخص 30%.' },
+    commonConcerns: [
+        { concern: 'مثل الرياض.', solution: '600ppm مقابل 300. 8M نخلة. Nafud.' },
+        { concern: 'مثل خميس.', solution: 'لا عفن+15 دقيقة = أرخص 30%.' },
     ],
     consumerEducation: [
         { myth: 'تنظيف عادي.', truth: '4 محاور: Descaler+HEPA+Pre-Rinse+RO.' },

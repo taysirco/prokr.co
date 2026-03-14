@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'RO Water', use: 'بدون CaCO₃ 600ppm' },
         { name: 'HEPA Pollen', use: 'لقاح نخيل 8M' },
     ],
-    hiddenObjections: [
-        { fear: 'شامبو يكفي.', solution: 'Nafud يقطع+600ppm يُخشّن. HEPA+RO.' },
-        { fear: 'مثل خميس.', solution: 'لا عفن+15 دقيقة = أرخص 30%.' },
+    commonConcerns: [
+        { concern: 'شامبو يكفي.', solution: 'Nafud يقطع+600ppm يُخشّن. HEPA+RO.' },
+        { concern: 'مثل خميس.', solution: 'لا عفن+15 دقيقة = أرخص 30%.' },
     ],
     consumerEducation: [
         { myth: 'ماء عادي.', truth: '600ppm = أعلى خشونة. RO.' },

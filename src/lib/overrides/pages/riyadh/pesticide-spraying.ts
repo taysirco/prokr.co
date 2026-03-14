@@ -57,8 +57,8 @@ export const override: PageOverride = {
         { name: 'Gel Baits Microencapsulated', use: 'تدوم 8-12 أسبوعاً في 50°م' },
         { name: 'IGR (Insect Growth Regulators)', use: 'يكسر الكيتين ← لا انسلاخ ← لا تكاثر' },
     ],
-    hiddenObjections: [
-        { fear: 'عقد سنوي غالي.', solution: 'لدغة عقرب = طوارئ 2,000-5,000. العقد يمنع 100%. كل ريال وقاية = 5 ريال علاج.' },
+    commonConcerns: [
+        { concern: 'عقد سنوي غالي.', solution: 'لدغة عقرب = طوارئ 2,000-5,000. العقد يمنع 100%. كل ريال وقاية = 5 ريال علاج.' },
     ],
     consumerEducation: [
         { myth: 'حشرات الرياض موسمية.', truth: 'صيفاً: Fire Ant + عقارب خارج. شتاءً: هجرة للداخل. 12 شهر — يتبدل النوع.' },

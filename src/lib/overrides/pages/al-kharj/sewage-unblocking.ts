@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Chemical Descaler', use: 'يُذيب كلس — لا سنبك' },
         { name: 'سنبك كهربائي', use: 'دهون+مواد عضوية' },
     ],
-    hiddenObjections: [
-        { fear: 'سنبك يكفي.', solution: 'CaCO₃ = كلس. سنبك لا يُذيب. Descaler.' },
-        { fear: 'مثل الرياض.', solution: 'كلس+رمل. الرياض: دهون فقط.' },
+    commonConcerns: [
+        { concern: 'سنبك يكفي.', solution: 'CaCO₃ = كلس. سنبك لا يُذيب. Descaler.' },
+        { concern: 'مثل الرياض.', solution: 'كلس+رمل. الرياض: دهون فقط.' },
     ],
     consumerEducation: [
         { myth: 'أي تسليك.', truth: 'CaCO₃+SiO₂ = Descaler+Jetting.' },

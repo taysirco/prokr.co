@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'EPE Foam', use: 'Thermal Shock + خدش' },
         { name: 'GPS', use: 'مسافات + طرق صحراوية' },
     ],
-    hiddenObjections: [
-        { fear: 'غالي.', solution: 'Tarpaulin UV = 50-100. تلف = آلاف. 1-2%.' },
-        { fear: 'أي دينا.', solution: 'بدون UV-Resistant = Tarpaulin يتقصّف. فرق.' },
+    commonConcerns: [
+        { concern: 'غالي.', solution: 'Tarpaulin UV = 50-100. تلف = آلاف. 1-2%.' },
+        { concern: 'أي دينا.', solution: 'بدون UV-Resistant = Tarpaulin يتقصّف. فرق.' },
     ],
     consumerEducation: [
         { myth: 'مثل الرياض.', truth: 'ΔT 54°م. UV أعلى. عواصف أكثف. -2°م.' },

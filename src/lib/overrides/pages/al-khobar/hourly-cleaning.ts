@@ -57,9 +57,9 @@ export const override: PageOverride = {
         { name: 'Microfiber جاف', use: 'تجفيف فوري بعد المسح — إلزامي' },
         { name: 'Anti-Corrosion Spray', use: 'صنابير + مقابض — يحمي من NaCl' },
     ],
-    hiddenObjections: [
-        { fear: 'أنظف بنفسي.', solution: 'بماء الشبكة؟ = NaCl جديد. بدون تجفيف؟ = عفن. بدون Anti-Fungal؟ = حمام. 3 أخطاء شائعة.' },
-        { fear: 'عاملة أرخص.', solution: 'أرخص = بدون RO + بدون تجفيف + بدون Anti-Fungal = 3 مشاكل كل زيارة.' },
+    commonConcerns: [
+        { concern: 'أنظف بنفسي.', solution: 'بماء الشبكة؟ = NaCl جديد. بدون تجفيف؟ = عفن. بدون Anti-Fungal؟ = حمام. 3 أخطاء شائعة.' },
+        { concern: 'عاملة أرخص.', solution: 'أرخص = بدون RO + بدون تجفيف + بدون Anti-Fungal = 3 مشاكل كل زيارة.' },
     ],
     consumerEducation: [
         { myth: 'ممسحة وماء.', truth: 'ماء الخبر = NaCl. ممسحة = تُوزّع NaCl. بدون تجفيف = عفن. 3 أخطاء.' },

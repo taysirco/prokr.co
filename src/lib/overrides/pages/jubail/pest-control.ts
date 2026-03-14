@@ -45,7 +45,7 @@ export const override: PageOverride = {
     saudiRegulations: [REGULATIONS.GHAD_SYSTEM],
     verificationBadges: [{ badge: '✔️ مرخصة', authority: 'بلدي + وقاء', icon: 'shield-check' }],
     equipment: [{ name: 'Gel Bait مُقاوم', use: 'كيماوي' }, { name: 'LED أصفر', use: 'إضاءة' }, { name: 'IGR', use: '70-85%' }],
-    hiddenObjections: [{ fear: 'رش.', solution: 'كيماوي يُحلل.' }],
+    commonConcerns: [{ concern: 'رش.', solution: 'كيماوي يُحلل.' }],
     consumerEducation: [{ myth: 'مثل القطيف.', truth: 'صناعي كيماوي — لا واحة.' },
         { myth: 'الحشرات تدل على قلة نظافة.', truth: 'الحشرات تبحث عن ماء ودفء وليس قذارة. أنظف بيت يجذب حشرات إذا فيه رطوبة أو شقوق.' },
     ],

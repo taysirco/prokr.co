@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Ceramic 9H', use: 'حاجز ثلاثي (NaCl+SiO₂+UV) — 2-3 سنوات' },
         { name: 'Underbody Pressure Wash', use: 'يُزيل Sabkha+رمل من الشاسيه' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل الخبر.', solution: 'الخبر = NaCl فقط. الظهران = NaCl+SiO₂. SiO₂ يخدش Clear Coat ← NaCl يتآكل المكشوف. أسوأ.' },
-        { fear: 'Ceramic غالي.', solution: '400-1,000 ÷ 2-3 سنوات vs إعادة طلاء 3,000-8,000. = 5-13%.' },
+    commonConcerns: [
+        { concern: 'مثل الخبر.', solution: 'الخبر = NaCl فقط. الظهران = NaCl+SiO₂. SiO₂ يخدش Clear Coat ← NaCl يتآكل المكشوف. أسوأ.' },
+        { concern: 'Ceramic غالي.', solution: '400-1,000 ÷ 2-3 سنوات vs إعادة طلاء 3,000-8,000. = 5-13%.' },
     ],
     consumerEducation: [
         { myth: 'غبار عادي.', truth: 'NaCl+SiO₂ ≠ غبار. يتآكل + يخدش. مزدوج.' },

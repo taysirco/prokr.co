@@ -60,9 +60,9 @@ export const override: PageOverride = {
         { name: 'HEPA + Dehumidifier', use: 'SiO₂ PM10 + 75-85%' },
         { name: 'BTI Larvicide', use: 'بعوض حديقة' },
     ],
-    hiddenObjections: [
-        { fear: 'عاملة واحدة.', solution: '7 محاور = فريق مُتخصص. واحدة = 1/7.' },
-        { fear: 'لسنة كاملة؟', solution: 'NaCl+SiO₂ يومي + عفن أسبوعي. أسبوعي = الأمثل.' },
+    commonConcerns: [
+        { concern: 'عاملة واحدة.', solution: '7 محاور = فريق مُتخصص. واحدة = 1/7.' },
+        { concern: 'لسنة كاملة؟', solution: 'NaCl+SiO₂ يومي + عفن أسبوعي. أسبوعي = الأمثل.' },
     ],
     consumerEducation: [
         { myth: 'مثل الخبر.', truth: 'SiO₂ إضافي + أرامكو = 7 بدلاً من 6. مختلف.' },

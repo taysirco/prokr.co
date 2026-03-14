@@ -56,9 +56,9 @@ export const override: PageOverride = {
         { name: 'Anti-Fungal Treatment', use: 'حماية حشوة من 85-95% — فعّال 3-4 أشهر' },
         { name: 'Turbo Dryer', use: 'تجفيف سريع بعد التنظيف' },
     ],
-    hiddenObjections: [
-        { fear: 'المجلس نظيف.', solution: 'البوليمر شفاف. عفن الحشوة مخفي. العث ميكروبي. NaCl لا يُرى. 4 مخفية.' },
-        { fear: 'تنظيف يتلف.', solution: 'العكس: بوليمر يُصلّب + عفن يُحلل + NaCl يتآكل. ترك = التلف. التنظيف = الحماية.' },
+    commonConcerns: [
+        { concern: 'المجلس نظيف.', solution: 'البوليمر شفاف. عفن الحشوة مخفي. العث ميكروبي. NaCl لا يُرى. 4 مخفية.' },
+        { concern: 'تنظيف يتلف.', solution: 'العكس: بوليمر يُصلّب + عفن يُحلل + NaCl يتآكل. ترك = التلف. التنظيف = الحماية.' },
     ],
     consumerEducation: [
         { myth: 'شامبو يكفي.', truth: 'لا يُكسر Ester Bonds. لا يقتل عث. لا يُعالج عفن حشوة. 3 فشلات.' },

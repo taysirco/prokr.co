@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Alkaline Degreaser', use: 'يُذيب كربنة رطبة' },
         { name: 'مقياس ميكرون', use: 'NFPA 96 < 25μm' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل الباحة.', solution: 'متشابه — نفس الفيزياء.' },
-        { fear: 'شهري غالي.', solution: 'حريق = خسارة مطعم. شهري أرخص 1000×.' },
+    commonConcerns: [
+        { concern: 'مثل الباحة.', solution: 'متشابه — نفس الفيزياء.' },
+        { concern: 'شهري غالي.', solution: 'حريق = خسارة مطعم. شهري أرخص 1000×.' },
     ],
     consumerEducation: [
         { myth: 'ربع سنوي يكفي بخميس.', truth: 'Biofilm + كربنة رطبة = تراكم سريع. شهري.' },

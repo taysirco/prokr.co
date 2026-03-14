@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Dehumidifier صناعي', use: '6-10h → 3-4h — إلزامي' },
         { name: 'Anti-Fungal', use: 'بعد تجفيف — وقاية' },
     ],
-    hiddenObjections: [
-        { fear: 'بخار يكفي.', solution: '6-10h = عفن بعد! Dehumidifier.' },
-        { fear: 'مثل بريدة.', solution: '15 دقيقة vs 6-10h! عكس!' },
+    commonConcerns: [
+        { concern: 'بخار يكفي.', solution: '6-10h = عفن بعد! Dehumidifier.' },
+        { concern: 'مثل بريدة.', solution: '15 دقيقة vs 6-10h! عكس!' },
     ],
     consumerEducation: [
         { myth: 'بخار مثالي.', truth: 'بالباحة = مشكلة بدون Dehumidifier.' },

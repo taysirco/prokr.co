@@ -55,9 +55,9 @@ export const override: PageOverride = {
         { name: 'HEPA (مُرافق)', use: 'يشفط لقاح قبل البخار — يحمي الأسطح' },
         { name: 'Dehumidifier (العيون)', use: 'يُجفف بعد البخار في 60-70% — إلزامي' },
     ],
-    hiddenObjections: [
-        { fear: 'البخار يبلل.', solution: 'Dry Vapor = 5% فقط. + الهفوف = يجف 1-2 ساعة طبيعياً.' },
-        { fear: 'ممسحة تكفي.', solution: 'لا تصل لعث 10-15 سم. لا تُذيب CaSO₄. لا تُعقّم تربة. البخار = يخترق.' },
+    commonConcerns: [
+        { concern: 'البخار يبلل.', solution: 'Dry Vapor = 5% فقط. + الهفوف = يجف 1-2 ساعة طبيعياً.' },
+        { concern: 'ممسحة تكفي.', solution: 'لا تصل لعث 10-15 سم. لا تُذيب CaSO₄. لا تُعقّم تربة. البخار = يخترق.' },
     ],
     consumerEducation: [
         { myth: 'بخار = ماء.', truth: 'Dry Vapor = 130°م + 5% رطوبة = ليس ماء. لا يُبلل. يقتل بالحرارة.' },

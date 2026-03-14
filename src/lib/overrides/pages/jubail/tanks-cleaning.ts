@@ -55,9 +55,9 @@ export const override: PageOverride = {
         { name: 'كلور 2×', use: 'NaCl Demand' },
         { name: 'Algaecide', use: '98% طحالب' },
     ],
-    hiddenObjections: [
-        { fear: 'لا Scale = سهل.', solution: 'Biofilm أقصى + Demand + طحالب. 3 تحديات.' },
-        { fear: 'كلور يكفي.', solution: 'Biofilm يحمي. Anti-Biofilm أولاً.' },
+    commonConcerns: [
+        { concern: 'لا Scale = سهل.', solution: 'Biofilm أقصى + Demand + طحالب. 3 تحديات.' },
+        { concern: 'كلور يكفي.', solution: 'Biofilm يحمي. Anti-Biofilm أولاً.' },
     ],
     consumerEducation: [
         { myth: 'مثل حفر الباطن.', truth: 'Biofilm+طحالب+Demand. عكس (لا Scale vs Scale).' },

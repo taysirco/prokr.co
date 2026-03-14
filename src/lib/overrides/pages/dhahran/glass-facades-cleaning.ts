@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Anti-Biofilm', use: 'يمنع غشاء — 4 أشهر' },
         { name: 'Marine Sealant', use: 'يقاوم NaCl+SiO₂ — 7-10 سنوات' },
     ],
-    hiddenObjections: [
-        { fear: 'نظيفة.', solution: 'NaCl شفاف + Biofilm شفاف + SiO₂ ناعم. \"نظيفة\" = لا تُلاحظ. ربع سنوي يكشف.' },
-        { fear: 'ماء وقماش.', solution: 'ماء = NaCl جديد. قماش + SiO₂ = خدش. 2 أخطاء.' },
+    commonConcerns: [
+        { concern: 'نظيفة.', solution: 'NaCl شفاف + Biofilm شفاف + SiO₂ ناعم. \"نظيفة\" = لا تُلاحظ. ربع سنوي يكشف.' },
+        { concern: 'ماء وقماش.', solution: 'ماء = NaCl جديد. قماش + SiO₂ = خدش. 2 أخطاء.' },
     ],
     consumerEducation: [
         { myth: 'مثل الخبر.', truth: 'SiO₂ خدش 7 Mohs > زجاج 5.5 = فرق حرج.' },

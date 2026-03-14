@@ -55,9 +55,9 @@ export const override: PageOverride = {
         { name: 'Marine Ceramic Overcoat', use: 'حماية الفوم من الرذاذ الملحي والأشعة فوق البنفسجية' },
         { name: 'SS316 Fastener Kit', use: 'مسامير وقطاعات تثبيت بحرية' },
     ],
-    hiddenObjections: [
-        { fear: 'Marine-Formulated أغلى 25-35%.', solution: 'يدوم 10+ سنوات vs عادي 2-3 = أرخص إجمالياً 3-4×.' },
-        { fear: '40 كجم أغلى من 35.', solution: '35 يفشل في 98% = خسارة كاملة. 40+ = 10+ سنوات. لا يوجد خيار أرخص يعمل.' },
+    commonConcerns: [
+        { concern: 'Marine-Formulated أغلى 25-35%.', solution: 'يدوم 10+ سنوات vs عادي 2-3 = أرخص إجمالياً 3-4×.' },
+        { concern: '40 كجم أغلى من 35.', solution: '35 يفشل في 98% = خسارة كاملة. 40+ = 10+ سنوات. لا يوجد خيار أرخص يعمل.' },
     ],
     consumerEducation: [
         { myth: 'الفوم العادي يكفي في كل الشرقية.', truth: 'الظهران 80%: 35 كجم عادي يكفي. الخبر 95%: 38 كجم. القطيف 98%: 40+ Marine. ليست منطقة واحدة.' },

@@ -56,9 +56,9 @@ export const override: PageOverride = {
         { name: 'BTI Larvicide', use: 'أقراص بيولوجية تقتل يرقات بعوض الضنك' },
         { name: 'Anti-Mold Treatment', use: 'مبيد فطري يقتل العفن ويقطع غذاء الحشرات' },
     ],
-    hiddenObjections: [
-        { fear: '6 زيارات/سنة = كثير.', solution: '95% رطوبة + 12 شهر نشاط = لا مجال لفجوات. 6 = الحد الأدنى.' },
-        { fear: 'Marine أغلى.', solution: 'يدوم 45-60 يوماً vs أسبوع للعادي. Marine أوفر فعلياً.' },
+    commonConcerns: [
+        { concern: '6 زيارات/سنة = كثير.', solution: '95% رطوبة + 12 شهر نشاط = لا مجال لفجوات. 6 = الحد الأدنى.' },
+        { concern: 'Marine أغلى.', solution: 'يدوم 45-60 يوماً vs أسبوع للعادي. Marine أوفر فعلياً.' },
     ],
     consumerEducation: [
         { myth: 'البعوض موسمي.', truth: 'في الخبر 12 شهراً. الشتاء 20°م = لا يقتله.' },

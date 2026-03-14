@@ -52,9 +52,9 @@ export const override: PageOverride = {
         { name: 'Anti-Static Spray', use: 'كهرباء ساكنة — إلكترونيات' },
         { name: 'Microfiber ناعم جاف', use: 'شاشات — بلا خدش' },
     ],
-    hiddenObjections: [
-        { fear: 'لا عفن = سهل.', solution: 'PM10 + كهرباء ساكنة + ΔT. 3 تحديات قارية.' },
-        { fear: 'عاملة المبنى.', solution: 'بدون HEPA + بدون Anti-Static = 2 خطأ.' },
+    commonConcerns: [
+        { concern: 'لا عفن = سهل.', solution: 'PM10 + كهرباء ساكنة + ΔT. 3 تحديات قارية.' },
+        { concern: 'عاملة المبنى.', solution: 'بدون HEPA + بدون Anti-Static = 2 خطأ.' },
     ],
     consumerEducation: [
         { myth: 'مثل الرياض.', truth: 'ΔT 54°م > 35°م. SiO₂ أكثف. كهرباء ساكنة أعلى.' },

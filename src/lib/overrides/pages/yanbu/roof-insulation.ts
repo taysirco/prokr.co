@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Closed-Cell + Vapor', use: '70-85% — تكثّف' },
         { name: '316 Fasteners', use: 'NaCl — مقاوم صدأ' },
     ],
-    hiddenObjections: [
-        { fear: 'SBS عادي.', solution: 'NaCl يُتشقق. Marine.' },
-        { fear: 'مثل بريدة.', solution: 'عكس! أغلى 60%. إلزامي.' },
+    commonConcerns: [
+        { concern: 'SBS عادي.', solution: 'NaCl يُتشقق. Marine.' },
+        { concern: 'مثل بريدة.', solution: 'عكس! أغلى 60%. إلزامي.' },
     ],
     consumerEducation: [
         { myth: 'Open-Cell.', truth: '70-85% = Closed. Open كارثة.' },

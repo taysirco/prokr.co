@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Residual Spray', use: 'ذباب + سوس — حماية طويلة' },
         { name: 'شبك صناعي', use: 'ذباب مزارع — حاجز فيزيائي' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل الرياض.', solution: 'ذباب 5-10×+سوس+NH₃ = مختلف.' },
-        { fear: 'رش عام يكفي.', solution: '4 أنواع مختلفة = بروتوكول متخصص.' },
+    commonConcerns: [
+        { concern: 'مثل الرياض.', solution: 'ذباب 5-10×+سوس+NH₃ = مختلف.' },
+        { concern: 'رش عام يكفي.', solution: '4 أنواع مختلفة = بروتوكول متخصص.' },
     ],
     consumerEducation: [
         { myth: 'رش واحد.', truth: 'ذباب+صراصير+سوس+عقارب = 4 بروتوكولات.' },

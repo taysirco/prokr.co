@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Anti-Fungal', use: '70-85% — عفن بعد بخار' },
         { name: 'Dehumidifier', use: '6-8h تجفيف — ساحلي' },
     ],
-    hiddenObjections: [
-        { fear: 'بخار آمن.', solution: '70-85%+بخار = عفن بعد! Dehumidifier.' },
-        { fear: 'مثل بريدة.', solution: '6-8h vs 15 دقيقة. مختلف.' },
+    commonConcerns: [
+        { concern: 'بخار آمن.', solution: '70-85%+بخار = عفن بعد! Dehumidifier.' },
+        { concern: 'مثل بريدة.', solution: '6-8h vs 15 دقيقة. مختلف.' },
     ],
     consumerEducation: [
         { myth: 'بخار يُجفف.', truth: '70-85% = 6-8h تجفيف.' },

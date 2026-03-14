@@ -52,9 +52,9 @@ export const override: PageOverride = {
         { name: 'EPE Foam', use: 'Thermal Shock + خدش' },
         { name: 'GPS تتبع', use: 'طرق صحراوية' },
     ],
-    hiddenObjections: [
-        { fear: 'مسافة قصيرة.', solution: 'SiO₂ + UV في دقائق. قصيرة ≠ آمنة.' },
-        { fear: 'لا رطوبة.', solution: 'صحيح ← لا تكثّف (ميزة!). لكن: SiO₂ + UV + ΔT = 3 تحديات.' },
+    commonConcerns: [
+        { concern: 'مسافة قصيرة.', solution: 'SiO₂ + UV في دقائق. قصيرة ≠ آمنة.' },
+        { concern: 'لا رطوبة.', solution: 'صحيح ← لا تكثّف (ميزة!). لكن: SiO₂ + UV + ΔT = 3 تحديات.' },
     ],
     consumerEducation: [
         { myth: 'مثل الرياض.', truth: 'ΔT 54°م. UV أعلى. عواصف أكثف.' },

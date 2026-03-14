@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'VCI', use: 'NaCl — معادن' },
         { name: 'Anti-Fungal', use: 'عفن واحي — شهري' },
     ],
-    hiddenObjections: [
-        { fear: 'غالي.', solution: 'تلف بدون = أغلى. Dehumidifier ضروري.' },
-        { fear: 'مثل الخبر.', solution: 'واحة = عيون. عفن واحي إضافي.' },
+    commonConcerns: [
+        { concern: 'غالي.', solution: 'تلف بدون = أغلى. Dehumidifier ضروري.' },
+        { concern: 'مثل الخبر.', solution: 'واحة = عيون. عفن واحي إضافي.' },
     ],
     consumerEducation: [
         { myth: 'أي مستودع.', truth: 'بدون Dehumidifier = تلف.' },

@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Silica Gel', use: '80-95% — إلكترونيات' },
         { name: 'Stretch', use: 'NaCl+طين — حاجز' },
     ],
-    hiddenObjections: [
-        { fear: 'أزقة = مستحيل.', solution: 'فريق يدوي يعرف كل زقاق.' },
-        { fear: 'غالي.', solution: 'يدوي = 25-40% إضافي. بدون = لا بديل.' },
+    commonConcerns: [
+        { concern: 'أزقة = مستحيل.', solution: 'فريق يدوي يعرف كل زقاق.' },
+        { concern: 'غالي.', solution: 'يدوي = 25-40% إضافي. بدون = لا بديل.' },
     ],
     consumerEducation: [
         { myth: 'شاحنة كبيرة.', truth: 'أزقة = يدوي + دينا صغيرة.' },

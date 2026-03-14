@@ -1,7 +1,7 @@
 // ═══════════════════════════════════════════════════════════════
 // City Climate & Geographic Profiles — الملفات المناخية للمدن
-// السر الخوارزمي: Entity Intersection بين القطاع والمناخ
-// = محتوى فريد لكل مدينة يستحيل تكراره
+// Entity Intersection بين القطاع والمناخ
+// = محتوى فريد لكل مدينة
 // ═══════════════════════════════════════════════════════════════
 
 // ─────────────────────────────────────────
@@ -22,7 +22,7 @@ export interface CityClimateProfile {
         'moving': string[];
         'sewage': string[];
     };
-    /** فقرات Entity Intersection جاهزة للحقن — فقرة واحدة لكل قطاع */
+    /** فقرات Entity Intersection — فقرة واحدة لكل قطاع */
     intersections: {
         'leak-detection': string;
         'insulation': string;

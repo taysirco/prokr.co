@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'RO Water', use: 'شطف بدون CaCO₃ 600ppm' },
         { name: 'HEPA Pollen', use: 'حبوب لقاح نخيل 8M' },
     ],
-    hiddenObjections: [
-        { fear: 'مكنسة عادية تكفي.', solution: 'Nafud 10 μm يمر. HEPA يوقف.' },
-        { fear: 'مثل عنيزة.', solution: 'نفس 600ppm لكن بريدة: 8M نخلة = لقاح أعلى.' },
+    commonConcerns: [
+        { concern: 'مكنسة عادية تكفي.', solution: 'Nafud 10 μm يمر. HEPA يوقف.' },
+        { concern: 'مثل عنيزة.', solution: 'نفس 600ppm لكن بريدة: 8M نخلة = لقاح أعلى.' },
     ],
     consumerEducation: [
         { myth: 'شامبو يكفي.', truth: 'Nafud يقطع. HEPA أولاً.' },

@@ -56,9 +56,9 @@ export const override: PageOverride = {
         { name: 'Alkaline Degreaser', use: 'يُذيب الكربنة الدهنية الجافة (لا Biofilm!)' },
         { name: 'مقياس ميكرون', use: 'NFPA 96 compliance — < 25μm' },
     ],
-    hiddenObjections: [
-        { fear: 'Alkaline يكفي.', solution: 'كرملة تمور ≠ كربنة. Enzymatic إلزامي.' },
-        { fear: 'مثل خميس NFPA.', solution: 'أبسط — لا Biofilm = Alkaline مباشر.' },
+    commonConcerns: [
+        { concern: 'Alkaline يكفي.', solution: 'كرملة تمور ≠ كربنة. Enzymatic إلزامي.' },
+        { concern: 'مثل خميس NFPA.', solution: 'أبسط — لا Biofilm = Alkaline مباشر.' },
     ],
     consumerEducation: [
         { myth: 'المداخن ما تحتاج Enzymatic.', truth: 'مطاعم التمور = كرملة سكر في المدخنة. Alkaline لا يكفي.' },

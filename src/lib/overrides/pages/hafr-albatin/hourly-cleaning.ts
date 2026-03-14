@@ -56,9 +56,9 @@ export const override: PageOverride = {
         { name: 'Anti-Static', use: 'الخطوة 2 — يُفرّغ شحنة' },
         { name: 'ماء مُفلتر', use: 'الخطوة 3 — لا CaCO₃' },
     ],
-    hiddenObjections: [
-        { fear: 'أبسط.', solution: '3 خطوات ≠ أبسط. HEPA + Anti-Static = حاسمان. بدونهما = تلويث.' },
-        { fear: 'أنظف بنفسي.', solution: 'بمكنسة = SiO₂ PM10. بممسحة = كهرباء ساكنة. 2 خطأ.' },
+    commonConcerns: [
+        { concern: 'أبسط.', solution: '3 خطوات ≠ أبسط. HEPA + Anti-Static = حاسمان. بدونهما = تلويث.' },
+        { concern: 'أنظف بنفسي.', solution: 'بمكنسة = SiO₂ PM10. بممسحة = كهرباء ساكنة. 2 خطأ.' },
     ],
     consumerEducation: [
         { myth: 'ممسحة.', truth: 'كهرباء ساكنة = تنقل. HEPA + Anti-Static.' },

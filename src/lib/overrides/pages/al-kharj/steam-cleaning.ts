@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'HEPA Extraction', use: 'يسحب SiO₂+NH₃ مُحرّر' },
         { name: 'RO Water Boiler', use: 'لا CaCO₃ في البخار' },
     ],
-    hiddenObjections: [
-        { fear: 'بخار يسبب عفن.', solution: '15-25% = 10 دقيقة. لا عفن.' },
-        { fear: 'مثل الشامبو.', solution: '150°م يكسّر NH₃. الشامبو لا يصل.' },
+    commonConcerns: [
+        { concern: 'بخار يسبب عفن.', solution: '15-25% = 10 دقيقة. لا عفن.' },
+        { concern: 'مثل الشامبو.', solution: '150°م يكسّر NH₃. الشامبو لا يصل.' },
     ],
     consumerEducation: [
         { myth: 'شامبو أفضل.', truth: '150°م يكسّر NH₃+يُلين CaCO₃.' },

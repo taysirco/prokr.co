@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'HEPA', use: 'نخيل غبار طلع — حساسية' },
         { name: 'Dehumidifier', use: '80-95% + عيون — يخفض' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل الخبر.', solution: 'واحة = تربة+نخيل+عيون+عفن واحي. مختلف.' },
-        { fear: 'مثل الأحساء.', solution: 'NaCl ساحلي إضافي. الأحساء: واحة داخلية.' },
+    commonConcerns: [
+        { concern: 'مثل الخبر.', solution: 'واحة = تربة+نخيل+عيون+عفن واحي. مختلف.' },
+        { concern: 'مثل الأحساء.', solution: 'NaCl ساحلي إضافي. الأحساء: واحة داخلية.' },
     ],
     consumerEducation: [
         { myth: 'ساحلي فقط.', truth: 'ساحلي+واحي = ثنائي فريد.' },

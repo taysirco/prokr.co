@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Anti-Mite', use: 'يقتل عث Dermatophagoides — مفروشات رطبة' },
         { name: 'Dehumidifier صناعي', use: 'تحكم رطوبة 60-85% + تجفيف' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل عنيزة.', solution: '6-7 محاور مقابل 4. عفن+عث = مختلف تماماً.' },
-        { fear: 'أغلى = مبالغة.', solution: 'البيئة أعقد = خطوات أكثر. بدونها = كارثة.' },
+    commonConcerns: [
+        { concern: 'مثل عنيزة.', solution: '6-7 محاور مقابل 4. عفن+عث = مختلف تماماً.' },
+        { concern: 'أغلى = مبالغة.', solution: 'البيئة أعقد = خطوات أكثر. بدونها = كارثة.' },
     ],
     consumerEducation: [
         { myth: '4 خطوات تكفي مثل عنيزة.', truth: 'بدون Anti-Fungal+Anti-Mite = عفن+عث. 6-7 إلزامي.' },

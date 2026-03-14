@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Crystalline', use: 'عزل جدران من الداخل — يتفاعل مع الرطوبة' },
         { name: 'Vapor Barrier', use: 'يمنع تكثّف ضبابي بيني' },
     ],
-    hiddenObjections: [
-        { fear: 'اختياري مثل عنيزة.', solution: 'أمطار+ضباب = إلزامي. بدونه = تسرب.' },
-        { fear: 'غالي.', solution: 'تسرب = تلف هيكلي 10000+. العزل أرخص 20×.' },
+    commonConcerns: [
+        { concern: 'اختياري مثل عنيزة.', solution: 'أمطار+ضباب = إلزامي. بدونه = تسرب.' },
+        { concern: 'غالي.', solution: 'تسرب = تلف هيكلي 10000+. العزل أرخص 20×.' },
     ],
     consumerEducation: [
         { myth: 'العزل المائي ترف بالسعودية.', truth: 'خميس: أمطار+ضباب = إلزامي 100%.' },

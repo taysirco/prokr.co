@@ -57,8 +57,8 @@ export const override: PageOverride = {
         { name: 'سبايك بولي كربونيت', use: 'يثبط الوقوف على الحواف — لا يسخن في 50°م.' },
         { name: 'Bird Shock Flex Track', use: 'نبضات كهربائية تطرد المعتاد — حل للأسطح الكبيرة.' },
     ],
-    hiddenObjections: [
-        { fear: 'الحمام يعود بعد الطرد.', solution: 'ثلاثي: شبك + سبايك + نبضات = لا مكان للوقوف.' },
+    commonConcerns: [
+        { concern: 'الحمام يعود بعد الطرد.', solution: 'ثلاثي: شبك + سبايك + نبضات = لا مكان للوقوف.' },
     ],
     consumerEducation: [
         { myth: 'الحمام لا يضر.', truth: 'pH 3-4 × 100+ كجم/سنة. ثم أكل خرسانة + Histoplasma + انسداد مجاري. ثلاثة أضرار.' },

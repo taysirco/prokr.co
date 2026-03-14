@@ -55,9 +55,9 @@ export const override: PageOverride = {
         { name: 'Anti-Corrosion Spray', use: 'NaCl — Stainless' },
         { name: 'Chemical Wash', use: 'SOx+حرارة — حمض' },
     ],
-    hiddenObjections: [
-        { fear: 'التنظيف العادي.', solution: 'طبقة ثلاثية. Degreaser صناعي.' },
-        { fear: 'مثل بريدة.', solution: 'NaCl+SOx إضافي. ثلاثي.' },
+    commonConcerns: [
+        { concern: 'التنظيف العادي.', solution: 'طبقة ثلاثية. Degreaser صناعي.' },
+        { concern: 'مثل بريدة.', solution: 'NaCl+SOx إضافي. ثلاثي.' },
     ],
     consumerEducation: [
         { myth: 'سنوي.', truth: 'ربع سنوي. الدفاع المدني.' },

@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Anti-Fungal Wood', use: '70-85% — عفن خشب' },
         { name: 'RO Extraction', use: 'NaCl — أقمشة' },
     ],
-    hiddenObjections: [
-        { fear: 'تنظيف عادي.', solution: 'NaCl+عفن = Anti-Rust+Anti-Fungal.' },
-        { fear: 'مثل بريدة.', solution: 'صدأ+عفن = مختلف تماماً.' },
+    commonConcerns: [
+        { concern: 'تنظيف عادي.', solution: 'NaCl+عفن = Anti-Rust+Anti-Fungal.' },
+        { concern: 'مثل بريدة.', solution: 'صدأ+عفن = مختلف تماماً.' },
     ],
     consumerEducation: [
         { myth: 'سنوي.', truth: 'NaCl = نصف سنوي Anti-Rust.' },

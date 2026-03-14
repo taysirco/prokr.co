@@ -55,9 +55,9 @@ export const override: PageOverride = {
         { name: 'كاميرا حرارية', use: 'مفاصل ΔT — تشقق' },
         { name: 'Epoxy Food-Grade', use: 'إصلاح — CaCO₃ 600ppm' },
     ],
-    hiddenObjections: [
-        { fear: 'بصري يكفي.', solution: 'بقع واضحة+فحص ضغط = دقيق.' },
-        { fear: 'مثل عنيزة.', solution: 'نفس 600ppm لكن بريدة أكبر.' },
+    commonConcerns: [
+        { concern: 'بصري يكفي.', solution: 'بقع واضحة+فحص ضغط = دقيق.' },
+        { concern: 'مثل عنيزة.', solution: 'نفس 600ppm لكن بريدة أكبر.' },
     ],
     consumerEducation: [
         { myth: 'فحص 5 سنوات.', truth: '600ppm = سنوي. يتسلل.' },

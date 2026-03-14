@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'HEPA Pollen Filter', use: 'يوقف حبوب نخيل 8M' },
         { name: 'HEPA Fine (10 μm)', use: 'يوقف Nafud SiO₂ الناعم' },
     ],
-    hiddenObjections: [
-        { fear: 'Acid Flush غالي.', solution: '600ppm = بدونه تبريد -40%. فاتورة أعلى.' },
-        { fear: 'مثل عنيزة.', solution: 'عنيزة أقل نخيل. بريدة: 8M = أعلى.' },
+    commonConcerns: [
+        { concern: 'Acid Flush غالي.', solution: '600ppm = بدونه تبريد -40%. فاتورة أعلى.' },
+        { concern: 'مثل عنيزة.', solution: 'عنيزة أقل نخيل. بريدة: 8M = أعلى.' },
     ],
     consumerEducation: [
         { myth: 'تنظيف عادي.', truth: '600ppm = Acid Flush إلزامي.' },

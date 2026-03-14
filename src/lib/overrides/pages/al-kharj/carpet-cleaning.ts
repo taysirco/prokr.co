@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'HEPA Activated Carbon', use: 'يمتص NH₃ + يسحب SiO₂' },
         { name: 'RO Water', use: 'شطف بدون CaCO₃ — لا خشونة' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل الرياض.', solution: 'NH₃ مزارع+CaCO₃. الرياض: لا.' },
-        { fear: 'شامبو يكفي.', solution: 'بلمرة حيوانية عميقة. Enzymatic.' },
+    commonConcerns: [
+        { concern: 'مثل الرياض.', solution: 'NH₃ مزارع+CaCO₃. الرياض: لا.' },
+        { concern: 'شامبو يكفي.', solution: 'بلمرة حيوانية عميقة. Enzymatic.' },
     ],
     consumerEducation: [
         { myth: 'ماء صنبور يكفي.', truth: 'CaCO₃ 450ppm = خشونة. RO.' },

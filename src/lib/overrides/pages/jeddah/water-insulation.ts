@@ -56,8 +56,8 @@ export const override: PageOverride = {
         { name: 'HDPE French Drain', use: 'تصريف — يُقلل ضغط هيدروستاتيكي' },
         { name: 'SBS Membrane', use: 'حاجز خارجي مرن — يتحمل طين' },
     ],
-        hiddenObjections: [
-        { fear: 'العزل مكلف — مش متأكد يستاهل.', solution: 'عزل SBC 601 يوفر 30-40% كهرباء سنوياً. يسترد تكلفته خلال 2-3 سنوات.' },
+        commonConcerns: [
+        { concern: 'العزل مكلف — مش متأكد يستاهل.', solution: 'عزل SBC 601 يوفر 30-40% كهرباء سنوياً. يسترد تكلفته خلال 2-3 سنوات.' },
     ],
 
     consumerEducation: [

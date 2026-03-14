@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'تغليف مانع مطر', use: 'مطر+ضباب — حماية' },
         { name: 'All-Terrain', use: 'Laterite — طين زلق' },
     ],
-    hiddenObjections: [
-        { fear: 'مكشوف.', solution: 'مطر = تبلل. تغليف.' },
-        { fear: 'مثل بريدة.', solution: 'جبلي+ضباب ≠ مستوي.' },
+    commonConcerns: [
+        { concern: 'مكشوف.', solution: 'مطر = تبلل. تغليف.' },
+        { concern: 'مثل بريدة.', solution: 'جبلي+ضباب ≠ مستوي.' },
     ],
     consumerEducation: [
         { myth: 'أي دباب.', truth: 'Mountain-Spec+All-Terrain.' },

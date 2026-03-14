@@ -52,9 +52,9 @@ export const override: PageOverride = {
         { name: 'Dry Vapor 130°م', use: 'يُحرر SiO₂ + يُعقّم + يُكسر بخور' },
         { name: 'اختبار حرارة', use: 'أقمشة — 130°م + 52°م' },
     ],
-    hiddenObjections: [
-        { fear: 'يبلل.', solution: '10-15% = يجف 20-30 دقيقة. أسرع في المملكة.' },
-        { fear: 'ممسحة أسهل.', solution: 'كهرباء ساكنة = تنقل. بخار = يُحرر.' },
+    commonConcerns: [
+        { concern: 'يبلل.', solution: '10-15% = يجف 20-30 دقيقة. أسرع في المملكة.' },
+        { concern: 'ممسحة أسهل.', solution: 'كهرباء ساكنة = تنقل. بخار = يُحرر.' },
     ],
     consumerEducation: [
         { myth: 'للعفن والعث.', truth: 'لا عفن ولا عث! للتعقيم + SiO₂ + بخور.' },

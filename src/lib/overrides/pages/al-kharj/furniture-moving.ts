@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'تثبيت مقوّى', use: 'طرق ترابية — صدمات' },
         { name: 'تغليف محكم', use: 'SiO₂ — خدش أسطح لامعة' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل الرياض.', solution: 'ΔT+طرق ترابية+SiO₂ = مختلف.' },
-        { fear: 'تغليف حراري مبالغة.', solution: '50°م في الصهريج = تشقق خشب.' },
+    commonConcerns: [
+        { concern: 'مثل الرياض.', solution: 'ΔT+طرق ترابية+SiO₂ = مختلف.' },
+        { concern: 'تغليف حراري مبالغة.', solution: '50°م في الصهريج = تشقق خشب.' },
     ],
     consumerEducation: [
         { myth: 'نقل عادي يكفي.', truth: 'ΔT+ترابي = تغليف حراري+تثبيت.' },

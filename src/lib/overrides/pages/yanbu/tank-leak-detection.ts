@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Nitrogen Pressure', use: 'ثقوب تآكل — كشف' },
         { name: 'Epoxy Marine', use: 'تحلية — إصلاح' },
     ],
-    hiddenObjections: [
-        { fear: 'بصري يكفي.', solution: '70-85% تكثّف = FLIR.' },
-        { fear: 'مثل بريدة.', solution: 'تكثّف يُخفي vs بقع واضحة.' },
+    commonConcerns: [
+        { concern: 'بصري يكفي.', solution: '70-85% تكثّف = FLIR.' },
+        { concern: 'مثل بريدة.', solution: 'تكثّف يُخفي vs بقع واضحة.' },
     ],
     consumerEducation: [
         { myth: 'فحص 5 سنوات.', truth: 'مزدوج = سنوي.' },

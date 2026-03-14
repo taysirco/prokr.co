@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Descaler', use: 'يُذيب CaCO₃ قبل العزل' },
         { name: 'فحص سُمك', use: 'يقيس تآكل العزل' },
     ],
-    hiddenObjections: [
-        { fear: 'عزل عادي.', solution: 'CaCO₃ يآكل العادي. Epoxy مقاوم.' },
-        { fear: 'مثل خميس.', solution: 'لا عفن = لا Anti-Fungal = مختلف.' },
+    commonConcerns: [
+        { concern: 'عزل عادي.', solution: 'CaCO₃ يآكل العادي. Epoxy مقاوم.' },
+        { concern: 'مثل خميس.', solution: 'لا عفن = لا Anti-Fungal = مختلف.' },
     ],
     consumerEducation: [
         { myth: 'أي عزل.', truth: 'CaCO₃ = مقاوم فقط. + Food-Grade.' },

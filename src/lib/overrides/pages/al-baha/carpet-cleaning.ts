@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Oxalic Acid', use: 'Laterite Fe₂O₃ — لا مبيّض' },
         { name: 'Anti-Fungal Treatment', use: '200 يوم ضباب — عفن' },
     ],
-    hiddenObjections: [
-        { fear: 'تجفيف طبيعي.', solution: '6-10h = عفن. Dehumidifier.' },
-        { fear: 'مثل بريدة.', solution: '15 دقيقة vs 6-10h!' },
+    commonConcerns: [
+        { concern: 'تجفيف طبيعي.', solution: '6-10h = عفن. Dehumidifier.' },
+        { concern: 'مثل بريدة.', solution: '15 دقيقة vs 6-10h!' },
     ],
     consumerEducation: [
         { myth: 'تجفيف شمس.', truth: 'ضباب = لا شمس. Dehumidifier.' },

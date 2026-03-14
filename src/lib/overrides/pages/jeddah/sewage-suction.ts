@@ -52,8 +52,8 @@ export const override: PageOverride = {
         { name: 'Vacuum Truck 10-15 م³', use: 'شفط' },
         { name: 'حصى تصريف', use: 'يُسرّع Soakaway 3-5×' },
     ],
-        hiddenObjections: [
-        { fear: 'الشفط يتم بدون نظافة.', solution: 'شفط + تنظيف + تعقيم = بروتوكول شامل. تقرير فني بعد كل خدمة.' },
+        commonConcerns: [
+        { concern: 'الشفط يتم بدون نظافة.', solution: 'شفط + تنظيف + تعقيم = بروتوكول شامل. تقرير فني بعد كل خدمة.' },
     ],
 
     consumerEducation: [

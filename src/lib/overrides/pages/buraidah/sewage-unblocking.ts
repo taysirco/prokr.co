@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Chemical Descaler', use: 'CaCO₃ 600ppm — يُذيب' },
         { name: 'كاميرا فحص', use: 'Nafud ترسيب — تشخيص' },
     ],
-    hiddenObjections: [
-        { fear: 'سبرنج يكفي.', solution: '600ppm كلس صلب. Hydro Jetting.' },
-        { fear: 'مثل عنيزة.', solution: 'نفس 600ppm لكن بريدة أكبر.' },
+    commonConcerns: [
+        { concern: 'سبرنج يكفي.', solution: '600ppm كلس صلب. Hydro Jetting.' },
+        { concern: 'مثل عنيزة.', solution: 'نفس 600ppm لكن بريدة أكبر.' },
     ],
     consumerEducation: [
         { myth: 'تسليك سنوي.', truth: '600ppm = كل 3 أشهر. أسرع.' },

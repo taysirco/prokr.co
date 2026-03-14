@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Enzymatic Cleaner', use: 'سكر تمور — تفكيك' },
         { name: 'RO Water', use: 'CaCO₃ — لا بقع' },
     ],
-    hiddenObjections: [
-        { fear: 'إسفنج يكفي.', solution: 'Nafud = خدوش. No-Touch.' },
-        { fear: 'ماء عادي.', solution: '550ppm = بقع. RO.' },
+    commonConcerns: [
+        { concern: 'إسفنج يكفي.', solution: 'Nafud = خدوش. No-Touch.' },
+        { concern: 'ماء عادي.', solution: '550ppm = بقع. RO.' },
     ],
     consumerEducation: [
         { myth: 'شهري.', truth: 'أسبوعي Nafud. يومي تمور.' },

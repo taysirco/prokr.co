@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'HEPA Filter', use: 'لقاح — مارس-مايو' },
         { name: 'Condenser Cleaner', use: '48°م — حمل خارجي' },
     ],
-    hiddenObjections: [
-        { fear: 'غسل عادي.', solution: 'Scale = Descaler إلزامي.' },
-        { fear: 'مثل الباحة.', solution: 'Scale+Nafud ≠ Aspergillus.' },
+    commonConcerns: [
+        { concern: 'غسل عادي.', solution: 'Scale = Descaler إلزامي.' },
+        { concern: 'مثل الباحة.', solution: 'Scale+Nafud ≠ Aspergillus.' },
     ],
     consumerEducation: [
         { myth: 'ربع سنوي فلتر.', truth: 'شهري! Nafud 7 Mohs.' },

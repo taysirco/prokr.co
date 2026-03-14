@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Anti-Fungal', use: 'حماية قاعدة — فعّال 4-5 أشهر' },
         { name: 'Turbo Dryer + Dehumidifier', use: 'تجفيف 3-4 ساعات' },
     ],
-    hiddenObjections: [
-        { fear: 'شفط يكفي.', solution: 'NaCl في العمق. SiO₂ بين الألياف. عفن في القاعدة. شفط = سطحي.' },
-        { fear: 'مثل الخبر.', solution: 'الخبر = NaCl فقط. الظهران = NaCl+SiO₂ = تصلب+قطع. أسوأ على الألياف.' },
+    commonConcerns: [
+        { concern: 'شفط يكفي.', solution: 'NaCl في العمق. SiO₂ بين الألياف. عفن في القاعدة. شفط = سطحي.' },
+        { concern: 'مثل الخبر.', solution: 'الخبر = NaCl فقط. الظهران = NaCl+SiO₂ = تصلب+قطع. أسوأ على الألياف.' },
     ],
     consumerEducation: [
         { myth: 'غبار عادي.', truth: 'NaCl+SiO₂ ≠ غبار. يُصلّب+يقطع. مزدوج.' },

@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Citric + RO', use: 'CaCO₃ — لا تصلب' },
         { name: 'Oil Treatment', use: 'ΔT — خشب تشقق' },
     ],
-    hiddenObjections: [
-        { fear: 'منظف عادي.', solution: 'Nafud+كلس+ΔT = 3 ركائز.' },
-        { fear: 'مثل الباحة.', solution: 'Cracking vs Swelling. عكس!' },
+    commonConcerns: [
+        { concern: 'منظف عادي.', solution: 'Nafud+كلس+ΔT = 3 ركائز.' },
+        { concern: 'مثل الباحة.', solution: 'Cracking vs Swelling. عكس!' },
     ],
     consumerEducation: [
         { myth: 'تجفيف مشكلة.', truth: '15 دقيقة! 10-20%.' },

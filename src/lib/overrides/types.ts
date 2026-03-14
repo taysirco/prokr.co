@@ -49,7 +49,7 @@ export interface PageOverride {
     trustFactors?: string[];
 
     // ─── Content: Semantic Data Overrides ───
-    hiddenObjections?: { fear: string; solution: string }[];
+    commonConcerns?: { concern: string; solution: string }[];
     consumerEducation?: { myth: string; truth: string }[];
     equipment?: { name: string; use: string }[];
     govReferences?: string[];

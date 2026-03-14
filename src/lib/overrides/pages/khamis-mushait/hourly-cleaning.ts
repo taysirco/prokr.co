@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Anti-Fungal+Anti-Mite', use: 'يقتل عفن وعث' },
         { name: 'Dehumidifier صناعي', use: 'تجفيف بعد كل تنظيف' },
     ],
-    hiddenObjections: [
-        { fear: 'أغلى = مبالغة.', solution: '5-6 خطوات لأن البيئة أعقد. بدونها = عفن+عث.' },
-        { fear: 'مثل الباحة.', solution: 'متشابه — خميس أقل غابات. تكلفة متقاربة.' },
+    commonConcerns: [
+        { concern: 'أغلى = مبالغة.', solution: '5-6 خطوات لأن البيئة أعقد. بدونها = عفن+عث.' },
+        { concern: 'مثل الباحة.', solution: 'متشابه — خميس أقل غابات. تكلفة متقاربة.' },
     ],
     consumerEducation: [
         { myth: '3 خطوات تكفي مثل عنيزة.', truth: '60-85% + ضباب = عفن+عث. 3 خطوات = كارثة.' },

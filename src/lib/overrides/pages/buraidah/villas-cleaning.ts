@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'HEPA Pollen', use: 'نخيل 8M — كل طابق' },
         { name: 'RO Water+Microfiber', use: 'لا كلس+لا خدش' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل الرياض.', solution: '600ppm > 300. 8M نخلة. Nafud.' },
-        { fear: 'مثل خميس.', solution: '4 محاور مقابل 7 = أرخص 40%.' },
+    commonConcerns: [
+        { concern: 'مثل الرياض.', solution: '600ppm > 300. 8M نخلة. Nafud.' },
+        { concern: 'مثل خميس.', solution: '4 محاور مقابل 7 = أرخص 40%.' },
     ],
     consumerEducation: [
         { myth: 'تنظيف عادي.', truth: '4 محاور: Descaler+HEPA+Pre-Rinse+RO.' },

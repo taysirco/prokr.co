@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'CYA', use: 'UV أعلى — حماية كلور' },
         { name: 'Flexible Grout', use: 'ΔT 54°م — بلاط' },
     ],
-    hiddenObjections: [
-        { fear: 'لا طحالب = سهل.', solution: 'تبخر + ΔT + CaCO₃ + SiO₂. 4 تحديات.' },
-        { fear: 'مثل الرياض.', solution: 'ΔT 54°م > 35°م. -2°م = تجميد.' },
+    commonConcerns: [
+        { concern: 'لا طحالب = سهل.', solution: 'تبخر + ΔT + CaCO₃ + SiO₂. 4 تحديات.' },
+        { concern: 'مثل الرياض.', solution: 'ΔT 54°م > 35°م. -2°م = تجميد.' },
     ],
     consumerEducation: [
         { myth: 'لا يتجمد.', truth: '-2°م = سطح يتجمد. تجهيز شتاء.' },

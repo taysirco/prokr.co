@@ -54,8 +54,8 @@ export const override: PageOverride = {
         { name: 'Vacuum Suction Truck', use: 'صهريج شفط 8-15 م³' },
         { name: 'Jetting للمنفذ', use: 'ينظّف كلس Soakaway ← يُعيد الامتصاص' },
     ],
-    hiddenObjections: [
-        { fear: 'عقد سنوي غالي.', solution: 'طوارئ × مفاجئ = أغلى 30-40%. العقد: منتظم + بدون فيضان.' },
+    commonConcerns: [
+        { concern: 'عقد سنوي غالي.', solution: 'طوارئ × مفاجئ = أغلى 30-40%. العقد: منتظم + بدون فيضان.' },
     ],
     consumerEducation: [
         { myth: 'التربة الرملية تمتص دائماً.', truth: 'تمتص حتى يُغلّف الكلس والدهون المنفذ. بعد ذلك: تتوقف. تنظيف المنفذ يُعيدها.' },

@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Acid Polish', use: 'يُعيد لمعان بعد تآكل أمطار حمضية' },
         { name: 'Impregnator', use: 'يحمي مسام الرخام من رطوبة+عفن' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل عنيزة.', solution: 'مشاكل مختلفة تماماً. عنيزة: ميكانيكي. خميس: بيولوجي+كيميائي.' },
-        { fear: 'جلي عادي يكفي.', solution: 'بدون Anti-Fungal = العفن يرجع. Poultice للبقع العميقة.' },
+    commonConcerns: [
+        { concern: 'مثل عنيزة.', solution: 'مشاكل مختلفة تماماً. عنيزة: ميكانيكي. خميس: بيولوجي+كيميائي.' },
+        { concern: 'جلي عادي يكفي.', solution: 'بدون Anti-Fungal = العفن يرجع. Poultice للبقع العميقة.' },
     ],
     consumerEducation: [
         { myth: 'الرخام يتخدش بخميس مثل عنيزة.', truth: 'لا SiO₂ صحراوي = لا خدش. المشكلة عفن+تآكل.' },

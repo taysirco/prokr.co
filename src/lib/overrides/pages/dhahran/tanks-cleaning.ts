@@ -55,9 +55,9 @@ export const override: PageOverride = {
         { name: 'Chlorine أعلى', use: 'Chloride Demand' },
         { name: 'إيبوكسي غذائي', use: 'حديد — NaCl تآكل' },
     ],
-    hiddenObjections: [
-        { fear: 'ماء نظيف.', solution: 'SiO₂ قاع + Biofilm + Chloride = \"نظيف\" ≠ آمن. فحص.' },
-        { fear: 'كلور يكفي.', solution: 'Chloride Demand + SiO₂ يحمي = كلور وحده ≠ كافٍ.' },
+    commonConcerns: [
+        { concern: 'ماء نظيف.', solution: 'SiO₂ قاع + Biofilm + Chloride = \"نظيف\" ≠ آمن. فحص.' },
+        { concern: 'كلور يكفي.', solution: 'Chloride Demand + SiO₂ يحمي = كلور وحده ≠ كافٍ.' },
     ],
     consumerEducation: [
         { myth: 'مثل الأحساء.', truth: 'لا Scale = ميزة! NaCl+SiO₂ = مختلف.' },

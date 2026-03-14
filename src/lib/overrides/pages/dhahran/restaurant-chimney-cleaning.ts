@@ -55,9 +55,9 @@ export const override: PageOverride = {
         { name: 'RO Water', use: 'صفر NaCl' },
         { name: 'مقياس ميكرون', use: 'يكشف SiO₂ المُسرّع' },
     ],
-    hiddenObjections: [
-        { fear: 'ربع سنوي مكلف.', solution: 'حريق = 50,000-200,000. عقد = 1-4%.' },
-        { fear: 'نظيفة.', solution: 'SiO₂ يُخشّن داخلياً. مقياس ميكرون يكشف.' },
+    commonConcerns: [
+        { concern: 'ربع سنوي مكلف.', solution: 'حريق = 50,000-200,000. عقد = 1-4%.' },
+        { concern: 'نظيفة.', solution: 'SiO₂ يُخشّن داخلياً. مقياس ميكرون يكشف.' },
     ],
     consumerEducation: [
         { myth: 'مثل الخبر.', truth: 'SiO₂ يُخشّن = أسرع. كربنة مُركّبة ≠ NaCl فقط.' },

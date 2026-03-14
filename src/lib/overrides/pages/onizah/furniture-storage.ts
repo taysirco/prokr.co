@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Stretch Film', use: 'تغليف — يحمي من SiO₂' },
         { name: 'مصائد + طُعم محيطي', use: 'حماية من حشرات سوق التمور' },
     ],
-    hiddenObjections: [
-        { fear: 'غالي مثل خميس.', solution: 'أرخص 30-40%. لا Dehumidifier ولا Anti-Fungal.' },
-        { fear: 'حشرات خطيرة.', solution: 'إحكام + مصائد = حماية 99%. ليست خطيرة — مزعجة فقط.' },
+    commonConcerns: [
+        { concern: 'غالي مثل خميس.', solution: 'أرخص 30-40%. لا Dehumidifier ولا Anti-Fungal.' },
+        { concern: 'حشرات خطيرة.', solution: 'إحكام + مصائد = حماية 99%. ليست خطيرة — مزعجة فقط.' },
     ],
     consumerEducation: [
         { myth: 'المستودع يحتاج Dehumidifier.', truth: '15-25% = صفر عفن. لا حاجة.' },

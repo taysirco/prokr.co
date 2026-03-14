@@ -56,9 +56,9 @@ export const override: PageOverride = {
         { name: 'Diamond Pads 7-مراحل', use: 'جلي تدريجي: خشن → ناعم → لمعان مرآة' },
         { name: 'Sealer (مانع تسرب)', use: 'يسد المسام — يحمي من CaSO₄ + تربة 1-2 سنة' },
     ],
-    hiddenObjections: [
-        { fear: 'الرخام جديد.', solution: 'CaSO₄ يترسب من اليوم الأول. لقاح يخدش من أول مشي. Sealer من اليوم الأول = حماية الاستثمار.' },
-        { fear: 'ملمّع من المحل يكفي.', solution: 'الملمّع = طبقة فوق الـ Scale. يلمع ثم يبهت بسرعة. Citric يُذيب الـ Scale ← لمعان حقيقي.' },
+    commonConcerns: [
+        { concern: 'الرخام جديد.', solution: 'CaSO₄ يترسب من اليوم الأول. لقاح يخدش من أول مشي. Sealer من اليوم الأول = حماية الاستثمار.' },
+        { concern: 'ملمّع من المحل يكفي.', solution: 'الملمّع = طبقة فوق الـ Scale. يلمع ثم يبهت بسرعة. Citric يُذيب الـ Scale ← لمعان حقيقي.' },
     ],
     consumerEducation: [
         { myth: 'الرخام يتحمل.', truth: 'الرخام 3-4 Mohs = ناعم نسبياً. CaSO₄ + لقاح + تربة = 3 هجمات يومية. يتحمل.. لكن يبهت.' },

@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Anti-Fungal', use: '70-85% — عفن أسبوعين' },
         { name: 'HEPA Activated Carbon', use: 'SOx YASREF — غازي' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل جدة.', solution: 'SOx YASREF = حمضي. 5 خطوات.' },
-        { fear: 'شهري.', solution: 'NaCl+SOx يومي = أسبوعي.' },
+    commonConcerns: [
+        { concern: 'مثل جدة.', solution: 'SOx YASREF = حمضي. 5 خطوات.' },
+        { concern: 'شهري.', solution: 'NaCl+SOx يومي = أسبوعي.' },
     ],
     consumerEducation: [
         { myth: 'ممسحة.', truth: 'H₂SO₄ لزج. RO+Microfiber.' },

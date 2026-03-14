@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'HEPA Filter', use: 'عرعر — لزج يسد' },
         { name: 'Defrost Kit', use: 'Heat Pump — تذويب شتاء' },
     ],
-    hiddenObjections: [
-        { fear: 'تنظيف عادي.', solution: 'Aspergillus+عرعر+Heat Pump = 3 تحديات.' },
-        { fear: 'مثل بريدة.', solution: 'عفن+عرعر+تجمد ≠ كلس.' },
+    commonConcerns: [
+        { concern: 'تنظيف عادي.', solution: 'Aspergillus+عرعر+Heat Pump = 3 تحديات.' },
+        { concern: 'مثل بريدة.', solution: 'عفن+عرعر+تجمد ≠ كلس.' },
     ],
     consumerEducation: [
         { myth: 'ربع سنوي.', truth: 'شهري! عرعر+Aspergillus.' },

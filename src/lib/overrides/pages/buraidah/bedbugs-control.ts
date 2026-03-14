@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Residual Spray', use: 'حماية طويلة — يمنع إعادة' },
         { name: 'HEPA Vacuum', use: 'ألياف نخيل+Nafud+فضلات' },
     ],
-    hiddenObjections: [
-        { fear: 'رش يكفي.', solution: 'البيض مقاوم. Heat يقتل الكل.' },
-        { fear: 'مثل عنيزة.', solution: 'بريدة: 8M نخلة = ألياف أكثر.' },
+    commonConcerns: [
+        { concern: 'رش يكفي.', solution: 'البيض مقاوم. Heat يقتل الكل.' },
+        { concern: 'مثل عنيزة.', solution: 'بريدة: 8M نخلة = ألياف أكثر.' },
     ],
     consumerEducation: [
         { myth: 'رش عام.', truth: 'بيض مقاوم = Heat 55°م.' },

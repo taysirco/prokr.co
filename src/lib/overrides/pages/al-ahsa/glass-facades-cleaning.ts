@@ -56,9 +56,9 @@ export const override: PageOverride = {
         { name: 'Citric Acid 3-5%', use: 'يُذيب CaSO₄ Scale المتراكم على الزجاج' },
         { name: 'UV-Resistant Sealant', use: 'يستبدل ختم متآكل — فعّال 8-10 سنوات في UV 9+' },
     ],
-    hiddenObjections: [
-        { fear: 'ماء وقماش يكفي.', solution: 'ماء الأحساء = CaSO₄ يترسب. قماش = لقاح يُفرش. 2 فشلات. Deionized + Squeegee = الحل.' },
-        { fear: 'الواجهة ما تتسخ.', solution: 'CaSO₄ أسبوعياً + لقاح يومياً. البقع تتراكم ببطء — \"ما تتسخ\" = لا تُلاحظ. ربع سنوي = يكشف.' },
+    commonConcerns: [
+        { concern: 'ماء وقماش يكفي.', solution: 'ماء الأحساء = CaSO₄ يترسب. قماش = لقاح يُفرش. 2 فشلات. Deionized + Squeegee = الحل.' },
+        { concern: 'الواجهة ما تتسخ.', solution: 'CaSO₄ أسبوعياً + لقاح يومياً. البقع تتراكم ببطء — \"ما تتسخ\" = لا تُلاحظ. ربع سنوي = يكشف.' },
     ],
     consumerEducation: [
         { myth: 'واجهات الأحساء مثل جدة.', truth: 'جدة = NaCl (صدأ). الأحساء = CaSO₄ (Scale بلا صدأ) + لقاح. مشكلتان مختلفتان = حلان مختلفان.' },

@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'VCI', use: 'حماية بخارية للمعدات' },
         { name: 'Ratchet + Transit Bolts', use: 'ربط + تثبيت' },
     ],
-    hiddenObjections: [
-        { fear: 'أي دينا.', solution: 'بدون Tarpaulin+VCI = مزدوج يصل. 50-200 ريال = يحمي آلاف.' },
-        { fear: 'قصيرة.', solution: 'NaCl+SiO₂ في دقائق. قصيرة ≠ آمنة.' },
+    commonConcerns: [
+        { concern: 'أي دينا.', solution: 'بدون Tarpaulin+VCI = مزدوج يصل. 50-200 ريال = يحمي آلاف.' },
+        { concern: 'قصيرة.', solution: 'NaCl+SiO₂ في دقائق. قصيرة ≠ آمنة.' },
     ],
     consumerEducation: [
         { myth: 'مثل الرياض.', truth: 'NaCl+SiO₂+رطوبة = 3 تهديدات. الرياض = SiO₂ فقط.' },

@@ -54,8 +54,8 @@ export const override: PageOverride = {
         { name: 'CCTV Pipe Camera', use: 'يكشف Stress Cracking + رمل' },
         { name: 'Grease Trap', use: 'مصيدة دهون مطاعم — وقائية' },
     ],
-        hiddenObjections: [
-        { fear: 'الشفط يتم بدون نظافة.', solution: 'شفط + تنظيف + تعقيم = بروتوكول شامل. تقرير فني بعد كل خدمة.' },
+        commonConcerns: [
+        { concern: 'الشفط يتم بدون نظافة.', solution: 'شفط + تنظيف + تعقيم = بروتوكول شامل. تقرير فني بعد كل خدمة.' },
     ],
 
     consumerEducation: [

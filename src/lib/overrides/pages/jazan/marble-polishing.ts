@@ -52,8 +52,8 @@ export const override: PageOverride = {
         { name: 'Desalination Poultice', use: 'كمّادات تسحب NaCl/MgCl₂ من المسام — تمنع Salt Spalling' },
         { name: 'Biocide + Anti-Moss', use: 'يقتل طحالب/أشنات الرخام الخارجي + يمنع العودة' },
     ],
-    hiddenObjections: [
-        { fear: 'جلي يكفي بدون Sealer.', solution: 'بدون Anti-Fungal Sealer: العفن يعود خلال أسابيع ← Etching يعود. الجلي بدون Sealer = 25% من الحل.' },
+    commonConcerns: [
+        { concern: 'جلي يكفي بدون Sealer.', solution: 'بدون Anti-Fungal Sealer: العفن يعود خلال أسابيع ← Etching يعود. الجلي بدون Sealer = 25% من الحل.' },
     ],
     consumerEducation: [
         { myth: 'رخام لا يتأثر بالرطوبة.', truth: 'الرخام = CaCO₃ = مسامي. 80% رطوبة = عفن + ملح + طحالب. 3 آليات تتآكل من الداخل والخارج.' },

@@ -55,9 +55,9 @@ export const override: PageOverride = {
         { name: 'Abrasion-Resistant Ceramic', use: 'حماية من رمل صحراوي خشن' },
         { name: 'SS304 Fasteners', use: 'مثبتات كافية في بيئة منخفضة الملح' },
     ],
-    hiddenObjections: [
-        { fear: 'نفس سعر الخبر.', solution: 'أرخص 15-20%: SS304 بدل SS316 + Vapor Vents اختيارية.' },
-        { fear: '72°م = عزل أقوى = أغلى.', solution: 'SBS 4mm يتحمل 80°م = نفس المادة. الفرق في المكملات.' },
+    commonConcerns: [
+        { concern: 'نفس سعر الخبر.', solution: 'أرخص 15-20%: SS304 بدل SS316 + Vapor Vents اختيارية.' },
+        { concern: '72°م = عزل أقوى = أغلى.', solution: 'SBS 4mm يتحمل 80°م = نفس المادة. الفرق في المكملات.' },
     ],
     consumerEducation: [
         { myth: 'الظهران والدمام والخبر = نفس العزل.', truth: 'الظهران أبعد عن البحر = حرارة أعلى + ملح أقل = نظام مختلف.' },

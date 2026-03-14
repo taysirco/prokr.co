@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Alkaline Marine', use: 'كربنة لزجة + VOC' },
         { name: 'Acid Rinse', use: 'NaCl بلوري — ملحي' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل حفر الباطن.', solution: 'لزجة ≠ صلبة. 98% ≠ 10-15%. Biofilm ≠ لا Biofilm. عكس.' },
-        { fear: 'بخاخ.', solution: 'Biofilm يحمي. لا يصل. Anti-Biofilm أولاً.' },
+    commonConcerns: [
+        { concern: 'مثل حفر الباطن.', solution: 'لزجة ≠ صلبة. 98% ≠ 10-15%. Biofilm ≠ لا Biofilm. عكس.' },
+        { concern: 'بخاخ.', solution: 'Biofilm يحمي. لا يصل. Anti-Biofilm أولاً.' },
     ],
     consumerEducation: [
         { myth: 'مثل الرياض.', truth: '98% لزجة + Biofilm + NaCl. رياض جافة.' },

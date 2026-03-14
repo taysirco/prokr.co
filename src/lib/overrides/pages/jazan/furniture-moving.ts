@@ -52,8 +52,8 @@ export const override: PageOverride = {
         { name: 'Stretch Film', use: 'حماية معدن من Chloride + حماية MDF من رطوبة' },
         { name: 'Anti-Fungal Spray (فحص)', use: 'معالجة أثاث مُعفّن قبل التحميل — يمنع Cross-Contamination' },
     ],
-    hiddenObjections: [
-        { fear: 'شاحنة مكشوفة أرخص.', solution: 'مطر واحد = MDF تالف (500-5,000 ريال). ملح = صدأ (200-1,000 ريال). المكشوفة = مقامرة.' },
+    commonConcerns: [
+        { concern: 'شاحنة مكشوفة أرخص.', solution: 'مطر واحد = MDF تالف (500-5,000 ريال). ملح = صدأ (200-1,000 ريال). المكشوفة = مقامرة.' },
     ],
     consumerEducation: [
         { myth: 'MDF يتحمل.', truth: 'MDF = ألياف مضغوطة = يمتص الرطوبة = ينتفخ = لا يعود. 80% + مطر = كارثة.' },

@@ -88,8 +88,8 @@ export const override: PageOverride = {
         { name: 'أغلفة كرتون واقية (Cardboard Protectors)', use: 'زوايا كرتونية تحمي أركان الأثاث والزجاج من الصدمات' },
     ],
 
-    hiddenObjections: [
-        { fear: 'الدينا بتخدش أو تكسر الأثاث', solution: 'بطانيات حماية + تثبيت Ratchet Straps + أغلفة كرتون = حماية ثلاثية. تأمين ضد التلف (عبر TGA للمرخصين). صور قبل التحميل وبعد التنزيل = توثيق' },
+    commonConcerns: [
+        { concern: 'الدينا بتخدش أو تكسر الأثاث', solution: 'بطانيات حماية + تثبيت Ratchet Straps + أغلفة كرتون = حماية ثلاثية. تأمين ضد التلف (عبر TGA للمرخصين). صور قبل التحميل وبعد التنزيل = توثيق' },
     ],
 
     trustAnchors: [

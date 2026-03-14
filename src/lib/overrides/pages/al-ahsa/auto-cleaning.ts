@@ -56,9 +56,9 @@ export const override: PageOverride = {
         { name: 'Enzymatic Pre-Wash', use: 'يُفكك تربة عضوية لزجة من العتلات والجوانب' },
         { name: 'Ceramic Coating 9H', use: 'يحمي Clear Coat من UV 48°م — فعّال 2-3 سنوات' },
     ],
-    hiddenObjections: [
-        { fear: 'غسلة 40 ريال أغلى من 15.', solution: '15 = إسفنجة + ماء عادي = خدوش + بقع. بعد سنة: Polish 200-500 ريال. Touchless + Deionized = أرخص إجمالياً.' },
-        { fear: 'Ceramic غالي.', solution: '300-800 ريال ÷ 2-3 سنوات = 100-270 ريال/سنة. إعادة طلاء = 3,000-8,000 ريال. Ceramic = 4-10% من تكلفة الإصلاح.' },
+    commonConcerns: [
+        { concern: 'غسلة 40 ريال أغلى من 15.', solution: '15 = إسفنجة + ماء عادي = خدوش + بقع. بعد سنة: Polish 200-500 ريال. Touchless + Deionized = أرخص إجمالياً.' },
+        { concern: 'Ceramic غالي.', solution: '300-800 ريال ÷ 2-3 سنوات = 100-270 ريال/سنة. إعادة طلاء = 3,000-8,000 ريال. Ceramic = 4-10% من تكلفة الإصلاح.' },
     ],
     consumerEducation: [
         { myth: 'غبار الأحساء عادي.', truth: 'لقاح لاصق ≠ رمل SiO₂. تربة عضوية ≠ غبار معدني. CaSO₄ ≠ NaCl. 3 فروقات = 3 أدوات مختلفة.' },

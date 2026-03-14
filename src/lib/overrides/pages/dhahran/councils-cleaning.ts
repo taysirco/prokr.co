@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Dry Vapor 130°م', use: 'يقتل عث + يُلين بوليمر' },
         { name: 'Anti-Fungal', use: 'حشوة — فعّال 4-5 أشهر' },
     ],
-    hiddenObjections: [
-        { fear: 'المجلس نظيف.', solution: 'بوليمر شفاف. عفن مخفي. عث ميكروبي. NaCl+SiO₂ لا يُرى. 4 مخفية.' },
-        { fear: 'شامبو يكفي.', solution: 'لا يُكسر Ester Bonds. لا يقتل عث. لا يُعالج مزدوج. 3 فشلات.' },
+    commonConcerns: [
+        { concern: 'المجلس نظيف.', solution: 'بوليمر شفاف. عفن مخفي. عث ميكروبي. NaCl+SiO₂ لا يُرى. 4 مخفية.' },
+        { concern: 'شامبو يكفي.', solution: 'لا يُكسر Ester Bonds. لا يقتل عث. لا يُعالج مزدوج. 3 فشلات.' },
     ],
     consumerEducation: [
         { myth: 'مثل الخبر.', truth: 'SiO₂ إضافي = خدش ألياف. 75-85% ≠ 85-95%. مختلف.' },

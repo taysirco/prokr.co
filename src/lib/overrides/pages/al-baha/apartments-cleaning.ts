@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'HEPA Filter', use: 'عرعر لزج — ضبابي' },
         { name: 'Dehumidifier', use: '6-10h — أبطأ تجفيف' },
     ],
-    hiddenObjections: [
-        { fear: 'منظف عادي.', solution: 'Laterite+عرعر+عفن = 4 ركائز.' },
-        { fear: 'مثل بريدة.', solution: 'ضباب+عرعر ≠ كلس+Nafud.' },
+    commonConcerns: [
+        { concern: 'منظف عادي.', solution: 'Laterite+عرعر+عفن = 4 ركائز.' },
+        { concern: 'مثل بريدة.', solution: 'ضباب+عرعر ≠ كلس+Nafud.' },
     ],
     consumerEducation: [
         { myth: 'تجفيف سريع.', truth: '6-10h! Dehumidifier إلزامي.' },

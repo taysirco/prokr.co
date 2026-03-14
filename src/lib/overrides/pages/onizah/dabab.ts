@@ -55,9 +55,9 @@ export const override: PageOverride = {
         { name: 'صندوق تبريد 18°م', use: 'نقل تمور — يمنع التخمر' },
         { name: 'عزل حراري', use: 'حماية إلكترونيات من ΔT 50°م' },
     ],
-    hiddenObjections: [
-        { fear: 'بعيد عن بريدة.', solution: '30 كم = 20-30 دقيقة فقط. أقرب مدينة كبيرة.' },
-        { fear: 'VCI مطلوب.', solution: 'صفر NaCl = صفر صدأ = لا VCI. وفّر.' },
+    commonConcerns: [
+        { concern: 'بعيد عن بريدة.', solution: '30 كم = 20-30 دقيقة فقط. أقرب مدينة كبيرة.' },
+        { concern: 'VCI مطلوب.', solution: 'صفر NaCl = صفر صدأ = لا VCI. وفّر.' },
     ],
     consumerEducation: [
         { myth: 'التمور ما تحتاج تبريد.', truth: '48°م + 4 ساعات = تخمر. تبريد 18°م إلزامي.' },

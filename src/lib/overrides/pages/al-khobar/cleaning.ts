@@ -57,9 +57,9 @@ export const override: PageOverride = {
         { name: 'Anti-Corrosion Spray', use: 'يحمي المعادن من NaCl — فعّال 3-6 أشهر' },
         { name: 'Dehumidifier + مراوح', use: 'تجفيف بعد التنظيف — إلزامي في 85-95%' },
     ],
-    hiddenObjections: [
-        { fear: 'منظف عادي يكفي.', solution: 'يُنظف — لا يحمي. NaCl يعود غداً. عفن يعود بعد أسبوع. تآكل يستمر. الحماية = الفرق.' },
-        { fear: 'المكيف يُجفف.', solution: 'المكيف يُبرّد + يُكثّف. لا يسحب رطوبة. Dehumidifier = يسحب. مختلفان.' },
+    commonConcerns: [
+        { concern: 'منظف عادي يكفي.', solution: 'يُنظف — لا يحمي. NaCl يعود غداً. عفن يعود بعد أسبوع. تآكل يستمر. الحماية = الفرق.' },
+        { concern: 'المكيف يُجفف.', solution: 'المكيف يُبرّد + يُكثّف. لا يسحب رطوبة. Dehumidifier = يسحب. مختلفان.' },
     ],
     consumerEducation: [
         { myth: 'الخبر مثل الرياض.', truth: 'NaCl ≠ SiO₂. 85-95% ≠ 15%. عفن ≠ غبار. 3 فروقات جذرية.' },

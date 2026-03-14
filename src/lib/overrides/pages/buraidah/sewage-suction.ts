@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Chemical Descaler', use: 'CaCO₃ 600ppm — وقائي' },
         { name: 'كاميرا فحص', use: 'Nafud ترسيب — تشخيص' },
     ],
-    hiddenObjections: [
-        { fear: 'شفط فقط.', solution: 'بدون Descaler = يسد أسرع. وقائي.' },
-        { fear: 'مثل عنيزة.', solution: 'نفس 600ppm لكن بريدة: فلل أكبر.' },
+    commonConcerns: [
+        { concern: 'شفط فقط.', solution: 'بدون Descaler = يسد أسرع. وقائي.' },
+        { concern: 'مثل عنيزة.', solution: 'نفس 600ppm لكن بريدة: فلل أكبر.' },
     ],
     consumerEducation: [
         { myth: 'شفط سنوي.', truth: '600ppm = ربع سنوي. أسرع انسداد.' },

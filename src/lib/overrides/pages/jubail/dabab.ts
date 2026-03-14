@@ -52,9 +52,9 @@ export const override: PageOverride = {
         { name: 'Silica Gel', use: '98% — يمتص رطوبة' },
         { name: 'VCI', use: 'تكثّف — يمنع صدأ' },
     ],
-    hiddenObjections: [
-        { fear: 'مسافة قصيرة.', solution: '98% تكثّف = دقائق. قصيرة ≠ آمنة.' },
-        { fear: 'مثل الخبر.', solution: 'VOC + 98% > 95% + سخام. مختلف.' },
+    commonConcerns: [
+        { concern: 'مسافة قصيرة.', solution: '98% تكثّف = دقائق. قصيرة ≠ آمنة.' },
+        { concern: 'مثل الخبر.', solution: 'VOC + 98% > 95% + سخام. مختلف.' },
     ],
     consumerEducation: [
         { myth: 'Stretch عادي.', truth: 'لا يقاوم NaCl+VOC. Marine.' },

@@ -88,9 +88,9 @@ export const override: PageOverride = {
         { name: 'جهاز قياس سماكة', use: 'يتأكد من سماكة 5 سم متساوية — أي نقطة رقيقة = نقطة ضعف' },
     ],
 
-    hiddenObjections: [
-        { fear: 'Closed-Cell + طلاء UV = تكلفة عالية', solution: 'Open-Cell/EPS يفشل بـ 2-3 سنوات = إزالة + إعادة (80+ ريال/م²). Closed-Cell: مرة في 15-20 سنة. الحساب: Closed-Cell أوفر 60%+ على 15 سنة بحائل' },
-        { fear: 'الفوم يحتاج صيانة', solution: 'Closed-Cell + طلاء UV = صفر صيانة. فقط تجديد طلاء كل 3-5 سنوات (8-15 ريال/م² = 5 دقائق فحص بصري + يوم طلاء). أقل صيانة من أي بديل' },
+    commonConcerns: [
+        { concern: 'Closed-Cell + طلاء UV = تكلفة عالية', solution: 'Open-Cell/EPS يفشل بـ 2-3 سنوات = إزالة + إعادة (80+ ريال/م²). Closed-Cell: مرة في 15-20 سنة. الحساب: Closed-Cell أوفر 60%+ على 15 سنة بحائل' },
+        { concern: 'الفوم يحتاج صيانة', solution: 'Closed-Cell + طلاء UV = صفر صيانة. فقط تجديد طلاء كل 3-5 سنوات (8-15 ريال/م² = 5 دقائق فحص بصري + يوم طلاء). أقل صيانة من أي بديل' },
     ],
 
     consumerEducation: [

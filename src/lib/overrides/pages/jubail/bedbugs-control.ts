@@ -56,9 +56,9 @@ export const override: PageOverride = {
         { name: 'IGR', use: 'يمنع بيض من التطور' },
         { name: 'فحص UV', use: 'يكشف بيض + فضلات' },
     ],
-    hiddenObjections: [
-        { fear: 'رش البعوض يكفي.', solution: 'آلية مختلفة. بعوض = Larvicide. بق = حراري+IGR.' },
-        { fear: 'ما فيه بق.', solution: '85-98% = يختبئ 21 يوماً. يوجد — لا يُرى.' },
+    commonConcerns: [
+        { concern: 'رش البعوض يكفي.', solution: 'آلية مختلفة. بعوض = Larvicide. بق = حراري+IGR.' },
+        { concern: 'ما فيه بق.', solution: '85-98% = يختبئ 21 يوماً. يوجد — لا يُرى.' },
     ],
     consumerEducation: [
         { myth: 'البعوض الأهم.', truth: 'بعوض = ضنك خطير. لكن: بق = مستقل. كلاهما.' },

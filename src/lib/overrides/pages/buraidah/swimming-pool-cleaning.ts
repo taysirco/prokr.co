@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Descaler مسابح', use: 'CaCO₃ 600ppm — أسبوعي' },
         { name: 'Acid Wash', use: 'Scale صلب — ربع سنوي' },
     ],
-    hiddenObjections: [
-        { fear: 'Sand Filter يكفي.', solution: 'Nafud 10 μm يمر. DE.' },
-        { fear: 'مثل الرياض.', solution: '600ppm > 300. Nafud فريد.' },
+    commonConcerns: [
+        { concern: 'Sand Filter يكفي.', solution: 'Nafud 10 μm يمر. DE.' },
+        { concern: 'مثل الرياض.', solution: '600ppm > 300. Nafud فريد.' },
     ],
     consumerEducation: [
         { myth: 'Descaler شهري.', truth: '600ppm = أسبوعي. أسرع Scale.' },

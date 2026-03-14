@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Citric Acid', use: 'CaCO₃ 550ppm — إذابة' },
         { name: 'Enzymatic Cleaner', use: 'سكر تمور — تفكيك' },
     ],
-    hiddenObjections: [
-        { fear: 'جاف = نظيف.', solution: 'Nafud+كلس+تمور = 4 تحديات.' },
-        { fear: 'ماء يكفي.', solution: '550ppm = كلس. Citric.' },
+    commonConcerns: [
+        { concern: 'جاف = نظيف.', solution: 'Nafud+كلس+تمور = 4 تحديات.' },
+        { concern: 'ماء يكفي.', solution: '550ppm = كلس. Citric.' },
     ],
     consumerEducation: [
         { myth: 'سنوي.', truth: 'ربع سنوي+لقاح+تمور = 6.' },

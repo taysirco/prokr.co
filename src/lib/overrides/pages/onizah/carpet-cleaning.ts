@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Citric Acid + RO', use: 'CaCO₃ — لا تصلب' },
         { name: 'Enzymatic Cleaner', use: 'سكر تمور — تفكيك' },
     ],
-    hiddenObjections: [
-        { fear: 'مكنسة عادية.', solution: 'HEPA عميق. Nafud.' },
-        { fear: 'ماء يكفي.', solution: '550ppm = خشن. RO.' },
+    commonConcerns: [
+        { concern: 'مكنسة عادية.', solution: 'HEPA عميق. Nafud.' },
+        { concern: 'ماء يكفي.', solution: '550ppm = خشن. RO.' },
     ],
     consumerEducation: [
         { myth: 'نصف سنوي.', truth: 'ربع سنوي+لقاح+تمور.' },

@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Impregnator Sealer', use: 'حماية — يدوم 2-3 سنة (لا عفن يُهاجمه)' },
         { name: 'Descaler مخفف', use: 'إذابة CaCO₃ Etching بدون تلف' },
     ],
-    hiddenObjections: [
-        { fear: 'أغلى من خميس.', solution: 'أرخص سنوياً! Sealer 2-3 سنة مقابل سنة. نصف التكلفة.' },
-        { fear: 'Pitting لا يُصلح.', solution: 'Diamond Pad يُعيد السطح. HEPA يومي يمنع التكرار.' },
+    commonConcerns: [
+        { concern: 'أغلى من خميس.', solution: 'أرخص سنوياً! Sealer 2-3 سنة مقابل سنة. نصف التكلفة.' },
+        { concern: 'Pitting لا يُصلح.', solution: 'Diamond Pad يُعيد السطح. HEPA يومي يمنع التكرار.' },
     ],
     consumerEducation: [
         { myth: 'الرخام يحتاج Sealer كل سنة.', truth: 'بعنيزة: 2-3 سنة — صفر عفن يحمي Sealer.' },

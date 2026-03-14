@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'شبك فتحات', use: 'حمام — لا دخول' },
         { name: 'مصائد موسمية', use: 'تمور — أغسطس-أكتوبر' },
     ],
-    hiddenObjections: [
-        { fear: 'حديد عادي أرخص.', solution: 'يصدأ. SS304 15-20 سنة.' },
-        { fear: 'مثل الباحة.', solution: 'جاف = SS304. رطب = SS316.' },
+    commonConcerns: [
+        { concern: 'حديد عادي أرخص.', solution: 'يصدأ. SS304 15-20 سنة.' },
+        { concern: 'مثل الباحة.', solution: 'جاف = SS304. رطب = SS316.' },
     ],
     consumerEducation: [
         { myth: 'حمام عادي.', truth: 'سوق التمور = كثيف.' },

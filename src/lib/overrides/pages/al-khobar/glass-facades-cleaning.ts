@@ -56,9 +56,9 @@ export const override: PageOverride = {
         { name: 'Marine-Grade Sealant', use: 'يقاوم NaCl — فعّال 8-10 سنوات' },
         { name: 'Squeegee مهني', use: 'يرفع NaCl بدون خدش' },
     ],
-    hiddenObjections: [
-        { fear: 'الواجهة ما تتسخ.', solution: 'NaCl شفاف + Biofilm شفاف. \"ما تتسخ\" = لا تُلاحظ. ربع سنوي يكشف.' },
-        { fear: 'ماء وصابون.', solution: 'ماء الخبر = NaCl جديد. صابون لا يقتل Biofilm. 2 فشلات.' },
+    commonConcerns: [
+        { concern: 'الواجهة ما تتسخ.', solution: 'NaCl شفاف + Biofilm شفاف. \"ما تتسخ\" = لا تُلاحظ. ربع سنوي يكشف.' },
+        { concern: 'ماء وصابون.', solution: 'ماء الخبر = NaCl جديد. صابون لا يقتل Biofilm. 2 فشلات.' },
     ],
     consumerEducation: [
         { myth: 'واجهات الخبر مثل الأحساء.', truth: 'NaCl ≠ CaSO₄. Biofilm ≠ لقاح. Hygroscopic ≠ Scale. مختلف.' },

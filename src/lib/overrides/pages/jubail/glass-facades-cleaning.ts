@@ -55,9 +55,9 @@ export const override: PageOverride = {
         { name: 'Anti-Biofilm', use: '98% — طحالب' },
         { name: 'Marine Sealant', use: 'NaCl+VOC — مُقاوم' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل الخبر.', solution: 'VOC + سخام SABIC + 98% Biofilm. أقسى.' },
-        { fear: 'ماء يكفي.', solution: 'سخام = لا يُزال بماء. VOC = ينزلق.' },
+    commonConcerns: [
+        { concern: 'مثل الخبر.', solution: 'VOC + سخام SABIC + 98% Biofilm. أقسى.' },
+        { concern: 'ماء يكفي.', solution: 'سخام = لا يُزال بماء. VOC = ينزلق.' },
     ],
     consumerEducation: [
         { myth: 'ساحلي فقط.', truth: 'سخام + VOC = صناعي. ثلاثي.' },

@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Anti-Biofilm', use: 'يقتل + يمنع — 4 أشهر' },
         { name: 'RO Water', use: 'صفر NaCl = صفر Biofilm جديد' },
     ],
-    hiddenObjections: [
-        { fear: 'بخاخ يكفي.', solution: 'pH 9-10 لا يُذيب NaCl+SiO₂. لا يقتل Biofilm.' },
-        { fear: 'أنظف بنفسي.', solution: 'بماء الظهران = NaCl. بدون Anti-Biofilm = يعود.' },
+    commonConcerns: [
+        { concern: 'بخاخ يكفي.', solution: 'pH 9-10 لا يُذيب NaCl+SiO₂. لا يقتل Biofilm.' },
+        { concern: 'أنظف بنفسي.', solution: 'بماء الظهران = NaCl. بدون Anti-Biofilm = يعود.' },
     ],
     consumerEducation: [
         { myth: 'فرن عادي.', truth: 'NaCl+SiO₂ + 75-85% = مزدوج. مختلف.' },

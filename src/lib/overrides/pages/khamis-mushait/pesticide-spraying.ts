@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Dehumidifier', use: 'يُسرّع جفاف المبيد — 60-85%' },
         { name: 'جهاز ULV', use: 'رش ضبابي دقيق — تغطية أفضل' },
     ],
-    hiddenObjections: [
-        { fear: 'رش عادي يكفي.', solution: 'بدون Dehumidifier = فعالية 50%. IPM أولاً.' },
-        { fear: 'مثل عنيزة.', solution: 'المبيد لا يجف + تكاثر 2× = بروتوكول مختلف.' },
+    commonConcerns: [
+        { concern: 'رش عادي يكفي.', solution: 'بدون Dehumidifier = فعالية 50%. IPM أولاً.' },
+        { concern: 'مثل عنيزة.', solution: 'المبيد لا يجف + تكاثر 2× = بروتوكول مختلف.' },
     ],
     consumerEducation: [
         { myth: 'نصف سنوي يكفي بخميس.', truth: 'تكاثر 2× = ربع سنوي إلزامي.' },

@@ -55,9 +55,9 @@ export const override: PageOverride = {
         { name: 'Vapor Vents (1 per m²)', use: 'فتحات تهوية تمنع تراكم البخار والفقاعات' },
         { name: 'Abrasion-Resistant Marine Ceramic', use: 'سيراميك يقاوم كشط الرمل وتآكل الملح' },
     ],
-    hiddenObjections: [
-        { fear: 'Ceramic Marine أغلى.', solution: 'يدوم 20-25 سنة. العادي: 8-12 سنة. تكلفة أقل على المدى الطويل.' },
-        { fear: 'Vapor Vents = ثقوب.', solution: 'صمامات أحادية: تُخرج البخار ولا تُدخل الماء. بدونها = فقاعات أكبر.' },
+    commonConcerns: [
+        { concern: 'Ceramic Marine أغلى.', solution: 'يدوم 20-25 سنة. العادي: 8-12 سنة. تكلفة أقل على المدى الطويل.' },
+        { concern: 'Vapor Vents = ثقوب.', solution: 'صمامات أحادية: تُخرج البخار ولا تُدخل الماء. بدونها = فقاعات أكبر.' },
     ],
     consumerEducation: [
         { myth: 'عزل سميك يكفي.', truth: 'السماكة لا تمنع الفقاعات ولا الكشط. Vapor Vents + Ceramic Marine = الحل.' },

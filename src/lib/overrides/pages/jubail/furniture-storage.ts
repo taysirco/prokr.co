@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Anti-Fungal شهري', use: '98% — عفن' },
         { name: 'تغليف Marine', use: 'حماية إضافية' },
     ],
-    hiddenObjections: [
-        { fear: 'غالي.', solution: 'تلف بدون Dehumidifier = أغلى بكثير. 98% لا ترحم.' },
-        { fear: 'بيت أرخص.', solution: 'بيت = 98% + عفن. مستودع = Dehumidifier 24/7.' },
+    commonConcerns: [
+        { concern: 'غالي.', solution: 'تلف بدون Dehumidifier = أغلى بكثير. 98% لا ترحم.' },
+        { concern: 'بيت أرخص.', solution: 'بيت = 98% + عفن. مستودع = Dehumidifier 24/7.' },
     ],
     consumerEducation: [
         { myth: 'أي مستودع.', truth: 'بدون Dehumidifier 24/7 = تلف.' },

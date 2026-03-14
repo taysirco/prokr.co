@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'إحكام+تغطية', use: 'SiO₂ غبار — تسلل' },
         { name: 'HEPA AC', use: 'NH₃ رائحة — قرب مزرعة' },
     ],
-    hiddenObjections: [
-        { fear: 'مُكيّف مبالغة.', solution: 'ΔT 48°م = تشقق. مُكيّف أرخص من إصلاح.' },
-        { fear: 'مثل خميس.', solution: 'لا عفن = أرخص 15-20%.' },
+    commonConcerns: [
+        { concern: 'مُكيّف مبالغة.', solution: 'ΔT 48°م = تشقق. مُكيّف أرخص من إصلاح.' },
+        { concern: 'مثل خميس.', solution: 'لا عفن = أرخص 15-20%.' },
     ],
     consumerEducation: [
         { myth: 'أي مستودع.', truth: 'ΔT 48°م = مُكيّف إلزامي.' },

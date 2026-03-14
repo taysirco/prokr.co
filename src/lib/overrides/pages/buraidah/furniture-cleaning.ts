@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'RO Water', use: 'بدون CaCO₃ 600ppm — بقع' },
         { name: 'Oil Polish', use: 'يحمي خشب ΔT — تشقق' },
     ],
-    hiddenObjections: [
-        { fear: 'مكنسة تكفي.', solution: 'Nafud 10 μm يمر. HEPA.' },
-        { fear: 'مثل خميس.', solution: 'لا عفن+20 دقيقة = أرخص 30%.' },
+    commonConcerns: [
+        { concern: 'مكنسة تكفي.', solution: 'Nafud 10 μm يمر. HEPA.' },
+        { concern: 'مثل خميس.', solution: 'لا عفن+20 دقيقة = أرخص 30%.' },
     ],
     consumerEducation: [
         { myth: 'مسح عادي.', truth: 'Nafud يقطع+600ppm يبقّع. HEPA+RO.' },

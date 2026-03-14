@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Anti-Fungal', use: '80-95% عفن' },
         { name: 'Turbo', use: '80-95% تجفيف' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل الخبر.', solution: 'واحة = طلع. مختلف.' },
-        { fear: 'شامبو.', solution: 'بلمرة ملحية = Enzymatic.' },
+    commonConcerns: [
+        { concern: 'مثل الخبر.', solution: 'واحة = طلع. مختلف.' },
+        { concern: 'شامبو.', solution: 'بلمرة ملحية = Enzymatic.' },
     ],
     consumerEducation: [
         { myth: 'بخار لعفن.', truth: 'بخار = عث+طلع+تعقيم.' },

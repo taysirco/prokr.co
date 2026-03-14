@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'مبيد SFDA مسجل', use: 'يقتل الهاربين بعد البخار — نظام غد' },
         { name: 'Anti-Fungal+Dehumidifier', use: 'يقتل عفن + يمنع تكاثر رطب' },
     ],
-    hiddenObjections: [
-        { fear: 'مبيد يكفي.', solution: 'لا يقتل البيض. بخار 90°م إلزامي. + Dehumidifier بخميس.' },
-        { fear: 'زيارة واحدة.', solution: '3 زيارات — تكاثر 2× بالرطوبة. واحدة لا تكفي.' },
+    commonConcerns: [
+        { concern: 'مبيد يكفي.', solution: 'لا يقتل البيض. بخار 90°م إلزامي. + Dehumidifier بخميس.' },
+        { concern: 'زيارة واحدة.', solution: '3 زيارات — تكاثر 2× بالرطوبة. واحدة لا تكفي.' },
     ],
     consumerEducation: [
         { myth: 'بق الفراش مثل عنيزة.', truth: 'تكاثر 2× + عفن مصاحب = أعقد وأغلى 30%.' },

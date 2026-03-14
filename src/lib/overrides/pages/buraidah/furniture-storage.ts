@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'إحكام Nafud', use: 'يمنع SiO₂ — محكم' },
         { name: 'تغليف Microfiber', use: 'يحمي خدش — أسطح لامعة' },
     ],
-    hiddenObjections: [
-        { fear: 'مستودع عادي.', solution: 'ΔT+Nafud = مكيف+محكم.' },
-        { fear: 'مثل خميس.', solution: 'لا عفن = أرخص 30%.' },
+    commonConcerns: [
+        { concern: 'مستودع عادي.', solution: 'ΔT+Nafud = مكيف+محكم.' },
+        { concern: 'مثل خميس.', solution: 'لا عفن = أرخص 30%.' },
     ],
     consumerEducation: [
         { myth: 'أي مستودع.', truth: 'ΔT 45°م = مكيف. Nafud = محكم.' },

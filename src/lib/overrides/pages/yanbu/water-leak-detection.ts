@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Acoustic Leak Detector', use: 'تحت أرض — صوت' },
         { name: 'PPR Pipes', use: 'بديل — لا تتآكل' },
     ],
-    hiddenObjections: [
-        { fear: 'بصري يكفي.', solution: '70-85% = FLIR إلزامي.' },
-        { fear: 'حديد مجلفن.', solution: 'تآكل مزدوج. PPR.' },
+    commonConcerns: [
+        { concern: 'بصري يكفي.', solution: '70-85% = FLIR إلزامي.' },
+        { concern: 'حديد مجلفن.', solution: 'تآكل مزدوج. PPR.' },
     ],
     consumerEducation: [
         { myth: 'بصري.', truth: '70-85% تكثّف = FLIR.' },

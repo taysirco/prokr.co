@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Sealer', use: '80-95%+طين — يسد' },
         { name: 'Anti-Biofilm', use: 'رخام خارجي واحي' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل الخبر.', solution: 'واحة = طين مسام+عفن واحي+Biofilm.' },
-        { fear: 'مرة.', solution: '80-95%+NaCl+طين. ربع سنوي.' },
+    commonConcerns: [
+        { concern: 'مثل الخبر.', solution: 'واحة = طين مسام+عفن واحي+Biofilm.' },
+        { concern: 'مرة.', solution: '80-95%+NaCl+طين. ربع سنوي.' },
     ],
     consumerEducation: [
         { myth: 'ساحلي فقط.', truth: 'واحي = طين+عيون+Biofilm.' },

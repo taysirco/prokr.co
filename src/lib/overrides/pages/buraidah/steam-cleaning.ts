@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'HEPA Pollen', use: 'نخيل ألياف — أولاً' },
         { name: 'Descaler جهاز', use: 'CaCO₃ 600ppm — شهري' },
     ],
-    hiddenObjections: [
-        { fear: 'ماء صنبور يكفي.', solution: '600ppm = جهاز يتلف 6 أشهر. RO.' },
-        { fear: 'مثل خميس.', solution: 'لا عفن+10 دقائق = أرخص 20%.' },
+    commonConcerns: [
+        { concern: 'ماء صنبور يكفي.', solution: '600ppm = جهاز يتلف 6 أشهر. RO.' },
+        { concern: 'مثل خميس.', solution: 'لا عفن+10 دقائق = أرخص 20%.' },
     ],
     consumerEducation: [
         { myth: 'أي ماء.', truth: '600ppm = RO إلزامي. يتلف.' },

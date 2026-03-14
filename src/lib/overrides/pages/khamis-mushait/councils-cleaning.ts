@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Anti-Fungal+Anti-Mite', use: 'يقتل عفن Aspergillus وعث Dermatophagoides' },
         { name: 'Dehumidifier صناعي', use: 'تجفيف 4-8h — بدونه عفن جديد!' },
     ],
-    hiddenObjections: [
-        { fear: 'شامبو يكفي.', solution: 'بلمرة رطبة عميقة = شامبو سطحي فقط. Enzymatic+بخار.' },
-        { fear: 'مثل الباحة.', solution: 'متشابه — خميس أقل غابات. نفس البروتوكول.' },
+    commonConcerns: [
+        { concern: 'شامبو يكفي.', solution: 'بلمرة رطبة عميقة = شامبو سطحي فقط. Enzymatic+بخار.' },
+        { concern: 'مثل الباحة.', solution: 'متشابه — خميس أقل غابات. نفس البروتوكول.' },
     ],
     consumerEducation: [
         { myth: 'المجلس يجف بسرعة مثل عنيزة.', truth: '4-8h مقابل 20 دقيقة. 60-85% vs 15-25%.' },

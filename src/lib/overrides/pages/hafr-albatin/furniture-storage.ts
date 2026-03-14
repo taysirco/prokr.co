@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'إحكام (Sealed)', use: 'SiO₂ عواصف' },
         { name: 'فلتر هواء', use: 'SiO₂ ناعم' },
     ],
-    hiddenObjections: [
-        { fear: 'عادي أرخص.', solution: 'بدون عزل + ΔT 54°م = تلف. أرخص بـ 100/شهر — أغلى بآلاف تلف.' },
-        { fear: 'مثل الرياض.', solution: 'ΔT 54°م > 35°م. -2°م شتاء. عزل أهم.' },
+    commonConcerns: [
+        { concern: 'عادي أرخص.', solution: 'بدون عزل + ΔT 54°م = تلف. أرخص بـ 100/شهر — أغلى بآلاف تلف.' },
+        { concern: 'مثل الرياض.', solution: 'ΔT 54°م > 35°م. -2°م شتاء. عزل أهم.' },
     ],
     consumerEducation: [
         { myth: 'أي مستودع.', truth: 'بدون عزل = ΔT 54°م. بدون إحكام = SiO₂.' },

@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Dehumidifier', use: 'PVAc — يمنع امتصاص' },
         { name: 'Enzymatic', use: 'سخام SABIC' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل الخبر.', solution: 'VOC Galvanic 2× + 98% > 95% + سخام. أقسى.' },
-        { fear: 'ملمّع.', solution: 'لا يحمي من NaCl+VOC ولا عفن 98%. سطحي.' },
+    commonConcerns: [
+        { concern: 'مثل الخبر.', solution: 'VOC Galvanic 2× + 98% > 95% + سخام. أقسى.' },
+        { concern: 'ملمّع.', solution: 'لا يحمي من NaCl+VOC ولا عفن 98%. سطحي.' },
     ],
     consumerEducation: [
         { myth: 'ساحلي فقط.', truth: 'VOC = صناعي. NaCl+VOC = Galvanic 2×.' },

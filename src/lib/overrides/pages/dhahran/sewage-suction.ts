@@ -55,9 +55,9 @@ export const override: PageOverride = {
         { name: 'High-Pressure Wall Cleaner', use: 'تنظيف جدران من الرمل' },
         { name: 'External Coating Kit', use: 'عزل خارجي اختياري لتقليل التسلل' },
     ],
-    hiddenObjections: [
-        { fear: 'عزل (1,500-3,000) في بيئة سهلة.', solution: 'يوفر 40-50% من الشفط. يسترد خلال 6-8 أشهر.' },
-        { fear: 'التوصيل غالي.', solution: '5,000-12,000 مرة واحدة = لا شفط مدى الحياة.' },
+    commonConcerns: [
+        { concern: 'عزل (1,500-3,000) في بيئة سهلة.', solution: 'يوفر 40-50% من الشفط. يسترد خلال 6-8 أشهر.' },
+        { concern: 'التوصيل غالي.', solution: '5,000-12,000 مرة واحدة = لا شفط مدى الحياة.' },
     ],
     consumerEducation: [
         { myth: 'كل الشرقية = نفس مشكلة البيارات.', truth: 'الجبيل: 60-70% تسلل. الخبر: 40-50%. الظهران: 20-30%. فرق ضخم.' },

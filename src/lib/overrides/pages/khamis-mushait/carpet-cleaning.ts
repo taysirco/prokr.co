@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Anti-Mite', use: 'يقتل عث Dermatophagoides — سجاد رطب' },
         { name: 'Dehumidifier صناعي', use: 'تجفيف 6-10h — بدونه عفن جديد' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل عنيزة.', solution: 'عكس! عفن+عث+6-10h تجفيف مقابل 30 دقيقة. أغلى 35%.' },
-        { fear: 'Dehumidifier مبالغة.', solution: 'بدونه = عفن جديد بعد الغسل = أسوأ.' },
+    commonConcerns: [
+        { concern: 'مثل عنيزة.', solution: 'عكس! عفن+عث+6-10h تجفيف مقابل 30 دقيقة. أغلى 35%.' },
+        { concern: 'Dehumidifier مبالغة.', solution: 'بدونه = عفن جديد بعد الغسل = أسوأ.' },
     ],
     consumerEducation: [
         { myth: 'السجاد يجف بسرعة مثل عنيزة.', truth: '6-10h مقابل 30 دقيقة. 60-85% vs 15-25%.' },

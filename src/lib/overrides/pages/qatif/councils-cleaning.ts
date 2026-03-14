@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Anti-Fungal', use: '80-95% عفن مزدوج' },
         { name: 'HEPA', use: 'طلع نخيل حساسية' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل الخبر.', solution: 'واحة = طلع+طين+عيون. مختلف.' },
-        { fear: 'شامبو.', solution: 'بلمرة ملحية = Enzymatic.' },
+    commonConcerns: [
+        { concern: 'مثل الخبر.', solution: 'واحة = طلع+طين+عيون. مختلف.' },
+        { concern: 'شامبو.', solution: 'بلمرة ملحية = Enzymatic.' },
     ],
     consumerEducation: [
         { myth: 'ساحلي فقط.', truth: 'واحي = طلع+طين+عيون.' },

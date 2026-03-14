@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Anti-Fungal Foam', use: 'عفن حشو — ضباب' },
         { name: 'Anti-Humidity Sealing', use: 'PVAc — إطار خشب' },
     ],
-    hiddenObjections: [
-        { fear: 'تجفيف طبيعي.', solution: '6-10h = عفن. Dehumidifier.' },
-        { fear: 'مثل بريدة.', solution: 'PVAc Swelling vs Cracking.' },
+    commonConcerns: [
+        { concern: 'تجفيف طبيعي.', solution: '6-10h = عفن. Dehumidifier.' },
+        { concern: 'مثل بريدة.', solution: 'PVAc Swelling vs Cracking.' },
     ],
     consumerEducation: [
         { myth: 'كنب مصنّع.', truth: 'PVAc يمتص. Anti-Humidity.' },

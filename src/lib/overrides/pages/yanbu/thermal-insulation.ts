@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Vapor Barrier', use: '70-85% — تكثّف بيني' },
         { name: 'Anti-Corrosion Primer', use: 'NaCl — CUI' },
     ],
-    hiddenObjections: [
-        { fear: 'Open أرخص.', solution: '70-85% = يمتص = عفن. Closed.' },
-        { fear: 'نفس بريدة.', solution: 'عكس! Closed+Vapor vs Open.' },
+    commonConcerns: [
+        { concern: 'Open أرخص.', solution: '70-85% = يمتص = عفن. Closed.' },
+        { concern: 'نفس بريدة.', solution: 'عكس! Closed+Vapor vs Open.' },
     ],
     consumerEducation: [
         { myth: 'Open يكفي.', truth: '70-85% = Closed. Open كارثة.' },

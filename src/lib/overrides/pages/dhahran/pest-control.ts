@@ -45,7 +45,7 @@ export const override: PageOverride = {
     saudiRegulations: [REGULATIONS.GHAD_SYSTEM],
     verificationBadges: [{ badge: '✔️ مرخصة', authority: 'بلدي + وقاء', icon: 'shield-check' }],
     equipment: [{ name: 'Delta Dust', use: 'عقارب' }, { name: 'UV Blacklight', use: 'كشف' }, { name: 'Gel Bait', use: 'مجمعات' }, { name: 'IGR', use: '70-85%' }],
-    hiddenObjections: [{ fear: 'رش.', solution: '5-7 أيام أفضل.' }],
+    commonConcerns: [{ concern: 'رش.', solution: '5-7 أيام أفضل.' }],
     consumerEducation: [{ myth: 'مثل الخبر.', truth: 'عقارب + مشجرات + أبعد عن بحر.' },
         { myth: 'الحشرات تدل على قلة نظافة.', truth: 'الحشرات تبحث عن ماء ودفء وليس قذارة. أنظف بيت يجذب حشرات إذا فيه رطوبة أو شقوق.' },
     ],

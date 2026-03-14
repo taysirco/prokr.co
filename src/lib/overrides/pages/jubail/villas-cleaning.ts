@@ -62,9 +62,9 @@ export const override: PageOverride = {
         { name: 'Anti-Biofilm', use: 'Biofilm — المحور 6' },
         { name: 'Dehumidifier', use: 'تكثّف — المحور 7' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل الخبر.', solution: 'سخام SABIC + 98%>95% + VOC. أعقد.' },
-        { fear: 'غالي.', solution: '7 محاور = 7 أدوات+فريق. بدون = تلف أغلى.' },
+    commonConcerns: [
+        { concern: 'مثل الخبر.', solution: 'سخام SABIC + 98%>95% + VOC. أعقد.' },
+        { concern: 'غالي.', solution: '7 محاور = 7 أدوات+فريق. بدون = تلف أغلى.' },
     ],
     consumerEducation: [
         { myth: 'مثل حفر الباطن.', truth: '5 محاور vs 7. عفن+عث إضافي. أعقد 40%.' },

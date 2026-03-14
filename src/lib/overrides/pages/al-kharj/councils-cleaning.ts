@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'HEPA Activated Carbon', use: 'يمتص NH₃/H₂S' },
         { name: 'RO Water', use: 'شطف بدون CaCO₃' },
     ],
-    hiddenObjections: [
-        { fear: 'معطر يكفي.', solution: 'بلمرة حيوانية عميقة. Enzymatic.' },
-        { fear: 'مثل خميس.', solution: 'لا عفن+30 دقيقة. أبسط 30%.' },
+    commonConcerns: [
+        { concern: 'معطر يكفي.', solution: 'بلمرة حيوانية عميقة. Enzymatic.' },
+        { concern: 'مثل خميس.', solution: 'لا عفن+30 دقيقة. أبسط 30%.' },
     ],
     consumerEducation: [
         { myth: 'شامبو يكفي.', truth: 'بلمرة حيوانية = Enzymatic يكسّر.' },

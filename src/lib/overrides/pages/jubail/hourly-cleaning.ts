@@ -56,9 +56,9 @@ export const override: PageOverride = {
         { name: 'Enzymatic', use: 'سخام — خطوة 4' },
         { name: 'Dehumidifier', use: '98% — خطوة 5' },
     ],
-    hiddenObjections: [
-        { fear: 'أغلى.', solution: '5 خطوات = أعقد = أغلى. لكن: فعالية. عادية = تلويث.' },
-        { fear: 'عاملة عادية.', solution: 'لا تعرف 5 خطوات. فرق تدريب.' },
+    commonConcerns: [
+        { concern: 'أغلى.', solution: '5 خطوات = أعقد = أغلى. لكن: فعالية. عادية = تلويث.' },
+        { concern: 'عاملة عادية.', solution: 'لا تعرف 5 خطوات. فرق تدريب.' },
     ],
     consumerEducation: [
         { myth: 'ممسحة.', truth: 'NaCl+VOC+سخام+98%. ممسحة = 0%.' },

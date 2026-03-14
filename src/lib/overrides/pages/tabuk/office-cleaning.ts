@@ -51,8 +51,8 @@ export const override: PageOverride = {
         { name: 'Deionized Water', use: 'شاشات بدون كلس ثلجي' },
         { name: 'سوار ESD مُؤرّض', use: 'يُفرّغ الكهرباء الساكنة في 12% رطوبة' },
     ],
-    hiddenObjections: [
-        { fear: 'عامل المبنى يكفي.', solution: 'بدون ESD: شرارة = تلف. بدون HEPA: Throttling. بدون Deionized: كلس.' },
+    commonConcerns: [
+        { concern: 'عامل المبنى يكفي.', solution: 'بدون ESD: شرارة = تلف. بدون HEPA: Throttling. بدون Deionized: كلس.' },
     ],
     consumerEducation: [
         { myth: 'أجهزة حديثة ما تحتاج.', truth: 'حسمى 3 أشهر = Throttling حتى جديد.' },

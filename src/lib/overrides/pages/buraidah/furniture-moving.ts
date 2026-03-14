@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'تغليف محكم', use: 'Nafud ناعم — يتسلل' },
         { name: 'Microfiber', use: 'Nafud — لا خدش' },
     ],
-    hiddenObjections: [
-        { fear: 'تغليف عادي يكفي.', solution: 'Nafud 10 μm يتسلل. محكم.' },
-        { fear: 'مثل الرياض.', solution: 'ΔT+Nafud+نخيل = فريد.' },
+    commonConcerns: [
+        { concern: 'تغليف عادي يكفي.', solution: 'Nafud 10 μm يتسلل. محكم.' },
+        { concern: 'مثل الرياض.', solution: 'ΔT+Nafud+نخيل = فريد.' },
     ],
     consumerEducation: [
         { myth: 'نقل عادي.', truth: 'ΔT+Nafud = حراري+محكم.' },

@@ -440,13 +440,13 @@ export function SeoContentSection({ city, service }: SeoContentProps) {
                 {/* Internal links flow: Articles → Silos (not reverse) */}
 
                 {/* ── Content: Hidden Objections ── */}
-                {content.semanticData?.hiddenObjections && content.semanticData.hiddenObjections.length > 0 && (
+                {content.semanticData?.commonConcerns && content.semanticData.commonConcerns.length > 0 && (
                     <div className="mb-10">
                         <h3 className="text-xl font-bold text-gray-900 mb-4">⚠️ ما يجب أن تعرفه قبل حجز {service.name_ar} {cityKw}</h3>
                         <div className="space-y-4">
-                            {content.semanticData.hiddenObjections.map((obj, i) => (
+                            {content.semanticData.commonConcerns.map((obj, i) => (
                                 <div key={i} className="bg-gradient-to-l from-red-50 to-orange-50 border border-red-100 rounded-xl p-5">
-                                    <p className="font-bold text-red-800 text-sm mb-2">❓ {obj.fear}</p>
+                                    <p className="font-bold text-red-800 text-sm mb-2">❓ {obj.concern}</p>
                                     <p className="text-gray-700 text-sm leading-relaxed">✅ {obj.solution}</p>
                                 </div>
                             ))}

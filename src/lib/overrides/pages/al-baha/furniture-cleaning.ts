@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Anti-Fungal', use: '200 يوم ضباب — أدراج' },
         { name: 'Dehumidifier', use: '6-10h — تجفيف' },
     ],
-    hiddenObjections: [
-        { fear: 'منظف عادي.', solution: 'PVAc+عفن = Anti-Humidity.' },
-        { fear: 'مثل بريدة.', solution: 'Swelling vs Cracking. عكس!' },
+    commonConcerns: [
+        { concern: 'منظف عادي.', solution: 'PVAc+عفن = Anti-Humidity.' },
+        { concern: 'مثل بريدة.', solution: 'Swelling vs Cracking. عكس!' },
     ],
     consumerEducation: [
         { myth: 'خشب مقاوم.', truth: 'PVAc يمتص. Anti-Humidity.' },

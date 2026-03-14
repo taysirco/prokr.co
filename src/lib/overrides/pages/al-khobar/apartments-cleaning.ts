@@ -57,9 +57,9 @@ export const override: PageOverride = {
         { name: 'Anti-Fungal Spray', use: 'يمنع Aspergillus في 85-95% — فعّال 3-4 أشهر' },
         { name: 'Dehumidifier', use: 'يُخفض رطوبة الغرفة من 85-95% إلى 50-60%' },
     ],
-    hiddenObjections: [
-        { fear: 'منظف عادي يكفي.', solution: 'المنظف يُنظف — لا يحمي من NaCl ولا عفن ولا تآكل. 3 مشاكل بعد التنظيف = تعود. الحماية = الفرق.' },
-        { fear: 'المكيف يُجفف.', solution: 'المكيف يُبرّد — لكن 85-95% = تكثّف. المبخر نفسه رطب = عفن. المكيف ≠ Dehumidifier.' },
+    commonConcerns: [
+        { concern: 'منظف عادي يكفي.', solution: 'المنظف يُنظف — لا يحمي من NaCl ولا عفن ولا تآكل. 3 مشاكل بعد التنظيف = تعود. الحماية = الفرق.' },
+        { concern: 'المكيف يُجفف.', solution: 'المكيف يُبرّد — لكن 85-95% = تكثّف. المبخر نفسه رطب = عفن. المكيف ≠ Dehumidifier.' },
     ],
     consumerEducation: [
         { myth: 'الخبر مثل الرياض.', truth: 'NaCl ≠ SiO₂. 85-95% ≠ 15%. Sabkha ≠ رمل. 3 فروقات = بروتوكول مختلف تماماً.' },

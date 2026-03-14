@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Anti-Algae', use: 'يمنع طحالب بعد التنظيف' },
         { name: 'إحكام+فلتر', use: 'يمنع أمطار+أبواغ' },
     ],
-    hiddenObjections: [
-        { fear: 'نصف سنوي يكفي.', solution: 'طحالب 2× + أمطار = ربع سنوي.' },
-        { fear: 'مثل عنيزة.', solution: 'عنيزة: لا طحالب+لا مطر = نصف سنوي.' },
+    commonConcerns: [
+        { concern: 'نصف سنوي يكفي.', solution: 'طحالب 2× + أمطار = ربع سنوي.' },
+        { concern: 'مثل عنيزة.', solution: 'عنيزة: لا طحالب+لا مطر = نصف سنوي.' },
     ],
     consumerEducation: [
         { myth: 'الخزان ما يتلوث بسرعة.', truth: '60-85%+أمطار+ضباب = 2× أسرع.' },

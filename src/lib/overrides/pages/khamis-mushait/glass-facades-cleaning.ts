@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Algicide', use: 'يقتل طحالب خضراء من أمطار' },
         { name: 'Marine Sealant', use: 'يُبطئ نمو Biofilm على الزجاج' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل الباحة.', solution: 'متشابه — خميس أقل غابات لكن ضباب أكثر. تكلفة متقاربة.' },
-        { fear: 'شهري غالي.', solution: 'ربع سنوي = Biofilm سميك = Acid Wash = أغلى 5×.' },
+    commonConcerns: [
+        { concern: 'مثل الباحة.', solution: 'متشابه — خميس أقل غابات لكن ضباب أكثر. تكلفة متقاربة.' },
+        { concern: 'شهري غالي.', solution: 'ربع سنوي = Biofilm سميك = Acid Wash = أغلى 5×.' },
     ],
     consumerEducation: [
         { myth: 'الواجهات ما تحتاج Anti-Biofilm.', truth: 'ضباب 200 يوم = أسبوعين = أسرع Biofilm.' },

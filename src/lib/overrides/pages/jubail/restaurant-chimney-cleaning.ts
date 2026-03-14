@@ -55,9 +55,9 @@ export const override: PageOverride = {
         { name: 'Scraper', use: 'NaCl بلوري' },
         { name: 'مقياس ميكرون', use: 'NFPA — Biofilm يُسرّع' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل حفر الباطن.', solution: 'Biofilm أقصى + لزجة ≠ صلبة. NFPA أسرع.' },
-        { fear: 'ربع سنوي كافٍ.', solution: 'مطاعم أسماك: شهرين. Biofilm يُسرّع.' },
+    commonConcerns: [
+        { concern: 'مثل حفر الباطن.', solution: 'Biofilm أقصى + لزجة ≠ صلبة. NFPA أسرع.' },
+        { concern: 'ربع سنوي كافٍ.', solution: 'مطاعم أسماك: شهرين. Biofilm يُسرّع.' },
     ],
     consumerEducation: [
         { myth: 'كيميائي يكفي.', truth: 'Biofilm يحمي الكربنة. Anti-Biofilm أولاً.' },

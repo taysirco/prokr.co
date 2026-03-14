@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Chemical Descaler', use: 'CaCO₃ 450ppm' },
         { name: 'RO Rinse', use: 'SiO₂' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل الرياض.', solution: 'NH₃ مزارع. الرياض: لا مزارع ألبان قريبة.' },
-        { fear: 'رائحة طبيعية.', solution: 'NH₃ = تآكل. ليس طبيعي.' },
+    commonConcerns: [
+        { concern: 'مثل الرياض.', solution: 'NH₃ مزارع. الرياض: لا مزارع ألبان قريبة.' },
+        { concern: 'رائحة طبيعية.', solution: 'NH₃ = تآكل. ليس طبيعي.' },
     ],
     consumerEducation: [
         { myth: 'صيانة عادية.', truth: 'NH₃+H₂S. Activated Carbon.' },

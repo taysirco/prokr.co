@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'حقن أساسات', use: 'ΔT — تشققات' },
         { name: 'Descaler', use: 'CaCO₃ — أنفاق' },
     ],
-    hiddenObjections: [
-        { fear: 'رش سطحي.', solution: 'مستعمرة تحت. Termidor.' },
-        { fear: 'لا نمل بالقصيم.', solution: '8M نخلة = أكبر!' },
+    commonConcerns: [
+        { concern: 'رش سطحي.', solution: 'مستعمرة تحت. Termidor.' },
+        { concern: 'لا نمل بالقصيم.', solution: '8M نخلة = أكبر!' },
     ],
     consumerEducation: [
         { myth: 'مرة واحدة.', truth: 'فحص سنوي. ΔT.' },

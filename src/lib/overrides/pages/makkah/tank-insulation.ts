@@ -56,9 +56,9 @@ export const override: PageOverride = {
         { name: 'Thermal Jacket', use: 'يُقلل سطح الخزان من 65°م لـ 25°م ← يُحيِّد Legionella + يُقلل الإجهاد 60%' },
         { name: 'كاميرا حرارية FLIR', use: 'تكشف Pitting كبقع أبرد + تسرب مخفي بّخرته الحرارة' },
     ],
-    hiddenObjections: [
-        { fear: 'Marine-Grade أغلى 30-40%', solution: 'Marine-Grade: مرة واحدة ← 10-15 سنة. Food-Grade: يتآكل في 3-5 سنوات ← إعادة 2-3 مرات × 600-1,500 = 1,800-4,500. Marine-Grade مرة = أرخص 50%+.' },
-        { fear: 'عزل حراري = تكلفة إضافية', solution: 'بدونه: Legionella + دورات إجهاد = عمر أقصر 40% ← استبدال مبكر. العزل: 800-2,000 مرة ← يُطيل العمر 2-3× + يُحيِّد Legionella. عائد: 3-5×.' },
+    commonConcerns: [
+        { concern: 'Marine-Grade أغلى 30-40%', solution: 'Marine-Grade: مرة واحدة ← 10-15 سنة. Food-Grade: يتآكل في 3-5 سنوات ← إعادة 2-3 مرات × 600-1,500 = 1,800-4,500. Marine-Grade مرة = أرخص 50%+.' },
+        { concern: 'عزل حراري = تكلفة إضافية', solution: 'بدونه: Legionella + دورات إجهاد = عمر أقصر 40% ← استبدال مبكر. العزل: 800-2,000 مرة ← يُطيل العمر 2-3× + يُحيِّد Legionella. عائد: 3-5×.' },
     ],
     consumerEducation: [
         { myth: 'Food-Grade يكفي لخزان', truth: 'في مكة: لا. مياه الشعيبة = كلوريد. Food-Grade مُصمم لمياه عذبة. يتآكل في 3-5 سنوات. Marine-Grade = الخيار الوحيد.' },

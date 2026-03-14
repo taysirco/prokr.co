@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Transit Bolts', use: '500 كم اهتزاز' },
         { name: 'UV Cover', use: 'حماية UV قاري' },
     ],
-    hiddenObjections: [
-        { fear: 'غالي.', solution: '500 كم × ΔT 54°م = مسافة+مناخ. تلف بدون حماية = أغلى بكثير.' },
-        { fear: 'شاحنة مُغلقة.', solution: 'ليست مُعزولة حرارياً. 52°م تدخل. UV يتسرب. Stretch = حماية ثانية.' },
+    commonConcerns: [
+        { concern: 'غالي.', solution: '500 كم × ΔT 54°م = مسافة+مناخ. تلف بدون حماية = أغلى بكثير.' },
+        { concern: 'شاحنة مُغلقة.', solution: 'ليست مُعزولة حرارياً. 52°م تدخل. UV يتسرب. Stretch = حماية ثانية.' },
     ],
     consumerEducation: [
         { myth: 'مثل الرياض.', truth: 'ΔT 54°م > 35°م. مسافات أطول. UV أعلى. -2°م.' },

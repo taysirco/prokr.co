@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Diamond Pad', use: 'يُجدد Nafud خدش' },
         { name: 'RO Water', use: 'شطف بدون كلس جديد' },
     ],
-    hiddenObjections: [
-        { fear: 'Descaler يتلف.', solution: 'pH neutral للرخام. ليس حمض قوي.' },
-        { fear: 'مثل خميس.', solution: 'لا عفن تحت = أبسط 20%.' },
+    commonConcerns: [
+        { concern: 'Descaler يتلف.', solution: 'pH neutral للرخام. ليس حمض قوي.' },
+        { concern: 'مثل خميس.', solution: 'لا عفن تحت = أبسط 20%.' },
     ],
     consumerEducation: [
         { myth: 'ماء وصابون.', truth: '600ppm = بقع. Descaler+RO.' },

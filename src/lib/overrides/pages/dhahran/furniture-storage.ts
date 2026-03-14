@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'VCI + Anti-Corrosion', use: 'يحمي معادن من مزدوج' },
         { name: 'تبريد < 35°م', use: 'PVAc حماية' },
     ],
-    hiddenObjections: [
-        { fear: 'عادي أرخص.', solution: 'عادي + مزدوج = تلف. أرخص بـ 200/شهر — أغلى بـ آلاف تلف.' },
-        { fear: 'قصير.', solution: '3-4 أسابيع = عفن. ساعات = صدأ. قصير ≠ آمن.' },
+    commonConcerns: [
+        { concern: 'عادي أرخص.', solution: 'عادي + مزدوج = تلف. أرخص بـ 200/شهر — أغلى بـ آلاف تلف.' },
+        { concern: 'قصير.', solution: '3-4 أسابيع = عفن. ساعات = صدأ. قصير ≠ آمن.' },
     ],
     consumerEducation: [
         { myth: 'أي مستودع.', truth: 'بدون فلتر = مزدوج يدخل. بدون Dehumidifier = عفن. بدون تبريد = PVAc.' },

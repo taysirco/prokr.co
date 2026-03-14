@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Dehumidifier', use: 'يُجفف المبيد أسرع — 60-85%' },
         { name: 'مبيد يرقات', use: 'بعوض — بِرك مياه أمطار' },
     ],
-    hiddenObjections: [
-        { fear: 'رش عادي يكفي.', solution: 'IPM = تشخيص أولاً. الرطوبة تحتاج Dehumidifier.' },
-        { fear: 'مثل عنيزة.', solution: 'تكاثر 2× + بعوض + عفن يجذب = مختلف.' },
+    commonConcerns: [
+        { concern: 'رش عادي يكفي.', solution: 'IPM = تشخيص أولاً. الرطوبة تحتاج Dehumidifier.' },
+        { concern: 'مثل عنيزة.', solution: 'تكاثر 2× + بعوض + عفن يجذب = مختلف.' },
     ],
     consumerEducation: [
         { myth: 'المبيد يعمل مثل عنيزة.', truth: '60-85% = لا يجف = فعالية أقل. Dehumidifier.' },

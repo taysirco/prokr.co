@@ -56,8 +56,8 @@ export const override: PageOverride = {
         { name: 'Marine-Grade Food-Safe Epoxy', use: 'يتحمل Cl⁻ + حرارة — آمن للشرب' },
         { name: 'Anti-Algae Coating', use: 'يمنع تكاثر الطحالب على السطح في رطوبة 80%' },
     ],
-    hiddenObjections: [
-        { fear: 'الخزان سليم ظاهرياً.', solution: 'Pitting: ثقوب من الداخل. الخارج يبدو سليماً حتى ينفجر. الحرارية تكتشف من الخارج.' },
+    commonConcerns: [
+        { concern: 'الخزان سليم ظاهرياً.', solution: 'Pitting: ثقوب من الداخل. الخارج يبدو سليماً حتى ينفجر. الحرارية تكتشف من الخارج.' },
     ],
     consumerEducation: [
         { myth: 'الكلس في الخزان = حماية.', truth: 'جدة: كلوريد لا كلسيوم. لا طبقة واقية. Pitting يثقب سريعاً.' },

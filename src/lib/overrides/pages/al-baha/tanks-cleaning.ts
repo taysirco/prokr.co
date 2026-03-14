@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Heavy-Duty Filter', use: 'Laterite — مدخل' },
         { name: 'إحكام غطاء', use: 'مطر — لا يدخل' },
     ],
-    hiddenObjections: [
-        { fear: 'مياه جبلية نظيفة.', solution: 'Laterite يلوّث بعد المطر.' },
-        { fear: 'مثل بريدة.', solution: 'مطر+Biofilm ≠ CaCO₃ Scale.' },
+    commonConcerns: [
+        { concern: 'مياه جبلية نظيفة.', solution: 'Laterite يلوّث بعد المطر.' },
+        { concern: 'مثل بريدة.', solution: 'مطر+Biofilm ≠ CaCO₃ Scale.' },
     ],
     consumerEducation: [
         { myth: 'نصف سنوي.', truth: 'ربع سنوي+بعد مطر.' },

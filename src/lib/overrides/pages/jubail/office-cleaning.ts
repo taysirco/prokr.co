@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Anti-Fungal', use: '98% عفن مكتبي' },
         { name: 'Enzymatic', use: 'سخام SABIC' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل الخبر.', solution: 'VOC PM2.5 + سخام SABIC + 98%. أخطر.' },
-        { fear: 'عاملة المبنى.', solution: 'بدون HEPA AC + بدون Marine = 0%.' },
+    commonConcerns: [
+        { concern: 'مثل الخبر.', solution: 'VOC PM2.5 + سخام SABIC + 98%. أخطر.' },
+        { concern: 'عاملة المبنى.', solution: 'بدون HEPA AC + بدون Marine = 0%.' },
     ],
     consumerEducation: [
         { myth: 'ساحلي فقط.', truth: 'VOC + سخام = صناعي. رباعي.' },

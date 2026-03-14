@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Anti-Biofilm Treatment', use: 'يقتل Biofilm بكتيري/فطري' },
         { name: 'RO Water (شطف)', use: 'صفر NaCl = صفر بقع = صفر Biofilm جديد' },
     ],
-    hiddenObjections: [
-        { fear: 'بخاخ يكفي.', solution: 'pH 9-10 لا يصل NaCl. لا يقتل Biofilm. أداة ضعيفة.' },
-        { fear: 'أنظف بنفسي.', solution: 'بماء الخبر؟ = NaCl جديد. بدون Anti-Biofilm? = يعود.' },
+    commonConcerns: [
+        { concern: 'بخاخ يكفي.', solution: 'pH 9-10 لا يصل NaCl. لا يقتل Biofilm. أداة ضعيفة.' },
+        { concern: 'أنظف بنفسي.', solution: 'بماء الخبر؟ = NaCl جديد. بدون Anti-Biofilm? = يعود.' },
     ],
     consumerEducation: [
         { myth: 'فرن عادي.', truth: 'NaCl + 85-95% + مأكولات بحرية = 3 فروقات ساحلية.' },

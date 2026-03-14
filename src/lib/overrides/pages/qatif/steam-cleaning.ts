@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Dehumidifier', use: '80-95% → 50-60%' },
         { name: 'Anti-Mite', use: 'بعد بخار — عث' },
     ],
-    hiddenObjections: [
-        { fear: 'يبلل.', solution: '80-95% = يبلل. Dehumidifier.' },
-        { fear: 'بدون Dehumidifier.', solution: 'عفن 24-48 ساعة.' },
+    commonConcerns: [
+        { concern: 'يبلل.', solution: '80-95% = يبلل. Dehumidifier.' },
+        { concern: 'بدون Dehumidifier.', solution: 'عفن 24-48 ساعة.' },
     ],
     consumerEducation: [
         { myth: 'يجف طبيعي.', truth: '80-95% = 4-8 ساعات.' },

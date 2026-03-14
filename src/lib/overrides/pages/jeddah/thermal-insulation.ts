@@ -53,8 +53,8 @@ export const override: PageOverride = {
         { name: 'Closed-Cell SPF', use: 'عزل + Vapor Barrier بطبقة واحدة' },
         { name: 'Mechanical Ventilation', use: 'يُزيل Latent Load — الرطوبة الزائدة' },
     ],
-        hiddenObjections: [
-        { fear: 'العزل مكلف — مش متأكد يستاهل.', solution: 'عزل SBC 601 يوفر 30-40% كهرباء سنوياً. يسترد تكلفته خلال 2-3 سنوات.' },
+        commonConcerns: [
+        { concern: 'العزل مكلف — مش متأكد يستاهل.', solution: 'عزل SBC 601 يوفر 30-40% كهرباء سنوياً. يسترد تكلفته خلال 2-3 سنوات.' },
     ],
 
     consumerEducation: [

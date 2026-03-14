@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Softened Water', use: 'حماية المرجل من CaCO₃ 550ppm' },
         { name: 'شفاط رطوبة', use: 'يسحب المحلول بعد البخار — يمنع إعادة ترسب' },
     ],
-    hiddenObjections: [
-        { fear: 'عفن بعد البخار.', solution: '15-25% = 20 دقيقة تجفيف. صفر عفن. مستحيل.' },
-        { fear: 'Dehumidifier مطلوب.', solution: 'لا! وفّر 100-200 ريال. عكس خميس.' },
+    commonConcerns: [
+        { concern: 'عفن بعد البخار.', solution: '15-25% = 20 دقيقة تجفيف. صفر عفن. مستحيل.' },
+        { concern: 'Dehumidifier مطلوب.', solution: 'لا! وفّر 100-200 ريال. عكس خميس.' },
     ],
     consumerEducation: [
         { myth: 'البخار يسبب عفن.', truth: '15-25% رطوبة = تجفيف 20 دقيقة. صفر عفن. أسرع مدينة.' },

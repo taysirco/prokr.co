@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Spot-Free Rinse', use: '98% — صفر Water Spots' },
         { name: 'Marine Degreaser', use: 'سخام SABIC — يُكسر' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل الخبر.', solution: 'VOC + سخام SABIC إضافي. Galvanic 2×. مختلف.' },
-        { fear: 'Ceramic غالي.', solution: 'Galvanic 2× = إعادة طلاء أسرع = أغلى. Ceramic = وقاية.' },
+    commonConcerns: [
+        { concern: 'مثل الخبر.', solution: 'VOC + سخام SABIC إضافي. Galvanic 2×. مختلف.' },
+        { concern: 'Ceramic غالي.', solution: 'Galvanic 2× = إعادة طلاء أسرع = أغلى. Ceramic = وقاية.' },
     ],
     consumerEducation: [
         { myth: 'ساحلي فقط.', truth: 'ساحلي + صناعي = VOC + سخام. ثنائي.' },

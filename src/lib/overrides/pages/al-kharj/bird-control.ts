@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'أشواك ستانلس', use: 'حواف+مكيفات — يمنع الهبوط' },
         { name: 'جهاز طرد صوتي', use: 'ترددات تُزعج الطيور' },
     ],
-    hiddenObjections: [
-        { fear: 'طرد يكفي.', solution: 'صوامع = غذاء مستمر. شبك فقط.' },
-        { fear: 'مثل الرياض.', solution: '3-5× أكثر. مزارع = مختلف.' },
+    commonConcerns: [
+        { concern: 'طرد يكفي.', solution: 'صوامع = غذاء مستمر. شبك فقط.' },
+        { concern: 'مثل الرياض.', solution: '3-5× أكثر. مزارع = مختلف.' },
     ],
     consumerEducation: [
         { myth: 'حمام عادي.', truth: 'حمام مزارع 3-5×. صوامع أعلاف.' },

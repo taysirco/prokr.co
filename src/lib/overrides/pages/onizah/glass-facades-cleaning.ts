@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Descaler حمضي', use: 'إذابة بقع CaCO₃ الكلسية' },
         { name: 'Enzymatic Sugar Breaker', use: 'إزالة تمور لزجة بدون فرك' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل أي مدينة.', solution: 'تمور لزجة = فريد عنيزة. Enzymatic إضافي.' },
-        { fear: 'Biofilm مثل الباحة.', solution: 'صفر — 15-25% رطوبة. وفّر 100%.' },
+    commonConcerns: [
+        { concern: 'مثل أي مدينة.', solution: 'تمور لزجة = فريد عنيزة. Enzymatic إضافي.' },
+        { concern: 'Biofilm مثل الباحة.', solution: 'صفر — 15-25% رطوبة. وفّر 100%.' },
     ],
     consumerEducation: [
         { myth: 'الماء والصابون يكفي للواجهات.', truth: 'SiO₂ Pitting + CaCO₃ Spots. يحتاج أدوات متخصصة.' },

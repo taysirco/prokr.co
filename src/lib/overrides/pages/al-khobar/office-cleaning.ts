@@ -56,9 +56,9 @@ export const override: PageOverride = {
         { name: 'Anti-Fungal Spray', use: 'يمنع عفن زوايا + خزائن' },
         { name: 'Anti-Biofilm + Microfiber', use: 'ينظف شاشات بدون NaCl ولا Biofilm' },
     ],
-    hiddenObjections: [
-        { fear: 'المكتب نظيف.', solution: 'NaCl لا يُرى. عفن في الزوايا المخفية. Biofilm شفاف. \"نظيف\" = ظاهري.' },
-        { fear: 'عاملة المبنى تكفي.', solution: 'بماء الخبر = NaCl. بدون Anti-Biofilm = Biofilm. بدون Anti-Fungal = عفن. 3 أخطاء.' },
+    commonConcerns: [
+        { concern: 'المكتب نظيف.', solution: 'NaCl لا يُرى. عفن في الزوايا المخفية. Biofilm شفاف. \"نظيف\" = ظاهري.' },
+        { concern: 'عاملة المبنى تكفي.', solution: 'بماء الخبر = NaCl. بدون Anti-Biofilm = Biofilm. بدون Anti-Fungal = عفن. 3 أخطاء.' },
     ],
     consumerEducation: [
         { myth: 'مكتب الخبر مثل الرياض.', truth: 'NaCl + 85-95% + Biofilm = 3 تحديات لا توجد في الرياض.' },

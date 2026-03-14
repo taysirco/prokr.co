@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Anti-Fungal+Anti-Mite', use: 'يقتل عفن+عث عميقاً' },
         { name: 'Dehumidifier', use: 'تجفيف 4-8h — يمنع عفن جديد' },
     ],
-    hiddenObjections: [
-        { fear: 'بخار يكفي.', solution: 'سطحي فقط. Anti-Fungal+Anti-Mite+Dehumidifier.' },
-        { fear: 'مثل عنيزة.', solution: '4-8h تجفيف مقابل 20 دقيقة. مختلف تماماً.' },
+    commonConcerns: [
+        { concern: 'بخار يكفي.', solution: 'سطحي فقط. Anti-Fungal+Anti-Mite+Dehumidifier.' },
+        { concern: 'مثل عنيزة.', solution: '4-8h تجفيف مقابل 20 دقيقة. مختلف تماماً.' },
     ],
     consumerEducation: [
         { myth: 'البخار يقتل كل شيء.', truth: 'سطحي. عفن عميق+عث حشوات = يحتاج ملحقات.' },

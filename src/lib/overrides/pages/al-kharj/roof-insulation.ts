@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'طلاء مقاوم UV', use: 'UV 10+ — يحمي 10+ سنوات' },
         { name: 'عزل مقاوم SiO₂', use: 'رمل — يدوم أطول' },
     ],
-    hiddenObjections: [
-        { fear: 'يحتاج مائي.', solution: 'لا مطر = لا يحتاج = وفر 40%.' },
-        { fear: 'مثل خميس.', solution: 'عكس! حراري فقط مقابل مزدوج.' },
+    commonConcerns: [
+        { concern: 'يحتاج مائي.', solution: 'لا مطر = لا يحتاج = وفر 40%.' },
+        { concern: 'مثل خميس.', solution: 'عكس! حراري فقط مقابل مزدوج.' },
     ],
     consumerEducation: [
         { myth: 'مائي ضروري.', truth: 'لا مطر بالخرج = حراري فقط.' },

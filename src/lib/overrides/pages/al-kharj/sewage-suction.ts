@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Jetting ضغط عالي', use: 'يُزيل SiO₂+CaCO₃ ترسيب' },
         { name: 'Chemical Descaler', use: 'يُذيب CaCO₃ — يمنع انسداد' },
     ],
-    hiddenObjections: [
-        { fear: 'شفط عادي يكفي.', solution: 'CaCO₃ يسد = Descaler+Jetting.' },
-        { fear: 'كل 6 أشهر.', solution: 'كلس+رمل = ربع سنوي.' },
+    commonConcerns: [
+        { concern: 'شفط عادي يكفي.', solution: 'CaCO₃ يسد = Descaler+Jetting.' },
+        { concern: 'كل 6 أشهر.', solution: 'كلس+رمل = ربع سنوي.' },
     ],
     consumerEducation: [
         { myth: 'شفط بس.', truth: 'CaCO₃ يسد = Descaler+Jetting.' },

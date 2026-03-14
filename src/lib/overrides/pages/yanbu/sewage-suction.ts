@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'شاحنة شفط', use: 'شفط حمأة — ساحلي' },
         { name: 'Anti-Corrosion', use: 'NaCl — خرسانة' },
     ],
-    hiddenObjections: [
-        { fear: 'شفط عادي.', solution: 'H₂S 70-85% = تهوية.' },
-        { fear: 'مثل بريدة.', solution: 'H₂S+NaCl = أخطر.' },
+    commonConcerns: [
+        { concern: 'شفط عادي.', solution: 'H₂S 70-85% = تهوية.' },
+        { concern: 'مثل بريدة.', solution: 'H₂S+NaCl = أخطر.' },
     ],
     consumerEducation: [
         { myth: 'نصف سنوي.', truth: '70-85% = ربع سنوي.' },

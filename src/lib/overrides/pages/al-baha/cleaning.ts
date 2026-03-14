@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'HEPA Filter', use: 'عرعر لزج — حبوب لقاح' },
         { name: 'Anti-Fungal', use: '200 يوم ضباب — عفن' },
     ],
-    hiddenObjections: [
-        { fear: 'منظف عادي.', solution: 'Laterite+عرعر+عفن = 4 ركائز.' },
-        { fear: 'مثل بريدة.', solution: 'ضباب+عرعر+طين ≠ كلس+Nafud.' },
+    commonConcerns: [
+        { concern: 'منظف عادي.', solution: 'Laterite+عرعر+عفن = 4 ركائز.' },
+        { concern: 'مثل بريدة.', solution: 'ضباب+عرعر+طين ≠ كلس+Nafud.' },
     ],
     consumerEducation: [
         { myth: 'الباحة نظيفة.', truth: '200 يوم ضباب. 3 مصادر مختلفة.' },

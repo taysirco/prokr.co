@@ -55,9 +55,9 @@ export const override: PageOverride = {
         { name: 'CCTV Pipe Camera', use: 'كشف تآكل الملح وحالة الأنابيب' },
         { name: 'Grease Trap Installation', use: 'مصيدة دهون لمنع تراكم الشحوم' },
     ],
-    hiddenObjections: [
-        { fear: 'عقد وقائي مكلف.', solution: '200-375 ريال/زيارة vs حفر واستبدال: 3,000-8,000 ريال.' },
-        { fear: 'CCTV ضروري كل مرة؟', solution: 'أول مرة إلزامي لمعرفة حالة الأنابيب. بعدها: كل سنة أو عند مشكلة.' },
+    commonConcerns: [
+        { concern: 'عقد وقائي مكلف.', solution: '200-375 ريال/زيارة vs حفر واستبدال: 3,000-8,000 ريال.' },
+        { concern: 'CCTV ضروري كل مرة؟', solution: 'أول مرة إلزامي لمعرفة حالة الأنابيب. بعدها: كل سنة أو عند مشكلة.' },
     ],
     consumerEducation: [
         { myth: 'كل انسداد = سبرنق يكفي.', truth: 'انسداد دهني + رمل = صلب. السبرنق يخرق ثقباً لكن لا يُنظّف الجدران. Jetting يُنظّف 100%.' },

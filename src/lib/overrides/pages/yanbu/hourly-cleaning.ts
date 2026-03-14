@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'HEPA Activated Carbon', use: 'SOx — غازي' },
         { name: 'Anti-Fungal', use: '70-85% — عفن' },
     ],
-    hiddenObjections: [
-        { fear: 'عاملة عادية.', solution: '5 أدوات خاصة ساحلية.' },
-        { fear: 'مثل بريدة.', solution: '5 مقابل 3. أعقد.' },
+    commonConcerns: [
+        { concern: 'عاملة عادية.', solution: '5 أدوات خاصة ساحلية.' },
+        { concern: 'مثل بريدة.', solution: '5 مقابل 3. أعقد.' },
     ],
     consumerEducation: [
         { myth: 'ماء عادي.', truth: 'NaCl يعود. RO.' },

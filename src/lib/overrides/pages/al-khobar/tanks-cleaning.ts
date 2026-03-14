@@ -57,9 +57,9 @@ export const override: PageOverride = {
         { name: 'BTI Larvicide', use: 'يقتل يرقات بعوض Culex' },
         { name: 'إيبوكسي غذائي', use: 'يحمي خزانات حديدية من NaCl تآكل' },
     ],
-    hiddenObjections: [
-        { fear: 'الماء نظيف.', solution: 'Biofilm شفاف. Free Chlorine منخفض. فحص = يكشف.' },
-        { fear: 'كلور يكفي.', solution: 'Chloride Demand = الكلور يُستهلك أسرع. Biofilm = يحمي بكتيريا. كلور وحده ≠ كافٍ.' },
+    commonConcerns: [
+        { concern: 'الماء نظيف.', solution: 'Biofilm شفاف. Free Chlorine منخفض. فحص = يكشف.' },
+        { concern: 'كلور يكفي.', solution: 'Chloride Demand = الكلور يُستهلك أسرع. Biofilm = يحمي بكتيريا. كلور وحده ≠ كافٍ.' },
     ],
     consumerEducation: [
         { myth: 'خزان الخبر مثل الأحساء.', truth: 'NaCl ≠ CaSO₄. لا Scale = ميزة. Chloride Demand = تحدٍ مختلف.' },

@@ -57,9 +57,9 @@ export const override: PageOverride = {
         { name: 'UV-Resistant Cover', use: 'يحمي وحدة خارجية من UV + حرارة' },
         { name: 'Gasket Kit', use: 'استبدال جوانات جافة — يمنع تسريب' },
     ],
-    hiddenObjections: [
-        { fear: '6 مرات كثير.', solution: 'ΔT 54°م + 52°م × 5 أشهر + عواصف = 6 = الحد. 4 = يكسر. 2,000+ ريال إصلاح.' },
-        { fear: 'مثل الرياض.', solution: 'الرياض ΔT ~35°م. حفر الباطن = 54°م = 1.5× أقصى.' },
+    commonConcerns: [
+        { concern: '6 مرات كثير.', solution: 'ΔT 54°م + 52°م × 5 أشهر + عواصف = 6 = الحد. 4 = يكسر. 2,000+ ريال إصلاح.' },
+        { concern: 'مثل الرياض.', solution: 'الرياض ΔT ~35°م. حفر الباطن = 54°م = 1.5× أقصى.' },
     ],
     consumerEducation: [
         { myth: 'مرتين بالسنة.', truth: '52°م × 5 أشهر + عواصف + ΔT 54°م. مرتين = تعطّل.' },

@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Diamond Pads 7-مراحل', use: 'جلي تدريجي' },
         { name: 'Sealer + UV Sealer', use: 'شعيرات + UV + خدش' },
     ],
-    hiddenObjections: [
-        { fear: 'لا عفن = سهل.', solution: 'SiO₂ أكثف + ΔT أقصى + UV. 3 تحديات ≠ سهل.' },
-        { fear: 'ملمّع.', solution: 'فوق SiO₂ + شعيرات. سطحي.' },
+    commonConcerns: [
+        { concern: 'لا عفن = سهل.', solution: 'SiO₂ أكثف + ΔT أقصى + UV. 3 تحديات ≠ سهل.' },
+        { concern: 'ملمّع.', solution: 'فوق SiO₂ + شعيرات. سطحي.' },
     ],
     consumerEducation: [
         { myth: 'مثل الرياض.', truth: 'ΔT 54°م > 35°م. SiO₂ أكثف. UV أعلى.' },

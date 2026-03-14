@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'جهاز رطوبة', use: 'يقيس في الجدران حول الخزان' },
         { name: 'فاحص ضغط', use: 'يكشف تسرب داخلي' },
     ],
-    hiddenObjections: [
-        { fear: 'تكثّف مو تسرب.', solution: 'ممكن! فحص حراري يُميّز بدقة.' },
-        { fear: 'مثل عنيزة.', solution: 'أمطار+تكثّف+عفن = أعقد بكثير.' },
+    commonConcerns: [
+        { concern: 'تكثّف مو تسرب.', solution: 'ممكن! فحص حراري يُميّز بدقة.' },
+        { concern: 'مثل عنيزة.', solution: 'أمطار+تكثّف+عفن = أعقد بكثير.' },
     ],
     consumerEducation: [
         { myth: 'بصري يكفي.', truth: 'مطر+تكثّف+عفن = بصري مُضلل تماماً. حراري.' },

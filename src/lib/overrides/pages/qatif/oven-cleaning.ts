@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Alkaline', use: 'كربنة واحية لزجة' },
         { name: 'Acid Rinse', use: 'NaCl أسماك — بلوري' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل الخبر.', solution: 'واحي+أسماك. مختلف.' },
-        { fear: 'بخاخ.', solution: 'Biofilm يحمي. Anti-Biofilm أولاً.' },
+    commonConcerns: [
+        { concern: 'مثل الخبر.', solution: 'واحي+أسماك. مختلف.' },
+        { concern: 'بخاخ.', solution: 'Biofilm يحمي. Anti-Biofilm أولاً.' },
     ],
     consumerEducation: [
         { myth: 'مثل الرياض.', truth: '80-95% لزجة + Biofilm + أسماك.' },

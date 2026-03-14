@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'pH Balancer', use: 'SOx — يُغيّر pH' },
         { name: 'Marine-Grade Pump', use: 'NaCl — صدأ مقاوم' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل بريدة.', solution: 'طحالب+ملح+صدأ = مختلف.' },
-        { fear: 'شهري يكفي.', solution: '70-85% طحالب = أسبوعي.' },
+    commonConcerns: [
+        { concern: 'مثل بريدة.', solution: 'طحالب+ملح+صدأ = مختلف.' },
+        { concern: 'شهري يكفي.', solution: '70-85% طحالب = أسبوعي.' },
     ],
     consumerEducation: [
         { myth: 'كلور يكفي.', truth: 'Algaecide+pH+Marine-Grade.' },

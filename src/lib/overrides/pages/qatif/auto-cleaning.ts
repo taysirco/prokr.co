@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'RO Rinse', use: 'Water Spots — صفر ملح' },
         { name: 'Ceramic 9H', use: 'NaCl Galvanic — حاجز' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل الخبر.', solution: 'طين واحي + غبار نخيل. مختلف.' },
-        { fear: 'إسفنجة ناعمة.', solution: 'NaCl+طين+طلع = خليط. Touchless.' },
+    commonConcerns: [
+        { concern: 'مثل الخبر.', solution: 'طين واحي + غبار نخيل. مختلف.' },
+        { concern: 'إسفنجة ناعمة.', solution: 'NaCl+طين+طلع = خليط. Touchless.' },
     ],
     consumerEducation: [
         { myth: 'ساحلي فقط.', truth: 'طين+نخيل = واحي. ثنائي.' },

@@ -57,9 +57,9 @@ export const override: PageOverride = {
         { name: 'RO Water (شطف)', use: 'صفر NaCl = صفر Biofilm جديد' },
         { name: 'مقياس سُمك ميكرون', use: 'يكشف كربنة + Biofilm المُضاف' },
     ],
-    hiddenObjections: [
-        { fear: 'ربع سنوي مكلف.', solution: 'حريق مدخنة = 50,000-200,000 ريال. عقد 900-2,200/سنة = 1-4%.' },
-        { fear: 'المدخنة نظيفة.', solution: 'Biofilm شفاف. كربنة رطبة لزجة. مقياس ميكرون يكشف.' },
+    commonConcerns: [
+        { concern: 'ربع سنوي مكلف.', solution: 'حريق مدخنة = 50,000-200,000 ريال. عقد 900-2,200/سنة = 1-4%.' },
+        { concern: 'المدخنة نظيفة.', solution: 'Biofilm شفاف. كربنة رطبة لزجة. مقياس ميكرون يكشف.' },
     ],
     consumerEducation: [
         { myth: 'نصف سنوي.', truth: 'Biofilm 85-95% + NaCl = يصل 6,000 ميكرون أسرع. ربع سنوي = الحد.' },

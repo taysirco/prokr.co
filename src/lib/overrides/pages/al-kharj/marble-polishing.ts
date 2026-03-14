@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Diamond Pad', use: 'يُعيد لمعان — SiO₂ خدش' },
         { name: 'RO Water', use: 'شطف بدون كلس جديد' },
     ],
-    hiddenObjections: [
-        { fear: 'خل يكفي.', solution: 'حمض قوي = يآكل الرخام! pH 5-6 فقط.' },
-        { fear: 'مثل خميس.', solution: 'لا عفن تحت الرخام = أبسط وأرخص.' },
+    commonConcerns: [
+        { concern: 'خل يكفي.', solution: 'حمض قوي = يآكل الرخام! pH 5-6 فقط.' },
+        { concern: 'مثل خميس.', solution: 'لا عفن تحت الرخام = أبسط وأرخص.' },
     ],
     consumerEducation: [
         { myth: 'ماء صنبور يكفي.', truth: 'CaCO₃ 450ppm = كلس جديد فوراً. RO.' },

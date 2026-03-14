@@ -57,9 +57,9 @@ export const override: PageOverride = {
         { name: 'UV Protective Coating', use: 'يحيِّد Polymer Chain Scission — يُطيل عمر الفوم من 18 شهراً لـ 10-15 سنة.' },
         { name: 'Ceramic Overcoat', use: 'طبقة إضافية تعكس UV + حرارة — مثالية لـ UV مكة الأشد.' },
     ],
-    hiddenObjections: [
-        { fear: 'Closed-Cell أغلى 30-40% من Open-Cell', solution: 'Open-Cell يمتص + ينضغط + R-Value نصف = تحتاج ضعف السماكة + يفشل عند السيول. Closed-Cell: سماكة أقل + عمر أطول + لا سيول = أرخص على 10 سنوات بـ 40-60%.' },
-        { fear: 'UV Coat تكلفة إضافية (12-20 ريال/م²)', solution: 'بدون Coat: فوم ينتهي في 18 شهراً ← إعادة رش كامل (55-85/م²). Coat: 12-20/م² مرة ← الفوم يعيش 10-15 سنة. الحساب: 12/م² × مرة أفضل من 85/م² × 7 مرات.' },
+    commonConcerns: [
+        { concern: 'Closed-Cell أغلى 30-40% من Open-Cell', solution: 'Open-Cell يمتص + ينضغط + R-Value نصف = تحتاج ضعف السماكة + يفشل عند السيول. Closed-Cell: سماكة أقل + عمر أطول + لا سيول = أرخص على 10 سنوات بـ 40-60%.' },
+        { concern: 'UV Coat تكلفة إضافية (12-20 ريال/م²)', solution: 'بدون Coat: فوم ينتهي في 18 شهراً ← إعادة رش كامل (55-85/م²). Coat: 12-20/م² مرة ← الفوم يعيش 10-15 سنة. الحساب: 12/م² × مرة أفضل من 85/م² × 7 مرات.' },
     ],
     consumerEducation: [
         { myth: 'UV Coat اختياري — تجميل', truth: 'في مكة: إلزامي. بدونه: 18 شهراً. معه: 10-15 سنة. ليس تجميلاً — هو حماية وجودية لاستثمارك في الفوم.' },

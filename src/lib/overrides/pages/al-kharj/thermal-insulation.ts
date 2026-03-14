@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'طلاء عاكس UV', use: 'سقف — يعكس 40%' },
         { name: 'PU Foam رش', use: 'فوم — سد تسربات حرارية' },
     ],
-    hiddenObjections: [
-        { fear: 'يحتاج مائي.', solution: 'لا مطر = حراري فقط = وفر 30%.' },
-        { fear: 'غالي.', solution: 'وفر 35-50% كهرباء. عائد 2-3 سنة.' },
+    commonConcerns: [
+        { concern: 'يحتاج مائي.', solution: 'لا مطر = حراري فقط = وفر 30%.' },
+        { concern: 'غالي.', solution: 'وفر 35-50% كهرباء. عائد 2-3 سنة.' },
     ],
     consumerEducation: [
         { myth: 'مزدوج.', truth: 'لا مطر = حراري فقط.' },

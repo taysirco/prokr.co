@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'أشواك Stainless', use: 'حافة — حمام+نوارس' },
         { name: 'Ultrasonic Repeller', use: 'نوارس — صوت طارد' },
     ],
-    hiddenObjections: [
-        { fear: 'شبك عادي.', solution: 'NaCl = صدأ. 316 Stainless.' },
-        { fear: 'مثل بريدة.', solution: 'بحري+نوارس = مختلف.' },
+    commonConcerns: [
+        { concern: 'شبك عادي.', solution: 'NaCl = صدأ. 316 Stainless.' },
+        { concern: 'مثل بريدة.', solution: 'بحري+نوارس = مختلف.' },
     ],
     consumerEducation: [
         { myth: 'طرد يكفي.', truth: 'شبك+أشواك+ألترا = ثلاثي.' },

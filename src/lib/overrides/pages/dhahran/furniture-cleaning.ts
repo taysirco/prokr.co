@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Wood Conditioner', use: 'يوازن رطوبة — يمنع PVAc مزدوج' },
         { name: 'Enzymatic', use: 'يُكسر بوليمر بخور' },
     ],
-    hiddenObjections: [
-        { fear: 'أثاث جديد.', solution: 'NaCl+SiO₂ من اليوم الأول. حماية مبكرة = أرخص.' },
-        { fear: 'ملمّع يكفي.', solution: 'سطحي. لا يحمي مفصلات ولا يمنع عفن داخلي.' },
+    commonConcerns: [
+        { concern: 'أثاث جديد.', solution: 'NaCl+SiO₂ من اليوم الأول. حماية مبكرة = أرخص.' },
+        { concern: 'ملمّع يكفي.', solution: 'سطحي. لا يحمي مفصلات ولا يمنع عفن داخلي.' },
     ],
     consumerEducation: [
         { myth: 'مثل الرياض.', truth: 'NaCl إضافي = صدأ. 75-85% = عفن. مختلف.' },

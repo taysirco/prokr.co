@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'UV Film', use: 'نوافذ — يحجب 70-80%' },
         { name: 'HEPA Vacuum', use: 'SiO₂ — يحجز' },
     ],
-    hiddenObjections: [
-        { fear: 'لا رطوبة = سهل.', solution: 'ΔT 54°م + 10-15% تشقق + UV + SiO₂. 4 تحديات قارية.' },
-        { fear: 'ملمّع.', solution: 'لا يحمي من ΔT ولا UV ولا جفاف. سطحي.' },
+    commonConcerns: [
+        { concern: 'لا رطوبة = سهل.', solution: 'ΔT 54°م + 10-15% تشقق + UV + SiO₂. 4 تحديات قارية.' },
+        { concern: 'ملمّع.', solution: 'لا يحمي من ΔT ولا UV ولا جفاف. سطحي.' },
     ],
     consumerEducation: [
         { myth: 'مثل الرياض.', truth: 'ΔT 54°م > 35°م. UV أعلى. 10-15% < 15%. أقسى.' },

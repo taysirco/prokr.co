@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'شاحنة مغلقة', use: 'حماية من أمطار+ضباب (لا مكشوفة)' },
         { name: 'Ratchet Straps', use: 'تثبيت — منحدرات 6-12%' },
     ],
-    hiddenObjections: [
-        { fear: 'مكشوفة أرخص.', solution: 'مطر = خسارة عفش = أغلى 100×. مغلقة أرخص فعلياً.' },
-        { fear: 'مثل الباحة.', solution: 'متشابه. خميس ← أبها 30 كم أسهل قليلاً.' },
+    commonConcerns: [
+        { concern: 'مكشوفة أرخص.', solution: 'مطر = خسارة عفش = أغلى 100×. مغلقة أرخص فعلياً.' },
+        { concern: 'مثل الباحة.', solution: 'متشابه. خميس ← أبها 30 كم أسهل قليلاً.' },
     ],
     consumerEducation: [
         { myth: 'شاحنة مكشوفة تكفي بخميس.', truth: 'أمطار+ضباب = تلف مائي. مغلقة فقط.' },

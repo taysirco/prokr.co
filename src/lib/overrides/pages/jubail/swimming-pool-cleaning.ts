@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Algaecide Marine', use: '98% طحالب أقصى' },
         { name: 'Anti-Biofilm', use: '98% Biofilm — أنابيب' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل الخبر.', solution: 'VOC + 98%>95% + سخام. أقسى.' },
-        { fear: 'كلور عادي.', solution: 'NaCl Demand = يستهلك. 2×.' },
+    commonConcerns: [
+        { concern: 'مثل الخبر.', solution: 'VOC + 98%>95% + سخام. أقسى.' },
+        { concern: 'كلور عادي.', solution: 'NaCl Demand = يستهلك. 2×.' },
     ],
     consumerEducation: [
         { myth: 'مثل حفر الباطن.', truth: '98% طحالب vs 10-15% لا طحالب. عكس!' },

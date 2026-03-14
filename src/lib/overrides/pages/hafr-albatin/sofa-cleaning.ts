@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Enzymatic (Lipase + Esterase)', use: 'بلمرة 52°م — أقوى' },
         { name: 'Leather Conditioner', use: '10-15% — يمنع تشقق' },
     ],
-    hiddenObjections: [
-        { fear: 'لا عفن = سهل.', solution: 'SiO₂ + جلد + بخور. 3 تحديات قارية.' },
-        { fear: 'شامبو.', solution: 'لا يُكسر بوليمر 52°م. Enzymatic فقط.' },
+    commonConcerns: [
+        { concern: 'لا عفن = سهل.', solution: 'SiO₂ + جلد + بخور. 3 تحديات قارية.' },
+        { concern: 'شامبو.', solution: 'لا يُكسر بوليمر 52°م. Enzymatic فقط.' },
     ],
     consumerEducation: [
         { myth: 'مثل الرياض.', truth: '52°م > 45°م. SiO₂ أكثف. 10-15% < 15%.' },

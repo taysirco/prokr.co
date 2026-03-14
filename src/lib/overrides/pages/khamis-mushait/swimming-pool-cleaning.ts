@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'جهاز pH+كلور', use: 'ضبط بعد مطر — الأمطار تُخفف' },
         { name: 'شبك تغطية', use: 'يمنع أوراق أشجار من الدخول' },
     ],
-    hiddenObjections: [
-        { fear: 'كلور يكفي.', solution: 'أمطار تُخففه + طحالب 2×. Algicide إلزامي.' },
-        { fear: 'مثل عنيزة.', solution: 'عنيزة: شمس+لا مطر+لا أشجار = أبسط.' },
+    commonConcerns: [
+        { concern: 'كلور يكفي.', solution: 'أمطار تُخففه + طحالب 2×. Algicide إلزامي.' },
+        { concern: 'مثل عنيزة.', solution: 'عنيزة: شمس+لا مطر+لا أشجار = أبسط.' },
     ],
     consumerEducation: [
         { myth: 'المسبح ما يحتاج Algicide.', truth: '60-85% = طحالب 2×. Algicide أسبوعي.' },

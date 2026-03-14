@@ -45,7 +45,7 @@ export const override: PageOverride = {
     saudiRegulations: [REGULATIONS.GHAD_SYSTEM],
     verificationBadges: [{ badge: '✔️ مرخصة', authority: 'بلدي + وقاء', icon: 'shield-check' }],
     equipment: [{ name: 'BTI', use: 'بعوض واحة' }, { name: 'Gel Bait', use: 'صراصير' }, { name: 'IGR', use: '80-95%' }, { name: 'فيرومون', use: 'RPW' }],
-    hiddenObjections: [{ fear: 'رش شهري.', solution: '80-95% = 2-4 أيام.' }],
+    commonConcerns: [{ concern: 'رش شهري.', solution: '80-95% = 2-4 أيام.' }],
     consumerEducation: [{ myth: 'مثل الدمام.', truth: 'واحة + سبخة + 80-95%.' },
         { myth: 'الحشرات تدل على قلة نظافة.', truth: 'الحشرات تبحث عن ماء ودفء وليس قذارة. أنظف بيت يجذب حشرات إذا فيه رطوبة أو شقوق.' },
     ],

@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Vapor Barrier', use: 'يمنع تكثّف بيني — 60-85%' },
         { name: 'جهاز رش ضغط عالي', use: 'تطبيق متساوي — سماكة دقيقة' },
     ],
-    hiddenObjections: [
-        { fear: 'Open-Cell أرخص.', solution: 'يمتص الماء = كارثة بخميس. Closed-Cell أغلى لكن يحمي.' },
-        { fear: 'مثل الباحة.', solution: 'متشابه — نفس الفيزياء الجبلية. نفس الحل.' },
+    commonConcerns: [
+        { concern: 'Open-Cell أرخص.', solution: 'يمتص الماء = كارثة بخميس. Closed-Cell أغلى لكن يحمي.' },
+        { concern: 'مثل الباحة.', solution: 'متشابه — نفس الفيزياء الجبلية. نفس الحل.' },
     ],
     consumerEducation: [
         { myth: 'أي فوم يكفي بخميس.', truth: 'Open-Cell = كارثة. Closed-Cell فقط.' },

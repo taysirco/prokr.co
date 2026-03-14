@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Scrub صناعي', use: 'يُزيل Scale الصلب' },
         { name: 'شفط قاع', use: 'SiO₂ رواسب رملية' },
     ],
-    hiddenObjections: [
-        { fear: 'تنظيف عادي.', solution: 'CaCO₃ Scale = Descaler إلزامي.' },
-        { fear: 'مثل خميس.', solution: 'كلس مقابل طحالب = مختلف.' },
+    commonConcerns: [
+        { concern: 'تنظيف عادي.', solution: 'CaCO₃ Scale = Descaler إلزامي.' },
+        { concern: 'مثل خميس.', solution: 'كلس مقابل طحالب = مختلف.' },
     ],
     consumerEducation: [
         { myth: 'ماء يكفي.', truth: 'CaCO₃ Scale صلب. Descaler.' },

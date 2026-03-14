@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'كاميرا حرارية', use: 'يُحدد موقع التسرب' },
         { name: 'Chemical Descaler', use: 'يُذيب CaCO₃ — يمنع انسداد' },
     ],
-    hiddenObjections: [
-        { fear: 'بصري يكفي.', solution: 'CaCO₃ انسداد داخلي. فحص ضغط.' },
-        { fear: 'مثل خميس.', solution: 'أبسط! مصدر واحد. لا تكثّف.' },
+    commonConcerns: [
+        { concern: 'بصري يكفي.', solution: 'CaCO₃ انسداد داخلي. فحص ضغط.' },
+        { concern: 'مثل خميس.', solution: 'أبسط! مصدر واحد. لا تكثّف.' },
     ],
     consumerEducation: [
         { myth: 'فحص بصري.', truth: 'CaCO₃ داخلي = ضغط+حراري.' },

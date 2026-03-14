@@ -56,9 +56,9 @@ export const override: PageOverride = {
         { name: 'Scorpion Barrier Treatment', use: 'حاجز كيميائي حول محيط الفيلا ضد العقارب' },
         { name: 'BTI Larvicide', use: 'أقراص بيولوجية للأحواض وتصريف المكيفات' },
     ],
-    hiddenObjections: [
-        { fear: '6 زيارات/سنة كثير.', solution: 'عقارب + بعوض = 12 شهر نشاط. 6 = الحد الأدنى للأمان.' },
-        { fear: 'مبيد عادي أضعف من Marine.', solution: 'في 80% رطوبة: العادي يعمل بكفاءة 100%. Marine للـ 95%+ فقط.' },
+    commonConcerns: [
+        { concern: '6 زيارات/سنة كثير.', solution: 'عقارب + بعوض = 12 شهر نشاط. 6 = الحد الأدنى للأمان.' },
+        { concern: 'مبيد عادي أضعف من Marine.', solution: 'في 80% رطوبة: العادي يعمل بكفاءة 100%. Marine للـ 95%+ فقط.' },
     ],
     consumerEducation: [
         { myth: 'العقارب لا تدخل المنازل.', truth: 'تدخل بحثاً عن البرودة والماء صيفاً. الفتحات تحت الأبواب = مدخلها الرئيسي.' },

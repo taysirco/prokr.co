@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'شاحنة مغلقة', use: 'مطر+ضباب — حماية' },
         { name: 'Anti-Humidity', use: 'PVAc — مفاصل' },
     ],
-    hiddenObjections: [
-        { fear: 'مكشوف أرخص.', solution: 'مطر = عفن. مغلق.' },
-        { fear: 'مثل بريدة.', solution: 'جبلي+ضباب ≠ مستقيم+جاف.' },
+    commonConcerns: [
+        { concern: 'مكشوف أرخص.', solution: 'مطر = عفن. مغلق.' },
+        { concern: 'مثل بريدة.', solution: 'جبلي+ضباب ≠ مستقيم+جاف.' },
     ],
     consumerEducation: [
         { myth: 'أي شاحنة.', truth: 'Mountain-Spec+مغلق.' },

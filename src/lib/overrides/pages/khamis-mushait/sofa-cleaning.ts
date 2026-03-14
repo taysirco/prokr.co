@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Anti-Fungal+Anti-Mite', use: 'يقتل عفن وعث' },
         { name: 'Dehumidifier', use: 'تجفيف 4-8h' },
     ],
-    hiddenObjections: [
-        { fear: 'شامبو يكفي.', solution: 'بلمرة رطبة = سطحي فقط. Enzymatic+بخار.' },
-        { fear: 'مثل عنيزة.', solution: 'عكس! عفن+عث+4-8h مقابل 20 دقيقة.' },
+    commonConcerns: [
+        { concern: 'شامبو يكفي.', solution: 'بلمرة رطبة = سطحي فقط. Enzymatic+بخار.' },
+        { concern: 'مثل عنيزة.', solution: 'عكس! عفن+عث+4-8h مقابل 20 دقيقة.' },
     ],
     consumerEducation: [
         { myth: 'الكنب يجف بسرعة.', truth: '4-8h مقابل 20 دقيقة. 60-85% vs 15-25%.' },

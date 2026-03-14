@@ -57,8 +57,8 @@ export const override: PageOverride = {
         { name: 'CCTV Pipe Camera', use: 'يكتشف شقوق PVC من الداخل ← يُحدد مصدر تسلل التربة' },
         { name: 'HDPE Pipe', use: 'بديل PVC بمرونة 200%+ — يتحمل تفاوت 60°م بدون شقوق' },
     ],
-    hiddenObjections: [
-        { fear: 'Jetting أغلى من سبرنق.', solution: 'سبرنق: يعود كل 2-4 أسابيع = أغلى 50% سنوياً. Jetting: كل 3-6 أشهر = تنظيف حقيقي + أرخص.' },
+    commonConcerns: [
+        { concern: 'Jetting أغلى من سبرنق.', solution: 'سبرنق: يعود كل 2-4 أسابيع = أغلى 50% سنوياً. Jetting: كل 3-6 أشهر = تنظيف حقيقي + أرخص.' },
     ],
     consumerEducation: [
         { myth: 'كل انسداد = دهون فقط.', truth: 'في الرياض: 50-60% كلس CaCO₃ + 30% دهون + 10% تربة من شقوق. المعالجة مختلفة: Jetting لا سبرنق.' },

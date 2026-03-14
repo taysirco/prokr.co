@@ -52,8 +52,8 @@ export const override: PageOverride = {
         { name: 'Dehumidifier صناعي', use: 'يسحب الرطوبة المتبقية خلال 2-4 ساعات — إلزامي بعد كل جلسة بخار' },
         { name: 'Anti-Mold Treatment', use: 'يُطبّق بعد التجفيف — يمنع العفن 3-4 أسابيع' },
     ],
-    hiddenObjections: [
-        { fear: 'البخار يُعفّن — سمعت.', solution: 'البخار + Dehumidifier = تعقيم. البخار بدون = تخريب. المشكلة ليست البخار — المشكلة = عدم التجفيف في 80%.' },
+    commonConcerns: [
+        { concern: 'البخار يُعفّن — سمعت.', solution: 'البخار + Dehumidifier = تعقيم. البخار بدون = تخريب. المشكلة ليست البخار — المشكلة = عدم التجفيف في 80%.' },
     ],
     consumerEducation: [
         { myth: 'في جازان البخار خطر.', truth: 'البخار + Dehumidifier = أفضل أداة. بدون Dehumidifier = خطر. التكامل = الحل.' },

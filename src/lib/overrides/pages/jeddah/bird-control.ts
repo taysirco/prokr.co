@@ -54,8 +54,8 @@ export const override: PageOverride = {
         { name: 'شبك SS316', use: 'مقاوم Cl⁻ — 15-20 سنة' },
         { name: 'سبايك بولي كربونيت', use: 'لا يصدأ + لا يسخن' },
     ],
-        hiddenObjections: [
-        { fear: 'المبيدات خطرة على الأطفال.', solution: 'المبيدات المسجلة في SFDA آمنة بعد الجفاف (1-2 ساعة). إخلاء مؤقت + تهوية = أمان 100%.' },
+        commonConcerns: [
+        { concern: 'المبيدات خطرة على الأطفال.', solution: 'المبيدات المسجلة في SFDA آمنة بعد الجفاف (1-2 ساعة). إخلاء مؤقت + تهوية = أمان 100%.' },
     ],
 
     consumerEducation: [

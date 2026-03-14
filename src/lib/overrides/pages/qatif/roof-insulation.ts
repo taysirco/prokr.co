@@ -55,9 +55,9 @@ export const override: PageOverride = {
         { name: 'Marine Ceramic Overcoat', use: 'طبقة حماية تعكس الحرارة وتمنع ترسبات الملح' },
         { name: 'SS316 Fasteners & Nails', use: 'مسامير وبراغي بحرية لا تصدأ في رذاذ 35,000 ppm' },
     ],
-    hiddenObjections: [
-        { fear: 'Marine SBS أغلى 20-30% من العادي.', solution: 'العادي يُستبدل كل 3-5 سنوات = أغلى إجمالياً. Marine 10-15 سنة = أرخص على مدى 15 سنة.' },
-        { fear: 'SS316 hardware غالي.', solution: 'مسمار SS316: 1-2 ريال. مسمار عادي + صيانة صدأ + إعادة تثبيت = 10+ ريال. الحساب واضح.' },
+    commonConcerns: [
+        { concern: 'Marine SBS أغلى 20-30% من العادي.', solution: 'العادي يُستبدل كل 3-5 سنوات = أغلى إجمالياً. Marine 10-15 سنة = أرخص على مدى 15 سنة.' },
+        { concern: 'SS316 hardware غالي.', solution: 'مسمار SS316: 1-2 ريال. مسمار عادي + صيانة صدأ + إعادة تثبيت = 10+ ريال. الحساب واضح.' },
     ],
     consumerEducation: [
         { myth: 'القطيف مثل الخبر — نفس العزل.', truth: 'القطيف أقرب للبحر + رذاذ مباشر + سبخات. الخبر بعيدة كم أو أكثر. Marine-Grade إلزامي في القطيف — ليس في كل الخبر.' },

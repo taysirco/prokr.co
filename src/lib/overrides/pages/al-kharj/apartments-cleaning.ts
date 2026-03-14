@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Chemical Descaler', use: 'CaCO₃ 450ppm كلس' },
         { name: 'RO Rinse + Microfiber', use: 'SiO₂ بدون خدش' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل الرياض.', solution: 'NH₃ مزارع. الرياض لا مزارع ألبان قريبة.' },
-        { fear: 'معطر يكفي.', solution: 'يُخفي. NH₃ يتراكم. AC يمتص = فرق.' },
+    commonConcerns: [
+        { concern: 'مثل الرياض.', solution: 'NH₃ مزارع. الرياض لا مزارع ألبان قريبة.' },
+        { concern: 'معطر يكفي.', solution: 'يُخفي. NH₃ يتراكم. AC يمتص = فرق.' },
     ],
     consumerEducation: [
         { myth: 'معطر يكفي للرائحة.', truth: 'NH₃ يتراكم في الأقمشة. AC يمتص.' },

@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Anti-Fungal مزدوج', use: 'واحي+ساحلي — أعلى+أسفل' },
         { name: 'Dehumidifier', use: 'PVAc — 80-95%' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل الخبر.', solution: 'واحة = عفن واحي+طين. مختلف.' },
-        { fear: 'ملمّع.', solution: 'NaCl+عفن 80-95%. سطحي.' },
+    commonConcerns: [
+        { concern: 'مثل الخبر.', solution: 'واحة = عفن واحي+طين. مختلف.' },
+        { concern: 'ملمّع.', solution: 'NaCl+عفن 80-95%. سطحي.' },
     ],
     consumerEducation: [
         { myth: 'ساحلي فقط.', truth: 'واحي = طين+عيون+عفن.' },

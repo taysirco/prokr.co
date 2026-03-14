@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'فحص ضغط', use: 'يكشف تسرب داخلي' },
         { name: 'كاميرا حرارية', use: 'يُحدد موقع التسرب' },
     ],
-    hiddenObjections: [
-        { fear: 'بصري يكفي.', solution: 'CaCO₃ تآكل داخلي. سُمك يكشف.' },
-        { fear: 'مثل خميس.', solution: 'أبسط! لا تكثّف. مصدر واحد.' },
+    commonConcerns: [
+        { concern: 'بصري يكفي.', solution: 'CaCO₃ تآكل داخلي. سُمك يكشف.' },
+        { concern: 'مثل خميس.', solution: 'أبسط! لا تكثّف. مصدر واحد.' },
     ],
     consumerEducation: [
         { myth: 'فحص بصري.', truth: 'CaCO₃ تآكل داخلي = سُمك.' },

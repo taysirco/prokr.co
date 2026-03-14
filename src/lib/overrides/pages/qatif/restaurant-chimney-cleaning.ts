@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Alkaline', use: 'كربنة واحية لزجة' },
         { name: 'مقياس ميكرون', use: 'NFPA' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل الخبر.', solution: 'واحي+أسماك. مختلف.' },
-        { fear: 'ربع سنوي.', solution: 'مطاعم أسماك = شهرين.' },
+    commonConcerns: [
+        { concern: 'مثل الخبر.', solution: 'واحي+أسماك. مختلف.' },
+        { concern: 'ربع سنوي.', solution: 'مطاعم أسماك = شهرين.' },
     ],
     consumerEducation: [
         { myth: 'كيميائي يكفي.', truth: 'Biofilm يحمي.' },

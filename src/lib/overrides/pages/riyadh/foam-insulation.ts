@@ -57,8 +57,8 @@ export const override: PageOverride = {
         { name: 'UV Protective Coating', use: 'يحيِّد Polymer Chain Scission — يمنع تفتت الفوم تحت أشعة الرياض المباشرة' },
         { name: 'Ceramic Overcoat', use: 'يعكس 80% حرارة شمسية + يحمي UV Coat + حماية إضافية' },
     ],
-    hiddenObjections: [
-        { fear: 'Closed-Cell أغلى 30% من Open-Cell.', solution: 'Open-Cell يفشل بأول مطرة = خسارة كاملة. Closed-Cell: 15+ سنة. التكلفة الفعلية: Closed-Cell أرخص 3× على مدى 15 سنة.' },
+    commonConcerns: [
+        { concern: 'Closed-Cell أغلى 30% من Open-Cell.', solution: 'Open-Cell يفشل بأول مطرة = خسارة كاملة. Closed-Cell: 15+ سنة. التكلفة الفعلية: Closed-Cell أرخص 3× على مدى 15 سنة.' },
     ],
     consumerEducation: [
         { myth: 'أي فوم يعزل بنفس الكفاءة.', truth: 'Open-Cell R-3.5. Closed-Cell R-6.5. ضعف الكفاءة. Open-Cell يمتص ماء = يفقد R-Value. الاسم فوم — الأداء مختلف جذرياً.' },

@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Nitrogen Pressure', use: 'تآكل — ثقوب' },
         { name: 'PPR Pipes', use: 'بديل — لا تتآكل' },
     ],
-    hiddenObjections: [
-        { fear: 'بصري يكفي.', solution: '70-85% تكثّف = FLIR.' },
-        { fear: 'مثل بريدة.', solution: 'تكثّف يُخفي vs بقع واضحة.' },
+    commonConcerns: [
+        { concern: 'بصري يكفي.', solution: '70-85% تكثّف = FLIR.' },
+        { concern: 'مثل بريدة.', solution: 'تكثّف يُخفي vs بقع واضحة.' },
     ],
     consumerEducation: [
         { myth: 'المجلفن يكفي.', truth: 'تآكل مزدوج = PPR.' },

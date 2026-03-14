@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'شاحنة مغلقة', use: 'مطر+ضباب — حماية' },
         { name: 'All-Terrain', use: 'Laterite — انزلاق' },
     ],
-    hiddenObjections: [
-        { fear: 'مكشوفة أرخص.', solution: 'مطر = تبلل. مغلقة.' },
-        { fear: 'مثل بريدة.', solution: 'جبلي ≠ مستوي.' },
+    commonConcerns: [
+        { concern: 'مكشوفة أرخص.', solution: 'مطر = تبلل. مغلقة.' },
+        { concern: 'مثل بريدة.', solution: 'جبلي ≠ مستوي.' },
     ],
     consumerEducation: [
         { myth: 'أي دينا.', truth: 'Mountain-Spec+مغلقة.' },

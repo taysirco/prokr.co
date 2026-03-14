@@ -56,9 +56,9 @@ export const override: PageOverride = {
         { name: 'Anti-Static Spray', use: 'يُفرّغ شحنة — الخطوة 2' },
         { name: 'سيليكون ختم', use: 'شقوق ΔT — الخطوة 3' },
     ],
-    hiddenObjections: [
-        { fear: 'لا عفن = سهل.', solution: 'SiO₂ PM10 + كهرباء ساكنة + ΔT شقوق = 3 تحديات.' },
-        { fear: 'ممسحة.', solution: 'تنقل SiO₂ بكهرباء ساكنة. HEPA + Anti-Static = الحل.' },
+    commonConcerns: [
+        { concern: 'لا عفن = سهل.', solution: 'SiO₂ PM10 + كهرباء ساكنة + ΔT شقوق = 3 تحديات.' },
+        { concern: 'ممسحة.', solution: 'تنقل SiO₂ بكهرباء ساكنة. HEPA + Anti-Static = الحل.' },
     ],
     consumerEducation: [
         { myth: 'مثل الرياض.', truth: 'ΔT 54°م > 35°م. عواصف أكثف. -2°م شتاء.' },

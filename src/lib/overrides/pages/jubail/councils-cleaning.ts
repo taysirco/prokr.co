@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Anti-Fungal', use: '98% عفن حشوة' },
         { name: 'Turbo Dryer', use: '98% تجفيف إلزامي' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل الخبر.', solution: 'VOC بلمرة مُركّبة + 98% > 95% + سخام. أقسى.' },
-        { fear: 'شامبو.', solution: 'لا يُكسر VOC+بخور Bonds. Enzymatic.' },
+    commonConcerns: [
+        { concern: 'مثل الخبر.', solution: 'VOC بلمرة مُركّبة + 98% > 95% + سخام. أقسى.' },
+        { concern: 'شامبو.', solution: 'لا يُكسر VOC+بخور Bonds. Enzymatic.' },
     ],
     consumerEducation: [
         { myth: 'بخار لعفن فقط.', truth: 'بخار = عث + تعقيم + يُحرر NaCl. ثلاثي.' },

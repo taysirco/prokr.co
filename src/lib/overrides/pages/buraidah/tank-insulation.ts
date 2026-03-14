@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'فاحص سماكة', use: 'فحص تقشّر — سنوي' },
         { name: 'إحكام غطاء', use: 'Nafud — يمنع دخول' },
     ],
-    hiddenObjections: [
-        { fear: 'إسمنتي أرخص.', solution: '600ppm يتقشّر سنة. Epoxy يدوم 10+.' },
-        { fear: 'مثل خميس.', solution: 'لا طحالب = أرخص 25%.' },
+    commonConcerns: [
+        { concern: 'إسمنتي أرخص.', solution: '600ppm يتقشّر سنة. Epoxy يدوم 10+.' },
+        { concern: 'مثل خميس.', solution: 'لا طحالب = أرخص 25%.' },
     ],
     consumerEducation: [
         { myth: 'إسمنتي يكفي.', truth: '600ppm = تقشّر سنة. Epoxy.' },

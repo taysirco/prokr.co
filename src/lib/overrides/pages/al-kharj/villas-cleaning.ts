@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Descaler+RO', use: 'CaCO₃ — حمامات' },
         { name: 'Pre-Rinse ضغط', use: 'فناء — SiO₂' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل الرياض.', solution: 'NH₃+CaCO₃+أفنية. الرياض: لا.' },
-        { fear: 'مثل خميس.', solution: 'لا عفن+30 دقيقة = أرخص 40%.' },
+    commonConcerns: [
+        { concern: 'مثل الرياض.', solution: 'NH₃+CaCO₃+أفنية. الرياض: لا.' },
+        { concern: 'مثل خميس.', solution: 'لا عفن+30 دقيقة = أرخص 40%.' },
     ],
     consumerEducation: [
         { myth: 'معطر يكفي.', truth: 'NH₃ بلمرة. AC يمتص.' },

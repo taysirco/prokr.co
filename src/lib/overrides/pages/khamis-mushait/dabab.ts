@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'فرامل صيانة يومية', use: 'منحدرات 6-12% جبلية' },
         { name: 'Silica Gel', use: 'حماية من 60-85% رطوبة' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل عنيزة.', solution: 'أمطار+ضباب+منحدرات = أصعب. عنيزة: مسطح+جاف.' },
-        { fear: 'غالي.', solution: 'بدون Waterproof = خسارة بضائع = أغلى 100×.' },
+    commonConcerns: [
+        { concern: 'مثل عنيزة.', solution: 'أمطار+ضباب+منحدرات = أصعب. عنيزة: مسطح+جاف.' },
+        { concern: 'غالي.', solution: 'بدون Waterproof = خسارة بضائع = أغلى 100×.' },
     ],
     consumerEducation: [
         { myth: 'طرق خميس سهلة.', truth: 'منحدرات 6-12% + ضباب + أمطار = صعبة.' },

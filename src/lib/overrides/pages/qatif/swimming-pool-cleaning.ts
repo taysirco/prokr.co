@@ -52,9 +52,9 @@ export const override: PageOverride = {
         { name: 'Algaecide', use: 'عيون — طحالب واحية' },
         { name: 'Anti-Biofilm', use: '80-95% — أنابيب' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل الخبر.', solution: 'عيون تُغذي. فريد.' },
-        { fear: 'كلور يكفي.', solution: 'NaCl Demand + عيون. 2×.' },
+    commonConcerns: [
+        { concern: 'مثل الخبر.', solution: 'عيون تُغذي. فريد.' },
+        { concern: 'كلور يكفي.', solution: 'NaCl Demand + عيون. 2×.' },
     ],
     consumerEducation: [
         { myth: 'ساحلي فقط.', truth: 'عيون = تغذية طحالب واحية.' },

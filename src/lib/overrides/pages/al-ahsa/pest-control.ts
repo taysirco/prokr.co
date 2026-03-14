@@ -47,7 +47,7 @@ export const override: PageOverride = {
     saudiRegulations: [REGULATIONS.GHAD_SYSTEM],
     verificationBadges: [{ badge: '✔️ مرخصة', authority: 'بلدي + وقاء', icon: 'shield-check' }],
     equipment: [{ name: 'فيرومون RPW', use: 'نخيل' }, { name: 'BTI', use: 'عيون' }, { name: 'IGR', use: '30-70%' }, { name: 'مصائد ضوئية', use: 'زراعة' }],
-    hiddenObjections: [{ fear: 'رش شهري.', solution: '16-يومي + فيرومون + BTI.' }],
+    commonConcerns: [{ concern: 'رش شهري.', solution: '16-يومي + فيرومون + BTI.' }],
     consumerEducation: [{ myth: 'مثل القطيف.', truth: 'واحة زراعية — لا ساحلي. CaSO₄ — لا NaCl.' },
         { myth: 'الحشرات تدل على قلة نظافة.', truth: 'الحشرات تبحث عن ماء ودفء وليس قذارة. أنظف بيت يجذب حشرات إذا فيه رطوبة أو شقوق.' },
     ],

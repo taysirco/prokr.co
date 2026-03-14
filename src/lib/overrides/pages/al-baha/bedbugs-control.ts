@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Dehumidifier', use: '6-10h بعد بخار — إلزامي' },
         { name: 'HEPA فحص', use: 'بيض — شقوق' },
     ],
-    hiddenObjections: [
-        { fear: 'مبيد يكفي.', solution: 'بخار+Dehumidifier.' },
-        { fear: 'مثل بريدة.', solution: '60-85%+6-10h ≠ 10-20%.' },
+    commonConcerns: [
+        { concern: 'مبيد يكفي.', solution: 'بخار+Dehumidifier.' },
+        { concern: 'مثل بريدة.', solution: '60-85%+6-10h ≠ 10-20%.' },
     ],
     consumerEducation: [
         { myth: 'مرة واحدة.', truth: '2-3 جلسات. بيض.' },

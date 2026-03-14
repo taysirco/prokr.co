@@ -56,9 +56,9 @@ export const override: PageOverride = {
         { name: 'أحزمة Ratchet', use: 'ربط ثابت لا ينزلق — أفضل من الحبال' },
         { name: 'Transit Bolts', use: 'تثبيت أجزاء متحركة في المعدات' },
     ],
-    hiddenObjections: [
-        { fear: 'أي دينا نفسها.', solution: 'بدون Tarpaulin + VCI = حمولة مكشوفة لـ NaCl. أرخص بـ 30-50 ريال — أغلى بآلاف في التلف.' },
-        { fear: 'المسافة قصيرة.', solution: 'NaCl في دقائق. 85-95% تكثّف في دقائق. قصيرة ≠ آمنة. الحماية = في كل مسافة.' },
+    commonConcerns: [
+        { concern: 'أي دينا نفسها.', solution: 'بدون Tarpaulin + VCI = حمولة مكشوفة لـ NaCl. أرخص بـ 30-50 ريال — أغلى بآلاف في التلف.' },
+        { concern: 'المسافة قصيرة.', solution: 'NaCl في دقائق. 85-95% تكثّف في دقائق. قصيرة ≠ آمنة. الحماية = في كل مسافة.' },
     ],
     consumerEducation: [
         { myth: 'دينا الخبر مثل الرياض.', truth: 'NaCl ≠ SiO₂. 85-95% ≠ 15%. Sabkha ≠ رمل. صناعي + بترول. مختلفة جذرياً.' },

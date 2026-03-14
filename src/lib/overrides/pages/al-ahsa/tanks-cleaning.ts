@@ -56,9 +56,9 @@ export const override: PageOverride = {
         { name: 'غطاء محكم + Mesh', use: 'يمنع بعوض + لقاح + حشرات واحة' },
         { name: 'فحص ماء', use: 'pH + Chlorine + E. coli = سلامة الماء' },
     ],
-    hiddenObjections: [
-        { fear: 'الماء نظيف.', solution: 'CaSO₄ Scale لا يُرى (في القاع). Biofilm لا يُرى (شفاف). بعوض يرقات لا تُرى. \"نظيف\" = ظاهري.' },
-        { fear: 'مرة بالسنة.', solution: 'CaSO₄ 300-500 ppm يومي = ترسب. لقاح يومي = Biofilm. سنوي = 9 أشهر تراكم. نصف سنوي = الحد.' },
+    commonConcerns: [
+        { concern: 'الماء نظيف.', solution: 'CaSO₄ Scale لا يُرى (في القاع). Biofilm لا يُرى (شفاف). بعوض يرقات لا تُرى. \"نظيف\" = ظاهري.' },
+        { concern: 'مرة بالسنة.', solution: 'CaSO₄ 300-500 ppm يومي = ترسب. لقاح يومي = Biofilm. سنوي = 9 أشهر تراكم. نصف سنوي = الحد.' },
     ],
     consumerEducation: [
         { myth: 'CaSO₄ آمن — ما يصدّئ.', truth: 'لا يُصدّئ = صحيح. لكن يترسب Scale = بكتيريا + مضخة + سعة. مشكلة مختلفة — ليست أقل.' },

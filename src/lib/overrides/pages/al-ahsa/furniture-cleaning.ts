@@ -56,9 +56,9 @@ export const override: PageOverride = {
         { name: 'Citric Acid 2%', use: 'يُذيب CaSO₄ من أسطح الأثاث — آمن على الخشب المطلي' },
         { name: 'Anti-Fungal Wood Treatment', use: 'يمنع عفن في أثاث أحياء العيون — فعّال 6 أشهر' },
     ],
-    hiddenObjections: [
-        { fear: 'الأثاث ما يتأثر.', solution: 'PVAc يلين عند 50°م. خنافس تأكل بصمت. CaSO₄ طبقة بطيئة. عفن يُحلل ببطء. 4 تهديدات بطيئة — لكن حتمية.' },
-        { fear: 'تنظيف يخدش.', solution: 'Citric 2% + قماش Microfiber = آمن تماماً. الخدش يحدث من CaSO₄ = كوارتز دقيق في الماء العادي.' },
+    commonConcerns: [
+        { concern: 'الأثاث ما يتأثر.', solution: 'PVAc يلين عند 50°م. خنافس تأكل بصمت. CaSO₄ طبقة بطيئة. عفن يُحلل ببطء. 4 تهديدات بطيئة — لكن حتمية.' },
+        { concern: 'تنظيف يخدش.', solution: 'Citric 2% + قماش Microfiber = آمن تماماً. الخدش يحدث من CaSO₄ = كوارتز دقيق في الماء العادي.' },
     ],
     consumerEducation: [
         { myth: 'أثاث المحل ضمان.', truth: 'الضمان لا يُغطي: PVAc لين (بيئة) + خنافس (حشرات) + CaSO₄ (ماء). 3 أسباب بيئية ≠ عيب تصنيع.' },

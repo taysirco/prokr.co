@@ -55,9 +55,9 @@ export const override: PageOverride = {
         { name: 'Cool Roof Coating', use: 'طلاء عاكس — ΔT' },
         { name: 'كاميرا حرارية', use: 'فحص تسرب خزان سطح' },
     ],
-    hiddenObjections: [
-        { fear: 'Closed أفضل.', solution: 'لا مطر = Open 50% أرخص. SBC.' },
-        { fear: 'عزل مائي لازم.', solution: 'لا مطر = لا مائي. فحص خزان فقط.' },
+    commonConcerns: [
+        { concern: 'Closed أفضل.', solution: 'لا مطر = Open 50% أرخص. SBC.' },
+        { concern: 'عزل مائي لازم.', solution: 'لا مطر = لا مائي. فحص خزان فقط.' },
     ],
     consumerEducation: [
         { myth: 'Closed ضروري.', truth: 'لا مطر = Open R-3.7 يكفي.' },

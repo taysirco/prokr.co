@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Anti-Fungal مزدوج', use: 'واحي+ساحلي — أعلى+أسفل' },
         { name: 'Turbo + Dehumidifier', use: '80-95% — 4-8 ساعات' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل الخبر.', solution: 'واحة = تربة طينية + نخيل + عفن واحي. مختلف.' },
-        { fear: 'شامبو.', solution: 'NaCl+طين = ينزلق. RO+HEPA.' },
+    commonConcerns: [
+        { concern: 'مثل الخبر.', solution: 'واحة = تربة طينية + نخيل + عفن واحي. مختلف.' },
+        { concern: 'شامبو.', solution: 'NaCl+طين = ينزلق. RO+HEPA.' },
     ],
     consumerEducation: [
         { myth: 'ساحلي فقط.', truth: 'واحي = طين+نخيل+عيون. ثنائي.' },

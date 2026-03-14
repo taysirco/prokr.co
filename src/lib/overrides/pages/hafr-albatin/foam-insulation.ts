@@ -57,9 +57,9 @@ export const override: PageOverride = {
         { name: 'UV Protective Coating', use: 'طبقة واقية تحيِّد الأشعة فوق البنفسجية — تمنع تكسّر الروابط الجزيئية في الفوم المكشوف' },
         { name: 'Ceramic Overcoat', use: 'يعكس 80-85% حرارة شمسية ويحمي الفوم من الاحتكاك الرملي — طبقة حماية ثلاثية' },
     ],
-    hiddenObjections: [
-        { fear: 'Closed-Cell 35+ أغلى 30-40% من Open-Cell.', solution: 'Open-Cell يفشل خلال 2-3 سنوات في حفر الباطن = خسارة كاملة. Closed-Cell: 10-12 سنة. التكلفة الفعلية: Closed-Cell أرخص 3-4× على مدى 12 سنة.' },
-        { fear: 'UV Coat (12-20 ريال/م²) إضافي.', solution: 'بدون UV Coat: الفوم يتفتت خلال 12-18 شهراً = إعادة رش كاملة. UV Coat يُمدّد العمر 8-10 سنوات. كل ريال UV = 50 ريال وقاية.' },
+    commonConcerns: [
+        { concern: 'Closed-Cell 35+ أغلى 30-40% من Open-Cell.', solution: 'Open-Cell يفشل خلال 2-3 سنوات في حفر الباطن = خسارة كاملة. Closed-Cell: 10-12 سنة. التكلفة الفعلية: Closed-Cell أرخص 3-4× على مدى 12 سنة.' },
+        { concern: 'UV Coat (12-20 ريال/م²) إضافي.', solution: 'بدون UV Coat: الفوم يتفتت خلال 12-18 شهراً = إعادة رش كاملة. UV Coat يُمدّد العمر 8-10 سنوات. كل ريال UV = 50 ريال وقاية.' },
     ],
     consumerEducation: [
         { myth: 'أي فوم يعزل بنفس الكفاءة.', truth: 'Open-Cell R-value: 3.5/إنش. Closed-Cell: 6.5/إنش (ضعف تقريباً). في حفر الباطن: Open-Cell يفقد R-value بالكامل خلال 2-3 سنوات (رمل). Closed-Cell يحافظ عليه 10+ سنوات.' },

@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Algaecide', use: '48°م — أسبوعي' },
         { name: 'Heavy-Duty Filter', use: 'Nafud SiO₂' },
     ],
-    hiddenObjections: [
-        { fear: 'ربع سنوي كافي.', solution: 'Scale+طحالب = أسبوعي+ربع.' },
-        { fear: 'مثل الباحة.', solution: 'Scale ≠ Biofilm.' },
+    commonConcerns: [
+        { concern: 'ربع سنوي كافي.', solution: 'Scale+طحالب = أسبوعي+ربع.' },
+        { concern: 'مثل الباحة.', solution: 'Scale ≠ Biofilm.' },
     ],
     consumerEducation: [
         { myth: 'كلور ثابت.', truth: '48°م = يومي.' },

@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'BTI Granules', use: 'بعوض — حديقة بيولوجي' },
         { name: 'Anti-Fungal+Dehumidifier', use: '70-85% — داخل' },
     ],
-    hiddenObjections: [
-        { fear: 'تنظيف مُوحّد.', solution: '4 مناطق مختلفة. Zone-Based.' },
-        { fear: 'مثل بريدة.', solution: 'صدأ+بعوض+عفن = مختلف.' },
+    commonConcerns: [
+        { concern: 'تنظيف مُوحّد.', solution: '4 مناطق مختلفة. Zone-Based.' },
+        { concern: 'مثل بريدة.', solution: 'صدأ+بعوض+عفن = مختلف.' },
     ],
     consumerEducation: [
         { myth: 'تنظيف شامل.', truth: 'Zone-Based = 4 مناطق.' },

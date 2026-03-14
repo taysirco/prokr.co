@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'RO Water+Microfiber', use: 'لا CaCO₃+لا خدش SiO₂' },
         { name: 'Oil Polish', use: 'يحمي خشب من ΔT تشقق' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل الرياض.', solution: 'NH₃ مزارع+CaCO₃ آبار. الرياض: لا.' },
-        { fear: 'مثل خميس.', solution: 'لا عفن+20 دقيقة = أرخص 30%.' },
+    commonConcerns: [
+        { concern: 'مثل الرياض.', solution: 'NH₃ مزارع+CaCO₃ آبار. الرياض: لا.' },
+        { concern: 'مثل خميس.', solution: 'لا عفن+20 دقيقة = أرخص 30%.' },
     ],
     consumerEducation: [
         { myth: 'شامبو يكفي.', truth: 'بلمرة حيوانية = Enzymatic.' },

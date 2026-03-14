@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'قاطع جذور ميكانيكي', use: 'يقطع جذور تخترق المفاصل' },
         { name: 'كاميرا CCTV', use: 'تشخيص نوع الانسداد بدقة' },
     ],
-    hiddenObjections: [
-        { fear: 'سوستة تكفي.', solution: 'لا تزيل جذور ولا طين. ضغط+قاطع.' },
-        { fear: 'مثل عنيزة.', solution: '4 أنواع مقابل 1. أعقد.' },
+    commonConcerns: [
+        { concern: 'سوستة تكفي.', solution: 'لا تزيل جذور ولا طين. ضغط+قاطع.' },
+        { concern: 'مثل عنيزة.', solution: '4 أنواع مقابل 1. أعقد.' },
     ],
     consumerEducation: [
         { myth: 'انسداد دهون فقط.', truth: '4 أنواع: طين+جذور+طحالب+تربة. تشخيص أولاً.' },

@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Activated Carbon Filter', use: 'يمتص NH₃ من الكبينة' },
         { name: 'RO Water', use: 'شطف أخير بدون CaCO₃' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل الرياض.', solution: 'غبار مزارع+NH₃. الرياض: غبار عادي فقط.' },
-        { fear: 'RO مبالغة.', solution: 'CaCO₃ 450ppm = بقع على سيارة سوداء. RO يمنع.' },
+    commonConcerns: [
+        { concern: 'مثل الرياض.', solution: 'غبار مزارع+NH₃. الرياض: غبار عادي فقط.' },
+        { concern: 'RO مبالغة.', solution: 'CaCO₃ 450ppm = بقع على سيارة سوداء. RO يمنع.' },
     ],
     consumerEducation: [
         { myth: 'ماء صنبور يكفي.', truth: 'CaCO₃ 450ppm = بقع. RO.' },

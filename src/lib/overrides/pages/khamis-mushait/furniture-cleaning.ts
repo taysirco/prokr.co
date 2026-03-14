@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Anti-Mite', use: 'يقتل عث — حشوات رطبة' },
         { name: 'Dehumidifier صناعي', use: 'تجفيف + منع انتفاخ مستمر' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل الباحة.', solution: 'متشابه — خميس أقل غابات. نفس البروتوكول.' },
-        { fear: 'Dehumidifier مبالغة.', solution: 'بدونه = انتفاخ+عفن = تكلفة 10×.' },
+    commonConcerns: [
+        { concern: 'مثل الباحة.', solution: 'متشابه — خميس أقل غابات. نفس البروتوكول.' },
+        { concern: 'Dehumidifier مبالغة.', solution: 'بدونه = انتفاخ+عفن = تكلفة 10×.' },
     ],
     consumerEducation: [
         { myth: 'أثاث خميس مثل عنيزة.', truth: 'عكس! انتفاخ+عفن+عث vs تشقق+جفاف.' },

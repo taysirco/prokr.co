@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'IGR + Gel Bait', use: 'صراصير — عفن' },
         { name: 'Anti-Mite', use: 'Dermatophagoides — مراتب' },
     ],
-    hiddenObjections: [
-        { fear: 'رش عام.', solution: 'IPM Forest+IGR+Anti-Mite = ثلاثي.' },
-        { fear: 'مثل بريدة.', solution: 'غابة+عث = مختلف.' },
+    commonConcerns: [
+        { concern: 'رش عام.', solution: 'IPM Forest+IGR+Anti-Mite = ثلاثي.' },
+        { concern: 'مثل بريدة.', solution: 'غابة+عث = مختلف.' },
     ],
     consumerEducation: [
         { myth: 'ربع سنوي.', truth: 'شهري! غابة مستمرة.' },

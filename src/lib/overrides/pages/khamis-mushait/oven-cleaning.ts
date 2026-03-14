@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Alkaline Degreaser', use: 'يُذيب الكربنة الرطبة بعد كشفها' },
         { name: 'فرشاة ناعمة', use: 'تنظيف بدون خدش' },
     ],
-    hiddenObjections: [
-        { fear: 'Alkaline يكفي.', solution: 'Biofilm يمنع. Anti-Biofilm أولاً = الفرق.' },
-        { fear: 'مثل الباحة.', solution: 'متشابه — نفس الفيزياء.' },
+    commonConcerns: [
+        { concern: 'Alkaline يكفي.', solution: 'Biofilm يمنع. Anti-Biofilm أولاً = الفرق.' },
+        { concern: 'مثل الباحة.', solution: 'متشابه — نفس الفيزياء.' },
     ],
     consumerEducation: [
         { myth: 'أي منظّف يكفي.', truth: 'Biofilm يحمي الكربنة. Anti-Biofilm فقط يكشفها.' },

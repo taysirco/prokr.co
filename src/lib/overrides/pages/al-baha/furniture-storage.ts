@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'IPM Forest', use: 'خنافس+نمل — غابة' },
         { name: 'Anti-Humidity Sealing', use: 'PVAc — خشب' },
     ],
-    hiddenObjections: [
-        { fear: 'مستودع عادي.', solution: '60-85% = عفن. Dehumidifier.' },
-        { fear: 'مثل بريدة.', solution: 'عفن+PVAc+غابة ≠ ΔT.' },
+    commonConcerns: [
+        { concern: 'مستودع عادي.', solution: '60-85% = عفن. Dehumidifier.' },
+        { concern: 'مثل بريدة.', solution: 'عفن+PVAc+غابة ≠ ΔT.' },
     ],
     consumerEducation: [
         { myth: 'فحص سنوي.', truth: 'Anti-Fungal شهري. غابة.' },

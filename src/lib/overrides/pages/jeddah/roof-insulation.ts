@@ -56,8 +56,8 @@ export const override: PageOverride = {
         { name: 'Closed-Cell SPF 35+ kg', use: 'عزل حراري — لا يمتص رطوبة 80%' },
         { name: 'Anti-Fungal Coating', use: 'يحيِّد Stachybotrys على السطح' },
     ],
-        hiddenObjections: [
-        { fear: 'العزل مكلف — مش متأكد يستاهل.', solution: 'عزل SBC 601 يوفر 30-40% كهرباء سنوياً. يسترد تكلفته خلال 2-3 سنوات.' },
+        commonConcerns: [
+        { concern: 'العزل مكلف — مش متأكد يستاهل.', solution: 'عزل SBC 601 يوفر 30-40% كهرباء سنوياً. يسترد تكلفته خلال 2-3 سنوات.' },
     ],
 
     consumerEducation: [

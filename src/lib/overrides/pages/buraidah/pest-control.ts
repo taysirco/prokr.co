@@ -56,9 +56,9 @@ export const override: PageOverride = {
         { name: 'Gel Bait', use: 'صراصير — دقيق مطبخ' },
         { name: 'Residual Spray', use: 'حماية طويلة — فتحات' },
     ],
-    hiddenObjections: [
-        { fear: 'رش عام يكفي.', solution: 'ΔT تكاثر 2×. IPM+Gel+إحكام.' },
-        { fear: 'مثل خميس.', solution: 'لا عفن+لا عث = أبسط 20%.' },
+    commonConcerns: [
+        { concern: 'رش عام يكفي.', solution: 'ΔT تكاثر 2×. IPM+Gel+إحكام.' },
+        { concern: 'مثل خميس.', solution: 'لا عفن+لا عث = أبسط 20%.' },
     ],
     consumerEducation: [
         { myth: 'رش مرة.', truth: 'ΔT+نخيل = دوري. ربع سنوي.' },

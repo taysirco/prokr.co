@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'صندوق معزول', use: 'ΔT 45°م — تمور' },
         { name: 'تغطية محكمة', use: 'Nafud SiO₂ — غبار' },
     ],
-    hiddenObjections: [
-        { fear: 'دينا عادية.', solution: 'تمور = نظيف+معزول. مزرعة = Nafud.' },
-        { fear: 'غالي.', solution: 'خسارة تمور فاسدة أغلى 10×.' },
+    commonConcerns: [
+        { concern: 'دينا عادية.', solution: 'تمور = نظيف+معزول. مزرعة = Nafud.' },
+        { concern: 'غالي.', solution: 'خسارة تمور فاسدة أغلى 10×.' },
     ],
     consumerEducation: [
         { myth: 'أي دينا.', truth: 'طرق Nafud = عجلات مناسبة.' },

@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Anti-Fungal', use: '70-85% — عفن سجاد' },
         { name: 'RO Water', use: 'NaCl — مسح أسطح' },
     ],
-    hiddenObjections: [
-        { fear: 'مكنسة تكفي.', solution: 'NaCl+SOx = HEPA AC.' },
-        { fear: 'مثل بريدة.', solution: 'ملح+حمض+عفن vs كلس+Nafud.' },
+    commonConcerns: [
+        { concern: 'مكنسة تكفي.', solution: 'NaCl+SOx = HEPA AC.' },
+        { concern: 'مثل بريدة.', solution: 'ملح+حمض+عفن vs كلس+Nafud.' },
     ],
     consumerEducation: [
         { myth: 'أسبوعي.', truth: 'NaCl+SOx يومي.' },

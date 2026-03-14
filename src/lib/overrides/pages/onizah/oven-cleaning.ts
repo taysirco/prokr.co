@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Alkaline Degreaser', use: 'يُذيب الكربنة الجافة مباشرة (لا Biofilm!)' },
         { name: 'فرشاة ناعمة', use: 'تنظيف بدون خدش — SiO₂ في السلك يخدش' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل خميس.', solution: 'أبسط — لا Biofilm = خطوة أقل.' },
-        { fear: 'Alkaline يكفي.', solution: 'كرملة تمور مختلفة — Enzymatic أولاً.' },
+    commonConcerns: [
+        { concern: 'مثل خميس.', solution: 'أبسط — لا Biofilm = خطوة أقل.' },
+        { concern: 'Alkaline يكفي.', solution: 'كرملة تمور مختلفة — Enzymatic أولاً.' },
     ],
     consumerEducation: [
         { myth: 'سلك جلي أسرع.', truth: 'يخدش سطح الفرن. Alkaline+Enzymatic أبطأ لكن بدون خدش.' },

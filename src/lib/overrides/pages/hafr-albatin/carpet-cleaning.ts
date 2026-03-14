@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Anti-Static Treatment', use: 'يُفرّغ شحنة — SiO₂ لا يلتصق' },
         { name: 'Hot Water Extraction', use: 'يسحب SiO₂ من العمق — حرارة مُختبرة' },
     ],
-    hiddenObjections: [
-        { fear: 'لا عفن = سهل.', solution: 'SiO₂ Cutting + كهرباء ساكنة + ΔT. 3 تحديات قارية ≠ سهل.' },
-        { fear: 'شفط يكفي.', solution: 'شفط عادي = ينقل. HEPA = يحجز. فرق.' },
+    commonConcerns: [
+        { concern: 'لا عفن = سهل.', solution: 'SiO₂ Cutting + كهرباء ساكنة + ΔT. 3 تحديات قارية ≠ سهل.' },
+        { concern: 'شفط يكفي.', solution: 'شفط عادي = ينقل. HEPA = يحجز. فرق.' },
     ],
     consumerEducation: [
         { myth: 'مثل الرياض.', truth: 'ΔT 54°م > 35°م. -2°م. عواصف أكثف. مختلف.' },

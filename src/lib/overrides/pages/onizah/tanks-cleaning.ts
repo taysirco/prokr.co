@@ -56,9 +56,9 @@ export const override: PageOverride = {
         { name: 'تنظيف ميكانيكي', use: 'إزالة SiO₂ طمي من القاع' },
         { name: 'كلور 1.3× Demand', use: 'تعقيم — لا Biofilm = فعّال 100%' },
     ],
-    hiddenObjections: [
-        { fear: 'Anti-Biofilm مطلوب.', solution: '15-25% = صفر Biofilm. وفّر 100%.' },
-        { fear: 'مثل بريدة.', solution: 'CaCO₃ 550 vs 600 = Scale أقل 8%. نفس البروتوكول.' },
+    commonConcerns: [
+        { concern: 'Anti-Biofilm مطلوب.', solution: '15-25% = صفر Biofilm. وفّر 100%.' },
+        { concern: 'مثل بريدة.', solution: 'CaCO₃ 550 vs 600 = Scale أقل 8%. نفس البروتوكول.' },
     ],
     consumerEducation: [
         { myth: 'كلور عادي يكفي.', truth: 'CaCO₃ يستهلك جزء من الكلور = 1.3× Demand. ليس عادي.' },

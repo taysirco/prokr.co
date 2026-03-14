@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Anti-Fungal مقصورة', use: 'يقتل عفن Stachybotrys — 60-85%' },
         { name: 'غسل ضغط عالي 2500 PSI', use: 'إزالة طين عسيري من Undercarriage' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل الباحة.', solution: 'متشابه — خميس أقل غابات. ضباب أكثر. تكلفة متقاربة.' },
-        { fear: 'غسيل خارجي يكفي.', solution: 'عفن المقصورة داخلي. Anti-Fungal إلزامي.' },
+    commonConcerns: [
+        { concern: 'مثل الباحة.', solution: 'متشابه — خميس أقل غابات. ضباب أكثر. تكلفة متقاربة.' },
+        { concern: 'غسيل خارجي يكفي.', solution: 'عفن المقصورة داخلي. Anti-Fungal إلزامي.' },
     ],
     consumerEducation: [
         { myth: 'المقصورة ما تحتاج تنظيف.', truth: '60-85% = عفن 48 ساعة تحت المقاعد. رائحة+حساسية.' },

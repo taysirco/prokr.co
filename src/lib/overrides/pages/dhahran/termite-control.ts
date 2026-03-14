@@ -57,9 +57,9 @@ export const override: PageOverride = {
         { name: 'Barrier مُعزز (Imidacloprid)', use: 'يحمي المبنى — يقاوم NaCl' },
         { name: 'محطات مراقبة', use: 'ربع سنوي — يكشف نشاط' },
     ],
-    hiddenObjections: [
-        { fear: 'ما عندي.', solution: 'Sabkha + 75-85% = متى — ليس إن. الوقاية = أرخص 10×.' },
-        { fear: 'Bait بطيء.', solution: 'Cascading Kill = 2-4 أشهر. يقتل الملكة.' },
+    commonConcerns: [
+        { concern: 'ما عندي.', solution: 'Sabkha + 75-85% = متى — ليس إن. الوقاية = أرخص 10×.' },
+        { concern: 'Bait بطيء.', solution: 'Cascading Kill = 2-4 أشهر. يقتل الملكة.' },
     ],
     consumerEducation: [
         { myth: 'مثل الرياض.', truth: 'Sabkha ≠ صخرية. 75-85% ≠ 15%. NaCl Barrier.' },

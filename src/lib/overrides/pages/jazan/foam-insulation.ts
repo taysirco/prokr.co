@@ -80,9 +80,9 @@ export const override: PageOverride = {
         { name: 'مقياس سُمك', use: 'قياس بعد الجفاف — التحقق من 5 سم فعلية' },
     ],
 
-    hiddenObjections: [
-        { fear: 'Closed-Cell + طلاء UV = تكلفة عالية', solution: 'Open-Cell يفشل في 6-12 شهر = إزالة (500/م²) + إعادة. Closed-Cell: مرة في 15-20 سنة. الحساب واضح: Closed-Cell أوفر 70% على 20 سنة بجازان' },
-        { fear: 'الفوم يحتاج صيانة دورية', solution: 'Closed-Cell + طلاء UV = صفر صيانة 15-20 سنة. الصيانة الوحيدة: فحص بصري سنوي للطبقة الخارجية (5 دقائق)' },
+    commonConcerns: [
+        { concern: 'Closed-Cell + طلاء UV = تكلفة عالية', solution: 'Open-Cell يفشل في 6-12 شهر = إزالة (500/م²) + إعادة. Closed-Cell: مرة في 15-20 سنة. الحساب واضح: Closed-Cell أوفر 70% على 20 سنة بجازان' },
+        { concern: 'الفوم يحتاج صيانة دورية', solution: 'Closed-Cell + طلاء UV = صفر صيانة 15-20 سنة. الصيانة الوحيدة: فحص بصري سنوي للطبقة الخارجية (5 دقائق)' },
     ],
 
     consumerEducation: [

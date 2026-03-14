@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Dehumidifier', use: 'تجفيف بعد البخار — إلزامي في 85-95%' },
         { name: 'Anti-Biofilm Treatment', use: 'يمنع إعادة تكوّن الغشاء — 3 أشهر' },
     ],
-    hiddenObjections: [
-        { fear: 'البخار يبلل.', solution: 'Dry Vapor = 5%. لكن في 85-95%: يحتاج تجفيف. Dehumidifier = الفرق.' },
-        { fear: 'ممسحة أسهل.', solution: 'ممسحة بماء الخبر = NaCl جديد. لا تقتل عث. لا تُكسر Biofilm. 3 فشلات.' },
+    commonConcerns: [
+        { concern: 'البخار يبلل.', solution: 'Dry Vapor = 5%. لكن في 85-95%: يحتاج تجفيف. Dehumidifier = الفرق.' },
+        { concern: 'ممسحة أسهل.', solution: 'ممسحة بماء الخبر = NaCl جديد. لا تقتل عث. لا تُكسر Biofilm. 3 فشلات.' },
     ],
     consumerEducation: [
         { myth: 'بخار = ماء.', truth: '130°م = ليس ماء. يقتل + يُذيب + يُكسر. لكن: يحتاج تجفيف في 85-95%.' },

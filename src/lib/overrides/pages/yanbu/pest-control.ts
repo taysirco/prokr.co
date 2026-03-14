@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'IGR', use: 'صراصير — مانع نمو' },
         { name: 'Gel Bait', use: 'صراصير ألمانية — طُعم' },
     ],
-    hiddenObjections: [
-        { fear: 'رش عام.', solution: 'BTI+IGR+Gel = متخصص.' },
-        { fear: 'مثل بريدة.', solution: 'بعوض+صراصير+عفن = مختلف.' },
+    commonConcerns: [
+        { concern: 'رش عام.', solution: 'BTI+IGR+Gel = متخصص.' },
+        { concern: 'مثل بريدة.', solution: 'بعوض+صراصير+عفن = مختلف.' },
     ],
     consumerEducation: [
         { myth: 'رش عام.', truth: 'BTI+IGR+Gel = ثلاثي متخصص.' },

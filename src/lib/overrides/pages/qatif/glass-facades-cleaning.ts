@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Anti-Biofilm', use: 'واحي — طحالب' },
         { name: 'Marine Sealant', use: 'NaCl — مُقاوم' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل الخبر.', solution: 'Biofilm واحي + طين. مختلف.' },
-        { fear: 'ماء يكفي.', solution: 'طين لزج = ينتشر. فرك+RO.' },
+    commonConcerns: [
+        { concern: 'مثل الخبر.', solution: 'Biofilm واحي + طين. مختلف.' },
+        { concern: 'ماء يكفي.', solution: 'طين لزج = ينتشر. فرك+RO.' },
     ],
     consumerEducation: [
         { myth: 'ساحلي فقط.', truth: 'واحي = Biofilm+طين.' },

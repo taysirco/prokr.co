@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'HEPA Pollen', use: 'حبوب لقاح 8M نخلة' },
         { name: 'RO Water+Microfiber', use: 'لا كلس+لا خدش Nafud' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل عنيزة.', solution: 'عنيزة أقل نخيل. بريدة: 8M+600ppm.' },
-        { fear: 'مثل خميس.', solution: 'لا عفن+20 دقيقة = أرخص 30%.' },
+    commonConcerns: [
+        { concern: 'مثل عنيزة.', solution: 'عنيزة أقل نخيل. بريدة: 8M+600ppm.' },
+        { concern: 'مثل خميس.', solution: 'لا عفن+20 دقيقة = أرخص 30%.' },
     ],
     consumerEducation: [
         { myth: 'Descaler شهري.', truth: '600ppm = أسبوعي. أسرع تكلّس.' },

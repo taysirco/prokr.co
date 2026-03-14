@@ -55,9 +55,9 @@ export const override: PageOverride = {
         { name: 'Barrier', use: 'رطوبة 80-95%' },
         { name: 'فحص UV', use: 'خشب تاريخي — بيوت' },
     ],
-    hiddenObjections: [
-        { fear: 'بيت قديم = مستحيل.', solution: 'Bait + Barrier حتى بيوت تاريخية. الحل موجود.' },
-        { fear: 'رش بعوض يكفي.', solution: 'آلية مختلفة.' },
+    commonConcerns: [
+        { concern: 'بيت قديم = مستحيل.', solution: 'Bait + Barrier حتى بيوت تاريخية. الحل موجود.' },
+        { concern: 'رش بعوض يكفي.', solution: 'آلية مختلفة.' },
     ],
     consumerEducation: [
         { myth: 'مثل حفر الباطن.', truth: '80-95% طين vs 10-15% رمل. أسرع 5×.' },

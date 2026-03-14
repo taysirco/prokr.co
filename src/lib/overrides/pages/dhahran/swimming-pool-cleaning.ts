@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Algaecide + CYA', use: 'طحالب + UV حماية' },
         { name: 'BTI Larvicide', use: 'بعوض' },
     ],
-    hiddenObjections: [
-        { fear: 'لا Scale = سهل.', solution: 'لا Scale = ميزة! لكن: Chloride + SiO₂ + طحالب = 3 أخرى.' },
-        { fear: 'فرشاة عادية.', solution: 'حديدية + SiO₂ = مُركّب. Nylon.' },
+    commonConcerns: [
+        { concern: 'لا Scale = سهل.', solution: 'لا Scale = ميزة! لكن: Chloride + SiO₂ + طحالب = 3 أخرى.' },
+        { concern: 'فرشاة عادية.', solution: 'حديدية + SiO₂ = مُركّب. Nylon.' },
     ],
     consumerEducation: [
         { myth: 'مثل الخبر.', truth: 'SiO₂ إضافي = خدش بلاط. مختلف.' },

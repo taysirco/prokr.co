@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'RO Fill', use: 'تعبئة بدون كلس جديد' },
         { name: 'فلتر رمل', use: 'SiO₂ — يمنع خدش بلاط' },
     ],
-    hiddenObjections: [
-        { fear: 'كلور يكفي.', solution: 'NH₃ = Chloramines. فحص نسبة.' },
-        { fear: 'مثل خميس.', solution: 'كلس مقابل طحالب. مختلف.' },
+    commonConcerns: [
+        { concern: 'كلور يكفي.', solution: 'NH₃ = Chloramines. فحص نسبة.' },
+        { concern: 'مثل خميس.', solution: 'كلس مقابل طحالب. مختلف.' },
     ],
     consumerEducation: [
         { myth: 'تنظيف عادي.', truth: 'CaCO₃ = Descaler. NH₃ = فحص. مختلف.' },

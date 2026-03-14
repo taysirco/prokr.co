@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'أشواك+طرد صوتي', use: 'منع عشّ — أعداد ضخمة' },
         { name: 'Descaler+حمض', use: 'فضلات+CaCO₃ طبقة مزدوجة' },
     ],
-    hiddenObjections: [
-        { fear: 'شبك عادي يكفي.', solution: 'Nafud يآكل. 316 يدوم.' },
-        { fear: 'طرد يكفي.', solution: '8M نخلة = طعام. شبك+طرد.' },
+    commonConcerns: [
+        { concern: 'شبك عادي يكفي.', solution: 'Nafud يآكل. 316 يدوم.' },
+        { concern: 'طرد يكفي.', solution: '8M نخلة = طعام. شبك+طرد.' },
     ],
     consumerEducation: [
         { myth: 'حمام عادي.', truth: 'نخيل 8M = أعداد 5-10×.' },

@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Microfiber 300 GSM', use: 'مسح ناعم — لا يخدش Veneer' },
         { name: 'Softened Water', use: 'حماية PVAc من CaCO₃' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل بريدة.', solution: 'CaCO₃ أقل 8%. نفس البروتوكول. تكلفة متقاربة.' },
-        { fear: 'عفن من الغسل.', solution: '15-25% = تجفيف 20 دقيقة. صفر عفن.' },
+    commonConcerns: [
+        { concern: 'مثل بريدة.', solution: 'CaCO₃ أقل 8%. نفس البروتوكول. تكلفة متقاربة.' },
+        { concern: 'عفن من الغسل.', solution: '15-25% = تجفيف 20 دقيقة. صفر عفن.' },
     ],
     consumerEducation: [
         { myth: 'أثاث عنيزة ينتفخ مثل خميس.', truth: 'عكس تماماً! 15-25% = تشقق وجفاف. خميس 60-85% = انتفاخ.' },

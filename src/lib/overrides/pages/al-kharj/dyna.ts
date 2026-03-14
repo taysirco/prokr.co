@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'تغطية محكمة', use: 'SiO₂ — طرق ترابية' },
         { name: 'تثبيت صناعي', use: 'معدات حساسة — صدمات طريق' },
     ],
-    hiddenObjections: [
-        { fear: 'دينا عادية تكفي.', solution: 'طرق ترابية+معدات حساسة = تخصص.' },
-        { fear: 'غالي.', solution: 'تلف معدات أغلى 10×.' },
+    commonConcerns: [
+        { concern: 'دينا عادية تكفي.', solution: 'طرق ترابية+معدات حساسة = تخصص.' },
+        { concern: 'غالي.', solution: 'تلف معدات أغلى 10×.' },
     ],
     consumerEducation: [
         { myth: 'أي دينا.', truth: 'طرق ترابية = عجلات مناسبة.' },

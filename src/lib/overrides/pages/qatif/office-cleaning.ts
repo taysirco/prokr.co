@@ -52,9 +52,9 @@ export const override: PageOverride = {
         { name: 'Anti-Fungal', use: '80-95% — عفن واحي' },
         { name: 'RO + Anti-Static', use: 'NaCl — أجهزة' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل الخبر.', solution: 'طلع+واحي. مختلف.' },
-        { fear: 'عاملة المبنى.', solution: 'بدون HEPA+Anti-Fungal = 0%.' },
+    commonConcerns: [
+        { concern: 'مثل الخبر.', solution: 'طلع+واحي. مختلف.' },
+        { concern: 'عاملة المبنى.', solution: 'بدون HEPA+Anti-Fungal = 0%.' },
     ],
     consumerEducation: [
         { myth: 'ساحلي فقط.', truth: 'واحي = طلع+عيون.' },

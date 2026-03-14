@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Anti-Mite', use: 'يقتل عث — موكيت+كراسي' },
         { name: 'HEPA H13', use: 'حماية مهنية 99.97%' },
     ],
-    hiddenObjections: [
-        { fear: 'Sick Building مبالغة.', solution: '60-85%+ضباب = عفن أسبوعين. حقيقي.' },
-        { fear: 'مثل الباحة.', solution: 'متشابه — خميس أقل غابات. نفس البروتوكول.' },
+    commonConcerns: [
+        { concern: 'Sick Building مبالغة.', solution: '60-85%+ضباب = عفن أسبوعين. حقيقي.' },
+        { concern: 'مثل الباحة.', solution: 'متشابه — خميس أقل غابات. نفس البروتوكول.' },
     ],
     consumerEducation: [
         { myth: 'مثل عنيزة.', truth: 'عنيزة: لا Sick Building. خميس: Sick Building حقيقي.' },

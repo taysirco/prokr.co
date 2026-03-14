@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'HEPA شفط عميق', use: 'Nafud — شقوق' },
         { name: 'مبيد Residual', use: 'باقي — حماية' },
     ],
-    hiddenObjections: [
-        { fear: 'مبيد يكفي.', solution: 'بخار مثالي بعنيزة! يجف فوراً.' },
-        { fear: 'بخار = عفن.', solution: '10-20% = يجف 15 دقيقة!' },
+    commonConcerns: [
+        { concern: 'مبيد يكفي.', solution: 'بخار مثالي بعنيزة! يجف فوراً.' },
+        { concern: 'بخار = عفن.', solution: '10-20% = يجف 15 دقيقة!' },
     ],
     consumerEducation: [
         { myth: 'بخار خطر.', truth: 'بعنيزة = مثالي. 10-20%.' },

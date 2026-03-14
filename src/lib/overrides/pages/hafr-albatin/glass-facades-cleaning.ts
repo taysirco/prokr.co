@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Flexible Sealant', use: 'ΔT 54°م — يتحمل Cycling' },
         { name: 'UV Film', use: 'UV قاري — يحمي Sealant + زجاج' },
     ],
-    hiddenObjections: [
-        { fear: 'لا Biofilm = سهل.', solution: 'SiO₂ أكثف + ΔT أقصى + UV أعلى. 3 تحديات ≠ سهل.' },
-        { fear: 'ماء وقماش.', solution: 'قماش + SiO₂ أكثف = خدش أعمق.' },
+    commonConcerns: [
+        { concern: 'لا Biofilm = سهل.', solution: 'SiO₂ أكثف + ΔT أقصى + UV أعلى. 3 تحديات ≠ سهل.' },
+        { concern: 'ماء وقماش.', solution: 'قماش + SiO₂ أكثف = خدش أعمق.' },
     ],
     consumerEducation: [
         { myth: 'مثل الرياض.', truth: 'ΔT 54°م > 35°م. SiO₂ أكثف. UV أعلى.' },

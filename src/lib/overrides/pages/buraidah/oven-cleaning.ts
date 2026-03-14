@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Degreaser صناعي', use: 'دهن — بعد Descaler' },
         { name: 'HEPA زوايا', use: 'Nafud محترق — رائحة' },
     ],
-    hiddenObjections: [
-        { fear: 'Degreaser يكفي.', solution: '600ppm كلس يغطي. Descaler أولاً.' },
-        { fear: 'مثل خميس.', solution: 'لا عفن. لكن: كلس+دهن مزدوج.' },
+    commonConcerns: [
+        { concern: 'Degreaser يكفي.', solution: '600ppm كلس يغطي. Descaler أولاً.' },
+        { concern: 'مثل خميس.', solution: 'لا عفن. لكن: كلس+دهن مزدوج.' },
     ],
     consumerEducation: [
         { myth: 'Degreaser فقط.', truth: '600ppm = Descaler أولاً.' },

@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Anti-Biofilm', use: '200 يوم ضباب — 20-30% أسرع' },
         { name: 'Marine Sealant', use: 'Dew Point — شتاء' },
     ],
-    hiddenObjections: [
-        { fear: 'Descaler يكفي.', solution: 'لا Scale! Laterite. Oxalic.' },
-        { fear: 'مثل بريدة.', solution: 'Laterite+Biofilm ≠ CaCO₃.' },
+    commonConcerns: [
+        { concern: 'Descaler يكفي.', solution: 'لا Scale! Laterite. Oxalic.' },
+        { concern: 'مثل بريدة.', solution: 'Laterite+Biofilm ≠ CaCO₃.' },
     ],
     consumerEducation: [
         { myth: 'مبيّض ينظّف.', truth: 'يُثبّت Laterite = أسوأ.' },

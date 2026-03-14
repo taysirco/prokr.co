@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Marine-Grade تغليف', use: 'SiO₂+NaCl — سميك' },
         { name: 'Anti-Corrosion Spray', use: 'Pitting — قبل تغليف' },
     ],
-    hiddenObjections: [
-        { fear: 'تغليف عادي.', solution: 'NaCl = صدأ. Marine-Grade.' },
-        { fear: 'مثل بريدة.', solution: 'صدأ+عفن = مختلف تماماً.' },
+    commonConcerns: [
+        { concern: 'تغليف عادي.', solution: 'NaCl = صدأ. Marine-Grade.' },
+        { concern: 'مثل بريدة.', solution: 'صدأ+عفن = مختلف تماماً.' },
     ],
     consumerEducation: [
         { myth: 'أي شركة.', truth: 'VCI+Marine-Grade = متخصص ساحلي.' },

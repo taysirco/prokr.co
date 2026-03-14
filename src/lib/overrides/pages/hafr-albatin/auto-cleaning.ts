@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Ceramic 9H', use: 'مرن ΔT 54°م + مقاوم UV' },
         { name: 'Anti-Static Rinse', use: 'يُفرّغ شحنة SiO₂ في 10-15%' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل الرياض.', solution: 'ΔT 54°م > 35°م. -2°م شتاء. UV أعلى. عواصف أكثف.' },
-        { fear: 'Ceramic غالي.', solution: 'Ceramic = 380-950 ÷ 2-3 سنوات. إعادة طلاء = 3,000-8,000.' },
+    commonConcerns: [
+        { concern: 'مثل الرياض.', solution: 'ΔT 54°م > 35°م. -2°م شتاء. UV أعلى. عواصف أكثف.' },
+        { concern: 'Ceramic غالي.', solution: 'Ceramic = 380-950 ÷ 2-3 سنوات. إعادة طلاء = 3,000-8,000.' },
     ],
     consumerEducation: [
         { myth: 'غبار عادي.', truth: 'SiO₂ عواصف = أكثف + كهرباء ساكنة = يلتصق.' },

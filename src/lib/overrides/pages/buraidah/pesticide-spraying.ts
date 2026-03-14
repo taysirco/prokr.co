@@ -56,9 +56,9 @@ export const override: PageOverride = {
         { name: 'Gel Bait', use: 'لا يتبخر — دقيق' },
         { name: 'Residual Spray', use: 'فتحات — حماية طويلة' },
     ],
-    hiddenObjections: [
-        { fear: 'رش عادي يكفي.', solution: 'ΔT يُبخّر 40%. Micro-Encap.' },
-        { fear: 'مثل خميس.', solution: 'لا مطر = يدوم 2×. لكن: تبخّر.' },
+    commonConcerns: [
+        { concern: 'رش عادي يكفي.', solution: 'ΔT يُبخّر 40%. Micro-Encap.' },
+        { concern: 'مثل خميس.', solution: 'لا مطر = يدوم 2×. لكن: تبخّر.' },
     ],
     consumerEducation: [
         { myth: 'رش سائل.', truth: 'ΔT = Micro-Encap+Gel.' },

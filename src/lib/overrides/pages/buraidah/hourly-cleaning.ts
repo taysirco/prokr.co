@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'HEPA Pollen+Fine', use: 'Nafud+نخيل — 10 μm' },
         { name: 'Microfiber', use: 'Nafud لا يخدش' },
     ],
-    hiddenObjections: [
-        { fear: 'عاملة عادية.', solution: 'Descaler+HEPA+Microfiber = 3 أدوات خاصة.' },
-        { fear: 'مثل الرياض.', solution: '600ppm+Nafud+نخيل = مختلف.' },
+    commonConcerns: [
+        { concern: 'عاملة عادية.', solution: 'Descaler+HEPA+Microfiber = 3 أدوات خاصة.' },
+        { concern: 'مثل الرياض.', solution: '600ppm+Nafud+نخيل = مختلف.' },
     ],
     consumerEducation: [
         { myth: 'مكنسة تكفي.', truth: 'Nafud 10 μm يمر = HEPA.' },

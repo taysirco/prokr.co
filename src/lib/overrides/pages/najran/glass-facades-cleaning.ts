@@ -56,9 +56,9 @@ export const override: PageOverride = {
         { name: 'UV-Stable Silicone Sealant', use: 'يتحمل UV 10+ لمدة 8-10 سنوات بدلاً من 2-3' },
         { name: 'Deionized Water Rinse', use: 'يمنع Water Spots الكلسية — ماء نجران عسر (400+ ppm)' },
     ],
-    hiddenObjections: [
-        { fear: 'Touchless أغلى من الإسفنجة.', solution: 'Touchless = 150-350 ريال. استبدال لوحة زجاج مخدوشة = 500-2,000 ريال. غسلة واحدة بإسفنجة = خدوش أول مرة = ثمن الزجاج > 10 غسلات Touchless.' },
-        { fear: 'UV-Stable أغلى 50%.', solution: 'عادي: 200 ريال × 3 مرات (كل 2-3 سنوات) = 600 ريال/10 سنوات. UV-Stable: 300 ريال × 1 مرة = 300 ريال/10 سنوات. أرخص 50% إجمالياً + حماية أفضل.' },
+    commonConcerns: [
+        { concern: 'Touchless أغلى من الإسفنجة.', solution: 'Touchless = 150-350 ريال. استبدال لوحة زجاج مخدوشة = 500-2,000 ريال. غسلة واحدة بإسفنجة = خدوش أول مرة = ثمن الزجاج > 10 غسلات Touchless.' },
+        { concern: 'UV-Stable أغلى 50%.', solution: 'عادي: 200 ريال × 3 مرات (كل 2-3 سنوات) = 600 ريال/10 سنوات. UV-Stable: 300 ريال × 1 مرة = 300 ريال/10 سنوات. أرخص 50% إجمالياً + حماية أفضل.' },
     ],
     consumerEducation: [
         { myth: 'الزجاج لا يُخدش.', truth: 'كوارتز 7 Mohs > زجاج 5.5 Mohs. يُخدش بسهولة. الماس 10 > كوارتز 7 > زجاج 5.5. كل مادة أصلب تخدش الأضعف.' },

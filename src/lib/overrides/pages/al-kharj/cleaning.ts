@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Chemical Descaler', use: 'يُذيب CaCO₃ 450ppm' },
         { name: 'Microfiber + RO', use: 'SiO₂ بدون خدش + لا كلس' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل الرياض.', solution: 'NH₃+CaCO₃. الرياض لا مزارع ولا آبار.' },
-        { fear: 'غالي.', solution: 'أرخص 30% من خميس. 4 محاور مقابل 7.' },
+    commonConcerns: [
+        { concern: 'مثل الرياض.', solution: 'NH₃+CaCO₃. الرياض لا مزارع ولا آبار.' },
+        { concern: 'غالي.', solution: 'أرخص 30% من خميس. 4 محاور مقابل 7.' },
     ],
     consumerEducation: [
         { myth: 'معطر يكفي.', truth: 'NH₃ يتراكم. AC يمتص = فرق حقيقي.' },

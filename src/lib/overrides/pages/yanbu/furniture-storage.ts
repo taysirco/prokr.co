@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'VCI Bags', use: 'NaCl — حماية معدن' },
         { name: 'Anti-Fungal', use: '70-85% — خشب+أقمشة' },
     ],
-    hiddenObjections: [
-        { fear: 'مستودع عادي.', solution: '70-85% = عفن. Dehumidifier.' },
-        { fear: 'مثل بريدة.', solution: 'صدأ+عفن+حمض ≠ ΔT.' },
+    commonConcerns: [
+        { concern: 'مستودع عادي.', solution: '70-85% = عفن. Dehumidifier.' },
+        { concern: 'مثل بريدة.', solution: 'صدأ+عفن+حمض ≠ ΔT.' },
     ],
     consumerEducation: [
         { myth: 'أي مستودع.', truth: 'ساحلي = Dehumidifier+VCI.' },

@@ -57,8 +57,8 @@ export const override: PageOverride = {
         { name: 'IGR', use: 'يكسر انسلاخ ← لا تكاثر' },
         { name: 'Fipronil Soil Injection', use: 'حاجز نمل أبيض 5م عمق — 5-8 سنوات' },
     ],
-        hiddenObjections: [
-        { fear: 'المبيدات خطرة على الأطفال.', solution: 'المبيدات المسجلة في SFDA آمنة بعد الجفاف (1-2 ساعة). إخلاء مؤقت + تهوية = أمان 100%.' },
+        commonConcerns: [
+        { concern: 'المبيدات خطرة على الأطفال.', solution: 'المبيدات المسجلة في SFDA آمنة بعد الجفاف (1-2 ساعة). إخلاء مؤقت + تهوية = أمان 100%.' },
     ],
 
     consumerEducation: [

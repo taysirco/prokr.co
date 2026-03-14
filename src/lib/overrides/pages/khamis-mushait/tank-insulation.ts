@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'إحكام Anti-Leak', use: 'يمنع دخول أمطار وضباب' },
         { name: 'فلتر تهوية', use: 'يمنع أبواغ ضبابية من الدخول' },
     ],
-    hiddenObjections: [
-        { fear: 'عزل عادي يكفي.', solution: 'أمطار+طحالب = Closed-Cell+إحكام.' },
-        { fear: 'مثل عنيزة.', solution: 'عنيزة: لا مطر+لا طحالب = أبسط.' },
+    commonConcerns: [
+        { concern: 'عزل عادي يكفي.', solution: 'أمطار+طحالب = Closed-Cell+إحكام.' },
+        { concern: 'مثل عنيزة.', solution: 'عنيزة: لا مطر+لا طحالب = أبسط.' },
     ],
     consumerEducation: [
         { myth: 'الخزان لا يحتاج إحكام.', truth: 'أمطار خميس = تلوث. إحكام إلزامي.' },

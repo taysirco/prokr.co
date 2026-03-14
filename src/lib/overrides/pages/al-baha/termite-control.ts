@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'DPC جبلي', use: 'رطوبة أرضية+مطر' },
         { name: 'Anti-Humidity Sealing', use: 'PVAc — خشب' },
     ],
-    hiddenObjections: [
-        { fear: 'رش سطحي.', solution: 'مستعمرة تحت. Termidor.' },
-        { fear: 'مثل بريدة.', solution: 'خشب رطب+غابة ≠ نخيل.' },
+    commonConcerns: [
+        { concern: 'رش سطحي.', solution: 'مستعمرة تحت. Termidor.' },
+        { concern: 'مثل بريدة.', solution: 'خشب رطب+غابة ≠ نخيل.' },
     ],
     consumerEducation: [
         { myth: 'مرة واحدة.', truth: 'فحص سنوي. رطوبة.' },

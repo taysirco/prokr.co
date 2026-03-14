@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Anti-Fungal مزدوج', use: 'واحي+ساحلي — 3' },
         { name: 'HEPA', use: 'نخيل طلع — 4' },
     ],
-    hiddenObjections: [
-        { fear: 'أغلى.', solution: '4 خطوات = أعقد = أغلى. لكن: فعالية.' },
-        { fear: 'عاملة عادية.', solution: '4 خطوات + مواد. تدريب.' },
+    commonConcerns: [
+        { concern: 'أغلى.', solution: '4 خطوات = أعقد = أغلى. لكن: فعالية.' },
+        { concern: 'عاملة عادية.', solution: '4 خطوات + مواد. تدريب.' },
     ],
     consumerEducation: [
         { myth: 'ممسحة.', truth: 'NaCl+طين = 0%.' },

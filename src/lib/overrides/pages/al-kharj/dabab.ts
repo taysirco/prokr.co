@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'تغطية محكمة', use: 'يمنع SiO₂ — طرق ترابية' },
         { name: 'دباب 4x4', use: 'طرق مزارع غير مُعبّدة' },
     ],
-    hiddenObjections: [
-        { fear: 'دباب عادي يكفي.', solution: 'طرق ترابية+ألبان = معزول+4x4.' },
-        { fear: 'غالي.', solution: 'خسارة ألبان فاسدة أغلى.' },
+    commonConcerns: [
+        { concern: 'دباب عادي يكفي.', solution: 'طرق ترابية+ألبان = معزول+4x4.' },
+        { concern: 'غالي.', solution: 'خسارة ألبان فاسدة أغلى.' },
     ],
     consumerEducation: [
         { myth: 'أي دباب.', truth: 'طرق ترابية = يعلق. 4x4 أو عجلات كبيرة.' },

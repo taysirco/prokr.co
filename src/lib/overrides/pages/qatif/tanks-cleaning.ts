@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'كلور 2×', use: 'NaCl Demand' },
         { name: 'Algaecide', use: 'عيون — طحالب' },
     ],
-    hiddenObjections: [
-        { fear: 'لا Scale = سهل.', solution: 'عيون+Biofilm+Demand. 3 تحديات.' },
-        { fear: 'كلور يكفي.', solution: 'Biofilm يحمي. Anti-Biofilm أولاً.' },
+    commonConcerns: [
+        { concern: 'لا Scale = سهل.', solution: 'عيون+Biofilm+Demand. 3 تحديات.' },
+        { concern: 'كلور يكفي.', solution: 'Biofilm يحمي. Anti-Biofilm أولاً.' },
     ],
     consumerEducation: [
         { myth: 'مثل الخبر.', truth: 'عيون تغذية. فريد.' },

@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'IGR', use: 'يمنع بيض من التطور' },
         { name: 'فحص UV', use: 'شقوق + ألياف نخيل' },
     ],
-    hiddenObjections: [
-        { fear: 'بيت قديم = ما فيه حل.', solution: 'حراري 55°م يصل كل شق. الحل موجود.' },
-        { fear: 'رش بعوض يكفي.', solution: 'آلية مختلفة. بق = حراري+IGR.' },
+    commonConcerns: [
+        { concern: 'بيت قديم = ما فيه حل.', solution: 'حراري 55°م يصل كل شق. الحل موجود.' },
+        { concern: 'رش بعوض يكفي.', solution: 'آلية مختلفة. بق = حراري+IGR.' },
     ],
     consumerEducation: [
         { myth: 'بيوت جديدة فقط.', truth: 'بيوت تاريخية = أكثر شقوق = أكثر بق.' },

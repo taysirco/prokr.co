@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'Anti-Fungal', use: '70-85% — عفن أسبوعين' },
         { name: 'Dehumidifier', use: 'تجفيف 4-8h — رطوبة' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل بريدة.', solution: 'عفن+4-8h vs 15 دقيقة. مختلف.' },
-        { fear: 'شامبو يكفي.', solution: 'NaCl يتبلور+SOx حمض. RO.' },
+    commonConcerns: [
+        { concern: 'مثل بريدة.', solution: 'عفن+4-8h vs 15 دقيقة. مختلف.' },
+        { concern: 'شامبو يكفي.', solution: 'NaCl يتبلور+SOx حمض. RO.' },
     ],
     consumerEducation: [
         { myth: 'ماء عادي.', truth: 'NaCl يتبلور = أخشن. RO.' },

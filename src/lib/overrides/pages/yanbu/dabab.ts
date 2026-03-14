@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'تغليف فقاعي', use: 'SiO₂+NaCl — خدش' },
         { name: 'مانع رطوبة', use: '70-85% — عفن' },
     ],
-    hiddenObjections: [
-        { fear: 'مكشوف أرخص.', solution: 'NaCl = صدأ. VCI أمان.' },
-        { fear: 'مثل بريدة.', solution: 'صدأ+عفن = مختلف.' },
+    commonConcerns: [
+        { concern: 'مكشوف أرخص.', solution: 'NaCl = صدأ. VCI أمان.' },
+        { concern: 'مثل بريدة.', solution: 'صدأ+عفن = مختلف.' },
     ],
     consumerEducation: [
         { myth: 'مكشوف يكفي.', truth: 'NaCl = صدأ 48h.' },

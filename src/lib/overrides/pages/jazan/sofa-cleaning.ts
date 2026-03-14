@@ -52,8 +52,8 @@ export const override: PageOverride = {
         { name: 'Anti-Fungal Leather Conditioner', use: 'يقتل Green Mold + يحمي الجلد من 80% — مُختلف عن Conditioner الجاف' },
         { name: 'بخار 130°م', use: 'يقتل عث 12/12 — شهرياً' },
     ],
-    hiddenObjections: [
-        { fear: 'أنظف بنفسي.', solution: 'بدون Dehumidifier: كنب مبلل + 80% = عفن أسود. + بدون Anti-Fungal: العفن يعود فوراً. + بدون استخلاص عميق: الحشو بقي مُعفّن.' },
+    commonConcerns: [
+        { concern: 'أنظف بنفسي.', solution: 'بدون Dehumidifier: كنب مبلل + 80% = عفن أسود. + بدون Anti-Fungal: العفن يعود فوراً. + بدون استخلاص عميق: الحشو بقي مُعفّن.' },
     ],
     consumerEducation: [
         { myth: 'الكنب يجف طبيعياً.', truth: 'في 80% رطوبة: لا يجف. يبقى رطباً ← عفن. Dehumidifier = الحل الوحيد.' },

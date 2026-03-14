@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Enzymatic', use: 'سخام SABIC — يُكسر الكربون' },
         { name: 'Turbo Dryer + Dehumidifier', use: '98% — تجفيف إلزامي' },
     ],
-    hiddenObjections: [
-        { fear: 'مثل الخبر.', solution: 'VOC + سخام SABIC إضافي. 98% > 95%. مختلف.' },
-        { fear: 'شامبو.', solution: 'NaCl+VOC = ينزلق. سخام = لا يعمل. Marine+Enzymatic.' },
+    commonConcerns: [
+        { concern: 'مثل الخبر.', solution: 'VOC + سخام SABIC إضافي. 98% > 95%. مختلف.' },
+        { concern: 'شامبو.', solution: 'NaCl+VOC = ينزلق. سخام = لا يعمل. Marine+Enzymatic.' },
     ],
     consumerEducation: [
         { myth: 'ساحلي فقط.', truth: 'ساحلي + صناعي = VOC + سخام. ثلاثي.' },

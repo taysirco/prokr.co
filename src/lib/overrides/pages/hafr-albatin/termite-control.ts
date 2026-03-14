@@ -57,9 +57,9 @@ export const override: PageOverride = {
         { name: 'Barrier Microencapsulation', use: 'يقاوم 52°م تبخر' },
         { name: 'Thermal Camera', use: '-2°م مستعمرة عميقة' },
     ],
-    hiddenObjections: [
-        { fear: 'جاف = ما فيه.', solution: '10-15% = أبطأ. ليس = لا يوجد. تسريب = فرصة.' },
-        { fear: 'رش.', solution: 'سطحي ≠ عميق. -2°م = أعمق.' },
+    commonConcerns: [
+        { concern: 'جاف = ما فيه.', solution: '10-15% = أبطأ. ليس = لا يوجد. تسريب = فرصة.' },
+        { concern: 'رش.', solution: 'سطحي ≠ عميق. -2°م = أعمق.' },
     ],
     consumerEducation: [
         { myth: 'جاف = آمن.', truth: 'أبطأ ≠ آمن. تسريب = يكفي.' },

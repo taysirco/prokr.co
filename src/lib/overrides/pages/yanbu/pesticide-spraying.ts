@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'IGR (Insect Growth Regulator)', use: 'صراصير — مانع نمو' },
         { name: 'Residual ساحلي', use: '70-85% — مدة أطول' },
     ],
-    hiddenObjections: [
-        { fear: 'رش عام.', solution: 'BTI+IGR+Gel = متخصص ثلاثي.' },
-        { fear: 'ربع سنوي.', solution: '70-85% = شهري. Residual يُخفف.' },
+    commonConcerns: [
+        { concern: 'رش عام.', solution: 'BTI+IGR+Gel = متخصص ثلاثي.' },
+        { concern: 'ربع سنوي.', solution: '70-85% = شهري. Residual يُخفف.' },
     ],
     consumerEducation: [
         { myth: 'رش عام.', truth: 'BTI+IGR+Gel = ثلاثي.' },

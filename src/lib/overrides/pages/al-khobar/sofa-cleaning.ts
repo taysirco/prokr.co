@@ -54,9 +54,9 @@ export const override: PageOverride = {
         { name: 'Dry Vapor 130°م', use: 'يقتل عث + يُلين بوليمر' },
         { name: 'Turbo Dryer + Dehumidifier', use: 'تجفيف 2-3 ساعات — إلزامي' },
     ],
-    hiddenObjections: [
-        { fear: 'الكنب نظيف.', solution: 'عفن حشوة مخفي. عث ميكروبي. NaCl لا يُرى. بوليمر شفاف. 4 مخفية.' },
-        { fear: 'منظف محل.', solution: 'لا يقتل عث. لا يُعالج عفن. لا يجفف. 3 فشلات.' },
+    commonConcerns: [
+        { concern: 'الكنب نظيف.', solution: 'عفن حشوة مخفي. عث ميكروبي. NaCl لا يُرى. بوليمر شفاف. 4 مخفية.' },
+        { concern: 'منظف محل.', solution: 'لا يقتل عث. لا يُعالج عفن. لا يجفف. 3 فشلات.' },
     ],
     consumerEducation: [
         { myth: 'مثل الرياض.', truth: '85-95% ≠ 15%. NaCl ≠ SiO₂. عفن حتمي ≠ اختياري.' },

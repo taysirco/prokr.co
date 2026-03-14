@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'ΔT Protection', use: 'تشقق خشب — مفاصل' },
         { name: 'تغليف Nafud', use: 'SiO₂ — لا خدوش' },
     ],
-    hiddenObjections: [
-        { fear: 'مكشوفة أرخص.', solution: '48°م = 60°م = ذوبان.' },
-        { fear: 'مثل الباحة.', solution: 'ΔT vs PVAc. طرق سهلة.' },
+    commonConcerns: [
+        { concern: 'مكشوفة أرخص.', solution: '48°م = 60°م = ذوبان.' },
+        { concern: 'مثل الباحة.', solution: 'ΔT vs PVAc. طرق سهلة.' },
     ],
     consumerEducation: [
         { myth: 'أي شاحنة.', truth: 'معزولة. 48°م = ذوبان.' },

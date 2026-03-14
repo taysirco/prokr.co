@@ -53,9 +53,9 @@ export const override: PageOverride = {
         { name: 'IPM Forest Kit', use: 'خنافس+نمل — غابة' },
         { name: 'BTI', use: 'بعوض — ركود مطر' },
     ],
-    hiddenObjections: [
-        { fear: 'رش عام.', solution: 'IPM Forest+مقاوم. ليس عام.' },
-        { fear: 'مثل بريدة.', solution: 'Residual أقصر+غابة.' },
+    commonConcerns: [
+        { concern: 'رش عام.', solution: 'IPM Forest+مقاوم. ليس عام.' },
+        { concern: 'مثل بريدة.', solution: 'Residual أقصر+غابة.' },
     ],
     consumerEducation: [
         { myth: 'ربع سنوي.', truth: 'شهري! Residual أقصر.' },
