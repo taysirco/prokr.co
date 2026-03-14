@@ -7,7 +7,8 @@ import { generateContentLayers } from './ai-content-layers';
 import { getServiceKeywordProfile, getCityKeyword, resolveKeywordTemplate } from './keyword-strategy';
 import { BLOG_ARTICLES } from './blog-data';
 import { resolveSeoContent } from './overrides';
-import { SalaryCycleNote } from '@/components/SalaryCycleBadge';
+import { getSalaryCycleConfig } from '@/lib/salary-cycle';
+import { watermarkText } from './watermark';
 
 // ============================================
 // AI-Ready SEO Content Generator
@@ -224,6 +225,10 @@ export function SeoContentSection({ city, service }: SeoContentProps) {
         complementaryLinks
     } = content;
 
+    // 🛡️ Zero-Width Steganography — page-specific watermark helper
+    const pageSlug = `${city.slug}-${service.slug}`;
+    const wm = (text: string) => watermarkText(text, pageSlug);
+
     return (
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <article className="prose prose-lg prose-emerald max-w-none">
@@ -232,9 +237,9 @@ export function SeoContentSection({ city, service }: SeoContentProps) {
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">
                     دليل شامل لخدمة {service.name_ar} {cityKw} (2026)
                 </h2>
-                <div className="seo-introduction bg-emerald-50 p-6 rounded-xl border-r-4 border-emerald-500 mb-8">
+                <div className="seo-introduction bg-emerald-50 p-6 rounded-xl border-r-4 border-emerald-500 mb-8" suppressHydrationWarning>
                     <p className="text-gray-700 leading-relaxed font-medium">
-                        {aiContent.introduction}
+                        {wm(aiContent.introduction)}
                     </p>
                     <p className="text-xs text-gray-500 mt-3">
                         {geoSignals.statisticalClaims[0]} | {geoSignals.authorityReferences[0]} | آخر تحديث: {geoSignals.lastUpdated}
@@ -247,14 +252,14 @@ export function SeoContentSection({ city, service }: SeoContentProps) {
                         <h3 className="text-xl font-bold text-gray-900 mb-4">
                             تحديات {service.name_ar} {cityKw} وكيف نتغلب عليها
                         </h3>
-                        <div className="grid gap-4">
+                        <div className="grid gap-4" suppressHydrationWarning>
                             {aiContent.localChallenges.map((challenge, idx) => (
                                 <div key={idx} className="bg-white border border-gray-100 p-4 rounded-xl shadow-sm">
                                     <div className="flex items-start gap-3">
                                         <span className="text-amber-500 text-xl">⚠️</span>
                                         <div>
-                                            <h4 className="font-bold text-gray-800 mb-1">{challenge}</h4>
-                                            <p className="text-gray-600 text-sm">{aiContent.customSolutions[idx]}</p>
+                                            <h4 className="font-bold text-gray-800 mb-1">{wm(challenge)}</h4>
+                                            <p className="text-gray-600 text-sm">{wm(aiContent.customSolutions[idx])}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -264,7 +269,7 @@ export function SeoContentSection({ city, service }: SeoContentProps) {
                 )}
 
                 {/* 3. EXPERT TIPS (E-E-A-T) */}
-                <div className="bg-sky-50 p-6 rounded-xl mb-10">
+                <div className="bg-sky-50 p-6 rounded-xl mb-10" suppressHydrationWarning>
                     <h3 className="text-xl font-bold text-sky-900 mb-4 flex items-center gap-2">
                         <span>💡</span>
                         نصائح خبراء بروكر {cityKw} لعام 2026
@@ -273,7 +278,7 @@ export function SeoContentSection({ city, service }: SeoContentProps) {
                         {expertTips.map((tip, idx) => (
                             <li key={idx} className="flex items-start gap-2 text-sky-800">
                                 <span className="font-bold">•</span>
-                                <span>{tip}</span>
+                                <span>{wm(tip)}</span>
                             </li>
                         ))}
                     </ul>
@@ -283,7 +288,7 @@ export function SeoContentSection({ city, service }: SeoContentProps) {
                 <h3 className="text-xl font-bold text-gray-900 mb-4">
                     📊 مقارنة أسعار {service.name_ar} {cityKw} (تحديث 2026)
                 </h3>
-                <div className="overflow-x-auto rounded-2xl border border-gray-200 shadow-lg mb-2" itemScope itemType="https://schema.org/Table">
+                <div className="overflow-x-auto rounded-2xl border border-gray-200 shadow-lg mb-2" itemScope itemType="https://schema.org/Table" suppressHydrationWarning>
                     <table className="w-full text-right">
                         <caption className="bg-gradient-to-l from-gray-50 to-gray-100 font-bold p-4 border-b border-gray-200 text-gray-800 text-sm">
                             مقارنة بين أسعار السوق العشوائية وأسعار بروكر المعتمدة لخدمة {service.name_ar} {cityKw} — بيانات محدّثة لعام 2026
@@ -342,26 +347,37 @@ export function SeoContentSection({ city, service }: SeoContentProps) {
                 <p className="text-sm text-gray-500 mb-2 italic">
                     * الأسعار تقريبية ومبنية على متوسط السوق {cityKw}. السعر النهائي يُحدد بعد المعاينة الميدانية. أسعار السوق العشوائية تعكس متوسط أسعار الشركات غير المعتمدة.
                 </p>
-                <SalaryCycleNote className="mb-8" />
+                {(() => {
+                    const salaryConfig = getSalaryCycleConfig();
+                    return salaryConfig ? (
+                        <p className={`text-xs font-medium mt-2 px-3 py-1.5 rounded-lg border
+                            ${salaryConfig.colors.badgeBg} ${salaryConfig.colors.badgeText} ${salaryConfig.colors.badgeBorder}
+                            mb-8`}
+                            suppressHydrationWarning
+                        >
+                            {salaryConfig.icon} {salaryConfig.pricingNote}
+                        </p>
+                    ) : null;
+                })()}
 
                 {/* 5. SUCCESS STORIES */}
                 <div className="mb-10">
                     <h3 className="text-xl font-bold text-gray-900 mb-4">قصص نجاح {service.name_ar} {cityKw}</h3>
-                    <div className="grid sm:grid-cols-2 gap-4">
+                    <div className="grid sm:grid-cols-2 gap-4" suppressHydrationWarning>
                         {aiContent.successStories.map((story, idx) => (
                             <div key={idx} className="bg-emerald-50/50 p-4 rounded-xl border border-emerald-100">
                                 <h4 className="font-bold text-emerald-800 mb-2">{story.title}</h4>
-                                <p className="text-gray-700 text-sm leading-relaxed">{story.result}</p>
+                                <p className="text-gray-700 text-sm leading-relaxed">{wm(story.result)}</p>
                             </div>
                         ))}
                     </div>
                 </div>
 
                 {/* 6. WARNINGS */}
-                <div className="border-l-4 border-red-500 bg-red-50 p-4 rounded-r-xl mb-10">
+                <div className="border-l-4 border-red-500 bg-red-50 p-4 rounded-r-xl mb-10" suppressHydrationWarning>
                     <h3 className="text-lg font-bold text-red-800 mb-2">تنبيهات هامة</h3>
                     <ul className="list-disc list-inside space-y-1 text-red-700 text-sm">
-                        {warnings.map((w, i) => <li key={i}>{w}</li>)}
+                        {warnings.map((w, i) => <li key={i}>{wm(w)}</li>)}
                     </ul>
                 </div>
 
@@ -478,13 +494,13 @@ export function SeoContentSection({ city, service }: SeoContentProps) {
                 )}
 
                 {/* 9. FAQs */}
-                <div className="space-y-4" itemScope itemType="https://schema.org/FAQPage">
+                <div className="space-y-4" itemScope itemType="https://schema.org/FAQPage" suppressHydrationWarning>
                     <h3 className="text-xl font-bold text-gray-900">الأسئلة الشائعة عن {service.name_ar} {cityKw}</h3>
                     {content.faqItems.map((faq, index) => (
                         <div key={index} className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
                             <h4 className="font-bold text-gray-900 mb-2" itemProp="name">{faq.question}</h4>
                             <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
-                                <p className="text-gray-600 text-sm leading-relaxed" itemProp="text">{faq.answer}</p>
+                                <p className="text-gray-600 text-sm leading-relaxed" itemProp="text">{wm(faq.answer)}</p>
                             </div>
                         </div>
                     ))}
