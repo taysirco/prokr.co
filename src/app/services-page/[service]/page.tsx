@@ -356,7 +356,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                 </section>
 
                 {/* Content rule: NO مقالات ذات صلة on silos */}
-                {/* Internal links flow: Articles → Silos (not reverse) */}
+                
 
                 {/* Other Services */}
                 <section className="bg-gray-100 py-12">

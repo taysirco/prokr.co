@@ -44,7 +44,7 @@ export default function Footer({ currentCity, currentService }: FooterProps) {
         hasPageOverride(c.slug, canonicalService)
     );
 
-    // 2. 🎯 تطبيق الحقن المركز (6 روابط فقط!) — بدل نزيف 24+ رابط
+    // 2. عرض 6 روابط مختارة فقط — بدل 24+ رابط
     const targetedServices = getDeterministicLinks(allServices, currentCity || 'root', 6);
     const targetedCities = getDeterministicLinks(allCities, canonicalService || 'root', 6);
 

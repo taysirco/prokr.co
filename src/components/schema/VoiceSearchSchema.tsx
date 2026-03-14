@@ -38,7 +38,7 @@ export function VoiceSearchSchema({ city, service, aiContent, entityContext, pri
         '@context': 'https://schema.org',
         '@graph': [
             {
-                // 🎙️ اختراق البحث الصوتي (Voice Search)
+                // 🎙️ تحسين البحث الصوتي (Voice Search)
                 // يقرأ محرك البحث النص المحدد فقط
                 // ⚠️ @id مختلف عن #webpage لتجنب التعارض مع UnifiedGraphCompiler
                 '@type': 'WebPage',
@@ -51,7 +51,7 @@ export function VoiceSearchSchema({ city, service, aiContent, entityContext, pri
                     cssSelector: ['#voice-search-data'],
                 },
             },
-            // 🤖 اختراق Gemini (RAG Dataset)
+            // 🤖 تحسين ظهور Gemini (RAG Dataset)
             // فقط إذا وُجدت بيانات تسعير
             ...(pricingEntry ? [{
                 '@type': 'Dataset',

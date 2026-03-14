@@ -2,7 +2,7 @@
 import { useState } from 'react';
 
 // 🎯 Price Quick View — فخ الإشارة التفاعلية
-// يُغري الزائر بنقرة فورية (أول 3 ثوانٍ) → INP ≈ 0ms → إشارة CrUX ضخمة
+// يُشجّع الزائر على التفاعل السريع — تجربة مستخدم محسّنة
 export function PriceDisclosure({ avgPrice, unit }: { avgPrice: number; unit: string }) {
     const [revealed, setRevealed] = useState(false);
 

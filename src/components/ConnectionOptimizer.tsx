@@ -8,7 +8,7 @@ import { useEffect } from 'react';
  * Detects slow connections (2G/3G/saveData) and activates
  * `prokr-lite-mode` on <html> element.
  *
- * CSS rules are injected directly via <style> tag to bypass
+ * CSS rules are applied directly via <style> tag to bypass
  * Tailwind v4 tree-shaking (which strips classes not in templates).
  *
  * Also listens for connection changes (e.g., WiFi → 3G)
@@ -87,7 +87,7 @@ const LITE_MODE_CSS = `
 
 export default function ConnectionOptimizer() {
     useEffect(() => {
-        // ═══ 1. Inject CSS (bypass Tailwind tree-shaking) ═══
+        // ═══ 1. Apply CSS (bypass Tailwind tree-shaking) ═══
         const styleId = 'prokr-lite-mode-css';
         if (!document.getElementById(styleId)) {
             const style = document.createElement('style');

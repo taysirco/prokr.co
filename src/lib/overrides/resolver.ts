@@ -1,7 +1,7 @@
 // ============================================
 // Page Override Resolver
 // Merges per-page overrides with auto-generated content
-// + Entity Intersection auto-injection
+// + Entity Intersection auto-integration
 // ============================================
 
 import type { City, Service } from '@/types';

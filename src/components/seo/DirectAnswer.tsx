@@ -31,7 +31,7 @@ export const DirectAnswer: React.FC<DirectAnswerProps> = ({ city, service, answe
                 ملخص سريع عن {service} في {city}
             </h3>
 
-            {/* Intro sentence — the hook */}
+            {/* Intro sentence — summary */}
             {intro && (
                 <p
                     className="font-semibold text-gray-900 mb-3 leading-relaxed"

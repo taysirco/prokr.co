@@ -10,7 +10,7 @@ interface FraudAlertBannerProps {
 // ==========================================================
 // 🛡️ مؤشر بروكر لكشف الاحتيال والشركات الوهمية
 // Consumer Protection Alert — Consumer protection warnings
-// "هل شركة X نصابين؟" — "خدعة الفريون" — "سرقة أثاث النقل"
+// أسئلة المستهلك الشائعة: مشاكل الفريون، تجارب عملاء النقل
 // ==========================================================
 
 const CONSUMER_ALERTS: Record<string, { title: string; warning: string; link: string }[]> = {

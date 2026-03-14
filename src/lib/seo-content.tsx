@@ -436,10 +436,10 @@ export function SeoContentSection({ city, service }: SeoContentProps) {
                     </div>
                 )}
 
-                {/* ── Content rule: NO مقالات ذات صلة on silos ── */}
-                {/* Internal links flow: Articles → Silos (not reverse) */}
+                
+                
 
-                {/* ── Content: Hidden Objections ── */}
+                {/* ── أسئلة شائعة ── */}
                 {content.semanticData?.commonConcerns && content.semanticData.commonConcerns.length > 0 && (
                     <div className="mb-10">
                         <h3 className="text-xl font-bold text-gray-900 mb-4">⚠️ ما يجب أن تعرفه قبل حجز {service.name_ar} {cityKw}</h3>
@@ -454,7 +454,7 @@ export function SeoContentSection({ city, service }: SeoContentProps) {
                     </div>
                 )}
 
-                {/* ── Content: Counter-Narratives ── */}
+                {/* ── تصحيح معلومات ── */}
                 {content.semanticData?.consumerEducation && content.semanticData.consumerEducation.length > 0 && (
                     <div className="mb-10">
                         <h3 className="text-xl font-bold text-gray-900 mb-4">🔍 صحّح معلوماتك عن {service.name_ar}</h3>
