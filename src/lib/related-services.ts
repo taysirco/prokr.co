@@ -145,7 +145,7 @@ export function applyContextualLinks(
     html: string,
     citySlug: string,
     currentServiceSlug: string,
-    maxLinks: number = 3
+    maxLinks: number = 5
 ): string {
     let result = html;
     let linkCount = 0;
@@ -185,48 +185,128 @@ export function applyContextualLinks(
 // ============================================
 // Contextual Trigger Phrases
 // Common domain phrases in AI text → service links
+// ALL slugs verified against real routes (33 services)
 // ============================================
 const CONTEXTUAL_TRIGGERS: { phrase: string; slug: string; label: string }[] = [
-    // Leak Detection family
-    { phrase: 'تسربات الخزانات', slug: 'tank-leak-detection', label: 'كشف تسربات الخزانات' },
+    // ═══════════════════════════════════════════
+    // 🔍 Leak Detection (3 services)
+    // ═══════════════════════════════════════════
+    { phrase: 'تسربات الخزانات', slug: 'water-leak-detection', label: 'كشف تسربات المياه' },
     { phrase: 'تسربات الحمامات', slug: 'bathroom-leak-detection', label: 'كشف تسربات الحمامات' },
+    { phrase: 'تسرب حمامات', slug: 'bathroom-leak-detection', label: 'كشف تسربات الحمامات' },
     { phrase: 'تسرب المياه', slug: 'water-leak-detection', label: 'كشف تسربات المياه' },
     { phrase: 'تسربات المياه', slug: 'water-leak-detection', label: 'كشف تسربات المياه' },
-    // Insulation family
+    { phrase: 'كشف تسربات', slug: 'water-leak-detection', label: 'كشف تسربات المياه' },
+    { phrase: 'تسريب الماء', slug: 'water-leak-detection', label: 'كشف تسربات المياه' },
+    { phrase: 'فاتورة المياه', slug: 'water-leak-detection', label: 'كشف تسربات المياه' },
+
+    // ═══════════════════════════════════════════
+    // 🛡️ Insulation (5 services)
+    // ═══════════════════════════════════════════
     { phrase: 'عزل الخزانات', slug: 'tank-insulation', label: 'عزل خزانات' },
     { phrase: 'عزل خزانات', slug: 'tank-insulation', label: 'عزل خزانات' },
-    { phrase: 'عزل الأسطح', slug: 'roof-insulation', label: 'عزل اسطح' },
-    { phrase: 'عزل اسطح', slug: 'roof-insulation', label: 'عزل اسطح' },
-    { phrase: 'عزل مائي', slug: 'waterproofing', label: 'عزل مائي' },
+    { phrase: 'عزل الأسطح', slug: 'roof-insulation', label: 'عزل أسطح' },
+    { phrase: 'عزل اسطح', slug: 'roof-insulation', label: 'عزل أسطح' },
+    { phrase: 'عزل السطح', slug: 'roof-insulation', label: 'عزل أسطح' },
+    { phrase: 'عزل مائي', slug: 'water-insulation', label: 'عزل مائي' },
+    { phrase: 'العزل المائي', slug: 'water-insulation', label: 'عزل مائي' },
     { phrase: 'عزل حراري', slug: 'thermal-insulation', label: 'عزل حراري' },
+    { phrase: 'العزل الحراري', slug: 'thermal-insulation', label: 'عزل حراري' },
     { phrase: 'عزل فوم', slug: 'foam-insulation', label: 'عزل فوم' },
-    { phrase: 'مواد عزل', slug: 'waterproofing', label: 'عزل مائي' },
-    // Pest Control family
+    { phrase: 'عزل بولي يوريثان', slug: 'foam-insulation', label: 'عزل فوم' },
+    { phrase: 'مواد عزل', slug: 'water-insulation', label: 'عزل مائي' },
+
+    // ═══════════════════════════════════════════
+    // 🐜 Pest Control (3 services)
+    // ═══════════════════════════════════════════
     { phrase: 'مكافحة الحشرات', slug: 'pest-control', label: 'مكافحة حشرات' },
     { phrase: 'مكافحة حشرات', slug: 'pest-control', label: 'مكافحة حشرات' },
-    { phrase: 'رش المبيدات', slug: 'pesticide-spraying', label: 'رش مبيدات' },
-    { phrase: 'رش مبيدات', slug: 'pesticide-spraying', label: 'رش مبيدات' },
-    { phrase: 'النمل الابيض', slug: 'termite-control', label: 'مكافحة النمل الابيض' },
-    { phrase: 'النمل الأبيض', slug: 'termite-control', label: 'مكافحة النمل الابيض' },
-    // Sewage family
-    { phrase: 'تسليك المجاري', slug: 'drain-cleaning', label: 'تسليك مجاري' },
-    { phrase: 'تسليك مجاري', slug: 'drain-cleaning', label: 'تسليك مجاري' },
-    { phrase: 'شفط البيارات', slug: 'septic-tank-pumping', label: 'شفط بيارات' },
-    { phrase: 'شفط بيارات', slug: 'septic-tank-pumping', label: 'شفط بيارات' },
-    { phrase: 'نفخ المجاري', slug: 'drain-blowing', label: 'نفخ المجاري' },
-    // Moving family
+    { phrase: 'رش المبيدات', slug: 'pest-control', label: 'مكافحة حشرات' },
+    { phrase: 'رش مبيدات', slug: 'pest-control', label: 'مكافحة حشرات' },
+    { phrase: 'النمل الابيض', slug: 'termite-control', label: 'مكافحة النمل الأبيض' },
+    { phrase: 'النمل الأبيض', slug: 'termite-control', label: 'مكافحة النمل الأبيض' },
+    { phrase: 'مكافحة النمل', slug: 'termite-control', label: 'مكافحة النمل الأبيض' },
+    { phrase: 'أرضة', slug: 'termite-control', label: 'مكافحة النمل الأبيض' },
+    { phrase: 'الصراصير', slug: 'pest-control', label: 'مكافحة حشرات' },
+    { phrase: 'بق الفراش', slug: 'pest-control', label: 'مكافحة حشرات' },
+
+    // ═══════════════════════════════════════════
+    // 🚿 Sewage (2 services)
+    // ═══════════════════════════════════════════
+    { phrase: 'تسليك المجاري', slug: 'sewage-unblocking', label: 'تسليك مجاري' },
+    { phrase: 'تسليك مجاري', slug: 'sewage-unblocking', label: 'تسليك مجاري' },
+    { phrase: 'انسداد المجاري', slug: 'sewage-unblocking', label: 'تسليك مجاري' },
+    { phrase: 'شفط البيارات', slug: 'sewage-suction', label: 'شفط بيارات' },
+    { phrase: 'شفط بيارات', slug: 'sewage-suction', label: 'شفط بيارات' },
+    { phrase: 'شفط الصرف', slug: 'sewage-suction', label: 'شفط بيارات' },
+    { phrase: 'تنظيف البيارة', slug: 'sewage-suction', label: 'شفط بيارات' },
+
+    // ═══════════════════════════════════════════
+    // 🚛 Moving & Storage (3 services)
+    // ═══════════════════════════════════════════
     { phrase: 'نقل العفش', slug: 'furniture-moving', label: 'نقل عفش' },
     { phrase: 'نقل عفش', slug: 'furniture-moving', label: 'نقل عفش' },
-    { phrase: 'تخزين الأثاث', slug: 'furniture-storage', label: 'تخزين اثاث' },
-    { phrase: 'تخزين اثاث', slug: 'furniture-storage', label: 'تخزين اثاث' },
-    // Cleaning family
+    { phrase: 'نقل الأثاث', slug: 'furniture-moving', label: 'نقل عفش' },
+    { phrase: 'نقل أثاث', slug: 'furniture-moving', label: 'نقل عفش' },
+    { phrase: 'نقل اثاث', slug: 'furniture-moving', label: 'نقل عفش' },
+    { phrase: 'تخزين الأثاث', slug: 'furniture-storage', label: 'تخزين أثاث' },
+    { phrase: 'تخزين اثاث', slug: 'furniture-storage', label: 'تخزين أثاث' },
+    { phrase: 'تخزين العفش', slug: 'furniture-storage', label: 'تخزين أثاث' },
+    { phrase: 'مغادرة الشقة', slug: 'moving-out', label: 'تنظيف مغادرة' },
+    { phrase: 'تنظيف مغادرة', slug: 'moving-out', label: 'تنظيف مغادرة' },
+    { phrase: 'إخلاء الشقة', slug: 'moving-out', label: 'تنظيف مغادرة' },
+
+    // ═══════════════════════════════════════════
+    // 🧹 Cleaning Services (12 services)
+    // ═══════════════════════════════════════════
     { phrase: 'تنظيف الخزانات', slug: 'tanks-cleaning', label: 'تنظيف خزانات' },
     { phrase: 'تنظيف خزانات', slug: 'tanks-cleaning', label: 'تنظيف خزانات' },
+    { phrase: 'غسيل الخزان', slug: 'tanks-cleaning', label: 'تنظيف خزانات' },
     { phrase: 'تنظيف المكيفات', slug: 'air-conditioner-cleaning', label: 'تنظيف مكيفات' },
     { phrase: 'تنظيف مكيفات', slug: 'air-conditioner-cleaning', label: 'تنظيف مكيفات' },
-    { phrase: 'صيانة المكيفات', slug: 'ac-maintenance', label: 'صيانة مكيفات' },
-    { phrase: 'صيانة مكيفات', slug: 'ac-maintenance', label: 'صيانة مكيفات' },
+    { phrase: 'غسيل المكيف', slug: 'air-conditioner-cleaning', label: 'تنظيف مكيفات' },
+    { phrase: 'صيانة المكيفات', slug: 'air-conditioner-cleaning', label: 'تنظيف مكيفات' },
+    { phrase: 'صيانة مكيفات', slug: 'air-conditioner-cleaning', label: 'تنظيف مكيفات' },
     { phrase: 'جلي البلاط', slug: 'floor-polishing', label: 'جلي بلاط' },
     { phrase: 'جلي الرخام', slug: 'marble-polishing', label: 'جلي رخام' },
+    { phrase: 'تلميع الرخام', slug: 'marble-polishing', label: 'جلي رخام' },
     { phrase: 'تنظيف بالبخار', slug: 'steam-cleaning', label: 'تنظيف بالبخار' },
+    { phrase: 'التنظيف بالبخار', slug: 'steam-cleaning', label: 'تنظيف بالبخار' },
+    { phrase: 'تنظيف السجاد', slug: 'carpet-cleaning', label: 'تنظيف سجاد' },
+    { phrase: 'تنظيف سجاد', slug: 'carpet-cleaning', label: 'تنظيف سجاد' },
+    { phrase: 'غسيل السجاد', slug: 'carpet-cleaning', label: 'تنظيف سجاد' },
+    { phrase: 'تنظيف المجالس', slug: 'councils-cleaning', label: 'تنظيف مجالس' },
+    { phrase: 'تنظيف مجالس', slug: 'councils-cleaning', label: 'تنظيف مجالس' },
+    { phrase: 'تنظيف الكنب', slug: 'sofa-cleaning', label: 'تنظيف كنب' },
+    { phrase: 'تنظيف كنب', slug: 'sofa-cleaning', label: 'تنظيف كنب' },
+    { phrase: 'غسيل الكنب', slug: 'sofa-cleaning', label: 'تنظيف كنب' },
+    { phrase: 'تنظيف الفلل', slug: 'villas-cleaning', label: 'تنظيف فلل' },
+    { phrase: 'تنظيف فلل', slug: 'villas-cleaning', label: 'تنظيف فلل' },
+    { phrase: 'تنظيف المنازل', slug: 'cleaning', label: 'تنظيف منازل' },
+    { phrase: 'تنظيف منازل', slug: 'cleaning', label: 'تنظيف منازل' },
+    { phrase: 'تنظيف البيت', slug: 'cleaning', label: 'تنظيف منازل' },
+    { phrase: 'تنظيف شقق', slug: 'cleaning', label: 'تنظيف منازل' },
+    { phrase: 'تنظيف الشقق', slug: 'cleaning', label: 'تنظيف منازل' },
+    { phrase: 'تنظيف المطابخ', slug: 'kitchen-cleaning', label: 'تنظيف مطابخ' },
+    { phrase: 'تنظيف مطبخ', slug: 'kitchen-cleaning', label: 'تنظيف مطابخ' },
+    { phrase: 'تنظيف الأفران', slug: 'oven-cleaning', label: 'تنظيف أفران' },
+    { phrase: 'تنظيف الفرن', slug: 'oven-cleaning', label: 'تنظيف أفران' },
+    { phrase: 'تنظيف المكاتب', slug: 'office-cleaning', label: 'تنظيف مكاتب' },
+    { phrase: 'تنظيف مكاتب', slug: 'office-cleaning', label: 'تنظيف مكاتب' },
+    { phrase: 'تنظيف المحلات', slug: 'shops-cleaning', label: 'تنظيف محلات' },
+    { phrase: 'تنظيف واجهات زجاجية', slug: 'glass-facades-cleaning', label: 'تنظيف واجهات' },
+    { phrase: 'تنظيف الواجهات', slug: 'glass-facades-cleaning', label: 'تنظيف واجهات' },
+    { phrase: 'تنظيف المسابح', slug: 'swimming-pool-cleaning', label: 'تنظيف مسابح' },
+    { phrase: 'تنظيف مسابح', slug: 'swimming-pool-cleaning', label: 'تنظيف مسابح' },
+    { phrase: 'تنظيف البلاط', slug: 'floor-cleaning', label: 'تنظيف أرضيات' },
+    { phrase: 'تنظيف الأرضيات', slug: 'floor-cleaning', label: 'تنظيف أرضيات' },
+    { phrase: 'تعقيم المنزل', slug: 'sanitization', label: 'تعقيم' },
+    { phrase: 'تعقيم وتطهير', slug: 'sanitization', label: 'تعقيم' },
+    { phrase: 'التعقيم', slug: 'sanitization', label: 'تعقيم' },
+
+    // ═══════════════════════════════════════════
+    // 🚚 Transport (1 service)
+    // ═══════════════════════════════════════════
+    { phrase: 'دينا نقل', slug: 'dyna', label: 'دينا نقل' },
+    { phrase: 'سيارة نقل', slug: 'dyna', label: 'دينا نقل' },
 ];
