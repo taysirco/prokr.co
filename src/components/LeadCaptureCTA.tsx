@@ -95,8 +95,8 @@ const CLIMATE_CONTEXT: Record<string, { label: string; desc: string }> = {
     'moderate': { label: 'مناخ معتدل', desc: 'رغم اعتدال المناخ، يتطلب الأمر خبرة محلية لضمان جودة التنفيذ وفق المعايير' },
 };
 
-// --- Scarcity Narratives (vary by service) ---
-const SCARCITY_TEXTS: Record<string, string> = {
+// --- Availability context (vary by service) ---
+const AVAILABILITY_CONTEXT: Record<string, string> = {
     moving: 'مع ارتفاع حركة النقل والتقل في المنطقة، نقوم بتقييم صارم لضمان أن شركات النقل المعتمدة تمتلك الأسطول والتأمين الكافي لحماية ممتلكاتك.',
     cleaning: 'نظراً لارتفاع الطلب على خدمات التنظيف الاحترافي، نُخضع كل شركة لاختبار ميداني فعلي قبل منحها شارة الاعتماد من بروكر.',
     'pest-control': 'سلامة عائلتك أولوية. لذلك نتحقق من أن كل شركة تستخدم مبيدات مسجلة رسمياً في SFDA ولديها رخصة رش سارية المفعول.',
@@ -142,7 +142,7 @@ function hashIndex(str: string, max: number): number {
 export default function LeadCaptureCTA({ cityName, serviceName, serviceSlug, citySlug }: LeadCaptureCTAProps) {
     const category = getCategory(serviceSlug);
     const criteria = SERVICE_CRITERIA[category] || SERVICE_CRITERIA['cleaning'];
-    const scarcityText = SCARCITY_TEXTS[category] || SCARCITY_TEXTS['cleaning'];
+    const availabilityText = AVAILABILITY_CONTEXT[category] || AVAILABILITY_CONTEXT['cleaning'];
     const cycleConfig = getMarketTimingConfig();
 
     // Derive unique content seed from city+service combination
@@ -197,7 +197,7 @@ export default function LeadCaptureCTA({ cityName, serviceName, serviceSlug, cit
 
     return (
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            {/* Main Scarcity Card */}
+            {/* Main Availability Card */}
             <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-amber-50 via-white to-emerald-50 border-2 border-amber-200 shadow-xl">
                 <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-amber-400/20 to-transparent rounded-br-full" />
                 <div className="absolute bottom-0 right-0 w-40 h-40 bg-gradient-to-tl from-emerald-400/10 to-transparent rounded-tl-full" />
@@ -228,9 +228,9 @@ export default function LeadCaptureCTA({ cityName, serviceName, serviceSlug, cit
                         {intros[idx]}
                     </p>
 
-                    {/* Service-specific scarcity explanation */}
+                    {/* Service-specific availability note */}
                     <p className="text-base text-gray-600 max-w-3xl mb-4 leading-relaxed">
-                        {scarcityText}
+                        {availabilityText}
                     </p>
 
                     {/* Climate challenge — unique per city group */}

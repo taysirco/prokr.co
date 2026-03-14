@@ -4,7 +4,7 @@ import { getCityContext, getAdjustedPriceRange, getServiceNuances, getClimateCon
 import { getRelatedServices, generateServiceUrl, applyContextualLinks, escapeHtml } from './related-services';
 import { hasPageOverride } from './overrides/registry';
 import { getServiceBySlug, getCityBySlug } from './seed';
-import { generateContentLayers } from './ai-content-layers';
+import { generateContentLayers } from './content-layers';
 import { getServiceKeywordProfile, getCityKeyword, resolveKeywordTemplate } from './locale-formatting';
 import { BLOG_ARTICLES } from './blog-data';
 import { resolveSeoContent } from './overrides';
@@ -53,7 +53,7 @@ export function generateSeoContent({ city, service }: SeoContentProps) {
     const relatedServices = getRelatedServices(service.slug, 11, city.slug);
     const climateContent = cityContext ? getClimateContent(cityContext.climate) : null;
 
-    // AI Content Layers
+    // Content Layers
     const aiContent = generateContentLayers(city, service);
 
     // Keyword strategy for بـ prefix (used throughout)
@@ -191,7 +191,7 @@ export function generateSeoContent({ city, service }: SeoContentProps) {
         relatedServices,
         climateContent,
 
-        // New AI Content Fields
+        // New Content Fields
         aiContent,
         expertTips,
         warnings,

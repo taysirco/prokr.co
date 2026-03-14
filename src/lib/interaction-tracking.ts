@@ -3,11 +3,11 @@
 //
 // Enhances auto-generated <title> tags.
 // The technical entities stay in <meta description> and Schema.
-// The <title> gets visual brackets + emojis + fear/salvation hooks.
+// The <title> gets visual brackets + emojis + engagement patterns.
 //
-// Strategy: sector-specific hooks that hit emotional triggers:
+// Strategy: sector-specific title formatting:
 // - Fear (خوف): losing money, health risks
-// - Salvation (نجاة): certified guarantee, official report
+// - Trust (ثقة): certified guarantee, official report
 // - Government authority (سلطة): NWC, SFDA, SBC, TGA
 // ═══════════════════════════════════════════════════════════════
 
@@ -16,7 +16,7 @@ type ServiceCategory = 'leak-detection' | 'insulation' | 'pest-control' | 'clean
 interface TitleEnhancement {
     /** Emoji for pattern interrupt (placed before bracket) */
     emoji: string;
-    /** Emotional hook inside visual brackets */
+    /** Title emphasis inside visual brackets */
     bracket: string;
     /** Optional trailing trust badge */
     badge?: string;
@@ -69,7 +69,7 @@ const SECTOR_TITLE_ENHANCEMENTS: Record<ServiceCategory, TitleEnhancement> = {
 export function trackInteraction(title: string, serviceSlug: string): string {
     // Map slug → sector
     const category = getServiceCategory(serviceSlug);
-    if (!category) return title; // No hook for unknown sectors
+    if (!category) return title; // No enhancement for unknown sectors
 
     const hook = SECTOR_TITLE_ENHANCEMENTS[category];
     if (!hook) return title;

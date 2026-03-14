@@ -1,7 +1,7 @@
 // ============================================
 // SPEAKABLE WEB PAGE SCHEMA
 // For voice search and AI engine optimization
-// ⚡ Atomic SGE Sync: speakableText must be the EXACT same
+// ⚡ Structured Data: speakableText must be the EXACT same
 //    variable rendered in .direct-answer div
 // ============================================
 interface SpeakableWebPageJsonLdProps {

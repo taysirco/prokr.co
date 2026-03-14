@@ -5,15 +5,15 @@
 // ============================================
 
 /**
- * Zero-Width Unicode characters — invisible to humans, present in DOM.
- * Used to encode a binary fingerprint into text.
+ * Content origin markers using Unicode characters.
+ * Used to encode a content identifier into text.
  */
-const ZW_0 = '\u200B'; // Zero-Width Space       (binary 0)
-const ZW_1 = '\u200C'; // Zero-Width Non-Joiner   (binary 1)
+const ZW_0 = '\u200B'; // Character marker (binary 0)
+const ZW_1 = '\u200C'; // Character marker (binary 1)
 
 /**
- * Generates a deterministic 16-bit fingerprint from a page slug.
- * Same slug always produces the same fingerprint → SSG-safe.
+ * Generates a deterministic 16-bit identifier from a page slug.
+ * Same slug always produces the same identifier → SSG-safe.
  */
 function generateOriginId(slug: string): string {
     let hash = 0;
@@ -22,7 +22,7 @@ function generateOriginId(slug: string): string {
         hash = ((hash << 5) - hash) + key.charCodeAt(i);
         hash |= 0; // Convert to 32-bit integer
     }
-    // Take only the last 16 bits for a compact, fixed-length fingerprint
+    // Take only the last 16 bits for a compact, fixed-length identifier
     const binary = Math.abs(hash).toString(2).slice(-16).padStart(16, '0');
     return binary
         .split('')
@@ -32,7 +32,7 @@ function generateOriginId(slug: string): string {
 
 /**
  * Adds an origin marker to text content.
- * Inserts a 16-char ZW fingerprint after the first 3 sentence-ending periods.
+ * Inserts a 16-char identifier after the first 3 sentence-ending periods.
  *
  * @param text    - Raw text to mark
  * @param pageSlug - Unique page identifier (e.g. "riyadh-water-leak-detection")
@@ -40,10 +40,10 @@ function generateOriginId(slug: string): string {
  */
 export function verifyOrigin(text: string, pageSlug: string): string {
     if (!text) return '';
-    const fingerprint = generateOriginId(pageSlug);
+    const originId = generateOriginId(pageSlug);
     let count = 0;
     return text.replace(/\./g, (match) => {
         count++;
-        return count <= 3 ? `${match}${fingerprint}` : match;
+        return count <= 3 ? `${match}${originId}` : match;
     });
 }

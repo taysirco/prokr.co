@@ -184,7 +184,7 @@ export default function RootLayout({
     '.prokr-dark [class*="to-white"]{--tw-gradient-to:#1e293b!important}',
     /* Hero section */
     '.prokr-dark [class*="from-emerald-800"]{--tw-gradient-from:#064e3b!important}',
-    /* Direct Answer SGE box */
+    /* Direct Answer box */
     '.prokr-dark .direct-answer{background:#1e293b!important}',
     /* Footer */
     '.prokr-dark footer{background:#0f172a!important;color:#e2e8f0!important}',

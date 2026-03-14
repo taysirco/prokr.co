@@ -117,7 +117,7 @@ export default async function SiloPage({ params }: SiloPageProps) {
 
     const allAdvertisers = [...premium, ...standard];
 
-    // Generate AI content — override-aware
+    // Generate Content — override-aware
     const aiContent = resolveContentLayers(city, service);
 
     // Keyword strategy for بـ prefix

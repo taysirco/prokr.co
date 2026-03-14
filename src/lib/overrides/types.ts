@@ -19,7 +19,7 @@ export interface PageOverride {
         ogImage?: string;           // OpenGraph image URL
     };
 
-    // ─── AI Content Layers ───
+    // ─── Content Layers ───
     content?: {
         introduction?: string;          // مقدمة مخصصة بالكامل (500+ حرف مع اقتباس خبير)
         shortAnswer?: string;           // الإجابة المباشرة (Featured Snippet)

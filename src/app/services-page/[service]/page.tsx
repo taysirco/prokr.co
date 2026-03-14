@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Home, ChevronLeft, MapPin } from 'lucide-react';
 import { getServiceBySlug, getServiceImage, CITIES, SERVICES, REGION_NAMES, getCitiesByRegion } from '@/lib/seed';
-import { generateServiceCategoryMeta } from '@/lib/ai-content-layers';
+import { generateServiceCategoryMeta } from '@/lib/content-layers';
 import { BreadcrumbJsonLd, ServiceJsonLd, ItemListJsonLd, WebPageJsonLd } from '@/components/JsonLd';
 import { getCityContext, getAdjustedPriceRange } from '@/lib/city-context';
 import { getServiceKeywordProfile } from '@/lib/locale-formatting';

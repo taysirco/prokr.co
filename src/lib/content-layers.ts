@@ -3,7 +3,7 @@ import { CITY_CONTEXT } from './city-context';
 import { getServiceKeywordProfile, getCityKeyword, resolveKeywordTemplate } from './locale-formatting';
 import { trackInteraction } from './interaction-tracking';
 
-// Types for the AI Content Layers
+// Types for the Content Layers
 export interface ContentLayers {
     introduction: string;
     whyUs: string[];

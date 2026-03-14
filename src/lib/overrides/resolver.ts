@@ -7,7 +7,7 @@
 import type { City, Service } from '@/types';
 import type { PageOverride } from './types';
 import { getPageOverride, hasPageOverride } from './registry';
-import { generateContentLayers, type ContentLayers } from '../ai-content-layers';
+import { generateContentLayers, type ContentLayers } from '../content-layers';
 import { generateSeoContent } from '../seo-content';
 import { getServiceKeywordProfile, getCityKeyword, resolveKeywordTemplate } from '../locale-formatting';
 import { getCityContext, getAdjustedPriceRange } from '../city-context';
@@ -108,7 +108,7 @@ export function resolveContentLayers(city: City, service: Service): ContentLayer
     if (!override?.content) {
         return {
             ...auto,
-            // Auto-inject climate challenges if auto content is generic
+            // Auto-apply climate challenges if auto content is generic
             localChallenges: autoChallenges.length > 0 ? autoChallenges : auto.localChallenges,
             entityIntersection: autoEntityIntersection,
         };
@@ -184,7 +184,7 @@ export function resolveMetadata(city: City, service: Service): ResolvedMetadata 
 
     const m = override?.meta;
 
-    // Dual-Layer CTR: apply emotional hooks to ALL titles (override + auto)
+    // Title enhancement: apply formatting to ALL titles (override + auto)
     const resolvedTitle = m?.title ?? auto.metaTitle;
     const ctrTitle = trackInteraction(resolvedTitle, service.slug);
 
@@ -257,7 +257,7 @@ export function resolveSeoContent(city: City, service: Service) {
 
         return {
             ...auto,
-            // Inject entity-enriched data into auto-generated content
+            // Apply entity-enriched data to generated content
             aiContent: {
                 ...auto.aiContent,
                 localChallenges: autoChallenges.length > 0 ? autoChallenges : auto.aiContent.localChallenges,
@@ -328,7 +328,7 @@ export function resolveSeoContent(city: City, service: Service) {
         // Related services: Related Services 7-11
         relatedServices: resolvedRelated,
         complementaryLinks: resolvedComplementaryLinks,
-        // AI content layer overrides + entity injection
+        // Content layer overrides + entity enrichment
         aiContent: {
             ...auto.aiContent,
             introduction: override.content?.introduction ?? auto.aiContent.introduction,

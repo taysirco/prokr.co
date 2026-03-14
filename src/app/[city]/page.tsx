@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { Home, ChevronLeft, MapPin, Truck, Sparkles, Bug, Droplet, Wrench, Building2, Navigation, Clock, ArrowLeft } from 'lucide-react';
 import { getCityBySlug, getServiceImage, CITIES, SERVICES, CATEGORY_NAMES, getServicesByCategory } from '@/lib/seed';
 import { getSubRegionsByCity } from '@/lib/sub-regions';
-import { generateCityMeta } from '@/lib/ai-content-layers';
+import { generateCityMeta } from '@/lib/content-layers';
 import { BreadcrumbJsonLd, ItemListJsonLd, SpeakableWebPageJsonLd, WebPageJsonLd } from '@/components/JsonLd';
 import { getCityContext } from '@/lib/city-context';
 import { getCityKeyword } from '@/lib/locale-formatting';

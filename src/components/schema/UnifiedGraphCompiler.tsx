@@ -7,7 +7,7 @@
 
 import type { Advertiser, City, Service } from '@/types';
 import type { CityContext } from '@/lib/city-context';
-import type { ContentLayers } from '@/lib/ai-content-layers';
+import type { ContentLayers } from '@/lib/content-layers';
 import { resolveSeoContent } from '@/lib/overrides';
 import { getServiceKeywordProfile, getCityKeyword } from '@/lib/locale-formatting';
 import { getCanonicalSlug } from '@/lib/services/super-page-groups';
