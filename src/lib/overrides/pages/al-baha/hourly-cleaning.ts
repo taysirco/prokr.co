@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'ساعية عادية.', solution: '4 ركائز = تدريب خاص.' },
         { fear: 'مثل بريدة.', solution: 'Laterite+عرعر ≠ كلس.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'أي عاملة.', truth: 'مُدرّبة 4 ركائز.' },
         { myth: 'مبيّض ينظّف.', truth: 'يُثبّت Laterite = كارثة.' },
     ],

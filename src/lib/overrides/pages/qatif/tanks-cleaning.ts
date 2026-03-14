@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'لا Scale = سهل.', solution: 'عيون+Biofilm+Demand. 3 تحديات.' },
         { fear: 'كلور يكفي.', solution: 'Biofilm يحمي. Anti-Biofilm أولاً.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'مثل الخبر.', truth: 'عيون تغذية. فريد.' },
         { myth: 'مثل حفر الباطن.', truth: 'طحالب+Biofilm vs لا طحالب.' },
     ],

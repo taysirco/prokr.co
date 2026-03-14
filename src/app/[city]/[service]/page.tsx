@@ -5,25 +5,25 @@ import Image from 'next/image';
 import { Home, ChevronLeft, Star, Phone, MessageCircle, BadgeCheck, MapPin, Shield } from 'lucide-react';
 import { getCityBySlug, getServiceBySlug, getUniquePageImages } from '@/lib/seed';
 import { getAdvertisersBySilo } from '@/lib/db-actions';
-import { UnifiedGraphCompiler, AiVoiceJsonLd } from '@/components/JsonLd';
+import { UnifiedGraphCompiler, VoiceSearchSchema } from '@/components/JsonLd';
 import { DirectAnswer } from '@/components/seo/DirectAnswer';
 import { SeoContentSection } from '@/lib/seo-content';
 import { LiveBlogPostingJsonLd } from '@/components/schema';
 import { pricingData } from '@/lib/pricing-data';
 import { getCityContext } from '@/lib/city-context';
-import { getServiceKeywordProfile, getCityKeyword } from '@/lib/keyword-strategy';
+import { getServiceKeywordProfile, getCityKeyword } from '@/lib/locale-formatting';
 import { resolveContentLayers, resolveMetadata, getOverrideForPage } from '@/lib/overrides';
 import { AbsorbedServiceSections } from '@/components/seo/AbsorbedServiceSection';
 import { getSuperPageGroup, isCanonicalSlug, getCanonicalSlug } from '@/lib/services/super-page-groups';
 import { SERVICES as ALL_SERVICES_LIST } from '@/lib/services';
 import Footer from '@/components/Footer';
-import SleeperCellCTA from '@/components/SleeperCellCTA';
+import LeadCaptureCTA from '@/components/LeadCaptureCTA';
 import { LiveAvailabilityBanner } from '@/components/LiveAvailabilityBanner';
-import GeoSignals from '@/components/GeoSignals';
+import LocalPresence from '@/components/LocalPresence';
 import FraudAlertBanner from '@/components/FraudAlertBanner';
 import GeoPricingTable from '@/components/GeoPricingTable';
-import SalaryCycleBadge from '@/components/SalaryCycleBadge';
-import { PriceRevealTrap } from '@/components/PriceRevealTrap';
+import MarketTimingBadge from '@/components/MarketTimingBadge';
+import { PriceDisclosure } from '@/components/PriceDisclosure';
 import PricingBenchmarkBox from '@/components/PricingBenchmarkBox';
 import type { Advertiser } from '@/types';
 
@@ -148,7 +148,7 @@ export default async function SiloPage({ params }: SiloPageProps) {
 
     return (
         <>
-            {/* 🚨 @graph Singularity — كل الـ JSON-LD في سكريبت واحد مترابط بـ @id */}
+            {/* 🚨 JSON-LD Structured Data — كل الـ JSON-LD في سكريبت واحد مترابط بـ @id */}
             <UnifiedGraphCompiler
                 city={city}
                 service={service}
@@ -159,8 +159,8 @@ export default async function SiloPage({ params }: SiloPageProps) {
                 canonicalPageUrl={canonicalPageUrl}
                 cityContext={cityContext}
             />
-            {/* 🎙️🤖 AI Voice + RAG Dataset — Agentic Voice Search Hack */}
-            <AiVoiceJsonLd
+            {/* 🎙️🤖 AI Voice + RAG Dataset — Voice Search Optimization */}
+            <VoiceSearchSchema
                 city={city}
                 service={service}
                 aiContent={override?.content}
@@ -210,9 +210,9 @@ export default async function SiloPage({ params }: SiloPageProps) {
                                     {aiContent.h1}
                                 </h1>
 
-                                {/* 💰 Salary Cycle Badge — النبض المالي */}
+                                {/* 💰 Market Timing Badge — النبض المالي */}
                                 <div className="mb-3">
-                                    <SalaryCycleBadge compact />
+                                    <MarketTimingBadge compact />
                                 </div>
                                 <p className="text-lg text-emerald-100 max-w-xl">
                                     {aiContent.heroSubtitle
@@ -281,10 +281,10 @@ export default async function SiloPage({ params }: SiloPageProps) {
                     totalCompanies={premium.length + standard.length}
                 />
 
-                {/* 🎯 CrUX INP Hijacker — فخ الإشارة التفاعلية */}
+                {/* 🎯 Price Quick View — فخ الإشارة التفاعلية */}
                 {aiPricingEntry && (
                     <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
-                        <PriceRevealTrap avgPrice={aiPricingEntry.avgPrice} unit={aiPricingEntry.unit} />
+                        <PriceDisclosure avgPrice={aiPricingEntry.avgPrice} unit={aiPricingEntry.unit} />
                     </section>
                 )}
 
@@ -297,10 +297,10 @@ export default async function SiloPage({ params }: SiloPageProps) {
                     />
                 </section>
 
-                {/* Companies or Sleeper Cell Lead Gen */}
+                {/* Companies or Lead Capture */}
                 {allAdvertisers.length === 0 ? (
-                    /* 🧬 Sleeper Cell Protocol — Scarcity-Framed Lead Gen */
-                    <SleeperCellCTA cityName={city.name_ar} serviceName={service.name_ar} serviceSlug={service.slug} citySlug={resolvedParams.city} />
+                    /* 🧬 Service Request Form — Lead Generation */
+                    <LeadCaptureCTA cityName={city.name_ar} serviceName={service.name_ar} serviceSlug={service.slug} citySlug={resolvedParams.city} />
                 ) : (
                     <>
                         {/* Premium Advertisers Grid */}
@@ -372,13 +372,13 @@ export default async function SiloPage({ params }: SiloPageProps) {
                     <PricingBenchmarkBox citySlug={resolvedParams.city} serviceSlug={resolvedParams.service} />
                 </section>
 
-                {/* 🛡️ Anti-Scam YMYL Trap — Consumer Protection Banner */}
+                {/* 🛡️ Consumer Protection Alert — Consumer Protection Banner */}
                 <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
                     <FraudAlertBanner serviceName={service.name_ar} serviceSlug={service.slug} cityName={city.name_ar} />
                 </section>
 
-                {/* Phantom Geo-Hijacking — Unique Per City+Service Slug */}
-                <GeoSignals citySlug={resolvedParams.city} serviceSlug={resolvedParams.service} serviceName={service.name_ar} serviceCategory={service.category} />
+                {/* Local Service Area — Unique Per City+Service Slug */}
+                <LocalPresence citySlug={resolvedParams.city} serviceSlug={resolvedParams.service} serviceName={service.name_ar} serviceCategory={service.category} />
 
                 {/* Footer */}
                 <Footer currentCity={resolvedParams.city} currentService={resolvedParams.service} />

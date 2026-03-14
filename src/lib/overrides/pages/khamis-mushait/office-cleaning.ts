@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'Sick Building مبالغة.', solution: '60-85%+ضباب = عفن أسبوعين. حقيقي.' },
         { fear: 'مثل الباحة.', solution: 'متشابه — خميس أقل غابات. نفس البروتوكول.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'مثل عنيزة.', truth: 'عنيزة: لا Sick Building. خميس: Sick Building حقيقي.' },
         { myth: 'HEPA ترف.', truth: 'ضباب×8h = حساسية مزمنة 20-30%. ضروري.' },
     ],

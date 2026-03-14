@@ -60,7 +60,7 @@ export const override: PageOverride = {
         { fear: 'أبسط.', solution: '3 خطوات ≠ أبسط. HEPA + Anti-Static = حاسمان. بدونهما = تلويث.' },
         { fear: 'أنظف بنفسي.', solution: 'بمكنسة = SiO₂ PM10. بممسحة = كهرباء ساكنة. 2 خطأ.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'ممسحة.', truth: 'كهرباء ساكنة = تنقل. HEPA + Anti-Static.' },
         { myth: 'مثل الشرقية.', truth: 'لا عفن + لا صدأ = 3 خطوات. أسرع.' },
         { myth: 'شهري.', truth: 'عواصف 2-4/شهر. أسبوعي.' },

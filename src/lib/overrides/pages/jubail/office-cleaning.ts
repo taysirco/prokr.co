@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'مثل الخبر.', solution: 'VOC PM2.5 + سخام SABIC + 98%. أخطر.' },
         { fear: 'عاملة المبنى.', solution: 'بدون HEPA AC + بدون Marine = 0%.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'ساحلي فقط.', truth: 'VOC + سخام = صناعي. رباعي.' },
         { myth: 'مكيف يكفي.', truth: 'فلتر لا يحجز VOC. HEPA AC.' },
     ],

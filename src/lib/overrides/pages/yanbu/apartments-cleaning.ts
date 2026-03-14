@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'مثل جدة.', solution: 'SOx YASREF = حمضي. 5 خطوات.' },
         { fear: 'شهري.', solution: 'NaCl+SOx يومي = أسبوعي.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'ممسحة.', truth: 'H₂SO₄ لزج. RO+Microfiber.' },
         { myth: 'مثل بريدة.', truth: 'ملح+حمض+عفن vs كلس+Nafud.' },
     ],

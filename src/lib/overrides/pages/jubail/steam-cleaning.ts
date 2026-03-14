@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'يبلل.', solution: '98% = يبلل أكثر. Dehumidifier = يحل.' },
         { fear: 'بدون Dehumidifier أوفر.', solution: 'عفن 24 ساعة = أغلى بكثير.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'يجف طبيعي.', truth: '98% = 6-10 ساعات بدون Dehumidifier.' },
         { myth: 'مثل حفر الباطن.', truth: '10-15% = 20 دقيقة. 98% = 6-10 ساعات. عكس!' },
     ],

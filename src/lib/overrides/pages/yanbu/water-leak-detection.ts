@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'بصري يكفي.', solution: '70-85% = FLIR إلزامي.' },
         { fear: 'حديد مجلفن.', solution: 'تآكل مزدوج. PPR.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'بصري.', truth: '70-85% تكثّف = FLIR.' },
         { myth: 'المجلفن يكفي.', truth: 'تآكل مزدوج = PPR.' },
     ],

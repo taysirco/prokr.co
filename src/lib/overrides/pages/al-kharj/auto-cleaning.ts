@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'مثل الرياض.', solution: 'غبار مزارع+NH₃. الرياض: غبار عادي فقط.' },
         { fear: 'RO مبالغة.', solution: 'CaCO₃ 450ppm = بقع على سيارة سوداء. RO يمنع.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'ماء صنبور يكفي.', truth: 'CaCO₃ 450ppm = بقع. RO.' },
         { myth: 'شهري يكفي.', truth: 'غبار مزارع يومي. أسبوعي.' },
     ],

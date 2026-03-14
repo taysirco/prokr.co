@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'تنظيف عادي.', solution: 'CaCO₃ Scale = Descaler إلزامي.' },
         { fear: 'مثل خميس.', solution: 'كلس مقابل طحالب = مختلف.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'ماء يكفي.', truth: 'CaCO₃ Scale صلب. Descaler.' },
         { myth: 'سنوي.', truth: 'كلس+رمل = نصف سنوي.' },
     ],

@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'مثل الخبر.', solution: 'واحي+أسماك. مختلف.' },
         { fear: 'ربع سنوي.', solution: 'مطاعم أسماك = شهرين.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'كيميائي يكفي.', truth: 'Biofilm يحمي.' },
         { myth: 'مثل الرياض.', truth: '80-95% Biofilm + أسماك.' },
     ],

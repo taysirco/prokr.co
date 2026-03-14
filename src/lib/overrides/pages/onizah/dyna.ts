@@ -60,7 +60,7 @@ export const override: PageOverride = {
         { fear: 'بريدة بعيدة.', solution: '30 كم = 20-30 دقيقة. أقرب مدينة رئيسية.' },
         { fear: 'تبريد غالي.', solution: 'بدونه = خسارة كاملة. التبريد أرخص من الخسارة 10×.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'التمور تتحمل الحرارة.', truth: '48°م + 4 ساعات = تخمر. تبريد 18°م إلزامي.' },
         { myth: 'Tarpaulin فقط للمطر.', truth: 'SiO₂ يخدش البضائع. Tarpaulin يحمي من الرمل أيضاً.' },
     ],

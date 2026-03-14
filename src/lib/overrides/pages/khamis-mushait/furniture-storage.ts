@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'غالي.', solution: 'بدون Dehumidifier = خسارة أثاث 10000+ ريال. أرخص بكثير.' },
         { fear: 'مثل الباحة.', solution: 'متشابه. نفس الفيزياء الجبلية.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'مستودع عادي يكفي.', truth: '60-85% = عفن أسبوع. Dehumidifier إلزامي.' },
         { myth: 'تخزين خميس مثل عنيزة.', truth: 'أغلى 40-50%. كل أداة حماية مطلوبة.' },
     ],

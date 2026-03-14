@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'إسفنج يكفي.', solution: 'Laterite = خدوش. pH Foam+No-Touch.' },
         { fear: 'مثل بريدة.', solution: 'Red Mud+عرعر ≠ SiO₂.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'ماء يكفي.', truth: 'Red Mud يحتاج pH Foam.' },
         { myth: 'شهري.', truth: 'بعد كل مطر. أسبوعي ضباب.' },
     ],

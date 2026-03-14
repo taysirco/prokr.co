@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'اختياري مثل عنيزة.', solution: 'أمطار+ضباب = إلزامي. بدونه = تسرب.' },
         { fear: 'غالي.', solution: 'تسرب = تلف هيكلي 10000+. العزل أرخص 20×.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'العزل المائي ترف بالسعودية.', truth: 'خميس: أمطار+ضباب = إلزامي 100%.' },
         { myth: 'دهان مائي يكفي.', truth: 'PU Membrane + Crystalline. الدهان لا يكفي لأمطار غزيرة.' },
     ],

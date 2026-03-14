@@ -1,10 +1,10 @@
 import type { Advertiser, City, Service, ServiceSchema } from '@/types';
-import { getServiceKeywordProfile, getCityKeyword } from '@/lib/keyword-strategy';
+import { getServiceKeywordProfile, getCityKeyword } from '@/lib/locale-formatting';
 import { getCanonicalSlug } from '@/lib/services/super-page-groups';
 
 // ============================================
 // SERVICE SCHEMA
-// For service pages
+// For silos
 // ============================================
 interface ServiceJsonLdProps {
     service: Service;

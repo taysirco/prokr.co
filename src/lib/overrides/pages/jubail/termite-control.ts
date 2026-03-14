@@ -60,7 +60,7 @@ export const override: PageOverride = {
         { fear: 'جاف أسوأ.', solution: 'عكس! 98% = أسرع نمو. 10-15% = أبطأ.' },
         { fear: 'رش بعوض يكفي.', solution: 'بعوض ≠ نمل أبيض. آليات مختلفة.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'مثل حفر الباطن.', truth: '98% vs 10-15%. أسرع vs أبطأ. عكس كامل.' },
         { myth: 'Barrier عادي.', truth: '98%+NaCl يتحلل. Marine يدوم 3×.' },
     ],

@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'مثل الباحة.', solution: 'متشابه — خميس أقل غابات. نفس البروتوكول.' },
         { fear: 'Dehumidifier مبالغة.', solution: 'بدونه = انتفاخ+عفن = تكلفة 10×.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'أثاث خميس مثل عنيزة.', truth: 'عكس! انتفاخ+عفن+عث vs تشقق+جفاف.' },
         { myth: 'لا عفن بخميس.', truth: '60-85%+ضباب = أسرع عفن PVAc.' },
     ],

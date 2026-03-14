@@ -59,7 +59,7 @@ export const override: PageOverride = {
         { fear: 'بعيد عن بريدة.', solution: '30 كم = 20-30 دقيقة فقط. أقرب مدينة كبيرة.' },
         { fear: 'VCI مطلوب.', solution: 'صفر NaCl = صفر صدأ = لا VCI. وفّر.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'التمور ما تحتاج تبريد.', truth: '48°م + 4 ساعات = تخمر. تبريد 18°م إلزامي.' },
         { myth: 'دباب عادي يكفي.', truth: 'SiO₂ يخدش. Stretch Film ضروري. + تبريد للتمور.' },
     ],

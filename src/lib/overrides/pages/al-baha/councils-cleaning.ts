@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'منظف عادي.', solution: '4 تحديات جبلية = 4 ركائز.' },
         { fear: 'مثل بريدة.', solution: 'ضباب+عرعر+طين ≠ كلس.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'الباحة نظيفة.', truth: 'ضباب = عفن. عرعر = لزج.' },
         { myth: 'مبيّض ينظّف.', truth: 'مبيّض + Laterite = أسوأ.' },
     ],

@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'ماء وقماش.', solution: 'SiO₂+NaCl = Liquid Grinding = خدش.' },
         { fear: 'مثل جدة.', solution: 'SOx YASREF = حمض إضافي. Etching.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'شهري.', truth: 'NaCl+SOx يومي = أسبوعي.' },
         { myth: 'ماء عادي.', truth: 'NaCl يعود. RO.' },
     ],

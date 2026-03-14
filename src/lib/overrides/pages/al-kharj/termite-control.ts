@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'جاف = لا نمل.', solution: 'رطوبة CaCO₃ تحت الأرض.' },
         { fear: 'رش سطحي.', solution: 'النمل تحت. حاجز عميق.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'جاف = آمن.', truth: 'تحت الأرض رطب. CaCO₃.' },
         { myth: 'بعد البناء.', truth: 'Pre-Con أرخص 10×.' },
     ],

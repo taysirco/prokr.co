@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'كلور يكفي.', solution: 'NH₃ = Chloramines. فحص نسبة.' },
         { fear: 'مثل خميس.', solution: 'كلس مقابل طحالب. مختلف.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'تنظيف عادي.', truth: 'CaCO₃ = Descaler. NH₃ = فحص. مختلف.' },
         { myth: 'كل 3 أشهر.', truth: 'تبخّر+كلس = شهري.' },
     ],

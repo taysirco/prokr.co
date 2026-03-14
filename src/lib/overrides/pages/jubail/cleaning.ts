@@ -62,7 +62,7 @@ export const override: PageOverride = {
         { fear: 'مثل الخبر.', solution: 'VOC + سخام + 98% > 95%. أعقد.' },
         { fear: 'منظف عادي.', solution: 'NaCl+VOC = ينزلق. Marine only.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'ساحلي فقط.', truth: 'ساحلي + صناعي = 5 خطوات.' },
         { myth: 'شهري.', truth: '98% = عفن أسبوعي. أسبوعي.' },
         { myth: 'يجف طبيعي.', truth: '98% = 6-10 ساعات. Dehumidifier.' },

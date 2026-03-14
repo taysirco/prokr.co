@@ -62,7 +62,7 @@ export const override: PageOverride = {
         { fear: 'مثل الخبر.', solution: 'واحة = عفن واحي+طين+نخيل+عيون. مختلف.' },
         { fear: 'منظف عادي.', solution: 'NaCl+طين = ينزلق. RO+Microfiber.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'ساحلي فقط.', truth: 'واحي = طين+نخيل+عيون. ثنائي.' },
         { myth: 'شهري.', truth: 'عفن أسبوعي+NaCl يومي. أسبوعي.' },
     ],

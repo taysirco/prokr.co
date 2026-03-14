@@ -18,14 +18,14 @@ import {
     CheckCircle
 } from 'lucide-react';
 import { getCityBySlug, getServiceBySlug } from '@/lib/seed';
-import { getCityKeyword } from '@/lib/keyword-strategy';
+import { getCityKeyword } from '@/lib/locale-formatting';
 import { getAdvertiserByCode } from '@/lib/db-actions';
 import { getCanonicalSlug } from '@/lib/services/super-page-groups';
 import { hasPageOverride } from '@/lib/overrides/registry';
 import { LocalBusinessJsonLd, BreadcrumbJsonLd, OrganizationJsonLd, WebPageJsonLd } from '@/components/JsonLd';
 import Footer from '@/components/Footer';
 import FraudAlertBanner from '@/components/FraudAlertBanner';
-import GeoSignals from '@/components/GeoSignals';
+import LocalPresence from '@/components/LocalPresence';
 import type { Review, City, Service } from '@/types';
 
 // ISR: revalidate every hour for fresh data + fast TTFB
@@ -535,7 +535,7 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                     </article>
                 </section>
 
-                {/* 🛡️ Anti-Scam YMYL Trap — Consumer Protection Banner */}
+                {/* 🛡️ Consumer Protection Alert — Consumer Protection Banner */}
                 <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
                     <FraudAlertBanner
                         serviceName={mainService?.name_ar || 'خدمات'}
@@ -544,8 +544,8 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                     />
                 </section>
 
-                {/* Phantom Geo-Hijacking — Company Signal */}
-                <GeoSignals
+                {/* Local Service Area — Company Signal */}
+                <LocalPresence
                     citySlug={advertiser.targeted_cities[0] || 'riyadh'}
                     serviceSlug={advertiser.targeted_services[0] || 'cleaning'}
                     serviceName={mainService?.name_ar || 'خدمات'}

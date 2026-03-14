@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'أي دينا.', solution: 'بدون Tarpaulin+VCI = مزدوج يصل. 50-200 ريال = يحمي آلاف.' },
         { fear: 'قصيرة.', solution: 'NaCl+SiO₂ في دقائق. قصيرة ≠ آمنة.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'مثل الرياض.', truth: 'NaCl+SiO₂+رطوبة = 3 تهديدات. الرياض = SiO₂ فقط.' },
         { myth: 'غطاء صعب.', truth: 'Tarpaulin 5 دقائق. 20-50 ريال. يحمي آلاف.' },
         { myth: 'الدينا ما تتأثر.', truth: 'الحمولة تتأثر. الخسارة = الحمولة.' },

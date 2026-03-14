@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'مثل الرياض.', solution: 'NH₃ مزارع. الرياض: لا مزارع ألبان قريبة.' },
         { fear: 'رائحة طبيعية.', solution: 'NH₃ = تآكل. ليس طبيعي.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'صيانة عادية.', truth: 'NH₃+H₂S. Activated Carbon.' },
         { myth: 'مرتين.', truth: 'NH₃+CaCO₃+SiO₂. 4.' },
     ],

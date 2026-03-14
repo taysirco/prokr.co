@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'مكشوفة أرخص.', solution: 'مطر = تبلل. مغلقة.' },
         { fear: 'مثل بريدة.', solution: 'جبلي ≠ مستوي.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'أي دينا.', truth: 'Mountain-Spec+مغلقة.' },
         { myth: 'طرق عادية.', truth: 'منحدرات+Laterite.' },
     ],

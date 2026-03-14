@@ -108,7 +108,7 @@ export const override: PageOverride = {
 
         saudiRegulations: [REGULATIONS.BALADI_HEALTH],
 
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'ماء وصابون يكفي لتنظيف الواجهات', truth: 'الصابون يترك طبقة لزجة تجذب الغبار أسرع. في جدة: ملح NaCl البحري يتصلب على الزجاج — يحتاج محلول إزالة أملاح متخصص (Descaler). والارتفاعات فوق 3 أمتار تحتاج رافعة أو حبال أمان — لا تستخدم سلم عادي' },
         { myth: 'المنظف العادي يكفي.', truth: 'المنظف العادي يزيل 40% من الأوساخ. HEPA + بخار = 99%+. الفرق = 59% غبار دقيق + بكتيريا + عث.' },
     ],

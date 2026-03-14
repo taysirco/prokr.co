@@ -59,7 +59,7 @@ export const override: PageOverride = {
         { fear: 'رش سطحي يكفي.', solution: 'المستعمرة تحت الأرض. Termidor+حقن.' },
         { fear: 'مثل خميس.', solution: 'نخيل 8M = سيللوز أكثر. نطاق أوسع.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'رش عام.', truth: 'مستعمرة = Termidor. سطحي لا يصل.' },
         { myth: 'مرة عمر.', truth: 'ΔT+نخيل = فحص سنوي. مستعمرات جديدة.' },
     ],

@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'مثل الرياض.', solution: 'NH₃ مزارع. الرياض لا مزارع ألبان قريبة.' },
         { fear: 'معطر يكفي.', solution: 'يُخفي. NH₃ يتراكم. AC يمتص = فرق.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'معطر يكفي للرائحة.', truth: 'NH₃ يتراكم في الأقمشة. AC يمتص.' },
         { myth: 'شهري يكفي.', truth: 'NH₃ يومي من المزارع. أسبوعي لو قريب.' },
     ],

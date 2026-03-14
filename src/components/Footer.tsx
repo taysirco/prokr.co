@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { Phone, Mail, MapPin, Facebook, Twitter, Instagram } from 'lucide-react';
 import { CITIES, SERVICES, getCityBySlug, getServiceBySlug } from '@/lib/seed';
 import { NAP } from '@/lib/nap';
-import { getCityKeyword } from '@/lib/keyword-strategy';
+import { getCityKeyword } from '@/lib/locale-formatting';
 import { hasPageOverride } from '@/lib/overrides/registry';
 import { isAbsorbedSlug, getCanonicalSlug } from '@/lib/services/super-page-groups';
 

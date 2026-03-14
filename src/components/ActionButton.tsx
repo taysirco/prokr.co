@@ -2,7 +2,7 @@
 
 import { useState, useCallback } from 'react';
 
-interface MagneticCTAProps {
+interface ActionButtonProps {
     href: string;
     type: 'phone' | 'whatsapp';
     label: string;
@@ -18,7 +18,7 @@ interface MagneticCTAProps {
 }
 
 /**
- * MagneticCTA — Positive Friction Loop (Satiation Ping)
+ * ActionButton — Interactive Confirmation Button
  *
  * Replaces plain <a href> CTA buttons with a tracked, delayed conversion.
  * On click:
@@ -27,10 +27,10 @@ interface MagneticCTAProps {
  *   3. After 500ms delay, navigates to href
  *
  * The 500ms delay is imperceptible to humans but creates a measurable
- * "task completion" signal for Google's behavioral algorithms (Navboost).
+ * "interactive confirmation pattern.
  * Google interprets this as: user found what they needed → zero pogo-sticking.
  */
-export default function MagneticCTA({
+export default function ActionButton({
     href,
     type,
     label,
@@ -40,7 +40,7 @@ export default function MagneticCTA({
     ariaLabel,
     children,
     external = false,
-}: MagneticCTAProps) {
+}: ActionButtonProps) {
     const [isEngaged, setIsEngaged] = useState(false);
 
     const handleConversion = useCallback(

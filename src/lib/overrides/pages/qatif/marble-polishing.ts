@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'مثل الخبر.', solution: 'واحة = طين مسام+عفن واحي+Biofilm.' },
         { fear: 'مرة.', solution: '80-95%+NaCl+طين. ربع سنوي.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'ساحلي فقط.', truth: 'واحي = طين+عيون+Biofilm.' },
         { myth: 'ملمّع.', truth: 'طين+عفن مسامي. سطحي.' },
     ],

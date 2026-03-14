@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'مكنسة تكفي.', solution: 'NaCl+SOx = HEPA AC.' },
         { fear: 'مثل بريدة.', solution: 'ملح+حمض+عفن vs كلس+Nafud.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'أسبوعي.', truth: 'NaCl+SOx يومي.' },
         { myth: 'تنظيف عادي.', truth: 'HEPA AC+Anti-Fungal+RO.' },
     ],

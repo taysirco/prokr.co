@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'بيت قديم = ما فيه حل.', solution: 'حراري 55°م يصل كل شق. الحل موجود.' },
         { fear: 'رش بعوض يكفي.', solution: 'آلية مختلفة. بق = حراري+IGR.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'بيوت جديدة فقط.', truth: 'بيوت تاريخية = أكثر شقوق = أكثر بق.' },
         { myth: 'بخاخ.', truth: 'Knockdown Resistance + 80-95% = لا يجف. حراري.' },
     ],

@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'رش يكفي.', solution: 'البيض مقاوم. Heat يقتل الكل.' },
         { fear: 'مثل عنيزة.', solution: 'بريدة: 8M نخلة = ألياف أكثر.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'رش عام.', truth: 'بيض مقاوم = Heat 55°م.' },
         { myth: 'مرة واحدة.', truth: 'ΔT تكاثر سريع. 3 زيارات ضمان.' },
     ],

@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'تنظيف مُوحّد.', solution: '4 مناطق مختلفة. Zone-Based.' },
         { fear: 'مثل بريدة.', solution: 'صدأ+بعوض+عفن = مختلف.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'تنظيف شامل.', truth: 'Zone-Based = 4 مناطق.' },
         { myth: 'شهري.', truth: 'NaCl+SOx يومي = أسبوعي.' },
     ],

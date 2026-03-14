@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'لا Scale = لا مشكلة.', solution: 'لا Scale = ميزة! لكن: Chloride Demand + طحالب + Biofilm = 3 مشاكل أخرى.' },
         { fear: 'كلور زيادة = غالي.', solution: '20-30% أكثر = 50-100 ريال/شهر. مسبح أخضر = 300-500 ريال Shock + يوم بدون سباحة.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'مسبح الخبر مثل الأحساء.', truth: 'NaCl ≠ CaSO₄. لا Scale = ميزة. لكن Chloride Demand = تحدٍ مختلف. مختلف.' },
         { myth: 'كلور عادي يكفي.', truth: 'Chloride Demand = 20-30% أكثر. عادي = تحت المطلوب = طحالب.' },
         { myth: 'شهري.', truth: 'طحالب 85-95% + Chloride Demand = أسبوعي إلزامي.' },

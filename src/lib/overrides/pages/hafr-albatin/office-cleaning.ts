@@ -56,7 +56,7 @@ export const override: PageOverride = {
         { fear: 'لا عفن = سهل.', solution: 'PM10 + كهرباء ساكنة + ΔT. 3 تحديات قارية.' },
         { fear: 'عاملة المبنى.', solution: 'بدون HEPA + بدون Anti-Static = 2 خطأ.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'مثل الرياض.', truth: 'ΔT 54°م > 35°م. SiO₂ أكثف. كهرباء ساكنة أعلى.' },
         { myth: 'مكيف يكفي.', truth: 'فلتر مكيف لا يحجز PM10 كـ HEPA. + المكيف نفسه SiO₂ فيه.' },
         { myth: 'شهري.', truth: 'PM10 يومي + عواصف. أسبوعي.' },

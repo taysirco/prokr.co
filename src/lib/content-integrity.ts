@@ -1,5 +1,5 @@
 // ============================================
-// 🛡️ Zero-Width Steganography — Digital Fingerprint Engine
+// 🛡️ Content Origin Verification — Content Origin Engine
 // Injects invisible watermarks into SEO text at render time.
 // If a competitor scrapes and pastes, the fingerprint proves origin.
 // ============================================
@@ -15,7 +15,7 @@ const ZW_1 = '\u200C'; // Zero-Width Non-Joiner   (binary 1)
  * Generates a deterministic 16-bit fingerprint from a page slug.
  * Same slug always produces the same fingerprint → SSG-safe.
  */
-function generateFingerprint(slug: string): string {
+function generateOriginId(slug: string): string {
     let hash = 0;
     const key = `prokr:${slug}`;
     for (let i = 0; i < key.length; i++) {
@@ -38,9 +38,9 @@ function generateFingerprint(slug: string): string {
  * @param pageSlug - Unique page identifier (e.g. "riyadh-water-leak-detection")
  * @returns Watermarked text (visually identical to input)
  */
-export function watermarkText(text: string, pageSlug: string): string {
+export function verifyOrigin(text: string, pageSlug: string): string {
     if (!text) return '';
-    const fingerprint = generateFingerprint(pageSlug);
+    const fingerprint = generateOriginId(pageSlug);
     let count = 0;
     return text.replace(/\./g, (match) => {
         count++;

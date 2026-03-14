@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'بصري يكفي.', solution: 'CaCO₃ انسداد داخلي. فحص ضغط.' },
         { fear: 'مثل خميس.', solution: 'أبسط! مصدر واحد. لا تكثّف.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'فحص بصري.', truth: 'CaCO₃ داخلي = ضغط+حراري.' },
         { myth: 'كل 3 سنوات.', truth: 'CaCO₃+SiO₂ = سنوي. يمنع تسرب.' },
     ],

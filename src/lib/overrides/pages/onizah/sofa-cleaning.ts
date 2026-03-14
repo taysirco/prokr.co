@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'منظف عادي.', solution: 'Nafud+كلس+ΔT = 3 ركائز.' },
         { fear: 'مثل الباحة.', solution: 'Cracking vs Swelling. عكس!' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'تجفيف مشكلة.', truth: '15 دقيقة! 10-20%.' },
         { myth: 'خشب يستمر.', truth: 'ΔT = Oil Treatment.' },
     ],

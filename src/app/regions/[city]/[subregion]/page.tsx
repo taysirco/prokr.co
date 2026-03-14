@@ -7,13 +7,13 @@ import { getCityBySlug, getServiceBySlug, getServiceImage, CATEGORY_NAMES } from
 import { getSubRegion, getSubRegionsByCity, SUB_REGIONS } from '@/lib/sub-regions';
 import { BreadcrumbJsonLd, ItemListJsonLd, WebPageJsonLd, ServiceAreaJsonLd } from '@/components/JsonLd';
 import { getCityContext } from '@/lib/city-context';
-import { getCityKeyword } from '@/lib/keyword-strategy';
+import { getCityKeyword } from '@/lib/locale-formatting';
 import { hasPageOverride } from '@/lib/overrides/registry';
 import { isAbsorbedSlug } from '@/lib/services/super-page-groups';
 import Footer from '@/components/Footer';
 import FraudAlertBanner from '@/components/FraudAlertBanner';
-import SalaryCycleBadge from '@/components/SalaryCycleBadge';
-import GeoSignals from '@/components/GeoSignals';
+import MarketTimingBadge from '@/components/MarketTimingBadge';
+import LocalPresence from '@/components/LocalPresence';
 import { LiveAvailabilityBanner } from '@/components/LiveAvailabilityBanner';
 
 interface SubRegionPageProps {
@@ -193,9 +193,9 @@ export default async function SubRegionPage({ params }: SubRegionPageProps) {
                             {availableServices.length} خدمة متوفرة في {subRegion.name_ar} من شركات معتمدة.
                         </p>
 
-                        {/* 💰 Salary Cycle Badge — النبض المالي */}
+                        {/* 💰 Market Timing Badge — النبض المالي */}
                         <div className="mt-3">
-                            <SalaryCycleBadge compact />
+                            <MarketTimingBadge compact />
                         </div>
                     </div>
                 </section>
@@ -325,13 +325,13 @@ export default async function SubRegionPage({ params }: SubRegionPageProps) {
                     </Link>
                 </section>
 
-                {/* 🛡️ Anti-Scam YMYL Trap — Consumer Protection Banner */}
+                {/* 🛡️ Consumer Protection Alert — Consumer Protection Banner */}
                 <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
                     <FraudAlertBanner serviceName="خدمات منزلية" serviceSlug="cleaning" cityName={`${subRegion.name_ar}، ${city.name_ar}`} />
                 </section>
 
-                {/* Phantom Geo-Hijacking — SubRegion Signal */}
-                <GeoSignals citySlug={resolvedParams.city} serviceSlug="city-hub" serviceName="خدمات منزلية" serviceCategory="cleaning" />
+                {/* Local Service Area — SubRegion Signal */}
+                <LocalPresence citySlug={resolvedParams.city} serviceSlug="city-hub" serviceName="خدمات منزلية" serviceCategory="cleaning" />
 
                 <Footer currentCity={resolvedParams.city} />
             </main>

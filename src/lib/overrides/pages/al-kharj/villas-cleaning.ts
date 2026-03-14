@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'مثل الرياض.', solution: 'NH₃+CaCO₃+أفنية. الرياض: لا.' },
         { fear: 'مثل خميس.', solution: 'لا عفن+30 دقيقة = أرخص 40%.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'معطر يكفي.', truth: 'NH₃ بلمرة. AC يمتص.' },
         { myth: '4 محاور مبالغة.', truth: 'مزارع+آبار+رمل+حرارة = 4 حقيقي.' },
     ],

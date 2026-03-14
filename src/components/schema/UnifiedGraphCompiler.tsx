@@ -1,5 +1,5 @@
 // ============================================
-// 🚨 UNIFIED GRAPH COMPILER — @graph Singularity 🚨
+// 🚨 UNIFIED GRAPH COMPILER — JSON-LD Structured Data 🚨
 // Merges 10 separate JSON-LD scripts into ONE
 // interconnected @graph with @id cross-references.
 // Result: Google digests the page in 0.01s!
@@ -9,7 +9,7 @@ import type { Advertiser, City, Service } from '@/types';
 import type { CityContext } from '@/lib/city-context';
 import type { ContentLayers } from '@/lib/ai-content-layers';
 import { resolveSeoContent } from '@/lib/overrides';
-import { getServiceKeywordProfile, getCityKeyword } from '@/lib/keyword-strategy';
+import { getServiceKeywordProfile, getCityKeyword } from '@/lib/locale-formatting';
 import { getCanonicalSlug } from '@/lib/services/super-page-groups';
 
 // ── WARRANTY DATA (mirrored from ServiceOfferJsonLd) ──

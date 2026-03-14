@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'مثل الرياض.', solution: 'NH₃ مزارع+CaCO₃ آبار. الرياض: لا.' },
         { fear: 'مثل خميس.', solution: 'لا عفن+20 دقيقة = أرخص 30%.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'شامبو يكفي.', truth: 'بلمرة حيوانية = Enzymatic.' },
         { myth: 'ماء صنبور للخشب.', truth: 'CaCO₃ بقع. RO.' },
     ],

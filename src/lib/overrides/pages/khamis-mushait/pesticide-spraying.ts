@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'رش عادي يكفي.', solution: 'بدون Dehumidifier = فعالية 50%. IPM أولاً.' },
         { fear: 'مثل عنيزة.', solution: 'المبيد لا يجف + تكاثر 2× = بروتوكول مختلف.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'نصف سنوي يكفي بخميس.', truth: 'تكاثر 2× = ربع سنوي إلزامي.' },
         { myth: 'أي مبيد يعمل.', truth: 'SFDA نظام غد فقط. غيره = غرامة+خطر.' },
     ],

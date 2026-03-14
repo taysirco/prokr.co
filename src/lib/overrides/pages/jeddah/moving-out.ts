@@ -108,7 +108,7 @@ export const override: PageOverride = {
 
         saudiRegulations: [REGULATIONS.BALADI_HEALTH],
 
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'تنظيف سريع بنفسك يكفي للتسليم', truth: 'المؤجر يحق له خصم من التأمين إذا الشقة غير نظيفة. التنظيف الاحترافي + صورة قبل/بعد + فاتورة = دليل يحمي حقك. في جدة: الرطوبة تترك علامات عفن — تحتاج تنظيف وتعقيم متخصص' },
         { myth: 'أي دينا تكفي.', truth: 'دينا بدون ترخيص TGA = بدون تأمين = أي ضرر يتحمله العميل. الترخيص = حماية قانونية.' },
     ],

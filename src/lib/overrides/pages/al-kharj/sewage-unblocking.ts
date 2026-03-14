@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'سنبك يكفي.', solution: 'CaCO₃ = كلس. سنبك لا يُذيب. Descaler.' },
         { fear: 'مثل الرياض.', solution: 'كلس+رمل. الرياض: دهون فقط.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'أي تسليك.', truth: 'CaCO₃+SiO₂ = Descaler+Jetting.' },
         { myth: 'مرة بالسنة.', truth: 'كلس+رمل = ربع سنوي.' },
     ],

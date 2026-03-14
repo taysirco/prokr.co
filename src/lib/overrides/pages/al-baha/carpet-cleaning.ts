@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'تجفيف طبيعي.', solution: '6-10h = عفن. Dehumidifier.' },
         { fear: 'مثل بريدة.', solution: '15 دقيقة vs 6-10h!' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'تجفيف شمس.', truth: 'ضباب = لا شمس. Dehumidifier.' },
         { myth: 'نصف سنوي.', truth: 'ربع سنوي. رغدان شهري.' },
     ],

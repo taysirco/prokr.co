@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'Descaler يكفي.', solution: 'NaCl Etching ≠ كلس. Marine Sealer.' },
         { fear: 'مثل بريدة.', solution: 'Etching+حمض+عفن vs كلس+Nafud.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'سنوي.', truth: 'NaCl Etching = نصف سنوي Sealer.' },
         { myth: 'ماء عادي.', truth: 'NaCl يعود. RO.' },
     ],

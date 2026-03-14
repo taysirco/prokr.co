@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'بخار يسبب عفن.', solution: '15-25% = 10 دقيقة. لا عفن.' },
         { fear: 'مثل الشامبو.', solution: '150°م يكسّر NH₃. الشامبو لا يصل.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'شامبو أفضل.', truth: '150°م يكسّر NH₃+يُلين CaCO₃.' },
         { myth: 'بخار يتلف.', truth: 'يتلف جلد طبيعي فقط. باقي: آمن.' },
     ],

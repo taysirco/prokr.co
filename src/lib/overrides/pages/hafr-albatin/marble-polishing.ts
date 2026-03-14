@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'لا عفن = سهل.', solution: 'SiO₂ أكثف + ΔT أقصى + UV. 3 تحديات ≠ سهل.' },
         { fear: 'ملمّع.', solution: 'فوق SiO₂ + شعيرات. سطحي.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'مثل الرياض.', truth: 'ΔT 54°م > 35°م. SiO₂ أكثف. UV أعلى.' },
         { myth: 'مرة.', truth: 'SiO₂ أكثف + ΔT شعيرات. ربع سنوي.' },
         { myth: 'لا NaCl = سهل.', truth: 'صحيح (ميزة!). لكن: SiO₂ + ΔT + UV.' },

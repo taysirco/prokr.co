@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'لا رطوبة = سهل.', solution: 'ΔT 54°م + 10-15% تشقق + UV + SiO₂. 4 تحديات قارية.' },
         { fear: 'ملمّع.', solution: 'لا يحمي من ΔT ولا UV ولا جفاف. سطحي.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'مثل الرياض.', truth: 'ΔT 54°م > 35°م. UV أعلى. 10-15% < 15%. أقسى.' },
         { myth: 'سنوي.', truth: 'ΔT 54°م + جلد 3-4 أشهر. نصف سنوي.' },
         { myth: 'لا NaCl = سهل.', truth: 'صحيح (ميزة!). لكن: ΔT + UV + جفاف = 3 تحديات بديلة.' },

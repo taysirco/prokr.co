@@ -60,7 +60,7 @@ export const override: PageOverride = {
         { fear: 'مثل الرياض بالضبط.', solution: 'ضباب+عفن+برد+أمطار = مختلف تماماً. الرياض: SiO₂+حر.' },
         { fear: 'صيانة عادية تكفي.', solution: 'Anti-Fungal + Heat Pump + Drain = 3 خطوات إضافية.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'المكيف يحتاج صيانة مرتين/سنة.', truth: '4 مرات — ضباب 200 يوم = عفن كل 3 أشهر.' },
         { myth: 'لا حاجة لتدفئة بالسعودية.', truth: '0°م شتاءً = Heat Pump ضروري. خميس ليست الرياض.' },
     ],

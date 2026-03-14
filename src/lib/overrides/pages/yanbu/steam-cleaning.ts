@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'بخار آمن.', solution: '70-85%+بخار = عفن بعد! Dehumidifier.' },
         { fear: 'مثل بريدة.', solution: '6-8h vs 15 دقيقة. مختلف.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'بخار يُجفف.', truth: '70-85% = 6-8h تجفيف.' },
         { myth: 'ماء عادي.', truth: 'NaCl+تحلية = RO.' },
     ],

@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'مثل الرياض.', solution: 'CaCO₃+SiO₂+ΔT = مختلف. الرياض: لا كلس.' },
         { fear: 'غالي.', solution: 'تسرب خفي × سنة = عفن تحت البلاط = 5000+ إصلاح.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'فحص بصري يكفي.', truth: 'CaCO₃ انسداد داخلي. فحص ضغط.' },
         { myth: 'مثل خميس.', truth: 'أبسط! لا تكثّف. مصدر واحد.' },
     ],

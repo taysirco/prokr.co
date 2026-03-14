@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'بصري يكفي.', solution: '70-85% تكثّف = FLIR.' },
         { fear: 'مثل بريدة.', solution: 'تكثّف يُخفي vs بقع واضحة.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'فحص 5 سنوات.', truth: 'مزدوج = سنوي.' },
         { myth: 'Epoxy عادي.', truth: 'تحلية = Marine-Grade.' },
     ],

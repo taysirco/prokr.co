@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'غالي.', solution: 'تلف بدون Dehumidifier = أغلى بكثير. 98% لا ترحم.' },
         { fear: 'بيت أرخص.', solution: 'بيت = 98% + عفن. مستودع = Dehumidifier 24/7.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'أي مستودع.', truth: 'بدون Dehumidifier 24/7 = تلف.' },
         { myth: 'مثل الرياض.', truth: 'الرياض 15%: لا Dehumidifier. الجبيل 98%: 24/7.' },
         { myth: 'ربع سنوي فحص.', truth: '98% + NaCl+VOC. شهري.' },

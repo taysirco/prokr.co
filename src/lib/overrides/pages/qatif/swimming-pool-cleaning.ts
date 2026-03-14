@@ -56,7 +56,7 @@ export const override: PageOverride = {
         { fear: 'مثل الخبر.', solution: 'عيون تُغذي. فريد.' },
         { fear: 'كلور يكفي.', solution: 'NaCl Demand + عيون. 2×.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'ساحلي فقط.', truth: 'عيون = تغذية طحالب واحية.' },
         { myth: 'مثل حفر الباطن.', truth: 'طحالب أسرع 10× بسبب عيون+80-95%.' },
     ],

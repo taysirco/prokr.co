@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'لا Scale = سهل.', solution: 'لا Scale = ميزة! لكن: Chloride + SiO₂ + طحالب = 3 أخرى.' },
         { fear: 'فرشاة عادية.', solution: 'حديدية + SiO₂ = مُركّب. Nylon.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'مثل الخبر.', truth: 'SiO₂ إضافي = خدش بلاط. مختلف.' },
         { myth: 'شهري.', truth: 'Chloride + طحالب + SiO₂. أسبوعي.' },
         { myth: 'كلور عادي.', truth: '20-30% أكثر.' },

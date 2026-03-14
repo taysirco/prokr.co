@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'لا Biofilm = سهل.', solution: 'كربنة أصلب + SiO₂ خشونة. 2 تحديات.' },
         { fear: 'بخاخ.', solution: 'pH 9-10 لا يعمل على كربنة 52°م.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'مثل الرياض.', truth: '52°م > 45°م. أصلب كربنة.' },
         { myth: 'مثل الشرقية.', truth: 'لا NaCl + لا Biofilm. أصلب لكن أبسط.' },
         { myth: 'نصف سنوي.', truth: 'كربنة تجف فوراً. ربع سنوي.' },

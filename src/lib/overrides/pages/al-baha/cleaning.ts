@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'منظف عادي.', solution: 'Laterite+عرعر+عفن = 4 ركائز.' },
         { fear: 'مثل بريدة.', solution: 'ضباب+عرعر+طين ≠ كلس+Nafud.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'الباحة نظيفة.', truth: '200 يوم ضباب. 3 مصادر مختلفة.' },
         { myth: 'مبيّض يُنظّف.', truth: 'يُثبّت Laterite. Oxalic فقط.' },
     ],

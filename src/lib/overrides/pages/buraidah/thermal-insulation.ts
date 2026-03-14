@@ -59,7 +59,7 @@ export const override: PageOverride = {
         { fear: 'Closed أفضل.', solution: 'لا مطر = Open 40% أرخص.' },
         { fear: 'مثل خميس.', solution: 'عكس! Open مقابل Closed. أرخص 50%.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'Closed ضروري.', truth: 'لا مطر = Open R-3.7 يكفي.' },
         { myth: 'Vapor لازم.', truth: '10-20% = لا تكثّف. وفر 15%.' },
     ],

@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'رش عام.', solution: 'BTI+IGR+Gel = متخصص ثلاثي.' },
         { fear: 'ربع سنوي.', solution: '70-85% = شهري. Residual يُخفف.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'رش عام.', truth: 'BTI+IGR+Gel = ثلاثي.' },
         { myth: 'ربع سنوي.', truth: '70-85% = شهري.' },
     ],

@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'كلور يكفي.', solution: 'أمطار تُخففه + طحالب 2×. Algicide إلزامي.' },
         { fear: 'مثل عنيزة.', solution: 'عنيزة: شمس+لا مطر+لا أشجار = أبسط.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'المسبح ما يحتاج Algicide.', truth: '60-85% = طحالب 2×. Algicide أسبوعي.' },
         { myth: 'كل أسبوعين يكفي.', truth: 'أمطار+طحالب+أوراق = أسبوعي إلزامي.' },
     ],

@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'ربع سنوي.', solution: 'مطر = أسبوعي. كلور يُخفف.' },
         { fear: 'مثل بريدة.', solution: 'مطر+Biofilm+طين ≠ جاف+Scale.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'كلور ثابت.', truth: 'مطر = 1.3× بعد.' },
         { myth: 'لا Biofilm.', truth: '20-30% أسرع. ضباب+غابة.' },
     ],

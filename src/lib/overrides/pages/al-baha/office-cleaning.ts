@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'تنظيف عادي.', solution: 'أسوأ SBS = Anti-Allergen.' },
         { fear: 'مثل بريدة.', solution: 'لا SBS ببريدة. ×2 هنا.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'شهري.', truth: 'أسبوعي! SBS = صحة مهنية.' },
         { myth: 'HEPA اختياري.', truth: 'عرعر HVAC = إلزامي.' },
     ],

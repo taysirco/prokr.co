@@ -109,7 +109,7 @@ export const override: PageOverride = {
 
         saudiRegulations: [REGULATIONS.TGA_LICENSE],
 
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'الدباب نفس الدينا', truth: 'الدباب: حمولة 1-2 طن، أثاث شقة صغيرة أو جزء من الأثاث. الدينا: 4-10 طن، أثاث شقة كاملة أو أكثر. استخدام الدباب لحمولة كبيرة = رحلتين-ثلاث = تكلفة أعلى من الدينا' },
         { myth: 'أي دينا تكفي.', truth: 'دينا بدون ترخيص TGA = بدون تأمين = أي ضرر يتحمله العميل. الترخيص = حماية قانونية.' },
     ],

@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'حديد عادي أرخص.', solution: 'يصدأ. SS304 15-20 سنة.' },
         { fear: 'مثل الباحة.', solution: 'جاف = SS304. رطب = SS316.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'حمام عادي.', truth: 'سوق التمور = كثيف.' },
         { myth: 'SS316 ضروري.', truth: '10-20% = SS304 يكفي.' },
     ],

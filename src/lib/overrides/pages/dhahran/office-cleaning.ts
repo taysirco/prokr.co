@@ -61,7 +61,7 @@ export const override: PageOverride = {
         { fear: 'المكتب نظيف.', solution: 'NaCl شفاف + SiO₂ ناعم + عفن مخفي. \"نظيف\" = لا تُلاحظ.' },
         { fear: 'عاملة المبنى.', solution: 'بدون ترتيب + بدون HEPA + بدون Anti-Corrosion = 3 أخطاء.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'مثل الرياض.', truth: 'NaCl إضافي = تآكل. 75-85% = عفن. مختلف.' },
         { myth: 'مكيف يكفي.', truth: 'المكيف نفسه = عفن + NaCl+SiO₂. جزء من المشكلة.' },
         { myth: 'شهري.', truth: 'مزدوج يومي + PM10 مستمر. أسبوعي.' },

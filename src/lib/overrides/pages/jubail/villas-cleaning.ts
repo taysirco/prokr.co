@@ -66,7 +66,7 @@ export const override: PageOverride = {
         { fear: 'مثل الخبر.', solution: 'سخام SABIC + 98%>95% + VOC. أعقد.' },
         { fear: 'غالي.', solution: '7 محاور = 7 أدوات+فريق. بدون = تلف أغلى.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'مثل حفر الباطن.', truth: '5 محاور vs 7. عفن+عث إضافي. أعقد 40%.' },
         { myth: 'شهري.', truth: '7 ملوثات يومية + عفن أسبوعي. أسبوعي.' },
         { myth: 'فريق صغير.', truth: '7 محاور = 5-8 أشخاص.' },

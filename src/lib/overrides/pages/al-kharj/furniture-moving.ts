@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'مثل الرياض.', solution: 'ΔT+طرق ترابية+SiO₂ = مختلف.' },
         { fear: 'تغليف حراري مبالغة.', solution: '50°م في الصهريج = تشقق خشب.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'نقل عادي يكفي.', truth: 'ΔT+ترابي = تغليف حراري+تثبيت.' },
         { myth: 'أي وقت.', truth: 'صيف ظهراً = أخطر. صباحاً أفضل.' },
     ],

@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'مثل الخبر.', solution: 'واحة = تربة طينية + نخيل + عفن واحي. مختلف.' },
         { fear: 'شامبو.', solution: 'NaCl+طين = ينزلق. RO+HEPA.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'ساحلي فقط.', truth: 'واحي = طين+نخيل+عيون. ثنائي.' },
         { myth: 'يجف طبيعي.', truth: '80-95%. Turbo.' },
     ],

@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'مثل الخبر.', solution: 'VOC Galvanic 2× + 98% > 95% + سخام. أقسى.' },
         { fear: 'ملمّع.', solution: 'لا يحمي من NaCl+VOC ولا عفن 98%. سطحي.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'ساحلي فقط.', truth: 'VOC = صناعي. NaCl+VOC = Galvanic 2×.' },
         { myth: 'نصف سنوي.', truth: 'عفن أسبوعي + Galvanic. ربع سنوي.' },
         { myth: 'بدون Dehumidifier.', truth: '98% = PVAc يمتص = تفكك.' },

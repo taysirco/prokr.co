@@ -1,5 +1,5 @@
 import type { City, Service } from '@/types';
-import { getServiceKeywordProfile, getCityKeyword } from '@/lib/keyword-strategy';
+import { getServiceKeywordProfile, getCityKeyword } from '@/lib/locale-formatting';
 
 // ============================================
 // HOWTO SCHEMA

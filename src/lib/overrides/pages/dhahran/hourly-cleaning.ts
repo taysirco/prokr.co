@@ -60,7 +60,7 @@ export const override: PageOverride = {
         { fear: 'أنظف بنفسي.', solution: 'بماء الظهران = NaCl + SiO₂ خدش = تلف مزدوج. 5 خطوات = تحتاج تدريب.' },
         { fear: 'أرخص.', solution: 'أرخص = بدون ترتيب = خدش + ملح + عفن = 3 أخطاء كل زيارة.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'ممسحة.', truth: 'ممسحة + SiO₂ = خدش. + ماء الظهران = NaCl. 2 أخطاء.' },
         { myth: 'مثل الرياض.', truth: 'NaCl إضافي + 75-85% عفن. مختلف.' },
         { myth: 'شهري.', truth: 'مزدوج يومي. أسبوعي = الحد.' },

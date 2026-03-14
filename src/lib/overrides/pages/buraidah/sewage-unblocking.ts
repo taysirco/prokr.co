@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'سبرنج يكفي.', solution: '600ppm كلس صلب. Hydro Jetting.' },
         { fear: 'مثل عنيزة.', solution: 'نفس 600ppm لكن بريدة أكبر.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'تسليك سنوي.', truth: '600ppm = كل 3 أشهر. أسرع.' },
         { myth: 'سبرنج.', truth: 'كلس+Nafud صلب = Hydro.' },
     ],

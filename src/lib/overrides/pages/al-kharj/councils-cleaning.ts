@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'معطر يكفي.', solution: 'بلمرة حيوانية عميقة. Enzymatic.' },
         { fear: 'مثل خميس.', solution: 'لا عفن+30 دقيقة. أبسط 30%.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'شامبو يكفي.', truth: 'بلمرة حيوانية = Enzymatic يكسّر.' },
         { myth: 'ماء صنبور.', truth: 'CaCO₃ 450ppm = خشونة. RO.' },
     ],

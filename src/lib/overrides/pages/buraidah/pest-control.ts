@@ -60,7 +60,7 @@ export const override: PageOverride = {
         { fear: 'رش عام يكفي.', solution: 'ΔT تكاثر 2×. IPM+Gel+إحكام.' },
         { fear: 'مثل خميس.', solution: 'لا عفن+لا عث = أبسط 20%.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'رش مرة.', truth: 'ΔT+نخيل = دوري. ربع سنوي.' },
         { myth: 'أي مبيد.', truth: 'SFDA غد مسجل. Gel > رش.' },
     ],

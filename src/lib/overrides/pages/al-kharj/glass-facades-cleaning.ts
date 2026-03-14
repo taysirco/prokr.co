@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'ماء صنبور يكفي.', solution: 'CaCO₃ 450ppm = بقع. RO.' },
         { fear: 'مثل الرياض.', solution: 'CaCO₃ أعلى + حمام مزارع 3-5×.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'أي مسح يكفي.', truth: 'SiO₂ بدون Pre-Rinse = خدش. RO = لا بقع.' },
         { myth: 'فضلات حمام عادية.', truth: 'pH 3-4 يآكل. حمام مزارع 3-5×.' },
     ],

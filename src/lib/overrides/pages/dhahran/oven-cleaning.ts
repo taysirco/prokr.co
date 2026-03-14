@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'بخاخ يكفي.', solution: 'pH 9-10 لا يُذيب NaCl+SiO₂. لا يقتل Biofilm.' },
         { fear: 'أنظف بنفسي.', solution: 'بماء الظهران = NaCl. بدون Anti-Biofilm = يعود.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'فرن عادي.', truth: 'NaCl+SiO₂ + 75-85% = مزدوج. مختلف.' },
         { myth: 'مثل الخبر.', truth: 'SiO₂ إضافي يُخشّن. 75-85% = أبطأ. كربنة شبه رطبة = أصعب.' },
         { myth: 'نصف سنوي.', truth: 'Biofilm 4-6 أسابيع. ربع سنوي.' },

@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'مثل الخبر.', solution: 'VOC + سخام SABIC إضافي. Galvanic 2×. مختلف.' },
         { fear: 'Ceramic غالي.', solution: 'Galvanic 2× = إعادة طلاء أسرع = أغلى. Ceramic = وقاية.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'ساحلي فقط.', truth: 'ساحلي + صناعي = VOC + سخام. ثنائي.' },
         { myth: 'إسفنجة ناعمة.', truth: 'فوق NaCl+VOC+سخام = تخدش. Touchless.' },
         { myth: 'شهري.', truth: 'يومي × 3 ملوثات + 98%. أسبوعي.' },

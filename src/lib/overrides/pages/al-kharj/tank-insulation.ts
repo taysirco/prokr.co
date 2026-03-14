@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'عزل عادي.', solution: 'CaCO₃ يآكل العادي. Epoxy مقاوم.' },
         { fear: 'مثل خميس.', solution: 'لا عفن = لا Anti-Fungal = مختلف.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'أي عزل.', truth: 'CaCO₃ = مقاوم فقط. + Food-Grade.' },
         { myth: 'بدون Descaler.', truth: 'كلس يمنع التصاق = تقشّر.' },
     ],

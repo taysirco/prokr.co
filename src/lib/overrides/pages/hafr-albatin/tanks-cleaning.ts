@@ -59,7 +59,7 @@ export const override: PageOverride = {
         { fear: 'لا Biofilm = سهل.', solution: 'CaCO₃ + SiO₂ + ΔT + -2°م. 4 تحديات.' },
         { fear: 'كلور يكفي.', solution: 'تبخر = تركيز. CaCO₃ يحمي. SiO₂ يحمي. كلور وحده ≠ كافٍ.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'مثل الرياض.', truth: '-2°م = تجمد. ΔT 54°م > 35°م. CaCO₃ أكثر.' },
         { myth: 'سنوي.', truth: 'CaCO₃ + SiO₂ + تبخر. نصف سنوي.' },
         { myth: 'لا يتجمد.', truth: '-2°م = سطح + أنابيب. عزل.' },

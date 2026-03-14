@@ -60,7 +60,7 @@ export const override: PageOverride = {
         { fear: 'الواجهة ما تتسخ.', solution: 'NaCl شفاف + Biofilm شفاف. \"ما تتسخ\" = لا تُلاحظ. ربع سنوي يكشف.' },
         { fear: 'ماء وصابون.', solution: 'ماء الخبر = NaCl جديد. صابون لا يقتل Biofilm. 2 فشلات.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'واجهات الخبر مثل الأحساء.', truth: 'NaCl ≠ CaSO₄. Biofilm ≠ لقاح. Hygroscopic ≠ Scale. مختلف.' },
         { myth: 'المطر يغسل.', truth: 'المطر في الخبر = NaCl + أملاح بحرية = بقع إضافية.' },
         { myth: 'سنوي.', truth: 'NaCl أسبوعي + Biofilm شهري. سنوي = 11 شهراً. ربع سنوي.' },

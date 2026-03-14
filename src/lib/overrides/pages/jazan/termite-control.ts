@@ -27,7 +27,7 @@ export const override: PageOverride = {
     verificationBadges: [{ badge: '✔️ مكافحة مرخصة', authority: 'بلدي + وقاء', icon: 'shield-check' }],
     equipment: [{ name: 'Fipronil 0.06%', use: 'Cascading Kill — يقتل المستعمرة عبر التلامس' }, { name: 'Bait Stations', use: '12/12 مراقبة — لا توقف موسمي' }, { name: 'حقن ضغط عالي', use: 'تجديد الحاجز المُتحلل' }],
     hiddenObjections: [{ fear: 'ما شفت نمل.', solution: 'النمل تحت الأرض. 80% = أنفاق مستقرة = قد يصل دون أن تُلاحظ. Bait Stations = كشف مبكر.' }],
-    counterNarratives: [{ myth: 'مرة واحدة تكفي.', truth: '80% يُحلل المبيد. + المستعمرة نشطة 12/12. مرة = حماية مؤقتة. Bait Stations 12/12 = حماية دائمة.' },
+    consumerEducation: [{ myth: 'مرة واحدة تكفي.', truth: '80% يُحلل المبيد. + المستعمرة نشطة 12/12. مرة = حماية مؤقتة. Bait Stations 12/12 = حماية دائمة.' },
         { myth: 'الحشرات تدل على قلة نظافة.', truth: 'الحشرات تبحث عن ماء ودفء وليس قذارة. أنظف بيت يجذب حشرات إذا فيه رطوبة أو شقوق.' },
     ],
     relatedServices: [{ slug: 'pest-control', context: 'حشرات — شاملة', priority: 1 }, { slug: 'water-leak-detection', context: 'تسربات — رطوبة تجذب', priority: 2 }, { slug: 'water-insulation', context: 'عزل — يمنع رطوبة', priority: 3 },

@@ -1,8 +1,8 @@
 // ═══════════════════════════════════════════════════════════════
-// Reverse Semantic Poisoning — Counter-Narrative Injection
-// Auto-appended to every page's counterNarratives via resolver
+// Consumer Myth Correction — Consumer Education
+// Auto-appended to every page's consumerEducation via resolver
 //
-// Each sector gets a tailored "poisoning" narrative that:
+// Each sector gets a tailored myth correction narrative that:
 // 1. Exposes competitor practices as YMYL violations
 // 2. Positions Prokr as Subject Matter Expert
 // 3. Uses sector-specific equipment/protocol references
@@ -17,10 +17,10 @@ interface CounterNarrative {
 }
 
 /**
- * Sector-specific "reverse semantic poisoning" counter-narratives.
- * These are auto-appended to every page's counterNarratives array.
+ * Sector-specific "consumer myth correction" consumer-educations.
+ * These are auto-appended to every page's consumerEducation array.
  */
-const SECTOR_POISON: Record<ServiceCategory, CounterNarrative> = {
+const SECTOR_MYTHS: Record<ServiceCategory, CounterNarrative> = {
     'leak-detection': {
         myth: 'الكشف المجاني عند الإصلاح عرض ممتاز — ليش ما أستغله؟',
         truth: 'تحذير هندسي: تشغيل أجهزة دقيقة مثل أكوافون (Aquaphon A200) وكاميرات حرارية (FLIR E96) يتطلب تكلفة تشغيلية صارمة — بطاريات ليثيوم + معايرة دورية + فني معتمد. عروض "الكشف المجاني" غالباً تعني: إما استخدام أجهزة رخيصة غير دقيقة، أو تضخيم فاتورة قطع الغيار لاحقاً لتعويض خسارة الفحص الأولي. في دليل بروكر، نُلزم المعلنين بشفافية التسعير وبروتوكول ضغط نيتروجين (10 بار) لضمان إصدار تقرير NWC رسمي لا يُرفض.',
@@ -48,10 +48,10 @@ const SECTOR_POISON: Record<ServiceCategory, CounterNarrative> = {
 };
 
 /**
- * Get the reverse-semantic-poisoning counter-narrative for a service.
+ * Get the consumer-myth-correction consumer-education for a service.
  * Returns null if the service category is unknown.
  */
-export function getPoisonCounterNarrative(serviceSlug: string): CounterNarrative | null {
+export function getConsumerMythCorrection(serviceSlug: string): CounterNarrative | null {
     // Map service slug to sector category
     const CATEGORY_MAP: Record<string, ServiceCategory> = {
         // Leak detection
@@ -119,5 +119,5 @@ export function getPoisonCounterNarrative(serviceSlug: string): CounterNarrative
     const category = CATEGORY_MAP[serviceSlug];
     if (!category) return null;
 
-    return SECTOR_POISON[category];
+    return SECTOR_MYTHS[category];
 }

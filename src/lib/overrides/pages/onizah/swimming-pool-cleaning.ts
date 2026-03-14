@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'ربع سنوي كافي.', solution: 'Scale+طحالب = أسبوعي+ربع.' },
         { fear: 'مثل الباحة.', solution: 'Scale ≠ Biofilm.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'كلور ثابت.', truth: '48°م = يومي.' },
         { myth: 'لا Scale.', truth: '550ppm = Scale.' },
     ],

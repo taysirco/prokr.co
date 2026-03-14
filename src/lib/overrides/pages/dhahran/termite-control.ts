@@ -61,7 +61,7 @@ export const override: PageOverride = {
         { fear: 'ما عندي.', solution: 'Sabkha + 75-85% = متى — ليس إن. الوقاية = أرخص 10×.' },
         { fear: 'Bait بطيء.', solution: 'Cascading Kill = 2-4 أشهر. يقتل الملكة.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'مثل الرياض.', truth: 'Sabkha ≠ صخرية. 75-85% ≠ 15%. NaCl Barrier.' },
         { myth: 'رش.', truth: 'سطحي ≠ جوفي. لا يصل.' },
         { myth: 'مرة.', truth: 'مستعمرات جديدة مستمرة. مراقبة.' },

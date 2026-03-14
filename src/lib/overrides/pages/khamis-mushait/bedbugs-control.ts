@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'مبيد يكفي.', solution: 'لا يقتل البيض. بخار 90°م إلزامي. + Dehumidifier بخميس.' },
         { fear: 'زيارة واحدة.', solution: '3 زيارات — تكاثر 2× بالرطوبة. واحدة لا تكفي.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'بق الفراش مثل عنيزة.', truth: 'تكاثر 2× + عفن مصاحب = أعقد وأغلى 30%.' },
         { myth: 'مبيد فقط يحل.', truth: 'لا يقتل البيض + الرطوبة تمنع جفافه. بخار+Dehumidifier.' },
     ],

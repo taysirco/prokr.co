@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'مُكيّف مبالغة.', solution: 'ΔT 48°م = تشقق. مُكيّف أرخص من إصلاح.' },
         { fear: 'مثل خميس.', solution: 'لا عفن = أرخص 15-20%.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'أي مستودع.', truth: 'ΔT 48°م = مُكيّف إلزامي.' },
         { myth: 'لا يحتاج إحكام.', truth: 'SiO₂ يتسلل = غبار شهري.' },
     ],

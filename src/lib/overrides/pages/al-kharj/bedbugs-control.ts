@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'مثل الرياض.', solution: 'تشققات ΔT أعمق + عمالة مزارع = مختلف.' },
         { fear: 'حرارة تكفي.', solution: 'تشققات تحمي البق من الحرارة. Steam+سد.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'رش عادي يكفي.', truth: 'تشققات عميقة = الرش لا يصل. Steam+Residual.' },
         { myth: 'مرة واحدة.', truth: 'عمالة مستمرة = عدوى مستمرة. متابعة.' },
     ],

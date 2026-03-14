@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'مسح يكفي.', solution: 'Biofilm = Anti-Biofilm.' },
         { fear: 'مثل بريدة.', solution: 'Biofilm+Dew Point ≠ SiO₂.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'نصف سنوي.', truth: 'ربع سنوي. Biofilm.' },
         { myth: 'ماء يكفي.', truth: 'Anti-Biofilm+Oxalic+Sealant.' },
     ],

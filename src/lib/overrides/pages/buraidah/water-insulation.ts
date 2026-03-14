@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'SBS لازم.', solution: 'لا مطر = لا SBS! DPC يكفي.' },
         { fear: 'مثل خميس.', solution: 'عكس! أساسات فقط. وفر 60%.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'SBS ضروري.', truth: 'لا مطر = لا SBS. DPC+Closed.' },
         { myth: 'عزل شامل.', truth: 'أساسات+مفاصل فقط. أرخص 60%.' },
     ],

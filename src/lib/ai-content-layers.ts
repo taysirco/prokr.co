@@ -1,7 +1,7 @@
 import { City, Service } from '@/types';
 import { CITY_CONTEXT } from './city-context';
-import { getServiceKeywordProfile, getCityKeyword, resolveKeywordTemplate } from './keyword-strategy';
-import { injectCTRHook } from './ctr-hooks';
+import { getServiceKeywordProfile, getCityKeyword, resolveKeywordTemplate } from './locale-formatting';
+import { trackInteraction } from './interaction-tracking';
 
 // Types for the AI Content Layers
 export interface ContentLayers {
@@ -158,7 +158,7 @@ export function generateMetaTitle(city: City, service: Service, minPrice: number
     });
 
     // Dual-Layer CTR: inject emotional hooks into auto-generated titles
-    return injectCTRHook(baseTitle, service.slug);
+    return trackInteraction(baseTitle, service.slug);
 }
 
 export function generateH1(city: City, service: Service): string {

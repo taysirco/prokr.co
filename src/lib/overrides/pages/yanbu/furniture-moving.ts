@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'تغليف عادي.', solution: 'NaCl = صدأ. Marine-Grade.' },
         { fear: 'مثل بريدة.', solution: 'صدأ+عفن = مختلف تماماً.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'أي شركة.', truth: 'VCI+Marine-Grade = متخصص ساحلي.' },
         { myth: 'تغليف بلاستيك.', truth: 'بلاستيك = رطوبة محبوسة = عفن.' },
     ],

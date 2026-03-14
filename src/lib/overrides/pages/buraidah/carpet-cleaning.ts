@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'مكنسة عادية تكفي.', solution: 'Nafud 10 μm يمر. HEPA يوقف.' },
         { fear: 'مثل عنيزة.', solution: 'نفس 600ppm لكن بريدة: 8M نخلة = لقاح أعلى.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'شامبو يكفي.', truth: 'Nafud يقطع. HEPA أولاً.' },
         { myth: 'ماء عادي.', truth: '600ppm = أعلى خشونة. RO.' },
     ],

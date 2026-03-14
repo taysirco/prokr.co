@@ -60,7 +60,7 @@ export const override: PageOverride = {
         { fear: 'المكتب نظيف.', solution: 'NaCl لا يُرى. عفن في الزوايا المخفية. Biofilm شفاف. \"نظيف\" = ظاهري.' },
         { fear: 'عاملة المبنى تكفي.', solution: 'بماء الخبر = NaCl. بدون Anti-Biofilm = Biofilm. بدون Anti-Fungal = عفن. 3 أخطاء.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'مكتب الخبر مثل الرياض.', truth: 'NaCl + 85-95% + Biofilm = 3 تحديات لا توجد في الرياض.' },
         { myth: 'تكييف يكفي.', truth: 'المكيف نفسه = عفن Evaporator + NaCl Condenser. جزء من المشكلة.' },
         { myth: 'شهري.', truth: 'NaCl يومي + Biofilm أسبوعي + عفن مستمر. أسبوعي = الأمثل.' },

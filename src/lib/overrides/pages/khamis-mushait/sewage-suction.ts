@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'شهري يكفي.', solution: 'أمطار + تربة = 3 أسابيع. شهري = فيضان.' },
         { fear: 'مثل عنيزة.', solution: 'أمطار+تربة = مختلف تماماً.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'البيارة مثل عنيزة.', truth: 'أمطار+صخر = أسرع امتلاءً. 3 أسابيع.' },
         { myth: 'الرائحة عادية.', truth: '60-85% = لا تتبخر. أقوى وأطول.' },
     ],

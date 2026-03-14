@@ -56,7 +56,7 @@ export const override: PageOverride = {
         { fear: 'يبلل.', solution: '10-15% = يجف 20-30 دقيقة. أسرع في المملكة.' },
         { fear: 'ممسحة أسهل.', solution: 'كهرباء ساكنة = تنقل. بخار = يُحرر.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'للعفن والعث.', truth: 'لا عفن ولا عث! للتعقيم + SiO₂ + بخور.' },
         { myth: 'Dehumidifier.', truth: 'لا يحتاج! 10-15% = يجف وحده.' },
         { myth: 'ربع سنوي.', truth: 'لا عفن/عث = نصف سنوي.' },

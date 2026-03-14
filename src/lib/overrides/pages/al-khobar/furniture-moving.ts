@@ -61,7 +61,7 @@ export const override: PageOverride = {
         { fear: 'المسافة قصيرة.', solution: 'NaCl في دقائق. 85-95% تكثّف في دقائق. قصيرة ≠ آمنة.' },
         { fear: 'شاحنة مُغلقة.', solution: 'ليست مُحكمة 100%. فتحات = NaCl. Stretch = حماية ثانية.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'نقل الخبر مثل الرياض.', truth: 'NaCl + 85-95% + Sabkha = 3 تهديدات لا توجد في الرياض. مختلف.' },
         { myth: 'تغليف زيادة.', truth: 'التغليف = 50-100 ريال. صدأ + تكثّف = 500-5,000 ريال. 1-10%.' },
         { myth: 'ثلاثية = داخلي.', truth: 'بين مدن = طرق خارجية = Sabkha + NaCl أعلى. أصعب من داخل المدينة.' },

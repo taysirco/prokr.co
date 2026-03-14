@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'أزقة = مستحيل.', solution: 'فريق يدوي يعرف كل زقاق.' },
         { fear: 'غالي.', solution: 'يدوي = 25-40% إضافي. بدون = لا بديل.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'شاحنة كبيرة.', truth: 'أزقة = يدوي + دينا صغيرة.' },
         { myth: 'لا VCI.', truth: 'NaCl + 80-95%. صدأ.' },
     ],

@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'مثل الرياض.', solution: 'ذباب 5-10×+سوس+NH₃ = مختلف.' },
         { fear: 'رش عام يكفي.', solution: '4 أنواع مختلفة = بروتوكول متخصص.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'رش واحد.', truth: 'ذباب+صراصير+سوس+عقارب = 4 بروتوكولات.' },
         { myth: 'مرتين بالسنة.', truth: 'ΔT = تكاثر سريع. ربع سنوي.' },
     ],

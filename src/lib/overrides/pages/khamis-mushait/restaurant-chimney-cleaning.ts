@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'مثل الباحة.', solution: 'متشابه — نفس الفيزياء.' },
         { fear: 'شهري غالي.', solution: 'حريق = خسارة مطعم. شهري أرخص 1000×.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'ربع سنوي يكفي بخميس.', truth: 'Biofilm + كربنة رطبة = تراكم سريع. شهري.' },
         { myth: 'Alkaline وحده.', truth: 'Biofilm يمنع الوصول. Anti-Biofilm أولاً.' },
     ],

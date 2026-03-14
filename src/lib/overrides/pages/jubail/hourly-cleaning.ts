@@ -60,7 +60,7 @@ export const override: PageOverride = {
         { fear: 'أغلى.', solution: '5 خطوات = أعقد = أغلى. لكن: فعالية. عادية = تلويث.' },
         { fear: 'عاملة عادية.', solution: 'لا تعرف 5 خطوات. فرق تدريب.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'ممسحة.', truth: 'NaCl+VOC+سخام+98%. ممسحة = 0%.' },
         { myth: 'مثل الرياض.', truth: '5 خطوات vs 2. أعقد 2.5×.' },
     ],

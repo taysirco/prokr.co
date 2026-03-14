@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'أغلى = مبالغة.', solution: '5-6 خطوات لأن البيئة أعقد. بدونها = عفن+عث.' },
         { fear: 'مثل الباحة.', solution: 'متشابه — خميس أقل غابات. تكلفة متقاربة.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: '3 خطوات تكفي مثل عنيزة.', truth: '60-85% + ضباب = عفن+عث. 3 خطوات = كارثة.' },
         { myth: 'Dehumidifier مبالغة.', truth: 'بدونه = عفن جديد 72 ساعة. ضروري.' },
     ],

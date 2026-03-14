@@ -60,7 +60,7 @@ export const override: PageOverride = {
         { fear: 'رش البعوض يكفي.', solution: 'آلية مختلفة. بعوض = Larvicide. بق = حراري+IGR.' },
         { fear: 'ما فيه بق.', solution: '85-98% = يختبئ 21 يوماً. يوجد — لا يُرى.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'البعوض الأهم.', truth: 'بعوض = ضنك خطير. لكن: بق = مستقل. كلاهما.' },
         { myth: 'بخاخ.', truth: 'Knockdown Resistance + 98% = لا يجف. حراري.' },
         { myth: 'نظافة.', truth: 'بق = دم — ليس أوساخ.' },

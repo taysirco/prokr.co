@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'دباب عادي يكفي.', solution: 'طرق ترابية+ألبان = معزول+4x4.' },
         { fear: 'غالي.', solution: 'خسارة ألبان فاسدة أغلى.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'أي دباب.', truth: 'طرق ترابية = يعلق. 4x4 أو عجلات كبيرة.' },
         { myth: 'تبريد مو ضروري.', truth: 'ΔT 48°م = ألبان تفسد 30 دقيقة.' },
     ],

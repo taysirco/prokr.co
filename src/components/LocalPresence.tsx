@@ -3,7 +3,7 @@ import { getServiceGeoProfile } from '@/lib/service-geo-profiles';
 import { getNeighborhoodCoords } from '@/lib/neighborhood-coords';
 import { MapPin, Navigation, Clock, Truck, Wrench } from 'lucide-react';
 
-interface GeoSignalsProps {
+interface LocalPresenceProps {
     citySlug: string;
     serviceSlug: string;
     serviceName: string;
@@ -23,7 +23,7 @@ function stableHash(str: string): number {
 }
 
 /**
- * Phantom Geo-Hijacking — Per-Service-Slug Neighborhood-Level Uniqueness
+ * Local Service Area — Per-Service-Slug Neighborhood-Level Uniqueness
  * 
  * Each of the 53×24 = 1,272 pages gets:
  * - Different dispatch NEIGHBORHOOD (name + real coordinates)
@@ -34,7 +34,7 @@ function stableHash(str: string): number {
  * - Different Google Maps destination
  * - Different Schema.org coordinates
  */
-export default function GeoSignals({ citySlug, serviceSlug, serviceName, serviceCategory }: GeoSignalsProps) {
+export default function LocalPresence({ citySlug, serviceSlug, serviceName, serviceCategory }: LocalPresenceProps) {
     const context = getCityContext(citySlug);
     if (!context) return null;
 

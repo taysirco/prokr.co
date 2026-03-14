@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'مستودع عادي.', solution: '60-85% = عفن. Dehumidifier.' },
         { fear: 'مثل بريدة.', solution: 'عفن+PVAc+غابة ≠ ΔT.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'فحص سنوي.', truth: 'Anti-Fungal شهري. غابة.' },
         { myth: 'مستودع يكفي.', truth: 'Dehumidifier+IPM+Waterproof.' },
     ],

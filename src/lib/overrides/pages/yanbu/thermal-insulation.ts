@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'Open أرخص.', solution: '70-85% = يمتص = عفن. Closed.' },
         { fear: 'نفس بريدة.', solution: 'عكس! Closed+Vapor vs Open.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'Open يكفي.', truth: '70-85% = Closed. Open كارثة.' },
         { myth: 'لا Vapor.', truth: '70-85% = Vapor إلزامي.' },
     ],

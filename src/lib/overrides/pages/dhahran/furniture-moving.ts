@@ -61,7 +61,7 @@ export const override: PageOverride = {
         { fear: 'قصيرة.', solution: 'NaCl+SiO₂ في دقائق. 75-85% تكثّف في دقائق. قصيرة ≠ آمنة.' },
         { fear: 'شاحنة مُغلقة.', solution: 'ليست 100% مُحكمة. NaCl+SiO₂ يدخل. Stretch = حماية ثانية.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'مثل الخبر.', truth: 'SiO₂ إضافي = خدش. EPE = خطوة إضافية. مختلف.' },
         { myth: 'تغليف زيادة.', truth: 'تغليف = 50-150 ريال. صدأ+خدش+تكثّف = 500-5,000.' },
         { myth: 'ثلاثية = داخلي.', truth: 'بين مدن = طرق ملحية+رملية = NaCl+SiO₂ أعلى.' },

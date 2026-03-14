@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'رش سطحي.', solution: 'مستعمرة تحت. Termidor.' },
         { fear: 'مثل بريدة.', solution: 'خشب رطب+غابة ≠ نخيل.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'مرة واحدة.', truth: 'فحص سنوي. رطوبة.' },
         { myth: 'لا نمل بالجبل.', truth: 'غابة عرعر = مصدر!' },
     ],

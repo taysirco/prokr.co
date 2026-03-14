@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'ربع سنوي.', solution: 'Bio-Creosote = شهري.' },
         { fear: 'مثل بريدة.', solution: 'كربنة رطبة ≠ جافة.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'دهن عادي.', truth: 'Bio-Creosote = حمضي لزج.' },
         { myth: 'ربع سنوي.', truth: 'شهري تجاري. ضباب.' },
     ],

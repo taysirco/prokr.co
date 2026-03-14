@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'منظف عادي.', solution: 'Laterite+عرعر+عفن = 4 ركائز.' },
         { fear: 'مثل بريدة.', solution: 'ضباب+عرعر ≠ كلس+Nafud.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'تجفيف سريع.', truth: '6-10h! Dehumidifier إلزامي.' },
         { myth: 'مبيّض يُنظّف.', truth: 'يُثبّت Laterite. Oxalic.' },
     ],

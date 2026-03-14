@@ -62,7 +62,7 @@ export const override: PageOverride = {
         { fear: 'جاف = ما فيه.', solution: '10-15% = يُكتشف أسرع ← ليس = لا يوجد. يوجد — يُكتشف أسرع.' },
         { fear: 'الحرارة تقتله طبيعياً.', solution: '52°م خارج = ممكن. داخل = 22°م مُكيّف = يعيش.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'ما فيه.', truth: 'يوجد — يُكتشف أسرع بسبب الجفاف. ليس أقل.' },
         { myth: 'بخاخ.', truth: 'Knockdown Resistance. حراري + IGR = آليات مختلفة.' },
         { myth: 'نظافة.', truth: 'البق = دم — ليس أوساخ. أنظف بيت يُصاب.' },

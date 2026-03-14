@@ -54,7 +54,7 @@ export const override: PageOverride = {
         { name: 'حقيبة حرارية', use: 'إلكترونيات -2°م' },
     ],
     hiddenObjections: [{ fear: 'بلا غطاء أرخص.', solution: 'ثلج 5 دقائق = MDF تالف = 500-3,000 ريال.' }],
-    counterNarratives: [{ myth: 'رحلة قصيرة = لا خطر.', truth: 'ثلج + رياح = خطر أول دقيقة.' },
+    consumerEducation: [{ myth: 'رحلة قصيرة = لا خطر.', truth: 'ثلج + رياح = خطر أول دقيقة.' },
         { myth: 'النقل سهل — أسويه بنفسي.', truth: 'خدش خزانة = 500-2,000 ريال. إصابة ظهر = آلاف. النقل المهني + التأمين = أرخص من المخاطرة.' },
     ],
     relatedServices: [

@@ -61,7 +61,7 @@ export const override: PageOverride = {
         { fear: 'مثل الخبر.', solution: 'VOC إضافي + 85-98% > 85-95% + PM2.5 بتروكيماوي. مختلف.' },
         { fear: '6 كثير.', solution: '85-98% + VOC = عفن + ترسبات أسرع. 6 = الحد.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'ساحلي فقط.', truth: 'ساحلي + صناعي = مزدوج فريد. VOC ≠ NaCl فقط.' },
         { myth: 'فلتر يكفي.', truth: 'فلتر عادي لا يحجز VOC. Activated Carbon.' },
         { myth: 'مرتين.', truth: '98% + VOC. 6 = الحد.' },

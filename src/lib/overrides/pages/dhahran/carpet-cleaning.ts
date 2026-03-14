@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'شفط يكفي.', solution: 'NaCl في العمق. SiO₂ بين الألياف. عفن في القاعدة. شفط = سطحي.' },
         { fear: 'مثل الخبر.', solution: 'الخبر = NaCl فقط. الظهران = NaCl+SiO₂ = تصلب+قطع. أسوأ على الألياف.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'غبار عادي.', truth: 'NaCl+SiO₂ ≠ غبار. يُصلّب+يقطع. مزدوج.' },
         { myth: 'يجف طبيعياً.', truth: '75-85% = 18-24 ساعة. Turbo = 3-4.' },
         { myth: 'مرة بالسنة.', truth: 'مزدوج شهري. ربع سنوي = الحد.' },

@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'مبيد يكفي.', solution: 'بخار 56°م يقتل بيض. مبيد لا يصل.' },
         { fear: 'مثل بريدة.', solution: '70-85% = تكاثر أسرع.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'مرة واحدة.', truth: '2-3 جلسات. بيض أسبوعين.' },
         { myth: 'بخاخ منزلي.', truth: 'مُركّز + بخار 56°م.' },
     ],

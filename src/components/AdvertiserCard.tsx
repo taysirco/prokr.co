@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Phone, MessageCircle, Star, BadgeCheck, MapPin } from 'lucide-react';
 import type { Advertiser } from '@/types';
-import MagneticCTA from './MagneticCTA';
+import ActionButton from './ActionButton';
 
 interface AdvertiserCardProps {
     advertiser: Advertiser;
@@ -112,7 +112,7 @@ export default function AdvertiserCard({ advertiser, variant = 'standard' }: Adv
 
                     {/* CTA Buttons */}
                     <div className="flex gap-3 mt-5">
-                        <MagneticCTA
+                        <ActionButton
                             href={phoneLink}
                             type="phone"
                             label="اتصل الآن"
@@ -121,8 +121,8 @@ export default function AdvertiserCard({ advertiser, variant = 'standard' }: Adv
                             className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-l from-emerald-500 to-emerald-600 text-white font-medium rounded-xl hover:from-emerald-600 hover:to-emerald-700 shadow-lg shadow-emerald-500/30 hover:shadow-emerald-500/50"
                         >
                             <Phone className="w-5 h-5" />
-                        </MagneticCTA>
-                        <MagneticCTA
+                        </ActionButton>
+                        <ActionButton
                             href={whatsappLink}
                             type="whatsapp"
                             label=""
@@ -133,7 +133,7 @@ export default function AdvertiserCard({ advertiser, variant = 'standard' }: Adv
                             className="flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-l from-green-500 to-green-600 text-white font-medium rounded-xl hover:from-green-600 hover:to-green-700 shadow-lg shadow-green-500/30 hover:shadow-green-500/50"
                         >
                             <MessageCircle className="w-5 h-5" />
-                        </MagneticCTA>
+                        </ActionButton>
                     </div>
                 </div>
             </div>
@@ -176,7 +176,7 @@ export default function AdvertiserCard({ advertiser, variant = 'standard' }: Adv
 
             {/* Quick Actions */}
             <div className="flex gap-2">
-                <MagneticCTA
+                <ActionButton
                     href={phoneLink}
                     type="phone"
                     label=""
@@ -186,8 +186,8 @@ export default function AdvertiserCard({ advertiser, variant = 'standard' }: Adv
                     className="p-2.5 bg-emerald-50 text-emerald-600 rounded-lg hover:bg-emerald-100"
                 >
                     <Phone className="w-5 h-5" />
-                </MagneticCTA>
-                <MagneticCTA
+                </ActionButton>
+                <ActionButton
                     href={whatsappLink}
                     type="whatsapp"
                     label=""
@@ -198,7 +198,7 @@ export default function AdvertiserCard({ advertiser, variant = 'standard' }: Adv
                     className="p-2.5 bg-green-50 text-green-600 rounded-lg hover:bg-green-100"
                 >
                     <MessageCircle className="w-5 h-5" />
-                </MagneticCTA>
+                </ActionButton>
             </div>
         </div>
     );

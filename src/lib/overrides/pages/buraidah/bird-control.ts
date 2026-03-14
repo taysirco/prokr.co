@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'شبك عادي يكفي.', solution: 'Nafud يآكل. 316 يدوم.' },
         { fear: 'طرد يكفي.', solution: '8M نخلة = طعام. شبك+طرد.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'حمام عادي.', truth: 'نخيل 8M = أعداد 5-10×.' },
         { myth: 'فضلات عادية.', truth: 'تمور = حمضية pH 3-4.' },
     ],

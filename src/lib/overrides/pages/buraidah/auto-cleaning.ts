@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'غسل عادي يكفي.', solution: 'Nafud+600ppm+نخيل = خدش+بقع+لزج.' },
         { fear: 'مثل الرياض.', solution: '600ppm مقابل 300. Nafud أنعم. نخيل 8M.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'أي غسل.', truth: 'Pre-Rinse+RO+Clay Bar = 3 خطوات إلزامية.' },
         { myth: 'ماء عادي.', truth: '600ppm = بقع 10 دقائق. RO.' },
     ],

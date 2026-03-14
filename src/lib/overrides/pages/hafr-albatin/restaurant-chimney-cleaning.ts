@@ -59,7 +59,7 @@ export const override: PageOverride = {
         { fear: 'لا Biofilm = أسهل.', solution: 'كربنة أصلب + SiO₂ + ΔT. 3 تحديات قارية.' },
         { fear: 'ربع سنوي مكلف.', solution: 'حريق = 50,000-200,000. عقد = 1-4%.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'مثل الرياض.', truth: '52°م أحر = أصلب. ΔT 54°م > 35°م.' },
         { myth: 'كيميائي يكفي.', truth: 'كربنة صلبة = Mechanical إلزامي.' },
         { myth: 'نصف سنوي.', truth: 'SiO₂ يُخشّن = تراكم أسرع. ربع سنوي.' },

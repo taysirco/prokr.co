@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'البخار يبلل.', solution: 'Dry Vapor = 5%. لكن في 85-95%: يحتاج تجفيف. Dehumidifier = الفرق.' },
         { fear: 'ممسحة أسهل.', solution: 'ممسحة بماء الخبر = NaCl جديد. لا تقتل عث. لا تُكسر Biofilm. 3 فشلات.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'بخار = ماء.', truth: '130°م = ليس ماء. يقتل + يُذيب + يُكسر. لكن: يحتاج تجفيف في 85-95%.' },
         { myth: 'يجف طبيعياً.', truth: '85-95% = لا يجف. 24 ساعة رطب = عفن. Dehumidifier = الحل.' },
         { myth: 'مرة بالسنة.', truth: 'عث 12/12 + NaCl يومي + Biofilm شهري. ربع سنوي.' },

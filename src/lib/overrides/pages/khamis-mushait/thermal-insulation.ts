@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'Open-Cell أرخص.', solution: 'يمتص ← يفقد R-value. Closed-Cell أرخص طويلاً.' },
         { fear: 'مثل عنيزة.', solution: 'عكس! تدفئة مقابل تبريد. أمطار مقابل لا مطر.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'خميس حارة مثل عنيزة.', truth: '0-5°م شتاءً! تدفئة الأولوية.' },
         { myth: 'أي عزل يكفي.', truth: 'Closed-Cell فقط بخميس. أمطار+ضباب.' },
     ],

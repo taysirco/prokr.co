@@ -59,7 +59,7 @@ export const override: PageOverride = {
     hiddenObjections: [
         { fear: 'الرطوبة طبيعية بجدة — مو تسرب.', solution: 'تكثّف: موزع + أدفأ. تسرب: بقعة ثابتة + أبرد. الحرارية تُفرّق.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'كل رطوبة في جدة = تكثّف.', truth: 'التكثّف موزع ولا يسبب عفناً محدداً. بقعة ثابتة + عفن أسود = تسرب مؤكد.' },
         { myth: 'العفن سطحي ما يضر.', truth: 'Stachybotrys يُطلق Mycotoxins. التنفس = حساسية + ربو + التهاب رئوي. ليس تجميلياً.' },
     ],

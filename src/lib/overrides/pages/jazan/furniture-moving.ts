@@ -55,7 +55,7 @@ export const override: PageOverride = {
     hiddenObjections: [
         { fear: 'شاحنة مكشوفة أرخص.', solution: 'مطر واحد = MDF تالف (500-5,000 ريال). ملح = صدأ (200-1,000 ريال). المكشوفة = مقامرة.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'MDF يتحمل.', truth: 'MDF = ألياف مضغوطة = يمتص الرطوبة = ينتفخ = لا يعود. 80% + مطر = كارثة.' },
         { myth: 'أي دينا تكفي.', truth: 'دينا بدون ترخيص TGA = بدون تأمين = أي ضرر يتحمله العميل. الترخيص = حماية قانونية.' },
     ],

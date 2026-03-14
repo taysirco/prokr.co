@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'لا عفن = سهل.', solution: 'بلمرة 52°م أقسى + SiO₂ + كهرباء. 3 تحديات ≠ سهل.' },
         { fear: 'شامبو.', solution: 'لا يُكسر Ester Bonds 52°م. Enzymatic فقط.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'مثل الرياض.', truth: '52°م > 45°م. ΔT 54°م. -2°م. عواصف أكثف.' },
         { myth: 'نصف سنوي.', truth: 'بخور + SiO₂ + كهرباء. ربع سنوي.' },
         { myth: 'بخار للعث.', truth: 'لا عث! 10-15% = لا Der p 1. توفير بخار.' },

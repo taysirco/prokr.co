@@ -60,7 +60,7 @@ export const override: PageOverride = {
         { fear: 'مثل الخبر.', solution: 'الخبر = NaCl. الظهران = NaCl+SiO₂ مزدوج. SiO₂ يخدش ← NaCl يتآكل = أسوأ.' },
         { fear: 'HEPA غالي.', solution: 'HEPA = 50-100 ريال/فلتر. أمراض تنفسية = آلاف. استثمار صحي.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'الظهران مثل الخبر.', truth: 'الخبر = NaCl 90%. الظهران = NaCl 60% + SiO₂ 40%. المزيج = أسوأ.' },
         { myth: 'غسل عادي.', truth: 'بدون Anti-Rust: SiO₂ يكشف + NaCl يتآكل. بدون HEPA: SiO₂ يدخل. بروتوكول مزدوج.' },
         { myth: 'مرة بالسنة.', truth: 'SiO₂ شهري + NaCl أسبوعي + عفن 5 أشهر. سنوي = متأخر.' },

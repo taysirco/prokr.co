@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'Sand Filter يكفي.', solution: 'Nafud 10 μm يمر. DE.' },
         { fear: 'مثل الرياض.', solution: '600ppm > 300. Nafud فريد.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'Descaler شهري.', truth: '600ppm = أسبوعي. أسرع Scale.' },
         { myth: 'كلور عادي.', truth: 'ΔT = مضاعف+مساءً.' },
     ],

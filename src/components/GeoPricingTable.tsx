@@ -1,6 +1,6 @@
 import { getGeoPricing } from '@/lib/geo-pricing-data';
 import type { MovingRoute, CleaningZone, PestPricing, LeakPricing, InsulationPricing, SewagePricing, ACPricing } from '@/lib/geo-pricing-data';
-import { SalaryCycleNote } from '@/components/SalaryCycleBadge';
+import { MarketTimingNote } from '@/components/MarketTimingBadge';
 
 interface GeoPricingTableProps {
     citySlug: string;
@@ -259,7 +259,7 @@ export default function GeoPricingTable({ citySlug, cityName, serviceSlug, servi
                     {' '}الأسعار بالريال السعودي وتشمل ضريبة القيمة المضافة 15%.
                     {' '}قارن بين 3 شركات على الأقل عبر بروكر للحصول على أفضل سعر.
                 </p>
-                <SalaryCycleNote className="mt-2" />
+                <MarketTimingNote className="mt-2" />
             </div>
 
             {/* JSON-LD Schema */}

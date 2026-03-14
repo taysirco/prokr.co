@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'بصري يكفي.', solution: 'CaCO₃ تآكل داخلي. سُمك يكشف.' },
         { fear: 'مثل خميس.', solution: 'أبسط! لا تكثّف. مصدر واحد.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'فحص بصري.', truth: 'CaCO₃ تآكل داخلي = سُمك.' },
         { myth: 'كل 5 سنوات.', truth: 'CaCO₃ = سنوي. يمنع التسرب.' },
     ],

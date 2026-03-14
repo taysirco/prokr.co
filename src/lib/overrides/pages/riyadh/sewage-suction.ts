@@ -57,7 +57,7 @@ export const override: PageOverride = {
     hiddenObjections: [
         { fear: 'عقد سنوي غالي.', solution: 'طوارئ × مفاجئ = أغلى 30-40%. العقد: منتظم + بدون فيضان.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'التربة الرملية تمتص دائماً.', truth: 'تمتص حتى يُغلّف الكلس والدهون المنفذ. بعد ذلك: تتوقف. تنظيف المنفذ يُعيدها.' },
         { myth: 'الكلور يسلّك المجاري.', truth: 'الكلور يقتل بكتيريا لكن لا يفك انسداد دهون/شعر. Hydro-Jet أو Snake الميكانيكي = الحل.' },
     ],

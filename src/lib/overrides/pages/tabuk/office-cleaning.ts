@@ -54,7 +54,7 @@ export const override: PageOverride = {
     hiddenObjections: [
         { fear: 'عامل المبنى يكفي.', solution: 'بدون ESD: شرارة = تلف. بدون HEPA: Throttling. بدون Deionized: كلس.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'أجهزة حديثة ما تحتاج.', truth: 'حسمى 3 أشهر = Throttling حتى جديد.' },
         { myth: 'المنظف العادي يكفي.', truth: 'المنظف العادي يزيل 40% من الأوساخ. HEPA + بخار = 99%+. الفرق = 59% غبار دقيق + بكتيريا + عث.' },
     ],

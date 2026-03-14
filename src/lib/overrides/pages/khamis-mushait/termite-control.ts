@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'مبيد عادي يكفي.', solution: 'Termidor = يصل المستعمرة. مبيد عادي سطحي.' },
         { fear: 'مثل عنيزة.', solution: 'أسرع 50% بالرطوبة. خشب لين = أخطر.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'النمل الأبيض بطيء.', truth: '60-85% = أسرع 50%. خشب رطب = طعام سهل.' },
         { myth: 'حواجز تكفي.', truth: 'حقن+حواجز+معالجة رطوبة. ثلاثي.' },
     ],

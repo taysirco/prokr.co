@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'مثل عنيزة.', solution: 'عنيزة أقل نخيل. بريدة: 8M+600ppm.' },
         { fear: 'مثل خميس.', solution: 'لا عفن+20 دقيقة = أرخص 30%.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'Descaler شهري.', truth: '600ppm = أسبوعي. أسرع تكلّس.' },
         { myth: 'ماء عادي.', truth: '600ppm = بقع فوراً. RO.' },
     ],

@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'غالي.', solution: 'Tarpaulin UV = 50-100. تلف = آلاف. 1-2%.' },
         { fear: 'أي دينا.', solution: 'بدون UV-Resistant = Tarpaulin يتقصّف. فرق.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'مثل الرياض.', truth: 'ΔT 54°م. UV أعلى. عواصف أكثف. -2°م.' },
         { myth: 'Tarpaulin عادي.', truth: 'UV يتلفه. UV-Resistant فقط.' },
         { myth: 'أي وقت.', truth: 'ظهر = أسوأ UV + حرارة. صباح/مساء.' },

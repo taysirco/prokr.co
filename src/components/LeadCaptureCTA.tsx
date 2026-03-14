@@ -1,9 +1,9 @@
 
 
 import { Rocket, ShieldCheck, Clock, Users, Phone, Building2, Star, TrendingUp, CheckCircle2, Thermometer, MapPin, AlertTriangle, Zap } from 'lucide-react';
-import { getSalaryCycleConfig } from '@/lib/salary-cycle';
+import { getMarketTimingConfig } from '@/lib/market-timing';
 
-interface SleeperCellCTAProps {
+interface LeadCaptureCTAProps {
     cityName: string;
     serviceName: string;
     serviceSlug: string;
@@ -139,11 +139,11 @@ function hashIndex(str: string, max: number): number {
     return Math.abs(hash) % max;
 }
 
-export default function SleeperCellCTA({ cityName, serviceName, serviceSlug, citySlug }: SleeperCellCTAProps) {
+export default function LeadCaptureCTA({ cityName, serviceName, serviceSlug, citySlug }: LeadCaptureCTAProps) {
     const category = getCategory(serviceSlug);
     const criteria = SERVICE_CRITERIA[category] || SERVICE_CRITERIA['cleaning'];
     const scarcityText = SCARCITY_TEXTS[category] || SCARCITY_TEXTS['cleaning'];
-    const cycleConfig = getSalaryCycleConfig();
+    const cycleConfig = getMarketTimingConfig();
 
     // Derive unique content seed from city+service combination
     const seed = `${citySlug}-${serviceSlug}`;
@@ -209,7 +209,7 @@ export default function SleeperCellCTA({ cityName, serviceName, serviceSlug, cit
                         <span>{criteria.icon} الطلب على {serviceName} يفوق العرض في {cityName}</span>
                     </div>
 
-                    {/* 💰 Salary Cycle Banner */}
+                    {/* 💰 Market Timing Banner */}
                     <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold mb-6
                         ${cycleConfig.colors.badgeBg} ${cycleConfig.colors.badgeText} border ${cycleConfig.colors.badgeBorder}`}
                     >

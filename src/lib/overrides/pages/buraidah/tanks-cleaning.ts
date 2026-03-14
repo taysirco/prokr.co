@@ -60,7 +60,7 @@ export const override: PageOverride = {
         { fear: 'تعقيم يكفي.', solution: '600ppm Scale = Descaler أولاً.' },
         { fear: 'مثل خميس.', solution: 'لا طحالب = أرخص 20%.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'سنوي يكفي.', truth: '600ppm = كل 6 أشهر. Scale.' },
         { myth: 'ماء يكفي.', truth: 'Scale = Descaler صناعي.' },
     ],

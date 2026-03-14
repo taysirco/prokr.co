@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'عاملة عادية.', solution: 'Descaler+HEPA+Microfiber = 3 أدوات خاصة.' },
         { fear: 'مثل الرياض.', solution: '600ppm+Nafud+نخيل = مختلف.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'مكنسة تكفي.', truth: 'Nafud 10 μm يمر = HEPA.' },
         { myth: 'Descaler شهري.', truth: '600ppm = يومي أو كل يومين.' },
     ],

@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'يبلل.', solution: 'Dry Vapor 5%. + Dehumidifier = 2-3 ساعات.' },
         { fear: 'ممسحة أسهل.', solution: 'ممسحة = ترتيب + خطأ محتمل. بخار = خطوة واحدة.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'بخار = ماء.', truth: '130°م ≠ ماء. يقتل + يُذيب + يرفع.' },
         { myth: 'يجف.', truth: '75-85% = 12-18 ساعة بدون. Dehumidifier = 2-3.' },
         { myth: 'سنوي.', truth: 'مزدوج + عث + Biofilm. ربع سنوي.' },

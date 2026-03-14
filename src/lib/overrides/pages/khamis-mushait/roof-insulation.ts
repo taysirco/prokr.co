@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'حراري يكفي مثل عنيزة.', solution: 'أمطار خميس = مائي إلزامي. عنيزة: لا مطر.' },
         { fear: 'غالي.', solution: 'تسرب مائي = تلف هيكلي 10000+. العزل أرخص.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'سطح خميس مثل عنيزة.', truth: 'أمطار+ضباب = مائي إلزامي. عنيزة: حراري فقط.' },
         { myth: 'Open-Cell يكفي أرخص.', truth: 'يمتص ماء = كارثة بخميس الممطورة.' },
     ],

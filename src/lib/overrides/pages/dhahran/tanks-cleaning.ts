@@ -59,7 +59,7 @@ export const override: PageOverride = {
         { fear: 'ماء نظيف.', solution: 'SiO₂ قاع + Biofilm + Chloride = \"نظيف\" ≠ آمن. فحص.' },
         { fear: 'كلور يكفي.', solution: 'Chloride Demand + SiO₂ يحمي = كلور وحده ≠ كافٍ.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'مثل الأحساء.', truth: 'لا Scale = ميزة! NaCl+SiO₂ = مختلف.' },
         { myth: 'سنوي.', truth: 'Biofilm + Chloride. نصف سنوي.' },
         { myth: 'كلور عادي.', truth: '20-30% أكثر.' },

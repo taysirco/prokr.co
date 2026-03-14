@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'دباب عادي.', solution: 'تمور = نظيف+معزول. Nafud = تغطية.' },
         { fear: 'مثل الخرج.', solution: 'تمور مقابل ألبان. مختلف.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'أي دباب.', truth: 'طرق Nafud = عجلات كبيرة.' },
         { myth: 'بدون عزل.', truth: 'ΔT 45°م = تمور تتلف ساعة.' },
     ],

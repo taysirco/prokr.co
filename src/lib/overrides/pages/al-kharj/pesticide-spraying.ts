@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'مبيد واحد يكفي.', solution: '4 أنواع = 4 مبيدات. واحد لا يكفي.' },
         { fear: 'مثل الرياض.', solution: 'ذباب 5-10×+سوس+عقارب = أعقد.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'رش عام.', truth: '4 أنواع = 4 بروتوكولات مختلفة.' },
         { myth: 'نصف سنوي.', truth: 'ΔT تكاثر سريع = ربع سنوي.' },
     ],

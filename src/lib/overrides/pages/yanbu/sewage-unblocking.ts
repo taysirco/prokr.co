@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'سبرنج يكفي.', solution: 'Biofilm لزج. Hydro.' },
         { fear: 'مثل بريدة.', solution: 'Biofilm (لا Scale). مختلف.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'Descaler.', truth: 'لا Scale! Biofilm = Anti-Bacterial.' },
         { myth: 'نصف سنوي.', truth: '70-85% = ربع سنوي Biofilm.' },
     ],

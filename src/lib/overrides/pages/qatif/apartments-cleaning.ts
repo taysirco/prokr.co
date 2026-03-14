@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'مثل الخبر.', solution: 'واحة = تربة+نخيل+عيون+عفن واحي. مختلف.' },
         { fear: 'مثل الأحساء.', solution: 'NaCl ساحلي إضافي. الأحساء: واحة داخلية.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'ساحلي فقط.', truth: 'ساحلي+واحي = ثنائي فريد.' },
         { myth: 'شهري.', truth: 'عفن واحي+NaCl+طين+نخيل. أسبوعي.' },
     ],

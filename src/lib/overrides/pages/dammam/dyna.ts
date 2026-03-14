@@ -131,7 +131,7 @@ export const override: PageOverride = {
         }
 ],
 
-    counterNarratives: [
+    consumerEducation: [
         {
                 "myth": "أي دينا تكفي — المهم تنقل",
                 "truth": "في المدن الجافة: ممكن. في الدمام: الرطوبة الخليجية المالحة تتلف أثاث مكشوف خلال ساعة. نوع الدينا (مغلقة vs مفتوحة) يفرق بين نقل آمن وخسارة"

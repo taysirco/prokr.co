@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'مكشوفة أرخص.', solution: '48°م = 60°م = ذوبان.' },
         { fear: 'مثل الباحة.', solution: 'ΔT vs PVAc. طرق سهلة.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'أي شاحنة.', truth: 'معزولة. 48°م = ذوبان.' },
         { myth: 'ΔT لا يأثر.', truth: 'مفاصل جافة تتكسر.' },
     ],

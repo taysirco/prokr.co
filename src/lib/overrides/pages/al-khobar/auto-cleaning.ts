@@ -60,7 +60,7 @@ export const override: PageOverride = {
         { fear: 'غسلة 45 ريال أغلى من 15.', solution: '15 = إسفنجة + ماء ملحي = خدوش + بقع + بدون Underbody. بعد سنة: Polish + صدأ = 1,000-5,000 ريال.' },
         { fear: 'Ceramic غالي.', solution: '350-900 ريال ÷ 2-3 سنوات. إعادة طلاء في NaCl = 3,000-8,000 ريال. Ceramic = 5-10%.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'غبار الخبر عادي.', truth: 'NaCl ≠ SiO₂. ملحي ≠ رملي. يتآكل ≠ يخدش فقط. فرق كيميائي = حلول مختلفة.' },
         { myth: 'إسفنجة ناعمة.', truth: 'الإسفنجة + NaCl تحتها = خدوش أقوى من رمل. NaCl بلوري = حاد. Touchless = صفر تلامس.' },
         { myth: 'ماء الخبر نظيف.', truth: 'ماء الخبر = NaCl + أملاح = Water Spots بعد كل غسلة. Deionized = الحل.' },

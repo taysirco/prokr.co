@@ -59,7 +59,7 @@ export const override: PageOverride = {
     hiddenObjections: [
         { fear: 'الخزان سليم ظاهرياً.', solution: 'Pitting: ثقوب من الداخل. الخارج يبدو سليماً حتى ينفجر. الحرارية تكتشف من الخارج.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'الكلس في الخزان = حماية.', truth: 'جدة: كلوريد لا كلسيوم. لا طبقة واقية. Pitting يثقب سريعاً.' },
         { myth: 'الطحالب الخارجية لا تضر.', truth: 'تُسرّع تآكل السطح + إذا دخلت = تلوث الماء.' },
     ],

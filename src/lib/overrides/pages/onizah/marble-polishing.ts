@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'أغلى من خميس.', solution: 'أرخص سنوياً! Sealer 2-3 سنة مقابل سنة. نصف التكلفة.' },
         { fear: 'Pitting لا يُصلح.', solution: 'Diamond Pad يُعيد السطح. HEPA يومي يمنع التكرار.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'الرخام يحتاج Sealer كل سنة.', truth: 'بعنيزة: 2-3 سنة — صفر عفن يحمي Sealer.' },
         { myth: 'خل يُنظف الرخام.', truth: 'حمض + CaCO₃ = Etching مزدوج. يُدمّر الرخام.' },
     ],

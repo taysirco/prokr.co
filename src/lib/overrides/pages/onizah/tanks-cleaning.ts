@@ -60,7 +60,7 @@ export const override: PageOverride = {
         { fear: 'Anti-Biofilm مطلوب.', solution: '15-25% = صفر Biofilm. وفّر 100%.' },
         { fear: 'مثل بريدة.', solution: 'CaCO₃ 550 vs 600 = Scale أقل 8%. نفس البروتوكول.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'كلور عادي يكفي.', truth: 'CaCO₃ يستهلك جزء من الكلور = 1.3× Demand. ليس عادي.' },
         { myth: 'الخزان يحتاج تنظيف مرة/سنة.', truth: 'CaCO₃ 550ppm = مرتين/سنة. كل 6 أشهر.' },
     ],

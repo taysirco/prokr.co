@@ -59,7 +59,7 @@ export const override: PageOverride = {
         { fear: 'ربع سنوي مكلف.', solution: 'حريق = 50,000-200,000. عقد = 1-4%.' },
         { fear: 'نظيفة.', solution: 'SiO₂ يُخشّن داخلياً. مقياس ميكرون يكشف.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'مثل الخبر.', truth: 'SiO₂ يُخشّن = أسرع. كربنة مُركّبة ≠ NaCl فقط.' },
         { myth: 'نصف سنوي.', truth: 'SiO₂ يُسرّع + Biofilm يُضيف. ربع سنوي.' },
         { myth: 'ماء عادي.', truth: 'NaCl = Biofilm. RO fقط.' },

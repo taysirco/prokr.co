@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'نظيف.', solution: 'عفن مخفي + عث ميكروبي + NaCl+SiO₂ ناعم + بوليمر شفاف.' },
         { fear: 'منظف محل.', solution: 'لا يقتل عث. لا يجفف. لا يُكسر بوليمر.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'مثل الخبر.', truth: 'SiO₂ إضافي = Fiber Cutting. أسوأ على الألياف.' },
         { myth: 'سنوي.', truth: 'مزدوج + عفن 3-4 أسابيع. ربع سنوي.' },
         { myth: 'بخور عطر.', truth: 'بلمرة 45°م + رطوبة = عفن فوق.' },

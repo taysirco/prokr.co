@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'مبيد يكفي.', solution: 'بخار مثالي بعنيزة! يجف فوراً.' },
         { fear: 'بخار = عفن.', solution: '10-20% = يجف 15 دقيقة!' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'بخار خطر.', truth: 'بعنيزة = مثالي. 10-20%.' },
         { myth: 'مرة واحدة.', truth: '2-3 جلسات. بيض.' },
     ],

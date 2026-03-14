@@ -13,7 +13,7 @@ export interface ServiceSemanticData {
     entities: string[];                                      // كيانات حقيقية (أجهزة، مواد، جهات)
     lsiNGrams: string[];                                     // متلازمات دلالية ثنائية/ثلاثية
     hiddenObjections: { fear: string; solution: string }[];  // مخاوف العميل + حلولنا
-    counterNarratives: { myth: string; truth: string }[];    // خرافات شائعة + الحقيقة
+    consumerEducation: { myth: string; truth: string }[];    // خرافات شائعة + الحقيقة
     equipment: { name: string; use: string }[];              // معدات وتقنيات حقيقية
     govReferences: string[];                                 // تراخيص ومعايير حكومية
 }

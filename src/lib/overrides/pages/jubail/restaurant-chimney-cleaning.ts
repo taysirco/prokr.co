@@ -59,7 +59,7 @@ export const override: PageOverride = {
         { fear: 'مثل حفر الباطن.', solution: 'Biofilm أقصى + لزجة ≠ صلبة. NFPA أسرع.' },
         { fear: 'ربع سنوي كافٍ.', solution: 'مطاعم أسماك: شهرين. Biofilm يُسرّع.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'كيميائي يكفي.', truth: 'Biofilm يحمي الكربنة. Anti-Biofilm أولاً.' },
         { myth: 'مثل الرياض.', truth: 'Biofilm + NaCl + لزجة. مختلف.' },
     ],

@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'شفط فقط.', solution: 'بدون Descaler = يسد أسرع. وقائي.' },
         { fear: 'مثل عنيزة.', solution: 'نفس 600ppm لكن بريدة: فلل أكبر.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'شفط سنوي.', truth: '600ppm = ربع سنوي. أسرع انسداد.' },
         { myth: 'بدون Descaler.', truth: '600ppm × 6 = انسداد كامل.' },
     ],

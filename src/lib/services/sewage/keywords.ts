@@ -1,4 +1,4 @@
-import type { ServiceKeywordProfile } from '../../keyword-strategy';
+import type { ServiceKeywordProfile } from '../../locale-formatting';
 
 export const SEWAGE_KEYWORDS: Record<string, ServiceKeywordProfile> = {
     'sewer-cleaning': {

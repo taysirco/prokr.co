@@ -60,7 +60,7 @@ export const override: PageOverride = {
     hiddenObjections: [
         { fear: 'عقد سنوي غالي.', solution: 'لدغة عقرب = طوارئ 2,000-5,000. العقد يمنع 100%. كل ريال وقاية = 5 ريال علاج.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'حشرات الرياض موسمية.', truth: 'صيفاً: Fire Ant + عقارب خارج. شتاءً: هجرة للداخل. 12 شهر — يتبدل النوع.' },
         { myth: 'رش السوق يكفي.', truth: 'تركيز منخفض + لا Microencapsulation + تبخر في ساعات بـ 50°م. المهني: أسابيع-أشهر.' },
     ],

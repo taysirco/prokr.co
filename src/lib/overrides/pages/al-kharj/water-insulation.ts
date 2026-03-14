@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'يحتاج سطحي.', solution: 'لا أمطار = أرضي فقط = 50% أرخص.' },
         { fear: 'مثل خميس.', solution: 'عكس! أرضي فقط مقابل مزدوج.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'عزل سطحي.', truth: 'لا أمطار بالخرج. أرضي فقط.' },
         { myth: 'لا يحتاج.', truth: 'CaCO₃ أرضية = تآكل حديد. SBC 602.' },
     ],

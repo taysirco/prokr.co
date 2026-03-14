@@ -8,16 +8,16 @@ import { getSubRegionsByCity } from '@/lib/sub-regions';
 import { generateCityMeta } from '@/lib/ai-content-layers';
 import { BreadcrumbJsonLd, ItemListJsonLd, SpeakableWebPageJsonLd, WebPageJsonLd } from '@/components/JsonLd';
 import { getCityContext } from '@/lib/city-context';
-import { getCityKeyword } from '@/lib/keyword-strategy';
+import { getCityKeyword } from '@/lib/locale-formatting';
 import { BLOG_ARTICLES } from '@/lib/blog-data';
 import { hasPageOverride } from '@/lib/overrides/registry';
 import { isAbsorbedSlug } from '@/lib/services/super-page-groups';
 import Footer from '@/components/Footer';
-import GeoSignals from '@/components/GeoSignals';
+import LocalPresence from '@/components/LocalPresence';
 import FraudAlertBanner from '@/components/FraudAlertBanner';
 import { LiveAvailabilityBanner } from '@/components/LiveAvailabilityBanner';
-import SalaryCycleBadge from '@/components/SalaryCycleBadge';
-import SleeperCellCTA from '@/components/SleeperCellCTA';
+import MarketTimingBadge from '@/components/MarketTimingBadge';
+import LeadCaptureCTA from '@/components/LeadCaptureCTA';
 
 interface CityPageProps {
     params: Promise<{
@@ -25,7 +25,7 @@ interface CityPageProps {
     }>;
 }
 
-// Revalidate every hour — salary cycle and availability data change daily
+// Revalidate every hour — market timing and availability data change daily
 export const revalidate = 3600;
 
 // Generate static params for all cities
@@ -180,9 +180,9 @@ export default async function CityPage({ params }: CityPageProps) {
                             </div>
                         </div>
 
-                        {/* 💰 Salary Cycle Badge — النبض المالي */}
+                        {/* 💰 Market Timing Badge — النبض المالي */}
                         <div className="mt-3">
-                            <SalaryCycleBadge compact />
+                            <MarketTimingBadge compact />
                         </div>
 
                         <p className="text-lg text-emerald-100 max-w-2xl mt-4">
@@ -375,8 +375,8 @@ export default async function CityPage({ params }: CityPageProps) {
                     </article>
                 </section>
 
-                {/* 🧬 Sleeper Cell Protocol — Scarcity-Framed Lead Gen */}
-                <SleeperCellCTA cityName={city.name_ar} serviceName="خدمات منزلية" serviceSlug="cleaning" citySlug={resolvedParams.city} />
+                {/* 🧬 Service Request Form — Lead Generation */}
+                <LeadCaptureCTA cityName={city.name_ar} serviceName="خدمات منزلية" serviceSlug="cleaning" citySlug={resolvedParams.city} />
 
                 {/* Related Blog Articles */}
                 <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -414,13 +414,13 @@ export default async function CityPage({ params }: CityPageProps) {
                     </div>
                 </section>
 
-                {/* 🛡️ Anti-Scam YMYL Trap — Consumer Protection Banner */}
+                {/* 🛡️ Consumer Protection Alert — Consumer Protection Banner */}
                 <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
                     <FraudAlertBanner serviceName="خدمات منزلية" serviceSlug="cleaning" cityName={city.name_ar} />
                 </section>
 
-                {/* Phantom Geo-Hijacking — City-Level Landmark Signal */}
-                <GeoSignals citySlug={resolvedParams.city} serviceSlug="city-hub" serviceName="خدمات منزلية" serviceCategory="cleaning" />
+                {/* Local Service Area — City-Level Landmark Signal */}
+                <LocalPresence citySlug={resolvedParams.city} serviceSlug="city-hub" serviceName="خدمات منزلية" serviceCategory="cleaning" />
 
                 <Footer currentCity={resolvedParams.city} />
             </main>

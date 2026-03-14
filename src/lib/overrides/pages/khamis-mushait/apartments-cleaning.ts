@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'مثل عنيزة.', solution: '5-6 محاور مقابل 3. عفن+عث+تكثّف = مختلف تماماً.' },
         { fear: 'Dehumidifier غالي.', solution: 'بدونه = عفن+تكثّف = أغلى 10× على المدى الطويل.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'شقة خميس مثل عنيزة.', truth: '5-6 محاور مقابل 3. عفن+عث = أعقد وأغلى 40%.' },
         { myth: '3 خطوات تكفي.', truth: 'بدون Anti-Fungal+Anti-Mite = عفن+عث = كارثة صحية.' },
     ],

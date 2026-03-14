@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'مثل الباحة.', solution: 'متشابه — خميس أقل غابات لكن ضباب أكثر. تكلفة متقاربة.' },
         { fear: 'شهري غالي.', solution: 'ربع سنوي = Biofilm سميك = Acid Wash = أغلى 5×.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'الواجهات ما تحتاج Anti-Biofilm.', truth: 'ضباب 200 يوم = أسبوعين = أسرع Biofilm.' },
         { myth: 'مثل عنيزة.', truth: 'عنيزة: لا Biofilm+ربع سنوي. عكس!' },
     ],

@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'مثل بريدة.', solution: 'طحالب+ملح+صدأ = مختلف.' },
         { fear: 'شهري يكفي.', solution: '70-85% طحالب = أسبوعي.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'كلور يكفي.', truth: 'Algaecide+pH+Marine-Grade.' },
         { myth: 'معدات عادية.', truth: 'NaCl = صدأ. Marine-Grade.' },
     ],

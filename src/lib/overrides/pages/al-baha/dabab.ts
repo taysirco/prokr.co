@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'مكشوف.', solution: 'مطر = تبلل. تغليف.' },
         { fear: 'مثل بريدة.', solution: 'جبلي+ضباب ≠ مستوي.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'أي دباب.', truth: 'Mountain-Spec+All-Terrain.' },
         { myth: 'سريع.', truth: 'ضباب = أبطأ. أمان.' },
     ],

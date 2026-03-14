@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'مثل الخبر.', solution: 'واحة = طلع. مختلف.' },
         { fear: 'شامبو.', solution: 'بلمرة ملحية = Enzymatic.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'بخار لعفن.', truth: 'بخار = عث+طلع+تعقيم.' },
         { myth: 'نصف سنوي.', truth: 'عفن+عث+بخور+طلع. ربع سنوي.' },
     ],

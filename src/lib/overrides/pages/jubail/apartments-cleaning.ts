@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'مثل الخبر.', solution: 'VOC إضافي + 98% > 95% + PM2.5 صناعي. مختلف.' },
         { fear: 'منظف عادي.', solution: 'NaCl+VOC = مُركّبة. عادي = ينزلق. Degreaser.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'ساحلي فقط.', truth: 'ساحلي + صناعي = VOC + NaCl + PM2.5. ثلاثي.' },
         { myth: 'شهري.', truth: '98% = عفن أسبوعي. أسبوعي.' },
         { myth: 'HEPA عادي.', truth: 'لا يحجز VOC. Activated Carbon.' },

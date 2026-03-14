@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'مكنسة تكفي.', solution: 'Nafud 10 μm يمر = HEPA. أجهزة.' },
         { fear: 'مثل الرياض.', solution: '600ppm+Nafud+نخيل = 3 تحديات فريدة.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'تنظيف عادي.', truth: 'Nafud يتلف أجهزة+600ppm كلس. HEPA+Descaler.' },
         { myth: 'شهري.', truth: 'Nafud+كلس = يومي أو أسبوعي.' },
     ],

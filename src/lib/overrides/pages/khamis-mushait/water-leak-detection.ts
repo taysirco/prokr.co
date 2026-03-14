@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'تكثّف مو تسرب.', solution: 'ممكن! فحص حراري يُميّز بدقة.' },
         { fear: 'بصري يكفي.', solution: '3 مصادر+عفن = بصري مُضلل. حراري.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'كشف خميس مثل عنيزة.', truth: '3 مصادر+عفن = أعقد. حراري إلزامي.' },
         { myth: 'التسرب واضح دائماً.', truth: 'عفن يُغطي + تكثّف يُضلل + مطر يُخلط.' },
     ],

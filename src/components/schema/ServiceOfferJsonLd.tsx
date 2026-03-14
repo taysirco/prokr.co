@@ -1,6 +1,6 @@
 import type { City, Service } from '@/types';
 import { resolveSeoContent } from '@/lib/overrides';
-import { getServiceKeywordProfile, getCityKeyword } from '@/lib/keyword-strategy';
+import { getServiceKeywordProfile, getCityKeyword } from '@/lib/locale-formatting';
 
 // ============================================
 // WARRANTY PROMISE — YMYL TRUST SHIELD

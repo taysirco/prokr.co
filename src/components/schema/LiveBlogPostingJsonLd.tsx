@@ -1,5 +1,5 @@
 // ============================================
-// LIVE BLOG POSTING SCHEMA — QDF SIGNAL HACK
+// LiveBlogPosting Schema — Freshness Signal
 // Triggers Google's Query Deserves Freshness algorithm
 // by presenting the page as a real-time live platform
 // ============================================

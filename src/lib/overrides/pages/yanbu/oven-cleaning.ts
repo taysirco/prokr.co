@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'منظف عادي.', solution: 'NaCl+دهن=صلب. Degreaser صناعي.' },
         { fear: 'مثل بريدة.', solution: 'ملح+حمض+عفن = أعقد.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'سنوي.', truth: 'ربع سنوي. ملح+دهن.' },
         { myth: 'ماء ساخن.', truth: 'NaCl يعود. RO.' },
     ],

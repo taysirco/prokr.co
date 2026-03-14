@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'رش عام.', solution: 'BTI+IGR+Gel = متخصص.' },
         { fear: 'مثل بريدة.', solution: 'بعوض+صراصير+عفن = مختلف.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'رش عام.', truth: 'BTI+IGR+Gel = ثلاثي متخصص.' },
         { myth: 'ربع سنوي.', truth: '70-85% = شهري. تكاثر.' },
     ],

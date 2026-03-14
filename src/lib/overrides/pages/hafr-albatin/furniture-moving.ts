@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'غالي.', solution: '500 كم × ΔT 54°م = مسافة+مناخ. تلف بدون حماية = أغلى بكثير.' },
         { fear: 'شاحنة مُغلقة.', solution: 'ليست مُعزولة حرارياً. 52°م تدخل. UV يتسرب. Stretch = حماية ثانية.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'مثل الرياض.', truth: 'ΔT 54°م > 35°م. مسافات أطول. UV أعلى. -2°م.' },
         { myth: 'شاحنة تكفي.', truth: 'لا معزولة. 52°م + SiO₂ + UV = يدخل. تغليف.' },
         { myth: 'أي وقت.', truth: 'ظهر = أسوأ. صباح = أفضل 50%.' },

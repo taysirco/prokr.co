@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'ماء عادي يكفي.', solution: '600ppm = بقع فوراً. Pure Water.' },
         { fear: 'مثل الرياض.', solution: 'Nafud أنعم + 600ppm أعلى + نخيل.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'قطن وماء.', truth: 'Nafud يعلق بالقطن = خدش. Microfiber.' },
         { myth: 'ماء صنبور.', truth: '600ppm = بقع كلس. Pure Water.' },
     ],

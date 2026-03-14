@@ -59,7 +59,7 @@ export const override: PageOverride = {
         { fear: 'مثل بريدة.', solution: 'طحالب+تآكل vs Scale. مختلف.' },
         { fear: 'تعقيم يكفي.', solution: 'Anti-Algae+Anti-Corrosion إضافي.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'سنوي.', truth: '70-85% = ربع سنوي. طحالب.' },
         { myth: 'تحلية نظيفة.', truth: 'TDS<150 = تآكل. Epoxy.' },
     ],

@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'مثل بريدة.', solution: 'عفن+4-8h vs 15 دقيقة. مختلف.' },
         { fear: 'شامبو يكفي.', solution: 'NaCl يتبلور+SOx حمض. RO.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'ماء عادي.', truth: 'NaCl يتبلور = أخشن. RO.' },
         { myth: 'تجفيف سريع.', truth: '70-85% = 4-8h. Dehumidifier.' },
     ],

@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'مثل خميس.', solution: 'أبسط — لا Biofilm = خطوة أقل.' },
         { fear: 'Alkaline يكفي.', solution: 'كرملة تمور مختلفة — Enzymatic أولاً.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'سلك جلي أسرع.', truth: 'يخدش سطح الفرن. Alkaline+Enzymatic أبطأ لكن بدون خدش.' },
         { myth: 'الفرن ما يحتاج Enzymatic.', truth: 'كرملة تمور ≠ كربنة عادية. Alkaline لا يُكسِّر السكر.' },
     ],

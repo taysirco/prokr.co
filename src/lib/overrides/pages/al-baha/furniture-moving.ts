@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'مكشوف أرخص.', solution: 'مطر = عفن. مغلق.' },
         { fear: 'مثل بريدة.', solution: 'جبلي+ضباب ≠ مستقيم+جاف.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'أي شاحنة.', truth: 'Mountain-Spec+مغلق.' },
         { myth: 'PVAc ينجو.', truth: 'اهتزاز+رطوبة = كسر.' },
     ],

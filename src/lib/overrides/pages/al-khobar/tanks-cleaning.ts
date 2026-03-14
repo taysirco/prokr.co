@@ -61,7 +61,7 @@ export const override: PageOverride = {
         { fear: 'الماء نظيف.', solution: 'Biofilm شفاف. Free Chlorine منخفض. فحص = يكشف.' },
         { fear: 'كلور يكفي.', solution: 'Chloride Demand = الكلور يُستهلك أسرع. Biofilm = يحمي بكتيريا. كلور وحده ≠ كافٍ.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'خزان الخبر مثل الأحساء.', truth: 'NaCl ≠ CaSO₄. لا Scale = ميزة. Chloride Demand = تحدٍ مختلف.' },
         { myth: 'سنوي.', truth: 'Biofilm 85-95% + Chloride Demand. نصف سنوي = الحد.' },
         { myth: 'كلور عادي.', truth: '20-30% أكثر. Free Chlorine فحص أسبوعي.' },

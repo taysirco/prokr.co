@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'Descaler يكفي.', solution: 'لا Scale! Laterite. Oxalic.' },
         { fear: 'مثل بريدة.', solution: 'Laterite+Biofilm ≠ CaCO₃.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'مبيّض ينظّف.', truth: 'يُثبّت Laterite = أسوأ.' },
         { myth: 'سنوي.', truth: 'خارجي ربع سنوي. Biofilm.' },
     ],

@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'مثل دباب.', solution: 'دينا 3-4 طن مقابل 500 كجم. فرامل تبريد مختلفة.' },
         { fear: 'غالي.', solution: 'بدون Waterproof = خسارة 3-4 طن = أغلى 100×.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'دينا عادية تكفي بخميس.', truth: 'أمطار+منحدرات = Waterproof+فرامل تبريد إلزامي.' },
         { myth: 'مثل عنيزة.', truth: 'عنيزة: مسطح+جاف. خميس: جبلي+رطب = أصعب.' },
     ],

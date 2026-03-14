@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'مياه جبلية نظيفة.', solution: 'Laterite يلوّث بعد المطر.' },
         { fear: 'مثل بريدة.', solution: 'مطر+Biofilm ≠ CaCO₃ Scale.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'نصف سنوي.', truth: 'ربع سنوي+بعد مطر.' },
         { myth: 'كلور ثابت.', truth: '1.3× بعد مطر.' },
     ],

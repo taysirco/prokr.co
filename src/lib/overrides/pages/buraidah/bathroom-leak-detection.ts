@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'بصري يكفي.', solution: '600ppm داخلي = فحص ضغط.' },
         { fear: 'مثل عنيزة.', solution: 'نفس 600ppm لكن بريدة: فلل أكبر.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'فحص بصري.', truth: 'CaCO₃ داخلي = ضغط+حراري.' },
         { myth: 'Descaler سنوي.', truth: '600ppm = كل 3 أشهر.' },
     ],

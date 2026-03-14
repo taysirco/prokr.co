@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'المبيدات خطرة على الأطفال.', solution: 'المبيدات المسجلة في SFDA آمنة بعد الجفاف (1-2 ساعة). إخلاء مؤقت + تهوية = أمان 100%.' },
     ],
 
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'أي شبك يكفي.', truth: 'SS304 = 2-3 سنوات في ملح. SS316 = الوحيد.' },
         { myth: 'النوارس ساحلية فقط.', truth: '20-30 كم داخلياً.' },
     ],

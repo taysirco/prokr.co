@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'دينا عادية.', solution: 'تمور = نظيف+معزول. مزرعة = Nafud.' },
         { fear: 'غالي.', solution: 'خسارة تمور فاسدة أغلى 10×.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'أي دينا.', truth: 'طرق Nafud = عجلات مناسبة.' },
         { myth: 'بدون عزل.', truth: 'ΔT 45°م = تلف ساعة.' },
     ],

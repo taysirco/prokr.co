@@ -61,7 +61,7 @@ export const override: PageOverride = {
         { fear: 'مثل الخبر.', solution: 'واحة = تربة طينية + نخيل + عيون. عفن مختلف.' },
         { fear: 'مثل الجبيل.', solution: 'لا VOC ولا سخام SABIC. لكن: واحة.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'ساحلي فقط.', truth: 'ساحلي + واحي = ثنائي فريد.' },
         { myth: 'مثل الظهران.', truth: 'لا SiO₂ خدش. طين = سد. مختلف.' },
         { myth: 'مرتين.', truth: 'NaCl+واحي+طين+نخيل. 4+.' },

@@ -62,7 +62,7 @@ export const override: PageOverride = {
         { fear: 'رش أرخص.', solution: 'رش × 5 = 1,000-2,500 + أسابيع. حراري = 800-1,200 × ينتهي.' },
         { fear: 'ما عندي.', solution: '75-85% = يختبئ. مُجمّع = ينتقل. قد يكون مبكراً. فحص = يكشف.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'مثل الخبر.', truth: '75-85% = أبطأ قليلاً. لكن: مُجمّعات = إعادة إصابة أسرع. مختلف.' },
         { myth: 'نظافة = حماية.', truth: 'البق = دم — ليس أوساخ. أنظف مُجمّع يُصاب.' },
         { myth: 'بخاخ.', truth: 'Knockdown Resistance. IGR + حرارة = آليات مختلفة.' },

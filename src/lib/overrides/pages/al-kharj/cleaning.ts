@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'مثل الرياض.', solution: 'NH₃+CaCO₃. الرياض لا مزارع ولا آبار.' },
         { fear: 'غالي.', solution: 'أرخص 30% من خميس. 4 محاور مقابل 7.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'معطر يكفي.', truth: 'NH₃ يتراكم. AC يمتص = فرق حقيقي.' },
         { myth: 'مثل خميس.', truth: 'لا عفن+لا عث+20 دقيقة = أبسط 40%.' },
     ],

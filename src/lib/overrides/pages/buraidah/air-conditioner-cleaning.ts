@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'Acid Flush غالي.', solution: '600ppm = بدونه تبريد -40%. فاتورة أعلى.' },
         { fear: 'مثل عنيزة.', solution: 'عنيزة أقل نخيل. بريدة: 8M = أعلى.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'تنظيف عادي.', truth: '600ppm = Acid Flush إلزامي.' },
         { myth: 'نصف سنوي.', truth: '600ppm = ربع سنوي. أسرع تكلّس.' },
     ],

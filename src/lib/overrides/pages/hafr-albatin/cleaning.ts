@@ -60,7 +60,7 @@ export const override: PageOverride = {
         { fear: 'لا عفن = سهل.', solution: 'SiO₂ PM10 + كهرباء ساكنة + ΔT شقوق = 3 تحديات.' },
         { fear: 'ممسحة.', solution: 'تنقل SiO₂ بكهرباء ساكنة. HEPA + Anti-Static = الحل.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'مثل الرياض.', truth: 'ΔT 54°م > 35°م. عواصف أكثف. -2°م شتاء.' },
         { myth: 'جاف = نظيف.', truth: 'جاف = كهرباء ساكنة = SiO₂ يلتصق.' },
         { myth: 'شهري.', truth: 'عواصف 2-4/شهر. أسبوعي.' },

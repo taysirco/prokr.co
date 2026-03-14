@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'مثل عنيزة.', solution: 'مشاكل مختلفة تماماً. عنيزة: ميكانيكي. خميس: بيولوجي+كيميائي.' },
         { fear: 'جلي عادي يكفي.', solution: 'بدون Anti-Fungal = العفن يرجع. Poultice للبقع العميقة.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'الرخام يتخدش بخميس مثل عنيزة.', truth: 'لا SiO₂ صحراوي = لا خدش. المشكلة عفن+تآكل.' },
         { myth: 'Impregnator يكفي.', truth: 'Anti-Fungal أولاً — Impregnator لا يقتل العفن الموجود.' },
     ],

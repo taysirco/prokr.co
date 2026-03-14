@@ -61,7 +61,7 @@ export const override: PageOverride = {
         { fear: 'أنظف بنفسي.', solution: 'بماء الشبكة؟ = NaCl جديد. بدون تجفيف؟ = عفن. بدون Anti-Fungal؟ = حمام. 3 أخطاء شائعة.' },
         { fear: 'عاملة أرخص.', solution: 'أرخص = بدون RO + بدون تجفيف + بدون Anti-Fungal = 3 مشاكل كل زيارة.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'ممسحة وماء.', truth: 'ماء الخبر = NaCl. ممسحة = تُوزّع NaCl. بدون تجفيف = عفن. 3 أخطاء.' },
         { myth: 'مثل الرياض.', truth: 'الرياض: ماء + ممسحة = يكفي (15% = يجف). الخبر: RO + Anti-Fungal + تجفيف = إلزامي.' },
         { myth: 'شهري.', truth: 'NaCl يومي + عفن أسبوعي. شهري = 3 أسابيع تراكم. أسبوعي.' },

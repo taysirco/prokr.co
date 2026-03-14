@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'مثل الخبر.', solution: 'واحي+أسماك. مختلف.' },
         { fear: 'بخاخ.', solution: 'Biofilm يحمي. Anti-Biofilm أولاً.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'مثل الرياض.', truth: '80-95% لزجة + Biofilm + أسماك.' },
         { myth: 'نصف سنوي.', truth: 'لزجة تتراكم. ربع سنوي.' },
     ],

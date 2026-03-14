@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'رش عام.', solution: 'IPM Forest+IGR+Anti-Mite = ثلاثي.' },
         { fear: 'مثل بريدة.', solution: 'غابة+عث = مختلف.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'ربع سنوي.', truth: 'شهري! غابة مستمرة.' },
         { myth: 'لا حشرات بالجبل.', truth: 'غابة = حشرات فريدة!' },
     ],

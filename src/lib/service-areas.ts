@@ -1,5 +1,5 @@
 /**
- * Phantom Geo-Hijacking — Dispatch Zone Data
+ * Local Service Area — Dispatch Zone Data
  * 
  * Each city has 4 distinct dispatch zones with REAL coordinates:
  * - residential: Main residential district (cleaning, pest-control, leak-detection)

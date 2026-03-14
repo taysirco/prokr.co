@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'المجلس نظيف.', solution: 'بوليمر شفاف. عفن مخفي. عث ميكروبي. NaCl+SiO₂ لا يُرى. 4 مخفية.' },
         { fear: 'شامبو يكفي.', solution: 'لا يُكسر Ester Bonds. لا يقتل عث. لا يُعالج مزدوج. 3 فشلات.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'مثل الخبر.', truth: 'SiO₂ إضافي = خدش ألياف. 75-85% ≠ 85-95%. مختلف.' },
         { myth: 'نصف سنوي.', truth: 'مزدوج + بخور + عفن 3-4 أسابيع. ربع سنوي = الحد.' },
         { myth: 'منظف قوي.', truth: 'لا يُكسر Ester Bonds. Enzymatic = الوحيد الفعّال.' },

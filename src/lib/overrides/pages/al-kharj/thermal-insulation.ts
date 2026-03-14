@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'يحتاج مائي.', solution: 'لا مطر = حراري فقط = وفر 30%.' },
         { fear: 'غالي.', solution: 'وفر 35-50% كهرباء. عائد 2-3 سنة.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'مزدوج.', truth: 'لا مطر = حراري فقط.' },
         { myth: 'أي عزل.', truth: 'UV+SiO₂ = مقاوم إلزامي.' },
     ],

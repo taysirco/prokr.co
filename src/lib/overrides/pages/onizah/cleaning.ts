@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'جاف = نظيف.', solution: 'CaCO₃+Nafud+تمور+لقاح = 4 تحديات.' },
         { fear: 'مثل ينبع.', solution: 'Nafud+كلس ≠ NaCl+SOx.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'ماء يكفي.', truth: '550ppm = كلس جديد. Citric.' },
         { myth: 'سنوي.', truth: 'ربع سنوي+لقاح+تمور = 6.' },
     ],

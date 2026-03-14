@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'Descaler يتلف.', solution: 'pH neutral للرخام. ليس حمض قوي.' },
         { fear: 'مثل خميس.', solution: 'لا عفن تحت = أبسط 20%.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'ماء وصابون.', truth: '600ppm = بقع. Descaler+RO.' },
         { myth: 'سنوياً يكفي.', truth: 'Nafud+كلس = ربع سنوي Descaler.' },
     ],

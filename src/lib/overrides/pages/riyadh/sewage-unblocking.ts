@@ -60,7 +60,7 @@ export const override: PageOverride = {
     hiddenObjections: [
         { fear: 'Jetting أغلى من سبرنق.', solution: 'سبرنق: يعود كل 2-4 أسابيع = أغلى 50% سنوياً. Jetting: كل 3-6 أشهر = تنظيف حقيقي + أرخص.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'كل انسداد = دهون فقط.', truth: 'في الرياض: 50-60% كلس CaCO₃ + 30% دهون + 10% تربة من شقوق. المعالجة مختلفة: Jetting لا سبرنق.' },
         { myth: 'PVC يتحمل أي مناخ.', truth: '60°م تفاوت × 365 = PVC يتشقق بعد 5-8 سنوات. HDPE مُصمم لهذا المناخ.' },
     ],

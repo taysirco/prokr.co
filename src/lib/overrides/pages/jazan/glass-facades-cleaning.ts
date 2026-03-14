@@ -54,7 +54,7 @@ export const override: PageOverride = {
         { name: 'Biocide Anti-Moss', use: 'يقتل طحالب/أشنات + يمنع العودة 3 أشهر' },
     ],
     hiddenObjections: [{ fear: 'Marine-Grade أغلى.', solution: 'سيلكون عادي × تجديد كل سنة = أغلى على 5 سنوات. Marine-Grade × 3-4 سنوات = أرخص 40%.' }],
-    counterNarratives: [{ myth: 'الزجاج لا يتأثر.', truth: 'Salt Fog Micro-Etching يُعتمه تدريجياً. + الطحالب تنمو على السطح. + السيلكون يفنى = تسلل.' },
+    consumerEducation: [{ myth: 'الزجاج لا يتأثر.', truth: 'Salt Fog Micro-Etching يُعتمه تدريجياً. + الطحالب تنمو على السطح. + السيلكون يفنى = تسلل.' },
         { myth: 'التنظيف العميق يتلف الأثاث.', truth: 'المعدات الصناعية مصممة للأسطح الحساسة. البخار 150°م ينظف بدون كيماويات. التنظيف اليدوي بمواد خاطئة أخطر بكثير.' },
     ],
     relatedServices: [

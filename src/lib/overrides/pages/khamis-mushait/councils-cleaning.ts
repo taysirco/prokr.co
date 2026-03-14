@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'شامبو يكفي.', solution: 'بلمرة رطبة عميقة = شامبو سطحي فقط. Enzymatic+بخار.' },
         { fear: 'مثل الباحة.', solution: 'متشابه — خميس أقل غابات. نفس البروتوكول.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'المجلس يجف بسرعة مثل عنيزة.', truth: '4-8h مقابل 20 دقيقة. 60-85% vs 15-25%.' },
         { myth: 'لا عفن بخميس.', truth: 'ضباب 200 يوم + 60-85% = أسرع عفن.' },
     ],

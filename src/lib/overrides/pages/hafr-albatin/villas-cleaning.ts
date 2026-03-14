@@ -62,7 +62,7 @@ export const override: PageOverride = {
         { fear: 'لا عفن = سهل.', solution: '5 محاور قارية: ΔT 54°م + Deathstalker + UV + SiO₂ + كهرباء ≠ سهل.' },
         { fear: 'فريق أصغر.', solution: 'أصغر (-2) لكن: مُدرّب على 5 محاور + حشرات. تخصص ≠ عدد.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'مثل الرياض.', truth: 'ΔT 54°م > 35°م. -2°م. Deathstalker. UV أعلى. عواصف أكثف.' },
         { myth: 'مثل الشرقية.', truth: 'لا عفن + لا عث = ميزتين. لكن: ΔT + UV + Deathstalker = فريد.' },
         { myth: 'شهري.', truth: 'عواصف 2-4/شهر + كهرباء ساكنة. أسبوعي.' },

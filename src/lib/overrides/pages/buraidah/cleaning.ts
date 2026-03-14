@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'مثل الرياض.', solution: '600ppm مقابل 300. 8M نخلة. Nafud.' },
         { fear: 'مثل خميس.', solution: 'لا عفن+15 دقيقة = أرخص 30%.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'تنظيف عادي.', truth: '4 محاور: Descaler+HEPA+Pre-Rinse+RO.' },
         { myth: 'Descaler شهري.', truth: '600ppm = أسبوعي. أسرع تكلّس.' },
     ],

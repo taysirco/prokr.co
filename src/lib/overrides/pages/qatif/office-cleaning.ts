@@ -56,7 +56,7 @@ export const override: PageOverride = {
         { fear: 'مثل الخبر.', solution: 'طلع+واحي. مختلف.' },
         { fear: 'عاملة المبنى.', solution: 'بدون HEPA+Anti-Fungal = 0%.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'ساحلي فقط.', truth: 'واحي = طلع+عيون.' },
         { myth: 'مكيف يكفي.', truth: 'فلتر لا يحجز طلع. HEPA.' },
     ],

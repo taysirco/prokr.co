@@ -59,7 +59,7 @@ export const override: PageOverride = {
         { fear: 'بيت قديم = مستحيل.', solution: 'Bait + Barrier حتى بيوت تاريخية. الحل موجود.' },
         { fear: 'رش بعوض يكفي.', solution: 'آلية مختلفة.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'مثل حفر الباطن.', truth: '80-95% طين vs 10-15% رمل. أسرع 5×.' },
         { myth: 'Barrier عادي.', truth: 'تربة طينية رطبة = يتحلل. مُخصص.' },
     ],

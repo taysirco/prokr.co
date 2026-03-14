@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'نظيفة.', solution: 'NaCl شفاف + Biofilm شفاف + SiO₂ ناعم. \"نظيفة\" = لا تُلاحظ. ربع سنوي يكشف.' },
         { fear: 'ماء وقماش.', solution: 'ماء = NaCl جديد. قماش + SiO₂ = خدش. 2 أخطاء.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'مثل الخبر.', truth: 'SiO₂ خدش 7 Mohs > زجاج 5.5 = فرق حرج.' },
         { myth: 'المطر.', truth: 'مطر الظهران = NaCl + SiO₂ = بقع+خدوش إضافية.' },
         { myth: 'سنوي.', truth: 'مزدوج أسبوعي + Biofilm شهري. ربع سنوي.' },

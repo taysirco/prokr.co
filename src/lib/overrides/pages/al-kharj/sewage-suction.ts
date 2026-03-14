@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'شفط عادي يكفي.', solution: 'CaCO₃ يسد = Descaler+Jetting.' },
         { fear: 'كل 6 أشهر.', solution: 'كلس+رمل = ربع سنوي.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'شفط بس.', truth: 'CaCO₃ يسد = Descaler+Jetting.' },
         { myth: 'مرتين بالسنة.', truth: 'كلس+رمل = 4. ربع سنوي.' },
     ],

@@ -46,7 +46,7 @@ export const override: PageOverride = {
     verificationBadges: [{ badge: '✔️ مرخصة', authority: 'بلدي + وقاء', icon: 'shield-check' }],
     equipment: [{ name: 'Gel Bait', use: 'مولات' }, { name: 'K9', use: 'فنادق جسر' }, { name: 'BTI', use: 'كورنيش' }, { name: 'IGR', use: '85-95%' }],
     hiddenObjections: [{ fear: 'رش.', solution: '85-95% = 3-5 أيام.' }],
-    counterNarratives: [{ myth: 'مثل الدمام.', truth: 'جسر + مولات + كورنيش.' },
+    consumerEducation: [{ myth: 'مثل الدمام.', truth: 'جسر + مولات + كورنيش.' },
         { myth: 'الحشرات تدل على قلة نظافة.', truth: 'الحشرات تبحث عن ماء ودفء وليس قذارة. أنظف بيت يجذب حشرات إذا فيه رطوبة أو شقوق.' },
     ],
     relatedServices: [{ slug: 'bedbugs-control', context: 'بق — فنادق جسر', priority: 1 }, { slug: 'termite-control', context: 'نمل', priority: 2 },

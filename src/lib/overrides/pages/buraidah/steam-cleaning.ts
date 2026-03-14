@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'ماء صنبور يكفي.', solution: '600ppm = جهاز يتلف 6 أشهر. RO.' },
         { fear: 'مثل خميس.', solution: 'لا عفن+10 دقائق = أرخص 20%.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'أي ماء.', truth: '600ppm = RO إلزامي. يتلف.' },
         { myth: 'بخار يعفّن.', truth: '10-20% = 10 دقائق. لا عفن.' },
     ],

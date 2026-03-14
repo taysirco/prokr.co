@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'مثل الخبر.', solution: 'VOC + 98%>95% + سخام. أقسى.' },
         { fear: 'كلور عادي.', solution: 'NaCl Demand = يستهلك. 2×.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'مثل حفر الباطن.', truth: '98% طحالب vs 10-15% لا طحالب. عكس!' },
         { myth: 'كلور يكفي.', truth: 'NaCl Demand + VOC. لا يكفي.' },
     ],

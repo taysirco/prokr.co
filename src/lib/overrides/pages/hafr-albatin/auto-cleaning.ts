@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'مثل الرياض.', solution: 'ΔT 54°م > 35°م. -2°م شتاء. UV أعلى. عواصف أكثف.' },
         { fear: 'Ceramic غالي.', solution: 'Ceramic = 380-950 ÷ 2-3 سنوات. إعادة طلاء = 3,000-8,000.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'غبار عادي.', truth: 'SiO₂ عواصف = أكثف + كهرباء ساكنة = يلتصق.' },
         { myth: 'إسفنجة ناعمة.', truth: 'SiO₂ عواصف = أكثف من الرياض. Touchless فقط.' },
         { myth: 'شهري.', truth: 'عواصف 2-4/شهر. أسبوعي.' },

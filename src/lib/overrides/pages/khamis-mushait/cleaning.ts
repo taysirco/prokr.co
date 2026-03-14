@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'مثل عنيزة.', solution: '6-7 محاور مقابل 4. عفن+عث = مختلف تماماً.' },
         { fear: 'أغلى = مبالغة.', solution: 'البيئة أعقد = خطوات أكثر. بدونها = كارثة.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: '4 خطوات تكفي مثل عنيزة.', truth: 'بدون Anti-Fungal+Anti-Mite = عفن+عث. 6-7 إلزامي.' },
         { myth: 'Dehumidifier ترف.', truth: '60-85% = بدونه كل شيء يتعفّن.' },
     ],

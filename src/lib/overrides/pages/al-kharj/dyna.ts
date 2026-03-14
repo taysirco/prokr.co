@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'دينا عادية تكفي.', solution: 'طرق ترابية+معدات حساسة = تخصص.' },
         { fear: 'غالي.', solution: 'تلف معدات أغلى 10×.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'أي دينا.', truth: 'طرق ترابية = عجلات مناسبة.' },
         { myth: 'بدون تغطية.', truth: 'SiO₂ = غبار على الأعلاف = رفض المزرعة.' },
     ],

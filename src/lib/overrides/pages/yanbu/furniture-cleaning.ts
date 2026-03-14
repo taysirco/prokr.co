@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'تنظيف عادي.', solution: 'NaCl+عفن = Anti-Rust+Anti-Fungal.' },
         { fear: 'مثل بريدة.', solution: 'صدأ+عفن = مختلف تماماً.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'سنوي.', truth: 'NaCl = نصف سنوي Anti-Rust.' },
         { myth: 'تنظيف يكفي.', truth: 'Anti-Rust+Anti-Fungal إضافي.' },
     ],

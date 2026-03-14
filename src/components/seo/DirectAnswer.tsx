@@ -39,7 +39,7 @@ export const DirectAnswer: React.FC<DirectAnswerProps> = ({ city, service, answe
                 />
             )}
 
-            {/* Structured bullet list — SGE bait */}
+            {/* Structured bullet list — Featured snippet format */}
             {bullets.length > 0 && (
                 <ul className="list-disc pr-6 space-y-2 text-gray-800">
                     {bullets.map((bullet, i) => (

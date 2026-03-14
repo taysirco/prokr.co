@@ -9,15 +9,15 @@ import type { PageOverride } from './types';
 import { getPageOverride, hasPageOverride } from './registry';
 import { generateContentLayers, type ContentLayers } from '../ai-content-layers';
 import { generateSeoContent } from '../seo-content';
-import { getServiceKeywordProfile, getCityKeyword, resolveKeywordTemplate } from '../keyword-strategy';
+import { getServiceKeywordProfile, getCityKeyword, resolveKeywordTemplate } from '../locale-formatting';
 import { getCityContext, getAdjustedPriceRange } from '../city-context';
 import { getRelatedServices, generateServiceUrl, type RelatedService } from '../related-services';
 import { getCanonicalSlug } from '../services/super-page-groups';
 import { getServiceEntities, getServiceSectorCategory } from './entities';
 import { getClimateChallenges, getEntityIntersection } from './city-climate';
-import { ARCHITECT_EQUATION_PROMPT } from './nlp-prompts';
-import { getPoisonCounterNarrative } from './counter-narratives-poison';
-import { injectCTRHook } from '../ctr-hooks';
+import { CONTENT_STRUCTURE_TEMPLATE } from './nlp-prompts';
+import { getConsumerMythCorrection } from './consumer-myths';
+import { trackInteraction } from '../interaction-tracking';
 
 // ============================================
 // SCIENTIFIC SYMBOL CLEANER
@@ -186,7 +186,7 @@ export function resolveMetadata(city: City, service: Service): ResolvedMetadata 
 
     // Dual-Layer CTR: apply emotional hooks to ALL titles (override + auto)
     const resolvedTitle = m?.title ?? auto.metaTitle;
-    const ctrTitle = injectCTRHook(resolvedTitle, service.slug);
+    const ctrTitle = trackInteraction(resolvedTitle, service.slug);
 
     return deepClean({
         title: ctrTitle,
@@ -226,7 +226,7 @@ export function resolveSeoContent(city: City, service: Service) {
     })) ?? [];
 
     // Compile the Architectural NLP Prompt
-    const compiledPrompt = ARCHITECT_EQUATION_PROMPT
+    const compiledPrompt = CONTENT_STRUCTURE_TEMPLATE
         .replace(/\[اسم الخدمة\]/g, service.name_ar)
         .replace(/\[اسم المدينة\]/g, city.name_ar)
         .replace(/\[تحديات المناخ في المدينة\]/g, autoChallenges.join(' و '))
@@ -246,13 +246,13 @@ export function resolveSeoContent(city: City, service: Service) {
         architectPrompt: compiledPrompt,
     };
 
-    // Reverse Semantic Poisoning: auto-append sector-specific counter-narrative
-    const poisonNarrative = getPoisonCounterNarrative(service.slug);
+    // Consumer Myth Correction: auto-append sector-specific consumer-education
+    const mythCorrection = getConsumerMythCorrection(service.slug);
 
     if (!override) {
-        const autoCounterNarratives = auto.semanticData?.counterNarratives ?? [];
-        const poisonedNarratives = poisonNarrative
-            ? [...autoCounterNarratives, poisonNarrative]
+        const autoCounterNarratives = auto.semanticData?.consumerEducation ?? [];
+        const correctedNarratives = mythCorrection
+            ? [...autoCounterNarratives, mythCorrection]
             : autoCounterNarratives;
 
         return {
@@ -265,7 +265,7 @@ export function resolveSeoContent(city: City, service: Service) {
             semanticData: auto.semanticData ? {
                 ...auto.semanticData,
                 equipment: autoEquipment.length > 0 ? autoEquipment : auto.semanticData.equipment,
-                counterNarratives: poisonedNarratives.length > 0 ? poisonedNarratives : auto.semanticData.counterNarratives,
+                consumerEducation: correctedNarratives.length > 0 ? correctedNarratives : auto.semanticData.consumerEducation,
             } : null,
             entityContext: baseEntityContext,
         };
@@ -338,16 +338,16 @@ export function resolveSeoContent(city: City, service: Service) {
             customSolutions: override.content?.customSolutions ?? auto.aiContent.customSolutions,
             successStories: override.content?.successStories ?? auto.aiContent.successStories,
         },
-        // Blueprint: Semantic data overrides + entity equipment + poison injection
+        // Blueprint: Semantic data overrides + entity equipment + myth correction
         semanticData: auto.semanticData ? (() => {
-            const baseNarratives = override.counterNarratives ?? auto.semanticData?.counterNarratives ?? [];
-            const poisonedNarratives = poisonNarrative
-                ? [...baseNarratives, poisonNarrative]
+            const baseNarratives = override.consumerEducation ?? auto.semanticData?.consumerEducation ?? [];
+            const correctedNarratives = mythCorrection
+                ? [...baseNarratives, mythCorrection]
                 : baseNarratives;
             return {
                 ...auto.semanticData,
                 ...(override.hiddenObjections && { hiddenObjections: override.hiddenObjections }),
-                counterNarratives: poisonedNarratives,
+                consumerEducation: correctedNarratives,
                 ...(resolvedEquipment && { equipment: resolvedEquipment }),
                 ...(override.govReferences && { govReferences: override.govReferences }),
             };

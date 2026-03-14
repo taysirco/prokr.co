@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'مستودع عادي.', solution: 'ΔT+Nafud = مكيف+محكم.' },
         { fear: 'مثل خميس.', solution: 'لا عفن = أرخص 30%.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'أي مستودع.', truth: 'ΔT 45°م = مكيف. Nafud = محكم.' },
         { myth: 'مثل الرياض.', truth: 'Nafud أنعم. 600ppm. نخيل.' },
     ],

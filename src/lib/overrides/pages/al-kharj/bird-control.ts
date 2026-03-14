@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'طرد يكفي.', solution: 'صوامع = غذاء مستمر. شبك فقط.' },
         { fear: 'مثل الرياض.', solution: '3-5× أكثر. مزارع = مختلف.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'حمام عادي.', truth: 'حمام مزارع 3-5×. صوامع أعلاف.' },
         { myth: 'طرد مؤقت يكفي.', truth: 'غذاء مستمر = يرجعون. شبك دائم.' },
     ],

@@ -1,15 +1,15 @@
 // ============================================
-// AI VOICE SCHEMA — Agentic RAG & Voice Hack
+// Voice Search Optimization Schema
 // SpeakableSpecification + Dataset in @graph
 // 🎙️ Voice Search: Siri/Google reads #ai-voice-payload
-// 🤖 RAG Hack: Gemini ingests Dataset with pricing
+// 🤖 Dataset Schema: Gemini ingests Dataset with pricing
 // ============================================
 
 import type { City, Service } from '@/types';
 import type { PageOverride } from '@/lib/overrides/types';
 import type { PricingEntry } from '@/lib/pricing-data';
 
-interface AiVoiceJsonLdProps {
+interface VoiceSearchSchemaProps {
     city: City;
     service: Service;
     aiContent: PageOverride['content'];
@@ -18,7 +18,7 @@ interface AiVoiceJsonLdProps {
     pageUrl: string;
 }
 
-export function AiVoiceJsonLd({ city, service, aiContent, entityContext, pricingEntry, pageUrl }: AiVoiceJsonLdProps) {
+export function VoiceSearchSchema({ city, service, aiContent, entityContext, pricingEntry, pageUrl }: VoiceSearchSchemaProps) {
     // Guard: no shortAnswer = no schema (graceful degradation)
     if (!aiContent?.shortAnswer) return null;
 

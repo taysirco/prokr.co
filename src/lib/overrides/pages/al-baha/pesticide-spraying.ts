@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'رش عام.', solution: 'IPM Forest+مقاوم. ليس عام.' },
         { fear: 'مثل بريدة.', solution: 'Residual أقصر+غابة.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'ربع سنوي.', truth: 'شهري! Residual أقصر.' },
         { myth: 'مبيد يكفي.', truth: 'مقاوم رطوبة مطلوب.' },
     ],

@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'مثل حفر الباطن.', solution: 'لزجة ≠ صلبة. 98% ≠ 10-15%. Biofilm ≠ لا Biofilm. عكس.' },
         { fear: 'بخاخ.', solution: 'Biofilm يحمي. لا يصل. Anti-Biofilm أولاً.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'مثل الرياض.', truth: '98% لزجة + Biofilm + NaCl. رياض جافة.' },
         { myth: 'نصف سنوي.', truth: 'لزجة تتراكم أسرع. ربع سنوي.' },
     ],

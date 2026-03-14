@@ -61,7 +61,7 @@ export const override: PageOverride = {
         { fear: 'مثل الخبر.', solution: 'الخبر = NaCl 90%. الظهران = NaCl+SiO₂ 60/40. المزيج = خدش+تآكل معاً.' },
         { fear: 'ممسحة عادية.', solution: 'ممسحة + SiO₂ تحت NaCl = خدش مُبلّل. أسوأ من جاف.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'الظهران مثل الخبر.', truth: 'SiO₂ إضافي = خدش مزدوج. 75-85% ≠ 85-95%. مختلف.' },
         { myth: 'ماء وصابون.', truth: 'ماء الظهران = NaCl. صابون + SiO₂ = خدش. 2 أخطاء.' },
         { myth: 'شهري.', truth: 'NaCl+SiO₂ يومي. أسبوعي = الحد.' },

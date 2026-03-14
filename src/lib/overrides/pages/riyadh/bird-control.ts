@@ -60,7 +60,7 @@ export const override: PageOverride = {
     hiddenObjections: [
         { fear: 'الحمام يعود بعد الطرد.', solution: 'ثلاثي: شبك + سبايك + نبضات = لا مكان للوقوف.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'الحمام لا يضر.', truth: 'pH 3-4 × 100+ كجم/سنة. ثم أكل خرسانة + Histoplasma + انسداد مجاري. ثلاثة أضرار.' },
         { myth: 'طرد مؤقت يكفي.', truth: 'بدون حاجز مادي: يعود خلال أيام. شبك + سبايك = الحل الدائم.' },
     ],

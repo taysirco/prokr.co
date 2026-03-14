@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'Alkaline يكفي.', solution: 'Biofilm يمنع. Anti-Biofilm أولاً = الفرق.' },
         { fear: 'مثل الباحة.', solution: 'متشابه — نفس الفيزياء.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'أي منظّف يكفي.', truth: 'Biofilm يحمي الكربنة. Anti-Biofilm فقط يكشفها.' },
         { myth: 'مرتين/سنة.', truth: '3-4 أشهر — Biofilm أسرع بالرطوبة.' },
     ],

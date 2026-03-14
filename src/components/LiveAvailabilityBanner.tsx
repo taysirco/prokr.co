@@ -1,10 +1,10 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { getSalaryCycleConfig, type SalaryCycleConfig } from '@/lib/salary-cycle';
+import { getMarketTimingConfig, type MarketTimingConfig } from '@/lib/market-timing';
 
 // ============================================
-// LIVE AVAILABILITY BANNER — QDF VISUAL SIGNAL
+// Real-time Availability Status
 // Animated bar showing real-time team availability
 // ============================================
 
@@ -21,7 +21,7 @@ export function LiveAvailabilityBanner({
 }: LiveAvailabilityBannerProps) {
     const [currentTime, setCurrentTime] = useState('');
     const [dotVisible, setDotVisible] = useState(true);
-    const [cycleConfig, setCycleConfig] = useState<SalaryCycleConfig | null>(null);
+    const [cycleConfig, setCycleConfig] = useState<MarketTimingConfig | null>(null);
 
     // Deterministic team count based on total companies and hour
     const availableTeams = Math.max(2, Math.min(totalCompanies, Math.ceil(totalCompanies * 0.7)));
@@ -52,7 +52,7 @@ export function LiveAvailabilityBanner({
     }, []);
 
     useEffect(() => {
-        setCycleConfig(getSalaryCycleConfig());
+        setCycleConfig(getMarketTimingConfig());
     }, []);
 
     return (

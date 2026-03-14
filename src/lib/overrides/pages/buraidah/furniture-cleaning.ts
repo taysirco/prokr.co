@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'مكنسة تكفي.', solution: 'Nafud 10 μm يمر. HEPA.' },
         { fear: 'مثل خميس.', solution: 'لا عفن+20 دقيقة = أرخص 30%.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'مسح عادي.', truth: 'Nafud يقطع+600ppm يبقّع. HEPA+RO.' },
         { myth: 'ماء عادي.', truth: '600ppm = أعلى كلس. RO.' },
     ],

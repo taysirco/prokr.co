@@ -59,7 +59,7 @@ export const override: PageOverride = {
     hiddenObjections: [
         { fear: 'دينا عشوائية أرخص.', solution: 'بدون غطاء: ثلج = Short Circuit (500-3,000 ريال). بدون EPE: تجمد كمبريسور (800-3,000 ريال). وفر 200 = خاطر بـ 5,000+.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'الأجهزة حديد — تتحمل.', truth: '60% إلكترونيات. -2°م = زيت يتجمد + PCB يتكاثف. حديد لا يحمي الداخل.' },
         { myth: 'أي دينا تكفي.', truth: 'دينا بدون ترخيص TGA = بدون تأمين = أي ضرر يتحمله العميل. الترخيص = حماية قانونية.' },
     ],

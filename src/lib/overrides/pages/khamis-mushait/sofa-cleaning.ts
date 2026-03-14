@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'شامبو يكفي.', solution: 'بلمرة رطبة = سطحي فقط. Enzymatic+بخار.' },
         { fear: 'مثل عنيزة.', solution: 'عكس! عفن+عث+4-8h مقابل 20 دقيقة.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'الكنب يجف بسرعة.', truth: '4-8h مقابل 20 دقيقة. 60-85% vs 15-25%.' },
         { myth: 'لا عفن.', truth: '60-85%+ضباب = عفن أسبوعين.' },
     ],

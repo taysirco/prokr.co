@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'لا عفن = سهل.', solution: 'SiO₂ Cutting + كهرباء ساكنة + ΔT. 3 تحديات قارية ≠ سهل.' },
         { fear: 'شفط يكفي.', solution: 'شفط عادي = ينقل. HEPA = يحجز. فرق.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'مثل الرياض.', truth: 'ΔT 54°م > 35°م. -2°م. عواصف أكثف. مختلف.' },
         { myth: 'جاف = نظيف.', truth: 'جاف = كهرباء ساكنة = SiO₂ يلتصق أكثر.' },
         { myth: 'سنوي.', truth: 'عواصف 2-4/شهر. ربع سنوي.' },

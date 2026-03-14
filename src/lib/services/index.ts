@@ -13,7 +13,7 @@ import { PEST_CONTROL_KEYWORDS } from './pest-control/keywords';
 import { SEWAGE_KEYWORDS } from './sewage/keywords';
 import { LEAK_DETECTION_KEYWORDS } from './leak-detection/keywords';
 import { INSULATION_KEYWORDS } from './insulation/keywords';
-import type { ServiceKeywordProfile } from '../keyword-strategy';
+import type { ServiceKeywordProfile } from '../locale-formatting';
 
 const allCategories = [
     movingCategory,

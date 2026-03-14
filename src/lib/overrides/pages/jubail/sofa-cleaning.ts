@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'مثل الخبر.', solution: 'VOC بلمرة + 98%>95% + سخام. أقسى.' },
         { fear: 'شامبو.', solution: 'لا يُكسر VOC+بخور Bonds.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'بخار لعفن.', truth: 'بخار = عث + تعقيم + NaCl. ثلاثي.' },
         { myth: 'نصف سنوي.', truth: 'عفن أسبوعي + عث شهري. ربع سنوي.' },
     ],

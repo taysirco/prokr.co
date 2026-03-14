@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'Alkaline يكفي.', solution: 'كربنة حيوانية = Enzymatic أولاً.' },
         { fear: 'مثل الرياض.', solution: 'NH₃ = روابط حيوانية أقوى.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'تنظيف عادي.', truth: 'كربنة حيوانية = Enzymatic ← Alkaline.' },
         { myth: 'نصف سنوي.', truth: 'كربنة حيوانية أسرع = ربع سنوي.' },
     ],

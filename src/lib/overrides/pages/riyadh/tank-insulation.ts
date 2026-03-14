@@ -60,7 +60,7 @@ export const override: PageOverride = {
     hiddenObjections: [
         { fear: 'عزل حراري (800-2,000) إضافي.', solution: 'يُطيل العمر 2-3× = يمنع استبدال (3,500-6,000). يدفع ثمنه + ربح.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'الخزان ما يحتاج حماية.', truth: '40°م/يوم × 3,650 دورة = شقوق مضمونة. + Legionella + كلس. ثلاثة أسباب.' },
         { myth: 'الكلس يحمي الخزان.', truth: 'CaCO₃ هش 3/10 موس. يُغلّف لا يسد. الماء يتسلل. يُخفي المشكلة = يفاقمها.' },
     ],

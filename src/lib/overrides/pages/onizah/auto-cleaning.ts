@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'إسفنج يكفي.', solution: 'Nafud = خدوش. No-Touch.' },
         { fear: 'ماء عادي.', solution: '550ppm = بقع. RO.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'شهري.', truth: 'أسبوعي Nafud. يومي تمور.' },
         { myth: 'أي ماء.', truth: 'RO فقط. 550ppm = كلس.' },
     ],

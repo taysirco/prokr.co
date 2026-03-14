@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'مثل الخبر.', solution: 'طين واحي + غبار نخيل. مختلف.' },
         { fear: 'إسفنجة ناعمة.', solution: 'NaCl+طين+طلع = خليط. Touchless.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'ساحلي فقط.', truth: 'طين+نخيل = واحي. ثنائي.' },
         { myth: 'شهري.', truth: 'NaCl+طين+طلع يومي. أسبوعي.' },
     ],

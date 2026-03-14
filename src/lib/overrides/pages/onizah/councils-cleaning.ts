@@ -59,7 +59,7 @@ export const override: PageOverride = {
         { fear: 'مثل بريدة بالضبط.', solution: 'بقع تمور أكثر — أكبر سوق. Enzymatic مزدوج ضروري.' },
         { fear: 'عفن بعد الغسل.', solution: '15-25% رطوبة = تجفيف 20 دقيقة. صفر عفن.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'شامبو ينظف المجلس.', truth: 'بلمرة SiO₂+بخور = طبقة بوليمرية. الشامبو لا يخترقها.' },
         { myth: 'المجلس يحتاج Anti-Mite.', truth: '15-25% رطوبة = صفر عث. لا حاجة.' },
     ],

@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'مثل الخبر.', solution: 'Biofilm واحي + طين. مختلف.' },
         { fear: 'ماء يكفي.', solution: 'طين لزج = ينتشر. فرك+RO.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'ساحلي فقط.', truth: 'واحي = Biofilm+طين.' },
         { myth: 'ربع سنوي.', truth: 'طين+Biofilm. شهري.' },
     ],

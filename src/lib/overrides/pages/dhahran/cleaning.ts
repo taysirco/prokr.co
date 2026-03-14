@@ -60,7 +60,7 @@ export const override: PageOverride = {
         { fear: 'منظف عادي.', solution: 'يُنظف — لا يحمي من مزدوج. NaCl يعود + SiO₂ يتراكم + عفن ينمو.' },
         { fear: 'مثل الخبر.', solution: 'الخبر = NaCl. الظهران = NaCl+SiO₂. SiO₂ = خدش إضافي. مختلف.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'ممسحة وماء.', truth: 'ماء الظهران = NaCl. ممسحة + SiO₂ = خدش. 2 أخطاء.' },
         { myth: 'الظهران مثل الرياض.', truth: 'NaCl إضافي = تآكل. 75-85% ≠ 15%. عفن حتمي.' },
         { myth: 'شهري.', truth: 'مزدوج يومي. أسبوعي = الحد.' },

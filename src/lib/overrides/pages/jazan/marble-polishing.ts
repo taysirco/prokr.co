@@ -55,7 +55,7 @@ export const override: PageOverride = {
     hiddenObjections: [
         { fear: 'جلي يكفي بدون Sealer.', solution: 'بدون Anti-Fungal Sealer: العفن يعود خلال أسابيع ← Etching يعود. الجلي بدون Sealer = 25% من الحل.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'رخام لا يتأثر بالرطوبة.', truth: 'الرخام = CaCO₃ = مسامي. 80% رطوبة = عفن + ملح + طحالب. 3 آليات تتآكل من الداخل والخارج.' },
         { myth: 'المنظف العادي يكفي.', truth: 'المنظف العادي يزيل 40% من الأوساخ. HEPA + بخار = 99%+. الفرق = 59% غبار دقيق + بكتيريا + عث.' },
     ],

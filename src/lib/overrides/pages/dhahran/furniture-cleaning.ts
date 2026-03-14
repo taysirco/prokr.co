@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'أثاث جديد.', solution: 'NaCl+SiO₂ من اليوم الأول. حماية مبكرة = أرخص.' },
         { fear: 'ملمّع يكفي.', solution: 'سطحي. لا يحمي مفصلات ولا يمنع عفن داخلي.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'مثل الرياض.', truth: 'NaCl إضافي = صدأ. 75-85% = عفن. مختلف.' },
         { myth: 'خشب يتحمل.', truth: '75-85% + 45°م = انتفاخ/انكماش. دورة = شقوق.' },
         { myth: 'سنوي.', truth: 'مزدوج + عفن 3-4 أسابيع. نصف سنوي = الحد.' },

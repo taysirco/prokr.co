@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'لا طحالب = سهل.', solution: 'تبخر + ΔT + CaCO₃ + SiO₂. 4 تحديات.' },
         { fear: 'مثل الرياض.', solution: 'ΔT 54°م > 35°م. -2°م = تجميد.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'لا يتجمد.', truth: '-2°م = سطح يتجمد. تجهيز شتاء.' },
         { myth: 'شهري.', truth: 'تبخر 52°م = تعبئة أسبوعية.' },
         { myth: 'فرشاة عادية.', truth: 'SiO₂ + حديدية = خدش. Nylon.' },

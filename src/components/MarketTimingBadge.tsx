@@ -1,25 +1,25 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { getSalaryCycleConfig, type SalaryCycleConfig } from '@/lib/salary-cycle';
+import { getMarketTimingConfig, type MarketTimingConfig } from '@/lib/market-timing';
 
 // ============================================
-// 💰 SalaryCycleBadge — Visual phase indicator
+// 💰 MarketTimingBadge — Visual phase indicator
 // Reads client date, shows phase-appropriate badge
 // ============================================
 
-interface SalaryCycleBadgeProps {
+interface MarketTimingBadgeProps {
     /** Compact mode for smaller spaces */
     compact?: boolean;
     /** Additional CSS classes */
     className?: string;
 }
 
-export default function SalaryCycleBadge({ compact = false, className = '' }: SalaryCycleBadgeProps) {
-    const [config, setConfig] = useState<SalaryCycleConfig | null>(null);
+export default function MarketTimingBadge({ compact = false, className = '' }: MarketTimingBadgeProps) {
+    const [config, setConfig] = useState<MarketTimingConfig | null>(null);
 
     useEffect(() => {
-        setConfig(getSalaryCycleConfig());
+        setConfig(getMarketTimingConfig());
     }, []);
 
     // SSR: return null to avoid hydration mismatch (div→span type change in compact mode)
@@ -65,14 +65,14 @@ export default function SalaryCycleBadge({ compact = false, className = '' }: Sa
 }
 
 /**
- * Inline salary-cycle note for tables/pricing.
+ * Inline market-timing note for tables/pricing.
  * Renders a single-line note matching the current phase.
  */
-export function SalaryCycleNote({ className = '' }: { className?: string }) {
-    const [config, setConfig] = useState<SalaryCycleConfig | null>(null);
+export function MarketTimingNote({ className = '' }: { className?: string }) {
+    const [config, setConfig] = useState<MarketTimingConfig | null>(null);
 
     useEffect(() => {
-        setConfig(getSalaryCycleConfig());
+        setConfig(getMarketTimingConfig());
     }, []);
 
     if (!config) return null;

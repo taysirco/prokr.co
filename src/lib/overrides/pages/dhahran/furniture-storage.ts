@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'عادي أرخص.', solution: 'عادي + مزدوج = تلف. أرخص بـ 200/شهر — أغلى بـ آلاف تلف.' },
         { fear: 'قصير.', solution: '3-4 أسابيع = عفن. ساعات = صدأ. قصير ≠ آمن.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'أي مستودع.', truth: 'بدون فلتر = مزدوج يدخل. بدون Dehumidifier = عفن. بدون تبريد = PVAc.' },
         { myth: 'مثل الخبر.', truth: 'SiO₂ إضافي = فلتر مزدوج. 75-85% < 85-95% = أقل كهرباء.' },
         { myth: 'بيت.', truth: 'غرفة مُغلقة + 75-85% = عفن. نفس المشكلة.' },

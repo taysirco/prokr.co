@@ -56,7 +56,7 @@ export const override: PageOverride = {
         { fear: 'مسافة قصيرة.', solution: 'SiO₂ + UV في دقائق. قصيرة ≠ آمنة.' },
         { fear: 'لا رطوبة.', solution: 'صحيح ← لا تكثّف (ميزة!). لكن: SiO₂ + UV + ΔT = 3 تحديات.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'مثل الرياض.', truth: 'ΔT 54°م. UV أعلى. عواصف أكثف.' },
         { myth: 'غطاء ما يحتاج.', truth: 'SiO₂ + UV = دقائق. غطاء = حتمي.' },
         { myth: 'أي وقت.', truth: 'ظهر 52°م + UV = أسوأ. صباح/مساء.' },

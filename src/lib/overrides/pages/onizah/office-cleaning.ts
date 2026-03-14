@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'Sick Building مثل خميس.', solution: '15-25% = صفر عفن+عث. لا Sick Building.' },
         { fear: 'حشرات تمور في المكتب.', solution: 'فحص مداخل + مصائد = حماية 99%.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'أي قطعة قماش تكفي للأجهزة.', truth: 'SiO₂ يخدش. Anti-Static Cloth فقط.' },
         { myth: 'المكتب يحتاج Anti-Mite.', truth: '15-25% = صفر عث. لا حاجة.' },
     ],

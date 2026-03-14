@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'منظف عادي.', solution: 'PVAc+عفن = Anti-Humidity.' },
         { fear: 'مثل بريدة.', solution: 'Swelling vs Cracking. عكس!' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'خشب مقاوم.', truth: 'PVAc يمتص. Anti-Humidity.' },
         { myth: 'نصف سنوي.', truth: 'ربع سنوي. ضباب.' },
     ],

@@ -107,7 +107,7 @@ export const override: PageOverride = {
 
         saudiRegulations: [REGULATIONS.BALADI_HEALTH],
 
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'المكتب نظيف — ما يحتاج شركة', truth: 'المكتب يبدو نظيفاً لكن: موكيت المكتب يجمع 400x أكثر بكتيريا من مقعد الحمام (دراسة Arizona). في جدة الرطبة: العث يتكاثر في كراسي القماش. تنظيف احترافي كل شهر = إنتاجية أعلى + غياب مرضي أقل' },
         { myth: 'المنظف العادي يكفي.', truth: 'المنظف العادي يزيل 40% من الأوساخ. HEPA + بخار = 99%+. الفرق = 59% غبار دقيق + بكتيريا + عث.' },
     ],

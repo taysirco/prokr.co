@@ -56,7 +56,7 @@ export const override: PageOverride = {
         { fear: 'مسافة قصيرة.', solution: '98% تكثّف = دقائق. قصيرة ≠ آمنة.' },
         { fear: 'مثل الخبر.', solution: 'VOC + 98% > 95% + سخام. مختلف.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'Stretch عادي.', truth: 'لا يقاوم NaCl+VOC. Marine.' },
         { myth: 'لا Silica.', truth: '98% = Short Circuit. Silica إلزامي.' },
     ],

@@ -61,7 +61,7 @@ export const override: PageOverride = {
         { fear: 'مكيف الرياض نفسه.', solution: 'الرياض = غبار SiO₂ + 15% رطوبة = لا صدأ ولا عفن. الخبر = NaCl + 85-95% = صدأ + عفن حتمي. مكيفان مختلفان تماماً.' },
         { fear: 'Anti-Rust غالي.', solution: '100-200 ريال/سنة vs استبدال Condenser 1,500-4,000 ريال vs مكيف جديد 3,000-8,000 ريال. Anti-Rust = 2-5% من الاستبدال.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'غسل بالماء يكفي.', truth: 'الماء يُزيل الأملاح مؤقتاً — لا يحمي من الصدأ. Anti-Rust Coating = حاجز دائم. الغسل بدون Coating = يتكرر الصدأ.' },
         { myth: 'العفن = رائحة فقط.', truth: 'Aspergillus = جراثيم في الهواء = حساسية + ربو + ABPA. رائحة = أقل المشاكل.' },
         { myth: 'مرة بالسنة.', truth: 'Anti-Fungal: كل 4 أشهر. Anti-Rust: سنوياً. فلتر: أسبوعي. مرة بالسنة = 8 أشهر بدون حماية.' },

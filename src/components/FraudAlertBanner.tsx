@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { getSalaryCycleConfig } from '@/lib/salary-cycle';
+import { getMarketTimingConfig } from '@/lib/market-timing';
 
 interface FraudAlertBannerProps {
     serviceName: string;
@@ -9,11 +9,11 @@ interface FraudAlertBannerProps {
 
 // ==========================================================
 // 🛡️ مؤشر بروكر لكشف الاحتيال والشركات الوهمية
-// Anti-Scam YMYL Trap — يلتقط negative intent searches
+// Consumer Protection Alert — Consumer protection warnings
 // "هل شركة X نصابين؟" — "خدعة الفريون" — "سرقة أثاث النقل"
 // ==========================================================
 
-const SCAM_WARNINGS: Record<string, { title: string; warning: string; link: string }[]> = {
+const CONSUMER_ALERTS: Record<string, { title: string; warning: string; link: string }[]> = {
     moving: [
         { title: 'احتجاز الأثاث والفدية', warning: '"شالوا أثاثي وقالوا ادفع 3,800 بدل 500 والا ما ننزّل" — هالقصة تتكرر يومياً في الرياض وجدة.', link: '/blog/furniture-theft-ransom-scam' },
         { title: 'أسعار أقل من السوق بالنص', warning: 'نقل شقة 3 غرف بـ 400 ريال؟ السعر الحقيقي 1,200-1,800. السعر الرخيص = فخ 90% من الحالات.', link: '/blog/scam-companies-warning-signs' },
@@ -58,8 +58,8 @@ function getServiceCategory(slug: string): string {
 
 export default function FraudAlertBanner({ serviceName, serviceSlug, cityName }: FraudAlertBannerProps) {
     const category = getServiceCategory(serviceSlug);
-    const warnings = SCAM_WARNINGS[category] || SCAM_WARNINGS.moving;
-    const cycleConfig = getSalaryCycleConfig();
+    const warnings = CONSUMER_ALERTS[category] || CONSUMER_ALERTS.moving;
+    const cycleConfig = getMarketTimingConfig();
 
     return (
         <section className="bg-gradient-to-br from-rose-50 via-white to-amber-50 border-2 border-rose-200 rounded-2xl p-6 sm:p-8 shadow-sm">
@@ -117,7 +117,7 @@ export default function FraudAlertBanner({ serviceName, serviceSlug, cityName }:
                 </div>
             </div>
 
-            {/* 💰 Salary Cycle Urgency Warning */}
+            {/* 💰 Market Timing Alert */}
             {cycleConfig.fraudWarningExtra && (
                 <div className="bg-red-50 border border-red-200 rounded-xl p-4 mb-4 flex items-start gap-3">
                     <span className="text-lg">🚨</span>

@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'مكشوف أرخص.', solution: 'NaCl = صدأ. VCI أمان.' },
         { fear: 'مثل بريدة.', solution: 'صدأ+عفن = مختلف.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'مكشوف يكفي.', truth: 'NaCl = صدأ 48h.' },
         { myth: 'تغليف عادي.', truth: 'VCI+فقاعي+مانع رطوبة.' },
     ],

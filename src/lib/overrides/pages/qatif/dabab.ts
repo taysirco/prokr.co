@@ -56,7 +56,7 @@ export const override: PageOverride = {
         { fear: 'مسافة قصيرة.', solution: '80-95% تكثّف = دقائق. Silica.' },
         { fear: 'مثل الخبر.', solution: 'أزقة تاريخية + طين. مختلف.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'شاحنة.', truth: 'أزقة = دباب فقط.' },
         { myth: 'لا Silica.', truth: '80-95% = Short Circuit.' },
     ],

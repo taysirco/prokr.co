@@ -60,7 +60,7 @@ export const override: PageOverride = {
         { fear: 'الرخام جديد.', solution: 'NaCl من اليوم الأول. 85-95% من الساعة الأولى. Sealer فوراً = حماية الاستثمار.' },
         { fear: 'ملمّع من المحل.', solution: 'الملمّع = طبقة فوق NaCl الرطب. يلمع مؤقتاً. NaCl تحته = يُبهت بسرعة. غسل + جلي = لمعان حقيقي.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'رخام الخبر مثل الأحساء.', truth: 'NaCl Hygroscopic ≠ CaSO₄ Scale. عفن مسامي ≠ Silt Staining. Biofilm ≠ لقاح. مختلف.' },
         { myth: 'يجف طبيعياً.', truth: '85-95% = لا يجف. NaCl يبقى رطباً = يُبهت أكثر.' },
         { myth: 'جلي مرة.', truth: 'NaCl أسبوعي + عفن شهري. جلي بدون Sealer = يُبهت خلال أشهر.' },

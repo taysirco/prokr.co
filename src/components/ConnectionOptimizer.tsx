@@ -85,7 +85,7 @@ const LITE_MODE_CSS = `
 }
 `;
 
-export default function NetworkSensor() {
+export default function ConnectionOptimizer() {
     useEffect(() => {
         // ═══ 1. Inject CSS (bypass Tailwind tree-shaking) ═══
         const styleId = 'prokr-lite-mode-css';

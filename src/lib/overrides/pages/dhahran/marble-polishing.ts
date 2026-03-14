@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'رخام جديد.', solution: 'SiO₂ من اليوم الأول = خدش. Sealer فوراً = حماية الاستثمار.' },
         { fear: 'ملمّع محل.', solution: 'طبقة فوق SiO₂ + NaCl. يلمع مؤقتاً. تحته = خدش+إبهات. غسل+جلي = حقيقي.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'مثل الخبر.', truth: 'SiO₂ 7 Mohs = خدش حقيقي. الخبر = NaCl إبهات فقط. مختلف.' },
         { myth: 'يجف.', truth: '75-85% = بطيء. NaCl يتبلور + SiO₂ يتصلب.' },
         { myth: 'جلي مرة.', truth: 'SiO₂ أسبوعي + NaCl أسبوعي. ربع سنوي.' },

@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'SBS عادي.', solution: 'NaCl يُتشقق. Marine.' },
         { fear: 'مثل بريدة.', solution: 'عكس! أغلى 60%. إلزامي.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'Open-Cell.', truth: '70-85% = Closed. Open كارثة.' },
         { myth: 'لا Vapor.', truth: '70-85% = Vapor إلزامي.' },
     ],

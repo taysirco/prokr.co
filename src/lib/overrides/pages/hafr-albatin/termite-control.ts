@@ -61,7 +61,7 @@ export const override: PageOverride = {
         { fear: 'جاف = ما فيه.', solution: '10-15% = أبطأ. ليس = لا يوجد. تسريب = فرصة.' },
         { fear: 'رش.', solution: 'سطحي ≠ عميق. -2°م = أعمق.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'جاف = آمن.', truth: 'أبطأ ≠ آمن. تسريب = يكفي.' },
         { myth: 'مثل الرياض.', truth: 'ΔT 54°م. -2°م. عقارب مُركّب.' },
         { myth: 'مرة.', truth: 'تربة رملية = مستعمرات جديدة. مراقبة.' },

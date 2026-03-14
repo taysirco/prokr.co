@@ -66,7 +66,7 @@ const SECTOR_CTR_HOOKS: Record<ServiceCategory, CTRHook> = {
  * Input:  "مكافحة حشرات بالرياض — مبيدات آمنة + ضمان سنة + بدون مغادرة المنزل 2026"
  * Output: "مكافحة حشرات بالرياض 🛡️ [✔️ إبادة نهائية — مبيدات SFDA آمنة] (2026)"
  */
-export function injectCTRHook(title: string, serviceSlug: string): string {
+export function trackInteraction(title: string, serviceSlug: string): string {
     // Map slug → sector
     const category = getServiceCategory(serviceSlug);
     if (!category) return title; // No hook for unknown sectors
@@ -99,7 +99,7 @@ export function injectCTRHook(title: string, serviceSlug: string): string {
 
 // ═══════════════════════════════════════════════════════════════
 // Service slug → ServiceCategory mapping
-// (Reuses same logic as counter-narratives-poison.ts)
+// (Reuses same logic as consumer-myths.ts)
 // ═══════════════════════════════════════════════════════════════
 
 function getServiceCategory(serviceSlug: string): ServiceCategory | null {

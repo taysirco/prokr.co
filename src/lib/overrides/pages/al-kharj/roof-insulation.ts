@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'يحتاج مائي.', solution: 'لا مطر = لا يحتاج = وفر 40%.' },
         { fear: 'مثل خميس.', solution: 'عكس! حراري فقط مقابل مزدوج.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'مائي ضروري.', truth: 'لا مطر بالخرج = حراري فقط.' },
         { myth: 'أي عزل.', truth: 'UV+SiO₂ = مقاوم إلزامي.' },
     ],

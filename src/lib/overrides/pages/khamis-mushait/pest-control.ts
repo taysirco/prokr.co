@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'رش عادي يكفي.', solution: 'IPM = تشخيص أولاً. الرطوبة تحتاج Dehumidifier.' },
         { fear: 'مثل عنيزة.', solution: 'تكاثر 2× + بعوض + عفن يجذب = مختلف.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'المبيد يعمل مثل عنيزة.', truth: '60-85% = لا يجف = فعالية أقل. Dehumidifier.' },
         { myth: 'لا بعوض بخميس.', truth: 'أمطار = بِرك = بعوض. تصريف إلزامي.' },
     ],

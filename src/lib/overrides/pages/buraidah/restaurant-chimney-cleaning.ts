@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'Degreaser يكفي.', solution: '600ppm كلس يغطي. Descaler أولاً.' },
         { fear: 'سنوي يكفي.', solution: 'ΔT = شهري صيفاً. 998 دوري.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'Degreaser فقط.', truth: '600ppm = Descaler أولاً.' },
         { myth: 'فحص اختياري.', truth: '998 = إلزامي. غرامة.' },
     ],

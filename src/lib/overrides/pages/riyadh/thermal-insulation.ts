@@ -61,7 +61,7 @@ export const override: PageOverride = {
     hiddenObjections: [
         { fear: 'النظام 25,000-50,000 غالي.', solution: 'توفير: 10,000-14,000/سنة. يسترد خلال 2-3 سنوات. 15+ سنة توفير صافي = 150,000-200,000 ريال.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'عزل الجدار الداخلي يكفي.', truth: 'يتجاهل 12+ عموداً و8+ كمرات. ETICS يغلف كل شيء من الخارج بدون خسارة مساحة.' },
         { myth: 'النوافذ لا تؤثر كثيراً.', truth: '205 W/m·K = 120× أسرع من الجدار. كل نافذة بدون Thermal Break = ثقب مكشوف.' },
     ],

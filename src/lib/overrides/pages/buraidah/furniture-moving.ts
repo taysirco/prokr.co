@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'تغليف عادي يكفي.', solution: 'Nafud 10 μm يتسلل. محكم.' },
         { fear: 'مثل الرياض.', solution: 'ΔT+Nafud+نخيل = فريد.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'نقل عادي.', truth: 'ΔT+Nafud = حراري+محكم.' },
         { myth: 'أي وقت.', truth: 'صباحاً صيفاً = أفضل.' },
     ],

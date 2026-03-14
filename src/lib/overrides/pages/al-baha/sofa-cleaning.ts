@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'تجفيف طبيعي.', solution: '6-10h = عفن. Dehumidifier.' },
         { fear: 'مثل بريدة.', solution: 'PVAc Swelling vs Cracking.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'كنب مصنّع.', truth: 'PVAc يمتص. Anti-Humidity.' },
         { myth: 'نصف سنوي.', truth: 'ربع سنوي. ضباب.' },
     ],

@@ -59,7 +59,7 @@ export const override: PageOverride = {
         { fear: 'مثل الخبر.', solution: 'VOC + سخام SABIC + 98% Biofilm. أقسى.' },
         { fear: 'ماء يكفي.', solution: 'سخام = لا يُزال بماء. VOC = ينزلق.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'ساحلي فقط.', truth: 'سخام + VOC = صناعي. ثلاثي.' },
         { myth: 'ربع سنوي.', truth: 'سخام+Biofilm. شهري.' },
     ],

@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'مثل الخبر.', solution: 'VOC + طرق SABIC + 98%. مختلف.' },
         { fear: 'VCI غالي.', solution: '5-10 ريال = يحمي حديد آلاف.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'Tarpaulin عادي.', truth: 'NaCl+VOC يُتلفه. Marine.' },
         { myth: 'لا VCI.', truth: '98%+NaCl = صدأ أسابيع.' },
     ],

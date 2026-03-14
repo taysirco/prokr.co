@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'رش سطحي.', solution: 'مستعمرة تحت. Termidor+حقن.' },
         { fear: 'مثل بريدة.', solution: 'رطوبة+ميناء vs نخيل+ΔT.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'رش عام.', truth: 'Termidor+حقن = مستعمرة.' },
         { myth: 'مرة واحدة.', truth: 'فحص سنوي. رطوبة.' },
     ],

@@ -60,7 +60,7 @@ export const override: PageOverride = {
         { fear: 'الرخام جديد.', solution: 'CaSO₄ يترسب من اليوم الأول. لقاح يخدش من أول مشي. Sealer من اليوم الأول = حماية الاستثمار.' },
         { fear: 'ملمّع من المحل يكفي.', solution: 'الملمّع = طبقة فوق الـ Scale. يلمع ثم يبهت بسرعة. Citric يُذيب الـ Scale ← لمعان حقيقي.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'الرخام يتحمل.', truth: 'الرخام 3-4 Mohs = ناعم نسبياً. CaSO₄ + لقاح + تربة = 3 هجمات يومية. يتحمل.. لكن يبهت.' },
         { myth: 'جلي مرة يكفي.', truth: 'CaSO₄ أسبوعي + لقاح يومي. جلي بدون Sealer = يبهت خلال أشهر. جلي + Sealer = 1-2 سنة.' },
         { myth: 'خل بديل Citric.', truth: 'الخل (Acetic Acid) يتفاعل مع CaCO₃ (الرخام) = يُتلفه. Citric مُخفف = آمن — يتفاعل مع CaSO₄ فقط.' },

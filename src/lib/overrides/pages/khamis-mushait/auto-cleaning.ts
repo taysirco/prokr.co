@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'مثل الباحة.', solution: 'متشابه — خميس أقل غابات. ضباب أكثر. تكلفة متقاربة.' },
         { fear: 'غسيل خارجي يكفي.', solution: 'عفن المقصورة داخلي. Anti-Fungal إلزامي.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'المقصورة ما تحتاج تنظيف.', truth: '60-85% = عفن 48 ساعة تحت المقاعد. رائحة+حساسية.' },
         { myth: 'خميس مثل عنيزة.', truth: 'عكس — عفن+ضباب+أمطار. أغلى 25-35%.' },
     ],

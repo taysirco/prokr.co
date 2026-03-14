@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'غالي مثل خميس.', solution: 'أرخص 30-40%. لا Dehumidifier ولا Anti-Fungal.' },
         { fear: 'حشرات خطيرة.', solution: 'إحكام + مصائد = حماية 99%. ليست خطيرة — مزعجة فقط.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'المستودع يحتاج Dehumidifier.', truth: '15-25% = صفر عفن. لا حاجة.' },
         { myth: 'التخزين بعنيزة مثل أي مدينة.', truth: 'أرخص — لا Dehumidifier + لا VCI. لكن عزل + إحكام.' },
     ],

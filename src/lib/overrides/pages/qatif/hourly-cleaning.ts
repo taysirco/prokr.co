@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'أغلى.', solution: '4 خطوات = أعقد = أغلى. لكن: فعالية.' },
         { fear: 'عاملة عادية.', solution: '4 خطوات + مواد. تدريب.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'ممسحة.', truth: 'NaCl+طين = 0%.' },
         { myth: 'مثل الرياض.', truth: '4 خطوات vs 2.' },
     ],

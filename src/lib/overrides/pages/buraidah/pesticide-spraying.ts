@@ -60,7 +60,7 @@ export const override: PageOverride = {
         { fear: 'رش عادي يكفي.', solution: 'ΔT يُبخّر 40%. Micro-Encap.' },
         { fear: 'مثل خميس.', solution: 'لا مطر = يدوم 2×. لكن: تبخّر.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'رش سائل.', truth: 'ΔT = Micro-Encap+Gel.' },
         { myth: 'مرة سنوياً.', truth: 'Nafud+نخيل = ربع سنوي.' },
     ],

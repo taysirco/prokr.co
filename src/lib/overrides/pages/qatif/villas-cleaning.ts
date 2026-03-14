@@ -64,7 +64,7 @@ export const override: PageOverride = {
         { fear: 'مثل الخبر.', solution: 'واحة = 6 محاور. عفن مزدوج+طين+نخيل+عيون.' },
         { fear: 'غالي.', solution: '6 محاور = 6 أدوات. بدون = تلف أغلى.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'ساحلي فقط.', truth: 'واحي = طين+نخيل+عيون+عفن واحي. ثنائي.' },
         { myth: 'شهري.', truth: '6 ملوثات + عفن أسبوعي. أسبوعي.' },
         { myth: 'مثل حفر الباطن.', truth: '6 محاور vs 5. عفن+عث إضافي.' },

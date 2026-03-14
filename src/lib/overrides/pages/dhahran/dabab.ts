@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'مسافة قصيرة.', solution: 'NaCl+SiO₂ في دقائق. قصيرة ≠ آمنة.' },
         { fear: 'أي دباب.', solution: 'بدون غطاء + EPE = مزدوج يصل. 10-20 ريال = يحمي آلاف.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'مثل الخبر.', truth: 'SiO₂ إضافي = خدش مزدوج. مختلف.' },
         { myth: 'غطاء ما يحتاج.', truth: 'NaCl+SiO₂ جوي. فتح = تلف.' },
         { myth: 'أي دباب نفسه.', truth: 'غطاء + EPE + Silica = الفرق.' },

@@ -117,7 +117,7 @@ export function getRelatedServicesContext(
 }
 
 // ============================================
-// 🧠 In-Text Neural Linking — Wikipedia Engine
+// 🧠 In-Text Contextual Internal Linking — Internal Linking System
 // Converts first mention of other services into
 // contextual internal links (strongest link signal)
 // ============================================
@@ -143,7 +143,7 @@ export function escapeHtml(text: string): string {
  * of each (up to maxLinks) into an internal contextual link.
  *
  * Uses CONTEXTUAL_TRIGGERS — common Arabic domain phrases found in AI text
- * that map to specific service pages. More effective than exact name_ar
+ * that map to specific silos. More effective than exact name_ar
  * matching since AI text uses natural language variations.
  */
 export function applyContextualLinks(

@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'شبك عادي.', solution: 'NaCl = صدأ. 316 Stainless.' },
         { fear: 'مثل بريدة.', solution: 'بحري+نوارس = مختلف.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'طرد يكفي.', truth: 'شبك+أشواك+ألترا = ثلاثي.' },
         { myth: '304 يكفي.', truth: 'NaCl = 316 إلزامي.' },
     ],

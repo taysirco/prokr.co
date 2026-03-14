@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'رش سطحي.', solution: 'مستعمرة تحت. Termidor.' },
         { fear: 'لا نمل بالقصيم.', solution: '8M نخلة = أكبر!' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'مرة واحدة.', truth: 'فحص سنوي. ΔT.' },
         { myth: 'لا مزارع.', truth: '8M نخلة = سيللوز!' },
     ],

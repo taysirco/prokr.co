@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'شامبو يكفي.', solution: 'بلمرة حيوانية = Enzymatic.' },
         { fear: 'مثل خميس.', solution: 'لا عفن+20 دقيقة = أرخص 30%.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'معطر.', truth: 'AC يمتص NH₃ لا يُعطّر.' },
         { myth: 'ماء صنبور.', truth: 'CaCO₃ = خشونة. RO.' },
     ],

@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'مثل عنيزة.', solution: '7-8 محاور مقابل 5. عفن+عث = مختلف تماماً.' },
         { fear: 'أغلى = مبالغة.', solution: '7-8 محاور حقيقية. بدونها = كارثة.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: '5 محاور تكفي.', truth: 'عفن+عث+طحالب+حديقة = 7-8 إلزامي.' },
         { myth: 'فيلا خميس مثل عنيزة.', truth: 'أعقد 40%+أغلى.' },
     ],

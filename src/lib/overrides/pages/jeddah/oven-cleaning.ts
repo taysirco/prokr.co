@@ -106,7 +106,7 @@ export const override: PageOverride = {
 
         saudiRegulations: [REGULATIONS.BALADI_HEALTH],
 
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'الفرن ينظف نفسه — Self-Clean يكفي', truth: 'Self-Clean يحرق البقع الخفيفة على الجدران الداخلية. لكن: دهون تحت العنصر الحراري + مؤخرة الفرن + مجرى الشفط = لا يصلها Self-Clean. هذه الدهون المتراكمة = خطر حريق حقيقي. تنظيف احترافي كل 3-6 أشهر إلزامي' },
         { myth: 'المنظف العادي يكفي.', truth: 'المنظف العادي يزيل 40% من الأوساخ. HEPA + بخار = 99%+. الفرق = 59% غبار دقيق + بكتيريا + عث.' },
     ],

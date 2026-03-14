@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'شفط عادي.', solution: 'H₂S 70-85% = تهوية.' },
         { fear: 'مثل بريدة.', solution: 'H₂S+NaCl = أخطر.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'نصف سنوي.', truth: '70-85% = ربع سنوي.' },
         { myth: 'شفط يكفي.', truth: 'تهوية+تعقيم+Anti-Corrosion.' },
     ],

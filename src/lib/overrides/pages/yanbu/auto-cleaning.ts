@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'إسفنج يكفي.', solution: 'SiO₂+NaCl = Liquid Grinding = خدش.' },
         { fear: 'مثل جدة.', solution: 'SOx YASREF إضافي. أعقد.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'ماء عادي.', truth: 'NaCl يعود بالتبخر. RO.' },
         { myth: 'شهري.', truth: '48h Pitting. كل 3-5 أيام.' },
     ],

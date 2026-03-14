@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'Closed-Cell أفضل.', solution: 'لا مطر = أغلى بدون فائدة. Open-Cell يكفي.' },
         { fear: 'مثل خميس.', solution: 'عكس! تبريد مقابل تدفئة. أرخص 40%.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'Closed-Cell ضروري.', truth: 'لا مطر = Open-Cell 40% أرخص ويكفي.' },
         { myth: 'لا يحتاج عزل أرضي.', truth: 'CaCO₃ رطوبة أرضية = Closed-Cell تحت.' },
     ],

@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'مثل الخبر.', solution: 'الخبر = NaCl فقط. الظهران = NaCl+SiO₂. SiO₂ يخدش Clear Coat ← NaCl يتآكل المكشوف. أسوأ.' },
         { fear: 'Ceramic غالي.', solution: '400-1,000 ÷ 2-3 سنوات vs إعادة طلاء 3,000-8,000. = 5-13%.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'غبار عادي.', truth: 'NaCl+SiO₂ ≠ غبار. يتآكل + يخدش. مزدوج.' },
         { myth: 'إسفنجة ناعمة.', truth: 'إسفنجة + SiO₂ تحت NaCl = أسوأ خدش. Touchless فقط.' },
         { myth: 'شهري.', truth: 'NaCl+SiO₂ يومي. أسبوعي = الأمثل.' },

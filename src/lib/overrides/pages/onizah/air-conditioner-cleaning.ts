@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'غسل عادي.', solution: 'Scale = Descaler إلزامي.' },
         { fear: 'مثل الباحة.', solution: 'Scale+Nafud ≠ Aspergillus.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'ربع سنوي فلتر.', truth: 'شهري! Nafud 7 Mohs.' },
         { myth: 'لا حاجة Descaler.', truth: '550ppm Scale = -40%.' },
     ],

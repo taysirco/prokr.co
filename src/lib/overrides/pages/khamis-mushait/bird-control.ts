@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'تسميم أسرع.', solution: 'الأنظمة تمنع. طارد+شبك = حل دائم ومشروع.' },
         { fear: 'مثل عنيزة.', solution: 'فضلات رطبة = Histoplasma. أخطر. Anti-Fungal إلزامي.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'فضلات طيور غير خطيرة.', truth: '60-85% = Histoplasma فطر تنفسي. خطير بالرطوبة.' },
         { myth: 'طارد يكفي.', truth: 'طارد+شبك+تنظيف Anti-Fungal. الفضلات الموجودة خطيرة.' },
     ],

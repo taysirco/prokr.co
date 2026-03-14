@@ -61,7 +61,7 @@ export const override: PageOverride = {
         { fear: 'ما عندي نمل.', solution: 'Sabkha 85-95% = المستعمرة تأتي — ليس إن كانت بل متى. الوقاية = أرخص 10×.' },
         { fear: 'Bait بطيء.', solution: 'Cascading Kill: 2-4 أشهر للمستعمرة الكاملة. بطيء = يقتل الملكة. سريع = يقتل الجنود فقط.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'الخبر مثل الرياض.', truth: 'Sabkha ≠ صخرية. 85-95% ≠ 15%. NaCl Barrier = 3-4 ≠ 5 سنوات.' },
         { myth: 'رش سطحي.', truth: 'سطحي ≠ جوفي. المستعمرة تحت الأرض. الرش لا يصلها.' },
         { myth: 'مرة واحدة.', truth: 'Sabkha + 85-95% = مستعمرات جديدة مستمرة. مراقبة دائمة.' },

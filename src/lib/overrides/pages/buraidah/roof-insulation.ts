@@ -59,7 +59,7 @@ export const override: PageOverride = {
         { fear: 'Closed أفضل.', solution: 'لا مطر = Open 50% أرخص. SBC.' },
         { fear: 'عزل مائي لازم.', solution: 'لا مطر = لا مائي. فحص خزان فقط.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'Closed ضروري.', truth: 'لا مطر = Open R-3.7 يكفي.' },
         { myth: 'مائي لازم.', truth: 'لا مطر = لا مائي. أرخص 50%.' },
     ],

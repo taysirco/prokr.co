@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'خل يكفي.', solution: 'حمض قوي = يآكل الرخام! pH 5-6 فقط.' },
         { fear: 'مثل خميس.', solution: 'لا عفن تحت الرخام = أبسط وأرخص.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'ماء صنبور يكفي.', truth: 'CaCO₃ 450ppm = كلس جديد فوراً. RO.' },
         { myth: 'جلي مرة يكفي.', truth: 'SiO₂ يومي = نصف سنوي إلزامي.' },
     ],

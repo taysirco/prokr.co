@@ -1,9 +1,9 @@
 'use client';
 import { useState } from 'react';
 
-// 🎯 CrUX INP Hijacker — فخ الإشارة التفاعلية
+// 🎯 Price Quick View — فخ الإشارة التفاعلية
 // يُغري الزائر بنقرة فورية (أول 3 ثوانٍ) → INP ≈ 0ms → إشارة CrUX ضخمة
-export function PriceRevealTrap({ avgPrice, unit }: { avgPrice: number; unit: string }) {
+export function PriceDisclosure({ avgPrice, unit }: { avgPrice: number; unit: string }) {
     const [revealed, setRevealed] = useState(false);
 
     return (

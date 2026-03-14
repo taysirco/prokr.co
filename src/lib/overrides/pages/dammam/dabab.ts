@@ -131,7 +131,7 @@ export const override: PageOverride = {
         }
 ],
 
-    counterNarratives: [
+    consumerEducation: [
         {
                 "myth": "الدباب فقط للأكل والطلبات",
                 "truth": "الدبابات التجارية تنقل: أثاث صغير، أجهزة إلكترونية، قطع غيار صناعية، مشتريات ثقيلة. صندوق مغلق يحمل حتى 500 كجم"

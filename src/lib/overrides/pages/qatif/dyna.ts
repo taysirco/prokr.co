@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'مثل الخبر.', solution: 'أزقة + طين زراعي. مختلف.' },
         { fear: 'VCI غالي.', solution: '5-10 ريال = يحمي آلاف.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'Tarpaulin عادي.', truth: 'طين + NaCl = أسرع تلف.' },
         { myth: 'لا VCI.', truth: 'NaCl + 80-95% = صدأ شهر.' },
     ],

@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'لا Biofilm = سهل.', solution: 'SiO₂ أكثف + ΔT أقصى + UV أعلى. 3 تحديات ≠ سهل.' },
         { fear: 'ماء وقماش.', solution: 'قماش + SiO₂ أكثف = خدش أعمق.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'مثل الرياض.', truth: 'ΔT 54°م > 35°م. SiO₂ أكثف. UV أعلى.' },
         { myth: 'سنوي.', truth: 'SiO₂ عواصف 2-4/شهر. ربع سنوي.' },
         { myth: 'Sealant عادي.', truth: 'ΔT 54°م = يفشل 1-2 سنة. Flexible.' },

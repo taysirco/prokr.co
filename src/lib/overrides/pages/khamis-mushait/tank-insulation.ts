@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'عزل عادي يكفي.', solution: 'أمطار+طحالب = Closed-Cell+إحكام.' },
         { fear: 'مثل عنيزة.', solution: 'عنيزة: لا مطر+لا طحالب = أبسط.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'الخزان لا يحتاج إحكام.', truth: 'أمطار خميس = تلوث. إحكام إلزامي.' },
         { myth: 'Open-Cell أرخص.', truth: 'يمتص رطوبة 60-85% = يتعفّن.' },
     ],

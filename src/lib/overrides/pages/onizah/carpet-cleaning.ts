@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'مكنسة عادية.', solution: 'HEPA عميق. Nafud.' },
         { fear: 'ماء يكفي.', solution: '550ppm = خشن. RO.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'نصف سنوي.', truth: 'ربع سنوي+لقاح+تمور.' },
         { myth: 'تجفيف مشكلة.', truth: '15 دقيقة! 10-20%.' },
     ],

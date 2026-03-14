@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'معطر يكفي.', solution: 'NH₃ يتراكم. AC يمتص = فرق.' },
         { fear: 'يومي غالي.', solution: 'NH₃+SiO₂ يومي. رائحة = عملاء يخسرون.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'مرتين بالأسبوع.', truth: 'NH₃+SiO₂ يومي. يومي أو 3 أيام.' },
         { myth: 'مثل الرياض.', truth: 'NH₃+CaCO₃ = خطوات إضافية.' },
     ],

@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'عفن بعد البخار.', solution: '15-25% = 20 دقيقة تجفيف. صفر عفن. مستحيل.' },
         { fear: 'Dehumidifier مطلوب.', solution: 'لا! وفّر 100-200 ريال. عكس خميس.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'البخار يسبب عفن.', truth: '15-25% رطوبة = تجفيف 20 دقيقة. صفر عفن. أسرع مدينة.' },
         { myth: 'الشامبو أنظف من البخار.', truth: 'البخار يُكسِّر بلمرة SiO₂+بخور. الشامبو لا يخترقها.' },
     ],

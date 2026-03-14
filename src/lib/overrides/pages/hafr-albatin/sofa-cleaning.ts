@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'لا عفن = سهل.', solution: 'SiO₂ + جلد + بخور. 3 تحديات قارية.' },
         { fear: 'شامبو.', solution: 'لا يُكسر بوليمر 52°م. Enzymatic فقط.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'مثل الرياض.', truth: '52°م > 45°م. SiO₂ أكثف. 10-15% < 15%.' },
         { myth: 'سنوي.', truth: 'SiO₂ + بخور. نصف سنوي.' },
         { myth: 'بدون Conditioner.', truth: '10-15% = يتشقق. الأسوأ على الجلد.' },

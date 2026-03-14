@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'مثل أي مدينة.', solution: 'تمور لزجة = فريد عنيزة. Enzymatic إضافي.' },
         { fear: 'Biofilm مثل الباحة.', solution: 'صفر — 15-25% رطوبة. وفّر 100%.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'الماء والصابون يكفي للواجهات.', truth: 'SiO₂ Pitting + CaCO₃ Spots. يحتاج أدوات متخصصة.' },
         { myth: 'الواجهات تحتاج تنظيف شهري.', truth: 'ربع سنوي يكفي — لا Biofilm = لا تراكم.' },
     ],

@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'بخار يكفي.', solution: '6-10h = عفن بعد! Dehumidifier.' },
         { fear: 'مثل بريدة.', solution: '15 دقيقة vs 6-10h! عكس!' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'بخار مثالي.', truth: 'بالباحة = مشكلة بدون Dehumidifier.' },
         { myth: 'تجفيف طبيعي.', truth: 'ضباب = لا شمس. Dehumidifier.' },
     ],

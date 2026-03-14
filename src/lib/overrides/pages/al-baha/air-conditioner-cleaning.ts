@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'تنظيف عادي.', solution: 'Aspergillus+عرعر+Heat Pump = 3 تحديات.' },
         { fear: 'مثل بريدة.', solution: 'عفن+عرعر+تجمد ≠ كلس.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'ربع سنوي.', truth: 'شهري! عرعر+Aspergillus.' },
         { myth: 'لا حاجة شتاء.', truth: 'Heat Pump = تنظيف+تذويب.' },
     ],

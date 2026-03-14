@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'شامبو يكفي.', solution: 'Nafud يقطع+600ppm يُخشّن. HEPA+RO.' },
         { fear: 'مثل خميس.', solution: 'لا عفن+20 دقيقة = أرخص 25%.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'ماء عادي.', truth: '600ppm = أعلى خشونة. RO.' },
         { myth: 'مكنسة تكفي.', truth: 'Nafud 10 μm يمر. HEPA يوقف.' },
     ],

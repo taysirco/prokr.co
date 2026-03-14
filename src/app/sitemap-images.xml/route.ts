@@ -1,5 +1,5 @@
 import { CITIES, SERVICES, SERVICE_IMAGES, getServiceImage } from '@/lib/seed';
-import { getServiceKeywordProfile, getCityKeyword } from '@/lib/keyword-strategy';
+import { getServiceKeywordProfile, getCityKeyword } from '@/lib/locale-formatting';
 import { hasPageOverride } from '@/lib/overrides/registry';
 import { isAbsorbedSlug } from '@/lib/services/super-page-groups';
 

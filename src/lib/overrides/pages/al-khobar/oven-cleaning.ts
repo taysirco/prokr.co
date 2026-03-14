@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'بخاخ يكفي.', solution: 'pH 9-10 لا يصل NaCl. لا يقتل Biofilm. أداة ضعيفة.' },
         { fear: 'أنظف بنفسي.', solution: 'بماء الخبر؟ = NaCl جديد. بدون Anti-Biofilm? = يعود.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'فرن عادي.', truth: 'NaCl + 85-95% + مأكولات بحرية = 3 فروقات ساحلية.' },
         { myth: 'ماء وصابون.', truth: 'ماء NaCl + صابون < pH 12. لا يكفي لكربنة ولا Biofilm.' },
         { myth: 'نصف سنوي.', truth: 'Biofilm 85-95% = ينمو أسابيع. ربع سنوي.' },

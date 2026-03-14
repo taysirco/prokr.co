@@ -59,7 +59,7 @@ export const override: PageOverride = {
         { fear: 'التنظيف العادي.', solution: 'طبقة ثلاثية. Degreaser صناعي.' },
         { fear: 'مثل بريدة.', solution: 'NaCl+SOx إضافي. ثلاثي.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'سنوي.', truth: 'ربع سنوي. الدفاع المدني.' },
         { myth: 'تنظيف عادي.', truth: 'ثلاثي = Degreaser صناعي.' },
     ],

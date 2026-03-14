@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'نصف سنوي يكفي.', solution: 'طحالب 2× + أمطار = ربع سنوي.' },
         { fear: 'مثل عنيزة.', solution: 'عنيزة: لا طحالب+لا مطر = نصف سنوي.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'الخزان ما يتلوث بسرعة.', truth: '60-85%+أمطار+ضباب = 2× أسرع.' },
         { myth: 'Chlorine عادي يكفي.', truth: 'تلوث أسرع = تركيز أعلى.' },
     ],

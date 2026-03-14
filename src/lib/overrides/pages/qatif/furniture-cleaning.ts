@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'مثل الخبر.', solution: 'واحة = عفن واحي+طين. مختلف.' },
         { fear: 'ملمّع.', solution: 'NaCl+عفن 80-95%. سطحي.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'ساحلي فقط.', truth: 'واحي = طين+عيون+عفن.' },
         { myth: 'نصف سنوي.', truth: 'عفن+Galvanic. ربع سنوي.' },
     ],

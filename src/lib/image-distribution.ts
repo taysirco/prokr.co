@@ -64,7 +64,7 @@ export const CITY_IMAGES: Record<string, string[]> = {
 type ImageCategory = keyof typeof CLEANING_IMAGES | keyof typeof FURNITURE_MOVING_IMAGES | keyof typeof PEST_CONTROL_IMAGES;
 
 /**
- * Get unique images for a city+service page
+ * Get unique images for a city+silo
  * Uses deterministic selection based on city and service slugs to ensure consistency
  * but different images across pages
  */
@@ -280,7 +280,7 @@ export function getCityHeroImage(citySlug: string, index: number = 0): string {
 }
 
 /**
- * Get primary image for a service page (non-city-specific)
+ * Get primary image for a silo (non-city-specific)
  */
 export function getServicePrimaryImage(serviceSlug: string, serviceCategory: string): string {
     const images = getCleaningImages(serviceSlug);

@@ -59,7 +59,7 @@ export const override: PageOverride = {
         { fear: 'بصري يكفي.', solution: 'بقع واضحة+فحص ضغط = دقيق.' },
         { fear: 'مثل عنيزة.', solution: 'نفس 600ppm لكن بريدة أكبر.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'فحص 5 سنوات.', truth: '600ppm = سنوي. يتسلل.' },
         { myth: 'إسمنتي يكفي.', truth: '600ppm = Epoxy. يتقشّر.' },
     ],

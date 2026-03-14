@@ -55,7 +55,7 @@ export const override: PageOverride = {
     hiddenObjections: [
         { fear: 'البخار يُعفّن — سمعت.', solution: 'البخار + Dehumidifier = تعقيم. البخار بدون = تخريب. المشكلة ليست البخار — المشكلة = عدم التجفيف في 80%.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'في جازان البخار خطر.', truth: 'البخار + Dehumidifier = أفضل أداة. بدون Dehumidifier = خطر. التكامل = الحل.' },
         { myth: 'المنظف العادي يكفي.', truth: 'المنظف العادي يزيل 40% من الأوساخ. HEPA + بخار = 99%+. الفرق = 59% غبار دقيق + بكتيريا + عث.' },
     ],

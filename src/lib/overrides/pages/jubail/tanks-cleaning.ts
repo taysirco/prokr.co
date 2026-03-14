@@ -59,7 +59,7 @@ export const override: PageOverride = {
         { fear: 'لا Scale = سهل.', solution: 'Biofilm أقصى + Demand + طحالب. 3 تحديات.' },
         { fear: 'كلور يكفي.', solution: 'Biofilm يحمي. Anti-Biofilm أولاً.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'مثل حفر الباطن.', truth: 'Biofilm+طحالب+Demand. عكس (لا Scale vs Scale).' },
         { myth: 'شاور = يُنظف.', truth: 'Biofilm = Diffusion Barrier. Anti-Biofilm.' },
     ],

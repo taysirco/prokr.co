@@ -60,7 +60,7 @@ export const override: PageOverride = {
         { fear: 'Alkaline يكفي.', solution: 'كرملة تمور ≠ كربنة. Enzymatic إلزامي.' },
         { fear: 'مثل خميس NFPA.', solution: 'أبسط — لا Biofilm = Alkaline مباشر.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'المداخن ما تحتاج Enzymatic.', truth: 'مطاعم التمور = كرملة سكر في المدخنة. Alkaline لا يكفي.' },
         { myth: 'نصف سنوي يكفي.', truth: 'ربع سنوي — NFPA 96 + كرملة تمور = تراكم أسرع.' },
     ],

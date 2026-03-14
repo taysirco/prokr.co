@@ -6,9 +6,9 @@ import { SERVICES, CATEGORY_NAMES, getServicesByCategory, getServiceImage } from
 import { BreadcrumbJsonLd, ServiceCatalogJsonLd, WebPageJsonLd } from '@/components/JsonLd';
 import { isAbsorbedSlug } from '@/lib/services/super-page-groups';
 import Footer from '@/components/Footer';
-import SalaryCycleBadge from '@/components/SalaryCycleBadge';
+import MarketTimingBadge from '@/components/MarketTimingBadge';
 import FraudAlertBanner from '@/components/FraudAlertBanner';
-import GeoSignals from '@/components/GeoSignals';
+import LocalPresence from '@/components/LocalPresence';
 
 export const metadata: Metadata = {
     title: 'جميع الخدمات المنزلية في السعودية - بروكر',
@@ -104,9 +104,9 @@ export default function ServicesPage() {
                             من نقل العفش إلى التنظيف ومكافحة الحشرات.
                         </p>
 
-                        {/* 💰 Salary Cycle Badge — النبض المالي */}
+                        {/* 💰 Market Timing Badge — النبض المالي */}
                         <div className="mt-4">
-                            <SalaryCycleBadge compact />
+                            <MarketTimingBadge compact />
                         </div>
                     </div>
                 </section>
@@ -204,13 +204,13 @@ export default function ServicesPage() {
                     </div>
                 </section>
 
-                {/* 🛡️ Anti-Scam YMYL Trap — Consumer Protection Banner */}
+                {/* 🛡️ Consumer Protection Alert — Consumer Protection Banner */}
                 <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
                     <FraudAlertBanner serviceName="خدمات منزلية" serviceSlug="cleaning" cityName="السعودية" />
                 </section>
 
-                {/* Phantom Geo-Hijacking — National Signal */}
-                <GeoSignals citySlug="riyadh" serviceSlug="city-hub" serviceName="خدمات منزلية" serviceCategory="cleaning" />
+                {/* Local Service Area — National Signal */}
+                <LocalPresence citySlug="riyadh" serviceSlug="city-hub" serviceName="خدمات منزلية" serviceCategory="cleaning" />
 
                 <Footer />
             </main>

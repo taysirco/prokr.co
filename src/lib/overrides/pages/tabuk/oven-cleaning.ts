@@ -58,7 +58,7 @@ export const override: PageOverride = {
     hiddenObjections: [
         { fear: 'بخاخ عادي يكفي.', solution: 'pH 9-10 = لا يخترق تكربن + سخام مُركّب. pH 13 مهني = يخترق. + لا يُذيب كلس. المهني = 95% نتيجة.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'الفرن الذاتي التنظيف يكفي.', truth: 'Self-Clean يحرق الشحوم. لكن: لا يُذيب كلس + لا يُزيل سخام مدفأة + الطبقة المُركّبة تحتاج Saponification.' },
         { myth: 'المنظف العادي يكفي.', truth: 'المنظف العادي يزيل 40% من الأوساخ. HEPA + بخار = 99%+. الفرق = 59% غبار دقيق + بكتيريا + عث.' },
     ],

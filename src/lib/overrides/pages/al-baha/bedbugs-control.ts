@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'مبيد يكفي.', solution: 'بخار+Dehumidifier.' },
         { fear: 'مثل بريدة.', solution: '60-85%+6-10h ≠ 10-20%.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'مرة واحدة.', truth: '2-3 جلسات. بيض.' },
         { myth: 'بدون Dehumidifier.', truth: '6-10h = عودة.' },
     ],

@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'العزل مكلف — مش متأكد يستاهل.', solution: 'عزل SBC 601 يوفر 30-40% كهرباء سنوياً. يسترد تكلفته خلال 2-3 سنوات.' },
     ],
 
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'أي فوم يعزل.', truth: 'Open-Cell يفشل من الهواء في جدة. Closed-Cell 40+ = الوحيد المقبول.' },
         { myth: 'UV أهم من Anti-Fungal.', truth: 'في جدة: العفن أخطر من UV (الرطوبة تفلتر UV طبيعياً). Anti-Fungal = الأولوية.' },
     ],

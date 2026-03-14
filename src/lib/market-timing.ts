@@ -3,10 +3,10 @@
 // يغيّر واجهة الموقع حسب دورة الراتب السعودي
 // ============================================
 
-export type SalaryCyclePhase = 'premium' | 'budget' | 'urgency';
+export type MarketTimingPhase = 'premium' | 'budget' | 'urgency';
 
-export interface SalaryCycleConfig {
-    phase: SalaryCyclePhase;
+export interface MarketTimingConfig {
+    phase: MarketTimingPhase;
     /** Arabic label for the current phase */
     label: string;
     /** Emoji icon */
@@ -39,14 +39,14 @@ export interface SalaryCycleConfig {
 }
 
 /**
- * Determines current salary cycle phase based on day of month.
+ * Determines current market timing phase based on day of month.
  * Uses Saudi Arabia timezone (Asia/Riyadh).
  *
  * - PREMIUM (27→5): Post-salary spending period
  * - BUDGET (6→19): Mid-month conservation
  * - URGENCY (20→26): Pre-salary pressure + installment push
  */
-export function getSalaryCyclePhase(date?: Date): SalaryCyclePhase {
+export function getMarketTimingPhase(date?: Date): MarketTimingPhase {
     const d = date || new Date();
     // Use Riyadh timezone to determine day
     const riyadhDay = parseInt(
@@ -59,14 +59,14 @@ export function getSalaryCyclePhase(date?: Date): SalaryCyclePhase {
 }
 
 /**
- * Returns full configuration for the current salary cycle phase.
+ * Returns full configuration for the current market timing phase.
  */
-export function getSalaryCycleConfig(date?: Date): SalaryCycleConfig {
-    const phase = getSalaryCyclePhase(date);
+export function getMarketTimingConfig(date?: Date): MarketTimingConfig {
+    const phase = getMarketTimingPhase(date);
     return PHASE_CONFIGS[phase];
 }
 
-const PHASE_CONFIGS: Record<SalaryCyclePhase, SalaryCycleConfig> = {
+const PHASE_CONFIGS: Record<MarketTimingPhase, MarketTimingConfig> = {
     premium: {
         phase: 'premium',
         label: 'موسم الرواتب',

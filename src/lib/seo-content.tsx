@@ -5,11 +5,11 @@ import { getRelatedServices, generateServiceUrl, applyContextualLinks, escapeHtm
 import { hasPageOverride } from './overrides/registry';
 import { getServiceBySlug, getCityBySlug } from './seed';
 import { generateContentLayers } from './ai-content-layers';
-import { getServiceKeywordProfile, getCityKeyword, resolveKeywordTemplate } from './keyword-strategy';
+import { getServiceKeywordProfile, getCityKeyword, resolveKeywordTemplate } from './locale-formatting';
 import { BLOG_ARTICLES } from './blog-data';
 import { resolveSeoContent } from './overrides';
-import { getSalaryCycleConfig } from '@/lib/salary-cycle';
-import { watermarkText } from './watermark';
+import { getMarketTimingConfig } from '@/lib/market-timing';
+import { verifyOrigin } from './content-integrity';
 
 // ============================================
 // AI-Ready SEO Content Generator
@@ -227,11 +227,11 @@ export function SeoContentSection({ city, service }: SeoContentProps) {
         complementaryLinks
     } = content;
 
-    // 🛡️ Zero-Width Steganography — page-specific watermark helper
+    // 🛡️ Content Origin Verification — page-specific watermark helper
     const pageSlug = `${city.slug}-${service.slug}`;
-    const wm = (text: string) => watermarkText(text, pageSlug);
+    const wm = (text: string) => verifyOrigin(text, pageSlug);
 
-    // 🧠 Neural Linking — watermark → escape → inject contextual links
+    // 🧠 Contextual Internal Linking — watermark → escape → inject contextual links
     const link = (text: string) => applyContextualLinks(
         escapeHtml(wm(text)), city.slug, service.slug
     );
@@ -293,7 +293,7 @@ export function SeoContentSection({ city, service }: SeoContentProps) {
                     </ul>
                 </div>
 
-                {/* 4. SHADOW PRICING TABLE — SGE Bait */}
+                {/* 4. PRICING COMPARISON TABLE — Featured Snippet Format */}
                 <h3 className="text-xl font-bold text-gray-900 mb-4">
                     📊 مقارنة أسعار {service.name_ar} {cityKw} (تحديث 2026)
                 </h3>
@@ -357,7 +357,7 @@ export function SeoContentSection({ city, service }: SeoContentProps) {
                     * الأسعار تقريبية ومبنية على متوسط السوق {cityKw}. السعر النهائي يُحدد بعد المعاينة الميدانية. أسعار السوق العشوائية تعكس متوسط أسعار الشركات غير المعتمدة.
                 </p>
                 {(() => {
-                    const salaryConfig = getSalaryCycleConfig();
+                    const salaryConfig = getMarketTimingConfig();
                     return salaryConfig ? (
                         <p className={`text-xs font-medium mt-2 px-3 py-1.5 rounded-lg border
                             ${salaryConfig.colors.badgeBg} ${salaryConfig.colors.badgeText} ${salaryConfig.colors.badgeBorder}
@@ -436,8 +436,8 @@ export function SeoContentSection({ city, service }: SeoContentProps) {
                     </div>
                 )}
 
-                {/* ── Blueprint Rule #14: NO مقالات ذات صلة on service pages ── */}
-                {/* Link Equity flows: Articles → Service Pages (not reverse) */}
+                {/* ── Blueprint Rule #14: NO مقالات ذات صلة on silos ── */}
+                {/* Link Equity flows: Articles → Silos (not reverse) */}
 
                 {/* ── Blueprint: Hidden Objections ── */}
                 {content.semanticData?.hiddenObjections && content.semanticData.hiddenObjections.length > 0 && (
@@ -455,11 +455,11 @@ export function SeoContentSection({ city, service }: SeoContentProps) {
                 )}
 
                 {/* ── Blueprint: Counter-Narratives ── */}
-                {content.semanticData?.counterNarratives && content.semanticData.counterNarratives.length > 0 && (
+                {content.semanticData?.consumerEducation && content.semanticData.consumerEducation.length > 0 && (
                     <div className="mb-10">
                         <h3 className="text-xl font-bold text-gray-900 mb-4">🔍 صحّح معلوماتك عن {service.name_ar}</h3>
                         <div className="space-y-4">
-                            {content.semanticData.counterNarratives.map((cn, i) => (
+                            {content.semanticData.consumerEducation.map((cn, i) => (
                                 <div key={i} className="bg-gradient-to-l from-blue-50 to-indigo-50 border border-blue-100 rounded-xl p-5">
                                     <p className="text-red-700 text-sm mb-2 line-through opacity-80">❌ {cn.myth}</p>
                                     <p className="text-emerald-800 text-sm font-medium leading-relaxed">✅ {cn.truth}</p>

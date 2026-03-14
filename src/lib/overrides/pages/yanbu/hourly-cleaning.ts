@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'عاملة عادية.', solution: '5 أدوات خاصة ساحلية.' },
         { fear: 'مثل بريدة.', solution: '5 مقابل 3. أعقد.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'ماء عادي.', truth: 'NaCl يعود. RO.' },
         { myth: 'أسبوعي.', truth: 'NaCl يومي. يومي.' },
     ],

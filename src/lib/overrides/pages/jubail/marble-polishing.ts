@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'مثل الخبر.', solution: 'VOC بقع إضافي + 98% > 95% + Biofilm. أقسى.' },
         { fear: 'ملمّع.', solution: 'فوق VOC + عفن مسامي. سطحي.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'ساحلي فقط.', truth: 'VOC بقع = صناعي. ثنائي.' },
         { myth: 'مرة.', truth: '98% عفن + NaCl إبهات. ربع سنوي.' },
     ],

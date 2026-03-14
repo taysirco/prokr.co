@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'مثل الخبر.', solution: 'VOC + 98% > 95% + SABIC. أخطر.' },
         { fear: 'غالي.', solution: 'VCI + Silica = 50-100. تلف = آلاف.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'شاحنة مُغلقة.', truth: '98% = تكثّف حتى مُغلقة. Silica.' },
         { myth: 'Stretch عادي.', truth: 'NaCl+VOC يتآكله. Marine.' },
     ],

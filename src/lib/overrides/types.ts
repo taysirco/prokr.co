@@ -50,7 +50,7 @@ export interface PageOverride {
 
     // ─── Blueprint: Semantic Data Overrides ───
     hiddenObjections?: { fear: string; solution: string }[];
-    counterNarratives?: { myth: string; truth: string }[];
+    consumerEducation?: { myth: string; truth: string }[];
     equipment?: { name: string; use: string }[];
     govReferences?: string[];
 

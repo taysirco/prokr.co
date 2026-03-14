@@ -111,7 +111,7 @@ export const override: PageOverride = {
 
         saudiRegulations: [REGULATIONS.TGA_LICENSE],
 
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'أي دينا بالشارع تنفع', truth: 'الدينا بدون ترخيص TGA = بدون تأمين. لو تلف أثاثك أثناء النقل = لا تعويض. الدينا المرخصة: تأمين ضد التلف + بيان حمولة رسمي + سائق معتمد. فرق السعر 10-20% فقط — يستحق الأمان' },
         { myth: 'أي دينا تكفي.', truth: 'دينا بدون ترخيص TGA = بدون تأمين = أي ضرر يتحمله العميل. الترخيص = حماية قانونية.' },
     ],

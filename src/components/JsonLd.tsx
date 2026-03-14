@@ -25,6 +25,6 @@ export { FaqJsonLd } from './schema/FaqJsonLd';
 export { ServiceOfferJsonLd } from './schema/ServiceOfferJsonLd';
 export { DatasetJsonLd } from './schema/DatasetJsonLd';
 export { LiveBlogPostingJsonLd } from './schema/LiveBlogPostingJsonLd';
-export { AiVoiceJsonLd } from './schema/AiVoiceJsonLd';
+export { VoiceSearchSchema } from './schema/VoiceSearchSchema';
 export { UnifiedGraphCompiler } from './schema/UnifiedGraphCompiler';
 

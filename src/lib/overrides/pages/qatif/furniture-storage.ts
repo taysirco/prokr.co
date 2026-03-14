@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'غالي.', solution: 'تلف بدون = أغلى. Dehumidifier ضروري.' },
         { fear: 'مثل الخبر.', solution: 'واحة = عيون. عفن واحي إضافي.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'أي مستودع.', truth: 'بدون Dehumidifier = تلف.' },
         { myth: 'ربع سنوي فحص.', truth: '80-95% + عيون. شهري.' },
     ],

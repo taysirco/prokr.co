@@ -55,7 +55,7 @@ export const override: PageOverride = {
     hiddenObjections: [
         { fear: 'أنظف بنفسي.', solution: 'بدون Dehumidifier: كنب مبلل + 80% = عفن أسود. + بدون Anti-Fungal: العفن يعود فوراً. + بدون استخلاص عميق: الحشو بقي مُعفّن.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'الكنب يجف طبيعياً.', truth: 'في 80% رطوبة: لا يجف. يبقى رطباً ← عفن. Dehumidifier = الحل الوحيد.' },
         { myth: 'Conditioner عادي يكفي.', truth: 'Conditioner جاف = يُرطّب. في 80%: يُغذي العفن. Anti-Fungal = يقتل + يحمي.' },
     ],

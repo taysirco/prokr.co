@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'عادي أرخص.', solution: 'بدون عزل + ΔT 54°م = تلف. أرخص بـ 100/شهر — أغلى بآلاف تلف.' },
         { fear: 'مثل الرياض.', solution: 'ΔT 54°م > 35°م. -2°م شتاء. عزل أهم.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'أي مستودع.', truth: 'بدون عزل = ΔT 54°م. بدون إحكام = SiO₂.' },
         { myth: 'غالي.', truth: 'أرخص 10-20% من الشرقية (لا Dehumidifier).' },
         { myth: 'بيت.', truth: 'بيت بدون عزل + ΔT 54°م = نفس المشكلة.' },

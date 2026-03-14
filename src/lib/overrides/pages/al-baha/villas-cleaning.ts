@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: '7 محاور كثير.', solution: '7 تحديات فريدة = 7 حلول.' },
         { fear: 'مثل بريدة.', solution: '4 vs 7. الأعقد بالمملكة.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: '4 محاور.', truth: '7. الباحة فريدة.' },
         { myth: 'نصف سنوي.', truth: 'ربع سنوي+ضباب = 5.' },
     ],

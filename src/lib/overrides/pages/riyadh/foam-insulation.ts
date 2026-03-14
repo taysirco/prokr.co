@@ -60,7 +60,7 @@ export const override: PageOverride = {
     hiddenObjections: [
         { fear: 'Closed-Cell أغلى 30% من Open-Cell.', solution: 'Open-Cell يفشل بأول مطرة = خسارة كاملة. Closed-Cell: 15+ سنة. التكلفة الفعلية: Closed-Cell أرخص 3× على مدى 15 سنة.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'أي فوم يعزل بنفس الكفاءة.', truth: 'Open-Cell R-3.5. Closed-Cell R-6.5. ضعف الكفاءة. Open-Cell يمتص ماء = يفقد R-Value. الاسم فوم — الأداء مختلف جذرياً.' },
         { myth: 'UV Coat اختياري.', truth: 'في الرياض: إلزامي. 10+ ساعات شمس × رطوبة 10% = UV أشد 20%. بدون Coat: الفوم ينتهي في سنتين.' },
     ],

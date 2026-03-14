@@ -14,7 +14,7 @@ export function middleware(request: NextRequest) {
     // ════════════════════════════════════════════════════════════════
     // 🚨 بروتوكول غسيل الكيانات — Entity Laundering Shield 🚨
     // Absorbs all equity from legacy toxic domains (.com/.net/.org)
-    // and neutralizes poisoned anchor text before it touches
+    // and normalizes incoming anchor text before it touches
     // clean silo paths /{city}/{service}
     // ════════════════════════════════════════════════════════════════
     const toxicDomains = [

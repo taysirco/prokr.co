@@ -60,7 +60,7 @@ export const override: PageOverride = {
         { fear: 'بصري يكفي.', solution: 'بقع واضحة+حراري = دقيق.' },
         { fear: 'مثل عنيزة.', solution: 'نفس 600ppm لكن بريدة أكبر.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'تسرب عادي.', truth: '600ppm+ΔT = مزدوج. أكثر.' },
         { myth: 'إصلاح يكفي.', truth: 'Descaler وقائي = 40% أقل تسرب.' },
     ],

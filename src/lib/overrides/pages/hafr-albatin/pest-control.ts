@@ -46,7 +46,7 @@ export const override: PageOverride = {
     verificationBadges: [{ badge: '✔️ مرخصة', authority: 'بلدي + وقاء', icon: 'shield-check' }],
     equipment: [{ name: 'Delta Dust', use: 'عقارب' }, { name: 'UV Blacklight', use: 'كشف' }, { name: 'مصائد غراء', use: 'ثعابين' }, { name: 'K9', use: 'KKMC' }],
     hiddenObjections: [{ fear: 'رش شهري.', solution: '12-18 يوم Residual!' }],
-    counterNarratives: [{ myth: 'مثل الرياض.', truth: 'عقارب + ثعابين + فيضان. أكثر تطرفاً.' },
+    consumerEducation: [{ myth: 'مثل الرياض.', truth: 'عقارب + ثعابين + فيضان. أكثر تطرفاً.' },
         { myth: 'الحشرات تدل على قلة نظافة.', truth: 'الحشرات تبحث عن ماء ودفء وليس قذارة. أنظف بيت يجذب حشرات إذا فيه رطوبة أو شقوق.' },
     ],
     relatedServices: [{ slug: 'bedbugs-control', context: 'بق — KKMC', priority: 1 }, { slug: 'termite-control', context: 'نمل', priority: 2 },

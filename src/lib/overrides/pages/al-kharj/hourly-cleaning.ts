@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'معطر يكفي.', solution: 'NH₃ يتراكم يومياً. AC يمتص.' },
         { fear: 'مثل الرياض.', solution: 'NH₃+CaCO₃ = خطوات إضافية.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'مسح عادي.', truth: 'NH₃+CaCO₃+SiO₂ = AC+Descaler+Microfiber.' },
         { myth: 'مرتين بالأسبوع.', truth: 'NH₃ يومي = يومي أفضل.' },
     ],

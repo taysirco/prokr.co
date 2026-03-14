@@ -57,7 +57,7 @@ export const override: PageOverride = {
         { fear: 'تنظيف عادي.', solution: 'NaCl+SOx+عفن = 3 معالجات خاصة.' },
         { fear: 'مثل بريدة.', solution: 'صدأ+حمض+عفن vs كلس. مختلف.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'سنوي.', truth: 'NaCl+SOx = ربع سنوي.' },
         { myth: 'ماء عادي.', truth: 'NaCl يعود. RO.' },
     ],

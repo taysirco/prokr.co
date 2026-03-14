@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'إسمنتي أرخص.', solution: '600ppm يتقشّر سنة. Epoxy يدوم 10+.' },
         { fear: 'مثل خميس.', solution: 'لا طحالب = أرخص 25%.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'إسمنتي يكفي.', truth: '600ppm = تقشّر سنة. Epoxy.' },
         { myth: 'فحص 5 سنوات.', truth: '600ppm = سنوي. يتسلل.' },
     ],

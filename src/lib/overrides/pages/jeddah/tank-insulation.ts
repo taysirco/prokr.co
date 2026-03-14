@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'العزل مكلف — مش متأكد يستاهل.', solution: 'عزل SBC 601 يوفر 30-40% كهرباء سنوياً. يسترد تكلفته خلال 2-3 سنوات.' },
     ],
 
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'Food-Grade العادي يكفي.', truth: 'لا يتحمل Cl⁻. Marine-Grade = الوحيد لجدة.' },
         { myth: 'الخزان الأرضي محمي.', truth: 'Cl⁻ في الماء + رطوبة تربة = يُهاجم أيضاً.' },
     ],

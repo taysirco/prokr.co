@@ -61,7 +61,7 @@ export const override: PageOverride = {
         { fear: 'ربع سنوي مكلف.', solution: 'حريق مدخنة = 50,000-200,000 ريال. عقد 900-2,200/سنة = 1-4%.' },
         { fear: 'المدخنة نظيفة.', solution: 'Biofilm شفاف. كربنة رطبة لزجة. مقياس ميكرون يكشف.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'نصف سنوي.', truth: 'Biofilm 85-95% + NaCl = يصل 6,000 ميكرون أسرع. ربع سنوي = الحد.' },
         { myth: 'ماء عادي للشطف.', truth: 'ماء الخبر = NaCl = Biofilm جديد. RO فقط.' },
         { myth: 'مداخن الخبر مثل الرياض.', truth: 'NaCl + Biofilm + كربنة رطبة = 3 فروقات ساحلية.' },

@@ -64,7 +64,7 @@ export const override: PageOverride = {
         { fear: 'عاملة واحدة.', solution: '7 محاور = فريق مُتخصص. واحدة = 1/7.' },
         { fear: 'لسنة كاملة؟', solution: 'NaCl+SiO₂ يومي + عفن أسبوعي. أسبوعي = الأمثل.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'مثل الخبر.', truth: 'SiO₂ إضافي + أرامكو = 7 بدلاً من 6. مختلف.' },
         { myth: 'تنظيف = ممسحة.', truth: '7 محاور = 7 أدوات + فريق + ترتيب.' },
         { myth: 'شهري.', truth: '7 محاور يومية/أسبوعية. شهري = 3 أسابيع × 7 = 21 تراكم.' },

@@ -107,7 +107,7 @@ export const override: PageOverride = {
 
         saudiRegulations: [REGULATIONS.BALADI_HEALTH],
 
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'ممسحة وكلور = أرضية نظيفة', truth: 'الكلور ينظف لكن: يُتلف الرخام + يبهت الجرانيت + يذيب الجراوت. في جدة: ملوحة الهواء تترك طبقة NaCl على الأرضيات — تحتاج منظف pH محايد (6.5-7.5) يذيب الملح بدون ضرر' },
         { myth: 'المنظف العادي يكفي.', truth: 'المنظف العادي يزيل 40% من الأوساخ. HEPA + بخار = 99%+. الفرق = 59% غبار دقيق + بكتيريا + عث.' },
     ],

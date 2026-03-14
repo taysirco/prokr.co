@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'Epoxy عادي.', solution: 'تحلية = Marine-Grade.' },
         { fear: 'مثل بريدة.', solution: 'طحالب+تآكل vs CaCO₃.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'فحص 5 سنوات.', truth: 'تحلية+NaCl = سنوي.' },
         { myth: 'لا طحالب.', truth: '70-85% = طحالب. Anti-Algae.' },
     ],

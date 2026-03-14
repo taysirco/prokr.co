@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'مثل الخبر.', solution: 'VOC + سخام SABIC إضافي. 98% > 95%. مختلف.' },
         { fear: 'شامبو.', solution: 'NaCl+VOC = ينزلق. سخام = لا يعمل. Marine+Enzymatic.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'ساحلي فقط.', truth: 'ساحلي + صناعي = VOC + سخام. ثلاثي.' },
         { myth: 'يجف طبيعي.', truth: '98% = 6-10 ساعات. بدون Turbo = عفن.' },
         { myth: 'نصف سنوي.', truth: 'NaCl+VOC+سخام يومي. ربع سنوي.' },

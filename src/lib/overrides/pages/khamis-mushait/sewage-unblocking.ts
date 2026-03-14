@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'سوستة تكفي.', solution: 'لا تزيل جذور ولا طين. ضغط+قاطع.' },
         { fear: 'مثل عنيزة.', solution: '4 أنواع مقابل 1. أعقد.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'انسداد دهون فقط.', truth: '4 أنواع: طين+جذور+طحالب+تربة. تشخيص أولاً.' },
         { myth: 'نصف سنوي يكفي.', truth: 'أمطار+4 أنواع = ربع سنوي إلزامي.' },
     ],

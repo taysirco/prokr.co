@@ -17,5 +17,5 @@ export { FaqJsonLd } from './FaqJsonLd';
 export { ServiceOfferJsonLd } from './ServiceOfferJsonLd';
 export { DatasetJsonLd } from './DatasetJsonLd';
 export { LiveBlogPostingJsonLd } from './LiveBlogPostingJsonLd';
-export { AiVoiceJsonLd } from './AiVoiceJsonLd';
+export { VoiceSearchSchema } from './VoiceSearchSchema';
 export { UnifiedGraphCompiler } from './UnifiedGraphCompiler';

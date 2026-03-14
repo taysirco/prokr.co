@@ -58,7 +58,7 @@ export const override: PageOverride = {
         { fear: 'Open-Cell أرخص.', solution: 'يمتص الماء = كارثة بخميس. Closed-Cell أغلى لكن يحمي.' },
         { fear: 'مثل الباحة.', solution: 'متشابه — نفس الفيزياء الجبلية. نفس الحل.' },
     ],
-    counterNarratives: [
+    consumerEducation: [
         { myth: 'أي فوم يكفي بخميس.', truth: 'Open-Cell = كارثة. Closed-Cell فقط.' },
         { myth: 'عزل حراري يكفي.', truth: 'أمطار + ضباب = عزل مائي أيضاً. مزدوج.' },
     ],
