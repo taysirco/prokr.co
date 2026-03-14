@@ -24,6 +24,7 @@ import FraudAlertBanner from '@/components/FraudAlertBanner';
 import GeoPricingTable from '@/components/GeoPricingTable';
 import SalaryCycleBadge from '@/components/SalaryCycleBadge';
 import { PriceRevealTrap } from '@/components/PriceRevealTrap';
+import PricingBenchmarkBox from '@/components/PricingBenchmarkBox';
 import type { Advertiser } from '@/types';
 
 // Disable static generation, use ISR instead
@@ -365,6 +366,11 @@ export default async function SiloPage({ params }: SiloPageProps) {
                         />
                     ) : null;
                 })()}
+
+                {/* 📊 Pricing Benchmark — مؤشر بروكر للأسعار */}
+                <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <PricingBenchmarkBox citySlug={resolvedParams.city} serviceSlug={resolvedParams.service} />
+                </section>
 
                 {/* 🛡️ Anti-Scam YMYL Trap — Consumer Protection Banner */}
                 <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">

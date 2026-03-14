@@ -14,6 +14,7 @@ import Footer from '@/components/Footer';
 import FraudAlertBanner from '@/components/FraudAlertBanner';
 import SalaryCycleBadge from '@/components/SalaryCycleBadge';
 import GeoSignals from '@/components/GeoSignals';
+import { LiveAvailabilityBanner } from '@/components/LiveAvailabilityBanner';
 
 interface SubRegionPageProps {
     params: Promise<{
@@ -198,6 +199,13 @@ export default async function SubRegionPage({ params }: SubRegionPageProps) {
                         </div>
                     </div>
                 </section>
+
+                {/* ── Live Availability Banner — QDF Visual Signal ── */}
+                <LiveAvailabilityBanner
+                    cityNameAr={`${subRegion.name_ar}، ${city.name_ar}`}
+                    serviceNameAr="خدمات منزلية"
+                    totalCompanies={0}
+                />
 
                 {/* Services */}
                 <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

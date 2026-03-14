@@ -14,6 +14,7 @@ import Footer from '@/components/Footer';
 import FraudAlertBanner from '@/components/FraudAlertBanner';
 import SalaryCycleBadge from '@/components/SalaryCycleBadge';
 import GeoSignals from '@/components/GeoSignals';
+import { LiveAvailabilityBanner } from '@/components/LiveAvailabilityBanner';
 
 // Major cities for price comparison
 const COMPARISON_CITIES = ['riyadh', 'jeddah', 'dammam', 'makkah', 'madinah', 'taif'];
@@ -208,6 +209,13 @@ export default async function ServicePage({ params }: ServicePageProps) {
                         </div>
                     </div>
                 </section>
+
+                {/* ── Live Availability Banner — QDF Visual Signal ── */}
+                <LiveAvailabilityBanner
+                    cityNameAr="المملكة"
+                    serviceNameAr={service.name_ar}
+                    totalCompanies={0}
+                />
 
                 {/* Cities by Region */}
                 <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

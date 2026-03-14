@@ -20,6 +20,69 @@ import { getPoisonCounterNarrative } from './counter-narratives-poison';
 import { injectCTRHook } from '../ctr-hooks';
 
 // ============================================
+// SCIENTIFIC SYMBOL CLEANER
+// تنظيف الرموز العلمية التي تربك المستخدم العادي
+// ============================================
+
+function cleanText(text: string): string {
+  return text
+    // === الرموز الكيميائية → مرادفات عربية ===
+    .replace(/ΔT\s*\d*°?م?\s*/g, 'فرق حراري ')          // ΔT 48°م → فرق حراري
+    .replace(/SiO₂/g, 'رمل')                               // SiO₂ → رمل
+    .replace(/CaCO₃\s*\d*p?p?m?\s*/g, 'كلس ')             // CaCO₃ 600ppm → كلس
+    .replace(/NH₃/g, 'أمونيا')                              // NH₃ → أمونيا
+    .replace(/H₂S/g, 'كبريتيد')                             // H₂S → كبريتيد
+    .replace(/PVAc/g, 'غراء')                               // PVAc → غراء
+    .replace(/\bCYA\b/g, 'مثبت كلور')                       // CYA → مثبت كلور
+    .replace(/\bHEPA\b/g, 'فلتر دقيق')                      // HEPA → فلتر دقيق
+    .replace(/\bFeD\b/g, 'فحص أداء')                        // FeD → فحص أداء
+    .replace(/\bDer p 1\b/g, 'عث الغبار')                    // Der p 1 → عث الغبار
+    .replace(/\d+>\d+\.?\d*\s*Mohs/g, 'صلابة عالية')       // 7>5.5 Mohs → صلابة عالية
+    .replace(/\bMohs\b/g, 'صلابة')                          // Mohs → صلابة
+    // === المصطلحات التقنية → عربي واضح ===
+    .replace(/Thermal\s*Fatigue/gi, 'إجهاد حراري')          // Thermal Fatigue → إجهاد حراري
+    .replace(/Thermal\s*Cycling/gi, 'دورة حرارية')          // Thermal Cycling → دورة حرارية
+    .replace(/Thermal\s*Shock/gi, 'صدمة حرارية')            // Thermal Shock → صدمة حرارية
+    .replace(/Fiber\s*Cutting/gi, 'قطع ألياف')              // Fiber Cutting → قطع ألياف
+    .replace(/Micro-Abrasion/gi, 'خدش دقيق')                // Micro-Abrasion → خدش دقيق
+    .replace(/Micro-Swirls/gi, 'خدوش دائرية')               // Micro-Swirls → خدوش دائرية
+    .replace(/Micro-Cracks/gi, 'شقوق دقيقة')                // Micro-Cracks → شقوق دقيقة
+    .replace(/Fiber\s*Fatigue/gi, 'إجهاد ألياف')             // Fiber Fatigue → إجهاد ألياف
+    .replace(/\bBiofilm\b/g, 'غشاء حيوي')                   // Biofilm → غشاء حيوي
+    .replace(/\bScale\b/g, 'ترسبات')                        // Scale → ترسبات
+    .replace(/\bSealant\b/g, 'مانع تسرب')                   // Sealant → مانع تسرب
+    .replace(/\bDescaler\b/g, 'مزيل كلس')                   // Descaler → مزيل كلس
+    .replace(/\bShrinkage\b/g, 'انكماش')                    // Shrinkage → انكماش
+    .replace(/\bO-rings\b/gi, 'حلقات مطاطية')               // O-rings → حلقات مطاطية
+    .replace(/\bOlibanum\b/g, 'لبان')                        // Olibanum → لبان
+    .replace(/\bEster Bonds\b/g, 'روابط كيميائية')           // Ester Bonds → روابط كيميائية
+    .replace(/\bEnzymatic\b/g, 'إنزيمي')                     // Enzymatic → إنزيمي
+    .replace(/\bAnti-Static\b/g, 'مضاد كهرباء ساكنة')       // Anti-Static → مضاد كهرباء ساكنة
+    .replace(/\bAnti-Fungal\b/g, 'مضاد فطريات')             // Anti-Fungal → مضاد فطريات
+    .replace(/\bAnti-Biofilm\b/g, 'مضاد غشاء حيوي')         // Anti-Biofilm → مضاد غشاء حيوي
+    .replace(/\bAspergillus\b/g, 'فطر العفن')                // Aspergillus → فطر العفن
+    .replace(/\bSqueegee\b/g, 'ممسحة مطاطية')               // Squeegee → ممسحة مطاطية
+    .replace(/\bAlgaecide\b/g, 'مبيد طحالب')                 // Algaecide → مبيد طحالب
+    // === تنظيف المسافات الزائدة ===
+    .replace(/\s{2,}/g, ' ')
+    .trim();
+}
+
+/** Deep-clean all string values in an object or array */
+function deepClean<T>(obj: T): T {
+  if (typeof obj === 'string') return cleanText(obj) as T;
+  if (Array.isArray(obj)) return obj.map(item => deepClean(item)) as T;
+  if (obj && typeof obj === 'object') {
+    const cleaned: Record<string, unknown> = {};
+    for (const [key, value] of Object.entries(obj)) {
+      cleaned[key] = deepClean(value);
+    }
+    return cleaned as T;
+  }
+  return obj;
+}
+
+// ============================================
 // CONTENT LAYERS RESOLVER
 // ============================================
 
@@ -52,7 +115,7 @@ export function resolveContentLayers(city: City, service: Service): ContentLayer
     }
 
     const c = override.content;
-    return {
+    return deepClean({
         introduction: c.introduction ?? auto.introduction,
         shortAnswer: c.shortAnswer ?? auto.shortAnswer,
         whyUs: c.whyUs ?? auto.whyUs,
@@ -63,7 +126,7 @@ export function resolveContentLayers(city: City, service: Service): ContentLayer
         h1: override.meta?.h1 ?? auto.h1,
         heroSubtitle: c.heroSubtitle,
         entityIntersection: override.entityContext?.intersectionParagraph ?? autoEntityIntersection,
-    };
+    });
 }
 
 // ============================================
@@ -125,14 +188,14 @@ export function resolveMetadata(city: City, service: Service): ResolvedMetadata 
     const resolvedTitle = m?.title ?? auto.metaTitle;
     const ctrTitle = injectCTRHook(resolvedTitle, service.slug);
 
-    return {
+    return deepClean({
         title: ctrTitle,
         description: m?.description ?? autoDescription,
         keywords: m?.keywords ?? autoKeywords,
         ogTitle: m?.ogTitle ?? ctrTitle,
         ogDescription: m?.ogDescription ?? m?.description ?? autoDescription,
         ogImage: m?.ogImage,
-    };
+    });
 }
 
 // ============================================
@@ -343,5 +406,6 @@ export function isSchemaDisabled(citySlug: string, serviceSlug: string, schemaNa
  * Get the override object for a page (for passing to components).
  */
 export function getOverrideForPage(citySlug: string, serviceSlug: string): PageOverride | undefined {
-    return getPageOverride(citySlug, serviceSlug);
+    const override = getPageOverride(citySlug, serviceSlug);
+    return override ? deepClean(override) : undefined;
 }

@@ -5,6 +5,8 @@ import { CITIES, SERVICES, REGION_NAMES, getCitiesByRegion } from '@/lib/seed';
 import { BreadcrumbJsonLd, ItemListJsonLd, WebPageJsonLd } from '@/components/JsonLd';
 import Footer from '@/components/Footer';
 import SalaryCycleBadge from '@/components/SalaryCycleBadge';
+import FraudAlertBanner from '@/components/FraudAlertBanner';
+import GeoSignals from '@/components/GeoSignals';
 
 export const metadata: Metadata = {
     title: 'مناطق الخدمة في السعودية | 24 مدينة - بروكر',
@@ -216,6 +218,14 @@ export default function LocationsPage() {
                         </div>
                     </div>
                 </section>
+
+                {/* 🛡️ Anti-Scam YMYL Trap — Consumer Protection Banner */}
+                <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                    <FraudAlertBanner serviceName="خدمات منزلية" serviceSlug="cleaning" cityName="السعودية" />
+                </section>
+
+                {/* Phantom Geo-Hijacking — National Signal */}
+                <GeoSignals citySlug="riyadh" serviceSlug="city-hub" serviceName="خدمات منزلية" serviceCategory="cleaning" />
 
                 <Footer />
             </main>
