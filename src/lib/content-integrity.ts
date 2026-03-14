@@ -36,7 +36,7 @@ function generateOriginId(slug: string): string {
  *
  * @param text    - Raw text to mark
  * @param pageSlug - Unique page identifier (e.g. "riyadh-water-leak-detection")
- * @returns Marked text (visually identical to input)
+ * @returns Marked text (output matches input visually)
  */
 export function verifyOrigin(text: string, pageSlug: string): string {
     if (!text) return '';

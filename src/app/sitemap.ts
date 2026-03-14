@@ -81,7 +81,7 @@ export default async function sitemap({ id }: { id: number }): Promise<MetadataR
         const pages: MetadataRoute.Sitemap = [];
         for (const city of CITIES) {
             for (const serviceSlug of slugsForThisSitemap) {
-                // Skip absorbed slugs — they redirect to canonical Super Pages
+                // Skip absorbed slugs — they redirect to canonical service pages
                 if (isAbsorbedSlug(serviceSlug)) continue;
                 if (hasPageOverride(city.slug, serviceSlug)) {
                     pages.push({

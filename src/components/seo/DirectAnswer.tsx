@@ -24,7 +24,7 @@ export const DirectAnswer: React.FC<DirectAnswerProps> = ({ city, service, answe
 
     return (
         <div
-            id="ai-zero-click"
+            id="quick-summary"
             className="direct-answer bg-blue-50/80 border-r-4 border-blue-600 p-5 my-6 rounded-lg shadow-sm"
         >
             <h3 className="font-bold text-lg mb-3 text-blue-900">

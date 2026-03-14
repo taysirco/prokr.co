@@ -1,10 +1,10 @@
 // ============================================
 // Service Groups — Fragment URL Architecture
-// Service Consolidation: Synonym slugs → Canonical Super Page
+// Service Consolidation: Synonym slugs → Canonical Service
 // ============================================
 //
 // Each group defines:
-//   canonical : The "Super Page" slug that will be the indexed page
+//   canonical : The canonical slug that will be the indexed page
 //   absorbed  : Slugs that will 301-redirect → canonical#absorbed-slug
 //   category  : The service category for filtering
 //
@@ -14,16 +14,16 @@
 //   3. → 301 redirect to /riyadh/pest-control#pesticide-spraying
 //   4. On pest-control page, a fragment section renders the absorbed content
 //   5. Sitemap excludes absorbed slugs
-//   6. Canonical tag on all pages points to the Super Page
+//   6. Canonical tag on all pages points to the main service
 //
 // MAKKAH NOTE: ac-maintenance, ac-installation, epoxy-coating only exist
 // in Makkah. The redirect logic handles this via override-gated existence.
 // ============================================
 
 export interface SuperPageGroup {
-    /** The canonical slug that becomes the Super Page */
+    /** The canonical slug for this service group */
     canonical: string;
-    /** Slugs absorbed into this Super Page as #fragment sections */
+    /** Synonymous slugs merged as #fragment sections */
     absorbed: string[];
     /** The service category */
     category: string;
@@ -184,7 +184,7 @@ for (const group of SUPER_PAGE_GROUPS) {
 // ============================================
 
 /**
- * Returns the canonical (Super Page) slug for an absorbed slug.
+ * Returns the canonical slug for an absorbed slug.
  * Returns null if the slug is not absorbed by any group.
  *
  * @example getCanonicalSlug('pesticide-spraying') → 'pest-control'
@@ -225,7 +225,7 @@ export function isAbsorbedSlug(slug: string): boolean {
 }
 
 /**
- * Checks if a slug is a canonical Super Page slug.
+ * Checks if a slug is a canonical service page slug.
  *
  * @example isCanonicalSlug('pest-control') → true
  * @example isCanonicalSlug('pesticide-spraying') → false

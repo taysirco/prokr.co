@@ -1,7 +1,7 @@
 // ============================================
-// AbsorbedServiceSection — Fragment Section for Super Pages
+// AbsorbedServiceSection — Fragment Section for Consolidated Pages
 // Renders absorbed service content as a section with a fragment ID
-// Used when a Super Page needs to display content from merged services
+// Used when a consolidated page needs to display content from merged services
 // ============================================
 
 import type { City, Service } from '@/types';
@@ -10,14 +10,14 @@ import type { SuperPageGroup } from '@/lib/services/super-page-groups';
 
 interface AbsorbedServiceSectionsProps {
     city: City;
-    service: Service; // The canonical (super page) service
+    service: Service; // The canonical service
     group: SuperPageGroup;
     allServices: Service[]; // All SERVICES for slug→name lookup
 }
 
 /**
  * Renders all absorbed service content as fragment-anchored sections
- * within the canonical Super Page.
+ * within the canonical service page.
  *
  * Each section has:
  *   - id={absorbedSlug} — the fragment anchor

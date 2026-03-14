@@ -193,7 +193,7 @@ export default async function SubRegionPage({ params }: SubRegionPageProps) {
                             {availableServices.length} خدمة متوفرة في {subRegion.name_ar} من شركات معتمدة.
                         </p>
 
-                        {/* 💰 Market Timing Badge — النبض المالي */}
+                        {/* 💰 Market Timing Badge — عروض الشهر */}
                         <div className="mt-3">
                             <MarketTimingBadge compact />
                         </div>

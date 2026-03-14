@@ -1,6 +1,6 @@
 // ============================================
-// 💰 النبض المالي — Salary Cycle Intelligence
-// يغيّر واجهة الموقع حسب دورة الراتب السعودي
+// 💰 Dynamic Pricing Display
+// يعرض رسائل مختلفة حسب وقت الشهر
 // ============================================
 
 export type MarketTimingPhase = 'premium' | 'budget' | 'urgency';
@@ -44,7 +44,7 @@ export interface MarketTimingConfig {
  *
  * - PREMIUM (27→5): Post-salary spending period
  * - BUDGET (6→19): Mid-month conservation
- * - URGENCY (20→26): Pre-salary pressure + installment push
+ * - URGENCY (20→26): Late-month installment messaging
  */
 export function getMarketTimingPhase(date?: Date): MarketTimingPhase {
     const d = date || new Date();

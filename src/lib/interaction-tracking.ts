@@ -14,7 +14,7 @@
 type ServiceCategory = 'leak-detection' | 'insulation' | 'pest-control' | 'cleaning' | 'moving' | 'sewage';
 
 interface TitleEnhancement {
-    /** Emoji for pattern interrupt (placed before bracket) */
+    /** Emoji for visual emphasis (placed before bracket) */
     emoji: string;
     /** Title emphasis inside visual brackets */
     bracket: string;
@@ -24,7 +24,7 @@ interface TitleEnhancement {
 
 /**
  * Sector-specific title enhancements that create "attention pattern" in SERPs.
- * These make users' eyes STOP on our result among 10 blue links.
+ * These improve visibility in search results.
  */
 const SECTOR_TITLE_ENHANCEMENTS: Record<ServiceCategory, TitleEnhancement> = {
     'leak-detection': {

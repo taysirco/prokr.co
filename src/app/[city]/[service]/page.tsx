@@ -52,7 +52,7 @@ export async function generateMetadata({ params }: SiloPageProps): Promise<Metad
     // Use the override-aware resolver
     const meta = resolveMetadata(city, service);
 
-    // Defense-in-depth: Ensure canonical always points to the Super Page
+    // Ensure canonical always points to the main service page
     // Even if middleware redirect is bypassed, canonical must be correct
     const canonicalServiceSlug = getCanonicalSlug(resolvedParams.service) || resolvedParams.service;
     const canonicalUrl = `https://prokr.co/${resolvedParams.city}/${canonicalServiceSlug}`;
@@ -210,7 +210,7 @@ export default async function SiloPage({ params }: SiloPageProps) {
                                     {aiContent.h1}
                                 </h1>
 
-                                {/* 💰 Market Timing Badge — النبض المالي */}
+                                {/* 💰 Market Timing Badge — عروض الشهر */}
                                 <div className="mb-3">
                                     <MarketTimingBadge compact />
                                 </div>

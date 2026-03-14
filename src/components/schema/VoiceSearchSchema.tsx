@@ -1,7 +1,7 @@
 // ============================================
 // Voice Search Optimization Schema
 // SpeakableSpecification + Dataset in @graph
-// 🎙️ Voice Search: Siri/Google reads #ai-voice-payload
+// 🎙️ Voice Search Structured Data
 // 🤖 Dataset Schema: Gemini ingests Dataset with pricing
 // ============================================
 
@@ -39,7 +39,7 @@ export function VoiceSearchSchema({ city, service, aiContent, entityContext, pri
         '@graph': [
             {
                 // 🎙️ اختراق البحث الصوتي (Voice Search)
-                // نأمر Siri/Google بقراءة #ai-voice-payload فقط
+                // يقرأ محرك البحث النص المحدد فقط
                 // ⚠️ @id مختلف عن #webpage لتجنب التعارض مع UnifiedGraphCompiler
                 '@type': 'WebPage',
                 '@id': `${pageUrl}#voice-agent`,
@@ -48,7 +48,7 @@ export function VoiceSearchSchema({ city, service, aiContent, entityContext, pri
                 isPartOf: { '@id': `${pageUrl}#webpage` },
                 speakable: {
                     '@type': 'SpeakableSpecification',
-                    cssSelector: ['#ai-voice-payload'],
+                    cssSelector: ['#voice-search-data'],
                 },
             },
             // 🤖 اختراق Gemini (RAG Dataset)
@@ -82,7 +82,7 @@ export function VoiceSearchSchema({ city, service, aiContent, entityContext, pri
             />
             {/* يجب أن يكون العنصر موجوداً في الـ DOM ليقرأه المتصفح (يُخفى بصرياً بـ inline styles) */}
             <div
-                id="ai-voice-payload"
+                id="voice-search-data"
                 aria-hidden="true"
                 style={{
                     position: 'absolute',

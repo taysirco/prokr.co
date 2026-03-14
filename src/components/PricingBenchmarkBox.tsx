@@ -8,7 +8,7 @@ interface PricingBenchmarkBoxProps {
 
 /**
  * مربع متوسط السعر وفق مؤشر بروكر
- * يُعرض في كل صفحة خدمة (Super Page) لتعزيز الربط الداخلي
+ * يُعرض في كل صفحة خدمة لتعزيز الربط الداخلي
  */
 export default function PricingBenchmarkBox({
   citySlug,

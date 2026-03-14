@@ -104,7 +104,7 @@ export default function ServicesPage() {
                             من نقل العفش إلى التنظيف ومكافحة الحشرات.
                         </p>
 
-                        {/* 💰 Market Timing Badge — النبض المالي */}
+                        {/* 💰 Market Timing Badge — عروض الشهر */}
                         <div className="mt-4">
                             <MarketTimingBadge compact />
                         </div>

@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 
 // ════════════════════════════════════════════════════════════════
-// 🔒 مانيفستو غسيل الكيان — M&A Sovereign Schema
+// 🔒 Corporate Acquisition Page — M&A Schema
 // This page is the SOLE destination for all legacy domain traffic.
 // It uses AcquireAction schema to justify entity transition in
 // Google's Knowledge Graph. MUST be indexed (index: true).
@@ -76,7 +76,7 @@ export default function AcquisitionPage() {
 
     return (
         <>
-            {/* 🧠 AcquireAction Schema — Knowledge Graph Entity Laundering */}
+            {/* 🧠 AcquireAction Schema — AcquireAction Schema */}
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(acquisitionSchema) }}

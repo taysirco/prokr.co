@@ -34,7 +34,7 @@ export const SERVICE_RELATIONS: Record<string, RelatedService[]> = {
 
 /**
  * Get related services for a given service.
- * Resolves absorbed slugs to their canonical Super Page slugs.
+ * Resolves absorbed slugs to their canonical service page slugs.
  * Deduplicates if both canonical and absorbed appear in the relations.
  */
 export function getRelatedServices(serviceSlug: string, limit: number = 3, citySlug?: string): RelatedService[] {

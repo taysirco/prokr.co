@@ -91,7 +91,7 @@ export function LiveAvailabilityBanner({
                     )}
                 </div>
 
-                {/* Right: Status + Salary Cycle Signal */}
+                {/* Right: Status + Monthly Offers */}
                 <div className="hidden sm:flex items-center gap-2">
                     <div className="flex items-center gap-1.5 bg-green-600/30 border border-green-500/30 rounded-full px-3 py-1">
                         <span className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse" />

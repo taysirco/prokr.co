@@ -180,7 +180,7 @@ export default async function CityPage({ params }: CityPageProps) {
                             </div>
                         </div>
 
-                        {/* 💰 Market Timing Badge — النبض المالي */}
+                        {/* 💰 Market Timing Badge — عروض الشهر */}
                         <div className="mt-3">
                             <MarketTimingBadge compact />
                         </div>

@@ -35,7 +35,7 @@ interface ServicePageProps {
     }>;
 }
 
-// Generate static params for canonical services only (absorbed slugs redirect via Super Pages)
+// Generate static params for canonical services only (absorbed slugs redirect to canonical)
 export async function generateStaticParams() {
     return SERVICES.filter(s => !isAbsorbedSlug(s.slug)).map(service => ({
         service: service.slug,
@@ -171,7 +171,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                                     شركات معتمدة، أسعار تنافسية، وخدمة احترافية.
                                 </p>
 
-                                {/* 💰 Market Timing Badge — النبض المالي */}
+                                {/* 💰 Market Timing Badge — عروض الشهر */}
                                 <div className="mt-4">
                                     <MarketTimingBadge compact />
                                 </div>
