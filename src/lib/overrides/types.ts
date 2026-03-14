@@ -48,7 +48,7 @@ export interface PageOverride {
     checklist?: string[];
     trustFactors?: string[];
 
-    // ─── Blueprint: Semantic Data Overrides ───
+    // ─── Content: Semantic Data Overrides ───
     hiddenObjections?: { fear: string; solution: string }[];
     consumerEducation?: { myth: string; truth: string }[];
     equipment?: { name: string; use: string }[];

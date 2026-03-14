@@ -96,7 +96,7 @@ export default function LocalPresence({ citySlug, serviceSlug, serviceName, serv
 
     return (
         <section 
-            className="geo-signals mt-10 mb-6 mx-auto max-w-4xl"
+            className="local-presence mt-10 mb-6 mx-auto max-w-4xl"
             itemScope 
             itemType="https://schema.org/LocalBusiness"
             aria-label={`تغطية ${serviceName} — ${cityName}`}

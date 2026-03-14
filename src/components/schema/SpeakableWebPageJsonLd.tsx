@@ -34,7 +34,7 @@ export function SpeakableWebPageJsonLd({ title, description, url, speakableSelec
             '@type': 'SpeakableSpecification',
             cssSelector: speakableSelectors,
         },
-        // ⚡ Atomic SGE Sync: Inject the EXACT DirectAnswer text
+        // ⚡ Structured Data: Sync the EXACT DirectAnswer text
         // into the schema as abstract — byte-for-byte match with
         // what the user sees in .direct-answer div
         ...(speakableText && { abstract: speakableText }),

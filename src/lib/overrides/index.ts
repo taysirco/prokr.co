@@ -31,4 +31,4 @@ export type { ClimateZone, CityClimateProfile } from './city-climate';
 export { GOV, EXPERTS, REGULATIONS, AMANA, getAmanaForCity } from './trust-anchors';
 
 // NLP Prompts (Master Compiler for Content Writers & AI)
-export { MASTER_NLP_PROMPT, CONTENT_STRUCTURE_TEMPLATE } from './nlp-prompts';
+export { MASTER_CONTENT_PROMPT, CONTENT_STRUCTURE_TEMPLATE } from './content-templates';

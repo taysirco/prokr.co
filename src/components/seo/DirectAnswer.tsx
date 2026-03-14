@@ -7,14 +7,14 @@ interface DirectAnswerProps {
 }
 
 /**
- * SGE Bullet Formatting — "Generative Sniper Bullet"
+ * Structured Answer Formatting
  *
  * Transforms the DirectAnswer from a dense paragraph into a structured
- * `<ul>` list optimized for AI Overview / SGE extraction.
+ * `<ul>` list formatted for clear, scannable presentation.
  *
  * Parser auto-detects two patterns:
- * 1. ARCHITECT pattern (override pages): splits on `. ف` / `، ت` / `لذا` / `مما`
- * 2. PRICING pattern (auto pages): splits on `. ي` / `. ش` / `. ب`
+ * 1. Content template pattern (override pages): splits on `. ف` / `، ت` / `لذا` / `مما`
+ * 2. Pricing pattern (auto pages): splits on `. ي` / `. ش` / `. ب`
  *
  * Technical entities inside [...] brackets are auto-bolded.
  * Equipment names in (...) parentheses are auto-bolded.
@@ -74,9 +74,9 @@ interface ParsedAnswer {
 }
 
 function parseAnswer(answer: string): ParsedAnswer {
-    // Pattern 1: ARCHITECT equation — "على عكس... يعتمد... ففي ظل... لذا... مما يضمن"
+    // Pattern 1: Content template — "على عكس... يعتمد... ففي ظل... لذا... مما يضمن"
     if (answer.includes('يعتمد') && answer.includes('ففي ظل')) {
-        return parseArchitectPattern(answer);
+        return parseContentTemplatePattern(answer);
     }
 
     // Pattern 2: PRICING style — "service: price1, price2. includes: x + y + z"
@@ -89,13 +89,13 @@ function parseAnswer(answer: string): ParsedAnswer {
 }
 
 /**
- * Parse ARCHITECT equation pattern:
+ * Parse content template pattern:
  * "على عكس [X]... يعتمد بروتوكولنا... على استخدام [equipment].
  *  ففي ظل [challenges]... تتفاقم ظاهرة [problem].
  *  لذا؛ يتدخل خبراؤنا عبر [steps]...
  *  مما يضمن لك [guarantee]."
  */
-function parseArchitectPattern(text: string): ParsedAnswer {
+function parseContentTemplatePattern(text: string): ParsedAnswer {
     let intro = '';
     const bullets: string[] = [];
     let guarantee = '';

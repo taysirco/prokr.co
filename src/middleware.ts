@@ -36,7 +36,7 @@ export function middleware(request: NextRequest) {
 
         // 🔒 Route 100% of raw domain energy to quarantine chamber
         // 301 is safe here: context shift from "service" to "corporate statement"
-        // algorithmically cleanses toxic anchor text associations
+        // normalizes anchor text associations
         if (pathname !== '/corporate/acquisition') {
             const cleanUrl = new URL('/corporate/acquisition', 'https://prokr.co');
             return NextResponse.redirect(cleanUrl, 301);
@@ -73,7 +73,7 @@ export function middleware(request: NextRequest) {
     // ──────────────────────────────────────────────────────
     // FRAGMENT URL ARCHITECTURE — 301 Redirect for absorbed slugs
     // /{city}/{absorbed-slug} → 301 → /{city}/{canonical}#{absorbed-slug}
-    // Prevents keyword cannibalization by consolidating to Super Pages
+    // Prevents duplicate pages by consolidating to Super Pages
     // ──────────────────────────────────────────────────────
     if (segments.length === 2 && citySlugs.has(firstSegment)) {
         const serviceSlug = segments[1];

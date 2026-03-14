@@ -8,7 +8,7 @@ export interface PricingItem {
     time?: string;
 }
 
-// Blueprint: Per-service-slug semantic data for unique, non-templated content
+// Content: Per-service-slug semantic data for unique, non-templated content
 export interface ServiceSemanticData {
     entities: string[];                                      // كيانات حقيقية (أجهزة، مواد، جهات)
     lsiNGrams: string[];                                     // متلازمات دلالية ثنائية/ثلاثية

@@ -3,7 +3,7 @@ import { resolveSeoContent } from '@/lib/overrides';
 import { getServiceKeywordProfile, getCityKeyword } from '@/lib/locale-formatting';
 
 // ============================================
-// WARRANTY PROMISE — YMYL TRUST SHIELD
+// WARRANTY PROMISE — WARRANTY COMPLIANCE
 // Category-aware warranty for Google E-E-A-T
 // ============================================
 const WARRANTY_BY_CATEGORY: Record<string, {
@@ -94,7 +94,7 @@ export function ServiceOfferJsonLd({ city, service }: ServiceOfferJsonLdProps) {
                 }
             ]
         },
-        // ── AggregateOffer with WarrantyPromise (YMYL Shield) ──
+        // ── AggregateOffer with WarrantyPromise (Warranty Compliance) ──
         "offers": {
             "@type": "AggregateOffer",
             "priceCurrency": "SAR",

@@ -60,7 +60,7 @@ export function generateSeoContent({ city, service }: SeoContentProps) {
     const kwProfile = getServiceKeywordProfile(service.slug);
     const cityKw = getCityKeyword(city.name_ar, kwProfile.cityPrefixPattern);
 
-    // E-E-A-T Signals — Category-specific
+    // Trust Signals — Category-specific
     const expertTipsTemplate = EXPERT_TIPS[service.category] || EXPERT_TIPS['cleaning'] || [];
     const expertTips = expertTipsTemplate.map(t => t.replace(/\{cityKw\}/g, cityKw).replace(/\{serviceName\}/g, service.name_ar));
 
@@ -202,7 +202,7 @@ export function generateSeoContent({ city, service }: SeoContentProps) {
         nearbyCityLinks,
         complementaryLinks,
 
-        // Blueprint: Per-slug semantic data
+        // Content: Per-slug semantic data
         semanticData: SEMANTIC_DATA[service.slug] || null,
     };
 }
@@ -227,11 +227,11 @@ export function SeoContentSection({ city, service }: SeoContentProps) {
         complementaryLinks
     } = content;
 
-    // 🛡️ Content Origin Verification — page-specific watermark helper
+    // 🛡️ Content Origin Verification — page-specific origin marker
     const pageSlug = `${city.slug}-${service.slug}`;
     const wm = (text: string) => verifyOrigin(text, pageSlug);
 
-    // 🧠 Contextual Internal Linking — watermark → escape → inject contextual links
+    // 🧠 Contextual Internal Linking — origin mark → escape → add contextual links
     const link = (text: string) => applyContextualLinks(
         escapeHtml(wm(text)), city.slug, service.slug
     );
@@ -436,10 +436,10 @@ export function SeoContentSection({ city, service }: SeoContentProps) {
                     </div>
                 )}
 
-                {/* ── Blueprint Rule #14: NO مقالات ذات صلة on silos ── */}
-                {/* Link Equity flows: Articles → Silos (not reverse) */}
+                {/* ── Content rule: NO مقالات ذات صلة on silos ── */}
+                {/* Internal links flow: Articles → Silos (not reverse) */}
 
-                {/* ── Blueprint: Hidden Objections ── */}
+                {/* ── Content: Hidden Objections ── */}
                 {content.semanticData?.hiddenObjections && content.semanticData.hiddenObjections.length > 0 && (
                     <div className="mb-10">
                         <h3 className="text-xl font-bold text-gray-900 mb-4">⚠️ ما يجب أن تعرفه قبل حجز {service.name_ar} {cityKw}</h3>
@@ -454,7 +454,7 @@ export function SeoContentSection({ city, service }: SeoContentProps) {
                     </div>
                 )}
 
-                {/* ── Blueprint: Counter-Narratives ── */}
+                {/* ── Content: Counter-Narratives ── */}
                 {content.semanticData?.consumerEducation && content.semanticData.consumerEducation.length > 0 && (
                     <div className="mb-10">
                         <h3 className="text-xl font-bold text-gray-900 mb-4">🔍 صحّح معلوماتك عن {service.name_ar}</h3>
@@ -469,7 +469,7 @@ export function SeoContentSection({ city, service }: SeoContentProps) {
                     </div>
                 )}
 
-                {/* ── Blueprint: Technical Equipment ── */}
+                {/* ── Content: Technical Equipment ── */}
                 {content.semanticData?.equipment && content.semanticData.equipment.length > 0 && (
                     <div className="mb-10 bg-gradient-to-bl from-slate-50 to-gray-50 p-6 rounded-xl border border-gray-200">
                         <h3 className="text-xl font-bold text-gray-900 mb-4">🔧 المعدات والتقنيات المستخدمة في {service.name_ar}</h3>

@@ -1,6 +1,6 @@
 // ============================================
 // LiveBlogPosting Schema — Freshness Signal
-// Triggers Google's Query Deserves Freshness algorithm
+// Ensures content freshness signals
 // by presenting the page as a real-time live platform
 // ============================================
 

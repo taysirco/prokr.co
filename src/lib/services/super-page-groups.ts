@@ -1,6 +1,6 @@
 // ============================================
-// Super Page Groups — Fragment URL Architecture
-// Anti-Cannibalization: Synonym slugs → Canonical Super Page
+// Service Groups — Fragment URL Architecture
+// Service Consolidation: Synonym slugs → Canonical Super Page
 // ============================================
 //
 // Each group defines:

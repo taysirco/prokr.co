@@ -157,7 +157,7 @@ export function generateMetaTitle(city: City, service: Service, minPrice: number
         count: companiesCount,
     });
 
-    // Dual-Layer CTR: inject emotional hooks into auto-generated titles
+    // Title enhancement: add engagement hooks into auto-generated titles
     return trackInteraction(baseTitle, service.slug);
 }
 

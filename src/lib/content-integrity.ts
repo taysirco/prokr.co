@@ -1,7 +1,7 @@
 // ============================================
 // 🛡️ Content Origin Verification — Content Origin Engine
-// Injects invisible watermarks into SEO text at render time.
-// If a competitor scrapes and pastes, the fingerprint proves origin.
+// Adds content origin markers for duplication detection.
+// If content is duplicated, the marker proves original source.
 // ============================================
 
 /**
@@ -31,12 +31,12 @@ function generateOriginId(slug: string): string {
 }
 
 /**
- * Injects an invisible watermark into text content.
+ * Adds an origin marker to text content.
  * Inserts a 16-char ZW fingerprint after the first 3 sentence-ending periods.
  *
- * @param text    - Raw text to watermark
+ * @param text    - Raw text to mark
  * @param pageSlug - Unique page identifier (e.g. "riyadh-water-leak-detection")
- * @returns Watermarked text (visually identical to input)
+ * @returns Marked text (visually identical to input)
  */
 export function verifyOrigin(text: string, pageSlug: string): string {
     if (!text) return '';

@@ -1,7 +1,7 @@
 // ═══════════════════════════════════════════════════════════════
-// Dual-Layer CTR Title Hooks — Pattern Interrupt Injection
+// Title Enhancement Patterns
 //
-// Adds emotional CTR magnets to auto-generated <title> tags.
+// Enhances auto-generated <title> tags.
 // The technical entities stay in <meta description> and Schema.
 // The <title> gets visual brackets + emojis + fear/salvation hooks.
 //
@@ -13,7 +13,7 @@
 
 type ServiceCategory = 'leak-detection' | 'insulation' | 'pest-control' | 'cleaning' | 'moving' | 'sewage';
 
-interface CTRHook {
+interface TitleEnhancement {
     /** Emoji for pattern interrupt (placed before bracket) */
     emoji: string;
     /** Emotional hook inside visual brackets */
@@ -23,10 +23,10 @@ interface CTRHook {
 }
 
 /**
- * Sector-specific CTR hooks that create "Pattern Interrupt" in SERPs.
+ * Sector-specific title enhancements that create "attention pattern" in SERPs.
  * These make users' eyes STOP on our result among 10 blue links.
  */
-const SECTOR_CTR_HOOKS: Record<ServiceCategory, CTRHook> = {
+const SECTOR_TITLE_ENHANCEMENTS: Record<ServiceCategory, TitleEnhancement> = {
     'leak-detection': {
         emoji: '🛑',
         bracket: '✔️ تقرير NWC معتمد لخفض الفاتورة',
@@ -60,7 +60,7 @@ const SECTOR_CTR_HOOKS: Record<ServiceCategory, CTRHook> = {
 };
 
 /**
- * Inject CTR hook into an auto-generated meta title.
+ * Add title enhancement into an auto-generated meta title.
  * ONLY called for auto-generated titles, NOT overrides.
  *
  * Input:  "مكافحة حشرات بالرياض — مبيدات آمنة + ضمان سنة + بدون مغادرة المنزل 2026"
@@ -71,7 +71,7 @@ export function trackInteraction(title: string, serviceSlug: string): string {
     const category = getServiceCategory(serviceSlug);
     if (!category) return title; // No hook for unknown sectors
 
-    const hook = SECTOR_CTR_HOOKS[category];
+    const hook = SECTOR_TITLE_ENHANCEMENTS[category];
     if (!hook) return title;
 
     // Extract the primary keyword (before the dash —)
@@ -80,7 +80,7 @@ export function trackInteraction(title: string, serviceSlug: string): string {
         ? title.substring(0, dashIndex).trim()
         : title.replace(/\s*2026\s*$/, '').trim();
 
-    // Build the CTR-enhanced title
+    // Build the enhanced title
     // Format: "{primary keyword} {emoji} [{bracket}] (2026)"
     const enhanced = `${primaryKeyword} ${hook.emoji} [${hook.bracket}] (2026)`;
 

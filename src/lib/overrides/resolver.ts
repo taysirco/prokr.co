@@ -15,7 +15,7 @@ import { getRelatedServices, generateServiceUrl, type RelatedService } from '../
 import { getCanonicalSlug } from '../services/super-page-groups';
 import { getServiceEntities, getServiceSectorCategory } from './entities';
 import { getClimateChallenges, getEntityIntersection } from './city-climate';
-import { CONTENT_STRUCTURE_TEMPLATE } from './nlp-prompts';
+import { CONTENT_STRUCTURE_TEMPLATE } from './content-templates';
 import { getConsumerMythCorrection } from './consumer-myths';
 import { trackInteraction } from '../interaction-tracking';
 
@@ -279,7 +279,7 @@ export function resolveSeoContent(city: City, service: Service) {
         }))
         : auto.pricing;
 
-    // Blueprint Rule #13: Resolve related services (7-11) from override or auto
+    // Related services: Resolve related services (7-11) from override or auto
     // Apply canonical slug resolution even for override-custom relations
     // 🛡️ CRITICAL: Filter by hasPageOverride to prevent broken links (61-link fix)
     const resolvedRelated = override.relatedServices
@@ -325,7 +325,7 @@ export function resolveSeoContent(city: City, service: Service) {
         warnings: override.warnings ?? auto.warnings,
         checklist: override.checklist ?? auto.checklist,
         trustFactors: override.trustFactors ?? auto.trustFactors,
-        // Blueprint Rule #13: Related Services 7-11
+        // Related services: Related Services 7-11
         relatedServices: resolvedRelated,
         complementaryLinks: resolvedComplementaryLinks,
         // AI content layer overrides + entity injection
@@ -338,7 +338,7 @@ export function resolveSeoContent(city: City, service: Service) {
             customSolutions: override.content?.customSolutions ?? auto.aiContent.customSolutions,
             successStories: override.content?.successStories ?? auto.aiContent.successStories,
         },
-        // Blueprint: Semantic data overrides + entity equipment + myth correction
+        // Content: Semantic data overrides + entity equipment + myth correction
         semanticData: auto.semanticData ? (() => {
             const baseNarratives = override.consumerEducation ?? auto.semanticData?.consumerEducation ?? [];
             const correctedNarratives = mythCorrection
