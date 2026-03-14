@@ -3,15 +3,15 @@
 // Auto-appended to every page's consumerEducation via resolver
 //
 // Each sector gets a tailored myth correction narrative that:
-// 1. Exposes competitor practices as YMYL violations
-// 2. Positions Prokr as Subject Matter Expert
-// 3. Uses sector-specific equipment/protocol references
-// 4. Never mentions competitors by name (natural + safe)
+// 1. Addresses common misconceptions
+// 2. Shows professional expertise
+// 3. Uses accurate technical references
+// 4. Maintains professional tone
 // ═══════════════════════════════════════════════════════════════
 
 import type { ServiceCategory } from './entities';
 
-interface CounterNarrative {
+interface MythCorrection {
     myth: string;
     truth: string;
 }
@@ -20,7 +20,7 @@ interface CounterNarrative {
  * Sector-specific "consumer myth correction" consumer-educations.
  * These are auto-appended to every page's consumerEducation array.
  */
-const SECTOR_MYTHS: Record<ServiceCategory, CounterNarrative> = {
+const SECTOR_MYTHS: Record<ServiceCategory, MythCorrection> = {
     'leak-detection': {
         myth: 'الكشف المجاني عند الإصلاح عرض ممتاز — ليش ما أستغله؟',
         truth: 'تحذير هندسي: تشغيل أجهزة دقيقة مثل أكوافون (Aquaphon A200) وكاميرات حرارية (FLIR E96) يتطلب تكلفة تشغيلية صارمة — بطاريات ليثيوم + معايرة دورية + فني معتمد. عروض "الكشف المجاني" غالباً تعني: إما استخدام أجهزة رخيصة غير دقيقة، أو تضخيم فاتورة قطع الغيار لاحقاً لتعويض خسارة الفحص الأولي. في دليل بروكر، نُلزم المعلنين بشفافية التسعير وبروتوكول ضغط نيتروجين (10 بار) لضمان إصدار تقرير NWC رسمي لا يُرفض.',
@@ -51,7 +51,7 @@ const SECTOR_MYTHS: Record<ServiceCategory, CounterNarrative> = {
  * Get the consumer-myth-correction consumer-education for a service.
  * Returns null if the service category is unknown.
  */
-export function getConsumerMythCorrection(serviceSlug: string): CounterNarrative | null {
+export function getConsumerMythCorrection(serviceSlug: string): MythCorrection | null {
     // Map service slug to sector category
     const CATEGORY_MAP: Record<string, ServiceCategory> = {
         // Leak detection

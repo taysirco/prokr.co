@@ -5,13 +5,13 @@ import { Metadata } from 'next';
 // This page is the SOLE destination for all legacy domain traffic.
 // It uses AcquireAction schema to justify entity transition in
 // Google's Knowledge Graph. MUST be indexed (index: true).
-// CRITICAL: No internal links to silo pages. Zero equity bleed.
+// This page is standalone with no internal navigation links.
 // ════════════════════════════════════════════════════════════════
 
 export const metadata: Metadata = {
     title: 'إعلان استحواذ ودمج الأصول | شركة بروكر التقنية',
     description: 'البيان الرسمي لاستحواذ منصة prokr.co على الأصول الفكرية والنطاقات التابعة لشبكة بروكر القديمة. تم إيقاف العمل بالأنظمة السابقة وتأسيس بنية تحتية جديدة.',
-    // 🚨 يجب أن يتفهرس لتتم عملية الغسيل عبر Knowledge Graph!
+    // 🚨 يجب أن يتفهرس كبيان رسمي
     robots: { index: true, follow: true },
     alternates: {
         canonical: 'https://prokr.co/corporate/acquisition',
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
 };
 
 export default function AcquisitionPage() {
-    // 🧠 سحر الـ Knowledge Graph: AcquireAction يفصل الكيان الجديد عن الماضي
-    // هذا الـ Schema يبرر لجوجل قانونياً التدفق العنيف للروابط من النطاقات القديمة
+    // 🧠 AcquireAction Schema: يوضح الانتقال من الكيان القديم للجديد
+    // يوضح عملية الاستحواذ على النطاقات القديمة
     const acquisitionSchema = {
         '@context': 'https://schema.org',
         '@type': 'AcquireAction',
@@ -225,7 +225,7 @@ export default function AcquisitionPage() {
                     </div>
                 </section>
 
-                {/* Isolated Footer — NO internal links (zero equity bleed) */}
+                {/* Standalone Footer */}
                 <footer className="bg-gray-900 text-gray-400 py-8">
                     <div className="max-w-4xl mx-auto px-4 text-center text-xs space-y-2">
                         <p>© {new Date().getFullYear()} بروكر لتقنية المعلومات — جميع الحقوق محفوظة</p>

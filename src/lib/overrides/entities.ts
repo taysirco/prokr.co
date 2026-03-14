@@ -39,12 +39,12 @@ export interface SectorEntities {
     kinematics?: EntityItem[];
     warehousing?: EntityItem[];
 
-    // ─── NLP & Semantic Strategy ───
-    /** مصطلحات عامية دارجة للربط الدلالي (Contextual Bridging) */
+    // ─── Content Strategy ───
+    /** مصطلحات عامية دارجة للمرادفات المحلية */
     slangTerms?: string[];
-    /** أفعال نشطة دقيقة للتحليل النحوي التبعي (Dependency Parsing) */
+    /** أفعال نشطة دقيقة لتحسين النص */
     activeVerbs?: string[];
-    /** ممارسات خاطئة للتأطير التناقضي (Negative Entities & Contrastive NLP) */
+    /** ممارسات خاطئة شائعة للتحذير منها */
     wrongPractices?: EntityItem[];
 }
 

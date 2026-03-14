@@ -27,7 +27,7 @@ function getStableRandomItem<T>(arr: T[], seed: string): T {
     return arr[index];
 }
 
-import { AI_INTRO_TEMPLATES, AI_WHY_US, AI_SOLUTIONS, AI_SUCCESS_STORIES } from './services';
+import { INTRO_TEMPLATES, WHY_US_REASONS, SOLUTIONS_MAP, SUCCESS_STORIES } from './services';
 
 // ==========================================
 // 1. UNIQUE INTRODUCTIONS
@@ -39,7 +39,7 @@ function generateIntroduction(city: City, service: Service, context: any): strin
     const climateNote = context.climate === 'humid-coastal'
         ? 'الرطوبة الساحلية' : context.climate === 'mountain' ? 'تضاريس المنطقة الجبلية' : 'الحرارة المرتفعة والغبار';
 
-    const templatesTemplate = AI_INTRO_TEMPLATES[service.category] || AI_INTRO_TEMPLATES['cleaning'] || [];
+    const templatesTemplate = INTRO_TEMPLATES[service.category] || INTRO_TEMPLATES['cleaning'] || [];
 
     // Replace the placeholders before picking a random one to ensure correct logic,
     // though getStableRandomItem picks one string then we could replace. Replacing all is fine.
@@ -66,7 +66,7 @@ function generateWhyUs(city: City, service: Service, context: any): string[] {
             ? 'معدات وفرق مجهزة للمناطق الجبلية'
             : 'حلول مخصصة للتعامل مع الحرارة والغبار';
 
-    const reasons = AI_WHY_US[service.category] || AI_WHY_US['cleaning'] || [];
+    const reasons = WHY_US_REASONS[service.category] || WHY_US_REASONS['cleaning'] || [];
     return [climateReason, ...reasons].slice(0, 5);
 }
 
@@ -78,7 +78,7 @@ function generateChallengesAndSolutions(city: City, service: Service, context: a
     const generalChallenges = context.challenges || [];
     const challenges = [...specificNuances, ...generalChallenges].slice(0, 3);
 
-    const solutionsMap = AI_SOLUTIONS[service.category] || AI_SOLUTIONS['cleaning'] || {};
+    const solutionsMap = SOLUTIONS_MAP[service.category] || SOLUTIONS_MAP['cleaning'] || {};
     const solutions = challenges.map((challenge: string) => {
         const key = Object.keys(solutionsMap).find(k => challenge.includes(k));
         return key ? solutionsMap[key] : 'نقدم حلولاً مبتكرة ومخصصة لهذا التحدي لضمان أفضل النتائج.';
@@ -95,7 +95,7 @@ function generateSuccessStories(city: City, service: Service, context: any) {
     const profile = getServiceKeywordProfile(service.slug);
     const cityKw = getCityKeyword(city.name_ar, profile.cityPrefixPattern);
 
-    const storiesTemplate = AI_SUCCESS_STORIES[service.category] || AI_SUCCESS_STORIES['cleaning'] || [];
+    const storiesTemplate = SUCCESS_STORIES[service.category] || SUCCESS_STORIES['cleaning'] || [];
 
     const stories = storiesTemplate.map((s: { title: string, result: string }) => ({
         title: s.title.replace(/\{neighborhood\}/g, neighborhood).replace(/\{cityKw\}/g, cityKw),
@@ -157,7 +157,7 @@ export function generateMetaTitle(city: City, service: Service, minPrice: number
         count: companiesCount,
     });
 
-    // Title enhancement: add engagement hooks into auto-generated titles
+    // Title enhancement: add title formatting to auto-generated titles
     return trackInteraction(baseTitle, service.slug);
 }
 

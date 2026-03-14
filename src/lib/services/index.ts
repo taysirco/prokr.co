@@ -33,10 +33,10 @@ export const EXPERT_TIPS: Record<string, string[]> = allCategories.reduce((acc, 
 export const WARNINGS: Record<string, string[]> = allCategories.reduce((acc, c) => { acc[c.category] = c.warnings; return acc; }, {} as Record<string, string[]>);
 export const CHECKLISTS: Record<string, string[]> = allCategories.reduce((acc, c) => { acc[c.category] = c.checklist; return acc; }, {} as Record<string, string[]>);
 
-export const AI_INTRO_TEMPLATES: Record<string, string[]> = allCategories.reduce((acc, c) => { acc[c.category] = c.aiIntroTemplates; return acc; }, {} as Record<string, string[]>);
-export const AI_WHY_US: Record<string, string[]> = allCategories.reduce((acc, c) => { acc[c.category] = c.aiWhyUs; return acc; }, {} as Record<string, string[]>);
-export const AI_SOLUTIONS: Record<string, Record<string, string>> = allCategories.reduce((acc, c) => { acc[c.category] = c.aiSolutions; return acc; }, {} as Record<string, Record<string, string>>);
-export const AI_SUCCESS_STORIES: Record<string, { title: string, result: string }[]> = allCategories.reduce((acc, c) => { acc[c.category] = c.aiSuccessStories; return acc; }, {} as Record<string, { title: string, result: string }[]>);
+export const INTRO_TEMPLATES: Record<string, string[]> = allCategories.reduce((acc, c) => { acc[c.category] = c.aiIntroTemplates; return acc; }, {} as Record<string, string[]>);
+export const WHY_US_REASONS: Record<string, string[]> = allCategories.reduce((acc, c) => { acc[c.category] = c.aiWhyUs; return acc; }, {} as Record<string, string[]>);
+export const SOLUTIONS_MAP: Record<string, Record<string, string>> = allCategories.reduce((acc, c) => { acc[c.category] = c.aiSolutions; return acc; }, {} as Record<string, Record<string, string>>);
+export const SUCCESS_STORIES: Record<string, { title: string, result: string }[]> = allCategories.reduce((acc, c) => { acc[c.category] = c.aiSuccessStories; return acc; }, {} as Record<string, { title: string, result: string }[]>);
 
 // Semantic data aggregated: slug → ServiceSemanticData
 import type { ServiceSemanticData } from './types';

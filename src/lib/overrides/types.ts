@@ -133,7 +133,7 @@ export interface PageOverride {
         priority: number;
     }[];
 
-    // ─── Entity Intersection (NLP Signals) ───
+    // ─── Entity Intersection ───
     /**
      * كيانات علمية + مناخية محقونة في المحتوى.
      * تُستخدم لبناء Entity Intersection = محتوى فريد لكل مدينة.
@@ -146,7 +146,7 @@ export interface PageOverride {
         /** فقرة Entity Intersection جاهزة — تقاطع القطاع × المناخ */
         intersectionParagraph?: string;
 
-        // ─── NLP Engine Signals ───
+        // ─── Content Signals ───
         /** مصطلحات دارجة من العميل للربط الدلالي */
         slangTerms?: string[];
         /** أفعال مسار قوي للتحليل النحوي */

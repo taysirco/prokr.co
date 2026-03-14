@@ -186,13 +186,13 @@ export function resolveMetadata(city: City, service: Service): ResolvedMetadata 
 
     // Title enhancement: apply formatting to ALL titles (override + auto)
     const resolvedTitle = m?.title ?? auto.metaTitle;
-    const ctrTitle = trackInteraction(resolvedTitle, service.slug);
+    const enhancedTitle = trackInteraction(resolvedTitle, service.slug);
 
     return deepClean({
-        title: ctrTitle,
+        title: enhancedTitle,
         description: m?.description ?? autoDescription,
         keywords: m?.keywords ?? autoKeywords,
-        ogTitle: m?.ogTitle ?? ctrTitle,
+        ogTitle: m?.ogTitle ?? enhancedTitle,
         ogDescription: m?.ogDescription ?? m?.description ?? autoDescription,
         ogImage: m?.ogImage,
     });
@@ -225,7 +225,7 @@ export function resolveSeoContent(city: City, service: Service) {
         use: t.use,
     })) ?? [];
 
-    // Compile the Architectural NLP Prompt
+    // Compile the content generation prompt
     const compiledPrompt = CONTENT_STRUCTURE_TEMPLATE
         .replace(/\[اسم الخدمة\]/g, service.name_ar)
         .replace(/\[اسم المدينة\]/g, city.name_ar)
@@ -250,10 +250,10 @@ export function resolveSeoContent(city: City, service: Service) {
     const mythCorrection = getConsumerMythCorrection(service.slug);
 
     if (!override) {
-        const autoCounterNarratives = auto.semanticData?.consumerEducation ?? [];
+        const autoMythCorrections = auto.semanticData?.consumerEducation ?? [];
         const correctedNarratives = mythCorrection
-            ? [...autoCounterNarratives, mythCorrection]
-            : autoCounterNarratives;
+            ? [...autoMythCorrections, mythCorrection]
+            : autoMythCorrections;
 
         return {
             ...auto,
@@ -352,7 +352,7 @@ export function resolveSeoContent(city: City, service: Service) {
                 ...(override.govReferences && { govReferences: override.govReferences }),
             };
         })() : null,
-        // Entity Intersection context (Merge custom override with auto base NLP context)
+        // Entity Intersection context (Merge custom override with auto base content)
         entityContext: override.entityContext ? {
             ...baseEntityContext,
             ...override.entityContext,
