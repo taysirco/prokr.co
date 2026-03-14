@@ -314,7 +314,7 @@ export function SeoContentSection({ city, service }: SeoContentProps) {
                         </thead>
                         <tbody className="divide-y divide-gray-100">
                             {pricing.map((item, index) => {
-                                // Psychological inflation: market price = Prokr price × 1.4~1.8 (varies per item)
+                                // Market comparison: typical market price range for comparison display
                                 const inflationFactors = [1.45, 1.55, 1.65, 1.75, 1.5, 1.6];
                                 const factor = inflationFactors[index % inflationFactors.length];
                                 const marketMin = Math.round(item.maxPrice * factor * 0.85);

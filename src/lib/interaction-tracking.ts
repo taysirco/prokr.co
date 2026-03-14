@@ -6,7 +6,7 @@
 // The <title> gets visual brackets + emojis + engagement patterns.
 //
 // Strategy: sector-specific title formatting:
-// - Fear (خوف): losing money, health risks
+// - Awareness: cost transparency, health standards
 // - Trust (ثقة): certified guarantee, official report
 // - Government authority (سلطة): NWC, SFDA, SBC, TGA
 // ═══════════════════════════════════════════════════════════════
