@@ -11,7 +11,7 @@ interface FooterProps {
     currentService?: string;
 }
 
-// 🚨 [Footer internal links — deterministic category rotation] 🚨
+// Footer internal links — deterministic category rotation
 // توليد رقم عشوائي ثابت (Seed) بناءً على مسار الصفحة لكي لا ينهار كاش السيرفر
 const getDeterministicLinks = <T,>(items: T[], seedString: string, limit: number): T[] => {
     if (!items.length) return [];

@@ -23,7 +23,7 @@ export function ProkrOrganizationJsonLd() {
             name: 'المملكة العربية السعودية',
             sameAs: 'https://en.wikipedia.org/wiki/Saudi_Arabia',
         },
-        // ⚡ Entity Consolidation: Social + Domain Variants
+        // Entity Consolidation: Social + Domain Variants
         sameAs: [
             'https://twitter.com/prokr_sa',
             'https://www.instagram.com/prokr_sa',
@@ -32,7 +32,7 @@ export function ProkrOrganizationJsonLd() {
             'https://prokr.net',
             'https://prokr.org',
         ],
-        // ⚡ Entity Acquisition Declaration — Knowledge Graph Priming
+        // Entity Acquisition Declaration
         acquires: [
             {
                 '@type': 'WebSite',

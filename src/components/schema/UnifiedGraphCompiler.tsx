@@ -1,5 +1,5 @@
 // ============================================
-// 🚨 Unified JSON-LD Structured Data 🚨
+// Unified JSON-LD Structured Data
 // Merges 10 separate JSON-LD scripts into ONE
 // interconnected @graph with @id cross-references.
 // Optimized for structured data processing.

@@ -37,7 +37,7 @@ export function LocalBusinessJsonLd({ advertiser, city }: LocalBusinessJsonLdPro
         });
     }
 
-    // 🚨 السجل السيادي الموحد (Unified Sovereign Credential Ledger) 🚨
+    // Unified Credential Ledger
     // جميع الاعتمادات الحكومية في مصفوفة واحدة — بدون تعارضات spread
     const sovereignCredentials: Record<string, unknown>[] = [];
 
@@ -147,7 +147,7 @@ export function LocalBusinessJsonLd({ advertiser, city }: LocalBusinessJsonLdPro
         ...(advertiser.payment_methods && advertiser.payment_methods.length > 0 && {
             paymentAccepted: advertiser.payment_methods,
         }),
-        // 🚨 السجل السيادي الموحد — Unified Sovereign Credential Ledger 🚨
+        // Unified Credential Ledger
         // جميع الاعتمادات الحكومية في مصفوفة واحدة بدون تعارضات
         ...(sovereignCredentials.length > 0 && { hasCredential: sovereignCredentials }),
         // Qiwa workforce compliance (ProgramMembership — separate from credentials)

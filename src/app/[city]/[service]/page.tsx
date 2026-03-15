@@ -148,7 +148,7 @@ export default async function SiloPage({ params }: SiloPageProps) {
 
     return (
         <>
-            {/* 🚨 JSON-LD Structured Data — كل الـ JSON-LD في سكريبت واحد مترابط بـ @id */}
+            {/* JSON-LD Structured Data — unified @graph */}
             <UnifiedGraphCompiler
                 city={city}
                 service={service}
@@ -159,7 +159,7 @@ export default async function SiloPage({ params }: SiloPageProps) {
                 canonicalPageUrl={canonicalPageUrl}
                 cityContext={cityContext}
             />
-            {/* 🎙️🤖 AI Voice + RAG Dataset — Voice Search Optimization */}
+            {/* Voice Search + Dataset Schema */}
             <VoiceSearchSchema
                 city={city}
                 service={service}
@@ -168,7 +168,7 @@ export default async function SiloPage({ params }: SiloPageProps) {
                 pricingEntry={aiPricingEntry}
                 pageUrl={canonicalPageUrl}
             />
-            {/* LiveBlogPosting — QDF Freshness Signal */}
+            {/* LiveBlogPosting — freshness signal */}
             <LiveBlogPostingJsonLd
                 cityNameAr={cityKw}
                 serviceNameAr={service.name_ar}
@@ -274,7 +274,7 @@ export default async function SiloPage({ params }: SiloPageProps) {
                     </div>
                 </section>
 
-                {/* ── Live Availability Banner — QDF Visual Signal ── */}
+                {/* Live Availability Banner */}
                 <LiveAvailabilityBanner
                     cityNameAr={cityKw}
                     serviceNameAr={service.name_ar}
@@ -299,7 +299,7 @@ export default async function SiloPage({ params }: SiloPageProps) {
 
                 {/* Companies or Lead Capture */}
                 {allAdvertisers.length === 0 ? (
-                    /* 🧬 Service Request Form — Lead Generation */
+                    /* Service Request Form */
                     <LeadCaptureCTA cityName={city.name_ar} serviceName={service.name_ar} serviceSlug={service.slug} citySlug={resolvedParams.city} />
                 ) : (
                     <>

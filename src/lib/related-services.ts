@@ -117,7 +117,7 @@ export function getRelatedServicesContext(
 }
 
 // ============================================
-// 🧠 In-Text Contextual Internal Linking — Internal Linking System
+// In-Text Contextual Internal Linking System
 // Converts first mention of other services into
 // contextual internal links (strongest link signal)
 // ============================================

@@ -94,7 +94,7 @@ export default async function OgImage({ params }: { params: Promise<{ city: stri
                     </div>
                 </div>
 
-                {/* الشريط السفلي — PROKR.CO right, QDF left */}
+                {/* Bottom bar */}
                 <div
                     style={{
                         display: 'flex',

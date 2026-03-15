@@ -192,7 +192,7 @@ export default async function CityPage({ params }: CityPageProps) {
                     </div>
                 </section>
 
-                {/* ── Live Availability Banner — QDF Visual Signal ── */}
+                {/* Live Availability Banner */}
                 <LiveAvailabilityBanner
                     cityNameAr={cityKw}
                     serviceNameAr="خدمات منزلية"
@@ -375,7 +375,7 @@ export default async function CityPage({ params }: CityPageProps) {
                     </article>
                 </section>
 
-                {/* 🧬 Service Request Form — Lead Generation */}
+                {/* Service Request Form */}
                 <LeadCaptureCTA cityName={city.name_ar} serviceName="خدمات منزلية" serviceSlug="cleaning" citySlug={resolvedParams.city} />
 
                 {/* Related Blog Articles */}

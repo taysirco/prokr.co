@@ -210,7 +210,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                     </div>
                 </section>
 
-                {/* ── Live Availability Banner — QDF Visual Signal ── */}
+                {/* Live Availability Banner */}
                 <LiveAvailabilityBanner
                     cityNameAr="المملكة"
                     serviceNameAr={service.name_ar}

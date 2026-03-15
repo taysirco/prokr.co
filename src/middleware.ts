@@ -12,7 +12,7 @@ export function middleware(request: NextRequest) {
     const hostname = request.headers.get('host') || '';
 
     // ════════════════════════════════════════════════════════════════
-    // 🚨 Legacy Domain Redirect Handler 🚨
+    // Legacy Domain Redirect Handler
     // Redirects legacy domains (.com/.net/.org)
     // to the canonical .co domain
     // 
@@ -23,7 +23,7 @@ export function middleware(request: NextRequest) {
     ];
 
     if (legacyDomains.some(domain => hostname.includes(domain))) {
-        // 🔥 Return 410 for legacy static files → 410 (permanently gone)
+        // Return 410 for legacy static files
         if (pathname.match(/\.(xml|txt|php|html)$/i)) {
             return new NextResponse('Gone', {
                 status: 410,
@@ -34,7 +34,7 @@ export function middleware(request: NextRequest) {
             });
         }
 
-        // 🔒 Redirect all legacy domain traffic to corporate page
+        // Redirect all legacy domain traffic to corporate page
         // 301 is safe here: context shift from "service" to "corporate statement"
         // ensures all traffic uses canonical domain
         if (pathname !== '/corporate/acquisition') {

@@ -231,7 +231,7 @@ export function SeoContentSection({ city, service }: SeoContentProps) {
     const pageSlug = `${city.slug}-${service.slug}`;
     const wm = (text: string) => verifyOrigin(text, pageSlug);
 
-    // 🧠 Contextual Internal Linking — origin mark → escape → add contextual links
+    // Contextual Internal Linking — markup + contextual links
     const link = (text: string) => applyContextualLinks(
         escapeHtml(wm(text)), city.slug, service.slug
     );

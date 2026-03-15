@@ -11,7 +11,7 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
     title: 'إعلان استحواذ ودمج الأصول | شركة بروكر التقنية',
     description: 'البيان الرسمي لاستحواذ منصة prokr.co على الأصول الفكرية والنطاقات التابعة لشبكة بروكر القديمة. تم إيقاف العمل بالأنظمة السابقة وتأسيس بنية تحتية جديدة.',
-    // 🚨 يجب أن يتفهرس كبيان رسمي
+    // official statement page
     robots: { index: true, follow: true },
     alternates: {
         canonical: 'https://prokr.co/corporate/acquisition',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 };
 
 export default function AcquisitionPage() {
-    // 🧠 AcquireAction Schema: يوضح الانتقال من الكيان القديم للجديد
+    // AcquireAction schema for entity transition
     // يوضح عملية الاستحواذ على النطاقات القديمة
     const acquisitionSchema = {
         '@context': 'https://schema.org',
@@ -76,7 +76,7 @@ export default function AcquisitionPage() {
 
     return (
         <>
-            {/* 🧠 AcquireAction Schema — AcquireAction Schema */}
+            {/* AcquireAction Schema */}
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(acquisitionSchema) }}

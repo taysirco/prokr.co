@@ -1,7 +1,7 @@
 // ============================================
 // SPEAKABLE WEB PAGE SCHEMA
 // For voice search and AI engine optimization
-// ⚡ Structured Data: speakableText must be the EXACT same
+// Structured Data: speakableText must match
 //    variable rendered in .direct-answer div
 // ============================================
 interface SpeakableWebPageJsonLdProps {
@@ -9,7 +9,7 @@ interface SpeakableWebPageJsonLdProps {
     description: string;
     url: string;
     speakableSelectors: string[];
-    speakableText?: string;  // ⚡ Synced with DirectAnswer text
+    speakableText?: string;  // Synced with DirectAnswer text
     dateModified?: string;
     about?: { name: string; type: string };
     mentions?: { name: string; type: string }[];
@@ -34,7 +34,7 @@ export function SpeakableWebPageJsonLd({ title, description, url, speakableSelec
             '@type': 'SpeakableSpecification',
             cssSelector: speakableSelectors,
         },
-        // ⚡ Structured Data: Sync the EXACT DirectAnswer text
+        // Structured Data: sync DirectAnswer text
         // into the schema as abstract — byte-for-byte match with
         // what the user sees in .direct-answer div
         ...(speakableText && { abstract: speakableText }),

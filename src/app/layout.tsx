@@ -100,7 +100,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://firebasestorage.googleapis.com" />
         <link rel="preconnect" href="https://prokr-84ca8.firebasestorage.app" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        {/* ⚡ Speculation Rules API — Zero-latency navigation */}
+        {/* Speculation Rules API — prerender navigation */}
         <script
           type="speculationrules"
           dangerouslySetInnerHTML={{
@@ -121,7 +121,7 @@ export default function RootLayout({
             }),
           }}
         />
-        {/* ⚡ Network-Aware DOM — Lite Mode for 2G/3G/saveData */}
+        {/* Network-Aware Lite Mode for slow connections */}
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(){

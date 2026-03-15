@@ -200,7 +200,7 @@ export default async function SubRegionPage({ params }: SubRegionPageProps) {
                     </div>
                 </section>
 
-                {/* ── Live Availability Banner — QDF Visual Signal ── */}
+                {/* Live Availability Banner */}
                 <LiveAvailabilityBanner
                     cityNameAr={`${subRegion.name_ar}، ${city.name_ar}`}
                     serviceNameAr="خدمات منزلية"

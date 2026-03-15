@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 
-// 🎯 Price Quick View — عنصر التفاعل السريع
+// Price Quick View — عنصر التفاعل السريع
 // يُشجّع الزائر على التفاعل السريع — تجربة مستخدم محسّنة
 export function PriceDisclosure({ avgPrice, unit }: { avgPrice: number; unit: string }) {
     const [revealed, setRevealed] = useState(false);
