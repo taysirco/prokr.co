@@ -7,6 +7,6 @@ export const qatifCompanies: Company[] = [
     //     services: ['cleaning', 'pest-control'],
     //     rating: 4.5,
     //     reviewsCount: 68,
-    //     phone: '+966500000011'
+    //     phone: '+966542317431'
     // },
 ];

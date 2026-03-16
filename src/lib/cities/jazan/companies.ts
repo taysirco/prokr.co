@@ -7,6 +7,6 @@ export const jazanCompanies: Company[] = [
     //     services: ['cleaning', 'pest-control'],
     //     rating: 4.5,
     //     reviewsCount: 56,
-    //     phone: '+966500000018'
+    //     phone: '+966542317431'
     // },
 ];

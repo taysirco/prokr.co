@@ -7,6 +7,6 @@ export const alAhsaCompanies: Company[] = [
     //     services: ['pest-control', 'cleaning'],
     //     rating: 4.8,
     //     reviewsCount: 112,
-    //     phone: '+966500000010'
+    //     phone: '+966542317431'
     // },
 ];

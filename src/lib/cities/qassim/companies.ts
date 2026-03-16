@@ -7,6 +7,6 @@ export const qassimCompanies: Company[] = [
     //     services: ['furniture-moving', 'cleaning'],
     //     rating: 4.8,
     //     reviewsCount: 110,
-    //     phone: '+966500000020'
+    //     phone: '+966542317431'
     // },
 ];

@@ -19,6 +19,6 @@ export const riyadhCompanies: Company[] = [
     //     services: ['furniture-moving', 'furniture-storage'],
     //     rating: 4.8,
     //     reviewsCount: 154,
-    //     phone: '+966500000000'
+    //     phone: '+966542317431'
     // },
 ];

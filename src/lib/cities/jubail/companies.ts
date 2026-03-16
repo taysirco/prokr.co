@@ -7,6 +7,6 @@ export const jubailCompanies: Company[] = [
     //     services: ['furniture-moving', 'cleaning'],
     //     rating: 4.6,
     //     reviewsCount: 75,
-    //     phone: '+966500000009'
+    //     phone: '+966542317431'
     // },
 ];

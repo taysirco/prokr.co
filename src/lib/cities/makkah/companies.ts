@@ -7,6 +7,6 @@ export const makkahCompanies: Company[] = [
     //     services: ['furniture-moving'],
     //     rating: 4.8,
     //     reviewsCount: 120,
-    //     phone: '+966500000003'
+    //     phone: '+966542317431'
     // },
 ];

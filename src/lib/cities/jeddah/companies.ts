@@ -8,6 +8,6 @@ export const jeddahCompanies: Company[] = [
     //     services: ['furniture-moving'],
     //     rating: 4.7,
     //     reviewsCount: 110,
-    //     phone: '+966500000001'
+    //     phone: '+966542317431'
     // },
 ];

@@ -261,7 +261,7 @@ export default function LeadCaptureCTA({ cityName, serviceName, serviceSlug, cit
                     {/* CTA Buttons — text varies per page */}
                     <div className="flex flex-col sm:flex-row gap-4">
                         <a
-                            href={`https://wa.me/966920000000?text=${waText}`}
+                            href={`https://wa.me/966542317431?text=${waText}`}
                             className="group flex items-center justify-center gap-3 px-8 py-4 bg-gray-900 text-white rounded-2xl font-bold text-lg hover:bg-gray-800 transition-all hover:shadow-xl hover:shadow-gray-900/20 hover:-translate-y-0.5"
                         >
                             <Phone className="w-5 h-5 group-hover:animate-pulse" />

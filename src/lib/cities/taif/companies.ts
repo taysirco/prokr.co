@@ -7,6 +7,6 @@ export const taifCompanies: Company[] = [
     //     services: ['furniture-moving', 'furniture-storage'],
     //     rating: 4.7,
     //     reviewsCount: 82,
-    //     phone: '+966500000005'
+    //     phone: '+966542317431'
     // },
 ];

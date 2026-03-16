@@ -7,6 +7,6 @@ export const dammamCompanies: Company[] = [
     //     services: ['furniture-moving'],
     //     rating: 4.6,
     //     reviewsCount: 88,
-    //     phone: '+966500000002'
+    //     phone: '+966542317431'
     // },
 ];

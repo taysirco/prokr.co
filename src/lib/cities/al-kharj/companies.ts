@@ -7,6 +7,6 @@ export const alKharjCompanies: Company[] = [
     //     services: ['pest-control', 'cleaning'],
     //     rating: 4.6,
     //     reviewsCount: 77,
-    //     phone: '+966500000021'
+    //     phone: '+966542317431'
     // },
 ];

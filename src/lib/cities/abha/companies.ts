@@ -7,6 +7,6 @@ export const abhaCompanies: Company[] = [
     //     services: ['furniture-moving', 'insulation'],
     //     rating: 4.8,
     //     reviewsCount: 115,
-    //     phone: '+966500000015'
+    //     phone: '+966542317431'
     // },
 ];

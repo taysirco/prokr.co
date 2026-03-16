@@ -7,6 +7,6 @@ export const najranCompanies: Company[] = [
     //     services: ['pest-control', 'cleaning'],
     //     rating: 4.5,
     //     reviewsCount: 42,
-    //     phone: '+966500000017'
+    //     phone: '+966542317431'
     // },
 ];

@@ -7,6 +7,6 @@ export const onizahCompanies: Company[] = [
     //     services: ['cleaning', 'pest-control'],
     //     rating: 4.6,
     //     reviewsCount: 45,
-    //     phone: '+966500000023'
+    //     phone: '+966542317431'
     // },
 ];

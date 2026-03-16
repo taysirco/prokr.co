@@ -7,6 +7,6 @@ export const madinahCompanies: Company[] = [
     //     services: ['cleaning', 'pest-control'],
     //     rating: 4.9,
     //     reviewsCount: 95,
-    //     phone: '+966500000004'
+    //     phone: '+966542317431'
     // },
 ];

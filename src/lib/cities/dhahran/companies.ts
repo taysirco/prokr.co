@@ -7,6 +7,6 @@ export const dhahranCompanies: Company[] = [
     //     services: ['furniture-moving'],
     //     rating: 4.9,
     //     reviewsCount: 105,
-    //     phone: '+966500000008'
+    //     phone: '+966542317431'
     // },
 ];

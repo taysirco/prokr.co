@@ -52,7 +52,7 @@ export function ProkrOrganizationJsonLd() {
         ],
         contactPoint: {
             '@type': 'ContactPoint',
-            telephone: '+966500000000',
+            telephone: '+966542317431',
             contactType: 'customer service',
             areaServed: 'SA',
             availableLanguage: ['Arabic'],

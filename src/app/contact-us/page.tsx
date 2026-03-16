@@ -69,8 +69,8 @@ export default function ContactPage() {
                                 </div>
                                 <div>
                                     <h3 className="font-bold text-gray-900">الهاتف</h3>
-                                    <a href="tel:+966500000000" className="text-emerald-600 hover:underline" dir="ltr">
-                                        +966 50 000 0000
+                                    <a href="tel:+966542317431" className="text-emerald-600 hover:underline" dir="ltr">
+                                        +966 54 231 7431
                                     </a>
                                 </div>
                             </div>
@@ -84,13 +84,13 @@ export default function ContactPage() {
                                 <div>
                                     <h3 className="font-bold text-gray-900">واتساب</h3>
                                     <a
-                                        href="https://wa.me/966500000000"
+                                        href="https://wa.me/966542317431"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="text-green-600 hover:underline"
                                         dir="ltr"
                                     >
-                                        +966 50 000 0000
+                                        +966 54 231 7431
                                     </a>
                                 </div>
                             </div>

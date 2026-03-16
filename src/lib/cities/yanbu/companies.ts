@@ -7,6 +7,6 @@ export const yanbuCompanies: Company[] = [
     //     services: ['cleaning', 'pest-control'],
     //     rating: 4.5,
     //     reviewsCount: 65,
-    //     phone: '+966500000006'
+    //     phone: '+966542317431'
     // },
 ];

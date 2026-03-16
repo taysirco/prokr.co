@@ -7,8 +7,8 @@ export const NAP = {
     name: 'بروكر',
     nameEn: 'Prokr',
     url: 'https://prokr.co',
-    phone: '+966500000000',
-    phoneDisplay: '+966 50 000 0000',
+    phone: '+966542317431',
+    phoneDisplay: '+966 54 231 7431',
     email: 'info@prokr.co',
     address: {
         country: 'المملكة العربية السعودية',

@@ -7,6 +7,6 @@ export const alBahaCompanies: Company[] = [
     //     services: ['furniture-moving', 'insulation'],
     //     rating: 4.7,
     //     reviewsCount: 64,
-    //     phone: '+966500000019'
+    //     phone: '+966542317431'
     // },
 ];

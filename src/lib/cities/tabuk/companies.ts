@@ -7,6 +7,6 @@ export const tabukCompanies: Company[] = [
     //     services: ['furniture-moving', 'insulation'],
     //     rating: 4.6,
     //     reviewsCount: 71,
-    //     phone: '+966500000013'
+    //     phone: '+966542317431'
     // },
 ];

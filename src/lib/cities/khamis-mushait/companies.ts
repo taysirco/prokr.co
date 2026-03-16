@@ -7,6 +7,6 @@ export const khamisMushaitCompanies: Company[] = [
     //     services: ['cleaning', 'insulation'],
     //     rating: 4.6,
     //     reviewsCount: 92,
-    //     phone: '+966500000016'
+    //     phone: '+966542317431'
     // },
 ];

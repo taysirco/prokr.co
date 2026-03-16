@@ -7,6 +7,6 @@ export const hafrAlbatinCompanies: Company[] = [
     //     services: ['cleaning', 'insulation'],
     //     rating: 4.4,
     //     reviewsCount: 55,
-    //     phone: '+966500000012'
+    //     phone: '+966542317431'
     // },
 ];

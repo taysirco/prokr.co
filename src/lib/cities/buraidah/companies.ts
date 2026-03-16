@@ -7,6 +7,6 @@ export const buraidahCompanies: Company[] = [
     //     services: ['insulation', 'cleaning'],
     //     rating: 4.7,
     //     reviewsCount: 85,
-    //     phone: '+966500000022'
+    //     phone: '+966542317431'
     // },
 ];

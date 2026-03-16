@@ -7,6 +7,6 @@ export const hailCompanies: Company[] = [
     //     services: ['insulation', 'cleaning'],
     //     rating: 4.7,
     //     reviewsCount: 88,
-    //     phone: '+966500000014'
+    //     phone: '+966542317431'
     // },
 ];

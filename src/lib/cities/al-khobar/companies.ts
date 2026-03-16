@@ -7,6 +7,6 @@ export const alKhobarCompanies: Company[] = [
     //     services: ['furniture-moving'],
     //     rating: 4.8,
     //     reviewsCount: 130,
-    //     phone: '+966500000007'
+    //     phone: '+966542317431'
     // },
 ];
