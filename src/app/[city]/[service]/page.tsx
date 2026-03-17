@@ -19,6 +19,7 @@ import { SERVICES as ALL_SERVICES_LIST } from '@/lib/services';
 import Footer from '@/components/Footer';
 import LeadCaptureCTA from '@/components/LeadCaptureCTA';
 import { LiveAvailabilityBanner } from '@/components/LiveAvailabilityBanner';
+import { EmergencyNightBanner } from '@/components/EmergencyNightBanner';
 import LocalPresence from '@/components/LocalPresence';
 import FraudAlertBanner from '@/components/FraudAlertBanner';
 import GeoPricingTable from '@/components/GeoPricingTable';
@@ -178,6 +179,12 @@ export default async function SiloPage({ params }: SiloPageProps) {
             />
 
             <main className="min-h-screen bg-gray-50">
+                {/* 🚨 Emergency Night Banner (12AM-6AM only) */}
+                <EmergencyNightBanner
+                    cityNameAr={cityKw}
+                    serviceNameAr={service.name_ar}
+                />
+
                 {/* Hero Section with Image */}
                 <section className="relative bg-gradient-to-bl from-emerald-600 via-emerald-700 to-emerald-900 text-white overflow-hidden">
                     {/* Background Pattern */}
@@ -278,7 +285,9 @@ export default async function SiloPage({ params }: SiloPageProps) {
                 <LiveAvailabilityBanner
                     cityNameAr={cityKw}
                     serviceNameAr={service.name_ar}
+                    serviceCategory={service.category}
                     totalCompanies={premium.length + standard.length}
+                    neighborhoods={cityContext?.neighborhoods.map(n => n.name_ar) || []}
                 />
 
                 {/* 💰 Price Quick View — عنصر التفاعل السريع */}
