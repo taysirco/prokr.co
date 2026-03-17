@@ -16,6 +16,7 @@ import Footer from '@/components/Footer';
 import LocalPresence from '@/components/LocalPresence';
 import FraudAlertBanner from '@/components/FraudAlertBanner';
 import { LiveAvailabilityBanner } from '@/components/LiveAvailabilityBanner';
+import { EmergencyNightBanner } from '@/components/EmergencyNightBanner';
 import MarketTimingBadge from '@/components/MarketTimingBadge';
 import LeadCaptureCTA from '@/components/LeadCaptureCTA';
 
@@ -149,6 +150,12 @@ export default async function CityPage({ params }: CityPageProps) {
             />
 
             <main className="min-h-screen bg-gray-50">
+                {/* 🚨 Emergency Night Banner (12AM-6AM only) */}
+                <EmergencyNightBanner
+                    cityNameAr={city.name_ar}
+                    serviceNameAr="خدمات منزلية"
+                />
+
                 {/* Hero Section */}
                 <section className="relative bg-gradient-to-bl from-emerald-600 via-emerald-700 to-emerald-900 text-white overflow-hidden">
                     <div className="absolute inset-0 opacity-10">
@@ -197,6 +204,7 @@ export default async function CityPage({ params }: CityPageProps) {
                     cityNameAr={cityKw}
                     serviceNameAr="خدمات منزلية"
                     totalCompanies={0}
+                    neighborhoods={cityContext?.neighborhoods.map(n => n.name_ar) || []}
                 />
 
                 {/* Services by Category */}

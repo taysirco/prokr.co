@@ -15,6 +15,7 @@ import FraudAlertBanner from '@/components/FraudAlertBanner';
 import MarketTimingBadge from '@/components/MarketTimingBadge';
 import LocalPresence from '@/components/LocalPresence';
 import { LiveAvailabilityBanner } from '@/components/LiveAvailabilityBanner';
+import { EmergencyNightBanner } from '@/components/EmergencyNightBanner';
 
 // Major cities for price comparison
 const COMPARISON_CITIES = ['riyadh', 'jeddah', 'dammam', 'makkah', 'madinah', 'taif'];
@@ -142,6 +143,12 @@ export default async function ServicePage({ params }: ServicePageProps) {
             />
 
             <main className="min-h-screen bg-gray-50">
+                {/* 🚨 Emergency Night Banner (12AM-6AM only) */}
+                <EmergencyNightBanner
+                    cityNameAr="المملكة"
+                    serviceNameAr={service.name_ar}
+                />
+
                 {/* Hero Section with Image */}
                 <section className="relative bg-gradient-to-bl from-emerald-600 via-emerald-700 to-emerald-900 text-white overflow-hidden">
                     <div className="absolute inset-0 opacity-10">
@@ -214,6 +221,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                 <LiveAvailabilityBanner
                     cityNameAr="المملكة"
                     serviceNameAr={service.name_ar}
+                    serviceCategory={service.category}
                     totalCompanies={0}
                 />
 

@@ -15,6 +15,7 @@ import FraudAlertBanner from '@/components/FraudAlertBanner';
 import MarketTimingBadge from '@/components/MarketTimingBadge';
 import LocalPresence from '@/components/LocalPresence';
 import { LiveAvailabilityBanner } from '@/components/LiveAvailabilityBanner';
+import { EmergencyNightBanner } from '@/components/EmergencyNightBanner';
 
 interface SubRegionPageProps {
     params: Promise<{
@@ -155,6 +156,12 @@ export default async function SubRegionPage({ params }: SubRegionPageProps) {
             )}
 
             <main className="min-h-screen bg-gray-50">
+                {/* 🚨 Emergency Night Banner (12AM-6AM only) */}
+                <EmergencyNightBanner
+                    cityNameAr={`${subRegion.name_ar}، ${city.name_ar}`}
+                    serviceNameAr="خدمات منزلية"
+                />
+
                 {/* Hero */}
                 <section className="relative bg-gradient-to-bl from-emerald-600 via-emerald-700 to-emerald-900 text-white overflow-hidden">
                     <div className="absolute inset-0 opacity-10">
@@ -205,6 +212,7 @@ export default async function SubRegionPage({ params }: SubRegionPageProps) {
                     cityNameAr={`${subRegion.name_ar}، ${city.name_ar}`}
                     serviceNameAr="خدمات منزلية"
                     totalCompanies={0}
+                    neighborhoods={[subRegion.name_ar, ...(cityContext?.neighborhoods.map(n => n.name_ar).slice(0, 4) || [])]}
                 />
 
                 {/* Services */}
