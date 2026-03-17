@@ -7,6 +7,8 @@ import Footer from '@/components/Footer';
 import MarketTimingBadge from '@/components/MarketTimingBadge';
 import FraudAlertBanner from '@/components/FraudAlertBanner';
 import LocalPresence from '@/components/LocalPresence';
+import { EmergencyNightBanner } from '@/components/EmergencyNightBanner';
+import { LiveAvailabilityBanner } from '@/components/LiveAvailabilityBanner';
 
 export const metadata: Metadata = {
     title: 'مناطق الخدمة في السعودية | 24 مدينة - بروكر',
@@ -72,6 +74,9 @@ export default function LocationsPage() {
             />
 
             <main className="min-h-screen bg-gray-50">
+                {/* 🚨 Emergency Night Banner — 12AM-6AM */}
+                <EmergencyNightBanner cityNameAr="المملكة" serviceNameAr="خدمات منزلية" />
+
                 {/* Hero Section */}
                 <section className="relative bg-gradient-to-bl from-emerald-600 via-emerald-700 to-emerald-900 text-white overflow-hidden">
                     <div className="absolute inset-0 opacity-10">
@@ -110,6 +115,13 @@ export default function LocationsPage() {
                         </div>
                     </div>
                 </section>
+
+                {/* 🚗 Live Dispatch — National Locations Availability */}
+                <LiveAvailabilityBanner
+                    cityNameAr="المملكة"
+                    serviceNameAr="خدمات منزلية"
+                    totalCompanies={CITIES.length}
+                />
 
                 {/* Map Section */}
                 <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

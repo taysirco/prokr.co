@@ -26,6 +26,8 @@ import { isAbsorbedSlug } from '@/lib/services/super-page-groups';
 import { BLOG_ARTICLES } from '@/lib/blog-data';
 import Footer from '@/components/Footer';
 import { WebsiteJsonLd, ProkrOrganizationJsonLd, BreadcrumbJsonLd } from '@/components/JsonLd';
+import { EmergencyNightBanner } from '@/components/EmergencyNightBanner';
+import { LiveAvailabilityBanner } from '@/components/LiveAvailabilityBanner';
 
 // Service icons mapping
 const serviceIcons: Record<string, React.ReactNode> = {
@@ -179,6 +181,9 @@ export default function HomePage() {
       />
 
       <main className="min-h-screen">
+        {/* 🚨 Emergency Night Banner — 12AM-6AM */}
+        <EmergencyNightBanner cityNameAr="المملكة" serviceNameAr="خدمات منزلية" />
+
         {/* Hero Section - Premium Design */}
         <section className="relative bg-gradient-to-bl from-emerald-600 via-emerald-700 to-emerald-900 text-white overflow-hidden min-h-[85vh] flex items-center">
           {/* Animated Background Pattern */}
@@ -294,6 +299,13 @@ export default function HomePage() {
             <ChevronLeft className="w-5 h-5 text-emerald-200 rotate-[-90deg]" />
           </div>
         </section>
+
+        {/* 🚗 Live Dispatch — National Availability */}
+        <LiveAvailabilityBanner
+            cityNameAr="المملكة"
+            serviceNameAr="خدمات منزلية"
+            totalCompanies={canonicalServices.length}
+        />
 
         {/* Trust Indicators Bar */}
         <section className="bg-white border-b border-gray-100 py-6">
