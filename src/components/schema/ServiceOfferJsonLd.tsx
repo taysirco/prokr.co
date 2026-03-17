@@ -135,7 +135,7 @@ export function ServiceOfferJsonLd({ city, service }: ServiceOfferJsonLdProps) {
             "@type": "ReserveAction",
             "target": {
                 "@type": "EntryPoint",
-                "urlTemplate": `https://prokr.co/${city.slug}/${service.slug}?action=book&source=web`,
+                "urlTemplate": `https://prokr.co/api/book?service=${service.slug}&city=${city.slug}&source=web`,
                 "inLanguage": "ar-SA",
                 "actionPlatform": [
                     "http://schema.org/DesktopWebPlatform",

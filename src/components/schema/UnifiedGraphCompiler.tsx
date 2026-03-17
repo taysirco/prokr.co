@@ -189,7 +189,7 @@ export function UnifiedGraphCompiler({
             '@type': 'ReserveAction',
             target: {
                 '@type': 'EntryPoint',
-                urlTemplate: `${baseUrl}?action=book&source=web`,
+                urlTemplate: `https://prokr.co/api/book?service=${service.slug}&city=${city.slug}&source=web`,
                 inLanguage: 'ar-SA',
                 actionPlatform: [
                     'http://schema.org/DesktopWebPlatform',

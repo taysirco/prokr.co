@@ -304,3 +304,39 @@ export interface AdvertiserRequestFormData {
   region: string;
   selected_plan: 'free' | 'premium';
 }
+
+// ============================================
+// AI Booking API — Service Booking Types
+// Used by /api/book endpoint for Google Assistant
+// and AI agent programmatic reservations
+// ============================================
+
+export type BookingSource = 'web' | 'google_assistant' | 'ai_agent' | 'api';
+export type BookingStatus = 'pending' | 'confirmed' | 'completed' | 'cancelled';
+
+export interface ServiceBooking {
+  id: string;
+  reservation_id: string;           // Human-readable ID: BK-{timestamp}-{random}
+  service_slug: string;
+  city_slug: string;
+  customer_name: string;
+  customer_phone: string;           // Saudi format: 05xxxxxxxx
+  preferred_date?: string;          // ISO date string
+  notes?: string;
+  source: BookingSource;
+  status: BookingStatus;
+  matched_providers: string[];      // Array of advertiser short_codes
+  matched_providers_count: number;
+  created_at: Date;
+  updated_at: Date;
+}
+
+export interface ServiceBookingFormData {
+  service: string;        // service slug
+  city: string;           // city slug
+  customer_name: string;
+  customer_phone: string;
+  preferred_date?: string;
+  notes?: string;
+  source?: BookingSource;
+}

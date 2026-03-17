@@ -43,6 +43,23 @@ service cloud.firestore {
       allow read, update, delete: if request.auth != null;
     }
     
+    // AI Booking API — service bookings from /api/book
+    // Anyone (including AI agents) can create, admin manages
+    match /service_bookings/{bookingId} {
+      // API creates bookings (no auth required for AI agent access)
+      allow create: if true
+        && request.resource.data.keys().hasAll([
+          'reservation_id', 'service_slug', 'city_slug',
+          'customer_name', 'customer_phone', 'source', 'status'
+        ])
+        && request.resource.data.status == 'pending'
+        && request.resource.data.customer_name is string
+        && request.resource.data.customer_phone is string;
+      
+      // Only authenticated admin can read/update/delete
+      allow read, update, delete: if request.auth != null;
+    }
+    
     // Admin-only data
     match /admin/{document=**} {
       allow read, write: if request.auth != null;
