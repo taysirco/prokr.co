@@ -122,8 +122,8 @@ export function LiveAvailabilityBanner({
                         </div>
                         <span className="text-white/90 text-sm font-medium">
                             {isEmergency
-                                ? `فرق طوارئ ${serviceNameAr} الليلية في ${cityNameAr}`
-                                : `حالة توفر فرق ${serviceNameAr} الآن في ${cityNameAr}`
+                                ? `فرق طوارئ ${serviceNameAr} الليلية ${cityNameAr.startsWith('ب') ? cityNameAr : `في ${cityNameAr}`}`
+                                : `حالة توفر فرق ${serviceNameAr} الآن ${cityNameAr.startsWith('ب') ? cityNameAr : `في ${cityNameAr}`}`
                             }
                         </span>
                     </div>

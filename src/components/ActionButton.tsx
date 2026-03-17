@@ -1,6 +1,7 @@
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
+import { getHourlyMode } from '@/lib/market-timing';
 
 interface ActionButtonProps {
     href: string;
@@ -26,9 +27,9 @@ interface ActionButtonProps {
  *   2. Shows visual "engaged" feedback (scale + opacity)
  *   3. After 500ms delay, navigates to href
  *
- * The 500ms delay is imperceptible to humans but creates a measurable
- * "interactive confirmation pattern.
- * Google interprets this as: user found what they needed → zero pogo-sticking.
+ * 🚨 Night Mode (12AM-6AM Riyadh):
+ *   Phone buttons get red pulsing emergency CTA styling
+ *   to maximize late-night emergency conversions.
  */
 export default function ActionButton({
     href,
@@ -42,6 +43,11 @@ export default function ActionButton({
     external = false,
 }: ActionButtonProps) {
     const [isEngaged, setIsEngaged] = useState(false);
+    const [isEmergencyHour, setIsEmergencyHour] = useState(false);
+
+    useEffect(() => {
+        setIsEmergencyHour(getHourlyMode() === 'emergency');
+    }, []);
 
     const handleConversion = useCallback(
         (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -57,6 +63,7 @@ export default function ActionButton({
                     city: cityName || '',
                     service: serviceName || '',
                     timestamp: new Date().toISOString(),
+                    is_emergency_hour: isEmergencyHour,
                 });
             }
 
@@ -65,7 +72,7 @@ export default function ActionButton({
                 (window as any).gtag('event', 'generate_lead', {
                     event_category: 'conversion',
                     event_label: `${type}_${cityName || 'unknown'}_${serviceName || 'unknown'}`,
-                    value: type === 'phone' ? 10 : 5,
+                    value: type === 'phone' ? (isEmergencyHour ? 15 : 10) : 5,
                 });
             }
 
@@ -79,12 +86,23 @@ export default function ActionButton({
                 }
             }, 500);
         },
-        [href, type, cityName, serviceName, isEngaged, external]
+        [href, type, cityName, serviceName, isEngaged, external, isEmergencyHour]
     );
 
     // Engaged state text based on type
     const engagedLabel =
         type === 'phone' ? 'جاري فتح الاتصال...' : 'جاري فتح واتساب...';
+
+    // 🚨 Emergency night label for phone buttons
+    const emergencyPhoneLabel = '🚨 اتصل الآن — طوارئ';
+    const displayLabel = isEmergencyHour && type === 'phone' && !isEngaged
+        ? emergencyPhoneLabel
+        : (isEngaged ? engagedLabel : label);
+
+    // 🚨 Emergency night styling for phone buttons
+    const emergencyClasses = isEmergencyHour && type === 'phone'
+        ? 'animate-pulse !bg-red-600 !border-red-500 hover:!bg-red-700 shadow-[0_0_15px_rgba(239,68,68,0.4)]'
+        : '';
 
     return (
         <a
@@ -93,15 +111,16 @@ export default function ActionButton({
             aria-label={ariaLabel}
             rel={external ? 'noopener noreferrer' : undefined}
             target={external ? '_blank' : undefined}
-            className={`${className} transition-all duration-300 ${isEngaged
+            className={`${className} ${emergencyClasses} transition-all duration-300 ${isEngaged
                     ? 'opacity-75 scale-95 pointer-events-none'
                     : 'hover:scale-[1.03] active:scale-95'
                 }`}
         >
             {children}
             {label && (
-                <span>{isEngaged ? engagedLabel : label}</span>
+                <span>{displayLabel}</span>
             )}
         </a>
     );
 }
+

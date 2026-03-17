@@ -73,7 +73,7 @@ export function EmergencyNightBanner({ cityNameAr, serviceNameAr }: EmergencyNig
 
                         <div className="flex flex-col">
                             <span className={`${config.colors.text} text-sm sm:text-base font-bold`}>
-                                خدمة طوارئ ليلية متاحة الآن في {cityNameAr}
+                                خدمة طوارئ ليلية متاحة الآن {cityNameAr.startsWith('ب') ? cityNameAr : `في ${cityNameAr}`}
                             </span>
                             <span className="text-red-300/80 text-xs sm:text-sm">
                                 فرق {serviceNameAr} جاهزة للتحرك فوراً — خدمة 24/7
