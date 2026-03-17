@@ -203,7 +203,7 @@ export default async function CityPage({ params }: CityPageProps) {
                 <LiveAvailabilityBanner
                     cityNameAr={cityKw}
                     serviceNameAr="خدمات منزلية"
-                    totalCompanies={0}
+                    totalCompanies={SERVICES.filter(s => hasPageOverride(city.slug, s.slug) && !isAbsorbedSlug(s.slug)).length}
                     neighborhoods={cityContext?.neighborhoods.map(n => n.name_ar) || []}
                 />
 

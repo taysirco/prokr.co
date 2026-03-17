@@ -222,7 +222,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                     cityNameAr="المملكة"
                     serviceNameAr={service.name_ar}
                     serviceCategory={service.category}
-                    totalCompanies={0}
+                    totalCompanies={CITIES.filter(c => hasPageOverride(c.slug, getCanonicalSlug(service.slug) || service.slug)).length}
                 />
 
                 {/* Cities by Region */}

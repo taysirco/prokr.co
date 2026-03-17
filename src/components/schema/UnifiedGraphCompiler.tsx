@@ -11,6 +11,7 @@ import type { ContentLayers } from '@/lib/content-layers';
 import { resolveSeoContent } from '@/lib/overrides';
 import { getServiceKeywordProfile, getCityKeyword } from '@/lib/locale-formatting';
 import { getCanonicalSlug } from '@/lib/services/super-page-groups';
+import { getHourlyMode } from '@/lib/market-timing';
 
 // ── WARRANTY DATA (mirrored from ServiceOfferJsonLd) ──
 const WARRANTY_BY_CATEGORY: Record<string, {
@@ -325,6 +326,55 @@ export function UnifiedGraphCompiler({
         contentLocation: { '@type': 'Place', name: `${city.name_ar}، المملكة العربية السعودية` },
         creator: { '@type': 'Organization', name: 'بروكر', url: 'https://prokr.co' },
     });
+
+    // ── 8. EmergencyService (#emergency) — Night Mode Schema (12AM-6AM) ──
+    const hourlyMode = getHourlyMode();
+    if (hourlyMode === 'emergency') {
+        graph.push({
+            '@type': 'EmergencyService',
+            '@id': `${baseUrl}#emergency`,
+            name: `خدمة طوارئ ${service.name_ar} ليلية ${cityKw}`,
+            description: `فرق ${service.name_ar} ليلية جاهزة للتحرك فوراً ${cityKw} — خدمة طوارئ 24/7. استجابة خلال 30 دقيقة.`,
+            serviceType: `طوارئ ${service.name_ar}`,
+            areaServed: {
+                '@type': 'City',
+                name: city.name_ar,
+                addressCountry: 'SA',
+                ...(cityContext?.coordinates && {
+                    geo: {
+                        '@type': 'GeoCoordinates',
+                        latitude: cityContext.coordinates.lat,
+                        longitude: cityContext.coordinates.lng,
+                    },
+                }),
+            },
+            provider: {
+                '@type': 'Organization',
+                name: 'بروكر',
+                url: 'https://prokr.co',
+                telephone: '+966553165555',
+            },
+            hoursAvailable: {
+                '@type': 'OpeningHoursSpecification',
+                dayOfWeek: [
+                    'Monday', 'Tuesday', 'Wednesday', 'Thursday',
+                    'Friday', 'Saturday', 'Sunday',
+                ],
+                opens: '00:00',
+                closes: '06:00',
+            },
+            potentialAction: {
+                '@type': 'CommunicateAction',
+                target: {
+                    '@type': 'EntryPoint',
+                    urlTemplate: 'tel:+966553165555',
+                    actionPlatform: 'http://schema.org/TelephoneActionPlatform',
+                },
+                name: `اتصل لطلب طوارئ ${service.name_ar} ${cityKw}`,
+            },
+            isRelatedTo: { '@id': `${baseUrl}#service` },
+        });
+    }
 
     // ============================================
     // 💥 OUTPUT: النتيجة النهائية: JSON-LD موحد

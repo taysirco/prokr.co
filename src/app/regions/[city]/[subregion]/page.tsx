@@ -211,7 +211,7 @@ export default async function SubRegionPage({ params }: SubRegionPageProps) {
                 <LiveAvailabilityBanner
                     cityNameAr={`${subRegion.name_ar}، ${city.name_ar}`}
                     serviceNameAr="خدمات منزلية"
-                    totalCompanies={0}
+                    totalCompanies={availableServices.length}
                     neighborhoods={[subRegion.name_ar, ...(cityContext?.neighborhoods.map(n => n.name_ar).slice(0, 4) || [])]}
                 />
 
