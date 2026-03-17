@@ -104,6 +104,18 @@ self.addEventListener('fetch', (event) => {
   const { request } = event;
   const url = new URL(request.url);
 
+  // ─── Skip Firebase Auth & critical Google API requests ───
+  // These must NEVER be intercepted by the SW to avoid CSP violations
+  const PASSTHROUGH_DOMAINS = [
+    'identitytoolkit.googleapis.com',
+    'securetoken.googleapis.com',
+    'www.googleapis.com',
+    'accounts.google.com',
+  ];
+  if (PASSTHROUGH_DOMAINS.some(d => url.hostname === d || url.hostname.endsWith('.' + d))) {
+    return; // Let the browser handle these directly
+  }
+
   // Skip non-GET for caching (but intercept for Background Sync)
   if (request.method !== 'GET') {
     if (request.method === 'POST' || request.method === 'PUT') {
