@@ -113,6 +113,8 @@ function getActionCodeSettings(mode: 'claim' | 'review', companyCode: string): A
 
 export async function sendClaimVerificationEmail(email: string, companyCode: string): Promise<void> {
     const settings = getActionCodeSettings('claim', companyCode);
+    // Use Arabic email template
+    auth.languageCode = 'ar';
     await sendSignInLinkToEmail(auth, email, settings);
     if (typeof window !== 'undefined') {
         window.localStorage.setItem('claimEmail', email);
