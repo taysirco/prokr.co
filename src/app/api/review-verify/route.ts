@@ -1,19 +1,20 @@
 // ============================================
 // 🔐 API: Verified Reviews
-// POST: submit a review + send verification email
+// POST: submit a review (validated via Firebase ID token)
 // PUT:  verify a review after email confirmation
 // ============================================
 
 import { NextRequest, NextResponse } from 'next/server';
 import { collection, query, where, getDocs, addDoc, updateDoc, Timestamp } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
+import { verifyAuthToken } from '@/lib/firebase-admin-init';
 
 const REVIEWS_COLLECTION = 'verified_reviews';
 
-// POST — Submit a new review (pending verification)
+// POST — Submit a new review (server-validated via Firebase ID token)
 export async function POST(request: NextRequest) {
     try {
-        const { email, phone, companyCode, rating, comment, userName, verified } = await request.json();
+        const { email, phone, companyCode, rating, comment, userName } = await request.json();
 
         if ((!email && !phone) || !companyCode || !rating) {
             return NextResponse.json({ error: 'التقييم ورمز الشركة وطريقة التحقق مطلوبون' }, { status: 400 });
@@ -21,6 +22,26 @@ export async function POST(request: NextRequest) {
 
         if (rating < 1 || rating > 5) {
             return NextResponse.json({ error: 'التقييم يجب أن يكون بين 1 و 5' }, { status: 400 });
+        }
+
+        // ============================================
+        // 🔐 SERVER-SIDE TOKEN VALIDATION
+        // Verify the Firebase ID token to confirm
+        // the user is actually authenticated
+        // ============================================
+        const authHeader = request.headers.get('Authorization');
+        const tokenData = await verifyAuthToken(authHeader);
+
+        // Determine if review should be marked as verified
+        // Token MUST be valid AND match the submitted email/phone
+        let isVerified = false;
+        if (tokenData) {
+            if (email && tokenData.email === email) {
+                isVerified = true;
+            }
+            if (phone && tokenData.phone_number === phone) {
+                isVerified = true;
+            }
         }
 
         // Check for duplicate review (by email or phone)
@@ -40,28 +61,32 @@ export async function POST(request: NextRequest) {
             }
         }
 
-        // Create review (pre-verified if user is authenticated)
+        // Create review — verified status is SERVER-DETERMINED, not client
         await addDoc(reviewsRef, {
             company_code: companyCode,
             reviewer_email: email || '',
             reviewer_phone: phone || '',
+            reviewer_uid: tokenData?.uid || '',
             user_name: userName || 'عميل بروكر',
             rating: Number(rating),
             comment: comment || '',
-            verified: verified === true, // Pre-verified via Google/Phone auth
+            verified: isVerified,
             created_at: Timestamp.fromDate(new Date()),
         });
 
         return NextResponse.json({
-            message: 'تم إرسال رابط التأكيد إلى بريدك. بعد التأكيد سيظهر تقييمك.',
-            status: 'pending',
+            message: isVerified
+                ? 'تم إرسال تقييمك المُوثّق بنجاح ✅'
+                : 'تم إرسال تقييمك. سيتم مراجعته قريباً.',
+            status: 'success',
+            verified: isVerified,
         });
     } catch {
         return NextResponse.json({ error: 'حدث خطأ. حاول مرة أخرى.' }, { status: 500 });
     }
 }
 
-// PUT — Verify a review after email confirmation
+// PUT — Verify a review after email confirmation (legacy path)
 export async function PUT(request: NextRequest) {
     try {
         const { email, companyCode } = await request.json();

@@ -3,7 +3,7 @@
 // ============================================
 // 🔐 ClaimBusinessCTA — توثيق المنشأة بخطوتين
 // Step 1: Email verification
-// Step 2: Phone OTP (must match registered number)
+// Step 2: Phone OTP (server validates matching)
 // ============================================
 
 import { useState, useEffect, useRef } from 'react';
@@ -14,7 +14,6 @@ import type { RecaptchaVerifier } from 'firebase/auth';
 interface ClaimBusinessCTAProps {
     companyCode: string;
     businessName: string;
-    businessPhone: string; // Phone number registered on the platform
     variant?: 'full' | 'compact';
 }
 
@@ -31,13 +30,14 @@ type ClaimState =
     | 'claimed'          // ✅ Both verified
     | 'error';
 
-export default function ClaimBusinessCTA({ companyCode, businessName, businessPhone, variant = 'full' }: ClaimBusinessCTAProps) {
+export default function ClaimBusinessCTA({ companyCode, businessName, variant = 'full' }: ClaimBusinessCTAProps) {
     const [state, setState] = useState<ClaimState>('idle');
     const [email, setEmail] = useState('');
     const [phoneInput, setPhoneInput] = useState('');
     const [otpCode, setOtpCode] = useState('');
     const [errorMsg, setErrorMsg] = useState('');
     const recaptchaRef = useRef<RecaptchaVerifier | null>(null);
+    const recaptchaContainerRef = useRef<HTMLDivElement | null>(null);
 
     // Check if already claimed
     useEffect(() => {
@@ -52,6 +52,16 @@ export default function ClaimBusinessCTA({ companyCode, businessName, businessPh
             })
             .catch(() => { /* silent */ });
     }, [companyCode]);
+
+    // Cleanup RecaptchaVerifier on unmount
+    useEffect(() => {
+        return () => {
+            if (recaptchaRef.current) {
+                recaptchaRef.current.clear();
+                recaptchaRef.current = null;
+            }
+        };
+    }, []);
 
     // ============================================
     // Step 1: Email Verification
@@ -93,7 +103,7 @@ export default function ClaimBusinessCTA({ companyCode, businessName, businessPh
     }
 
     // ============================================
-    // Step 2: Phone Verification
+    // Step 2: Phone Verification (SERVER validates match)
     // ============================================
     async function handlePhoneSendOTP() {
         if (!phoneInput || phoneInput.length < 9) {
@@ -101,26 +111,26 @@ export default function ClaimBusinessCTA({ companyCode, businessName, businessPh
             return;
         }
 
-        // Check if phone matches the registered number
-        const inputFormatted = formatSaudiPhone(phoneInput);
-        const registeredFormatted = formatSaudiPhone(businessPhone);
-
-        if (inputFormatted !== registeredFormatted) {
-            setErrorMsg('رقم الهاتف لا يتطابق مع الرقم المسجل لهذه المنشأة. تأكد من إدخال نفس الرقم.');
-            return;
-        }
-
         setState('phone-sending');
         setErrorMsg('');
 
         try {
-            if (!recaptchaRef.current) {
-                recaptchaRef.current = setupRecaptcha('claim-phone-btn');
+            // Clear old RecaptchaVerifier before creating new
+            if (recaptchaRef.current) {
+                recaptchaRef.current.clear();
+                recaptchaRef.current = null;
             }
+            recaptchaRef.current = setupRecaptcha('claim-phone-btn');
+
             await sendPhoneOTP(phoneInput, recaptchaRef.current);
             setState('phone-otp');
         } catch {
             setErrorMsg('حدث خطأ في إرسال رمز التحقق.');
+            // Reset RecaptchaVerifier on failure for retry
+            if (recaptchaRef.current) {
+                recaptchaRef.current.clear();
+                recaptchaRef.current = null;
+            }
             setState('phone-form');
         }
     }
@@ -137,12 +147,19 @@ export default function ClaimBusinessCTA({ companyCode, businessName, businessPh
         try {
             await verifyPhoneOTP(otpCode);
 
-            // Mark claim as phone-verified
-            await fetch('/api/claim/verify-phone', {
+            // SERVER-SIDE phone matching — API validates phone against registered number
+            const res = await fetch('/api/claim/verify-phone', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email, companyCode, phone: phoneInput }),
             });
+
+            const data = await res.json();
+            if (!res.ok) {
+                setErrorMsg(data.error || 'حدث خطأ في التحقق');
+                setState('phone-form');
+                return;
+            }
 
             setState('claimed');
         } catch {
@@ -269,6 +286,8 @@ export default function ClaimBusinessCTA({ companyCode, businessName, businessPh
                         )}
                     </button>
                 </div>
+                {/* Hidden recaptcha container */}
+                <div ref={recaptchaContainerRef} id="recaptcha-claim-container" />
             </div>
         );
     }

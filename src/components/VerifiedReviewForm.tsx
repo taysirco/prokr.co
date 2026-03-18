@@ -33,6 +33,16 @@ export default function VerifiedReviewForm({ companyCode, businessName }: Verifi
     const [loading, setLoading] = useState(false);
     const recaptchaRef = useRef<RecaptchaVerifier | null>(null);
 
+    // Cleanup RecaptchaVerifier on unmount
+    useEffect(() => {
+        return () => {
+            if (recaptchaRef.current) {
+                recaptchaRef.current.clear();
+                recaptchaRef.current = null;
+            }
+        };
+    }, []);
+
     // Check existing auth
     useEffect(() => {
         const unsubscribe = onAuthChange((user) => {
@@ -71,13 +81,22 @@ export default function VerifiedReviewForm({ companyCode, businessName }: Verifi
         setLoading(true);
         setErrorMsg('');
         try {
-            if (!recaptchaRef.current) {
-                recaptchaRef.current = setupRecaptcha('phone-send-btn');
+            // Clear old RecaptchaVerifier before creating new
+            if (recaptchaRef.current) {
+                recaptchaRef.current.clear();
+                recaptchaRef.current = null;
             }
+            recaptchaRef.current = setupRecaptcha('phone-send-btn');
+
             await sendPhoneOTP(phoneInput, recaptchaRef.current);
             setAuthMethod('phone-otp');
         } catch {
             setErrorMsg('حدث خطأ في إرسال رمز التحقق. تأكد من الرقم.');
+            // Reset on failure for retry
+            if (recaptchaRef.current) {
+                recaptchaRef.current.clear();
+                recaptchaRef.current = null;
+            }
         } finally {
             setLoading(false);
         }
@@ -113,9 +132,18 @@ export default function VerifiedReviewForm({ companyCode, businessName }: Verifi
         setReviewState('sending');
         setErrorMsg('');
         try {
+            // Get Firebase ID token for server-side validation
+            const currentUser = getCurrentUser();
+            const idToken = currentUser ? await currentUser.getIdToken() : null;
+
+            const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+            if (idToken) {
+                headers['Authorization'] = `Bearer ${idToken}`;
+            }
+
             const res = await fetch('/api/review-verify', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+                headers,
                 body: JSON.stringify({
                     email: userEmail,
                     phone: userPhone,
@@ -123,7 +151,6 @@ export default function VerifiedReviewForm({ companyCode, businessName }: Verifi
                     rating,
                     comment,
                     userName: userName || 'عميل بروكر',
-                    verified: true, // Already authenticated
                 }),
             });
             const data = await res.json();
