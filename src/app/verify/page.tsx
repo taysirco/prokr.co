@@ -32,39 +32,38 @@ function VerifyContent() {
                 }
 
                 // Get stored email
-                const emailKey = mode === 'claim' ? 'claimEmail' : 'reviewerEmail';
-                let email = window.localStorage.getItem(emailKey);
+                const email = window.localStorage.getItem('claimEmail');
 
-                // If no stored email, ask the user
                 if (!email) {
-                    email = window.prompt('يرجى إدخال البريد الإلكتروني المستخدم في التسجيل:');
-                    if (!email) {
+                    const prompted = window.prompt('يرجى إدخال البريد الإلكتروني المستخدم في التسجيل:');
+                    if (!prompted) {
                         setState('error');
                         setMessage('لم يتم إدخال البريد الإلكتروني');
                         return;
                     }
-                }
+                    // Complete Firebase sign-in with prompted email
+                    await completeEmailSignIn(prompted, link);
 
-                // Complete Firebase sign-in
-                await completeEmailSignIn(email, link);
+                    if (mode === 'claim' && companyCode) {
+                        await fetch('/api/claim/verify', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ email: prompted, companyCode }),
+                        });
+                        setMessage('تم تأكيد البريد ✅ — الآن عد لصفحة المنشأة لإكمال الخطوة 2: تأكيد رقم الهاتف');
+                    }
+                } else {
+                    // Complete Firebase sign-in
+                    await completeEmailSignIn(email, link);
 
-                // Call the appropriate verify API
-                if (mode === 'claim' && companyCode) {
-                    const res = await fetch('/api/claim/verify', {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({ email, companyCode }),
-                    });
-                    const data = await res.json();
-                    setMessage(data.message || 'تم توثيق المنشأة بنجاح!');
-                } else if (mode === 'review' && companyCode) {
-                    const res = await fetch('/api/review-verify', {
-                        method: 'PUT',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({ email, companyCode }),
-                    });
-                    const data = await res.json();
-                    setMessage(data.message || 'تم تأكيد تقييمك بنجاح!');
+                    if (mode === 'claim' && companyCode) {
+                        await fetch('/api/claim/verify', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ email, companyCode }),
+                        });
+                        setMessage('تم تأكيد البريد ✅ — الآن عد لصفحة المنشأة لإكمال الخطوة 2: تأكيد رقم الهاتف');
+                    }
                 }
 
                 setState('success');
@@ -72,8 +71,6 @@ function VerifyContent() {
                 // Clean up localStorage
                 window.localStorage.removeItem('claimEmail');
                 window.localStorage.removeItem('claimCompanyCode');
-                window.localStorage.removeItem('reviewerEmail');
-                window.localStorage.removeItem('reviewCompanyCode');
             } catch {
                 setState('error');
                 setMessage('حدث خطأ أثناء التحقق. حاول مرة أخرى.');
@@ -100,7 +97,7 @@ function VerifyContent() {
                             <CheckCircle className="w-10 h-10 text-emerald-600" />
                         </div>
                         <h1 className="text-xl font-bold text-emerald-900 mb-2">
-                            {mode === 'claim' ? '✅ تم توثيق المنشأة!' : '✅ تم تأكيد تقييمك!'}
+                            {mode === 'claim' ? '✅ تم تأكيد البريد — الخطوة 1 من 2' : '✅ تم التحقق!'}
                         </h1>
                         <p className="text-gray-600 text-sm mb-6">{message}</p>
 

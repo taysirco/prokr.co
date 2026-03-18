@@ -30,16 +30,17 @@ export async function POST(request: NextRequest) {
             return NextResponse.json({ error: 'لم يتم العثور على طلب توثيق معلّق' }, { status: 404 });
         }
 
-        // Update the claim to verified
+        // Update the claim to email_verified (Step 1 complete, pending phone Step 2)
         const claimDoc = snap.docs[0];
         await updateDoc(claimDoc.ref, {
-            status: 'verified',
-            verified_at: Timestamp.fromDate(new Date()),
+            status: 'email_verified',
+            email_verified_at: Timestamp.fromDate(new Date()),
         });
 
         return NextResponse.json({
             success: true,
-            message: 'تم توثيق المنشأة بنجاح! ✅',
+            message: 'تم تأكيد البريد! الآن أكمل الخطوة 2: تأكيد رقم الهاتف',
+            next_step: 'phone',
         });
     } catch {
         return NextResponse.json({ error: 'حدث خطأ أثناء التحقق' }, { status: 500 });

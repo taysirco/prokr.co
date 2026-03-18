@@ -17,17 +17,18 @@ export async function POST(request: NextRequest) {
             return NextResponse.json({ error: 'البريد ورمز الشركة ورقم الهاتف مطلوبون' }, { status: 400 });
         }
 
-        // Find the claim (must be email-verified)
+        // Find the claim (must be email-verified, NOT pending)
         const claimsRef = collection(db, CLAIMS_COLLECTION);
         const q = query(
             claimsRef,
             where('company_code', '==', companyCode),
             where('claimant_email', '==', email),
+            where('status', '==', 'email_verified'),
         );
         const snap = await getDocs(q);
 
         if (snap.empty) {
-            return NextResponse.json({ error: 'لم يتم العثور على طلب توثيق' }, { status: 404 });
+            return NextResponse.json({ error: 'يجب تأكيد البريد الإلكتروني أولاً (الخطوة 1)' }, { status: 404 });
         }
 
         // Update with phone verification

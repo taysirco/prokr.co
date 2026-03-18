@@ -23,13 +23,21 @@ export async function POST(request: NextRequest) {
             return NextResponse.json({ error: 'التقييم يجب أن يكون بين 1 و 5' }, { status: 400 });
         }
 
-        // Check for duplicate review
+        // Check for duplicate review (by email or phone)
         const reviewsRef = collection(db, REVIEWS_COLLECTION);
-        const dupQ = query(reviewsRef, where('company_code', '==', companyCode), where('reviewer_email', '==', email));
-        const dupSnap = await getDocs(dupQ);
-
-        if (!dupSnap.empty) {
-            return NextResponse.json({ error: 'لقد قمت بتقييم هذه الشركة مسبقاً' }, { status: 409 });
+        if (email) {
+            const dupEmailQ = query(reviewsRef, where('company_code', '==', companyCode), where('reviewer_email', '==', email));
+            const dupEmailSnap = await getDocs(dupEmailQ);
+            if (!dupEmailSnap.empty) {
+                return NextResponse.json({ error: 'لقد قمت بتقييم هذه الشركة مسبقاً' }, { status: 409 });
+            }
+        }
+        if (phone) {
+            const dupPhoneQ = query(reviewsRef, where('company_code', '==', companyCode), where('reviewer_phone', '==', phone));
+            const dupPhoneSnap = await getDocs(dupPhoneQ);
+            if (!dupPhoneSnap.empty) {
+                return NextResponse.json({ error: 'لقد قمت بتقييم هذه الشركة مسبقاً' }, { status: 409 });
+            }
         }
 
         // Create review (pre-verified if user is authenticated)

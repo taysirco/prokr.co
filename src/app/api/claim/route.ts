@@ -62,18 +62,34 @@ export async function GET(request: NextRequest) {
 
     try {
         const claimsRef = collection(db, CLAIMS_COLLECTION);
-        const q = query(claimsRef, where('company_code', '==', companyCode), where('status', '==', 'verified'));
-        const snap = await getDocs(q);
 
-        if (!snap.empty) {
-            const claim = snap.docs[0].data();
+        // Check fully verified (email + phone)
+        const verifiedQ = query(claimsRef, where('company_code', '==', companyCode), where('status', '==', 'verified'));
+        const verifiedSnap = await getDocs(verifiedQ);
+
+        if (!verifiedSnap.empty) {
+            const claim = verifiedSnap.docs[0].data();
             return NextResponse.json({
                 claimed: true,
+                email_verified: true,
+                phone_verified: claim.phone_verified === true,
                 verified_at: claim.verified_at?.toDate()?.toISOString(),
             });
         }
 
-        return NextResponse.json({ claimed: false });
+        // Check email-only verified (pending phone)
+        const emailOnlyQ = query(claimsRef, where('company_code', '==', companyCode), where('status', '==', 'email_verified'));
+        const emailOnlySnap = await getDocs(emailOnlyQ);
+
+        if (!emailOnlySnap.empty) {
+            return NextResponse.json({
+                claimed: false,
+                email_verified: true,
+                phone_verified: false,
+            });
+        }
+
+        return NextResponse.json({ claimed: false, email_verified: false, phone_verified: false });
     } catch {
         return NextResponse.json({ error: 'حدث خطأ' }, { status: 500 });
     }
