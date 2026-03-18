@@ -13,10 +13,10 @@ const REVIEWS_COLLECTION = 'verified_reviews';
 // POST — Submit a new review (pending verification)
 export async function POST(request: NextRequest) {
     try {
-        const { email, companyCode, rating, comment, userName } = await request.json();
+        const { email, phone, companyCode, rating, comment, userName, verified } = await request.json();
 
-        if (!email || !companyCode || !rating) {
-            return NextResponse.json({ error: 'البريد والتقييم ورمز الشركة مطلوبون' }, { status: 400 });
+        if ((!email && !phone) || !companyCode || !rating) {
+            return NextResponse.json({ error: 'التقييم ورمز الشركة وطريقة التحقق مطلوبون' }, { status: 400 });
         }
 
         if (rating < 1 || rating > 5) {
@@ -32,14 +32,15 @@ export async function POST(request: NextRequest) {
             return NextResponse.json({ error: 'لقد قمت بتقييم هذه الشركة مسبقاً' }, { status: 409 });
         }
 
-        // Create review (pending verification)
+        // Create review (pre-verified if user is authenticated)
         await addDoc(reviewsRef, {
             company_code: companyCode,
-            reviewer_email: email,
+            reviewer_email: email || '',
+            reviewer_phone: phone || '',
             user_name: userName || 'عميل بروكر',
             rating: Number(rating),
             comment: comment || '',
-            verified: false,
+            verified: verified === true, // Pre-verified via Google/Phone auth
             created_at: Timestamp.fromDate(new Date()),
         });
 

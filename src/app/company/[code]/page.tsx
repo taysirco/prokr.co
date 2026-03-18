@@ -521,7 +521,7 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                                 </div>
 
                                 {/* 🔐 Claim Business CTA */}
-                                <ClaimBusinessCTA companyCode={advertiser.short_code} businessName={advertiser.business_name} variant="full" />
+                                <ClaimBusinessCTA companyCode={advertiser.short_code} businessName={advertiser.business_name} businessPhone={advertiser.phone_number} variant="full" />
                             </div>
                         </div>
                     </div>
