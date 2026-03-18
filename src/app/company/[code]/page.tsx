@@ -574,7 +574,9 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                             <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
                                 <h4 className="font-bold text-gray-800 mb-2" itemProp="name">هل {advertiser.business_name} شركة معتمدة؟</h4>
                                 <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
-                                    <p className="text-gray-600" itemProp="text">{advertiser.is_premium ? `نعم، ${advertiser.business_name} شركة معتمدة وموثقة في منصة بروكر. تم التحقق من تراخيصها وجودة خدماتها.` : `${advertiser.business_name} شركة مسجلة في منصة بروكر. ننصح بالتحقق من التراخيص والضمانات قبل التعاقد.`}</p>
+                                    <p className="text-gray-600" itemProp="text">{advertiser.is_premium
+                                        ? `نعم، ${advertiser.business_name} شركة معتمدة وموثقة في منصة بروكر.${advertiser.has_verified_employees ? ' تم التحقق من هوية فريق العمل عبر منصة نفاذ الوطنية.' : ''} تم التحقق من تراخيصها وجودة خدماتها.`
+                                        : `${advertiser.business_name} شركة مسجلة في منصة بروكر. ننصح بالتحقق من التراخيص والضمانات قبل التعاقد.`}</p>
                                 </div>
                             </div>
                             {avgRating > 0 && (

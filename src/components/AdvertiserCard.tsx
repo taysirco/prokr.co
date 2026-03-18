@@ -134,7 +134,7 @@ export default function AdvertiserCard({ advertiser, variant = 'standard' }: Adv
                                         ? 'bg-slate-50 text-slate-700 border-slate-300'
                                         : 'bg-green-50 text-green-700 border-green-200'
                                 }`} title={`تصنيف نطاقات: ${advertiser.nitaqat_band}`}>
-                                    🏅 نطاقات {advertiser.nitaqat_band === 'platinum' ? 'بلاتيني' : 'أخضر'}
+                                    🏅 نطاقات {advertiser.nitaqat_band === 'platinum' ? 'بلاتيني' : advertiser.nitaqat_band === 'green' ? 'أخضر' : 'أخضر منخفض'}
                                 </span>
                             )}
                         </div>

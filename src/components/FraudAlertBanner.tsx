@@ -112,7 +112,7 @@ export default function FraudAlertBanner({ serviceName, serviceSlug, cityName }:
                         لحمايتك، احجز فقط عبر الشركات الموثقة في prokr.co
                     </p>
                     <p className="text-emerald-700 text-xs mt-0.5">
-                        نتحقق من السجل التجاري والتراخيص والفوترة الإلكترونية (ZATCA) وتسجيل العمالة في منصة قوى ونطاقات
+                        نتحقق من الهوية الوطنية عبر نفاذ والسجل التجاري والفوترة الإلكترونية (ZATCA) وعقود العمالة في منصة قوى ونطاقات
                     </p>
                 </div>
             </div>
