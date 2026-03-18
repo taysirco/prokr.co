@@ -26,6 +26,8 @@ import { LocalBusinessJsonLd, BreadcrumbJsonLd, OrganizationJsonLd, WebPageJsonL
 import Footer from '@/components/Footer';
 import FraudAlertBanner from '@/components/FraudAlertBanner';
 import LocalPresence from '@/components/LocalPresence';
+import ClaimBusinessCTA from '@/components/ClaimBusinessCTA';
+import VerifiedReviewForm from '@/components/VerifiedReviewForm';
 import type { Review, City, Service } from '@/types';
 
 // ISR: revalidate every hour for fresh data + fast TTFB
@@ -375,6 +377,9 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                                     ))}
                                 </div>
                             </section>
+
+                            {/* Verified Review Form */}
+                            <VerifiedReviewForm companyCode={advertiser.short_code} businessName={advertiser.business_name} />
                         </div>
 
                         {/* Right Column - Sidebar */}
@@ -514,6 +519,9 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                                         )}
                                     </ul>
                                 </div>
+
+                                {/* 🔐 Claim Business CTA */}
+                                <ClaimBusinessCTA companyCode={advertiser.short_code} businessName={advertiser.business_name} variant="full" />
                             </div>
                         </div>
                     </div>
