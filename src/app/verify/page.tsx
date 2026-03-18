@@ -45,6 +45,8 @@ function VerifyContent() {
                     await completeEmailSignIn(prompted, link);
 
                     if (mode === 'claim' && companyCode) {
+                        // Save prompted email to localStorage for phone step
+                        window.localStorage.setItem('claimEmail', prompted);
                         await fetch('/api/claim/verify', {
                             method: 'POST',
                             headers: { 'Content-Type': 'application/json' },
