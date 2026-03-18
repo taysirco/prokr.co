@@ -2,12 +2,13 @@
 // 🔐 API: Verified Reviews
 // POST: submit a review (validated via Firebase ID token)
 // PUT:  verify a review after email confirmation
+// Uses Admin SDK (bypasses Firestore rules)
 // ============================================
 
 import { NextRequest, NextResponse } from 'next/server';
-import { collection, query, where, getDocs, addDoc, updateDoc, Timestamp } from 'firebase/firestore';
-import { db } from '@/lib/firebase';
+import { getAdminDb } from '@/lib/firebase-admin-init';
 import { verifyAuthToken } from '@/lib/firebase-admin-init';
+import { FieldValue } from 'firebase-admin/firestore';
 
 const REVIEWS_COLLECTION = 'verified_reviews';
 
@@ -26,14 +27,10 @@ export async function POST(request: NextRequest) {
 
         // ============================================
         // 🔐 SERVER-SIDE TOKEN VALIDATION
-        // Verify the Firebase ID token to confirm
-        // the user is actually authenticated
         // ============================================
         const authHeader = request.headers.get('Authorization');
         const tokenData = await verifyAuthToken(authHeader);
 
-        // Determine if review should be marked as verified
-        // Token MUST be valid AND match the submitted email/phone
         let isVerified = false;
         if (tokenData) {
             if (email && tokenData.email === email) {
@@ -44,25 +41,31 @@ export async function POST(request: NextRequest) {
             }
         }
 
+        const db = getAdminDb();
+        const reviewsRef = db.collection(REVIEWS_COLLECTION);
+
         // Check for duplicate review (by email or phone)
-        const reviewsRef = collection(db, REVIEWS_COLLECTION);
         if (email) {
-            const dupEmailQ = query(reviewsRef, where('company_code', '==', companyCode), where('reviewer_email', '==', email));
-            const dupEmailSnap = await getDocs(dupEmailQ);
+            const dupEmailSnap = await reviewsRef
+                .where('company_code', '==', companyCode)
+                .where('reviewer_email', '==', email)
+                .get();
             if (!dupEmailSnap.empty) {
                 return NextResponse.json({ error: 'لقد قمت بتقييم هذه الشركة مسبقاً' }, { status: 409 });
             }
         }
         if (phone) {
-            const dupPhoneQ = query(reviewsRef, where('company_code', '==', companyCode), where('reviewer_phone', '==', phone));
-            const dupPhoneSnap = await getDocs(dupPhoneQ);
+            const dupPhoneSnap = await reviewsRef
+                .where('company_code', '==', companyCode)
+                .where('reviewer_phone', '==', phone)
+                .get();
             if (!dupPhoneSnap.empty) {
                 return NextResponse.json({ error: 'لقد قمت بتقييم هذه الشركة مسبقاً' }, { status: 409 });
             }
         }
 
-        // Create review — verified status is SERVER-DETERMINED, not client
-        await addDoc(reviewsRef, {
+        // Create review — verified status is SERVER-DETERMINED
+        await reviewsRef.add({
             company_code: companyCode,
             reviewer_email: email || '',
             reviewer_phone: phone || '',
@@ -71,7 +74,7 @@ export async function POST(request: NextRequest) {
             rating: Number(rating),
             comment: comment || '',
             verified: isVerified,
-            created_at: Timestamp.fromDate(new Date()),
+            created_at: FieldValue.serverTimestamp(),
         });
 
         return NextResponse.json({
@@ -96,20 +99,18 @@ export async function PUT(request: NextRequest) {
             return NextResponse.json({ error: 'البريد ورمز الشركة مطلوبان' }, { status: 400 });
         }
 
-        const reviewsRef = collection(db, REVIEWS_COLLECTION);
-        const q = query(
-            reviewsRef,
-            where('company_code', '==', companyCode),
-            where('reviewer_email', '==', email),
-            where('verified', '==', false)
-        );
-        const snap = await getDocs(q);
+        const db = getAdminDb();
+        const snap = await db.collection(REVIEWS_COLLECTION)
+            .where('company_code', '==', companyCode)
+            .where('reviewer_email', '==', email)
+            .where('verified', '==', false)
+            .get();
 
         if (snap.empty) {
             return NextResponse.json({ error: 'لم يتم العثور على تقييم معلّق' }, { status: 404 });
         }
 
-        await updateDoc(snap.docs[0].ref, {
+        await snap.docs[0].ref.update({
             verified: true,
         });
 

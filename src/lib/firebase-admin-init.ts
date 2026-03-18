@@ -1,39 +1,56 @@
 // ============================================
-// 🔐 Firebase Admin SDK — Server-side token validation
-// Used by API routes to verify Firebase ID tokens
+// 🔐 Firebase Admin SDK — Server-side operations
+// Used by API routes: bypasses Firestore rules
 // ============================================
 
 import { initializeApp, getApps, cert, type App } from 'firebase-admin/app';
 import { getAuth, type Auth } from 'firebase-admin/auth';
+import { getFirestore, type Firestore } from 'firebase-admin/firestore';
 
 let adminApp: App;
 let adminAuth: Auth;
+let adminFirestore: Firestore;
+
+function ensureAdminApp(): App {
+    if (getApps().length === 0) {
+        const projectId = process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID;
+
+        if (process.env.FIREBASE_ADMIN_PRIVATE_KEY && process.env.FIREBASE_ADMIN_CLIENT_EMAIL) {
+            adminApp = initializeApp({
+                credential: cert({
+                    projectId,
+                    clientEmail: process.env.FIREBASE_ADMIN_CLIENT_EMAIL,
+                    privateKey: process.env.FIREBASE_ADMIN_PRIVATE_KEY.replace(/\\n/g, '\n'),
+                }),
+            });
+        } else {
+            // Firebase App Hosting: auto-detects credentials
+            adminApp = initializeApp({ projectId });
+        }
+    } else {
+        adminApp = getApps()[0];
+    }
+    return adminApp;
+}
 
 function getAdminAuth(): Auth {
     if (!adminAuth) {
-        if (getApps().length === 0) {
-            // If GOOGLE_APPLICATION_CREDENTIALS is set, cert will auto-detect
-            // Otherwise, use project-level defaults (works in Cloud Run, GCF, etc.)
-            const projectId = process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID;
-
-            if (process.env.FIREBASE_ADMIN_PRIVATE_KEY && process.env.FIREBASE_ADMIN_CLIENT_EMAIL) {
-                adminApp = initializeApp({
-                    credential: cert({
-                        projectId,
-                        clientEmail: process.env.FIREBASE_ADMIN_CLIENT_EMAIL,
-                        privateKey: process.env.FIREBASE_ADMIN_PRIVATE_KEY.replace(/\\n/g, '\n'),
-                    }),
-                });
-            } else {
-                // Fallback: initialize without credentials (works in Firebase-hosted environments)
-                adminApp = initializeApp({ projectId });
-            }
-        } else {
-            adminApp = getApps()[0];
-        }
+        ensureAdminApp();
         adminAuth = getAuth(adminApp);
     }
     return adminAuth;
+}
+
+/**
+ * Get Admin Firestore — bypasses security rules
+ * Use this in API routes instead of client SDK
+ */
+export function getAdminDb(): Firestore {
+    if (!adminFirestore) {
+        ensureAdminApp();
+        adminFirestore = getFirestore(adminApp);
+    }
+    return adminFirestore;
 }
 
 /**
@@ -63,3 +80,4 @@ export async function verifyAuthToken(authHeader: string | null): Promise<{
         return null;
     }
 }
+

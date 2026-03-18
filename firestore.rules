@@ -66,25 +66,23 @@ service cloud.firestore {
     }
     
     // Business Claims — claim verification for company ownership
+    // API routes use Admin SDK (bypass rules), so these only apply to client SDK
     match /business_claims/{claimId} {
       // Anyone can read claim status (CTA checks if claimed)
       allow read: if true;
-      // Anyone can create a new claim (email is sent for verification)
-      allow create: if true;
-      // Update allowed for verification flow (email/phone confirm)
-      allow update: if true;
+      // Only Admin SDK (API routes) handles create/update — block direct client writes
+      allow create, update: if request.auth != null;
       // Only authenticated admin can delete
       allow delete: if request.auth != null;
     }
     
     // Verified Reviews — authenticated reviews for companies
+    // API routes use Admin SDK (bypass rules), so these only apply to client SDK
     match /verified_reviews/{reviewId} {
       // Anyone can read reviews (public display)
       allow read: if true;
-      // Anyone can create a review (auth gate is client-side + server validates token)
-      allow create: if true;
-      // Update for verification status changes
-      allow update: if true;
+      // Only Admin SDK (API routes) handles create/update — block direct client writes
+      allow create, update: if request.auth != null;
       // Only authenticated admin can delete
       allow delete: if request.auth != null;
     }

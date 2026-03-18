@@ -1,11 +1,12 @@
 // ============================================
-// 🔐 API: Verify Business Claim
-// POST: mark a claim as verified after email confirmation
+// 🔐 API: Verify Business Claim (Email — Step 1)
+// POST: mark a claim as email_verified
+// Uses Admin SDK (bypasses Firestore rules)
 // ============================================
 
 import { NextRequest, NextResponse } from 'next/server';
-import { collection, query, where, getDocs, updateDoc, Timestamp } from 'firebase/firestore';
-import { db } from '@/lib/firebase';
+import { getAdminDb } from '@/lib/firebase-admin-init';
+import { FieldValue } from 'firebase-admin/firestore';
 
 const CLAIMS_COLLECTION = 'business_claims';
 
@@ -17,24 +18,21 @@ export async function POST(request: NextRequest) {
             return NextResponse.json({ error: 'البريد ورمز الشركة مطلوبان' }, { status: 400 });
         }
 
-        const claimsRef = collection(db, CLAIMS_COLLECTION);
-        const q = query(
-            claimsRef,
-            where('company_code', '==', companyCode),
-            where('claimant_email', '==', email),
-            where('status', '==', 'pending')
-        );
-        const snap = await getDocs(q);
+        const db = getAdminDb();
+        const snap = await db.collection(CLAIMS_COLLECTION)
+            .where('company_code', '==', companyCode)
+            .where('claimant_email', '==', email)
+            .where('status', '==', 'pending')
+            .get();
 
         if (snap.empty) {
             return NextResponse.json({ error: 'لم يتم العثور على طلب توثيق معلّق' }, { status: 404 });
         }
 
         // Update the claim to email_verified (Step 1 complete, pending phone Step 2)
-        const claimDoc = snap.docs[0];
-        await updateDoc(claimDoc.ref, {
+        await snap.docs[0].ref.update({
             status: 'email_verified',
-            email_verified_at: Timestamp.fromDate(new Date()),
+            email_verified_at: FieldValue.serverTimestamp(),
         });
 
         return NextResponse.json({

@@ -2,11 +2,12 @@
 // 🔐 API: Business Claim — Submit & Check
 // POST: submit a new claim
 // GET:  check claim status for a company
+// Uses Admin SDK (bypasses Firestore rules)
 // ============================================
 
 import { NextRequest, NextResponse } from 'next/server';
-import { collection, query, where, getDocs, addDoc, Timestamp } from 'firebase/firestore';
-import { db } from '@/lib/firebase';
+import { getAdminDb } from '@/lib/firebase-admin-init';
+import { FieldValue } from 'firebase-admin/firestore';
 
 const CLAIMS_COLLECTION = 'business_claims';
 
@@ -19,30 +20,37 @@ export async function POST(request: NextRequest) {
             return NextResponse.json({ error: 'البريد الإلكتروني ورمز الشركة مطلوبان' }, { status: 400 });
         }
 
+        const db = getAdminDb();
+        const claimsRef = db.collection(CLAIMS_COLLECTION);
+
         // Check if already claimed
-        const claimsRef = collection(db, CLAIMS_COLLECTION);
-        const existingQ = query(claimsRef, where('company_code', '==', companyCode), where('status', '==', 'verified'));
-        const existingSnap = await getDocs(existingQ);
+        const existingSnap = await claimsRef
+            .where('company_code', '==', companyCode)
+            .where('status', '==', 'verified')
+            .get();
 
         if (!existingSnap.empty) {
             return NextResponse.json({ error: 'هذه المنشأة مُوثّقة بالفعل', claimed: true }, { status: 409 });
         }
 
         // Check if pending claim exists for this email
-        const pendingQ = query(claimsRef, where('company_code', '==', companyCode), where('claimant_email', '==', email), where('status', '==', 'pending'));
-        const pendingSnap = await getDocs(pendingQ);
+        const pendingSnap = await claimsRef
+            .where('company_code', '==', companyCode)
+            .where('claimant_email', '==', email)
+            .where('status', '==', 'pending')
+            .get();
 
         if (!pendingSnap.empty) {
             return NextResponse.json({ message: 'طلب التوثيق قيد الانتظار. تحقق من بريدك الإلكتروني', status: 'pending' });
         }
 
         // Create new claim
-        await addDoc(claimsRef, {
+        await claimsRef.add({
             company_code: companyCode,
             claimant_email: email,
             business_name: businessName || '',
             status: 'pending',
-            claimed_at: Timestamp.fromDate(new Date()),
+            claimed_at: FieldValue.serverTimestamp(),
             verified_at: null,
         });
 
@@ -62,11 +70,14 @@ export async function GET(request: NextRequest) {
     }
 
     try {
-        const claimsRef = collection(db, CLAIMS_COLLECTION);
+        const db = getAdminDb();
+        const claimsRef = db.collection(CLAIMS_COLLECTION);
 
         // Check fully verified (email + phone)
-        const verifiedQ = query(claimsRef, where('company_code', '==', companyCode), where('status', '==', 'verified'));
-        const verifiedSnap = await getDocs(verifiedQ);
+        const verifiedSnap = await claimsRef
+            .where('company_code', '==', companyCode)
+            .where('status', '==', 'verified')
+            .get();
 
         if (!verifiedSnap.empty) {
             const claim = verifiedSnap.docs[0].data();
@@ -79,8 +90,10 @@ export async function GET(request: NextRequest) {
         }
 
         // Check email-only verified (pending phone)
-        const emailOnlyQ = query(claimsRef, where('company_code', '==', companyCode), where('status', '==', 'email_verified'));
-        const emailOnlySnap = await getDocs(emailOnlyQ);
+        const emailOnlySnap = await claimsRef
+            .where('company_code', '==', companyCode)
+            .where('status', '==', 'email_verified')
+            .get();
 
         if (!emailOnlySnap.empty) {
             return NextResponse.json({
