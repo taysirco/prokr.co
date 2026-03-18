@@ -47,7 +47,8 @@ export async function POST(request: NextRequest) {
         });
 
         return NextResponse.json({ message: 'تم إرسال رابط التأكيد إلى بريدك الإلكتروني', status: 'pending' });
-    } catch {
+    } catch (err) {
+        console.error('[CLAIM POST ERROR]', err);
         return NextResponse.json({ error: 'حدث خطأ. حاول مرة أخرى.' }, { status: 500 });
     }
 }
@@ -90,7 +91,8 @@ export async function GET(request: NextRequest) {
         }
 
         return NextResponse.json({ claimed: false, email_verified: false, phone_verified: false });
-    } catch {
+    } catch (err) {
+        console.error('[CLAIM GET ERROR]', err);
         return NextResponse.json({ error: 'حدث خطأ' }, { status: 500 });
     }
 }
