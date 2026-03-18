@@ -12,6 +12,7 @@ import { hasPageOverride } from '@/lib/overrides/registry';
 import { isAbsorbedSlug, getCanonicalSlug } from '@/lib/services/super-page-groups';
 import Footer from '@/components/Footer';
 import FraudAlertBanner from '@/components/FraudAlertBanner';
+import { NafathTrustShield } from '@/components/NafathTrustShield';
 import MarketTimingBadge from '@/components/MarketTimingBadge';
 import LocalPresence from '@/components/LocalPresence';
 import { LiveAvailabilityBanner } from '@/components/LiveAvailabilityBanner';
@@ -387,6 +388,11 @@ export default async function ServicePage({ params }: ServicePageProps) {
                 {/* 🛡️ Consumer Protection Alert — Consumer Protection Banner */}
                 <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
                     <FraudAlertBanner serviceName={service.name_ar} serviceSlug={service.slug} cityName="السعودية" />
+                </section>
+
+                {/* 🛡️ Nafath Trust Shield — Government Identity Verification */}
+                <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
+                    <NafathTrustShield serviceNameAr={service.name_ar} cityNameAr="المملكة" />
                 </section>
 
                 {/* Local Service Area — National Service Signal */}

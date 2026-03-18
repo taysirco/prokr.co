@@ -22,6 +22,7 @@ import { LiveAvailabilityBanner } from '@/components/LiveAvailabilityBanner';
 import { EmergencyNightBanner } from '@/components/EmergencyNightBanner';
 import LocalPresence from '@/components/LocalPresence';
 import FraudAlertBanner from '@/components/FraudAlertBanner';
+import { NafathTrustShield } from '@/components/NafathTrustShield';
 import GeoPricingTable from '@/components/GeoPricingTable';
 import MarketTimingBadge from '@/components/MarketTimingBadge';
 import { PriceDisclosure } from '@/components/PriceDisclosure';
@@ -384,6 +385,11 @@ export default async function SiloPage({ params }: SiloPageProps) {
                 {/* 🛡️ Consumer Protection Alert — Consumer Protection Banner */}
                 <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
                     <FraudAlertBanner serviceName={service.name_ar} serviceSlug={service.slug} cityName={city.name_ar} />
+                </section>
+
+                {/* 🛡️ Nafath Trust Shield — Government Identity Verification */}
+                <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
+                    <NafathTrustShield serviceNameAr={service.name_ar} cityNameAr={cityKw} />
                 </section>
 
                 {/* Local Service Area — Unique Per City+Service Slug */}

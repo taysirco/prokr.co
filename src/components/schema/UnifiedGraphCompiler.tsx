@@ -144,6 +144,17 @@ export function UnifiedGraphCompiler({
                     { '@type': 'GovernmentOrganization', name: 'منصة قوى — أجير (Qiwa)', url: 'https://qiwa.sa' },
                     { '@type': 'GovernmentOrganization', name: 'برنامج نطاقات — وزارة الموارد البشرية', url: 'https://hrsd.gov.sa' },
                 ],
+                // 🛡️ درع نفاذ — التحقق الحكومي على مستوى المنصة
+                hasCredential: {
+                    '@type': 'EducationalOccupationalCredential',
+                    credentialCategory: 'Government Identity Verification Platform',
+                    name: 'التحقق عبر منصة نفاذ الوطنية — مركز المعلومات الوطني',
+                    recognizedBy: {
+                        '@type': 'GovernmentOrganization',
+                        name: 'مركز المعلومات الوطني — منصة نفاذ (Nafath)',
+                        url: 'https://www.iam.gov.sa/',
+                    },
+                },
             },
             ...advertisers.slice(0, 10).map(ad => ({
                 '@type': 'Organization' as const,
@@ -290,6 +301,21 @@ export function UnifiedGraphCompiler({
                                 reviewCount: reviews.length,
                                 bestRating: 5,
                                 worstRating: 1,
+                            },
+                        }),
+                        // 🛡️ درع نفاذ — تحقق أمني على العمالة
+                        ...(ad.has_verified_employees && {
+                            employee: {
+                                '@type': 'Person',
+                                hasCredential: {
+                                    '@type': 'EducationalOccupationalCredential',
+                                    credentialCategory: 'تحقق أمني وسجل جنائي نظيف',
+                                    recognizedBy: {
+                                        '@type': 'GovernmentOrganization',
+                                        name: 'منصة نفاذ (Nafath)',
+                                        url: 'https://www.iam.gov.sa/',
+                                    },
+                                },
                             },
                         }),
                     },

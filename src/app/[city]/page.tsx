@@ -15,6 +15,7 @@ import { isAbsorbedSlug } from '@/lib/services/super-page-groups';
 import Footer from '@/components/Footer';
 import LocalPresence from '@/components/LocalPresence';
 import FraudAlertBanner from '@/components/FraudAlertBanner';
+import { NafathTrustShield } from '@/components/NafathTrustShield';
 import { LiveAvailabilityBanner } from '@/components/LiveAvailabilityBanner';
 import { EmergencyNightBanner } from '@/components/EmergencyNightBanner';
 import MarketTimingBadge from '@/components/MarketTimingBadge';
@@ -425,6 +426,11 @@ export default async function CityPage({ params }: CityPageProps) {
                 {/* 🛡️ Consumer Protection Alert — Consumer Protection Banner */}
                 <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
                     <FraudAlertBanner serviceName="خدمات منزلية" serviceSlug="cleaning" cityName={city.name_ar} />
+                </section>
+
+                {/* 🛡️ Nafath Trust Shield — Government Identity Verification */}
+                <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
+                    <NafathTrustShield serviceNameAr="خدمات منزلية" cityNameAr={city.name_ar} />
                 </section>
 
                 {/* Local Service Area — City-Level Landmark Signal */}
