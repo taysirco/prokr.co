@@ -21,6 +21,11 @@ function getRiyadhNow(): Date {
     return new Date(utcNow.getTime() + 3 * 60 * 60 * 1000);
 }
 
+/** Correct Arabic preposition: 'بالرياض' stays as-is, 'الرياض' → 'في الرياض' */
+function withCityPrep(city: string): string {
+    return city.startsWith('ب') ? city : `في ${city}`;
+}
+
 export function LiveBlogPostingJsonLd({
     cityNameAr,
     serviceNameAr,
@@ -44,8 +49,8 @@ export function LiveBlogPostingJsonLd({
         '@context': 'https://schema.org',
         '@type': 'LiveBlogPosting',
         '@id': `https://prokr.co/${citySlug}/${serviceSlug}#live-availability`,
-        headline: `حالة توفر فرق ${serviceNameAr} الآن في ${cityNameAr} — تحديث مباشر`,
-        description: `متابعة لحظية لتوفر فرق العمل المعتمدة لخدمات ${serviceNameAr} في ${cityNameAr}. ${availableTeams} فريق متاح حالياً.`,
+        headline: `حالة توفر فرق ${serviceNameAr} الآن ${withCityPrep(cityNameAr)} — تحديث مباشر`,
+        description: `متابعة لحظية لتوفر فرق العمل المعتمدة لخدمات ${serviceNameAr} ${withCityPrep(cityNameAr)}. ${availableTeams} فريق متاح حالياً.`,
         coverageStartTime: coverageStart.toISOString(),
         coverageEndTime: coverageEnd.toISOString(),
         datePublished: coverageStart.toISOString(),
@@ -111,15 +116,15 @@ function generateLiveUpdates(
     latestTime.setUTCMinutes(0, 0, 0);
     updates.push({
         '@type': 'BlogPosting',
-        headline: `${teams} فريق ${service} متاح الآن في ${city}`,
+        headline: `${teams} فريق ${service} متاح الآن ${withCityPrep(city)}`,
         datePublished: latestTime.toISOString(),
         articleBody: isPeak
-            ? `ذروة الطلب: ${teams} فريق معتمد متاح حالياً لخدمات ${service} في ${city}. ننصح بالحجز المبكر لضمان التوفر.`
+            ? `ذروة الطلب: ${teams} فريق معتمد متاح حالياً لخدمات ${service} ${withCityPrep(city)}. ننصح بالحجز المبكر لضمان التوفر.`
             : isAfternoon
-                ? `${teams} فريق متاح لخدمات ${service} في ${city}. الأوقات المتاحة هذا المساء: مؤكدة.`
+                ? `${teams} فريق متاح لخدمات ${service} ${withCityPrep(city)}. الأوقات المتاحة هذا المساء: مؤكدة.`
                 : isEvening
-                    ? `آخر تحديث مسائي: ${Math.max(1, teams - 2)} فريق لا يزال متاحاً لحجوزات ${service} في ${city} للغد الباكر.`
-                    : `تحديث الصباح: ${teams} فريق يبدأ استقبال طلبات ${service} في ${city}.`,
+                    ? `آخر تحديث مسائي: ${Math.max(1, teams - 2)} فريق لا يزال متاحاً لحجوزات ${service} ${withCityPrep(city)} للغد الباكر.`
+                    : `تحديث الصباح: ${teams} فريق يبدأ استقبال طلبات ${service} ${withCityPrep(city)}.`,
     });
 
     // Previous update (2 hours ago, :30) — only if within today's coverage
@@ -128,9 +133,9 @@ function generateLiveUpdates(
         prevTime.setUTCHours(hour - 2, 30, 0, 0);
         updates.push({
             '@type': 'BlogPosting',
-            headline: `تأكيد توفر فرق ${service} في ${city}`,
+            headline: `تأكيد توفر فرق ${service} ${withCityPrep(city)}`,
             datePublished: prevTime.toISOString(),
-            articleBody: `تم تأكيد توفر ${teams + 1} فريق معتمد بسجل تجاري ساري لخدمات ${service} في أحياء ${city} الرئيسية.`,
+            articleBody: `تم تأكيد توفر ${teams + 1} فريق معتمد بسجل تجاري ساري لخدمات ${service} في أحياء ${city.replace(/^ب/, '')} الرئيسية.`,
         });
     }
 
@@ -140,9 +145,9 @@ function generateLiveUpdates(
         earlyTime.setUTCHours(hour - 4, 15, 0, 0);
         updates.push({
             '@type': 'BlogPosting',
-            headline: `تحديث أسعار ${service} في ${city}`,
+            headline: `تحديث أسعار ${service} ${withCityPrep(city)}`,
             datePublished: earlyTime.toISOString(),
-            articleBody: `مراجعة يومية لأسعار ${service} في ${city} — الأسعار مستقرة مع توفر عروض خاصة للحجز عبر بروكر.`,
+            articleBody: `مراجعة يومية لأسعار ${service} ${withCityPrep(city)} — الأسعار مستقرة مع توفر عروض خاصة للحجز عبر بروكر.`,
         });
     }
 

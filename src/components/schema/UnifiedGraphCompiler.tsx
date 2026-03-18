@@ -276,8 +276,8 @@ export function UnifiedGraphCompiler({
         graph.push({
             '@type': 'ItemList',
             '@id': `${baseUrl}#company-list`,
-            name: `أفضل ${top5.length} شركات ${service.name_ar} مجربة في ${cityKw}`,
-            description: `قائمة أفضل شركات ${service.name_ar} المعتمدة في ${cityKw} — مراجعات حقيقية وأسعار تنافسية`,
+            name: `أفضل ${top5.length} شركات ${service.name_ar} مجربة ${cityKw.startsWith('ب') ? cityKw : `في ${cityKw}`}`,
+            description: `قائمة أفضل شركات ${service.name_ar} المعتمدة ${cityKw.startsWith('ب') ? cityKw : `في ${cityKw}`} — مراجعات حقيقية وأسعار تنافسية`,
             numberOfItems: top5.length,
             about: { '@id': `${baseUrl}#service` },
             itemListElement: top5.map((ad, index) => {
