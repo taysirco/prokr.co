@@ -81,7 +81,8 @@ export async function POST(request: NextRequest) {
             status: 'success',
             verified: isVerified,
         });
-    } catch {
+    } catch (err) {
+        console.error('[REVIEW POST ERROR]', err);
         return NextResponse.json({ error: 'حدث خطأ. حاول مرة أخرى.' }, { status: 500 });
     }
 }
@@ -116,7 +117,8 @@ export async function PUT(request: NextRequest) {
             success: true,
             message: 'تم تأكيد تقييمك بنجاح! ✅',
         });
-    } catch {
+    } catch (err) {
+        console.error('[REVIEW PUT ERROR]', err);
         return NextResponse.json({ error: 'حدث خطأ' }, { status: 500 });
     }
 }

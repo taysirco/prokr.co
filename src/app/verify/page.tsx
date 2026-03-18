@@ -63,13 +63,17 @@ function VerifyContent() {
                             body: JSON.stringify({ email, companyCode }),
                         });
                         setMessage('تم تأكيد البريد ✅ — الآن عد لصفحة المنشأة لإكمال الخطوة 2: تأكيد رقم الهاتف');
+                    } else {
+                        setMessage('تم التحقق من حسابك بنجاح!');
                     }
                 }
 
                 setState('success');
 
-                // Clean up localStorage
-                window.localStorage.removeItem('claimEmail');
+                // Clean up localStorage (keep claimEmail for phone step if claim mode)
+                if (mode !== 'claim') {
+                    window.localStorage.removeItem('claimEmail');
+                }
                 window.localStorage.removeItem('claimCompanyCode');
             } catch {
                 setState('error');

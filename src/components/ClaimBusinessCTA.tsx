@@ -45,8 +45,12 @@ export default function ClaimBusinessCTA({ companyCode, businessName, variant = 
             .then(res => res.json())
             .then(data => {
                 if (data.claimed) setState('claimed');
-                // If email verified but phone not yet
+                // If email verified but phone not yet — restore email from localStorage
                 if (data.email_verified && !data.phone_verified) {
+                    const savedEmail = typeof window !== 'undefined'
+                        ? window.localStorage.getItem('claimEmail') || ''
+                        : '';
+                    if (savedEmail) setEmail(savedEmail);
                     setState('phone-form');
                 }
             })
@@ -162,6 +166,10 @@ export default function ClaimBusinessCTA({ companyCode, businessName, variant = 
             }
 
             setState('claimed');
+            // Clean up localStorage — full claim complete
+            if (typeof window !== 'undefined') {
+                window.localStorage.removeItem('claimEmail');
+            }
         } catch {
             setErrorMsg('رمز التحقق غير صحيح.');
             setState('phone-otp');

@@ -42,7 +42,8 @@ export async function POST(request: NextRequest) {
             message: 'تم تأكيد البريد! الآن أكمل الخطوة 2: تأكيد رقم الهاتف',
             next_step: 'phone',
         });
-    } catch {
+    } catch (err) {
+        console.error('[CLAIM VERIFY ERROR]', err);
         return NextResponse.json({ error: 'حدث خطأ أثناء التحقق' }, { status: 500 });
     }
 }

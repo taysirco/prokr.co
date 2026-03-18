@@ -77,7 +77,8 @@ export async function POST(request: NextRequest) {
             success: true,
             message: 'تم توثيق المنشأة بالكامل — البريد + الهاتف ✅',
         });
-    } catch {
+    } catch (err) {
+        console.error('[CLAIM VERIFY-PHONE ERROR]', err);
         return NextResponse.json({ error: 'حدث خطأ أثناء التحقق' }, { status: 500 });
     }
 }
