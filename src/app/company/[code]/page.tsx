@@ -436,10 +436,62 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                                     </div>
                                 </div>
 
-                                {/* Trust Badges */}
+                                {/* 🛡️ Government Credential Panel */}
                                 <div className="bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-2xl p-6 border border-emerald-200">
-                                    <h3 className="font-bold text-emerald-900 mb-4">لماذا تختارنا؟</h3>
+                                    <h3 className="font-bold text-emerald-900 mb-4 flex items-center gap-2">
+                                        <Shield className="w-5 h-5" />
+                                        {(advertiser.has_verified_employees || advertiser.zatca_registered || advertiser.qiwa_registered || advertiser.crn)
+                                            ? 'اعتمادات حكومية مُوثّقة'
+                                            : 'لماذا تختارنا؟'}
+                                    </h3>
                                     <ul className="space-y-3">
+                                        {/* Dynamic credentials */}
+                                        {advertiser.crn && (
+                                            <li className="flex items-center gap-3 text-emerald-800">
+                                                <div className="w-8 h-8 bg-emerald-200 rounded-lg flex items-center justify-center text-sm">📝</div>
+                                                <div>
+                                                    <span className="text-sm font-bold">سجل تجاري</span>
+                                                    <span className="text-[10px] text-emerald-600 block">رقم {advertiser.crn}</span>
+                                                </div>
+                                            </li>
+                                        )}
+                                        {advertiser.has_verified_employees && (
+                                            <li className="flex items-center gap-3 text-emerald-800">
+                                                <div className="w-8 h-8 bg-emerald-200 rounded-lg flex items-center justify-center text-sm">🪪</div>
+                                                <div>
+                                                    <span className="text-sm font-bold">تحقق نفاذ</span>
+                                                    <span className="text-[10px] text-emerald-600 block">هوية وطنية — مركز المعلومات الوطني</span>
+                                                </div>
+                                            </li>
+                                        )}
+                                        {advertiser.zatca_registered && (
+                                            <li className="flex items-center gap-3 text-emerald-800">
+                                                <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center text-sm">🧾</div>
+                                                <div>
+                                                    <span className="text-sm font-bold">ZATCA</span>
+                                                    <span className="text-[10px] text-blue-600 block">فوترة إلكترونية — المرحلة الثانية</span>
+                                                </div>
+                                            </li>
+                                        )}
+                                        {advertiser.qiwa_registered && (
+                                            <li className="flex items-center gap-3 text-emerald-800">
+                                                <div className="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center text-sm">📋</div>
+                                                <div>
+                                                    <span className="text-sm font-bold">منصة قوى</span>
+                                                    <span className="text-[10px] text-purple-600 block">عقود عمالة موثقة نظامية</span>
+                                                </div>
+                                            </li>
+                                        )}
+                                        {advertiser.nitaqat_band && (
+                                            <li className="flex items-center gap-3 text-emerald-800">
+                                                <div className="w-8 h-8 bg-amber-100 rounded-lg flex items-center justify-center text-sm">🏅</div>
+                                                <div>
+                                                    <span className="text-sm font-bold">نطاقات {advertiser.nitaqat_band === 'platinum' ? 'بلاتيني' : advertiser.nitaqat_band === 'green' ? 'أخضر' : 'أخضر منخفض'}</span>
+                                                    <span className="text-[10px] text-amber-600 block">وزارة الموارد البشرية</span>
+                                                </div>
+                                            </li>
+                                        )}
+                                        {/* Fallback generic trust items */}
                                         <li className="flex items-center gap-3 text-emerald-800">
                                             <div className="w-8 h-8 bg-emerald-200 rounded-lg flex items-center justify-center">
                                                 <Shield className="w-4 h-4 text-emerald-700" />
@@ -452,12 +504,14 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                                             </div>
                                             <span className="text-sm">خدمة على مدار الساعة</span>
                                         </li>
-                                        <li className="flex items-center gap-3 text-emerald-800">
-                                            <div className="w-8 h-8 bg-emerald-200 rounded-lg flex items-center justify-center">
-                                                <Star className="w-4 h-4 text-emerald-700" />
-                                            </div>
-                                            <span className="text-sm">تقييمات عالية من العملاء</span>
-                                        </li>
+                                        {avgRating > 0 && (
+                                            <li className="flex items-center gap-3 text-emerald-800">
+                                                <div className="w-8 h-8 bg-emerald-200 rounded-lg flex items-center justify-center">
+                                                    <Star className="w-4 h-4 text-emerald-700" />
+                                                </div>
+                                                <span className="text-sm">تقييم {avgRating.toFixed(1)} من 5 نجوم</span>
+                                            </li>
+                                        )}
                                     </ul>
                                 </div>
                             </div>

@@ -110,6 +110,36 @@ export default function AdvertiserCard({ advertiser, variant = 'standard' }: Adv
                         {advertiser.description || 'شركة متخصصة في تقديم أفضل الخدمات بأعلى جودة وأفضل الأسعار.'}
                     </p>
 
+                    {/* 🛡️ Government Credential Badges */}
+                    {(advertiser.has_verified_employees || advertiser.zatca_registered || advertiser.qiwa_registered || advertiser.nitaqat_band) && (
+                        <div className="flex flex-wrap gap-1.5 mt-3">
+                            {advertiser.has_verified_employees && (
+                                <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-emerald-50 text-emerald-700 text-[10px] font-bold rounded-full border border-emerald-200" title="فريق بتحقق هوية وطنية عبر منصة نفاذ">
+                                    🪪 نفاذ
+                                </span>
+                            )}
+                            {advertiser.zatca_registered && (
+                                <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-blue-50 text-blue-700 text-[10px] font-bold rounded-full border border-blue-200" title="ملتزمة بنظام الفوترة الإلكترونية ZATCA المرحلة الثانية">
+                                    🧾 ZATCA
+                                </span>
+                            )}
+                            {advertiser.qiwa_registered && (
+                                <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-purple-50 text-purple-700 text-[10px] font-bold rounded-full border border-purple-200" title="عقود موثقة في منصة قوى وأجير">
+                                    📋 قوى
+                                </span>
+                            )}
+                            {advertiser.nitaqat_band && (
+                                <span className={`inline-flex items-center gap-1 px-2 py-0.5 text-[10px] font-bold rounded-full border ${
+                                    advertiser.nitaqat_band === 'platinum'
+                                        ? 'bg-slate-50 text-slate-700 border-slate-300'
+                                        : 'bg-green-50 text-green-700 border-green-200'
+                                }`} title={`تصنيف نطاقات: ${advertiser.nitaqat_band}`}>
+                                    🏅 نطاقات {advertiser.nitaqat_band === 'platinum' ? 'بلاتيني' : 'أخضر'}
+                                </span>
+                            )}
+                        </div>
+                    )}
+
                     {/* CTA Buttons */}
                     <div className="flex gap-3 mt-5">
                         <ActionButton
@@ -169,9 +199,17 @@ export default function AdvertiserCard({ advertiser, variant = 'standard' }: Adv
                 >
                     {advertiser.business_name}
                 </Link>
-                <p className="text-sm text-gray-500 truncate">
-                    {advertiser.targeted_cities.slice(0, 2).join(' • ')}
-                </p>
+                <div className="flex items-center gap-2 mt-0.5">
+                    <p className="text-sm text-gray-500 truncate">
+                        {advertiser.targeted_cities.slice(0, 2).join(' • ')}
+                    </p>
+                    {/* Compact credential indicator */}
+                    {advertiser.has_verified_employees && (
+                        <span className="inline-flex items-center gap-0.5 px-1.5 py-0.5 bg-emerald-50 text-emerald-600 text-[9px] font-bold rounded border border-emerald-200" title="فريق بتحقق نفاذ">
+                            🛡️
+                        </span>
+                    )}
+                </div>
             </div>
 
             {/* Quick Actions */}
