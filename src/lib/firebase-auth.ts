@@ -126,9 +126,8 @@ export function isEmailSignInLink(link: string): boolean {
 
 export async function completeEmailSignIn(email: string, link: string) {
     const result = await signInWithEmailLink(auth, email, link);
-    if (typeof window !== 'undefined') {
-        window.localStorage.removeItem('claimEmail');
-    }
+    // NOTE: Do NOT remove claimEmail here — the verify page manages
+    // localStorage cleanup based on mode (claim keeps it for phone step)
     return result;
 }
 

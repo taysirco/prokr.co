@@ -39,18 +39,31 @@ export default function ClaimBusinessCTA({ companyCode, businessName, variant = 
     const recaptchaRef = useRef<RecaptchaVerifier | null>(null);
     const recaptchaContainerRef = useRef<HTMLDivElement | null>(null);
 
-    // Check if already claimed
+    // Check if already claimed or email verified
     useEffect(() => {
         fetch(`/api/claim?code=${companyCode}`)
             .then(res => res.json())
             .then(data => {
-                if (data.claimed) setState('claimed');
-                // If email verified but phone not yet — restore email from localStorage
+                if (data.claimed) {
+                    setState('claimed');
+                    return;
+                }
+                // If email verified but phone not yet — restore email and go to phone step
                 if (data.email_verified && !data.phone_verified) {
+                    // Priority 1: email from API response (most reliable)
+                    // Priority 2: email from localStorage (fallback)
+                    const apiEmail = data.claimant_email || '';
                     const savedEmail = typeof window !== 'undefined'
                         ? window.localStorage.getItem('claimEmail') || ''
                         : '';
-                    if (savedEmail) setEmail(savedEmail);
+                    const restoredEmail = apiEmail || savedEmail;
+                    if (restoredEmail) {
+                        setEmail(restoredEmail);
+                        // Re-save to localStorage in case it was cleared
+                        if (typeof window !== 'undefined' && restoredEmail) {
+                            window.localStorage.setItem('claimEmail', restoredEmail);
+                        }
+                    }
                     setState('phone-form');
                 }
             })

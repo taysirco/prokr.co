@@ -96,10 +96,12 @@ export async function GET(request: NextRequest) {
             .get();
 
         if (!emailOnlySnap.empty) {
+            const claim = emailOnlySnap.docs[0].data();
             return NextResponse.json({
                 claimed: false,
                 email_verified: true,
                 phone_verified: false,
+                claimant_email: claim.claimant_email || '',
             });
         }
 
