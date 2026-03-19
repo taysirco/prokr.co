@@ -182,7 +182,7 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                         <div className="flex flex-col md:flex-row gap-6 items-start">
                             {/* Logo */}
                             <div className="relative">
-                                <div className="w-28 h-28 md:w-32 md:h-32 bg-white rounded-2xl shadow-xl flex items-center justify-center border-4 border-white">
+                                <div className="relative w-28 h-28 md:w-32 md:h-32 bg-white rounded-2xl shadow-xl flex items-center justify-center border-4 border-white">
                                     {advertiser.logo_url ? (
                                         <Image
                                             src={advertiser.logo_url}
