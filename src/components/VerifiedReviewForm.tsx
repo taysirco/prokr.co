@@ -6,8 +6,8 @@
 // ============================================
 
 import { useState, useEffect, useRef, useCallback } from 'react';
-import { Star, Loader2, CheckCircle, Shield, Phone, Smartphone } from 'lucide-react';
-import { signInWithGoogle, handleGoogleRedirectResult, setupRecaptcha, sendPhoneOTP, verifyPhoneOTP, getCurrentUser, onAuthChange, formatSaudiPhone } from '@/lib/firebase-auth';
+import { Star, Loader2, CheckCircle, Shield, Phone, Smartphone, ExternalLink, Copy } from 'lucide-react';
+import { signInWithGoogle, setupRecaptcha, sendPhoneOTP, verifyPhoneOTP, getCurrentUser, onAuthChange, formatSaudiPhone } from '@/lib/firebase-auth';
 import type { RecaptchaVerifier } from 'firebase/auth';
 
 interface VerifiedReviewFormProps {
@@ -43,18 +43,8 @@ export default function VerifiedReviewForm({ companyCode, businessName }: Verifi
         };
     }, []);
 
-    // Check existing auth + handle Google redirect result (mobile flow)
+    // Check existing auth state
     useEffect(() => {
-        // Handle returning from Google redirect (mobile browsers)
-        handleGoogleRedirectResult().then((user) => {
-            if (user) {
-                setAuthMethod('authenticated');
-                setUserEmail(user.email || '');
-                setUserName(user.displayName || '');
-                setLoading(false);
-            }
-        });
-
         const unsubscribe = onAuthChange((user) => {
             if (user) {
                 setAuthMethod('authenticated');
@@ -67,20 +57,20 @@ export default function VerifiedReviewForm({ companyCode, businessName }: Verifi
         return () => unsubscribe();
     }, []);
 
-    // Google Sign-In (popup on desktop, redirect on mobile)
+    // Google Sign-In (popup-only)
     const handleGoogleSignIn = useCallback(async () => {
         setLoading(true);
         setErrorMsg('');
         try {
             const user = await signInWithGoogle();
-            // Desktop popup flow — immediate result
             setAuthMethod('authenticated');
             setUserEmail(user.email || '');
             setUserName(user.displayName || '');
         } catch (err: unknown) {
-            // Mobile redirect flow — page will reload, don't show error
-            if (err instanceof Error && err.message === 'REDIRECT_IN_PROGRESS') {
-                // Keep loading state — page will redirect to Google
+            if (err instanceof Error && err.message === 'POPUP_BLOCKED') {
+                // In-app WebView (Instagram/Twitter/Facebook) — show guidance
+                setErrorMsg('WEBVIEW_BLOCKED');
+                setLoading(false);
                 return;
             }
             setErrorMsg('حدث خطأ في تسجيل الدخول بجوجل');
@@ -215,6 +205,36 @@ export default function VerifiedReviewForm({ companyCode, businessName }: Verifi
                             سجّل دخولك أولاً لضمان مصداقية التقييمات
                         </p>
 
+                        {/* WebView blocked guidance */}
+                        {errorMsg === 'WEBVIEW_BLOCKED' && (
+                            <div className="bg-amber-50 border border-amber-200 rounded-xl p-3 space-y-2">
+                                <p className="text-amber-800 text-xs font-bold flex items-center gap-1.5">
+                                    <ExternalLink className="w-4 h-4 flex-shrink-0" />
+                                    المتصفح الحالي لا يدعم تسجيل الدخول بجوجل
+                                </p>
+                                <p className="text-amber-700 text-[11px]">
+                                    افتح الرابط في Safari أو Chrome من القائمة أعلاه ⬆️
+                                </p>
+                                <button
+                                    type="button"
+                                    onClick={() => {
+                                        navigator.clipboard.writeText(window.location.href);
+                                        setErrorMsg('تم نسخ الرابط ✅');
+                                        setTimeout(() => setErrorMsg(''), 2000);
+                                    }}
+                                    className="w-full py-2 bg-amber-100 text-amber-800 text-xs font-bold rounded-lg flex items-center justify-center gap-1.5 hover:bg-amber-200 transition-colors"
+                                >
+                                    <Copy className="w-3.5 h-3.5" />
+                                    نسخ الرابط
+                                </button>
+                            </div>
+                        )}
+
+                        {/* General error */}
+                        {errorMsg && errorMsg !== 'WEBVIEW_BLOCKED' && (
+                            <p className="text-red-600 text-xs bg-red-50 p-2 rounded-lg">⚠️ {errorMsg}</p>
+                        )}
+
                         {/* Google Sign-In */}
                         <button
                             onClick={handleGoogleSignIn}
@@ -241,7 +261,7 @@ export default function VerifiedReviewForm({ companyCode, businessName }: Verifi
 
                         {/* Phone option */}
                         <button
-                            onClick={() => setAuthMethod('phone-input')}
+                            onClick={() => { setAuthMethod('phone-input'); setErrorMsg(''); }}
                             className="w-full py-3 bg-white border-2 border-gray-200 rounded-xl hover:border-emerald-400 hover:bg-emerald-50 transition-all flex items-center justify-center gap-2 text-sm font-bold text-gray-700"
                         >
                             <Smartphone className="w-5 h-5 text-emerald-600" />

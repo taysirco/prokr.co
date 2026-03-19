@@ -3,8 +3,6 @@ import {
     isSignInWithEmailLink,
     signInWithEmailLink,
     signInWithPopup,
-    signInWithRedirect,
-    getRedirectResult,
     GoogleAuthProvider,
     RecaptchaVerifier,
     signInWithPhoneNumber,
@@ -24,24 +22,26 @@ const googleProvider = new GoogleAuthProvider();
 const BASE_URL = typeof window !== 'undefined' ? window.location.origin : 'https://prokr.co';
 
 // ============================================
-// 1. Google Sign-In (Popup-first, Redirect-fallback)
+// 1. Google Sign-In (Popup-only)
 // ============================================
 
 /**
- * Sign in with Google — adaptive method:
- * - Try signInWithPopup first (works on desktop + most mobile)
- * - If popup is blocked (some mobile browsers), fall back to signInWithRedirect
+ * Sign in with Google using signInWithPopup.
  *
- * This avoids cross-origin authDomain issues with signInWithRedirect
- * on Cloud Run deployments where authDomain ≠ hosting domain.
+ * Why popup-only (no redirect fallback)?
+ * - signInWithRedirect requires authDomain === hosting domain
+ * - Our app is on Cloud Run (prokr.co) but authDomain is prokr-84ca8.firebaseapp.com
+ * - Chrome 115+, Firefox 109+, Safari 16.1+ all block 3rd-party storage
+ * - signInWithRedirect would silently fail on every modern browser
+ *
+ * If popup is blocked (in-app WebViews: Instagram/Twitter/Facebook),
+ * we throw POPUP_BLOCKED so the UI can show a guidance message.
  */
 export async function signInWithGoogle(): Promise<User> {
     try {
-        // Primary: popup-based flow (works everywhere popup isn’t blocked)
         const result = await signInWithPopup(auth, googleProvider);
         return result.user;
     } catch (err: unknown) {
-        // If popup was blocked/closed, fall back to redirect
         if (err && typeof err === 'object' && 'code' in err) {
             const firebaseErr = err as { code: string };
             if (
@@ -49,28 +49,11 @@ export async function signInWithGoogle(): Promise<User> {
                 firebaseErr.code === 'auth/popup-closed-by-user' ||
                 firebaseErr.code === 'auth/cancelled-popup-request'
             ) {
-                await signInWithRedirect(auth, googleProvider);
-                // Page will redirect — won’t reach here
-                throw new Error('REDIRECT_IN_PROGRESS');
+                // Popup blocked — likely in-app WebView (Instagram/Twitter/Facebook)
+                throw new Error('POPUP_BLOCKED');
             }
         }
-        throw err; // Re-throw other errors
-    }
-}
-
-/**
- * Handle Google redirect result on page load (for mobile flow)
- * Call this once on app/component mount to check if returning from redirect
- */
-export async function handleGoogleRedirectResult(): Promise<User | null> {
-    try {
-        const result = await getRedirectResult(auth);
-        if (result) {
-            return result.user;
-        }
-        return null;
-    } catch {
-        return null;
+        throw err;
     }
 }
 
