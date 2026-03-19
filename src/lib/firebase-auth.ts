@@ -6,6 +6,7 @@ import {
     GoogleAuthProvider,
     RecaptchaVerifier,
     signInWithPhoneNumber,
+    initializeRecaptchaConfig,
     onAuthStateChanged,
     signOut,
     type ActionCodeSettings,
@@ -13,6 +14,16 @@ import {
     type User,
 } from 'firebase/auth';
 import { auth } from './firebase';
+
+// Force-fetch reCAPTCHA Enterprise config on module load.
+// Required after enabling reCAPTCHA Enterprise in Firebase Console.
+// Without this, the SDK may not have the correct Enterprise site keys,
+// causing INVALID_APP_CREDENTIAL errors on phone auth.
+if (typeof window !== 'undefined') {
+    initializeRecaptchaConfig(auth).catch(() => {
+        // Silent fallback — AUDIT mode will use v2 if Enterprise fails
+    });
+}
 
 // ============================================
 // State
@@ -82,6 +93,12 @@ export function setupRecaptcha(buttonId: string): RecaptchaVerifier {
 export async function sendPhoneOTP(phoneNumber: string, recaptchaVerifier: RecaptchaVerifier): Promise<void> {
     // Ensure Saudi format
     const formatted = formatSaudiPhone(phoneNumber);
+
+    // Explicitly render the invisible reCAPTCHA widget before use.
+    // Without this, the v2 fallback (after Enterprise init failure) produces
+    // an invalid/missing token → 400 Bad Request from sendVerificationCode API.
+    await recaptchaVerifier.render();
+
     phoneConfirmationResult = await signInWithPhoneNumber(auth, formatted, recaptchaVerifier);
 }
 
