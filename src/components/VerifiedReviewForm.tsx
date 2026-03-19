@@ -7,7 +7,7 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { Star, Loader2, CheckCircle, Shield, Phone, Smartphone, ExternalLink, Copy } from 'lucide-react';
-import { signInWithGoogle, setupRecaptcha, sendPhoneOTP, verifyPhoneOTP, getCurrentUser, onAuthChange, formatSaudiPhone } from '@/lib/firebase-auth';
+import { signInWithGoogle, checkGoogleRedirectResult, setupRecaptcha, sendPhoneOTP, verifyPhoneOTP, getCurrentUser, onAuthChange, formatSaudiPhone } from '@/lib/firebase-auth';
 import type { RecaptchaVerifier } from 'firebase/auth';
 
 interface VerifiedReviewFormProps {
@@ -57,7 +57,18 @@ export default function VerifiedReviewForm({ companyCode, businessName }: Verifi
         return () => unsubscribe();
     }, []);
 
-    // Google Sign-In (popup-only)
+    // Handle Google redirect result (Safari iOS returns here after sign-in)
+    useEffect(() => {
+        checkGoogleRedirectResult().then((user) => {
+            if (user) {
+                setAuthMethod('authenticated');
+                setUserEmail(user.email || '');
+                setUserName(user.displayName || '');
+            }
+        });
+    }, []);
+
+    // Google Sign-In (popup → redirect fallback)
     const handleGoogleSignIn = useCallback(async () => {
         setLoading(true);
         setErrorMsg('');
@@ -67,11 +78,18 @@ export default function VerifiedReviewForm({ companyCode, businessName }: Verifi
             setUserEmail(user.email || '');
             setUserName(user.displayName || '');
         } catch (err: unknown) {
-            if (err instanceof Error && err.message === 'POPUP_BLOCKED') {
-                // In-app WebView (Instagram/Twitter/Facebook) — show guidance
-                setErrorMsg('WEBVIEW_BLOCKED');
-                setLoading(false);
-                return;
+            if (err instanceof Error) {
+                if (err.message === 'POPUP_BLOCKED') {
+                    // In-app WebView (Instagram/Twitter/Facebook) — show guidance
+                    setErrorMsg('WEBVIEW_BLOCKED');
+                    setLoading(false);
+                    return;
+                }
+                if (err.message === 'REDIRECT_STARTED') {
+                    // Safari iOS — browser is navigating to Google sign-in page
+                    // Keep loading state, user will return after sign-in
+                    return;
+                }
             }
             setErrorMsg('حدث خطأ في تسجيل الدخول بجوجل');
             setLoading(false);
