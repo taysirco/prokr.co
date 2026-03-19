@@ -288,6 +288,7 @@ export default function ClaimBusinessCTA({ companyCode, businessName, variant = 
                         onChange={(e) => setPhoneInput(e.target.value)}
                         placeholder="05XXXXXXXX"
                         dir="ltr"
+                        inputMode="tel"
                         className="w-full px-4 py-2.5 border-2 border-gray-200 rounded-xl text-sm focus:border-emerald-400 focus:ring-2 focus:ring-emerald-100 outline-none"
                         autoFocus
                     />

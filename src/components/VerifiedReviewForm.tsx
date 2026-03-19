@@ -218,7 +218,17 @@ export default function VerifiedReviewForm({ companyCode, businessName }: Verifi
                                 <button
                                     type="button"
                                     onClick={() => {
-                                        navigator.clipboard.writeText(window.location.href);
+                                        try {
+                                            navigator.clipboard.writeText(window.location.href);
+                                        } catch {
+                                            // Fallback for WebViews without Clipboard API
+                                            const input = document.createElement('input');
+                                            input.value = window.location.href;
+                                            document.body.appendChild(input);
+                                            input.select();
+                                            document.execCommand('copy');
+                                            document.body.removeChild(input);
+                                        }
                                         setErrorMsg('تم نسخ الرابط ✅');
                                         setTimeout(() => setErrorMsg(''), 2000);
                                     }}
@@ -280,6 +290,7 @@ export default function VerifiedReviewForm({ companyCode, businessName }: Verifi
                             onChange={(e) => setPhoneInput(e.target.value)}
                             placeholder="05XXXXXXXX"
                             dir="ltr"
+                            inputMode="tel"
                             className="w-full px-4 py-2.5 border-2 border-gray-200 rounded-xl text-sm focus:border-emerald-400 focus:ring-2 focus:ring-emerald-100 outline-none"
                             autoFocus
                         />
