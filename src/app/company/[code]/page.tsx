@@ -642,7 +642,7 @@ function ReviewCard({ review }: { review: Review }) {
                         ))}
                     </div>
                 </div>
-                <span className="text-xs text-gray-500">
+                <span className="text-xs text-gray-500" suppressHydrationWarning>
                     {new Date(review.date).toLocaleDateString('ar-SA')}
                 </span>
             </div>
