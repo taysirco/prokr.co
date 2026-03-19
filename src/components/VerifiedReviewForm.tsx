@@ -289,6 +289,8 @@ export default function VerifiedReviewForm({ companyCode, businessName }: Verifi
                             placeholder="أدخل الرمز المكون من 6 أرقام"
                             dir="ltr"
                             maxLength={6}
+                            inputMode="numeric"
+                            autoComplete="one-time-code"
                             className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl text-center text-lg tracking-[0.3em] font-mono focus:border-emerald-400 focus:ring-2 focus:ring-emerald-100 outline-none"
                             autoFocus
                         />

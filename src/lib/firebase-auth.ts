@@ -24,37 +24,38 @@ const googleProvider = new GoogleAuthProvider();
 const BASE_URL = typeof window !== 'undefined' ? window.location.origin : 'https://prokr.co';
 
 // ============================================
-// 1. Google Sign-In (Mobile-aware)
+// 1. Google Sign-In (Popup-first, Redirect-fallback)
 // ============================================
 
 /**
- * Detect if running on a mobile browser
- */
-function isMobileBrowser(): boolean {
-    if (typeof navigator === 'undefined') return false;
-    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-}
-
-/**
  * Sign in with Google — adaptive method:
- * - Desktop: signInWithPopup (instant, no page reload)
- * - Mobile: signInWithRedirect (reliable, page reloads after auth)
+ * - Try signInWithPopup first (works on desktop + most mobile)
+ * - If popup is blocked (some mobile browsers), fall back to signInWithRedirect
  *
- * On mobile, the page will reload after sign-in. The `onAuthStateChanged`
- * listener in the consuming component will pick up the user automatically.
- * Returns the signed-in user (desktop only — mobile returns after redirect).
+ * This avoids cross-origin authDomain issues with signInWithRedirect
+ * on Cloud Run deployments where authDomain ≠ hosting domain.
  */
 export async function signInWithGoogle(): Promise<User> {
-    if (isMobileBrowser()) {
-        // Mobile: redirect-based flow (most reliable on mobile browsers)
-        await signInWithRedirect(auth, googleProvider);
-        // This line won't be reached — page redirects to Google
-        // After redirect back, getRedirectResult or onAuthStateChanged picks up
-        throw new Error('REDIRECT_IN_PROGRESS');
+    try {
+        // Primary: popup-based flow (works everywhere popup isn’t blocked)
+        const result = await signInWithPopup(auth, googleProvider);
+        return result.user;
+    } catch (err: unknown) {
+        // If popup was blocked/closed, fall back to redirect
+        if (err && typeof err === 'object' && 'code' in err) {
+            const firebaseErr = err as { code: string };
+            if (
+                firebaseErr.code === 'auth/popup-blocked' ||
+                firebaseErr.code === 'auth/popup-closed-by-user' ||
+                firebaseErr.code === 'auth/cancelled-popup-request'
+            ) {
+                await signInWithRedirect(auth, googleProvider);
+                // Page will redirect — won’t reach here
+                throw new Error('REDIRECT_IN_PROGRESS');
+            }
+        }
+        throw err; // Re-throw other errors
     }
-    // Desktop: popup-based flow
-    const result = await signInWithPopup(auth, googleProvider);
-    return result.user;
 }
 
 /**

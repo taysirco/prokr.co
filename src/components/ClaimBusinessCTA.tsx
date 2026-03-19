@@ -330,6 +330,8 @@ export default function ClaimBusinessCTA({ companyCode, businessName, variant = 
                     placeholder="______"
                     dir="ltr"
                     maxLength={6}
+                    inputMode="numeric"
+                    autoComplete="one-time-code"
                     className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl text-center text-xl tracking-[0.4em] font-mono focus:border-emerald-400 focus:ring-2 focus:ring-emerald-100 outline-none mb-3"
                     autoFocus
                 />
