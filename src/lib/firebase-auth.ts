@@ -1,13 +1,10 @@
-// ============================================
-// 🔐 Firebase Auth — Multi-Method Authentication
-// Google Sign-In + Phone OTP + Email Link
-// ============================================
-
 import {
     sendSignInLinkToEmail,
     isSignInWithEmailLink,
     signInWithEmailLink,
     signInWithPopup,
+    signInWithRedirect,
+    getRedirectResult,
     GoogleAuthProvider,
     RecaptchaVerifier,
     signInWithPhoneNumber,
@@ -27,16 +24,53 @@ const googleProvider = new GoogleAuthProvider();
 const BASE_URL = typeof window !== 'undefined' ? window.location.origin : 'https://prokr.co';
 
 // ============================================
-// 1. Google Sign-In
+// 1. Google Sign-In (Mobile-aware)
 // ============================================
 
 /**
- * Sign in with Google popup
- * Returns the signed-in user
+ * Detect if running on a mobile browser
+ */
+function isMobileBrowser(): boolean {
+    if (typeof navigator === 'undefined') return false;
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+
+/**
+ * Sign in with Google — adaptive method:
+ * - Desktop: signInWithPopup (instant, no page reload)
+ * - Mobile: signInWithRedirect (reliable, page reloads after auth)
+ *
+ * On mobile, the page will reload after sign-in. The `onAuthStateChanged`
+ * listener in the consuming component will pick up the user automatically.
+ * Returns the signed-in user (desktop only — mobile returns after redirect).
  */
 export async function signInWithGoogle(): Promise<User> {
+    if (isMobileBrowser()) {
+        // Mobile: redirect-based flow (most reliable on mobile browsers)
+        await signInWithRedirect(auth, googleProvider);
+        // This line won't be reached — page redirects to Google
+        // After redirect back, getRedirectResult or onAuthStateChanged picks up
+        throw new Error('REDIRECT_IN_PROGRESS');
+    }
+    // Desktop: popup-based flow
     const result = await signInWithPopup(auth, googleProvider);
     return result.user;
+}
+
+/**
+ * Handle Google redirect result on page load (for mobile flow)
+ * Call this once on app/component mount to check if returning from redirect
+ */
+export async function handleGoogleRedirectResult(): Promise<User | null> {
+    try {
+        const result = await getRedirectResult(auth);
+        if (result) {
+            return result.user;
+        }
+        return null;
+    } catch {
+        return null;
+    }
 }
 
 // ============================================

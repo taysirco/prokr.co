@@ -7,7 +7,7 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { Star, Loader2, CheckCircle, Shield, Phone, Smartphone } from 'lucide-react';
-import { signInWithGoogle, setupRecaptcha, sendPhoneOTP, verifyPhoneOTP, getCurrentUser, onAuthChange, formatSaudiPhone } from '@/lib/firebase-auth';
+import { signInWithGoogle, handleGoogleRedirectResult, setupRecaptcha, sendPhoneOTP, verifyPhoneOTP, getCurrentUser, onAuthChange, formatSaudiPhone } from '@/lib/firebase-auth';
 import type { RecaptchaVerifier } from 'firebase/auth';
 
 interface VerifiedReviewFormProps {
@@ -43,31 +43,47 @@ export default function VerifiedReviewForm({ companyCode, businessName }: Verifi
         };
     }, []);
 
-    // Check existing auth
+    // Check existing auth + handle Google redirect result (mobile flow)
     useEffect(() => {
+        // Handle returning from Google redirect (mobile browsers)
+        handleGoogleRedirectResult().then((user) => {
+            if (user) {
+                setAuthMethod('authenticated');
+                setUserEmail(user.email || '');
+                setUserName(user.displayName || '');
+                setLoading(false);
+            }
+        });
+
         const unsubscribe = onAuthChange((user) => {
             if (user) {
                 setAuthMethod('authenticated');
                 setUserEmail(user.email || '');
                 setUserPhone(user.phoneNumber || '');
                 setUserName(user.displayName || '');
+                setLoading(false);
             }
         });
         return () => unsubscribe();
     }, []);
 
-    // Google Sign-In
+    // Google Sign-In (popup on desktop, redirect on mobile)
     const handleGoogleSignIn = useCallback(async () => {
         setLoading(true);
         setErrorMsg('');
         try {
             const user = await signInWithGoogle();
+            // Desktop popup flow — immediate result
             setAuthMethod('authenticated');
             setUserEmail(user.email || '');
             setUserName(user.displayName || '');
-        } catch {
+        } catch (err: unknown) {
+            // Mobile redirect flow — page will reload, don't show error
+            if (err instanceof Error && err.message === 'REDIRECT_IN_PROGRESS') {
+                // Keep loading state — page will redirect to Google
+                return;
+            }
             setErrorMsg('حدث خطأ في تسجيل الدخول بجوجل');
-        } finally {
             setLoading(false);
         }
     }, []);
