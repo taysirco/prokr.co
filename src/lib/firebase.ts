@@ -6,7 +6,13 @@ import { getStorage } from 'firebase/storage';
 // Firebase configuration - Replace with your actual credentials
 const firebaseConfig = {
     apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY || 'YOUR_API_KEY',
-    authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN || 'YOUR_PROJECT.firebaseapp.com',
+    // Use current hostname as authDomain in browser so that signInWithRedirect
+    // goes through our /__/auth/* rewrite proxy (same-origin).
+    // This fixes Safari ITP blocking third-party cookies from firebaseapp.com.
+    // Server-side falls back to the default firebaseapp.com domain.
+    authDomain: typeof window !== 'undefined'
+        ? window.location.host
+        : (process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN || 'prokr-84ca8.firebaseapp.com'),
     projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID || 'YOUR_PROJECT_ID',
     storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET || 'YOUR_PROJECT.appspot.com',
     messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID || 'YOUR_MESSAGING_SENDER_ID',

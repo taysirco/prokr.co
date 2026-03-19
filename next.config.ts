@@ -20,6 +20,17 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async rewrites() {
+    return [
+      {
+        // Proxy Firebase auth handler through same domain.
+        // Required for signInWithRedirect on Safari iOS — Safari ITP blocks
+        // third-party cookies when authDomain differs from hosting domain.
+        source: '/__/auth/:path*',
+        destination: 'https://prokr-84ca8.firebaseapp.com/__/auth/:path*',
+      },
+    ];
+  },
   async headers() {
     return [
       {
