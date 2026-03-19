@@ -50,8 +50,6 @@ export default function ClaimBusinessCTA({ companyCode, businessName, variant = 
                 }
                 // If email verified but phone not yet — restore email and go to phone step
                 if (data.email_verified && !data.phone_verified) {
-                    // Priority 1: email from API response (most reliable)
-                    // Priority 2: email from localStorage (fallback)
                     const apiEmail = data.claimant_email || '';
                     const savedEmail = typeof window !== 'undefined'
                         ? window.localStorage.getItem('claimEmail') || ''
@@ -59,7 +57,6 @@ export default function ClaimBusinessCTA({ companyCode, businessName, variant = 
                     const restoredEmail = apiEmail || savedEmail;
                     if (restoredEmail) {
                         setEmail(restoredEmail);
-                        // Re-save to localStorage in case it was cleared
                         if (typeof window !== 'undefined' && restoredEmail) {
                             window.localStorage.setItem('claimEmail', restoredEmail);
                         }
@@ -188,6 +185,7 @@ export default function ClaimBusinessCTA({ companyCode, businessName, variant = 
             setState('phone-otp');
         }
     }
+
 
     // ============================================
     // RENDER: Already Claimed

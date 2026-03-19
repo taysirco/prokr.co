@@ -26,7 +26,7 @@ import { LocalBusinessJsonLd, BreadcrumbJsonLd, OrganizationJsonLd, WebPageJsonL
 import Footer from '@/components/Footer';
 import FraudAlertBanner from '@/components/FraudAlertBanner';
 import LocalPresence from '@/components/LocalPresence';
-import ClaimBusinessCTA from '@/components/ClaimBusinessCTA';
+import ClaimBusinessCTA from '@/components/ClaimBusinessCTAWrapper';
 import VerifiedReviewForm from '@/components/VerifiedReviewForm';
 import type { Review, City, Service } from '@/types';
 
