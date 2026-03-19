@@ -85,11 +85,6 @@ export default function VerifiedReviewForm({ companyCode, businessName }: Verifi
                     setLoading(false);
                     return;
                 }
-                if (err.message === 'REDIRECT_STARTED') {
-                    // Safari iOS — browser is navigating to Google sign-in page
-                    // Keep loading state, user will return after sign-in
-                    return;
-                }
             }
             setErrorMsg('حدث خطأ في تسجيل الدخول بجوجل');
             setLoading(false);

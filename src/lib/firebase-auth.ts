@@ -3,7 +3,6 @@ import {
     isSignInWithEmailLink,
     signInWithEmailLink,
     signInWithPopup,
-    signInWithRedirect,
     getRedirectResult,
     GoogleAuthProvider,
     RecaptchaVerifier,
@@ -35,22 +34,8 @@ const googleProvider = new GoogleAuthProvider();
 const BASE_URL = typeof window !== 'undefined' ? window.location.origin : 'https://prokr.co';
 
 // ============================================
-// 1. Google Sign-In (Popup → Redirect fallback)
+// 1. Google Sign-In (Popup for all browsers)
 // ============================================
-
-/**
- * Detect Safari on iOS/iPadOS.
- * Safari blocks popups from async calls, and signInWithPopup fails silently.
- * We use signInWithRedirect as fallback for these browsers.
- */
-function isSafariIOS(): boolean {
-    if (typeof navigator === 'undefined') return false;
-    const ua = navigator.userAgent;
-    // iOS Safari (not Chrome/Firefox/Edge on iOS)
-    const isIOS = /iPad|iPhone|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-    const isSafari = /^((?!CriOS|FxiOS|EdgiOS|OPiOS|chrome|android).)*safari/i.test(ua);
-    return isIOS && isSafari;
-}
 
 /**
  * Detect in-app WebViews (Instagram, Twitter/X, Facebook, TikTok, etc.)
@@ -64,7 +49,7 @@ function isInAppWebView(): boolean {
 
 /**
  * Check for a pending Google redirect result on page load.
- * Must be called early to catch the user returning from the Google sign-in page.
+ * Kept for backwards compatibility — catches any in-progress redirect flows.
  */
 export async function checkGoogleRedirectResult(): Promise<User | null> {
     try {
@@ -76,28 +61,23 @@ export async function checkGoogleRedirectResult(): Promise<User | null> {
 }
 
 /**
- * Sign in with Google.
+ * Sign in with Google using signInWithPopup.
  *
- * Strategy:
- * 1. In-app WebViews → throw POPUP_BLOCKED (user must open in real browser)
- * 2. Safari iOS → use signInWithRedirect (popups don't work)
- * 3. All others → use signInWithPopup (best UX)
+ * Why popup-only?
+ * - authDomain is set to window.location.host (same-origin via /__/auth/* rewrite)
+ * - This makes the popup same-origin, so Safari ITP doesn't block it
+ * - signInWithRedirect through a proxy loses auth state (handler JS breaks)
+ * - Popup works on all browsers including Safari iOS when same-origin
+ *
+ * If popup is blocked (in-app WebViews: Instagram/Twitter/Facebook),
+ * we throw POPUP_BLOCKED so the UI can show a guidance message.
  */
 export async function signInWithGoogle(): Promise<User> {
-    // In-app WebViews can't do popups or redirects properly
+    // In-app WebViews can't do popups — show guidance to open in browser
     if (isInAppWebView()) {
         throw new Error('POPUP_BLOCKED');
     }
 
-    // Safari iOS: redirect flow (popups blocked by default)
-    if (isSafariIOS()) {
-        await signInWithRedirect(auth, googleProvider);
-        // This line won't execute — the browser navigates away.
-        // When it returns, checkGoogleRedirectResult() picks up the result.
-        throw new Error('REDIRECT_STARTED');
-    }
-
-    // All other browsers: popup flow (best UX)
     try {
         const result = await signInWithPopup(auth, googleProvider);
         return result.user;
@@ -109,16 +89,7 @@ export async function signInWithGoogle(): Promise<User> {
                 firebaseErr.code === 'auth/popup-closed-by-user' ||
                 firebaseErr.code === 'auth/cancelled-popup-request'
             ) {
-                // Popup blocked — try redirect as last resort
-                try {
-                    await signInWithRedirect(auth, googleProvider);
-                    throw new Error('REDIRECT_STARTED');
-                } catch (redirectErr) {
-                    if (redirectErr instanceof Error && redirectErr.message === 'REDIRECT_STARTED') {
-                        throw redirectErr;
-                    }
-                    throw new Error('POPUP_BLOCKED');
-                }
+                throw new Error('POPUP_BLOCKED');
             }
         }
         throw err;
