@@ -3,7 +3,7 @@
 // Multi-Strategy Caching + Offline + Background Sync
 // ============================================
 
-const SW_VERSION = '1.0.0';
+const SW_VERSION = '1.1.0';
 
 // ─── Cache Names ───
 const CACHE_STATIC  = 'prokr-static-v1';
@@ -104,13 +104,21 @@ self.addEventListener('fetch', (event) => {
   const { request } = event;
   const url = new URL(request.url);
 
-  // ─── Skip Firebase Auth & critical Google API requests ───
-  // These must NEVER be intercepted by the SW to avoid CSP violations
+  // ─── Skip Firebase Auth handler & critical Google API requests ───
+  // These must NEVER be intercepted by the SW to avoid auth flow breakage
+  
+  // Skip /__/auth/* — these are proxied to Firebase auth handler via Next.js rewrites
+  // Intercepting them would break Google Sign-In popup/redirect flow
+  if (url.pathname.startsWith('/__/auth')) {
+    return;
+  }
+
   const PASSTHROUGH_DOMAINS = [
     'identitytoolkit.googleapis.com',
     'securetoken.googleapis.com',
     'www.googleapis.com',
     'accounts.google.com',
+    'prokr-84ca8.firebaseapp.com',
   ];
   if (PASSTHROUGH_DOMAINS.some(d => url.hostname === d || url.hostname.endsWith('.' + d))) {
     return; // Let the browser handle these directly
