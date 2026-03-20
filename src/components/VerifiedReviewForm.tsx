@@ -68,7 +68,7 @@ export default function VerifiedReviewForm({ companyCode, businessName }: Verifi
         });
     }, []);
 
-    // Google Sign-In (popup → redirect fallback)
+    // Google Sign-In (popup, with redirect fallback on mobile)
     const handleGoogleSignIn = useCallback(async () => {
         setLoading(true);
         setErrorMsg('');
@@ -83,6 +83,12 @@ export default function VerifiedReviewForm({ companyCode, businessName }: Verifi
                     // In-app WebView (Instagram/Twitter/Facebook) — show guidance
                     setErrorMsg('WEBVIEW_BLOCKED');
                     setLoading(false);
+                    return;
+                }
+                if (err.message === 'REDIRECT_STARTED') {
+                    // Mobile fallback — browser is navigating to Google sign-in.
+                    // Keep loading state active. When user returns,
+                    // checkGoogleRedirectResult() (called on mount) handles it.
                     return;
                 }
             }

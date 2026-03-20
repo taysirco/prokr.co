@@ -3,6 +3,7 @@ import {
     isSignInWithEmailLink,
     signInWithEmailLink,
     signInWithPopup,
+    signInWithRedirect,
     getRedirectResult,
     GoogleAuthProvider,
     RecaptchaVerifier,
@@ -34,12 +35,50 @@ const googleProvider = new GoogleAuthProvider();
 const BASE_URL = typeof window !== 'undefined' ? window.location.origin : 'https://prokr.co';
 
 // ============================================
-// 1. Google Sign-In (Popup for all browsers)
+// 1. Google Sign-In — Device-Aware Strategy
+// ============================================
+//
+// How it works:
+// ─────────────────────────────────────────────
+// DESKTOP (Windows/Mac/Linux):
+//   → signInWithPopup → opens floating popup window
+//   → User signs in with Google in the popup
+//   → Popup closes, auth result returned instantly
+//
+// MOBILE (iPhone/Android, any browser):
+//   → signInWithPopup → opens new tab (iOS/Android treat popups as tabs)
+//   → User signs in with Google in the new tab
+//   → Tab closes, auth result returned to original tab
+//   → If popup/tab is blocked → falls back to signInWithRedirect
+//   → signInWithRedirect navigates the page to Google sign-in
+//   → After sign-in, redirects back to company page with session saved
+//
+// IN-APP WEBVIEWS (Instagram/Twitter/Facebook/TikTok):
+//   → Throws POPUP_BLOCKED immediately
+//   → UI shows guidance to open in Safari/Chrome
+//
+// Why authDomain = window.location.host?
+// ─────────────────────────────────────────────
+// Firebase SDK opens the auth handler at https://{authDomain}/__/auth/handler
+// If authDomain ≠ hosting domain → Safari ITP blocks cross-origin cookies/storage
+// We set authDomain = current hostname and proxy /__/auth/* via Next.js rewrites
+// This makes EVERYTHING same-origin → Safari ITP won't block anything
 // ============================================
 
 /**
+ * Detect mobile devices (phones and tablets).
+ * On mobile, signInWithPopup opens a new tab (visual redirect).
+ */
+function isMobileDevice(): boolean {
+    if (typeof navigator === 'undefined') return false;
+    const ua = navigator.userAgent;
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(ua)
+        || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1); // iPadOS
+}
+
+/**
  * Detect in-app WebViews (Instagram, Twitter/X, Facebook, TikTok, etc.)
- * These block ALL popup windows.
+ * These block ALL popup windows — no workaround possible.
  */
 function isInAppWebView(): boolean {
     if (typeof navigator === 'undefined') return false;
@@ -49,7 +88,8 @@ function isInAppWebView(): boolean {
 
 /**
  * Check for a pending Google redirect result on page load.
- * Kept for backwards compatibility — catches any in-progress redirect flows.
+ * This catches mobile users returning after signInWithRedirect.
+ * MUST be called on component mount (useEffect) before any other auth action.
  */
 export async function checkGoogleRedirectResult(): Promise<User | null> {
     try {
@@ -61,34 +101,58 @@ export async function checkGoogleRedirectResult(): Promise<User | null> {
 }
 
 /**
- * Sign in with Google using signInWithPopup.
+ * Sign in with Google — device-aware strategy.
  *
- * Why popup-only?
- * - authDomain is set to window.location.host (same-origin via /__/auth/* rewrite)
- * - This makes the popup same-origin, so Safari ITP doesn't block it
- * - signInWithRedirect through a proxy loses auth state (handler JS breaks)
- * - Popup works on all browsers including Safari iOS when same-origin
- *
- * If popup is blocked (in-app WebViews: Instagram/Twitter/Facebook),
- * we throw POPUP_BLOCKED so the UI can show a guidance message.
+ * @returns Promise<User> on successful popup sign-in
+ * @throws Error('POPUP_BLOCKED') if WebView or popup genuinely blocked
+ * @throws Error('REDIRECT_STARTED') if falling back to redirect (mobile)
  */
 export async function signInWithGoogle(): Promise<User> {
-    // In-app WebViews can't do popups — show guidance to open in browser
+    // ─── WebView Detection ──────────────────────────
+    // In-app WebViews (Instagram/Twitter/Facebook) block ALL auth methods.
+    // Show guidance to open in Safari/Chrome instead.
     if (isInAppWebView()) {
         throw new Error('POPUP_BLOCKED');
     }
 
+    // ─── Primary: Try signInWithPopup ──────────────
+    // Works on:
+    //   Desktop → opens popup window (best UX)
+    //   Mobile  → opens new tab (feels like redirect, but more reliable)
+    // With authDomain = same origin, Safari ITP doesn't interfere.
     try {
         const result = await signInWithPopup(auth, googleProvider);
         return result.user;
     } catch (err: unknown) {
         if (err && typeof err === 'object' && 'code' in err) {
             const firebaseErr = err as { code: string };
+
+            // Popup was blocked or user closed it
             if (
                 firebaseErr.code === 'auth/popup-blocked' ||
                 firebaseErr.code === 'auth/popup-closed-by-user' ||
                 firebaseErr.code === 'auth/cancelled-popup-request'
             ) {
+                // ─── Fallback: signInWithRedirect (mobile only) ──────
+                // On mobile, if the new tab was blocked by the browser,
+                // we fall back to signInWithRedirect which navigates
+                // the current page to Google sign-in.
+                // On desktop, we just show the POPUP_BLOCKED error.
+                if (isMobileDevice()) {
+                    try {
+                        await signInWithRedirect(auth, googleProvider);
+                        // Browser navigates away — this line won't execute.
+                        // When it returns, checkGoogleRedirectResult() picks up the result.
+                        throw new Error('REDIRECT_STARTED');
+                    } catch (redirectErr) {
+                        if (redirectErr instanceof Error && redirectErr.message === 'REDIRECT_STARTED') {
+                            throw redirectErr;
+                        }
+                        // Redirect also failed — nothing we can do
+                        throw new Error('POPUP_BLOCKED');
+                    }
+                }
+
                 throw new Error('POPUP_BLOCKED');
             }
         }
