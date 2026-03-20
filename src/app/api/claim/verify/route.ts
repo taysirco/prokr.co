@@ -1,11 +1,13 @@
 // ============================================
 // 🔐 API: Verify Business Claim (Email — Step 1)
 // POST: mark a claim as email_verified
+// ⚠️ SECURITY: Validates Firebase ID token to ensure
+//    the caller actually owns the email address.
 // Uses Admin SDK (bypasses Firestore rules)
 // ============================================
 
 import { NextRequest, NextResponse } from 'next/server';
-import { getAdminDb } from '@/lib/firebase-admin-init';
+import { getAdminDb, verifyAuthToken } from '@/lib/firebase-admin-init';
 import { FieldValue } from 'firebase-admin/firestore';
 
 const CLAIMS_COLLECTION = 'business_claims';
@@ -16,6 +18,23 @@ export async function POST(request: NextRequest) {
 
         if (!email || !companyCode) {
             return NextResponse.json({ error: 'البريد ورمز الشركة مطلوبان' }, { status: 400 });
+        }
+
+        // ============================================
+        // 🔐 TOKEN VALIDATION — Prevent unauthorized claim verification
+        // Without this, anyone could POST {email, companyCode}
+        // and fraudulently mark a claim as email_verified.
+        // The caller must have signed in via the email link
+        // (completeEmailSignIn) which creates a Firebase session.
+        // ============================================
+        const authHeader = request.headers.get('Authorization');
+        const tokenData = await verifyAuthToken(authHeader);
+
+        if (!tokenData || tokenData.email !== email) {
+            return NextResponse.json(
+                { error: 'يجب تسجيل الدخول بنفس البريد الإلكتروني المستخدم في التوثيق' },
+                { status: 401 }
+            );
         }
 
         const db = getAdminDb();
@@ -33,6 +52,7 @@ export async function POST(request: NextRequest) {
         await snap.docs[0].ref.update({
             status: 'email_verified',
             email_verified_at: FieldValue.serverTimestamp(),
+            verified_by_uid: tokenData.uid,
         });
 
         return NextResponse.json({

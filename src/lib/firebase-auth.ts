@@ -128,9 +128,13 @@ export async function signInWithGoogle(): Promise<User> {
             const firebaseErr = err as { code: string };
 
             // Popup was blocked or user closed it
+            if (firebaseErr.code === 'auth/popup-closed-by-user') {
+                // User intentionally closed the popup — don't show error, just dismiss
+                throw new Error('POPUP_CLOSED');
+            }
+
             if (
                 firebaseErr.code === 'auth/popup-blocked' ||
-                firebaseErr.code === 'auth/popup-closed-by-user' ||
                 firebaseErr.code === 'auth/cancelled-popup-request'
             ) {
                 // ─── Fallback: signInWithRedirect (mobile only) ──────

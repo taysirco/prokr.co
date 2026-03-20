@@ -86,9 +86,13 @@ export default function VerifiedReviewForm({ companyCode, businessName }: Verifi
                     return;
                 }
                 if (err.message === 'REDIRECT_STARTED') {
-                    // Mobile fallback — browser is navigating to Google sign-in.
-                    // Keep loading state active. When user returns,
-                    // checkGoogleRedirectResult() (called on mount) handles it.
+                    // Mobile fallback — browser navigating to Google sign-in.
+                    // Keep loading state. checkGoogleRedirectResult() handles return.
+                    return;
+                }
+                if (err.message === 'POPUP_CLOSED') {
+                    // User intentionally closed the popup — silently dismiss
+                    setLoading(false);
                     return;
                 }
             }
@@ -302,7 +306,15 @@ export default function VerifiedReviewForm({ companyCode, businessName }: Verifi
                 {/* Phone: Enter number */}
                 {authMethod === 'phone-input' && (
                     <div className="space-y-3">
-                        <label className="block text-gray-700 text-xs font-bold mb-1">رقم الهاتف</label>
+                        <div className="flex items-center justify-between mb-1">
+                            <label className="block text-gray-700 text-xs font-bold">رقم الهاتف</label>
+                            <button
+                                onClick={() => { setAuthMethod('choosing'); setErrorMsg(''); setPhoneInput(''); }}
+                                className="text-gray-400 text-[11px] hover:text-gray-600 transition-colors"
+                            >
+                                ← رجوع
+                            </button>
+                        </div>
                         <input
                             type="tel"
                             value={phoneInput}
@@ -329,9 +341,17 @@ export default function VerifiedReviewForm({ companyCode, businessName }: Verifi
                 {/* Phone: Enter OTP */}
                 {authMethod === 'phone-otp' && (
                     <div className="space-y-3">
-                        <p className="text-emerald-700 text-sm text-center mb-2">
-                            تم إرسال رمز التحقق إلى <strong dir="ltr">{formatSaudiPhone(phoneInput)}</strong>
-                        </p>
+                        <div className="flex items-center justify-between">
+                            <p className="text-emerald-700 text-sm">
+                                تم إرسال رمز التحقق إلى <strong dir="ltr">{formatSaudiPhone(phoneInput)}</strong>
+                            </p>
+                            <button
+                                onClick={() => { setAuthMethod('phone-input'); setErrorMsg(''); setOtpCode(''); }}
+                                className="text-gray-400 text-[11px] hover:text-gray-600 transition-colors flex-shrink-0"
+                            >
+                                ← تغيير الرقم
+                            </button>
+                        </div>
                         <input
                             type="text"
                             value={otpCode}

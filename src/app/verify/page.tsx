@@ -25,16 +25,30 @@ function VerifyContent() {
     // Core verification logic — extracted for reuse
     async function processVerification(email: string) {
         const link = window.location.href;
-        await completeEmailSignIn(email, link);
+        const userCredential = await completeEmailSignIn(email, link);
 
         if (mode === 'claim' && companyCode) {
             // Save email to localStorage for phone step
             window.localStorage.setItem('claimEmail', email);
-            await fetch('/api/claim/verify', {
+
+            // Get Firebase ID token for server-side validation
+            // This ensures the API can verify the caller owns this email
+            const idToken = await userCredential.user.getIdToken();
+
+            const res = await fetch('/api/claim/verify', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${idToken}`,
+                },
                 body: JSON.stringify({ email, companyCode }),
             });
+
+            if (!res.ok) {
+                const data = await res.json();
+                throw new Error(data.error || 'فشل في تأكيد البريد');
+            }
+
             setMessage('تم تأكيد البريد ✅ — الآن عد لصفحة المنشأة لإكمال الخطوة 2: تأكيد رقم الهاتف');
         } else {
             setMessage('تم التحقق من حسابك بنجاح!');

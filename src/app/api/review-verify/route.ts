@@ -26,19 +26,27 @@ export async function POST(request: NextRequest) {
         }
 
         // ============================================
-        // 🔐 SERVER-SIDE TOKEN VALIDATION
+        // 🔐 SERVER-SIDE TOKEN VALIDATION (REQUIRED)
+        // Reviews MUST be authenticated — prevents spam/abuse.
+        // The token is verified against the email/phone the user
+        // signed in with on the client.
         // ============================================
         const authHeader = request.headers.get('Authorization');
         const tokenData = await verifyAuthToken(authHeader);
 
+        if (!tokenData) {
+            return NextResponse.json(
+                { error: 'يجب تسجيل الدخول لإرسال تقييم' },
+                { status: 401 }
+            );
+        }
+
         let isVerified = false;
-        if (tokenData) {
-            if (email && tokenData.email === email) {
-                isVerified = true;
-            }
-            if (phone && tokenData.phone_number === phone) {
-                isVerified = true;
-            }
+        if (email && tokenData.email === email) {
+            isVerified = true;
+        }
+        if (phone && tokenData.phone_number === phone) {
+            isVerified = true;
         }
 
         const db = getAdminDb();
