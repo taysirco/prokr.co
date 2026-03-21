@@ -97,7 +97,7 @@ export function generateInternalLink(
     serviceName: string
 ): string {
     const url = generateServiceUrl(related.slug, citySlug);
-    return `<a href="${url}" class="text-emerald-600 hover:text-emerald-700 font-medium">${serviceName}</a>`;
+    return `<a href="${url}" class="text-sky-600 hover:text-sky-700 font-medium">${serviceName}</a>`;
 }
 
 /**
@@ -182,7 +182,7 @@ export function applyContextualLinks(
             const url = `/${citySlug}/${targetSlug}`;
 
             result = result.replace(regex,
-                `<a href="${url}" class="text-emerald-600 font-semibold hover:underline border-b border-emerald-200 border-dashed" title="${trigger.label} في ${citySlug}">${trigger.phrase}</a>`
+                `<a href="${url}" class="text-sky-600 font-semibold hover:underline border-b border-sky-200 border-dashed" title="${trigger.label} في ${citySlug}">${trigger.phrase}</a>`
             );
             linkCount++;
         }

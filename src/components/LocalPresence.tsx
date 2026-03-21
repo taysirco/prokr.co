@@ -114,8 +114,8 @@ export default function LocalPresence({ citySlug, serviceSlug, serviceName, serv
             <div className="rounded-xl border border-gray-200 dark:border-gray-700 bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 p-5 shadow-sm">
                 {/* Header — unique team name per service */}
                 <div className="flex items-center gap-2 mb-4 flex-wrap">
-                    <div className="w-8 h-8 bg-emerald-100 dark:bg-emerald-900/30 rounded-full flex items-center justify-center shrink-0">
-                        <MapPin className="w-4 h-4 text-emerald-600" />
+                    <div className="w-8 h-8 bg-sky-100 dark:bg-sky-900/30 rounded-full flex items-center justify-center shrink-0">
+                        <MapPin className="w-4 h-4 text-sky-600" />
                     </div>
                     <h3 className="text-sm font-bold text-gray-800 dark:text-gray-200">
                         {profile.teamDesc} — {dispatchNeighborhood.name_ar}، {cityName}
@@ -124,13 +124,13 @@ export default function LocalPresence({ citySlug, serviceSlug, serviceName, serv
 
                 {/* Dispatch signal — UNIQUE neighborhood per slug */}
                 <p className="text-xs leading-relaxed text-gray-600 dark:text-gray-400 mb-3">
-                    <Navigation className="w-3.5 h-3.5 inline-block ml-1 text-emerald-500" />
+                    <Navigation className="w-3.5 h-3.5 inline-block ml-1 text-sky-500" />
                     ينطلق {profile.teamDesc} من نقطة التمركز في{' '}
                     <a 
                         href={mapsUrl}
                         target="_blank" 
                         rel="nofollow noopener" 
-                        className="text-emerald-600 hover:text-emerald-700 dark:text-emerald-400 dark:hover:text-emerald-300 font-semibold hover:underline transition-colors"
+                        className="text-sky-600 hover:text-sky-700 dark:text-sky-400 dark:hover:text-sky-300 font-semibold hover:underline transition-colors"
                         title={`اتجاهات من ${dispatchNeighborhood.name_ar} إلى ${destNeighborhood.name_ar} — ${cityName}`}
                     >
                         📍 {dispatchNeighborhood.name_ar}

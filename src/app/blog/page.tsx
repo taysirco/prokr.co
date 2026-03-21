@@ -56,8 +56,8 @@ export default function BlogPage() {
         if (slug === 'insulation') return 'bg-amber-500';
         if (slug === 'sewage') return 'bg-purple-500';
         if (slug === 'moving') return 'bg-blue-500';
-        if (slug === 'cleaning') return 'bg-emerald-500';
-        return 'bg-emerald-500';
+        if (slug === 'cleaning') return 'bg-sky-500';
+        return 'bg-sky-500';
     }
     function getCategoryBadge(slug: string) {
         if (slug === 'consumer-protection') return 'bg-rose-50 text-rose-700';
@@ -66,8 +66,8 @@ export default function BlogPage() {
         if (slug === 'insulation') return 'bg-amber-50 text-amber-700';
         if (slug === 'sewage') return 'bg-purple-50 text-purple-700';
         if (slug === 'moving') return 'bg-blue-50 text-blue-700';
-        if (slug === 'cleaning') return 'bg-emerald-50 text-emerald-700';
-        return 'bg-emerald-50 text-emerald-700';
+        if (slug === 'cleaning') return 'bg-sky-50 text-sky-700';
+        return 'bg-sky-50 text-sky-700';
     }
 
     return (
@@ -105,9 +105,9 @@ export default function BlogPage() {
 
             <main className="min-h-screen bg-gray-50">
                 {/* Hero */}
-                <section className="bg-gradient-to-bl from-emerald-600 via-emerald-700 to-emerald-900 text-white">
+                <section className="bg-gradient-to-bl from-sky-600 via-sky-700 to-sky-900 text-white">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-                        <nav className="flex items-center gap-2 text-emerald-100 text-sm mb-6">
+                        <nav className="flex items-center gap-2 text-sky-100 text-sm mb-6">
                             <Link href="/" className="hover:text-white transition-colors flex items-center gap-1">
                                 <Home className="w-4 h-4" />
                                 الرئيسية
@@ -122,10 +122,10 @@ export default function BlogPage() {
                             </div>
                             <div>
                                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold">مدونة بروكر</h1>
-                                <p className="text-emerald-100 mt-1">{BLOG_ARTICLES.length} مقال ودليل شامل</p>
+                                <p className="text-sky-100 mt-1">{BLOG_ARTICLES.length} مقال ودليل شامل</p>
                             </div>
                         </div>
-                        <p className="text-lg text-emerald-100 max-w-2xl mt-4">
+                        <p className="text-lg text-sky-100 max-w-2xl mt-4">
                             أدلة ونصائح احترافية لمساعدتك في اختيار أفضل الخدمات المنزلية في السعودية — من خبراء بروكر
                         </p>
                     </div>
@@ -138,7 +138,7 @@ export default function BlogPage() {
                             <a
                                 key={cat.slug}
                                 href={`#cat-${cat.slug}`}
-                                className="px-4 py-2 bg-white border border-gray-200 rounded-full text-sm font-medium text-gray-700 hover:border-emerald-300 hover:text-emerald-700 transition-colors"
+                                className="px-4 py-2 bg-white border border-gray-200 rounded-full text-sm font-medium text-gray-700 hover:border-sky-300 hover:text-sky-700 transition-colors"
                             >
                                 {cat.label} ({articlesByCategory[cat.slug]?.length || 0})
                             </a>
@@ -161,13 +161,13 @@ export default function BlogPage() {
                                     <Link
                                         key={article.slug}
                                         href={`/blog/${article.slug}`}
-                                        className="group bg-white rounded-2xl border border-gray-200 overflow-hidden hover:border-emerald-300 hover:shadow-xl transition-all"
+                                        className="group bg-white rounded-2xl border border-gray-200 overflow-hidden hover:border-sky-300 hover:shadow-xl transition-all"
                                     >
                                         <div className="p-6">
                                             <span className={`inline-block px-3 py-1 ${badgeClass} rounded-full text-xs font-medium mb-3`}>
                                                 {article.categoryLabel}
                                             </span>
-                                            <h3 className="font-bold text-gray-900 mb-2 group-hover:text-emerald-700 transition-colors line-clamp-2">
+                                            <h3 className="font-bold text-gray-900 mb-2 group-hover:text-sky-700 transition-colors line-clamp-2">
                                                 {article.title}
                                             </h3>
                                             <p className="text-gray-500 text-sm line-clamp-2 mb-4">{article.excerpt}</p>
@@ -180,7 +180,7 @@ export default function BlogPage() {
                                             </div>
                                         </div>
                                         <div className="px-6 pb-4">
-                                            <span className="text-emerald-600 text-sm font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
+                                            <span className="text-sky-600 text-sm font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
                                                 اقرأ المقال
                                                 <ArrowLeft className="w-4 h-4" />
                                             </span>

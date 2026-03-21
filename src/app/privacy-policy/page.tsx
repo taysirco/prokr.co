@@ -42,9 +42,9 @@ export default function PrivacyPolicyPage() {
         />
         <main className="min-h-screen bg-gray-50">
             {/* Hero */}
-            <section className="bg-gradient-to-bl from-emerald-600 via-emerald-700 to-emerald-900 text-white py-16">
+            <section className="bg-gradient-to-bl from-sky-600 via-sky-700 to-sky-900 text-white py-16">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <nav className="flex items-center gap-2 text-emerald-100 text-sm mb-6">
+                    <nav className="flex items-center gap-2 text-sky-100 text-sm mb-6">
                         <Link href="/" className="hover:text-white transition-colors flex items-center gap-1">
                             <Home className="w-4 h-4" />
                             الرئيسية
@@ -53,7 +53,7 @@ export default function PrivacyPolicyPage() {
                         <span className="text-white font-medium">سياسة الخصوصية</span>
                     </nav>
                     <h1 className="text-3xl sm:text-4xl font-bold">سياسة الخصوصية</h1>
-                    <p className="text-emerald-100 mt-4">آخر تحديث: يناير 2026</p>
+                    <p className="text-sky-100 mt-4">آخر تحديث: يناير 2026</p>
                 </div>
             </section>
 
@@ -109,7 +109,7 @@ export default function PrivacyPolicyPage() {
                     </p>
                     <ul>
                         <li>البريد الإلكتروني: privacy@prokr.co</li>
-                        <li>صفحة <Link href="/contact-us" className="text-emerald-600">اتصل بنا</Link></li>
+                        <li>صفحة <Link href="/contact-us" className="text-sky-600">اتصل بنا</Link></li>
                     </ul>
                 </div>
             </section>

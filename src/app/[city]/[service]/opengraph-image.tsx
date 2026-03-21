@@ -52,7 +52,7 @@ export default async function OgImage({ params }: { params: Promise<{ city: stri
         (
             <div
                 style={{
-                    background: 'linear-gradient(135deg, #0f172a 0%, #064e3b 50%, #022c22 100%)',
+                    background: 'linear-gradient(135deg, #0f172a 0%, #0C4A6E 50%, #082f49 100%)',
                     width: '100%',
                     height: '100%',
                     display: 'flex',
@@ -96,8 +96,8 @@ export default async function OgImage({ params }: { params: Promise<{ city: stri
                         style={{
                             display: 'flex',
                             alignItems: 'center',
-                            background: '#10b981',
-                            color: '#022c22',
+                            background: '#0EA5E9',
+                            color: '#082f49',
                             padding: '10px 28px',
                             borderRadius: '100px',
                             fontSize: '26px',

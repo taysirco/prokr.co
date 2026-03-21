@@ -53,7 +53,7 @@ function CleaningTable({ data, cityName }: { data: CleaningZone[]; cityName: str
         <div className="overflow-x-auto">
             <table className="w-full text-sm">
                 <thead>
-                    <tr className="bg-emerald-50 text-emerald-900">
+                    <tr className="bg-sky-50 text-sky-900">
                         <th className="text-right p-3 font-bold rounded-tr-lg">🏘️ الحي / المنطقة ({cityName})</th>
                         <th className="text-center p-3 font-bold">شقة غرفتين</th>
                         <th className="text-center p-3 font-bold">شقة 3 غرف</th>
@@ -65,10 +65,10 @@ function CleaningTable({ data, cityName }: { data: CleaningZone[]; cityName: str
                     {data.map((row, i) => (
                         <tr key={i} className={`border-b border-gray-100 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}>
                             <td className="p-3 font-medium text-gray-900 whitespace-nowrap">{row.zone}</td>
-                            <td className="p-3 text-center text-emerald-700 font-medium">{row.twoRoom}</td>
-                            <td className="p-3 text-center text-emerald-700 font-medium">{row.threeRoom}</td>
-                            <td className="p-3 text-center text-emerald-700 font-medium">{row.smallVilla}</td>
-                            <td className="p-3 text-center text-emerald-700 font-medium">{row.largeVilla}</td>
+                            <td className="p-3 text-center text-sky-700 font-medium">{row.twoRoom}</td>
+                            <td className="p-3 text-center text-sky-700 font-medium">{row.threeRoom}</td>
+                            <td className="p-3 text-center text-sky-700 font-medium">{row.smallVilla}</td>
+                            <td className="p-3 text-center text-sky-700 font-medium">{row.largeVilla}</td>
                         </tr>
                     ))}
                 </tbody>

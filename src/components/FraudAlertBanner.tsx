@@ -103,15 +103,15 @@ export default function FraudAlertBanner({ serviceName, serviceSlug, cityName }:
             </div>
 
             {/* Trust CTA */}
-            <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-4 flex flex-col sm:flex-row items-start sm:items-center gap-3">
-                <div className="w-8 h-8 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0 text-lg">
+            <div className="bg-sky-50 border border-sky-200 rounded-xl p-4 flex flex-col sm:flex-row items-start sm:items-center gap-3">
+                <div className="w-8 h-8 bg-sky-100 rounded-lg flex items-center justify-center flex-shrink-0 text-lg">
                     ✅
                 </div>
                 <div className="flex-1">
-                    <p className="text-emerald-900 font-bold text-sm">
+                    <p className="text-sky-900 font-bold text-sm">
                         لحمايتك، احجز فقط عبر الشركات الموثقة في prokr.co
                     </p>
-                    <p className="text-emerald-700 text-xs mt-0.5">
+                    <p className="text-sky-700 text-xs mt-0.5">
                         نتحقق من الهوية الوطنية عبر نفاذ والسجل التجاري والفوترة الإلكترونية (ZATCA) وعقود العمالة في منصة قوى ونطاقات
                     </p>
                 </div>

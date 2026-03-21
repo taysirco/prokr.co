@@ -119,9 +119,9 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
                                             key={city.slug}
                                             href={`/${city.slug}`}
                                             onClick={onClose}
-                                            className="flex items-center gap-3 px-4 py-3 hover:bg-emerald-50 transition-colors"
+                                            className="flex items-center gap-3 px-4 py-3 hover:bg-sky-50 transition-colors"
                                         >
-                                            <div className="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center text-emerald-600">
+                                            <div className="w-10 h-10 bg-sky-100 rounded-lg flex items-center justify-center text-sky-600">
                                                 <MapPin className="w-5 h-5" />
                                             </div>
                                             <div>
@@ -144,7 +144,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
                                             key={service.slug}
                                             href={`/${service.slug}`}
                                             onClick={onClose}
-                                            className="flex items-center gap-3 px-4 py-3 hover:bg-emerald-50 transition-colors"
+                                            className="flex items-center gap-3 px-4 py-3 hover:bg-sky-50 transition-colors"
                                         >
                                             <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600">
                                                 <Briefcase className="w-5 h-5" />

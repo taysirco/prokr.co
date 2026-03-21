@@ -92,7 +92,7 @@ export function LiveAvailabilityBanner({
     // Dynamic colors based on mode
     const bgClass = isEmergency
         ? 'bg-gradient-to-r from-red-900 via-red-800 to-red-900 border-red-700/50'
-        : 'bg-gradient-to-r from-emerald-900 via-emerald-800 to-emerald-900 border-emerald-700/50';
+        : 'bg-gradient-to-r from-sky-900 via-sky-800 to-sky-900 border-sky-700/50';
 
     const liveColor = isEmergency ? 'bg-red-500' : 'bg-red-500';
     const livePing = isEmergency ? 'bg-red-400' : 'bg-red-400';
@@ -101,9 +101,9 @@ export function LiveAvailabilityBanner({
     const statusDot = isEmergency ? 'bg-red-400' : 'bg-green-400';
     const statusText = isEmergency ? 'text-red-300' : 'text-green-300';
     const statusLabel = isEmergency ? 'خدمة طوارئ ليلية' : 'يستقبل طلبات';
-    const teamBg = isEmergency ? 'bg-red-700/50' : 'bg-emerald-700/50';
-    const teamTextColor = isEmergency ? 'text-red-100' : 'text-emerald-100';
-    const teamLabelColor = isEmergency ? 'text-red-300' : 'text-emerald-300';
+    const teamBg = isEmergency ? 'bg-red-700/50' : 'bg-sky-700/50';
+    const teamTextColor = isEmergency ? 'text-red-100' : 'text-sky-100';
+    const teamLabelColor = isEmergency ? 'text-red-300' : 'text-sky-300';
     const teamIcon = isEmergency ? '🚨' : '👷';
 
     return (
@@ -158,13 +158,13 @@ export function LiveAvailabilityBanner({
                             <div className={`flex items-center gap-1.5 rounded-full px-3 py-1 border
                                 ${cycleConfig.phase === 'premium' ? 'bg-amber-500/20 border-amber-400/30' :
                                   cycleConfig.phase === 'urgency' ? 'bg-red-500/20 border-red-400/30' :
-                                  'bg-emerald-500/20 border-emerald-400/30'}`}
+                                  'bg-sky-500/20 border-sky-400/30'}`}
                             >
                                 <span className="text-xs">{cycleConfig.icon}</span>
                                 <span className={`text-xs font-medium
                                     ${cycleConfig.phase === 'premium' ? 'text-amber-300' :
                                       cycleConfig.phase === 'urgency' ? 'text-red-300' :
-                                      'text-emerald-300'}`}
+                                      'text-sky-300'}`}
                                 >
                                     {cycleConfig.availabilityExtra}
                                 </span>
@@ -184,7 +184,7 @@ export function LiveAvailabilityBanner({
                         <span className={`text-sm font-medium ${
                             currentMsg.urgencyLevel === 'high' ? 'text-red-200' :
                             currentMsg.urgencyLevel === 'medium' ? 'text-yellow-200' :
-                            'text-emerald-200'
+                            'text-sky-200'
                         }`}>
                             {currentMsg.text}
                         </span>
@@ -197,7 +197,7 @@ export function LiveAvailabilityBanner({
                                         key={i}
                                         className={`w-1 h-1 rounded-full transition-all duration-300 ${
                                             i === currentMsgIndex
-                                                ? (isEmergency ? 'bg-red-400 w-2' : 'bg-emerald-400 w-2')
+                                                ? (isEmergency ? 'bg-red-400 w-2' : 'bg-sky-400 w-2')
                                                 : 'bg-white/20'
                                         }`}
                                     />

@@ -182,7 +182,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                 />
 
                 {/* Hero Section with Image */}
-                <section className="relative bg-gradient-to-bl from-emerald-600 via-emerald-700 to-emerald-900 text-white overflow-hidden">
+                <section className="relative bg-gradient-to-bl from-sky-600 via-sky-700 to-sky-900 text-white overflow-hidden">
                     <div className="absolute inset-0 opacity-10">
                         <div className="absolute inset-0" style={{
                             backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
@@ -193,7 +193,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                             <div>
                                 {/* Breadcrumbs */}
-                                <nav className="flex items-center gap-2 text-emerald-100 text-sm mb-6">
+                                <nav className="flex items-center gap-2 text-sky-100 text-sm mb-6">
                                     <Link href="/" className="hover:text-white transition-colors flex items-center gap-1">
                                         <Home className="w-4 h-4" />
                                         الرئيسية
@@ -205,7 +205,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
                                     {aiContent.h1}
                                 </h1>
-                                <p className="text-lg text-emerald-100 max-w-xl">
+                                <p className="text-lg text-sky-100 max-w-xl">
                                     اكتشف أفضل شركات {service.name_ar} في جميع مدن المملكة.
                                     شركات معتمدة، أسعار تنافسية، وخدمة احترافية.
                                 </p>
@@ -223,7 +223,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                                         </div>
                                         <div>
                                             <p className="font-bold">{CITIES.length}</p>
-                                            <p className="text-xs text-emerald-200">مدينة</p>
+                                            <p className="text-xs text-sky-200">مدينة</p>
                                         </div>
                                     </div>
                                 </div>
@@ -242,7 +242,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                                         quality={90}
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/50 to-transparent"></div>
+                                    <div className="absolute inset-0 bg-gradient-to-t from-sky-900/50 to-transparent"></div>
                                     <VisionAiWatermark position="top-right" size="md" />
                                 </div>
                             </div>
@@ -276,7 +276,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                         {Object.entries(citiesByRegion).map(([region, cities]) => (
                             <div key={region} className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
                                 <h3 className="font-bold text-gray-900 mb-4 flex items-center gap-2">
-                                    <MapPin className="w-5 h-5 text-emerald-500" />
+                                    <MapPin className="w-5 h-5 text-sky-500" />
                                     {REGION_NAMES[region] || region}
                                 </h3>
                                 <div className="space-y-2">
@@ -284,7 +284,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                                         <Link
                                             key={city.slug}
                                             href={`/${city.slug}/${getCanonicalSlug(service.slug) || service.slug}`}
-                                            className="flex items-center justify-between p-3 hover:bg-emerald-50 rounded-lg text-gray-700 hover:text-emerald-700 transition-colors group"
+                                            className="flex items-center justify-between p-3 hover:bg-sky-50 rounded-lg text-gray-700 hover:text-sky-700 transition-colors group"
                                         >
                                             <span>{city.name_ar}</span>
                                             <ChevronLeft className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -298,12 +298,12 @@ export default async function ServicePage({ params }: ServicePageProps) {
 
                 {/* SEO Content */}
                 <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-                    <article className="prose prose-lg prose-emerald max-w-none">
+                    <article className="prose prose-lg prose-sky max-w-none">
                         <h2 className="text-2xl font-bold text-gray-900 mb-6">
                             {service.name_ar} في المملكة العربية السعودية
                         </h2>
 
-                        <div className="bg-emerald-50 p-6 rounded-xl border-r-4 border-emerald-500 mb-8">
+                        <div className="bg-sky-50 p-6 rounded-xl border-r-4 border-sky-500 mb-8">
                             <p className="text-gray-700 leading-relaxed font-medium">
                                 تقدم بروكر دليلاً شاملاً لأفضل شركات {service.name_ar} في جميع مدن المملكة العربية السعودية.
                                 بناءً على تحليل أكثر من 500 شركة مسجلة في {CITIES.length} مدينة، نساعدك في العثور على الشركة المناسبة
@@ -329,7 +329,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                                             * الأسعار تقريبية لخدمة {basePrice.label} بالريال السعودي
                                         </caption>
                                         <thead>
-                                            <tr className="bg-emerald-50 text-gray-700 border-b border-gray-200">
+                                            <tr className="bg-sky-50 text-gray-700 border-b border-gray-200">
                                                 <th className="text-right p-4 font-semibold">المدينة</th>
                                                 <th className="text-right p-4 font-semibold">السعر المتوقع</th>
                                                 <th className="text-right p-4 font-semibold">الرابط</th>
@@ -342,11 +342,11 @@ export default async function ServicePage({ params }: ServicePageProps) {
                                                 return (
                                                     <tr key={citySlug} className="hover:bg-gray-50">
                                                         <td className="p-4 text-gray-800 font-medium">{ctx.name_ar}</td>
-                                                        <td className="p-4 text-emerald-600 font-bold" dir="ltr">
+                                                        <td className="p-4 text-sky-600 font-bold" dir="ltr">
                                                             {getAdjustedPriceRange(basePrice.min, basePrice.max, citySlug)}
                                                         </td>
                                                         <td className="p-4">
-                                                            <Link href={`/${citySlug}/${getCanonicalSlug(service.slug) || service.slug}`} className="text-emerald-600 hover:text-emerald-800 underline text-sm">
+                                                            <Link href={`/${citySlug}/${getCanonicalSlug(service.slug) || service.slug}`} className="text-sky-600 hover:text-sky-800 underline text-sm">
                                                                 عرض الشركات
                                                             </Link>
                                                         </td>
@@ -425,7 +425,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                                 <Link
                                     key={otherService.slug}
                                     href={`/${otherService.slug}`}
-                                    className="px-4 py-2 bg-white border border-gray-200 rounded-lg hover:border-emerald-300 hover:shadow-md transition-all text-gray-700 hover:text-emerald-700"
+                                    className="px-4 py-2 bg-white border border-gray-200 rounded-lg hover:border-sky-300 hover:shadow-md transition-all text-gray-700 hover:text-sky-700"
                                 >
                                     {otherService.name_ar}
                                 </Link>

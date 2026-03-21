@@ -27,7 +27,7 @@ export function getBlogArticlesByCategory(category: string): BlogArticle[] {
 
 export const BLOG_CATEGORIES = [
     { slug: 'moving', label: 'نقل عفش', color: 'blue' },
-    { slug: 'cleaning', label: 'تنظيف', color: 'emerald' },
+    { slug: 'cleaning', label: 'تنظيف', color: 'sky' },
     { slug: 'pest-control', label: 'مكافحة حشرات', color: 'red' },
     { slug: 'leak-detection', label: 'كشف تسربات', color: 'cyan' },
     { slug: 'insulation', label: 'عزل', color: 'amber' },

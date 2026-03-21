@@ -33,7 +33,7 @@ export default function CompanyStickyBar({
                     label="اتصل الآن"
                     cityName={cityName}
                     serviceName={serviceName}
-                    className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-l from-emerald-500 to-emerald-600 text-white font-medium rounded-xl"
+                    className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-l from-sky-500 to-sky-600 text-white font-medium rounded-xl"
                 >
                     <Phone className="w-5 h-5" />
                 </ActionButton>

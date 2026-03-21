@@ -117,7 +117,7 @@ export default function CopyButton({
                 className={`inline-flex items-center justify-center w-8 h-8 rounded-lg transition-all duration-200 ${
                     copied
                         ? 'bg-green-100 text-green-600'
-                        : 'bg-gray-100 hover:bg-emerald-50 text-gray-500 hover:text-emerald-600'
+                        : 'bg-gray-100 hover:bg-sky-50 text-gray-500 hover:text-sky-600'
                 } ${className}`}
                 aria-label={copied ? 'تم النسخ' : (label || defaultLabels[type])}
                 title={copied ? '✅ تم النسخ' : (label || defaultLabels[type])}
@@ -141,7 +141,7 @@ export default function CopyButton({
             className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-200 ${
                 copied
                     ? 'bg-green-100 text-green-700 border border-green-200'
-                    : 'bg-gray-50 hover:bg-emerald-50 text-gray-600 hover:text-emerald-700 border border-gray-200 hover:border-emerald-200'
+                    : 'bg-gray-50 hover:bg-sky-50 text-gray-600 hover:text-sky-700 border border-gray-200 hover:border-sky-200'
             } ${className}`}
         >
             {copied ? (

@@ -40,7 +40,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
     return (
         <main className="min-h-screen bg-gray-50">
             {/* Search Header */}
-            <section className="bg-gradient-to-bl from-emerald-600 via-emerald-700 to-emerald-900 text-white py-12">
+            <section className="bg-gradient-to-bl from-sky-600 via-sky-700 to-sky-900 text-white py-12">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                     <h1 className="text-3xl font-bold mb-6">البحث في بروكر</h1>
                     <form action="/search" method="GET" className="relative">
@@ -54,7 +54,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
                         />
                         <button
                             type="submit"
-                            className="absolute left-2 top-1/2 -translate-y-1/2 px-6 py-2.5 bg-gradient-to-l from-emerald-600 to-emerald-700 text-white font-medium rounded-xl hover:from-emerald-700 hover:to-emerald-800 transition-all"
+                            className="absolute left-2 top-1/2 -translate-y-1/2 px-6 py-2.5 bg-gradient-to-l from-sky-600 to-sky-700 text-white font-medium rounded-xl hover:from-sky-700 hover:to-sky-800 transition-all"
                         >
                             بحث
                         </button>
@@ -79,10 +79,10 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
                                 <Link
                                     key={service.slug}
                                     href={`/${service.slug}`}
-                                    className="flex items-center justify-between p-4 bg-white border border-gray-200 rounded-xl hover:border-emerald-300 hover:shadow-md transition-all group"
+                                    className="flex items-center justify-between p-4 bg-white border border-gray-200 rounded-xl hover:border-sky-300 hover:shadow-md transition-all group"
                                 >
-                                    <span className="font-medium text-gray-900 group-hover:text-emerald-700">{service.name_ar}</span>
-                                    <ArrowLeft className="w-4 h-4 text-gray-400 group-hover:text-emerald-500" />
+                                    <span className="font-medium text-gray-900 group-hover:text-sky-700">{service.name_ar}</span>
+                                    <ArrowLeft className="w-4 h-4 text-gray-400 group-hover:text-sky-500" />
                                 </Link>
                             ))}
                         </div>
@@ -98,10 +98,10 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
                                 <Link
                                     key={city.slug}
                                     href={`/${city.slug}`}
-                                    className="flex items-center justify-between p-4 bg-white border border-gray-200 rounded-xl hover:border-emerald-300 hover:shadow-md transition-all group"
+                                    className="flex items-center justify-between p-4 bg-white border border-gray-200 rounded-xl hover:border-sky-300 hover:shadow-md transition-all group"
                                 >
-                                    <span className="font-medium text-gray-900 group-hover:text-emerald-700">{city.name_ar}</span>
-                                    <ArrowLeft className="w-4 h-4 text-gray-400 group-hover:text-emerald-500" />
+                                    <span className="font-medium text-gray-900 group-hover:text-sky-700">{city.name_ar}</span>
+                                    <ArrowLeft className="w-4 h-4 text-gray-400 group-hover:text-sky-500" />
                                 </Link>
                             ))}
                         </div>
@@ -112,7 +112,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
                 {query && matchedServices.length === 0 && matchedCities.length === 0 && (
                     <div className="text-center py-16">
                         <p className="text-gray-500 text-lg mb-4">لم يتم العثور على نتائج لـ &quot;{resolvedParams.q}&quot;</p>
-                        <Link href="/" className="text-emerald-600 font-medium hover:underline">
+                        <Link href="/" className="text-sky-600 font-medium hover:underline">
                             العودة للرئيسية
                         </Link>
                     </div>

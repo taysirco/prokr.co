@@ -198,9 +198,9 @@ export default function LeadCaptureCTA({ cityName, serviceName, serviceSlug, cit
     return (
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             {/* Main Availability Card */}
-            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-amber-50 via-white to-emerald-50 border-2 border-amber-200 shadow-xl">
+            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-amber-50 via-white to-sky-50 border-2 border-amber-200 shadow-xl">
                 <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-amber-400/20 to-transparent rounded-br-full" />
-                <div className="absolute bottom-0 right-0 w-40 h-40 bg-gradient-to-tl from-emerald-400/10 to-transparent rounded-tl-full" />
+                <div className="absolute bottom-0 right-0 w-40 h-40 bg-gradient-to-tl from-sky-400/10 to-transparent rounded-tl-full" />
 
                 <div className="relative p-8 md:p-12">
                     {/* Badge — service-specific icon */}
@@ -246,7 +246,7 @@ export default function LeadCaptureCTA({ cityName, serviceName, serviceSlug, cit
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
                         {shownCriteria.map((text, i) => {
                             const icons = [ShieldCheck, Star, CheckCircle2, Clock, Users, Building2, Zap, AlertTriangle];
-                            const colors = ['text-emerald-600', 'text-amber-500', 'text-blue-600', 'text-purple-600', 'text-teal-600', 'text-orange-600', 'text-rose-600', 'text-cyan-600'];
+                            const colors = ['text-sky-600', 'text-amber-500', 'text-blue-600', 'text-purple-600', 'text-teal-600', 'text-orange-600', 'text-rose-600', 'text-cyan-600'];
                             const Icon = icons[hashIndex(seed + text, icons.length)];
                             const color = colors[hashIndex(seed + text + 'c', colors.length)];
                             return (
@@ -276,7 +276,7 @@ export default function LeadCaptureCTA({ cityName, serviceName, serviceSlug, cit
 
                         <a
                             href="/advertise"
-                            className="group flex items-center justify-center gap-3 px-8 py-4 bg-white border-2 border-emerald-600 text-emerald-700 rounded-2xl font-bold text-lg hover:bg-emerald-50 transition-all hover:shadow-xl hover:shadow-emerald-500/10 hover:-translate-y-0.5"
+                            className="group flex items-center justify-center gap-3 px-8 py-4 bg-white border-2 border-sky-600 text-sky-700 rounded-2xl font-bold text-lg hover:bg-sky-50 transition-all hover:shadow-xl hover:shadow-sky-500/10 hover:-translate-y-0.5"
                         >
                             <Building2 className="w-5 h-5 group-hover:animate-pulse" />
                             <span>{companyCtas[idx]}</span>
@@ -288,8 +288,8 @@ export default function LeadCaptureCTA({ cityName, serviceName, serviceSlug, cit
             {/* Trust Signals — contextualized per city */}
             <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="flex items-center gap-4 bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
-                    <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center">
-                        <ShieldCheck className="w-6 h-6 text-emerald-600" />
+                    <div className="w-12 h-12 bg-sky-100 rounded-xl flex items-center justify-center">
+                        <ShieldCheck className="w-6 h-6 text-sky-600" />
                     </div>
                     <div>
                         <p className="font-bold text-gray-900">ضمان معايير {cityName}</p>

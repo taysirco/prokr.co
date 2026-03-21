@@ -38,8 +38,8 @@ export default function NotFound() {
         />
         <main className="min-h-screen bg-gray-50 flex flex-col items-center justify-center px-4">
             <div className="max-w-2xl mx-auto text-center">
-                <div className="w-24 h-24 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Search className="w-12 h-12 text-emerald-600" />
+                <div className="w-24 h-24 bg-sky-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Search className="w-12 h-12 text-sky-600" />
                 </div>
 
                 <h1 className="text-4xl font-bold text-gray-900 mb-4">
@@ -51,7 +51,7 @@ export default function NotFound() {
 
                 <Link
                     href="/"
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-600 text-white font-medium rounded-xl hover:bg-emerald-700 transition-colors mb-12"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-sky-600 text-white font-medium rounded-xl hover:bg-sky-700 transition-colors mb-12"
                 >
                     <Home className="w-5 h-5" />
                     العودة للصفحة الرئيسية
@@ -60,7 +60,7 @@ export default function NotFound() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-right">
                     <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
                         <h2 className="font-bold text-lg text-gray-900 mb-4 flex items-center gap-2">
-                            <MapPin className="w-5 h-5 text-emerald-500" />
+                            <MapPin className="w-5 h-5 text-sky-500" />
                             المدن الرئيسية
                         </h2>
                         <ul className="space-y-2">
@@ -68,7 +68,7 @@ export default function NotFound() {
                                 <li key={city.slug}>
                                     <Link
                                         href={`/${city.slug}`}
-                                        className="flex items-center justify-between text-gray-700 hover:text-emerald-600 transition-colors py-1"
+                                        className="flex items-center justify-between text-gray-700 hover:text-sky-600 transition-colors py-1"
                                     >
                                         <span>{city.name_ar}</span>
                                         <ArrowLeft className="w-4 h-4" />
@@ -80,7 +80,7 @@ export default function NotFound() {
 
                     <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
                         <h2 className="font-bold text-lg text-gray-900 mb-4 flex items-center gap-2">
-                            <Search className="w-5 h-5 text-emerald-500" />
+                            <Search className="w-5 h-5 text-sky-500" />
                             الخدمات الأكثر طلباً
                         </h2>
                         <ul className="space-y-2">
@@ -88,7 +88,7 @@ export default function NotFound() {
                                 <li key={service.slug}>
                                     <Link
                                         href={`/${service.slug}`}
-                                        className="flex items-center justify-between text-gray-700 hover:text-emerald-600 transition-colors py-1"
+                                        className="flex items-center justify-between text-gray-700 hover:text-sky-600 transition-colors py-1"
                                     >
                                         <span>{service.name_ar}</span>
                                         <ArrowLeft className="w-4 h-4" />

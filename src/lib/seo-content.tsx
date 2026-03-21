@@ -238,13 +238,13 @@ export function SeoContentSection({ city, service }: SeoContentProps) {
 
     return (
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <article className="prose prose-lg prose-emerald max-w-none">
+            <article className="prose prose-lg prose-sky max-w-none">
 
                 {/* 1. INTRODUCTION (AI Generated) */}
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">
                     دليل شامل لخدمة {service.name_ar} {cityKw} (2026)
                 </h2>
-                <div className="seo-introduction bg-emerald-50 p-6 rounded-xl border-r-4 border-emerald-500 mb-8" suppressHydrationWarning>
+                <div className="seo-introduction bg-sky-50 p-6 rounded-xl border-r-4 border-sky-500 mb-8" suppressHydrationWarning>
                     <p className="text-gray-700 leading-relaxed font-medium"
                        dangerouslySetInnerHTML={{ __html: link(aiContent.introduction) }}
                     />
@@ -307,8 +307,8 @@ export function SeoContentSection({ city, service }: SeoContentProps) {
                                 <th className="p-4 font-bold text-gray-700">نوع الخدمة</th>
                                 <th className="p-4 font-bold text-gray-700" style={{ display: 'table-cell' }}>الوحدة</th>
                                 <th className="p-4 font-bold text-red-600">متوسط سعر السوق ⚠️</th>
-                                <th className="p-4 font-bold text-emerald-700">سعر بروكر المعتمد ✔️</th>
-                                <th className="p-4 font-bold text-emerald-700">التوفير</th>
+                                <th className="p-4 font-bold text-sky-700">سعر بروكر المعتمد ✔️</th>
+                                <th className="p-4 font-bold text-sky-700">التوفير</th>
                                 {pricing.some(i => i.time) && <th className="p-4 font-bold text-gray-700">المدة</th>}
                             </tr>
                         </thead>
@@ -321,17 +321,17 @@ export function SeoContentSection({ city, service }: SeoContentProps) {
                                 const marketMax = Math.round(item.maxPrice * factor * 1.15);
                                 const savingPercent = Math.round(((marketMax - item.maxPrice) / marketMax) * 100);
                                 return (
-                                    <tr key={index} className={`hover:bg-emerald-50/30 transition-colors ${index === 0 ? 'bg-emerald-50/20' : ''}`}>
+                                    <tr key={index} className={`hover:bg-sky-50/30 transition-colors ${index === 0 ? 'bg-sky-50/20' : ''}`}>
                                         <td className="p-4 text-gray-800 font-semibold text-sm">{item.type}</td>
                                         <td className="p-4 text-gray-500 text-sm">{item.unit}</td>
                                         <td className="p-4 text-red-500 line-through text-sm opacity-75" dir="ltr">
                                             {marketMin.toLocaleString('ar-SA')} - {marketMax.toLocaleString('ar-SA')} ريال
                                         </td>
-                                        <td className="p-4 text-emerald-700 font-bold text-sm" dir="ltr">
+                                        <td className="p-4 text-sky-700 font-bold text-sm" dir="ltr">
                                             {item.price} ريال
                                         </td>
                                         <td className="p-4">
-                                            <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800 whitespace-nowrap">
+                                            <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold bg-sky-100 text-sky-800 whitespace-nowrap">
                                                 وفّر {savingPercent}%
                                             </span>
                                         </td>
@@ -344,8 +344,8 @@ export function SeoContentSection({ city, service }: SeoContentProps) {
                         </tbody>
                     </table>
                     {/* Trust footer inside the table card */}
-                    <div className="bg-gradient-to-l from-emerald-50 to-green-50 px-4 py-3 border-t border-emerald-100 flex flex-wrap items-center justify-between gap-2">
-                        <p className="text-xs text-emerald-800 font-medium">
+                    <div className="bg-gradient-to-l from-sky-50 to-green-50 px-4 py-3 border-t border-sky-100 flex flex-wrap items-center justify-between gap-2">
+                        <p className="text-xs text-sky-800 font-medium">
                             ✅ الأسعار أعلاه من شركات بروكر المعتمدة والمرخصة {cityKw}
                         </p>
                         <p className="text-xs text-gray-500">
@@ -374,8 +374,8 @@ export function SeoContentSection({ city, service }: SeoContentProps) {
                     <h3 className="text-xl font-bold text-gray-900 mb-4">قصص نجاح {service.name_ar} {cityKw}</h3>
                     <div className="grid sm:grid-cols-2 gap-4" suppressHydrationWarning>
                         {aiContent.successStories.map((story, idx) => (
-                            <div key={idx} className="bg-emerald-50/50 p-4 rounded-xl border border-emerald-100">
-                                <h4 className="font-bold text-emerald-800 mb-2">{story.title}</h4>
+                            <div key={idx} className="bg-sky-50/50 p-4 rounded-xl border border-sky-100">
+                                <h4 className="font-bold text-sky-800 mb-2">{story.title}</h4>
                                 <p className="text-gray-700 text-sm leading-relaxed"
                                    dangerouslySetInnerHTML={{ __html: link(story.result) }}
                                 />
@@ -401,11 +401,11 @@ export function SeoContentSection({ city, service }: SeoContentProps) {
                                 <Link
                                     key={i}
                                     href={link.url}
-                                    className="group flex items-start gap-3 p-4 bg-white border border-gray-200 rounded-xl hover:border-emerald-300 hover:shadow-md transition-all"
+                                    className="group flex items-start gap-3 p-4 bg-white border border-gray-200 rounded-xl hover:border-sky-300 hover:shadow-md transition-all"
                                 >
-                                    <span className="text-emerald-500 mt-0.5 group-hover:text-emerald-600">&#8592;</span>
+                                    <span className="text-sky-500 mt-0.5 group-hover:text-sky-600">&#8592;</span>
                                     <div>
-                                        <span className="font-bold text-gray-900 group-hover:text-emerald-700 block text-sm">{link.name_ar} في {city.name_ar}</span>
+                                        <span className="font-bold text-gray-900 group-hover:text-sky-700 block text-sm">{link.name_ar} في {city.name_ar}</span>
                                         <span className="text-gray-500 text-xs leading-relaxed">{link.context}</span>
                                     </div>
                                 </Link>
@@ -462,7 +462,7 @@ export function SeoContentSection({ city, service }: SeoContentProps) {
                             {content.semanticData.consumerEducation.map((cn, i) => (
                                 <div key={i} className="bg-gradient-to-l from-blue-50 to-indigo-50 border border-blue-100 rounded-xl p-5">
                                     <p className="text-red-700 text-sm mb-2 line-through opacity-80">❌ {cn.myth}</p>
-                                    <p className="text-emerald-800 text-sm font-medium leading-relaxed">✅ {cn.truth}</p>
+                                    <p className="text-sky-800 text-sm font-medium leading-relaxed">✅ {cn.truth}</p>
                                 </div>
                             ))}
                         </div>

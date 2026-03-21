@@ -253,7 +253,7 @@ export default function DarkSocialShare({
             className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6"
             aria-label="مشاركة الصفحة"
         >
-            <div className="relative overflow-hidden bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 rounded-2xl border border-emerald-200/60 shadow-lg">
+            <div className="relative overflow-hidden bg-gradient-to-br from-green-50 via-sky-50 to-teal-50 rounded-2xl border border-sky-200/60 shadow-lg">
                 {/* Glassmorphism overlay */}
                 <div className="absolute inset-0 bg-white/30 backdrop-blur-sm pointer-events-none" />
 
@@ -262,7 +262,7 @@ export default function DarkSocialShare({
                         {/* Left: Content */}
                         <div className="flex-1 min-w-0">
                             <h3 className="text-lg font-bold text-gray-900 mb-1.5 flex items-center gap-2">
-                                <Share2 className="w-5 h-5 text-emerald-600 flex-shrink-0" aria-hidden="true" />
+                                <Share2 className="w-5 h-5 text-sky-600 flex-shrink-0" aria-hidden="true" />
                                 شارك العرض مع صديقك
                             </h3>
                             <p className="text-sm text-gray-600 leading-relaxed">
@@ -277,7 +277,7 @@ export default function DarkSocialShare({
                                 <Users className="w-3.5 h-3.5" aria-hidden="true" />
                                 <span>
                                     تمت مشاركة هذه الصفحة{' '}
-                                    <strong className="text-emerald-700">
+                                    <strong className="text-sky-700">
                                         {mounted ? displayCount.toLocaleString('ar-SA') : '···'}
                                     </strong>{' '}
                                     مرة
@@ -301,14 +301,14 @@ export default function DarkSocialShare({
                             {/* Secondary: Copy Link */}
                             <button
                                 onClick={handleCopyLink}
-                                className="flex items-center justify-center gap-2 w-full sm:w-auto px-5 py-2.5 bg-white/80 hover:bg-white border border-gray-200 text-gray-700 text-sm font-medium rounded-xl transition-all duration-200 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2"
+                                className="flex items-center justify-center gap-2 w-full sm:w-auto px-5 py-2.5 bg-white/80 hover:bg-white border border-gray-200 text-gray-700 text-sm font-medium rounded-xl transition-all duration-200 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2"
                                 id="dark-social-share-copy"
                                 aria-label="نسخ رابط الصفحة"
                             >
                                 {copied ? (
                                     <>
-                                        <Check className="w-4 h-4 text-emerald-500" aria-hidden="true" />
-                                        <span className="text-emerald-600">تم نسخ الرابط!</span>
+                                        <Check className="w-4 h-4 text-sky-500" aria-hidden="true" />
+                                        <span className="text-sky-600">تم نسخ الرابط!</span>
                                     </>
                                 ) : (
                                     <>

@@ -75,7 +75,7 @@ const LITE_MODE_CSS = `
   bottom: 0;
   left: 0;
   right: 0;
-  background: #059669;
+  background: #0284C7;
   color: white;
   text-align: center;
   padding: 4px 0;

@@ -151,7 +151,7 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
 
             <main className="min-h-screen bg-gray-50">
                 {/* Hero Cover */}
-                <section className="relative bg-gradient-to-bl from-emerald-600 via-emerald-700 to-emerald-900 text-white">
+                <section className="relative bg-gradient-to-bl from-sky-600 via-sky-700 to-sky-900 text-white">
                     <div className="absolute inset-0 opacity-10">
                         <div className="absolute inset-0" style={{
                             backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
@@ -160,7 +160,7 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
 
                     <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
                         {/* Breadcrumbs */}
-                        <nav className="flex items-center gap-2 text-emerald-100 text-sm mb-6">
+                        <nav className="flex items-center gap-2 text-sky-100 text-sm mb-6">
                             <Link href="/" className="hover:text-white transition-colors flex items-center gap-1">
                                 <Home className="w-4 h-4" />
                                 الرئيسية
@@ -178,7 +178,7 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                                         {mainService?.name_ar}
                                     </Link>
                                 ) : (
-                                    <span className="text-emerald-200">{mainService?.name_ar}</span>
+                                    <span className="text-sky-200">{mainService?.name_ar}</span>
                                 );
                             })()}
                         </nav>
@@ -197,7 +197,7 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                                             sizes="128px"
                                         />
                                     ) : (
-                                        <span className="text-4xl font-bold text-emerald-600">
+                                        <span className="text-4xl font-bold text-sky-600">
                                             {advertiser.business_name.charAt(0)}
                                         </span>
                                     )}
@@ -255,7 +255,7 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                                         </div>
                                     )}
 
-                                    <div className="flex items-center gap-1.5 text-emerald-100">
+                                    <div className="flex items-center gap-1.5 text-sky-100">
                                         <MapPin className="w-4 h-4" />
                                         <span className="text-sm">
                                             {advertiser.targeted_cities.slice(0, 3).map(c => getCityBySlug(c)?.name_ar).join(' • ')}
@@ -284,7 +284,7 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                             {/* Services */}
                             <section className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
                                 <h2 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
-                                    <CheckCircle className="w-5 h-5 text-emerald-500" />
+                                    <CheckCircle className="w-5 h-5 text-sky-500" />
                                     خدماتنا
                                 </h2>
                                 <div className="flex flex-wrap gap-2">
@@ -293,7 +293,7 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                                         return service ? (
                                             <span
                                                 key={serviceSlug}
-                                                className="px-4 py-2 bg-emerald-50 text-emerald-700 rounded-lg text-sm font-medium"
+                                                className="px-4 py-2 bg-sky-50 text-sky-700 rounded-lg text-sm font-medium"
                                             >
                                                 {service.name_ar}
                                             </span>
@@ -305,7 +305,7 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                             {/* About */}
                             <section className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
                                 <h2 className="text-lg font-bold text-gray-900 mb-4">عن الشركة</h2>
-                                <div className="prose prose-emerald max-w-none">
+                                <div className="prose prose-sky max-w-none">
                                     <p className="text-gray-600 whitespace-pre-line leading-relaxed">
                                         {advertiser.description}
                                     </p>
@@ -316,7 +316,7 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                             {advertiser.gallery.length > 0 && (
                                 <section className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
                                     <h2 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
-                                        <Camera className="w-5 h-5 text-emerald-500" />
+                                        <Camera className="w-5 h-5 text-sky-500" />
                                         معرض الصور
                                     </h2>
                                     <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
@@ -411,7 +411,7 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                                 {/* Service Areas */}
                                 <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
                                     <h3 className="font-bold text-gray-900 mb-4 flex items-center gap-2">
-                                        <MapPin className="w-5 h-5 text-emerald-500" />
+                                        <MapPin className="w-5 h-5 text-sky-500" />
                                         مناطق الخدمة
                                     </h3>
                                     <div className="flex flex-wrap gap-2">
@@ -423,7 +423,7 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                                                 <Link
                                                     key={citySlug}
                                                     href={hasOverride ? `/${citySlug}/${serviceSlug}` : `/${citySlug}`}
-                                                    className="px-3 py-1.5 bg-gray-100 hover:bg-emerald-50 text-gray-700 hover:text-emerald-700 rounded-lg text-sm transition-colors"
+                                                    className="px-3 py-1.5 bg-gray-100 hover:bg-sky-50 text-gray-700 hover:text-sky-700 rounded-lg text-sm transition-colors"
                                                 >
                                                     {city.name_ar}
                                                 </Link>
@@ -433,8 +433,8 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                                 </div>
 
                                 {/* 🛡️ Government Credential Panel */}
-                                <div className="bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-2xl p-6 border border-emerald-200">
-                                    <h3 className="font-bold text-emerald-900 mb-4 flex items-center gap-2">
+                                <div className="bg-gradient-to-br from-sky-50 to-sky-100 rounded-2xl p-6 border border-sky-200">
+                                    <h3 className="font-bold text-sky-900 mb-4 flex items-center gap-2">
                                         <Shield className="w-5 h-5" />
                                         {(advertiser.has_verified_employees || advertiser.zatca_registered || advertiser.qiwa_registered || advertiser.crn)
                                             ? 'اعتمادات حكومية مُوثّقة'
@@ -443,25 +443,25 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                                     <ul className="space-y-3">
                                         {/* Dynamic credentials */}
                                         {advertiser.crn && (
-                                            <li className="flex items-center gap-3 text-emerald-800">
-                                                <div className="w-8 h-8 bg-emerald-200 rounded-lg flex items-center justify-center text-sm">📝</div>
+                                            <li className="flex items-center gap-3 text-sky-800">
+                                                <div className="w-8 h-8 bg-sky-200 rounded-lg flex items-center justify-center text-sm">📝</div>
                                                 <div>
                                                     <span className="text-sm font-bold">سجل تجاري</span>
-                                                    <span className="text-[10px] text-emerald-600 block">رقم {advertiser.crn}</span>
+                                                    <span className="text-[10px] text-sky-600 block">رقم {advertiser.crn}</span>
                                                 </div>
                                             </li>
                                         )}
                                         {advertiser.has_verified_employees && (
-                                            <li className="flex items-center gap-3 text-emerald-800">
-                                                <div className="w-8 h-8 bg-emerald-200 rounded-lg flex items-center justify-center text-sm">🪪</div>
+                                            <li className="flex items-center gap-3 text-sky-800">
+                                                <div className="w-8 h-8 bg-sky-200 rounded-lg flex items-center justify-center text-sm">🪪</div>
                                                 <div>
                                                     <span className="text-sm font-bold">تحقق نفاذ</span>
-                                                    <span className="text-[10px] text-emerald-600 block">هوية وطنية — مركز المعلومات الوطني</span>
+                                                    <span className="text-[10px] text-sky-600 block">هوية وطنية — مركز المعلومات الوطني</span>
                                                 </div>
                                             </li>
                                         )}
                                         {advertiser.zatca_registered && (
-                                            <li className="flex items-center gap-3 text-emerald-800">
+                                            <li className="flex items-center gap-3 text-sky-800">
                                                 <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center text-sm">🧾</div>
                                                 <div>
                                                     <span className="text-sm font-bold">ZATCA</span>
@@ -470,7 +470,7 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                                             </li>
                                         )}
                                         {advertiser.qiwa_registered && (
-                                            <li className="flex items-center gap-3 text-emerald-800">
+                                            <li className="flex items-center gap-3 text-sky-800">
                                                 <div className="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center text-sm">📋</div>
                                                 <div>
                                                     <span className="text-sm font-bold">منصة قوى</span>
@@ -479,7 +479,7 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                                             </li>
                                         )}
                                         {advertiser.nitaqat_band && (
-                                            <li className="flex items-center gap-3 text-emerald-800">
+                                            <li className="flex items-center gap-3 text-sky-800">
                                                 <div className="w-8 h-8 bg-amber-100 rounded-lg flex items-center justify-center text-sm">🏅</div>
                                                 <div>
                                                     <span className="text-sm font-bold">نطاقات {advertiser.nitaqat_band === 'platinum' ? 'بلاتيني' : advertiser.nitaqat_band === 'green' ? 'أخضر' : 'أخضر منخفض'}</span>
@@ -488,22 +488,22 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                                             </li>
                                         )}
                                         {/* Fallback generic trust items */}
-                                        <li className="flex items-center gap-3 text-emerald-800">
-                                            <div className="w-8 h-8 bg-emerald-200 rounded-lg flex items-center justify-center">
-                                                <Shield className="w-4 h-4 text-emerald-700" />
+                                        <li className="flex items-center gap-3 text-sky-800">
+                                            <div className="w-8 h-8 bg-sky-200 rounded-lg flex items-center justify-center">
+                                                <Shield className="w-4 h-4 text-sky-700" />
                                             </div>
                                             <span className="text-sm">شركة معتمدة ومرخصة</span>
                                         </li>
-                                        <li className="flex items-center gap-3 text-emerald-800">
-                                            <div className="w-8 h-8 bg-emerald-200 rounded-lg flex items-center justify-center">
-                                                <Clock className="w-4 h-4 text-emerald-700" />
+                                        <li className="flex items-center gap-3 text-sky-800">
+                                            <div className="w-8 h-8 bg-sky-200 rounded-lg flex items-center justify-center">
+                                                <Clock className="w-4 h-4 text-sky-700" />
                                             </div>
                                             <span className="text-sm">خدمة على مدار الساعة</span>
                                         </li>
                                         {avgRating > 0 && (
-                                            <li className="flex items-center gap-3 text-emerald-800">
-                                                <div className="w-8 h-8 bg-emerald-200 rounded-lg flex items-center justify-center">
-                                                    <Star className="w-4 h-4 text-emerald-700" />
+                                            <li className="flex items-center gap-3 text-sky-800">
+                                                <div className="w-8 h-8 bg-sky-200 rounded-lg flex items-center justify-center">
+                                                    <Star className="w-4 h-4 text-sky-700" />
                                                 </div>
                                                 <span className="text-sm">تقييم {avgRating.toFixed(1)} من 5 نجوم</span>
                                             </li>
@@ -524,7 +524,7 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                         <h2 className="text-2xl font-bold text-gray-900 mb-4">
                             عن {advertiser.business_name}
                         </h2>
-                        <div className="bg-emerald-50 p-6 rounded-xl border-r-4 border-emerald-500 mb-6">
+                        <div className="bg-sky-50 p-6 rounded-xl border-r-4 border-sky-500 mb-6">
                             <p className="text-gray-700 leading-relaxed">
                                 {advertiser.business_name} هي شركة {advertiser.is_premium ? 'معتمدة وموثقة' : 'مسجلة'} في منصة بروكر،
                                 تقدم خدمات {targetedServices.map(s => s.name_ar).join(' و')} في {targetedCities.map(c => c.name_ar).join(' و')}.
@@ -540,7 +540,7 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                                 const hasOverride = hasPageOverride(citySlug, slug);
                                 return (
                                     <li key={s.slug}>✓ {hasOverride ? (
-                                        <Link href={`/${citySlug}/${slug}`} className="text-emerald-700 hover:underline">{s.name_ar}</Link>
+                                        <Link href={`/${citySlug}/${slug}`} className="text-sky-700 hover:underline">{s.name_ar}</Link>
                                     ) : (
                                         <span className="text-gray-600">{s.name_ar}</span>
                                     )}</li>
@@ -551,7 +551,7 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                         <h3 className="text-xl font-bold text-gray-900 mb-3">مناطق التغطية</h3>
                         <div className="flex flex-wrap gap-2 mb-8 not-prose">
                             {targetedCities.map(c => (
-                                <Link key={c.slug} href={`/${c.slug}`} className="px-3 py-1.5 bg-emerald-50 text-emerald-700 rounded-lg text-sm hover:bg-emerald-100 transition-colors">{c.name_ar}</Link>
+                                <Link key={c.slug} href={`/${c.slug}`} className="px-3 py-1.5 bg-sky-50 text-sky-700 rounded-lg text-sm hover:bg-sky-100 transition-colors">{c.name_ar}</Link>
                             ))}
                         </div>
 

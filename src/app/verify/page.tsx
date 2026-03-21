@@ -162,10 +162,10 @@ function VerifyContent() {
 
                 {state === 'success' && (
                     <>
-                        <div className="w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <CheckCircle className="w-10 h-10 text-emerald-600" />
+                        <div className="w-20 h-20 bg-sky-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <CheckCircle className="w-10 h-10 text-sky-600" />
                         </div>
-                        <h1 className="text-xl font-bold text-emerald-900 mb-2">
+                        <h1 className="text-xl font-bold text-sky-900 mb-2">
                             {mode === 'claim' ? '✅ تم تأكيد البريد — الخطوة 1 من 2' : '✅ تم التحقق!'}
                         </h1>
                         <p className="text-gray-600 text-sm mb-6">{message}</p>
@@ -173,7 +173,7 @@ function VerifyContent() {
                         {companyCode && (
                             <Link
                                 href={`/company/${companyCode}`}
-                                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-l from-emerald-500 to-teal-500 text-white font-bold text-sm rounded-xl hover:from-emerald-600 hover:to-teal-600 transition-all shadow-lg"
+                                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-l from-sky-500 to-teal-500 text-white font-bold text-sm rounded-xl hover:from-sky-600 hover:to-teal-600 transition-all shadow-lg"
                             >
                                 <Building2 className="w-4 h-4" />
                                 العودة لصفحة المنشأة

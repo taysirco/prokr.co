@@ -51,8 +51,8 @@ export default function AdvertiserCard({ advertiser, variant = 'standard' }: Adv
                                     className="object-cover rounded-xl border-2 border-amber-200"
                                 />
                             ) : (
-                                <div className="w-full h-full bg-gradient-to-br from-emerald-100 to-emerald-200 rounded-xl flex items-center justify-center border-2 border-amber-200">
-                                    <span className="text-2xl font-bold text-emerald-600">
+                                <div className="w-full h-full bg-gradient-to-br from-sky-100 to-sky-200 rounded-xl flex items-center justify-center border-2 border-amber-200">
+                                    <span className="text-2xl font-bold text-sky-600">
                                         {advertiser.business_name.charAt(0)}
                                     </span>
                                 </div>
@@ -66,7 +66,7 @@ export default function AdvertiserCard({ advertiser, variant = 'standard' }: Adv
                                 href={`/company/${advertiser.short_code}`}
                                 className="block"
                             >
-                                <h3 className="font-bold text-lg text-gray-900 group-hover:text-emerald-600 transition-colors truncate">
+                                <h3 className="font-bold text-lg text-gray-900 group-hover:text-sky-600 transition-colors truncate">
                                     {advertiser.business_name}
                                 </h3>
                             </Link>
@@ -117,7 +117,7 @@ export default function AdvertiserCard({ advertiser, variant = 'standard' }: Adv
                     {(advertiser.has_verified_employees || advertiser.zatca_registered || advertiser.qiwa_registered || advertiser.nitaqat_band) && (
                         <div className="flex flex-wrap gap-1.5 mt-3">
                             {advertiser.has_verified_employees && (
-                                <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-emerald-50 text-emerald-700 text-[10px] font-bold rounded-full border border-emerald-200" title="فريق بتحقق هوية وطنية عبر منصة نفاذ">
+                                <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-sky-50 text-sky-700 text-[10px] font-bold rounded-full border border-sky-200" title="فريق بتحقق هوية وطنية عبر منصة نفاذ">
                                     🪪 نفاذ
                                 </span>
                             )}
@@ -151,7 +151,7 @@ export default function AdvertiserCard({ advertiser, variant = 'standard' }: Adv
                             label="اتصل الآن"
                             cityName={advertiser.targeted_cities[0] || ''}
                             serviceName={advertiser.business_name}
-                            className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-l from-emerald-500 to-emerald-600 text-white font-medium rounded-xl hover:from-emerald-600 hover:to-emerald-700 shadow-lg shadow-emerald-500/30 hover:shadow-emerald-500/50"
+                            className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-l from-sky-500 to-sky-600 text-white font-medium rounded-xl hover:from-sky-600 hover:to-sky-700 shadow-lg shadow-sky-500/30 hover:shadow-sky-500/50"
                         >
                             <Phone className="w-5 h-5" />
                         </ActionButton>
@@ -176,7 +176,7 @@ export default function AdvertiserCard({ advertiser, variant = 'standard' }: Adv
 
     // Standard variant - Simple row
     return (
-        <div className="flex items-center gap-4 p-4 bg-white rounded-xl border border-gray-200 hover:border-emerald-300 hover:shadow-md transition-all">
+        <div className="flex items-center gap-4 p-4 bg-white rounded-xl border border-gray-200 hover:border-sky-300 hover:shadow-md transition-all">
             {/* Logo */}
             <div className="relative w-12 h-12 flex-shrink-0">
                 {advertiser.logo_url ? (
@@ -199,7 +199,7 @@ export default function AdvertiserCard({ advertiser, variant = 'standard' }: Adv
             <div className="flex-1 min-w-0">
                 <Link
                     href={`/company/${advertiser.short_code}`}
-                    className="font-medium text-gray-900 hover:text-emerald-600 transition-colors truncate block"
+                    className="font-medium text-gray-900 hover:text-sky-600 transition-colors truncate block"
                 >
                     {advertiser.business_name}
                 </Link>
@@ -209,7 +209,7 @@ export default function AdvertiserCard({ advertiser, variant = 'standard' }: Adv
                     </p>
                     {/* Compact credential indicator */}
                     {advertiser.has_verified_employees && (
-                        <span className="inline-flex items-center gap-0.5 px-1.5 py-0.5 bg-emerald-50 text-emerald-600 text-[9px] font-bold rounded border border-emerald-200" title="فريق بتحقق نفاذ">
+                        <span className="inline-flex items-center gap-0.5 px-1.5 py-0.5 bg-sky-50 text-sky-600 text-[9px] font-bold rounded border border-sky-200" title="فريق بتحقق نفاذ">
                             🛡️
                         </span>
                     )}
@@ -225,7 +225,7 @@ export default function AdvertiserCard({ advertiser, variant = 'standard' }: Adv
                     cityName={advertiser.targeted_cities[0] || ''}
                     serviceName={advertiser.business_name}
                     ariaLabel="اتصل"
-                    className="p-2.5 bg-emerald-50 text-emerald-600 rounded-lg hover:bg-emerald-100"
+                    className="p-2.5 bg-sky-50 text-sky-600 rounded-lg hover:bg-sky-100"
                 >
                     <Phone className="w-5 h-5" />
                 </ActionButton>

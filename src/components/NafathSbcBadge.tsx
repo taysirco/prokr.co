@@ -31,7 +31,7 @@ function ShieldIcon({ size, className }: { size: 'xs' | 'sm'; className?: string
             style={{ display: 'block' }}
         >
             {/* Green circle background */}
-            <circle cx="12" cy="12" r="12" fill="#059669" />
+            <circle cx="12" cy="12" r="12" fill="#0284C7" />
             {/* White shield */}
             <path
                 d="M12 4 L18 6.5 V11.5 C18 15 12 18 12 18 C12 18 6 15 6 11.5 V6.5 L12 4Z"
@@ -41,7 +41,7 @@ function ShieldIcon({ size, className }: { size: 'xs' | 'sm'; className?: string
             <path
                 d="M9 11.5 L11 13.5 L15.5 9"
                 fill="none"
-                stroke="#059669"
+                stroke="#0284C7"
                 strokeWidth="1.8"
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -66,7 +66,7 @@ function TextPill({ size, className }: { size: 'md' | 'lg'; className?: string }
                 alignItems: 'center',
                 gap: size === 'lg' ? '6px' : '5px',
                 maxWidth,
-                background: 'linear-gradient(135deg, #059669, #047857)',
+                background: 'linear-gradient(135deg, #0284C7, #0369A1)',
                 borderRadius: '6px',
                 padding: size === 'lg' ? '5px 10px' : '4px 8px',
                 border: '0.5px solid rgba(255,255,255,0.15)',
@@ -90,7 +90,7 @@ function TextPill({ size, className }: { size: 'md' | 'lg'; className?: string }
                 <path
                     d="M3.5 8 L5.8 10.5 L10.5 5.5"
                     fill="none"
-                    stroke="#059669"
+                    stroke="#0284C7"
                     strokeWidth="1.6"
                     strokeLinecap="round"
                     strokeLinejoin="round"

@@ -162,7 +162,7 @@ export default async function CityPage({ params }: CityPageProps) {
                 />
 
                 {/* Hero Section */}
-                <section className="relative bg-gradient-to-bl from-emerald-600 via-emerald-700 to-emerald-900 text-white overflow-hidden">
+                <section className="relative bg-gradient-to-bl from-sky-600 via-sky-700 to-sky-900 text-white overflow-hidden">
                     <div className="absolute inset-0 opacity-10">
                         <div className="absolute inset-0" style={{
                             backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
@@ -171,7 +171,7 @@ export default async function CityPage({ params }: CityPageProps) {
 
                     <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
                         {/* Breadcrumbs */}
-                        <nav className="flex items-center gap-2 text-emerald-100 text-sm mb-6">
+                        <nav className="flex items-center gap-2 text-sky-100 text-sm mb-6">
                             <Link href="/" className="hover:text-white transition-colors flex items-center gap-1">
                                 <Home className="w-4 h-4" />
                                 الرئيسية
@@ -188,7 +188,7 @@ export default async function CityPage({ params }: CityPageProps) {
                                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
                                     {aiContent.h1}
                                 </h1>
-                                <p className="text-emerald-100 mt-1">{city.name_en}</p>
+                                <p className="text-sky-100 mt-1">{city.name_en}</p>
                             </div>
                         </div>
 
@@ -197,7 +197,7 @@ export default async function CityPage({ params }: CityPageProps) {
                             <MarketTimingBadge compact />
                         </div>
 
-                        <p className="text-lg text-emerald-100 max-w-2xl mt-4">
+                        <p className="text-lg text-sky-100 max-w-2xl mt-4">
                             اكتشف أفضل شركات الخدمات المعتمدة في {city.name_ar}.
                             نقل عفش، تنظيف، مكافحة حشرات، كشف تسربات والمزيد.
                         </p>
@@ -221,7 +221,7 @@ export default async function CityPage({ params }: CityPageProps) {
                         return (
                             <div key={category} className="mb-12">
                                 <div className="flex items-center gap-3 mb-6">
-                                    <div className="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center text-emerald-600">
+                                    <div className="w-10 h-10 bg-sky-100 rounded-lg flex items-center justify-center text-sky-600">
                                         {categoryIcons[category] || <Wrench className="w-5 h-5" />}
                                     </div>
                                     <h2 className="text-xl font-bold text-gray-900">
@@ -234,7 +234,7 @@ export default async function CityPage({ params }: CityPageProps) {
                                         <Link
                                             key={service.slug}
                                             href={`/${city.slug}/${service.slug}`}
-                                            className="group relative bg-white rounded-xl border border-gray-200 hover:border-emerald-300 hover:shadow-lg transition-all overflow-hidden"
+                                            className="group relative bg-white rounded-xl border border-gray-200 hover:border-sky-300 hover:shadow-lg transition-all overflow-hidden"
                                         >
                                             {/* Image */}
                                             <div className="relative aspect-[4/3] bg-gray-100 overflow-hidden">
@@ -303,11 +303,11 @@ export default async function CityPage({ params }: CityPageProps) {
 
                 {/* SEO Content Section */}
                 <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-gray-200">
-                    <article className="prose prose-lg prose-emerald max-w-none">
+                    <article className="prose prose-lg prose-sky max-w-none">
                         <h2 className="text-2xl font-bold text-gray-900 mb-4">
                             دليل الخدمات الشامل في {city.name_ar} (2026)
                         </h2>
-                        <div className="city-seo-intro bg-emerald-50 p-6 rounded-xl border-r-4 border-emerald-500 mb-6">
+                        <div className="city-seo-intro bg-sky-50 p-6 rounded-xl border-r-4 border-sky-500 mb-6">
                             <p className="text-gray-700 leading-relaxed">
                                 {cityContext
                                     ? `تعد ${city.name_ar} من أهم المدن السعودية التي تتميز بـ${cityContext.urbanTraits.slice(0, 2).join(' و')}. يقدم بروكر دليلاً شاملاً لأفضل الخدمات المتوفرة في جميع أحياء ${city.name_ar}، من نقل العفش إلى التنظيف ومكافحة الحشرات وكشف التسربات والعزل. جميع الشركات مرخصة ومعتمدة وفقاً لاشتراطات وزارة التجارة السعودية.`
@@ -344,7 +344,7 @@ export default async function CityPage({ params }: CityPageProps) {
                                 </h3>
                                 <div className="flex flex-wrap gap-2">
                                     {cityContext.neighborhoods.map((n, idx) => (
-                                        <span key={idx} className="px-3 py-1 bg-emerald-100 text-emerald-800 rounded-full text-sm font-medium">
+                                        <span key={idx} className="px-3 py-1 bg-sky-100 text-sky-800 rounded-full text-sm font-medium">
                                             {n.name_ar}
                                         </span>
                                     ))}
@@ -422,13 +422,13 @@ export default async function CityPage({ params }: CityPageProps) {
                     <h2 className="text-xl font-bold text-gray-900 mb-6">مقالات وأدلة مفيدة</h2>
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                         {BLOG_ARTICLES.slice(0, 3).map(article => (
-                            <Link key={article.slug} href={`/blog/${article.slug}`} className="group bg-white border border-gray-200 rounded-xl p-4 hover:border-emerald-300 hover:shadow-md transition-all">
-                                <span className="text-xs text-emerald-600 font-medium">{article.categoryLabel}</span>
-                                <h3 className="font-bold text-gray-900 text-sm mt-1 group-hover:text-emerald-700 transition-colors line-clamp-2">{article.title}</h3>
+                            <Link key={article.slug} href={`/blog/${article.slug}`} className="group bg-white border border-gray-200 rounded-xl p-4 hover:border-sky-300 hover:shadow-md transition-all">
+                                <span className="text-xs text-sky-600 font-medium">{article.categoryLabel}</span>
+                                <h3 className="font-bold text-gray-900 text-sm mt-1 group-hover:text-sky-700 transition-colors line-clamp-2">{article.title}</h3>
                                 <div className="flex items-center gap-1 mt-2 text-xs text-gray-400">
                                     <Clock className="w-3 h-3" />
                                     <span>{article.readTime} دقائق</span>
-                                    <ArrowLeft className="w-3 h-3 mr-auto text-emerald-500 opacity-0 group-hover:opacity-100 transition-opacity" />
+                                    <ArrowLeft className="w-3 h-3 mr-auto text-sky-500 opacity-0 group-hover:opacity-100 transition-opacity" />
                                 </div>
                             </Link>
                         ))}
@@ -444,7 +444,7 @@ export default async function CityPage({ params }: CityPageProps) {
                                 <Link
                                     key={otherCity.slug}
                                     href={`/${otherCity.slug}`}
-                                    className="px-4 py-2 bg-white border border-gray-200 rounded-lg hover:border-emerald-300 hover:shadow-md transition-all text-gray-700 hover:text-emerald-700"
+                                    className="px-4 py-2 bg-white border border-gray-200 rounded-lg hover:border-sky-300 hover:shadow-md transition-all text-gray-700 hover:text-sky-700"
                                 >
                                     {otherCity.name_ar}
                                 </Link>

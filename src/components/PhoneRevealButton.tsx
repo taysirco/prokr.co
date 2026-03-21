@@ -124,7 +124,7 @@ export default function PhoneRevealButton({
     // Emergency styling for the call button
     const callButtonClasses = isEmergencyHour
         ? 'bg-red-600 hover:bg-red-700 text-white shadow-[0_0_12px_rgba(239,68,68,0.4)] animate-pulse'
-        : 'bg-emerald-600 hover:bg-emerald-700 text-white';
+        : 'bg-sky-600 hover:bg-sky-700 text-white';
 
     const callLabel = isEmergencyHour ? '🚨 اتصل — طوارئ' : '📞 اتصل الآن';
 
@@ -139,7 +139,7 @@ export default function PhoneRevealButton({
                     </span>
                     <button
                         onClick={handleReveal}
-                        className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200 rounded-lg text-xs font-bold transition-all duration-200 animate-pulse hover:animate-none cursor-pointer"
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-sky-50 hover:bg-sky-100 text-sky-700 border border-sky-200 rounded-lg text-xs font-bold transition-all duration-200 animate-pulse hover:animate-none cursor-pointer"
                     >
                         <span className="text-base">👁️</span>
                         اضغط لكشف الرقم الموثق
@@ -149,14 +149,14 @@ export default function PhoneRevealButton({
                 /* ═══════ REVEALED STATE ═══════ */
                 <div className="animate-phone-reveal">
                     {/* Number + Copy Row */}
-                    <div className="flex items-center gap-2 p-3 bg-emerald-50 rounded-xl border border-emerald-200">
-                        <Phone className="w-4 h-4 text-emerald-600 flex-shrink-0" />
+                    <div className="flex items-center gap-2 p-3 bg-sky-50 rounded-xl border border-sky-200">
+                        <Phone className="w-4 h-4 text-sky-600 flex-shrink-0" />
 
                         {showCallLink ? (
                             <a
                                 href={phoneLink || `tel:${phoneNumber}`}
                                 dir="ltr"
-                                className="text-emerald-700 font-mono font-bold tracking-wider text-sm hover:text-emerald-800 transition-colors flex-1"
+                                className="text-sky-700 font-mono font-bold tracking-wider text-sm hover:text-sky-800 transition-colors flex-1"
                                 onClick={(e) => {
                                     // Let it navigate naturally for direct tel: links
                                     // GA4 tracking still fires

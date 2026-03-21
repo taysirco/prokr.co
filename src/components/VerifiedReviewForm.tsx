@@ -200,10 +200,10 @@ export default function VerifiedReviewForm({ companyCode, businessName }: Verifi
     // ============================================
     if (reviewState === 'sent') {
         return (
-            <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-5 text-center">
-                <CheckCircle className="w-10 h-10 text-emerald-500 mx-auto mb-2" />
-                <h4 className="text-emerald-900 font-bold text-base mb-1">تم إرسال تقييمك بنجاح ✅</h4>
-                <p className="text-emerald-700 text-sm">شكراً لمشاركتك تجربتك. تقييمك موثّق ومعتمد.</p>
+            <div className="bg-sky-50 border border-sky-200 rounded-2xl p-5 text-center">
+                <CheckCircle className="w-10 h-10 text-sky-500 mx-auto mb-2" />
+                <h4 className="text-sky-900 font-bold text-base mb-1">تم إرسال تقييمك بنجاح ✅</h4>
+                <p className="text-sky-700 text-sm">شكراً لمشاركتك تجربتك. تقييمك موثّق ومعتمد.</p>
             </div>
         );
     }
@@ -215,7 +215,7 @@ export default function VerifiedReviewForm({ companyCode, businessName }: Verifi
         return (
             <div className="bg-white border border-gray-200 rounded-2xl p-5 sm:p-6 shadow-sm">
                 <div className="flex items-center gap-2 mb-4">
-                    <Shield className="w-5 h-5 text-emerald-600" />
+                    <Shield className="w-5 h-5 text-sky-600" />
                     <h3 className="text-base font-bold text-gray-900">
                         أضف تقييمك المُوثّق لـ {businessName}
                     </h3>
@@ -295,9 +295,9 @@ export default function VerifiedReviewForm({ companyCode, businessName }: Verifi
                         {/* Phone option */}
                         <button
                             onClick={() => { setAuthMethod('phone-input'); setErrorMsg(''); }}
-                            className="w-full py-3 bg-white border-2 border-gray-200 rounded-xl hover:border-emerald-400 hover:bg-emerald-50 transition-all flex items-center justify-center gap-2 text-sm font-bold text-gray-700"
+                            className="w-full py-3 bg-white border-2 border-gray-200 rounded-xl hover:border-sky-400 hover:bg-sky-50 transition-all flex items-center justify-center gap-2 text-sm font-bold text-gray-700"
                         >
-                            <Smartphone className="w-5 h-5 text-emerald-600" />
+                            <Smartphone className="w-5 h-5 text-sky-600" />
                             التحقق برقم الهاتف (SMS)
                         </button>
                     </div>
@@ -322,7 +322,7 @@ export default function VerifiedReviewForm({ companyCode, businessName }: Verifi
                             placeholder="05XXXXXXXX"
                             dir="ltr"
                             inputMode="tel"
-                            className="w-full px-4 py-2.5 border-2 border-gray-200 rounded-xl text-sm focus:border-emerald-400 focus:ring-2 focus:ring-emerald-100 outline-none"
+                            className="w-full px-4 py-2.5 border-2 border-gray-200 rounded-xl text-sm focus:border-sky-400 focus:ring-2 focus:ring-sky-100 outline-none"
                             autoFocus
                         />
                         {errorMsg && <p className="text-red-600 text-xs bg-red-50 p-2 rounded-lg">⚠️ {errorMsg}</p>}
@@ -330,7 +330,7 @@ export default function VerifiedReviewForm({ companyCode, businessName }: Verifi
                             id="phone-send-btn"
                             onClick={handleSendOTP}
                             disabled={loading}
-                            className="w-full py-3 bg-gradient-to-l from-emerald-500 to-teal-500 text-white font-bold text-sm rounded-xl hover:from-emerald-600 hover:to-teal-600 transition-all flex items-center justify-center gap-2 disabled:opacity-60"
+                            className="w-full py-3 bg-gradient-to-l from-sky-500 to-teal-500 text-white font-bold text-sm rounded-xl hover:from-sky-600 hover:to-teal-600 transition-all flex items-center justify-center gap-2 disabled:opacity-60"
                         >
                             {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Phone className="w-4 h-4" />}
                             إرسال رمز التحقق
@@ -342,7 +342,7 @@ export default function VerifiedReviewForm({ companyCode, businessName }: Verifi
                 {authMethod === 'phone-otp' && (
                     <div className="space-y-3">
                         <div className="flex items-center justify-between">
-                            <p className="text-emerald-700 text-sm">
+                            <p className="text-sky-700 text-sm">
                                 تم إرسال رمز التحقق إلى <strong dir="ltr">{formatSaudiPhone(phoneInput)}</strong>
                             </p>
                             <button
@@ -361,14 +361,14 @@ export default function VerifiedReviewForm({ companyCode, businessName }: Verifi
                             maxLength={6}
                             inputMode="numeric"
                             autoComplete="one-time-code"
-                            className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl text-center text-lg tracking-[0.3em] font-mono focus:border-emerald-400 focus:ring-2 focus:ring-emerald-100 outline-none"
+                            className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl text-center text-lg tracking-[0.3em] font-mono focus:border-sky-400 focus:ring-2 focus:ring-sky-100 outline-none"
                             autoFocus
                         />
                         {errorMsg && <p className="text-red-600 text-xs bg-red-50 p-2 rounded-lg">⚠️ {errorMsg}</p>}
                         <button
                             onClick={handleVerifyOTP}
                             disabled={loading}
-                            className="w-full py-3 bg-gradient-to-l from-emerald-500 to-teal-500 text-white font-bold text-sm rounded-xl hover:from-emerald-600 hover:to-teal-600 transition-all flex items-center justify-center gap-2 disabled:opacity-60"
+                            className="w-full py-3 bg-gradient-to-l from-sky-500 to-teal-500 text-white font-bold text-sm rounded-xl hover:from-sky-600 hover:to-teal-600 transition-all flex items-center justify-center gap-2 disabled:opacity-60"
                         >
                             {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : <CheckCircle className="w-4 h-4" />}
                             تأكيد الرمز
@@ -386,12 +386,12 @@ export default function VerifiedReviewForm({ companyCode, businessName }: Verifi
         <div className="bg-white border border-gray-200 rounded-2xl p-5 sm:p-6 shadow-sm">
             <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center gap-2">
-                    <Shield className="w-5 h-5 text-emerald-600" />
+                    <Shield className="w-5 h-5 text-sky-600" />
                     <h3 className="text-base font-bold text-gray-900">تقييمك المُوثّق</h3>
                 </div>
-                <div className="flex items-center gap-1.5 bg-emerald-50 px-2.5 py-1 rounded-full">
-                    <CheckCircle className="w-3.5 h-3.5 text-emerald-600" />
-                    <span className="text-emerald-700 text-[10px] font-bold">
+                <div className="flex items-center gap-1.5 bg-sky-50 px-2.5 py-1 rounded-full">
+                    <CheckCircle className="w-3.5 h-3.5 text-sky-600" />
+                    <span className="text-sky-700 text-[10px] font-bold">
                         {userEmail || userPhone}
                     </span>
                 </div>
@@ -431,7 +431,7 @@ export default function VerifiedReviewForm({ companyCode, businessName }: Verifi
                         onChange={(e) => setComment(e.target.value)}
                         placeholder="شاركنا تجربتك مع هذه الشركة..."
                         rows={3}
-                        className="w-full px-3 py-2 border border-gray-200 rounded-xl text-sm focus:border-emerald-400 focus:ring-2 focus:ring-emerald-100 outline-none resize-none"
+                        className="w-full px-3 py-2 border border-gray-200 rounded-xl text-sm focus:border-sky-400 focus:ring-2 focus:ring-sky-100 outline-none resize-none"
                     />
                 </div>
 
@@ -440,7 +440,7 @@ export default function VerifiedReviewForm({ companyCode, businessName }: Verifi
                 <button
                     type="submit"
                     disabled={reviewState === 'sending'}
-                    className="w-full py-3 bg-gradient-to-l from-emerald-500 to-teal-500 text-white font-bold text-sm rounded-xl hover:from-emerald-600 hover:to-teal-600 transition-all shadow-lg shadow-emerald-200 flex items-center justify-center gap-2 disabled:opacity-60"
+                    className="w-full py-3 bg-gradient-to-l from-sky-500 to-teal-500 text-white font-bold text-sm rounded-xl hover:from-sky-600 hover:to-teal-600 transition-all shadow-lg shadow-sky-200 flex items-center justify-center gap-2 disabled:opacity-60"
                 >
                     {reviewState === 'sending' ? (
                         <><Loader2 className="w-4 h-4 animate-spin" /> جاري الإرسال...</>

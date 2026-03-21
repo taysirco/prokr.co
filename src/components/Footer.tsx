@@ -54,7 +54,7 @@ export default function Footer({ currentCity, currentService }: FooterProps) {
             <div className="border-b border-gray-800">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
                     <h3 className="text-white font-bold text-lg mb-4 flex items-center gap-2">
-                        <span className="w-1 h-6 bg-emerald-500 rounded-full"></span>
+                        <span className="w-1 h-6 bg-sky-500 rounded-full"></span>
                         {city ? `خدمات مقترحة ${getCityKeyword(city.name_ar, 'ba')}` : 'خدمات مقترحة'}
                     </h3>
                     <div className="flex flex-wrap gap-x-4 gap-y-2">
@@ -62,7 +62,7 @@ export default function Footer({ currentCity, currentService }: FooterProps) {
                             <Link
                                 key={s.slug}
                                 href={`/${currentValidCity}/${s.slug}`}
-                                className="hover:text-emerald-400 transition-colors text-sm"
+                                className="hover:text-sky-400 transition-colors text-sm"
                             >
                                 {s.name_ar}
                             </Link>
@@ -75,7 +75,7 @@ export default function Footer({ currentCity, currentService }: FooterProps) {
             <div className="border-b border-gray-800">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
                     <h3 className="text-white font-bold text-lg mb-4 flex items-center gap-2">
-                        <span className="w-1 h-6 bg-emerald-500 rounded-full"></span>
+                        <span className="w-1 h-6 bg-sky-500 rounded-full"></span>
                         {service ? `${service.name_ar} في مدن أخرى` : 'مدن أخرى'}
                     </h3>
                     <div className="flex flex-wrap gap-x-4 gap-y-2">
@@ -83,7 +83,7 @@ export default function Footer({ currentCity, currentService }: FooterProps) {
                             <Link
                                 key={c.slug}
                                 href={`/${c.slug}/${canonicalService}`}
-                                className="hover:text-emerald-400 transition-colors text-sm"
+                                className="hover:text-sky-400 transition-colors text-sm"
                             >
                                 {c.name_ar}
                             </Link>
@@ -99,47 +99,47 @@ export default function Footer({ currentCity, currentService }: FooterProps) {
                     {/* Column 1: Quick Links */}
                     <div>
                         <h3 className="text-white font-bold text-lg mb-4 flex items-center gap-2">
-                            <span className="w-1 h-6 bg-emerald-500 rounded-full"></span>
+                            <span className="w-1 h-6 bg-sky-500 rounded-full"></span>
                             روابط سريعة
                         </h3>
                         <ul className="space-y-2">
                             <li>
-                                <Link href="/" className="hover:text-emerald-400 transition-colors text-sm">
+                                <Link href="/" className="hover:text-sky-400 transition-colors text-sm">
                                     الرئيسية
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/about-us" className="hover:text-emerald-400 transition-colors text-sm">
+                                <Link href="/about-us" className="hover:text-sky-400 transition-colors text-sm">
                                     من نحن
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/advertise" className="hover:text-emerald-400 transition-colors text-sm">
+                                <Link href="/advertise" className="hover:text-sky-400 transition-colors text-sm">
                                     أضف إعلانك
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/contact-us" className="hover:text-emerald-400 transition-colors text-sm">
+                                <Link href="/contact-us" className="hover:text-sky-400 transition-colors text-sm">
                                     تواصل معنا
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/locations" className="hover:text-emerald-400 transition-colors text-sm">
+                                <Link href="/locations" className="hover:text-sky-400 transition-colors text-sm">
                                     المدن
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/services" className="hover:text-emerald-400 transition-colors text-sm">
+                                <Link href="/services" className="hover:text-sky-400 transition-colors text-sm">
                                     جميع الخدمات
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/blog" className="hover:text-emerald-400 transition-colors text-sm">
+                                <Link href="/blog" className="hover:text-sky-400 transition-colors text-sm">
                                     المدونة
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/research/pricing-index" className="hover:text-emerald-400 transition-colors text-sm">
+                                <Link href="/research/pricing-index" className="hover:text-sky-400 transition-colors text-sm">
                                     📊 مؤشر الأسعار
                                 </Link>
                             </li>
@@ -149,20 +149,20 @@ export default function Footer({ currentCity, currentService }: FooterProps) {
                     {/* Column 4: Legal & Contact */}
                     <div>
                         <h3 className="text-white font-bold text-lg mb-4 flex items-center gap-2">
-                            <span className="w-1 h-6 bg-emerald-500 rounded-full"></span>
+                            <span className="w-1 h-6 bg-sky-500 rounded-full"></span>
                             تواصل معنا
                         </h3>
                         <ul className="space-y-3">
                             <li className="flex items-center gap-3 text-sm">
-                                <Phone className="w-4 h-4 text-emerald-500" />
+                                <Phone className="w-4 h-4 text-sky-500" />
                                 <span dir="ltr">{NAP.phoneDisplay}</span>
                             </li>
                             <li className="flex items-center gap-3 text-sm">
-                                <Mail className="w-4 h-4 text-emerald-500" />
+                                <Mail className="w-4 h-4 text-sky-500" />
                                 <span>{NAP.email}</span>
                             </li>
                             <li className="flex items-center gap-3 text-sm">
-                                <MapPin className="w-4 h-4 text-emerald-500" />
+                                <MapPin className="w-4 h-4 text-sky-500" />
                                 <span>{NAP.address.country}</span>
                             </li>
                         </ul>
@@ -171,7 +171,7 @@ export default function Footer({ currentCity, currentService }: FooterProps) {
                         <div className="flex gap-3 mt-6">
                             <a
                                 href={NAP.social.facebook}
-                                className="w-10 h-10 bg-gray-800 hover:bg-emerald-600 rounded-lg flex items-center justify-center transition-colors"
+                                className="w-10 h-10 bg-gray-800 hover:bg-sky-600 rounded-lg flex items-center justify-center transition-colors"
                                 aria-label="Facebook"
                                 rel="noopener noreferrer"
                                 target="_blank"
@@ -180,7 +180,7 @@ export default function Footer({ currentCity, currentService }: FooterProps) {
                             </a>
                             <a
                                 href={NAP.social.twitter}
-                                className="w-10 h-10 bg-gray-800 hover:bg-emerald-600 rounded-lg flex items-center justify-center transition-colors"
+                                className="w-10 h-10 bg-gray-800 hover:bg-sky-600 rounded-lg flex items-center justify-center transition-colors"
                                 aria-label="Twitter"
                                 rel="noopener noreferrer"
                                 target="_blank"
@@ -189,7 +189,7 @@ export default function Footer({ currentCity, currentService }: FooterProps) {
                             </a>
                             <a
                                 href={NAP.social.instagram}
-                                className="w-10 h-10 bg-gray-800 hover:bg-emerald-600 rounded-lg flex items-center justify-center transition-colors"
+                                className="w-10 h-10 bg-gray-800 hover:bg-sky-600 rounded-lg flex items-center justify-center transition-colors"
                                 aria-label="Instagram"
                                 rel="noopener noreferrer"
                                 target="_blank"

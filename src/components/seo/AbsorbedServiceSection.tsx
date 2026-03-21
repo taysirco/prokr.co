@@ -42,7 +42,7 @@ export function AbsorbedServiceSections({
     return (
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-gray-200">
             <div className="flex items-center gap-3 mb-8">
-                <div className="w-1.5 h-8 bg-gradient-to-b from-emerald-400 to-emerald-600 rounded-full"></div>
+                <div className="w-1.5 h-8 bg-gradient-to-b from-sky-400 to-sky-600 rounded-full"></div>
                 <h2 className="text-xl font-bold text-gray-900">خدمات ذات صلة — {service.name_ar}</h2>
             </div>
 
@@ -62,8 +62,8 @@ export function AbsorbedServiceSections({
                             className="merged-section scroll-mt-32 bg-white rounded-2xl border border-gray-200 p-6 lg:p-8 shadow-sm transition-all duration-300"
                         >
                             {/* Fragment Section Heading */}
-                            <h3 className="text-lg lg:text-xl font-bold text-emerald-800 mb-4 flex items-center gap-2">
-                                <span className="w-2 h-2 bg-emerald-500 rounded-full"></span>
+                            <h3 className="text-lg lg:text-xl font-bold text-sky-800 mb-4 flex items-center gap-2">
+                                <span className="w-2 h-2 bg-sky-500 rounded-full"></span>
                                 {label} {city.name_ar}
                             </h3>
 
@@ -81,7 +81,7 @@ export function AbsorbedServiceSections({
                                     <div className="overflow-x-auto">
                                         <table className="w-full text-sm" dir="rtl">
                                             <thead>
-                                                <tr className="bg-emerald-50 text-emerald-800">
+                                                <tr className="bg-sky-50 text-sky-800">
                                                     <th className="py-2 px-3 text-right rounded-tr-lg">الخدمة</th>
                                                     <th className="py-2 px-3 text-center">الوحدة</th>
                                                     <th className="py-2 px-3 text-center">السعر (ريال)</th>
@@ -93,7 +93,7 @@ export function AbsorbedServiceSections({
                                                     <tr key={i} className="border-b border-gray-100">
                                                         <td className="py-2 px-3 text-right">{p.type}</td>
                                                         <td className="py-2 px-3 text-center">{p.unit}</td>
-                                                        <td className="py-2 px-3 text-center font-medium text-emerald-700">
+                                                        <td className="py-2 px-3 text-center font-medium text-sky-700">
                                                             {p.minPrice}–{p.maxPrice}
                                                         </td>
                                                         <td className="py-2 px-3 text-center text-gray-500">{p.time}</td>
@@ -112,7 +112,7 @@ export function AbsorbedServiceSections({
                                     <div className="space-y-3">
                                         {override.faq.slice(0, 3).map((item, i) => (
                                             <details key={i} className="group bg-gray-50 rounded-lg">
-                                                <summary className="cursor-pointer p-3 text-gray-900 font-medium text-sm hover:text-emerald-700 transition-colors">
+                                                <summary className="cursor-pointer p-3 text-gray-900 font-medium text-sm hover:text-sky-700 transition-colors">
                                                     {item.question}
                                                 </summary>
                                                 <p className="px-3 pb-3 text-sm text-gray-600 leading-relaxed">

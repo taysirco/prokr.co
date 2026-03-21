@@ -12,7 +12,7 @@ export default function AdvertisePage() {
     return (
         <main className="min-h-screen bg-gray-50">
             {/* Hero Section */}
-            <section className="relative bg-gradient-to-bl from-emerald-600 via-emerald-700 to-emerald-900 text-white overflow-hidden">
+            <section className="relative bg-gradient-to-bl from-sky-600 via-sky-700 to-sky-900 text-white overflow-hidden">
                 <div className="absolute inset-0 opacity-10">
                     <div className="absolute inset-0" style={{
                         backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
@@ -20,7 +20,7 @@ export default function AdvertisePage() {
                 </div>
 
                 <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
-                    <nav className="flex items-center gap-2 text-emerald-100 text-sm mb-6">
+                    <nav className="flex items-center gap-2 text-sky-100 text-sm mb-6">
                         <Link href="/" className="hover:text-white transition-colors flex items-center gap-1">
                             <Home className="w-4 h-4" />
                             الرئيسية
@@ -33,22 +33,22 @@ export default function AdvertisePage() {
                         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
                             أضف شركتك في بروكر
                         </h1>
-                        <p className="text-lg text-emerald-100 mb-8">
+                        <p className="text-lg text-sky-100 mb-8">
                             انضم إلى أكثر من 500 شركة خدمات في المملكة واحصل على عملاء جدد يومياً.
                             سجل مجاناً أو اختر الباقة المميزة لتصدر نتائج البحث.
                         </p>
 
                         <div className="flex flex-wrap gap-6">
                             <div className="flex items-center gap-2">
-                                <CheckCircle className="w-5 h-5 text-emerald-300" />
+                                <CheckCircle className="w-5 h-5 text-sky-300" />
                                 <span>تسجيل مجاني</span>
                             </div>
                             <div className="flex items-center gap-2">
-                                <CheckCircle className="w-5 h-5 text-emerald-300" />
+                                <CheckCircle className="w-5 h-5 text-sky-300" />
                                 <span>ظهور في 24 مدينة</span>
                             </div>
                             <div className="flex items-center gap-2">
-                                <CheckCircle className="w-5 h-5 text-emerald-300" />
+                                <CheckCircle className="w-5 h-5 text-sky-300" />
                                 <span>تواصل مباشر مع العملاء</span>
                             </div>
                         </div>
@@ -64,8 +64,8 @@ export default function AdvertisePage() {
 
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
                     <div className="text-center p-6 bg-white rounded-2xl shadow-sm border border-gray-100">
-                        <div className="w-14 h-14 mx-auto bg-emerald-100 rounded-xl flex items-center justify-center mb-4">
-                            <Users className="w-7 h-7 text-emerald-600" />
+                        <div className="w-14 h-14 mx-auto bg-sky-100 rounded-xl flex items-center justify-center mb-4">
+                            <Users className="w-7 h-7 text-sky-600" />
                         </div>
                         <h3 className="font-bold text-gray-900 mb-2">آلاف العملاء</h3>
                         <p className="text-sm text-gray-600">وصول لآلاف العملاء الباحثين عن خدماتك</p>
@@ -111,14 +111,14 @@ export default function AdvertisePage() {
                         {/* Free Plan */}
                         <div
                             className={`bg-white rounded-2xl p-8 border-2 transition-all cursor-pointer ${selectedPlan === 'free'
-                                ? 'border-emerald-500 shadow-lg'
+                                ? 'border-sky-500 shadow-lg'
                                 : 'border-gray-200 hover:border-gray-300'
                                 }`}
                             onClick={() => setSelectedPlan('free')}
                         >
                             <div className="flex items-center justify-between mb-6">
                                 <h3 className="text-xl font-bold text-gray-900">الباقة المجانية</h3>
-                                <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center ${selectedPlan === 'free' ? 'border-emerald-500 bg-emerald-500' : 'border-gray-300'
+                                <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center ${selectedPlan === 'free' ? 'border-sky-500 bg-sky-500' : 'border-gray-300'
                                     }`}>
                                     {selectedPlan === 'free' && <CheckCircle className="w-4 h-4 text-white" />}
                                 </div>
@@ -131,23 +131,23 @@ export default function AdvertisePage() {
 
                             <ul className="space-y-3 mb-8">
                                 <li className="flex items-center gap-2 text-gray-600">
-                                    <CheckCircle className="w-5 h-5 text-emerald-500" />
+                                    <CheckCircle className="w-5 h-5 text-sky-500" />
                                     ظهور في قائمة الشركات
                                 </li>
                                 <li className="flex items-center gap-2 text-gray-600">
-                                    <CheckCircle className="w-5 h-5 text-emerald-500" />
+                                    <CheckCircle className="w-5 h-5 text-sky-500" />
                                     صفحة تعريفية لشركتك
                                 </li>
                                 <li className="flex items-center gap-2 text-gray-600">
-                                    <CheckCircle className="w-5 h-5 text-emerald-500" />
+                                    <CheckCircle className="w-5 h-5 text-sky-500" />
                                     عرض رقم الهاتف
                                 </li>
                                 <li className="flex items-center gap-2 text-gray-600">
-                                    <CheckCircle className="w-5 h-5 text-emerald-500" />
+                                    <CheckCircle className="w-5 h-5 text-sky-500" />
                                     إضافة 3 مدن
                                 </li>
                                 <li className="flex items-center gap-2 text-gray-600">
-                                    <CheckCircle className="w-5 h-5 text-emerald-500" />
+                                    <CheckCircle className="w-5 h-5 text-sky-500" />
                                     إضافة 2 خدمات
                                 </li>
                             </ul>
@@ -215,7 +215,7 @@ export default function AdvertisePage() {
                     <div className="text-center mt-12">
                         <a
                             href="#registration-form"
-                            className="inline-flex items-center gap-2 px-10 py-4 bg-gradient-to-l from-emerald-500 to-emerald-600 text-white font-bold text-lg rounded-xl hover:from-emerald-600 hover:to-emerald-700 shadow-xl shadow-emerald-500/30 transition-all"
+                            className="inline-flex items-center gap-2 px-10 py-4 bg-gradient-to-l from-sky-500 to-sky-600 text-white font-bold text-lg rounded-xl hover:from-sky-600 hover:to-sky-700 shadow-xl shadow-sky-500/30 transition-all"
                         >
                             ابدأ الآن
                             <ArrowDown className="w-5 h-5" />

@@ -538,7 +538,7 @@ export default function AdminDashboard() {
     if (authLoading) {
         return (
             <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-                <Loader2 className="w-8 h-8 animate-spin text-emerald-600" />
+                <Loader2 className="w-8 h-8 animate-spin text-sky-600" />
             </div>
         );
     }
@@ -546,10 +546,10 @@ export default function AdminDashboard() {
     // Login screen
     if (!user) {
         return (
-            <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-emerald-800 to-emerald-900 flex items-center justify-center p-4">
+            <div className="min-h-screen bg-gradient-to-br from-sky-900 via-sky-800 to-sky-900 flex items-center justify-center p-4">
                 <div className="bg-white rounded-3xl shadow-2xl p-8 w-full max-w-md">
                     <div className="text-center mb-8">
-                        <div className="w-20 h-20 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-xl shadow-emerald-500/30">
+                        <div className="w-20 h-20 bg-gradient-to-br from-sky-500 to-sky-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-xl shadow-sky-500/30">
                             <span className="text-white font-black text-3xl">P</span>
                         </div>
                         <h1 className="text-2xl font-bold text-gray-900">لوحة تحكم بروكر</h1>
@@ -565,7 +565,7 @@ export default function AdminDashboard() {
                                     type="email"
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
-                                    className="w-full pr-10 pl-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                                    className="w-full pr-10 pl-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-sky-500 focus:border-sky-500"
                                     placeholder="admin@prokr.co"
                                     required
                                     dir="ltr"
@@ -581,7 +581,7 @@ export default function AdminDashboard() {
                                     type="password"
                                     value={password}
                                     onChange={(e) => setPassword(e.target.value)}
-                                    className="w-full pr-10 pl-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                                    className="w-full pr-10 pl-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-sky-500 focus:border-sky-500"
                                     placeholder="••••••••"
                                     required
                                     dir="ltr"
@@ -598,7 +598,7 @@ export default function AdminDashboard() {
                         <button
                             type="submit"
                             disabled={loginLoading}
-                            className="w-full px-4 py-4 bg-gradient-to-l from-emerald-500 to-emerald-600 text-white font-bold rounded-xl hover:from-emerald-600 hover:to-emerald-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/30"
+                            className="w-full px-4 py-4 bg-gradient-to-l from-sky-500 to-sky-600 text-white font-bold rounded-xl hover:from-sky-600 hover:to-sky-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-sky-500/30"
                         >
                             {loginLoading ? (
                                 <>
@@ -622,7 +622,7 @@ export default function AdminDashboard() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-center h-16">
                         <div className="flex items-center gap-4">
-                            <div className="w-10 h-10 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl flex items-center justify-center shadow-lg shadow-emerald-500/30">
+                            <div className="w-10 h-10 bg-gradient-to-br from-sky-500 to-sky-600 rounded-xl flex items-center justify-center shadow-lg shadow-sky-500/30">
                                 <span className="text-white font-bold text-lg">P</span>
                             </div>
                             <div>
@@ -645,7 +645,7 @@ export default function AdminDashboard() {
                                 </div>
                                 <div className="w-px h-8 bg-gray-200"></div>
                                 <div className="text-center">
-                                    <p className="text-lg font-bold text-emerald-600">{advertisers.filter(a => a.is_active !== false).length}</p>
+                                    <p className="text-lg font-bold text-sky-600">{advertisers.filter(a => a.is_active !== false).length}</p>
                                     <p className="text-xs text-gray-500">نشط</p>
                                 </div>
                             </div>
@@ -669,7 +669,7 @@ export default function AdminDashboard() {
                         <button
                             onClick={() => { setActiveTab('list'); cancelEdit(); }}
                             className={`px-6 py-4 font-medium transition-all border-b-2 ${activeTab === 'list'
-                                ? 'text-emerald-600 border-emerald-600 bg-emerald-50'
+                                ? 'text-sky-600 border-sky-600 bg-sky-50'
                                 : 'text-gray-600 border-transparent hover:text-gray-900 hover:bg-gray-50'
                                 }`}
                         >
@@ -694,7 +694,7 @@ export default function AdminDashboard() {
                         <button
                             onClick={() => { setActiveTab('add'); cancelEdit(); }}
                             className={`px-6 py-4 font-medium transition-all border-b-2 ${activeTab === 'add'
-                                ? 'text-emerald-600 border-emerald-600 bg-emerald-50'
+                                ? 'text-sky-600 border-sky-600 bg-sky-50'
                                 : 'text-gray-600 border-transparent hover:text-gray-900 hover:bg-gray-50'
                                 }`}
                         >
@@ -708,9 +708,9 @@ export default function AdminDashboard() {
             <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
                 {/* Success Message */}
                 {successMessage && (
-                    <div className="mb-6 p-4 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3">
-                        <Check className="w-5 h-5 text-emerald-600" />
-                        <span className="text-emerald-800 font-medium">{successMessage}</span>
+                    <div className="mb-6 p-4 bg-sky-50 border border-sky-200 rounded-xl flex items-center gap-3">
+                        <Check className="w-5 h-5 text-sky-600" />
+                        <span className="text-sky-800 font-medium">{successMessage}</span>
                     </div>
                 )}
 
@@ -728,7 +728,7 @@ export default function AdminDashboard() {
                                         value={searchQuery}
                                         onChange={(e) => setSearchQuery(e.target.value)}
                                         placeholder="بحث بالاسم أو الهاتف أو الكود..."
-                                        className="w-full pr-10 pl-4 py-2.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                                        className="w-full pr-10 pl-4 py-2.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-sky-500 focus:border-sky-500"
                                     />
                                 </div>
 
@@ -736,7 +736,7 @@ export default function AdminDashboard() {
                                 <select
                                     value={filterCity}
                                     onChange={(e) => setFilterCity(e.target.value)}
-                                    className="px-4 py-2.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                                    className="px-4 py-2.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-sky-500 focus:border-sky-500"
                                 >
                                     <option value="">جميع المدن</option>
                                     {CITIES.map(city => (
@@ -748,7 +748,7 @@ export default function AdminDashboard() {
                                 <select
                                     value={filterService}
                                     onChange={(e) => setFilterService(e.target.value)}
-                                    className="px-4 py-2.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                                    className="px-4 py-2.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-sky-500 focus:border-sky-500"
                                 >
                                     <option value="">جميع الخدمات</option>
                                     {SERVICES.map(service => (
@@ -760,7 +760,7 @@ export default function AdminDashboard() {
                                 <select
                                     value={filterStatus}
                                     onChange={(e) => setFilterStatus(e.target.value as typeof filterStatus)}
-                                    className="px-4 py-2.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                                    className="px-4 py-2.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-sky-500 focus:border-sky-500"
                                 >
                                     <option value="all">جميع الحالات</option>
                                     <option value="premium">مميز فقط</option>
@@ -777,7 +777,7 @@ export default function AdminDashboard() {
                                 <button
                                     onClick={loadAdvertisers}
                                     disabled={listLoading}
-                                    className="flex items-center gap-2 text-emerald-600 hover:text-emerald-700 font-medium text-sm"
+                                    className="flex items-center gap-2 text-sky-600 hover:text-sky-700 font-medium text-sm"
                                 >
                                     <RefreshCw className={`w-4 h-4 ${listLoading ? 'animate-spin' : ''}`} />
                                     تحديث القائمة
@@ -789,7 +789,7 @@ export default function AdminDashboard() {
                         <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
                             {listLoading ? (
                                 <div className="flex items-center justify-center py-20">
-                                    <Loader2 className="w-8 h-8 animate-spin text-emerald-600" />
+                                    <Loader2 className="w-8 h-8 animate-spin text-sky-600" />
                                 </div>
                             ) : filteredAdvertisers.length === 0 ? (
                                 <div className="text-center py-20">
@@ -866,7 +866,7 @@ export default function AdminDashboard() {
                                                         <button
                                                             onClick={() => handleToggleActive(advertiser.id, advertiser.is_active !== false)}
                                                             className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-all ${advertiser.is_active !== false
-                                                                ? 'bg-emerald-100 text-emerald-700 hover:bg-emerald-200'
+                                                                ? 'bg-sky-100 text-sky-700 hover:bg-sky-200'
                                                                 : 'bg-red-100 text-red-700 hover:bg-red-200'
                                                                 }`}
                                                         >
@@ -895,7 +895,7 @@ export default function AdminDashboard() {
                                                             </a>
                                                             <button
                                                                 onClick={() => handleEdit(advertiser)}
-                                                                className="p-2 text-gray-400 hover:text-emerald-600 hover:bg-emerald-50 rounded-lg transition-all"
+                                                                className="p-2 text-gray-400 hover:text-sky-600 hover:bg-sky-50 rounded-lg transition-all"
                                                                 title="تعديل"
                                                             >
                                                                 <Edit className="w-4 h-4" />
@@ -1040,7 +1040,7 @@ export default function AdminDashboard() {
                                                 <div className="flex flex-col gap-2">
                                                     <button
                                                         onClick={() => handleApproveRequest(request.id)}
-                                                        className="flex items-center gap-2 px-4 py-2 bg-emerald-600 text-white font-medium rounded-lg hover:bg-emerald-700 transition-colors"
+                                                        className="flex items-center gap-2 px-4 py-2 bg-sky-600 text-white font-medium rounded-lg hover:bg-sky-700 transition-colors"
                                                     >
                                                         <CheckCircle className="w-4 h-4" />
                                                         موافقة
@@ -1091,7 +1091,7 @@ export default function AdminDashboard() {
                         {/* Basic Info */}
                         <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
                             <h2 className="text-lg font-bold text-gray-900 mb-6 flex items-center gap-2">
-                                <Building2 className="w-5 h-5 text-emerald-500" />
+                                <Building2 className="w-5 h-5 text-sky-500" />
                                 معلومات الشركة
                             </h2>
 
@@ -1104,7 +1104,7 @@ export default function AdminDashboard() {
                                         type="text"
                                         value={form.business_name}
                                         onChange={(e) => setForm(prev => ({ ...prev, business_name: e.target.value }))}
-                                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-sky-500 focus:border-sky-500"
                                         placeholder="مثال: شركة النخبة للخدمات"
                                         required
                                     />
@@ -1119,7 +1119,7 @@ export default function AdminDashboard() {
                                         type="tel"
                                         value={form.phone_number}
                                         onChange={(e) => setForm(prev => ({ ...prev, phone_number: e.target.value }))}
-                                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-sky-500 focus:border-sky-500"
                                         placeholder="+966501234567"
                                         dir="ltr"
                                         required
@@ -1135,7 +1135,7 @@ export default function AdminDashboard() {
                                         type="tel"
                                         value={form.whatsapp_number}
                                         onChange={(e) => setForm(prev => ({ ...prev, whatsapp_number: e.target.value }))}
-                                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-sky-500 focus:border-sky-500"
                                         placeholder="+966501234567"
                                         dir="ltr"
                                     />
@@ -1152,7 +1152,7 @@ export default function AdminDashboard() {
                                                 type="radio"
                                                 checked={!form.is_premium}
                                                 onChange={() => setForm(prev => ({ ...prev, is_premium: false }))}
-                                                className="w-4 h-4 text-emerald-600"
+                                                className="w-4 h-4 text-sky-600"
                                             />
                                             <span>مجاني</span>
                                         </label>
@@ -1186,7 +1186,7 @@ export default function AdminDashboard() {
                                         />
                                         <div className="flex justify-between text-sm text-gray-500 mt-1">
                                             <span>أقل</span>
-                                            <span className="font-bold text-emerald-600">{form.priority_score}</span>
+                                            <span className="font-bold text-sky-600">{form.priority_score}</span>
                                             <span>أعلى</span>
                                         </div>
                                     </div>
@@ -1200,7 +1200,7 @@ export default function AdminDashboard() {
                                         value={form.description}
                                         onChange={(e) => setForm(prev => ({ ...prev, description: e.target.value }))}
                                         rows={4}
-                                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 resize-none"
+                                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-sky-500 focus:border-sky-500 resize-none"
                                         placeholder="اكتب وصفاً تفصيلياً للشركة..."
                                     />
                                 </div>
@@ -1210,7 +1210,7 @@ export default function AdminDashboard() {
                         {/* Sovereign Verification & Address */}
                         <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
                             <h2 className="text-lg font-bold text-gray-900 mb-6 flex items-center gap-2">
-                                <Check className="w-5 h-5 text-emerald-500" />
+                                <Check className="w-5 h-5 text-sky-500" />
                                 بيانات التوثيق والعنوان
                                 <span className="text-xs font-normal text-gray-400 mr-1">(اختياري — يعزز ترتيب SEO)</span>
                             </h2>
@@ -1225,7 +1225,7 @@ export default function AdminDashboard() {
                                         type="text"
                                         value={form.crn}
                                         onChange={(e) => setForm(prev => ({ ...prev, crn: e.target.value }))}
-                                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-sky-500 focus:border-sky-500"
                                         placeholder="مثال: 1010XXXXXX"
                                         dir="ltr"
                                         maxLength={10}
@@ -1241,7 +1241,7 @@ export default function AdminDashboard() {
                                         type="text"
                                         value={form.sbc_number}
                                         onChange={(e) => setForm(prev => ({ ...prev, sbc_number: e.target.value }))}
-                                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-sky-500 focus:border-sky-500"
                                         placeholder="مثال: XXXXX"
                                         dir="ltr"
                                     />
@@ -1257,7 +1257,7 @@ export default function AdminDashboard() {
                                         type="text"
                                         value={form.street_address}
                                         onChange={(e) => setForm(prev => ({ ...prev, street_address: e.target.value }))}
-                                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-sky-500 focus:border-sky-500"
                                         placeholder="مثال: RRMA2929"
                                     />
                                 </div>
@@ -1271,7 +1271,7 @@ export default function AdminDashboard() {
                                         type="text"
                                         value={form.postal_code}
                                         onChange={(e) => setForm(prev => ({ ...prev, postal_code: e.target.value }))}
-                                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-sky-500 focus:border-sky-500"
                                         placeholder="مثال: 12211"
                                         dir="ltr"
                                         maxLength={5}
@@ -1288,7 +1288,7 @@ export default function AdminDashboard() {
                                         type="url"
                                         value={form.google_maps_url}
                                         onChange={(e) => setForm(prev => ({ ...prev, google_maps_url: e.target.value }))}
-                                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-sky-500 focus:border-sky-500"
                                         placeholder="https://maps.google.com/..."
                                         dir="ltr"
                                     />
@@ -1303,7 +1303,7 @@ export default function AdminDashboard() {
                                         type="text"
                                         value={form.google_maps_place_id}
                                         onChange={(e) => setForm(prev => ({ ...prev, google_maps_place_id: e.target.value }))}
-                                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-sky-500 focus:border-sky-500"
                                         placeholder="مثال: ChIJXXXXXXX"
                                         dir="ltr"
                                     />
@@ -1320,7 +1320,7 @@ export default function AdminDashboard() {
                                                 key={option.value}
                                                 className={`flex items-center gap-2 p-2.5 border rounded-xl cursor-pointer transition-colors text-sm ${
                                                     form.payment_methods.includes(option.value)
-                                                        ? 'bg-emerald-50 border-emerald-300 text-emerald-700'
+                                                        ? 'bg-sky-50 border-sky-300 text-sky-700'
                                                         : 'bg-white border-gray-200 text-gray-600 hover:bg-gray-50'
                                                 }`}
                                             >
@@ -1335,7 +1335,7 @@ export default function AdminDashboard() {
                                                                 : [...prev.payment_methods, option.value]
                                                         }));
                                                     }}
-                                                    className="w-4 h-4 text-emerald-600 rounded"
+                                                    className="w-4 h-4 text-sky-600 rounded"
                                                 />
                                                 {option.label}
                                             </label>
@@ -1350,7 +1350,7 @@ export default function AdminDashboard() {
                                             type="checkbox"
                                             checked={form.has_verified_employees}
                                             onChange={(e) => setForm(prev => ({ ...prev, has_verified_employees: e.target.checked }))}
-                                            className="w-5 h-5 text-emerald-600 rounded"
+                                            className="w-5 h-5 text-sky-600 rounded"
                                         />
                                         <div>
                                             <span className="font-medium text-gray-900">فريق عمل معتمد بتحقق أمني (نفاذ)</span>
@@ -1368,7 +1368,7 @@ export default function AdminDashboard() {
                                             type="checkbox"
                                             checked={form.zatca_registered}
                                             onChange={(e) => setForm(prev => ({ ...prev, zatca_registered: e.target.checked }))}
-                                            className="w-5 h-5 text-emerald-600 rounded"
+                                            className="w-5 h-5 text-sky-600 rounded"
                                         />
                                         <div>
                                             <span className="font-medium text-gray-900">⚡ ملتزمة بالفوترة الإلكترونية (ZATCA)</span>
@@ -1386,7 +1386,7 @@ export default function AdminDashboard() {
                                             type="checkbox"
                                             checked={form.qiwa_registered}
                                             onChange={(e) => setForm(prev => ({ ...prev, qiwa_registered: e.target.checked }))}
-                                            className="w-5 h-5 text-emerald-600 rounded"
+                                            className="w-5 h-5 text-sky-600 rounded"
                                         />
                                         <div>
                                             <span className="font-medium text-gray-900">📋 عقود موثقة في منصة قوى / أجير</span>
@@ -1405,7 +1405,7 @@ export default function AdminDashboard() {
                                     <select
                                         value={form.nitaqat_band}
                                         onChange={(e) => setForm(prev => ({ ...prev, nitaqat_band: e.target.value }))}
-                                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-sky-500 focus:border-sky-500"
                                     >
                                         <option value="">لم يُحدد</option>
                                         <option value="platinum">بلاتيني — نسبة توطين ممتازة</option>
@@ -1420,7 +1420,7 @@ export default function AdminDashboard() {
                         <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
                             <div className="flex items-center justify-between mb-6">
                                 <h2 className="text-lg font-bold text-gray-900 flex items-center gap-2">
-                                    <MapPin className="w-5 h-5 text-emerald-500" />
+                                    <MapPin className="w-5 h-5 text-sky-500" />
                                     المدن المستهدفة
                                     <span className="text-sm font-normal text-gray-500">
                                         ({form.targeted_cities.length} مدينة)
@@ -1429,7 +1429,7 @@ export default function AdminDashboard() {
                                 <button
                                     type="button"
                                     onClick={handleSelectAllCities}
-                                    className="text-sm text-emerald-600 hover:text-emerald-700 font-medium"
+                                    className="text-sm text-sky-600 hover:text-sky-700 font-medium"
                                 >
                                     {form.targeted_cities.length === CITIES.length ? 'إلغاء الكل' : 'تحديد الكل'}
                                 </button>
@@ -1451,7 +1451,7 @@ export default function AdminDashboard() {
                                                         type="checkbox"
                                                         checked={form.targeted_cities.includes(city.slug)}
                                                         onChange={() => handleCityToggle(city.slug)}
-                                                        className="w-4 h-4 text-emerald-600 rounded"
+                                                        className="w-4 h-4 text-sky-600 rounded"
                                                     />
                                                     <span className="text-gray-700">{city.name_ar}</span>
                                                 </label>
@@ -1466,7 +1466,7 @@ export default function AdminDashboard() {
                         <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
                             <div className="flex items-center justify-between mb-6">
                                 <h2 className="text-lg font-bold text-gray-900 flex items-center gap-2">
-                                    <Wrench className="w-5 h-5 text-emerald-500" />
+                                    <Wrench className="w-5 h-5 text-sky-500" />
                                     الخدمات المقدمة
                                     <span className="text-sm font-normal text-gray-500">
                                         ({form.targeted_services.length} خدمة)
@@ -1475,7 +1475,7 @@ export default function AdminDashboard() {
                                 <button
                                     type="button"
                                     onClick={handleSelectAllServices}
-                                    className="text-sm text-emerald-600 hover:text-emerald-700 font-medium"
+                                    className="text-sm text-sky-600 hover:text-sky-700 font-medium"
                                 >
                                     {form.targeted_services.length === SERVICES.length ? 'إلغاء الكل' : 'تحديد الكل'}
                                 </button>
@@ -1497,7 +1497,7 @@ export default function AdminDashboard() {
                                                         type="checkbox"
                                                         checked={form.targeted_services.includes(service.slug)}
                                                         onChange={() => handleServiceToggle(service.slug)}
-                                                        className="w-4 h-4 text-emerald-600 rounded"
+                                                        className="w-4 h-4 text-sky-600 rounded"
                                                     />
                                                     <span className="text-gray-700 text-sm">{service.name_ar}</span>
                                                 </label>
@@ -1512,7 +1512,7 @@ export default function AdminDashboard() {
                         {!editingId && (
                             <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
                                 <h2 className="text-lg font-bold text-gray-900 mb-6 flex items-center gap-2">
-                                    <ImageIcon className="w-5 h-5 text-emerald-500" />
+                                    <ImageIcon className="w-5 h-5 text-sky-500" />
                                     الوسائط
                                 </h2>
 
@@ -1522,7 +1522,7 @@ export default function AdminDashboard() {
                                         <label className="block text-sm font-medium text-gray-700 mb-2">
                                             شعار الشركة
                                         </label>
-                                        <div className="border-2 border-dashed border-gray-300 rounded-xl p-6 text-center hover:border-emerald-500 transition-colors">
+                                        <div className="border-2 border-dashed border-gray-300 rounded-xl p-6 text-center hover:border-sky-500 transition-colors">
                                             {logoFile ? (
                                                 <div className="flex items-center justify-center gap-3">
                                                     <div className="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center overflow-hidden">
@@ -1560,7 +1560,7 @@ export default function AdminDashboard() {
                                         <label className="block text-sm font-medium text-gray-700 mb-2">
                                             معرض الصور ({galleryFiles.length}/10)
                                         </label>
-                                        <div className="border-2 border-dashed border-gray-300 rounded-xl p-4 hover:border-emerald-500 transition-colors">
+                                        <div className="border-2 border-dashed border-gray-300 rounded-xl p-4 hover:border-sky-500 transition-colors">
                                             {galleryFiles.length > 0 ? (
                                                 <div className="grid grid-cols-4 gap-2">
                                                     {galleryFiles.map((file, index) => (
@@ -1580,7 +1580,7 @@ export default function AdminDashboard() {
                                                         </div>
                                                     ))}
                                                     {galleryFiles.length < 10 && (
-                                                        <label className="aspect-square border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center cursor-pointer hover:border-emerald-500">
+                                                        <label className="aspect-square border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center cursor-pointer hover:border-sky-500">
                                                             <Plus className="w-6 h-6 text-gray-400" />
                                                             <input
                                                                 type="file"
@@ -1625,7 +1625,7 @@ export default function AdminDashboard() {
                             <button
                                 type="submit"
                                 disabled={isLoading}
-                                className="flex items-center gap-2 px-8 py-4 bg-gradient-to-l from-emerald-500 to-emerald-600 text-white font-bold rounded-xl hover:from-emerald-600 hover:to-emerald-700 shadow-lg shadow-emerald-500/30 disabled:opacity-50 disabled:cursor-not-allowed"
+                                className="flex items-center gap-2 px-8 py-4 bg-gradient-to-l from-sky-500 to-sky-600 text-white font-bold rounded-xl hover:from-sky-600 hover:to-sky-700 shadow-lg shadow-sky-500/30 disabled:opacity-50 disabled:cursor-not-allowed"
                             >
                                 {isLoading ? (
                                     <>

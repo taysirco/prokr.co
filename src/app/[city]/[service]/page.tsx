@@ -192,7 +192,7 @@ export default async function SiloPage({ params }: SiloPageProps) {
                 />
 
                 {/* Hero Section with Image */}
-                <section className="relative bg-gradient-to-bl from-emerald-600 via-emerald-700 to-emerald-900 text-white overflow-hidden">
+                <section className="relative bg-gradient-to-bl from-sky-600 via-sky-700 to-sky-900 text-white overflow-hidden">
                     {/* Background Pattern */}
                     <div className="absolute inset-0 opacity-10">
                         <div className="absolute inset-0" style={{
@@ -205,7 +205,7 @@ export default async function SiloPage({ params }: SiloPageProps) {
                             {/* Text Content */}
                             <div>
                                 {/* Breadcrumbs */}
-                                <nav className="flex items-center gap-2 text-emerald-100 text-sm mb-6">
+                                <nav className="flex items-center gap-2 text-sky-100 text-sm mb-6">
                                     <Link href="/" className="hover:text-white transition-colors flex items-center gap-1">
                                         <Home className="w-4 h-4" />
                                         الرئيسية
@@ -227,7 +227,7 @@ export default async function SiloPage({ params }: SiloPageProps) {
                                 <div className="mb-3">
                                     <MarketTimingBadge compact />
                                 </div>
-                                <p className="text-lg text-emerald-100 max-w-xl">
+                                <p className="text-lg text-sky-100 max-w-xl">
                                     {aiContent.heroSubtitle
                                         ? aiContent.heroSubtitle
                                         : `${cityContext?.responseTime ? `استجابة ${cityContext.responseTime} — ` : ''}قارن بين أفضل شركات ${service.name_ar} المعتمدة ${cityKw}${cityContext?.neighborhoods?.[0] ? ` في ${cityContext.neighborhoods[0].name_ar} والأحياء المجاورة` : ''}. أسعار ${new Date().getFullYear()}.`
@@ -242,7 +242,7 @@ export default async function SiloPage({ params }: SiloPageProps) {
                                         </div>
                                         <div>
                                             <p className="font-bold">{premium.length + standard.length}</p>
-                                            <p className="text-xs text-emerald-200">شركة مسجلة</p>
+                                            <p className="text-xs text-sky-200">شركة مسجلة</p>
                                         </div>
                                     </div>
                                     <div className="flex items-center gap-2">
@@ -251,7 +251,7 @@ export default async function SiloPage({ params }: SiloPageProps) {
                                         </div>
                                         <div>
                                             <p className="font-bold">{premium.length}</p>
-                                            <p className="text-xs text-emerald-200">معتمدة</p>
+                                            <p className="text-xs text-sky-200">معتمدة</p>
                                         </div>
                                     </div>
                                 </div>
@@ -270,14 +270,14 @@ export default async function SiloPage({ params }: SiloPageProps) {
                                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                                         quality={90}
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/50 to-transparent"></div>
+                                    <div className="absolute inset-0 bg-gradient-to-t from-sky-900/50 to-transparent"></div>
                                     {/* 🛡️ Vision AI OCR — Nafath/SBC Watermark */}
                                     <VisionAiWatermark position="top-right" size="md" />
                                 </div>
                                 {/* Floating Badge */}
                                 <div className="absolute -bottom-4 -right-4 bg-white rounded-xl shadow-xl p-4">
                                     <div className="flex items-center gap-2">
-                                        <BadgeCheck className="w-8 h-8 text-emerald-600" />
+                                        <BadgeCheck className="w-8 h-8 text-sky-600" />
                                         <div>
                                             <p className="text-sm font-bold text-gray-900">شركات معتمدة</p>
                                             <p className="text-xs text-gray-500">{premium.length} شركة مميزة</p>
@@ -473,8 +473,8 @@ function PremiumCard({ advertiser }: { advertiser: Advertiser }) {
                                 className="object-cover rounded-xl border-2 border-amber-200"
                             />
                         ) : (
-                            <div className="w-full h-full bg-gradient-to-br from-emerald-100 to-emerald-200 rounded-xl flex items-center justify-center border-2 border-amber-200">
-                                <span className="text-2xl font-bold text-emerald-600">
+                            <div className="w-full h-full bg-gradient-to-br from-sky-100 to-sky-200 rounded-xl flex items-center justify-center border-2 border-amber-200">
+                                <span className="text-2xl font-bold text-sky-600">
                                     {advertiser.business_name.charAt(0)}
                                 </span>
                             </div>
@@ -486,7 +486,7 @@ function PremiumCard({ advertiser }: { advertiser: Advertiser }) {
                             href={`/company/${advertiser.short_code}`}
                             className="block"
                         >
-                            <h3 className="font-bold text-lg text-gray-900 group-hover:text-emerald-600 transition-colors truncate">
+                            <h3 className="font-bold text-lg text-gray-900 group-hover:text-sky-600 transition-colors truncate">
                                 {advertiser.business_name}
                             </h3>
                         </Link>
@@ -532,7 +532,7 @@ function PremiumCard({ advertiser }: { advertiser: Advertiser }) {
                         label="اتصل الآن"
                         cityName={advertiser.targeted_cities[0] || ''}
                         serviceName={advertiser.business_name}
-                        className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-l from-emerald-500 to-emerald-600 text-white font-medium rounded-xl hover:from-emerald-600 hover:to-emerald-700 shadow-lg shadow-emerald-500/30 transition-all"
+                        className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-l from-sky-500 to-sky-600 text-white font-medium rounded-xl hover:from-sky-600 hover:to-sky-700 shadow-lg shadow-sky-500/30 transition-all"
                     >
                         <Phone className="w-5 h-5" />
                     </ActionButton>
@@ -561,7 +561,7 @@ function StandardRow({ advertiser }: { advertiser: Advertiser }) {
     const phoneLink = `tel:${advertiser.phone_number}`;
 
     return (
-        <div className="flex items-center gap-4 p-4 bg-white rounded-xl border border-gray-200 hover:border-emerald-300 hover:shadow-md transition-all">
+        <div className="flex items-center gap-4 p-4 bg-white rounded-xl border border-gray-200 hover:border-sky-300 hover:shadow-md transition-all">
             <div className="relative w-12 h-12 flex-shrink-0">
                 {advertiser.logo_url ? (
                     <Image
@@ -582,7 +582,7 @@ function StandardRow({ advertiser }: { advertiser: Advertiser }) {
             <div className="flex-1 min-w-0">
                 <Link
                     href={`/company/${advertiser.short_code}`}
-                    className="font-medium text-gray-900 hover:text-emerald-600 transition-colors truncate block"
+                    className="font-medium text-gray-900 hover:text-sky-600 transition-colors truncate block"
                 >
                     {advertiser.business_name}
                 </Link>
@@ -599,7 +599,7 @@ function StandardRow({ advertiser }: { advertiser: Advertiser }) {
                     cityName={advertiser.targeted_cities[0] || ''}
                     serviceName={advertiser.business_name}
                     ariaLabel="اتصل"
-                    className="p-2.5 bg-emerald-50 text-emerald-600 rounded-lg hover:bg-emerald-100 transition-colors"
+                    className="p-2.5 bg-sky-50 text-sky-600 rounded-lg hover:bg-sky-100 transition-colors"
                 >
                     <Phone className="w-5 h-5" />
                 </ActionButton>

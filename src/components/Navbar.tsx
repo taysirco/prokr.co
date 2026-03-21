@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown, MapPin, Search, Phone, Sparkles, Truck, Bug, Droplet, Wrench, Building2, Shield, Home, Info, Mail, BookOpen } from 'lucide-react';
 import { SERVICES, getServicesByCategory, CATEGORY_NAMES, getCitiesByRegion, REGION_NAMES } from '@/lib/seed';
@@ -40,20 +41,20 @@ export default function Navbar() {
     return (
         <>
             {/* Top Bar - Contact Info */}
-            <div className="hidden lg:block bg-emerald-900 text-white text-sm py-2">
+            <div className="hidden lg:block bg-sky-900 text-white text-sm py-2">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
                     <div className="flex items-center gap-6">
                         <span className="flex items-center gap-2">
-                            <Phone className="w-4 h-4 text-emerald-400" />
+                            <Phone className="w-4 h-4 text-sky-400" />
                             <span>الخط الساخن: +966 54 231 7431</span>
                         </span>
-                        <span className="text-emerald-400">|</span>
+                        <span className="text-sky-400">|</span>
                         <span>المنصة الأولى للخدمات في المملكة</span>
                     </div>
                     <div className="flex items-center gap-4">
-                        <Link href="/about-us" className="hover:text-emerald-300 transition-colors">من نحن</Link>
-                        <Link href="/contact-us" className="hover:text-emerald-300 transition-colors">اتصل بنا</Link>
-                        <Link href="/advertise" className="hover:text-emerald-300 transition-colors">للشركات</Link>
+                        <Link href="/about-us" className="hover:text-sky-300 transition-colors">من نحن</Link>
+                        <Link href="/contact-us" className="hover:text-sky-300 transition-colors">اتصل بنا</Link>
+                        <Link href="/advertise" className="hover:text-sky-300 transition-colors">للشركات</Link>
                     </div>
                 </div>
             </div>
@@ -66,20 +67,15 @@ export default function Navbar() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-center h-20">
                         {/* Logo */}
-                        <Link href="/" className="flex items-center gap-3 group">
-                            <div className="relative">
-                                <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 via-emerald-600 to-emerald-700 rounded-2xl flex items-center justify-center shadow-xl shadow-emerald-500/30 group-hover:shadow-emerald-500/50 transition-all group-hover:scale-105">
-                                    <span className="text-white font-black text-2xl">P</span>
-                                </div>
-                                {/* Pulse effect */}
-                                <div className="absolute inset-0 bg-emerald-500 rounded-2xl animate-ping opacity-20"></div>
-                            </div>
-                            <div className="flex flex-col">
-                                <span className="text-2xl font-black bg-gradient-to-l from-emerald-600 to-emerald-800 bg-clip-text text-transparent">
-                                    بروكر
-                                </span>
-                                <span className="text-[10px] text-gray-400 font-medium -mt-1">دليل الخدمات السعودي</span>
-                            </div>
+                        <Link href="/" className="flex items-center group">
+                            <Image
+                                src="/logo.png"
+                                alt="PROKR - بروكر"
+                                width={140}
+                                height={44}
+                                className="h-11 w-auto group-hover:scale-105 transition-transform"
+                                priority
+                            />
                         </Link>
 
                         {/* Desktop Navigation */}
@@ -87,7 +83,7 @@ export default function Navbar() {
                             {/* Home */}
                             <Link
                                 href="/"
-                                className="flex items-center gap-2 px-4 py-2.5 text-gray-700 hover:text-emerald-600 hover:bg-emerald-50 rounded-xl font-medium transition-all"
+                                className="flex items-center gap-2 px-4 py-2.5 text-gray-700 hover:text-sky-600 hover:bg-sky-50 rounded-xl font-medium transition-all"
                             >
                                 <Home className="w-4 h-4" />
                                 <span>الرئيسية</span>
@@ -101,8 +97,8 @@ export default function Navbar() {
                             >
                                 <button
                                     className={`flex items-center gap-2 px-4 py-2.5 font-medium transition-all rounded-xl ${isServicesOpen
-                                        ? 'text-emerald-600 bg-emerald-50'
-                                        : 'text-gray-700 hover:text-emerald-600 hover:bg-emerald-50'
+                                        ? 'text-sky-600 bg-sky-50'
+                                        : 'text-gray-700 hover:text-sky-600 hover:bg-sky-50'
                                         }`}
                                 >
                                     <Wrench className="w-4 h-4" />
@@ -121,7 +117,7 @@ export default function Navbar() {
                                                 {Object.entries(servicesByCategory).slice(0, 3).map(([category, services]) => (
                                                     <div key={category}>
                                                         <div className="flex items-center gap-2 mb-4 pb-2 border-b border-gray-100">
-                                                            <div className="w-8 h-8 bg-emerald-100 rounded-lg flex items-center justify-center text-emerald-600">
+                                                            <div className="w-8 h-8 bg-sky-100 rounded-lg flex items-center justify-center text-sky-600">
                                                                 {categoryIcons[category] || <Wrench className="w-4 h-4" />}
                                                             </div>
                                                             <h4 className="font-bold text-gray-900">
@@ -133,7 +129,7 @@ export default function Navbar() {
                                                                 <Link
                                                                     key={service.slug}
                                                                     href={`/${service.slug}`}
-                                                                    className="block px-3 py-2 text-gray-600 hover:bg-emerald-50 hover:text-emerald-700 rounded-lg transition-all text-sm"
+                                                                    className="block px-3 py-2 text-gray-600 hover:bg-sky-50 hover:text-sky-700 rounded-lg transition-all text-sm"
                                                                 >
                                                                     {service.name_ar}
                                                                 </Link>
@@ -144,7 +140,7 @@ export default function Navbar() {
                                             </div>
                                         </div>
                                         {/* Footer of dropdown */}
-                                        <div className="bg-gradient-to-l from-emerald-50 to-white px-6 py-4 border-t border-gray-100">
+                                        <div className="bg-gradient-to-l from-sky-50 to-white px-6 py-4 border-t border-gray-100">
                                             <div className="flex items-center justify-between">
                                                 <div>
                                                     <p className="font-bold text-gray-900">{SERVICES.filter(s => !isAbsorbedSlug(s.slug)).length} خدمة متخصصة</p>
@@ -152,7 +148,7 @@ export default function Navbar() {
                                                 </div>
                                                 <Link
                                                     href="/services"
-                                                    className="px-5 py-2.5 bg-emerald-600 text-white font-medium rounded-xl hover:bg-emerald-700 transition-colors shadow-lg shadow-emerald-500/30"
+                                                    className="px-5 py-2.5 bg-sky-600 text-white font-medium rounded-xl hover:bg-sky-700 transition-colors shadow-lg shadow-sky-500/30"
                                                 >
                                                     عرض الكل ←
                                                 </Link>
@@ -170,8 +166,8 @@ export default function Navbar() {
                             >
                                 <button
                                     className={`flex items-center gap-2 px-4 py-2.5 font-medium transition-all rounded-xl ${isCitiesOpen
-                                        ? 'text-emerald-600 bg-emerald-50'
-                                        : 'text-gray-700 hover:text-emerald-600 hover:bg-emerald-50'
+                                        ? 'text-sky-600 bg-sky-50'
+                                        : 'text-gray-700 hover:text-sky-600 hover:bg-sky-50'
                                         }`}
                                 >
                                     <MapPin className="w-4 h-4" />
@@ -190,7 +186,7 @@ export default function Navbar() {
                                                 {Object.entries(citiesByRegion).slice(0, 3).map(([region, cities]) => (
                                                     <div key={region}>
                                                         <h4 className="font-bold text-gray-900 mb-3 text-sm flex items-center gap-2">
-                                                            <MapPin className="w-4 h-4 text-emerald-500" />
+                                                            <MapPin className="w-4 h-4 text-sky-500" />
                                                             {REGION_NAMES[region]}
                                                         </h4>
                                                         <div className="space-y-1">
@@ -198,7 +194,7 @@ export default function Navbar() {
                                                                 <Link
                                                                     key={city.slug}
                                                                     href={`/${city.slug}`}
-                                                                    className="block px-3 py-2 text-gray-600 hover:bg-emerald-50 hover:text-emerald-700 rounded-lg transition-all text-sm"
+                                                                    className="block px-3 py-2 text-gray-600 hover:bg-sky-50 hover:text-sky-700 rounded-lg transition-all text-sm"
                                                                 >
                                                                     {city.name_ar}
                                                                 </Link>
@@ -229,7 +225,7 @@ export default function Navbar() {
                             {/* Blog */}
                             <Link
                                 href="/blog"
-                                className="flex items-center gap-2 px-4 py-2.5 text-gray-700 hover:text-emerald-600 hover:bg-emerald-50 rounded-xl font-medium transition-all"
+                                className="flex items-center gap-2 px-4 py-2.5 text-gray-700 hover:text-sky-600 hover:bg-sky-50 rounded-xl font-medium transition-all"
                             >
                                 <BookOpen className="w-4 h-4" />
                                 <span>المدونة</span>
@@ -238,7 +234,7 @@ export default function Navbar() {
                             {/* About */}
                             <Link
                                 href="/about-us"
-                                className="flex items-center gap-2 px-4 py-2.5 text-gray-700 hover:text-emerald-600 hover:bg-emerald-50 rounded-xl font-medium transition-all"
+                                className="flex items-center gap-2 px-4 py-2.5 text-gray-700 hover:text-sky-600 hover:bg-sky-50 rounded-xl font-medium transition-all"
                             >
                                 <Info className="w-4 h-4" />
                                 <span>من نحن</span>
@@ -247,7 +243,7 @@ export default function Navbar() {
                             {/* Contact */}
                             <Link
                                 href="/contact-us"
-                                className="flex items-center gap-2 px-4 py-2.5 text-gray-700 hover:text-emerald-600 hover:bg-emerald-50 rounded-xl font-medium transition-all"
+                                className="flex items-center gap-2 px-4 py-2.5 text-gray-700 hover:text-sky-600 hover:bg-sky-50 rounded-xl font-medium transition-all"
                             >
                                 <Mail className="w-4 h-4" />
                                 <span>اتصل بنا</span>
@@ -259,7 +255,7 @@ export default function Navbar() {
                             {/* Search Button */}
                             <button
                                 onClick={() => setIsSearchOpen(true)}
-                                className="p-3 text-gray-500 hover:text-emerald-600 hover:bg-emerald-50 rounded-xl transition-all"
+                                className="p-3 text-gray-500 hover:text-sky-600 hover:bg-sky-50 rounded-xl transition-all"
                                 aria-label="بحث"
                             >
                                 <Search className="w-5 h-5" />
@@ -282,14 +278,14 @@ export default function Navbar() {
                         <div className="flex lg:hidden items-center gap-3">
                             <button
                                 onClick={() => setIsSearchOpen(true)}
-                                className="p-2.5 text-gray-500 hover:text-emerald-600 hover:bg-emerald-50 rounded-xl transition-all"
+                                className="p-2.5 text-gray-500 hover:text-sky-600 hover:bg-sky-50 rounded-xl transition-all"
                                 aria-label="بحث"
                             >
                                 <Search className="w-5 h-5" />
                             </button>
                             <button
                                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                                className="p-2.5 text-gray-600 hover:text-emerald-600 hover:bg-emerald-50 rounded-xl transition-all"
+                                className="p-2.5 text-gray-600 hover:text-sky-600 hover:bg-sky-50 rounded-xl transition-all"
                             >
                                 {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
                             </button>
@@ -305,16 +301,16 @@ export default function Navbar() {
                         <div className="grid grid-cols-2 gap-3">
                             <Link
                                 href="/"
-                                className="flex items-center gap-3 p-4 bg-gray-50 hover:bg-emerald-50 rounded-2xl transition-all"
+                                className="flex items-center gap-3 p-4 bg-gray-50 hover:bg-sky-50 rounded-2xl transition-all"
                             >
-                                <div className="w-10 h-10 bg-emerald-100 rounded-xl flex items-center justify-center text-emerald-600">
+                                <div className="w-10 h-10 bg-sky-100 rounded-xl flex items-center justify-center text-sky-600">
                                     <Home className="w-5 h-5" />
                                 </div>
                                 <span className="font-medium text-gray-900">الرئيسية</span>
                             </Link>
                             <Link
                                 href="/services"
-                                className="flex items-center gap-3 p-4 bg-gray-50 hover:bg-emerald-50 rounded-2xl transition-all"
+                                className="flex items-center gap-3 p-4 bg-gray-50 hover:bg-sky-50 rounded-2xl transition-all"
                             >
                                 <div className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600">
                                     <Wrench className="w-5 h-5" />
@@ -323,7 +319,7 @@ export default function Navbar() {
                             </Link>
                             <Link
                                 href="/locations"
-                                className="flex items-center gap-3 p-4 bg-gray-50 hover:bg-emerald-50 rounded-2xl transition-all"
+                                className="flex items-center gap-3 p-4 bg-gray-50 hover:bg-sky-50 rounded-2xl transition-all"
                             >
                                 <div className="w-10 h-10 bg-purple-100 rounded-xl flex items-center justify-center text-purple-600">
                                     <MapPin className="w-5 h-5" />
@@ -332,7 +328,7 @@ export default function Navbar() {
                             </Link>
                             <Link
                                 href="/blog"
-                                className="flex items-center gap-3 p-4 bg-gray-50 hover:bg-emerald-50 rounded-2xl transition-all"
+                                className="flex items-center gap-3 p-4 bg-gray-50 hover:bg-sky-50 rounded-2xl transition-all"
                             >
                                 <div className="w-10 h-10 bg-amber-100 rounded-xl flex items-center justify-center text-amber-600">
                                     <BookOpen className="w-5 h-5" />
@@ -349,7 +345,7 @@ export default function Navbar() {
                                     <Link
                                         key={service.slug}
                                         href={`/${service.slug}`}
-                                        className="px-4 py-3 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 rounded-xl transition-all"
+                                        className="px-4 py-3 text-sm text-gray-700 hover:bg-sky-50 hover:text-sky-700 rounded-xl transition-all"
                                     >
                                         {service.name_ar}
                                     </Link>

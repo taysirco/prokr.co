@@ -172,9 +172,9 @@ export default function AdvertiserRegistrationForm({
 
     if (isSuccess) {
         return (
-            <div className="bg-emerald-50 rounded-3xl p-8 text-center">
-                <div className="w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <CheckCircle className="w-10 h-10 text-emerald-600" />
+            <div className="bg-sky-50 rounded-3xl p-8 text-center">
+                <div className="w-20 h-20 bg-sky-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <CheckCircle className="w-10 h-10 text-sky-600" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
                     تم إرسال طلبك بنجاح!
@@ -186,7 +186,7 @@ export default function AdvertiserRegistrationForm({
                 </p>
                 <button
                     onClick={() => window.location.reload()}
-                    className="px-6 py-3 bg-emerald-600 text-white font-medium rounded-xl hover:bg-emerald-700 transition-colors"
+                    className="px-6 py-3 bg-sky-600 text-white font-medium rounded-xl hover:bg-sky-700 transition-colors"
                 >
                     إرسال طلب آخر
                 </button>
@@ -215,13 +215,13 @@ export default function AdvertiserRegistrationForm({
                         type="button"
                         onClick={() => setForm(prev => ({ ...prev, selected_plan: 'free' }))}
                         className={`p-4 rounded-xl border-2 text-right transition-all ${form.selected_plan === 'free'
-                            ? 'border-emerald-500 bg-emerald-50'
+                            ? 'border-sky-500 bg-sky-50'
                             : 'border-gray-200 hover:border-gray-300'
                             }`}
                     >
                         <div className="flex items-center justify-between mb-2">
                             <span className="font-bold text-gray-900">الباقة المجانية</span>
-                            <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center ${form.selected_plan === 'free' ? 'border-emerald-500 bg-emerald-500' : 'border-gray-300'
+                            <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center ${form.selected_plan === 'free' ? 'border-sky-500 bg-sky-500' : 'border-gray-300'
                                 }`}>
                                 {form.selected_plan === 'free' && <CheckCircle className="w-3 h-3 text-white" />}
                             </div>
@@ -257,7 +257,7 @@ export default function AdvertiserRegistrationForm({
             {/* Basic Info */}
             <div className="bg-white rounded-2xl border border-gray-200 p-6">
                 <h3 className="text-lg font-bold text-gray-900 mb-6 flex items-center gap-2">
-                    <Building2 className="w-5 h-5 text-emerald-600" />
+                    <Building2 className="w-5 h-5 text-sky-600" />
                     معلومات الشركة
                 </h3>
 
@@ -270,7 +270,7 @@ export default function AdvertiserRegistrationForm({
                             type="text"
                             value={form.business_name}
                             onChange={(e) => setForm(prev => ({ ...prev, business_name: e.target.value }))}
-                            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-sky-500 focus:border-sky-500"
                             placeholder="مثال: شركة النظافة المتميزة"
                             required
                         />
@@ -286,7 +286,7 @@ export default function AdvertiserRegistrationForm({
                                 type="text"
                                 value={form.contact_name}
                                 onChange={(e) => setForm(prev => ({ ...prev, contact_name: e.target.value }))}
-                                className="w-full pr-10 pl-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                                className="w-full pr-10 pl-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-sky-500 focus:border-sky-500"
                                 placeholder="اسم المسؤول عن التواصل"
                                 required
                             />
@@ -303,7 +303,7 @@ export default function AdvertiserRegistrationForm({
                                 type="tel"
                                 value={form.phone_number}
                                 onChange={(e) => setForm(prev => ({ ...prev, phone_number: e.target.value }))}
-                                className="w-full pr-10 pl-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                                className="w-full pr-10 pl-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-sky-500 focus:border-sky-500"
                                 placeholder="05xxxxxxxx"
                                 dir="ltr"
                                 required
@@ -321,7 +321,7 @@ export default function AdvertiserRegistrationForm({
                                 type="tel"
                                 value={form.whatsapp_number}
                                 onChange={(e) => setForm(prev => ({ ...prev, whatsapp_number: e.target.value }))}
-                                className="w-full pr-10 pl-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                                className="w-full pr-10 pl-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-sky-500 focus:border-sky-500"
                                 placeholder="نفس رقم الهاتف إذا تُرك فارغاً"
                                 dir="ltr"
                             />
@@ -338,7 +338,7 @@ export default function AdvertiserRegistrationForm({
                                 value={form.description}
                                 onChange={(e) => setForm(prev => ({ ...prev, description: e.target.value }))}
                                 rows={4}
-                                className="w-full pr-10 pl-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 resize-none"
+                                className="w-full pr-10 pl-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-sky-500 focus:border-sky-500 resize-none"
                                 placeholder="اكتب وصفاً مختصراً عن شركتك وخدماتها..."
                                 required
                             />
@@ -350,7 +350,7 @@ export default function AdvertiserRegistrationForm({
             {/* Region Selection */}
             <div className="bg-white rounded-2xl border border-gray-200 p-6">
                 <h3 className="text-lg font-bold text-gray-900 mb-6 flex items-center gap-2">
-                    <MapPin className="w-5 h-5 text-emerald-600" />
+                    <MapPin className="w-5 h-5 text-sky-600" />
                     المنطقة والمدن
                 </h3>
 
@@ -367,7 +367,7 @@ export default function AdvertiserRegistrationForm({
                                     type="button"
                                     onClick={() => handleRegionChange(key)}
                                     className={`px-4 py-3 rounded-xl text-sm font-medium transition-all ${form.region === key
-                                        ? 'bg-emerald-600 text-white'
+                                        ? 'bg-sky-600 text-white'
                                         : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                                         }`}
                                 >
@@ -393,7 +393,7 @@ export default function AdvertiserRegistrationForm({
                                         type="button"
                                         onClick={() => handleCityToggle(city.slug)}
                                         className={`px-4 py-2 rounded-lg text-sm transition-all ${form.targeted_cities.includes(city.slug)
-                                            ? 'bg-emerald-100 text-emerald-700 border-2 border-emerald-500'
+                                            ? 'bg-sky-100 text-sky-700 border-2 border-sky-500'
                                             : 'bg-gray-100 text-gray-600 border-2 border-transparent hover:bg-gray-200'
                                             }`}
                                     >
@@ -409,7 +409,7 @@ export default function AdvertiserRegistrationForm({
             {/* Services */}
             <div className="bg-white rounded-2xl border border-gray-200 p-6">
                 <h3 className="text-lg font-bold text-gray-900 mb-6 flex items-center gap-2">
-                    <Wrench className="w-5 h-5 text-emerald-600" />
+                    <Wrench className="w-5 h-5 text-sky-600" />
                     الخدمات المقدمة
                     <span className="text-gray-400 text-xs font-normal">
                         ({form.targeted_services.length} خدمة مختارة)
@@ -445,7 +445,7 @@ export default function AdvertiserRegistrationForm({
             {/* Images */}
             <div className="bg-white rounded-2xl border border-gray-200 p-6">
                 <h3 className="text-lg font-bold text-gray-900 mb-6 flex items-center gap-2">
-                    <ImageIcon className="w-5 h-5 text-emerald-600" />
+                    <ImageIcon className="w-5 h-5 text-sky-600" />
                     الصور
                 </h3>
 
@@ -455,7 +455,7 @@ export default function AdvertiserRegistrationForm({
                         <label className="block text-sm font-medium text-gray-700 mb-2">
                             شعار الشركة (اللوجو)
                         </label>
-                        <div className="relative border-2 border-dashed border-gray-300 rounded-xl p-6 text-center hover:border-emerald-400 transition-colors">
+                        <div className="relative border-2 border-dashed border-gray-300 rounded-xl p-6 text-center hover:border-sky-400 transition-colors">
                             {logoFile ? (
                                 <div className="relative inline-block">
                                     <img
@@ -495,7 +495,7 @@ export default function AdvertiserRegistrationForm({
                                 (حتى 11 صورة · حد أقصى 5 ميجابايت للصورة)
                             </span>
                         </label>
-                        <div className="border-2 border-dashed border-gray-300 rounded-xl p-4 hover:border-emerald-400 transition-colors">
+                        <div className="border-2 border-dashed border-gray-300 rounded-xl p-4 hover:border-sky-400 transition-colors">
                             <div className="flex flex-wrap gap-2 mb-4">
                                 {galleryFiles.map((file, index) => (
                                     <div key={index} className="relative">
@@ -533,7 +533,7 @@ export default function AdvertiserRegistrationForm({
             </div>
 
             {/* Submit */}
-            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 p-6 bg-gradient-to-l from-emerald-50 to-white rounded-2xl border border-gray-200">
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 p-6 bg-gradient-to-l from-sky-50 to-white rounded-2xl border border-gray-200">
                 <div>
                     <p className="font-bold text-gray-900">
                         {form.selected_plan === 'premium' ? 'الباقة المميزة - 299 ر.س/شهرياً' : 'الباقة المجانية'}
@@ -545,7 +545,7 @@ export default function AdvertiserRegistrationForm({
                 <button
                     type="submit"
                     disabled={isLoading}
-                    className="w-full sm:w-auto px-8 py-4 bg-gradient-to-l from-emerald-500 to-emerald-600 text-white font-bold rounded-xl hover:from-emerald-600 hover:to-emerald-700 shadow-xl shadow-emerald-500/30 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                    className="w-full sm:w-auto px-8 py-4 bg-gradient-to-l from-sky-500 to-sky-600 text-white font-bold rounded-xl hover:from-sky-600 hover:to-sky-700 shadow-xl shadow-sky-500/30 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 >
                     {isLoading ? (
                         <>

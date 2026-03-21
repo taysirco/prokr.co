@@ -8,7 +8,7 @@ export function PriceDisclosure({ avgPrice, unit }: { avgPrice: number; unit: st
 
     return (
         <div
-            className="bg-emerald-50 border border-emerald-200 p-4 rounded-xl flex items-center justify-between cursor-pointer hover:bg-emerald-100 transition-colors group"
+            className="bg-sky-50 border border-sky-200 p-4 rounded-xl flex items-center justify-between cursor-pointer hover:bg-sky-100 transition-colors group"
             onClick={() => setRevealed(true)}
             role="button"
             tabIndex={0}
@@ -20,16 +20,16 @@ export function PriceDisclosure({ avgPrice, unit }: { avgPrice: number; unit: st
                     {revealed ? '✅' : '👇'}
                 </span>
                 <div>
-                    <h4 className="font-bold text-emerald-900 text-sm">مؤشر الأسعار المباشر</h4>
-                    <p className="text-xs text-emerald-700">
+                    <h4 className="font-bold text-sky-900 text-sm">مؤشر الأسعار المباشر</h4>
+                    <p className="text-xs text-sky-700">
                         {revealed ? 'متوسط التكلفة الفعلية بناءً على عروض أسعار حقيقية' : 'اضغط لكشف متوسط التكلفة الفعلي اليوم'}
                     </p>
                 </div>
             </div>
 
-            <div className="bg-white px-4 py-2 rounded-lg font-mono font-black text-lg border border-emerald-100 shadow-inner min-w-[120px] text-center">
+            <div className="bg-white px-4 py-2 rounded-lg font-mono font-black text-lg border border-sky-100 shadow-inner min-w-[120px] text-center">
                 {revealed ? (
-                    <span className="text-emerald-700">{avgPrice.toLocaleString('ar-SA')} {unit}</span>
+                    <span className="text-sky-700">{avgPrice.toLocaleString('ar-SA')} {unit}</span>
                 ) : (
                     <span className="text-slate-300 blur-[4px] select-none transition-all duration-300">0000 ر.س</span>
                 )}

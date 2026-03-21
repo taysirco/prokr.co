@@ -187,19 +187,19 @@ export default function HomePage() {
         <EmergencyNightBanner cityNameAr="المملكة" serviceNameAr="خدمات منزلية" />
 
         {/* Hero Section - Premium Design */}
-        <section className="relative bg-gradient-to-bl from-emerald-600 via-emerald-700 to-emerald-900 text-white overflow-hidden min-h-[85vh] flex items-center">
+        <section className="relative bg-gradient-to-bl from-sky-600 via-sky-700 to-sky-900 text-white overflow-hidden min-h-[85vh] flex items-center">
           {/* Animated Background Pattern */}
           <div className="absolute inset-0">
             <div className="absolute inset-0 opacity-[0.08]" style={{
               backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
             }}></div>
             {/* Gradient Overlay */}
-            <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-emerald-900/50 to-transparent"></div>
+            <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-sky-900/50 to-transparent"></div>
           </div>
 
           {/* Floating Shapes */}
-          <div className="absolute top-20 left-10 w-72 h-72 bg-emerald-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-emerald-400/10 rounded-full blur-3xl"></div>
+          <div className="absolute top-20 left-10 w-72 h-72 bg-sky-500/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-sky-400/10 rounded-full blur-3xl"></div>
 
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 w-full">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -216,10 +216,10 @@ export default function HomePage() {
                   <span className="block bg-gradient-to-l from-amber-300 to-amber-400 bg-clip-text text-transparent">
                     خدمات منزلية
                   </span>
-                  <span className="block text-emerald-100">في المملكة العربية السعودية</span>
+                  <span className="block text-sky-100">في المملكة العربية السعودية</span>
                 </h1>
 
-                <p className="text-xl text-emerald-100/90 mb-8 max-w-xl mx-auto lg:mx-0 lg:mr-0">
+                <p className="text-xl text-sky-100/90 mb-8 max-w-xl mx-auto lg:mx-0 lg:mr-0">
                   منصة موثوقة تجمع أفضل مقدمي خدمات نقل العفش، التنظيف، مكافحة الحشرات، والصيانة في المملكة العربية السعودية
                 </p>
 
@@ -231,9 +231,9 @@ export default function HomePage() {
                       type="text"
                       name="q"
                       placeholder="ابحث عن خدمة أو مدينة..."
-                      className="w-full pr-14 pl-32 py-4 bg-white rounded-2xl text-gray-900 placeholder-gray-400 shadow-2xl shadow-emerald-900/30 focus:outline-none focus:ring-4 focus:ring-white/30"
+                      className="w-full pr-14 pl-32 py-4 bg-white rounded-2xl text-gray-900 placeholder-gray-400 shadow-2xl shadow-sky-900/30 focus:outline-none focus:ring-4 focus:ring-white/30"
                     />
-                    <button type="submit" className="absolute left-2 top-1/2 -translate-y-1/2 px-6 py-2.5 bg-gradient-to-l from-emerald-600 to-emerald-700 text-white font-medium rounded-xl hover:from-emerald-700 hover:to-emerald-800 transition-all shadow-lg">
+                    <button type="submit" className="absolute left-2 top-1/2 -translate-y-1/2 px-6 py-2.5 bg-gradient-to-l from-sky-600 to-sky-700 text-white font-medium rounded-xl hover:from-sky-700 hover:to-sky-800 transition-all shadow-lg">
                       بحث
                     </button>
                   </div>
@@ -241,7 +241,7 @@ export default function HomePage() {
 
                 {/* Quick City Links */}
                 <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
-                  <span className="text-emerald-200 text-sm">المدن الرئيسية:</span>
+                  <span className="text-sky-200 text-sm">المدن الرئيسية:</span>
                   {majorCities.map(city => (
                     <Link
                       key={city.slug}
@@ -262,7 +262,7 @@ export default function HomePage() {
                     <Building2 className="w-7 h-7 text-white" />
                   </div>
                   <p className="text-4xl font-bold mb-1">+500</p>
-                  <p className="text-emerald-200">شركة مسجلة</p>
+                  <p className="text-sky-200">شركة مسجلة</p>
                 </div>
 
                 {/* Stat Card 2 */}
@@ -271,7 +271,7 @@ export default function HomePage() {
                     <MapPin className="w-7 h-7 text-white" />
                   </div>
                   <p className="text-4xl font-bold mb-1">24</p>
-                  <p className="text-emerald-200">مدينة سعودية</p>
+                  <p className="text-sky-200">مدينة سعودية</p>
                 </div>
 
                 {/* Stat Card 3 */}
@@ -280,7 +280,7 @@ export default function HomePage() {
                     <Wrench className="w-7 h-7 text-white" />
                   </div>
                   <p className="text-4xl font-bold mb-1">{canonicalServices.length}</p>
-                  <p className="text-emerald-200">خدمة متنوعة</p>
+                  <p className="text-sky-200">خدمة متنوعة</p>
                 </div>
 
                 {/* Stat Card 4 */}
@@ -289,7 +289,7 @@ export default function HomePage() {
                     <ThumbsUp className="w-7 h-7 text-white" />
                   </div>
                   <p className="text-4xl font-bold mb-1">+10K</p>
-                  <p className="text-emerald-200">عميل راضي</p>
+                  <p className="text-sky-200">عميل راضي</p>
                 </div>
               </div>
             </div>
@@ -297,8 +297,8 @@ export default function HomePage() {
 
           {/* Scroll Indicator */}
           <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
-            <span className="text-emerald-200 text-sm">اكتشف المزيد</span>
-            <ChevronLeft className="w-5 h-5 text-emerald-200 rotate-[-90deg]" />
+            <span className="text-sky-200 text-sm">اكتشف المزيد</span>
+            <ChevronLeft className="w-5 h-5 text-sky-200 rotate-[-90deg]" />
           </div>
         </section>
 
@@ -314,8 +314,8 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-wrap items-center justify-center gap-8 lg:gap-16">
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center">
-                  <Shield className="w-6 h-6 text-emerald-600" />
+                <div className="w-12 h-12 bg-sky-100 rounded-xl flex items-center justify-center">
+                  <Shield className="w-6 h-6 text-sky-600" />
                 </div>
                 <div>
                   <p className="font-bold text-gray-900">شركات موثوقة</p>
@@ -356,7 +356,7 @@ export default function HomePage() {
         {/* Featured Services - Premium Grid */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center mb-12">
-            <span className="inline-block px-4 py-1.5 bg-emerald-100 text-emerald-700 font-medium rounded-full text-sm mb-4">
+            <span className="inline-block px-4 py-1.5 bg-sky-100 text-sky-700 font-medium rounded-full text-sm mb-4">
               خدماتنا المميزة
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
@@ -372,17 +372,17 @@ export default function HomePage() {
               <Link
                 key={service.slug}
                 href={`/${service.slug}`}
-                className={`group relative p-6 bg-white rounded-3xl border-2 border-gray-100 hover:border-emerald-400 hover:shadow-2xl hover:shadow-emerald-500/10 transition-all duration-300 overflow-hidden ${index === 0 ? 'md:col-span-2 md:row-span-2' : ''
+                className={`group relative p-6 bg-white rounded-3xl border-2 border-gray-100 hover:border-sky-400 hover:shadow-2xl hover:shadow-sky-500/10 transition-all duration-300 overflow-hidden ${index === 0 ? 'md:col-span-2 md:row-span-2' : ''
                   }`}
               >
                 {/* Background Gradient on Hover */}
-                <div className="absolute inset-0 bg-gradient-to-br from-emerald-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-sky-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
 
                 <div className="relative">
-                  <div className={`${index === 0 ? 'w-20 h-20' : 'w-14 h-14'} mb-4 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-emerald-500/30 group-hover:scale-110 transition-transform`}>
+                  <div className={`${index === 0 ? 'w-20 h-20' : 'w-14 h-14'} mb-4 bg-gradient-to-br from-sky-500 to-sky-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-sky-500/30 group-hover:scale-110 transition-transform`}>
                     {serviceIcons[service.slug] || <Wrench className={index === 0 ? 'w-10 h-10' : 'w-7 h-7'} />}
                   </div>
-                  <h3 className={`font-bold text-gray-900 group-hover:text-emerald-600 transition-colors ${index === 0 ? 'text-2xl mb-3' : 'text-lg mb-1'}`}>
+                  <h3 className={`font-bold text-gray-900 group-hover:text-sky-600 transition-colors ${index === 0 ? 'text-2xl mb-3' : 'text-lg mb-1'}`}>
                     {service.name_ar}
                   </h3>
                   {index === 0 && (
@@ -390,7 +390,7 @@ export default function HomePage() {
                       خدمات نقل العفش الاحترافية مع التغليف والفك والتركيب
                     </p>
                   )}
-                  <div className="flex items-center gap-1 text-emerald-600 font-medium text-sm group-hover:gap-2 transition-all">
+                  <div className="flex items-center gap-1 text-sky-600 font-medium text-sm group-hover:gap-2 transition-all">
                     <span>استعرض الشركات</span>
                     <ArrowLeft className="w-4 h-4" />
                   </div>
@@ -402,7 +402,7 @@ export default function HomePage() {
           <div className="text-center mt-10">
             <Link
               href="/services"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-emerald-600 text-white font-bold rounded-2xl hover:bg-emerald-700 shadow-lg shadow-emerald-500/30 transition-all hover:scale-105"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-sky-600 text-white font-bold rounded-2xl hover:bg-sky-700 shadow-lg shadow-sky-500/30 transition-all hover:scale-105"
             >
               عرض جميع الخدمات ({canonicalServices.length} خدمة)
               <ArrowLeft className="w-5 h-5" />
@@ -428,11 +428,11 @@ export default function HomePage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* Step 1 */}
               <div className="relative text-center group">
-                <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-3xl flex items-center justify-center text-white shadow-xl shadow-emerald-500/30 group-hover:scale-110 transition-transform">
+                <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-sky-500 to-sky-600 rounded-3xl flex items-center justify-center text-white shadow-xl shadow-sky-500/30 group-hover:scale-110 transition-transform">
                   <Search className="w-10 h-10" />
                 </div>
-                <div className="absolute top-8 left-0 right-1/2 h-0.5 bg-gradient-to-l from-emerald-300 to-transparent hidden md:block"></div>
-                <span className="inline-block px-3 py-1 bg-emerald-100 text-emerald-700 font-bold rounded-full text-sm mb-4">1</span>
+                <div className="absolute top-8 left-0 right-1/2 h-0.5 bg-gradient-to-l from-sky-300 to-transparent hidden md:block"></div>
+                <span className="inline-block px-3 py-1 bg-sky-100 text-sky-700 font-bold rounded-full text-sm mb-4">1</span>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">اختر الخدمة والمدينة</h3>
                 <p className="text-gray-500">
                   تصفح خدماتنا المتنوعة واختر المدينة التي تحتاج فيها الخدمة
@@ -492,9 +492,9 @@ export default function HomePage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {Object.entries(citiesByRegion).map(([region, cities]) => (
-                <div key={region} className="bg-white rounded-3xl p-6 shadow-lg shadow-gray-200/50 border border-gray-100 hover:shadow-xl hover:border-emerald-200 transition-all group">
+                <div key={region} className="bg-white rounded-3xl p-6 shadow-lg shadow-gray-200/50 border border-gray-100 hover:shadow-xl hover:border-sky-200 transition-all group">
                   <div className="flex items-center gap-3 mb-5">
-                    <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-emerald-500/30">
+                    <div className="w-12 h-12 bg-gradient-to-br from-sky-500 to-sky-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-sky-500/30">
                       <MapPin className="w-6 h-6" />
                     </div>
                     <h3 className="font-bold text-xl text-gray-900">
@@ -506,7 +506,7 @@ export default function HomePage() {
                       <Link
                         key={city.slug}
                         href={`/${city.slug}`}
-                        className="flex items-center justify-between p-3 hover:bg-emerald-50 rounded-xl text-gray-700 hover:text-emerald-700 transition-all group/item"
+                        className="flex items-center justify-between p-3 hover:bg-sky-50 rounded-xl text-gray-700 hover:text-sky-700 transition-all group/item"
                       >
                         <span className="font-medium">{city.name_ar}</span>
                         <ChevronLeft className="w-5 h-5 opacity-0 group-hover/item:opacity-100 -translate-x-2 group-hover/item:translate-x-0 transition-all" />
@@ -520,7 +520,7 @@ export default function HomePage() {
         </section>
 
         {/* Testimonials */}
-        <section className="bg-gradient-to-br from-emerald-900 via-emerald-800 to-emerald-900 text-white py-20 relative overflow-hidden">
+        <section className="bg-gradient-to-br from-sky-900 via-sky-800 to-sky-900 text-white py-20 relative overflow-hidden">
           {/* Background Pattern */}
           <div className="absolute inset-0 opacity-10">
             <div className="absolute inset-0" style={{
@@ -536,7 +536,7 @@ export default function HomePage() {
               <h2 className="text-3xl sm:text-4xl font-bold mb-4">
                 لماذا يثق العملاء ببروكر؟
               </h2>
-              <p className="text-emerald-200 max-w-2xl mx-auto">
+              <p className="text-sky-200 max-w-2xl mx-auto">
                 آلاف العملاء وثقوا ببروكر للوصول لأفضل الخدمات
               </p>
             </div>
@@ -549,7 +549,7 @@ export default function HomePage() {
                     <Star key={i} className="w-5 h-5 text-amber-400 fill-amber-400" />
                   ))}
                 </div>
-                <p className="text-emerald-100 mb-6 leading-relaxed">
+                <p className="text-sky-100 mb-6 leading-relaxed">
                   &quot;وجدت شركة نقل عفش ممتازة في الرياض خلال دقائق. الخدمة كانت احترافية والأسعار معقولة جداً. شكراً بروكر!&quot;
                 </p>
                 <div className="flex items-center gap-3">
@@ -558,7 +558,7 @@ export default function HomePage() {
                   </div>
                   <div>
                     <p className="font-bold">أحمد محمد</p>
-                    <p className="text-emerald-300 text-sm">الرياض</p>
+                    <p className="text-sky-300 text-sm">الرياض</p>
                   </div>
                 </div>
               </div>
@@ -570,7 +570,7 @@ export default function HomePage() {
                     <Star key={i} className="w-5 h-5 text-amber-400 fill-amber-400" />
                   ))}
                 </div>
-                <p className="text-emerald-100 mb-6 leading-relaxed">
+                <p className="text-sky-100 mb-6 leading-relaxed">
                   &quot;كنت أبحث عن شركة مكافحة حشرات موثوقة. بروكر سهّل عليّ المهمة بتوفير قائمة الشركات مع التقييمات.&quot;
                 </p>
                 <div className="flex items-center gap-3">
@@ -579,7 +579,7 @@ export default function HomePage() {
                   </div>
                   <div>
                     <p className="font-bold">سارة عبدالله</p>
-                    <p className="text-emerald-300 text-sm">جدة</p>
+                    <p className="text-sky-300 text-sm">جدة</p>
                   </div>
                 </div>
               </div>
@@ -591,7 +591,7 @@ export default function HomePage() {
                     <Star key={i} className="w-5 h-5 text-amber-400 fill-amber-400" />
                   ))}
                 </div>
-                <p className="text-emerald-100 mb-6 leading-relaxed">
+                <p className="text-sky-100 mb-6 leading-relaxed">
                   &quot;منصة رائعة وسهلة الاستخدام. تواصلت مع 3 شركات تنظيف وحصلت على أفضل عرض. أنصح الجميع باستخدامها.&quot;
                 </p>
                 <div className="flex items-center gap-3">
@@ -600,7 +600,7 @@ export default function HomePage() {
                   </div>
                   <div>
                     <p className="font-bold">محمد العتيبي</p>
-                    <p className="text-emerald-300 text-sm">الدمام</p>
+                    <p className="text-sky-300 text-sm">الدمام</p>
                   </div>
                 </div>
               </div>
@@ -626,13 +626,13 @@ export default function HomePage() {
               <Link
                 key={article.slug}
                 href={`/blog/${article.slug}`}
-                className="group bg-white rounded-2xl border border-gray-200 overflow-hidden hover:border-emerald-300 hover:shadow-xl transition-all"
+                className="group bg-white rounded-2xl border border-gray-200 overflow-hidden hover:border-sky-300 hover:shadow-xl transition-all"
               >
                 <div className="p-6">
-                  <span className="inline-block px-3 py-1 bg-emerald-50 text-emerald-700 rounded-full text-xs font-medium mb-3">
+                  <span className="inline-block px-3 py-1 bg-sky-50 text-sky-700 rounded-full text-xs font-medium mb-3">
                     {article.categoryLabel}
                   </span>
-                  <h3 className="font-bold text-gray-900 mb-2 group-hover:text-emerald-700 transition-colors line-clamp-2">
+                  <h3 className="font-bold text-gray-900 mb-2 group-hover:text-sky-700 transition-colors line-clamp-2">
                     {article.title}
                   </h3>
                   <p className="text-gray-500 text-sm line-clamp-2 mb-4">{article.excerpt}</p>
@@ -641,7 +641,7 @@ export default function HomePage() {
                       <Clock className="w-3.5 h-3.5" />
                       {article.readTime} دقائق
                     </span>
-                    <span className="text-emerald-600 font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
+                    <span className="text-sky-600 font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
                       اقرأ المقال
                       <ArrowLeft className="w-3.5 h-3.5" />
                     </span>

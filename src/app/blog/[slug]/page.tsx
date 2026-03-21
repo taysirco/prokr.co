@@ -141,7 +141,7 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
 
             <main className="min-h-screen bg-gray-50">
                 {/* Hero */}
-                <section className="text-white" style={{ background: isProtection ? 'linear-gradient(to bottom left, #e11d48, #be123c, #881337)' : 'linear-gradient(to bottom left, #059669, #047857, #064e3b)' }}>
+                <section className="text-white" style={{ background: isProtection ? 'linear-gradient(to bottom left, #e11d48, #be123c, #881337)' : 'linear-gradient(to bottom left, #0284C7, #0369A1, #0C4A6E)' }}>
                     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                         <nav className="flex items-center gap-2 text-sm mb-6" style={{ color: isProtection ? '#ffe4e6' : '#d1fae5' }}>
                             <Link href="/" className="hover:text-white transition-colors flex items-center gap-1">
@@ -182,7 +182,7 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
                 {/* Article Body */}
                 <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                     {/* Intro */}
-                    <div className="border-r-4 rounded-xl p-6 mb-10" style={{ backgroundColor: isProtection ? '#fff1f2' : '#ecfdf5', borderColor: isProtection ? '#f43f5e' : '#10b981' }}>
+                    <div className="border-r-4 rounded-xl p-6 mb-10" style={{ backgroundColor: isProtection ? '#fff1f2' : '#f0f9ff', borderColor: isProtection ? '#f43f5e' : '#0EA5E9' }}>
                         <p className="text-gray-700 text-lg leading-relaxed">{article.excerpt}</p>
                     </div>
 
@@ -192,16 +192,16 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
                         <ul className="space-y-2">
                             {article.sections.map((section, idx) => (
                                 <li key={idx}>
-                                    <a href={`#section-${idx}`} className="text-emerald-600 hover:underline text-sm flex items-center gap-2">
-                                        <span className="w-5 h-5 bg-emerald-100 rounded-full flex items-center justify-center text-xs font-bold text-emerald-700">{idx + 1}</span>
+                                    <a href={`#section-${idx}`} className="text-sky-600 hover:underline text-sm flex items-center gap-2">
+                                        <span className="w-5 h-5 bg-sky-100 rounded-full flex items-center justify-center text-xs font-bold text-sky-700">{idx + 1}</span>
                                         {section.heading}
                                     </a>
                                 </li>
                             ))}
                             {article.faq.length > 0 && (
                                 <li>
-                                    <a href="#faq" className="text-emerald-600 hover:underline text-sm flex items-center gap-2">
-                                        <span className="w-5 h-5 bg-emerald-100 rounded-full flex items-center justify-center text-xs font-bold text-emerald-700">?</span>
+                                    <a href="#faq" className="text-sky-600 hover:underline text-sm flex items-center gap-2">
+                                        <span className="w-5 h-5 bg-sky-100 rounded-full flex items-center justify-center text-xs font-bold text-sky-700">?</span>
                                         الأسئلة الشائعة
                                     </a>
                                 </li>
@@ -213,7 +213,7 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
                     {article.sections.map((section, idx) => (
                         <section key={idx} id={`section-${idx}`} className="mb-10">
                             <h2 className="text-2xl font-bold text-gray-900 mb-4">{section.heading}</h2>
-                            <div className="prose prose-lg prose-emerald max-w-none">
+                            <div className="prose prose-lg prose-sky max-w-none">
                                 <p className="text-gray-700 leading-relaxed whitespace-pre-line">{section.content}</p>
                             </div>
                         </section>
@@ -244,8 +244,8 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
 
                     {/* Related Services CTA */}
                     {article.relatedServices.length > 0 && (
-                        <div className="bg-gradient-to-bl from-emerald-50 to-emerald-100 rounded-xl p-6 border border-emerald-200 mb-10">
-                            <h3 className="font-bold text-emerald-900 mb-4">ابحث عن أفضل الشركات</h3>
+                        <div className="bg-gradient-to-bl from-sky-50 to-sky-100 rounded-xl p-6 border border-sky-200 mb-10">
+                            <h3 className="font-bold text-sky-900 mb-4">ابحث عن أفضل الشركات</h3>
                             <div className="flex flex-wrap gap-2">
                                 {article.relatedServices.filter(s => !isAbsorbedSlug(s)).map(serviceSlug => {
                                     const service = getServiceBySlug(serviceSlug);
@@ -253,7 +253,7 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
                                         <Link
                                             key={serviceSlug}
                                             href={`/${serviceSlug}`}
-                                            className="px-4 py-2 bg-white text-emerald-700 rounded-lg text-sm font-medium hover:bg-emerald-50 border border-emerald-200 transition-colors"
+                                            className="px-4 py-2 bg-white text-sky-700 rounded-lg text-sm font-medium hover:bg-sky-50 border border-sky-200 transition-colors"
                                         >
                                             {service.name_ar}
                                         </Link>
@@ -272,10 +272,10 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
                                     <Link
                                         key={ra.slug}
                                         href={`/blog/${ra.slug}`}
-                                        className="bg-white border border-gray-200 rounded-xl p-4 hover:border-emerald-300 hover:shadow-md transition-all group"
+                                        className="bg-white border border-gray-200 rounded-xl p-4 hover:border-sky-300 hover:shadow-md transition-all group"
                                     >
-                                        <span className="text-xs text-emerald-600 font-medium">{ra.categoryLabel}</span>
-                                        <h3 className="font-bold text-gray-900 mt-1 text-sm group-hover:text-emerald-700 transition-colors line-clamp-2">{ra.title}</h3>
+                                        <span className="text-xs text-sky-600 font-medium">{ra.categoryLabel}</span>
+                                        <h3 className="font-bold text-gray-900 mt-1 text-sm group-hover:text-sky-700 transition-colors line-clamp-2">{ra.title}</h3>
                                         <span className="text-xs text-gray-500 mt-2 flex items-center gap-1">
                                             <Clock className="w-3 h-3" />
                                             {ra.readTime} دقائق
@@ -287,7 +287,7 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
                     )}
 
                     {/* Back to Blog */}
-                    <Link href="/blog" className="inline-flex items-center gap-2 text-emerald-600 font-medium hover:underline">
+                    <Link href="/blog" className="inline-flex items-center gap-2 text-sky-600 font-medium hover:underline">
                         <ArrowLeft className="w-4 h-4" />
                         العودة للمدونة
                     </Link>

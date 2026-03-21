@@ -107,7 +107,7 @@ export default function AcquisitionPage() {
                         <p className="text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
                             الإعلان الرسمي لاستحواذ منصة بروكر على جميع الأصول الفكرية والنطاقات السابقة
                         </p>
-                        <div className="mt-6 inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 font-bold text-xl" dir="ltr">
+                        <div className="mt-6 inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-sky-500/20 border border-sky-400/30 text-sky-300 font-bold text-xl" dir="ltr">
                             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m9.86-5.368a4.5 4.5 0 00-1.242-7.244l-4.5-4.5a4.5 4.5 0 00-6.364 6.364L9.21 8.688" />
                             </svg>
@@ -122,7 +122,7 @@ export default function AcquisitionPage() {
                         {/* Header bar */}
                         <div className="bg-slate-900 text-white px-8 py-5">
                             <div className="flex items-center gap-3">
-                                <div className="w-10 h-10 bg-emerald-600 rounded-lg flex items-center justify-center text-white font-bold text-lg">
+                                <div className="w-10 h-10 bg-sky-600 rounded-lg flex items-center justify-center text-white font-bold text-lg">
                                     P
                                 </div>
                                 <div>
@@ -172,15 +172,15 @@ export default function AcquisitionPage() {
                             </div>
 
                             {/* E-E-A-T compliance notice */}
-                            <div className="flex items-start gap-4 p-4 bg-emerald-50 border border-emerald-200 rounded-xl mt-6">
-                                <div className="flex-shrink-0 w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center">
-                                    <svg className="w-5 h-5 text-emerald-600" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                            <div className="flex items-start gap-4 p-4 bg-sky-50 border border-sky-200 rounded-xl mt-6">
+                                <div className="flex-shrink-0 w-10 h-10 bg-sky-100 rounded-full flex items-center justify-center">
+                                    <svg className="w-5 h-5 text-sky-600" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
                                     </svg>
                                 </div>
                                 <div>
-                                    <h3 className="font-bold text-emerald-800 mb-1">ضمان الجودة والثقة (E-E-A-T)</h3>
-                                    <p className="text-emerald-700 text-sm leading-relaxed">
+                                    <h3 className="font-bold text-sky-800 mb-1">ضمان الجودة والثقة (E-E-A-T)</h3>
+                                    <p className="text-sky-700 text-sm leading-relaxed">
                                         تلتزم منصة بروكر الجديدة بأعلى معايير الخبرة والثقة والمصداقية.
                                         تم تأسيس بنية تحتية جديدة بالكامل تعتمد على توثيق السجلات التجارية (CRN)
                                         بمعايير وزارة التجارة السعودية، مع فصل كامل عن أي بيانات أو أنظمة سابقة.
@@ -192,7 +192,7 @@ export default function AcquisitionPage() {
                             <div className="text-center pt-6">
                                 <a
                                     href="https://prokr.co"
-                                    className="inline-flex items-center gap-3 px-8 py-4 bg-emerald-600 text-white font-bold text-lg rounded-xl hover:bg-emerald-700 shadow-lg shadow-emerald-200 transition-all duration-300 hover:shadow-xl hover:shadow-emerald-200 hover:-translate-y-0.5"
+                                    className="inline-flex items-center gap-3 px-8 py-4 bg-sky-600 text-white font-bold text-lg rounded-xl hover:bg-sky-700 shadow-lg shadow-sky-200 transition-all duration-300 hover:shadow-xl hover:shadow-sky-200 hover:-translate-y-0.5"
                                     rel="noopener"
                                 >
                                     <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">

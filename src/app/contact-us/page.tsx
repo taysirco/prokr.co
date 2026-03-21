@@ -31,7 +31,7 @@ export default function ContactPage() {
     return (
         <main className="min-h-screen bg-gray-50">
             {/* Hero Section */}
-            <section className="relative bg-gradient-to-bl from-emerald-600 via-emerald-700 to-emerald-900 text-white overflow-hidden">
+            <section className="relative bg-gradient-to-bl from-sky-600 via-sky-700 to-sky-900 text-white overflow-hidden">
                 <div className="absolute inset-0 opacity-10">
                     <div className="absolute inset-0" style={{
                         backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
@@ -39,7 +39,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
-                    <nav className="flex items-center gap-2 text-emerald-100 text-sm mb-6">
+                    <nav className="flex items-center gap-2 text-sky-100 text-sm mb-6">
                         <Link href="/" className="hover:text-white transition-colors flex items-center gap-1">
                             <Home className="w-4 h-4" />
                             الرئيسية
@@ -51,7 +51,7 @@ export default function ContactPage() {
                     <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
                         اتصل بنا
                     </h1>
-                    <p className="text-lg text-emerald-100 max-w-2xl">
+                    <p className="text-lg text-sky-100 max-w-2xl">
                         نحن هنا لمساعدتك. تواصل معنا لأي استفسار أو اقتراح.
                     </p>
                 </div>
@@ -64,12 +64,12 @@ export default function ContactPage() {
                     <div className="space-y-6">
                         <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
                             <div className="flex items-center gap-4 mb-4">
-                                <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center">
-                                    <Phone className="w-6 h-6 text-emerald-600" />
+                                <div className="w-12 h-12 bg-sky-100 rounded-xl flex items-center justify-center">
+                                    <Phone className="w-6 h-6 text-sky-600" />
                                 </div>
                                 <div>
                                     <h3 className="font-bold text-gray-900">الهاتف</h3>
-                                    <a href="tel:+966542317431" className="text-emerald-600 hover:underline" dir="ltr">
+                                    <a href="tel:+966542317431" className="text-sky-600 hover:underline" dir="ltr">
                                         +966 54 231 7431
                                     </a>
                                 </div>
@@ -132,14 +132,14 @@ export default function ContactPage() {
 
                             {isSubmitted ? (
                                 <div className="text-center py-12">
-                                    <div className="w-20 h-20 mx-auto bg-emerald-100 rounded-full flex items-center justify-center mb-6">
-                                        <CheckCircle className="w-10 h-10 text-emerald-600" />
+                                    <div className="w-20 h-20 mx-auto bg-sky-100 rounded-full flex items-center justify-center mb-6">
+                                        <CheckCircle className="w-10 h-10 text-sky-600" />
                                     </div>
                                     <h3 className="text-xl font-bold text-gray-900 mb-2">تم إرسال رسالتك بنجاح!</h3>
                                     <p className="text-gray-600 mb-6">سنتواصل معك في أقرب وقت ممكن.</p>
                                     <button
                                         onClick={() => setIsSubmitted(false)}
-                                        className="text-emerald-600 hover:underline"
+                                        className="text-sky-600 hover:underline"
                                     >
                                         إرسال رسالة أخرى
                                     </button>
@@ -157,7 +157,7 @@ export default function ContactPage() {
                                                 required
                                                 value={formData.name}
                                                 onChange={e => setFormData({ ...formData, name: e.target.value })}
-                                                className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-all"
+                                                className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-sky-500 focus:border-sky-500 outline-none transition-all"
                                                 placeholder="أدخل اسمك"
                                             />
                                         </div>
@@ -172,7 +172,7 @@ export default function ContactPage() {
                                                 required
                                                 value={formData.email}
                                                 onChange={e => setFormData({ ...formData, email: e.target.value })}
-                                                className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-all"
+                                                className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-sky-500 focus:border-sky-500 outline-none transition-all"
                                                 placeholder="example@email.com"
                                                 dir="ltr"
                                             />
@@ -189,7 +189,7 @@ export default function ContactPage() {
                                                 id="phone"
                                                 value={formData.phone}
                                                 onChange={e => setFormData({ ...formData, phone: e.target.value })}
-                                                className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-all"
+                                                className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-sky-500 focus:border-sky-500 outline-none transition-all"
                                                 placeholder="+966 5X XXX XXXX"
                                                 dir="ltr"
                                             />
@@ -204,7 +204,7 @@ export default function ContactPage() {
                                                 required
                                                 value={formData.subject}
                                                 onChange={e => setFormData({ ...formData, subject: e.target.value })}
-                                                className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-all bg-white"
+                                                className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-sky-500 focus:border-sky-500 outline-none transition-all bg-white"
                                             >
                                                 <option value="">اختر الموضوع</option>
                                                 <option value="inquiry">استفسار عام</option>
@@ -226,7 +226,7 @@ export default function ContactPage() {
                                             rows={5}
                                             value={formData.message}
                                             onChange={e => setFormData({ ...formData, message: e.target.value })}
-                                            className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-all resize-none"
+                                            className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-sky-500 focus:border-sky-500 outline-none transition-all resize-none"
                                             placeholder="اكتب رسالتك هنا..."
                                         />
                                     </div>
@@ -234,7 +234,7 @@ export default function ContactPage() {
                                     <button
                                         type="submit"
                                         disabled={isSubmitting}
-                                        className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-emerald-600 text-white font-bold rounded-xl hover:bg-emerald-700 shadow-lg transition-all disabled:opacity-70 disabled:cursor-not-allowed"
+                                        className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-sky-600 text-white font-bold rounded-xl hover:bg-sky-700 shadow-lg transition-all disabled:opacity-70 disabled:cursor-not-allowed"
                                     >
                                         {isSubmitting ? (
                                             <>

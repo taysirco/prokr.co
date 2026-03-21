@@ -192,13 +192,13 @@ export default function ClaimBusinessCTA({ companyCode, businessName, variant = 
     // ============================================
     if (state === 'claimed') {
         return (
-            <div className={`bg-emerald-50 border border-emerald-200 rounded-2xl ${variant === 'compact' ? 'p-3' : 'p-5'}`}>
+            <div className={`bg-sky-50 border border-sky-200 rounded-2xl ${variant === 'compact' ? 'p-3' : 'p-5'}`}>
                 <div className="flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-emerald-600 flex-shrink-0" />
-                    <p className="text-emerald-800 font-bold text-sm">✅ منشأة مُوثّقة ومُعتمدة</p>
+                    <CheckCircle className="w-5 h-5 text-sky-600 flex-shrink-0" />
+                    <p className="text-sky-800 font-bold text-sm">✅ منشأة مُوثّقة ومُعتمدة</p>
                 </div>
                 {variant === 'full' && (
-                    <p className="text-emerald-600 text-xs mt-1 mr-7">
+                    <p className="text-sky-600 text-xs mt-1 mr-7">
                         تم التحقق من ملكية {businessName} عبر البريد الإلكتروني ورقم الهاتف
                     </p>
                 )}
@@ -259,25 +259,25 @@ export default function ClaimBusinessCTA({ companyCode, businessName, variant = 
     // ============================================
     if (state === 'phone-form' || state === 'phone-sending' || state === 'email-verified') {
         return (
-            <div className="bg-gradient-to-br from-emerald-50 via-white to-teal-50 border-2 border-emerald-300 rounded-2xl p-5 sm:p-6">
+            <div className="bg-gradient-to-br from-sky-50 via-white to-teal-50 border-2 border-sky-300 rounded-2xl p-5 sm:p-6">
                 <div className="flex items-center gap-2 mb-1">
-                    <Smartphone className="w-5 h-5 text-emerald-600" />
-                    <h4 className="text-emerald-900 font-bold text-base">📱 الخطوة 2 من 2: تأكيد رقم الهاتف</h4>
+                    <Smartphone className="w-5 h-5 text-sky-600" />
+                    <h4 className="text-sky-900 font-bold text-base">📱 الخطوة 2 من 2: تأكيد رقم الهاتف</h4>
                 </div>
-                <p className="text-emerald-600 text-xs mb-4">
+                <p className="text-sky-600 text-xs mb-4">
                     أدخل رقم الهاتف المسجل لهذه المنشأة على بروكر للتحقق
                 </p>
 
                 {/* Progress bar */}
                 <div className="flex items-center gap-2 mb-4 justify-center">
                     <div className="flex items-center gap-1">
-                        <div className="w-6 h-6 bg-emerald-500 text-white rounded-full flex items-center justify-center text-xs">✓</div>
-                        <span className="text-emerald-600 text-xs font-bold">البريد ✓</span>
+                        <div className="w-6 h-6 bg-sky-500 text-white rounded-full flex items-center justify-center text-xs">✓</div>
+                        <span className="text-sky-600 text-xs font-bold">البريد ✓</span>
                     </div>
-                    <div className="w-8 h-0.5 bg-emerald-400" />
+                    <div className="w-8 h-0.5 bg-sky-400" />
                     <div className="flex items-center gap-1">
-                        <div className="w-6 h-6 bg-emerald-500 text-white rounded-full flex items-center justify-center text-xs font-bold">2</div>
-                        <span className="text-emerald-700 text-xs font-bold">الهاتف</span>
+                        <div className="w-6 h-6 bg-sky-500 text-white rounded-full flex items-center justify-center text-xs font-bold">2</div>
+                        <span className="text-sky-700 text-xs font-bold">الهاتف</span>
                     </div>
                 </div>
 
@@ -289,7 +289,7 @@ export default function ClaimBusinessCTA({ companyCode, businessName, variant = 
                         placeholder="05XXXXXXXX"
                         dir="ltr"
                         inputMode="tel"
-                        className="w-full px-4 py-2.5 border-2 border-gray-200 rounded-xl text-sm focus:border-emerald-400 focus:ring-2 focus:ring-emerald-100 outline-none"
+                        className="w-full px-4 py-2.5 border-2 border-gray-200 rounded-xl text-sm focus:border-sky-400 focus:ring-2 focus:ring-sky-100 outline-none"
                         autoFocus
                     />
                     {errorMsg && <p className="text-red-600 text-xs bg-red-50 p-2 rounded-lg">⚠️ {errorMsg}</p>}
@@ -297,7 +297,7 @@ export default function ClaimBusinessCTA({ companyCode, businessName, variant = 
                         id="claim-phone-btn"
                         onClick={handlePhoneSendOTP}
                         disabled={state === 'phone-sending'}
-                        className="w-full py-3 bg-gradient-to-l from-emerald-500 to-teal-500 text-white font-bold text-sm rounded-xl hover:from-emerald-600 hover:to-teal-600 transition-all flex items-center justify-center gap-2 disabled:opacity-60"
+                        className="w-full py-3 bg-gradient-to-l from-sky-500 to-teal-500 text-white font-bold text-sm rounded-xl hover:from-sky-600 hover:to-teal-600 transition-all flex items-center justify-center gap-2 disabled:opacity-60"
                     >
                         {state === 'phone-sending' ? (
                             <><Loader2 className="w-4 h-4 animate-spin" /> جاري الإرسال...</>
@@ -317,10 +317,10 @@ export default function ClaimBusinessCTA({ companyCode, businessName, variant = 
     // ============================================
     if (state === 'phone-otp' || state === 'phone-verifying') {
         return (
-            <div className="bg-gradient-to-br from-emerald-50 via-white to-teal-50 border-2 border-emerald-300 rounded-2xl p-5 sm:p-6 text-center">
-                <Phone className="w-8 h-8 text-emerald-600 mx-auto mb-2" />
-                <h4 className="text-emerald-900 font-bold text-base mb-1">أدخل رمز التحقق</h4>
-                <p className="text-emerald-700 text-sm mb-4">
+            <div className="bg-gradient-to-br from-sky-50 via-white to-teal-50 border-2 border-sky-300 rounded-2xl p-5 sm:p-6 text-center">
+                <Phone className="w-8 h-8 text-sky-600 mx-auto mb-2" />
+                <h4 className="text-sky-900 font-bold text-base mb-1">أدخل رمز التحقق</h4>
+                <p className="text-sky-700 text-sm mb-4">
                     تم إرسال رمز SMS إلى <strong dir="ltr">{formatSaudiPhone(phoneInput)}</strong>
                 </p>
 
@@ -333,7 +333,7 @@ export default function ClaimBusinessCTA({ companyCode, businessName, variant = 
                     maxLength={6}
                     inputMode="numeric"
                     autoComplete="one-time-code"
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl text-center text-xl tracking-[0.4em] font-mono focus:border-emerald-400 focus:ring-2 focus:ring-emerald-100 outline-none mb-3"
+                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl text-center text-xl tracking-[0.4em] font-mono focus:border-sky-400 focus:ring-2 focus:ring-sky-100 outline-none mb-3"
                     autoFocus
                 />
 
@@ -342,7 +342,7 @@ export default function ClaimBusinessCTA({ companyCode, businessName, variant = 
                 <button
                     onClick={handlePhoneVerifyOTP}
                     disabled={state === 'phone-verifying'}
-                    className="w-full py-3 bg-gradient-to-l from-emerald-500 to-teal-500 text-white font-bold text-sm rounded-xl hover:from-emerald-600 hover:to-teal-600 transition-all flex items-center justify-center gap-2 disabled:opacity-60"
+                    className="w-full py-3 bg-gradient-to-l from-sky-500 to-teal-500 text-white font-bold text-sm rounded-xl hover:from-sky-600 hover:to-teal-600 transition-all flex items-center justify-center gap-2 disabled:opacity-60"
                 >
                     {state === 'phone-verifying' ? (
                         <><Loader2 className="w-4 h-4 animate-spin" /> جاري التحقق...</>
