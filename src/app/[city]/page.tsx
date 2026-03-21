@@ -237,7 +237,7 @@ export default async function CityPage({ params }: CityPageProps) {
                                             className="group relative bg-white rounded-xl border border-gray-200 hover:border-emerald-300 hover:shadow-lg transition-all overflow-hidden"
                                         >
                                             {/* Image */}
-                                            <div className="relative aspect-[4/3] bg-gray-100">
+                                            <div className="relative aspect-[4/3] bg-gray-100 overflow-hidden">
                                                 <Image
                                                     src={getServiceImage(service.slug)}
                                                     alt={`شركة ${service.name_ar} ${cityKw} - أفضل الأسعار والشركات المعتمدة من بروكر | تم التحقق عبر نفاذ SBC`}
@@ -246,7 +246,7 @@ export default async function CityPage({ params }: CityPageProps) {
                                                     sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
                                                 />
                                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                                                <VisionAiWatermark position="bottom-right" size="sm" />
+                                                <VisionAiWatermark position="top-right" size="xs" />
                                             </div>
 
                                             {/* Title */}

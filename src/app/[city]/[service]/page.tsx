@@ -272,7 +272,7 @@ export default async function SiloPage({ params }: SiloPageProps) {
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/50 to-transparent"></div>
                                     {/* 🛡️ Vision AI OCR — Nafath/SBC Watermark */}
-                                    <VisionAiWatermark position="bottom-left" size="sm" />
+                                    <VisionAiWatermark position="top-right" size="md" />
                                 </div>
                                 {/* Floating Badge */}
                                 <div className="absolute -bottom-4 -right-4 bg-white rounded-xl shadow-xl p-4">

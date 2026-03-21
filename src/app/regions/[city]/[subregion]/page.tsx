@@ -255,7 +255,7 @@ export default async function SubRegionPage({ params }: SubRegionPageProps) {
                                         href={`/${city.slug}/${service.slug}`}
                                         className="group relative bg-white rounded-xl border border-gray-200 hover:border-emerald-300 hover:shadow-lg transition-all overflow-hidden"
                                     >
-                                        <div className="relative aspect-[4/3] bg-gray-100">
+                                        <div className="relative aspect-[4/3] bg-gray-100 overflow-hidden">
                                             <Image
                                                 src={getServiceImage(service.slug)}
                                                 alt={`شركة ${service.name_ar} في ${subRegion.name_ar}، ${city.name_ar} - أفضل الأسعار من بروكر | تم التحقق عبر نفاذ SBC`}
@@ -264,7 +264,7 @@ export default async function SubRegionPage({ params }: SubRegionPageProps) {
                                                 sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, 25vw"
                                             />
                                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                                            <VisionAiWatermark position="bottom-right" size="sm" />
+                                            <VisionAiWatermark position="top-right" size="xs" />
                                         </div>
                                         <div className="absolute bottom-0 left-0 right-0 p-3">
                                             <h3 className="font-semibold text-white text-sm">

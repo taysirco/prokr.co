@@ -1,98 +1,137 @@
 // ============================================
 // 🛡️ NafathSbcBadge — شارة "تم التحقق - نفاذ / SBC"
-// SVG text badge — Vision AI reads rendered text in pixels
+// Two modes:
+//   - xs/sm: Icon-only shield ✓ (readable at tiny sizes)
+//   - md/lg: Full HTML pill with Arabic + English text
 // Server Component — no 'use client' needed
 // ============================================
 
 interface NafathSbcBadgeProps {
-    size?: 'sm' | 'md' | 'lg';
-    opacity?: number;
+    size?: 'xs' | 'sm' | 'md' | 'lg';
     className?: string;
 }
 
-const SIZE_CONFIG = {
-    sm: { w: 140, h: 28, fontSize: 9, enSize: 7, iconSize: 12, pad: 6, radius: 6, gap: 3 },
-    md: { w: 200, h: 38, fontSize: 12, enSize: 9, iconSize: 16, pad: 8, radius: 8, gap: 4 },
-    lg: { w: 280, h: 50, fontSize: 16, enSize: 12, iconSize: 22, pad: 12, radius: 10, gap: 6 },
-} as const;
+// ─── Shield icon only (xs/sm) ───
+const ICON_SIZE: Record<string, number> = {
+    xs: 18,
+    sm: 22,
+};
 
-export function NafathSbcBadge({ size = 'md', opacity = 0.92, className }: NafathSbcBadgeProps) {
-    const c = SIZE_CONFIG[size];
-
+function ShieldIcon({ size, className }: { size: 'xs' | 'sm'; className?: string }) {
+    const s = ICON_SIZE[size];
     return (
         <svg
-            width={c.w}
-            height={c.h}
-            viewBox={`0 0 ${c.w} ${c.h}`}
+            width={s}
+            height={s}
+            viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
             role="img"
             aria-label="تم التحقق — نفاذ / SBC"
             className={className}
-            style={{ opacity }}
+            style={{ display: 'block' }}
         >
-            {/* Background pill */}
-            <rect
-                x="0" y="0"
-                width={c.w} height={c.h}
-                rx={c.radius} ry={c.radius}
-                fill="url(#nafathGrad)"
-                stroke="rgba(255,255,255,0.25)"
-                strokeWidth="1"
+            {/* Green circle background */}
+            <circle cx="12" cy="12" r="12" fill="#059669" />
+            {/* White shield */}
+            <path
+                d="M12 4 L18 6.5 V11.5 C18 15 12 18 12 18 C12 18 6 15 6 11.5 V6.5 L12 4Z"
+                fill="rgba(255,255,255,0.95)"
             />
+            {/* Green checkmark inside shield */}
+            <path
+                d="M9 11.5 L11 13.5 L15.5 9"
+                fill="none"
+                stroke="#059669"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+        </svg>
+    );
+}
 
-            {/* Gradient definition */}
-            <defs>
-                <linearGradient id="nafathGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#059669" />
-                    <stop offset="100%" stopColor="#047857" />
-                </linearGradient>
-            </defs>
+// ─── Full text pill (md/lg) — Pure HTML/CSS ───
+function TextPill({ size, className }: { size: 'md' | 'lg'; className?: string }) {
+    const maxWidth = size === 'lg' ? '160px' : '130px';
+    const shieldSize = size === 'lg' ? 16 : 14;
 
-            {/* Shield icon (simple path) */}
-            <g transform={`translate(${c.pad}, ${(c.h - c.iconSize) / 2})`}>
+    return (
+        <div
+            role="img"
+            aria-label="تم التحقق — نفاذ / SBC"
+            className={className}
+            dir="rtl"
+            style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: size === 'lg' ? '6px' : '5px',
+                maxWidth,
+                background: 'linear-gradient(135deg, #059669, #047857)',
+                borderRadius: '6px',
+                padding: size === 'lg' ? '5px 10px' : '4px 8px',
+                border: '0.5px solid rgba(255,255,255,0.15)',
+                opacity: 0.92,
+                whiteSpace: 'nowrap',
+                overflow: 'hidden',
+            }}
+        >
+            {/* Shield icon */}
+            <svg
+                width={shieldSize}
+                height={shieldSize}
+                viewBox="0 0 14 16"
+                xmlns="http://www.w3.org/2000/svg"
+                style={{ flexShrink: 0, display: 'block' }}
+            >
                 <path
-                    d={`M${c.iconSize / 2} 0 L${c.iconSize} ${c.iconSize * 0.25} L${c.iconSize} ${c.iconSize * 0.6} C${c.iconSize} ${c.iconSize * 0.85} ${c.iconSize / 2} ${c.iconSize} ${c.iconSize / 2} ${c.iconSize} C${c.iconSize / 2} ${c.iconSize} 0 ${c.iconSize * 0.85} 0 ${c.iconSize * 0.6} L0 ${c.iconSize * 0.25} Z`}
-                    fill="rgba(255,255,255,0.9)"
+                    d="M7 0 L14 3 V8.5 C14 12 7 16 7 16 C7 16 0 12 0 8.5 V3 L7 0Z"
+                    fill="rgba(255,255,255,0.92)"
                 />
-                {/* Checkmark inside shield */}
                 <path
-                    d={`M${c.iconSize * 0.25} ${c.iconSize * 0.5} L${c.iconSize * 0.42} ${c.iconSize * 0.68} L${c.iconSize * 0.75} ${c.iconSize * 0.32}`}
+                    d="M3.5 8 L5.8 10.5 L10.5 5.5"
                     fill="none"
                     stroke="#059669"
-                    strokeWidth={c.iconSize * 0.12}
+                    strokeWidth="1.6"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                 />
-            </g>
+            </svg>
 
-            {/* Arabic text: تم التحقق — نفاذ */}
-            <text
-                x={c.pad + c.iconSize + c.gap}
-                y={c.h * 0.48}
-                fill="white"
-                fontSize={c.fontSize}
-                fontWeight="700"
-                fontFamily="Cairo, Tahoma, Arial, sans-serif"
-                dominantBaseline="middle"
-                direction="rtl"
-                textAnchor="start"
-            >
-                تم التحقق — نفاذ
-            </text>
-
-            {/* English text: Verified · SBC */}
-            <text
-                x={c.pad + c.iconSize + c.gap}
-                y={c.h * 0.82}
-                fill="rgba(209,250,229,0.9)"
-                fontSize={c.enSize}
-                fontWeight="700"
-                fontFamily="Inter, system-ui, sans-serif"
-                dominantBaseline="middle"
-                letterSpacing="0.5"
-            >
-                Verified · SBC
-            </text>
-        </svg>
+            {/* Text block */}
+            <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 1.15, minWidth: 0 }}>
+                <span
+                    style={{
+                        color: '#fff',
+                        fontSize: size === 'lg' ? '11px' : '9.5px',
+                        fontWeight: 700,
+                        fontFamily: 'Cairo, Tahoma, Arial, sans-serif',
+                        overflow: 'hidden',
+                        textOverflow: 'ellipsis',
+                    }}
+                >
+                    تم التحقق — نفاذ
+                </span>
+                <span
+                    style={{
+                        color: 'rgba(209,250,229,0.85)',
+                        fontSize: size === 'lg' ? '7.5px' : '6.5px',
+                        fontWeight: 700,
+                        fontFamily: 'Inter, system-ui, sans-serif',
+                        letterSpacing: '0.3px',
+                        direction: 'ltr',
+                        textAlign: 'left',
+                    }}
+                >
+                    Verified · SBC
+                </span>
+            </div>
+        </div>
     );
+}
+
+export function NafathSbcBadge({ size = 'sm', className }: NafathSbcBadgeProps) {
+    if (size === 'xs' || size === 'sm') {
+        return <ShieldIcon size={size} className={className} />;
+    }
+    return <TextPill size={size as 'md' | 'lg'} className={className} />;
 }

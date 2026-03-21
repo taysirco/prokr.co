@@ -42,7 +42,7 @@ export default function AdvertiserCard({ advertiser, variant = 'standard' }: Adv
                 <div className="p-6">
                     {/* Logo & Info */}
                     <div className="flex items-start gap-4">
-                        <div className="relative w-20 h-20 flex-shrink-0">
+                        <div className="relative w-20 h-20 flex-shrink-0 overflow-hidden rounded-xl">
                             {advertiser.logo_url ? (
                                 <Image
                                     src={advertiser.logo_url}
@@ -58,7 +58,7 @@ export default function AdvertiserCard({ advertiser, variant = 'standard' }: Adv
                                 </div>
                             )}
                             {/* 🛡️ Vision AI OCR — Nafath/SBC Watermark */}
-                            <VisionAiWatermark position="bottom-right" size="sm" />
+                            <VisionAiWatermark position="top-right" size="xs" />
                         </div>
 
                         <div className="flex-1 min-w-0">

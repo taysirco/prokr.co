@@ -243,7 +243,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                                         quality={90}
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/50 to-transparent"></div>
-                                    <VisionAiWatermark position="bottom-left" size="sm" />
+                                    <VisionAiWatermark position="top-right" size="md" />
                                 </div>
                             </div>
                         </div>

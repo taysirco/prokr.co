@@ -147,7 +147,7 @@ export default function ServicesPage() {
                                         href={`/${service.slug}`}
                                         className="group relative bg-white rounded-xl border border-gray-200 hover:border-emerald-300 hover:shadow-lg transition-all overflow-hidden"
                                     >
-                                        <div className="relative aspect-[4/3] bg-gray-100">
+                                        <div className="relative aspect-[4/3] bg-gray-100 overflow-hidden">
                                             <Image
                                                 src={getServiceImage(service.slug)}
                                                 alt={`${service.name_ar} - أفضل شركات ${service.name_ar} في السعودية | تم التحقق عبر نفاذ SBC`}
@@ -156,7 +156,7 @@ export default function ServicesPage() {
                                                 sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
                                             />
                                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                                            <VisionAiWatermark position="bottom-right" size="sm" />
+                                            <VisionAiWatermark position="top-right" size="xs" />
                                         </div>
 
                                         <div className="absolute bottom-0 left-0 right-0 p-3">

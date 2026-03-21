@@ -1,32 +1,31 @@
 // ============================================
 // 🖼️ VisionAiWatermark — CSS Overlay for "نفاذ / SBC" badge
-// Can be used standalone (inside existing relative container)
-// or as a wrapper around an image.
+// Cleanly positions the badge over any image.
 // Server Component — no 'use client' needed
 // ============================================
 
 import { NafathSbcBadge } from './NafathSbcBadge';
 
-type BadgePosition = 'bottom-left' | 'bottom-right' | 'top-right';
-type BadgeSize = 'sm' | 'md' | 'lg';
+type BadgePosition = 'bottom-left' | 'bottom-right' | 'top-left' | 'top-right';
+type BadgeSize = 'xs' | 'sm' | 'md' | 'lg';
 
 interface VisionAiWatermarkProps {
     position?: BadgePosition;
     size?: BadgeSize;
-    /** When provided, wraps children in a relative container. When omitted, renders badge standalone (parent must be position:relative). */
     children?: React.ReactNode;
     className?: string;
 }
 
 const POSITION_STYLES: Record<BadgePosition, React.CSSProperties> = {
-    'bottom-left': { bottom: '8px', left: '8px' },
-    'bottom-right': { bottom: '8px', right: '8px' },
-    'top-right': { top: '8px', right: '8px' },
+    'top-left':     { top: '6px', left: '6px' },
+    'top-right':    { top: '6px', right: '6px' },
+    'bottom-left':  { bottom: '6px', left: '6px' },
+    'bottom-right': { bottom: '6px', right: '6px' },
 };
 
 export function VisionAiWatermark({
-    position = 'bottom-left',
-    size = 'md',
+    position = 'top-right',
+    size = 'sm',
     children,
     className,
 }: VisionAiWatermarkProps) {
@@ -37,7 +36,8 @@ export function VisionAiWatermark({
                 ...POSITION_STYLES[position],
                 zIndex: 10,
                 pointerEvents: 'none',
-                filter: 'drop-shadow(0 2px 6px rgba(0,0,0,0.3))',
+                filter: 'drop-shadow(0 1px 2px rgba(0,0,0,0.25))',
+                lineHeight: 0,
             }}
             aria-hidden="true"
         >
@@ -45,12 +45,10 @@ export function VisionAiWatermark({
         </div>
     );
 
-    // Standalone mode: just render the badge (parent must have position: relative)
     if (!children) return badge;
 
-    // Wrapper mode: wrap children in a relative container
     return (
-        <div className={className} style={{ position: 'relative' }}>
+        <div className={className} style={{ position: 'relative', overflow: 'hidden' }}>
             {children}
             {badge}
         </div>

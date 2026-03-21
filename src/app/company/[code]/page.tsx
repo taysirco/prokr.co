@@ -187,7 +187,7 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                         <div className="flex flex-col md:flex-row gap-6 items-start">
                             {/* Logo */}
                             <div className="relative">
-                                <div className="relative w-28 h-28 md:w-32 md:h-32 bg-white rounded-2xl shadow-xl flex items-center justify-center border-4 border-white">
+                                <div className="relative w-28 h-28 md:w-32 md:h-32 bg-white rounded-2xl shadow-xl flex items-center justify-center border-4 border-white overflow-hidden">
                                     {advertiser.logo_url ? (
                                         <Image
                                             src={advertiser.logo_url}
@@ -201,9 +201,9 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                                             {advertiser.business_name.charAt(0)}
                                         </span>
                                     )}
+                                    {/* 🛡️ Vision AI OCR — Nafath/SBC Watermark */}
+                                    <VisionAiWatermark position="top-right" size="xs" />
                                 </div>
-                                {/* 🛡️ Vision AI OCR — Nafath/SBC Watermark */}
-                                <VisionAiWatermark position="bottom-right" size="sm" />
                                 {advertiser.is_premium && (
                                     <div className="absolute -bottom-2 -right-2 w-10 h-10 bg-gradient-to-br from-amber-400 to-yellow-500 rounded-full flex items-center justify-center shadow-lg">
                                         <BadgeCheck className="w-6 h-6 text-white" />
@@ -330,7 +330,7 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                                                     sizes="(max-width: 768px) 50vw, 33vw"
                                                 />
                                                 {/* 🛡️ Vision AI OCR — Nafath/SBC Watermark */}
-                                                <VisionAiWatermark position="bottom-left" size="sm" />
+                                                <VisionAiWatermark position="top-right" size="xs" />
                                             </div>
                                         ))}
                                     </div>
