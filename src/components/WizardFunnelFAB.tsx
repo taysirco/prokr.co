@@ -93,12 +93,23 @@ export default function WizardFunnelFAB({
         if (typeof sessionStorage !== 'undefined') {
             sessionStorage.setItem('wizard_fab_opened', 'true');
         }
-        // GA4 event
-        if (typeof window !== 'undefined' && (window as any).gtag) {
-            (window as any).gtag('event', 'wizard_fab_click', {
-                event_category: 'wizard_funnel',
-                source: 'fab',
-            });
+        // GA4 event — fire both gtag AND dataLayer for cross-browser reliability
+        if (typeof window !== 'undefined') {
+            const w = window as any;
+            if (w.gtag) {
+                w.gtag('event', 'wizard_fab_click', {
+                    event_category: 'wizard_funnel',
+                    source: 'fab',
+                    timestamp: new Date().toISOString(),
+                });
+            }
+            if (w.dataLayer) {
+                w.dataLayer.push({
+                    event: 'prokr_wizard_fab_click',
+                    source: 'fab',
+                    timestamp: new Date().toISOString(),
+                });
+            }
         }
     }, []);
 
@@ -106,6 +117,18 @@ export default function WizardFunnelFAB({
         e.stopPropagation();
         setDismissed(true);
         setIsVisible(false);
+        // Track FAB dismissal
+        if (typeof window !== 'undefined') {
+            const w = window as any;
+            if (w.gtag) {
+                w.gtag('event', 'wizard_fab_dismiss', {
+                    event_category: 'wizard_funnel',
+                });
+            }
+            if (w.dataLayer) {
+                w.dataLayer.push({ event: 'prokr_wizard_fab_dismiss' });
+            }
+        }
     }, []);
 
     const timingConfig = typeof window !== 'undefined' ? getWizardTimingConfig() : null;

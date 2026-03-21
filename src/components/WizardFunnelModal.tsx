@@ -399,6 +399,7 @@ export default function WizardFunnelModal({
         const totalDwell = Date.now() - startTimeRef.current;
 
         // Fire terminal_conversion — the ultimate monetized action
+        // Must fire BEFORE window.open to guarantee delivery
         fireGA4Event('terminal_conversion', {
             conversion_type: 'wizard_whatsapp',
             service: data.service,
@@ -423,8 +424,12 @@ export default function WizardFunnelModal({
             phone: data.phone,
             compareWith: compareWithCompany,
         });
+
+        // Open WhatsApp first, then close modal after a brief delay
+        // to guarantee GA4/dataLayer events are fully processed
+        // before React unmounts the component
         window.open(`https://wa.me/${WIZARD_WHATSAPP_NUMBER}?text=${msg}`, '_blank', 'noopener,noreferrer');
-        onClose();
+        setTimeout(() => onClose(), 100);
     }, [data, onClose, compareWithCompany]);
 
     if (!isOpen) return null;
