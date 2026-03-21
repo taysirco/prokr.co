@@ -30,6 +30,7 @@ import ClaimBusinessCTA from '@/components/ClaimBusinessCTAWrapper';
 import VerifiedReviewForm from '@/components/VerifiedReviewForm';
 import CompanyStickyBar from '@/components/CompanyStickyBar';
 import CompanyContactSection from '@/components/CompanyContactSection';
+import WizardFunnelButton from '@/components/WizardFunnelButton';
 import type { Review, City, Service } from '@/types';
 
 // ISR: revalidate every hour for fresh data + fast TTFB
@@ -385,6 +386,21 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                                     streetAddress={advertiser.street_address}
                                     crn={advertiser.crn}
                                 />
+
+                                {/* ⚡ Wizard Funnel — Get Competing Quotes */}
+                                <div className="bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
+                                    <p className="text-sm font-bold text-gray-700 mb-1 text-center">
+                                        📊 قارن عرض {advertiser.business_name.length > 20 ? advertiser.business_name.slice(0, 20) + '…' : advertiser.business_name}
+                                    </p>
+                                    <p className="text-xs text-gray-400 mb-3 text-center">مع شركتين أخريين معتمدتين</p>
+                                    <WizardFunnelButton
+                                        placement="compact"
+                                        citySlug={mainCity?.slug}
+                                        cityName={mainCity?.name_ar}
+                                        serviceSlug={mainService?.slug}
+                                        compareWithCompany={advertiser.business_name}
+                                    />
+                                </div>
 
                                 {/* Service Areas */}
                                 <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">

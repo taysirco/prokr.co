@@ -18,6 +18,8 @@ import { getSuperPageGroup, isCanonicalSlug, getCanonicalSlug } from '@/lib/serv
 import { SERVICES as ALL_SERVICES_LIST } from '@/lib/services';
 import Footer from '@/components/Footer';
 import LeadCaptureCTA from '@/components/LeadCaptureCTA';
+import WizardFunnelButton from '@/components/WizardFunnelButton';
+import WizardFunnelFAB from '@/components/WizardFunnelFAB';
 import { LiveAvailabilityBanner } from '@/components/LiveAvailabilityBanner';
 import { EmergencyNightBanner } from '@/components/EmergencyNightBanner';
 import LocalPresence from '@/components/LocalPresence';
@@ -350,6 +352,23 @@ export default async function SiloPage({ params }: SiloPageProps) {
                         )}
                     </>
                 )}
+
+                {/* ⚡ Wizard Funnel CTA — Section 11.3 */}
+                <div data-wizard-cta>
+                    <WizardFunnelButton
+                        placement="inline"
+                        citySlug={resolvedParams.city}
+                        cityName={city.name_ar}
+                        serviceSlug={resolvedParams.service}
+                    />
+                </div>
+
+                {/* 🎯 Wizard FAB — Smart Floating Trigger */}
+                <WizardFunnelFAB
+                    citySlug={resolvedParams.city}
+                    cityName={city.name_ar}
+                    serviceSlug={resolvedParams.service}
+                />
 
                 {/* Enhanced SEO Content with Pricing Table, FAQ, etc. */}
                 <SeoContentSection city={city} service={service} />

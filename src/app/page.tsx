@@ -28,6 +28,8 @@ import Footer from '@/components/Footer';
 import { WebsiteJsonLd, ProkrOrganizationJsonLd, BreadcrumbJsonLd } from '@/components/JsonLd';
 import { EmergencyNightBanner } from '@/components/EmergencyNightBanner';
 import { LiveAvailabilityBanner } from '@/components/LiveAvailabilityBanner';
+import WizardFunnelButton from '@/components/WizardFunnelButton';
+import WizardFunnelFAB from '@/components/WizardFunnelFAB';
 
 // Service icons mapping
 const serviceIcons: Record<string, React.ReactNode> = {
@@ -464,6 +466,14 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        {/* ⚡ Wizard Funnel CTA — Section 11.3 */}
+        <div data-wizard-cta>
+          <WizardFunnelButton placement="hero" />
+        </div>
+
+        {/* 🎯 Wizard FAB — Smart Floating Trigger */}
+        <WizardFunnelFAB />
 
         {/* Browse by City - Premium Design */}
         <section className="py-20">

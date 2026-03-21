@@ -20,6 +20,8 @@ import { LiveAvailabilityBanner } from '@/components/LiveAvailabilityBanner';
 import { EmergencyNightBanner } from '@/components/EmergencyNightBanner';
 import MarketTimingBadge from '@/components/MarketTimingBadge';
 import LeadCaptureCTA from '@/components/LeadCaptureCTA';
+import WizardFunnelButton from '@/components/WizardFunnelButton';
+import WizardFunnelFAB from '@/components/WizardFunnelFAB';
 
 interface CityPageProps {
     params: Promise<{
@@ -386,6 +388,21 @@ export default async function CityPage({ params }: CityPageProps) {
 
                 {/* Service Request Form */}
                 <LeadCaptureCTA cityName={city.name_ar} serviceName="خدمات منزلية" serviceSlug="cleaning" citySlug={resolvedParams.city} />
+
+                {/* ⚡ Wizard Funnel CTA — Section 11.3 */}
+                <div data-wizard-cta>
+                    <WizardFunnelButton
+                        placement="inline"
+                        citySlug={resolvedParams.city}
+                        cityName={city.name_ar}
+                    />
+                </div>
+
+                {/* 🎯 Wizard FAB — Smart Floating Trigger */}
+                <WizardFunnelFAB
+                    citySlug={resolvedParams.city}
+                    cityName={city.name_ar}
+                />
 
                 {/* Related Blog Articles */}
                 <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
