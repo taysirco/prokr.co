@@ -7,6 +7,9 @@ import {
     mapServiceSlugToCategory,
 } from '@/lib/wizard-funnel-data';
 
+// GA4 Measurement ID — single source of truth
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID || 'G-H1W3HDFHS0';
+
 const WizardFunnelModal = dynamic(() => import('./WizardFunnelModal'), {
     ssr: false,
 });
@@ -99,16 +102,20 @@ export default function WizardFunnelFAB({
             if (w.gtag) {
                 w.gtag('event', 'wizard_fab_click', {
                     event_category: 'wizard_funnel',
+                    non_interaction: false,
+                    send_to: GA_ID,
                     source: 'fab',
                     timestamp: new Date().toISOString(),
                 });
             }
             if (w.dataLayer) {
-                w.dataLayer.push({
-                    event: 'prokr_wizard_fab_click',
+                const payload = {
                     source: 'fab',
+                    event_category: 'wizard_funnel',
                     timestamp: new Date().toISOString(),
-                });
+                };
+                w.dataLayer.push({ event: 'wizard_fab_click', ...payload });
+                w.dataLayer.push({ event: 'prokr_wizard_fab_click', ...payload });
             }
         }
     }, []);
@@ -123,15 +130,21 @@ export default function WizardFunnelFAB({
             if (w.gtag) {
                 w.gtag('event', 'wizard_fab_dismiss', {
                     event_category: 'wizard_funnel',
+                    non_interaction: false,
+                    send_to: GA_ID,
                 });
             }
             if (w.dataLayer) {
+                w.dataLayer.push({ event: 'wizard_fab_dismiss' });
                 w.dataLayer.push({ event: 'prokr_wizard_fab_dismiss' });
             }
         }
     }, []);
 
-    const timingConfig = typeof window !== 'undefined' ? getWizardTimingConfig() : null;
+    // Fix hydration: move timing config to state + useEffect
+    // (prevents SSR mismatch — server renders null, client renders config)
+    const [timingConfig, setTimingConfig] = useState<ReturnType<typeof getWizardTimingConfig> | null>(null);
+    useEffect(() => { setTimingConfig(getWizardTimingConfig()); }, []);
     const isNight = timingConfig?.isNightMode || false;
 
     if (dismissed && !isModalOpen) return null;

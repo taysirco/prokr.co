@@ -14,6 +14,9 @@ import {
 } from '@/lib/wizard-funnel-data';
 import { getCityContext } from '@/lib/city-context';
 
+// GA4 Measurement ID — single source of truth
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID || 'G-H1W3HDFHS0';
+
 interface WizardFunnelModalProps {
     isOpen: boolean;
     onClose: () => void;
@@ -182,35 +185,72 @@ export default function WizardFunnelModal({
 
     // ═══════ GA4 Event Helpers ═══════
 
-    function fireGA4Event(eventName: string, params: Record<string, unknown>) {
+    /**
+     * Universal GA4 event dispatcher.
+     * - Fires both gtag() AND dataLayer.push() for cross-platform coverage.
+     * - `useBeacon = true` forces navigator.sendBeacon transport — guarantees
+     *   delivery even during window.open(), tab close, or app switch.
+     * - `send_to` targets the correct GA4 property explicitly.
+     * - `non_interaction: false` ensures every step counts as active engagement
+     *   for bounce rate and Navboost behavioral signals.
+     */
+    function fireGA4Event(eventName: string, params: Record<string, unknown>, useBeacon = false) {
         if (typeof window === 'undefined') return;
         const w = window as any;
+        const beaconParams = useBeacon
+            ? { transport_type: 'beacon', send_to: GA_ID }
+            : { send_to: GA_ID };
+
         if (w.gtag) {
             w.gtag('event', eventName, {
                 event_category: 'wizard_funnel',
+                non_interaction: false,
                 timestamp: new Date().toISOString(),
+                ...beaconParams,
                 ...params,
             });
         }
+
+        // DataLayer: push BOTH prefixed (for GTM custom triggers)
+        // AND clean event name (for GTM GA4 event tags)
         if (w.dataLayer) {
-            w.dataLayer.push({
-                event: `prokr_${eventName}`,
+            const payload = {
                 ...params,
+                event_category: 'wizard_funnel',
                 timestamp: new Date().toISOString(),
-            });
+            };
+            w.dataLayer.push({ event: eventName, ...payload });
+            w.dataLayer.push({ event: `prokr_${eventName}`, ...payload });
         }
     }
 
+    /**
+     * Fire step completion — sends THREE signals per step:
+     * 1. `task_completion` — custom event for Prokr analytics
+     * 2. `select_content` — GA4 recommended event for ML pipeline recognition
+     * 3. dataLayer push — for GTM-based setups
+     */
     const fireStepComplete = useCallback((step: number, stepName: string, value: string) => {
         const stepDwell = Date.now() - stepStartTimeRef.current;
         const totalDwell = Date.now() - startTimeRef.current;
 
-        fireGA4Event('task_completion', {
+        const stepParams = {
             step_number: step,
             step_name: stepName,
             selected_value: value,
             step_dwell_ms: stepDwell,
             total_dwell_ms: totalDwell,
+            funnel_id: funnelIdRef.current,
+        };
+
+        // Primary: custom task completion event
+        fireGA4Event('task_completion', stepParams);
+
+        // Secondary: GA4 recommended event for Google ML pipeline
+        fireGA4Event('select_content', {
+            content_type: `wizard_step_${step}`,
+            item_id: value,
+            step_name: stepName,
             funnel_id: funnelIdRef.current,
         });
 
@@ -219,29 +259,76 @@ export default function WizardFunnelModal({
 
     const fireAbandon = useCallback(() => {
         const totalDwell = Date.now() - startTimeRef.current;
+        // Use beacon transport — abandon events fire during page unload/tab close
         fireGA4Event('wizard_abandon', {
             last_step: currentStep,
             total_dwell_ms: totalDwell,
             funnel_id: funnelIdRef.current,
             steps_completed: currentStep - initialStepRef.current,
-        });
+        }, true); // beacon = guaranteed delivery
     }, [currentStep]);
 
     const fireCompleteEvent = useCallback((finalData: WizardData) => {
         const totalDwell = Date.now() - startTimeRef.current;
+        // generate_lead is a GA4 recommended event.
+        // MUST include `currency` and `value` for GA4 Monetization reports.
+        // Use beacon transport — fires right before WhatsApp redirect.
         fireGA4Event('generate_lead', {
             conversion_type: 'wizard_complete',
             service: finalData.service,
             city: finalData.citySlug,
             neighborhood: finalData.neighborhood,
             budget: finalData.budget,
+            currency: 'SAR',
             value: 25,
             dwell_time_ms: totalDwell,
             funnel_id: funnelIdRef.current,
             compare_with: compareWithCompany || 'none',
             timing_mode: timingConfig?.isNightMode ? 'night' : 'day',
-        });
+        }, true); // beacon = guaranteed delivery during redirect
     }, [compareWithCompany, timingConfig]);
+
+    // ═══════ Exit Tracking: beforeunload + visibilitychange ═══════
+    // Catches: tab close, browser close, back button, app switch (mobile)
+
+    useEffect(() => {
+        if (!isOpen || submitted) return;
+
+        const handleBeforeUnload = () => {
+            if (currentStep > initialStepRef.current) {
+                // Use beacon — last chance to deliver during page teardown
+                fireGA4Event('wizard_abandon', {
+                    last_step: currentStep,
+                    total_dwell_ms: Date.now() - startTimeRef.current,
+                    funnel_id: funnelIdRef.current,
+                    steps_completed: currentStep - initialStepRef.current,
+                    exit_type: 'page_unload',
+                }, true);
+            }
+        };
+
+        // visibilitychange fires on mobile when user switches app or locks screen
+        // Safari iOS does NOT reliably fire beforeunload, but DOES fire visibilitychange
+        const handleVisibilityChange = () => {
+            if (document.visibilityState === 'hidden' && currentStep > initialStepRef.current) {
+                fireGA4Event('wizard_abandon', {
+                    last_step: currentStep,
+                    total_dwell_ms: Date.now() - startTimeRef.current,
+                    funnel_id: funnelIdRef.current,
+                    steps_completed: currentStep - initialStepRef.current,
+                    exit_type: 'visibility_hidden',
+                }, true);
+            }
+        };
+
+        window.addEventListener('beforeunload', handleBeforeUnload);
+        document.addEventListener('visibilitychange', handleVisibilityChange);
+
+        return () => {
+            window.removeEventListener('beforeunload', handleBeforeUnload);
+            document.removeEventListener('visibilitychange', handleVisibilityChange);
+        };
+    }, [isOpen, submitted, currentStep]);
 
     // ═══════ Micro-Interactions ═══════
 
@@ -399,21 +486,36 @@ export default function WizardFunnelModal({
         const totalDwell = Date.now() - startTimeRef.current;
 
         // Fire terminal_conversion — the ultimate monetized action
-        // Must fire BEFORE window.open to guarantee delivery
+        // BEACON TRANSPORT: guarantees delivery even during window.open redirect.
+        // Without beacon, Safari iOS and Chrome Android cancel XHR during navigation.
         fireGA4Event('terminal_conversion', {
             conversion_type: 'wizard_whatsapp',
             service: data.service,
             city: data.citySlug,
             neighborhood: data.neighborhood,
             budget: data.budget,
+            currency: 'SAR',
+            value: 25,
             funnel_id: funnelIdRef.current,
             dwell_time_ms: totalDwell,
             compare_with: compareWithCompany || 'none',
-        });
+        }, true); // beacon = guaranteed delivery
 
-        // Also fire INP-style performance entry for CrUX
-        if (typeof window !== 'undefined' && window.performance?.mark) {
-            window.performance.mark('wizard_terminal_conversion');
+        // Performance entry for INP + CrUX attribution
+        if (typeof window !== 'undefined' && window.performance) {
+            if (window.performance.mark) {
+                window.performance.mark('wizard_terminal_start');
+                window.performance.mark('wizard_terminal_end');
+            }
+            if (window.performance.measure) {
+                try {
+                    window.performance.measure(
+                        'wizard_terminal_conversion',
+                        'wizard_terminal_start',
+                        'wizard_terminal_end'
+                    );
+                } catch { /* measure may fail if marks don't exist */ }
+            }
         }
 
         const msg = buildWizardWhatsAppMessage({
@@ -426,10 +528,10 @@ export default function WizardFunnelModal({
         });
 
         // Open WhatsApp first, then close modal after a brief delay
-        // to guarantee GA4/dataLayer events are fully processed
+        // to guarantee GA4/dataLayer beacon events are fully queued
         // before React unmounts the component
         window.open(`https://wa.me/${WIZARD_WHATSAPP_NUMBER}?text=${msg}`, '_blank', 'noopener,noreferrer');
-        setTimeout(() => onClose(), 100);
+        setTimeout(() => onClose(), 150);
     }, [data, onClose, compareWithCompany]);
 
     if (!isOpen) return null;
@@ -836,7 +938,12 @@ export default function WizardFunnelModal({
                                             maxLength={10}
                                             value={data.phone}
                                             onChange={(e) => {
-                                                const val = e.target.value.replace(/[^0-9]/g, '').slice(0, 10);
+                                                // Convert Arabic-Indic numerals (٠١٢٣٤٥٦٧٨٩) to Western (0-9)
+                                                // Also handles Persian/Urdu variants (۰۱۲۳۴۵۶۷۸۹)
+                                                const arabicToWestern = (str: string) =>
+                                                    str.replace(/[٠-٩]/g, (d) => String.fromCharCode(d.charCodeAt(0) - 0x0660 + 48))
+                                                       .replace(/[۰-۹]/g, (d) => String.fromCharCode(d.charCodeAt(0) - 0x06F0 + 48));
+                                                const val = arabicToWestern(e.target.value).replace(/[^0-9]/g, '').slice(0, 10);
                                                 setData(d => ({ ...d, phone: val }));
                                                 setPhoneError('');
                                             }}
