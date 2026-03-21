@@ -21,10 +21,26 @@ interface CompanyContactSectionProps {
 /**
  * CompanyContactSection — Sidebar Contact Card (Client Component)
  *
- * Replaces the server-rendered "تواصل معنا" sidebar with:
- * - ActionButton for tracked WhatsApp (anti-bounce popup) + Phone
- * - PhoneRevealButton for masked phone (INP micro-friction)
- * - CopyButton for phone, address, CRN (High_Utility_Action)
+ * UNIFIED DESIGN — No duplication:
+ * ┌──────────────────────────────────────┐
+ * │  تواصل معنا                          │
+ * │                                      │
+ * │  📞 05555••• [👁️ اضغط لكشف الرقم]    │  ← PhoneRevealButton (INP signal)
+ * │  → After reveal:                     │
+ * │  📞 05555555 [📋] [اتصل الآن]        │  ← Number + Copy + Call (all in one)
+ * │                                      │
+ * │  [   💬 تواصل عبر واتساب   ]         │  ← WhatsApp Anti-Bounce
+ * │                                      │
+ * │  📍 العنوان... [📋]                   │
+ * │  📝 سجل تجاري: XXX [📋]             │
+ * └──────────────────────────────────────┘
+ *
+ * Behavioral signals preserved:
+ * - phone_reveal → INP (CrUX Micro-Friction)
+ * - terminal_conversion → GA4 (phone call tracking)
+ * - copy_action → GA4 (High_Utility_Action)
+ * - task_completion → GA4 (WhatsApp Anti-Bounce)
+ * - Night mode → Red emergency styling on call button
  */
 export default function CompanyContactSection({
     phoneNumber,
@@ -41,17 +57,23 @@ export default function CompanyContactSection({
             <h3 className="font-bold text-gray-900 mb-4">تواصل معنا</h3>
 
             <div className="space-y-3">
-                <ActionButton
-                    href={phoneLink}
-                    type="phone"
-                    label="اتصل الآن"
+                {/* ═══════════════════════════════════════════
+                 *  UNIFIED PHONE ROW
+                 *  Combines: Phone Reveal + Call Button + Copy
+                 *  All in one professional element
+                 * ═══════════════════════════════════════════ */}
+                <PhoneRevealButton
+                    phoneNumber={phoneNumber}
+                    phoneLink={phoneLink}
+                    sectionId="sidebar-contact"
+                    showCallLink
                     cityName={cityName}
                     serviceName={serviceName}
-                    className="flex items-center justify-center gap-2 w-full px-4 py-3.5 bg-gradient-to-l from-emerald-500 to-emerald-600 text-white font-medium rounded-xl hover:from-emerald-600 hover:to-emerald-700 shadow-lg shadow-emerald-500/30 transition-all"
-                >
-                    <Phone className="w-5 h-5" />
-                </ActionButton>
+                />
 
+                {/* ═══════════════════════════════════════════
+                 *  WHATSAPP BUTTON — Anti-Bounce (Section 11.1)
+                 * ═══════════════════════════════════════════ */}
                 <ActionButton
                     href={whatsappLink}
                     type="whatsapp"
@@ -66,50 +88,45 @@ export default function CompanyContactSection({
                 </ActionButton>
             </div>
 
-            {/* Phone Reveal + Copy Section */}
-            <div className="mt-4 pt-4 border-t border-gray-100 space-y-3">
-                <div className="flex items-center gap-3 text-gray-600">
-                    <Phone className="w-4 h-4 flex-shrink-0" />
-                    <PhoneRevealButton
-                        phoneNumber={phoneNumber}
-                        sectionId="sidebar-contact"
-                        showCallLink
-                    />
-                </div>
+            {/* ═══════════════════════════════════════════
+             *  ADDRESS + CRN — With Copy Buttons
+             * ═══════════════════════════════════════════ */}
+            {(streetAddress || crn) && (
+                <div className="mt-4 pt-4 border-t border-gray-100 space-y-3">
+                    {/* National Address with Copy */}
+                    {streetAddress && (
+                        <div className="flex items-start gap-3 text-gray-600">
+                            <span className="text-base flex-shrink-0 mt-0.5">📍</span>
+                            <div className="flex-1">
+                                <p className="text-sm text-gray-700 leading-relaxed">{streetAddress}</p>
+                                <div className="mt-1.5">
+                                    <CopyButton
+                                        value={streetAddress}
+                                        type="address"
+                                        sectionId="sidebar-contact"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    )}
 
-                {/* National Address with Copy */}
-                {streetAddress && (
-                    <div className="flex items-start gap-3 text-gray-600">
-                        <span className="text-base flex-shrink-0 mt-0.5">📍</span>
-                        <div className="flex-1">
-                            <p className="text-sm text-gray-700 leading-relaxed">{streetAddress}</p>
-                            <div className="mt-1.5">
+                    {/* CRN with Copy */}
+                    {crn && (
+                        <div className="flex items-center gap-3 text-gray-600">
+                            <span className="text-base flex-shrink-0">📝</span>
+                            <div className="flex-1 flex items-center gap-2">
+                                <span className="text-sm text-gray-700">سجل تجاري: {crn}</span>
                                 <CopyButton
-                                    value={streetAddress}
-                                    type="address"
+                                    value={crn}
+                                    type="crn"
                                     sectionId="sidebar-contact"
+                                    compact
                                 />
                             </div>
                         </div>
-                    </div>
-                )}
-
-                {/* CRN with Copy */}
-                {crn && (
-                    <div className="flex items-center gap-3 text-gray-600">
-                        <span className="text-base flex-shrink-0">📝</span>
-                        <div className="flex-1 flex items-center gap-2">
-                            <span className="text-sm text-gray-700">سجل تجاري: {crn}</span>
-                            <CopyButton
-                                value={crn}
-                                type="crn"
-                                sectionId="sidebar-contact"
-                                compact
-                            />
-                        </div>
-                    </div>
-                )}
-            </div>
+                    )}
+                </div>
+            )}
         </div>
     );
 }
