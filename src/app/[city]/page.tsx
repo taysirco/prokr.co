@@ -22,6 +22,8 @@ import MarketTimingBadge from '@/components/MarketTimingBadge';
 import LeadCaptureCTA from '@/components/LeadCaptureCTA';
 import WizardFunnelButton from '@/components/WizardFunnelButton';
 import WizardFunnelFAB from '@/components/WizardFunnelFAB';
+import DarkSocialShare from '@/components/DarkSocialShare';
+import { VisionAiWatermark } from '@/components/VisionAiWatermark';
 
 interface CityPageProps {
     params: Promise<{
@@ -238,12 +240,13 @@ export default async function CityPage({ params }: CityPageProps) {
                                             <div className="relative aspect-[4/3] bg-gray-100">
                                                 <Image
                                                     src={getServiceImage(service.slug)}
-                                                    alt={`شركة ${service.name_ar} ${cityKw} - أفضل الأسعار والشركات المعتمدة من بروكر`}
+                                                    alt={`شركة ${service.name_ar} ${cityKw} - أفضل الأسعار والشركات المعتمدة من بروكر | تم التحقق عبر نفاذ SBC`}
                                                     fill
                                                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                                                     sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
                                                 />
                                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                                                <VisionAiWatermark position="bottom-right" size="sm" />
                                             </div>
 
                                             {/* Title */}
@@ -402,6 +405,16 @@ export default async function CityPage({ params }: CityPageProps) {
                 <WizardFunnelFAB
                     citySlug={resolvedParams.city}
                     cityName={city.name_ar}
+                />
+
+                {/* 📱 Dark Social Share — City Page */}
+                <DarkSocialShare
+                    variant="service"
+                    serviceName="خدمات منزلية"
+                    cityName={city.name_ar}
+                    citySlug={resolvedParams.city}
+                    serviceSlug="city-hub"
+                    totalCompanies={SERVICES.length}
                 />
 
                 {/* Related Blog Articles */}

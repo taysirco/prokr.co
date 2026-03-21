@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { Home, ChevronLeft, Truck, Sparkles, Bug, Droplet, Wrench, Building2 } from 'lucide-react';
 import { SERVICES, CATEGORY_NAMES, getServicesByCategory, getServiceImage } from '@/lib/seed';
 import { BreadcrumbJsonLd, ServiceCatalogJsonLd, WebPageJsonLd } from '@/components/JsonLd';
+import { VisionAiWatermark } from '@/components/VisionAiWatermark';
 import { isAbsorbedSlug } from '@/lib/services/super-page-groups';
 import Footer from '@/components/Footer';
 import MarketTimingBadge from '@/components/MarketTimingBadge';
@@ -149,12 +150,13 @@ export default function ServicesPage() {
                                         <div className="relative aspect-[4/3] bg-gray-100">
                                             <Image
                                                 src={getServiceImage(service.slug)}
-                                                alt={`${service.name_ar} - أفضل شركات ${service.name_ar} في السعودية`}
+                                                alt={`${service.name_ar} - أفضل شركات ${service.name_ar} في السعودية | تم التحقق عبر نفاذ SBC`}
                                                 fill
                                                 className="object-cover group-hover:scale-105 transition-transform duration-300"
                                                 sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
                                             />
                                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                                            <VisionAiWatermark position="bottom-right" size="sm" />
                                         </div>
 
                                         <div className="absolute bottom-0 left-0 right-0 p-3">

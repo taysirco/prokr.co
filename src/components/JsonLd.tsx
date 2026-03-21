@@ -27,4 +27,5 @@ export { DatasetJsonLd } from './schema/DatasetJsonLd';
 export { LiveBlogPostingJsonLd } from './schema/LiveBlogPostingJsonLd';
 export { VoiceSearchSchema } from './schema/VoiceSearchSchema';
 export { UnifiedGraphCompiler } from './schema/UnifiedGraphCompiler';
+export { DefinedTermJsonLd } from './schema/DefinedTermJsonLd';
 

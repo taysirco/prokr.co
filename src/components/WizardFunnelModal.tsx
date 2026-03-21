@@ -932,10 +932,10 @@ export default function WizardFunnelModal({
 
                                     <div className="relative">
                                         <input
-                                            type="tel"
-                                            inputMode="numeric"
+                                            type="text"
+                                            inputMode="tel"
                                             placeholder="05XXXXXXXX"
-                                            maxLength={10}
+                                            maxLength={12}
                                             value={data.phone}
                                             onChange={(e) => {
                                                 // Convert Arabic-Indic numerals (٠١٢٣٤٥٦٧٨٩) to Western (0-9)
@@ -947,12 +947,28 @@ export default function WizardFunnelModal({
                                                 setData(d => ({ ...d, phone: val }));
                                                 setPhoneError('');
                                             }}
+                                            // Secondary conversion layer: intercept Arabic digits
+                                            // before they enter the input on browsers that fire
+                                            // onBeforeInput (Chrome, Safari, Edge)
+                                            onBeforeInput={(e: React.FormEvent<HTMLInputElement>) => {
+                                                const nativeEvent = e.nativeEvent as InputEvent;
+                                                if (nativeEvent.data && /[٠-٩۰-۹]/.test(nativeEvent.data)) {
+                                                    e.preventDefault();
+                                                    const converted = nativeEvent.data
+                                                        .replace(/[٠-٩]/g, (d) => String.fromCharCode(d.charCodeAt(0) - 0x0660 + 48))
+                                                        .replace(/[۰-۹]/g, (d) => String.fromCharCode(d.charCodeAt(0) - 0x06F0 + 48));
+                                                    const current = data.phone;
+                                                    const newVal = (current + converted).replace(/[^0-9]/g, '').slice(0, 10);
+                                                    setData(d => ({ ...d, phone: newVal }));
+                                                }
+                                            }}
                                             className={`w-full px-4 py-3.5 bg-gray-50 border-2 rounded-xl text-left font-mono text-lg tracking-wider focus:outline-none focus:ring-2 transition-all ${
                                                 phoneError
                                                     ? 'border-red-300 focus:ring-red-200 focus:border-red-400'
                                                     : 'border-gray-200 focus:ring-amber-200 focus:border-amber-400'
                                             }`}
                                             dir="ltr"
+                                            autoComplete="tel"
                                             autoFocus
                                         />
                                         <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-sm">🇸🇦</span>

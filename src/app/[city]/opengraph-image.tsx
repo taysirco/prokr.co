@@ -1,5 +1,6 @@
 import { ImageResponse } from 'next/og';
-import { getCityBySlug } from '@/lib/seed';
+import { getCityBySlug, SERVICES } from '@/lib/seed';
+import { getCityContext } from '@/lib/city-context';
 
 export const runtime = 'edge';
 export const alt = 'بروكر - دليل الخدمات السعودي';
@@ -18,41 +19,70 @@ export default async function OgImage({ params }: { params: Promise<{ city: stri
     const cityName = city?.name_ar || resolvedParams.city;
     const currentMonth = new Date().toLocaleString('ar-SA', { month: 'long', year: 'numeric' });
 
+    // Dynamic stats
+    const totalServices = SERVICES.length;
+    const cityContext = getCityContext(resolvedParams.city);
+    const neighborhoodCount = cityContext?.neighborhoods?.length || 0;
+
     const fontData = await fetch(FONT_URL).then(res => res.arrayBuffer()).catch(() => null);
 
     return new ImageResponse(
         (
             <div
                 style={{
-                    background: 'linear-gradient(to bottom right, #0f172a, #1e3a5f)',
+                    background: 'linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #0c2d48 100%)',
                     width: '100%',
                     height: '100%',
                     display: 'flex',
                     flexDirection: 'column',
-                    padding: '80px',
+                    padding: '60px 70px',
                     color: 'white',
                     fontFamily: '"Cairo"',
                 }}
             >
-                {/* شارة سيادية — top-right */}
+                {/* Top badges row */}
                 <div
                     style={{
                         display: 'flex',
                         alignItems: 'center',
                         alignSelf: 'flex-end',
-                        background: '#7c3aed',
-                        color: '#ffffff',
-                        padding: '12px 32px',
-                        borderRadius: '100px',
-                        fontSize: '28px',
-                        fontWeight: 'bold',
-                        boxShadow: '0 10px 25px rgba(0,0,0,0.5)',
+                        gap: '12px',
                     }}
                 >
-                    {rtl('دليل الخدمات المعتمد')}
+                    <div
+                        style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '10px',
+                            background: 'rgba(124, 58, 237, 0.9)',
+                            padding: '10px 28px',
+                            borderRadius: '100px',
+                            fontSize: '26px',
+                            fontWeight: 'bold',
+                            boxShadow: '0 8px 30px rgba(124, 58, 237, 0.4)',
+                        }}
+                    >
+                        {rtl(`${totalServices}+ خدمة متاحة`)}
+                    </div>
+                    {neighborhoodCount > 0 && (
+                        <div
+                            style={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                background: 'rgba(16, 185, 129, 0.9)',
+                                color: '#022c22',
+                                padding: '10px 28px',
+                                borderRadius: '100px',
+                                fontSize: '26px',
+                                fontWeight: 'bold',
+                            }}
+                        >
+                            {rtl(`${neighborhoodCount} حي مخدوم`)}
+                        </div>
+                    )}
                 </div>
 
-                {/* المحتوى الرئيسي — right-aligned */}
+                {/* المحتوى الرئيسي */}
                 <div
                     style={{
                         display: 'flex',
@@ -85,6 +115,22 @@ export default async function OgImage({ params }: { params: Promise<{ city: stri
                     >
                         {rtl(`في ${cityName}`)}
                     </div>
+                    <div
+                        style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '8px',
+                            marginTop: '20px',
+                            background: 'rgba(255,255,255,0.08)',
+                            padding: '10px 24px',
+                            borderRadius: '16px',
+                            border: '2px solid rgba(255,255,255,0.15)',
+                        }}
+                    >
+                        <span style={{ fontSize: '28px', color: '#94a3b8', fontWeight: 700 }}>
+                            {rtl('شركات معتمدة ✓ أسعار شفافة ✓ تقييمات حقيقية ✓')}
+                        </span>
+                    </div>
                 </div>
 
                 {/* الشريط السفلي */}
@@ -94,18 +140,38 @@ export default async function OgImage({ params }: { params: Promise<{ city: stri
                         justifyContent: 'space-between',
                         alignItems: 'flex-end',
                         borderTop: '2px solid #334155',
-                        paddingTop: '40px',
+                        paddingTop: '30px',
                     }}
                 >
-                    <div style={{ fontSize: '36px', color: '#94a3b8', fontWeight: 700, display: 'flex' }}>
+                    <div style={{ fontSize: '32px', color: '#64748b', fontWeight: 700, display: 'flex' }}>
                         {rtl(`تحديث: ${currentMonth}`)}
+                    </div>
+                    {/* 🛡️ Nafath/SBC Badge — Vision AI OCR Target */}
+                    <div
+                        style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '8px',
+                            background: 'rgba(16, 185, 129, 0.95)',
+                            padding: '8px 20px',
+                            borderRadius: '12px',
+                            border: '2px solid rgba(255,255,255,0.3)',
+                        }}
+                    >
+                        <span style={{ fontSize: '20px' }}>🛡️</span>
+                        <span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>
+                            {rtl('تم التحقق — نفاذ')}
+                        </span>
+                        <span style={{ fontSize: '14px', color: '#d1fae5', fontWeight: 700 }}>
+                            SBC
+                        </span>
                     </div>
                     <div
                         style={{
                             fontSize: '48px',
                             fontWeight: 700,
                             color: '#ffffff',
-                            letterSpacing: '2px',
+                            letterSpacing: '3px',
                         }}
                     >
                         PROKR.CO

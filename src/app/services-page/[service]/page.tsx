@@ -5,9 +5,10 @@ import Image from 'next/image';
 import { Home, ChevronLeft, MapPin } from 'lucide-react';
 import { getServiceBySlug, getServiceImage, CITIES, SERVICES, REGION_NAMES, getCitiesByRegion } from '@/lib/seed';
 import { generateServiceCategoryMeta } from '@/lib/content-layers';
-import { BreadcrumbJsonLd, ServiceJsonLd, ItemListJsonLd, WebPageJsonLd } from '@/components/JsonLd';
+import { BreadcrumbJsonLd, ServiceJsonLd, ItemListJsonLd, WebPageJsonLd, SpeakableWebPageJsonLd, DefinedTermJsonLd } from '@/components/JsonLd';
 import { getCityContext, getAdjustedPriceRange } from '@/lib/city-context';
 import { getServiceKeywordProfile } from '@/lib/locale-formatting';
+import { CitableSummary } from '@/components/seo/CitableSummary';
 import { hasPageOverride } from '@/lib/overrides/registry';
 import { isAbsorbedSlug, getCanonicalSlug } from '@/lib/services/super-page-groups';
 import Footer from '@/components/Footer';
@@ -17,6 +18,20 @@ import MarketTimingBadge from '@/components/MarketTimingBadge';
 import LocalPresence from '@/components/LocalPresence';
 import { LiveAvailabilityBanner } from '@/components/LiveAvailabilityBanner';
 import { EmergencyNightBanner } from '@/components/EmergencyNightBanner';
+import DarkSocialShare from '@/components/DarkSocialShare';
+import { VisionAiWatermark } from '@/components/VisionAiWatermark';
+
+// Service definitions for DefinedTerm schema + CitableSummary
+const SERVICE_DEFINITIONS: Record<string, string> = {
+    'furniture-moving': 'خدمة لوجستية تشمل تغليف ونقل الأثاث المنزلي والمكتبي بين المواقع داخل المدينة أو بين المدن، بما يشمل الفك والتركيب والتأمين',
+    'furniture-storage': 'خدمة تخزين الأثاث والممتلكات الشخصية في مستودعات مؤمنة ومكيفة لفترات محددة أو مفتوحة',
+    'moving-out': 'خدمة شاملة لإخلاء المنازل والمكاتب تشمل التنظيف والإصلاحات والتسليم للمالك',
+    'cleaning': 'خدمة تنظيف شاملة للمنازل والشقق والفلل تشمل التعقيم والتلميع وغسيل السجاد والمفروشات',
+    'pest-control': 'خدمة مكافحة الحشرات والقوارض باستخدام مبيدات معتمدة من هيئة الغذاء والدواء السعودية',
+    'water-leak-detection': 'خدمة كشف تسربات المياه المخفية بأجهزة إلكترونية متقدمة دون تكسير',
+    'tank-insulation': 'خدمة عزل خزانات المياه الأرضية والعلوية بمواد معتمدة لمنع التسرب والتلوث',
+    'sewage-unblocking': 'خدمة تسليك المجاري وشفط البيارات باستخدام أجهزة الكمبروسر والضغط العالي',
+};
 
 // Major cities for price comparison
 const COMPARISON_CITIES = ['riyadh', 'jeddah', 'dammam', 'makkah', 'madinah', 'taif'];
@@ -142,6 +157,22 @@ export default async function ServicePage({ params }: ServicePageProps) {
                     url: `https://prokr.co/${c.slug}/${getCanonicalSlug(service.slug) || service.slug}`
                 }))}
             />
+            {/* DefinedTerm — Declares Prokr as the authority for this service definition */}
+            <DefinedTermJsonLd
+                termName={service.name_ar}
+                termNameEn={service.name_en}
+                description={SERVICE_DEFINITIONS[service.slug] || `خدمة ${service.name_ar} من شركات معتمدة في المملكة العربية السعودية`}
+                serviceSlug={getCanonicalSlug(service.slug) || service.slug}
+                category={service.category}
+            />
+            {/* Speakable — Tells AI which paragraph to cite */}
+            <SpeakableWebPageJsonLd
+                title={`${service.name_ar} في السعودية`}
+                description={`اكتشف أفضل شركات ${service.name_ar} في جميع مدن المملكة العربية السعودية`}
+                url={`https://prokr.co/${getCanonicalSlug(service.slug) || service.slug}`}
+                speakableSelectors={['.citable-summary']}
+                speakableText={`${service.name_ar} في السعودية — ${SERVICE_DEFINITIONS[service.slug] || `خدمة ${service.name_ar}`}. يتوفر في ${CITIES.length} مدينة سعودية عبر دليل بروكر المعتمد.`}
+            />
 
             <main className="min-h-screen bg-gray-50">
                 {/* 🚨 Emergency Night Banner (12AM-6AM only) */}
@@ -203,7 +234,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                                 <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
                                     <Image
                                         src={heroImage}
-                                        alt={`${service.name_ar} في السعودية - أفضل شركات ${service.name_ar} المعتمدة 2026`}
+                                        alt={`${service.name_ar} في السعودية - أفضل شركات ${service.name_ar} المعتمدة 2026 | تم التحقق عبر نفاذ SBC`}
                                         fill
                                         className="object-cover"
                                         priority
@@ -212,6 +243,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                                         quality={90}
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/50 to-transparent"></div>
+                                    <VisionAiWatermark position="bottom-left" size="sm" />
                                 </div>
                             </div>
                         </div>
@@ -224,6 +256,14 @@ export default async function ServicePage({ params }: ServicePageProps) {
                     serviceNameAr={service.name_ar}
                     serviceCategory={service.category}
                     totalCompanies={CITIES.filter(c => hasPageOverride(c.slug, getCanonicalSlug(service.slug) || service.slug)).length}
+                />
+
+                {/* AI-Citable Summary —格式 AI Overview 会直接引用 */}
+                <CitableSummary
+                    serviceName={service.name_ar}
+                    locationName="المملكة العربية السعودية"
+                    definition={SERVICE_DEFINITIONS[service.slug] || `خدمة ${service.name_ar} من شركات معتمدة`}
+                    statText={`يتوفر في ${CITIES.filter(c => hasPageOverride(c.slug, getCanonicalSlug(service.slug) || service.slug)).length} مدينة سعودية عبر شركات مرخصة من وزارة التجارة`}
                 />
 
                 {/* Cities by Region */}
@@ -365,7 +405,16 @@ export default async function ServicePage({ params }: ServicePageProps) {
                 </section>
 
                 {/* Content rule: NO مقالات ذات صلة on silos */}
-                
+
+                {/* 📱 Dark Social Share — National Service Page */}
+                <DarkSocialShare
+                    variant="service"
+                    serviceName={service.name_ar}
+                    cityName="السعودية"
+                    citySlug="saudi"
+                    serviceSlug={getCanonicalSlug(service.slug) || service.slug}
+                    totalCompanies={CITIES.length}
+                />
 
                 {/* Other Services */}
                 <section className="bg-gray-100 py-12">

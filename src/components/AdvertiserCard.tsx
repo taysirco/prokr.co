@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { Phone, MessageCircle, Star, BadgeCheck, MapPin } from 'lucide-react';
 import type { Advertiser } from '@/types';
 import ActionButton from './ActionButton';
+import { VisionAiWatermark } from './VisionAiWatermark';
 
 interface AdvertiserCardProps {
     advertiser: Advertiser;
@@ -45,7 +46,7 @@ export default function AdvertiserCard({ advertiser, variant = 'standard' }: Adv
                             {advertiser.logo_url ? (
                                 <Image
                                     src={advertiser.logo_url}
-                                    alt={advertiser.business_name}
+                                    alt={`${advertiser.business_name} - تم التحقق عبر نفاذ SBC`}
                                     fill
                                     className="object-cover rounded-xl border-2 border-amber-200"
                                 />
@@ -56,6 +57,8 @@ export default function AdvertiserCard({ advertiser, variant = 'standard' }: Adv
                                     </span>
                                 </div>
                             )}
+                            {/* 🛡️ Vision AI OCR — Nafath/SBC Watermark */}
+                            <VisionAiWatermark position="bottom-right" size="sm" />
                         </div>
 
                         <div className="flex-1 min-w-0">

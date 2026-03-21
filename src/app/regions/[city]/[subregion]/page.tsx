@@ -5,9 +5,10 @@ import Image from 'next/image';
 import { Home, ChevronLeft, MapPin, Truck, Sparkles, Bug, Droplet, Wrench, Building2 } from 'lucide-react';
 import { getCityBySlug, getServiceBySlug, getServiceImage, CATEGORY_NAMES } from '@/lib/seed';
 import { getSubRegion, getSubRegionsByCity, SUB_REGIONS } from '@/lib/sub-regions';
-import { BreadcrumbJsonLd, ItemListJsonLd, WebPageJsonLd, ServiceAreaJsonLd } from '@/components/JsonLd';
+import { BreadcrumbJsonLd, ItemListJsonLd, WebPageJsonLd, ServiceAreaJsonLd, SpeakableWebPageJsonLd } from '@/components/JsonLd';
 import { getCityContext } from '@/lib/city-context';
 import { getCityKeyword } from '@/lib/locale-formatting';
+import { CitableSummary } from '@/components/seo/CitableSummary';
 import { hasPageOverride } from '@/lib/overrides/registry';
 import { isAbsorbedSlug } from '@/lib/services/super-page-groups';
 import Footer from '@/components/Footer';
@@ -17,6 +18,8 @@ import MarketTimingBadge from '@/components/MarketTimingBadge';
 import LocalPresence from '@/components/LocalPresence';
 import { LiveAvailabilityBanner } from '@/components/LiveAvailabilityBanner';
 import { EmergencyNightBanner } from '@/components/EmergencyNightBanner';
+import DarkSocialShare from '@/components/DarkSocialShare';
+import { VisionAiWatermark } from '@/components/VisionAiWatermark';
 
 interface SubRegionPageProps {
     params: Promise<{
@@ -155,6 +158,14 @@ export default async function SubRegionPage({ params }: SubRegionPageProps) {
                     neighborhoods={[subRegion.name_ar]}
                 />
             )}
+            {/* Speakable — Tells AI which paragraph to cite on subregion pages */}
+            <SpeakableWebPageJsonLd
+                title={`خدمات ${subRegion.name_ar}، ${city.name_ar}`}
+                description={`خدمات منزلية موثوقة في ${subRegion.name_ar} ${getCityKeyword(city.name_ar, 'ba')}`}
+                url={`https://prokr.co/regions/${city.slug}/${subRegion.slug}`}
+                speakableSelectors={['.citable-summary']}
+                speakableText={`خدمات منزلية في ${subRegion.name_ar}، ${city.name_ar} — يتوفر ${availableServices.length} خدمة منزلية من شركات معتمدة عبر دليل بروكر.`}
+            />
 
             <main className="min-h-screen bg-gray-50">
                 {/* 🚨 Emergency Night Banner (12AM-6AM only) */}
@@ -216,6 +227,14 @@ export default async function SubRegionPage({ params }: SubRegionPageProps) {
                     neighborhoods={[subRegion.name_ar, ...(cityContext?.neighborhoods.map(n => n.name_ar).slice(0, 4) || [])]}
                 />
 
+                {/* AI-Citable Summary — SubRegion Page */}
+                <CitableSummary
+                    serviceName="خدمات منزلية"
+                    locationName={`${subRegion.name_ar}، ${city.name_ar}`}
+                    definition={`خدمات صيانة وتشغيل منزلية شاملة تقدمها شركات مرخصة في منطقة ${subRegion.name_ar}`}
+                    statText={`يتوفر ${availableServices.length} خدمة من شركات معتمدة بسجل تجاري سارٍ`}
+                />
+
                 {/* Services */}
                 <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                     {Object.entries(servicesByCategory).map(([category, services]) => (
@@ -239,12 +258,13 @@ export default async function SubRegionPage({ params }: SubRegionPageProps) {
                                         <div className="relative aspect-[4/3] bg-gray-100">
                                             <Image
                                                 src={getServiceImage(service.slug)}
-                                                alt={`شركة ${service.name_ar} في ${subRegion.name_ar}، ${city.name_ar} - أفضل الأسعار من بروكر`}
+                                                alt={`شركة ${service.name_ar} في ${subRegion.name_ar}، ${city.name_ar} - أفضل الأسعار من بروكر | تم التحقق عبر نفاذ SBC`}
                                                 fill
                                                 className="object-cover group-hover:scale-105 transition-transform duration-300"
                                                 sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, 25vw"
                                             />
                                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                                            <VisionAiWatermark position="bottom-right" size="sm" />
                                         </div>
                                         <div className="absolute bottom-0 left-0 right-0 p-3">
                                             <h3 className="font-semibold text-white text-sm">
@@ -306,6 +326,16 @@ export default async function SubRegionPage({ params }: SubRegionPageProps) {
                         </div>
                     </article>
                 </section>
+
+                {/* 📱 Dark Social Share — SubRegion Page */}
+                <DarkSocialShare
+                    variant="service"
+                    serviceName="خدمات منزلية"
+                    cityName={`${subRegion.name_ar}، ${city.name_ar}`}
+                    citySlug={resolvedParams.city}
+                    serviceSlug={`region-${resolvedParams.subregion}`}
+                    totalCompanies={availableServices.length}
+                />
 
                 {/* Other Sub-Regions */}
                 {otherSubRegions.length > 0 && (

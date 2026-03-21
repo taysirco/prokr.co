@@ -20,11 +20,13 @@ import Footer from '@/components/Footer';
 import LeadCaptureCTA from '@/components/LeadCaptureCTA';
 import WizardFunnelButton from '@/components/WizardFunnelButton';
 import WizardFunnelFAB from '@/components/WizardFunnelFAB';
+import DarkSocialShare from '@/components/DarkSocialShare';
 import { LiveAvailabilityBanner } from '@/components/LiveAvailabilityBanner';
 import { EmergencyNightBanner } from '@/components/EmergencyNightBanner';
 import LocalPresence from '@/components/LocalPresence';
 import FraudAlertBanner from '@/components/FraudAlertBanner';
 import { NafathTrustShield } from '@/components/NafathTrustShield';
+import { VisionAiWatermark } from '@/components/VisionAiWatermark';
 import GeoPricingTable from '@/components/GeoPricingTable';
 import MarketTimingBadge from '@/components/MarketTimingBadge';
 import { PriceDisclosure } from '@/components/PriceDisclosure';
@@ -260,7 +262,7 @@ export default async function SiloPage({ params }: SiloPageProps) {
                                 <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl" suppressHydrationWarning>
                                     <Image
                                         src={heroImageUrl}
-                                        alt={`أفضل شركة ${service.name_ar} ${cityKw} - خدمات احترافية ومعتمدة 2026`}
+                                        alt={`أفضل شركة ${service.name_ar} ${cityKw} - تم التحقق عبر نفاذ SBC - خدمات معتمدة 2026`}
                                         fill
                                         className="object-cover"
                                         priority
@@ -269,6 +271,8 @@ export default async function SiloPage({ params }: SiloPageProps) {
                                         quality={90}
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/50 to-transparent"></div>
+                                    {/* 🛡️ Vision AI OCR — Nafath/SBC Watermark */}
+                                    <VisionAiWatermark position="bottom-left" size="sm" />
                                 </div>
                                 {/* Floating Badge */}
                                 <div className="absolute -bottom-4 -right-4 bg-white rounded-xl shadow-xl p-4">
@@ -368,6 +372,21 @@ export default async function SiloPage({ params }: SiloPageProps) {
                     citySlug={resolvedParams.city}
                     cityName={city.name_ar}
                     serviceSlug={resolvedParams.service}
+                />
+
+                {/* 📱 Dark Social Share — Section 11.4 */}
+                <DarkSocialShare
+                    variant="service"
+                    serviceName={service.name_ar}
+                    cityName={city.name_ar}
+                    citySlug={resolvedParams.city}
+                    serviceSlug={resolvedParams.service}
+                    totalCompanies={allAdvertisers.length}
+                    avgRating={(allAdvertisers.reduce((sum, a) => {
+                        const reviews = a.reviews || [];
+                        if (reviews.length === 0) return sum;
+                        return sum + reviews.reduce((s, r) => s + r.rating, 0) / reviews.length;
+                    }, 0) / Math.max(allAdvertisers.filter(a => (a.reviews?.length || 0) > 0).length, 1)).toFixed(1)}
                 />
 
                 {/* Enhanced SEO Content with Pricing Table, FAQ, etc. */}

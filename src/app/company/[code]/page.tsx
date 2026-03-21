@@ -31,6 +31,8 @@ import VerifiedReviewForm from '@/components/VerifiedReviewForm';
 import CompanyStickyBar from '@/components/CompanyStickyBar';
 import CompanyContactSection from '@/components/CompanyContactSection';
 import WizardFunnelButton from '@/components/WizardFunnelButton';
+import DarkSocialShare from '@/components/DarkSocialShare';
+import { VisionAiWatermark } from '@/components/VisionAiWatermark';
 import type { Review, City, Service } from '@/types';
 
 // ISR: revalidate every hour for fresh data + fast TTFB
@@ -200,6 +202,8 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                                         </span>
                                     )}
                                 </div>
+                                {/* 🛡️ Vision AI OCR — Nafath/SBC Watermark */}
+                                <VisionAiWatermark position="bottom-right" size="sm" />
                                 {advertiser.is_premium && (
                                     <div className="absolute -bottom-2 -right-2 w-10 h-10 bg-gradient-to-br from-amber-400 to-yellow-500 rounded-full flex items-center justify-center shadow-lg">
                                         <BadgeCheck className="w-6 h-6 text-white" />
@@ -320,11 +324,13 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                                             <div key={index} className="relative aspect-video rounded-xl overflow-hidden bg-gray-100">
                                                 <Image
                                                     src={img}
-                                                    alt={`${advertiser.business_name} - ${mainService?.name_ar || 'خدمات'} - صورة ${index + 1}`}
+                                                    alt={`${advertiser.business_name} - ${mainService?.name_ar || 'خدمات'} - تم التحقق عبر نفاذ SBC - صورة ${index + 1}`}
                                                     fill
                                                     className="object-cover hover:scale-105 transition-transform duration-300"
                                                     sizes="(max-width: 768px) 50vw, 33vw"
                                                 />
+                                                {/* 🛡️ Vision AI OCR — Nafath/SBC Watermark */}
+                                                <VisionAiWatermark position="bottom-left" size="sm" />
                                             </div>
                                         ))}
                                     </div>
@@ -583,6 +589,18 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                         </div>
                     </article>
                 </section>
+
+                {/* 📱 Dark Social Share — Company Page */}
+                <DarkSocialShare
+                    variant="company"
+                    serviceName={mainService?.name_ar || 'خدمات'}
+                    cityName={mainCity?.name_ar || 'السعودية'}
+                    citySlug={advertiser.targeted_cities[0] || 'riyadh'}
+                    serviceSlug={mainService?.slug || advertiser.targeted_services[0] || 'cleaning'}
+                    companyName={advertiser.business_name}
+                    companyCode={resolvedParams.code}
+                    companyRating={avgRating > 0 ? avgRating.toFixed(1) : undefined}
+                />
 
                 {/* 🛡️ Consumer Protection Alert — Consumer Protection Banner */}
                 <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
