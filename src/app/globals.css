@@ -263,5 +263,60 @@ html {
   scroll-margin-top: 8rem;
 }
 
+/* ── Behavioral Engineering Animations (Section 11) ── */
+
+/* PhoneRevealButton: fade-in after revealing number */
+@keyframes phone-reveal-fade-in {
+  from {
+    opacity: 0;
+    transform: translateX(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-phone-reveal {
+  animation: phone-reveal-fade-in 0.3s ease-out;
+}
+
+/* WhatsApp Anti-Bounce Popup: entrance */
+@keyframes popup-enter {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-popup-enter {
+  animation: popup-enter 0.3s ease-out;
+}
+
+/* WhatsApp Anti-Bounce Popup: progress bar */
+@keyframes progress-bar {
+  from { width: 0%; }
+  to { width: 100%; }
+}
+
+.animate-progress-bar {
+  animation: progress-bar 2s ease-in-out;
+}
+
+/* WhatsApp Anti-Bounce Popup: success bounce */
+@keyframes success-bounce {
+  0% { transform: scale(0); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.animate-success-bounce {
+  animation: success-bounce 0.4s ease-out;
+}
+
 /* Note: prokr-lite-mode CSS is injected via NetworkSensor.tsx
    component to bypass Tailwind v4 tree-shaking. */

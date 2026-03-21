@@ -27,6 +27,7 @@ import GeoPricingTable from '@/components/GeoPricingTable';
 import MarketTimingBadge from '@/components/MarketTimingBadge';
 import { PriceDisclosure } from '@/components/PriceDisclosure';
 import PricingBenchmarkBox from '@/components/PricingBenchmarkBox';
+import ActionButton from '@/components/ActionButton';
 import type { Advertiser } from '@/types';
 
 // Disable static generation, use ISR instead
@@ -487,21 +488,29 @@ function PremiumCard({ advertiser }: { advertiser: Advertiser }) {
                 </p>
 
                 <div className="flex gap-3 mt-5">
-                    <a
+                    <ActionButton
                         href={phoneLink}
+                        type="phone"
+                        label="اتصل الآن"
+                        cityName={advertiser.targeted_cities[0] || ''}
+                        serviceName={advertiser.business_name}
                         className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-l from-emerald-500 to-emerald-600 text-white font-medium rounded-xl hover:from-emerald-600 hover:to-emerald-700 shadow-lg shadow-emerald-500/30 transition-all"
                     >
                         <Phone className="w-5 h-5" />
-                        اتصل الآن
-                    </a>
-                    <a
+                    </ActionButton>
+                    <ActionButton
                         href={whatsappLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        type="whatsapp"
+                        label=""
+                        cityName={advertiser.targeted_cities[0] || ''}
+                        serviceName={advertiser.business_name}
+                        external
+                        advertiserName={advertiser.business_name}
+                        ariaLabel="واتساب"
                         className="flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-l from-green-500 to-green-600 text-white font-medium rounded-xl hover:from-green-600 hover:to-green-700 shadow-lg shadow-green-500/30 transition-all"
                     >
                         <MessageCircle className="w-5 h-5" />
-                    </a>
+                    </ActionButton>
                 </div>
             </div>
         </div>
@@ -545,22 +554,30 @@ function StandardRow({ advertiser }: { advertiser: Advertiser }) {
             </div>
 
             <div className="flex gap-2">
-                <a
+                <ActionButton
                     href={phoneLink}
+                    type="phone"
+                    label=""
+                    cityName={advertiser.targeted_cities[0] || ''}
+                    serviceName={advertiser.business_name}
+                    ariaLabel="اتصل"
                     className="p-2.5 bg-emerald-50 text-emerald-600 rounded-lg hover:bg-emerald-100 transition-colors"
-                    aria-label="اتصل"
                 >
                     <Phone className="w-5 h-5" />
-                </a>
-                <a
+                </ActionButton>
+                <ActionButton
                     href={whatsappLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    type="whatsapp"
+                    label=""
+                    cityName={advertiser.targeted_cities[0] || ''}
+                    serviceName={advertiser.business_name}
+                    external
+                    advertiserName={advertiser.business_name}
+                    ariaLabel="واتساب"
                     className="p-2.5 bg-green-50 text-green-600 rounded-lg hover:bg-green-100 transition-colors"
-                    aria-label="واتساب"
                 >
                     <MessageCircle className="w-5 h-5" />
-                </a>
+                </ActionButton>
             </div>
         </div>
     );

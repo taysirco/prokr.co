@@ -2,6 +2,7 @@
 
 import { useState, useCallback, useEffect } from 'react';
 import { getHourlyMode } from '@/lib/market-timing';
+import WhatsAppAntiBouncPopup from './WhatsAppAntiBouncPopup';
 
 interface ActionButtonProps {
     href: string;
@@ -16,20 +17,26 @@ interface ActionButtonProps {
     children?: React.ReactNode;
     /** Open in new tab (for WhatsApp links) */
     external?: boolean;
+    /** Advertiser name for WhatsApp popup display */
+    advertiserName?: string;
 }
 
 /**
- * ActionButton — Interactive Confirmation Button
+ * ActionButton — Interactive Confirmation Button with Behavioral Engineering
  *
- * Replaces plain <a href> CTA buttons with a tracked, delayed conversion.
- * On click:
+ * For PHONE buttons:
  *   1. Fires `prokr_terminal_conversion` to dataLayer (GA4/GTM)
  *   2. Shows visual "engaged" feedback (scale + opacity)
  *   3. After 500ms delay, navigates to href
  *
+ * For WHATSAPP buttons (Section 11.1 — Anti-Bounce):
+ *   1. Shows WhatsAppAntiBouncPopup ("Preparing 10% discount...")
+ *   2. Fires GA4 task_completion event during 2-second popup
+ *   3. After 2.8s, opens WhatsApp link
+ *   → RankBrain records 100% Task Completion
+ *
  * 🚨 Night Mode (12AM-6AM Riyadh):
  *   Phone buttons get red pulsing emergency CTA styling
- *   to maximize late-night emergency conversions.
  */
 export default function ActionButton({
     href,
@@ -41,9 +48,11 @@ export default function ActionButton({
     ariaLabel,
     children,
     external = false,
+    advertiserName,
 }: ActionButtonProps) {
     const [isEngaged, setIsEngaged] = useState(false);
     const [isEmergencyHour, setIsEmergencyHour] = useState(false);
+    const [showWhatsAppPopup, setShowWhatsAppPopup] = useState(false);
 
     useEffect(() => {
         setIsEmergencyHour(getHourlyMode() === 'emergency');
@@ -53,6 +62,26 @@ export default function ActionButton({
         (e: React.MouseEvent<HTMLAnchorElement>) => {
             e.preventDefault();
             if (isEngaged) return; // Prevent double-fire
+
+            // ── WhatsApp: Show Anti-Bounce Popup ──
+            if (type === 'whatsapp') {
+                setShowWhatsAppPopup(true);
+
+                // Fire initial engagement event
+                if (typeof window !== 'undefined' && (window as any).dataLayer) {
+                    (window as any).dataLayer.push({
+                        event: 'prokr_terminal_conversion',
+                        conversion_type: 'whatsapp',
+                        city: cityName || '',
+                        service: serviceName || '',
+                        timestamp: new Date().toISOString(),
+                        is_emergency_hour: isEmergencyHour,
+                    });
+                }
+                return;
+            }
+
+            // ── Phone: Original delay logic ──
             setIsEngaged(true);
 
             // 1. Fire satiation ping to dataLayer (GA4 / GTM)
@@ -72,7 +101,7 @@ export default function ActionButton({
                 (window as any).gtag('event', 'generate_lead', {
                     event_category: 'conversion',
                     event_label: `${type}_${cityName || 'unknown'}_${serviceName || 'unknown'}`,
-                    value: type === 'phone' ? (isEmergencyHour ? 15 : 10) : 5,
+                    value: isEmergencyHour ? 15 : 10,
                 });
             }
 
@@ -105,22 +134,32 @@ export default function ActionButton({
         : '';
 
     return (
-        <a
-            href={href}
-            onClick={handleConversion}
-            aria-label={ariaLabel}
-            rel={external ? 'noopener noreferrer' : undefined}
-            target={external ? '_blank' : undefined}
-            className={`${className} ${emergencyClasses} transition-all duration-300 ${isEngaged
-                    ? 'opacity-75 scale-95 pointer-events-none'
-                    : 'hover:scale-[1.03] active:scale-95'
-                }`}
-        >
-            {children}
-            {label && (
-                <span>{displayLabel}</span>
+        <>
+            <a
+                href={href}
+                onClick={handleConversion}
+                aria-label={ariaLabel}
+                rel={external ? 'noopener noreferrer' : undefined}
+                target={external ? '_blank' : undefined}
+                className={`${className} ${emergencyClasses} transition-all duration-300 ${isEngaged
+                        ? 'opacity-75 scale-95 pointer-events-none'
+                        : 'hover:scale-[1.03] active:scale-95'
+                    }`}
+            >
+                {children}
+                {label && (
+                    <span>{displayLabel}</span>
+                )}
+            </a>
+
+            {/* WhatsApp Anti-Bounce Popup */}
+            {showWhatsAppPopup && (
+                <WhatsAppAntiBouncPopup
+                    whatsappUrl={href}
+                    onClose={() => setShowWhatsAppPopup(false)}
+                    advertiserName={advertiserName || serviceName}
+                />
             )}
-        </a>
+        </>
     );
 }
-

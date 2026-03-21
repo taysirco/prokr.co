@@ -160,6 +160,7 @@ export default function AdvertiserCard({ advertiser, variant = 'standard' }: Adv
                             serviceName={advertiser.business_name}
                             external={true}
                             ariaLabel="واتساب"
+                            advertiserName={advertiser.business_name}
                             className="flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-l from-green-500 to-green-600 text-white font-medium rounded-xl hover:from-green-600 hover:to-green-700 shadow-lg shadow-green-500/30 hover:shadow-green-500/50"
                         >
                             <MessageCircle className="w-5 h-5" />
@@ -233,6 +234,7 @@ export default function AdvertiserCard({ advertiser, variant = 'standard' }: Adv
                     serviceName={advertiser.business_name}
                     external={true}
                     ariaLabel="واتساب"
+                    advertiserName={advertiser.business_name}
                     className="p-2.5 bg-green-50 text-green-600 rounded-lg hover:bg-green-100"
                 >
                     <MessageCircle className="w-5 h-5" />
