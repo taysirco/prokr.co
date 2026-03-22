@@ -14,6 +14,7 @@ let adminFirestore: Firestore;
 function ensureAdminApp(): App {
     if (getApps().length === 0) {
         const projectId = process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID;
+        const storageBucket = process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET || `${projectId}.firebasestorage.app`;
 
         if (process.env.FIREBASE_ADMIN_PRIVATE_KEY && process.env.FIREBASE_ADMIN_CLIENT_EMAIL) {
             adminApp = initializeApp({
@@ -22,10 +23,11 @@ function ensureAdminApp(): App {
                     clientEmail: process.env.FIREBASE_ADMIN_CLIENT_EMAIL,
                     privateKey: process.env.FIREBASE_ADMIN_PRIVATE_KEY.replace(/\\n/g, '\n'),
                 }),
+                storageBucket,
             });
         } else {
             // Firebase App Hosting: auto-detects credentials
-            adminApp = initializeApp({ projectId });
+            adminApp = initializeApp({ projectId, storageBucket });
         }
     } else {
         adminApp = getApps()[0];
