@@ -1,4 +1,4 @@
-// تنظيف بالساعة بأبها — Override (E-E-A-T)
+// تنظيف بالساعة بأبها — Override 
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 

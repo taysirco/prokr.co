@@ -1,4 +1,4 @@
-// جلي بلاط وأرضيات بأبها — Override (E-E-A-T)
+// جلي بلاط وأرضيات بأبها — Override 
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 

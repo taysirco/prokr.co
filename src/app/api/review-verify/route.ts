@@ -2,7 +2,7 @@
 // 🔐 API: Verified Reviews
 // POST: submit a review (validated via Firebase ID token)
 // PUT:  verify a review after email confirmation
-// Uses Admin SDK (bypasses Firestore rules)
+// Uses Admin SDK for server-side operations
 // ============================================
 
 import { NextRequest, NextResponse } from 'next/server';

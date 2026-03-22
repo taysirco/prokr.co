@@ -22,14 +22,14 @@ interface ActionButtonProps {
 }
 
 /**
- * ActionButton — Interactive Confirmation Button with Behavioral Engineering
+ * ActionButton — Interactive Confirmation Button with Interactive UX
  *
  * For PHONE buttons:
  *   1. Fires `prokr_terminal_conversion` to dataLayer (GA4/GTM)
  *   2. Shows visual "engaged" feedback (scale + opacity)
  *   3. After 500ms delay, navigates to href
  *
- * For WHATSAPP buttons (Section 11.1 — Anti-Bounce):
+ * For WHATSAPP buttons (Section 11.1 — WhatsApp Redirect):
  *   1. Shows WhatsAppAntiBouncPopup ("Preparing 10% discount...")
  *   2. Fires GA4 task_completion event during 2-second popup
  *   3. After 2.8s, opens WhatsApp link
@@ -63,7 +63,7 @@ export default function ActionButton({
             e.preventDefault();
             if (isEngaged) return; // Prevent double-fire
 
-            // ── WhatsApp: Show Anti-Bounce Popup ──
+            // ── WhatsApp: Show Engagement Popup ──
             if (type === 'whatsapp') {
                 setShowWhatsAppPopup(true);
 
@@ -152,7 +152,7 @@ export default function ActionButton({
                 )}
             </a>
 
-            {/* WhatsApp Anti-Bounce Popup */}
+            {/* WhatsApp Engagement Popup */}
             {showWhatsAppPopup && (
                 <WhatsAppAntiBouncPopup
                     whatsappUrl={href}

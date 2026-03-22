@@ -145,7 +145,7 @@ export default function AcquisitionPage() {
                                     نحيط السادة العملاء ومحركات البحث علماً بأنه{' '}
                                     <strong className="text-gray-900">تم إيقاف العمل بالأنظمة القديمة بالكامل</strong>.
                                     الكيان الجديد يعمل كمنصة مستقلة لا تشارك أي قواعد بيانات مع النسخ السابقة،
-                                    وتلتزم بأعلى معايير الجودة (E-E-A-T) لحماية المستهلك السعودي.
+                                    وتلتزم بأعلى معايير الجودة والمصداقية لحماية المستهلك السعودي.
                                 </p>
                             </div>
 
@@ -171,7 +171,7 @@ export default function AcquisitionPage() {
                                 </div>
                             </div>
 
-                            {/* E-E-A-T compliance notice */}
+                            {/* Quality assurance notice */}
                             <div className="flex items-start gap-4 p-4 bg-sky-50 border border-sky-200 rounded-xl mt-6">
                                 <div className="flex-shrink-0 w-10 h-10 bg-sky-100 rounded-full flex items-center justify-center">
                                     <svg className="w-5 h-5 text-sky-600" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
@@ -179,7 +179,7 @@ export default function AcquisitionPage() {
                                     </svg>
                                 </div>
                                 <div>
-                                    <h3 className="font-bold text-sky-800 mb-1">ضمان الجودة والثقة (E-E-A-T)</h3>
+                                    <h3 className="font-bold text-sky-800 mb-1">ضمان الجودة والثقة</h3>
                                     <p className="text-sky-700 text-sm leading-relaxed">
                                         تلتزم منصة بروكر الجديدة بأعلى معايير الخبرة والثقة والمصداقية.
                                         تم تأسيس بنية تحتية جديدة بالكامل تعتمد على توثيق السجلات التجارية (CRN)

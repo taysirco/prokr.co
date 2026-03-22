@@ -1,4 +1,4 @@
-// عزل أسطح بأبها — Override (E-E-A-T)
+// عزل أسطح بأبها — Override 
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 

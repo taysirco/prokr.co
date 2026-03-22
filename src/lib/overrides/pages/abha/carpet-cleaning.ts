@@ -1,4 +1,4 @@
-// تنظيف سجاد بأبها — Override (E-E-A-T)
+// تنظيف سجاد بأبها — Override 
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 

@@ -60,7 +60,7 @@ export function generateSeoContent({ city, service }: SeoContentProps) {
     const kwProfile = getServiceKeywordProfile(service.slug);
     const cityKw = getCityKeyword(city.name_ar, kwProfile.cityPrefixPattern);
 
-    // Trust Signals — Category-specific
+    // Category-specific content
     const expertTipsTemplate = EXPERT_TIPS[service.category] || EXPERT_TIPS['cleaning'] || [];
     const expertTips = expertTipsTemplate.map(t => t.replace(/\{cityKw\}/g, cityKw).replace(/\{serviceName\}/g, service.name_ar));
 
@@ -277,7 +277,7 @@ export function SeoContentSection({ city, service }: SeoContentProps) {
                     </div>
                 )}
 
-                {/* 3. EXPERT TIPS (E-E-A-T) */}
+                {/* 3. EXPERT TIPS */}
                 <div className="bg-sky-50 p-6 rounded-xl mb-10" suppressHydrationWarning>
                     <h3 className="text-xl font-bold text-sky-900 mb-4 flex items-center gap-2">
                         <span>💡</span>

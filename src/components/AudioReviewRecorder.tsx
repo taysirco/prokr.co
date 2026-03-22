@@ -1,9 +1,9 @@
 'use client';
 
 // ============================================
-// 🎤 AudioReviewRecorder — البصمة الصوتية
+// 🎤 AudioReviewRecorder — التقييم الصوتي
 // Records up to 20s audio with live waveform visualizer
-// Anti-abuse: min 2s, max 20s, file size limit 1MB
+// Validation: min 2s, max 20s, file size limit 1MB
 // ============================================
 
 import { useState, useRef, useEffect, useCallback } from 'react';
@@ -357,8 +357,8 @@ export default function AudioReviewRecorder({
         return (
             <div className="bg-sky-50 border border-sky-200 rounded-2xl p-5 text-center">
                 <CheckCircle className="w-10 h-10 text-sky-500 mx-auto mb-2" />
-                <h4 className="text-sky-900 font-bold text-base mb-1">تم إرسال بصمتك الصوتية بنجاح 🎤✅</h4>
-                <p className="text-sky-700 text-sm">شكراً لتقييمك — بصمتك الصوتية موثّقة ومعتمدة</p>
+                <h4 className="text-sky-900 font-bold text-base mb-1">تم إرسال تقييمك الصوتي بنجاح 🎤✅</h4>
+                <p className="text-sky-700 text-sm">شكراً لتقييمك — تقييمك الصوتي مسجّل ومعتمد</p>
             </div>
         );
     }
@@ -487,7 +487,7 @@ export default function AudioReviewRecorder({
                             className="flex-1 py-3 bg-gradient-to-l from-sky-500 to-teal-500 text-white font-bold text-sm rounded-xl hover:from-sky-600 hover:to-teal-600 transition-all shadow-lg shadow-sky-200 flex items-center justify-center gap-2 disabled:opacity-60"
                         >
                             <Mic className="w-4 h-4" />
-                            إرسال البصمة الصوتية
+                            إرسال التقييم الصوتي
                         </button>
                     </div>
                 </div>

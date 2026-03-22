@@ -4,7 +4,7 @@ import { getServiceKeywordProfile, getCityKeyword } from '@/lib/locale-formattin
 
 // ============================================
 // WARRANTY PROMISE — WARRANTY COMPLIANCE
-// Category-aware warranty for Google E-E-A-T
+// Category-aware warranty for service schema
 // ============================================
 const WARRANTY_BY_CATEGORY: Record<string, {
     duration: string;       // ISO 8601 duration (P30D = 30 days)

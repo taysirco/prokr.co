@@ -1,4 +1,4 @@
-// تنظيف واجهات زجاجية بأبها — Override (E-E-A-T)
+// تنظيف واجهات زجاجية بأبها — Override 
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 

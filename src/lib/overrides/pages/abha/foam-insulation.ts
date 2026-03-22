@@ -1,4 +1,4 @@
-// عزل فوم بأبها — Override (E-E-A-T) | خريطة 2.4: الجند+المحيميد → SBC+كفاءة
+// عزل فوم بأبها — Override  | خريطة 2.4: الجند+المحيميد → SBC+كفاءة
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 

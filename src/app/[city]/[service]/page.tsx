@@ -104,7 +104,7 @@ export default async function SiloPage({ params }: SiloPageProps) {
         notFound();
     }
 
-    // ENFORCE STRICT URL PERMUTATIONS (Return 404 if no deep E-E-A-T override exists)
+    // ENFORCE STRICT URL PERMUTATIONS (Return 404 if no content override exists)
     const override = getOverrideForPage(city.slug, service.slug);
     if (!override) {
         notFound();

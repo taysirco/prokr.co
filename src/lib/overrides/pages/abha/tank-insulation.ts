@@ -1,4 +1,4 @@
-// عزل خزانات بأبها — Override (E-E-A-T) | خريطة 2.4: المحيميد → SBC
+// عزل خزانات بأبها — Override  | خريطة 2.4: المحيميد → SBC
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 

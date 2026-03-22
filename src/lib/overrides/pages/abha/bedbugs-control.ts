@@ -1,4 +1,4 @@
-// مكافحة بق الفراش بأبها — Override (E-E-A-T)
+// مكافحة بق الفراش بأبها — Override 
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 

@@ -1,4 +1,4 @@
-// كشف تسربات بأبها — Override (E-E-A-T) | خريطة 2.4: الجند → NWC + SCE
+// كشف تسربات بأبها — Override  | خريطة 2.4: الجند → NWC + SCE
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 

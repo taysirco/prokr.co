@@ -87,7 +87,7 @@ export default function AudioReviewPlayer({
 
     return (
         <div className="space-y-2.5">
-            {/* Verified Audio Badge */}
+            {/* Audio Badge */}
             <div className="flex items-center gap-1.5">
                 <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-teal-50 text-teal-700 text-[10px] font-bold rounded-full border border-teal-200">
                     <Mic className="w-3 h-3" />

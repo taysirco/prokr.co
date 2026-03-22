@@ -24,7 +24,7 @@ export interface Review {
   rating: number; // 1-5
   comment: string;
   date: string; // ISO string from Firestore
-  // Audio UGC (البصمة الصوتية) fields
+  // Voice review fields (التقييم الصوتي)
   review_type?: 'text' | 'audio';
   audio_url?: string;
   audio_transcript?: string;

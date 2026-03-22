@@ -1,7 +1,7 @@
 // ============================================
 // 🔐 API: Verify Phone for Business Claim (Step 2)
 // POST: server-side phone matching + mark as verified
-// Uses Admin SDK (bypasses Firestore rules)
+// Uses Admin SDK for server-side operations
 // ============================================
 
 import { NextRequest, NextResponse } from 'next/server';

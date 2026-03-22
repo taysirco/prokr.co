@@ -263,7 +263,7 @@ html {
   scroll-margin-top: 8rem;
 }
 
-/* ── Behavioral Engineering Animations (Section 11) ── */
+/* ── UI Animations ── */
 
 /* PhoneRevealButton: fade-in after revealing number */
 @keyframes phone-reveal-fade-in {
@@ -281,7 +281,7 @@ html {
   animation: phone-reveal-fade-in 0.3s ease-out;
 }
 
-/* WhatsApp Anti-Bounce Popup: entrance */
+/* WhatsApp Popup: entrance */
 @keyframes popup-enter {
   from {
     opacity: 0;
@@ -297,7 +297,7 @@ html {
   animation: popup-enter 0.3s ease-out;
 }
 
-/* WhatsApp Anti-Bounce Popup: progress bar */
+/* WhatsApp Popup: progress bar */
 @keyframes progress-bar {
   from { width: 0%; }
   to { width: 100%; }
@@ -307,7 +307,7 @@ html {
   animation: progress-bar 2s ease-in-out;
 }
 
-/* WhatsApp Anti-Bounce Popup: success bounce */
+/* WhatsApp Popup: success bounce */
 @keyframes success-bounce {
   0% { transform: scale(0); }
   50% { transform: scale(1.2); }

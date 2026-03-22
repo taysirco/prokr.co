@@ -1,4 +1,4 @@
-// تنظيف مسابح بأبها — Override (E-E-A-T)
+// تنظيف مسابح بأبها — Override 
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 

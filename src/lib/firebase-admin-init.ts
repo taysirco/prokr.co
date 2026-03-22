@@ -1,6 +1,6 @@
 // ============================================
 // 🔐 Firebase Admin SDK — Server-side operations
-// Used by API routes: bypasses Firestore rules
+// Uses Admin SDK (server-side operations)
 // ============================================
 
 import { initializeApp, getApps, cert, type App } from 'firebase-admin/app';
@@ -44,8 +44,8 @@ function getAdminAuth(): Auth {
 }
 
 /**
- * Get Admin Firestore — bypasses security rules
- * Use this in API routes instead of client SDK
+ * Get Admin Firestore
+ * Use this in API routes for server-side operations
  */
 export function getAdminDb(): Firestore {
     if (!adminFirestore) {

@@ -3,7 +3,7 @@
 // POST: mark a claim as email_verified
 // ⚠️ SECURITY: Validates Firebase ID token to ensure
 //    the caller actually owns the email address.
-// Uses Admin SDK (bypasses Firestore rules)
+// Uses Admin SDK for server-side operations
 // ============================================
 
 import { NextRequest, NextResponse } from 'next/server';

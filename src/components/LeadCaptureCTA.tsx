@@ -285,7 +285,7 @@ export default function LeadCaptureCTA({ cityName, serviceName, serviceSlug, cit
                 </div>
             </div>
 
-            {/* Trust Signals — contextualized per city */}
+            {/* Guarantees — contextualized per city */}
             <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="flex items-center gap-4 bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
                     <div className="w-12 h-12 bg-sky-100 rounded-xl flex items-center justify-center">

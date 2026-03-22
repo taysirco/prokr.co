@@ -191,8 +191,7 @@ export default function WizardFunnelModal({
      * - `useBeacon = true` forces navigator.sendBeacon transport — guarantees
      *   delivery even during window.open(), tab close, or app switch.
      * - `send_to` targets the correct GA4 property explicitly.
-     * - `non_interaction: false` ensures every step counts as active engagement
-     *   for bounce rate and Navboost behavioral signals.
+     * - `non_interaction: false` ensures every step counts as active engagement.
      */
     function fireGA4Event(eventName: string, params: Record<string, unknown>, useBeacon = false) {
         if (typeof window === 'undefined') return;

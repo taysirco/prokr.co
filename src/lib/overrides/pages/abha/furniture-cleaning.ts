@@ -1,4 +1,4 @@
-// تنظيف أثاث بأبها — Override (E-E-A-T)
+// تنظيف أثاث بأبها — Override 
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 

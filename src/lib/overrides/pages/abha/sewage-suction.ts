@@ -1,4 +1,4 @@
-// شفط بيارات بأبها — Override (E-E-A-T) | خريطة 2.4: المحيميد → بلدي+NWC
+// شفط بيارات بأبها — Override  | خريطة 2.4: المحيميد → بلدي+NWC
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 

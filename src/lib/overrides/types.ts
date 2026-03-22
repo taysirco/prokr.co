@@ -1,6 +1,6 @@
 // ============================================
-// Page Override Types — E-E-A-T Architecture
-// Complete per-page control: content, SEO, schema, trust signals
+// Page Override Types
+// Complete per-page control: content, SEO, schema, credentials
 // ============================================
 
 /**
@@ -55,7 +55,7 @@ export interface PageOverride {
     govReferences?: string[];
 
     // ═════════════════════════════════════════
-    // E-E-A-T TRUST SIGNALS (جديد)
+    // SERVICE CREDENTIALS (جديد)
     // ═════════════════════════════════════════
 
     /**

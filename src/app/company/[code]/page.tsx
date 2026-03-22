@@ -286,7 +286,7 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                     </div>
                 </section>
 
-                {/* Sticky CTA Bar (Mobile) — Behavioral Engineering: Anti-Bounce */}
+                {/* Sticky CTA Bar (Mobile) */}
                 <CompanyStickyBar
                     phoneLink={phoneLink}
                     whatsappLink={whatsappLink}
@@ -509,7 +509,7 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                         {/* Right Column - Sidebar */}
                         <div className="lg:col-span-1">
                             <div className="sticky top-4 space-y-4">
-                                {/* Contact Card — Behavioral Engineering: Anti-Bounce + Phone Reveal + Copy */}
+                                {/* Contact Card */}
                                 <CompanyContactSection
                                     phoneNumber={advertiser.phone_number}
                                     phoneLink={phoneLink}

@@ -1,4 +1,4 @@
-// مكافحة حشرات بأبها — Override (E-E-A-T) | خريطة 2.4: الخضيري → SFDA + بلدي
+// مكافحة حشرات بأبها — Override  | خريطة 2.4: الخضيري → SFDA + بلدي
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 

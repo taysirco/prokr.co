@@ -1,4 +1,4 @@
-// عزل مائي بأبها — Override (E-E-A-T) | خريطة 2.4: الجند → SBC
+// عزل مائي بأبها — Override  | خريطة 2.4: الجند → SBC
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 

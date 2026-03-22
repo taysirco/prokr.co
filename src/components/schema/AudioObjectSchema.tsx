@@ -1,7 +1,6 @@
 // ============================================
-// 🎤 AudioObject Schema — البصمة الصوتية
+// 🎤 AudioObject Schema — التقييم الصوتي
 // JSON-LD Review + AudioObject for voice reviews
-// Provides anti-fraud SEO signal to Google
 // ============================================
 
 interface AudioReviewSchemaProps {

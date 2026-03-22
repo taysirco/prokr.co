@@ -1,7 +1,7 @@
 // ============================================
-// 🎤 API: Audio Voice Reviews (البصمة الصوتية)
+// 🎤 API: Audio Voice Reviews (التقييم الصوتي)
 // POST: Upload audio → Speech-to-Text → Firestore
-// Uses Admin SDK (bypasses Firestore rules)
+// Uses Admin SDK (server-side operations)
 // ============================================
 
 import { NextRequest, NextResponse } from 'next/server';
@@ -195,7 +195,7 @@ export async function POST(request: NextRequest) {
         }
 
         return NextResponse.json({
-            message: 'تم إرسال بصمتك الصوتية بنجاح 🎤✅',
+            message: 'تم إرسال تقييمك الصوتي بنجاح 🎤✅',
             status: 'success',
             verified: isVerified,
             transcript,

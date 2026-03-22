@@ -52,7 +52,7 @@ export const DirectAnswer: React.FC<DirectAnswerProps> = ({ city, service, answe
                 </ul>
             )}
 
-            {/* Guarantee closer — trust signal */}
+            {/* Guarantee closer */}
             {guarantee && (
                 <p
                     className="mt-3 text-blue-800 font-medium leading-relaxed"

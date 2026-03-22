@@ -21,25 +21,25 @@ interface CompanyContactSectionProps {
 /**
  * CompanyContactSection — Sidebar Contact Card (Client Component)
  *
- * UNIFIED DESIGN — No duplication:
+ * Layout:
  * ┌──────────────────────────────────────┐
  * │  تواصل معنا                          │
  * │                                      │
- * │  📞 05555••• [👁️ اضغط لكشف الرقم]    │  ← PhoneRevealButton (INP signal)
+ * │  📞 05555••• [👁️ اضغط لكشف الرقم]    │  ← PhoneRevealButton
  * │  → After reveal:                     │
- * │  📞 05555555 [📋] [اتصل الآن]        │  ← Number + Copy + Call (all in one)
+ * │  📞 05555555 [📋] [اتصل الآن]        │  ← Number + Copy + Call
  * │                                      │
- * │  [   💬 تواصل عبر واتساب   ]         │  ← WhatsApp Anti-Bounce
+ * │  [   💬 تواصل عبر واتساب   ]         │  ← WhatsApp CTA
  * │                                      │
  * │  📍 العنوان... [📋]                   │
  * │  📝 سجل تجاري: XXX [📋]             │
  * └──────────────────────────────────────┘
  *
- * Behavioral signals preserved:
- * - phone_reveal → INP (CrUX Micro-Friction)
- * - terminal_conversion → GA4 (phone call tracking)
- * - copy_action → GA4 (High_Utility_Action)
- * - task_completion → GA4 (WhatsApp Anti-Bounce)
+ * Tracked events:
+ * - phone_reveal → GA4 (phone interaction)
+ * - terminal_conversion → GA4 (phone call)
+ * - copy_action → GA4 (copy event)
+ * - task_completion → GA4 (WhatsApp click)
  * - Night mode → Red emergency styling on call button
  */
 export default function CompanyContactSection({
@@ -72,7 +72,7 @@ export default function CompanyContactSection({
                 />
 
                 {/* ═══════════════════════════════════════════
-                 *  WHATSAPP BUTTON — Anti-Bounce (Section 11.1)
+                 *  WHATSAPP BUTTON — WhatsApp Redirect (Section 11.1)
                  * ═══════════════════════════════════════════ */}
                 <ActionButton
                     href={whatsappLink}

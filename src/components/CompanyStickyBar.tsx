@@ -15,7 +15,7 @@ interface CompanyStickyBarProps {
  * CompanyStickyBar — Mobile Sticky CTA (Client Component)
  *
  * Replaces the raw <a> tags in the company page sticky bar
- * with ActionButton components that support WhatsApp Anti-Bounce.
+ * with ActionButton components that support WhatsApp WhatsApp Redirect.
  */
 export default function CompanyStickyBar({
     phoneLink,

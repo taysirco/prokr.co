@@ -1,4 +1,4 @@
-// غسيل سيارات بأبها — Override (E-E-A-T)
+// غسيل سيارات بأبها — Override 
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 

@@ -1,4 +1,4 @@
-// تنظيف كنب بأبها — Override (E-E-A-T)
+// تنظيف كنب بأبها — Override 
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 

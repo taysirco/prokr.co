@@ -9,9 +9,9 @@ interface WhatsAppAntiBouncPopupProps {
 }
 
 /**
- * WhatsApp Anti-Bounce Popup (Section 11.1)
+ * WhatsApp Engagement Popup (Section 11.1)
  *
- * Behavioral Engineering: Instead of immediately opening WhatsApp,
+ * UX Flow: Instead of immediately opening WhatsApp,
  * this popup creates a 2-second "task completion" event that:
  * 1. Prevents RankBrain from registering a bounce
  * 2. Fires GA4 task_completion event for 100% success rate

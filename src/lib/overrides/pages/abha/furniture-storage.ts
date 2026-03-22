@@ -1,4 +1,4 @@
-// تخزين عفش بأبها — Override (E-E-A-T)
+// تخزين عفش بأبها — Override 
 import type { PageOverride } from '../../types';
 import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
 

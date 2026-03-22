@@ -28,7 +28,7 @@ export default function Footer({ currentCity, currentService }: FooterProps) {
     const city = currentCity ? getCityBySlug(currentCity) : null;
     const service = currentService ? getServiceBySlug(currentService) : null;
 
-    // Show services and cities that actually have valid E-E-A-T pages
+    // Show services and cities that have valid content pages
     const currentValidCity = currentCity || 'riyadh';
     const currentValidService = currentService || 'furniture-moving';
     // Resolve absorbed slug to canonical for city link generation

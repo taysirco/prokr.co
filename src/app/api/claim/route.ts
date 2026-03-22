@@ -2,7 +2,7 @@
 // 🔐 API: Business Claim — Submit & Check
 // POST: submit a new claim
 // GET:  check claim status for a company
-// Uses Admin SDK (bypasses Firestore rules)
+// Uses Admin SDK for server-side operations
 // ============================================
 
 import { NextRequest, NextResponse } from 'next/server';
