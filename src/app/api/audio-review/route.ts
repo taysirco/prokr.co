@@ -10,7 +10,7 @@ import { verifyAuthToken } from '@/lib/firebase-admin-init';
 import { FieldValue } from 'firebase-admin/firestore';
 
 const REVIEWS_COLLECTION = 'verified_reviews';
-const MAX_AUDIO_SIZE = 512 * 1024; // 500KB
+const MAX_AUDIO_SIZE = 1024 * 1024; // 1MB (20s recording)
 
 export async function POST(request: NextRequest) {
     try {
@@ -57,9 +57,9 @@ export async function POST(request: NextRequest) {
             );
         }
 
-        if (duration < 2 || duration > 12) {
+        if (duration < 2 || duration > 22) {
             return NextResponse.json(
-                { error: 'مدة التسجيل يجب أن تكون بين 2 و 10 ثوانٍ' },
+                { error: 'مدة التسجيل يجب أن تكون بين 2 و 20 ثانية' },
                 { status: 400 }
             );
         }
@@ -145,8 +145,8 @@ export async function POST(request: NextRequest) {
         if (email && tokenData.email === email) isVerified = true;
         if (phone && tokenData.phone_number === phone) isVerified = true;
 
-        // ── 8. Save to Firestore ──
-        await reviewsRef.add({
+        // ── 8. Save to Firestore (verified_reviews collection) ──
+        const reviewData = {
             company_code: companyCode,
             reviewer_email: email || '',
             reviewer_phone: phone || '',
@@ -161,7 +161,38 @@ export async function POST(request: NextRequest) {
             audio_duration_seconds: duration,
             transcript_confidence: transcriptConfidence,
             created_at: FieldValue.serverTimestamp(),
-        });
+        };
+
+        await reviewsRef.add(reviewData);
+
+        // ── 9. Sync to Advertiser Document (so review appears on company page) ──
+        try {
+            const advertiserSnap = await db.collection('advertisers')
+                .where('short_code', '==', companyCode)
+                .limit(1)
+                .get();
+
+            if (!advertiserSnap.empty) {
+                const advertiserRef = advertiserSnap.docs[0].ref;
+                await advertiserRef.update({
+                    reviews: FieldValue.arrayUnion({
+                        user: userName || 'عميل بروكر',
+                        rating: Number(rating),
+                        comment: transcript,
+                        date: new Date().toISOString(),
+                        verified: isVerified,
+                        review_type: 'audio',
+                        audio_url: audioUrl,
+                        audio_transcript: transcript,
+                        audio_duration_seconds: duration,
+                        transcript_confidence: transcriptConfidence,
+                    }),
+                });
+            }
+        } catch (syncErr) {
+            // Non-blocking: review is saved in verified_reviews even if sync fails
+            console.error('[REVIEW SYNC ERROR]', syncErr);
+        }
 
         return NextResponse.json({
             message: 'تم إرسال بصمتك الصوتية بنجاح 🎤✅',

@@ -85,6 +85,30 @@ export async function POST(request: NextRequest) {
             created_at: FieldValue.serverTimestamp(),
         });
 
+        // ── Sync to Advertiser Document (so review appears on company page) ──
+        try {
+            const advertiserSnap = await db.collection('advertisers')
+                .where('short_code', '==', companyCode)
+                .limit(1)
+                .get();
+
+            if (!advertiserSnap.empty) {
+                const advertiserRef = advertiserSnap.docs[0].ref;
+                await advertiserRef.update({
+                    reviews: FieldValue.arrayUnion({
+                        user: userName || 'عميل بروكر',
+                        rating: Number(rating),
+                        comment: comment || '',
+                        date: new Date().toISOString(),
+                        verified: isVerified,
+                        review_type: 'text',
+                    }),
+                });
+            }
+        } catch (syncErr) {
+            console.error('[REVIEW SYNC ERROR]', syncErr);
+        }
+
         return NextResponse.json({
             message: isVerified
                 ? 'تم إرسال تقييمك المُوثّق بنجاح ✅'

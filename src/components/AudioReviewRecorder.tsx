@@ -20,7 +20,7 @@ interface AudioReviewRecorderProps {
 
 type RecorderState = 'idle' | 'requesting' | 'recording' | 'preview' | 'sending' | 'sent' | 'error';
 
-const MAX_DURATION = 10; // seconds
+const MAX_DURATION = 20; // seconds
 const MIN_DURATION = 2;  // seconds
 
 export default function AudioReviewRecorder({
@@ -293,8 +293,8 @@ export default function AudioReviewRecorder({
         }
 
         // Validate blob size (max 500KB)
-        if (audioBlob.size > 512 * 1024) {
-            setErrorMsg('حجم التسجيل كبير جداً. حاول مرة أخرى.');
+        if (audioBlob.size > 1024 * 1024) {
+            setErrorMsg('حجم التسجيل كبير جداً (الحد الأقصى 1MB). حاول مرة أخرى.');
             return;
         }
 
@@ -374,7 +374,7 @@ export default function AudioReviewRecorder({
                     <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
                         <Mic className="w-4.5 h-4.5" />
                     </div>
-                    <span>🎤 قيّم الخدمة بصوتك في 10 ثوانٍ</span>
+                    <span>🎤 قيّم الخدمة بصوتك في 20 ثانية</span>
                 </button>
             )}
 
