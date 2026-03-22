@@ -2,8 +2,8 @@
 
 // ============================================
 // 🎤 AudioReviewRecorder — البصمة الصوتية
-// Records 10s audio with live waveform visualizer
-// Anti-abuse: min 2s, max 10s, silence detection
+// Records up to 20s audio with live waveform visualizer
+// Anti-abuse: min 2s, max 20s, file size limit 1MB
 // ============================================
 
 import { useState, useRef, useEffect, useCallback } from 'react';
@@ -292,7 +292,7 @@ export default function AudioReviewRecorder({
             return;
         }
 
-        // Validate blob size (max 500KB)
+        // Validate blob size (max 1MB for 20s recording)
         if (audioBlob.size > 1024 * 1024) {
             setErrorMsg('حجم التسجيل كبير جداً (الحد الأقصى 1MB). حاول مرة أخرى.');
             return;

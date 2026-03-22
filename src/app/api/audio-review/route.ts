@@ -52,7 +52,7 @@ export async function POST(request: NextRequest) {
 
         if (audioFile.size > MAX_AUDIO_SIZE) {
             return NextResponse.json(
-                { error: 'حجم التسجيل الصوتي كبير جداً (الحد الأقصى 500KB)' },
+                { error: 'حجم التسجيل الصوتي كبير جداً (الحد الأقصى 1MB)' },
                 { status: 400 }
             );
         }
