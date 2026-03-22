@@ -127,10 +127,24 @@ export default function AudioReviewRecorder({
         setState('requesting');
 
         try {
+            // ── Feature Detection ──
+            // getUserMedia requires HTTPS (or localhost). Check early.
+            if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+                setErrorMsg(
+                    window.location.protocol === 'http:' && window.location.hostname !== 'localhost'
+                        ? 'التسجيل الصوتي يتطلب اتصال HTTPS آمن. يرجى فتح الموقع عبر HTTPS.'
+                        : 'متصفحك لا يدعم التسجيل الصوتي. استخدم Chrome أو Safari الأحدث.'
+                );
+                setState('idle');
+                return;
+            }
+
             const stream = await navigator.mediaDevices.getUserMedia({
                 audio: {
                     channelCount: 1,
-                    sampleRate: 16000,
+                    // Note: sampleRate omitted — not uniformly supported.
+                    // Some mobile browsers reject non-native rates.
+                    // STT API uses autoDecodingConfig so any rate works.
                     echoCancellation: true,
                     noiseSuppression: true,
                 },
@@ -138,8 +152,9 @@ export default function AudioReviewRecorder({
 
             streamRef.current = stream;
 
-            // Setup waveform analyser
-            const audioContext = new AudioContext();
+            // Setup waveform analyser (webkitAudioContext for older Safari)
+            const AudioCtx = window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext;
+            const audioContext = new AudioCtx();
             audioContextRef.current = audioContext;
             const source = audioContext.createMediaStreamSource(stream);
             const analyser = audioContext.createAnalyser();
@@ -147,17 +162,25 @@ export default function AudioReviewRecorder({
             source.connect(analyser);
             analyserRef.current = analyser;
 
-            // Determine best MIME type
-            const mimeType = MediaRecorder.isTypeSupported('audio/webm;codecs=opus')
-                ? 'audio/webm;codecs=opus'
-                : MediaRecorder.isTypeSupported('audio/webm')
-                    ? 'audio/webm'
-                    : 'audio/mp4'; // Safari fallback
+            // Determine best MIME type (ordered preference)
+            const mimeOptions = [
+                'audio/webm;codecs=opus',
+                'audio/webm',
+                'audio/mp4;codecs=aac',  // Safari iOS/macOS
+                'audio/mp4',
+                'audio/ogg;codecs=opus',
+            ];
+            const mimeType = mimeOptions.find(m => MediaRecorder.isTypeSupported(m)) || '';
 
-            const mediaRecorder = new MediaRecorder(stream, {
-                mimeType,
+            const recorderOptions: MediaRecorderOptions = {
                 audioBitsPerSecond: 32000,
-            });
+            };
+            // Only set mimeType if we found a supported one
+            // (if empty, let the browser pick its default)
+            if (mimeType) recorderOptions.mimeType = mimeType;
+
+            const mediaRecorder = new MediaRecorder(stream, recorderOptions);
+            const actualMime = mediaRecorder.mimeType; // what the browser actually chose
 
             chunksRef.current = [];
 
@@ -166,7 +189,7 @@ export default function AudioReviewRecorder({
             };
 
             mediaRecorder.onstop = () => {
-                const blob = new Blob(chunksRef.current, { type: mimeType });
+                const blob = new Blob(chunksRef.current, { type: actualMime || 'audio/webm' });
                 setAudioBlob(blob);
                 const url = URL.createObjectURL(blob);
                 setAudioUrl(url);
@@ -191,9 +214,26 @@ export default function AudioReviewRecorder({
 
             // Start waveform
             drawWaveform();
-        } catch (err) {
-            console.error('[AudioRecorder] Permission denied or error:', err);
-            setErrorMsg('يرجى السماح بالوصول للميكروفون لتسجيل تقييمك الصوتي');
+        } catch (err: unknown) {
+            console.error('[AudioRecorder] Error:', err);
+            // Specific error messages for each failure mode
+            if (err instanceof DOMException) {
+                switch (err.name) {
+                    case 'NotAllowedError':
+                        setErrorMsg('يرجى السماح بالوصول للميكروفون من إعدادات المتصفح ثم حاول مرة أخرى');
+                        break;
+                    case 'NotFoundError':
+                        setErrorMsg('لم يتم العثور على ميكروفون. تأكد من توصيل ميكروفون بجهازك.');
+                        break;
+                    case 'NotReadableError':
+                        setErrorMsg('الميكروفون مستخدم من تطبيق آخر. أغلق التطبيق وحاول مرة أخرى.');
+                        break;
+                    default:
+                        setErrorMsg('حدث خطأ في الوصول للميكروفون. حاول مرة أخرى.');
+                }
+            } else {
+                setErrorMsg('يرجى السماح بالوصول للميكروفون لتسجيل تقييمك الصوتي');
+            }
             setState('idle');
         }
     }
@@ -274,7 +314,9 @@ export default function AudioReviewRecorder({
             }
 
             const formData = new FormData();
-            formData.append('audio', audioBlob, 'voice-review.webm');
+            // Use correct file extension based on MIME type
+            const ext = audioBlob.type.includes('mp4') ? 'mp4' : audioBlob.type.includes('ogg') ? 'ogg' : 'webm';
+            formData.append('audio', audioBlob, `voice-review.${ext}`);
             formData.append('rating', String(rating));
             formData.append('companyCode', companyCode);
             formData.append('email', userEmail);
