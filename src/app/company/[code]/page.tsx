@@ -33,6 +33,9 @@ import CompanyContactSection from '@/components/CompanyContactSection';
 import WizardFunnelButton from '@/components/WizardFunnelButton';
 import DarkSocialShare from '@/components/DarkSocialShare';
 import { VisionAiWatermark } from '@/components/VisionAiWatermark';
+import AudioReviewPlayer from '@/components/AudioReviewPlayer';
+import { AudioReviewSchema } from '@/components/schema/AudioObjectSchema';
+import SourceOrderLayout from '@/components/SourceOrderLayout';
 import type { Review, City, Service } from '@/types';
 
 // ISR: revalidate every hour for fresh data + fast TTFB
@@ -147,6 +150,22 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                 description={`${advertiser.business_name} - ${advertiser.description.slice(0, 100)}`}
                 url={`https://prokr.co/company/${advertiser.short_code}`}
                 breadcrumbs={breadcrumbs}
+            />
+            {/* 🎤 Audio Review Schema — AudioObject + Review */}
+            <AudioReviewSchema
+                reviews={reviews
+                    .filter(r => r.review_type === 'audio' && r.audio_url)
+                    .map(r => ({
+                        userName: r.user,
+                        rating: r.rating,
+                        audioUrl: r.audio_url!,
+                        transcript: r.audio_transcript || r.comment,
+                        durationSeconds: r.audio_duration_seconds || 0,
+                        date: new Date(r.date).toISOString(),
+                    }))
+                }
+                businessName={advertiser.business_name}
+                pageUrl={`https://prokr.co/company/${advertiser.short_code}`}
             />
 
             <main className="min-h-screen bg-gray-50">
@@ -276,8 +295,117 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                     advertiserName={advertiser.business_name}
                 />
 
-                {/* Main Content */}
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                {/* 🔍 CSS Source Order Hack — Section 15.6
+                    Source order: SEO content FIRST (Google reads this first)
+                    Visual order: Company profile FIRST (user sees this first via column-reverse) */}
+                <SourceOrderLayout
+                    seoContent={
+                        <>
+                            {/* SEO Content Section */}
+                            <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-gray-200">
+                                <article className="prose prose-lg max-w-none">
+                                    <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                                        عن {advertiser.business_name}
+                                    </h2>
+                                    <div className="bg-sky-50 p-6 rounded-xl border-r-4 border-sky-500 mb-6">
+                                        <p className="text-gray-700 leading-relaxed">
+                                            {advertiser.business_name} هي شركة {advertiser.is_premium ? 'معتمدة وموثقة' : 'مسجلة'} في منصة بروكر،
+                                            تقدم خدمات {targetedServices.map(s => s.name_ar).join(' و')} في {targetedCities.map(c => c.name_ar).join(' و')}.
+                                            {avgRating > 0 ? ` حاصلة على تقييم ${avgRating.toFixed(1)} من 5 بناءً على ${reviews.length} تقييم من عملاء حقيقيين.` : ''}
+                                        </p>
+                                    </div>
+
+                                    <h3 className="text-xl font-bold text-gray-900 mb-3">الخدمات المقدمة</h3>
+                                    <ul className="text-gray-600 space-y-1 mb-6">
+                                        {targetedServices.map(s => {
+                                            const slug = getCanonicalSlug(s.slug) || s.slug;
+                                            const citySlug = advertiser.targeted_cities[0];
+                                            const hasOverride = hasPageOverride(citySlug, slug);
+                                            return (
+                                                <li key={s.slug}>✓ {hasOverride ? (
+                                                    <Link href={`/${citySlug}/${slug}`} className="text-sky-700 hover:underline">{s.name_ar}</Link>
+                                                ) : (
+                                                    <span className="text-gray-600">{s.name_ar}</span>
+                                                )}</li>
+                                            );
+                                        })}
+                                    </ul>
+
+                                    <h3 className="text-xl font-bold text-gray-900 mb-3">مناطق التغطية</h3>
+                                    <div className="flex flex-wrap gap-2 mb-8 not-prose">
+                                        {targetedCities.map(c => (
+                                            <Link key={c.slug} href={`/${c.slug}`} className="px-3 py-1.5 bg-sky-50 text-sky-700 rounded-lg text-sm hover:bg-sky-100 transition-colors">{c.name_ar}</Link>
+                                        ))}
+                                    </div>
+
+                                    {/* Company FAQ */}
+                                    <h3 className="text-xl font-bold text-gray-900 mb-4">أسئلة شائعة عن {advertiser.business_name}</h3>
+                                    <div className="space-y-4 not-prose" itemScope itemType="https://schema.org/FAQPage">
+                                        <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
+                                            <h4 className="font-bold text-gray-800 mb-2" itemProp="name">ما هي الخدمات التي تقدمها {advertiser.business_name}؟</h4>
+                                            <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                                                <p className="text-gray-600" itemProp="text">تقدم {advertiser.business_name} خدمات {targetedServices.map(s => s.name_ar).join(' و')} في {targetedCities.map(c => c.name_ar).join(' و')}. جميع الخدمات مضمونة ومرخصة.</p>
+                                            </div>
+                                        </div>
+                                        <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
+                                            <h4 className="font-bold text-gray-800 mb-2" itemProp="name">كيف أتواصل مع {advertiser.business_name}؟</h4>
+                                            <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                                                <p className="text-gray-600" itemProp="text">يمكنك التواصل مع {advertiser.business_name} عبر الهاتف أو واتساب مباشرة من صفحة الشركة على بروكر. الخدمة متاحة على مدار الساعة.</p>
+                                            </div>
+                                        </div>
+                                        <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
+                                            <h4 className="font-bold text-gray-800 mb-2" itemProp="name">هل {advertiser.business_name} شركة معتمدة؟</h4>
+                                            <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                                                <p className="text-gray-600" itemProp="text">{advertiser.is_premium
+                                                    ? `نعم، ${advertiser.business_name} شركة معتمدة وموثقة في منصة بروكر.${advertiser.has_verified_employees ? ' تم التحقق من هوية فريق العمل عبر منصة نفاذ الوطنية.' : ''} تم التحقق من تراخيصها وجودة خدماتها.`
+                                                    : `${advertiser.business_name} شركة مسجلة في منصة بروكر. ننصح بالتحقق من التراخيص والضمانات قبل التعاقد.`}</p>
+                                            </div>
+                                        </div>
+                                        {avgRating > 0 && (
+                                            <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
+                                                <h4 className="font-bold text-gray-800 mb-2" itemProp="name">ما تقييم {advertiser.business_name}؟</h4>
+                                                <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                                                    <p className="text-gray-600" itemProp="text">حصلت {advertiser.business_name} على تقييم {avgRating.toFixed(1)} من 5 نجوم بناءً على {reviews.length} تقييم من عملاء حقيقيين على منصة بروكر.</p>
+                                                </div>
+                                            </div>
+                                        )}
+                                    </div>
+                                </article>
+                            </section>
+
+                            {/* 📱 Dark Social Share — Company Page */}
+                            <DarkSocialShare
+                                variant="company"
+                                serviceName={mainService?.name_ar || 'خدمات'}
+                                cityName={mainCity?.name_ar || 'السعودية'}
+                                citySlug={advertiser.targeted_cities[0] || 'riyadh'}
+                                serviceSlug={mainService?.slug || advertiser.targeted_services[0] || 'cleaning'}
+                                companyName={advertiser.business_name}
+                                companyCode={resolvedParams.code}
+                                companyRating={avgRating > 0 ? avgRating.toFixed(1) : undefined}
+                            />
+
+                            {/* 🛡️ Consumer Protection Alert — Consumer Protection Banner */}
+                            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                                <FraudAlertBanner
+                                    serviceName={mainService?.name_ar || 'خدمات'}
+                                    serviceSlug={mainService?.slug || 'cleaning'}
+                                    cityName={mainCity?.name_ar || 'السعودية'}
+                                />
+                            </section>
+
+                            {/* Local Service Area — Company Signal */}
+                            <LocalPresence
+                                citySlug={advertiser.targeted_cities[0] || 'riyadh'}
+                                serviceSlug={advertiser.targeted_services[0] || 'cleaning'}
+                                serviceName={mainService?.name_ar || 'خدمات'}
+                                serviceCategory={mainService?.category || 'cleaning'}
+                            />
+                        </>
+                    }
+                >
+                    {/* Main Content */}
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                         {/* Left Column - Main Content */}
                         <div className="lg:col-span-2 space-y-8">
@@ -516,108 +644,8 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                             </div>
                         </div>
                     </div>
-                </div>
-
-                {/* SEO Content Section */}
-                <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-gray-200">
-                    <article className="prose prose-lg max-w-none">
-                        <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                            عن {advertiser.business_name}
-                        </h2>
-                        <div className="bg-sky-50 p-6 rounded-xl border-r-4 border-sky-500 mb-6">
-                            <p className="text-gray-700 leading-relaxed">
-                                {advertiser.business_name} هي شركة {advertiser.is_premium ? 'معتمدة وموثقة' : 'مسجلة'} في منصة بروكر،
-                                تقدم خدمات {targetedServices.map(s => s.name_ar).join(' و')} في {targetedCities.map(c => c.name_ar).join(' و')}.
-                                {avgRating > 0 ? ` حاصلة على تقييم ${avgRating.toFixed(1)} من 5 بناءً على ${reviews.length} تقييم من عملاء حقيقيين.` : ''}
-                            </p>
-                        </div>
-
-                        <h3 className="text-xl font-bold text-gray-900 mb-3">الخدمات المقدمة</h3>
-                        <ul className="text-gray-600 space-y-1 mb-6">
-                            {targetedServices.map(s => {
-                                const slug = getCanonicalSlug(s.slug) || s.slug;
-                                const citySlug = advertiser.targeted_cities[0];
-                                const hasOverride = hasPageOverride(citySlug, slug);
-                                return (
-                                    <li key={s.slug}>✓ {hasOverride ? (
-                                        <Link href={`/${citySlug}/${slug}`} className="text-sky-700 hover:underline">{s.name_ar}</Link>
-                                    ) : (
-                                        <span className="text-gray-600">{s.name_ar}</span>
-                                    )}</li>
-                                );
-                            })}
-                        </ul>
-
-                        <h3 className="text-xl font-bold text-gray-900 mb-3">مناطق التغطية</h3>
-                        <div className="flex flex-wrap gap-2 mb-8 not-prose">
-                            {targetedCities.map(c => (
-                                <Link key={c.slug} href={`/${c.slug}`} className="px-3 py-1.5 bg-sky-50 text-sky-700 rounded-lg text-sm hover:bg-sky-100 transition-colors">{c.name_ar}</Link>
-                            ))}
-                        </div>
-
-                        {/* Company FAQ */}
-                        <h3 className="text-xl font-bold text-gray-900 mb-4">أسئلة شائعة عن {advertiser.business_name}</h3>
-                        <div className="space-y-4 not-prose" itemScope itemType="https://schema.org/FAQPage">
-                            <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
-                                <h4 className="font-bold text-gray-800 mb-2" itemProp="name">ما هي الخدمات التي تقدمها {advertiser.business_name}؟</h4>
-                                <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
-                                    <p className="text-gray-600" itemProp="text">تقدم {advertiser.business_name} خدمات {targetedServices.map(s => s.name_ar).join(' و')} في {targetedCities.map(c => c.name_ar).join(' و')}. جميع الخدمات مضمونة ومرخصة.</p>
-                                </div>
-                            </div>
-                            <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
-                                <h4 className="font-bold text-gray-800 mb-2" itemProp="name">كيف أتواصل مع {advertiser.business_name}؟</h4>
-                                <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
-                                    <p className="text-gray-600" itemProp="text">يمكنك التواصل مع {advertiser.business_name} عبر الهاتف أو واتساب مباشرة من صفحة الشركة على بروكر. الخدمة متاحة على مدار الساعة.</p>
-                                </div>
-                            </div>
-                            <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
-                                <h4 className="font-bold text-gray-800 mb-2" itemProp="name">هل {advertiser.business_name} شركة معتمدة؟</h4>
-                                <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
-                                    <p className="text-gray-600" itemProp="text">{advertiser.is_premium
-                                        ? `نعم، ${advertiser.business_name} شركة معتمدة وموثقة في منصة بروكر.${advertiser.has_verified_employees ? ' تم التحقق من هوية فريق العمل عبر منصة نفاذ الوطنية.' : ''} تم التحقق من تراخيصها وجودة خدماتها.`
-                                        : `${advertiser.business_name} شركة مسجلة في منصة بروكر. ننصح بالتحقق من التراخيص والضمانات قبل التعاقد.`}</p>
-                                </div>
-                            </div>
-                            {avgRating > 0 && (
-                                <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
-                                    <h4 className="font-bold text-gray-800 mb-2" itemProp="name">ما تقييم {advertiser.business_name}؟</h4>
-                                    <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
-                                        <p className="text-gray-600" itemProp="text">حصلت {advertiser.business_name} على تقييم {avgRating.toFixed(1)} من 5 نجوم بناءً على {reviews.length} تقييم من عملاء حقيقيين على منصة بروكر.</p>
-                                    </div>
-                                </div>
-                            )}
-                        </div>
-                    </article>
-                </section>
-
-                {/* 📱 Dark Social Share — Company Page */}
-                <DarkSocialShare
-                    variant="company"
-                    serviceName={mainService?.name_ar || 'خدمات'}
-                    cityName={mainCity?.name_ar || 'السعودية'}
-                    citySlug={advertiser.targeted_cities[0] || 'riyadh'}
-                    serviceSlug={mainService?.slug || advertiser.targeted_services[0] || 'cleaning'}
-                    companyName={advertiser.business_name}
-                    companyCode={resolvedParams.code}
-                    companyRating={avgRating > 0 ? avgRating.toFixed(1) : undefined}
-                />
-
-                {/* 🛡️ Consumer Protection Alert — Consumer Protection Banner */}
-                <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-                    <FraudAlertBanner
-                        serviceName={mainService?.name_ar || 'خدمات'}
-                        serviceSlug={mainService?.slug || 'cleaning'}
-                        cityName={mainCity?.name_ar || 'السعودية'}
-                    />
-                </section>
-
-                {/* Local Service Area — Company Signal */}
-                <LocalPresence
-                    citySlug={advertiser.targeted_cities[0] || 'riyadh'}
-                    serviceSlug={advertiser.targeted_services[0] || 'cleaning'}
-                    serviceName={mainService?.name_ar || 'خدمات'}
-                    serviceCategory={mainService?.category || 'cleaning'}
-                />
+                    </div>
+                </SourceOrderLayout>
 
                 {/* Footer */}
                 <Footer
@@ -629,8 +657,10 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
     );
 }
 
-// Review Card Component
+// Review Card Component — supports both text and audio reviews
 function ReviewCard({ review }: { review: Review }) {
+    const isAudio = review.review_type === 'audio' && review.audio_url;
+
     return (
         <div className="p-4 bg-gray-50 rounded-xl">
             <div className="flex items-start justify-between mb-2">
@@ -649,7 +679,18 @@ function ReviewCard({ review }: { review: Review }) {
                     {new Date(review.date).toLocaleDateString('ar-SA')}
                 </span>
             </div>
-            <p className="text-gray-600 text-sm">{review.comment}</p>
+
+            {/* Audio Review — show player + transcript */}
+            {isAudio ? (
+                <AudioReviewPlayer
+                    audioUrl={review.audio_url!}
+                    transcript={review.audio_transcript || review.comment}
+                    durationSeconds={review.audio_duration_seconds || 0}
+                    confidence={review.transcript_confidence}
+                />
+            ) : (
+                <p className="text-gray-600 text-sm">{review.comment}</p>
+            )}
         </div>
     );
 }

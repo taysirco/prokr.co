@@ -20,6 +20,7 @@ import { LiveAvailabilityBanner } from '@/components/LiveAvailabilityBanner';
 import { EmergencyNightBanner } from '@/components/EmergencyNightBanner';
 import DarkSocialShare from '@/components/DarkSocialShare';
 import { VisionAiWatermark } from '@/components/VisionAiWatermark';
+import SourceOrderLayout from '@/components/SourceOrderLayout';
 
 interface SubRegionPageProps {
     params: Promise<{
@@ -235,147 +236,156 @@ export default async function SubRegionPage({ params }: SubRegionPageProps) {
                     statText={`يتوفر ${availableServices.length} خدمة من شركات معتمدة بسجل تجاري سارٍ`}
                 />
 
-                {/* Services */}
-                <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-                    {Object.entries(servicesByCategory).map(([category, services]) => (
-                        <div key={category} className="mb-12">
-                            <div className="flex items-center gap-3 mb-6">
-                                <div className="w-10 h-10 bg-sky-100 rounded-lg flex items-center justify-center text-sky-600">
-                                    {categoryIcons[category] || <Wrench className="w-5 h-5" />}
-                                </div>
-                                <h2 className="text-xl font-bold text-gray-900">
-                                    {CATEGORY_NAMES[category] || category} في {subRegion.name_ar}
-                                </h2>
-                            </div>
+                {/* 🔍 CSS Source Order Hack — Section 15.6
+                    Source order: SEO content FIRST (Google reads this first)
+                    Visual order: Service listings FIRST (user sees this first via column-reverse) */}
+                <SourceOrderLayout
+                    seoContent={
+                        <>
+                            {/* SEO Content Section */}
+                            <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                                <article className="prose prose-lg max-w-none">
+                                    <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                                        دليل الخدمات في {subRegion.name_ar}، {city.name_ar}
+                                    </h2>
+                                    <p className="text-gray-700 leading-relaxed mb-6">
+                                        يوفر بروكر في منطقة {subRegion.name_ar} بـ{city.name_ar} مجموعة شاملة من الخدمات المنزلية والتجارية تشمل {availableServices.slice(0, 4).map(s => s?.name_ar).filter(Boolean).join('، ')} والمزيد.
+                                        جميع الشركات المدرجة لدينا معتمدة ومرخصة، وتقدم ضماناً على خدماتها مع أسعار تنافسية تناسب سكان {subRegion.name_ar}.
+                                    </p>
 
-                            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-                                {services.map(service => service && (
-                                    <Link
-                                        key={service.slug}
-                                        href={`/${city.slug}/${service.slug}`}
-                                        className="group relative bg-white rounded-xl border border-gray-200 hover:border-sky-300 hover:shadow-lg transition-all overflow-hidden"
-                                    >
-                                        <div className="relative aspect-[4/3] bg-gray-100 overflow-hidden">
-                                            <Image
-                                                src={getServiceImage(service.slug)}
-                                                alt={`شركة ${service.name_ar} في ${subRegion.name_ar}، ${city.name_ar} - أفضل الأسعار من بروكر | تم التحقق عبر نفاذ SBC`}
-                                                fill
-                                                className="object-cover group-hover:scale-105 transition-transform duration-300"
-                                                sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, 25vw"
-                                            />
-                                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                                            <VisionAiWatermark position="top-right" size="xs" />
+                                    <h3 className="text-xl font-bold text-gray-900 mb-3">الأسئلة الشائعة عن خدمات {subRegion.name_ar}</h3>
+                                    <div className="space-y-4 not-prose" itemScope itemType="https://schema.org/FAQPage">
+                                        <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
+                                            <h4 className="font-bold text-gray-800 mb-2" itemProp="name">ما الخدمات المتوفرة في {subRegion.name_ar}؟</h4>
+                                            <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                                                <p className="text-gray-600 text-sm" itemProp="text">
+                                                    تتوفر في {subRegion.name_ar} {availableServices.length} خدمة تشمل {availableServices.slice(0, 5).map(s => s?.name_ar).filter(Boolean).join('، ')}. جميع الشركات معتمدة ومرخصة.
+                                                </p>
+                                            </div>
                                         </div>
-                                        <div className="absolute bottom-0 left-0 right-0 p-3">
-                                            <h3 className="font-semibold text-white text-sm">
-                                                {service.name_ar} {subRegion.name_ar}
-                                            </h3>
+                                        <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
+                                            <h4 className="font-bold text-gray-800 mb-2" itemProp="name">كيف أختار شركة خدمات في {subRegion.name_ar}؟</h4>
+                                            <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                                                <p className="text-gray-600 text-sm" itemProp="text">
+                                                    قارن بين الشركات المتاحة في {subRegion.name_ar} من حيث التقييمات والأسعار والضمان. ننصح بطلب عرض سعر من 3 شركات على الأقل قبل الاختيار.
+                                                </p>
+                                            </div>
                                         </div>
-                                    </Link>
-                                ))}
-                            </div>
-                        </div>
-                    ))}
-                </section>
+                                        <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
+                                            <h4 className="font-bold text-gray-800 mb-2" itemProp="name">هل تغطي الشركات جميع أحياء {subRegion.name_ar}؟</h4>
+                                            <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                                                <p className="text-gray-600 text-sm" itemProp="text">
+                                                    نعم، الشركات المسجلة لدينا تغطي كافة أحياء {subRegion.name_ar} و{city.name_ar}. فرق العمل موزعة لتغطية المنطقة بأسرع وقت ممكن.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
+                                            <h4 className="font-bold text-gray-800 mb-2" itemProp="name">كم تكلفة الخدمات في {subRegion.name_ar}؟</h4>
+                                            <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                                                <p className="text-gray-600 text-sm" itemProp="text">
+                                                    تختلف الأسعار حسب نوع الخدمة وحجم العمل. يمكنك مقارنة الأسعار بين الشركات المتاحة في {subRegion.name_ar} عبر بروكر والحصول على عروض أسعار مجانية.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </section>
 
-                {/* SEO Content Section */}
-                <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-                    <article className="prose prose-lg max-w-none">
-                        <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                            دليل الخدمات في {subRegion.name_ar}، {city.name_ar}
-                        </h2>
-                        <p className="text-gray-700 leading-relaxed mb-6">
-                            يوفر بروكر في منطقة {subRegion.name_ar} بـ{city.name_ar} مجموعة شاملة من الخدمات المنزلية والتجارية تشمل {availableServices.slice(0, 4).map(s => s?.name_ar).filter(Boolean).join('، ')} والمزيد.
-                            جميع الشركات المدرجة لدينا معتمدة ومرخصة، وتقدم ضماناً على خدماتها مع أسعار تنافسية تناسب سكان {subRegion.name_ar}.
-                        </p>
+                            {/* Other Sub-Regions */}
+                            {otherSubRegions.length > 0 && (
+                                <section className="bg-gray-100 py-12">
+                                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                                        <h2 className="text-xl font-bold text-gray-900 mb-6">خدمات في مناطق أخرى بـ{city.name_ar}</h2>
+                                        <div className="flex flex-wrap gap-3">
+                                            {otherSubRegions.map(sr => (
+                                                <Link
+                                                    key={sr.slug}
+                                                    href={`/regions/${city.slug}/${sr.slug}`}
+                                                    className="px-4 py-2 bg-white border border-gray-200 rounded-lg hover:border-sky-300 hover:shadow-md transition-all"
+                                                >
+                                                    {sr.name_ar}
+                                                </Link>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </section>
+                            )}
 
-                        <h3 className="text-xl font-bold text-gray-900 mb-3">الأسئلة الشائعة عن خدمات {subRegion.name_ar}</h3>
-                        <div className="space-y-4 not-prose" itemScope itemType="https://schema.org/FAQPage">
-                            <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
-                                <h4 className="font-bold text-gray-800 mb-2" itemProp="name">ما الخدمات المتوفرة في {subRegion.name_ar}؟</h4>
-                                <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
-                                    <p className="text-gray-600 text-sm" itemProp="text">
-                                        تتوفر في {subRegion.name_ar} {availableServices.length} خدمة تشمل {availableServices.slice(0, 5).map(s => s?.name_ar).filter(Boolean).join('، ')}. جميع الشركات معتمدة ومرخصة.
-                                    </p>
+                            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                                <Link href={`/${city.slug}`} className="inline-flex items-center gap-2 text-sky-600 hover:text-sky-700">
+                                    <ChevronLeft className="w-4 h-4 rotate-180" />
+                                    جميع خدمات {city.name_ar}
+                                </Link>
+                            </section>
+
+                            {/* 🛡️ Consumer Protection Alert */}
+                            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                                <FraudAlertBanner serviceName="خدمات منزلية" serviceSlug="cleaning" cityName={`${subRegion.name_ar}، ${city.name_ar}`} />
+                            </section>
+
+                            {/* 🛡️ Nafath Trust Shield */}
+                            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
+                                <NafathTrustShield serviceNameAr="خدمات منزلية" cityNameAr={`${subRegion.name_ar}، ${city.name_ar}`} />
+                            </section>
+
+                            {/* Local Service Area */}
+                            <LocalPresence citySlug={resolvedParams.city} serviceSlug="city-hub" serviceName="خدمات منزلية" serviceCategory="cleaning" />
+                        </>
+                    }
+                >
+                    {/* Services */}
+                    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                        {Object.entries(servicesByCategory).map(([category, services]) => (
+                            <div key={category} className="mb-12">
+                                <div className="flex items-center gap-3 mb-6">
+                                    <div className="w-10 h-10 bg-sky-100 rounded-lg flex items-center justify-center text-sky-600">
+                                        {categoryIcons[category] || <Wrench className="w-5 h-5" />}
+                                    </div>
+                                    <h2 className="text-xl font-bold text-gray-900">
+                                        {CATEGORY_NAMES[category] || category} في {subRegion.name_ar}
+                                    </h2>
+                                </div>
+
+                                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                                    {services.map(service => service && (
+                                        <Link
+                                            key={service.slug}
+                                            href={`/${city.slug}/${service.slug}`}
+                                            className="group relative bg-white rounded-xl border border-gray-200 hover:border-sky-300 hover:shadow-lg transition-all overflow-hidden"
+                                        >
+                                            <div className="relative aspect-[4/3] bg-gray-100 overflow-hidden">
+                                                <Image
+                                                    src={getServiceImage(service.slug)}
+                                                    alt={`شركة ${service.name_ar} في ${subRegion.name_ar}، ${city.name_ar} - أفضل الأسعار من بروكر | تم التحقق عبر نفاذ SBC`}
+                                                    fill
+                                                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                                                    sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, 25vw"
+                                                />
+                                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                                                <VisionAiWatermark position="top-right" size="xs" />
+                                            </div>
+                                            <div className="absolute bottom-0 left-0 right-0 p-3">
+                                                <h3 className="font-semibold text-white text-sm">
+                                                    {service.name_ar} {subRegion.name_ar}
+                                                </h3>
+                                            </div>
+                                        </Link>
+                                    ))}
                                 </div>
                             </div>
-                            <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
-                                <h4 className="font-bold text-gray-800 mb-2" itemProp="name">كيف أختار شركة خدمات في {subRegion.name_ar}؟</h4>
-                                <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
-                                    <p className="text-gray-600 text-sm" itemProp="text">
-                                        قارن بين الشركات المتاحة في {subRegion.name_ar} من حيث التقييمات والأسعار والضمان. ننصح بطلب عرض سعر من 3 شركات على الأقل قبل الاختيار.
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
-                                <h4 className="font-bold text-gray-800 mb-2" itemProp="name">هل تغطي الشركات جميع أحياء {subRegion.name_ar}؟</h4>
-                                <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
-                                    <p className="text-gray-600 text-sm" itemProp="text">
-                                        نعم، الشركات المسجلة لدينا تغطي كافة أحياء {subRegion.name_ar} و{city.name_ar}. فرق العمل موزعة لتغطية المنطقة بأسرع وقت ممكن.
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
-                                <h4 className="font-bold text-gray-800 mb-2" itemProp="name">كم تكلفة الخدمات في {subRegion.name_ar}؟</h4>
-                                <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
-                                    <p className="text-gray-600 text-sm" itemProp="text">
-                                        تختلف الأسعار حسب نوع الخدمة وحجم العمل. يمكنك مقارنة الأسعار بين الشركات المتاحة في {subRegion.name_ar} عبر بروكر والحصول على عروض أسعار مجانية.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                </section>
-
-                {/* 📱 Dark Social Share — SubRegion Page */}
-                <DarkSocialShare
-                    variant="service"
-                    serviceName="خدمات منزلية"
-                    cityName={`${subRegion.name_ar}، ${city.name_ar}`}
-                    citySlug={resolvedParams.city}
-                    serviceSlug={`region-${resolvedParams.subregion}`}
-                    totalCompanies={availableServices.length}
-                />
-
-                {/* Other Sub-Regions */}
-                {otherSubRegions.length > 0 && (
-                    <section className="bg-gray-100 py-12">
-                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                            <h2 className="text-xl font-bold text-gray-900 mb-6">خدمات في مناطق أخرى بـ{city.name_ar}</h2>
-                            <div className="flex flex-wrap gap-3">
-                                {otherSubRegions.map(sr => (
-                                    <Link
-                                        key={sr.slug}
-                                        href={`/regions/${city.slug}/${sr.slug}`}
-                                        className="px-4 py-2 bg-white border border-gray-200 rounded-lg hover:border-sky-300 hover:shadow-md transition-all"
-                                    >
-                                        {sr.name_ar}
-                                    </Link>
-                                ))}
-                            </div>
-                        </div>
+                        ))}
                     </section>
-                )}
 
-                <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-                    <Link href={`/${city.slug}`} className="inline-flex items-center gap-2 text-sky-600 hover:text-sky-700">
-                        <ChevronLeft className="w-4 h-4 rotate-180" />
-                        جميع خدمات {city.name_ar}
-                    </Link>
-                </section>
-
-                {/* 🛡️ Consumer Protection Alert — Consumer Protection Banner */}
-                <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-                    <FraudAlertBanner serviceName="خدمات منزلية" serviceSlug="cleaning" cityName={`${subRegion.name_ar}، ${city.name_ar}`} />
-                </section>
-
-                {/* 🛡️ Nafath Trust Shield — Government Identity Verification */}
-                <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
-                    <NafathTrustShield serviceNameAr="خدمات منزلية" cityNameAr={`${subRegion.name_ar}، ${city.name_ar}`} />
-                </section>
-
-                {/* Local Service Area — SubRegion Signal */}
-                <LocalPresence citySlug={resolvedParams.city} serviceSlug="city-hub" serviceName="خدمات منزلية" serviceCategory="cleaning" />
+                    {/* 📱 Dark Social Share — SubRegion Page */}
+                    <DarkSocialShare
+                        variant="service"
+                        serviceName="خدمات منزلية"
+                        cityName={`${subRegion.name_ar}، ${city.name_ar}`}
+                        citySlug={resolvedParams.city}
+                        serviceSlug={`region-${resolvedParams.subregion}`}
+                        totalCompanies={availableServices.length}
+                    />
+                </SourceOrderLayout>
 
                 <Footer currentCity={resolvedParams.city} />
             </main>

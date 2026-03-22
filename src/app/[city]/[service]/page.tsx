@@ -32,6 +32,7 @@ import MarketTimingBadge from '@/components/MarketTimingBadge';
 import { PriceDisclosure } from '@/components/PriceDisclosure';
 import PricingBenchmarkBox from '@/components/PricingBenchmarkBox';
 import ActionButton from '@/components/ActionButton';
+import SourceOrderLayout from '@/components/SourceOrderLayout';
 import type { Advertiser } from '@/types';
 
 // Disable static generation, use ISR instead
@@ -314,125 +315,134 @@ export default async function SiloPage({ params }: SiloPageProps) {
                     />
                 </section>
 
-                {/* Companies or Lead Capture */}
-                {allAdvertisers.length === 0 ? (
-                    /* Service Request Form */
-                    <LeadCaptureCTA cityName={city.name_ar} serviceName={service.name_ar} serviceSlug={service.slug} citySlug={resolvedParams.city} />
-                ) : (
-                    <>
-                        {/* Premium Advertisers Grid */}
-                        {premium.length > 0 && (
-                            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-                                <div className="flex items-center gap-3 mb-8">
-                                    <div className="w-1.5 h-8 bg-gradient-to-b from-amber-400 to-amber-600 rounded-full"></div>
-                                    <h2 className="text-2xl font-bold text-gray-900">الشركات المعتمدة</h2>
-                                    <span className="px-3 py-1 bg-amber-100 text-amber-700 text-sm font-medium rounded-full">
-                                        أعلى تقييماً
-                                    </span>
-                                </div>
+                {/* 🔍 CSS Source Order Hack — Section 15.6
+                    Source order: SEO content FIRST (Google reads this first)
+                    Visual order: Company listings FIRST (user sees this first via column-reverse) */}
+                <SourceOrderLayout
+                    seoContent={
+                        <>
+                            {/* Enhanced SEO Content with Pricing Table, FAQ, etc. */}
+                            <SeoContentSection city={city} service={service} />
+                            {/* FAQ schema now inside UnifiedGraphCompiler @graph */}
 
-                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                    {premium.map(advertiser => (
-                                        <PremiumCard key={advertiser.id} advertiser={advertiser} />
-                                    ))}
-                                </div>
+                            {/* 📊 Geo-Pricing Table — التسعير الجغرافي المتقاطع */}
+                            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                                <GeoPricingTable
+                                    citySlug={resolvedParams.city}
+                                    cityName={city.name_ar}
+                                    serviceSlug={resolvedParams.service}
+                                    serviceName={service.name_ar}
+                                />
                             </section>
-                        )}
 
-                        {/* Standard Advertisers List */}
-                        {standard.length > 0 && (
-                            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-gray-200">
-                                <div className="flex items-center gap-3 mb-8">
-                                    <div className="w-1.5 h-8 bg-gradient-to-b from-gray-400 to-gray-600 rounded-full"></div>
-                                    <h2 className="text-xl font-bold text-gray-900">مزيد من الشركات</h2>
-                                </div>
+                            {/* Fragment URL Architecture: Absorbed Service Sections */}
+                            {isCanonicalSlug(service.slug) && (() => {
+                                const group = getSuperPageGroup(service.slug);
+                                return group ? (
+                                    <AbsorbedServiceSections
+                                        city={city}
+                                        service={service}
+                                        group={group}
+                                        allServices={ALL_SERVICES_LIST}
+                                    />
+                                ) : null;
+                            })()}
 
-                                <div className="space-y-3">
-                                    {standard.map(advertiser => (
-                                        <StandardRow key={advertiser.id} advertiser={advertiser} />
-                                    ))}
-                                </div>
+                            {/* 📊 Pricing Benchmark — مؤشر بروكر للأسعار */}
+                            <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                                <PricingBenchmarkBox citySlug={resolvedParams.city} serviceSlug={resolvedParams.service} />
                             </section>
-                        )}
-                    </>
-                )}
 
-                {/* ⚡ Wizard Funnel CTA — Section 11.3 */}
-                <div data-wizard-cta>
-                    <WizardFunnelButton
-                        placement="inline"
-                        citySlug={resolvedParams.city}
-                        cityName={city.name_ar}
-                        serviceSlug={resolvedParams.service}
-                    />
-                </div>
+                            {/* 🛡️ Consumer Protection Alert — Consumer Protection Banner */}
+                            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                                <FraudAlertBanner serviceName={service.name_ar} serviceSlug={service.slug} cityName={city.name_ar} />
+                            </section>
 
-                {/* 🎯 Wizard FAB — Smart Floating Trigger */}
-                <WizardFunnelFAB
-                    citySlug={resolvedParams.city}
-                    cityName={city.name_ar}
-                    serviceSlug={resolvedParams.service}
-                />
+                            {/* 🛡️ Nafath Trust Shield — Government Identity Verification */}
+                            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
+                                <NafathTrustShield serviceNameAr={service.name_ar} cityNameAr={cityKw} />
+                            </section>
 
-                {/* 📱 Dark Social Share — Section 11.4 */}
-                <DarkSocialShare
-                    variant="service"
-                    serviceName={service.name_ar}
-                    cityName={city.name_ar}
-                    citySlug={resolvedParams.city}
-                    serviceSlug={resolvedParams.service}
-                    totalCompanies={allAdvertisers.length}
-                    avgRating={(allAdvertisers.reduce((sum, a) => {
-                        const reviews = a.reviews || [];
-                        if (reviews.length === 0) return sum;
-                        return sum + reviews.reduce((s, r) => s + r.rating, 0) / reviews.length;
-                    }, 0) / Math.max(allAdvertisers.filter(a => (a.reviews?.length || 0) > 0).length, 1)).toFixed(1)}
-                />
+                            {/* Local Service Area — Unique Per City+Service Slug */}
+                            <LocalPresence citySlug={resolvedParams.city} serviceSlug={resolvedParams.service} serviceName={service.name_ar} serviceCategory={service.category} />
+                        </>
+                    }
+                >
+                    {/* Companies or Lead Capture */}
+                    {allAdvertisers.length === 0 ? (
+                        /* Service Request Form */
+                        <LeadCaptureCTA cityName={city.name_ar} serviceName={service.name_ar} serviceSlug={service.slug} citySlug={resolvedParams.city} />
+                    ) : (
+                        <>
+                            {/* Premium Advertisers Grid */}
+                            {premium.length > 0 && (
+                                <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                                    <div className="flex items-center gap-3 mb-8">
+                                        <div className="w-1.5 h-8 bg-gradient-to-b from-amber-400 to-amber-600 rounded-full"></div>
+                                        <h2 className="text-2xl font-bold text-gray-900">الشركات المعتمدة</h2>
+                                        <span className="px-3 py-1 bg-amber-100 text-amber-700 text-sm font-medium rounded-full">
+                                            أعلى تقييماً
+                                        </span>
+                                    </div>
 
-                {/* Enhanced SEO Content with Pricing Table, FAQ, etc. */}
-                <SeoContentSection city={city} service={service} />
-                {/* FAQ schema now inside UnifiedGraphCompiler @graph */}
+                                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                        {premium.map(advertiser => (
+                                            <PremiumCard key={advertiser.id} advertiser={advertiser} />
+                                        ))}
+                                    </div>
+                                </section>
+                            )}
 
-                {/* 📊 Geo-Pricing Table — التسعير الجغرافي المتقاطع */}
-                <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-                    <GeoPricingTable
-                        citySlug={resolvedParams.city}
-                        cityName={city.name_ar}
-                        serviceSlug={resolvedParams.service}
-                        serviceName={service.name_ar}
-                    />
-                </section>
+                            {/* Standard Advertisers List */}
+                            {standard.length > 0 && (
+                                <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-gray-200">
+                                    <div className="flex items-center gap-3 mb-8">
+                                        <div className="w-1.5 h-8 bg-gradient-to-b from-gray-400 to-gray-600 rounded-full"></div>
+                                        <h2 className="text-xl font-bold text-gray-900">مزيد من الشركات</h2>
+                                    </div>
 
-                {/* Fragment URL Architecture: Absorbed Service Sections */}
-                {isCanonicalSlug(service.slug) && (() => {
-                    const group = getSuperPageGroup(service.slug);
-                    return group ? (
-                        <AbsorbedServiceSections
-                            city={city}
-                            service={service}
-                            group={group}
-                            allServices={ALL_SERVICES_LIST}
+                                    <div className="space-y-3">
+                                        {standard.map(advertiser => (
+                                            <StandardRow key={advertiser.id} advertiser={advertiser} />
+                                        ))}
+                                    </div>
+                                </section>
+                            )}
+                        </>
+                    )}
+
+                    {/* ⚡ Wizard Funnel CTA — Section 11.3 */}
+                    <div data-wizard-cta>
+                        <WizardFunnelButton
+                            placement="inline"
+                            citySlug={resolvedParams.city}
+                            cityName={city.name_ar}
+                            serviceSlug={resolvedParams.service}
                         />
-                    ) : null;
-                })()}
+                    </div>
 
-                {/* 📊 Pricing Benchmark — مؤشر بروكر للأسعار */}
-                <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <PricingBenchmarkBox citySlug={resolvedParams.city} serviceSlug={resolvedParams.service} />
-                </section>
+                    {/* 🎯 Wizard FAB — Smart Floating Trigger */}
+                    <WizardFunnelFAB
+                        citySlug={resolvedParams.city}
+                        cityName={city.name_ar}
+                        serviceSlug={resolvedParams.service}
+                    />
 
-                {/* 🛡️ Consumer Protection Alert — Consumer Protection Banner */}
-                <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-                    <FraudAlertBanner serviceName={service.name_ar} serviceSlug={service.slug} cityName={city.name_ar} />
-                </section>
-
-                {/* 🛡️ Nafath Trust Shield — Government Identity Verification */}
-                <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
-                    <NafathTrustShield serviceNameAr={service.name_ar} cityNameAr={cityKw} />
-                </section>
-
-                {/* Local Service Area — Unique Per City+Service Slug */}
-                <LocalPresence citySlug={resolvedParams.city} serviceSlug={resolvedParams.service} serviceName={service.name_ar} serviceCategory={service.category} />
+                    {/* 📱 Dark Social Share — Section 11.4 */}
+                    <DarkSocialShare
+                        variant="service"
+                        serviceName={service.name_ar}
+                        cityName={city.name_ar}
+                        citySlug={resolvedParams.city}
+                        serviceSlug={resolvedParams.service}
+                        totalCompanies={allAdvertisers.length}
+                        avgRating={(allAdvertisers.reduce((sum, a) => {
+                            const reviews = a.reviews || [];
+                            if (reviews.length === 0) return sum;
+                            return sum + reviews.reduce((s, r) => s + r.rating, 0) / reviews.length;
+                        }, 0) / Math.max(allAdvertisers.filter(a => (a.reviews?.length || 0) > 0).length, 1)).toFixed(1)}
+                    />
+                </SourceOrderLayout>
 
                 {/* Footer */}
                 <Footer currentCity={resolvedParams.city} currentService={resolvedParams.service} />

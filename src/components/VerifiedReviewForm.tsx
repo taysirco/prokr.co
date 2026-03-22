@@ -6,9 +6,10 @@
 // ============================================
 
 import { useState, useEffect, useRef, useCallback } from 'react';
-import { Star, Loader2, CheckCircle, Shield, Phone, Smartphone, ExternalLink, Copy } from 'lucide-react';
+import { Star, Loader2, CheckCircle, Shield, Phone, Smartphone, ExternalLink, Copy, Mic, PenLine } from 'lucide-react';
 import { signInWithGoogle, checkGoogleRedirectResult, setupRecaptcha, sendPhoneOTP, verifyPhoneOTP, getCurrentUser, onAuthChange, formatSaudiPhone } from '@/lib/firebase-auth';
 import type { RecaptchaVerifier } from 'firebase/auth';
+import AudioReviewRecorder from './AudioReviewRecorder';
 
 interface VerifiedReviewFormProps {
     companyCode: string;
@@ -17,6 +18,7 @@ interface VerifiedReviewFormProps {
 
 type AuthMethod = null | 'choosing' | 'phone-input' | 'phone-otp' | 'authenticated';
 type ReviewState = 'form' | 'sending' | 'sent';
+type ReviewMode = 'text' | 'voice';
 
 export default function VerifiedReviewForm({ companyCode, businessName }: VerifiedReviewFormProps) {
     const [authMethod, setAuthMethod] = useState<AuthMethod>(null);
@@ -31,6 +33,7 @@ export default function VerifiedReviewForm({ companyCode, businessName }: Verifi
     const [comment, setComment] = useState('');
     const [errorMsg, setErrorMsg] = useState('');
     const [loading, setLoading] = useState(false);
+    const [reviewMode, setReviewMode] = useState<ReviewMode>('text');
     const recaptchaRef = useRef<RecaptchaVerifier | null>(null);
 
     // Cleanup RecaptchaVerifier on unmount
@@ -397,58 +400,101 @@ export default function VerifiedReviewForm({ companyCode, businessName }: Verifi
                 </div>
             </div>
 
-            <form onSubmit={handleSubmitReview} className="space-y-4">
-                {/* Star Rating */}
-                <div>
-                    <label className="block text-gray-700 text-xs font-bold mb-2">التقييم</label>
-                    <div className="flex gap-1" dir="ltr">
-                        {[1, 2, 3, 4, 5].map((star) => (
-                            <button
-                                key={star}
-                                type="button"
-                                onClick={() => setRating(star)}
-                                onMouseEnter={() => setHoverRating(star)}
-                                onMouseLeave={() => setHoverRating(0)}
-                                className="transition-transform hover:scale-110"
-                            >
-                                <Star
-                                    className={`w-8 h-8 ${
-                                        star <= (hoverRating || rating)
-                                            ? 'text-amber-400 fill-amber-400'
-                                            : 'text-gray-300'
-                                    } transition-colors`}
-                                />
-                            </button>
-                        ))}
-                    </div>
-                </div>
-
-                {/* Comment */}
-                <div>
-                    <label className="block text-gray-700 text-xs font-bold mb-1">تعليقك</label>
-                    <textarea
-                        value={comment}
-                        onChange={(e) => setComment(e.target.value)}
-                        placeholder="شاركنا تجربتك مع هذه الشركة..."
-                        rows={3}
-                        className="w-full px-3 py-2 border border-gray-200 rounded-xl text-sm focus:border-sky-400 focus:ring-2 focus:ring-sky-100 outline-none resize-none"
-                    />
-                </div>
-
-                {errorMsg && <p className="text-red-600 text-xs bg-red-50 p-2 rounded-lg">⚠️ {errorMsg}</p>}
-
+            {/* ── Review Mode Toggle: Text vs Voice ── */}
+            <div className="flex gap-2 mb-5 bg-gray-100 rounded-xl p-1">
                 <button
-                    type="submit"
-                    disabled={reviewState === 'sending'}
-                    className="w-full py-3 bg-gradient-to-l from-sky-500 to-teal-500 text-white font-bold text-sm rounded-xl hover:from-sky-600 hover:to-teal-600 transition-all shadow-lg shadow-sky-200 flex items-center justify-center gap-2 disabled:opacity-60"
+                    type="button"
+                    onClick={() => setReviewMode('text')}
+                    className={`flex-1 py-2.5 rounded-lg text-sm font-bold flex items-center justify-center gap-2 transition-all ${
+                        reviewMode === 'text'
+                            ? 'bg-white text-gray-800 shadow-sm'
+                            : 'text-gray-500 hover:text-gray-700'
+                    }`}
                 >
-                    {reviewState === 'sending' ? (
-                        <><Loader2 className="w-4 h-4 animate-spin" /> جاري الإرسال...</>
-                    ) : (
-                        <><Star className="w-4 h-4" /> إرسال التقييم المُوثّق</>
-                    )}
+                    <PenLine className="w-4 h-4" />
+                    ✍️ كتابي
                 </button>
-            </form>
+                <button
+                    type="button"
+                    onClick={() => setReviewMode('voice')}
+                    className={`flex-1 py-2.5 rounded-lg text-sm font-bold flex items-center justify-center gap-2 transition-all ${
+                        reviewMode === 'voice'
+                            ? 'bg-gradient-to-l from-teal-500 to-sky-500 text-white shadow-md'
+                            : 'text-gray-500 hover:text-gray-700'
+                    }`}
+                >
+                    <Mic className="w-4 h-4" />
+                    🎤 صوتي
+                </button>
+            </div>
+
+            {/* ── Voice Review Mode ── */}
+            {reviewMode === 'voice' && (
+                <AudioReviewRecorder
+                    companyCode={companyCode}
+                    businessName={businessName}
+                    userEmail={userEmail}
+                    userPhone={userPhone}
+                    userName={userName}
+                    onComplete={() => setReviewState('sent')}
+                />
+            )}
+
+            {/* ── Text Review Mode ── */}
+            {reviewMode === 'text' && (
+                <form onSubmit={handleSubmitReview} className="space-y-4">
+                    {/* Star Rating */}
+                    <div>
+                        <label className="block text-gray-700 text-xs font-bold mb-2">التقييم</label>
+                        <div className="flex gap-1" dir="ltr">
+                            {[1, 2, 3, 4, 5].map((star) => (
+                                <button
+                                    key={star}
+                                    type="button"
+                                    onClick={() => setRating(star)}
+                                    onMouseEnter={() => setHoverRating(star)}
+                                    onMouseLeave={() => setHoverRating(0)}
+                                    className="transition-transform hover:scale-110"
+                                >
+                                    <Star
+                                        className={`w-8 h-8 ${
+                                            star <= (hoverRating || rating)
+                                                ? 'text-amber-400 fill-amber-400'
+                                                : 'text-gray-300'
+                                        } transition-colors`}
+                                    />
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Comment */}
+                    <div>
+                        <label className="block text-gray-700 text-xs font-bold mb-1">تعليقك</label>
+                        <textarea
+                            value={comment}
+                            onChange={(e) => setComment(e.target.value)}
+                            placeholder="شاركنا تجربتك مع هذه الشركة..."
+                            rows={3}
+                            className="w-full px-3 py-2 border border-gray-200 rounded-xl text-sm focus:border-sky-400 focus:ring-2 focus:ring-sky-100 outline-none resize-none"
+                        />
+                    </div>
+
+                    {errorMsg && <p className="text-red-600 text-xs bg-red-50 p-2 rounded-lg">⚠️ {errorMsg}</p>}
+
+                    <button
+                        type="submit"
+                        disabled={reviewState === 'sending'}
+                        className="w-full py-3 bg-gradient-to-l from-sky-500 to-teal-500 text-white font-bold text-sm rounded-xl hover:from-sky-600 hover:to-teal-600 transition-all shadow-lg shadow-sky-200 flex items-center justify-center gap-2 disabled:opacity-60"
+                    >
+                        {reviewState === 'sending' ? (
+                            <><Loader2 className="w-4 h-4 animate-spin" /> جاري الإرسال...</>
+                        ) : (
+                            <><Star className="w-4 h-4" /> إرسال التقييم المُوثّق</>
+                        )}
+                    </button>
+                </form>
+            )}
         </div>
     );
 }

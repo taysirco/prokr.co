@@ -20,6 +20,7 @@ import { LiveAvailabilityBanner } from '@/components/LiveAvailabilityBanner';
 import { EmergencyNightBanner } from '@/components/EmergencyNightBanner';
 import DarkSocialShare from '@/components/DarkSocialShare';
 import { VisionAiWatermark } from '@/components/VisionAiWatermark';
+import SourceOrderLayout from '@/components/SourceOrderLayout';
 
 // Service definitions for DefinedTerm schema + CitableSummary
 const SERVICE_DEFINITIONS: Record<string, string> = {
@@ -266,186 +267,195 @@ export default async function ServicePage({ params }: ServicePageProps) {
                     statText={`يتوفر في ${CITIES.filter(c => hasPageOverride(c.slug, getCanonicalSlug(service.slug) || service.slug)).length} مدينة سعودية عبر شركات مرخصة من وزارة التجارة`}
                 />
 
-                {/* Cities by Region */}
-                <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-                    <h2 className="text-2xl font-bold text-gray-900 mb-8">
-                        اختر مدينتك لخدمة {service.name_ar}
-                    </h2>
+                {/* 🔍 CSS Source Order Hack — Section 15.6
+                    Source order: SEO content FIRST (Google reads this first)
+                    Visual order: City listings FIRST (user sees this first via column-reverse) */}
+                <SourceOrderLayout
+                    seoContent={
+                        <>
+                            {/* SEO Content */}
+                            <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                                <article className="prose prose-lg prose-sky max-w-none">
+                                    <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                                        {service.name_ar} في المملكة العربية السعودية
+                                    </h2>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {Object.entries(citiesByRegion).map(([region, cities]) => (
-                            <div key={region} className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
-                                <h3 className="font-bold text-gray-900 mb-4 flex items-center gap-2">
-                                    <MapPin className="w-5 h-5 text-sky-500" />
-                                    {REGION_NAMES[region] || region}
-                                </h3>
-                                <div className="space-y-2">
-                                    {cities.filter(city => hasPageOverride(city.slug, getCanonicalSlug(service.slug) || service.slug)).map(city => (
-                                        <Link
-                                            key={city.slug}
-                                            href={`/${city.slug}/${getCanonicalSlug(service.slug) || service.slug}`}
-                                            className="flex items-center justify-between p-3 hover:bg-sky-50 rounded-lg text-gray-700 hover:text-sky-700 transition-colors group"
-                                        >
-                                            <span>{city.name_ar}</span>
-                                            <ChevronLeft className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
-                                        </Link>
-                                    ))}
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </section>
+                                    <div className="bg-sky-50 p-6 rounded-xl border-r-4 border-sky-500 mb-8">
+                                        <p className="text-gray-700 leading-relaxed font-medium">
+                                            تقدم بروكر دليلاً شاملاً لأفضل شركات {service.name_ar} في جميع مدن المملكة العربية السعودية.
+                                            بناءً على تحليل أكثر من 500 شركة مسجلة في {CITIES.length} مدينة، نساعدك في العثور على الشركة المناسبة
+                                            بسهولة من خلال مقارنة الأسعار والتقييمات والتواصل المباشر مع مقدمي الخدمة.
+                                            جميع الشركات المعتمدة مرخصة وفقاً لاشتراطات وزارة التجارة السعودية.
+                                        </p>
+                                        <p className="text-xs text-gray-500 mt-3">
+                                            آخر تحديث: {new Date().toISOString().split('T')[0]} | وفقاً لمعايير هيئة المواصفات السعودية (SASO)
+                                        </p>
+                                    </div>
 
-                {/* SEO Content */}
-                <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-                    <article className="prose prose-lg prose-sky max-w-none">
-                        <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                            {service.name_ar} في المملكة العربية السعودية
+                                    {/* Inter-City Price Comparison Table */}
+                                    <h3 className="text-xl font-bold text-gray-900 mt-8 mb-4">
+                                        مقارنة أسعار {service.name_ar} بين المدن الرئيسية (2026)
+                                    </h3>
+                                    {(() => {
+                                        const basePrice = BASE_PRICE[service.slug];
+                                        if (!basePrice) return null;
+                                        return (
+                                            <div className="overflow-x-auto mb-8 not-prose">
+                                                <table className="w-full border-collapse bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200">
+                                                    <caption className="text-sm text-gray-500 mb-2 text-right">
+                                                        * الأسعار تقريبية لخدمة {basePrice.label} بالريال السعودي
+                                                    </caption>
+                                                    <thead>
+                                                        <tr className="bg-sky-50 text-gray-700 border-b border-gray-200">
+                                                            <th className="text-right p-4 font-semibold">المدينة</th>
+                                                            <th className="text-right p-4 font-semibold">السعر المتوقع</th>
+                                                            <th className="text-right p-4 font-semibold">الرابط</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody className="divide-y divide-gray-100">
+                                                        {COMPARISON_CITIES.filter(cs => hasPageOverride(cs, getCanonicalSlug(service.slug) || service.slug)).map(citySlug => {
+                                                            const ctx = getCityContext(citySlug);
+                                                            if (!ctx) return null;
+                                                            return (
+                                                                <tr key={citySlug} className="hover:bg-gray-50">
+                                                                    <td className="p-4 text-gray-800 font-medium">{ctx.name_ar}</td>
+                                                                    <td className="p-4 text-sky-600 font-bold" dir="ltr">
+                                                                        {getAdjustedPriceRange(basePrice.min, basePrice.max, citySlug)}
+                                                                    </td>
+                                                                    <td className="p-4">
+                                                                        <Link href={`/${citySlug}/${getCanonicalSlug(service.slug) || service.slug}`} className="text-sky-600 hover:text-sky-800 underline text-sm">
+                                                                            عرض الشركات
+                                                                        </Link>
+                                                                    </td>
+                                                                </tr>
+                                                            );
+                                                        })}
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        );
+                                    })()}
+
+                                    <h3 className="text-xl font-bold text-gray-900 mt-8 mb-4">
+                                        لماذا تختار بروكر لخدمة {service.name_ar}؟
+                                    </h3>
+                                    <ul className="text-gray-600 space-y-2">
+                                        <li>✓ شركات معتمدة ومرخصة رسمياً من وزارة التجارة</li>
+                                        <li>✓ أسعار تنافسية ومناسبة مع ضمان على الخدمة</li>
+                                        <li>✓ تقييمات حقيقية من عملاء سابقين</li>
+                                        <li>✓ تواصل مباشر مع مقدمي الخدمة عبر الهاتف والواتساب</li>
+                                        <li>✓ تغطية شاملة لجميع {CITIES.length} مدينة في المملكة</li>
+                                        <li>✓ مقارنة فورية بين العروض والأسعار</li>
+                                    </ul>
+
+                                    {/* National FAQ */}
+                                    <h3 className="text-xl font-bold text-gray-900 mt-10 mb-4">
+                                        أسئلة شائعة عن {service.name_ar}
+                                    </h3>
+                                    <div className="space-y-4 not-prose" itemScope itemType="https://schema.org/FAQPage">
+                                        <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
+                                            <h4 className="font-bold text-gray-800 mb-2" itemProp="name">كم تكلفة {service.name_ar} في السعودية؟</h4>
+                                            <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                                                <p className="text-gray-600" itemProp="text">تختلف الأسعار حسب المدينة وحجم العمل. الأسعار في الرياض وجدة أعلى بنسبة 10-20% مقارنة بالمدن الأصغر. استخدم بروكر للحصول على عروض أسعار مجانية من شركات معتمدة.</p>
+                                            </div>
+                                        </div>
+                                        <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
+                                            <h4 className="font-bold text-gray-800 mb-2" itemProp="name">في أي مدن تتوفر خدمة {service.name_ar}؟</h4>
+                                            <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                                                <p className="text-gray-600" itemProp="text">تتوفر خدمة {service.name_ar} عبر بروكر في {CITIES.length} مدينة سعودية تشمل الرياض، جدة، الدمام، مكة، المدينة، والمزيد.</p>
+                                            </div>
+                                        </div>
+                                        <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
+                                            <h4 className="font-bold text-gray-800 mb-2" itemProp="name">كيف أختار شركة {service.name_ar} موثوقة؟</h4>
+                                            <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                                                <p className="text-gray-600" itemProp="text">تحقق من ترخيص الشركة، اقرأ تقييمات العملاء، قارن بين 3 عروض على الأقل، وتأكد من وجود ضمان مكتوب. بروكر يعرض فقط الشركات التي تم التحقق منها.</p>
+                                            </div>
+                                        </div>
+                                        <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
+                                            <h4 className="font-bold text-gray-800 mb-2" itemProp="name">هل يوجد ضمان على {service.name_ar}؟</h4>
+                                            <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                                                <p className="text-gray-600" itemProp="text">نعم، جميع الشركات المعتمدة في بروكر ملزمة بتقديم ضمان يتراوح بين 3 أشهر وسنة كاملة حسب نوع الخدمة. الضمان يُوثق في عقد مكتوب.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Other Services */}
+                                    <div className="mt-8 not-prose">
+                                        <section className="bg-gray-100 py-12 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 rounded-xl">
+                                            <h2 className="text-xl font-bold text-gray-900 mb-6">خدمات أخرى</h2>
+                                            <div className="flex flex-wrap gap-3">
+                                                {SERVICES.filter(s => s.slug !== service.slug && !isAbsorbedSlug(s.slug)).slice(0, 12).map(otherService => (
+                                                    <Link
+                                                        key={otherService.slug}
+                                                        href={`/${otherService.slug}`}
+                                                        className="px-4 py-2 bg-white border border-gray-200 rounded-lg hover:border-sky-300 hover:shadow-md transition-all text-gray-700 hover:text-sky-700"
+                                                    >
+                                                        {otherService.name_ar}
+                                                    </Link>
+                                                ))}
+                                            </div>
+                                        </section>
+                                    </div>
+                                </article>
+                            </section>
+
+                            {/* 🛡️ Consumer Protection Alert */}
+                            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                                <FraudAlertBanner serviceName={service.name_ar} serviceSlug={service.slug} cityName="السعودية" />
+                            </section>
+
+                            {/* 🛡️ Nafath Trust Shield */}
+                            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
+                                <NafathTrustShield serviceNameAr={service.name_ar} cityNameAr="المملكة" />
+                            </section>
+
+                            {/* Local Service Area */}
+                            <LocalPresence citySlug="riyadh" serviceSlug={resolvedParams.service} serviceName={service.name_ar} serviceCategory={service.category} />
+                        </>
+                    }
+                >
+                    {/* Cities by Region */}
+                    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                        <h2 className="text-2xl font-bold text-gray-900 mb-8">
+                            اختر مدينتك لخدمة {service.name_ar}
                         </h2>
 
-                        <div className="bg-sky-50 p-6 rounded-xl border-r-4 border-sky-500 mb-8">
-                            <p className="text-gray-700 leading-relaxed font-medium">
-                                تقدم بروكر دليلاً شاملاً لأفضل شركات {service.name_ar} في جميع مدن المملكة العربية السعودية.
-                                بناءً على تحليل أكثر من 500 شركة مسجلة في {CITIES.length} مدينة، نساعدك في العثور على الشركة المناسبة
-                                بسهولة من خلال مقارنة الأسعار والتقييمات والتواصل المباشر مع مقدمي الخدمة.
-                                جميع الشركات المعتمدة مرخصة وفقاً لاشتراطات وزارة التجارة السعودية.
-                            </p>
-                            <p className="text-xs text-gray-500 mt-3">
-                                آخر تحديث: {new Date().toISOString().split('T')[0]} | وفقاً لمعايير هيئة المواصفات السعودية (SASO)
-                            </p>
-                        </div>
-
-                        {/* Inter-City Price Comparison Table */}
-                        <h3 className="text-xl font-bold text-gray-900 mt-8 mb-4">
-                            مقارنة أسعار {service.name_ar} بين المدن الرئيسية (2026)
-                        </h3>
-                        {(() => {
-                            const basePrice = BASE_PRICE[service.slug];
-                            if (!basePrice) return null;
-                            return (
-                                <div className="overflow-x-auto mb-8 not-prose">
-                                    <table className="w-full border-collapse bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200">
-                                        <caption className="text-sm text-gray-500 mb-2 text-right">
-                                            * الأسعار تقريبية لخدمة {basePrice.label} بالريال السعودي
-                                        </caption>
-                                        <thead>
-                                            <tr className="bg-sky-50 text-gray-700 border-b border-gray-200">
-                                                <th className="text-right p-4 font-semibold">المدينة</th>
-                                                <th className="text-right p-4 font-semibold">السعر المتوقع</th>
-                                                <th className="text-right p-4 font-semibold">الرابط</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody className="divide-y divide-gray-100">
-                                            {COMPARISON_CITIES.filter(cs => hasPageOverride(cs, getCanonicalSlug(service.slug) || service.slug)).map(citySlug => {
-                                                const ctx = getCityContext(citySlug);
-                                                if (!ctx) return null;
-                                                return (
-                                                    <tr key={citySlug} className="hover:bg-gray-50">
-                                                        <td className="p-4 text-gray-800 font-medium">{ctx.name_ar}</td>
-                                                        <td className="p-4 text-sky-600 font-bold" dir="ltr">
-                                                            {getAdjustedPriceRange(basePrice.min, basePrice.max, citySlug)}
-                                                        </td>
-                                                        <td className="p-4">
-                                                            <Link href={`/${citySlug}/${getCanonicalSlug(service.slug) || service.slug}`} className="text-sky-600 hover:text-sky-800 underline text-sm">
-                                                                عرض الشركات
-                                                            </Link>
-                                                        </td>
-                                                    </tr>
-                                                );
-                                            })}
-                                        </tbody>
-                                    </table>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            {Object.entries(citiesByRegion).map(([region, cities]) => (
+                                <div key={region} className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+                                    <h3 className="font-bold text-gray-900 mb-4 flex items-center gap-2">
+                                        <MapPin className="w-5 h-5 text-sky-500" />
+                                        {REGION_NAMES[region] || region}
+                                    </h3>
+                                    <div className="space-y-2">
+                                        {cities.filter(city => hasPageOverride(city.slug, getCanonicalSlug(service.slug) || service.slug)).map(city => (
+                                            <Link
+                                                key={city.slug}
+                                                href={`/${city.slug}/${getCanonicalSlug(service.slug) || service.slug}`}
+                                                className="flex items-center justify-between p-3 hover:bg-sky-50 rounded-lg text-gray-700 hover:text-sky-700 transition-colors group"
+                                            >
+                                                <span>{city.name_ar}</span>
+                                                <ChevronLeft className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                                            </Link>
+                                        ))}
+                                    </div>
                                 </div>
-                            );
-                        })()}
-
-                        <h3 className="text-xl font-bold text-gray-900 mt-8 mb-4">
-                            لماذا تختار بروكر لخدمة {service.name_ar}؟
-                        </h3>
-                        <ul className="text-gray-600 space-y-2">
-                            <li>✓ شركات معتمدة ومرخصة رسمياً من وزارة التجارة</li>
-                            <li>✓ أسعار تنافسية ومناسبة مع ضمان على الخدمة</li>
-                            <li>✓ تقييمات حقيقية من عملاء سابقين</li>
-                            <li>✓ تواصل مباشر مع مقدمي الخدمة عبر الهاتف والواتساب</li>
-                            <li>✓ تغطية شاملة لجميع {CITIES.length} مدينة في المملكة</li>
-                            <li>✓ مقارنة فورية بين العروض والأسعار</li>
-                        </ul>
-
-                        {/* National FAQ */}
-                        <h3 className="text-xl font-bold text-gray-900 mt-10 mb-4">
-                            أسئلة شائعة عن {service.name_ar}
-                        </h3>
-                        <div className="space-y-4 not-prose" itemScope itemType="https://schema.org/FAQPage">
-                            <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
-                                <h4 className="font-bold text-gray-800 mb-2" itemProp="name">كم تكلفة {service.name_ar} في السعودية؟</h4>
-                                <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
-                                    <p className="text-gray-600" itemProp="text">تختلف الأسعار حسب المدينة وحجم العمل. الأسعار في الرياض وجدة أعلى بنسبة 10-20% مقارنة بالمدن الأصغر. استخدم بروكر للحصول على عروض أسعار مجانية من شركات معتمدة.</p>
-                                </div>
-                            </div>
-                            <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
-                                <h4 className="font-bold text-gray-800 mb-2" itemProp="name">في أي مدن تتوفر خدمة {service.name_ar}؟</h4>
-                                <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
-                                    <p className="text-gray-600" itemProp="text">تتوفر خدمة {service.name_ar} عبر بروكر في {CITIES.length} مدينة سعودية تشمل الرياض، جدة، الدمام، مكة، المدينة، والمزيد.</p>
-                                </div>
-                            </div>
-                            <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
-                                <h4 className="font-bold text-gray-800 mb-2" itemProp="name">كيف أختار شركة {service.name_ar} موثوقة؟</h4>
-                                <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
-                                    <p className="text-gray-600" itemProp="text">تحقق من ترخيص الشركة، اقرأ تقييمات العملاء، قارن بين 3 عروض على الأقل، وتأكد من وجود ضمان مكتوب. بروكر يعرض فقط الشركات التي تم التحقق منها.</p>
-                                </div>
-                            </div>
-                            <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
-                                <h4 className="font-bold text-gray-800 mb-2" itemProp="name">هل يوجد ضمان على {service.name_ar}؟</h4>
-                                <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
-                                    <p className="text-gray-600" itemProp="text">نعم، جميع الشركات المعتمدة في بروكر ملزمة بتقديم ضمان يتراوح بين 3 أشهر وسنة كاملة حسب نوع الخدمة. الضمان يُوثق في عقد مكتوب.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                </section>
-
-                {/* Content rule: NO مقالات ذات صلة on silos */}
-
-                {/* 📱 Dark Social Share — National Service Page */}
-                <DarkSocialShare
-                    variant="service"
-                    serviceName={service.name_ar}
-                    cityName="السعودية"
-                    citySlug="saudi"
-                    serviceSlug={getCanonicalSlug(service.slug) || service.slug}
-                    totalCompanies={CITIES.length}
-                />
-
-                {/* Other Services */}
-                <section className="bg-gray-100 py-12">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <h2 className="text-xl font-bold text-gray-900 mb-6">خدمات أخرى</h2>
-                        <div className="flex flex-wrap gap-3">
-                            {SERVICES.filter(s => s.slug !== service.slug && !isAbsorbedSlug(s.slug)).slice(0, 12).map(otherService => (
-                                <Link
-                                    key={otherService.slug}
-                                    href={`/${otherService.slug}`}
-                                    className="px-4 py-2 bg-white border border-gray-200 rounded-lg hover:border-sky-300 hover:shadow-md transition-all text-gray-700 hover:text-sky-700"
-                                >
-                                    {otherService.name_ar}
-                                </Link>
                             ))}
                         </div>
-                    </div>
-                </section>
+                    </section>
 
-                {/* 🛡️ Consumer Protection Alert — Consumer Protection Banner */}
-                <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-                    <FraudAlertBanner serviceName={service.name_ar} serviceSlug={service.slug} cityName="السعودية" />
-                </section>
+                    {/* Content rule: NO مقالات ذات صلة on silos */}
 
-                {/* 🛡️ Nafath Trust Shield — Government Identity Verification */}
-                <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
-                    <NafathTrustShield serviceNameAr={service.name_ar} cityNameAr="المملكة" />
-                </section>
-
-                {/* Local Service Area — National Service Signal */}
-                <LocalPresence citySlug="riyadh" serviceSlug={resolvedParams.service} serviceName={service.name_ar} serviceCategory={service.category} />
+                    {/* 📱 Dark Social Share — National Service Page */}
+                    <DarkSocialShare
+                        variant="service"
+                        serviceName={service.name_ar}
+                        cityName="السعودية"
+                        citySlug="saudi"
+                        serviceSlug={getCanonicalSlug(service.slug) || service.slug}
+                        totalCompanies={CITIES.length}
+                    />
+                </SourceOrderLayout>
 
                 <Footer currentService={resolvedParams.service} />
             </main>

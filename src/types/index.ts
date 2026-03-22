@@ -24,6 +24,12 @@ export interface Review {
   rating: number; // 1-5
   comment: string;
   date: Date;
+  // Audio UGC (البصمة الصوتية) fields
+  review_type?: 'text' | 'audio';
+  audio_url?: string;
+  audio_transcript?: string;
+  audio_duration_seconds?: number;
+  transcript_confidence?: number;
 }
 
 // Main Advertiser interface
