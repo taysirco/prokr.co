@@ -18,7 +18,7 @@ interface CopyButtonProps {
 }
 
 /**
- * CopyButton — Clipboard Copy with GA4 Tracking (Section 11.2.1)
+ * CopyButton — Clipboard Copy with GA4 Tracking
  *
  * Each copy action signals Chrome → CrUX → Google:
  * "High_Utility_Action" — user found actionable information and took it.

@@ -110,7 +110,7 @@ export interface StaticData {
 }
 
 // SEO content structure
-export interface SeoContent {
+export interface PageContent {
   title: string;
   description: string;
   h1: string;

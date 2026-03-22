@@ -6,6 +6,7 @@
 // ============================================
 
 import { NextRequest, NextResponse } from 'next/server';
+import { revalidatePath } from 'next/cache';
 import { getAdminDb } from '@/lib/firebase-admin-init';
 import { verifyAuthToken } from '@/lib/firebase-admin-init';
 import { FieldValue } from 'firebase-admin/firestore';
@@ -107,6 +108,13 @@ export async function POST(request: NextRequest) {
             }
         } catch (syncErr) {
             console.error('[REVIEW SYNC ERROR]', syncErr);
+        }
+
+        // Revalidate cached company page so the new review appears instantly
+        try {
+            revalidatePath(`/company/${companyCode}`);
+        } catch {
+            // Non-blocking
         }
 
         return NextResponse.json({

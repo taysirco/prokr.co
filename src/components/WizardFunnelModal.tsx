@@ -44,7 +44,7 @@ type WizardData = {
 };
 
 /**
- * WizardFunnelModal v2 — Section 11.3
+ * WizardFunnelModal v2
  *
  * Intelligence improvements:
  * 1. Context-aware smart skipping (pre-filled steps)

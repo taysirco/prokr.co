@@ -1,6 +1,6 @@
 // ============================================
-// LiveBlogPosting Schema — Freshness Signal
-// Ensures content freshness signals
+// LiveBlogPosting Schema — content updates
+// Supports dynamic content updates
 // by presenting the page as a real-time live platform
 // ============================================
 

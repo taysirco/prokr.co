@@ -5,6 +5,7 @@
 // ============================================
 
 import { NextRequest, NextResponse } from 'next/server';
+import { revalidatePath } from 'next/cache';
 import { getAdminDb } from '@/lib/firebase-admin-init';
 import { verifyAuthToken } from '@/lib/firebase-admin-init';
 import { FieldValue } from 'firebase-admin/firestore';
@@ -192,6 +193,13 @@ export async function POST(request: NextRequest) {
         } catch (syncErr) {
             // Non-blocking: review is saved in verified_reviews even if sync fails
             console.error('[REVIEW SYNC ERROR]', syncErr);
+        }
+
+        // ── 10. Revalidate cached company page so the new review appears instantly ──
+        try {
+            revalidatePath(`/company/${companyCode}`);
+        } catch {
+            // Non-blocking: page will still update on next ISR cycle
         }
 
         return NextResponse.json({

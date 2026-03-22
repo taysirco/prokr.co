@@ -15,14 +15,14 @@ import { isAbsorbedSlug } from '@/lib/services/super-page-groups';
 import Footer from '@/components/Footer';
 import LocalPresence from '@/components/LocalPresence';
 import FraudAlertBanner from '@/components/FraudAlertBanner';
-import { NafathTrustShield } from '@/components/NafathTrustShield';
+import { NafathVerifyBanner } from '@/components/NafathVerifyBanner';
 import { LiveAvailabilityBanner } from '@/components/LiveAvailabilityBanner';
 import { EmergencyNightBanner } from '@/components/EmergencyNightBanner';
 import MarketTimingBadge from '@/components/MarketTimingBadge';
 import LeadCaptureCTA from '@/components/LeadCaptureCTA';
 import WizardFunnelButton from '@/components/WizardFunnelButton';
 import WizardFunnelFAB from '@/components/WizardFunnelFAB';
-import DarkSocialShare from '@/components/DarkSocialShare';
+import SocialShareWidget from '@/components/SocialShareWidget';
 import { VisionAiWatermark } from '@/components/VisionAiWatermark';
 import SourceOrderLayout from '@/components/SourceOrderLayout';
 
@@ -135,7 +135,7 @@ export default async function CityPage({ params }: CityPageProps) {
                 title={`خدمات ${city.name_ar}`}
                 description={`دليل شامل لأفضل شركات الخدمات ${cityKw}`}
                 url={`https://prokr.co/${city.slug}`}
-                speakableSelectors={['h1', '.city-seo-intro']}
+                speakableSelectors={['h1', '.city-intro']}
                 about={{ name: city.name_ar, type: 'City' }}
                 mentions={[{ name: 'المملكة العربية السعودية', type: 'Country' }]}
             />
@@ -213,11 +213,11 @@ export default async function CityPage({ params }: CityPageProps) {
                     neighborhoods={cityContext?.neighborhoods.map(n => n.name_ar) || []}
                 />
 
-                {/* 🔍 CSS Source Order Hack — Section 15.6
+                {/* 🔍 Content-first layout
                     Source order: SEO content FIRST (Google reads this first)
                     Visual order: Service listings FIRST (user sees this first via column-reverse) */}
                 <SourceOrderLayout
-                    seoContent={
+                    pageContent={
                         <>
                             {/* SEO Content Section */}
                             <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-gray-200">
@@ -225,7 +225,7 @@ export default async function CityPage({ params }: CityPageProps) {
                                     <h2 className="text-2xl font-bold text-gray-900 mb-4">
                                         دليل الخدمات الشامل في {city.name_ar} (2026)
                                     </h2>
-                                    <div className="city-seo-intro bg-sky-50 p-6 rounded-xl border-r-4 border-sky-500 mb-6">
+                                    <div className="city-intro bg-sky-50 p-6 rounded-xl border-r-4 border-sky-500 mb-6">
                                         <p className="text-gray-700 leading-relaxed">
                                             {cityContext
                                                 ? `تعد ${city.name_ar} من أهم المدن السعودية التي تتميز بـ${cityContext.urbanTraits.slice(0, 2).join(' و')}. يقدم بروكر دليلاً شاملاً لأفضل الخدمات المتوفرة في جميع أحياء ${city.name_ar}، من نقل العفش إلى التنظيف ومكافحة الحشرات وكشف التسربات والعزل. جميع الشركات مرخصة ومعتمدة وفقاً لاشتراطات وزارة التجارة السعودية.`
@@ -350,7 +350,7 @@ export default async function CityPage({ params }: CityPageProps) {
 
                             {/* 🛡️ Nafath Trust Shield */}
                             <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
-                                <NafathTrustShield serviceNameAr="خدمات منزلية" cityNameAr={city.name_ar} />
+                                <NafathVerifyBanner serviceNameAr="خدمات منزلية" cityNameAr={city.name_ar} />
                             </section>
 
                             {/* Local Service Area */}
@@ -466,7 +466,7 @@ export default async function CityPage({ params }: CityPageProps) {
                     />
 
                     {/* 📱 Dark Social Share */}
-                    <DarkSocialShare
+                    <SocialShareWidget
                         variant="service"
                         serviceName="خدمات منزلية"
                         cityName={city.name_ar}

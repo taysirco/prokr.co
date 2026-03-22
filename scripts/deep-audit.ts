@@ -11,7 +11,7 @@ import { sewageServices } from '@/lib/services/sewage/data';
 import { leakDetectionServices } from '@/lib/services/leak-detection/data';
 import { BASE_PRICING } from '@/lib/services';
 import { getCityContext, getAdjustedPriceRange } from '@/lib/city-context';
-import { generateSeoContent } from '@/lib/seo-content';
+import { generatePageContent } from '@/lib/seo-content';
 
 // ============================================
 // ALL SERVICES
@@ -229,7 +229,7 @@ for (const combo of testCombos) {
     const label = `${combo.city.slug}/${combo.service.slug}`;
 
     try {
-        const content = generateSeoContent({
+        const content = generatePageContent({
             city: combo.city as any,
             service: combo.service as any
         });
@@ -290,7 +290,7 @@ for (const combo of testCombos) {
     const label = `${combo.city.slug}/${combo.service.slug}`;
 
     try {
-        const content = generateSeoContent({
+        const content = generatePageContent({
             city: combo.city as any,
             service: combo.service as any
         });

@@ -23,7 +23,7 @@ interface PhoneRevealButtonProps {
 }
 
 /**
- * PhoneRevealButton — Unified Phone Component (Section 11.2)
+ * PhoneRevealButton — Unified Phone Component
  *
  * BEFORE reveal:
  * ┌──────────────────────────────────────────┐

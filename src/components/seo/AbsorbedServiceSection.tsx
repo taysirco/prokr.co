@@ -69,7 +69,7 @@ export function AbsorbedServiceSections({
 
                             {/* Introduction from absorbed page */}
                             {override.content?.introduction && (
-                                <div className="seo-introduction text-gray-700 leading-relaxed mb-6">
+                                <div className="content-intro text-gray-700 leading-relaxed mb-6">
                                     <p>{override.content.introduction}</p>
                                 </div>
                             )}

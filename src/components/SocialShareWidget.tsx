@@ -4,7 +4,7 @@ import { useState, useCallback, useEffect, useRef } from 'react';
 import { Share2, Copy, Check, MessageCircle, Users } from 'lucide-react';
 
 // ─── Types ──────────────────────────────────────────────────────────────────
-interface DarkSocialShareProps {
+interface SocialShareWidgetProps {
     /** Page variant — determines the pre-written message template */
     variant: 'service' | 'company';
     /** Arabic service name (e.g. "نقل عفش") */
@@ -112,7 +112,7 @@ function safeSetItem(key: string, value: string): void {
 }
 
 // ─── Component ──────────────────────────────────────────────────────────────
-export default function DarkSocialShare({
+export default function SocialShareWidget({
     variant,
     serviceName,
     cityName,
@@ -123,7 +123,7 @@ export default function DarkSocialShare({
     companyName,
     companyRating,
     companyCode,
-}: DarkSocialShareProps) {
+}: SocialShareWidgetProps) {
     const [copied, setCopied] = useState(false);
     const [mounted, setMounted] = useState(false);
     const [shareCount, setShareCount] = useState<number | null>(null); // null = not loaded yet

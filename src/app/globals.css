@@ -235,7 +235,7 @@ html {
   animation: skeleton-loading 1.5s infinite;
 }
 
-/* ⚡ Anti-Pogo Sticking: :target highlight for absorbed sections */
+/* ⚡ Target section highlight for absorbed sections */
 /* When a user arrives via #fragment (e.g., /furniture-moving#dyna), */
 /* the section flashes amber to confirm they found the right content */
 @keyframes highlight-fade {
@@ -318,7 +318,7 @@ html {
   animation: success-bounce 0.4s ease-out;
 }
 
-/* ── Wizard Funnel Animations v2 (Section 11.3) ── */
+/* ── Wizard Funnel Animations v2 (—) ── */
 
 /* Step transition: slide from right (RTL) */
 @keyframes wizard-slide-in {

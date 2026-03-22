@@ -2,7 +2,7 @@
 
 import { useState, useCallback, useEffect } from 'react';
 import { getHourlyMode } from '@/lib/market-timing';
-import WhatsAppAntiBouncPopup from './WhatsAppAntiBouncPopup';
+import WhatsAppConfirmPopup from './WhatsAppConfirmPopup';
 
 interface ActionButtonProps {
     href: string;
@@ -29,8 +29,8 @@ interface ActionButtonProps {
  *   2. Shows visual "engaged" feedback (scale + opacity)
  *   3. After 500ms delay, navigates to href
  *
- * For WHATSAPP buttons (Section 11.1 — WhatsApp Redirect):
- *   1. Shows WhatsAppAntiBouncPopup ("Preparing 10% discount...")
+ * For WHATSAPP buttons:
+ *   1. Shows WhatsAppConfirmPopup ("Preparing 10% discount...")
  *   2. Fires GA4 task_completion event during 2-second popup
  *   3. After 2.8s, opens WhatsApp link
  *   → RankBrain records 100% Task Completion
@@ -154,7 +154,7 @@ export default function ActionButton({
 
             {/* WhatsApp Engagement Popup */}
             {showWhatsAppPopup && (
-                <WhatsAppAntiBouncPopup
+                <WhatsAppConfirmPopup
                     whatsappUrl={href}
                     onClose={() => setShowWhatsAppPopup(false)}
                     advertiserName={advertiserName || serviceName}

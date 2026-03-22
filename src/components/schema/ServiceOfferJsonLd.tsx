@@ -1,5 +1,5 @@
 import type { City, Service } from '@/types';
-import { resolveSeoContent } from '@/lib/overrides';
+import { resolvePageContent } from '@/lib/overrides';
 import { getServiceKeywordProfile, getCityKeyword } from '@/lib/locale-formatting';
 
 // ============================================
@@ -49,7 +49,7 @@ interface ServiceOfferJsonLdProps {
 }
 
 export function ServiceOfferJsonLd({ city, service }: ServiceOfferJsonLdProps) {
-    const content = resolveSeoContent(city, service);
+    const content = resolvePageContent(city, service);
     const warranty = WARRANTY_BY_CATEGORY[service.category] || WARRANTY_BY_CATEGORY['cleaning'];
 
     // Calculate aggregate price range from pricing data

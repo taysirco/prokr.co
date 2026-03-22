@@ -1,5 +1,5 @@
 import type { City, Service } from '@/types';
-import { resolveSeoContent } from '@/lib/overrides';
+import { resolvePageContent } from '@/lib/overrides';
 
 interface FaqJsonLdProps {
     city: City;
@@ -7,7 +7,7 @@ interface FaqJsonLdProps {
 }
 
 export function FaqJsonLd({ city, service }: FaqJsonLdProps) {
-    const content = resolveSeoContent(city, service);
+    const content = resolvePageContent(city, service);
 
     const schema = {
         "@context": "https://schema.org",

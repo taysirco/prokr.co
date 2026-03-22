@@ -7,7 +7,7 @@ import { getServiceBySlug, getCityBySlug } from './seed';
 import { generateContentLayers } from './content-layers';
 import { getServiceKeywordProfile, getCityKeyword, resolveKeywordTemplate } from './locale-formatting';
 import { BLOG_ARTICLES } from './blog-data';
-import { resolveSeoContent } from './overrides';
+import { resolvePageContent } from './overrides';
 import { getMarketTimingConfig } from '@/lib/market-timing';
 import { verifyOrigin } from './content-integrity';
 
@@ -15,7 +15,7 @@ import { verifyOrigin } from './content-integrity';
 // SEO Content Generator
 // ============================================
 
-interface SeoContentProps {
+interface PageContentProps {
     city: City;
     service: Service;
 }
@@ -45,7 +45,7 @@ const DEFAULT_TRUST_FACTORS = [
 // MAIN SEO CONTENT GENERATOR
 // ============================================
 
-export function generateSeoContent({ city, service }: SeoContentProps) {
+export function generatePageContent({ city, service }: PageContentProps) {
     const cityContext = getCityContext(city.slug);
     const basePricing = BASE_PRICING[service.slug] || DEFAULT_BASE_PRICING;
     const trustFactors = TRUST_FACTORS[service.category] || DEFAULT_TRUST_FACTORS;
@@ -145,7 +145,7 @@ export function generateSeoContent({ city, service }: SeoContentProps) {
         } : null;
     }).filter(Boolean) as { name_ar: string; slug: string; url: string; context: string }[];
 
-    // GEO Content Signals (for AI search engines)
+    // GEO Local content (for AI search engines)
     const geoSignals = {
         lastUpdated: new Date().toISOString().split('T')[0],
         authorityReferences: [
@@ -211,8 +211,8 @@ export function generateSeoContent({ city, service }: SeoContentProps) {
 // UI COMPONENT
 // ============================================
 
-export function SeoContentSection({ city, service }: SeoContentProps) {
-    const content = resolveSeoContent(city, service);
+export function PageContentSection({ city, service }: PageContentProps) {
+    const content = resolvePageContent(city, service);
     const kwProfile = getServiceKeywordProfile(service.slug);
     const cityKw = getCityKeyword(city.name_ar, kwProfile.cityPrefixPattern);
 
@@ -244,7 +244,7 @@ export function SeoContentSection({ city, service }: SeoContentProps) {
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">
                     دليل شامل لخدمة {service.name_ar} {cityKw} (2026)
                 </h2>
-                <div className="seo-introduction bg-sky-50 p-6 rounded-xl border-r-4 border-sky-500 mb-8" suppressHydrationWarning>
+                <div className="content-intro bg-sky-50 p-6 rounded-xl border-r-4 border-sky-500 mb-8" suppressHydrationWarning>
                     <p className="text-gray-700 leading-relaxed font-medium"
                        dangerouslySetInnerHTML={{ __html: link(aiContent.introduction) }}
                     />

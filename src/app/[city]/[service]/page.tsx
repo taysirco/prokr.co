@@ -7,7 +7,7 @@ import { getCityBySlug, getServiceBySlug, getUniquePageImages } from '@/lib/seed
 import { getAdvertisersBySilo } from '@/lib/db-actions';
 import { UnifiedGraphCompiler, VoiceSearchSchema } from '@/components/JsonLd';
 import { DirectAnswer } from '@/components/seo/DirectAnswer';
-import { SeoContentSection } from '@/lib/seo-content';
+import { PageContentSection } from '@/lib/seo-content';
 import { LiveBlogPostingJsonLd } from '@/components/schema';
 import { pricingData } from '@/lib/pricing-data';
 import { getCityContext } from '@/lib/city-context';
@@ -20,12 +20,12 @@ import Footer from '@/components/Footer';
 import LeadCaptureCTA from '@/components/LeadCaptureCTA';
 import WizardFunnelButton from '@/components/WizardFunnelButton';
 import WizardFunnelFAB from '@/components/WizardFunnelFAB';
-import DarkSocialShare from '@/components/DarkSocialShare';
+import SocialShareWidget from '@/components/SocialShareWidget';
 import { LiveAvailabilityBanner } from '@/components/LiveAvailabilityBanner';
 import { EmergencyNightBanner } from '@/components/EmergencyNightBanner';
 import LocalPresence from '@/components/LocalPresence';
 import FraudAlertBanner from '@/components/FraudAlertBanner';
-import { NafathTrustShield } from '@/components/NafathTrustShield';
+import { NafathVerifyBanner } from '@/components/NafathVerifyBanner';
 import { VisionAiWatermark } from '@/components/VisionAiWatermark';
 import GeoPricingTable from '@/components/GeoPricingTable';
 import MarketTimingBadge from '@/components/MarketTimingBadge';
@@ -176,7 +176,7 @@ export default async function SiloPage({ params }: SiloPageProps) {
                 pricingEntry={aiPricingEntry}
                 pageUrl={canonicalPageUrl}
             />
-            {/* LiveBlogPosting — freshness signal */}
+            {/* LiveBlogPosting — content updates */}
             <LiveBlogPostingJsonLd
                 cityNameAr={cityKw}
                 serviceNameAr={service.name_ar}
@@ -315,14 +315,14 @@ export default async function SiloPage({ params }: SiloPageProps) {
                     />
                 </section>
 
-                {/* 🔍 CSS Source Order Hack — Section 15.6
+                {/* 🔍 Content-first layout
                     Source order: SEO content FIRST (Google reads this first)
                     Visual order: Company listings FIRST (user sees this first via column-reverse) */}
                 <SourceOrderLayout
-                    seoContent={
+                    pageContent={
                         <>
                             {/* Enhanced SEO Content with Pricing Table, FAQ, etc. */}
-                            <SeoContentSection city={city} service={service} />
+                            <PageContentSection city={city} service={service} />
                             {/* FAQ schema now inside UnifiedGraphCompiler @graph */}
 
                             {/* 📊 Geo-Pricing Table — التسعير الجغرافي المتقاطع */}
@@ -360,7 +360,7 @@ export default async function SiloPage({ params }: SiloPageProps) {
 
                             {/* 🛡️ Nafath Trust Shield — Government Identity Verification */}
                             <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
-                                <NafathTrustShield serviceNameAr={service.name_ar} cityNameAr={cityKw} />
+                                <NafathVerifyBanner serviceNameAr={service.name_ar} cityNameAr={cityKw} />
                             </section>
 
                             {/* Local Service Area — Unique Per City+Service Slug */}
@@ -411,7 +411,7 @@ export default async function SiloPage({ params }: SiloPageProps) {
                         </>
                     )}
 
-                    {/* ⚡ Wizard Funnel CTA — Section 11.3 */}
+                    {/* ⚡ Wizard Funnel CTA */}
                     <div data-wizard-cta>
                         <WizardFunnelButton
                             placement="inline"
@@ -428,8 +428,8 @@ export default async function SiloPage({ params }: SiloPageProps) {
                         serviceSlug={resolvedParams.service}
                     />
 
-                    {/* 📱 Dark Social Share — Section 11.4 */}
-                    <DarkSocialShare
+                    {/* 📱 Dark Social Share */}
+                    <SocialShareWidget
                         variant="service"
                         serviceName={service.name_ar}
                         cityName={city.name_ar}

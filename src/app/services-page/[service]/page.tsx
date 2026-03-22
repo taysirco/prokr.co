@@ -13,12 +13,12 @@ import { hasPageOverride } from '@/lib/overrides/registry';
 import { isAbsorbedSlug, getCanonicalSlug } from '@/lib/services/super-page-groups';
 import Footer from '@/components/Footer';
 import FraudAlertBanner from '@/components/FraudAlertBanner';
-import { NafathTrustShield } from '@/components/NafathTrustShield';
+import { NafathVerifyBanner } from '@/components/NafathVerifyBanner';
 import MarketTimingBadge from '@/components/MarketTimingBadge';
 import LocalPresence from '@/components/LocalPresence';
 import { LiveAvailabilityBanner } from '@/components/LiveAvailabilityBanner';
 import { EmergencyNightBanner } from '@/components/EmergencyNightBanner';
-import DarkSocialShare from '@/components/DarkSocialShare';
+import SocialShareWidget from '@/components/SocialShareWidget';
 import { VisionAiWatermark } from '@/components/VisionAiWatermark';
 import SourceOrderLayout from '@/components/SourceOrderLayout';
 
@@ -267,11 +267,11 @@ export default async function ServicePage({ params }: ServicePageProps) {
                     statText={`يتوفر في ${CITIES.filter(c => hasPageOverride(c.slug, getCanonicalSlug(service.slug) || service.slug)).length} مدينة سعودية عبر شركات مرخصة من وزارة التجارة`}
                 />
 
-                {/* 🔍 CSS Source Order Hack — Section 15.6
+                {/* 🔍 Content-first layout
                     Source order: SEO content FIRST (Google reads this first)
                     Visual order: City listings FIRST (user sees this first via column-reverse) */}
                 <SourceOrderLayout
-                    seoContent={
+                    pageContent={
                         <>
                             {/* SEO Content */}
                             <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -406,7 +406,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
 
                             {/* 🛡️ Nafath Trust Shield */}
                             <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
-                                <NafathTrustShield serviceNameAr={service.name_ar} cityNameAr="المملكة" />
+                                <NafathVerifyBanner serviceNameAr={service.name_ar} cityNameAr="المملكة" />
                             </section>
 
                             {/* Local Service Area */}
@@ -447,7 +447,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                     {/* Content rule: NO مقالات ذات صلة on silos */}
 
                     {/* 📱 Dark Social Share — National Service Page */}
-                    <DarkSocialShare
+                    <SocialShareWidget
                         variant="service"
                         serviceName={service.name_ar}
                         cityName="السعودية"

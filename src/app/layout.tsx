@@ -347,7 +347,7 @@ export default function RootLayout({
 
     /* ═══ DIRECT ANSWER / SPECIAL BOXES ═══ */
     '.prokr-dark .direct-answer{background:#1e293b!important}',
-    '.prokr-dark .seo-introduction{background:#0c4a6e!important;border-color:#0284c7!important}',
+    '.prokr-dark .content-intro{background:#0c4a6e!important;border-color:#0284c7!important}',
 
     /* ═══ FOOTER ═══ */
     '.prokr-dark footer{background:#0f172a!important;color:#e2e8f0!important}',

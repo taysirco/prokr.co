@@ -72,7 +72,7 @@ export default function CompanyContactSection({
                 />
 
                 {/* ═══════════════════════════════════════════
-                 *  WHATSAPP BUTTON — WhatsApp Redirect (Section 11.1)
+                 *  WHATSAPP BUTTON — WhatsApp Redirect
                  * ═══════════════════════════════════════════ */}
                 <ActionButton
                     href={whatsappLink}

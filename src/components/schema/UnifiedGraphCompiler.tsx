@@ -8,7 +8,7 @@
 import type { Advertiser, City, Service } from '@/types';
 import type { CityContext } from '@/lib/city-context';
 import type { ContentLayers } from '@/lib/content-layers';
-import { resolveSeoContent } from '@/lib/overrides';
+import { resolvePageContent } from '@/lib/overrides';
 import { getServiceKeywordProfile, getCityKeyword } from '@/lib/locale-formatting';
 import { getCanonicalSlug } from '@/lib/services/super-page-groups';
 import { getHourlyMode } from '@/lib/market-timing';
@@ -34,7 +34,7 @@ interface UnifiedGraphCompilerProps {
     city: City;
     service: Service;
     advertisers: Advertiser[];
-    aiContent: ContentLayers & { heroSubtitle?: string; entityIntersection?: string };
+    aiContent: ContentLayers & { heroSubtitle?: string; localizedContent?: string };
     breadcrumbs: { name: string; url: string }[];
     heroImageUrl: string;
     canonicalPageUrl: string;
@@ -57,7 +57,7 @@ export function UnifiedGraphCompiler({
     const baseUrl = `https://prokr.co/${city.slug}/${canonicalSlug}`;
 
     // ── Resolve SEO content for FAQ + Pricing ──
-    const seoContent = resolveSeoContent(city, service);
+    const pageContent = resolvePageContent(city, service);
     const warranty = WARRANTY_BY_CATEGORY[service.category] || WARRANTY_BY_CATEGORY['cleaning'];
 
     // ── AggregateRating calculation ──
@@ -67,7 +67,7 @@ export function UnifiedGraphCompiler({
         : undefined;
 
     // ── Pricing calculation ──
-    const prices = seoContent.pricing.slice(0, 5);
+    const prices = pageContent.pricing.slice(0, 5);
     const allMin = prices.map(p => p.minPrice).filter(Boolean);
     const allMax = prices.map(p => p.maxPrice).filter(Boolean);
     const lowestPrice = allMin.length > 0 ? Math.min(...allMin) : undefined;
@@ -103,7 +103,7 @@ export function UnifiedGraphCompiler({
         // 🎙️ Speakable (Voice Search)
         speakable: {
             '@type': 'SpeakableSpecification',
-            cssSelector: ['.direct-answer', 'h1', '.seo-introduction'],
+            cssSelector: ['.direct-answer', 'h1', '.content-intro'],
         },
         ...(aiContent.shortAnswer && { abstract: aiContent.shortAnswer }),
         dateModified: new Date().toISOString(),
@@ -251,7 +251,7 @@ export function UnifiedGraphCompiler({
         '@type': 'FAQPage',
         '@id': `${baseUrl}#faq`,
         isPartOf: { '@id': `${baseUrl}#webpage` },
-        mainEntity: seoContent.faqItems.map(faq => ({
+        mainEntity: pageContent.faqItems.map(faq => ({
             '@type': 'Question',
             name: faq.question,
             acceptedAnswer: { '@type': 'Answer', text: faq.answer },

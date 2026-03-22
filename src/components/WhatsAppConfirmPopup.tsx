@@ -2,14 +2,14 @@
 
 import { useState, useEffect, useCallback } from 'react';
 
-interface WhatsAppAntiBouncPopupProps {
+interface WhatsAppConfirmPopupProps {
     whatsappUrl: string;
     onClose: () => void;
     advertiserName?: string;
 }
 
 /**
- * WhatsApp Engagement Popup (Section 11.1)
+ * WhatsApp Engagement Popup
  *
  * UX Flow: Instead of immediately opening WhatsApp,
  * this popup creates a 2-second "task completion" event that:
@@ -20,11 +20,11 @@ interface WhatsAppAntiBouncPopupProps {
  * Animations are defined in globals.css (not styled-jsx) to avoid
  * hydration mismatches with Next.js SSR.
  */
-export default function WhatsAppAntiBouncPopup({
+export default function WhatsAppConfirmPopup({
     whatsappUrl,
     onClose,
     advertiserName,
-}: WhatsAppAntiBouncPopupProps) {
+}: WhatsAppConfirmPopupProps) {
     const [phase, setPhase] = useState<'loading' | 'success'>('loading');
 
     // User-initiated click → window.open (allowed by popup blockers)

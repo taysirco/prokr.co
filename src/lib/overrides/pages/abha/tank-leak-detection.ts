@@ -1,6 +1,6 @@
 // كشف تسربات خزانات بأبها — Override  | خريطة 2.4: المحيميد → NWC+بلدي
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../gov-references';
 
 export const override: PageOverride = {
     meta: {

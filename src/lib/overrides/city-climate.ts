@@ -1,6 +1,6 @@
 // ═══════════════════════════════════════════════════════════════
 // City Climate & Geographic Profiles — الملفات المناخية للمدن
-// Entity Intersection بين القطاع والمناخ
+// Localized content بين القطاع والمناخ
 // = محتوى فريد لكل مدينة
 // ═══════════════════════════════════════════════════════════════
 
@@ -22,7 +22,7 @@ export interface CityClimateProfile {
         'moving': string[];
         'sewage': string[];
     };
-    /** فقرات Entity Intersection — فقرة واحدة لكل قطاع */
+    /** فقرات Localized content — فقرة واحدة لكل قطاع */
     intersections: {
         'leak-detection': string;
         'insulation': string;
@@ -339,7 +339,7 @@ export function getCityClimate(citySlug: string): CityClimateProfile | null {
 }
 
 /**
- * Get entity intersection paragraph for a city + sector
+ * Get localized content paragraph for a city + sector
  */
 export function getEntityIntersection(
     citySlug: string,

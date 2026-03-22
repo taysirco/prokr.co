@@ -1,10 +1,10 @@
 // ============================================
-// 🛡️ NafathTrustShield — درع نفاذ وأبشر
+// 🛡️ NafathVerifyBanner — درع نفاذ وأبشر
 // Visual trust badge showing government verification
 // Server Component — no 'use client' needed
 // ============================================
 
-interface NafathTrustShieldProps {
+interface NafathVerifyBannerProps {
     serviceNameAr: string;
     cityNameAr: string;
 }
@@ -30,7 +30,7 @@ const TRUST_PILLARS = [
     },
 ] as const;
 
-export function NafathTrustShield({ serviceNameAr, cityNameAr }: NafathTrustShieldProps) {
+export function NafathVerifyBanner({ serviceNameAr, cityNameAr }: NafathVerifyBannerProps) {
     return (
         <section
             className="bg-gradient-to-br from-sky-50 via-white to-teal-50 border border-sky-200 rounded-2xl p-5 sm:p-7 shadow-sm"

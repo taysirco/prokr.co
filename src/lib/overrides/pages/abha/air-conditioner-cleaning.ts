@@ -1,6 +1,6 @@
 // تنظيف مكيفات بأبها — Override 
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../gov-references';
 
 export const override: PageOverride = {
     meta: {

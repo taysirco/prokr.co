@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../trust-anchors';
+import { GOV, EXPERTS, REGULATIONS, AMANA } from '../../gov-references';
 
 export const override: PageOverride = {
     meta: { title: 'مكافحة النمل الأبيض بجازان — رطوبة 80% = بيئة مثالية 12/12 + أسرع تكاثر + تربة رطبة = أنفاق لا تنهار (2026)', description: 'مكافحة نمل أبيض جازان. 80% رطوبة = بيئة مثالية = أسرع تكاثر وأطول أنفاق في المملكة. التربة رطبة = الأنفاق لا تنهار. المبيد يتحلل في 80%. Soil Treatment + Bait Stations.', h1: 'مكافحة النمل الأبيض بجازان — البيئة الاستوائية المثالية = أخطر إصابات', keywords: ['مكافحة نمل أبيض بجازان', 'مكافحة ارضة جازان', 'شركة مكافحة نمل ابيض بجازان'] },

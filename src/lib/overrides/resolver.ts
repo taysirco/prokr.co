@@ -1,14 +1,14 @@
 // ============================================
 // Page Override Resolver
 // Merges per-page overrides with auto-generated content
-// + Entity Intersection auto-integration
+// + Localized content auto-integration
 // ============================================
 
 import type { City, Service } from '@/types';
 import type { PageOverride } from './types';
 import { getPageOverride, hasPageOverride } from './registry';
 import { generateContentLayers, type ContentLayers } from '../content-layers';
-import { generateSeoContent } from '../seo-content';
+import { generatePageContent } from '../seo-content';
 import { getServiceKeywordProfile, getCityKeyword, resolveKeywordTemplate } from '../locale-formatting';
 import { getCityContext, getAdjustedPriceRange } from '../city-context';
 import { getRelatedServices, generateServiceUrl, type RelatedService } from '../related-services';
@@ -91,12 +91,12 @@ function deepClean<T>(obj: T): T {
  */
 export function resolveContentLayers(city: City, service: Service): ContentLayers & {
     heroSubtitle?: string;
-    entityIntersection?: string;
+    localizedContent?: string;
 } {
     const auto = generateContentLayers(city, service);
     const override = getPageOverride(city.slug, service.slug);
 
-    // Resolve entity intersection from override or auto-generate from city-climate
+    // Resolve localized content from override or auto-generate from city-climate
     const sectorCategory = getServiceSectorCategory(service.slug);
     const autoEntityIntersection = sectorCategory
         ? getEntityIntersection(city.slug, sectorCategory) ?? undefined
@@ -110,7 +110,7 @@ export function resolveContentLayers(city: City, service: Service): ContentLayer
             ...auto,
             // Auto-apply climate challenges if auto content is generic
             localChallenges: autoChallenges.length > 0 ? autoChallenges : auto.localChallenges,
-            entityIntersection: autoEntityIntersection,
+            localizedContent: autoEntityIntersection,
         };
     }
 
@@ -125,7 +125,7 @@ export function resolveContentLayers(city: City, service: Service): ContentLayer
         metaTitle: override.meta?.title ?? auto.metaTitle,
         h1: override.meta?.h1 ?? auto.h1,
         heroSubtitle: c.heroSubtitle,
-        entityIntersection: override.entityContext?.intersectionParagraph ?? autoEntityIntersection,
+        localizedContent: override.entityContext?.intersectionParagraph ?? autoEntityIntersection,
     });
 }
 
@@ -205,8 +205,8 @@ export function resolveMetadata(city: City, service: Service): ResolvedMetadata 
 /**
  * Resolves SEO content (pricing, FAQ, tips etc.): override fields take priority.
  */
-export function resolveSeoContent(city: City, service: Service) {
-    const auto = generateSeoContent({ city, service });
+export function resolvePageContent(city: City, service: Service) {
+    const auto = generatePageContent({ city, service });
     const override = getPageOverride(city.slug, service.slug);
 
     // Auto-generate entity data from central databases
@@ -352,7 +352,7 @@ export function resolveSeoContent(city: City, service: Service) {
                 ...(override.govReferences && { govReferences: override.govReferences }),
             };
         })() : null,
-        // Entity Intersection context (Merge custom override with auto base content)
+        // Localized content context (Merge custom override with auto base content)
         entityContext: override.entityContext ? {
             ...baseEntityContext,
             ...override.entityContext,

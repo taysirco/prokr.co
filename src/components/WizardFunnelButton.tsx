@@ -27,7 +27,7 @@ interface WizardFunnelButtonProps {
 }
 
 /**
- * WizardFunnelButton v2 — Section 11.3 CTA Trigger
+ * WizardFunnelButton v2 CTA Trigger
  *
  * Market timing-aware CTA text.
  * Supports company comparison context.

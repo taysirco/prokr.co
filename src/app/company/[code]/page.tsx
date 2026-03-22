@@ -31,7 +31,7 @@ import VerifiedReviewForm from '@/components/VerifiedReviewForm';
 import CompanyStickyBar from '@/components/CompanyStickyBar';
 import CompanyContactSection from '@/components/CompanyContactSection';
 import WizardFunnelButton from '@/components/WizardFunnelButton';
-import DarkSocialShare from '@/components/DarkSocialShare';
+import SocialShareWidget from '@/components/SocialShareWidget';
 import { VisionAiWatermark } from '@/components/VisionAiWatermark';
 import AudioReviewPlayer from '@/components/AudioReviewPlayer';
 import { AudioReviewSchema } from '@/components/schema/AudioObjectSchema';
@@ -295,11 +295,11 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                     advertiserName={advertiser.business_name}
                 />
 
-                {/* 🔍 CSS Source Order Hack — Section 15.6
+                {/* 🔍 Content-first layout
                     Source order: SEO content FIRST (Google reads this first)
                     Visual order: Company profile FIRST (user sees this first via column-reverse) */}
                 <SourceOrderLayout
-                    seoContent={
+                    pageContent={
                         <>
                             {/* SEO Content Section */}
                             <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-gray-200">
@@ -374,7 +374,7 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                             </section>
 
                             {/* 📱 Dark Social Share — Company Page */}
-                            <DarkSocialShare
+                            <SocialShareWidget
                                 variant="company"
                                 serviceName={mainService?.name_ar || 'خدمات'}
                                 cityName={mainCity?.name_ar || 'السعودية'}

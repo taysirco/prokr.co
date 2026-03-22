@@ -354,11 +354,11 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* 🔍 CSS Source Order Hack — Section 15.6
+        {/* 🔍 Content-first layout
             Source order: SEO content FIRST (Google reads this first)
             Visual order: Services/Cities/CTA FIRST (user sees this first via column-reverse) */}
         <SourceOrderLayout
-          seoContent={
+          pageContent={
             <>
               {/* How It Works — SEO Content (source-first) */}
               <section className="bg-gradient-to-b from-gray-50 to-white py-20">
@@ -559,7 +559,7 @@ export default function HomePage() {
             </div>
           </section>
 
-          {/* ⚡ Wizard Funnel CTA — Section 11.3 */}
+          {/* ⚡ Wizard Funnel CTA */}
           <div data-wizard-cta>
             <WizardFunnelButton placement="hero" />
           </div>

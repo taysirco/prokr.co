@@ -13,12 +13,12 @@ import { hasPageOverride } from '@/lib/overrides/registry';
 import { isAbsorbedSlug } from '@/lib/services/super-page-groups';
 import Footer from '@/components/Footer';
 import FraudAlertBanner from '@/components/FraudAlertBanner';
-import { NafathTrustShield } from '@/components/NafathTrustShield';
+import { NafathVerifyBanner } from '@/components/NafathVerifyBanner';
 import MarketTimingBadge from '@/components/MarketTimingBadge';
 import LocalPresence from '@/components/LocalPresence';
 import { LiveAvailabilityBanner } from '@/components/LiveAvailabilityBanner';
 import { EmergencyNightBanner } from '@/components/EmergencyNightBanner';
-import DarkSocialShare from '@/components/DarkSocialShare';
+import SocialShareWidget from '@/components/SocialShareWidget';
 import { VisionAiWatermark } from '@/components/VisionAiWatermark';
 import SourceOrderLayout from '@/components/SourceOrderLayout';
 
@@ -236,11 +236,11 @@ export default async function SubRegionPage({ params }: SubRegionPageProps) {
                     statText={`يتوفر ${availableServices.length} خدمة من شركات معتمدة بسجل تجاري سارٍ`}
                 />
 
-                {/* 🔍 CSS Source Order Hack — Section 15.6
+                {/* 🔍 Content-first layout
                     Source order: SEO content FIRST (Google reads this first)
                     Visual order: Service listings FIRST (user sees this first via column-reverse) */}
                 <SourceOrderLayout
-                    seoContent={
+                    pageContent={
                         <>
                             {/* SEO Content Section */}
                             <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -325,7 +325,7 @@ export default async function SubRegionPage({ params }: SubRegionPageProps) {
 
                             {/* 🛡️ Nafath Trust Shield */}
                             <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
-                                <NafathTrustShield serviceNameAr="خدمات منزلية" cityNameAr={`${subRegion.name_ar}، ${city.name_ar}`} />
+                                <NafathVerifyBanner serviceNameAr="خدمات منزلية" cityNameAr={`${subRegion.name_ar}، ${city.name_ar}`} />
                             </section>
 
                             {/* Local Service Area */}
@@ -377,7 +377,7 @@ export default async function SubRegionPage({ params }: SubRegionPageProps) {
                     </section>
 
                     {/* 📱 Dark Social Share — SubRegion Page */}
-                    <DarkSocialShare
+                    <SocialShareWidget
                         variant="service"
                         serviceName="خدمات منزلية"
                         cityName={`${subRegion.name_ar}، ${city.name_ar}`}

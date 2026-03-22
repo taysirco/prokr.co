@@ -133,20 +133,20 @@ export interface PageOverride {
         priority: number;
     }[];
 
-    // ─── Entity Intersection ───
+    // ─── Localized content ───
     /**
      * كيانات علمية + مناخية مدمجة في المحتوى.
-     * تُستخدم لبناء Entity Intersection = محتوى فريد لكل مدينة.
+     * تُستخدم لبناء Localized content = محتوى فريد لكل مدينة.
      */
     entityContext?: {
         /** أسماء الكيانات العلمية المُستخدمة في هذه الصفحة */
         sectorEntities?: string[];
         /** التحديات المناخية الخاصة بالمدينة لهذا القطاع */
         climateChallenges?: string[];
-        /** فقرة Entity Intersection جاهزة — تقاطع القطاع × المناخ */
+        /** فقرة Localized content جاهزة — تقاطع القطاع × المناخ */
         intersectionParagraph?: string;
 
-        // ─── Content Signals ───
+        // ─── Local content ───
         /** مصطلحات دارجة من العميل */
         slangTerms?: string[];
         /** أفعال نشطة لتحسين النص */
