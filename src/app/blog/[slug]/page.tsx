@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { Home, ChevronLeft, Clock, User, Calendar, Tag, ArrowLeft } from 'lucide-react';
+import { Home, ChevronLeft, Clock, User, Calendar, Tag, ArrowLeft, Shield, BookOpen, CheckCircle } from 'lucide-react';
 import { BLOG_ARTICLES, getBlogArticle } from '@/lib/blog-data';
 import { getServiceBySlug } from '@/lib/seed';
 import { BreadcrumbJsonLd } from '@/components/JsonLd';
@@ -98,6 +98,12 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
                         mainEntityOfPage: `https://prokr.co/blog/${slug}`,
                         inLanguage: 'ar',
                         keywords: article.tags.join(', '),
+                        ...(article.reviewedBy && {
+                            reviewedBy: { '@type': 'Person', name: article.reviewedBy },
+                        }),
+                        ...(article.sources && article.sources.length > 0 && {
+                            citation: article.sources.map(s => ({ '@type': 'CreativeWork', name: s })),
+                        }),
                     }),
                 }}
             />
@@ -175,6 +181,12 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
                                 <Clock className="w-4 h-4" />
                                 {article.readTime} دقائق قراءة
                             </span>
+                            {article.lastFactChecked && (
+                                <span className="flex items-center gap-1.5 bg-white/15 px-2.5 py-1 rounded-full">
+                                    <Shield className="w-3.5 h-3.5" />
+                                    تم التحقق: {new Date(article.lastFactChecked).toLocaleDateString('ar-SA', { year: 'numeric', month: 'long' })}
+                                </span>
+                            )}
                         </div>
                     </div>
                 </section>
@@ -185,6 +197,28 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
                     <div className="border-r-4 rounded-xl p-6 mb-10" style={{ backgroundColor: isProtection ? '#fff1f2' : '#f0f9ff', borderColor: isProtection ? '#f43f5e' : '#0EA5E9' }}>
                         <p className="text-gray-700 text-lg leading-relaxed">{article.excerpt}</p>
                     </div>
+
+                    {/* Author Bio & Trust Signals */}
+                    {article.authorBio && (
+                        <div className="bg-white border border-gray-200 rounded-xl p-5 mb-10 flex items-start gap-4">
+                            <div className="w-12 h-12 bg-gradient-to-br from-sky-500 to-sky-600 rounded-full flex items-center justify-center flex-shrink-0">
+                                <User className="w-6 h-6 text-white" />
+                            </div>
+                            <div>
+                                <div className="flex items-center gap-2 mb-1">
+                                    <h3 className="font-bold text-gray-900 text-sm">{article.author}</h3>
+                                    <CheckCircle className="w-4 h-4 text-sky-500" />
+                                </div>
+                                <p className="text-gray-600 text-sm leading-relaxed">{article.authorBio}</p>
+                                {article.reviewedBy && (
+                                    <p className="text-gray-500 text-xs mt-2 flex items-center gap-1">
+                                        <Shield className="w-3 h-3" />
+                                        راجعه: {article.reviewedBy}
+                                    </p>
+                                )}
+                            </div>
+                        </div>
+                    )}
 
                     {/* Table of Contents */}
                     <div className="bg-white border border-gray-200 rounded-xl p-6 mb-10">
@@ -232,6 +266,24 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
                                 ))}
                             </div>
                         </section>
+                    )}
+
+                    {/* Sources */}
+                    {article.sources && article.sources.length > 0 && (
+                        <div className="bg-gray-50 border border-gray-200 rounded-xl p-5 mb-10">
+                            <h3 className="font-bold text-gray-900 text-sm mb-3 flex items-center gap-2">
+                                <BookOpen className="w-4 h-4 text-gray-500" />
+                                المصادر والمراجع
+                            </h3>
+                            <ul className="space-y-1.5">
+                                {article.sources.map((source, idx) => (
+                                    <li key={idx} className="text-gray-600 text-sm flex items-start gap-2">
+                                        <span className="text-gray-400 mt-0.5">{idx + 1}.</span>
+                                        {source}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
                     )}
 
                     {/* Tags */}

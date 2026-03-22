@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { Home, ChevronLeft, Clock, ArrowLeft, BookOpen } from 'lucide-react';
+import { Home, ChevronLeft, Clock, ArrowLeft, BookOpen, Shield } from 'lucide-react';
 import { BLOG_ARTICLES, BLOG_CATEGORIES } from '@/lib/blog-data';
 import { BreadcrumbJsonLd, WebPageJsonLd } from '@/components/JsonLd';
 import Footer from '@/components/Footer';
@@ -57,6 +57,8 @@ export default function BlogPage() {
         if (slug === 'sewage') return 'bg-purple-500';
         if (slug === 'moving') return 'bg-blue-500';
         if (slug === 'cleaning') return 'bg-sky-500';
+        if (slug === 'government-guides') return 'bg-emerald-500';
+        if (slug === 'new-home') return 'bg-teal-500';
         return 'bg-sky-500';
     }
     function getCategoryBadge(slug: string) {
@@ -67,6 +69,8 @@ export default function BlogPage() {
         if (slug === 'sewage') return 'bg-purple-50 text-purple-700';
         if (slug === 'moving') return 'bg-blue-50 text-blue-700';
         if (slug === 'cleaning') return 'bg-sky-50 text-sky-700';
+        if (slug === 'government-guides') return 'bg-emerald-50 text-emerald-700';
+        if (slug === 'new-home') return 'bg-teal-50 text-teal-700';
         return 'bg-sky-50 text-sky-700';
     }
 
@@ -176,7 +180,15 @@ export default function BlogPage() {
                                                     <Clock className="w-3.5 h-3.5" />
                                                     {article.readTime} دقائق
                                                 </span>
-                                                <span>{new Date(article.updateDate).toLocaleDateString('ar-SA', { month: 'short', day: 'numeric' })}</span>
+                                                <div className="flex items-center gap-2">
+                                                    {article.lastFactChecked && (
+                                                        <span className="flex items-center gap-0.5 text-emerald-600 font-medium">
+                                                            <Shield className="w-3 h-3" />
+                                                            تم التحقق
+                                                        </span>
+                                                    )}
+                                                    <span>{new Date(article.updateDate).toLocaleDateString('ar-SA', { month: 'short', day: 'numeric' })}</span>
+                                                </div>
                                             </div>
                                         </div>
                                         <div className="px-6 pb-4">
