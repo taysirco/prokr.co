@@ -45,7 +45,7 @@ export function AudioReviewSchema({ reviews, businessName, pageUrl }: AudioRevie
             associatedMedia: {
                 '@type': 'AudioObject',
                 contentUrl: review.audioUrl,
-                encodingFormat: 'audio/webm',
+                encodingFormat: review.audioUrl.endsWith('.mp4') ? 'audio/mp4' : 'audio/webm',
                 duration: `PT${review.durationSeconds}S`,
                 transcript: review.transcript,
                 description: `تقييم صوتي مُوثّق من عميل حقيقي لـ ${businessName}`,

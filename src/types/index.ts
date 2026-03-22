@@ -23,7 +23,7 @@ export interface Review {
   user: string;
   rating: number; // 1-5
   comment: string;
-  date: Date;
+  date: string; // ISO string from Firestore
   // Audio UGC (البصمة الصوتية) fields
   review_type?: 'text' | 'audio';
   audio_url?: string;

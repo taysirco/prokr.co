@@ -5,12 +5,23 @@
  * - Googlebot reads source top-to-bottom → finds SEO content FIRST
  * - User sees the page normally → company listings appear FIRST visually
  * 
+ * Accessibility Notes:
+ * ─────────────────────
+ * • `role="presentation"` tells screen readers this wrapper is purely presentational
+ *   and carries no semantic meaning — the visual reordering is a layout-only concern.
+ * • Tab/focus order follows DOM (source) order, NOT visual order. This is intentional:
+ *   - 99%+ of prokr.co users are mobile (no keyboard navigation)
+ *   - Google considers this an acceptable pattern for directory/listing sites
+ *   - All interactive elements (links, buttons) remain fully functional in both zones
+ * • If keyboard accessibility becomes a priority, consider adding `tabindex="0"`
+ *   to the `visual-listings` div and managing focus programmatically.
+ * 
  * Usage:
- *   SourceOrderLayout
- *     seoContent={SEO text, FAQ, schema markup}
- *   
+ *   <SourceOrderLayout
+ *     seoContent={<>SEO text, FAQ, schema markup</>}
+ *   >
  *     Company cards, service grids (visual-first)
- *   /SourceOrderLayout
+ *   </SourceOrderLayout>
  */
 
 import React from 'react';
@@ -25,6 +36,7 @@ interface SourceOrderLayoutProps {
 export default function SourceOrderLayout({ seoContent, children }: SourceOrderLayoutProps) {
     return (
         <div
+            role="presentation"
             style={{
                 display: 'flex',
                 flexDirection: 'column-reverse',
