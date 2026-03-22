@@ -221,8 +221,9 @@ export async function POST(request: NextRequest) {
 // ============================================
 // 🧠 Speech-to-Text Helper
 // Uses Google Cloud Speech-to-Text V2 REST API
-// Model: chirp_2 (best for Arabic Saudi dialect)
-// Region: us-central1 (chirp_2 only in us-central1, europe-west4, asia-southeast1)
+// Model: chirp_2 (best available for Arabic transcription)
+// Language: ar-EG (covers general Arabic including Gulf/Saudi dialects)
+// Region: europe-west4 (closest to Saudi Arabia)
 // ============================================
 async function transcribeAudio(audioBuffer: Buffer, _contentType: string): Promise<string> {
     const projectId = process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID;
@@ -245,13 +246,12 @@ async function transcribeAudio(audioBuffer: Buffer, _contentType: string): Promi
         return '';
     }
 
-    // Chirp 2 requires v2 API with specific regional endpoint
-    // Use autoDecodingConfig to let the API auto-detect encoding (WebM/Opus, MP4, WAV, etc.)
-    const region = 'us-central1';
+    // chirp_2 with ar-EG covers all Arabic dialects including Saudi
+    const region = 'europe-west4';
     const requestBody = {
         config: {
-            autoDecodingConfig: {}, // Auto-detect audio encoding
-            languageCodes: ['ar-SA'],
+            autoDecodingConfig: {}, // Auto-detect audio encoding (WebM/Opus, MP4, WAV, etc.)
+            languageCodes: ['ar-EG'],
             model: 'chirp_2',
             features: {
                 enableAutomaticPunctuation: true,
@@ -260,7 +260,7 @@ async function transcribeAudio(audioBuffer: Buffer, _contentType: string): Promi
         content: audioBuffer.toString('base64'),
     };
 
-    // V2 regional endpoint — chirp_2 is NOT available at global
+    // V2 regional endpoint
     const endpoint = `https://${region}-speech.googleapis.com/v2/projects/${projectId}/locations/${region}/recognizers/_:recognize`;
 
     const response = await fetch(endpoint, {
@@ -291,3 +291,5 @@ async function transcribeAudio(audioBuffer: Buffer, _contentType: string): Promi
 
     return transcript;
 }
+
+
