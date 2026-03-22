@@ -69,8 +69,8 @@ export default async function OgImage({ params }: { params: Promise<{ city: stri
                             style={{
                                 display: 'flex',
                                 alignItems: 'center',
-                                background: 'rgba(16, 185, 129, 0.9)',
-                                color: '#022c22',
+                                background: 'rgba(2, 132, 199, 0.9)',
+                                color: '#0c4a6e',
                                 padding: '10px 28px',
                                 borderRadius: '100px',
                                 fontSize: '26px',
@@ -152,7 +152,7 @@ export default async function OgImage({ params }: { params: Promise<{ city: stri
                             display: 'flex',
                             alignItems: 'center',
                             gap: '8px',
-                            background: 'rgba(16, 185, 129, 0.95)',
+                            background: 'rgba(2, 132, 199, 0.95)',
                             padding: '8px 20px',
                             borderRadius: '12px',
                             border: '2px solid rgba(255,255,255,0.3)',
@@ -162,7 +162,7 @@ export default async function OgImage({ params }: { params: Promise<{ city: stri
                         <span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>
                             {rtl('تم التحقق — نفاذ')}
                         </span>
-                        <span style={{ fontSize: '14px', color: '#d1fae5', fontWeight: 700 }}>
+                        <span style={{ fontSize: '14px', color: '#bae6fd', fontWeight: 700 }}>
                             SBC
                         </span>
                     </div>

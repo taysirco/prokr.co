@@ -41,7 +41,7 @@ export default function Navbar() {
     return (
         <>
             {/* Top Bar - Contact Info */}
-            <div className="hidden lg:block bg-sky-900 text-white text-sm py-2">
+            <div className="hidden lg:block bg-slate-950 text-white text-sm py-2">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
                     <div className="flex items-center gap-6">
                         <span className="flex items-center gap-2">
@@ -61,8 +61,8 @@ export default function Navbar() {
 
             {/* Main Navbar */}
             <nav className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled
-                ? 'bg-white shadow-lg'
-                : 'bg-white/95 backdrop-blur-md border-b border-gray-100'
+                ? 'bg-gradient-to-l from-gray-950 to-slate-950 shadow-xl shadow-black/30'
+                : 'bg-gradient-to-l from-gray-950/95 to-slate-950/95 backdrop-blur-md border-b border-white/5'
                 }`}>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-center h-20">
@@ -73,7 +73,7 @@ export default function Navbar() {
                                 alt="PROKR - بروكر"
                                 width={140}
                                 height={44}
-                                className="h-11 w-auto group-hover:scale-105 transition-transform"
+                                className="h-12 w-auto group-hover:scale-105 transition-transform drop-shadow-[0_0_20px_rgba(56,189,248,0.35)]"
                                 priority
                             />
                         </Link>
@@ -83,7 +83,7 @@ export default function Navbar() {
                             {/* Home */}
                             <Link
                                 href="/"
-                                className="flex items-center gap-2 px-4 py-2.5 text-gray-700 hover:text-sky-600 hover:bg-sky-50 rounded-xl font-medium transition-all"
+                                className="flex items-center gap-2 px-4 py-2.5 text-gray-200 hover:text-white hover:bg-white/10 rounded-xl font-medium transition-all"
                             >
                                 <Home className="w-4 h-4" />
                                 <span>الرئيسية</span>
@@ -97,8 +97,8 @@ export default function Navbar() {
                             >
                                 <button
                                     className={`flex items-center gap-2 px-4 py-2.5 font-medium transition-all rounded-xl ${isServicesOpen
-                                        ? 'text-sky-600 bg-sky-50'
-                                        : 'text-gray-700 hover:text-sky-600 hover:bg-sky-50'
+                                        ? 'text-cyan-400 bg-white/10'
+                                        : 'text-gray-200 hover:text-white hover:bg-white/10'
                                         }`}
                                 >
                                     <Wrench className="w-4 h-4" />
@@ -166,8 +166,8 @@ export default function Navbar() {
                             >
                                 <button
                                     className={`flex items-center gap-2 px-4 py-2.5 font-medium transition-all rounded-xl ${isCitiesOpen
-                                        ? 'text-sky-600 bg-sky-50'
-                                        : 'text-gray-700 hover:text-sky-600 hover:bg-sky-50'
+                                        ? 'text-cyan-400 bg-white/10'
+                                        : 'text-gray-200 hover:text-white hover:bg-white/10'
                                         }`}
                                 >
                                     <MapPin className="w-4 h-4" />
@@ -225,7 +225,7 @@ export default function Navbar() {
                             {/* Blog */}
                             <Link
                                 href="/blog"
-                                className="flex items-center gap-2 px-4 py-2.5 text-gray-700 hover:text-sky-600 hover:bg-sky-50 rounded-xl font-medium transition-all"
+                                className="flex items-center gap-2 px-4 py-2.5 text-gray-200 hover:text-white hover:bg-white/10 rounded-xl font-medium transition-all"
                             >
                                 <BookOpen className="w-4 h-4" />
                                 <span>المدونة</span>
@@ -234,7 +234,7 @@ export default function Navbar() {
                             {/* About */}
                             <Link
                                 href="/about-us"
-                                className="flex items-center gap-2 px-4 py-2.5 text-gray-700 hover:text-sky-600 hover:bg-sky-50 rounded-xl font-medium transition-all"
+                                className="flex items-center gap-2 px-4 py-2.5 text-gray-200 hover:text-white hover:bg-white/10 rounded-xl font-medium transition-all"
                             >
                                 <Info className="w-4 h-4" />
                                 <span>من نحن</span>
@@ -243,7 +243,7 @@ export default function Navbar() {
                             {/* Contact */}
                             <Link
                                 href="/contact-us"
-                                className="flex items-center gap-2 px-4 py-2.5 text-gray-700 hover:text-sky-600 hover:bg-sky-50 rounded-xl font-medium transition-all"
+                                className="flex items-center gap-2 px-4 py-2.5 text-gray-200 hover:text-white hover:bg-white/10 rounded-xl font-medium transition-all"
                             >
                                 <Mail className="w-4 h-4" />
                                 <span>اتصل بنا</span>
@@ -255,14 +255,14 @@ export default function Navbar() {
                             {/* Search Button */}
                             <button
                                 onClick={() => setIsSearchOpen(true)}
-                                className="p-3 text-gray-500 hover:text-sky-600 hover:bg-sky-50 rounded-xl transition-all"
+                                className="p-3 text-gray-300 hover:text-white hover:bg-white/10 rounded-xl transition-all"
                                 aria-label="بحث"
                             >
                                 <Search className="w-5 h-5" />
                             </button>
 
                             {/* Divider */}
-                            <div className="h-8 w-px bg-gray-200"></div>
+                            <div className="h-8 w-px bg-white/20"></div>
 
                             {/* CTA Button */}
                             <Link
@@ -278,14 +278,14 @@ export default function Navbar() {
                         <div className="flex lg:hidden items-center gap-3">
                             <button
                                 onClick={() => setIsSearchOpen(true)}
-                                className="p-2.5 text-gray-500 hover:text-sky-600 hover:bg-sky-50 rounded-xl transition-all"
+                                className="p-2.5 text-gray-300 hover:text-white hover:bg-white/10 rounded-xl transition-all"
                                 aria-label="بحث"
                             >
                                 <Search className="w-5 h-5" />
                             </button>
                             <button
                                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                                className="p-2.5 text-gray-600 hover:text-sky-600 hover:bg-sky-50 rounded-xl transition-all"
+                                className="p-2.5 text-gray-300 hover:text-white hover:bg-white/10 rounded-xl transition-all"
                             >
                                 {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
                             </button>
@@ -296,56 +296,56 @@ export default function Navbar() {
                 {/* Mobile Menu */}
                 <div className={`lg:hidden overflow-hidden transition-all duration-300 ${isMenuOpen ? 'max-h-[80vh] opacity-100' : 'max-h-0 opacity-0'
                     }`}>
-                    <div className="bg-white border-t border-gray-100 px-4 py-6 space-y-4">
+                    <div className="bg-gradient-to-b from-gray-950 to-slate-950 border-t border-white/5 px-4 py-6 space-y-4">
                         {/* Quick Links */}
                         <div className="grid grid-cols-2 gap-3">
                             <Link
                                 href="/"
-                                className="flex items-center gap-3 p-4 bg-gray-50 hover:bg-sky-50 rounded-2xl transition-all"
+                                className="flex items-center gap-3 p-4 bg-white/5 hover:bg-white/10 rounded-2xl transition-all"
                             >
-                                <div className="w-10 h-10 bg-sky-100 rounded-xl flex items-center justify-center text-sky-600">
+                                <div className="w-10 h-10 bg-sky-500/20 rounded-xl flex items-center justify-center text-sky-400">
                                     <Home className="w-5 h-5" />
                                 </div>
-                                <span className="font-medium text-gray-900">الرئيسية</span>
+                                <span className="font-medium text-gray-200">الرئيسية</span>
                             </Link>
                             <Link
                                 href="/services"
-                                className="flex items-center gap-3 p-4 bg-gray-50 hover:bg-sky-50 rounded-2xl transition-all"
+                                className="flex items-center gap-3 p-4 bg-white/5 hover:bg-white/10 rounded-2xl transition-all"
                             >
-                                <div className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600">
+                                <div className="w-10 h-10 bg-blue-500/20 rounded-xl flex items-center justify-center text-blue-400">
                                     <Wrench className="w-5 h-5" />
                                 </div>
-                                <span className="font-medium text-gray-900">الخدمات</span>
+                                <span className="font-medium text-gray-200">الخدمات</span>
                             </Link>
                             <Link
                                 href="/locations"
-                                className="flex items-center gap-3 p-4 bg-gray-50 hover:bg-sky-50 rounded-2xl transition-all"
+                                className="flex items-center gap-3 p-4 bg-white/5 hover:bg-white/10 rounded-2xl transition-all"
                             >
-                                <div className="w-10 h-10 bg-purple-100 rounded-xl flex items-center justify-center text-purple-600">
+                                <div className="w-10 h-10 bg-purple-500/20 rounded-xl flex items-center justify-center text-purple-400">
                                     <MapPin className="w-5 h-5" />
                                 </div>
-                                <span className="font-medium text-gray-900">المدن</span>
+                                <span className="font-medium text-gray-200">المدن</span>
                             </Link>
                             <Link
                                 href="/blog"
-                                className="flex items-center gap-3 p-4 bg-gray-50 hover:bg-sky-50 rounded-2xl transition-all"
+                                className="flex items-center gap-3 p-4 bg-white/5 hover:bg-white/10 rounded-2xl transition-all"
                             >
-                                <div className="w-10 h-10 bg-amber-100 rounded-xl flex items-center justify-center text-amber-600">
+                                <div className="w-10 h-10 bg-amber-500/20 rounded-xl flex items-center justify-center text-amber-400">
                                     <BookOpen className="w-5 h-5" />
                                 </div>
-                                <span className="font-medium text-gray-900">المدونة</span>
+                                <span className="font-medium text-gray-200">المدونة</span>
                             </Link>
                         </div>
 
                         {/* Featured Services */}
-                        <div className="pt-4 border-t border-gray-100">
+                        <div className="pt-4 border-t border-white/10">
                             <h4 className="text-sm font-bold text-gray-400 mb-3 px-1">الخدمات الشائعة</h4>
                             <div className="grid grid-cols-2 gap-2">
                                 {SERVICES.filter(s => !isAbsorbedSlug(s.slug)).slice(0, 6).map(service => (
                                     <Link
                                         key={service.slug}
                                         href={`/${service.slug}`}
-                                        className="px-4 py-3 text-sm text-gray-700 hover:bg-sky-50 hover:text-sky-700 rounded-xl transition-all"
+                                        className="px-4 py-3 text-sm text-gray-300 hover:bg-white/10 hover:text-white rounded-xl transition-all"
                                     >
                                         {service.name_ar}
                                     </Link>
@@ -354,7 +354,7 @@ export default function Navbar() {
                         </div>
 
                         {/* CTA */}
-                        <div className="pt-4 border-t border-gray-100 space-y-3">
+                        <div className="pt-4 border-t border-white/10 space-y-3">
                             <Link
                                 href="/advertise"
                                 className="flex items-center justify-center gap-2 w-full px-6 py-4 bg-gradient-to-l from-amber-500 to-amber-600 text-white font-bold rounded-2xl shadow-lg"
@@ -364,7 +364,7 @@ export default function Navbar() {
                             </Link>
                             <Link
                                 href="/contact-us"
-                                className="flex items-center justify-center gap-2 w-full px-6 py-4 bg-gray-100 text-gray-700 font-medium rounded-2xl"
+                                className="flex items-center justify-center gap-2 w-full px-6 py-4 bg-white/10 text-gray-200 font-medium rounded-2xl hover:bg-white/15"
                             >
                                 <Phone className="w-5 h-5" />
                                 <span>تواصل معنا</span>

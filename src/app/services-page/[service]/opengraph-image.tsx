@@ -152,7 +152,7 @@ export default async function OgImage({ params }: { params: Promise<{ service: s
                             display: 'flex',
                             alignItems: 'center',
                             gap: '8px',
-                            background: 'rgba(16, 185, 129, 0.95)',
+                            background: 'rgba(2, 132, 199, 0.95)',
                             padding: '8px 20px',
                             borderRadius: '12px',
                             border: '2px solid rgba(255,255,255,0.3)',
@@ -162,7 +162,7 @@ export default async function OgImage({ params }: { params: Promise<{ service: s
                         <span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>
                             {rtl('تم التحقق — نفاذ')}
                         </span>
-                        <span style={{ fontSize: '14px', color: '#d1fae5', fontWeight: 700 }}>
+                        <span style={{ fontSize: '14px', color: '#bae6fd', fontWeight: 700 }}>
                             SBC
                         </span>
                     </div>

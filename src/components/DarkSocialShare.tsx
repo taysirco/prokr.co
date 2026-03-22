@@ -253,7 +253,7 @@ export default function DarkSocialShare({
             className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6"
             aria-label="مشاركة الصفحة"
         >
-            <div className="relative overflow-hidden bg-gradient-to-br from-green-50 via-sky-50 to-teal-50 rounded-2xl border border-sky-200/60 shadow-lg">
+            <div className="relative overflow-hidden bg-gradient-to-br from-sky-50 via-sky-50/50 to-cyan-50 rounded-2xl border border-sky-200/60 shadow-lg">
                 {/* Glassmorphism overlay */}
                 <div className="absolute inset-0 bg-white/30 backdrop-blur-sm pointer-events-none" />
 

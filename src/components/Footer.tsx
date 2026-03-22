@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Phone, Mail, MapPin, Facebook, Twitter, Instagram } from 'lucide-react';
 import { CITIES, SERVICES, getCityBySlug, getServiceBySlug } from '@/lib/seed';
 import { NAP } from '@/lib/nap';
@@ -49,9 +50,9 @@ export default function Footer({ currentCity, currentService }: FooterProps) {
     const targetedCities = getDeterministicLinks(allCities, canonicalService || 'root', 6);
 
     return (
-        <footer className="bg-gradient-to-b from-gray-900 to-gray-950 text-gray-300">
+        <footer className="bg-gradient-to-b from-gray-950 via-slate-950 to-gray-950 text-gray-300">
             {/* Sitemap-Style Links: All Services */}
-            <div className="border-b border-gray-800">
+            <div className="border-b border-white/10">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
                     <h3 className="text-white font-bold text-lg mb-4 flex items-center gap-2">
                         <span className="w-1 h-6 bg-sky-500 rounded-full"></span>
@@ -72,7 +73,7 @@ export default function Footer({ currentCity, currentService }: FooterProps) {
             </div>
 
             {/* Sitemap-Style Links: All Cities */}
-            <div className="border-b border-gray-800">
+            <div className="border-b border-white/10">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
                     <h3 className="text-white font-bold text-lg mb-4 flex items-center gap-2">
                         <span className="w-1 h-6 bg-sky-500 rounded-full"></span>
@@ -95,6 +96,21 @@ export default function Footer({ currentCity, currentService }: FooterProps) {
             {/* Main Footer */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {/* Column 0: Brand */}
+                    <div className="lg:col-span-3 flex flex-col sm:flex-row items-start sm:items-center gap-6 mb-4 pb-6 border-b border-white/10">
+                        <Link href="/" className="shrink-0">
+                            <Image
+                                src="/logo.png"
+                                alt="PROKR - بروكر"
+                                width={140}
+                                height={44}
+                                className="h-10 w-auto drop-shadow-[0_0_16px_rgba(56,189,248,0.3)]"
+                            />
+                        </Link>
+                        <p className="text-sm text-gray-400 leading-relaxed max-w-lg">
+                            المنصة الأولى لمقارنة واختيار أفضل شركات الخدمات المعتمدة في المملكة العربية السعودية — أسعار شفافة، تقييمات حقيقية، وضمان جودة.
+                        </p>
+                    </div>
 
                     {/* Column 1: Quick Links */}
                     <div>
@@ -171,7 +187,7 @@ export default function Footer({ currentCity, currentService }: FooterProps) {
                         <div className="flex gap-3 mt-6">
                             <a
                                 href={NAP.social.facebook}
-                                className="w-10 h-10 bg-gray-800 hover:bg-sky-600 rounded-lg flex items-center justify-center transition-colors"
+                                className="w-10 h-10 bg-white/10 hover:bg-sky-600 rounded-lg flex items-center justify-center transition-colors"
                                 aria-label="Facebook"
                                 rel="noopener noreferrer"
                                 target="_blank"
@@ -180,7 +196,7 @@ export default function Footer({ currentCity, currentService }: FooterProps) {
                             </a>
                             <a
                                 href={NAP.social.twitter}
-                                className="w-10 h-10 bg-gray-800 hover:bg-sky-600 rounded-lg flex items-center justify-center transition-colors"
+                                className="w-10 h-10 bg-white/10 hover:bg-sky-600 rounded-lg flex items-center justify-center transition-colors"
                                 aria-label="Twitter"
                                 rel="noopener noreferrer"
                                 target="_blank"
@@ -189,7 +205,7 @@ export default function Footer({ currentCity, currentService }: FooterProps) {
                             </a>
                             <a
                                 href={NAP.social.instagram}
-                                className="w-10 h-10 bg-gray-800 hover:bg-sky-600 rounded-lg flex items-center justify-center transition-colors"
+                                className="w-10 h-10 bg-white/10 hover:bg-sky-600 rounded-lg flex items-center justify-center transition-colors"
                                 aria-label="Instagram"
                                 rel="noopener noreferrer"
                                 target="_blank"
@@ -212,7 +228,7 @@ export default function Footer({ currentCity, currentService }: FooterProps) {
             </div>
 
             {/* Bottom Bar */}
-            <div className="border-t border-gray-800">
+            <div className="border-t border-white/10">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
                     <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                         <p className="text-sm text-gray-500">

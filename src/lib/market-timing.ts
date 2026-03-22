@@ -274,10 +274,10 @@ const PHASE_CONFIGS: Record<MarketTimingPhase, MarketTimingConfig> = {
         ctaText: 'اطلب عرض سعر مخفّض',
         ctaSubtext: 'أسعار خاصة لمنتصف الشهر',
         colors: {
-            badgeBg: 'bg-gradient-to-r from-sky-100 to-green-100',
+            badgeBg: 'bg-gradient-to-r from-sky-100 to-cyan-100',
             badgeText: 'text-sky-800',
             badgeBorder: 'border-sky-200',
-            accentGradient: 'from-sky-500 to-green-500',
+            accentGradient: 'from-sky-500 to-cyan-500',
         },
         companySectionSuffix: '— أفضل سعر',
         pricingNote: '💚 أسعار منتصف الشهر — خصومات حصرية على الخدمات الأساسية',

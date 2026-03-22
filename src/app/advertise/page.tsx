@@ -88,8 +88,8 @@ export default function AdvertisePage() {
                     </div>
 
                     <div className="text-center p-6 bg-white rounded-2xl shadow-sm border border-gray-100">
-                        <div className="w-14 h-14 mx-auto bg-green-100 rounded-xl flex items-center justify-center mb-4">
-                            <Shield className="w-7 h-7 text-green-600" />
+                        <div className="w-14 h-14 mx-auto bg-sky-100 rounded-xl flex items-center justify-center mb-4">
+                            <Shield className="w-7 h-7 text-sky-600" />
                         </div>
                         <h3 className="font-bold text-gray-900 mb-2">شارة معتمد</h3>
                         <p className="text-sm text-gray-600">احصل على شارة التوثيق وزد ثقة العملاء</p>

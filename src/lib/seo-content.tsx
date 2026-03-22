@@ -344,7 +344,7 @@ export function SeoContentSection({ city, service }: SeoContentProps) {
                         </tbody>
                     </table>
                     {/* Trust footer inside the table card */}
-                    <div className="bg-gradient-to-l from-sky-50 to-green-50 px-4 py-3 border-t border-sky-100 flex flex-wrap items-center justify-between gap-2">
+                    <div className="bg-gradient-to-l from-sky-50 to-cyan-50 px-4 py-3 border-t border-sky-100 flex flex-wrap items-center justify-between gap-2">
                         <p className="text-xs text-sky-800 font-medium">
                             ✅ الأسعار أعلاه من شركات بروكر المعتمدة والمرخصة {cityKw}
                         </p>

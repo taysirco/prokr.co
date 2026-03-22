@@ -143,7 +143,7 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
                 {/* Hero */}
                 <section className="text-white" style={{ background: isProtection ? 'linear-gradient(to bottom left, #e11d48, #be123c, #881337)' : 'linear-gradient(to bottom left, #0284C7, #0369A1, #0C4A6E)' }}>
                     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-                        <nav className="flex items-center gap-2 text-sm mb-6" style={{ color: isProtection ? '#ffe4e6' : '#d1fae5' }}>
+                        <nav className="flex items-center gap-2 text-sm mb-6" style={{ color: isProtection ? '#ffe4e6' : '#bae6fd' }}>
                             <Link href="/" className="hover:text-white transition-colors flex items-center gap-1">
                                 <Home className="w-4 h-4" />
                                 الرئيسية
@@ -162,7 +162,7 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
                             {article.title}
                         </h1>
 
-                        <div className="flex flex-wrap items-center gap-4 text-sm" style={{ color: isProtection ? '#ffe4e6' : '#d1fae5' }}>
+                        <div className="flex flex-wrap items-center gap-4 text-sm" style={{ color: isProtection ? '#ffe4e6' : '#bae6fd' }}>
                             <span className="flex items-center gap-1.5">
                                 <User className="w-4 h-4" />
                                 {article.author}
