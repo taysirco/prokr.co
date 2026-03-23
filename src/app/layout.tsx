@@ -299,6 +299,8 @@ export default function RootLayout({
     '.prokr-dark [class*="text-indigo-800"]{color:#a5b4fc!important}',
     '.prokr-dark [class*="text-cyan-700"]{color:#22d3ee!important}',
     '.prokr-dark [class*="text-cyan-800"]{color:#22d3ee!important}',
+    '.prokr-dark [class*="text-emerald-900"]{color:#6ee7b7!important}',
+    '.prokr-dark [class*="text-green-900"]{color:#86efac!important}',
 
     /* ═══ BACKGROUNDS — service page badges & cards ═══ */
     '.prokr-dark [class*="bg-indigo-50"]{background:#1e1b4b!important}',
@@ -315,6 +317,10 @@ export default function RootLayout({
     '.prokr-dark [class*="border-amber-300"]{border-color:#92400e!important}',
     '.prokr-dark [class*="border-amber-400"]{border-color:#b45309!important}',
     '.prokr-dark [class*="border-indigo-100"]{border-color:#312e81!important}',
+    '.prokr-dark [class*="border-emerald-300"]{border-color:#059669!important}',
+    '.prokr-dark [class*="border-green-300"]{border-color:#16a34a!important}',
+    '.prokr-dark [class*="border-red-300"]{border-color:#dc2626!important}',
+    '.prokr-dark [class*="border-blue-300"]{border-color:#2563eb!important}',
 
     /* ═══ LINE-THROUGH red text (pricing strikethrough) ═══ */
     '.prokr-dark .line-through[class*="text-red"]{color:#f87171!important;opacity:0.8!important}',

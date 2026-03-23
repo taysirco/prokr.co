@@ -158,7 +158,7 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
                             <ChevronLeft className="w-4 h-4" />
                             <Link href="/blog" className="hover:text-white transition-colors">المدونة</Link>
                             <ChevronLeft className="w-4 h-4" />
-                            <span className="text-white font-medium truncate max-w-[200px]">{article.title}</span>
+                            <span className="text-white font-medium">{article.title}</span>
                         </nav>
 
                         <span className="inline-block px-3 py-1 bg-white/20 rounded-full text-sm font-medium mb-4">
@@ -195,7 +195,7 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
                 {/* Article Body */}
                 <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                     {/* Intro */}
-                    <div className="border-r-4 rounded-xl p-6 mb-10" style={{ backgroundColor: isProtection ? '#fff1f2' : '#f0f9ff', borderColor: isProtection ? '#f43f5e' : '#0EA5E9' }}>
+                    <div className={`border-r-4 rounded-xl p-6 mb-10 ${isProtection ? 'bg-red-50 border-red-500' : 'bg-sky-50 border-sky-500'}`}>
                         <p className="text-gray-700 text-lg leading-relaxed">{article.excerpt}</p>
                     </div>
 
