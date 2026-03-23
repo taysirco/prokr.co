@@ -6,6 +6,7 @@ import { getServiceBySlug } from '@/lib/seed';
 import { BreadcrumbJsonLd } from '@/components/JsonLd';
 import { isAbsorbedSlug } from '@/lib/services/super-page-groups';
 import Footer from '@/components/Footer';
+import BlogContent from '@/components/BlogContent';
 import { notFound } from 'next/navigation';
 
 interface BlogArticlePageProps {
@@ -248,7 +249,7 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
                         <section key={idx} id={`section-${idx}`} className="mb-10">
                             <h2 className="text-2xl font-bold text-gray-900 mb-4">{section.heading}</h2>
                             <div className="prose prose-lg prose-sky max-w-none">
-                                <p className="text-gray-700 leading-relaxed whitespace-pre-line">{section.content}</p>
+                                <BlogContent content={section.content} />
                             </div>
                         </section>
                     ))}
@@ -261,7 +262,7 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
                                 {article.faq.map((faq, idx) => (
                                     <div key={idx} className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
                                         <h3 className="font-bold text-gray-900 mb-2">{faq.question}</h3>
-                                        <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                                        <div className="text-gray-600"><BlogContent content={faq.answer} /></div>
                                     </div>
                                 ))}
                             </div>
