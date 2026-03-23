@@ -53,6 +53,9 @@ import { BLOG_ARTICLES_GENERAL } from './blog/general';
 import { BLOG_ARTICLES_CONSUMER_PROTECTION } from './blog/consumer-protection';
 import { BLOG_ARTICLES_GOVERNMENT_GUIDES } from './blog/government-guides';
 import { BLOG_ARTICLES_NEW_HOME } from './blog/new-home-guides';
+import { BLOG_ARTICLES_SMART_GUIDES } from './blog/smart-guides';
+import { BLOG_ARTICLES_CLEANING_MISTAKES } from './blog/cleaning-mistakes';
+import { BLOG_ARTICLES_DIY_VS_PRO } from './blog/diy-vs-pro';
 
 // Aggregated blog articles
 export const BLOG_ARTICLES: BlogArticle[] = [
@@ -66,4 +69,7 @@ export const BLOG_ARTICLES: BlogArticle[] = [
     ...BLOG_ARTICLES_CONSUMER_PROTECTION,
     ...BLOG_ARTICLES_GOVERNMENT_GUIDES,
     ...BLOG_ARTICLES_NEW_HOME,
+    ...BLOG_ARTICLES_SMART_GUIDES,
+    ...BLOG_ARTICLES_CLEANING_MISTAKES,
+    ...BLOG_ARTICLES_DIY_VS_PRO,
 ];
