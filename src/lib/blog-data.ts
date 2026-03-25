@@ -56,6 +56,8 @@ import { BLOG_ARTICLES_NEW_HOME } from './blog/new-home-guides';
 import { BLOG_ARTICLES_SMART_GUIDES } from './blog/smart-guides';
 import { BLOG_ARTICLES_CLEANING_MISTAKES } from './blog/cleaning-mistakes';
 import { BLOG_ARTICLES_DIY_VS_PRO } from './blog/diy-vs-pro';
+import { BLOG_ARTICLES_AC_MAINTENANCE } from './blog/ac-maintenance-guide';
+import { BLOG_ARTICLES_SUMMER_ENERGY } from './blog/summer-energy-savings';
 
 // Aggregated blog articles
 export const BLOG_ARTICLES: BlogArticle[] = [
@@ -72,4 +74,6 @@ export const BLOG_ARTICLES: BlogArticle[] = [
     ...BLOG_ARTICLES_SMART_GUIDES,
     ...BLOG_ARTICLES_CLEANING_MISTAKES,
     ...BLOG_ARTICLES_DIY_VS_PRO,
+    ...BLOG_ARTICLES_AC_MAINTENANCE,
+    ...BLOG_ARTICLES_SUMMER_ENERGY,
 ];
