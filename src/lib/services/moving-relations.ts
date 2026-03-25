@@ -23,4 +23,30 @@ export const RELATIONS_MOVING: Record<string, RelatedService[]> = {
         { slug: 'furniture-moving', context: 'للقطع الكبيرة والشقق الكاملة', priority: 3 },
         { slug: 'dyna', context: 'للكميات المتوسطة من الأثاث', priority: 2 },
     ],
+    'intercity-moving': [
+        { slug: 'furniture-moving', context: 'للنقل داخل المدينة الواحدة بسعر أقل', priority: 3 },
+        { slug: 'furniture-packaging', context: 'تغليف احترافي للأثاث لحمايته أثناء النقل الطويل', priority: 3 },
+        { slug: 'furniture-storage', context: 'تخزين مؤقت للأثاث عند الوصول للمدينة الجديدة', priority: 2 },
+        { slug: 'international-moving', context: 'للنقل خارج المملكة مع خدمات التخليص الجمركي', priority: 1 },
+    ],
+    'international-moving': [
+        { slug: 'intercity-moving', context: 'للنقل بين مدن المملكة قبل الشحن الدولي', priority: 3 },
+        { slug: 'furniture-packaging', context: 'التغليف الدولي يتطلب معايير خاصة لحماية الأثاث', priority: 3 },
+        { slug: 'furniture-storage', context: 'تخزين الأثاث أثناء إجراءات الشحن والتخليص', priority: 2 },
+    ],
+    'heavy-equipment-moving': [
+        { slug: 'vehicle-transport', context: 'لنقل المركبات والمعدات الصغيرة', priority: 2 },
+        { slug: 'intercity-moving', context: 'لنقل المعدات الثقيلة بين المدن', priority: 2 },
+        { slug: 'dyna', context: 'لنقل المعدات المتوسطة بسيارات دينا مجهزة', priority: 2 },
+    ],
+    'vehicle-transport': [
+        { slug: 'heavy-equipment-moving', context: 'لنقل المعدات الثقيلة والآليات الكبيرة', priority: 2 },
+        { slug: 'intercity-moving', context: 'لنقل السيارات بين المدن بشاحنات متخصصة', priority: 2 },
+        { slug: 'international-moving', context: 'لشحن السيارات خارج المملكة', priority: 1 },
+    ],
+    'furniture-packaging': [
+        { slug: 'furniture-moving', context: 'التغليف يسبق النقل — نوفر خدمة نقل متكاملة', priority: 3 },
+        { slug: 'intercity-moving', context: 'تغليف احترافي خاص للنقل بين المدن', priority: 2 },
+        { slug: 'furniture-storage', context: 'تغليف مناسب للتخزين طويل المدى', priority: 2 },
+    ],
 };

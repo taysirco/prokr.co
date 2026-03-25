@@ -73,6 +73,11 @@ import { khamisMushait } from './cities/khamis-mushait';
 import { najran } from './cities/najran';
 import { jazan } from './cities/jazan';
 import { alBaha } from './cities/al-baha';
+import { neom } from './cities/neom';
+import { diriyah } from './cities/diriyah';
+import { majmaah } from './cities/majmaah';
+import { rasTanura } from './cities/ras-tanura';
+import { rabigh } from './cities/rabigh';
 
 // ============================================
 // Complete City Context Data
@@ -86,6 +91,8 @@ export const CITY_CONTEXT: Record<string, CityContext> = {
     'qassim': qassim,
     'buraidah': buraidah,
     'onizah': onizah,
+    'diriyah': diriyah,
+    'majmaah': majmaah,
 
     // Western Region
     'jeddah': jeddah,
@@ -93,6 +100,7 @@ export const CITY_CONTEXT: Record<string, CityContext> = {
     'madinah': madinah,
     'taif': taif,
     'yanbu': yanbu,
+    'rabigh': rabigh,
 
     // Eastern Region
     'dammam': dammam,
@@ -102,10 +110,12 @@ export const CITY_CONTEXT: Record<string, CityContext> = {
     'al-ahsa': alAhsa,
     'qatif': qatif,
     'hafr-albatin': hafrAlbatin,
+    'ras-tanura': rasTanura,
 
     // Northern Region
     'tabuk': tabuk,
     'hail': hail,
+    'neom': neom,
 
     // Southern Region
     'abha': abha,

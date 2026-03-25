@@ -11,6 +11,8 @@ export const pestControlServices: Service[] = [
     { slug: 'ants-control', name_ar: 'مكافحة النمل', name_en: 'Ant Control', category: 'pest-control' },
     { slug: 'bird-control', name_ar: 'مكافحة الحمام', name_en: 'Bird Control', category: 'pest-control' },
     { slug: 'snakes-control', name_ar: 'مكافحة الثعابين', name_en: 'Snake Control', category: 'pest-control' },
+    { slug: 'fumigation', name_ar: 'تبخير', name_en: 'Fumigation', category: 'pest-control' },
+    { slug: 'agricultural-spraying', name_ar: 'رش زراعي', name_en: 'Agricultural Spraying', category: 'pest-control' },
 ];
 
 export const pestControlImages: Record<string, string[]> = {

@@ -28,6 +28,12 @@ export const cleaningServices: Service[] = [
     { slug: 'restaurant-chimney-cleaning', name_ar: 'تنظيف مداخن مطاعم', name_en: 'Restaurant Chimney Cleaning', category: 'cleaning' },
     { slug: 'ac-maintenance', name_ar: 'صيانة مكيفات', name_en: 'AC Maintenance', category: 'cleaning' },
     { slug: 'ac-installation', name_ar: 'تركيب مكيفات', name_en: 'AC Installation', category: 'cleaning' },
+    { slug: 'house-cleaning', name_ar: 'تنظيف منازل عميق', name_en: 'House Cleaning', category: 'cleaning' },
+    { slug: 'deep-cleaning', name_ar: 'تنظيف عميق', name_en: 'Deep Cleaning', category: 'cleaning' },
+    { slug: 'commercial-cleaning', name_ar: 'تنظيف تجاري', name_en: 'Commercial Cleaning', category: 'cleaning' },
+    { slug: 'post-construction-cleaning', name_ar: 'تنظيف بعد البناء', name_en: 'Post-Construction Cleaning', category: 'cleaning' },
+    { slug: 'sterilization', name_ar: 'تعقيم شامل', name_en: 'Sterilization', category: 'cleaning' },
+    { slug: 'landscaping', name_ar: 'تنسيق حدائق', name_en: 'Landscaping', category: 'cleaning' },
 ];
 
 export const cleaningImages: Record<string, string[]> = {

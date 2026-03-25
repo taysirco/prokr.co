@@ -6,6 +6,11 @@ export const movingServices: Service[] = [
     { slug: 'dyna', name_ar: 'دينات نقل', name_en: 'Dyna Moving', category: 'moving' },
     { slug: 'moving-out', name_ar: 'نقل عفش بين المدن', name_en: 'Intercity Moving', category: 'moving' },
     { slug: 'dabab', name_ar: 'دباب نقل عفش', name_en: 'Dabab Moving', category: 'moving' },
+    { slug: 'intercity-moving', name_ar: 'نقل بين المدن', name_en: 'Intercity Moving', category: 'moving' },
+    { slug: 'international-moving', name_ar: 'نقل دولي', name_en: 'International Moving', category: 'moving' },
+    { slug: 'heavy-equipment-moving', name_ar: 'نقل معدات ثقيلة', name_en: 'Heavy Equipment Moving', category: 'moving' },
+    { slug: 'vehicle-transport', name_ar: 'شحن سيارات', name_en: 'Vehicle Transport', category: 'moving' },
+    { slug: 'furniture-packaging', name_ar: 'تغليف أثاث', name_en: 'Furniture Packaging', category: 'moving' },
 ];
 
 export const movingImages: Record<string, string[]> = {

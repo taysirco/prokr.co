@@ -20,6 +20,8 @@ export const CITIES: City[] = [
     { slug: 'qassim', name_ar: 'القصيم', name_en: 'Al Qassim', region: 'central' },
     { slug: 'buraidah', name_ar: 'بريدة', name_en: 'Buraidah', region: 'central' },
     { slug: 'onizah', name_ar: 'عنيزة', name_en: 'Onizah', region: 'central' },
+    { slug: 'diriyah', name_ar: 'الدرعية', name_en: 'Diriyah', region: 'central' },
+    { slug: 'majmaah', name_ar: 'المجمعة', name_en: 'Majmaah', region: 'central' },
 
     // Western Region (الغربية)
     { slug: 'jeddah', name_ar: 'جدة', name_en: 'Jeddah', region: 'western' },
@@ -27,6 +29,7 @@ export const CITIES: City[] = [
     { slug: 'madinah', name_ar: 'المدينة المنورة', name_en: 'Madinah', region: 'western' },
     { slug: 'taif', name_ar: 'الطائف', name_en: 'Taif', region: 'western' },
     { slug: 'yanbu', name_ar: 'ينبع', name_en: 'Yanbu', region: 'western' },
+    { slug: 'rabigh', name_ar: 'رابغ', name_en: 'Rabigh', region: 'western' },
 
     // Eastern Region (الشرقية)
     { slug: 'dammam', name_ar: 'الدمام', name_en: 'Dammam', region: 'eastern' },
@@ -36,10 +39,12 @@ export const CITIES: City[] = [
     { slug: 'al-ahsa', name_ar: 'الاحساء', name_en: 'Al Ahsa', region: 'eastern' },
     { slug: 'qatif', name_ar: 'القطيف', name_en: 'Qatif', region: 'eastern' },
     { slug: 'hafr-albatin', name_ar: 'حفر الباطن', name_en: 'Hafr Al Batin', region: 'eastern' },
+    { slug: 'ras-tanura', name_ar: 'رأس تنورة', name_en: 'Ras Tanura', region: 'eastern' },
 
     // Northern Region (الشمالية)
     { slug: 'tabuk', name_ar: 'تبوك', name_en: 'Tabuk', region: 'northern' },
     { slug: 'hail', name_ar: 'حائل', name_en: 'Hail', region: 'northern' },
+    { slug: 'neom', name_ar: 'نيوم', name_en: 'NEOM', region: 'northern' },
 
     // Southern Region (الجنوبية)
     { slug: 'abha', name_ar: 'أبها', name_en: 'Abha', region: 'southern' },

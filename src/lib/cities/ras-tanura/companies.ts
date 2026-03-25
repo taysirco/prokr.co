@@ -1,0 +1,1 @@
+export const rasTanuraCompanies: string[] = [];

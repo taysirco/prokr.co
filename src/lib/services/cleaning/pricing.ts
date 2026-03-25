@@ -144,4 +144,36 @@ export const cleaningPricing: Record<string, PricingItem[]> = {
         { type: 'تركيب مكيف سبليت (2-2.5 طن)', unit: 'وحدة', minPrice: 300, maxPrice: 500 },
         { type: 'تركيب مكيف كونسيلد / مركزي', unit: 'وحدة', minPrice: 500, maxPrice: 1000 },
     ],
+    'house-cleaning': [
+        { type: 'تنظيف منزل عميق — شقة صغيرة', unit: 'شقة', minPrice: 300, maxPrice: 500, time: '4-5 ساعات' },
+        { type: 'تنظيف منزل عميق — شقة كبيرة', unit: 'شقة', minPrice: 500, maxPrice: 800, time: '6-8 ساعات' },
+        { type: 'تنظيف منزل عميق — فيلا', unit: 'فيلا', minPrice: 800, maxPrice: 1500, time: 'يوم كامل' },
+    ],
+    'deep-cleaning': [
+        { type: 'تنظيف عميق — غرفة واحدة', unit: 'غرفة', minPrice: 100, maxPrice: 200 },
+        { type: 'تنظيف عميق — شقة كاملة', unit: 'شقة', minPrice: 400, maxPrice: 700, time: '5-7 ساعات' },
+        { type: 'تنظيف عميق — فيلا', unit: 'فيلا', minPrice: 700, maxPrice: 1500, time: 'يوم كامل' },
+    ],
+    'commercial-cleaning': [
+        { type: 'تنظيف محل / مكتب صغير', unit: 'زيارة', minPrice: 200, maxPrice: 400 },
+        { type: 'تنظيف مبنى تجاري', unit: 'زيارة', minPrice: 500, maxPrice: 1200 },
+        { type: 'عقد نظافة تجاري يومي', unit: 'شهرياً', minPrice: 3000, maxPrice: 8000 },
+    ],
+    'post-construction-cleaning': [
+        { type: 'تنظيف بعد البناء — شقة', unit: 'شقة', minPrice: 500, maxPrice: 1000, time: 'يوم كامل' },
+        { type: 'تنظيف بعد البناء — فيلا', unit: 'فيلا', minPrice: 1000, maxPrice: 2500, time: '1-2 يوم' },
+        { type: 'تنظيف بعد الترميم — جزئي', unit: 'مشروع', minPrice: 300, maxPrice: 700 },
+    ],
+    'sterilization': [
+        { type: 'تعقيم شامل — شقة', unit: 'شقة', minPrice: 250, maxPrice: 400 },
+        { type: 'تعقيم شامل — فيلا', unit: 'فيلا', minPrice: 400, maxPrice: 700 },
+        { type: 'تعقيم شامل — مكتب / منشأة', unit: 'وحدة', minPrice: 350, maxPrice: 600 },
+    ],
+    'landscaping': [
+        { type: 'تصميم وتنسيق حديقة صغيرة', unit: 'مشروع', minPrice: 2000, maxPrice: 5000 },
+        { type: 'تصميم وتنسيق حديقة فيلا كبيرة', unit: 'مشروع', minPrice: 5000, maxPrice: 15000 },
+        { type: 'تركيب عشب صناعي', unit: 'للمتر المربع', minPrice: 40, maxPrice: 80 },
+        { type: 'صيانة حدائق — عقد شهري', unit: 'شهرياً', minPrice: 500, maxPrice: 1500 },
+    ],
 };
+

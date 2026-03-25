@@ -4,6 +4,8 @@ export const leakDetectionServices: Service[] = [
     { slug: 'water-leak-detection', name_ar: 'كشف تسربات المياه', name_en: 'Water Leak Detection', category: 'leak-detection' },
     { slug: 'tank-leak-detection', name_ar: 'كشف تسربات الخزانات', name_en: 'Tank Leak Detection', category: 'leak-detection' },
     { slug: 'bathroom-leak-detection', name_ar: 'كشف تسربات الحمامات', name_en: 'Bathroom Leak Detection', category: 'leak-detection' },
+    { slug: 'leak-detection', name_ar: 'كشف تسربات', name_en: 'Leak Detection', category: 'leak-detection' },
+    { slug: 'plumbing', name_ar: 'سباكة', name_en: 'Plumbing', category: 'leak-detection' },
 ];
 
 export const leakDetectionImages: Record<string, string[]> = {

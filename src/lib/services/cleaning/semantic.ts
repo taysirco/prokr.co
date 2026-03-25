@@ -228,6 +228,8 @@ const remainingSlugs = [
     'office-cleaning', 'furniture-cleaning', 'kitchen-cleaning', 'auto-cleaning',
     'oven-cleaning', 'councils-cleaning', 'hourly-cleaning', 'floor-cleaning',
     'ac-maintenance', 'ac-installation',
+    'house-cleaning', 'deep-cleaning', 'commercial-cleaning',
+    'post-construction-cleaning', 'sterilization', 'landscaping',
 ];
 for (const slug of remainingSlugs) {
     if (!cleaningSemanticData[slug]) {

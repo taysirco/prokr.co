@@ -55,4 +55,15 @@ export const pestControlPricing: Record<string, PricingItem[]> = {
         { type: 'مكافحة ثعابين — فيلا + حديقة', unit: 'جلسة', minPrice: 400, maxPrice: 700 },
         { type: 'حاجز وقائي ضد الزواحف — محيط المنزل', unit: 'وحدة', minPrice: 500, maxPrice: 1000 },
     ],
+    'fumigation': [
+        { type: 'تبخير شقة — إبادة شاملة', unit: 'شقة', minPrice: 500, maxPrice: 1000, time: '24-48 ساعة' },
+        { type: 'تبخير فيلا', unit: 'فيلا', minPrice: 1000, maxPrice: 2000, time: '24-48 ساعة' },
+        { type: 'تبخير مستودع', unit: 'مستودع', minPrice: 2000, maxPrice: 5000, time: '48-72 ساعة' },
+    ],
+    'agricultural-spraying': [
+        { type: 'رش حديقة منزلية', unit: 'جلسة', minPrice: 100, maxPrice: 250 },
+        { type: 'رش نخيل (حتى 10 نخلات)', unit: 'جلسة', minPrice: 200, maxPrice: 500 },
+        { type: 'رش مزرعة صغيرة', unit: 'جلسة', minPrice: 500, maxPrice: 1500 },
+    ],
 };
+

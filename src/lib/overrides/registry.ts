@@ -64,6 +64,26 @@ import { override as riyadhWaterInsulation } from './pages/riyadh/water-insulati
 import { override as riyadhThermalInsulation } from './pages/riyadh/thermal-insulation';
 import { override as riyadhSewageUnblocking } from './pages/riyadh/sewage-unblocking';
 import { override as riyadhSewageSuction } from './pages/riyadh/sewage-suction';
+import { override as riyadhIntercityMoving } from './pages/riyadh/intercity-moving';
+import { override as riyadhInternationalMoving } from './pages/riyadh/international-moving';
+import { override as riyadhHeavyEquipmentMoving } from './pages/riyadh/heavy-equipment-moving';
+import { override as riyadhVehicleTransport } from './pages/riyadh/vehicle-transport';
+import { override as riyadhFurniturePackaging } from './pages/riyadh/furniture-packaging';
+import { override as riyadhHouseCleaning } from './pages/riyadh/house-cleaning';
+import { override as riyadhDeepCleaning } from './pages/riyadh/deep-cleaning';
+import { override as riyadhCommercialCleaning } from './pages/riyadh/commercial-cleaning';
+import { override as riyadhPostConstructionCleaning } from './pages/riyadh/post-construction-cleaning';
+import { override as riyadhSterilization } from './pages/riyadh/sterilization';
+import { override as riyadhLandscaping } from './pages/riyadh/landscaping';
+import { override as riyadhFumigation } from './pages/riyadh/fumigation';
+import { override as riyadhAgriculturalSpraying } from './pages/riyadh/agricultural-spraying';
+import { override as riyadhPlumbing } from './pages/riyadh/plumbing';
+import { override as riyadhEpoxyInsulation } from './pages/riyadh/epoxy-insulation';
+import { override as riyadhSoundInsulation } from './pages/riyadh/sound-insulation';
+import { override as riyadhInsulation } from './pages/riyadh/insulation';
+import { override as riyadhLeakDetection } from './pages/riyadh/leak-detection';
+import { override as riyadhDrainCleaning } from './pages/riyadh/drain-cleaning';
+import { override as riyadhTankMaintenance } from './pages/riyadh/tank-maintenance';
 
 // ─── AL-KHARJ (50) ───
 import { override as alKharjFurnitureMoving } from './pages/al-kharj/furniture-moving';
@@ -1050,6 +1070,26 @@ const PAGE_OVERRIDES: Record<OverrideKey, PageOverride> = {
     [makeOverrideKey('riyadh', 'thermal-insulation')]: riyadhThermalInsulation,
     [makeOverrideKey('riyadh', 'sewage-unblocking')]: riyadhSewageUnblocking,
     [makeOverrideKey('riyadh', 'sewage-suction')]: riyadhSewageSuction,
+    [makeOverrideKey('riyadh', 'intercity-moving')]: riyadhIntercityMoving,
+    [makeOverrideKey('riyadh', 'international-moving')]: riyadhInternationalMoving,
+    [makeOverrideKey('riyadh', 'heavy-equipment-moving')]: riyadhHeavyEquipmentMoving,
+    [makeOverrideKey('riyadh', 'vehicle-transport')]: riyadhVehicleTransport,
+    [makeOverrideKey('riyadh', 'furniture-packaging')]: riyadhFurniturePackaging,
+    [makeOverrideKey('riyadh', 'house-cleaning')]: riyadhHouseCleaning,
+    [makeOverrideKey('riyadh', 'deep-cleaning')]: riyadhDeepCleaning,
+    [makeOverrideKey('riyadh', 'commercial-cleaning')]: riyadhCommercialCleaning,
+    [makeOverrideKey('riyadh', 'post-construction-cleaning')]: riyadhPostConstructionCleaning,
+    [makeOverrideKey('riyadh', 'sterilization')]: riyadhSterilization,
+    [makeOverrideKey('riyadh', 'landscaping')]: riyadhLandscaping,
+    [makeOverrideKey('riyadh', 'fumigation')]: riyadhFumigation,
+    [makeOverrideKey('riyadh', 'agricultural-spraying')]: riyadhAgriculturalSpraying,
+    [makeOverrideKey('riyadh', 'plumbing')]: riyadhPlumbing,
+    [makeOverrideKey('riyadh', 'epoxy-insulation')]: riyadhEpoxyInsulation,
+    [makeOverrideKey('riyadh', 'sound-insulation')]: riyadhSoundInsulation,
+    [makeOverrideKey('riyadh', 'insulation')]: riyadhInsulation,
+    [makeOverrideKey('riyadh', 'leak-detection')]: riyadhLeakDetection,
+    [makeOverrideKey('riyadh', 'drain-cleaning')]: riyadhDrainCleaning,
+    [makeOverrideKey('riyadh', 'tank-maintenance')]: riyadhTankMaintenance,
 
     // ─── al-kharj (50) ───
     [makeOverrideKey('al-kharj', 'furniture-moving')]: alKharjFurnitureMoving,

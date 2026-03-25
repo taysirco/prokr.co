@@ -40,4 +40,15 @@ export const RELATIONS_PEST_CONTROL: Record<string, RelatedService[]> = {
     'snakes-control': [
         { slug: 'pest-control', context: 'مكافحة شاملة للزواحف والحشرات', priority: 2 },
     ],
+    'fumigation': [
+        { slug: 'pest-control', context: 'مكافحة شاملة للحشرات بعد التبخير', priority: 3 },
+        { slug: 'termite-control', context: 'التبخير فعال للقضاء على النمل الأبيض في الخشب', priority: 3 },
+        { slug: 'sterilization', context: 'تعقيم المكان بعد عملية التبخير', priority: 2 },
+        { slug: 'cleaning', context: 'تنظيف شامل بعد جلسة التبخير', priority: 1 },
+    ],
+    'agricultural-spraying': [
+        { slug: 'pest-control', context: 'مكافحة حشرات المزارع والبساتين', priority: 3 },
+        { slug: 'fumigation', context: 'تبخير المستودعات الزراعية والصوامع', priority: 2 },
+        { slug: 'landscaping', context: 'صيانة وتنسيق الحدائق والمسطحات الخضراء', priority: 2 },
+    ],
 };

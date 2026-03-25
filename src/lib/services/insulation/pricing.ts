@@ -31,4 +31,20 @@ export const insulationPricing: Record<string, PricingItem[]> = {
         { type: 'دهان إيبوكسي — مستودع / مصنع', unit: 'للمتر المربع', minPrice: 20, maxPrice: 40 },
         { type: 'دهان إيبوكسي — خزان مياه', unit: 'خزان', minPrice: 1000, maxPrice: 2500 },
     ],
+    'epoxy-insulation': [
+        { type: 'عزل ايبوكسي — خزان علوي', unit: 'خزان', minPrice: 800, maxPrice: 1500 },
+        { type: 'عزل ايبوكسي — خزان أرضي (Food Grade)', unit: 'خزان', minPrice: 1500, maxPrice: 3000 },
+        { type: 'عزل ايبوكسي — حمامات', unit: 'للمتر المربع', minPrice: 35, maxPrice: 55 },
+    ],
+    'sound-insulation': [
+        { type: 'عزل صوتي — جدران (صوف صخري)', unit: 'للمتر المربع', minPrice: 50, maxPrice: 100 },
+        { type: 'عزل صوتي — أسقف مستعارة', unit: 'للمتر المربع', minPrice: 60, maxPrice: 120 },
+        { type: 'عزل صوتي — استوديو متكامل', unit: 'غرفة', minPrice: 5000, maxPrice: 15000 },
+    ],
+    'insulation': [
+        { type: 'عزل شامل — شقة (مائي + حراري)', unit: 'للمتر المربع', minPrice: 30, maxPrice: 50 },
+        { type: 'عزل شامل — فيلا (مائي + حراري + خزان)', unit: 'مشروع', minPrice: 5000, maxPrice: 15000 },
+        { type: 'عزل شامل — مبنى تجاري', unit: 'مشروع', minPrice: 10000, maxPrice: 30000 },
+    ],
 };
+

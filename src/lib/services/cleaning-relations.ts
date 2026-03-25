@@ -99,4 +99,37 @@ export const RELATIONS_CLEANING: Record<string, RelatedService[]> = {
         { slug: 'kitchen-cleaning', context: 'تنظيف مطبخ المطعم كاملاً', priority: 3 },
         { slug: 'sanitization', context: 'تعقيم المطبخ للأمان الغذائي', priority: 2 },
     ],
+    'house-cleaning': [
+        { slug: 'deep-cleaning', context: 'للتنظيف العميق الشامل مع إزالة البقع المستعصية', priority: 3 },
+        { slug: 'sterilization', context: 'تعقيم المنزل بعد التنظيف لبيئة صحية', priority: 2 },
+        { slug: 'pest-control', context: 'رش وقائي بعد التنظيف لمنع الحشرات', priority: 1 },
+    ],
+    'deep-cleaning': [
+        { slug: 'house-cleaning', context: 'للتنظيف الدوري العادي بعد التنظيف العميق', priority: 2 },
+        { slug: 'sterilization', context: 'تعقيم شامل يكمل التنظيف العميق', priority: 3 },
+        { slug: 'carpet-cleaning', context: 'تنظيف متخصص للسجاد والموكيت', priority: 2 },
+        { slug: 'sofa-cleaning', context: 'تنظيف الكنب بالبخار ضمن الخدمة الشاملة', priority: 2 },
+    ],
+    'commercial-cleaning': [
+        { slug: 'office-cleaning', context: 'تنظيف المكاتب والمساحات الإدارية', priority: 3 },
+        { slug: 'glass-facades-cleaning', context: 'تنظيف الواجهات الزجاجية للمباني التجارية', priority: 2 },
+        { slug: 'sterilization', context: 'تعقيم المنشآت التجارية لسلامة العملاء', priority: 2 },
+        { slug: 'floor-polishing', context: 'جلي وتلميع أرضيات المحلات والمعارض', priority: 1 },
+    ],
+    'post-construction-cleaning': [
+        { slug: 'deep-cleaning', context: 'تنظيف عميق بعد إزالة مخلفات البناء', priority: 3 },
+        { slug: 'floor-polishing', context: 'جلي وتلميع الأرضيات الجديدة بعد البناء', priority: 3 },
+        { slug: 'glass-facades-cleaning', context: 'تنظيف الواجهات الزجاجية من آثار البناء', priority: 2 },
+        { slug: 'pest-control', context: 'رش وقائي للمبنى الجديد قبل السكن', priority: 2 },
+    ],
+    'sterilization': [
+        { slug: 'deep-cleaning', context: 'تنظيف عميق يسبق عملية التعقيم', priority: 3 },
+        { slug: 'sanitization', context: 'تعقيم متخصص بالمبيدات المعتمدة', priority: 2 },
+        { slug: 'commercial-cleaning', context: 'تعقيم المنشآت التجارية والمستشفيات', priority: 2 },
+    ],
+    'landscaping': [
+        { slug: 'pest-control', context: 'مكافحة حشرات الحدائق والمسطحات الخضراء', priority: 3 },
+        { slug: 'swimming-pool-cleaning', context: 'تنظيف المسابح ضمن صيانة الحدائق', priority: 2 },
+        { slug: 'villas-cleaning', context: 'تنظيف الفيلا الشامل مع الحديقة', priority: 1 },
+    ],
 };

@@ -318,4 +318,81 @@ const CONTEXTUAL_TRIGGERS: { phrase: string; slug: string; label: string }[] = [
     // ═══════════════════════════════════════════
     { phrase: 'دينا نقل', slug: 'dyna', label: 'دينا نقل' },
     { phrase: 'سيارة نقل', slug: 'dyna', label: 'دينا نقل' },
+
+    // ═══════════════════════════════════════════
+    // 🚛 New Moving Services (5 services)
+    // ═══════════════════════════════════════════
+    { phrase: 'نقل بين المدن', slug: 'intercity-moving', label: 'نقل بين المدن' },
+    { phrase: 'النقل بين المدن', slug: 'intercity-moving', label: 'نقل بين المدن' },
+    { phrase: 'نقل عفش بين المدن', slug: 'intercity-moving', label: 'نقل بين المدن' },
+    { phrase: 'نقل دولي', slug: 'international-moving', label: 'نقل دولي' },
+    { phrase: 'النقل الدولي', slug: 'international-moving', label: 'نقل دولي' },
+    { phrase: 'شحن دولي للأثاث', slug: 'international-moving', label: 'نقل دولي' },
+    { phrase: 'نقل المعدات الثقيلة', slug: 'heavy-equipment-moving', label: 'نقل معدات ثقيلة' },
+    { phrase: 'نقل معدات ثقيلة', slug: 'heavy-equipment-moving', label: 'نقل معدات ثقيلة' },
+    { phrase: 'نقل الآليات', slug: 'heavy-equipment-moving', label: 'نقل معدات ثقيلة' },
+    { phrase: 'نقل السيارات', slug: 'vehicle-transport', label: 'نقل سيارات' },
+    { phrase: 'نقل سيارات', slug: 'vehicle-transport', label: 'نقل سيارات' },
+    { phrase: 'شحن السيارات', slug: 'vehicle-transport', label: 'نقل سيارات' },
+    { phrase: 'تغليف الأثاث', slug: 'furniture-packaging', label: 'تغليف أثاث' },
+    { phrase: 'تغليف اثاث', slug: 'furniture-packaging', label: 'تغليف أثاث' },
+    { phrase: 'تغليف العفش', slug: 'furniture-packaging', label: 'تغليف أثاث' },
+
+    // ═══════════════════════════════════════════
+    // 🧹 New Cleaning Services (6 services)
+    // ═══════════════════════════════════════════
+    { phrase: 'تنظيف عميق', slug: 'deep-cleaning', label: 'تنظيف عميق' },
+    { phrase: 'التنظيف العميق', slug: 'deep-cleaning', label: 'تنظيف عميق' },
+    { phrase: 'تنظيف شامل ومعمق', slug: 'deep-cleaning', label: 'تنظيف عميق' },
+    { phrase: 'تنظيف تجاري', slug: 'commercial-cleaning', label: 'تنظيف تجاري' },
+    { phrase: 'التنظيف التجاري', slug: 'commercial-cleaning', label: 'تنظيف تجاري' },
+    { phrase: 'تنظيف المنشآت التجارية', slug: 'commercial-cleaning', label: 'تنظيف تجاري' },
+    { phrase: 'تنظيف بعد البناء', slug: 'post-construction-cleaning', label: 'تنظيف بعد البناء' },
+    { phrase: 'تنظيف ما بعد البناء', slug: 'post-construction-cleaning', label: 'تنظيف بعد البناء' },
+    { phrase: 'تنظيف مخلفات البناء', slug: 'post-construction-cleaning', label: 'تنظيف بعد البناء' },
+    { phrase: 'خدمات التعقيم', slug: 'sterilization', label: 'تعقيم' },
+    { phrase: 'تعقيم المباني', slug: 'sterilization', label: 'تعقيم' },
+    { phrase: 'تعقيم المنشآت', slug: 'sterilization', label: 'تعقيم' },
+    { phrase: 'تنسيق الحدائق', slug: 'landscaping', label: 'تنسيق حدائق' },
+    { phrase: 'تنسيق حدائق', slug: 'landscaping', label: 'تنسيق حدائق' },
+    { phrase: 'صيانة الحدائق', slug: 'landscaping', label: 'تنسيق حدائق' },
+    { phrase: 'المسطحات الخضراء', slug: 'landscaping', label: 'تنسيق حدائق' },
+
+    // ═══════════════════════════════════════════
+    // 🐜 New Pest Control Services (2 services)
+    // ═══════════════════════════════════════════
+    { phrase: 'تبخير المباني', slug: 'fumigation', label: 'تبخير' },
+    { phrase: 'التبخير', slug: 'fumigation', label: 'تبخير' },
+    { phrase: 'تبخير الحشرات', slug: 'fumigation', label: 'تبخير' },
+    { phrase: 'رش زراعي', slug: 'agricultural-spraying', label: 'رش زراعي' },
+    { phrase: 'الرش الزراعي', slug: 'agricultural-spraying', label: 'رش زراعي' },
+    { phrase: 'مبيدات زراعية', slug: 'agricultural-spraying', label: 'رش زراعي' },
+
+    // ═══════════════════════════════════════════
+    // 🔍 New Leak Detection/Plumbing (2 services)
+    // ═══════════════════════════════════════════
+    { phrase: 'أعمال السباكة', slug: 'plumbing', label: 'سباكة' },
+    { phrase: 'سباك', slug: 'plumbing', label: 'سباكة' },
+    { phrase: 'إصلاح الأنابيب', slug: 'plumbing', label: 'سباكة' },
+    { phrase: 'صيانة السباكة', slug: 'plumbing', label: 'سباكة' },
+
+    // ═══════════════════════════════════════════
+    // 🛡️ New Insulation Services (3 services)
+    // ═══════════════════════════════════════════
+    { phrase: 'عزل ايبوكسي', slug: 'epoxy-insulation', label: 'عزل إيبوكسي' },
+    { phrase: 'عزل إيبوكسي', slug: 'epoxy-insulation', label: 'عزل إيبوكسي' },
+    { phrase: 'طلاء إيبوكسي', slug: 'epoxy-insulation', label: 'عزل إيبوكسي' },
+    { phrase: 'عزل صوتي', slug: 'sound-insulation', label: 'عزل صوتي' },
+    { phrase: 'العزل الصوتي', slug: 'sound-insulation', label: 'عزل صوتي' },
+    { phrase: 'عزل الصوت', slug: 'sound-insulation', label: 'عزل صوتي' },
+
+    // ═══════════════════════════════════════════
+    // 🚿 New Sewage Services (2 services)
+    // ═══════════════════════════════════════════
+    { phrase: 'تنظيف المجاري', slug: 'drain-cleaning', label: 'تنظيف مجاري' },
+    { phrase: 'تنظيف مجاري', slug: 'drain-cleaning', label: 'تنظيف مجاري' },
+    { phrase: 'غسيل المجاري', slug: 'drain-cleaning', label: 'تنظيف مجاري' },
+    { phrase: 'صيانة الخزانات', slug: 'tank-maintenance', label: 'صيانة خزانات' },
+    { phrase: 'صيانة خزانات', slug: 'tank-maintenance', label: 'صيانة خزانات' },
+    { phrase: 'صيانة البيارات', slug: 'tank-maintenance', label: 'صيانة خزانات' },
 ];
