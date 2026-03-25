@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, AMANA } from '../../gov-references';
+import { GOV, EXPERTS, AMANA , REGULATIONS } from '../../gov-references';
 
 export const override: PageOverride = {
     meta: {
@@ -41,5 +41,12 @@ export const override: PageOverride = {
     equipment: [
         { name: 'ماكينة ضغط مياه (Pressure Washer)', use: 'إزالة الترسبات والكلس من جدران الخزان' },
         { name: 'محلول تعقيم معتمد MOH', use: 'قتل البكتيريا وضمان نقاء المياه' },
+    ],
+    expertCitations: [
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'صيانة الخزان الدورية تمنع تسرب المياه للخارج أو اختلاطها بمياه الصرف', source: 'خبير جودة تشطيبات' },
+    ],
+    saudiRegulations: [REGULATIONS.NWC_REPORT],
+    verificationBadges: [
+        { badge: '✔️ تعقيم معتمد', authority: 'وزارة الصحة', icon: 'shield-check' }
     ],
 };

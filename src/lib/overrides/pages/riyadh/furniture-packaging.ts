@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, AMANA } from '../../gov-references';
+import { GOV, EXPERTS, AMANA , REGULATIONS } from '../../gov-references';
 
 export const override: PageOverride = {
     meta: {
@@ -41,5 +41,12 @@ export const override: PageOverride = {
         { name: 'فقاعات هوائية (Bubble Wrap)', use: 'حماية من الصدمات والاهتزاز' },
         { name: 'كرتون مقوى مزدوج', use: 'حماية الزوايا والأسطح من الخدوش' },
         { name: 'ستريتش فيلم', use: 'حماية من الغبار والرطوبة وتثبيت التغليف' },
+    ],
+    expertCitations: [
+        { expert: EXPERTS.ALSHABNAN.name, quote: 'تغليف الأثاث الجيد يقلل نسبة التلف أثناء النقل بنسبة 90%', source: 'خبير خدمات لوجستية' },
+    ],
+    saudiRegulations: [REGULATIONS.TGA_LICENSE],
+    verificationBadges: [
+        { badge: '✔️ تغليف آمن', authority: 'هيئة النقل', icon: 'shield-check' }
     ],
 };

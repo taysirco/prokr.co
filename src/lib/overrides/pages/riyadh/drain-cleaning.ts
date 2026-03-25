@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, AMANA } from '../../gov-references';
+import { GOV, EXPERTS, AMANA , REGULATIONS } from '../../gov-references';
 
 export const override: PageOverride = {
     meta: {
@@ -35,5 +35,12 @@ export const override: PageOverride = {
     equipment: [
         { name: 'Hydro-Jet (3000 PSI)', use: 'ضغط مياه عالي يكسر الانسداد ويشطف الجدران' },
         { name: 'كاميرا CCTV للأنابيب', use: 'فحص دقيق يحدد مكان ونوع الانسداد' },
+    ],
+    expertCitations: [
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'انسداد المجاري المتكرر مشكلة بالبنية التحتية، تسليكها بضغط الماء هو الحل الأكثر أماناً للأنابيب', source: 'خبير جودة تشطيبات' },
+    ],
+    saudiRegulations: [REGULATIONS.BALADI_HEALTH],
+    verificationBadges: [
+        { badge: '✔️ معدات ضغط آمنة', authority: 'المياه الوطنية', icon: 'shield-check' }
     ],
 };

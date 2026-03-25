@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, AMANA } from '../../gov-references';
+import { GOV, EXPERTS, AMANA , REGULATIONS } from '../../gov-references';
 
 export const override: PageOverride = {
     meta: {
@@ -36,5 +36,13 @@ export const override: PageOverride = {
     equipment: [
         { name: 'نظام ري بالتنقيط ذكي', use: 'ري مبرمج يوفر 50% من المياه' },
         { name: 'تربة مخصوصة (Potting Mix)', use: 'تربة مخلوطة تحتفظ بالرطوبة في المناخ الحار' },
+    ],
+    expertReviewer: EXPERTS.ALMISNID,
+    expertCitations: [
+        { expert: EXPERTS.ALMISNID.name, quote: 'اختيار نباتات تتحمل حرارة الصيف يقلل استهلاك المياه بنسبة تزيد عن 50%', source: 'أستاذ المناخ والبيئة' },
+    ],
+    saudiRegulations: [REGULATIONS.BALADI_HEALTH],
+    verificationBadges: [
+        { badge: '✔️ اشتراطات بلدية', authority: 'أمانة الرياض', icon: 'shield-check' }
     ],
 };

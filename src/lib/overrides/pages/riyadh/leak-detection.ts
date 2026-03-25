@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, AMANA } from '../../gov-references';
+import { GOV, EXPERTS, AMANA , REGULATIONS } from '../../gov-references';
 
 export const override: PageOverride = {
     meta: {
@@ -38,5 +38,12 @@ export const override: PageOverride = {
         { name: 'جهاز النيتروجين', use: 'ضغط الأنابيب وكشف نقطة التسريب بالاستماع' },
         { name: 'كاميرا حرارية (Thermal Imaging)', use: 'كشف الرطوبة خلف الجدران بدون تكسير' },
         { name: 'جهاز الاستماع الصوتي', use: 'سماع صوت التسريب داخل الأنبوب' },
+    ],
+    expertCitations: [
+        { expert: EXPERTS.ALJUND.name, quote: '85% من حالات ارتفاع فاتورة المياه سببها تسربات مخفية لا ترى بالعين المجردة', source: 'مؤلف موسوعة أخطاء في البناء' },
+    ],
+    saudiRegulations: [REGULATIONS.NWC_REPORT],
+    verificationBadges: [
+        { badge: '✔️ تقرير معتمد', authority: 'المياه الوطنية', icon: 'shield-check' }
     ],
 };

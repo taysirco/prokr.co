@@ -33,4 +33,10 @@ export const override: PageOverride = {
     ],
     expertReviewer: EXPERTS.ALJUND,
     saudiRegulations: [REGULATIONS.SBC_601, REGULATIONS.SBC_602],
+    expertCitations: [
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'العزل الصحيح يخفض فاتورة الكهرباء بنسبة تصل إلى 40% خلال الصيف', source: 'خبير جودة تشطيبات' },
+    ],
+    verificationBadges: [
+        { badge: '✔️ كفاءة طاقة', authority: 'المركز السعودي لكفاءة الطاقة', icon: 'shield-check' }
+    ],
 };

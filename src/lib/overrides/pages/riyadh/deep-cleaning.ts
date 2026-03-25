@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, AMANA } from '../../gov-references';
+import { GOV, EXPERTS, AMANA , REGULATIONS } from '../../gov-references';
 
 export const override: PageOverride = {
     meta: {
@@ -34,5 +34,13 @@ export const override: PageOverride = {
     equipment: [
         { name: 'جهاز بخار صناعي 150°م', use: 'تفكيك الأوساخ المتراكمة وقتل البكتيريا' },
         { name: 'ماكينة جلي أرضيات صناعية', use: 'إزالة طبقات الأوساخ العميقة من البلاط' },
+    ],
+    expertReviewer: EXPERTS.ALMISNID,
+    expertCitations: [
+        { expert: EXPERTS.ALMISNID.name, quote: 'الغبار الصحراوي يحتاج تنظيف بخار للتعقيم وقتل البكتيريا بدلاً من المواد الكيميائية القاسية', source: 'أستاذ المناخ والبيئة' },
+    ],
+    saudiRegulations: [REGULATIONS.BALADI_HEALTH],
+    verificationBadges: [
+        { badge: '✔️ عمالة نظامية', authority: 'منصة بلدي', icon: 'shield-check' }
     ],
 };

@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, AMANA } from '../../gov-references';
+import { GOV, EXPERTS, AMANA , REGULATIONS } from '../../gov-references';
 
 export const override: PageOverride = {
     meta: {
@@ -32,4 +32,11 @@ export const override: PageOverride = {
         { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'تنظيم الخدمات الزراعية' },
     ],
     expertReviewer: EXPERTS.ALKHODAIRY,
+    expertCitations: [
+        { expert: EXPERTS.ALKHODAIRY.name, quote: 'المبيدات الزراعية يجب أن تكون مسجلة في نظام غد لضمان سلامة المحاصيل والتربة', source: 'عالم أبحاث طبي' },
+    ],
+    saudiRegulations: [REGULATIONS.GHAD_SYSTEM],
+    verificationBadges: [
+        { badge: '✔️ مبيدات مسجلة', authority: 'الغذاء والدواء', icon: 'shield-check' }
+    ],
 };

@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, AMANA } from '../../gov-references';
+import { GOV, EXPERTS, AMANA , REGULATIONS } from '../../gov-references';
 
 export const override: PageOverride = {
     meta: {
@@ -38,5 +38,12 @@ export const override: PageOverride = {
     equipment: [
         { name: 'أنابيب PPR (مقاومة للكلس)', use: 'العمر الافتراضي 50+ سنة — لا تتآكل ولا يتراكم عليها كلس' },
         { name: 'كاميرا فحص أنابيب', use: 'فحص داخل الأنابيب بدون تكسير' },
+    ],
+    expertCitations: [
+        { expert: EXPERTS.ALJUND.name, quote: 'تمديد السباكة الصحيح هو عصب المنزل وأي خطأ فيه يكلف الكثير للإصلاح لاحقاً', source: 'مؤلف موسوعة أخطاء في البناء' },
+    ],
+    saudiRegulations: [REGULATIONS.SBC_602],
+    verificationBadges: [
+        { badge: '✔️ سباكة كود', authority: 'كود البناء', icon: 'shield-check' }
     ],
 };

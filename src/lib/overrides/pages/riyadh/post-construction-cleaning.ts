@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, AMANA } from '../../gov-references';
+import { GOV, EXPERTS, AMANA , REGULATIONS } from '../../gov-references';
 
 export const override: PageOverride = {
     meta: {
@@ -39,5 +39,13 @@ export const override: PageOverride = {
         { name: 'شفاطة HEPA صناعية', use: 'شفط غبار الأسمنت الناعم بدون نشره' },
         { name: 'ماكينة جلي أرضيات', use: 'جلي وتلميع البلاط والرخام الجديد' },
         { name: 'مذيب طلاء متخصص', use: 'إزالة بقع الدهان من الأرضيات والنوافذ' },
+    ],
+    expertReviewer: EXPERTS.ALMOHAIMED,
+    expertCitations: [
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'إزالة بقايا البناء يجب أن تتم بمواد مخصصة لا تتلف التشطيبات النهائية', source: 'خبير جودة تشطيبات' },
+    ],
+    saudiRegulations: [REGULATIONS.BALADI_HEALTH],
+    verificationBadges: [
+        { badge: '✔️ التخلص الآمن', authority: 'أمانة الرياض', icon: 'shield-check' }
     ],
 };

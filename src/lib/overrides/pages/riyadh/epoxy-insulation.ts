@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, AMANA } from '../../gov-references';
+import { GOV, EXPERTS, AMANA , REGULATIONS } from '../../gov-references';
 
 export const override: PageOverride = {
     meta: {
@@ -33,4 +33,11 @@ export const override: PageOverride = {
         { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'كود البناء' },
     ],
     expertReviewer: EXPERTS.ALMOHAIMED,
+    expertCitations: [
+        { expert: EXPERTS.ALJUND.name, quote: 'عزل الايبوكسي ضروري للخزانات الأرضية لحماية المياه من التسرب والاختلاط بمياه الصرف', source: 'مؤلف موسوعة أخطاء في البناء' },
+    ],
+    saudiRegulations: [REGULATIONS.SBC_602],
+    verificationBadges: [
+        { badge: '✔️ مطابق للكود', authority: 'كود البناء', icon: 'shield-check' }
+    ],
 };

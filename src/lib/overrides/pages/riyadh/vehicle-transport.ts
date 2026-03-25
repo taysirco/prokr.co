@@ -42,4 +42,10 @@ export const override: PageOverride = {
         { name: 'سطحة هيدروليكية', use: 'رفع السيارة كاملة بدون أي احتكاك بالأرض' },
         { name: 'أربطة ربط احترافية', use: 'تثبيت السيارة بإحكام على السطحة' },
     ],
+    expertCitations: [
+        { expert: EXPERTS.ALSHABNAN.name, quote: 'نقل السيارات بهيدروليك يضمن عدم تضرر أسفل السيارة أثناء التحميل، والتأمين إلزامي', source: 'خبير خدمات لوجستية' },
+    ],
+    verificationBadges: [
+        { badge: '✔️ تأمين شامل', authority: 'هيئة النقل', icon: 'shield-check' }
+    ],
 };

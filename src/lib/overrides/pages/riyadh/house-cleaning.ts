@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, AMANA } from '../../gov-references';
+import { GOV, EXPERTS, AMANA , REGULATIONS } from '../../gov-references';
 
 export const override: PageOverride = {
     meta: {
@@ -41,5 +41,12 @@ export const override: PageOverride = {
     equipment: [
         { name: 'مكنسة HEPA صناعية', use: 'تحبس 99.97% من الغبار الناعم' },
         { name: 'ممسحة بخار', use: 'تنظيف وتعقيم الأرضيات بدون مواد كيميائية' },
+    ],
+    expertReviewer: EXPERTS.ALMISNID,
+    expertCitations: [
+        { expert: EXPERTS.ALMISNID.name, quote: 'التهوية الطبيعية بعد التنظيف ضرورية لتجديد الهواء الداخلي وتقليل الرطوبة', source: 'أستاذ المناخ والبيئة' },
+    ],
+    verificationBadges: [
+        { badge: '✔️ عمالة مرخصة', authority: 'منصة بلدي', icon: 'shield-check' }
     ],
 };

@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, EXPERTS, AMANA } from '../../gov-references';
+import { GOV, EXPERTS, AMANA , REGULATIONS } from '../../gov-references';
 
 export const override: PageOverride = {
     meta: {
@@ -40,5 +40,12 @@ export const override: PageOverride = {
     equipment: [
         { name: 'جهاز تبخير حراري (Heat Treatment)', use: 'يرفع الحرارة لـ 55-60°م — يقتل كل الحشرات بدون كيماويات' },
         { name: 'جهاز تبخير كيميائي (Fumigation)', use: 'ينشر الغاز المبيد في المساحات المغلقة' },
+    ],
+    expertCitations: [
+        { expert: EXPERTS.ALKHODAIRY.name, quote: 'التبخير غاز سام يجب أن يتم عبر شركات مرخصة وتحت إشراف تام لتفادي حالات التسمم', source: 'عالم أبحاث طبي' },
+    ],
+    saudiRegulations: [REGULATIONS.GHAD_SYSTEM],
+    verificationBadges: [
+        { badge: '✔️ مبيدات مرخصة', authority: 'الغذاء والدواء', icon: 'shield-check' }
     ],
 };

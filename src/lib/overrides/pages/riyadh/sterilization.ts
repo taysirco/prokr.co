@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, AMANA } from '../../gov-references';
+import { GOV, EXPERTS, AMANA , REGULATIONS } from '../../gov-references';
 
 export const override: PageOverride = {
     meta: {
@@ -36,5 +36,13 @@ export const override: PageOverride = {
     equipment: [
         { name: 'جهاز رذاذ ULV', use: 'ينشر المحلول المعقم كرذاذ ناعم يصل لكل الزوايا' },
         { name: 'مواد تعقيم مسجلة SFDA', use: 'فعالية مضمونة وآمنة على الصحة' },
+    ],
+    expertReviewer: EXPERTS.ALKHODAIRY,
+    expertCitations: [
+        { expert: EXPERTS.ALKHODAIRY.name, quote: 'التعقيم الكيميائي الفعال يجب أن يستهدف الفيروسات بتركيز محدد دون الإضرار بالأسطح', source: 'عالم أبحاث طبي' },
+    ],
+    saudiRegulations: [REGULATIONS.GHAD_SYSTEM],
+    verificationBadges: [
+        { badge: '✔️ مواد معتمدة', authority: 'وزارة الصحة', icon: 'shield-check' }
     ],
 };

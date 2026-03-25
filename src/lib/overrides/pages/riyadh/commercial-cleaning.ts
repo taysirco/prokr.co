@@ -1,5 +1,5 @@
 import type { PageOverride } from '../../types';
-import { GOV, AMANA } from '../../gov-references';
+import { GOV, EXPERTS, AMANA , REGULATIONS } from '../../gov-references';
 
 export const override: PageOverride = {
     meta: {
@@ -30,5 +30,13 @@ export const override: PageOverride = {
         { ...GOV.BALADI, role: 'ترخيص شركات النظافة التجارية' },
         { ...GOV.HRSD, role: 'تنظيم عقود العمالة' },
         { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'اشتراطات الأمانة' },
+    ],
+    expertReviewer: EXPERTS.ALMISNID,
+    expertCitations: [
+        { expert: EXPERTS.ALMISNID.name, quote: 'التنظيف التجاري يحتاج مواد معتمدة لا تترك أثراً كيميائياً يضر بالعملاء', source: 'أستاذ المناخ والبيئة' },
+    ],
+    saudiRegulations: [REGULATIONS.BALADI_HEALTH],
+    verificationBadges: [
+        { badge: '✔️ شهادة صحية', authority: 'منصة بلدي', icon: 'shield-check' }
     ],
 };

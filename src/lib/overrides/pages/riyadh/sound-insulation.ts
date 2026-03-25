@@ -34,4 +34,10 @@ export const override: PageOverride = {
     ],
     expertReviewer: EXPERTS.ALJUND,
     saudiRegulations: [REGULATIONS.SBC_601],
+    expertCitations: [
+        { expert: EXPERTS.ALMOHAIMED.name, quote: 'العزل الصوتي يعتمد على الكثافة والفراغات، واستخدام الصوف الصخري هو الأفضل', source: 'خبير جودة تشطيبات' },
+    ],
+    verificationBadges: [
+        { badge: '✔️ عزل صوتي', authority: 'كود البناء', icon: 'shield-check' }
+    ],
 };
