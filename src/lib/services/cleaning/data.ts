@@ -146,4 +146,22 @@ export const cleaningImages: Record<string, string[]> = {
     'ac-installation': [
         '/images/cleaning/ac_cleaning_and_maintenance_services.jpg',
     ],
+    'house-cleaning': [
+        '/images/cleaning/house-cleaning-villa-marble-floor-riyadh.jpg',
+    ],
+    'deep-cleaning': [
+        '/images/cleaning/deep-cleaning-steam-machine-marble-villa-saudi.jpg',
+    ],
+    'commercial-cleaning': [
+        '/images/cleaning/commercial-cleaning-office-lobby-floor-polishing.jpg',
+    ],
+    'post-construction-cleaning': [
+        '/images/cleaning/post-construction-cleaning-crew-villa-industrial-vacuum.jpg',
+    ],
+    'sterilization': [
+        '/images/cleaning/sterilization-service-ppe-fogger-office-saudi.jpg',
+    ],
+    'landscaping': [
+        '/images/cleaning/landscaping-service-villa-garden-palm-trees-saudi.jpg',
+    ],
 };

@@ -21,4 +21,10 @@ export const leakDetectionImages: Record<string, string[]> = {
     'bathroom-leak-detection': [
         '/images/leak-detection/Jeddah bathroom drain pipe repair Saudi Arabia.jpg',
     ],
+    'leak-detection': [
+        '/images/leak-detection/leak-detection-thermal-camera-villa-wall-riyadh.jpg',
+    ],
+    'plumbing': [
+        '/images/leak-detection/plumbing-service-ppr-pipes-kitchen-sink-repair.jpg',
+    ],
 };

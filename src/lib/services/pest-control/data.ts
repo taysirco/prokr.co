@@ -58,4 +58,10 @@ export const pestControlImages: Record<string, string[]> = {
     'snakes-control': [
         '/images/pest-control/snake-scorpion-removal-saudi.jpg',
     ],
+    'fumigation': [
+        '/images/pest-control/fumigation-warehouse-fog-technician-saudi.jpg',
+    ],
+    'agricultural-spraying': [
+        '/images/pest-control/agricultural-spraying-date-palm-farm-saudi.jpg',
+    ],
 };

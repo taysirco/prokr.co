@@ -16,4 +16,10 @@ export const sewageImages: Record<string, string[]> = {
         '/images/general-services/Riyadh plumbing services Saudi Arabia.jpg',
         '/images/general-services/Tabuk toilet drain pipe installation Saudi Arabia.jpg',
     ],
+    'drain-cleaning': [
+        '/images/sewage/drain-cleaning-hydro-jet-manhole-riyadh.jpg',
+    ],
+    'tank-maintenance': [
+        '/images/sewage/tank-maintenance-pressure-washing-underground-saudi.jpg',
+    ],
 };

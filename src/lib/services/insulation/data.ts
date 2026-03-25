@@ -31,4 +31,13 @@ export const insulationImages: Record<string, string[]> = {
     'epoxy-coating': [
         '/images/leak-detection/Dammam wall moisture detection mold Saudi Arabia.jpg',
     ],
+    'epoxy-insulation': [
+        '/images/leak-detection/epoxy-insulation-water-tank-coating-blue-saudi.jpg',
+    ],
+    'sound-insulation': [
+        '/images/leak-detection/sound-insulation-rockwool-wall-cavity-installation.jpg',
+    ],
+    'insulation': [
+        '/images/leak-detection/roof-insulation-polyurethane-foam-spray-riyadh.jpg',
+    ],
 };

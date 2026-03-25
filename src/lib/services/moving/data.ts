@@ -37,4 +37,19 @@ export const movingImages: Record<string, string[]> = {
     'dabab': [
         '/images/furniture-moving/same-day-furniture-moving-jeddah-box-packing.jpg',
     ],
+    'intercity-moving': [
+        '/images/furniture-moving/intercity-moving-saudi-truck-highway-riyadh.jpg',
+    ],
+    'international-moving': [
+        '/images/furniture-moving/international-moving-shipping-container-saudi-port.jpg',
+    ],
+    'heavy-equipment-moving': [
+        '/images/furniture-moving/heavy-equipment-moving-excavator-flatbed-riyadh.jpg',
+    ],
+    'vehicle-transport': [
+        '/images/furniture-moving/vehicle-transport-car-carrier-truck-saudi-highway.jpg',
+    ],
+    'furniture-packaging': [
+        '/images/furniture-moving/furniture-packaging-bubble-wrap-villa-riyadh.jpg',
+    ],
 };
