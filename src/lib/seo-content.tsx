@@ -220,8 +220,6 @@ export function PageContentSection({ city, service }: PageContentProps) {
     const {
         aiContent,
         pricing,
-        expertTips,
-        warnings,
         geoSignals,
         nearbyCityLinks,
         complementaryLinks
@@ -277,21 +275,6 @@ export function PageContentSection({ city, service }: PageContentProps) {
                     </div>
                 )}
 
-                {/* 3. EXPERT TIPS */}
-                <div className="bg-sky-50 p-6 rounded-xl mb-10" suppressHydrationWarning>
-                    <h3 className="text-xl font-bold text-sky-900 mb-4 flex items-center gap-2">
-                        <span>💡</span>
-                        نصائح خبراء بروكر {cityKw} لعام 2026
-                    </h3>
-                    <ul className="space-y-3">
-                        {expertTips.map((tip, idx) => (
-                            <li key={idx} className="flex items-start gap-2 text-sky-800">
-                                <span className="font-bold">•</span>
-                                <span dangerouslySetInnerHTML={{ __html: link(tip) }} />
-                            </li>
-                        ))}
-                    </ul>
-                </div>
 
                 {/* 4. PRICING COMPARISON TABLE — Featured Snippet Format */}
                 <h3 className="text-xl font-bold text-gray-900 mb-4">
@@ -369,28 +352,7 @@ export function PageContentSection({ city, service }: PageContentProps) {
                     ) : null;
                 })()}
 
-                {/* 5. SUCCESS STORIES */}
-                <div className="mb-10">
-                    <h3 className="text-xl font-bold text-gray-900 mb-4">قصص نجاح {service.name_ar} {cityKw}</h3>
-                    <div className="grid sm:grid-cols-2 gap-4" suppressHydrationWarning>
-                        {aiContent.successStories.map((story, idx) => (
-                            <div key={idx} className="bg-sky-50/50 p-4 rounded-xl border border-sky-100">
-                                <h4 className="font-bold text-sky-800 mb-2">{story.title}</h4>
-                                <p className="text-gray-700 text-sm leading-relaxed"
-                                   dangerouslySetInnerHTML={{ __html: link(story.result) }}
-                                />
-                            </div>
-                        ))}
-                    </div>
-                </div>
 
-                {/* 6. WARNINGS */}
-                <div className="border-l-4 border-red-500 bg-red-50 p-4 rounded-r-xl mb-10" suppressHydrationWarning>
-                    <h3 className="text-lg font-bold text-red-800 mb-2">تنبيهات هامة</h3>
-                    <ul className="list-disc list-inside space-y-1 text-red-700 text-sm">
-                        {warnings.map((w, i) => <li key={i} dangerouslySetInnerHTML={{ __html: link(w) }} />)}
-                    </ul>
-                </div>
 
                 {/* 7. COMPLEMENTARY SERVICES (Internal Linking) */}
                 {complementaryLinks.length > 0 && (
@@ -504,20 +466,7 @@ export function PageContentSection({ city, service }: PageContentProps) {
                     </div>
                 )}
 
-                {/* 9. FAQs */}
-                <div className="space-y-4" itemScope itemType="https://schema.org/FAQPage" suppressHydrationWarning>
-                    <h3 className="text-xl font-bold text-gray-900">الأسئلة الشائعة عن {service.name_ar} {cityKw}</h3>
-                    {content.faqItems.map((faq, index) => (
-                        <div key={index} className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
-                            <h4 className="font-bold text-gray-900 mb-2" itemProp="name">{faq.question}</h4>
-                            <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
-                                <p className="text-gray-600 text-sm leading-relaxed" itemProp="text"
-                                   dangerouslySetInnerHTML={{ __html: link(faq.answer) }}
-                                />
-                            </div>
-                        </div>
-                    ))}
-                </div>
+
 
             </article>
         </section>
