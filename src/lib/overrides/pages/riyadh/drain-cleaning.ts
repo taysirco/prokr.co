@@ -43,4 +43,17 @@ export const override: PageOverride = {
     verificationBadges: [
         { badge: '✔️ معدات ضغط آمنة', authority: 'المياه الوطنية', icon: 'shield-check' }
     ],
+    commonConcerns: [
+        { concern: 'الانسداد يرجع بعد كل تسليك', solution: 'السبرنقة تفتح ممر مؤقت — الكلس باقي. Hydro-Jet 3000 PSI يشطف الجدران من الكلس كاملاً + تركيب فلتر كلس = يقلل التكرار 80%' },
+        { concern: 'ضغط المياه العالي يكسر الأنابيب', solution: 'Hydro-Jet يُعاير حسب نوع الأنبوب. PVC يحتاج ضغط أقل من الحديد. الفني المحترف يفحص بالكاميرا أولاً ويحدد الضغط المناسب' },
+    ],
+    consumerEducation: [
+        { myth: 'حمض التسليك الكيميائي أسهل وأوفر', truth: 'أحماض التسليك تآكل الأنابيب البلاستيكية (PVC) + تنتج أبخرة سامة + تحل المشكلة مرة ثم تزيدها. Hydro-Jet: ماء فقط بدون أي كيماويات — أأمن للأنابيب والصحة' },
+    ],
+    relatedServices: [
+        { slug: 'plumbing', context: 'إصلاح سباكة', priority: 1 },
+        { slug: 'leak-detection', context: 'كشف تسربات', priority: 2 },
+        { slug: 'tank-maintenance', context: 'صيانة خزانات', priority: 3 },
+    ],
 };
+

@@ -48,4 +48,17 @@ export const override: PageOverride = {
     verificationBadges: [
         { badge: '✔️ التخلص الآمن', authority: 'أمانة الرياض', icon: 'shield-check' }
     ],
+    commonConcerns: [
+        { concern: 'التنظيف بعد البناء أغلى من العادي', solution: 'لأنه يحتاج معدات صناعية (جلي + HEPA + مذيبات) وعمالة متخصصة. التكلفة تشمل ما لا يستطيع التنظيف العادي فعله: إزالة أسمنت جاف + جلي أرضيات + تلميع زجاج' },
+        { concern: 'العمال يتلفون التشطيبات الجديدة', solution: 'الشركة المتخصصة تعرف: لا حمض على رخام جديد، لا شفرة معدنية على زجاج، لا ضغط مياه على جدران مدهونة حديثاً. تعاقد مع شركة خبرة وليس أي عمالة' },
+    ],
+    consumerEducation: [
+        { myth: 'أقدر أنظف بعد البناء بنفسي', truth: 'غبار الأسمنت ناعم (PM10) — حجمه أصغر من شعرة الرأس 5 مرات. المسح العادي ينشره في الهواء بدل إزالته. شفاطة HEPA صناعية هي الطريقة الوحيدة الآمنة لإزالته' },
+    ],
+    relatedServices: [
+        { slug: 'deep-cleaning', context: 'تنظيف عميق', priority: 1 },
+        { slug: 'sterilization', context: 'تعقيم بعد التنظيف', priority: 2 },
+        { slug: 'glass-facades-cleaning', context: 'تنظيف واجهات', priority: 3 },
+    ],
 };
+

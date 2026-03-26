@@ -49,4 +49,18 @@ export const override: PageOverride = {
     verificationBadges: [
         { badge: '✔️ تغليف آمن', authority: 'هيئة النقل', icon: 'shield-check' }
     ],
+    commonConcerns: [
+        { concern: 'التغليف غالي — أقدر أغلف بنفسي', solution: 'التغليف الذاتي يوفر المال لكن: 80% من تلف الأثاث بسبب تغليف سيئ. تكلفة إصلاح كنبة مخدوشة = ضعف تكلفة تغليف شقة كاملة. الاحترافي يوفر على المدى البعيد' },
+        { concern: 'الستريتش يلتصق بالأثاث', solution: 'صيفاً (50°م): لا نستخدم ستريتش مباشرة على خشب لامع. نضع طبقة فقاعات أو قماش أولاً ثم الستريتش فوقها — حماية بدون التصاق' },
+    ],
+    consumerEducation: [
+        { myth: 'البطانية تحمي الأثاث كفاية', truth: 'البطانية تمنع الخدوش السطحية فقط. لا تحمي من: الصدمات (السقوط)، الغبار، الرطوبة، الحرارة. التغليف الثلاثي (فقاعات + كرتون + ستريتش) يحمي من كل المخاطر' },
+    ],
+    relatedServices: [
+        { slug: 'furniture-moving', context: 'نقل أثاث', priority: 1 },
+        { slug: 'intercity-moving', context: 'نقل بين المدن', priority: 2 },
+        { slug: 'international-moving', context: 'شحن دولي', priority: 3 },
+        { slug: 'furniture-storage', context: 'تخزين أثاث', priority: 4 },
+    ],
 };
+

@@ -62,4 +62,10 @@ export const override: PageOverride = {
     consumerEducation: [
         { myth: 'أي شاحنة تنقل بين المدن', truth: 'النقل بين المدن يحتاج ترخيص TGA خاص + بيان حمولة + تأمين. الشاحنة العادية غير مؤهلة للمسافات الطويلة' },
     ],
+    relatedServices: [
+        { slug: 'furniture-moving', context: 'نقل عفش داخل المدينة', priority: 1 },
+        { slug: 'international-moving', context: 'نقل دولي', priority: 2 },
+        { slug: 'furniture-packaging', context: 'تغليف أثاث', priority: 3 },
+        { slug: 'furniture-storage', context: 'تخزين أثاث', priority: 4 },
+    ],
 };

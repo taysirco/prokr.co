@@ -49,4 +49,17 @@ export const override: PageOverride = {
     verificationBadges: [
         { badge: '✔️ تعقيم معتمد', authority: 'وزارة الصحة', icon: 'shield-check' }
     ],
+    commonConcerns: [
+        { concern: 'التنظيف يهدر كل مياه الخزان', solution: 'نعم — التنظيف يتطلب تفريغ الخزان. ننسّق الموعد ليكون مع وصول شحنة المياه الجديدة مباشرة — بدون انقطاع' },
+        { concern: 'الكلور المعقم يضر بالصحة', solution: 'نستخدم كلور بتركيز مضبوط (حسب MOH) + شطف 3 مرات بعد التعقيم. مياه الخزان بعد التعقيم أنقى من قبل' },
+    ],
+    consumerEducation: [
+        { myth: 'الخزان ما يحتاج تنظيف — المياه نظيفة من الشبكة', truth: 'المياه نظيفة من NWC نعم — لكن داخل الخزان: كلس يترسب (500 ppm) + حرارة تنمي بكتيريا + شقوق تسرّب مياه أرض ملوثة. 6 أشهر بدون تنظيف = مياه غير آمنة' },
+    ],
+    relatedServices: [
+        { slug: 'plumbing', context: 'سباكة', priority: 1 },
+        { slug: 'epoxy-insulation', context: 'عزل إيبوكسي للخزان', priority: 2 },
+        { slug: 'leak-detection', context: 'فحص تسربات', priority: 3 },
+    ],
 };
+

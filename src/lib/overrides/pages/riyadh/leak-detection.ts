@@ -46,4 +46,17 @@ export const override: PageOverride = {
     verificationBadges: [
         { badge: '✔️ تقرير معتمد', authority: 'المياه الوطنية', icon: 'shield-check' }
     ],
+    commonConcerns: [
+        { concern: 'الكشف مكلف وما أدري إذا عندي تسريب أصلاً', solution: 'مؤشر بسيط: أغلق كل الحنفيات واقرأ عداد المياه. انتظر ساعة. إذا تحرك = تسريب 100%. تكلفة الكشف (350 ريال) تنقذك من فاتورة شهرية 2,000 ريال' },
+        { concern: 'بعد الكشف لازم أكسر كل شيء؟', solution: 'الكشف بدون تكسير. الإصلاح: تكسير في نقطة محددة فقط (30×30 سم). ممكن يكون الحل استبدال أنبوب ظاهري بدل التكسير أصلاً' },
+    ],
+    consumerEducation: [
+        { myth: 'الفاتورة العالية من شركة المياه وليس تسريب', truth: 'في 80% من الحالات: الفاتورة العالية = تسريب خفي. تقرير كشف معتمد + إثبات إصلاح = NWC تُعدّل الفاتورة بأثر رجعي. الكشف يُعيد لك آلاف الريالات' },
+    ],
+    relatedServices: [
+        { slug: 'plumbing', context: 'إصلاح سباكة', priority: 1 },
+        { slug: 'tank-maintenance', context: 'فحص خزانات', priority: 2 },
+        { slug: 'water-leak-detection', context: 'كشف مائي تخصصي', priority: 3 },
+    ],
 };
+

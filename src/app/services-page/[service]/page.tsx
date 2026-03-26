@@ -336,48 +336,11 @@ export default async function ServicePage({ params }: ServicePageProps) {
                                         );
                                     })()}
 
-                                    <h3 className="text-xl font-bold text-gray-900 mt-8 mb-4">
-                                        لماذا تختار بروكر لخدمة {service.name_ar}؟
-                                    </h3>
-                                    <ul className="text-gray-600 space-y-2">
-                                        <li>✓ شركات معتمدة ومرخصة رسمياً من وزارة التجارة</li>
-                                        <li>✓ أسعار تنافسية ومناسبة مع ضمان على الخدمة</li>
-                                        <li>✓ تقييمات حقيقية من عملاء سابقين</li>
-                                        <li>✓ تواصل مباشر مع مقدمي الخدمة عبر الهاتف والواتساب</li>
-                                        <li>✓ تغطية شاملة لجميع {CITIES.length} مدينة في المملكة</li>
-                                        <li>✓ مقارنة فورية بين العروض والأسعار</li>
-                                    </ul>
 
-                                    {/* National FAQ */}
-                                    <h3 className="text-xl font-bold text-gray-900 mt-10 mb-4">
-                                        أسئلة شائعة عن {service.name_ar}
-                                    </h3>
-                                    <div className="space-y-4 not-prose" itemScope itemType="https://schema.org/FAQPage">
-                                        <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
-                                            <h4 className="font-bold text-gray-800 mb-2" itemProp="name">كم تكلفة {service.name_ar} في السعودية؟</h4>
-                                            <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
-                                                <p className="text-gray-600" itemProp="text">تختلف الأسعار حسب المدينة وحجم العمل. الأسعار في الرياض وجدة أعلى بنسبة 10-20% مقارنة بالمدن الأصغر. استخدم بروكر للحصول على عروض أسعار مجانية من شركات معتمدة.</p>
-                                            </div>
-                                        </div>
-                                        <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
-                                            <h4 className="font-bold text-gray-800 mb-2" itemProp="name">في أي مدن تتوفر خدمة {service.name_ar}؟</h4>
-                                            <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
-                                                <p className="text-gray-600" itemProp="text">تتوفر خدمة {service.name_ar} عبر بروكر في {CITIES.length} مدينة سعودية تشمل الرياض، جدة، الدمام، مكة، المدينة، والمزيد.</p>
-                                            </div>
-                                        </div>
-                                        <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
-                                            <h4 className="font-bold text-gray-800 mb-2" itemProp="name">كيف أختار شركة {service.name_ar} موثوقة؟</h4>
-                                            <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
-                                                <p className="text-gray-600" itemProp="text">تحقق من ترخيص الشركة، اقرأ تقييمات العملاء، قارن بين 3 عروض على الأقل، وتأكد من وجود ضمان مكتوب. بروكر يعرض فقط الشركات التي تم التحقق منها.</p>
-                                            </div>
-                                        </div>
-                                        <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
-                                            <h4 className="font-bold text-gray-800 mb-2" itemProp="name">هل يوجد ضمان على {service.name_ar}؟</h4>
-                                            <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
-                                                <p className="text-gray-600" itemProp="text">نعم، جميع الشركات المعتمدة في بروكر ملزمة بتقديم ضمان يتراوح بين 3 أشهر وسنة كاملة حسب نوع الخدمة. الضمان يُوثق في عقد مكتوب.</p>
-                                            </div>
-                                        </div>
-                                    </div>
+
+
+
+
 
                                     {/* Other Services */}
                                     <div className="mt-8 not-prose">

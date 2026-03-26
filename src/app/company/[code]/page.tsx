@@ -338,38 +338,7 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                                         ))}
                                     </div>
 
-                                    {/* Company FAQ */}
-                                    <h3 className="text-xl font-bold text-gray-900 mb-4">أسئلة شائعة عن {advertiser.business_name}</h3>
-                                    <div className="space-y-4 not-prose" itemScope itemType="https://schema.org/FAQPage">
-                                        <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
-                                            <h4 className="font-bold text-gray-800 mb-2" itemProp="name">ما هي الخدمات التي تقدمها {advertiser.business_name}؟</h4>
-                                            <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
-                                                <p className="text-gray-600" itemProp="text">تقدم {advertiser.business_name} خدمات {targetedServices.map(s => s.name_ar).join(' و')} في {targetedCities.map(c => c.name_ar).join(' و')}. جميع الخدمات مضمونة ومرخصة.</p>
-                                            </div>
-                                        </div>
-                                        <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
-                                            <h4 className="font-bold text-gray-800 mb-2" itemProp="name">كيف أتواصل مع {advertiser.business_name}؟</h4>
-                                            <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
-                                                <p className="text-gray-600" itemProp="text">يمكنك التواصل مع {advertiser.business_name} عبر الهاتف أو واتساب مباشرة من صفحة الشركة على بروكر. الخدمة متاحة على مدار الساعة.</p>
-                                            </div>
-                                        </div>
-                                        <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
-                                            <h4 className="font-bold text-gray-800 mb-2" itemProp="name">هل {advertiser.business_name} شركة معتمدة؟</h4>
-                                            <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
-                                                <p className="text-gray-600" itemProp="text">{advertiser.is_premium
-                                                    ? `نعم، ${advertiser.business_name} شركة معتمدة وموثقة في منصة بروكر.${advertiser.has_verified_employees ? ' تم التحقق من هوية فريق العمل عبر منصة نفاذ الوطنية.' : ''} تم التحقق من تراخيصها وجودة خدماتها.`
-                                                    : `${advertiser.business_name} شركة مسجلة في منصة بروكر. ننصح بالتحقق من التراخيص والضمانات قبل التعاقد.`}</p>
-                                            </div>
-                                        </div>
-                                        {avgRating > 0 && (
-                                            <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
-                                                <h4 className="font-bold text-gray-800 mb-2" itemProp="name">ما تقييم {advertiser.business_name}؟</h4>
-                                                <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
-                                                    <p className="text-gray-600" itemProp="text">حصلت {advertiser.business_name} على تقييم {avgRating.toFixed(1)} من 5 نجوم بناءً على {reviews.length} تقييم من عملاء حقيقيين على منصة بروكر.</p>
-                                                </div>
-                                            </div>
-                                        )}
-                                    </div>
+
                                 </article>
                             </section>
 

@@ -39,4 +39,23 @@ export const override: PageOverride = {
     verificationBadges: [
         { badge: '✔️ كفاءة طاقة', authority: 'المركز السعودي لكفاءة الطاقة', icon: 'shield-check' }
     ],
+    equipment: [
+        { name: 'بولي يوريثان رغوي (Spray Foam)', use: 'عزل أسطح وجدران — أعلى كفاءة حرارية R-value' },
+        { name: 'صوف صخري (Rockwool)', use: 'عزل حراري + صوتي + مقاوم للحريق' },
+        { name: 'لفائف بيتومين', use: 'عزل مائي للأسطح والأقبية — مقاوم للأشعة UV' },
+    ],
+    commonConcerns: [
+        { concern: 'العزل مكلف — هل يستحق؟', solution: 'فاتورة كهرباء الصيف في الرياض (بدون عزل): 3,000-5,000 ريال/شهر. بعد العزل: تنخفض 30-40%. التكلفة تسترد خلال 2-3 سنوات — ثم وفر مستمر لـ 15+ سنة' },
+        { concern: 'العزل القديم يتلف ونحتاج نغيره', solution: 'عزل البولي يوريثان يدوم 20-25 سنة. الصوف الصخري 30+ سنة. لكن لفائف البيتومين تحتاج صيانة كل 5-8 سنوات (الشمس تجففها)' },
+    ],
+    consumerEducation: [
+        { myth: 'كلها مواد عزل — ما فيه فرق', truth: 'كل نوع عزل يناسب استخدام: بولي يوريثان = حراري (أسطح). بيتومين = مائي (أقبية). صوف صخري = صوتي + حراري (جدران). إيبوكسي = حماية كيميائية (خزانات). اختيار النوع الخطأ = فشل العزل' },
+    ],
+    relatedServices: [
+        { slug: 'building-insulation', context: 'عزل مباني', priority: 1 },
+        { slug: 'epoxy-insulation', context: 'عزل إيبوكسي', priority: 2 },
+        { slug: 'sound-insulation', context: 'عزل صوتي', priority: 3 },
+        { slug: 'roof-waterproofing', context: 'عزل أسطح', priority: 4 },
+    ],
 };
+

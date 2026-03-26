@@ -26,7 +26,6 @@ export const override: PageOverride = {
         'سوسة النخيل: الرش الوقائي كل 3 أشهر أهم من العلاجي — الإصابة المتقدمة تقتل النخلة',
         'النجيل: رش الفجر فقط — الرش بالحرارة يحرق الأوراق المبللة',
     ],
-    warnings: ['مبيدات غير مسجلة من SFDA = خطر على المحاصيل والتربة والصحة'],
     trustAnchors: [
         { ...GOV.SFDA, role: 'تسجيل المبيدات الزراعية عبر نظام غد' },
         { entity: AMANA.RIYADH.entity, url: AMANA.RIYADH.url, role: 'تنظيم الخدمات الزراعية' },
@@ -37,6 +36,27 @@ export const override: PageOverride = {
     ],
     saudiRegulations: [REGULATIONS.GHAD_SYSTEM],
     verificationBadges: [
-        { badge: '✔️ مبيدات مسجلة', authority: 'الغذاء والدواء', icon: 'shield-check' }
+        { badge: '✔️ مبيدات مسجلة SFDA', authority: 'هيئة الغذاء والدواء', icon: 'shield-check' },
+    ],
+    equipment: [
+        { name: 'مرشة ضغط ظهرية 20 لتر', use: 'رش حدائق صغيرة — تغطية دقيقة لكل نبتة' },
+        { name: 'مرشة بمحرك (Power Sprayer)', use: 'رش مزارع كبيرة — ضغط عالي يصل قمم النخيل' },
+    ],
+    warnings: [
+        'مبيدات غير مسجلة من SFDA = خطر على المحاصيل والتربة والصحة',
+        'الرش وقت الظهر = تبخّر 50% من المبيد + حروق للنباتات المبللة',
+    ],
+    commonConcerns: [
+        { concern: 'المبيدات تلوث التربة والماء', solution: 'المبيدات المسجلة في نظام غد (SFDA) مختبرة على التحلل البيولوجي — تتفكك خلال أيام بدون تراكم. الخطر الحقيقي من المبيدات المغشوشة غير المسجلة' },
+        { concern: 'النحل يموت من الرش', solution: 'الرش الفجر (قبل نشاط النحل) أو المغرب (بعد عودته للخلية) يحمي النحل. نتجنب أيضاً رش الأزهار المتفتحة مباشرة' },
+    ],
+    consumerEducation: [
+        { myth: 'الرش مرة واحدة يكفي السنة', truth: 'الآفات موسمية — سوسة النخيل تحتاج رش وقائي كل 3 أشهر. الرش مرة واحدة يعالج الإصابة الحالية فقط. العقد السنوي (4 زيارات) = حماية شاملة' },
+    ],
+    relatedServices: [
+        { slug: 'landscaping', context: 'تنسيق حدائق', priority: 1 },
+        { slug: 'pest-control', context: 'مكافحة حشرات منزلية', priority: 2 },
+        { slug: 'fumigation', context: 'تبخير مستودعات', priority: 3 },
     ],
 };
+

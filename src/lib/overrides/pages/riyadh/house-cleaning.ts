@@ -49,4 +49,18 @@ export const override: PageOverride = {
     verificationBadges: [
         { badge: '✔️ عمالة مرخصة', authority: 'منصة بلدي', icon: 'shield-check' }
     ],
+    commonConcerns: [
+        { concern: 'العمال يكسرون شيء في البيت', solution: 'الشركة المرخصة ملزمة بالتعويض عن أي ضرر. اشترط عقد مكتوب يشمل بند التعويض عن الأضرار' },
+        { concern: 'مواد التنظيف تسبب حساسية لأطفالي', solution: 'اشترط مواد معتمدة SASO — آمنة للأطفال والحيوانات. بديل: تنظيف بالبخار (صفر كيماويات)' },
+    ],
+    consumerEducation: [
+        { myth: 'التنظيف الأسبوعي يكفي في الرياض', truth: 'في الرياض (مدينة صحراوية): الغبار يتراكم يومياً. التنظيف الأسبوعي الاحترافي + مسح يومي للأسطح = المعادلة الصحية' },
+    ],
+    relatedServices: [
+        { slug: 'deep-cleaning', context: 'تنظيف عميق', priority: 1 },
+        { slug: 'sterilization', context: 'تعقيم شامل', priority: 2 },
+        { slug: 'sofa-cleaning', context: 'تنظيف كنب', priority: 3 },
+        { slug: 'carpet-cleaning', context: 'تنظيف سجاد', priority: 4 },
+    ],
 };
+

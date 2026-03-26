@@ -40,4 +40,22 @@ export const override: PageOverride = {
     verificationBadges: [
         { badge: '✔️ عزل صوتي', authority: 'كود البناء', icon: 'shield-check' }
     ],
+    equipment: [
+        { name: 'صوف صخري (Rockwool)', use: 'أفضل مادة عزل صوتي + حراري للجدران — مقاومة للحريق' },
+        { name: 'ألواح جبس مزدوجة', use: 'طبقتان مع فراغ هوائي = حاجز صوتي فعال يقلل 50-60 ديسيبل' },
+        { name: 'نوافذ مزدوجة (Double Glazing)', use: 'تقليل 50% من ضوضاء الشارع — زجاجتان بفراغ غاز' },
+    ],
+    commonConcerns: [
+        { concern: 'العزل الصوتي يقلل المساحة كثير', solution: '5-8 سم فقط من كل جدار — في غرفة 4×4 = فقدان 2-3% من المساحة. الهدوء يستحق' },
+        { concern: 'العزل الصوتي غالي ولا يستاهل', solution: 'غرفة نوم في حي مزدحم بدون عزل = أرق مزمن + قلة إنتاجية. تكلفة عزل غرفة (3,000 ريال) = استثمار في صحتك لـ 15+ سنة' },
+    ],
+    consumerEducation: [
+        { myth: 'فوم عادي يكفي للعزل الصوتي', truth: 'الفوم الخفيف (Styrofoam) يعزل حرارة فقط — لا يمنع الصوت. العزل الصوتي يحتاج مادة كثيفة (صوف صخري) + فراغ هوائي + ألواح جبس مزدوجة. الكثافة تمنع انتقال الموجة الصوتية' },
+    ],
+    relatedServices: [
+        { slug: 'insulation', context: 'عزل حراري ومائي', priority: 1 },
+        { slug: 'building-insulation', context: 'عزل مباني', priority: 2 },
+        { slug: 'epoxy-insulation', context: 'عزل إيبوكسي', priority: 3 },
+    ],
 };
+

@@ -118,5 +118,18 @@ export const INSULATION_KEYWORDS: Record<string, ServiceKeywordProfile> = {
         cityPrefixPattern: 'ba',
         usp: 'جميع أنواع العزل + ضمان شامل',
     },
+    'building-insulation': {
+        slug: 'building-insulation',
+        synonyms: ['عزل مباني', 'عزل جدران خارجية', 'عزل واجهات', 'عزل حراري مباني', 'عزل مبنى', 'عزل مباني جديدة'],
+        primaryKeyword: 'شركة عزل مباني {city}',
+        metaTitle: 'عزل مباني {city} — جدران + واجهات + حراري + مائي + ضمان 2026',
+        metaDescription: 'عزل مباني {city} ✓ جدران ✓ واجهات ✓ حراري ✓ مائي ✓ كود البناء السعودي ✓ توفير 40% كهرباء. قارن {count}+ شركة عزل {city}.',
+        h1: 'عزل مباني شامل {city} — جدران وواجهات بكود البناء السعودي 2026',
+        secondaryKeywords: ['عزل مباني {city}', 'عزل جدران {city}', 'عزل واجهات مباني {city}', 'عزل حراري مباني {city}', 'عزل مبنى تحت الإنشاء {city}'],
+        longTailKeywords: ['عزل جدران فيلا {city}', 'عزل واجهات خارجية {city}', 'عزل حراري مبنى جديد {city}', 'عزل مباني {city} حي {neighborhood}'],
+        topQuestions: ['كم سعر عزل المبنى بالكامل {city}؟', 'هل العزل الحراري إلزامي للمباني الجديدة؟', 'ما أفضل مواد عزل الجدران الخارجية؟', 'كم يوفر عزل المبنى من فاتورة الكهرباء؟'],
+        cityPrefixPattern: 'ba',
+        usp: 'جدران + واجهات + حراري + مائي + كود البناء + ضمان',
+    },
 };
 

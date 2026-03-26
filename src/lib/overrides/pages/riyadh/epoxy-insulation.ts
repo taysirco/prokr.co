@@ -40,4 +40,21 @@ export const override: PageOverride = {
     verificationBadges: [
         { badge: '✔️ مطابق للكود', authority: 'كود البناء', icon: 'shield-check' }
     ],
+    equipment: [
+        { name: 'طلاء إيبوكسي Food-Grade', use: 'عزل خزانات مياه الشرب — آمن ومعتمد NSF/ANSI 61' },
+        { name: 'ماكينة جلي (Grinding Machine)', use: 'تحضير السطح قبل التطبيق — التصاق أقوى 3×' },
+    ],
+    commonConcerns: [
+        { concern: 'الإيبوكسي يتقشر بعد سنة', solution: 'التقشر = تحضير سطح سيئ. الاحترافي يجلي السطح بالـ Grinder + يزيل الرطوبة + يطبق طبقتين. النتيجة: 5-10 سنوات بدون مشاكل' },
+        { concern: 'ريحة الإيبوكسي قوية ومضرة', solution: 'صحيح أثناء التطبيق — لذلك يتم بتهوية كاملة + ماسك حماية. بعد الجفاف (48 ساعة): لا ريحة ولا أثر. الأنواع Food-Grade عديمة الرائحة بعد الجفاف' },
+    ],
+    consumerEducation: [
+        { myth: 'أي نوع إيبوكسي يصلح للخزان', truth: 'الإيبوكسي الصناعي (للأرضيات) يحتوي مواد لا تصلح للتماس مع مياه الشرب. خزانات الشرب = فقط food-grade معتمد NSF. اسأل عن الشهادة' },
+    ],
+    relatedServices: [
+        { slug: 'tank-maintenance', context: 'صيانة خزانات', priority: 1 },
+        { slug: 'building-insulation', context: 'عزل مباني', priority: 2 },
+        { slug: 'insulation', context: 'عزل حراري ومائي', priority: 3 },
+    ],
 };
+

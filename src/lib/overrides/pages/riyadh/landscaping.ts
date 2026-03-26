@@ -45,4 +45,17 @@ export const override: PageOverride = {
     verificationBadges: [
         { badge: '✔️ اشتراطات بلدية', authority: 'أمانة الرياض', icon: 'shield-check' }
     ],
+    commonConcerns: [
+        { concern: 'فاتورة المياه ترتفع كثير مع الحديقة', solution: 'ري بالتنقيط الذكي يوفر 50% من المياه. نباتات محلية (جهنمية، زيتون) تحتاج ري 70% أقل من النجيل الأوروبي. والعشب الصناعي = صفر مياه' },
+        { concern: 'النباتات تموت في الصيف', solution: 'نزرع فقط نباتات مقاومة للحرارة (50°م+). النخيل والجهنمية والياسمين الهندي لا تتأثر بحرارة الصيف' },
+    ],
+    consumerEducation: [
+        { myth: 'العشب الصناعي حرارته عالية صيفاً', truth: 'صحيح — العشب الصناعي يسخن في الشمس المباشرة. الحل: تركيب تحت شجرة أو مظلة. أو رش ماء خفيف بالنهار. الجيل الجديد من العشب يحتوي تقنية تبريد' },
+    ],
+    relatedServices: [
+        { slug: 'agricultural-spraying', context: 'رش وقائي', priority: 1 },
+        { slug: 'cleaning', context: 'تنظيف خارجي', priority: 2 },
+        { slug: 'swimming-pool', context: 'صيانة مسابح', priority: 3 },
+    ],
 };
+

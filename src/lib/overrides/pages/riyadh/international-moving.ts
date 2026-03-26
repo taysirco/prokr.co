@@ -52,4 +52,17 @@ export const override: PageOverride = {
     expertCitations: [
         { expert: EXPERTS.ALSHABNAN.name, quote: 'النقل الدولي يحتاج توثيقاً دقيقاً وبيان حمولة لتسهيل الإجراءات الجمركية', source: 'خبير خدمات لوجستية' },
     ],
+    commonConcerns: [
+        { concern: 'أغراضي تتأخر أسابيع في الجمارك', solution: 'التأخير = أوراق ناقصة. الشركة المرخصة TGA تجهز كل المستندات الجمركية مقدماً (فاتورة تفصيلية + قائمة محتويات بالإنجليزية + شهادة منشأ) — عبور الجمارك 1-3 أيام فقط' },
+        { concern: 'الأثاث يوصل مكسور بعد 30 يوم بحر', solution: 'التغليف الدولي 3 طبقات (خشب + فقاعات + كرتون) + تأمين بحري All Risk. أي تلف = تعويض كامل من شركة التأمين' },
+    ],
+    consumerEducation: [
+        { myth: 'أي شركة نقل محلية تقدر تنقل دولي', truth: 'النقل الدولي يحتاج: ترخيص TGA دولي + مخلص جمركي + وكيل شحن في بلد الوصول + تأمين بحري. الشركة المحلية لا تملك أياً من هذا — وتتوقف عند الميناء' },
+    ],
+    relatedServices: [
+        { slug: 'intercity-moving', context: 'نقل داخلي بين المدن', priority: 1 },
+        { slug: 'furniture-packaging', context: 'تغليف دولي', priority: 2 },
+        { slug: 'furniture-storage', context: 'تخزين قبل الشحن', priority: 3 },
+    ],
 };
+

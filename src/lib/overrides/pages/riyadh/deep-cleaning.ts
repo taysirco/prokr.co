@@ -43,4 +43,18 @@ export const override: PageOverride = {
     verificationBadges: [
         { badge: '✔️ عمالة نظامية', authority: 'منصة بلدي', icon: 'shield-check' }
     ],
+    commonConcerns: [
+        { concern: 'الكيماويات تبيض السجاد أو تخرب الرخام', solution: 'الفني المحترف يحدد نوع المادة حسب السطح: حمض خفيف للسيراميك، محلول PH محايد للرخام، بخار للأقمشة. لا نستخدم مادة واحدة لكل شيء' },
+        { concern: 'التنظيف العميق يحتاج وقت طويل وأنا مشغول', solution: 'فريق 3-4 أشخاص = شقة في 5-7 ساعات، فيلا في 10-14 ساعة. ممكن يشتغلون وأنت خارج البيت — استلام بالمفتاح' },
+    ],
+    consumerEducation: [
+        { myth: 'التنظيف العميق نفس التنظيف العادي بس أطول', truth: 'التنظيف العادي = مسح أسطح. التنظيف العميق = بخار 150°م + جلي صناعي + كيماويات متخصصة. يستهدف الأوساخ المتراكمة في مسام البلاط والأقمشة — أشياء المسح العادي لا يصلها' },
+    ],
+    relatedServices: [
+        { slug: 'house-cleaning', context: 'تنظيف منازل روتيني', priority: 1 },
+        { slug: 'post-construction-cleaning', context: 'تنظيف بعد البناء', priority: 2 },
+        { slug: 'sterilization', context: 'تعقيم بعد التنظيف', priority: 3 },
+        { slug: 'carpet-cleaning', context: 'تنظيف سجاد عميق', priority: 4 },
+    ],
 };
+

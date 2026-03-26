@@ -46,4 +46,17 @@ export const override: PageOverride = {
     verificationBadges: [
         { badge: '✔️ سباكة كود', authority: 'كود البناء', icon: 'shield-check' }
     ],
+    commonConcerns: [
+        { concern: 'السباك يكسر البلاط ويخرب الجدران', solution: 'السباك المحترف يستخدم كاميرا فحص لتحديد المشكلة بدقة — يكسر فقط في النقطة المطلوبة. الشركة المرخصة تتحمل تكلفة إعادة التشطيب' },
+        { concern: 'التسربات ترجع بعد الإصلاح', solution: 'الحل الجذري = استبدال الأنبوب القديم بـ PPR. الترقيع يحل المشكلة مؤقتاً. PPR مقاوم للكلس — لا يتآكل لـ 50 سنة' },
+    ],
+    consumerEducation: [
+        { myth: 'أي حد يقدر يصلح السباكة', truth: 'سباكة خاطئة = تسرب خفي ← رطوبة ← عفن ← فاتورة مياه مضاعفة. السباك المعتمد يعرف: نوع الأنبوب المناسب لمياه الرياض + كود السباكة SBC 602 + ضغط الاختبار الصحيح' },
+    ],
+    relatedServices: [
+        { slug: 'leak-detection', context: 'كشف تسربات', priority: 1 },
+        { slug: 'drain-cleaning', context: 'تسليك مجاري', priority: 2 },
+        { slug: 'tank-maintenance', context: 'صيانة خزانات', priority: 3 },
+    ],
 };
+

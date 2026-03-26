@@ -51,4 +51,17 @@ export const override: PageOverride = {
     expertCitations: [
         { expert: EXPERTS.ALZUWAYED.name, quote: 'نقل المعدات الثقيلة يتطلب تصاريح خاصة لضمان سلامة الطرق والممتلكات', source: 'المتحدث الرسمي لهيئة النقل' },
     ],
+    commonConcerns: [
+        { concern: 'المعدة غالية ولو طاحت من المقطورة؟', solution: 'التأمين الشامل إلزامي في عقد النقل الثقيل. أي ضرر أثناء النقل = تعويض كامل. تأكد من وثيقة التأمين قبل التحميل' },
+        { concern: 'الشوارع ما تتحمل 80 طن', solution: 'تصريح المرور يحدد المسار بالضبط — شوارع واسعة وجسور ذات حمولة كافية فقط. النقل ليلاً يتجنب الازدحام والحرارة' },
+    ],
+    consumerEducation: [
+        { myth: 'أي ونش يقدر ينقل معدة ثقيلة', truth: 'الونش العادي حمولته 3-5 طن. المعدات الثقيلة تحتاج Lowbed (30-80 طن) + رافعة هيدروليكية (25-100 طن) + تصريح مرور. الخطأ في اختيار المقطورة = كارثة' },
+    ],
+    relatedServices: [
+        { slug: 'intercity-moving', context: 'نقل بين المدن', priority: 1 },
+        { slug: 'vehicle-transport', context: 'نقل مركبات', priority: 2 },
+        { slug: 'furniture-moving', context: 'نقل عفش', priority: 3 },
+    ],
 };
+

@@ -48,4 +48,17 @@ export const override: PageOverride = {
     verificationBadges: [
         { badge: '✔️ مبيدات مرخصة', authority: 'الغذاء والدواء', icon: 'shield-check' }
     ],
+    commonConcerns: [
+        { concern: 'التبخير خطير على العائلة', solution: 'التبخير يتم مع إخلاء كامل 24-48 ساعة. بعد التهوية: المادة تتبخر تماماً — لا أثر ولا رائحة. شركات مرخصة فقط يمكنها استخدام غازات التبخير' },
+        { concern: 'التبخير يضر بالطعام المخزن', solution: 'نغلّف المواد الغذائية أو ننقلها. الغاز لا يتغلغل في العبوات المختومة. لكن الحبوب المفتوحة تُتلف' },
+    ],
+    consumerEducation: [
+        { myth: 'بخاخ المبيد من الصيدلية يغني عن التبخير', truth: 'بخاخ المبيد يقتل الحشرة التي يصيبها فقط. التبخير غاز يصل كل شق وزاوية — يقتل الحشرات المختبئة + بيوضها. إبادة شاملة' },
+    ],
+    relatedServices: [
+        { slug: 'pest-control', context: 'مكافحة حشرات', priority: 1 },
+        { slug: 'agricultural-spraying', context: 'رش زراعي', priority: 2 },
+        { slug: 'sterilization', context: 'تعقيم بعد التبخير', priority: 3 },
+    ],
 };
+

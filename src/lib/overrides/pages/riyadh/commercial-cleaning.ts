@@ -37,6 +37,29 @@ export const override: PageOverride = {
     ],
     saudiRegulations: [REGULATIONS.BALADI_HEALTH],
     verificationBadges: [
-        { badge: '✔️ شهادة صحية', authority: 'منصة بلدي', icon: 'shield-check' }
+        { badge: '✔️ شهادة صحية', authority: 'منصة بلدي', icon: 'shield-check' },
+        { badge: '✔️ عقود موثقة', authority: 'وزارة الموارد البشرية', icon: 'badge-check' },
+    ],
+    equipment: [
+        { name: 'غسالة أرضيات صناعية Ride-on', use: 'تنظيف مساحات كبيرة (مولات + مستودعات) بفعالية أعلى 10× من الطريقة اليدوية' },
+        { name: 'مكنسة HEPA صناعية', use: 'تحبس الغبار الناعم بدل نشره — ضرورة في مكاتب مغلقة' },
+    ],
+    warnings: [
+        'بدون عقد موثق = لا ضمان على استبدال عمالة أو جودة',
+        'شركات بدون شهادة بلدي = مخالفة للأمانة + غرامة على المنشأة',
+    ],
+    commonConcerns: [
+        { concern: 'العمالة تتغير كل فترة والجودة تنزل', solution: 'العقد السنوي يضمن مشرف جودة ثابت + تقييم شهري + استبدال فوري لأي عامل غير ملتزم' },
+        { concern: 'التنظيف بالنهار يزعج الموظفين', solution: 'الشركات المحترفة تعمل بعد ساعات الدوام (مساءً) أو الفجر — بدون أي إزعاج' },
+    ],
+    consumerEducation: [
+        { myth: 'أي شركة نظافة تصلح للمنشآت التجارية', truth: 'التنظيف التجاري يحتاج: عمالة بأعداد أكبر + معدات صناعية + جدول ثابت + مواد SASO. الشركة السكنية لا تملك هذه القدرات' },
+    ],
+    relatedServices: [
+        { slug: 'cleaning', context: 'تنظيف عام', priority: 1 },
+        { slug: 'deep-cleaning', context: 'تنظيف عميق دوري', priority: 2 },
+        { slug: 'sterilization', context: 'تعقيم مكاتب', priority: 3 },
+        { slug: 'glass-facades-cleaning', context: 'تنظيف واجهات', priority: 4 },
     ],
 };
+

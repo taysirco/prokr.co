@@ -70,3 +70,4 @@ export { override as insulation } from './insulation';
 export { override as leakDetection } from './leak-detection';
 export { override as drainCleaning } from './drain-cleaning';
 export { override as tankMaintenance } from './tank-maintenance';
+export { override as buildingInsulation } from './building-insulation';

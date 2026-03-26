@@ -10,6 +10,7 @@ export const insulationServices: Service[] = [
     { slug: 'epoxy-insulation', name_ar: 'عزل ايبوكسي', name_en: 'Epoxy Insulation', category: 'insulation' },
     { slug: 'sound-insulation', name_ar: 'عزل صوتي', name_en: 'Sound Insulation', category: 'insulation' },
     { slug: 'insulation', name_ar: 'عزل عام', name_en: 'General Insulation', category: 'insulation' },
+    { slug: 'building-insulation', name_ar: 'عزل مباني', name_en: 'Building Insulation', category: 'insulation' },
 ];
 
 export const insulationImages: Record<string, string[]> = {
@@ -38,6 +39,9 @@ export const insulationImages: Record<string, string[]> = {
         '/images/leak-detection/sound-insulation-rockwool-wall-cavity-installation.jpg',
     ],
     'insulation': [
+        '/images/leak-detection/roof-insulation-polyurethane-foam-spray-riyadh.jpg',
+    ],
+    'building-insulation': [
         '/images/leak-detection/roof-insulation-polyurethane-foam-spray-riyadh.jpg',
     ],
 };

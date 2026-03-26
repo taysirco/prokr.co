@@ -48,4 +48,17 @@ export const override: PageOverride = {
     verificationBadges: [
         { badge: '✔️ تأمين شامل', authority: 'هيئة النقل', icon: 'shield-check' }
     ],
+    commonConcerns: [
+        { concern: 'السطحة تخدش الجنوط أو البدي', solution: 'السطحة الهيدروليكية ترفع السيارة من القاعدة بالكامل بدون لمس الجنوط. للسيارات الفاخرة: أربطة ناعمة + حماية بدي + غطاء كامل' },
+        { concern: 'السيارة تنسرق في الطريق', solution: 'تأمين شامل على السيارة طوال مدة النقل. GPS على السطحة. إيصال استلام رسمي. تتبع الشحنة في الوقت الحقيقي' },
+    ],
+    consumerEducation: [
+        { myth: 'السحب بالونش أرخص ونفس الشيء', truth: 'الونش يسحب من المحور الأمامي فقط — العجلات الخلفية تتحرك على الأرض. للسيارات الأوتوماتيك: يتلف ناقل الحركة. للفاخرة: يخدش الجثة السفلية. السطحة الهيدروليكية = الخيار الوحيد الآمن' },
+    ],
+    relatedServices: [
+        { slug: 'heavy-equipment-moving', context: 'نقل معدات ثقيلة', priority: 1 },
+        { slug: 'intercity-moving', context: 'نقل عفش بين المدن', priority: 2 },
+        { slug: 'international-moving', context: 'شحن دولي', priority: 3 },
+    ],
 };
+

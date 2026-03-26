@@ -84,6 +84,7 @@ import { override as riyadhInsulation } from './pages/riyadh/insulation';
 import { override as riyadhLeakDetection } from './pages/riyadh/leak-detection';
 import { override as riyadhDrainCleaning } from './pages/riyadh/drain-cleaning';
 import { override as riyadhTankMaintenance } from './pages/riyadh/tank-maintenance';
+import { override as riyadhBuildingInsulation } from './pages/riyadh/building-insulation';
 
 // ─── AL-KHARJ (50) ───
 import { override as alKharjFurnitureMoving } from './pages/al-kharj/furniture-moving';
@@ -1090,6 +1091,7 @@ const PAGE_OVERRIDES: Record<OverrideKey, PageOverride> = {
     [makeOverrideKey('riyadh', 'leak-detection')]: riyadhLeakDetection,
     [makeOverrideKey('riyadh', 'drain-cleaning')]: riyadhDrainCleaning,
     [makeOverrideKey('riyadh', 'tank-maintenance')]: riyadhTankMaintenance,
+    [makeOverrideKey('riyadh', 'building-insulation')]: riyadhBuildingInsulation,
 
     // ─── al-kharj (50) ───
     [makeOverrideKey('al-kharj', 'furniture-moving')]: alKharjFurnitureMoving,

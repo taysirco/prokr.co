@@ -46,5 +46,10 @@ export const insulationPricing: Record<string, PricingItem[]> = {
         { type: 'عزل شامل — فيلا (مائي + حراري + خزان)', unit: 'مشروع', minPrice: 5000, maxPrice: 15000 },
         { type: 'عزل شامل — مبنى تجاري', unit: 'مشروع', minPrice: 10000, maxPrice: 30000 },
     ],
+    'building-insulation': [
+        { type: 'عزل حراري جدران خارجية — صوف صخري 5 سم', unit: 'للمتر المربع', minPrice: 25, maxPrice: 45 },
+        { type: 'عزل واجهات — بولي ستايرين + تشطيب خارجي', unit: 'للمتر المربع', minPrice: 35, maxPrice: 60 },
+        { type: 'عزل شامل مبنى (جدران + سقف + أساسات)', unit: 'مشروع', minPrice: 8000, maxPrice: 25000 },
+    ],
 };
 

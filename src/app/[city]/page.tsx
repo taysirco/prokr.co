@@ -270,40 +270,8 @@ export default async function CityPage({ params }: CityPageProps) {
                                         </div>
                                     )}
 
-                                    {/* City FAQ with Schema Markup */}
-                                    <div className="mb-8" itemScope itemType="https://schema.org/FAQPage">
-                                        <h3 className="text-xl font-bold text-gray-900 mb-4">
-                                            أسئلة شائعة عن الخدمات في {city.name_ar}
-                                        </h3>
-                                        <div className="space-y-4">
-                                            <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
-                                                <h4 className="font-bold text-gray-800 mb-2" itemProp="name">ما هي الخدمات المتوفرة في {city.name_ar}؟</h4>
-                                                <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
-                                                    <p className="text-gray-600" itemProp="text">يوفر بروكر أهم الخدمات المنزلية والتجارية المتنوعة في {city.name_ar} تشمل نقل العفش، التنظيف، مكافحة الحشرات، كشف التسربات، العزل، وخدمات الصرف الصحي. جميع الشركات مرخصة ومعتمدة.</p>
-                                                </div>
-                                            </div>
-                                            <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
-                                                <h4 className="font-bold text-gray-800 mb-2" itemProp="name">هل الشركات في {city.name_ar} معتمدة؟</h4>
-                                                <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
-                                                    <p className="text-gray-600" itemProp="text">نعم، جميع الشركات المعروضة على بروكر في {city.name_ar} تم التحقق من تراخيصها وجودة خدماتها وفقاً لاشتراطات وزارة التجارة.</p>
-                                                </div>
-                                            </div>
-                                            <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
-                                                <h4 className="font-bold text-gray-800 mb-2" itemProp="name">كيف أحجز خدمة في {city.name_ar}؟</h4>
-                                                <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
-                                                    <p className="text-gray-600" itemProp="text">اختر الخدمة المطلوبة، تصفح الشركات المتاحة في {city.name_ar}، قارن بين العروض، وتواصل مباشرة مع الشركة المختارة عبر الهاتف أو واتساب.</p>
-                                                </div>
-                                            </div>
-                                            {cityContext && (
-                                                <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
-                                                    <h4 className="font-bold text-gray-800 mb-2" itemProp="name">ما هي مدة الاستجابة في {city.name_ar}؟</h4>
-                                                    <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
-                                                        <p className="text-gray-600" itemProp="text">زمن الاستجابة في {city.name_ar}: {cityContext.responseTime}. {cityContext.nearbyCities.length > 0 && `نغطي أيضاً المدن القريبة: ${cityContext.nearbyCities.join('، ')}.`}</p>
-                                                    </div>
-                                                </div>
-                                            )}
-                                        </div>
-                                    </div>
+
+
                                 </article>
                             </section>
 
