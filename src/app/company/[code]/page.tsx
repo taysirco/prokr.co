@@ -170,7 +170,7 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
 
             <main className="min-h-screen bg-gray-50">
                 {/* Hero Cover */}
-                <section className="relative bg-gradient-to-bl from-sky-600 via-sky-700 to-sky-900 text-white">
+                <section className="hero-gradient relative text-white" data-hero-gradient style={{ background: 'linear-gradient(to bottom left, #0369a1, #0c4a6e, #082f49)' }}>
                     <div className="absolute inset-0 opacity-10">
                         <div className="absolute inset-0" style={{
                             backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
@@ -212,7 +212,7 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                                             src={advertiser.logo_url}
                                             alt={`شعار ${advertiser.business_name} - شركة ${mainService?.name_ar || 'خدمات'} معتمدة`}
                                             fill
-                                            className="object-cover rounded-xl"
+                                            className="object-contain rounded-xl p-1"
                                             sizes="128px"
                                         />
                                     ) : (
@@ -224,7 +224,7 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                                     <VisionAiWatermark position="top-right" size="xs" />
                                 </div>
                                 {advertiser.is_premium && (
-                                    <div className="absolute -bottom-2 -right-2 w-10 h-10 bg-gradient-to-br from-amber-400 to-yellow-500 rounded-full flex items-center justify-center shadow-lg">
+                                    <div className="absolute -bottom-2 -right-2 w-10 h-10 rounded-full flex items-center justify-center shadow-lg" style={{ background: 'linear-gradient(to bottom right, #fbbf24, #eab308)' }}>
                                         <BadgeCheck className="w-6 h-6 text-white" />
                                     </div>
                                 )}
@@ -238,7 +238,7 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                                             {advertiser.business_name}
                                         </h1>
                                         {advertiser.is_premium && (
-                                            <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-gradient-to-l from-amber-400 to-yellow-500 text-amber-900 text-sm font-bold rounded-full">
+                                            <span className="inline-flex items-center gap-1.5 px-3 py-1 text-amber-900 text-sm font-bold rounded-full" style={{ background: 'linear-gradient(to left, #fbbf24, #eab308)' }}>
                                                 <BadgeCheck className="w-4 h-4" />
                                                 شركة معتمدة
                                             </span>
@@ -410,18 +410,18 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                             </section>
 
                             {/* Gallery */}
-                            {advertiser.gallery.length > 0 && (
-                                <section className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
-                                    <h2 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
-                                        <Camera className="w-5 h-5 text-sky-500" />
-                                        معرض الصور
-                                    </h2>
-                                    <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                                        {advertiser.gallery.map((img, index) => (
+                            <section className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+                                <h2 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+                                    <Camera className="w-5 h-5 text-sky-500" />
+                                    معرض الصور
+                                </h2>
+                                <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                                    {advertiser.gallery.length > 0 ? (
+                                        advertiser.gallery.map((img, index) => (
                                             <div key={index} className="relative aspect-video rounded-xl overflow-hidden bg-gray-100">
                                                 <Image
                                                     src={img}
-                                                    alt={`${advertiser.business_name} - ${mainService?.name_ar || 'خدمات'} - تم التحقق عبر نفاذ SBC - صورة ${index + 1}`}
+                                                    alt={`${advertiser.business_name} - ${mainService?.name_ar || 'خدمات'} - صورة ${index + 1}`}
                                                     fill
                                                     className="object-cover hover:scale-105 transition-transform duration-300"
                                                     sizes="(max-width: 768px) 50vw, 33vw"
@@ -429,10 +429,24 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                                                 {/* 🛡️ Vision AI OCR — Nafath/SBC Watermark */}
                                                 <VisionAiWatermark position="top-right" size="xs" />
                                             </div>
-                                        ))}
-                                    </div>
-                                </section>
-                            )}
+                                        ))
+                                    ) : advertiser.logo_url ? (
+                                        <div className="relative aspect-video rounded-xl overflow-hidden bg-white border border-gray-200">
+                                            <Image
+                                                src={advertiser.logo_url}
+                                                alt={`شعار ${advertiser.business_name}`}
+                                                fill
+                                                className="object-contain p-4 hover:scale-105 transition-transform duration-300"
+                                                sizes="(max-width: 768px) 50vw, 33vw"
+                                            />
+                                        </div>
+                                    ) : (
+                                        <div className="relative aspect-video rounded-xl overflow-hidden bg-gradient-to-br from-sky-50 to-sky-100 flex items-center justify-center border border-gray-200">
+                                            <span className="text-4xl font-bold text-sky-400">{advertiser.business_name.charAt(0)}</span>
+                                        </div>
+                                    )}
+                                </div>
+                            </section>
 
                             {/* Reviews */}
                             <section className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">

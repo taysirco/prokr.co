@@ -640,7 +640,7 @@ export default function AdminDashboard() {
                                 </div>
                                 <div className="w-px h-8 bg-gray-200"></div>
                                 <div className="text-center">
-                                    <p className="text-lg font-bold text-amber-600">{advertisers.filter(a => a.is_premium).length}</p>
+                                    <p className="text-lg font-bold text-sky-600">{advertisers.filter(a => a.is_premium).length}</p>
                                     <p className="text-xs text-gray-500">مميز</p>
                                 </div>
                                 <div className="w-px h-8 bg-gray-200"></div>
@@ -679,7 +679,7 @@ export default function AdminDashboard() {
                         <button
                             onClick={() => { setActiveTab('requests'); cancelEdit(); }}
                             className={`px-6 py-4 font-medium transition-all border-b-2 relative ${activeTab === 'requests'
-                                ? 'text-amber-600 border-amber-600 bg-amber-50'
+                                ? 'text-sky-600 border-sky-600 bg-sky-50'
                                 : 'text-gray-600 border-transparent hover:text-gray-900 hover:bg-gray-50'
                                 }`}
                         >
@@ -850,7 +850,7 @@ export default function AdminDashboard() {
                                                         <button
                                                             onClick={() => handleTogglePremium(advertiser.id, advertiser.is_premium)}
                                                             className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-all ${advertiser.is_premium
-                                                                ? 'bg-amber-100 text-amber-700 hover:bg-amber-200'
+                                                                ? 'bg-sky-100 text-sky-700 hover:bg-sky-200'
                                                                 : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                                                                 }`}
                                                         >
@@ -934,7 +934,7 @@ export default function AdminDashboard() {
                                 <button
                                     onClick={loadRequests}
                                     disabled={requestsLoading}
-                                    className="flex items-center gap-2 text-amber-600 hover:text-amber-700 font-medium text-sm"
+                                    className="flex items-center gap-2 text-sky-600 hover:text-sky-700 font-medium text-sm"
                                 >
                                     <RefreshCw className={`w-4 h-4 ${requestsLoading ? 'animate-spin' : ''}`} />
                                     تحديث
@@ -946,7 +946,7 @@ export default function AdminDashboard() {
                         <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
                             {requestsLoading ? (
                                 <div className="flex items-center justify-center py-20">
-                                    <Loader2 className="w-8 h-8 animate-spin text-amber-600" />
+                                    <Loader2 className="w-8 h-8 animate-spin text-sky-600" />
                                 </div>
                             ) : requests.length === 0 ? (
                                 <div className="text-center py-20">
@@ -987,7 +987,7 @@ export default function AdminDashboard() {
                                                             </div>
                                                         </div>
                                                         <span className={`px-3 py-1 rounded-lg text-sm font-medium ${request.selected_plan === 'premium'
-                                                            ? 'bg-amber-100 text-amber-700'
+                                                            ? 'bg-sky-100 text-sky-700'
                                                             : 'bg-gray-100 text-gray-600'
                                                             }`}>
                                                             {request.selected_plan === 'premium' ? (
@@ -1073,15 +1073,15 @@ export default function AdminDashboard() {
                 {activeTab === 'add' && (
                     <form onSubmit={handleSubmit} className="space-y-6">
                         {editingId && (
-                            <div className="p-4 bg-amber-50 border border-amber-200 rounded-xl flex items-center justify-between">
-                                <span className="text-amber-800 font-medium">
+                            <div className="p-4 bg-sky-50 border border-sky-200 rounded-xl flex items-center justify-between">
+                                <span className="text-sky-800 font-medium">
                                     <Edit className="w-5 h-5 inline ml-2" />
                                     تعديل معلن موجود
                                 </span>
                                 <button
                                     type="button"
                                     onClick={cancelEdit}
-                                    className="text-amber-700 hover:text-amber-900 text-sm font-medium"
+                                    className="text-sky-700 hover:text-sky-700 text-sm font-medium"
                                 >
                                     إلغاء التعديل
                                 </button>
@@ -1156,14 +1156,14 @@ export default function AdminDashboard() {
                                             />
                                             <span>مجاني</span>
                                         </label>
-                                        <label className="flex items-center gap-2 cursor-pointer px-4 py-3 border border-amber-200 bg-amber-50 rounded-xl hover:bg-amber-100 flex-1">
+                                        <label className="flex items-center gap-2 cursor-pointer px-4 py-3 border border-sky-200 bg-sky-50 rounded-xl hover:bg-sky-100 flex-1">
                                             <input
                                                 type="radio"
                                                 checked={form.is_premium}
                                                 onChange={() => setForm(prev => ({ ...prev, is_premium: true }))}
-                                                className="w-4 h-4 text-amber-600"
+                                                className="w-4 h-4 text-sky-600"
                                             />
-                                            <span className="text-amber-700 font-medium">
+                                            <span className="text-sky-700 font-medium">
                                                 <Crown className="w-4 h-4 inline ml-1" />
                                                 مميز
                                             </span>

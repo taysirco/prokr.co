@@ -112,7 +112,8 @@ export default function AudioReviewPlayer({
                 {/* Play/Pause Button */}
                 <button
                     onClick={togglePlay}
-                    className="w-9 h-9 flex-shrink-0 bg-gradient-to-br from-sky-500 to-teal-500 text-white rounded-full flex items-center justify-center hover:from-sky-600 hover:to-teal-600 transition-all shadow-md shadow-sky-200/50"
+                    className="w-9 h-9 flex-shrink-0 text-white rounded-full flex items-center justify-center hover:opacity-90 transition-all shadow-md"
+                    style={{ background: 'linear-gradient(to bottom right, #0ea5e9, #14b8a6)' }}
                     aria-label={isPlaying ? 'إيقاف' : 'تشغيل'}
                 >
                     {isPlaying ? (

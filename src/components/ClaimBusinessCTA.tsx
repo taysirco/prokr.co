@@ -213,7 +213,7 @@ export default function ClaimBusinessCTA({ companyCode, businessName, variant = 
         return (
             <button
                 onClick={() => setState('email-form')}
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-amber-50 text-amber-800 text-xs font-bold rounded-full border border-amber-300 hover:bg-amber-100 hover:border-amber-400 transition-all"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-sky-50 text-sky-800 text-xs font-bold rounded-full border border-sky-300 hover:bg-sky-100 hover:border-sky-400 transition-all"
             >
                 <Shield className="w-3.5 h-3.5" />
                 هل تملك هذه المنشأة؟
@@ -358,16 +358,16 @@ export default function ClaimBusinessCTA({ companyCode, businessName, variant = 
     // RENDER: Initial CTA (idle or email-form)
     // ============================================
     return (
-        <div className="bg-gradient-to-br from-amber-50 via-white to-orange-50 border-2 border-amber-300 rounded-2xl p-5 sm:p-6 shadow-sm hover:shadow-md transition-shadow">
+        <div className="bg-gradient-to-br from-sky-50 via-white to-blue-50 border-2 border-sky-300 rounded-2xl p-5 sm:p-6 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-start gap-3 mb-4">
-                <div className="w-11 h-11 bg-amber-100 rounded-xl flex items-center justify-center flex-shrink-0 border border-amber-200">
-                    <Building2 className="w-6 h-6 text-amber-700" />
+                <div className="w-11 h-11 bg-sky-100 rounded-xl flex items-center justify-center flex-shrink-0 border border-sky-200">
+                    <Building2 className="w-6 h-6 text-sky-700" />
                 </div>
                 <div>
-                    <h3 className="text-base sm:text-lg font-bold text-amber-900">
+                    <h3 className="text-base sm:text-lg font-bold text-sky-900">
                         🔐 هل تملك هذه المنشأة؟
                     </h3>
-                    <p className="text-amber-700 text-xs sm:text-sm mt-0.5">
+                    <p className="text-sky-700 text-xs sm:text-sm mt-0.5">
                         وثّق حسابك بخطوتين: البريد + رقم الهاتف المسجل
                     </p>
                 </div>
@@ -391,7 +391,7 @@ export default function ClaimBusinessCTA({ companyCode, businessName, variant = 
 
                     <button
                         onClick={() => setState('email-form')}
-                        className="w-full py-3 bg-gradient-to-l from-amber-500 to-yellow-500 text-white font-bold text-sm rounded-xl hover:from-amber-600 hover:to-yellow-600 transition-all shadow-lg shadow-amber-200 flex items-center justify-center gap-2"
+                        className="w-full py-3 bg-gradient-to-l from-sky-500 to-sky-600 text-white font-bold text-sm rounded-xl hover:from-sky-600 hover:to-sky-700 transition-all shadow-lg shadow-sky-200 flex items-center justify-center gap-2"
                     >
                         <Shield className="w-4 h-4" />
                         ابدأ التوثيق — مجاناً
@@ -402,8 +402,8 @@ export default function ClaimBusinessCTA({ companyCode, businessName, variant = 
                     {/* Progress bar */}
                     <div className="flex items-center gap-2 justify-center mb-2">
                         <div className="flex items-center gap-1">
-                            <div className="w-6 h-6 bg-amber-500 text-white rounded-full flex items-center justify-center text-xs font-bold">1</div>
-                            <span className="text-amber-700 text-xs font-bold">البريد</span>
+                            <div className="w-6 h-6 bg-sky-500 text-white rounded-full flex items-center justify-center text-xs font-bold">1</div>
+                            <span className="text-sky-700 text-xs font-bold">البريد</span>
                         </div>
                         <div className="w-8 h-0.5 bg-gray-300" />
                         <div className="flex items-center gap-1">
@@ -422,7 +422,7 @@ export default function ClaimBusinessCTA({ companyCode, businessName, variant = 
                             onChange={(e) => setEmail(e.target.value)}
                             placeholder="owner@company.com"
                             dir="ltr"
-                            className="w-full px-4 py-2.5 border-2 border-gray-200 rounded-xl text-sm focus:border-amber-400 focus:ring-2 focus:ring-amber-100 outline-none"
+                            className="w-full px-4 py-2.5 border-2 border-gray-200 rounded-xl text-sm focus:border-sky-400 focus:ring-2 focus:ring-sky-100 outline-none"
                             required
                             autoFocus
                         />
@@ -433,7 +433,7 @@ export default function ClaimBusinessCTA({ companyCode, businessName, variant = 
                     <button
                         type="submit"
                         disabled={state === 'email-sending'}
-                        className="w-full py-3 bg-gradient-to-l from-amber-500 to-yellow-500 text-white font-bold text-sm rounded-xl hover:from-amber-600 hover:to-yellow-600 transition-all shadow-lg shadow-amber-200 flex items-center justify-center gap-2 disabled:opacity-60"
+                        className="w-full py-3 bg-gradient-to-l from-sky-500 to-sky-600 text-white font-bold text-sm rounded-xl hover:from-sky-600 hover:to-sky-700 transition-all shadow-lg shadow-sky-200 flex items-center justify-center gap-2 disabled:opacity-60"
                     >
                         {state === 'email-sending' ? (
                             <><Loader2 className="w-4 h-4 animate-spin" /> جاري الإرسال...</>

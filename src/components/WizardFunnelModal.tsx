@@ -569,7 +569,7 @@ export default function WizardFunnelModal({
                 {showExitConfirm && (
                     <div className="absolute inset-0 z-20 bg-white/95 backdrop-blur-sm flex items-center justify-center p-6 animate-wizard-slide-in">
                         <div className="text-center">
-                            <div className="w-16 h-16 mx-auto mb-4 bg-amber-100 rounded-full flex items-center justify-center text-3xl">
+                            <div className="w-16 h-16 mx-auto mb-4 bg-sky-100 rounded-full flex items-center justify-center text-3xl">
                                 😮
                             </div>
                             <h3 className="text-lg font-bold text-gray-900 mb-2">
@@ -580,7 +580,8 @@ export default function WizardFunnelModal({
                             </p>
                             <button
                                 onClick={handleCancelExit}
-                                className="w-full px-6 py-3.5 bg-gradient-to-l from-amber-500 to-orange-500 text-white font-bold rounded-xl shadow-lg shadow-amber-500/30 transition-all hover:scale-[1.02] active:scale-[0.98] mb-3"
+                                className="w-full px-6 py-3.5 text-white font-bold rounded-xl shadow-lg shadow-sky-500/30 transition-all hover:scale-[1.02] active:scale-[0.98] mb-3"
+                                style={{ background: 'linear-gradient(to left, #0ea5e9, #3b82f6)' }}
                             >
                                 ← أكمل طلبك
                             </button>
@@ -595,11 +596,8 @@ export default function WizardFunnelModal({
                 )}
 
                 {/* ═══════ Header — Market Timing Aware ═══════ */}
-                <div className={`px-6 py-5 ${
-                    timingConfig?.isNightMode
-                        ? 'bg-gradient-to-l from-red-600 via-red-700 to-red-800'
-                        : 'bg-gradient-to-l from-amber-500 via-orange-500 to-amber-600'
-                }`}>
+                <div className={`px-6 py-5`}
+                    style={{ background: timingConfig?.isNightMode ? 'linear-gradient(to left, #dc2626, #b91c1c, #991b1b)' : 'linear-gradient(to left, #0ea5e9, #3b82f6, #0284c7)' }}>
                     <div className="flex items-center gap-3">
                         <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-2xl">
                             {timingConfig?.ctaEmoji || '⚡'}
@@ -608,7 +606,7 @@ export default function WizardFunnelModal({
                             <p className="font-bold text-lg">
                                 {timingConfig?.modalTitle || '3 عروض أسعار في 60 ثانية'}
                             </p>
-                            <p className={`text-sm ${timingConfig?.isNightMode ? 'text-red-200' : 'text-amber-100'}`}>
+                            <p className={`text-sm ${timingConfig?.isNightMode ? 'text-red-200' : 'text-sky-100'}`}>
                                 {timingConfig?.modalSubtitle || 'مجاناً • بدون التزام'}
                             </p>
                         </div>
@@ -642,7 +640,7 @@ export default function WizardFunnelModal({
                                         i + 1 <= effectiveCurrent
                                             ? timingConfig?.isNightMode
                                                 ? 'bg-red-500'
-                                                : 'bg-amber-500'
+                                                : 'bg-sky-500'
                                             : 'bg-gray-200'
                                     }`}>
                                         {/* Celebration check mark */}
@@ -660,7 +658,7 @@ export default function WizardFunnelModal({
                                 الخطوة {effectiveCurrent} من {effectiveTotal} — {WIZARD_STEPS[currentStep - 1]?.label}
                             </p>
                             {effectiveTotal - effectiveCurrent <= 2 && effectiveTotal - effectiveCurrent > 0 && (
-                                <span className="text-xs font-bold text-amber-600 animate-pulse">
+                                <span className="text-xs font-bold text-sky-600 animate-pulse">
                                     باقي {effectiveTotal - effectiveCurrent === 1 ? 'خطوة واحدة' : 'خطوتين'}!
                                 </span>
                             )}
@@ -681,7 +679,7 @@ export default function WizardFunnelModal({
                                     </svg>
                                 </div>
                                 {/* Mini confetti particles */}
-                                <div className="absolute -top-2 -right-2 w-3 h-3 bg-amber-400 rounded-full animate-wizard-confetti-1" />
+                                <div className="absolute -top-2 -right-2 w-3 h-3 bg-sky-400 rounded-full animate-wizard-confetti-1" />
                                 <div className="absolute -top-1 -left-3 w-2 h-2 bg-green-400 rounded-full animate-wizard-confetti-2" />
                                 <div className="absolute top-0 right-0 w-2 h-2 bg-blue-400 rounded-full animate-wizard-confetti-3" />
                             </div>
@@ -689,11 +687,11 @@ export default function WizardFunnelModal({
                             <h3 className="text-xl font-bold text-gray-900 mb-2">✅ تم إرسال طلبك بنجاح!</h3>
 
                             {/* Countdown timer */}
-                            <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-50 border border-amber-200 rounded-full mb-3">
-                                <span className="text-amber-600 font-mono font-bold text-lg">
+                            <div className="inline-flex items-center gap-2 px-4 py-2 bg-sky-50 border border-sky-200 rounded-full mb-3">
+                                <span className="text-sky-600 font-mono font-bold text-lg">
                                     {String(countdownMin).padStart(2, '0')}:{String(countdownSec).padStart(2, '0')}
                                 </span>
-                                <span className="text-amber-700 text-xs font-medium">
+                                <span className="text-sky-700 text-xs font-medium">
                                     سيتواصل معك 3 شركات
                                 </span>
                             </div>
@@ -758,12 +756,12 @@ export default function WizardFunnelModal({
                                             <button
                                                 key={svc.id}
                                                 onClick={() => handleServiceSelect(svc.id)}
-                                                className={`relative flex flex-col items-center gap-2 p-4 bg-gray-50 hover:bg-amber-50 border-2 border-gray-200 hover:border-amber-400 rounded-xl transition-all duration-200 active:scale-95 group overflow-hidden ${
+                                                className={`relative flex flex-col items-center gap-2 p-4 bg-gray-50 hover:bg-sky-50 border-2 border-gray-200 hover:border-sky-400 rounded-xl transition-all duration-200 active:scale-95 group overflow-hidden ${
                                                     rippleTarget === svc.id ? 'animate-wizard-ripple' : ''
                                                 }`}
                                             >
                                                 <span className="text-3xl group-hover:scale-110 transition-transform">{svc.emoji}</span>
-                                                <span className="font-bold text-gray-700 text-sm group-hover:text-amber-700">{svc.label}</span>
+                                                <span className="font-bold text-gray-700 text-sm group-hover:text-sky-700">{svc.label}</span>
                                             </button>
                                         ))}
                                     </div>
@@ -779,12 +777,12 @@ export default function WizardFunnelModal({
                                             <button
                                                 key={prop.id}
                                                 onClick={() => handlePropertySelect(prop.id)}
-                                                className={`relative flex flex-col items-center gap-2 p-4 bg-gray-50 hover:bg-amber-50 border-2 border-gray-200 hover:border-amber-400 rounded-xl transition-all duration-200 active:scale-95 group overflow-hidden ${
+                                                className={`relative flex flex-col items-center gap-2 p-4 bg-gray-50 hover:bg-sky-50 border-2 border-gray-200 hover:border-sky-400 rounded-xl transition-all duration-200 active:scale-95 group overflow-hidden ${
                                                     rippleTarget === prop.id ? 'animate-wizard-ripple' : ''
                                                 }`}
                                             >
                                                 <span className="text-3xl group-hover:scale-110 transition-transform">{prop.emoji}</span>
-                                                <span className="font-bold text-gray-700 text-sm group-hover:text-amber-700">{prop.label}</span>
+                                                <span className="font-bold text-gray-700 text-sm group-hover:text-sky-700">{prop.label}</span>
                                             </button>
                                         ))}
                                     </div>
@@ -803,7 +801,7 @@ export default function WizardFunnelModal({
                                                     <button
                                                         key={city.slug}
                                                         onClick={() => handleCitySelect(city.slug, city.name)}
-                                                        className={`px-3 py-2.5 bg-gray-50 hover:bg-amber-50 border-2 border-gray-200 hover:border-amber-400 rounded-xl transition-all text-sm font-bold text-gray-700 hover:text-amber-700 active:scale-95 ${
+                                                        className={`px-3 py-2.5 bg-gray-50 hover:bg-sky-50 border-2 border-gray-200 hover:border-sky-400 rounded-xl transition-all text-sm font-bold text-gray-700 hover:text-sky-700 active:scale-95 ${
                                                             rippleTarget === city.slug ? 'animate-wizard-ripple' : ''
                                                         }`}
                                                     >
@@ -822,7 +820,7 @@ export default function WizardFunnelModal({
                                                             setData(d => ({ ...d, citySlug: '', cityName: '' }));
                                                             setNeighborhoods([]);
                                                         }}
-                                                        className="text-xs text-amber-600 hover:text-amber-700 underline"
+                                                        className="text-xs text-sky-600 hover:text-sky-700 underline"
                                                     >
                                                         تغيير المدينة
                                                     </button>
@@ -834,7 +832,7 @@ export default function WizardFunnelModal({
                                                     <button
                                                         key={hood}
                                                         onClick={() => handleNeighborhoodSelect(hood)}
-                                                        className={`px-3 py-2.5 bg-gray-50 hover:bg-amber-50 border-2 border-gray-200 hover:border-amber-400 rounded-xl transition-all text-sm font-bold text-gray-700 hover:text-amber-700 active:scale-95 text-right ${
+                                                        className={`px-3 py-2.5 bg-gray-50 hover:bg-sky-50 border-2 border-gray-200 hover:border-sky-400 rounded-xl transition-all text-sm font-bold text-gray-700 hover:text-sky-700 active:scale-95 text-right ${
                                                             rippleTarget === hood ? 'animate-wizard-ripple' : ''
                                                         }`}
                                                     >
@@ -843,7 +841,7 @@ export default function WizardFunnelModal({
                                                 ))}
                                                 <button
                                                     onClick={() => handleNeighborhoodSelect('حي آخر')}
-                                                    className="px-3 py-2.5 bg-gray-50 hover:bg-amber-50 border-2 border-gray-200 hover:border-amber-400 rounded-xl transition-all text-sm font-bold text-gray-700 hover:text-amber-700 active:scale-95 text-right col-span-2"
+                                                    className="px-3 py-2.5 bg-gray-50 hover:bg-sky-50 border-2 border-gray-200 hover:border-sky-400 rounded-xl transition-all text-sm font-bold text-gray-700 hover:text-sky-700 active:scale-95 text-right col-span-2"
                                                 >
                                                     📍 حي آخر
                                                 </button>
@@ -859,7 +857,7 @@ export default function WizardFunnelModal({
                                                             setData(d => ({ ...d, citySlug: '', cityName: '' }));
                                                             setNeighborhoods([]);
                                                         }}
-                                                        className="text-xs text-amber-600 hover:text-amber-700 underline"
+                                                        className="text-xs text-sky-600 hover:text-sky-700 underline"
                                                     >
                                                         تغيير المدينة
                                                     </button>
@@ -867,7 +865,7 @@ export default function WizardFunnelModal({
                                             </div>
                                             <button
                                                 onClick={() => handleNeighborhoodSelect(data.cityName)}
-                                                className="w-full px-4 py-3 bg-amber-500 hover:bg-amber-600 text-white font-bold rounded-xl transition-all active:scale-95"
+                                                className="w-full px-4 py-3 bg-sky-500 hover:bg-sky-600 text-white font-bold rounded-xl transition-all active:scale-95"
                                             >
                                                 متابعة ← {data.cityName}
                                             </button>
@@ -885,7 +883,7 @@ export default function WizardFunnelModal({
                                             <button
                                                 key={opt.id}
                                                 onClick={() => handleBudgetSelect(opt.id, opt.label)}
-                                                className={`w-full flex items-center gap-3 px-4 py-3.5 bg-gray-50 hover:bg-amber-50 border-2 border-gray-200 hover:border-amber-400 rounded-xl transition-all text-right font-bold text-gray-700 hover:text-amber-700 active:scale-[0.98] group ${
+                                                className={`w-full flex items-center gap-3 px-4 py-3.5 bg-gray-50 hover:bg-sky-50 border-2 border-gray-200 hover:border-sky-400 rounded-xl transition-all text-right font-bold text-gray-700 hover:text-sky-700 active:scale-[0.98] group ${
                                                     rippleTarget === opt.id ? 'animate-wizard-ripple' : ''
                                                 }`}
                                             >
@@ -964,7 +962,7 @@ export default function WizardFunnelModal({
                                             className={`w-full px-4 py-3.5 bg-gray-50 border-2 rounded-xl text-left font-mono text-lg tracking-wider focus:outline-none focus:ring-2 transition-all ${
                                                 phoneError
                                                     ? 'border-red-300 focus:ring-red-200 focus:border-red-400'
-                                                    : 'border-gray-200 focus:ring-amber-200 focus:border-amber-400'
+                                                    : 'border-gray-200 focus:ring-sky-200 focus:border-sky-400'
                                             }`}
                                             dir="ltr"
                                             autoComplete="tel"
@@ -982,7 +980,7 @@ export default function WizardFunnelModal({
                                         className={`w-full mt-4 flex items-center justify-center gap-2 px-6 py-3.5 font-bold rounded-xl transition-all shadow-lg disabled:opacity-50 disabled:cursor-not-allowed active:scale-[0.98] ${
                                             timingConfig?.isNightMode
                                                 ? 'bg-gradient-to-l from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white shadow-red-500/30'
-                                                : 'bg-gradient-to-l from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white shadow-amber-500/30'
+                                                : 'bg-gradient-to-l from-sky-500 to-blue-500 hover:from-sky-600 hover:to-blue-600 text-white shadow-sky-500/30'
                                         }`}
                                     >
                                         {timingConfig?.isNightMode ? '🚨 أرسل طلب الطوارئ' : '🚀 أرسل طلبي الآن'}

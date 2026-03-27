@@ -188,14 +188,14 @@ export default function HomePage() {
         <EmergencyNightBanner cityNameAr="المملكة" serviceNameAr="خدمات منزلية" />
 
         {/* Hero Section - Premium Design */}
-        <section className="relative bg-gradient-to-bl from-sky-600 via-sky-700 to-sky-900 text-white overflow-hidden min-h-[85vh] flex items-center">
+        <section className="hero-gradient relative text-white overflow-hidden min-h-[85vh] flex items-center" data-hero-gradient style={{ background: 'linear-gradient(to bottom left, #0369a1, #0c4a6e, #082f49)' }}>
           {/* Animated Background Pattern */}
           <div className="absolute inset-0">
             <div className="absolute inset-0 opacity-[0.08]" style={{
               backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
             }}></div>
             {/* Gradient Overlay */}
-            <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-sky-900/50 to-transparent"></div>
+            <div className="absolute bottom-0 left-0 right-0 h-64" style={{ background: 'linear-gradient(to top, rgba(12,74,110,0.5), transparent)' }}></div>
           </div>
 
           {/* Floating Shapes */}
@@ -214,7 +214,7 @@ export default function HomePage() {
 
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
                   بروكر - أكبر دليل
-                  <span className="block bg-gradient-to-l from-amber-300 to-amber-400 bg-clip-text text-transparent">
+                  <span className="block bg-clip-text text-transparent" style={{ backgroundImage: 'linear-gradient(to left, #fcd34d, #fbbf24)' }}>
                     خدمات منزلية
                   </span>
                   <span className="block text-sky-100">في المملكة العربية السعودية</span>
@@ -234,7 +234,7 @@ export default function HomePage() {
                       placeholder="ابحث عن خدمة أو مدينة..."
                       className="w-full pr-14 pl-32 py-4 bg-white rounded-2xl text-gray-900 placeholder-gray-400 shadow-2xl shadow-sky-900/30 focus:outline-none focus:ring-4 focus:ring-white/30"
                     />
-                    <button type="submit" className="absolute left-2 top-1/2 -translate-y-1/2 px-6 py-2.5 bg-gradient-to-l from-sky-600 to-sky-700 text-white font-medium rounded-xl hover:from-sky-700 hover:to-sky-800 transition-all shadow-lg">
+                    <button type="submit" className="absolute left-2 top-1/2 -translate-y-1/2 px-6 py-2.5 text-white font-medium rounded-xl hover:opacity-90 transition-all shadow-lg" style={{ background: 'linear-gradient(to left, #0284c7, #0369a1)' }}>
                       بحث
                     </button>
                   </div>
@@ -259,7 +259,7 @@ export default function HomePage() {
               <div className="hidden lg:grid grid-cols-2 gap-4">
                 {/* Stat Card 1 */}
                 <div className="bg-white/10 backdrop-blur-md rounded-3xl p-6 border border-white/20 hover:bg-white/15 transition-all group">
-                  <div className="w-14 h-14 bg-gradient-to-br from-amber-400 to-amber-500 rounded-2xl flex items-center justify-center mb-4 shadow-lg shadow-amber-500/30 group-hover:scale-110 transition-transform">
+                  <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform" style={{ background: 'linear-gradient(to bottom right, #fbbf24, #f59e0b)' }}>
                     <Building2 className="w-7 h-7 text-white" />
                   </div>
                   <p className="text-4xl font-bold mb-1">+500</p>
@@ -268,7 +268,7 @@ export default function HomePage() {
 
                 {/* Stat Card 2 */}
                 <div className="bg-white/10 backdrop-blur-md rounded-3xl p-6 border border-white/20 hover:bg-white/15 transition-all group">
-                  <div className="w-14 h-14 bg-gradient-to-br from-blue-400 to-blue-500 rounded-2xl flex items-center justify-center mb-4 shadow-lg shadow-blue-500/30 group-hover:scale-110 transition-transform">
+                  <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform" style={{ background: 'linear-gradient(to bottom right, #60a5fa, #3b82f6)' }}>
                     <MapPin className="w-7 h-7 text-white" />
                   </div>
                   <p className="text-4xl font-bold mb-1">24</p>
@@ -277,7 +277,7 @@ export default function HomePage() {
 
                 {/* Stat Card 3 */}
                 <div className="bg-white/10 backdrop-blur-md rounded-3xl p-6 border border-white/20 hover:bg-white/15 transition-all group">
-                  <div className="w-14 h-14 bg-gradient-to-br from-purple-400 to-purple-500 rounded-2xl flex items-center justify-center mb-4 shadow-lg shadow-purple-500/30 group-hover:scale-110 transition-transform">
+                  <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform" style={{ background: 'linear-gradient(to bottom right, #c084fc, #a855f7)' }}>
                     <Wrench className="w-7 h-7 text-white" />
                   </div>
                   <p className="text-4xl font-bold mb-1">{canonicalServices.length}</p>
@@ -286,7 +286,7 @@ export default function HomePage() {
 
                 {/* Stat Card 4 */}
                 <div className="bg-white/10 backdrop-blur-md rounded-3xl p-6 border border-white/20 hover:bg-white/15 transition-all group">
-                  <div className="w-14 h-14 bg-gradient-to-br from-rose-400 to-rose-500 rounded-2xl flex items-center justify-center mb-4 shadow-lg shadow-rose-500/30 group-hover:scale-110 transition-transform">
+                  <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform" style={{ background: 'linear-gradient(to bottom right, #fb7185, #f43f5e)' }}>
                     <ThumbsUp className="w-7 h-7 text-white" />
                   </div>
                   <p className="text-4xl font-bold mb-1">+10K</p>
@@ -315,8 +315,8 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-wrap items-center justify-center gap-8 lg:gap-16">
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-sky-100 rounded-xl flex items-center justify-center">
-                  <Shield className="w-6 h-6 text-sky-600" />
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ backgroundColor: '#e0f2fe' }}>
+                  <Shield className="w-6 h-6" style={{ color: '#0284c7' }} />
                 </div>
                 <div>
                   <p className="font-bold text-gray-900">شركات موثوقة</p>
@@ -324,8 +324,8 @@ export default function HomePage() {
                 </div>
               </div>
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center">
-                  <Star className="w-6 h-6 text-amber-600" />
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ backgroundColor: '#fef3c7' }}>
+                  <Star className="w-6 h-6" style={{ color: '#d97706' }} />
                 </div>
                 <div>
                   <p className="font-bold text-gray-900">تقييمات حقيقية</p>
@@ -333,8 +333,8 @@ export default function HomePage() {
                 </div>
               </div>
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
-                  <Zap className="w-6 h-6 text-blue-600" />
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ backgroundColor: '#dbeafe' }}>
+                  <Zap className="w-6 h-6" style={{ color: '#2563eb' }} />
                 </div>
                 <div>
                   <p className="font-bold text-gray-900">تواصل فوري</p>
@@ -376,7 +376,7 @@ export default function HomePage() {
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div className="relative text-center group">
-                      <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-sky-500 to-sky-600 rounded-3xl flex items-center justify-center text-white shadow-xl shadow-sky-500/30 group-hover:scale-110 transition-transform">
+                      <div className="w-20 h-20 mx-auto mb-6 rounded-3xl flex items-center justify-center text-white shadow-xl group-hover:scale-110 transition-transform" style={{ background: 'linear-gradient(to bottom right, #0ea5e9, #0284c7)' }}>
                         <Search className="w-10 h-10" />
                       </div>
                       <div className="absolute top-8 left-0 right-1/2 h-0.5 bg-gradient-to-l from-sky-300 to-transparent hidden md:block"></div>
@@ -385,7 +385,7 @@ export default function HomePage() {
                       <p className="text-gray-500">تصفح خدماتنا المتنوعة واختر المدينة التي تحتاج فيها الخدمة</p>
                     </div>
                     <div className="relative text-center group">
-                      <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-amber-500 to-amber-600 rounded-3xl flex items-center justify-center text-white shadow-xl shadow-amber-500/30 group-hover:scale-110 transition-transform">
+                      <div className="w-20 h-20 mx-auto mb-6 rounded-3xl flex items-center justify-center text-white shadow-xl group-hover:scale-110 transition-transform" style={{ background: 'linear-gradient(to bottom right, #f59e0b, #d97706)' }}>
                         <Star className="w-10 h-10" />
                       </div>
                       <div className="absolute top-8 left-1/2 right-0 h-0.5 bg-gradient-to-r from-amber-300 to-transparent hidden md:block"></div>
@@ -394,7 +394,7 @@ export default function HomePage() {
                       <p className="text-gray-500">اطلع على التقييمات والأسعار واختر الشركة الأنسب لك</p>
                     </div>
                     <div className="text-center group">
-                      <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-blue-500 to-blue-600 rounded-3xl flex items-center justify-center text-white shadow-xl shadow-blue-500/30 group-hover:scale-110 transition-transform">
+                      <div className="w-20 h-20 mx-auto mb-6 rounded-3xl flex items-center justify-center text-white shadow-xl group-hover:scale-110 transition-transform" style={{ background: 'linear-gradient(to bottom right, #3b82f6, #2563eb)' }}>
                         <Phone className="w-10 h-10" />
                       </div>
                       <span className="inline-block px-3 py-1 bg-blue-100 text-blue-700 font-bold rounded-full text-sm mb-4">3</span>
@@ -528,7 +528,7 @@ export default function HomePage() {
                   <div className="absolute inset-0 bg-gradient-to-br from-sky-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
 
                   <div className="relative">
-                    <div className={`${index === 0 ? 'w-20 h-20' : 'w-14 h-14'} mb-4 bg-gradient-to-br from-sky-500 to-sky-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-sky-500/30 group-hover:scale-110 transition-transform`}>
+                    <div className={`${index === 0 ? 'w-20 h-20' : 'w-14 h-14'} mb-4 rounded-2xl flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform`} style={{ background: 'linear-gradient(to bottom right, #0ea5e9, #0284c7)' }}>
                       {serviceIcons[service.slug] || <Wrench className={index === 0 ? 'w-10 h-10' : 'w-7 h-7'} />}
                     </div>
                     <h3 className={`font-bold text-gray-900 group-hover:text-sky-600 transition-colors ${index === 0 ? 'text-2xl mb-3' : 'text-lg mb-1'}`}>
@@ -551,7 +551,8 @@ export default function HomePage() {
             <div className="text-center mt-10">
               <Link
                 href="/services"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-sky-600 text-white font-bold rounded-2xl hover:bg-sky-700 shadow-lg shadow-sky-500/30 transition-all hover:scale-105"
+                className="inline-flex items-center gap-2 px-8 py-4 text-white font-bold rounded-2xl hover:opacity-90 shadow-lg transition-all hover:scale-105"
+                style={{ background: '#0284c7' }}
               >
                 عرض جميع الخدمات ({canonicalServices.length} خدمة)
                 <ArrowLeft className="w-5 h-5" />
@@ -586,7 +587,7 @@ export default function HomePage() {
                 {Object.entries(citiesByRegion).map(([region, cities]) => (
                   <div key={region} className="bg-white rounded-3xl p-6 shadow-lg shadow-gray-200/50 border border-gray-100 hover:shadow-xl hover:border-sky-200 transition-all group">
                     <div className="flex items-center gap-3 mb-5">
-                      <div className="w-12 h-12 bg-gradient-to-br from-sky-500 to-sky-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-sky-500/30">
+                      <div className="w-12 h-12 rounded-xl flex items-center justify-center text-white shadow-lg" style={{ background: 'linear-gradient(to bottom right, #0ea5e9, #0284c7)' }}>
                         <MapPin className="w-6 h-6" />
                       </div>
                       <h3 className="font-bold text-xl text-gray-900">
@@ -612,7 +613,7 @@ export default function HomePage() {
           </section>
 
           {/* Testimonials */}
-          <section className="bg-gradient-to-br from-sky-900 via-sky-800 to-sky-900 text-white py-20 relative overflow-hidden">
+          <section className="text-white py-20 relative overflow-hidden" data-section="testimonials" style={{ background: 'linear-gradient(to bottom right, #0c4a6e, #075985, #0c4a6e)' }}>
             {/* Background Pattern */}
             <div className="absolute inset-0 opacity-10">
               <div className="absolute inset-0" style={{
@@ -645,7 +646,7 @@ export default function HomePage() {
                     &quot;وجدت شركة نقل عفش ممتازة في الرياض خلال دقائق. الخدمة كانت احترافية والأسعار معقولة جداً. شكراً بروكر!&quot;
                   </p>
                   <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-gradient-to-br from-amber-400 to-amber-500 rounded-full flex items-center justify-center text-white font-bold">
+                    <div className="w-12 h-12 rounded-full flex items-center justify-center text-white font-bold" style={{ background: 'linear-gradient(to bottom right, #fbbf24, #f59e0b)' }}>
                       أ
                     </div>
                     <div>
@@ -666,7 +667,7 @@ export default function HomePage() {
                     &quot;كنت أبحث عن شركة مكافحة حشرات موثوقة. بروكر سهّل عليّ المهمة بتوفير قائمة الشركات مع التقييمات.&quot;
                   </p>
                   <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-500 rounded-full flex items-center justify-center text-white font-bold">
+                    <div className="w-12 h-12 rounded-full flex items-center justify-center text-white font-bold" style={{ background: 'linear-gradient(to bottom right, #60a5fa, #3b82f6)' }}>
                       س
                     </div>
                     <div>
@@ -687,7 +688,7 @@ export default function HomePage() {
                     &quot;منصة رائعة وسهلة الاستخدام. تواصلت مع 3 شركات تنظيف وحصلت على أفضل عرض. أنصح الجميع باستخدامها.&quot;
                   </p>
                   <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-gradient-to-br from-purple-400 to-purple-500 rounded-full flex items-center justify-center text-white font-bold">
+                    <div className="w-12 h-12 rounded-full flex items-center justify-center text-white font-bold" style={{ background: 'linear-gradient(to bottom right, #c084fc, #a855f7)' }}>
                       م
                     </div>
                     <div>
@@ -703,7 +704,7 @@ export default function HomePage() {
         {/* CTA Section - Premium */}
         <section className="py-20">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="relative bg-gradient-to-bl from-amber-500 via-amber-600 to-amber-700 rounded-[2.5rem] p-10 lg:p-16 overflow-hidden">
+            <div className="relative rounded-[2.5rem] p-10 lg:p-16 overflow-hidden" data-section="cta" style={{ background: 'linear-gradient(to bottom left, #f59e0b, #d97706, #b45309)' }}>
               {/* Background Shapes */}
               <div className="absolute top-0 left-0 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
               <div className="absolute bottom-0 right-0 w-96 h-96 bg-amber-800/30 rounded-full blur-3xl"></div>

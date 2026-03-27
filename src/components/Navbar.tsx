@@ -60,10 +60,8 @@ export default function Navbar() {
             </div>
 
             {/* Main Navbar */}
-            <nav className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled
-                ? 'bg-gradient-to-l from-gray-950 to-slate-950 shadow-xl shadow-black/30'
-                : 'bg-gradient-to-l from-gray-950/95 to-slate-950/95 backdrop-blur-md border-b border-white/5'
-                }`}>
+            <nav className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'shadow-xl' : 'backdrop-blur-md border-b border-white/5'}`}
+                style={{ background: isScrolled ? 'linear-gradient(to left, #030712, #0f172a)' : 'linear-gradient(to left, rgba(3,7,18,0.95), rgba(15,23,42,0.95))' }}>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-center h-20">
                         {/* Logo */}
@@ -267,7 +265,8 @@ export default function Navbar() {
                             {/* CTA Button */}
                             <Link
                                 href="/advertise"
-                                className="flex items-center gap-2 px-6 py-3 bg-gradient-to-l from-amber-500 to-amber-600 text-white font-bold rounded-2xl hover:from-amber-600 hover:to-amber-700 shadow-xl shadow-amber-500/30 hover:shadow-amber-500/50 transition-all hover:scale-105"
+                                className="flex items-center gap-2 px-6 py-3 text-white font-bold rounded-2xl hover:opacity-90 shadow-xl transition-all hover:scale-105"
+                                style={{ background: 'linear-gradient(to left, #f59e0b, #d97706)' }}
                             >
                                 <Building2 className="w-5 h-5" />
                                 <span>سجّل شركتك</span>
@@ -296,11 +295,12 @@ export default function Navbar() {
                 {/* Mobile Menu */}
                 <div className={`lg:hidden overflow-hidden transition-all duration-300 ${isMenuOpen ? 'max-h-[80vh] opacity-100' : 'max-h-0 opacity-0'
                     }`}>
-                    <div className="bg-gradient-to-b from-gray-950 to-slate-950 border-t border-white/5 px-4 py-6 space-y-4">
+                    <div className="border-t border-white/5 px-4 py-6 space-y-4" style={{ background: 'linear-gradient(to bottom, #030712, #0f172a)' }}>
                         {/* Quick Links */}
                         <div className="grid grid-cols-2 gap-3">
                             <Link
                                 href="/"
+                                onClick={() => setIsMenuOpen(false)}
                                 className="flex items-center gap-3 p-4 bg-white/5 hover:bg-white/10 rounded-2xl transition-all"
                             >
                                 <div className="w-10 h-10 bg-sky-500/20 rounded-xl flex items-center justify-center text-sky-400">
@@ -310,6 +310,7 @@ export default function Navbar() {
                             </Link>
                             <Link
                                 href="/services"
+                                onClick={() => setIsMenuOpen(false)}
                                 className="flex items-center gap-3 p-4 bg-white/5 hover:bg-white/10 rounded-2xl transition-all"
                             >
                                 <div className="w-10 h-10 bg-blue-500/20 rounded-xl flex items-center justify-center text-blue-400">
@@ -319,6 +320,7 @@ export default function Navbar() {
                             </Link>
                             <Link
                                 href="/locations"
+                                onClick={() => setIsMenuOpen(false)}
                                 className="flex items-center gap-3 p-4 bg-white/5 hover:bg-white/10 rounded-2xl transition-all"
                             >
                                 <div className="w-10 h-10 bg-purple-500/20 rounded-xl flex items-center justify-center text-purple-400">
@@ -328,6 +330,7 @@ export default function Navbar() {
                             </Link>
                             <Link
                                 href="/blog"
+                                onClick={() => setIsMenuOpen(false)}
                                 className="flex items-center gap-3 p-4 bg-white/5 hover:bg-white/10 rounded-2xl transition-all"
                             >
                                 <div className="w-10 h-10 bg-amber-500/20 rounded-xl flex items-center justify-center text-amber-400">
@@ -345,6 +348,7 @@ export default function Navbar() {
                                     <Link
                                         key={service.slug}
                                         href={`/${service.slug}`}
+                                        onClick={() => setIsMenuOpen(false)}
                                         className="px-4 py-3 text-sm text-gray-300 hover:bg-white/10 hover:text-white rounded-xl transition-all"
                                     >
                                         {service.name_ar}
@@ -357,13 +361,16 @@ export default function Navbar() {
                         <div className="pt-4 border-t border-white/10 space-y-3">
                             <Link
                                 href="/advertise"
-                                className="flex items-center justify-center gap-2 w-full px-6 py-4 bg-gradient-to-l from-amber-500 to-amber-600 text-white font-bold rounded-2xl shadow-lg"
+                                onClick={() => setIsMenuOpen(false)}
+                                className="flex items-center justify-center gap-2 w-full px-6 py-4 text-white font-bold rounded-2xl shadow-lg"
+                                style={{ background: 'linear-gradient(to left, #f59e0b, #d97706)' }}
                             >
                                 <Building2 className="w-5 h-5" />
                                 <span>سجّل شركتك مجاناً</span>
                             </Link>
                             <Link
                                 href="/contact-us"
+                                onClick={() => setIsMenuOpen(false)}
                                 className="flex items-center justify-center gap-2 w-full px-6 py-4 bg-white/10 text-gray-200 font-medium rounded-2xl hover:bg-white/15"
                             >
                                 <Phone className="w-5 h-5" />

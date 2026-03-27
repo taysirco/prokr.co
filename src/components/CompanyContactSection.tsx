@@ -82,7 +82,8 @@ export default function CompanyContactSection({
                     serviceName={serviceName}
                     external
                     advertiserName={advertiserName}
-                    className="flex items-center justify-center gap-2 w-full px-4 py-3.5 bg-gradient-to-l from-green-500 to-green-600 text-white font-medium rounded-xl hover:from-green-600 hover:to-green-700 shadow-lg shadow-green-500/30 transition-all"
+                    className="flex items-center justify-center gap-2 w-full px-4 py-3.5 text-white font-medium rounded-xl hover:opacity-90 shadow-lg transition-all"
+                    style={{ background: 'linear-gradient(to left, #22c55e, #16a34a)' }}
                 >
                     <MessageCircle className="w-5 h-5" />
                 </ActionButton>

@@ -42,7 +42,7 @@ export default function PrivacyPolicyPage() {
         />
         <main className="min-h-screen bg-gray-50">
             {/* Hero */}
-            <section className="bg-gradient-to-bl from-sky-600 via-sky-700 to-sky-900 text-white py-16">
+            <section className="hero-gradient text-white py-16" data-hero-gradient style={{ background: 'linear-gradient(to bottom left, #0369a1, #0c4a6e, #082f49)' }}>
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                     <nav className="flex items-center gap-2 text-sky-100 text-sm mb-6">
                         <Link href="/" className="hover:text-white transition-colors flex items-center gap-1">

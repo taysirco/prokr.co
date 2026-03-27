@@ -50,7 +50,7 @@ export default function Footer({ currentCity, currentService }: FooterProps) {
     const targetedCities = getDeterministicLinks(allCities, canonicalService || 'root', 6);
 
     return (
-        <footer className="bg-gradient-to-b from-gray-950 via-slate-950 to-gray-950 text-gray-300">
+        <footer className="text-gray-300" style={{ background: 'linear-gradient(to bottom, #030712, #0f172a, #030712)', color: '#cbd5e1' }}>
             {/* Sitemap-Style Links: All Services */}
             <div className="border-b border-white/10">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -64,6 +64,7 @@ export default function Footer({ currentCity, currentService }: FooterProps) {
                                 key={s.slug}
                                 href={`/${currentValidCity}/${s.slug}`}
                                 className="hover:text-sky-400 transition-colors text-sm"
+                                style={{ color: '#94a3b8' }}
                             >
                                 {s.name_ar}
                             </Link>
@@ -85,6 +86,7 @@ export default function Footer({ currentCity, currentService }: FooterProps) {
                                 key={c.slug}
                                 href={`/${c.slug}/${canonicalService}`}
                                 className="hover:text-sky-400 transition-colors text-sm"
+                                style={{ color: '#94a3b8' }}
                             >
                                 {c.name_ar}
                             </Link>
@@ -107,7 +109,7 @@ export default function Footer({ currentCity, currentService }: FooterProps) {
                                 className="h-10 w-auto drop-shadow-[0_0_16px_rgba(56,189,248,0.3)]"
                             />
                         </Link>
-                        <p className="text-sm text-gray-400 leading-relaxed max-w-lg">
+                        <p className="text-sm leading-relaxed max-w-lg" style={{ color: '#94a3b8' }}>
                             المنصة الأولى لمقارنة واختيار أفضل شركات الخدمات المعتمدة في المملكة العربية السعودية — أسعار شفافة، تقييمات حقيقية، وضمان جودة.
                         </p>
                     </div>
@@ -216,10 +218,10 @@ export default function Footer({ currentCity, currentService }: FooterProps) {
 
                         {/* Legal Links */}
                         <div className="mt-6 space-y-2">
-                            <Link href="/privacy-policy" className="block text-xs text-gray-500 hover:text-gray-400 transition-colors">
+                            <Link href="/privacy-policy" className="block text-xs hover:text-sky-400 transition-colors" style={{ color: '#94a3b8' }}>
                                 سياسة الخصوصية
                             </Link>
-                            <Link href="/terms-of-service" className="block text-xs text-gray-500 hover:text-gray-400 transition-colors">
+                            <Link href="/terms-of-service" className="block text-xs hover:text-sky-400 transition-colors" style={{ color: '#94a3b8' }}>
                                 الشروط والأحكام
                             </Link>
                         </div>
@@ -231,10 +233,10 @@ export default function Footer({ currentCity, currentService }: FooterProps) {
             <div className="border-t border-white/10">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
                     <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-                        <p className="text-sm text-gray-500">
+                        <p className="text-sm" style={{ color: '#94a3b8' }}>
                             © {new Date().getFullYear()} بروكر. جميع الحقوق محفوظة.
                         </p>
-                        <p className="text-xs text-gray-600">
+                        <p className="text-xs" style={{ color: '#64748b' }}>
                             دليل الخدمات السعودي الشامل
                         </p>
                     </div>

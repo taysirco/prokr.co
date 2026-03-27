@@ -19,6 +19,8 @@ interface ActionButtonProps {
     external?: boolean;
     /** Advertiser name for WhatsApp popup display */
     advertiserName?: string;
+    /** Optional inline styles (for hex overrides) */
+    style?: React.CSSProperties;
 }
 
 /**
@@ -49,6 +51,7 @@ export default function ActionButton({
     children,
     external = false,
     advertiserName,
+    style,
 }: ActionButtonProps) {
     const [isEngaged, setIsEngaged] = useState(false);
     const [isEmergencyHour, setIsEmergencyHour] = useState(false);
@@ -145,6 +148,7 @@ export default function ActionButton({
                         ? 'opacity-75 scale-95 pointer-events-none'
                         : 'hover:scale-[1.03] active:scale-95'
                     }`}
+                style={style}
             >
                 {children}
                 {label && (

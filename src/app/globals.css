@@ -412,5 +412,239 @@ html {
   animation: wizard-fab-enter 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-/* Note: prokr-lite-mode CSS is injected via NetworkSensor.tsx
-   component to bypass Tailwind v4 tree-shaking. */
+/* ═══════════════════════════════════════════════════════════════
+   Tailwind v4 oklch → hex Color Override System v2.0
+   ───────────────────────────────────────────────────────────────
+   Tailwind v4 uses oklch color space which renders colors much
+   lighter than intended. These overrides force explicit hex values
+   to guarantee WCAG 2.1 AA contrast compliance (≥ 4.5:1).
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── TEXT COLORS — Gray ── */
+.text-gray-300 { color: #d1d5db !important; }
+.text-gray-400 { color: #9ca3af !important; }
+.text-gray-500 { color: #6b7280 !important; }
+.text-gray-600 { color: #4b5563 !important; }
+.text-gray-700 { color: #374151 !important; }
+.text-gray-800 { color: #1f2937 !important; }
+.text-gray-900 { color: #111827 !important; }
+
+/* ── TEXT COLORS — Slate ── */
+.text-slate-400 { color: #94a3b8 !important; }
+.text-slate-500 { color: #64748b !important; }
+.text-slate-600 { color: #475569 !important; }
+.text-slate-700 { color: #334155 !important; }
+.text-slate-800 { color: #1e293b !important; }
+.text-slate-900 { color: #0f172a !important; }
+
+/* ── TEXT COLORS — Sky ── */
+.text-sky-100  { color: #e0f2fe !important; }
+.text-sky-200  { color: #bae6fd !important; }
+.text-sky-300  { color: #7dd3fc !important; }
+.text-sky-400  { color: #38bdf8 !important; }
+.text-sky-500  { color: #0ea5e9 !important; }
+.text-sky-600  { color: #0284c7 !important; }
+.text-sky-700  { color: #0369a1 !important; }
+.text-sky-800  { color: #075985 !important; }
+.text-sky-900  { color: #0c4a6e !important; }
+
+/* ── TEXT COLORS — Blue ── */
+.text-blue-400 { color: #60a5fa !important; }
+.text-blue-500 { color: #3b82f6 !important; }
+.text-blue-600 { color: #2563eb !important; }
+.text-blue-700 { color: #1d4ed8 !important; }
+.text-blue-800 { color: #1e40af !important; }
+
+/* ── TEXT COLORS — Amber/Gold ── */
+.text-amber-100 { color: #fef3c7 !important; }
+.text-amber-200 { color: #fde68a !important; }
+.text-amber-400 { color: #fbbf24 !important; }
+.text-amber-500 { color: #f59e0b !important; }
+.text-amber-600 { color: #d97706 !important; }
+.text-amber-700 { color: #b45309 !important; }
+.text-amber-800 { color: #92400e !important; }
+
+/* ── TEXT COLORS — Purple ── */
+.text-purple-400 { color: #c084fc !important; }
+.text-purple-500 { color: #a855f7 !important; }
+.text-purple-600 { color: #9333ea !important; }
+.text-purple-700 { color: #7e22ce !important; }
+
+/* ── TEXT COLORS — Red ── */
+.text-red-400  { color: #f87171 !important; }
+.text-red-500  { color: #ef4444 !important; }
+.text-red-600  { color: #dc2626 !important; }
+.text-red-700  { color: #b91c1c !important; }
+.text-red-800  { color: #991b1b !important; }
+
+/* ── TEXT COLORS — Green/Emerald ── */
+.text-green-500 { color: #22c55e !important; }
+.text-green-600 { color: #16a34a !important; }
+.text-green-700 { color: #15803d !important; }
+.text-emerald-500 { color: #10b981 !important; }
+.text-emerald-600 { color: #059669 !important; }
+.text-emerald-700 { color: #047857 !important; }
+
+/* ── TEXT COLORS — Orange ── */
+.text-orange-500 { color: #f97316 !important; }
+.text-orange-600 { color: #ea580c !important; }
+.text-orange-700 { color: #c2410c !important; }
+
+/* ── TEXT COLORS — Teal/Cyan ── */
+.text-teal-500  { color: #14b8a6 !important; }
+.text-teal-600  { color: #0d9488 !important; }
+.text-cyan-500  { color: #06b6d4 !important; }
+.text-cyan-600  { color: #0891b2 !important; }
+.text-cyan-700  { color: #0e7490 !important; }
+
+/* ── TEXT COLORS — Indigo ── */
+.text-indigo-500 { color: #6366f1 !important; }
+.text-indigo-600 { color: #4f46e5 !important; }
+.text-indigo-700 { color: #4338ca !important; }
+
+/* ── TEXT COLORS — Rose/Pink ── */
+.text-rose-500  { color: #f43e5e !important; }
+.text-rose-600  { color: #e11d48 !important; }
+.text-pink-500  { color: #ec4899 !important; }
+.text-pink-600  { color: #db2777 !important; }
+
+/* ── TEXT COLORS — Yellow ── */
+.text-yellow-500 { color: #eab308 !important; }
+.text-yellow-600 { color: #ca8a04 !important; }
+.text-yellow-700 { color: #a16207 !important; }
+
+/* ── BACKGROUND COLORS ── */
+.bg-gray-50   { background-color: #f9fafb !important; }
+.bg-gray-100  { background-color: #f3f4f6 !important; }
+.bg-gray-200  { background-color: #e5e7eb !important; }
+.bg-gray-900  { background-color: #111827 !important; }
+.bg-gray-950  { background-color: #030712 !important; }
+
+.bg-slate-50  { background-color: #f8fafc !important; }
+.bg-slate-100 { background-color: #f1f5f9 !important; }
+.bg-slate-950 { background-color: #020617 !important; }
+
+.bg-sky-50   { background-color: #f0f9ff !important; }
+.bg-sky-100  { background-color: #e0f2fe !important; }
+.bg-sky-200  { background-color: #bae6fd !important; }
+.bg-sky-500  { background-color: #0ea5e9 !important; }
+.bg-sky-600  { background-color: #0284c7 !important; }
+.bg-sky-700  { background-color: #0369a1 !important; }
+
+.bg-blue-50   { background-color: #eff6ff !important; }
+.bg-blue-100  { background-color: #dbeafe !important; }
+.bg-blue-600  { background-color: #2563eb !important; }
+
+.bg-amber-50  { background-color: #fffbeb !important; }
+.bg-amber-100 { background-color: #fef3c7 !important; }
+.bg-amber-500 { background-color: #f59e0b !important; }
+
+.bg-purple-50  { background-color: #faf5ff !important; }
+.bg-purple-100 { background-color: #f3e8ff !important; }
+.bg-purple-600 { background-color: #9333ea !important; }
+
+.bg-green-50  { background-color: #f0fdf4 !important; }
+.bg-green-100 { background-color: #dcfce7 !important; }
+
+.bg-red-50    { background-color: #fef2f2 !important; }
+.bg-red-100   { background-color: #fee2e2 !important; }
+
+.bg-emerald-50 { background-color: #ecfdf5 !important; }
+.bg-emerald-100 { background-color: #d1fae5 !important; }
+
+.bg-orange-50  { background-color: #fff7ed !important; }
+.bg-orange-100 { background-color: #ffedd5 !important; }
+
+.bg-indigo-50  { background-color: #eef2ff !important; }
+.bg-indigo-100 { background-color: #e0e7ff !important; }
+
+.bg-cyan-50    { background-color: #ecfeff !important; }
+.bg-cyan-100   { background-color: #cffafe !important; }
+
+.bg-teal-50    { background-color: #f0fdfa !important; }
+.bg-teal-100   { background-color: #ccfbf1 !important; }
+
+.bg-yellow-50  { background-color: #fefce8 !important; }
+.bg-yellow-100 { background-color: #fef9c3 !important; }
+
+.bg-rose-50    { background-color: #fff1f2 !important; }
+.bg-rose-100   { background-color: #ffe4e6 !important; }
+
+/* ── GRADIENT SECTIONS (data-attribute approach) ── */
+[data-hero-gradient] {
+  background: linear-gradient(to bottom left, #0369a1, #0c4a6e, #082f49) !important;
+}
+[data-section="testimonials"] {
+  background: linear-gradient(to bottom right, #0c4a6e, #075985, #0c4a6e) !important;
+}
+[data-section="cta"] {
+  background: linear-gradient(to bottom left, #f59e0b, #d97706, #b45309) !important;
+}
+
+/* ── HERO GRADIENT UTILITY ── */
+@utility hero-gradient {
+  background: linear-gradient(to bottom left, #0369a1, #0c4a6e, #082f49) !important;
+}
+
+/* ── BUTTON OVERRIDES ── */
+@utility btn-sky {
+  background-color: #0284c7 !important;
+}
+.btn-sky:hover {
+  background-color: #0369a1 !important;
+}
+
+/* ── FILL COLORS (for SVG icons via Lucide) ── */
+.fill-amber-400 { fill: #fbbf24 !important; }
+.fill-amber-500 { fill: #f59e0b !important; }
+.fill-sky-400   { fill: #38bdf8 !important; }
+.fill-sky-500   { fill: #0ea5e9 !important; }
+.fill-yellow-400 { fill: #facc15 !important; }
+.fill-yellow-500 { fill: #eab308 !important; }
+.fill-green-500  { fill: #22c55e !important; }
+.fill-red-500    { fill: #ef4444 !important; }
+
+/* ── STROKE COLORS (SVG outlines) ── */
+.stroke-sky-500  { stroke: #0ea5e9 !important; }
+.stroke-amber-500 { stroke: #f59e0b !important; }
+
+/* ── BORDER COLORS ── */
+.border-gray-100 { border-color: #f3f4f6 !important; }
+.border-gray-200 { border-color: #e5e7eb !important; }
+.border-gray-300 { border-color: #d1d5db !important; }
+.border-sky-100  { border-color: #e0f2fe !important; }
+.border-sky-200  { border-color: #bae6fd !important; }
+.border-sky-300  { border-color: #7dd3fc !important; }
+.border-sky-400  { border-color: #38bdf8 !important; }
+.border-sky-500  { border-color: #0ea5e9 !important; }
+.border-blue-200 { border-color: #bfdbfe !important; }
+.border-blue-300 { border-color: #93c5fd !important; }
+.border-amber-200 { border-color: #fde68a !important; }
+.border-amber-300 { border-color: #fcd34d !important; }
+.border-amber-400 { border-color: #fbbf24 !important; }
+.border-purple-200 { border-color: #e9d5ff !important; }
+.border-green-200 { border-color: #bbf7d0 !important; }
+.border-green-300 { border-color: #86efac !important; }
+.border-red-200  { border-color: #fecaca !important; }
+.border-red-300  { border-color: #fca5a5 !important; }
+
+/* ── RING COLORS ── */
+.ring-sky-500  { --tw-ring-color: #0ea5e9 !important; }
+.ring-blue-500 { --tw-ring-color: #3b82f6 !important; }
+.ring-amber-500 { --tw-ring-color: #f59e0b !important; }
+
+/* ── DIVIDE COLORS ── */
+.divide-gray-100 > * + * { border-color: #f3f4f6 !important; }
+.divide-gray-200 > * + * { border-color: #e5e7eb !important; }
+
+/* ── FOOTER-SPECIFIC OVERRIDES ── */
+footer.bg-gradient-to-b {
+  background: linear-gradient(to bottom, #030712, #0f172a, #030712) !important;
+}
+
+/* ── PLACEHOLDER COLORS ── */
+.placeholder-gray-400::placeholder { color: #9ca3af !important; }
+.placeholder-gray-500::placeholder { color: #6b7280 !important; }
+
+/* Note: prokr-lite-mode CSS is injected via layout.tsx script
+   to bypass Tailwind v4 tree-shaking. */

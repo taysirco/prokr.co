@@ -40,7 +40,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
     return (
         <main className="min-h-screen bg-gray-50">
             {/* Search Header */}
-            <section className="bg-gradient-to-bl from-sky-600 via-sky-700 to-sky-900 text-white py-12">
+            <section className="hero-gradient text-white py-12" data-hero-gradient style={{ background: 'linear-gradient(to bottom left, #0369a1, #0c4a6e, #082f49)' }}>
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                     <h1 className="text-3xl font-bold mb-6">البحث في بروكر</h1>
                     <form action="/search" method="GET" className="relative">

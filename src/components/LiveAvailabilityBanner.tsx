@@ -89,10 +89,10 @@ export function LiveAvailabilityBanner({
 
     const currentMsg = dispatchMessages[currentMsgIndex];
 
-    // Dynamic colors based on mode
-    const bgClass = isEmergency
-        ? 'bg-gradient-to-r from-red-900 via-red-800 to-red-900 border-red-700/50'
-        : 'bg-gradient-to-r from-sky-900 via-sky-800 to-sky-900 border-sky-700/50';
+    const bgStyle = isEmergency
+        ? { background: 'linear-gradient(to right, #7f1d1d, #991b1b, #7f1d1d)' }
+        : { background: 'linear-gradient(to right, #0c4a6e, #075985, #0c4a6e)' };
+    const borderClass = isEmergency ? 'border-red-700/50' : 'border-sky-700/50';
 
     const liveColor = isEmergency ? 'bg-red-500' : 'bg-red-500';
     const livePing = isEmergency ? 'bg-red-400' : 'bg-red-400';
@@ -107,7 +107,7 @@ export function LiveAvailabilityBanner({
     const teamIcon = isEmergency ? '🚨' : '👷';
 
     return (
-        <div className={`${bgClass} border-b`}>
+        <div className={`${borderClass} border-b`} style={bgStyle}>
             <div className="max-w-7xl mx-auto px-4 py-2.5" dir="rtl">
                 {/* Top row: status indicators */}
                 <div className="flex items-center justify-between flex-wrap gap-2 mb-1.5">

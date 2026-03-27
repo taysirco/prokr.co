@@ -32,7 +32,7 @@ export default function AdvertiserCard({ advertiser, variant = 'standard' }: Adv
 
                 {/* Premium Badge */}
                 <div className="absolute top-4 left-4 z-10">
-                    <span className="inline-flex items-center gap-1 px-3 py-1 bg-gradient-to-l from-amber-400 to-yellow-500 text-amber-900 text-xs font-bold rounded-full shadow-lg">
+                    <span className="inline-flex items-center gap-1 px-3 py-1 text-amber-900 text-xs font-bold rounded-full shadow-lg" style={{ background: 'linear-gradient(to left, #fbbf24, #eab308)' }}>
                         <BadgeCheck className="w-3.5 h-3.5" />
                         معتمد
                     </span>
@@ -51,7 +51,7 @@ export default function AdvertiserCard({ advertiser, variant = 'standard' }: Adv
                                     className="object-cover rounded-xl border-2 border-amber-200"
                                 />
                             ) : (
-                                <div className="w-full h-full bg-gradient-to-br from-sky-100 to-sky-200 rounded-xl flex items-center justify-center border-2 border-amber-200">
+                                <div className="w-full h-full rounded-xl flex items-center justify-center border-2 border-amber-200" style={{ background: 'linear-gradient(to bottom right, #e0f2fe, #bae6fd)' }}>
                                     <span className="text-2xl font-bold text-sky-600">
                                         {advertiser.business_name.charAt(0)}
                                     </span>
@@ -151,7 +151,8 @@ export default function AdvertiserCard({ advertiser, variant = 'standard' }: Adv
                             label="اتصل الآن"
                             cityName={advertiser.targeted_cities[0] || ''}
                             serviceName={advertiser.business_name}
-                            className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-l from-sky-500 to-sky-600 text-white font-medium rounded-xl hover:from-sky-600 hover:to-sky-700 shadow-lg shadow-sky-500/30 hover:shadow-sky-500/50"
+                            className="flex-1 flex items-center justify-center gap-2 px-4 py-3 text-white font-medium rounded-xl hover:opacity-90 shadow-lg transition-all"
+                            style={{ background: 'linear-gradient(to left, #0ea5e9, #0284c7)' }}
                         >
                             <Phone className="w-5 h-5" />
                         </ActionButton>
@@ -164,7 +165,8 @@ export default function AdvertiserCard({ advertiser, variant = 'standard' }: Adv
                             external={true}
                             ariaLabel="واتساب"
                             advertiserName={advertiser.business_name}
-                            className="flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-l from-green-500 to-green-600 text-white font-medium rounded-xl hover:from-green-600 hover:to-green-700 shadow-lg shadow-green-500/30 hover:shadow-green-500/50"
+                            className="flex items-center justify-center gap-2 px-4 py-3 text-white font-medium rounded-xl hover:opacity-90 shadow-lg transition-all"
+                            style={{ background: 'linear-gradient(to left, #22c55e, #16a34a)' }}
                         >
                             <MessageCircle className="w-5 h-5" />
                         </ActionButton>
@@ -187,7 +189,7 @@ export default function AdvertiserCard({ advertiser, variant = 'standard' }: Adv
                         className="object-cover rounded-lg"
                     />
                 ) : (
-                    <div className="w-full h-full bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg flex items-center justify-center">
+                    <div className="w-full h-full rounded-lg flex items-center justify-center" style={{ background: 'linear-gradient(to bottom right, #f3f4f6, #e5e7eb)' }}>
                         <span className="text-lg font-bold text-gray-500">
                             {advertiser.business_name.charAt(0)}
                         </span>

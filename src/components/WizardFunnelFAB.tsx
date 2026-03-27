@@ -156,11 +156,8 @@ export default function WizardFunnelFAB({
                 <div className="fixed bottom-6 left-6 z-[9990] animate-wizard-fab-enter">
                     <button
                         onClick={handleOpen}
-                        className={`relative flex items-center gap-3 px-5 py-3.5 rounded-2xl font-bold text-white shadow-2xl transition-all hover:scale-105 active:scale-95 ${
-                            isNight
-                                ? 'bg-gradient-to-l from-red-600 to-red-700 shadow-red-600/40'
-                                : 'bg-gradient-to-l from-amber-500 to-orange-500 shadow-amber-500/40'
-                        }`}
+                        className={`relative flex items-center gap-3 px-5 py-3.5 rounded-2xl font-bold text-white shadow-2xl transition-all hover:scale-105 active:scale-95`}
+                        style={{ background: isNight ? 'linear-gradient(to left, #dc2626, #b91c1c)' : 'linear-gradient(to left, #f59e0b, #f97316)', boxShadow: isNight ? '0 10px 30px -5px rgba(220,38,38,0.4)' : '0 10px 30px -5px rgba(245,158,11,0.4)' }}
                     >
                         {/* Pulse ring */}
                         <span className={`absolute -top-1 -right-1 w-4 h-4 rounded-full animate-ping ${

@@ -202,7 +202,7 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
                     {/* Author Bio & Trust Signals */}
                     {article.authorBio && (
                         <div className="bg-white border border-gray-200 rounded-xl p-5 mb-10 flex items-start gap-4">
-                            <div className="w-12 h-12 bg-gradient-to-br from-sky-500 to-sky-600 rounded-full flex items-center justify-center flex-shrink-0">
+                            <div className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style={{ background: 'linear-gradient(to bottom right, #0ea5e9, #0284c7)' }}>
                                 <User className="w-6 h-6 text-white" />
                             </div>
                             <div>

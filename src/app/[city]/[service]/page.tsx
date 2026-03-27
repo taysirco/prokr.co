@@ -193,7 +193,7 @@ export default async function SiloPage({ params }: SiloPageProps) {
                 />
 
                 {/* Hero Section with Image */}
-                <section className="relative bg-gradient-to-bl from-sky-600 via-sky-700 to-sky-900 text-white overflow-hidden">
+                <section className="hero-gradient relative text-white overflow-hidden" data-hero-gradient style={{ background: 'linear-gradient(to bottom left, #0369a1, #0c4a6e, #082f49)' }}>
                     {/* Background Pattern */}
                     <div className="absolute inset-0 opacity-10">
                         <div className="absolute inset-0" style={{
@@ -201,7 +201,7 @@ export default async function SiloPage({ params }: SiloPageProps) {
                         }}></div>
                     </div>
 
-                    <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+                    <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 sm:py-8 lg:py-16">
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                             {/* Text Content */}
                             <div>
@@ -465,11 +465,12 @@ function PremiumCard({ advertiser }: { advertiser: Advertiser }) {
         <div className="group relative bg-white rounded-2xl border-2 border-amber-400 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
             <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-l from-amber-400 via-yellow-300 to-amber-400"></div>
 
-            <div className="absolute top-4 left-4 z-10">
-                <span className="inline-flex items-center gap-1 px-3 py-1 bg-gradient-to-l from-amber-400 to-yellow-500 text-amber-900 text-xs font-bold rounded-full shadow-lg">
-                    <BadgeCheck className="w-3.5 h-3.5" />
+            {/* Angled "معتمد" ribbon — top-left corner */}
+            <div className="absolute top-0 left-0 z-10 overflow-hidden w-24 h-24 pointer-events-none">
+                <div className="absolute top-[10px] left-[-28px] w-[120px] text-center rotate-[-45deg] bg-gradient-to-r from-amber-400 to-yellow-500 text-amber-900 text-[11px] font-extrabold py-1 shadow-md">
+                    <BadgeCheck className="w-3 h-3 inline-block ml-0.5 -mt-0.5" />
                     معتمد
-                </span>
+                </div>
             </div>
 
             <div className="p-6">
@@ -480,7 +481,7 @@ function PremiumCard({ advertiser }: { advertiser: Advertiser }) {
                                 src={advertiser.logo_url}
                                 alt={advertiser.business_name}
                                 fill
-                                className="object-cover rounded-xl border-2 border-amber-200"
+                                className="object-contain rounded-xl border-2 border-amber-200 p-1"
                             />
                         ) : (
                             <div className="w-full h-full bg-gradient-to-br from-sky-100 to-sky-200 rounded-xl flex items-center justify-center border-2 border-amber-200">
@@ -542,7 +543,8 @@ function PremiumCard({ advertiser }: { advertiser: Advertiser }) {
                         label="اتصل الآن"
                         cityName={advertiser.targeted_cities[0] || ''}
                         serviceName={advertiser.business_name}
-                        className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-l from-sky-500 to-sky-600 text-white font-medium rounded-xl hover:from-sky-600 hover:to-sky-700 shadow-lg shadow-sky-500/30 transition-all"
+                        className="flex-1 flex items-center justify-center gap-2 px-4 py-3 text-white font-medium rounded-xl hover:opacity-90 shadow-lg transition-all"
+                        style={{ background: 'linear-gradient(to left, #0ea5e9, #0284c7)' }}
                     >
                         <Phone className="w-5 h-5" />
                     </ActionButton>
@@ -555,7 +557,8 @@ function PremiumCard({ advertiser }: { advertiser: Advertiser }) {
                         external
                         advertiserName={advertiser.business_name}
                         ariaLabel="واتساب"
-                        className="flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-l from-green-500 to-green-600 text-white font-medium rounded-xl hover:from-green-600 hover:to-green-700 shadow-lg shadow-green-500/30 transition-all"
+                        className="flex items-center justify-center gap-2 px-4 py-3 text-white font-medium rounded-xl hover:opacity-90 shadow-lg transition-all"
+                        style={{ background: 'linear-gradient(to left, #22c55e, #16a34a)' }}
                     >
                         <MessageCircle className="w-5 h-5" />
                     </ActionButton>
@@ -578,7 +581,7 @@ function StandardRow({ advertiser }: { advertiser: Advertiser }) {
                         src={advertiser.logo_url}
                         alt={advertiser.business_name}
                         fill
-                        className="object-cover rounded-lg"
+                        className="object-contain rounded-lg p-0.5"
                     />
                 ) : (
                     <div className="w-full h-full bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg flex items-center justify-center">

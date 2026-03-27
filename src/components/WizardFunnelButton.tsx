@@ -58,19 +58,15 @@ export default function WizardFunnelButton({
     const ctaSubtext = timingConfig?.ctaSubtext || 'مجاناً • بدون التزام';
     const isNight = timingConfig?.isNightMode || false;
 
-    const gradientClass = isNight
-        ? 'from-red-600 via-red-700 to-red-800'
-        : 'from-amber-500 via-orange-500 to-amber-600';
-    const gradientClassBl = isNight
-        ? 'from-red-600 via-red-700 to-red-800'
-        : 'from-amber-500 via-orange-500 to-orange-600';
+
 
     if (placement === 'compact') {
         return (
             <>
                 <button
                     onClick={() => setIsOpen(true)}
-                    className={`w-full flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-l ${gradientClass} text-white font-bold rounded-xl hover:opacity-90 transition-all shadow-lg active:scale-[0.98] text-sm ${className}`}
+                    className={`w-full flex items-center justify-center gap-2 px-4 py-3 text-white font-bold rounded-xl hover:opacity-90 transition-all shadow-lg active:scale-[0.98] text-sm ${className}`}
+                    style={{ background: isNight ? 'linear-gradient(to left, #dc2626, #b91c1c, #991b1b)' : 'linear-gradient(to left, #f59e0b, #f97316, #d97706)' }}
                 >
                     <span className="text-base">{ctaEmoji}</span>
                     {compareWithCompany
@@ -97,7 +93,7 @@ export default function WizardFunnelButton({
         return (
             <>
                 <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 ${className}`}>
-                    <div className={`relative overflow-hidden rounded-2xl bg-gradient-to-l ${gradientClass} p-6 sm:p-8 text-center shadow-xl`}>
+                    <div className={`relative overflow-hidden rounded-2xl p-6 sm:p-8 text-center shadow-xl`} style={{ background: isNight ? 'linear-gradient(to left, #dc2626, #b91c1c, #991b1b)' : 'linear-gradient(to left, #f59e0b, #f97316, #d97706)' }}>
                         {/* Background decoration */}
                         <div className="absolute top-0 left-0 w-32 h-32 bg-white/10 rounded-full blur-2xl" />
                         <div className="absolute bottom-0 right-0 w-40 h-40 bg-black/10 rounded-full blur-2xl" />
@@ -144,7 +140,7 @@ export default function WizardFunnelButton({
         <>
             <section className={`py-12 ${className}`}>
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className={`relative overflow-hidden rounded-[2rem] bg-gradient-to-bl ${gradientClassBl} p-8 sm:p-12 text-center shadow-2xl`}>
+                    <div className={`relative overflow-hidden rounded-[2rem] p-8 sm:p-12 text-center shadow-2xl`} style={{ background: isNight ? 'linear-gradient(to bottom left, #dc2626, #b91c1c, #991b1b)' : 'linear-gradient(to bottom left, #f59e0b, #f97316, #ea580c)' }}>
                         {/* Background shapes */}
                         <div className="absolute top-0 left-0 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
                         <div className="absolute bottom-0 right-0 w-72 h-72 bg-black/10 rounded-full blur-3xl" />
