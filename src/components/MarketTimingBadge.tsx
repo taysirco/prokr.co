@@ -25,12 +25,21 @@ export default function MarketTimingBadge({ compact = false, className = '' }: M
     // SSR: return null to avoid hydration mismatch (div→span type change in compact mode)
     if (!config) return null;
 
+    // Map phase to guaranteed hex colors for text
+    const textColorMap: Record<string, string> = {
+        premium: '#78350f',  // amber-900
+        budget: '#075985',   // sky-800
+        urgency: '#991b1b',  // red-800
+    };
+    const textHex = textColorMap[config.phase] || '#1f2937';
+
     if (compact) {
         return (
             <span
                 className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold
-                    ${config.colors.badgeBg} ${config.colors.badgeText} border ${config.colors.badgeBorder}
+                    ${config.colors.badgeBg} border ${config.colors.badgeBorder}
                     animate-fade-in ${className}`}
+                style={{ color: textHex }}
             >
                 <span>{config.icon}</span>
                 <span>{config.label}</span>
@@ -46,7 +55,7 @@ export default function MarketTimingBadge({ compact = false, className = '' }: M
         >
             <span className="text-lg">{config.icon}</span>
             <div className="flex flex-col">
-                <span className={`text-sm font-bold ${config.colors.badgeText}`}>
+                <span className="text-sm font-bold" style={{ color: textHex }}>
                     {config.badgeText}
                 </span>
                 {config.showInstallment && (
@@ -77,10 +86,18 @@ export function MarketTimingNote({ className = '' }: { className?: string }) {
 
     if (!config) return null;
 
+    const noteTextColorMap: Record<string, string> = {
+        premium: '#78350f',
+        budget: '#075985',
+        urgency: '#991b1b',
+    };
+    const noteTextHex = noteTextColorMap[config.phase] || '#1f2937';
+
     return (
         <p className={`text-xs font-medium mt-2 px-3 py-1.5 rounded-lg border
-            ${config.colors.badgeBg} ${config.colors.badgeText} ${config.colors.badgeBorder}
+            ${config.colors.badgeBg} ${config.colors.badgeBorder}
             ${className}`}
+            style={{ color: noteTextHex }}
         >
             {config.icon} {config.pricingNote}
         </p>

@@ -210,12 +210,21 @@ export default function LeadCaptureCTA({ cityName, serviceName, serviceSlug, cit
                     </div>
 
                     {/* 💰 Market Timing Banner */}
-                    <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold mb-6
-                        ${cycleConfig.colors.badgeBg} ${cycleConfig.colors.badgeText} border ${cycleConfig.colors.badgeBorder}`}
-                    >
-                        <span>{cycleConfig.icon}</span>
-                        <span>{cycleConfig.badgeText}</span>
-                    </div>
+                    {(() => {
+                        const badgeTextColorMap: Record<string, string> = {
+                            premium: '#78350f', budget: '#075985', urgency: '#991b1b',
+                        };
+                        const badgeHex = badgeTextColorMap[cycleConfig.phase] || '#1f2937';
+                        return (
+                            <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold mb-6
+                                ${cycleConfig.colors.badgeBg} border ${cycleConfig.colors.badgeBorder}`}
+                                style={{ color: badgeHex }}
+                            >
+                                <span>{cycleConfig.icon}</span>
+                                <span>{cycleConfig.badgeText}</span>
+                            </div>
+                        );
+                    })()}
 
                     {/* Title — unique per city+service */}
                     <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-4 leading-tight">
