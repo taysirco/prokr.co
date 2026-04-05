@@ -173,13 +173,16 @@ export default function WizardFunnelFAB({
                         </span>
 
                         {/* Dismiss X */}
-                        <button
+                        <span
+                            role="button"
+                            tabIndex={0}
                             onClick={handleDismiss}
-                            className="w-6 h-6 flex items-center justify-center rounded-full bg-white/20 hover:bg-white/30 text-white/80 text-xs transition-colors mr-1"
+                            onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handleDismiss(e as any); } }}
+                            className="w-6 h-6 flex items-center justify-center rounded-full bg-white/20 hover:bg-white/30 text-white/80 text-xs transition-colors mr-1 cursor-pointer"
                             aria-label="إخفاء"
                         >
                             ✕
-                        </button>
+                        </span>
                     </button>
                 </div>
             )}
