@@ -12,6 +12,7 @@ import {
     MessageCircle,
     Crown,
     MapPin,
+    MapPinned,
     Wrench,
     Image as ImageIcon,
     Save,
@@ -986,16 +987,8 @@ export default function AdminDashboard() {
                                                                 </span>
                                                             </div>
                                                         </div>
-                                                        <span className={`px-3 py-1 rounded-lg text-sm font-medium ${request.selected_plan === 'premium'
-                                                            ? 'bg-sky-100 text-sky-700'
-                                                            : 'bg-gray-100 text-gray-600'
-                                                            }`}>
-                                                            {request.selected_plan === 'premium' ? (
-                                                                <>
-                                                                    <Crown className="w-4 h-4 inline ml-1" />
-                                                                    مميز
-                                                                </>
-                                                            ) : 'مجاني'}
+                                                        <span className="px-3 py-1 rounded-lg text-sm font-medium bg-sky-100 text-sky-700">
+                                                            طلب جديد
                                                         </span>
                                                     </div>
 
@@ -1006,6 +999,12 @@ export default function AdminDashboard() {
                                                             <MapPin className="w-4 h-4" />
                                                             {request.targeted_cities.length} مدينة
                                                         </span>
+                                                        {request.targeted_neighborhoods && request.targeted_neighborhoods.length > 0 && (
+                                                            <span className="flex items-center gap-1">
+                                                                <MapPinned className="w-4 h-4" />
+                                                                {request.targeted_neighborhoods.length} حي
+                                                            </span>
+                                                        )}
                                                         <span className="flex items-center gap-1">
                                                             <Wrench className="w-4 h-4" />
                                                             {request.targeted_services.length} خدمة
@@ -1015,6 +1014,27 @@ export default function AdminDashboard() {
                                                             {new Date(request.created_at).toLocaleDateString('ar-SA')}
                                                         </span>
                                                     </div>
+
+                                                    {/* Financial & Duration Info */}
+                                                    {(request.duration_days || request.calculated_price_sar) && (
+                                                        <div className="mt-4 p-3 bg-sky-50 border border-sky-100 rounded-lg flex flex-wrap gap-6 text-sm">
+                                                            {request.duration_days && (
+                                                                <span className="font-medium text-sky-900 border-l border-sky-200 pl-6">
+                                                                    مدة الإعلان: {request.duration_days} يوم
+                                                                </span>
+                                                            )}
+                                                            {request.calculated_price_sar && (
+                                                                <span className="font-bold text-sky-900">
+                                                                    السعر النهائي: {request.calculated_price_sar.toLocaleString()} ريال
+                                                                </span>
+                                                            )}
+                                                            {request.discount_applied_sar > 0 ? (
+                                                                <span className="font-medium text-green-700 bg-green-100 px-3 py-0.5 rounded-full text-xs">
+                                                                    مشمول خصم {request.discount_applied_sar.toLocaleString()} ريال
+                                                                </span>
+                                                            ) : null}
+                                                        </div>
+                                                    )}
 
                                                     {/* Gallery Preview */}
                                                     {request.gallery && request.gallery.length > 0 && (

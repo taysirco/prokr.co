@@ -3,7 +3,7 @@ import { IBM_Plex_Sans_Arabic } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Suspense } from "react";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
+import NavbarWrapper from "@/components/NavbarWrapper";
 import Analytics from "@/components/Analytics";
 import ServiceWorkerRegistrar from "@/components/ServiceWorkerRegistrar";
 
@@ -504,8 +504,8 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="font-sans antialiased bg-gray-50 text-gray-900">
-        <Navbar />
+      <body className="font-sans antialiased bg-gray-50 text-gray-900" suppressHydrationWarning>
+        <NavbarWrapper />
         {children}
         <Suspense fallback={null}>
           <Analytics />

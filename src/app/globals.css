@@ -649,3 +649,32 @@ footer.bg-gradient-to-b {
 
 /* Note: prokr-lite-mode CSS is injected via layout.tsx script
    to bypass Tailwind v4 tree-shaking. */
+
+/* ── CTA Button Backgrounds (hydration-safe via data-attributes) ── */
+a[data-cta-type="phone"] {
+  background-color: #0284c7 !important;
+  color: #ffffff !important;
+}
+a[data-cta-type="phone"]:hover {
+  background-color: #0369a1 !important;
+}
+
+a[data-cta-type="whatsapp"] {
+  background-color: #16a34a !important;
+  color: #ffffff !important;
+}
+a[data-cta-type="whatsapp"]:hover {
+  background-color: #15803d !important;
+}
+
+/* ── CTA Button Backgrounds (href-based fallback for hydration recovery) ── */
+/* Target all tel: and wa.me links with shadow-lg class (CTA buttons only) */
+a[href^="tel:"].shadow-lg {
+  background-color: #0284c7 !important;
+  color: #ffffff !important;
+}
+
+a[href*="wa.me"].shadow-lg {
+  background-color: #16a34a !important;
+  color: #ffffff !important;
+}

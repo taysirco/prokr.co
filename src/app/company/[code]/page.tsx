@@ -6,8 +6,6 @@ import {
     Home,
     ChevronLeft,
     Star,
-    Phone,
-    MessageCircle,
     BadgeCheck,
     MapPin,
     Clock,
@@ -177,9 +175,9 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                         }}></div>
                     </div>
 
-                    <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                    <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 sm:py-8">
                         {/* Breadcrumbs */}
-                        <nav className="flex items-center gap-2 text-sky-100 text-sm mb-6">
+                        <nav className="flex items-center gap-2 text-sky-100 text-sm mb-4 sm:mb-6">
                             <Link href="/" className="hover:text-white transition-colors flex items-center gap-1">
                                 <Home className="w-4 h-4" />
                                 الرئيسية
@@ -203,10 +201,10 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                         </nav>
 
                         {/* Profile Header */}
-                        <div className="flex flex-col md:flex-row gap-6 items-start">
+                        <div className="flex flex-row gap-4 sm:gap-6 items-start">
                             {/* Logo */}
-                            <div className="relative">
-                                <div className="relative w-28 h-28 md:w-32 md:h-32 bg-white rounded-2xl shadow-xl flex items-center justify-center border-4 border-white overflow-hidden">
+                            <div className="relative flex-shrink-0">
+                                <div className="relative w-20 h-20 sm:w-28 sm:h-28 md:w-32 md:h-32 bg-white rounded-2xl shadow-xl flex items-center justify-center border-4 border-white overflow-hidden">
                                     {advertiser.logo_url ? (
                                         <Image
                                             src={advertiser.logo_url}
@@ -216,7 +214,7 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                                             sizes="128px"
                                         />
                                     ) : (
-                                        <span className="text-4xl font-bold text-sky-600">
+                                        <span className="text-3xl sm:text-4xl font-bold text-sky-600">
                                             {advertiser.business_name.charAt(0)}
                                         </span>
                                     )}
@@ -224,59 +222,59 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                                     <VisionAiWatermark position="top-right" size="xs" />
                                 </div>
                                 {advertiser.is_premium && (
-                                    <div className="absolute -bottom-2 -right-2 w-10 h-10 rounded-full flex items-center justify-center shadow-lg" style={{ background: 'linear-gradient(to bottom right, #fbbf24, #eab308)' }}>
-                                        <BadgeCheck className="w-6 h-6 text-white" />
+                                    <div className="absolute -bottom-2 -right-2 w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center shadow-lg" style={{ background: 'linear-gradient(to bottom right, #fbbf24, #eab308)' }}>
+                                        <BadgeCheck className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                                     </div>
                                 )}
                             </div>
 
                             {/* Info */}
-                            <div className="flex-1">
-                                <div className="flex items-start justify-between gap-4">
-                                    <div>
-                                        <h1 className="text-2xl md:text-3xl font-bold mb-2">
+                            <div className="flex-1 min-w-0">
+                                <div className="flex items-start justify-between gap-2 sm:gap-4">
+                                    <div className="flex-1 min-w-0">
+                                        <h1 className="text-lg sm:text-2xl md:text-3xl font-bold mb-1 sm:mb-2 leading-tight line-clamp-3">
                                             {advertiser.business_name}
                                         </h1>
                                         {advertiser.is_premium && (
-                                            <span className="inline-flex items-center gap-1.5 px-3 py-1 text-amber-900 text-sm font-bold rounded-full" style={{ background: 'linear-gradient(to left, #fbbf24, #eab308)' }}>
-                                                <BadgeCheck className="w-4 h-4" />
+                                            <span className="inline-flex items-center gap-1 sm:gap-1.5 px-2 sm:px-3 py-0.5 sm:py-1 text-amber-900 text-xs sm:text-sm font-bold rounded-full" style={{ background: 'linear-gradient(to left, #fbbf24, #eab308)' }}>
+                                                <BadgeCheck className="w-3 h-3 sm:w-4 sm:h-4" />
                                                 شركة معتمدة
                                             </span>
                                         )}
                                     </div>
 
                                     {/* Actions */}
-                                    <div className="flex gap-2">
-                                        <button className="p-2 bg-white/20 rounded-lg hover:bg-white/30 transition-colors">
-                                            <Share2 className="w-5 h-5" />
-                                        </button>
-                                        <button className="p-2 bg-white/20 rounded-lg hover:bg-white/30 transition-colors">
-                                            <Heart className="w-5 h-5" />
-                                        </button>
+                                    <div className="flex gap-1.5 sm:gap-2 flex-shrink-0">
+                                        <span className="p-1.5 sm:p-2 bg-white/20 rounded-lg cursor-pointer hover:bg-white/30 transition-colors" aria-label="مشاركة">
+                                            <Share2 className="w-4 h-4 sm:w-5 sm:h-5" />
+                                        </span>
+                                        <span className="p-1.5 sm:p-2 bg-white/20 rounded-lg cursor-pointer hover:bg-white/30 transition-colors" aria-label="حفظ">
+                                            <Heart className="w-4 h-4 sm:w-5 sm:h-5" />
+                                        </span>
                                     </div>
                                 </div>
 
                                 {/* Rating & Stats */}
-                                <div className="flex flex-wrap items-center gap-4 mt-4">
+                                <div className="flex flex-wrap items-center gap-2 sm:gap-4 mt-2 sm:mt-4">
                                     {avgRating > 0 && (
-                                        <div className="flex items-center gap-2 bg-white/20 rounded-full px-3 py-1.5">
+                                        <div className="flex items-center gap-1.5 sm:gap-2 bg-white/20 rounded-full px-2 sm:px-3 py-1 sm:py-1.5">
                                             <div className="flex">
                                                 {[1, 2, 3, 4, 5].map(star => (
                                                     <Star
                                                         key={star}
-                                                        className={`w-4 h-4 ${star <= avgRating ? 'text-amber-300 fill-amber-300' : 'text-white/40'}`}
+                                                        className={`w-3 h-3 sm:w-4 sm:h-4 ${star <= avgRating ? 'text-amber-300 fill-amber-300' : 'text-white/40'}`}
                                                     />
                                                 ))}
                                             </div>
-                                            <span className="text-sm font-medium">
+                                            <span className="text-xs sm:text-sm font-medium">
                                                 {avgRating.toFixed(1)} ({reviews.length} تقييم)
                                             </span>
                                         </div>
                                     )}
 
-                                    <div className="flex items-center gap-1.5 text-sky-100">
-                                        <MapPin className="w-4 h-4" />
-                                        <span className="text-sm">
+                                    <div className="flex items-center gap-1 sm:gap-1.5 text-sky-100">
+                                        <MapPin className="w-3 h-3 sm:w-4 sm:h-4" />
+                                        <span className="text-xs sm:text-sm">
                                             {advertiser.targeted_cities.slice(0, 3).map(c => getCityBySlug(c)?.name_ar).join(' • ')}
                                         </span>
                                     </div>

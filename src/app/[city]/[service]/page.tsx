@@ -220,7 +220,7 @@ export default async function SiloPage({ params }: SiloPageProps) {
                                 </nav>
 
                                 {/* Main Title */}
-                                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+                                <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold mb-4">
                                     {aiContent.h1}
                                 </h1>
 
@@ -228,12 +228,7 @@ export default async function SiloPage({ params }: SiloPageProps) {
                                 <div className="mb-3">
                                     <MarketTimingBadge compact />
                                 </div>
-                                <p className="text-lg text-sky-100 max-w-xl">
-                                    {aiContent.heroSubtitle
-                                        ? aiContent.heroSubtitle
-                                        : `${cityContext?.responseTime ? `استجابة ${cityContext.responseTime} — ` : ''}قارن بين أفضل شركات ${service.name_ar} المعتمدة ${cityKw}${cityContext?.neighborhoods?.[0] ? ` في ${cityContext.neighborhoods[0].name_ar} والأحياء المجاورة` : ''}. أسعار ${new Date().getFullYear()}.`
-                                    }
-                                </p>
+
 
                                 {/* Stats */}
                                 <div className="flex flex-wrap gap-6 mt-8">
@@ -473,7 +468,7 @@ function PremiumCard({ advertiser }: { advertiser: Advertiser }) {
                 </div>
             </div>
 
-            <div className="p-6">
+            <div className="p-4 sm:p-6">
                 <div className="flex items-start gap-4">
                     <div className="relative w-20 h-20 flex-shrink-0">
                         {advertiser.logo_url ? (
@@ -497,7 +492,7 @@ function PremiumCard({ advertiser }: { advertiser: Advertiser }) {
                             href={`/company/${advertiser.short_code}`}
                             className="block"
                         >
-                            <h3 className="font-bold text-lg text-gray-900 group-hover:text-sky-600 transition-colors truncate">
+                            <h3 className="font-bold text-base sm:text-lg text-gray-900 group-hover:text-sky-600 transition-colors line-clamp-2 leading-snug">
                                 {advertiser.business_name}
                             </h3>
                         </Link>
@@ -536,15 +531,14 @@ function PremiumCard({ advertiser }: { advertiser: Advertiser }) {
                     {advertiser.description}
                 </p>
 
-                <div className="flex gap-3 mt-5">
+                <div className="flex gap-2 sm:gap-3 mt-4">
                     <ActionButton
                         href={phoneLink}
                         type="phone"
                         label="اتصل الآن"
                         cityName={advertiser.targeted_cities[0] || ''}
                         serviceName={advertiser.business_name}
-                        className="flex-1 flex items-center justify-center gap-2 px-4 py-3 text-white font-medium rounded-xl hover:opacity-90 shadow-lg transition-all"
-                        style={{ background: 'linear-gradient(to left, #0ea5e9, #0284c7)' }}
+                        className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 sm:py-3 bg-sky-600 hover:bg-sky-700 text-white font-medium rounded-xl shadow-lg transition-all"
                     >
                         <Phone className="w-5 h-5" />
                     </ActionButton>
@@ -557,8 +551,7 @@ function PremiumCard({ advertiser }: { advertiser: Advertiser }) {
                         external
                         advertiserName={advertiser.business_name}
                         ariaLabel="واتساب"
-                        className="flex items-center justify-center gap-2 px-4 py-3 text-white font-medium rounded-xl hover:opacity-90 shadow-lg transition-all"
-                        style={{ background: 'linear-gradient(to left, #22c55e, #16a34a)' }}
+                        className="flex items-center justify-center gap-2 px-4 py-2.5 sm:py-3 bg-green-500 hover:bg-green-600 text-white font-medium rounded-xl shadow-lg transition-all"
                     >
                         <MessageCircle className="w-5 h-5" />
                     </ActionButton>
@@ -595,7 +588,7 @@ function StandardRow({ advertiser }: { advertiser: Advertiser }) {
             <div className="flex-1 min-w-0">
                 <Link
                     href={`/company/${advertiser.short_code}`}
-                    className="font-medium text-gray-900 hover:text-sky-600 transition-colors truncate block"
+                    className="font-medium text-gray-900 hover:text-sky-600 transition-colors block leading-snug line-clamp-2 text-sm"
                 >
                     {advertiser.business_name}
                 </Link>

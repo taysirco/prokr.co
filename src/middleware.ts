@@ -63,6 +63,12 @@ export function middleware(request: NextRequest) {
         pathname.includes('.') ||  // Static files like .css, .js, .ico
         pathname === '/'
     ) {
+        // For /search routes: add X-Robots-Tag header to prevent indexing
+        if (pathname.startsWith('/search')) {
+            const response = NextResponse.next();
+            response.headers.set('X-Robots-Tag', 'noindex, nofollow');
+            return response;
+        }
         return NextResponse.next();
     }
 

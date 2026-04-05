@@ -38,6 +38,28 @@ export default function Navbar() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    // Global Cmd/Ctrl+K to open search & custom event listeners
+    useEffect(() => {
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+                e.preventDefault();
+                setIsSearchOpen(prev => !prev);
+            }
+        };
+
+        const handleOpenSearch = () => {
+            setIsSearchOpen(true);
+        };
+
+        document.addEventListener('keydown', handleKeyDown);
+        window.addEventListener('open-search', handleOpenSearch);
+        
+        return () => {
+            document.removeEventListener('keydown', handleKeyDown);
+            window.removeEventListener('open-search', handleOpenSearch);
+        };
+    }, []);
+
     return (
         <>
             {/* Top Bar - Contact Info */}

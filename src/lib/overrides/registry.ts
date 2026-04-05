@@ -242,6 +242,10 @@ import { override as onizahThermalInsulation } from './pages/onizah/thermal-insu
 import { override as onizahSewageUnblocking } from './pages/onizah/sewage-unblocking';
 import { override as onizahSewageSuction } from './pages/onizah/sewage-suction';
 
+// ─── AR-RASS (2) ───
+import { override as arRassWaterLeakDetection } from './pages/ar-rass/water-leak-detection';
+import { override as arRassRoofInsulation } from './pages/ar-rass/roof-insulation';
+
 // ═══ WESTERN REGION ═══
 
 // ─── JEDDAH (50) ───
@@ -1248,6 +1252,10 @@ const PAGE_OVERRIDES: Record<OverrideKey, PageOverride> = {
     [makeOverrideKey('onizah', 'thermal-insulation')]: onizahThermalInsulation,
     [makeOverrideKey('onizah', 'sewage-unblocking')]: onizahSewageUnblocking,
     [makeOverrideKey('onizah', 'sewage-suction')]: onizahSewageSuction,
+
+    // ─── ar-rass (2) ───
+    [makeOverrideKey('ar-rass', 'water-leak-detection')]: arRassWaterLeakDetection,
+    [makeOverrideKey('ar-rass', 'roof-insulation')]: arRassRoofInsulation,
 
     // ═══ WESTERN REGION ═══
 

@@ -20,6 +20,7 @@ export const CITIES: City[] = [
     { slug: 'qassim', name_ar: 'القصيم', name_en: 'Al Qassim', region: 'central' },
     { slug: 'buraidah', name_ar: 'بريدة', name_en: 'Buraidah', region: 'central' },
     { slug: 'onizah', name_ar: 'عنيزة', name_en: 'Onizah', region: 'central' },
+    { slug: 'ar-rass', name_ar: 'الرس', name_en: 'Ar Rass', region: 'central' },
     { slug: 'diriyah', name_ar: 'الدرعية', name_en: 'Diriyah', region: 'central' },
     { slug: 'majmaah', name_ar: 'المجمعة', name_en: 'Majmaah', region: 'central' },
 

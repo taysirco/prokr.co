@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import HeroSearch from '@/components/HeroSearch';
 import {
   Truck,
   Sparkles,
@@ -225,20 +226,7 @@ export default function HomePage() {
                 </p>
 
                 {/* Search Bar */}
-                <form action="/search" method="GET" className="relative max-w-xl mx-auto lg:mx-0 lg:mr-0 mb-8">
-                  <div className="relative">
-                    <Search className="absolute right-4 top-1/2 -translate-y-1/2 w-6 h-6 text-gray-400" />
-                    <input
-                      type="text"
-                      name="q"
-                      placeholder="ابحث عن خدمة أو مدينة..."
-                      className="w-full pr-14 pl-32 py-4 bg-white rounded-2xl text-gray-900 placeholder-gray-400 shadow-2xl shadow-sky-900/30 focus:outline-none focus:ring-4 focus:ring-white/30"
-                    />
-                    <button type="submit" className="absolute left-2 top-1/2 -translate-y-1/2 px-6 py-2.5 text-white font-medium rounded-xl hover:opacity-90 transition-all shadow-lg" style={{ background: 'linear-gradient(to left, #0284c7, #0369a1)' }}>
-                      بحث
-                    </button>
-                  </div>
-                </form>
+                <HeroSearch />
 
                 {/* Quick City Links */}
                 <div className="flex flex-wrap gap-2 justify-center lg:justify-start">

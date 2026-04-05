@@ -38,8 +38,11 @@ export async function createAdvertiserRequest(
         gallery: galleryUrls,
         targeted_cities: data.targeted_cities,
         targeted_services: data.targeted_services,
+        targeted_neighborhoods: data.targeted_neighborhoods || [],
         region: data.region,
-        selected_plan: data.selected_plan,
+        duration_days: data.duration_days,
+        calculated_price_sar: data.calculated_price_sar,
+        discount_applied_sar: data.discount_applied_sar,
         status: 'pending' as const,
         created_at: Timestamp.fromDate(now),
         updated_at: Timestamp.fromDate(now),
@@ -107,19 +110,29 @@ export async function approveRequest(requestId: string): Promise<Advertiser> {
 
     const requestData = requestSnap.data() as AdvertiserRequest;
 
+    // Since advertiser paid via reps/bank transfer, we honor their requested duration
+    const now = new Date();
+    const durationDays = requestData.duration_days || 30; // fallback to 30 just in case
+    const expiryDate = new Date(now);
+    expiryDate.setDate(expiryDate.getDate() + durationDays);
+
+    let priorityScore = 50;
+    if (durationDays === 60) priorityScore = 100;
+    else if (durationDays === 30) priorityScore = 80;
+    else if (durationDays === 15) priorityScore = 65;
+
     // Create the advertiser
     const advertiser = await createAdvertiser({
         business_name: requestData.business_name,
         phone_number: requestData.phone_number,
         whatsapp_number: requestData.whatsapp_number,
         logo_url: requestData.logo_url,
-        is_premium: requestData.selected_plan === 'premium',
-        priority_score: requestData.selected_plan === 'premium' ? 80 : 50,
-        subscription_expiry: requestData.selected_plan === 'premium'
-            ? new Date(Date.now() + 30 * 24 * 60 * 60 * 1000) // 30 days
-            : null,
+        is_premium: true, // Mark as premium since they registered via paid wizard
+        priority_score: priorityScore,
+        subscription_expiry: expiryDate,
         targeted_cities: requestData.targeted_cities,
         targeted_services: requestData.targeted_services,
+        targeted_neighborhoods: requestData.targeted_neighborhoods,
         description: requestData.description,
         gallery: requestData.gallery,
     });

@@ -8,43 +8,43 @@ export default function robots(): MetadataRoute.Robots {
             {
                 userAgent: '*',
                 allow: '/',
-                disallow: ['/admin', '/api'],
+                disallow: ['/admin', '/api', '/search'],
                 crawlDelay: 1,
             },
             {
                 userAgent: 'GPTBot',
                 allow: '/',
-                disallow: ['/admin', '/api'],
+                disallow: ['/admin', '/api', '/search'],
             },
             {
                 userAgent: 'ChatGPT-User',
                 allow: '/',
-                disallow: ['/admin', '/api'],
+                disallow: ['/admin', '/api', '/search'],
             },
             {
                 userAgent: 'Claude-Web',
                 allow: '/',
-                disallow: ['/admin', '/api'],
+                disallow: ['/admin', '/api', '/search'],
             },
             {
                 userAgent: 'Applebot-Extended',
                 allow: '/',
-                disallow: ['/admin', '/api'],
+                disallow: ['/admin', '/api', '/search'],
             },
             {
                 userAgent: 'PerplexityBot',
                 allow: '/',
-                disallow: ['/admin', '/api'],
+                disallow: ['/admin', '/api', '/search'],
             },
             {
                 userAgent: 'Googlebot',
                 allow: '/',
-                disallow: ['/admin', '/api'],
+                disallow: ['/admin', '/api', '/search'],
             },
             {
                 userAgent: 'Bingbot',
                 allow: '/',
-                disallow: ['/admin', '/api'],
+                disallow: ['/admin', '/api', '/search'],
             },
         ],
         sitemap: [

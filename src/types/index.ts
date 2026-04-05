@@ -45,6 +45,7 @@ export interface Advertiser {
   subscription_expiry: Date | null;
   targeted_cities: string[]; // Array of city slugs
   targeted_services: string[]; // Array of service slugs
+  targeted_neighborhoods?: string[]; // Array of neighborhood slugs (optional for older records)
   description: string;
   gallery: string[]; // Array of image URLs
   reviews: Review[];
@@ -76,6 +77,7 @@ export interface AdvertiserFormData {
   subscription_expiry?: Date | null;
   targeted_cities: string[];
   targeted_services: string[];
+  targeted_neighborhoods?: string[];
   description: string;
   gallery?: string[];
   // Enhanced LocalBusiness Schema fields
@@ -290,8 +292,11 @@ export interface AdvertiserRequest {
   gallery: string[];
   targeted_cities: string[];
   targeted_services: string[];
+  targeted_neighborhoods?: string[];
   region: string;
-  selected_plan: 'free' | 'premium';
+  duration_days: 15 | 30 | 60;
+  calculated_price_sar: number;
+  discount_applied_sar: number;
   status: 'pending' | 'approved' | 'rejected';
   rejection_reason?: string;
   created_at: Date;
@@ -307,8 +312,11 @@ export interface AdvertiserRequestFormData {
   description: string;
   targeted_cities: string[];
   targeted_services: string[];
+  targeted_neighborhoods?: string[];
   region: string;
-  selected_plan: 'free' | 'premium';
+  duration_days: 15 | 30 | 60;
+  calculated_price_sar: number;
+  discount_applied_sar: number;
 }
 
 // ============================================

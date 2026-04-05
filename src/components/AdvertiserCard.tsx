@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { Phone, MessageCircle, Star, BadgeCheck, MapPin } from 'lucide-react';
@@ -39,7 +41,7 @@ export default function AdvertiserCard({ advertiser, variant = 'standard' }: Adv
                 </div>
 
                 {/* Card Content */}
-                <div className="p-6">
+                <div className="p-4 sm:p-6">
                     {/* Logo & Info */}
                     <div className="flex items-start gap-4">
                         <div className="relative w-20 h-20 flex-shrink-0 overflow-hidden rounded-xl">
@@ -66,7 +68,7 @@ export default function AdvertiserCard({ advertiser, variant = 'standard' }: Adv
                                 href={`/company/${advertiser.short_code}`}
                                 className="block"
                             >
-                                <h3 className="font-bold text-lg text-gray-900 group-hover:text-sky-600 transition-colors truncate">
+                                <h3 className="font-bold text-base sm:text-lg text-gray-900 group-hover:text-sky-600 transition-colors line-clamp-2 leading-snug">
                                     {advertiser.business_name}
                                 </h3>
                             </Link>
@@ -109,7 +111,7 @@ export default function AdvertiserCard({ advertiser, variant = 'standard' }: Adv
                     </div>
 
                     {/* Description Preview */}
-                    <p className="mt-4 text-sm text-gray-600 line-clamp-2">
+                    <p className="mt-3 text-sm text-gray-600 line-clamp-2">
                         {advertiser.description || 'شركة متخصصة في تقديم أفضل الخدمات بأعلى جودة وأفضل الأسعار.'}
                     </p>
 
@@ -144,15 +146,14 @@ export default function AdvertiserCard({ advertiser, variant = 'standard' }: Adv
                     )}
 
                     {/* CTA Buttons */}
-                    <div className="flex gap-3 mt-5">
+                    <div className="flex gap-2 sm:gap-3 mt-4">
                         <ActionButton
                             href={phoneLink}
                             type="phone"
                             label="اتصل الآن"
                             cityName={advertiser.targeted_cities[0] || ''}
                             serviceName={advertiser.business_name}
-                            className="flex-1 flex items-center justify-center gap-2 px-4 py-3 text-white font-medium rounded-xl hover:opacity-90 shadow-lg transition-all"
-                            style={{ background: 'linear-gradient(to left, #0ea5e9, #0284c7)' }}
+                            className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 sm:py-3 bg-sky-600 text-white font-medium rounded-xl hover:bg-sky-700 shadow-lg transition-all"
                         >
                             <Phone className="w-5 h-5" />
                         </ActionButton>
@@ -165,8 +166,7 @@ export default function AdvertiserCard({ advertiser, variant = 'standard' }: Adv
                             external={true}
                             ariaLabel="واتساب"
                             advertiserName={advertiser.business_name}
-                            className="flex items-center justify-center gap-2 px-4 py-3 text-white font-medium rounded-xl hover:opacity-90 shadow-lg transition-all"
-                            style={{ background: 'linear-gradient(to left, #22c55e, #16a34a)' }}
+                            className="flex items-center justify-center gap-2 px-4 py-2.5 sm:py-3 bg-green-500 text-white font-medium rounded-xl hover:bg-green-600 shadow-lg transition-all"
                         >
                             <MessageCircle className="w-5 h-5" />
                         </ActionButton>
@@ -201,7 +201,7 @@ export default function AdvertiserCard({ advertiser, variant = 'standard' }: Adv
             <div className="flex-1 min-w-0">
                 <Link
                     href={`/company/${advertiser.short_code}`}
-                    className="font-medium text-gray-900 hover:text-sky-600 transition-colors truncate block"
+                    className="font-medium text-gray-900 hover:text-sky-600 transition-colors block leading-snug line-clamp-2 text-sm"
                 >
                     {advertiser.business_name}
                 </Link>

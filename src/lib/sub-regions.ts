@@ -1,4 +1,4 @@
-import type { City } from '@/types';
+// Sub-regions/Neighborhoods — no unused imports
 
 // ============================================
 // Sub-regions/Neighborhoods for Major Cities
@@ -37,6 +37,12 @@ import { SUB_REGIONS_KHAMIS_MUSHAIT } from './cities/khamis-mushait/sub-regions'
 import { SUB_REGIONS_NAJRAN } from './cities/najran/sub-regions';
 import { SUB_REGIONS_JAZAN } from './cities/jazan/sub-regions';
 import { SUB_REGIONS_AL_BAHA } from './cities/al-baha/sub-regions';
+import { SUB_REGIONS_DIRIYAH } from './cities/diriyah/sub-regions';
+import { SUB_REGIONS_MAJMAAH } from './cities/majmaah/sub-regions';
+import { SUB_REGIONS_NEOM } from './cities/neom/sub-regions';
+import { SUB_REGIONS_RABIGH } from './cities/rabigh/sub-regions';
+import { SUB_REGIONS_RAS_TANURA } from './cities/ras-tanura/sub-regions';
+import { SUB_REGIONS_AR_RASS } from './cities/ar-rass/sub-regions';
 
 // Aggregated sub-regions by city
 export const SUB_REGIONS: Record<string, SubRegion[]> = {
@@ -45,11 +51,14 @@ export const SUB_REGIONS: Record<string, SubRegion[]> = {
     'qassim': SUB_REGIONS_QASSIM,
     'buraidah': SUB_REGIONS_BURAIDAH,
     'onizah': SUB_REGIONS_ONIZAH,
+    'diriyah': SUB_REGIONS_DIRIYAH,
+    'majmaah': SUB_REGIONS_MAJMAAH,
     'jeddah': SUB_REGIONS_JEDDAH,
     'makkah': SUB_REGIONS_MAKKAH,
     'madinah': SUB_REGIONS_MADINAH,
     'taif': SUB_REGIONS_TAIF,
     'yanbu': SUB_REGIONS_YANBU,
+    'rabigh': SUB_REGIONS_RABIGH,
     'dammam': SUB_REGIONS_DAMMAM,
     'al-khobar': SUB_REGIONS_AL_KHOBAR,
     'dhahran': SUB_REGIONS_DHAHRAN,
@@ -57,8 +66,11 @@ export const SUB_REGIONS: Record<string, SubRegion[]> = {
     'al-ahsa': SUB_REGIONS_AL_AHSA,
     'qatif': SUB_REGIONS_QATIF,
     'hafr-albatin': SUB_REGIONS_HAFR_ALBATIN,
+    'ras-tanura': SUB_REGIONS_RAS_TANURA,
+    'ar-rass': SUB_REGIONS_AR_RASS,
     'tabuk': SUB_REGIONS_TABUK,
     'hail': SUB_REGIONS_HAIL,
+    'neom': SUB_REGIONS_NEOM,
     'abha': SUB_REGIONS_ABHA,
     'khamis-mushait': SUB_REGIONS_KHAMIS_MUSHAIT,
     'najran': SUB_REGIONS_NAJRAN,

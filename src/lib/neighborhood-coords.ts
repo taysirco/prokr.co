@@ -268,8 +268,16 @@ export const NEIGHBORHOOD_COORDS: Record<string, Record<string, { lat: number; l
         'تروجينا': { lat: 28.0500, lng: 35.5800 },
         'سندالة': { lat: 27.8600, lng: 35.4200 },
     },
+    'ar-rass': {
+        'حي الحزم': { lat: 25.8650, lng: 43.4980 },
+        'حي الشفاء': { lat: 25.8720, lng: 43.5010 },
+        'حي الجوازات': { lat: 25.8610, lng: 43.4890 },
+        'حي الروضة': { lat: 25.8750, lng: 43.5100 },
+        'حي القادسية': { lat: 25.8580, lng: 43.4920 },
+        'حي الملك خالد': { lat: 25.8800, lng: 43.5050 },
+        'حي اليرموك': { lat: 25.8550, lng: 43.4850 },
+    },
 };
-
 /**
  * Get coordinates for a specific neighborhood in a city.
  * Falls back to city center coordinates if neighborhood not found.

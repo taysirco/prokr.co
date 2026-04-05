@@ -62,7 +62,7 @@ export function LiveAvailabilityBanner({
         // Pulse dot
         const pulse = setInterval(() => setDotVisible(v => !v), 1000);
 
-        // Initialize
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         setCycleConfig(getMarketTimingConfig());
         refreshDispatch();
 
@@ -107,7 +107,7 @@ export function LiveAvailabilityBanner({
     const teamIcon = isEmergency ? '🚨' : '👷';
 
     return (
-        <div className={`${borderClass} border-b`} style={bgStyle}>
+        <div suppressHydrationWarning className={`${borderClass} border-b`} style={bgStyle}>
             <div className="max-w-7xl mx-auto px-4 py-2.5" dir="rtl">
                 {/* Top row: status indicators */}
                 <div className="flex items-center justify-between flex-wrap gap-2 mb-1.5">

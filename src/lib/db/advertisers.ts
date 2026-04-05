@@ -25,13 +25,15 @@ export async function getAdvertisersBySilo(
 ): Promise<{ premium: Advertiser[]; standard: Advertiser[] }> {
     const advertisersRef = collection(db, ADVERTISERS_COLLECTION);
 
-    // Query for premium advertisers (top 15 by priority_score)
+    // Query for premium advertisers by city — fetch generously because
+    // Firestore can't do two array-contains (city + service).
+    // We fetch up to 150 per city, then filter by service in JS.
     const premiumQuery = query(
         advertisersRef,
         where('is_premium', '==', true),
         where('targeted_cities', 'array-contains', citySlug),
         orderBy('priority_score', 'desc'),
-        limit(15)
+        limit(150)
     );
 
     // Query for standard advertisers (50)
@@ -133,6 +135,7 @@ export async function createAdvertiser(data: AdvertiserFormData): Promise<Advert
         subscription_expiry: data.subscription_expiry || null,
         targeted_cities: data.targeted_cities,
         targeted_services: data.targeted_services,
+        targeted_neighborhoods: data.targeted_neighborhoods || [],
         description: data.description,
         gallery: data.gallery || [],
         reviews: [],
