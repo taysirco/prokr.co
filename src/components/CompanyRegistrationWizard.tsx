@@ -120,14 +120,40 @@ export default function CompanyRegistrationWizard({ onSuccess }: CompanyRegistra
         setCurrentStep(prev => Math.max(prev - 1, 1));
     }, []);
 
-    // ─── Handlers ──────────────────────────────────────────────────
+    // Determine the currently active category (if any)
+    const activeCategory = useMemo(() => {
+        if (form.targeted_services.length === 0) return null;
+        // Find which category the first selected service belongs to
+        for (const [category, services] of Object.entries(servicesByCategory)) {
+            if (services.some(s => form.targeted_services.includes(s.slug))) {
+                return category;
+            }
+        }
+        return null;
+    }, [form.targeted_services, servicesByCategory]);
+
     const handleServiceToggle = (serviceSlug: string) => {
-        setForm(prev => ({
-            ...prev,
-            targeted_services: prev.targeted_services.includes(serviceSlug)
-                ? prev.targeted_services.filter(s => s !== serviceSlug)
-                : [...prev.targeted_services, serviceSlug]
-        }));
+        // Find the category this service belongs to
+        const serviceCategory = Object.entries(servicesByCategory).find(
+            ([, services]) => services.some(s => s.slug === serviceSlug)
+        )?.[0];
+
+        setForm(prev => {
+            // If switching to a different category, clear all previous selections
+            if (serviceCategory && activeCategory && serviceCategory !== activeCategory) {
+                return {
+                    ...prev,
+                    targeted_services: [serviceSlug],
+                };
+            }
+            // Toggle within the same category
+            return {
+                ...prev,
+                targeted_services: prev.targeted_services.includes(serviceSlug)
+                    ? prev.targeted_services.filter(s => s !== serviceSlug)
+                    : [...prev.targeted_services, serviceSlug],
+            };
+        });
     };
 
     const handleCategoryToggle = (category: string) => {
@@ -135,14 +161,16 @@ export default function CompanyRegistrationWizard({ onSuccess }: CompanyRegistra
         const allSelected = categoryServices.every(s => form.targeted_services.includes(s));
 
         if (allSelected) {
+            // Deselect all services in this category
             setForm(prev => ({
                 ...prev,
                 targeted_services: prev.targeted_services.filter(s => !categoryServices.includes(s))
             }));
         } else {
+            // Select all services in this category (replacing any from other categories)
             setForm(prev => ({
                 ...prev,
-                targeted_services: [...new Set([...prev.targeted_services, ...categoryServices])]
+                targeted_services: [...categoryServices]
             }));
         }
     };
@@ -234,12 +262,12 @@ export default function CompanyRegistrationWizard({ onSuccess }: CompanyRegistra
             locationCost += cityCost;
         }
 
-        // Apply Services Multiplier
+        // Apply Services Multiplier (within single category)
         let baseCost = locationCost;
-        if (form.targeted_services.length > 1) {
-            let servicesMultiplier = 1;
-            if (form.targeted_services.length >= 2) servicesMultiplier += 0.50; // 50% for 2nd
-            if (form.targeted_services.length > 2) servicesMultiplier += (form.targeted_services.length - 2) * 0.25; // 25% for 3rd+
+        const numServices = form.targeted_services.length;
+        if (numServices >= 2) {
+            // Mild multiplier for additional services within the same category
+            const servicesMultiplier = 1 + (numServices - 1) * 0.15; // +15% per extra service
             baseCost = locationCost * servicesMultiplier;
         }
         
@@ -401,6 +429,7 @@ export default function CompanyRegistrationWizard({ onSuccess }: CompanyRegistra
                     <StepServices
                         servicesByCategory={servicesByCategory}
                         selectedServices={form.targeted_services}
+                        activeCategory={activeCategory}
                         onServiceToggle={handleServiceToggle}
                         onCategoryToggle={handleCategoryToggle}
                     />
@@ -519,38 +548,68 @@ export default function CompanyRegistrationWizard({ onSuccess }: CompanyRegistra
 interface StepServicesProps {
     servicesByCategory: Record<string, { slug: string; name_ar: string; category: string }[]>;
     selectedServices: string[];
+    activeCategory: string | null;
     onServiceToggle: (slug: string) => void;
     onCategoryToggle: (category: string) => void;
 }
 
-function StepServices({ servicesByCategory, selectedServices, onServiceToggle, onCategoryToggle }: StepServicesProps) {
+function StepServices({ servicesByCategory, selectedServices, activeCategory, onServiceToggle, onCategoryToggle }: StepServicesProps) {
+    // Compute locally to guarantee consistency with current selectedServices
+    const localActiveCategory = (() => {
+        if (selectedServices.length === 0) return null;
+        for (const [cat, svcs] of Object.entries(servicesByCategory)) {
+            if (svcs.some(s => selectedServices.includes(s.slug))) {
+                return cat;
+            }
+        }
+        return null;
+    })();
+    // Use local computation (more reliable than prop which may lag by one render)
+    const effectiveActiveCategory = localActiveCategory ?? activeCategory;
+
     return (
         <div>
             <div className="text-center mb-8">
                 <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
-                    ما نوع خدماتك؟
+                    ما تخصص شركتك؟
                 </h2>
                 <p className="text-gray-500 text-lg">
-                    اختر القطاعات والخدمات التي تقدمها شركتك
+                    اختر قطاعاً واحداً فقط لضمان تخصص شركتك وجودة ظهورها
                 </p>
             </div>
 
             <div className="space-y-6">
+                {/* DEBUG: visible indicator */}
+                <div style={{background: '#fee2e2', padding: '8px', borderRadius: '8px', fontSize: '12px', color: '#991b1b'}}>
+                    DEBUG: localActive={String(localActiveCategory)} | effective={String(effectiveActiveCategory)} | selected={selectedServices.join(',')} | len={selectedServices.length}
+                </div>
                 {Object.entries(servicesByCategory).map(([category, services]) => {
                     const meta = CATEGORY_META[category] || { icon: '📋', color: '#6b7280', gradient: 'from-gray-500 to-gray-600' };
                     const categoryServices = services.map(s => s.slug);
                     const selectedCount = categoryServices.filter(s => selectedServices.includes(s)).length;
                     const allSelected = selectedCount === categoryServices.length;
+                    const isThisCategory = effectiveActiveCategory === category;
+                    const isLocked = effectiveActiveCategory !== null && !isThisCategory;
 
                     return (
                         <div
                             key={category}
-                            className="rounded-2xl overflow-hidden transition-all duration-300"
+                            data-locked={isLocked ? 'true' : 'false'}
+                            data-category={category}
+                            className="rounded-2xl overflow-hidden transition-all duration-300 relative"
                             style={{
                                 border: selectedCount > 0 ? `2px solid ${meta.color}30` : '2px solid #e5e7eb',
                                 background: selectedCount > 0 ? `${meta.color}08` : '#ffffff',
+                                opacity: isLocked ? 0.35 : 1,
+                                pointerEvents: isLocked ? 'none' : 'auto',
+                                filter: isLocked ? 'grayscale(0.6)' : 'none',
                             }}
                         >
+                            {isLocked && (
+                                <div className="absolute top-3 left-3 z-10 bg-gray-800/70 text-white text-xs px-2.5 py-1 rounded-lg flex items-center gap-1">
+                                    🔒 قطاع آخر
+                                </div>
+                            )}
                             {/* Category Header */}
                             <button
                                 type="button"
@@ -624,7 +683,15 @@ function StepServices({ servicesByCategory, selectedServices, onServiceToggle, o
                 <div className="mt-6 p-4 rounded-xl text-center bg-gradient-to-br from-sky-50 to-sky-100 border border-sky-200">
                     <p className="text-sky-700 font-medium">
                         <Sparkles className="w-4 h-4 inline-block ml-1" />
-                        تم اختيار {selectedServices.length} خدمة
+                        تم اختيار {selectedServices.length} خدمة في قطاع {CATEGORY_NAMES[effectiveActiveCategory || ''] || effectiveActiveCategory}
+                    </p>
+                </div>
+            )}
+
+            {effectiveActiveCategory && (
+                <div className="mt-3 p-3 rounded-xl text-center bg-amber-50 border border-amber-200">
+                    <p className="text-amber-700 text-sm">
+                        💡 يمكنك اختيار خدمات متعددة داخل نفس القطاع فقط لضمان تخصص الشركة
                     </p>
                 </div>
             )}
@@ -896,7 +963,7 @@ function StepInfo({ form, setForm }: StepInfoProps) {
                     </label>
                     <textarea
                         value={form.description}
-                        onChange={(e) => setForm((prev: any) => ({ ...prev, description: e.target.value }))}
+                        onChange={(e) => setForm((prev: WizardFormState) => ({ ...prev, description: e.target.value }))}
                         rows={5}
                         className="w-full px-5 py-3.5 rounded-xl transition-all duration-200 resize-none text-gray-900 border-2 border-gray-200 bg-gray-50 outline-none focus:border-sky-500 focus:bg-white focus:ring-[3px] focus:ring-sky-500/10 text-right"
                         placeholder="اكتب وصفاً مختصراً عن شركتك وخدماتها..."
