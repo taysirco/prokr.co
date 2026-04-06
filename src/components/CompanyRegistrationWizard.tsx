@@ -579,10 +579,6 @@ function StepServices({ servicesByCategory, selectedServices, activeCategory, on
             </div>
 
             <div className="space-y-6">
-                {/* DEBUG: visible indicator */}
-                <div style={{background: '#fee2e2', padding: '8px', borderRadius: '8px', fontSize: '12px', color: '#991b1b'}}>
-                    DEBUG: localActive={String(localActiveCategory)} | effective={String(effectiveActiveCategory)} | selected={selectedServices.join(',')} | len={selectedServices.length}
-                </div>
                 {Object.entries(servicesByCategory).map(([category, services]) => {
                     const meta = CATEGORY_META[category] || { icon: '📋', color: '#6b7280', gradient: 'from-gray-500 to-gray-600' };
                     const categoryServices = services.map(s => s.slug);

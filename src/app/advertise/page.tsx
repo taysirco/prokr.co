@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { Home, ChevronLeft, CheckCircle, Star, Shield, Users, Zap, ArrowDown, Sparkles, Clock } from 'lucide-react';
-import Footer from '@/components/Footer';
+
 import CompanyRegistrationWizard from '@/components/CompanyRegistrationWizard';
 
 export const metadata: Metadata = {
@@ -223,7 +223,6 @@ export default function AdvertisePage() {
                 </div>
             </section>
 
-            <Footer />
         </main>
     );
 }
