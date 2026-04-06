@@ -5,6 +5,15 @@ import { BLOG_ARTICLES } from '@/lib/blog-data';
 import { hasPageOverride } from '@/lib/overrides/registry';
 import { isAbsorbedSlug } from '@/lib/services/super-page-groups';
 
+// ═══════════════════════════════════════════════════════════════
+// CRITICAL: Force dynamic generation so sitemap reflects current
+// date for Fibonacci drip progression. Without this, Next.js
+// generates the sitemap at build time and it stays static/empty.
+// Revalidate every hour to gradually reveal pages.
+// ═══════════════════════════════════════════════════════════════
+export const dynamic = 'force-dynamic';
+export const revalidate = 3600; // Regenerate every hour
+
 const BASE_URL = 'https://prokr.co';
 
 // ═══════════════════════════════════════════════════════════════

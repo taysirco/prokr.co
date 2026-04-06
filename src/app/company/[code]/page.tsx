@@ -60,7 +60,11 @@ export async function generateMetadata({ params }: CompanyPageProps): Promise<Me
     const mainCity = getCityBySlug(advertiser.targeted_cities[0]);
     const cityKw = mainCity ? getCityKeyword(mainCity.name_ar, 'ba') : '';
     const title = `${advertiser.business_name} - ${service?.name_ar || 'خدمات'}${cityKw ? ` ${cityKw}` : ''} | بروكر`;
-    const description = `${advertiser.business_name} - ${advertiser.description.slice(0, 120)}. شركة معتمدة ومرخصة${cityKw ? ` ${cityKw}` : ''}.`;
+    // Smart truncation: cut at word boundary to avoid mid-word breaks in OG/meta
+    const descText = advertiser.description.length > 120
+        ? advertiser.description.slice(0, advertiser.description.lastIndexOf(' ', 120)) || advertiser.description.slice(0, 120)
+        : advertiser.description;
+    const description = `${advertiser.business_name} - ${descText}. شركة معتمدة ومرخصة${cityKw ? ` ${cityKw}` : ''}.`;
 
     return {
         title,
@@ -145,7 +149,7 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
             <BreadcrumbJsonLd items={breadcrumbs} />
             <WebPageJsonLd
                 title={advertiser.business_name}
-                description={`${advertiser.business_name} - ${advertiser.description.slice(0, 100)}`}
+                description={`${advertiser.business_name} - ${advertiser.description.length > 100 ? (advertiser.description.slice(0, advertiser.description.lastIndexOf(' ', 100)) || advertiser.description.slice(0, 100)) : advertiser.description}`}
                 url={`https://prokr.co/company/${advertiser.short_code}`}
                 breadcrumbs={breadcrumbs}
             />
