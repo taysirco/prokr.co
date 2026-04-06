@@ -47,9 +47,10 @@ export default function robots(): MetadataRoute.Robots {
             },
         ],
         sitemap: [
-            // Next.js auto-generates sitemap index at /sitemap.xml
-            // which links to all child sitemaps (/sitemap/0.xml through /sitemap/7.xml)
-            `${baseUrl}/sitemap.xml`,
+            // Manual sitemap index (Next.js doesn't auto-generate one)
+            `${baseUrl}/api/sitemap-index`,
+            // Direct child sitemaps as fallback for immediate discovery
+            `${baseUrl}/sitemap/0.xml`,
             `${baseUrl}/sitemap-images.xml`,
         ],
         host: baseUrl,
