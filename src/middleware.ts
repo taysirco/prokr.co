@@ -12,6 +12,14 @@ export function middleware(request: NextRequest) {
     const hostname = request.headers.get('host') || '';
 
     // ════════════════════════════════════════════════════════════════
+    // Canonical Domain Redirect (www to non-www)
+    // ════════════════════════════════════════════════════════════════
+    if (hostname === 'www.prokr.co') {
+        const cleanUrl = new URL(pathname + url.search, 'https://prokr.co');
+        return NextResponse.redirect(cleanUrl, 301);
+    }
+
+    // ════════════════════════════════════════════════════════════════
     // Legacy Domain Redirect Handler
     // Redirects legacy domains (.com/.net/.org)
     // to the canonical .co domain

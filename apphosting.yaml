@@ -19,3 +19,7 @@ env:
     value: "485926356771"
   - variable: NEXT_PUBLIC_FIREBASE_APP_ID
     value: 1:485926356771:web:24bca0fe2ce51450c12e96
+  - variable: NEXT_PUBLIC_GSC_ID
+    value: "Ed3SDlm2dwURmwiI8W3KF167qVrunVCBy4_02QBKKMA"
+  - variable: NEXT_PUBLIC_GA_ID
+    value: "G-H1W3HDFHS0"

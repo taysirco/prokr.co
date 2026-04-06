@@ -60,11 +60,20 @@ export const metadata: Metadata = {
     siteName: "بروكر",
     locale: "ar_SA",
     type: "website",
+    images: [
+      {
+        url: 'https://prokr.co/images/og-default.png',
+        width: 1200,
+        height: 630,
+        alt: 'بروكر - دليل الخدمات السعودي الشامل',
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "بروكر - دليل الخدمات السعودي الشامل",
     description: "دليل شامل لأفضل شركات الخدمات في المملكة العربية السعودية",
+    images: ['https://prokr.co/images/og-default.png'],
   },
   robots: {
     index: true,
@@ -93,7 +102,7 @@ export const metadata: Metadata = {
     title: 'بروكر',
   },
   verification: {
-    google: process.env.NEXT_PUBLIC_GSC_ID || 'YOUR_GSC_VERIFICATION_CODE',
+    google: 'Ed3SDlm2dwURmwiI8W3KF167qVrunVCBy4_02QBKKMA',
   },
 };
 

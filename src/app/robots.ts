@@ -9,7 +9,6 @@ export default function robots(): MetadataRoute.Robots {
                 userAgent: '*',
                 allow: '/',
                 disallow: ['/admin', '/api', '/search'],
-                crawlDelay: 1,
             },
             {
                 userAgent: 'GPTBot',
@@ -47,9 +46,6 @@ export default function robots(): MetadataRoute.Robots {
                 disallow: ['/admin', '/api', '/search'],
             },
         ],
-        sitemap: [
-            `${baseUrl}/sitemap.xml`,
-            `${baseUrl}/sitemap-images.xml`,
-        ],
+        sitemap: `${baseUrl}/sitemap.xml`,
     };
 }
