@@ -213,6 +213,57 @@ export default function CompanyRegistrationWizard({ onSuccess }: CompanyRegistra
         }));
     };
 
+    // ─── Select All / Deselect All Cities (within current region) ──
+    const handleToggleAllCities = useCallback(() => {
+        if (!form.region) return;
+        const regionCities = citiesByRegion[form.region] || [];
+        const regionCitySlugs = regionCities.map(c => c.slug);
+        const allSelected = regionCitySlugs.every(s => form.targeted_cities.includes(s));
+
+        setForm(prev => {
+            if (allSelected) {
+                // Deselect all — also clean up orphaned neighborhoods
+                return {
+                    ...prev,
+                    targeted_cities: [],
+                    targeted_neighborhoods: [],
+                };
+            } else {
+                // Select all cities in this region
+                return {
+                    ...prev,
+                    targeted_cities: [...regionCitySlugs],
+                };
+            }
+        });
+    }, [form.region, form.targeted_cities, citiesByRegion]);
+
+    // ─── Select All / Deselect All Neighborhoods (per city) ────────
+    const handleToggleAllNeighborhoods = useCallback((citySlug: string) => {
+        const neighborhoods = getNeighborhoodsForCity(citySlug);
+        if (neighborhoods.length === 0) return;
+        const neighborhoodNames = neighborhoods.map(n => n.name_ar);
+        const allSelected = neighborhoodNames.every(n => form.targeted_neighborhoods.includes(n));
+
+        setForm(prev => {
+            if (allSelected) {
+                // Deselect all neighborhoods for this city
+                return {
+                    ...prev,
+                    targeted_neighborhoods: prev.targeted_neighborhoods.filter(n => !neighborhoodNames.includes(n)),
+                };
+            } else {
+                // Select all neighborhoods for this city (add without duplicating)
+                const existing = new Set(prev.targeted_neighborhoods);
+                neighborhoodNames.forEach(n => existing.add(n));
+                return {
+                    ...prev,
+                    targeted_neighborhoods: Array.from(existing),
+                };
+            }
+        });
+    }, [form.targeted_neighborhoods]);
+
     const handleLogoUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
         const file = e.target.files?.[0];
         if (file) {
@@ -444,6 +495,8 @@ export default function CompanyRegistrationWizard({ onSuccess }: CompanyRegistra
                         onRegionChange={handleRegionChange}
                         onCityToggle={handleCityToggle}
                         onNeighborhoodToggle={handleNeighborhoodToggle}
+                        onToggleAllCities={handleToggleAllCities}
+                        onToggleAllNeighborhoods={handleToggleAllNeighborhoods}
                     />
                 )}
 
@@ -706,6 +759,8 @@ interface StepLocationProps {
     onRegionChange: (region: string) => void;
     onCityToggle: (slug: string) => void;
     onNeighborhoodToggle: (name_ar: string) => void;
+    onToggleAllCities: () => void;
+    onToggleAllNeighborhoods: (citySlug: string) => void;
 }
 
 function StepLocation({
@@ -716,6 +771,8 @@ function StepLocation({
     onRegionChange,
     onCityToggle,
     onNeighborhoodToggle,
+    onToggleAllCities,
+    onToggleAllNeighborhoods,
 }: StepLocationProps) {
     // Collect neighborhoods for all selected cities
     const availableNeighborhoods = useMemo(() => {
@@ -770,13 +827,30 @@ function StepLocation({
             {/* Cities Selection */}
             {selectedRegion && (
                 <div className="mb-8 animate-scaleIn">
-                    <label className="block text-sm font-bold text-gray-700 mb-4 flex items-center gap-2">
-                        <Building2 className="w-4 h-4 text-sky-500" />
-                        المدن
-                        <span className="text-gray-400 text-xs font-normal">
-                            ({selectedCities.length} مدينة مختارة)
-                        </span>
-                    </label>
+                    <div className="flex items-center justify-between mb-4">
+                        <label className="text-sm font-bold text-gray-700 flex items-center gap-2">
+                            <Building2 className="w-4 h-4 text-sky-500" />
+                            المدن
+                            <span className="text-gray-400 text-xs font-normal">
+                                ({selectedCities.length} مدينة مختارة)
+                            </span>
+                        </label>
+                        {(citiesByRegion[selectedRegion]?.length || 0) > 1 && (
+                            <button
+                                type="button"
+                                onClick={onToggleAllCities}
+                                className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all duration-200 ${
+                                    citiesByRegion[selectedRegion]?.every(c => selectedCities.includes(c.slug))
+                                        ? 'bg-red-50 text-red-600 hover:bg-red-100 border border-red-200'
+                                        : 'bg-sky-50 text-sky-600 hover:bg-sky-100 border border-sky-200'
+                                }`}
+                            >
+                                {citiesByRegion[selectedRegion]?.every(c => selectedCities.includes(c.slug))
+                                    ? <>✕ إلغاء الكل</>
+                                    : <>☑ تحديد الكل</>}
+                            </button>
+                        )}
+                    </div>
                     <div className="flex flex-wrap gap-2.5">
                         {citiesByRegion[selectedRegion]?.map(city => {
                             const isSelected = selectedCities.includes(city.slug);
@@ -806,12 +880,33 @@ function StepLocation({
                     </label>
 
                     <div className="space-y-5">
-                        {availableNeighborhoods.map(({ cityName, citySlug, neighborhoods, hasNeighborhoods }) => (
+                        {availableNeighborhoods.map(({ cityName, citySlug, neighborhoods, hasNeighborhoods }) => {
+                            const allNeighborhoodsSelected = hasNeighborhoods && neighborhoods.every(n => selectedNeighborhoods.includes(n.name_ar));
+                            const selectedInCity = hasNeighborhoods ? neighborhoods.filter(n => selectedNeighborhoods.includes(n.name_ar)).length : 0;
+                            return (
                             <div key={citySlug} className="rounded-xl p-4 bg-slate-50 border border-slate-200">
-                                <h4 className="text-sm font-bold text-gray-700 mb-3 flex items-center gap-2">
-                                    <span className="w-2 h-2 rounded-full bg-emerald-400" />
-                                    أحياء {cityName}
-                                </h4>
+                                <div className="flex items-center justify-between mb-3">
+                                    <h4 className="text-sm font-bold text-gray-700 flex items-center gap-2">
+                                        <span className="w-2 h-2 rounded-full bg-emerald-400" />
+                                        أحياء {cityName}
+                                        {hasNeighborhoods && selectedInCity > 0 && (
+                                            <span className="text-xs text-emerald-600 font-medium">({selectedInCity}/{neighborhoods.length})</span>
+                                        )}
+                                    </h4>
+                                    {hasNeighborhoods && neighborhoods.length > 1 && (
+                                        <button
+                                            type="button"
+                                            onClick={() => onToggleAllNeighborhoods(citySlug)}
+                                            className={`flex items-center gap-1 px-3 py-1 rounded-lg text-[11px] font-bold transition-all duration-200 ${
+                                                allNeighborhoodsSelected
+                                                    ? 'bg-red-50 text-red-600 hover:bg-red-100 border border-red-200'
+                                                    : 'bg-emerald-50 text-emerald-600 hover:bg-emerald-100 border border-emerald-200'
+                                            }`}
+                                        >
+                                            {allNeighborhoodsSelected ? '✕ إلغاء الكل' : '☑ تحديد الكل'}
+                                        </button>
+                                    )}
+                                </div>
                                 {!hasNeighborhoods ? (
                                     <div className="flex items-center gap-2 text-emerald-600 bg-emerald-50 px-4 py-3 rounded-lg border border-emerald-100 font-medium text-sm">
                                         <CheckCircle className="w-4 h-4" />
@@ -836,7 +931,7 @@ function StepLocation({
                                 )}
 
                             </div>
-                        ))}
+                        );})}
                     </div>
 
                     {selectedNeighborhoods.length > 0 && (
