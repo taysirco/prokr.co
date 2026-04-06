@@ -72,6 +72,13 @@ export default function CompanyRegistrationWizard({ onSuccess }: CompanyRegistra
     const [galleryFiles, setGalleryFiles] = useState<File[]>([]);
     const [error, setError] = useState('');
 
+    // Auto-dismiss errors after 5 seconds
+    useEffect(() => {
+        if (!error) return;
+        const timer = setTimeout(() => setError(''), 5000);
+        return () => clearTimeout(timer);
+    }, [error]);
+
     const citiesByRegion = useMemo(() => getCitiesByRegion(), []);
     const servicesByCategory = useMemo(() => getServicesByCategory(), []);
 
@@ -92,8 +99,13 @@ export default function CompanyRegistrationWizard({ onSuccess }: CompanyRegistra
                 if (!form.business_name.trim()) return 'يرجى إدخال اسم الشركة';
                 if (!form.contact_name.trim()) return 'يرجى إدخال اسم المسؤول';
                 if (!form.phone_number.trim()) return 'يرجى إدخال رقم التواصل';
-                if (!/^05\d{8}$/.test(form.phone_number.replace(/\s/g, ''))) return 'رقم الهاتف غير صحيح (يجب أن يبدأ بـ 05)';
+                {
+                    const cleaned = form.phone_number.replace(/[\s\-()]/g, '');
+                    const isValidSA = /^05\d{8}$/.test(cleaned) || /^\+9665\d{8}$/.test(cleaned) || /^9665\d{8}$/.test(cleaned);
+                    if (!isValidSA) return 'رقم الهاتف غير صحيح (يجب أن يبدأ بـ 05 أو +966)';
+                }
                 if (!form.description.trim()) return 'يرجى إدخال وصف الشركة';
+                if (form.description.trim().length < 20) return 'وصف الشركة قصير جداً (20 حرف على الأقل)';
                 return null;
             case 5:
                 return null; // Images are optional
@@ -139,8 +151,17 @@ export default function CompanyRegistrationWizard({ onSuccess }: CompanyRegistra
         )?.[0];
 
         setForm(prev => {
+            // Compute current active category from prev state (avoids stale closure)
+            let currentActiveCategory: string | null = null;
+            for (const [cat, svcs] of Object.entries(servicesByCategory)) {
+                if (svcs.some(s => prev.targeted_services.includes(s.slug))) {
+                    currentActiveCategory = cat;
+                    break;
+                }
+            }
+
             // If switching to a different category, clear all previous selections
-            if (serviceCategory && activeCategory && serviceCategory !== activeCategory) {
+            if (serviceCategory && currentActiveCategory && serviceCategory !== currentActiveCategory) {
                 return {
                     ...prev,
                     targeted_services: [serviceSlug],
@@ -270,11 +291,13 @@ export default function CompanyRegistrationWizard({ onSuccess }: CompanyRegistra
             const validation = validateFile(file);
             if (!validation.valid) {
                 setError(validation.error || 'خطأ في الملف');
+                e.target.value = ''; // Reset so same file can be re-selected
                 return;
             }
             setLogoFile(file);
             setError('');
         }
+        e.target.value = ''; // Reset input to allow re-upload of same file
     };
 
     const handleGalleryUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -283,11 +306,20 @@ export default function CompanyRegistrationWizard({ onSuccess }: CompanyRegistra
             const validation = validateFile(file);
             if (!validation.valid) {
                 setError(validation.error || 'خطأ في الملف');
+                e.target.value = '';
                 return;
             }
         }
-        setGalleryFiles(prev => [...prev, ...files].slice(0, 11));
-        setError('');
+        setGalleryFiles(prev => {
+            const combined = [...prev, ...files];
+            if (combined.length > 11) {
+                setError(`تم إضافة الصور المتاحة فقط (الحد الأقصى 11 صورة)`);
+                return combined.slice(0, 11);
+            }
+            return combined;
+        });
+        setError(prev => prev || ''); // Don't clear if limit warning was just set
+        e.target.value = ''; // Reset input to allow re-upload
     };
 
     const removeGalleryImage = (index: number) => {
@@ -423,7 +455,7 @@ export default function CompanyRegistrationWizard({ onSuccess }: CompanyRegistra
             {/* ─── Progress Bar ─────────────────────────────────────── */}
             <div className="mb-10">
                 <div className="flex items-center justify-between mb-4">
-                    {STEPS.map((step, _index) => {
+                    {STEPS.map((step) => {
                         const StepIcon = step.icon;
                         const isActive = currentStep === step.id;
                         const isCompleted = currentStep > step.id;
