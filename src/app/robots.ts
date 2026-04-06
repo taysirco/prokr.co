@@ -46,6 +46,6 @@ export default function robots(): MetadataRoute.Robots {
                 disallow: ['/admin', '/api', '/search'],
             },
         ],
-        sitemap: `${baseUrl}/sitemap.xml`,
+        sitemap: `${baseUrl}/sitemap/0.xml`,
     };
 }
