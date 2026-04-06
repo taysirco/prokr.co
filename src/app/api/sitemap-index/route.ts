@@ -47,7 +47,7 @@ export async function GET() {
     const sitemapIndex = `<?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${sitemapIds.map(id => `  <sitemap>
-    <loc>${BASE_URL}/sitemap/${id}.xml</loc>
+    <loc>${BASE_URL}/api/sitemap/${id}</loc>
     <lastmod>${now}</lastmod>
   </sitemap>`).join('\n')}
   <sitemap>

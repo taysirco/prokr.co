@@ -50,7 +50,7 @@ export default function robots(): MetadataRoute.Robots {
             // Manual sitemap index (Next.js doesn't auto-generate one)
             `${baseUrl}/api/sitemap-index`,
             // Direct child sitemaps as fallback for immediate discovery
-            `${baseUrl}/sitemap/0.xml`,
+            `${baseUrl}/api/sitemap/0`,
             `${baseUrl}/sitemap-images.xml`,
         ],
         host: baseUrl,
