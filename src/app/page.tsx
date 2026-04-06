@@ -27,7 +27,7 @@ import { isAbsorbedSlug } from '@/lib/services/super-page-groups';
 import { BLOG_ARTICLES } from '@/lib/blog-data';
 import Footer from '@/components/Footer';
 import SourceOrderLayout from '@/components/SourceOrderLayout';
-import { WebsiteJsonLd, ProkrOrganizationJsonLd, BreadcrumbJsonLd } from '@/components/JsonLd';
+import { WebsiteJsonLd, ProkrOrganizationJsonLd, BreadcrumbJsonLd, SpeakableWebPageJsonLd } from '@/components/JsonLd';
 import { EmergencyNightBanner } from '@/components/EmergencyNightBanner';
 import { LiveAvailabilityBanner } from '@/components/LiveAvailabilityBanner';
 import WizardFunnelButton from '@/components/WizardFunnelButton';
@@ -70,6 +70,14 @@ export default function HomePage() {
       />
       <ProkrOrganizationJsonLd />
       <BreadcrumbJsonLd items={[{ name: 'الرئيسية', url: 'https://prokr.co' }]} />
+      <SpeakableWebPageJsonLd
+        title="بروكر - دليل الخدمات السعودي الشامل"
+        description="دليل شامل لأفضل شركات الخدمات في المملكة العربية السعودية"
+        url="https://prokr.co"
+        speakableSelectors={['h1', '.trust-indicators', '[data-hero-gradient] p']}
+        speakableText="بروكر هو أكبر دليل إلكتروني للخدمات المنزلية في المملكة العربية السعودية. يغطي 24 مدينة ويضم أكثر من 500 شركة معتمدة في خدمات نقل العفش والتنظيف ومكافحة الحشرات وكشف التسربات."
+        about={{ name: 'دليل الخدمات المنزلية', type: 'Thing' }}
+      />
       {/* Homepage FAQ JSON-LD for rich results */}
       <script
         type="application/ld+json"
