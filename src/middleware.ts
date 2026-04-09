@@ -20,6 +20,20 @@ export function middleware(request: NextRequest) {
     }
 
     // ════════════════════════════════════════════════════════════════
+    // SEO: Enforce Lowercase URLs (Prevent Duplicate Content)
+    // Exclude API and _next/static paths from this rule
+    // ════════════════════════════════════════════════════════════════
+    if (
+        !pathname.startsWith('/_next') && 
+        !pathname.startsWith('/api') && 
+        pathname !== pathname.toLowerCase()
+    ) {
+        const lowerUrl = request.nextUrl.clone();
+        lowerUrl.pathname = pathname.toLowerCase();
+        return NextResponse.redirect(lowerUrl, 301);
+    }
+
+    // ════════════════════════════════════════════════════════════════
     // Legacy Domain Redirect Handler
     // Redirects legacy domains (.com/.net/.org)
     // to the canonical .co domain
