@@ -19,6 +19,8 @@ const STATIC_LEGACY_MAP: Record<string, string> = {
     'شركات-تغليف-العفش-بخميس-مشيط': '/khamis-mushait/furniture-packaging',
     'نقل-أثاث-بالأحساء-عمالة-فلبينية': '/al-ahsa/furniture-moving',
     'شركات-كشف-تسربات-المسابح': '/water-leak-detection',
+    'مؤسسات-تخزين-العفش-في-الرياض': '/riyadh/furniture-storage',
+    'شركات-نقل-العفش-في-الدمام-عمالة-فلبيني': '/dammam/furniture-moving',
     'jeddah-water-leaks-detection-isolate-companies': '/jeddah/water-leak-detection',
 };
 
