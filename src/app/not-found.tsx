@@ -1,11 +1,22 @@
-import { redirect } from 'next/navigation';
+'use client';
+
+import { useEffect } from 'react';
 
 // ════════════════════════════════════════════════════════════════
-// 404 → Homepage Redirect
-// Any URL that doesn't match a valid route will be instantly
-// redirected to the homepage via server-side 307 redirect.
-// This prevents dead pages from hurting UX and SEO.
+// 404 → Homepage Redirect (Layer 2 - Dynamic Routes)
+// Since Next.js App Router does not support server-side redirect()
+// directly from within a not-found boundary, we use a robust
+// client-side redirect combined with a meta refresh tag.
 // ════════════════════════════════════════════════════════════════
 export default function NotFound() {
-    redirect('/');
+    useEffect(() => {
+        // Immediate client-side redirect
+        window.location.replace('/');
+    }, []);
+
+    // Meta refresh as a fallback for browsers with JS disabled 
+    // and for web crawlers. Renders inside Root Layout.
+    return (
+        <meta httpEquiv="refresh" content="0;url=/" />
+    );
 }
