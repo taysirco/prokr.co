@@ -6,6 +6,63 @@ import { isAbsorbedSlug, buildRedirectUrl, getCanonicalSlug } from '@/lib/servic
 const citySlugs = new Set(CITIES.map(c => c.slug));
 const serviceSlugs = new Set(SERVICES.map(s => s.slug));
 
+// ════════════════════════════════════════════════════════════════
+// Module-level constants for Legacy URL Engine
+// Hoisted outside middleware() to avoid re-allocation per request
+// ════════════════════════════════════════════════════════════════
+
+// Static map: exact old slug → new path (Arabic & unique patterns)
+const STATIC_LEGACY_MAP: Record<string, string> = {
+    'ارخص-شركة-نقل-عفش-جدة': '/jeddah/furniture-moving',
+    'ارقام-شركات-نقل-عفش-في-السعودية': '/furniture-moving',
+    'ارقام-نقل-عفش-مكة-خدمات-موثوقة-لنقل-الع': '/makkah/furniture-moving',
+    'شركات-تغليف-العفش-بخميس-مشيط': '/khamis-mushait/furniture-packaging',
+    'نقل-أثاث-بالأحساء-عمالة-فلبينية': '/al-ahsa/furniture-moving',
+    'jeddah-water-leaks-detection-isolate-companies': '/jeddah/water-leak-detection',
+};
+
+// City alias map: old name → new slug
+const CITY_ALIASES: Record<string, string> = {
+    'al-taif': 'taif',
+    'al-dammam': 'dammam',
+    'al-madina': 'madinah',
+    'mecca': 'makkah',
+    'khobar': 'al-khobar',
+    'khamis': 'khamis-mushait',
+    'jeddah': 'jeddah',
+    'riyadh': 'riyadh',
+    'tabuk': 'tabuk',
+    'yanbu': 'yanbu',
+    'hail': 'hail',
+    'buraidah': 'buraidah',
+    'abha': 'abha',
+    'dammam': 'dammam',
+    'al-khobar': 'al-khobar',
+    'al-kharj': 'al-kharj',
+    'madinah': 'madinah',
+    'taif': 'taif',
+    'najran': 'najran',
+    'jazan': 'jazan',
+    'qassim': 'qassim',
+    'al-ahsa': 'al-ahsa',
+    'jubail': 'jubail',
+    'dhahran': 'dhahran',
+    'neom': 'neom',
+};
+
+// Service alias map: old suffix → new slug
+const SERVICE_ALIASES: Record<string, string> = {
+    'movers': 'furniture-moving',
+    'cleaning': 'cleaning',
+    'cleaning-companies': 'cleaning',
+    'anti-insect': 'pest-control',
+    'water-leaks': 'water-leak-detection',
+    'water-leaks-detection': 'water-leak-detection',
+};
+
+// Pre-sorted service keys (longest first) to avoid partial matches
+const SORTED_SERVICE_KEYS = Object.keys(SERVICE_ALIASES).sort((a, b) => b.length - a.length);
+
 export function middleware(request: NextRequest) {
     const url = request.nextUrl.clone();
     const pathname = url.pathname;
@@ -94,73 +151,18 @@ export function middleware(request: NextRequest) {
             return NextResponse.redirect(new URL('/', request.url), 301);
         }
 
-        // ── Strategy A: Static Map for Arabic slugs & unique patterns ──
-        const STATIC_LEGACY_MAP: Record<string, string> = {
-            // Arabic slugs
-            'ارخص-شركة-نقل-عفش-جدة': '/jeddah/furniture-moving',
-            'ارقام-شركات-نقل-عفش-في-السعودية': '/furniture-moving',
-            'ارقام-نقل-عفش-مكة-خدمات-موثوقة-لنقل-الع': '/makkah/furniture-moving',
-            'شركات-تغليف-العفش-بخميس-مشيط': '/khamis-mushait/furniture-packaging',
-            'نقل-أثاث-بالأحساء-عمالة-فلبينية': '/al-ahsa/furniture-moving',
-            // Long-form English slugs that don't fit the pattern parser
-            'jeddah-water-leaks-detection-isolate-companies': '/jeddah/water-leak-detection',
-        };
-
+        // ── Strategy A: Static Map (exact match) ──
         if (STATIC_LEGACY_MAP[rawSlug]) {
             return NextResponse.redirect(new URL(STATIC_LEGACY_MAP[rawSlug], request.url), 301);
         }
 
-        // ── Strategy B: Pattern Parser for /ksa/{city}-{service}/ ──
-        // City alias map: old name → new slug
-        const CITY_ALIASES: Record<string, string> = {
-            'al-taif': 'taif',
-            'al-dammam': 'dammam',
-            'al-madina': 'madinah',
-            'mecca': 'makkah',
-            'khobar': 'al-khobar',
-            'khamis': 'khamis-mushait',
-            // Direct matches (same slug)
-            'jeddah': 'jeddah',
-            'riyadh': 'riyadh',
-            'tabuk': 'tabuk',
-            'yanbu': 'yanbu',
-            'hail': 'hail',
-            'buraidah': 'buraidah',
-            'abha': 'abha',
-            'dammam': 'dammam',
-            'al-khobar': 'al-khobar',
-            'al-kharj': 'al-kharj',
-            'madinah': 'madinah',
-            'taif': 'taif',
-            'najran': 'najran',
-            'jazan': 'jazan',
-            'qassim': 'qassim',
-            'al-ahsa': 'al-ahsa',
-            'jubail': 'jubail',
-            'dhahran': 'dhahran',
-            'neom': 'neom',
-        };
-
-        // Service alias map: old suffix → new slug
-        const SERVICE_ALIASES: Record<string, string> = {
-            'movers': 'furniture-moving',
-            'cleaning': 'cleaning',
-            'cleaning-companies': 'cleaning',
-            'anti-insect': 'pest-control',
-            'water-leaks': 'water-leak-detection',
-            'water-leaks-detection': 'water-leak-detection',
-        };
-
-        // Try to parse: {city-alias}-{service-alias}
-        // Iterate service aliases from longest to shortest to avoid partial matches
-        const sortedServiceKeys = Object.keys(SERVICE_ALIASES).sort((a, b) => b.length - a.length);
-        for (const serviceKey of sortedServiceKeys) {
+        // ── Strategy B: Pattern Parser {city-alias}-{service-alias} ──
+        for (const serviceKey of SORTED_SERVICE_KEYS) {
             if (rawSlug.endsWith(`-${serviceKey}`)) {
-                const cityPart = rawSlug.slice(0, -(serviceKey.length + 1)); // +1 for the hyphen
+                const cityPart = rawSlug.slice(0, -(serviceKey.length + 1));
                 const newCity = CITY_ALIASES[cityPart];
                 if (newCity) {
-                    const newService = SERVICE_ALIASES[serviceKey];
-                    return NextResponse.redirect(new URL(`/${newCity}/${newService}`, request.url), 301);
+                    return NextResponse.redirect(new URL(`/${newCity}/${SERVICE_ALIASES[serviceKey]}`, request.url), 301);
                 }
             }
         }
