@@ -51,7 +51,11 @@ export function middleware(request: NextRequest) {
         }
     }
 
-    // Skip if path has more segments, static files, api routes, etc.
+    // ════════════════════════════════════════════════════════════════
+    // Known Valid Routes — Skip List
+    // All filesystem routes that should pass through to Next.js.
+    // IMPORTANT: When adding new routes to /src/app/, add them here.
+    // ════════════════════════════════════════════════════════════════
     if (
         pathname.startsWith('/_next') ||
         pathname.startsWith('/api') ||
@@ -68,6 +72,13 @@ export function middleware(request: NextRequest) {
         pathname.startsWith('/search') ||
         pathname.startsWith('/blog') ||
         pathname.startsWith('/services-page') ||
+        pathname.startsWith('/verify') ||
+        pathname.startsWith('/research') ||
+        pathname.startsWith('/maintenance') ||
+        pathname.startsWith('/test-buttons') ||
+        pathname.startsWith('/llms.txt') ||
+        pathname.startsWith('/sitemap-images.xml') ||
+        pathname.startsWith('/.well-known') ||
         pathname.includes('.') ||  // Static files like .css, .js, .ico
         pathname === '/'
     ) {
@@ -130,7 +141,14 @@ export function middleware(request: NextRequest) {
         return NextResponse.rewrite(url);
     }
 
-    return NextResponse.next();
+    // ════════════════════════════════════════════════════════════════
+    // 404 CATCH-ALL — Edge-Level Redirect (Layer 1)
+    // If we reach here, the path doesn't match ANY known route.
+    // Redirect to homepage immediately at the Edge — no server
+    // rendering, no round-trip to Next.js, fastest possible response.
+    // 302 (temporary) so Google doesn't cache dead URL → homepage.
+    // ════════════════════════════════════════════════════════════════
+    return NextResponse.redirect(new URL('/', request.url), 302);
 }
 
 export const config = {
