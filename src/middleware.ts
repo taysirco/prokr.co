@@ -66,6 +66,125 @@ export function middleware(request: NextRequest) {
     }
 
     // ════════════════════════════════════════════════════════════════
+    // LEGACY URL REDIRECT ENGINE — /ksa/ prefix (Old Site Structure)
+    // Old format: /ksa/{city}-{service}/
+    // New format: /{city}/{service}
+    // Uses 301 Permanent to transfer full backlink equity (link juice)
+    // ════════════════════════════════════════════════════════════════
+    if (pathname.startsWith('/ksa/') || pathname === '/ksa') {
+        // Strip /ksa prefix and trailing slash for processing
+        // decodeURIComponent handles percent-encoded Arabic slugs
+        let rawSlug: string;
+        try {
+            rawSlug = decodeURIComponent(
+                pathname
+                    .replace(/^\/ksa\/?/, '')
+                    .replace(/\/.*$/, '') // Strip any subpaths (e.g., /contact.html)
+                    .replace(/\?.*$/, '') // Strip query strings
+            );
+        } catch {
+            rawSlug = pathname
+                .replace(/^\/ksa\/?/, '')
+                .replace(/\/.*$/, '')
+                .replace(/\?.*$/, '');
+        }
+
+        // If /ksa with no slug, redirect to homepage
+        if (!rawSlug) {
+            return NextResponse.redirect(new URL('/', request.url), 301);
+        }
+
+        // ── Strategy A: Static Map for Arabic slugs & unique patterns ──
+        const STATIC_LEGACY_MAP: Record<string, string> = {
+            // Arabic slugs
+            'ارخص-شركة-نقل-عفش-جدة': '/jeddah/furniture-moving',
+            'ارقام-شركات-نقل-عفش-في-السعودية': '/furniture-moving',
+            'ارقام-نقل-عفش-مكة-خدمات-موثوقة-لنقل-الع': '/makkah/furniture-moving',
+            'شركات-تغليف-العفش-بخميس-مشيط': '/khamis-mushait/furniture-packaging',
+            'نقل-أثاث-بالأحساء-عمالة-فلبينية': '/al-ahsa/furniture-moving',
+            // Long-form English slugs that don't fit the pattern parser
+            'jeddah-water-leaks-detection-isolate-companies': '/jeddah/water-leak-detection',
+        };
+
+        if (STATIC_LEGACY_MAP[rawSlug]) {
+            return NextResponse.redirect(new URL(STATIC_LEGACY_MAP[rawSlug], request.url), 301);
+        }
+
+        // ── Strategy B: Pattern Parser for /ksa/{city}-{service}/ ──
+        // City alias map: old name → new slug
+        const CITY_ALIASES: Record<string, string> = {
+            'al-taif': 'taif',
+            'al-dammam': 'dammam',
+            'al-madina': 'madinah',
+            'mecca': 'makkah',
+            'khobar': 'al-khobar',
+            'khamis': 'khamis-mushait',
+            // Direct matches (same slug)
+            'jeddah': 'jeddah',
+            'riyadh': 'riyadh',
+            'tabuk': 'tabuk',
+            'yanbu': 'yanbu',
+            'hail': 'hail',
+            'buraidah': 'buraidah',
+            'abha': 'abha',
+            'dammam': 'dammam',
+            'al-khobar': 'al-khobar',
+            'al-kharj': 'al-kharj',
+            'madinah': 'madinah',
+            'taif': 'taif',
+            'najran': 'najran',
+            'jazan': 'jazan',
+            'qassim': 'qassim',
+            'al-ahsa': 'al-ahsa',
+            'jubail': 'jubail',
+            'dhahran': 'dhahran',
+            'neom': 'neom',
+        };
+
+        // Service alias map: old suffix → new slug
+        const SERVICE_ALIASES: Record<string, string> = {
+            'movers': 'furniture-moving',
+            'cleaning': 'cleaning',
+            'cleaning-companies': 'cleaning',
+            'anti-insect': 'pest-control',
+            'water-leaks': 'water-leak-detection',
+            'water-leaks-detection': 'water-leak-detection',
+        };
+
+        // Try to parse: {city-alias}-{service-alias}
+        // Iterate service aliases from longest to shortest to avoid partial matches
+        const sortedServiceKeys = Object.keys(SERVICE_ALIASES).sort((a, b) => b.length - a.length);
+        for (const serviceKey of sortedServiceKeys) {
+            if (rawSlug.endsWith(`-${serviceKey}`)) {
+                const cityPart = rawSlug.slice(0, -(serviceKey.length + 1)); // +1 for the hyphen
+                const newCity = CITY_ALIASES[cityPart];
+                if (newCity) {
+                    const newService = SERVICE_ALIASES[serviceKey];
+                    return NextResponse.redirect(new URL(`/${newCity}/${newService}`, request.url), 301);
+                }
+            }
+        }
+
+        // No match found — redirect to homepage
+        return NextResponse.redirect(new URL('/', request.url), 301);
+    }
+
+    // ════════════════════════════════════════════════════════════════
+    // Legacy Sitemap Redirect
+    // /sitemap_index.xml → /api/sitemap-index
+    // ════════════════════════════════════════════════════════════════
+    if (pathname === '/sitemap_index.xml') {
+        return NextResponse.redirect(new URL('/api/sitemap-index', request.url), 301);
+    }
+
+    // ════════════════════════════════════════════════════════════════
+    // Legacy non-/ksa/ path: /al-safrat-movers/ → homepage
+    // ════════════════════════════════════════════════════════════════
+    if (pathname.startsWith('/al-safrat-movers')) {
+        return NextResponse.redirect(new URL('/', request.url), 301);
+    }
+
+
     // Known Valid Routes — Skip List
     // All filesystem routes that should pass through to Next.js.
     // IMPORTANT: When adding new routes to /src/app/, add them here.
