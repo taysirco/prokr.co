@@ -18,6 +18,7 @@ const STATIC_LEGACY_MAP: Record<string, string> = {
     'ارقام-نقل-عفش-مكة-خدمات-موثوقة-لنقل-الع': '/makkah/furniture-moving',
     'شركات-تغليف-العفش-بخميس-مشيط': '/khamis-mushait/furniture-packaging',
     'نقل-أثاث-بالأحساء-عمالة-فلبينية': '/al-ahsa/furniture-moving',
+    'شركات-كشف-تسربات-المسابح': '/water-leak-detection',
     'jeddah-water-leaks-detection-isolate-companies': '/jeddah/water-leak-detection',
 };
 
