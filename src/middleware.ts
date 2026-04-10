@@ -95,17 +95,31 @@ export function middleware(request: NextRequest) {
 
     // ════════════════════════════════════════════════════════════════
     // SEO: Enforce Lowercase URLs (Prevent Duplicate Content)
-    // Exclude: API, _next, and /company/ (short_codes are case-sensitive in Firestore)
+    // Exclude: API, _next, /company/ (case-sensitive short_codes)
+    // Exclude: /ksa/ (handled by legacy redirect engine below)
+    // CRITICAL: Must not touch percent-encoded bytes (%D8 etc.)
+    // toLowerCase() on %D8 → %d8 causes infinite redirect loops
+    // because the hosting platform re-normalizes hex to uppercase.
     // ════════════════════════════════════════════════════════════════
     if (
         !pathname.startsWith('/_next') && 
         !pathname.startsWith('/api') && 
         !pathname.startsWith('/company/') &&
-        pathname !== pathname.toLowerCase()
+        !pathname.startsWith('/ksa/')
     ) {
-        const lowerUrl = request.nextUrl.clone();
-        lowerUrl.pathname = pathname.toLowerCase();
-        return NextResponse.redirect(lowerUrl, 301);
+        // Only lowercase unencoded ASCII uppercase letters
+        // Preserve %XX sequences exactly as-is
+        const lowered = pathname.replace(/%[0-9A-Fa-f]{2}|[A-Z]/g, (match) => {
+            // If it's a percent-encoded byte, leave it unchanged
+            if (match.startsWith('%')) return match;
+            // Otherwise it's an uppercase ASCII letter — lowercase it
+            return match.toLowerCase();
+        });
+        if (lowered !== pathname) {
+            const lowerUrl = request.nextUrl.clone();
+            lowerUrl.pathname = lowered;
+            return NextResponse.redirect(lowerUrl, 301);
+        }
     }
 
     // ════════════════════════════════════════════════════════════════
