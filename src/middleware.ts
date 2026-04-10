@@ -13,6 +13,7 @@ const serviceSlugs = new Set(SERVICES.map(s => s.slug));
 
 // Static map: exact old slug → new path (Arabic & unique patterns)
 const STATIC_LEGACY_MAP: Record<string, string> = {
+    // ── Previously mapped ──
     'ارخص-شركة-نقل-عفش-جدة': '/jeddah/furniture-moving',
     'ارقام-شركات-نقل-عفش-في-السعودية': '/furniture-moving',
     'ارقام-نقل-عفش-مكة-خدمات-موثوقة-لنقل-الع': '/makkah/furniture-moving',
@@ -22,6 +23,47 @@ const STATIC_LEGACY_MAP: Record<string, string> = {
     'مؤسسات-تخزين-العفش-في-الرياض': '/riyadh/furniture-storage',
     'شركات-نقل-العفش-في-الدمام-عمالة-فلبيني': '/dammam/furniture-moving',
     'jeddah-water-leaks-detection-isolate-companies': '/jeddah/water-leak-detection',
+    // ── Jeddah (جدة) ──
+    'ارقام-اعلانات-لشركات-نقل-العفش-فى-جدة': '/jeddah/furniture-moving',
+    'ارقام-شركات-نقل-اثاث-من-جدة-الي-الاحساء': '/jeddah/furniture-moving',
+    'اعلانات-لشركات-تخزين-الأثاث-بجدة': '/jeddah/furniture-storage',
+    'اهمية-شركات-تنظيف-الشقق-بجدة': '/jeddah/cleaning',
+    'شركات-رش-المبيدات-الحشرية-بجدة': '/jeddah/pest-control',
+    'شركة-توفر-خدمات-تنظيف-فلل-بجدة': '/jeddah/cleaning',
+    'نقل-أثاث-بين-أحياء-جدة': '/jeddah/furniture-moving',
+    // ── Makkah (مكة) ──
+    'ارقام-شركات-نقل-عفش-مكة': '/makkah/furniture-moving',
+    // ── Taif (الطائف) ──
+    'ارقام-نقل-عفش-بالطائف-دليل-شامل-للخدما': '/taif/furniture-moving',
+    // ── Riyadh (الرياض) ──
+    'نقل-وتركيب-الأثاث-في-الرياض': '/riyadh/furniture-moving',
+    // ── Hail (حائل) ──
+    'اهمية-شركات-نقل-العفش-فى-حائل': '/hail/furniture-moving',
+    'خدمات-نقل-العفش-فى-حائل': '/hail/furniture-moving',
+    // ── Qassim (القصيم) ──
+    'خدمات-شركات-نقل-العفش-بمنطقة-القصيم': '/qassim/furniture-moving',
+    // ── Al-Khobar (الخبر) ──
+    'خدمات-نقل-أثاث-في-الخبر-عمالة-فلبينية': '/al-khobar/furniture-moving',
+    // ── Dammam (الدمام) ──
+    'سيارات-نقل-أثاث-بالدمام': '/dammam/furniture-moving',
+    // ── Al-Ahsa (الأحساء) ──
+    'سيارات-نقل-أثاث-في-الأحساء': '/al-ahsa/furniture-moving',
+    // ── Jubail (الجبيل) ──
+    'سيارات-نقل-أثاث-في-الجبيل': '/jubail/furniture-moving',
+    // ── Onizah (عنيزة) ──
+    'مؤسسات-تخزين-العفش-في-عنيزة': '/onizah/furniture-storage',
+    // ── Buraidah (بريدة) ──
+    'مؤسسات-نقل-أثاث-في-منطقة-بريدة': '/buraidah/furniture-moving',
+    // ── General (بدون مدينة) ──
+    'طرق-الكشف-عن-تسربات-المياه': '/water-leak-detection',
+    'مكافحة-الحشرات-المنزلية': '/pest-control',
+    // ── English /ksa/ patterns not matched by parser ──
+    'cars-transportation-furniture': '/furniture-moving',
+    'furniture-transportation-in-taif-filipino-employment': '/taif/furniture-moving',
+    'furniture-transportation-services-in-taif-filipino-employment': '/taif/furniture-moving',
+    'moving-furniture-in-taif-cheaper-prices': '/taif/furniture-moving',
+    'numbers-dinat-transfer-furniture': '/furniture-moving',
+    'transport-furniture-in-riyadh-pakistani': '/riyadh/furniture-moving',
 };
 
 // City alias map: old name → new slug
@@ -210,9 +252,20 @@ export function middleware(request: NextRequest) {
     }
 
     // ════════════════════════════════════════════════════════════════
-    // Legacy non-/ksa/ path: /al-safrat-movers/ → homepage
+    // Legacy non-/ksa/ paths → homepage
+    // Old WordPress blog (/2016/), hacked spam (/how-to/), and
+    // legacy short URLs — all redirect to homepage
     // ════════════════════════════════════════════════════════════════
-    if (pathname.startsWith('/al-safrat-movers')) {
+    if (
+        pathname.startsWith('/al-safrat-movers') ||
+        pathname.startsWith('/2016/') ||            // Old WordPress blog
+        pathname.startsWith('/how-to/') ||           // Hacked/spam paths
+        pathname === '/nakl-madina'                  // Old shortlink
+    ) {
+        // /nakl-madina was a legitimate old link for Madinah furniture moving
+        if (pathname === '/nakl-madina') {
+            return NextResponse.redirect(new URL('/madinah/furniture-moving', request.url), 301);
+        }
         return NextResponse.redirect(new URL('/', request.url), 301);
     }
 
@@ -244,7 +297,7 @@ export function middleware(request: NextRequest) {
         pathname.startsWith('/llms.txt') ||
         pathname.startsWith('/sitemap-images.xml') ||
         pathname.startsWith('/.well-known') ||
-        pathname.includes('.') ||  // Static files like .css, .js, .ico
+        /\.(css|js|ico|svg|png|jpe?g|gif|webp|avif|woff2?|ttf|eot|map|json|xml|txt)$/i.test(pathname) ||  // Static assets only
         pathname === '/'
     ) {
         // For /search routes: add X-Robots-Tag header to prevent indexing
