@@ -30,6 +30,7 @@ import CompanyStickyBar from '@/components/CompanyStickyBar';
 import CompanyContactSection from '@/components/CompanyContactSection';
 import WizardFunnelButton from '@/components/WizardFunnelButton';
 import SocialShareWidget from '@/components/SocialShareWidget';
+import CompanyLogo from '@/components/CompanyLogo';
 import { VisionAiWatermark } from '@/components/VisionAiWatermark';
 import AudioReviewPlayer from '@/components/AudioReviewPlayer';
 import { AudioReviewSchema } from '@/components/schema/AudioObjectSchema';
@@ -210,12 +211,10 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                             <div className="relative flex-shrink-0">
                                 <div className="relative w-20 h-20 sm:w-28 sm:h-28 md:w-32 md:h-32 bg-white rounded-2xl shadow-xl flex items-center justify-center border-4 border-white overflow-hidden">
                                     {advertiser.logo_url ? (
-                                        <Image
-                                            src={advertiser.logo_url}
-                                            alt={`شعار ${advertiser.business_name} - شركة ${mainService?.name_ar || 'خدمات'} معتمدة`}
-                                            fill
-                                            className="object-contain rounded-xl p-1"
-                                            sizes="128px"
+                                        <CompanyLogo
+                                            logoUrl={advertiser.logo_url}
+                                            businessName={advertiser.business_name}
+                                            serviceName={mainService?.name_ar}
                                         />
                                     ) : (
                                         <span className="text-3xl sm:text-4xl font-bold text-sky-600">
