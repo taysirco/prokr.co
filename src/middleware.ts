@@ -76,6 +76,7 @@ const CITY_ALIASES: Record<string, string> = {
     'mecca': 'makkah',
     'khobar': 'al-khobar',
     'khamis': 'khamis-mushait',
+    'hafar-albatin': 'hafr-albatin',
     // Direct matches (all 30 cities from seed.ts)
     'riyadh': 'riyadh',
     'al-kharj': 'al-kharj',
