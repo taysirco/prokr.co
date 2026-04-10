@@ -25,32 +25,46 @@ const STATIC_LEGACY_MAP: Record<string, string> = {
 };
 
 // City alias map: old name → new slug
+// MUST include ALL cities from seed.ts + any legacy aliases
 const CITY_ALIASES: Record<string, string> = {
+    // Legacy aliases (old name → new slug)
     'al-taif': 'taif',
     'al-dammam': 'dammam',
     'al-madina': 'madinah',
     'mecca': 'makkah',
     'khobar': 'al-khobar',
     'khamis': 'khamis-mushait',
-    'jeddah': 'jeddah',
+    // Direct matches (all 30 cities from seed.ts)
     'riyadh': 'riyadh',
-    'tabuk': 'tabuk',
-    'yanbu': 'yanbu',
-    'hail': 'hail',
-    'buraidah': 'buraidah',
-    'abha': 'abha',
-    'dammam': 'dammam',
-    'al-khobar': 'al-khobar',
     'al-kharj': 'al-kharj',
+    'qassim': 'qassim',
+    'buraidah': 'buraidah',
+    'onizah': 'onizah',
+    'ar-rass': 'ar-rass',
+    'diriyah': 'diriyah',
+    'majmaah': 'majmaah',
+    'jeddah': 'jeddah',
+    'makkah': 'makkah',
     'madinah': 'madinah',
     'taif': 'taif',
+    'yanbu': 'yanbu',
+    'rabigh': 'rabigh',
+    'dammam': 'dammam',
+    'al-khobar': 'al-khobar',
+    'dhahran': 'dhahran',
+    'jubail': 'jubail',
+    'al-ahsa': 'al-ahsa',
+    'qatif': 'qatif',
+    'hafr-albatin': 'hafr-albatin',
+    'ras-tanura': 'ras-tanura',
+    'tabuk': 'tabuk',
+    'hail': 'hail',
+    'neom': 'neom',
+    'abha': 'abha',
+    'khamis-mushait': 'khamis-mushait',
     'najran': 'najran',
     'jazan': 'jazan',
-    'qassim': 'qassim',
-    'al-ahsa': 'al-ahsa',
-    'jubail': 'jubail',
-    'dhahran': 'dhahran',
-    'neom': 'neom',
+    'al-baha': 'al-baha',
 };
 
 // Service alias map: old suffix → new slug
@@ -96,9 +110,7 @@ export function middleware(request: NextRequest) {
 
     // ════════════════════════════════════════════════════════════════
     // Legacy Domain Redirect Handler
-    // Redirects legacy domains (.com/.net/.org)
-    // to the canonical .co domain
-    // 
+    // Redirects legacy domains (.com/.net/.org) to canonical .co
     // ════════════════════════════════════════════════════════════════
     const legacyDomains = [
         'prokr.com', 'prokr.net', 'prokr.org',
