@@ -81,11 +81,12 @@ export function middleware(request: NextRequest) {
 
     // ════════════════════════════════════════════════════════════════
     // SEO: Enforce Lowercase URLs (Prevent Duplicate Content)
-    // Exclude API and _next/static paths from this rule
+    // Exclude: API, _next, and /company/ (short_codes are case-sensitive in Firestore)
     // ════════════════════════════════════════════════════════════════
     if (
         !pathname.startsWith('/_next') && 
         !pathname.startsWith('/api') && 
+        !pathname.startsWith('/company/') &&
         pathname !== pathname.toLowerCase()
     ) {
         const lowerUrl = request.nextUrl.clone();
