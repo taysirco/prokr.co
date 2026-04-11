@@ -35,6 +35,7 @@ yarn-error.log*
 
 # Firebase service account key (DO NOT COMMIT)
 serviceAccountKey.json
+scripts/gcloud-key.json
 
 # vercel
 .vercel

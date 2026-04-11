@@ -1,0 +1,36 @@
+# Prokr.co — Link Disavow File
+# Generated: 2026-04-11
+# Purpose: Protect prokr.co from toxic backlink profiles
+#          of legacy domain variants
+#
+# INSTRUCTIONS:
+# 1. Go to https://search.google.com/search-console/disavow-links
+# 2. Select prokr.co property
+# 3. Upload this file
+#
+# STRATEGY (§12.2):
+# - prokr.com, prokr.net, prokr.org are legacy domains
+# - They may have accumulated spam backlinks over time
+# - We disavow entire domains to prevent toxicity transfer
+# - prokr.co is the ONLY canonical domain
+#
+# WARNING: Do NOT remove these entries. The legacy domains
+# are consolidated into prokr.co via Organization schema
+# sameAs + acquires declarations, but their backlink
+# profiles must be quarantined.
+
+# Legacy domain variants — full domain disavow
+domain:prokr.com
+domain:prokr.net
+domain:prokr.org
+
+# Known spam referrer domains (common in Saudi market)
+# Add more as they appear in GSC's Links report
+domain:semalt.com
+domain:buttons-for-website.com
+domain:darodar.com
+domain:ilovevitaly.com
+domain:priceg.com
+domain:hulfingtonpost.com
+domain:resellerclub.com
+domain:screentoolkit.com

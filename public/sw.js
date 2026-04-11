@@ -3,7 +3,7 @@
 // Multi-Strategy Caching + Offline + Background Sync
 // ============================================
 
-const SW_VERSION = '1.2.0';
+const SW_VERSION = '1.3.0';
 
 // ─── Cache Names ───
 const CACHE_STATIC  = 'prokr-static-v1';
