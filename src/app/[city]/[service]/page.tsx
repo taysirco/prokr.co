@@ -32,6 +32,7 @@ import MarketTimingBadge from '@/components/MarketTimingBadge';
 import { PriceDisclosure } from '@/components/PriceDisclosure';
 import PricingBenchmarkBox from '@/components/PricingBenchmarkBox';
 import ActionButton from '@/components/ActionButton';
+import CompanyLogo from '@/components/CompanyLogo';
 import SourceOrderLayout from '@/components/SourceOrderLayout';
 import type { Advertiser } from '@/types';
 
@@ -472,11 +473,10 @@ function PremiumCard({ advertiser }: { advertiser: Advertiser }) {
                 <div className="flex items-start gap-4">
                     <div className="relative w-20 h-20 flex-shrink-0">
                         {advertiser.logo_url ? (
-                            <Image
-                                src={advertiser.logo_url}
-                                alt={advertiser.business_name}
-                                fill
-                                className="object-contain rounded-xl border-2 border-amber-200 p-1"
+                            <CompanyLogo
+                                logoUrl={advertiser.logo_url}
+                                businessName={advertiser.business_name}
+                                serviceName={advertiser.targeted_services[0]}
                             />
                         ) : (
                             <div className="w-full h-full bg-gradient-to-br from-sky-100 to-sky-200 rounded-xl flex items-center justify-center border-2 border-amber-200">
@@ -570,11 +570,10 @@ function StandardRow({ advertiser }: { advertiser: Advertiser }) {
         <div className="flex items-center gap-4 p-4 bg-white rounded-xl border border-gray-200 hover:border-sky-300 hover:shadow-md transition-all">
             <div className="relative w-12 h-12 flex-shrink-0">
                 {advertiser.logo_url ? (
-                    <Image
-                        src={advertiser.logo_url}
-                        alt={advertiser.business_name}
-                        fill
-                        className="object-contain rounded-lg p-0.5"
+                    <CompanyLogo
+                        logoUrl={advertiser.logo_url}
+                        businessName={advertiser.business_name}
+                        serviceName={advertiser.targeted_services[0]}
                     />
                 ) : (
                     <div className="w-full h-full bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg flex items-center justify-center">

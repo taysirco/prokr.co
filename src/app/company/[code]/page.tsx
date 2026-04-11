@@ -433,12 +433,10 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                                         ))
                                     ) : advertiser.logo_url ? (
                                         <div className="relative aspect-video rounded-xl overflow-hidden bg-white border border-gray-200">
-                                            <Image
-                                                src={advertiser.logo_url}
-                                                alt={`شعار ${advertiser.business_name}`}
-                                                fill
-                                                className="object-contain p-4 hover:scale-105 transition-transform duration-300"
-                                                sizes="(max-width: 768px) 50vw, 33vw"
+                                            <CompanyLogo
+                                                logoUrl={advertiser.logo_url}
+                                                businessName={advertiser.business_name}
+                                                serviceName={mainService?.name_ar}
                                             />
                                         </div>
                                     ) : (
