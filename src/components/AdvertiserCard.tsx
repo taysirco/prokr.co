@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import { useState } from 'react';
 import { Phone, MessageCircle, Star, BadgeCheck, MapPin } from 'lucide-react';
 import type { Advertiser } from '@/types';
 import ActionButton from './ActionButton';
@@ -14,6 +15,7 @@ interface AdvertiserCardProps {
 
 export default function AdvertiserCard({ advertiser, variant = 'standard' }: AdvertiserCardProps) {
     const isPremium = variant === 'premium' || advertiser.is_premium;
+    const [logoError, setLogoError] = useState(false);
 
     // Calculate average rating
     const avgRating = advertiser.reviews.length > 0
@@ -45,12 +47,13 @@ export default function AdvertiserCard({ advertiser, variant = 'standard' }: Adv
                     {/* Logo & Info */}
                     <div className="flex items-start gap-4">
                         <div className="relative w-20 h-20 flex-shrink-0 overflow-hidden rounded-xl">
-                            {advertiser.logo_url ? (
+                            {advertiser.logo_url && !logoError ? (
                                 <Image
                                     src={advertiser.logo_url}
                                     alt={`${advertiser.business_name} - تم التحقق عبر نفاذ SBC`}
                                     fill
                                     className="object-cover rounded-xl border-2 border-amber-200"
+                                    onError={() => setLogoError(true)}
                                 />
                             ) : (
                                 <div className="w-full h-full rounded-xl flex items-center justify-center border-2 border-amber-200" style={{ background: 'linear-gradient(to bottom right, #e0f2fe, #bae6fd)' }}>
@@ -181,12 +184,13 @@ export default function AdvertiserCard({ advertiser, variant = 'standard' }: Adv
         <div className="flex items-center gap-4 p-4 bg-white rounded-xl border border-gray-200 hover:border-sky-300 hover:shadow-md transition-all">
             {/* Logo */}
             <div className="relative w-12 h-12 flex-shrink-0">
-                {advertiser.logo_url ? (
+                {advertiser.logo_url && !logoError ? (
                     <Image
                         src={advertiser.logo_url}
                         alt={advertiser.business_name}
                         fill
                         className="object-cover rounded-lg"
+                        onError={() => setLogoError(true)}
                     />
                 ) : (
                     <div className="w-full h-full rounded-lg flex items-center justify-center" style={{ background: 'linear-gradient(to bottom right, #f3f4f6, #e5e7eb)' }}>
