@@ -34,6 +34,8 @@ import PricingBenchmarkBox from '@/components/PricingBenchmarkBox';
 import ActionButton from '@/components/ActionButton';
 import CompanyLogo from '@/components/CompanyLogo';
 import SourceOrderLayout from '@/components/SourceOrderLayout';
+import FaqAccordion from '@/components/FaqAccordion';
+import { resolvePageContent } from '@/lib/overrides';
 import type { Advertiser } from '@/types';
 
 // Disable static generation, use ISR instead
@@ -128,6 +130,10 @@ export default async function SiloPage({ params }: SiloPageProps) {
 
     // Generate Content — override-aware
     const aiContent = resolveContentLayers(city, service);
+
+    // FAQ data for visible accordion (already in schema via UnifiedGraphCompiler)
+    const pageContent = resolvePageContent(city, service);
+    const faqItems = pageContent.faqItems || [];
 
     // Keyword strategy for بـ prefix
     const kwProfile = getServiceKeywordProfile(service.slug);
@@ -319,7 +325,13 @@ export default async function SiloPage({ params }: SiloPageProps) {
                         <>
                             {/* Enhanced SEO Content with Pricing Table, FAQ, etc. */}
                             <PageContentSection city={city} service={service} />
-                            {/* FAQ schema now inside UnifiedGraphCompiler @graph */}
+
+                            {/* 📋 FAQ Accordion — visible PAA section (§7.4) */}
+                            <FaqAccordion
+                                items={faqItems}
+                                cityName={city.name_ar}
+                                serviceName={service.name_ar}
+                            />
 
                             {/* 📊 Geo-Pricing Table — التسعير الجغرافي المتقاطع */}
                             <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
