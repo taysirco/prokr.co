@@ -298,6 +298,7 @@ export function middleware(request: NextRequest) {
         pathname.startsWith('/test-buttons') ||
         pathname.startsWith('/llms.txt') ||
         pathname.startsWith('/sitemap-images.xml') ||
+        pathname.startsWith('/__/auth') ||           // Firebase auth handler (signInWithRedirect proxy)
         pathname.startsWith('/.well-known') ||
         /\.(css|js|ico|svg|png|jpe?g|gif|webp|avif|woff2?|ttf|eot|map|json|xml|txt)$/i.test(pathname) ||  // Static assets only
         pathname === '/'
