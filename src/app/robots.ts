@@ -51,7 +51,6 @@ export default function robots(): MetadataRoute.Robots {
             `${baseUrl}/api/sitemap-index`,
             // Direct child sitemaps as fallback for immediate discovery
             `${baseUrl}/api/sitemap/0`,
-            `${baseUrl}/sitemap-images.xml`,
         ],
         host: baseUrl,
     };
