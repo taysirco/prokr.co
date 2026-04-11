@@ -134,7 +134,7 @@ export default function ClaimBusinessCTA({ companyCode, businessName, variant = 
                 recaptchaRef.current.clear();
                 recaptchaRef.current = null;
             }
-            recaptchaRef.current = setupRecaptcha('claim-phone-btn');
+            recaptchaRef.current = await setupRecaptcha('claim-phone-btn');
 
             await sendPhoneOTP(phoneInput, recaptchaRef.current);
             setState('phone-otp');

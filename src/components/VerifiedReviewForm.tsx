@@ -118,7 +118,7 @@ export default function VerifiedReviewForm({ companyCode, businessName }: Verifi
                 recaptchaRef.current.clear();
                 recaptchaRef.current = null;
             }
-            recaptchaRef.current = setupRecaptcha('phone-send-btn');
+            recaptchaRef.current = await setupRecaptcha('phone-send-btn');
 
             await sendPhoneOTP(phoneInput, recaptchaRef.current);
             setAuthMethod('phone-otp');

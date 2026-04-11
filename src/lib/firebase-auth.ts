@@ -17,15 +17,9 @@ import {
 } from 'firebase/auth';
 import { auth } from './firebase';
 
-// Force-fetch reCAPTCHA Enterprise config on module load.
-// Required after enabling reCAPTCHA Enterprise in Firebase Console.
-// Without this, the SDK may not have the correct Enterprise site keys,
-// causing INVALID_APP_CREDENTIAL errors on phone auth.
-if (typeof window !== 'undefined') {
-    initializeRecaptchaConfig(auth).catch(() => {
-        // Silent fallback — AUDIT mode will use v2 if Enterprise fails
-    });
-}
+// reCAPTCHA Enterprise config is initialized lazily inside setupRecaptcha()
+// to avoid 401 errors on every page load when the key's domain list
+// hasn't been configured in Google Cloud Console.
 
 // ============================================
 // State
@@ -171,8 +165,17 @@ export async function signInWithGoogle(): Promise<User> {
 /**
  * Setup invisible reCAPTCHA on a button element
  * Must be called before sendPhoneOTP
+ * Lazily initializes reCAPTCHA Enterprise config on first use
  */
-export function setupRecaptcha(buttonId: string): RecaptchaVerifier {
+let recaptchaConfigInitialized = false;
+export async function setupRecaptcha(buttonId: string): Promise<RecaptchaVerifier> {
+    // Lazy init: only fetch Enterprise config when phone auth is actually needed
+    if (!recaptchaConfigInitialized) {
+        recaptchaConfigInitialized = true;
+        await initializeRecaptchaConfig(auth).catch(() => {
+            // Silent fallback — AUDIT mode will use v2 if Enterprise fails
+        });
+    }
     const verifier = new RecaptchaVerifier(auth, buttonId, {
         size: 'invisible',
         callback: () => {
