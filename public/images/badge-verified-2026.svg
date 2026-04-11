@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="60" viewBox="0 0 180 60" fill="none">
+  <!-- Background -->
+  <rect width="180" height="60" rx="10" fill="#F0F9FF" stroke="#BAE6FD" stroke-width="1"/>
+  
+  <!-- Shield Icon -->
+  <circle cx="25" cy="30" r="14" fill="#0284C7" fill-opacity="0.1"/>
+  <text x="25" y="35" text-anchor="middle" font-size="16">🛡️</text>
+  
+  <!-- Check Circle -->
+  <circle cx="160" cy="30" r="10" fill="#22C55E"/>
+  <path d="M155 30l3 3 5-6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Text -->
+  <text x="90" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#0369A1" direction="rtl">مزود خدمة معتمد</text>
+  <text x="90" y="42" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#94A3B8" direction="rtl">دليل بروكر 2026</text>
+</svg>
