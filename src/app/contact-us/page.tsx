@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { Home, ChevronLeft, Phone, Mail, MapPin, MessageCircle, Send, CheckCircle } from 'lucide-react';
 import Footer from '@/components/Footer';
+import FaqAccordion from '@/components/FaqAccordion';
 
 export default function ContactPage() {
     const [formData, setFormData] = useState({
@@ -29,6 +30,45 @@ export default function ContactPage() {
     };
 
     return (
+        <>
+            {/* BreadcrumbList JSON-LD */}
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'BreadcrumbList',
+                itemListElement: [
+                    { '@type': 'ListItem', position: 1, name: 'الرئيسية', item: 'https://prokr.co' },
+                    { '@type': 'ListItem', position: 2, name: 'اتصل بنا', item: 'https://prokr.co/contact-us' },
+                ],
+            }) }} />
+            {/* ContactPage WebPage JSON-LD */}
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'ContactPage',
+                name: 'اتصل بنا — بروكر',
+                description: 'تواصل مع فريق بروكر للاستفسارات، الشكاوى، أو تسجيل شركتك في الدليل',
+                url: 'https://prokr.co/contact-us',
+                mainEntity: {
+                    '@type': 'Organization',
+                    '@id': 'https://prokr.co/#organization',
+                    name: 'بروكر',
+                    telephone: '+966542317431',
+                    email: 'info@prokr.co',
+                },
+                speakable: {
+                    '@type': 'SpeakableSpecification',
+                    cssSelector: ['h1', 'h2', '.prose p:first-of-type'],
+                },
+            }) }} />
+            {/* FAQPage JSON-LD */}
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'FAQPage',
+                mainEntity: [
+                    { '@type': 'Question', name: 'كيف أتواصل مع بروكر؟', acceptedAnswer: { '@type': 'Answer', text: 'يمكنك التواصل معنا عبر واتساب على الرقم +966542317431، أو البريد الإلكتروني info@prokr.co، أو ملء نموذج الاتصال. متوسط وقت الاستجابة 15 دقيقة.' } },
+                    { '@type': 'Question', name: 'كيف أسجل شركتي في بروكر؟', acceptedAnswer: { '@type': 'Answer', text: 'التسجيل مجاني — تواصل معنا عبر نموذج الاتصال أو واتساب مع بيانات شركتك (الاسم التجاري، السجل التجاري، الخدمات، المدن المغطاة) وسيتم تفعيل حسابك خلال 24 ساعة.' } },
+                    { '@type': 'Question', name: 'هل خدمة بروكر مجانية للعملاء؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم، خدمة التصفح والمقارنة والاتصال بالشركات مجانية تماماً للعملاء. بروكر لا يأخذ أي عمولة من العملاء.' } },
+                ],
+            }) }} />
         <main className="min-h-screen bg-gray-50">
             {/* Hero Section */}
             <section className="hero-gradient relative text-white overflow-hidden" data-hero-gradient style={{ background: 'linear-gradient(to bottom left, #0369a1, #0c4a6e, #082f49)' }}>
@@ -294,7 +334,21 @@ export default function ContactPage() {
                 </div>
             </section>
 
+            {/* Contact FAQ — Interactive Accordion */}
+            <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+                <FaqAccordion
+                    items={[
+                        { question: 'كيف أتواصل مع بروكر؟', answer: 'يمكنك التواصل معنا عبر واتساب على الرقم +966542317431، أو البريد الإلكتروني info@prokr.co، أو ملء نموذج الاتصال. متوسط وقت الاستجابة 15 دقيقة.' },
+                        { question: 'كيف أسجل شركتي في بروكر؟', answer: 'التسجيل مجاني — تواصل معنا عبر نموذج الاتصال أو واتساب مع بيانات شركتك (الاسم التجاري، السجل التجاري، الخدمات، المدن المغطاة) وسيتم تفعيل حسابك خلال 24 ساعة.' },
+                        { question: 'هل خدمة بروكر مجانية للعملاء؟', answer: 'نعم، خدمة التصفح والمقارنة والاتصال بالشركات مجانية تماماً للعملاء. بروكر لا يأخذ أي عمولة من العملاء.' },
+                    ]}
+                    cityName="السعودية"
+                    serviceName="خدمة العملاء"
+                />
+            </section>
+
             <Footer />
         </main>
+        </>
     );
 }
