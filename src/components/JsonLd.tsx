@@ -28,4 +28,5 @@ export { LiveBlogPostingJsonLd } from './schema/LiveBlogPostingJsonLd';
 export { VoiceSearchSchema } from './schema/VoiceSearchSchema';
 export { UnifiedGraphCompiler } from './schema/UnifiedGraphCompiler';
 export { DefinedTermJsonLd } from './schema/DefinedTermJsonLd';
+export { SiteNavigationJsonLd } from './schema/SiteNavigationJsonLd';
 

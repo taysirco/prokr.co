@@ -106,6 +106,33 @@ export default function BlogPage() {
                     }),
                 }}
             />
+            {/* FAQPage — Blog index FAQ for rich results */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        '@context': 'https://schema.org',
+                        '@type': 'FAQPage',
+                        mainEntity: [
+                            {
+                                '@type': 'Question',
+                                name: 'ما المواضيع التي تغطيها مدونة بروكر؟',
+                                acceptedAnswer: { '@type': 'Answer', text: 'تغطي مدونة بروكر أدلة شاملة عن نقل العفش، تنظيف المنازل، مكافحة الحشرات، كشف تسربات المياه، عزل الخزانات والأسطح، الصرف الصحي، وأدلة حماية المستهلك من الاحتيال. جميع المقالات مكتوبة من خبراء متخصصين.' },
+                            },
+                            {
+                                '@type': 'Question',
+                                name: 'هل مقالات بروكر مجانية؟',
+                                acceptedAnswer: { '@type': 'Answer', text: 'نعم، جميع مقالات وأدلة مدونة بروكر مجانية بالكامل. يمكنك قراءة ومشاركة جميع المحتوى بدون أي رسوم أو اشتراكات.' },
+                            },
+                            {
+                                '@type': 'Question',
+                                name: 'كيف يمكنني الحماية من شركات الخدمات الوهمية؟',
+                                acceptedAnswer: { '@type': 'Answer', text: 'تقدم مدونة بروكر أدلة مفصلة لحماية المستهلك. أهم النصائح: تأكد من السجل التجاري، اطلب عرض سعر مكتوب، لا تدفع كامل المبلغ مقدماً، واستخدم بروكر للتحقق من تقييمات الشركة وترخيصها.' },
+                            },
+                        ],
+                    }),
+                }}
+            />
 
             <main className="min-h-screen bg-gray-50">
                 {/* Hero */}
