@@ -132,7 +132,7 @@ async function main() {
 
     // Robots.txt
     const robots = await fetchPage(`${BASE}/robots.txt`);
-    const robotsOk = robots.status === 200 && robots.body.includes('User-agent');
+    const robotsOk = robots.status === 200 && robots.body.toLowerCase().includes('user-agent');
     checks.push({ name: 'Robots.txt', ok: robotsOk, detail: robotsOk ? 'valid' : 'broken' });
 
     // SSL
