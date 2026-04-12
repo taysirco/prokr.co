@@ -21,6 +21,7 @@ import { EmergencyNightBanner } from '@/components/EmergencyNightBanner';
 import SocialShareWidget from '@/components/SocialShareWidget';
 import { VisionAiWatermark } from '@/components/VisionAiWatermark';
 import SourceOrderLayout from '@/components/SourceOrderLayout';
+import FaqAccordion from '@/components/FaqAccordion';
 
 // Service definitions for DefinedTerm schema + CitableSummary
 const SERVICE_DEFINITIONS: Record<string, string> = {
@@ -128,6 +129,28 @@ export default async function ServicePage({ params }: ServicePageProps) {
     const heroImage = getServiceImage(resolvedParams.service);
     const aiContent = generateServiceCategoryMeta(service);
 
+    // National-level FAQ
+    const profile = getServiceKeywordProfile(service.slug);
+    const activeCities = CITIES.filter(c => hasPageOverride(c.slug, getCanonicalSlug(service.slug) || service.slug));
+    const serviceFaqItems = [
+        {
+            question: `ما هي أفضل شركة ${service.name_ar} في السعودية؟`,
+            answer: `يعرض بروكر أفضل شركات ${service.name_ar} المعتمدة في ${activeCities.length} مدينة سعودية. قارن بين الشركات من حيث التقييمات والأسعار والضمانات لاختيار الأنسب لك.`
+        },
+        {
+            question: `كم تكلفة ${service.name_ar} في السعودية؟`,
+            answer: `تختلف الأسعار حسب المدينة وحجم العمل. الرياض وجدة عادةً أعلى من المدن الأصغر. استخدم جدول الأسعار في كل صفحة مدينة للمقارنة الدقيقة.`
+        },
+        {
+            question: `في أي مدن تتوفر خدمة ${service.name_ar}؟`,
+            answer: `تتوفر خدمة ${service.name_ar} عبر بروكر في ${activeCities.length} مدينة: ${activeCities.slice(0, 6).map(c => c.name_ar).join('، ')}${activeCities.length > 6 ? ' والمزيد' : ''}.`
+        },
+        {
+            question: `كيف أتأكد من جودة شركة ${service.name_ar}؟`,
+            answer: `تحقق من: 1) السجل التجاري الساري، 2) تقييمات العملاء على بروكر، 3) ضمان مكتوب على الخدمة، 4) شفافية الأسعار. الشركات المميزة في بروكر اجتازت معايير توثيق صارمة.`
+        },
+    ];
+
     // Breadcrumb items
     const breadcrumbs = [
         { name: 'الرئيسية', url: 'https://prokr.co' },
@@ -173,6 +196,19 @@ export default async function ServicePage({ params }: ServicePageProps) {
                 url={`https://prokr.co/${getCanonicalSlug(service.slug) || service.slug}`}
                 speakableSelectors={['.citable-summary']}
                 speakableText={`${service.name_ar} في السعودية — ${SERVICE_DEFINITIONS[service.slug] || `خدمة ${service.name_ar}`}. يتوفر في ${CITIES.length} مدينة سعودية عبر دليل بروكر المعتمد.`}
+            />
+            {/* FAQPage Schema — national service */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "FAQPage",
+                    "mainEntity": serviceFaqItems.map(faq => ({
+                        "@type": "Question",
+                        "name": faq.question,
+                        "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+                    }))
+                }) }}
             />
 
             <main className="min-h-screen bg-gray-50">
@@ -361,6 +397,13 @@ export default async function ServicePage({ params }: ServicePageProps) {
                                     </div>
                                 </article>
                             </section>
+
+                            {/* 📋 FAQ Accordion — national service */}
+                            <FaqAccordion
+                                items={serviceFaqItems}
+                                cityName="السعودية"
+                                serviceName={service.name_ar}
+                            />
 
                             {/* 🛡️ Consumer Protection Alert */}
                             <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
