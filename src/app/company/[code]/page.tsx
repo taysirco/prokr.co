@@ -35,6 +35,7 @@ import { VisionAiWatermark } from '@/components/VisionAiWatermark';
 import AudioReviewPlayer from '@/components/AudioReviewPlayer';
 import { AudioReviewSchema } from '@/components/schema/AudioObjectSchema';
 import SourceOrderLayout from '@/components/SourceOrderLayout';
+import FaqAccordion from '@/components/FaqAccordion';
 import type { Review, City, Service } from '@/types';
 
 // ISR: revalidate every hour for fresh data + fast TTFB
@@ -138,6 +139,33 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
         { name: advertiser.business_name, url: `https://prokr.co/company/${advertiser.short_code}` },
     ];
 
+    // Company-specific FAQ
+    const cityKw = mainCity ? getCityKeyword(mainCity.name_ar, 'ba') : '';
+    const companyFaqItems = [
+        {
+            question: `هل ${advertiser.business_name} شركة معتمدة ومرخصة؟`,
+            answer: `نعم، ${advertiser.business_name} شركة معتمدة في دليل بروكر${advertiser.crn ? ` بسجل تجاري رقم ${advertiser.crn}` : ''}. تم التحقق من تراخيصها وجودة خدماتها وفقاً لمعايير بروكر الصارمة.`
+        },
+        {
+            question: `ما هي الخدمات التي تقدمها ${advertiser.business_name}؟`,
+            answer: `تقدم ${advertiser.business_name} ${targetedServices.length} خدمات: ${targetedServices.map(s => s.name_ar).join('، ')}. تغطي ${targetedCities.length} مدينة: ${targetedCities.map(c => c.name_ar).join('، ')}.`
+        },
+        {
+            question: `كيف أتواصل مع ${advertiser.business_name}؟`,
+            answer: `يمكنك التواصل مع ${advertiser.business_name} عبر الهاتف أو واتساب مباشرة من صفحة الشركة على بروكر. اضغط على زر الاتصال أو واتساب في أعلى الصفحة للتواصل الفوري.`
+        },
+        {
+            question: `ما تقييم ${advertiser.business_name} من العملاء؟`,
+            answer: reviews.length > 0
+                ? `حصلت ${advertiser.business_name} على تقييم ${avgRating.toFixed(1)} من 5 نجوم بناءً على ${reviews.length} مراجعة من عملاء حقيقيين عبر بروكر.`
+                : `لم يتم تقييم ${advertiser.business_name} بعد. كن أول من يشارك تجربته مع الشركة عبر نموذج التقييم أعلاه.`
+        },
+        {
+            question: `هل ${advertiser.business_name} تقدم ضمان على الخدمة؟`,
+            answer: `جميع الشركات المعتمدة في بروكر ملزمة بتقديم ضمان مكتوب على الخدمة. تأكد من طلب عقد مكتوب يوضح نطاق الضمان والمدة قبل بدء العمل.`
+        },
+    ];
+
     return (
         <>
             {/* JSON-LD Schema - Company Full Data */}
@@ -153,6 +181,19 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                 description={`${advertiser.business_name} - ${advertiser.description.length > 100 ? (advertiser.description.slice(0, advertiser.description.lastIndexOf(' ', 100)) || advertiser.description.slice(0, 100)) : advertiser.description}`}
                 url={`https://prokr.co/company/${advertiser.short_code}`}
                 breadcrumbs={breadcrumbs}
+            />
+            {/* FAQPage Schema — company-level */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "FAQPage",
+                    "mainEntity": companyFaqItems.map(faq => ({
+                        "@type": "Question",
+                        "name": faq.question,
+                        "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+                    }))
+                }) }}
             />
             {/* 🎤 Audio Review Schema — AudioObject + Review */}
             <AudioReviewSchema
@@ -628,6 +669,13 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                     </div>
                     </div>
                 </SourceOrderLayout>
+
+                {/* 📋 FAQ Accordion — company-specific */}
+                <FaqAccordion
+                    items={companyFaqItems}
+                    cityName={mainCity?.name_ar || 'السعودية'}
+                    serviceName={advertiser.business_name}
+                />
 
                 {/* Footer */}
                 <Footer
