@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { pricingData, getPricingStats } from '@/lib/pricing-data';
 import { DatasetJsonLd } from '@/components/schema/DatasetJsonLd';
 import { BreadcrumbJsonLd } from '@/components/schema/BreadcrumbJsonLd';
+import FaqAccordion from '@/components/FaqAccordion';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
@@ -34,6 +35,14 @@ export default function PricingIndexPage() {
     {} as Record<string, typeof pricingData>
   );
 
+  // FAQ items for pricing
+  const pricingFaqItems = [
+    { question: 'كيف يتم حساب متوسط الأسعار في مؤشر بروكر؟', answer: 'يتم جمع عروض الأسعار من أكثر من 500 شركة مسجلة في بروكر، ثم استبعاد أعلى وأدنى 10% (IQR Method) لتجنب القيم الشاذة، وحساب المتوسط الحسابي والوسيط لكل مدينة وخدمة.' },
+    { question: 'هل الأسعار في مؤشر بروكر دقيقة؟', answer: 'نعم، الأسعار مبنية على تحليل أكثر من 4,800 عرض سعر حقيقي من شركات مرخصة بسجل تجاري سعودي. يتم التحديث أسبوعياً كل يوم أحد لضمان دقة البيانات.' },
+    { question: 'لماذا تختلف الأسعار بين المدن؟', answer: 'تختلف الأسعار حسب تكلفة المعيشة، حجم الطلب، المنافسة، والظروف المناخية. مثلاً: خدمات التنظيف في الرياض أعلى 10-15% من المدن الأصغر بسبب ارتفاع تكلفة العمالة.' },
+    { question: 'هل يمكنني تحميل بيانات مؤشر الأسعار؟', answer: 'نعم، البيانات متاحة للتحميل مجاناً بصيغتي CSV و JSON بموجب ترخيص Creative Commons BY-SA 4.0. يمكنك استخدامها في الأبحاث والتقارير بشرط ذكر المصدر.' },
+  ];
+
   return (
     <>
       {/* Dataset JSON-LD */}
@@ -49,6 +58,21 @@ export default function PricingIndexPage() {
         { name: 'مركز الأبحاث', url: 'https://prokr.co/research' },
         { name: 'مؤشر الأسعار', url: 'https://prokr.co/research/pricing-index' },
       ]} />
+      {/* FAQPage JSON-LD for pricing queries */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: pricingFaqItems.map(faq => ({
+              '@type': 'Question',
+              name: faq.question,
+              acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+            })),
+          }),
+        }}
+      />
 
       <main className="max-w-7xl mx-auto px-4 py-12" dir="rtl">
         {/* === الترويسة === */}
@@ -82,11 +106,7 @@ export default function PricingIndexPage() {
             {[
               { label: 'مدينة', value: stats.cities, icon: '🏙️' },
               { label: 'خدمة', value: stats.services, icon: '🔧' },
-              {
-                label: 'عرض سعر',
-                value: stats.totalSamples.toLocaleString('ar-SA'),
-                icon: '📊',
-              },
+              { label: 'عرض سعر', value: stats.totalSamples.toLocaleString('ar-SA'), icon: '📊' },
               { label: 'شركة معتمدة', value: '500+', icon: '✅' },
             ].map((stat) => (
               <div
@@ -94,9 +114,7 @@ export default function PricingIndexPage() {
                 className="bg-white rounded-xl shadow-sm p-4 border border-gray-100 hover:shadow-md transition-shadow"
               >
                 <div className="text-2xl mb-1">{stat.icon}</div>
-                <div className="text-2xl font-black text-blue-700">
-                  {stat.value}
-                </div>
+                <div className="text-2xl font-black text-blue-700">{stat.value}</div>
                 <div className="text-sm text-gray-500">{stat.label}</div>
               </div>
             ))}
@@ -147,21 +165,15 @@ export default function PricingIndexPage() {
                         </td>
                         <td className="p-3 text-green-700 font-medium">
                           {row.minPrice}{' '}
-                          <span className="text-gray-400 text-xs">
-                            {row.unit}
-                          </span>
+                          <span className="text-gray-400 text-xs">{row.unit}</span>
                         </td>
                         <td className="p-3 text-red-600 font-medium">
                           {row.maxPrice}{' '}
-                          <span className="text-gray-400 text-xs">
-                            {row.unit}
-                          </span>
+                          <span className="text-gray-400 text-xs">{row.unit}</span>
                         </td>
                         <td className="p-3 font-black text-blue-700 text-lg">
                           {row.avgPrice}{' '}
-                          <span className="text-gray-400 text-xs font-normal">
-                            {row.unit}
-                          </span>
+                          <span className="text-gray-400 text-xs font-normal">{row.unit}</span>
                         </td>
                         <td className="p-3 text-gray-600">{row.medianPrice}</td>
                         <td className="p-3 text-gray-500">{row.sampleCount}</td>
@@ -203,6 +215,11 @@ export default function PricingIndexPage() {
           >
             🔗 JSON API
           </a>
+        </section>
+
+        {/* === FAQ Section === */}
+        <section className="mt-16 max-w-4xl mx-auto">
+          <FaqAccordion items={pricingFaqItems} cityName="السعودية" serviceName="مؤشر الأسعار" />
         </section>
 
         {/* === منهجية البحث === */}

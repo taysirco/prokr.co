@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Home, ChevronLeft, MapPin } from 'lucide-react';
 import { CITIES, SERVICES, REGION_NAMES, getCitiesByRegion } from '@/lib/seed';
 import { BreadcrumbJsonLd, ItemListJsonLd, WebPageJsonLd } from '@/components/JsonLd';
+import FaqAccordion from '@/components/FaqAccordion';
 import Footer from '@/components/Footer';
 import MarketTimingBadge from '@/components/MarketTimingBadge';
 import FraudAlertBanner from '@/components/FraudAlertBanner';
@@ -71,6 +72,38 @@ export default function LocationsPage() {
                     name: c.name_ar,
                     url: `https://prokr.co/${c.slug}`
                 }))}
+            />
+            {/* FAQPage JSON-LD — locations FAQ for rich results */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        '@context': 'https://schema.org',
+                        '@type': 'FAQPage',
+                        mainEntity: [
+                            {
+                                '@type': 'Question',
+                                name: 'كم مدينة يغطيها بروكر؟',
+                                acceptedAnswer: { '@type': 'Answer', text: `يغطي بروكر ${CITIES.length} مدينة سعودية موزعة على 5 مناطق رئيسية تشمل المنطقة الوسطى والغربية والشرقية والشمالية والجنوبية.` },
+                            },
+                            {
+                                '@type': 'Question',
+                                name: 'هل تغطون جميع أحياء المدينة؟',
+                                acceptedAnswer: { '@type': 'Answer', text: 'نعم، الشركات المسجلة في بروكر تغطي جميع أحياء ومناطق كل مدينة. يمكنك اختيار المدينة ثم الخدمة المطلوبة للعثور على أقرب شركة لموقعك.' },
+                            },
+                            {
+                                '@type': 'Question',
+                                name: 'ما الخدمات المتوفرة في كل مدينة؟',
+                                acceptedAnswer: { '@type': 'Answer', text: 'يوفر بروكر خدمات متخصصة في كل مدينة تشمل نقل العفش، التنظيف، مكافحة الحشرات، كشف تسربات المياه، عزل الخزانات والأسطح، وخدمات الصرف الصحي.' },
+                            },
+                            {
+                                '@type': 'Question',
+                                name: 'هل الأسعار تختلف بين المدن؟',
+                                acceptedAnswer: { '@type': 'Answer', text: 'نعم، تختلف الأسعار بين المدن حسب تكلفة المعيشة والطلب. الأسعار في الرياض وجدة أعلى بنسبة 10-20% مقارنة بالمدن الأصغر. يمكنك مقارنة الأسعار عبر مؤشر بروكر للأسعار.' },
+                            },
+                        ],
+                    }),
+                }}
             />
 
             <main className="min-h-screen bg-gray-50">
@@ -201,33 +234,18 @@ export default function LocationsPage() {
                         </p>
                     </article>
 
-                    {/* Locations FAQ */}
-                    <div className="mt-8 space-y-4 not-prose" itemScope itemType="https://schema.org/FAQPage">
-                        <h3 className="text-xl font-bold text-gray-900 mb-4">أسئلة شائعة عن مناطق الخدمة</h3>
-                        <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
-                            <h4 className="font-bold text-gray-800 mb-2" itemProp="name">كم مدينة يغطيها بروكر؟</h4>
-                            <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
-                                <p className="text-gray-600" itemProp="text">يغطي بروكر {CITIES.length} مدينة سعودية موزعة على 5 مناطق رئيسية تشمل المنطقة الوسطى والغربية والشرقية والشمالية والجنوبية.</p>
-                            </div>
-                        </div>
-                        <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
-                            <h4 className="font-bold text-gray-800 mb-2" itemProp="name">هل تغطون جميع أحياء المدينة؟</h4>
-                            <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
-                                <p className="text-gray-600" itemProp="text">نعم، الشركات المسجلة في بروكر تغطي جميع أحياء ومناطق كل مدينة. يمكنك اختيار المدينة ثم الخدمة المطلوبة للعثور على أقرب شركة لموقعك.</p>
-                            </div>
-                        </div>
-                        <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
-                            <h4 className="font-bold text-gray-800 mb-2" itemProp="name">ما الخدمات المتوفرة في كل مدينة؟</h4>
-                            <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
-                                <p className="text-gray-600" itemProp="text">يوفر بروكر خدمات متخصصة في كل مدينة تشمل نقل العفش، التنظيف، مكافحة الحشرات، كشف تسربات المياه، عزل الخزانات والأسطح، وخدمات الصرف الصحي.</p>
-                            </div>
-                        </div>
-                        <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
-                            <h4 className="font-bold text-gray-800 mb-2" itemProp="name">هل الأسعار تختلف بين المدن؟</h4>
-                            <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
-                                <p className="text-gray-600" itemProp="text">نعم، تختلف الأسعار بين المدن حسب تكلفة المعيشة والطلب. الأسعار في الرياض وجدة أعلى بنسبة 10-20% مقارنة بالمدن الأصغر. يمكنك مقارنة الأسعار عبر بروكر.</p>
-                            </div>
-                        </div>
+                    {/* Locations FAQ — Interactive Accordion + JSON-LD above */}
+                    <div className="mt-8">
+                        <FaqAccordion
+                            items={[
+                                { question: 'كم مدينة يغطيها بروكر؟', answer: `يغطي بروكر ${CITIES.length} مدينة سعودية موزعة على 5 مناطق رئيسية تشمل المنطقة الوسطى والغربية والشرقية والشمالية والجنوبية.` },
+                                { question: 'هل تغطون جميع أحياء المدينة؟', answer: 'نعم، الشركات المسجلة في بروكر تغطي جميع أحياء ومناطق كل مدينة. يمكنك اختيار المدينة ثم الخدمة المطلوبة للعثور على أقرب شركة لموقعك.' },
+                                { question: 'ما الخدمات المتوفرة في كل مدينة؟', answer: 'يوفر بروكر خدمات متخصصة في كل مدينة تشمل نقل العفش، التنظيف، مكافحة الحشرات، كشف تسربات المياه، عزل الخزانات والأسطح، وخدمات الصرف الصحي.' },
+                                { question: 'هل الأسعار تختلف بين المدن؟', answer: 'نعم، تختلف الأسعار بين المدن حسب تكلفة المعيشة والطلب. الأسعار في الرياض وجدة أعلى بنسبة 10-20% مقارنة بالمدن الأصغر. يمكنك مقارنة الأسعار عبر مؤشر بروكر للأسعار.' },
+                            ]}
+                            cityName="السعودية"
+                            serviceName="مناطق الخدمة"
+                        />
                     </div>
                 </section>
 
