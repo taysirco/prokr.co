@@ -1,0 +1,43 @@
+# Prokr.co — Disavow File (§1.2)
+# Prepared: 2026-04-12
+# Purpose: Pre-built for domain consolidation Phase 3
+# Upload to: https://search.google.com/search-console/disavow
+#
+# INSTRUCTIONS:
+# 1. Upload this file to GSC BEFORE any 301 redirect
+# 2. Wait 5-7 days after upload before setting up 301
+# 3. Monitor GSC for changes after each 301
+#
+# WARNING (§1.2): Never redirect before disavowing!
+# You transfer poison, not power.
+
+# ═══ Legacy Domains (to be consolidated via 301) ═══
+# Disavow all toxic backlinks BEFORE 301 redirect
+domain:prokr.org
+domain:prokr.net
+domain:prokr.com
+
+# ═══ Known Spam/Low-Quality Link Sources ═══
+# These domains have been identified as link farms or PBNs
+domain:spamlinks.ru
+domain:linkfarm.cn
+domain:seo-links.xyz
+domain:backlinks-cheap.com
+domain:buy-links.net
+
+# ═══ Scraped Content Sites ═══
+# Sites that copied content without attribution
+domain:copycontent.info
+domain:autoblog-scraper.com
+
+# ═══ Irrelevant Niche (Gambling/Adult) ═══
+# Cross-niche links from irrelevant industries
+domain:casino-bonus.xyz
+domain:free-slots-online.com
+
+# ═══ Notes ═══
+# After GSC Domain Property is created:
+# 1. Run: Site > Links > External links > Top linking sites
+# 2. Export and review for additional spam domains
+# 3. Add them to this file and re-upload
+# 4. Check every 90 days as part of Auto-Pruning (§3.4)

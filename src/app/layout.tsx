@@ -6,6 +6,7 @@ import "./globals.css";
 import NavbarWrapper from "@/components/NavbarWrapper";
 import Analytics from "@/components/Analytics";
 import ServiceWorkerRegistrar from "@/components/ServiceWorkerRegistrar";
+import WhatsAppAntiBouncPopup from "@/components/WhatsAppAntiBouncPopup";
 
 const ibmPlexArabic = IBM_Plex_Sans_Arabic({
   variable: "--font-ibm-plex-arabic",
@@ -531,6 +532,7 @@ export default function RootLayout({
         <Suspense fallback={null}>
           <Analytics />
           <ServiceWorkerRegistrar />
+          <WhatsAppAntiBouncPopup />
         </Suspense>
       </body>
       <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || 'G-H1W3HDFHS0'} />
