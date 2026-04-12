@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { Home, ChevronLeft, Shield, Users, Target, Award, CheckCircle } from 'lucide-react';
 import { BreadcrumbJsonLd, WebPageJsonLd } from '@/components/JsonLd';
+import FaqAccordion from '@/components/FaqAccordion';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
@@ -32,6 +33,25 @@ export default function AboutPage() {
         { name: 'من نحن', url: 'https://prokr.co/about-us' },
     ];
 
+    const aboutFaqItems = [
+        {
+            question: 'متى تأسس بروكر؟',
+            answer: 'تأسس بروكر عام 2024 كأكبر دليل إلكتروني للخدمات المنزلية في المملكة العربية السعودية. يهدف إلى ربط العملاء بأفضل الشركات المعتمدة في 30 مدينة سعودية.'
+        },
+        {
+            question: 'كيف يتم اختيار الشركات في بروكر؟',
+            answer: 'يتم التحقق من كل شركة وفقاً لمعايير صارمة تشمل الترخيص من وزارة التجارة، جودة الخدمة، تقييمات العملاء الحقيقيين، والالتزام بتقديم ضمان مكتوب على الخدمات.'
+        },
+        {
+            question: 'هل بروكر مرتبط بأي شركة خدمات؟',
+            answer: 'لا، بروكر منصة مستقلة ومحايدة. لا نقدم خدمات مباشرة ولسنا مرتبطين بأي شركة. نحن دليل إلكتروني يسهل التواصل بين العملاء ومقدمي الخدمات المعتمدين.'
+        },
+        {
+            question: 'هل استخدام بروكر مجاني للعملاء؟',
+            answer: 'نعم، بروكر مجاني 100% للعملاء الباحثين عن خدمات. يمكنك البحث والمقارنة والتواصل مع الشركات بدون أي رسوم.'
+        },
+    ];
+
     return (
         <>
             <BreadcrumbJsonLd items={breadcrumbs} />
@@ -40,6 +60,19 @@ export default function AboutPage() {
                 description="تعرف على بروكر، أكبر دليل للخدمات المنزلية في المملكة العربية السعودية"
                 url="https://prokr.co/about-us"
                 breadcrumbs={breadcrumbs}
+            />
+            {/* FAQPage Schema — about-us */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "FAQPage",
+                    "mainEntity": aboutFaqItems.map(faq => ({
+                        "@type": "Question",
+                        "name": faq.question,
+                        "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+                    }))
+                }) }}
             />
 
             <main className="min-h-screen bg-gray-50">
@@ -132,7 +165,7 @@ export default function AboutPage() {
                                 </div>
                                 <h3 className="text-lg font-bold text-gray-900 mb-2">تغطية شاملة</h3>
                                 <p className="text-gray-600">
-                                    نغطي أكثر من 24 مدينة و50 خدمة في جميع أنحاء المملكة.
+                                    نغطي أكثر من 30 مدينة و54 خدمة في جميع أنحاء المملكة.
                                 </p>
                             </div>
                         </div>
@@ -148,7 +181,7 @@ export default function AboutPage() {
                                 <p className="text-sky-200">شركة مسجلة</p>
                             </div>
                             <div>
-                                <p className="text-4xl font-bold">24</p>
+                                <p className="text-4xl font-bold">30</p>
                                 <p className="text-sky-200">مدينة</p>
                             </div>
                             <div>
@@ -166,26 +199,11 @@ export default function AboutPage() {
                 {/* About FAQ */}
                 <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                     <h2 className="text-2xl font-bold text-gray-900 mb-6">أسئلة شائعة عن بروكر</h2>
-                    <div className="space-y-4" itemScope itemType="https://schema.org/FAQPage">
-                        <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
-                            <h3 className="font-bold text-gray-800 mb-2" itemProp="name">متى تأسس بروكر؟</h3>
-                            <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
-                                <p className="text-gray-600" itemProp="text">تأسس بروكر عام 2024 كأكبر دليل إلكتروني للخدمات المنزلية في المملكة العربية السعودية. يهدف إلى ربط العملاء بأفضل الشركات المعتمدة في 24 مدينة سعودية.</p>
-                            </div>
-                        </div>
-                        <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
-                            <h3 className="font-bold text-gray-800 mb-2" itemProp="name">كيف يتم اختيار الشركات في بروكر؟</h3>
-                            <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
-                                <p className="text-gray-600" itemProp="text">يتم التحقق من كل شركة وفقاً لمعايير صارمة تشمل الترخيص من وزارة التجارة، جودة الخدمة، تقييمات العملاء الحقيقيين، والالتزام بتقديم ضمان مكتوب على الخدمات.</p>
-                            </div>
-                        </div>
-                        <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
-                            <h3 className="font-bold text-gray-800 mb-2" itemProp="name">هل بروكر مرتبط بأي شركة خدمات؟</h3>
-                            <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
-                                <p className="text-gray-600" itemProp="text">لا، بروكر منصة مستقلة ومحايدة. لا نقدم خدمات مباشرة ولسنا مرتبطين بأي شركة. نحن دليل إلكتروني يسهل التواصل بين العملاء ومقدمي الخدمات المعتمدين.</p>
-                            </div>
-                        </div>
-                    </div>
+                    <FaqAccordion
+                        items={aboutFaqItems}
+                        cityName="السعودية"
+                        serviceName="بروكر"
+                    />
                 </section>
 
                 {/* CTA */}
