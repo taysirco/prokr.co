@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { Home, ChevronLeft, Shield, Users, Target, Award, CheckCircle } from 'lucide-react';
-import { BreadcrumbJsonLd, WebPageJsonLd } from '@/components/JsonLd';
+import { BreadcrumbJsonLd, WebPageJsonLd, SpeakableJsonLd } from '@/components/JsonLd';
 import FaqAccordion from '@/components/FaqAccordion';
 import Footer from '@/components/Footer';
 
@@ -74,6 +74,8 @@ export default function AboutPage() {
                     }))
                 }) }}
             />
+            {/* §14 Voice Search — Speakable */}
+            <SpeakableJsonLd url="https://prokr.co/about-us" cssSelector={['h1', '.prose p:first-of-type', '.prose h2']} />
 
             <main className="min-h-screen bg-gray-50">
                 {/* Hero Section */}

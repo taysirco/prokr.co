@@ -2,11 +2,12 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Home, ChevronLeft, Truck, Sparkles, Bug, Droplet, Wrench, Building2 } from 'lucide-react';
-import { SERVICES, CATEGORY_NAMES, getServicesByCategory, getServiceImage } from '@/lib/seed';
-import { BreadcrumbJsonLd, ServiceCatalogJsonLd, WebPageJsonLd } from '@/components/JsonLd';
+import { SERVICES, CITIES, CATEGORY_NAMES, getServicesByCategory, getServiceImage } from '@/lib/seed';
+import { BreadcrumbJsonLd, ServiceCatalogJsonLd, WebPageJsonLd, SpeakableJsonLd } from '@/components/JsonLd';
 import { VisionAiWatermark } from '@/components/VisionAiWatermark';
 import { isAbsorbedSlug } from '@/lib/services/super-page-groups';
 import Footer from '@/components/Footer';
+import FaqAccordion from '@/components/FaqAccordion';
 import MarketTimingBadge from '@/components/MarketTimingBadge';
 import FraudAlertBanner from '@/components/FraudAlertBanner';
 import LocalPresence from '@/components/LocalPresence';
@@ -79,6 +80,24 @@ export default function ServicesPage() {
                 breadcrumbs={breadcrumbs}
             />
             <ServiceCatalogJsonLd services={SERVICES.filter(s => !isAbsorbedSlug(s.slug))} />
+            {/* §14 Voice Search — Speakable */}
+            <SpeakableJsonLd url="https://prokr.co/services" cssSelector={['h1', '.prose p:first-of-type', '.prose h2']} />
+            {/* FAQPage JSON-LD — services FAQ */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        '@context': 'https://schema.org',
+                        '@type': 'FAQPage',
+                        mainEntity: [
+                            { '@type': 'Question', name: 'كم عدد الخدمات المتوفرة في بروكر؟', acceptedAnswer: { '@type': 'Answer', text: 'يوفر بروكر خدمات منزلية وتجارية متخصصة تشمل نقل العفش، التنظيف بجميع أنواعه، مكافحة الحشرات، كشف تسربات المياه، عزل الخزانات والأسطح، وخدمات الصرف الصحي.' } },
+                            { '@type': 'Question', name: 'كيف أجد شركة لخدمة معينة؟', acceptedAnswer: { '@type': 'Answer', text: 'اختر الخدمة المطلوبة من القائمة، ثم حدد مدينتك، وستظهر لك جميع الشركات المعتمدة التي تقدم هذه الخدمة في منطقتك مع التقييمات والأسعار.' } },
+                            { '@type': 'Question', name: 'هل جميع الخدمات متوفرة في كل المدن؟', acceptedAnswer: { '@type': 'Answer', text: `نعم، جميع الخدمات الأساسية متوفرة في كل المدن الـ ${CITIES.length} التي يغطيها بروكر. بعض الخدمات المتخصصة قد تكون متاحة في المدن الكبرى فقط.` } },
+                            { '@type': 'Question', name: 'هل يمكنني مقارنة الأسعار بين الشركات؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم، يتيح بروكر مقارنة الأسعار والتقييمات بين الشركات المختلفة. كل شركة تعرض أسعارها التقريبية وتقييمات العملاء السابقين.' } },
+                        ],
+                    }),
+                }}
+            />
 
             <main className="min-h-screen bg-gray-50">
                 {/* 🚨 Emergency Night Banner — 12AM-6AM */}
@@ -188,33 +207,18 @@ export default function ServicesPage() {
                         </p>
                     </article>
 
-                    {/* Services FAQ */}
-                    <div className="mt-8 space-y-4 not-prose" itemScope itemType="https://schema.org/FAQPage">
-                        <h3 className="text-xl font-bold text-gray-900 mb-4">أسئلة شائعة عن الخدمات</h3>
-                        <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
-                            <h4 className="font-bold text-gray-800 mb-2" itemProp="name">كم عدد الخدمات المتوفرة في بروكر؟</h4>
-                            <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
-                                <p className="text-gray-600" itemProp="text">يوفر بروكر خدمات منزلية وتجارية متخصصة تشمل نقل العفش، التنظيف بجميع أنواعه، مكافحة الحشرات، كشف تسربات المياه، عزل الخزانات والأسطح، وخدمات الصرف الصحي.</p>
-                            </div>
-                        </div>
-                        <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
-                            <h4 className="font-bold text-gray-800 mb-2" itemProp="name">كيف أجد شركة لخدمة معينة؟</h4>
-                            <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
-                                <p className="text-gray-600" itemProp="text">اختر الخدمة المطلوبة من القائمة أعلاه، ثم حدد مدينتك، وستظهر لك جميع الشركات المعتمدة التي تقدم هذه الخدمة في منطقتك مع التقييمات والأسعار.</p>
-                            </div>
-                        </div>
-                        <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
-                            <h4 className="font-bold text-gray-800 mb-2" itemProp="name">هل جميع الخدمات متوفرة في كل المدن؟</h4>
-                            <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
-                                <p className="text-gray-600" itemProp="text">نعم، جميع الخدمات الأساسية متوفرة في كل المدن الـ 24 التي يغطيها بروكر. بعض الخدمات المتخصصة قد تكون متاحة في المدن الكبرى فقط مثل الرياض وجدة والدمام.</p>
-                            </div>
-                        </div>
-                        <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
-                            <h4 className="font-bold text-gray-800 mb-2" itemProp="name">هل يمكنني مقارنة الأسعار بين الشركات؟</h4>
-                            <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
-                                <p className="text-gray-600" itemProp="text">نعم، يتيح بروكر مقارنة الأسعار والتقييمات بين الشركات المختلفة. كل شركة تعرض أسعارها التقريبية وتقييمات العملاء السابقين لمساعدتك في اتخاذ القرار الأفضل.</p>
-                            </div>
-                        </div>
+                    {/* Services FAQ — Interactive Accordion + JSON-LD above */}
+                    <div className="mt-8">
+                        <FaqAccordion
+                            items={[
+                                { question: 'كم عدد الخدمات المتوفرة في بروكر؟', answer: 'يوفر بروكر خدمات منزلية وتجارية متخصصة تشمل نقل العفش، التنظيف بجميع أنواعه، مكافحة الحشرات، كشف تسربات المياه، عزل الخزانات والأسطح، وخدمات الصرف الصحي.' },
+                                { question: 'كيف أجد شركة لخدمة معينة؟', answer: 'اختر الخدمة المطلوبة من القائمة، ثم حدد مدينتك، وستظهر لك جميع الشركات المعتمدة التي تقدم هذه الخدمة في منطقتك مع التقييمات والأسعار.' },
+                                { question: 'هل جميع الخدمات متوفرة في كل المدن؟', answer: `نعم، جميع الخدمات الأساسية متوفرة في كل المدن الـ ${CITIES.length} التي يغطيها بروكر. بعض الخدمات المتخصصة قد تكون متاحة في المدن الكبرى فقط.` },
+                                { question: 'هل يمكنني مقارنة الأسعار بين الشركات؟', answer: 'نعم، يتيح بروكر مقارنة الأسعار والتقييمات بين الشركات المختلفة. كل شركة تعرض أسعارها التقريبية وتقييمات العملاء السابقين.' },
+                            ]}
+                            cityName="السعودية"
+                            serviceName="الخدمات المنزلية"
+                        />
                     </div>
                 </section>
 
