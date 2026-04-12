@@ -6,7 +6,15 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "seo": "node scripts/seo-dashboard.js",
+    "seo:health": "node scripts/seo-health.js",
+    "seo:report": "node scripts/weekly-report.js",
+    "seo:report:json": "node scripts/weekly-report.js --json",
+    "seo:warm": "node scripts/omega-ignition.js",
+    "seo:schema": "node scripts/schema-validator.js",
+    "seo:links": "node scripts/internal-links-audit.js",
+    "seo:cwv": "node scripts/cwv-check.js"
   },
   "dependencies": {
     "@next/third-parties": "^16.1.6",

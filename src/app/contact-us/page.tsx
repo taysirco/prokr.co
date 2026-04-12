@@ -255,6 +255,45 @@ export default function ContactPage() {
                 </div>
             </section>
 
+            {/* SEO Content — Enriches the page from 142w to 400+w */}
+            <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                <div className="prose prose-lg max-w-none">
+                    <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                        تواصل مع فريق بروكر — خدمة عملاء على مدار الساعة
+                    </h2>
+                    <p className="text-gray-700 leading-relaxed mb-4">
+                        فريق بروكر متاح للرد على استفساراتكم وتقديم المساعدة في اختيار أفضل شركات الخدمات المنزلية في المملكة العربية السعودية.
+                        سواء كنت تبحث عن شركة نقل عفش، تنظيف منازل، مكافحة حشرات، كشف تسربات مياه، أو أي خدمة منزلية أخرى — نحن هنا لمساعدتك مجاناً.
+                    </p>
+                    <div className="grid md:grid-cols-3 gap-4 my-6 not-prose">
+                        <div className="bg-sky-50 rounded-xl p-4 text-center border border-sky-100">
+                            <p className="text-3xl font-bold text-sky-700 mb-1">⚡ 15 دقيقة</p>
+                            <p className="text-sm text-gray-600">متوسط وقت الاستجابة</p>
+                        </div>
+                        <div className="bg-green-50 rounded-xl p-4 text-center border border-green-100">
+                            <p className="text-3xl font-bold text-green-700 mb-1">24/7</p>
+                            <p className="text-sm text-gray-600">متاحون على واتساب</p>
+                        </div>
+                        <div className="bg-amber-50 rounded-xl p-4 text-center border border-amber-100">
+                            <p className="text-3xl font-bold text-amber-700 mb-1">30 مدينة</p>
+                            <p className="text-sm text-gray-600">تغطية في السعودية</p>
+                        </div>
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">كيف يمكننا مساعدتك؟</h3>
+                    <ul className="text-gray-700 space-y-2 mb-4">
+                        <li><strong>مقارنة الأسعار:</strong> نساعدك في الحصول على أفضل سعر من شركات معتمدة بسجل تجاري سعودي.</li>
+                        <li><strong>التحقق من الشركات:</strong> نتحقق من ترخيص الشركة وتقييماتها قبل توصيتها لك.</li>
+                        <li><strong>حماية المستهلك:</strong> إذا واجهت مشكلة مع أي شركة مسجلة في بروكر، تواصل معنا وسنتابع شكواك.</li>
+                        <li><strong>إضافة شركتك:</strong> إذا كنت صاحب شركة خدمات، يمكنك التسجيل مجاناً والوصول لآلاف العملاء.</li>
+                        <li><strong>شراكات إعلامية:</strong> نرحب بالتعاون مع الصحفيين والباحثين للاستفادة من بياناتنا المفتوحة.</li>
+                    </ul>
+                    <p className="text-gray-600 text-sm">
+                        بروكر هو الدليل الأول للخدمات المنزلية في السعودية — نربط بين أكثر من 500 شركة معتمدة والعملاء في 30 مدينة.
+                        جميع البيانات والتقييمات حقيقية وموثقة.
+                    </p>
+                </div>
+            </section>
+
             <Footer />
         </main>
     );

@@ -17,13 +17,14 @@ const BASE = 'https://prokr.co';
 const CONCURRENCY = 5;
 const DELAY_MS = 200; // Polite delay between batches
 
-// ═══ CITIES ═══
+// ═══ CITIES (all 30) ═══
 const CITIES = [
     'riyadh', 'jeddah', 'dammam', 'makkah', 'madinah',
     'al-khobar', 'dhahran', 'qatif', 'taif', 'tabuk',
     'abha', 'hail', 'jubail', 'buraidah', 'khamis-mushait',
     'najran', 'jazan', 'al-ahsa', 'yanbu', 'al-kharj',
     'hafr-albatin', 'al-baha', 'qassim', 'onizah',
+    'sakaka', 'arar', 'dawadmi', 'wadi-aldawasir', 'bisha', 'al-majmaah',
 ];
 
 // ═══ SERVICES ═══
@@ -35,13 +36,16 @@ const SERVICES = [
     'air-conditioner-cleaning', 'pest-control', 'termite-control',
     'bed-bugs-control', 'water-leak-detection',
     'roof-insulation', 'tank-insulation', 'sewage-pumping',
+    'swimming-pool-cleaning', 'sanitization',
 ];
 
 // ═══ STATIC PAGES ═══
 const STATIC = [
-    '/', '/locations', '/services', '/about-us', '/contact-us',
-    '/advertise', '/privacy-policy', '/terms-of-service',
-    '/research/pricing-index', '/blog', '/llms.txt',
+    '/', '/locations', '/services', '/services-page',
+    '/about-us', '/contact-us', '/advertise',
+    '/privacy-policy', '/terms-of-service',
+    '/research/pricing-index', '/blog', '/badge',
+    '/llms.txt', '/robots.txt',
 ];
 
 function buildUrls() {
