@@ -15,7 +15,8 @@
     "seo:schema": "node scripts/schema-validator.js",
     "seo:links": "node scripts/internal-links-audit.js",
     "seo:cwv": "node scripts/cwv-check.js",
-    "seo:monitor": "node scripts/phase2-monitor.js"
+    "seo:monitor": "node scripts/phase2-monitor.js",
+    "seo:index": "node scripts/indexing-api.js"
   },
   "dependencies": {
     "@next/third-parties": "^16.1.6",

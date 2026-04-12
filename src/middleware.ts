@@ -137,6 +137,17 @@ export function middleware(request: NextRequest) {
     }
 
     // ════════════════════════════════════════════════════════════════
+    // PHASE 3: Legacy Domain Consolidation (§1.2)
+    // ACTIVATE on Day 15+ (April 20, 2026) — after quarantine ends
+    // PREREQUISITE: Upload scripts/disavow.txt to GSC 5-7 days before
+    // ════════════════════════════════════════════════════════════════
+    const LEGACY_DOMAINS = ['prokr.com', 'prokr.net', 'prokr.org', 'www.prokr.com', 'www.prokr.net', 'www.prokr.org'];
+    if (LEGACY_DOMAINS.includes(hostname)) {
+        const canonicalUrl = new URL(pathname + url.search, 'https://prokr.co');
+        return NextResponse.redirect(canonicalUrl, 301);
+    }
+
+    // ════════════════════════════════════════════════════════════════
     // SEO: Enforce Lowercase URLs (Prevent Duplicate Content)
     // Exclude: API, _next, /company/ (case-sensitive short_codes)
     // Exclude: /ksa/ (handled by legacy redirect engine below)
