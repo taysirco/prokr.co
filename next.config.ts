@@ -45,6 +45,24 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async redirects() {
+    return [
+      {
+        // Fix: Next.js built-in sitemap.ts generates empty sitemaps on production
+        // while API route sitemaps work perfectly (703 URLs). Redirect any
+        // crawler/tool that discovers /sitemap.xml to the working API version.
+        source: '/sitemap.xml',
+        destination: '/api/sitemap-index',
+        permanent: true,
+      },
+      {
+        // Redirect child sitemaps to API versions
+        source: '/sitemap/:id.xml',
+        destination: '/api/sitemap/:id',
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {
