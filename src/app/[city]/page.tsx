@@ -25,6 +25,7 @@ import WizardFunnelFAB from '@/components/WizardFunnelFAB';
 import SocialShareWidget from '@/components/SocialShareWidget';
 import { VisionAiWatermark } from '@/components/VisionAiWatermark';
 import SourceOrderLayout from '@/components/SourceOrderLayout';
+import FaqAccordion from '@/components/FaqAccordion';
 
 interface CityPageProps {
     params: Promise<{
@@ -120,6 +121,31 @@ export default async function CityPage({ params }: CityPageProps) {
     const cityContext = getCityContext(city.slug);
     const cityKw = getCityKeyword(city.name_ar, 'ba');
 
+    // City-level FAQ items (general questions about services in this city)
+    const availableServices = SERVICES.filter(s => hasPageOverride(city.slug, s.slug) && !isAbsorbedSlug(s.slug));
+    const cityFaqItems = [
+        {
+            question: `ما هي الخدمات المتوفرة ${cityKw} عبر بروكر؟`,
+            answer: `يوفر بروكر ${availableServices.length} خدمة معتمدة ${cityKw}، تشمل: ${availableServices.slice(0, 6).map(s => s.name_ar).join('، ')}${availableServices.length > 6 ? ' والمزيد' : ''}. جميع الشركات مرخصة وموثقة وفقاً لاشتراطات وزارة التجارة السعودية.`
+        },
+        {
+            question: `كيف أختار أفضل شركة خدمات ${cityKw}؟`,
+            answer: `ننصح بمقارنة 3 شركات على الأقل من خلال بروكر. تحقق من: 1) السجل التجاري الساري، 2) تقييمات العملاء الحقيقية، 3) ضمان الخدمة المكتوب، 4) الشفافية في الأسعار. بروكر يعرض فقط الشركات المعتمدة التي تستوفي جميع المعايير.`
+        },
+        {
+            question: `هل الأسعار ${cityKw} تختلف عن باقي مدن المملكة؟`,
+            answer: `نعم، تتأثر الأسعار بعوامل محلية مثل ${cityContext?.challenges?.[0] || 'تكاليف التشغيل'} و${cityContext?.urbanTraits?.[0] || 'حجم المدينة'}. ${cityContext?.priceModifier && cityContext.priceModifier > 1.0 ? `الأسعار ${cityKw} أعلى قليلاً من المتوسط الوطني.` : `الأسعار ${cityKw} تنافسية مقارنة بالمدن الكبرى.`}`
+        },
+        {
+            question: `ما هي الأحياء التي تغطيها خدمات بروكر ${cityKw}؟`,
+            answer: `نغطي جميع أحياء ${city.name_ar}${cityContext?.neighborhoods && cityContext.neighborhoods.length > 0 ? ` بما فيها: ${cityContext.neighborhoods.slice(0, 5).map(n => n.name_ar).join('، ')} وغيرها` : ''}. فرق الشركات المعتمدة موزعة لتغطية كافة المناطق.`
+        },
+        {
+            question: `هل يمكن حجز خدمة طوارئ ليلية ${cityKw}؟`,
+            answer: `نعم، يوفر بروكر خدمة طوارئ 24/7 ${cityKw} لمعظم الخدمات مثل كشف التسربات ومكافحة الحشرات. ${cityContext?.responseTime ? `زمن الاستجابة المتوقع: ${cityContext.responseTime}.` : 'الاستجابة خلال 30 دقيقة في معظم الأحياء.'}`
+        },
+    ];
+
 
     // Breadcrumb items
     const breadcrumbs = [
@@ -153,6 +179,20 @@ export default async function CityPage({ params }: CityPageProps) {
                 description={`دليل شامل لأفضل شركات الخدمات المعتمدة ${cityKw} - نقل عفش، تنظيف، مكافحة حشرات وأكثر`}
                 url={`https://prokr.co/${city.slug}`}
                 breadcrumbs={breadcrumbs}
+            />
+
+            {/* FAQPage Schema — city-level */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "FAQPage",
+                    "mainEntity": cityFaqItems.map(faq => ({
+                        "@type": "Question",
+                        "name": faq.question,
+                        "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+                    }))
+                }) }}
             />
 
             <main className="min-h-screen bg-gray-50">
@@ -274,6 +314,13 @@ export default async function CityPage({ params }: CityPageProps) {
 
                                 </article>
                             </section>
+
+                            {/* 📋 FAQ Accordion — city-level */}
+                            <FaqAccordion
+                                items={cityFaqItems}
+                                cityName={city.name_ar}
+                                serviceName="خدمات منزلية"
+                            />
 
                             {/* Related Blog Articles */}
                             <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

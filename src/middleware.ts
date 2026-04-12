@@ -296,6 +296,8 @@ export function middleware(request: NextRequest) {
         pathname.startsWith('/research') ||
         pathname.startsWith('/maintenance') ||
         pathname.startsWith('/test-buttons') ||
+        pathname.startsWith('/badge') ||
+        pathname.startsWith('/offline') ||
         pathname.startsWith('/llms.txt') ||
         pathname.startsWith('/sitemap-images.xml') ||
         pathname.startsWith('/__/auth') ||           // Firebase auth handler (signInWithRedirect proxy)
