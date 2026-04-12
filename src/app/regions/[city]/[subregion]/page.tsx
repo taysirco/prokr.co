@@ -21,6 +21,7 @@ import { EmergencyNightBanner } from '@/components/EmergencyNightBanner';
 import SocialShareWidget from '@/components/SocialShareWidget';
 import { VisionAiWatermark } from '@/components/VisionAiWatermark';
 import SourceOrderLayout from '@/components/SourceOrderLayout';
+import FaqAccordion from '@/components/FaqAccordion';
 
 interface SubRegionPageProps {
     params: Promise<{
@@ -131,6 +132,26 @@ export default async function SubRegionPage({ params }: SubRegionPageProps) {
         { name: subRegion.name_ar, url: `https://prokr.co/regions/${city.slug}/${subRegion.slug}` },
     ];
 
+    // SubRegion FAQ items
+    const regionFaqItems = [
+        {
+            question: `ما الخدمات المتوفرة في ${subRegion.name_ar}؟`,
+            answer: `تتوفر في ${subRegion.name_ar} ${availableServices.length} خدمة تشمل ${availableServices.slice(0, 5).map(s => s?.name_ar).filter(Boolean).join('، ')}. جميع الشركات معتمدة ومرخصة.`
+        },
+        {
+            question: `كيف أختار شركة خدمات في ${subRegion.name_ar}؟`,
+            answer: `قارن بين الشركات المتاحة في ${subRegion.name_ar} من حيث التقييمات والأسعار والضمان. ننصح بطلب عرض سعر من 3 شركات على الأقل قبل الاختيار.`
+        },
+        {
+            question: `هل تغطي الشركات جميع أحياء ${subRegion.name_ar}؟`,
+            answer: `نعم، الشركات المسجلة لدينا تغطي كافة أحياء ${subRegion.name_ar} و${city.name_ar}. فرق العمل موزعة لتغطية المنطقة بأسرع وقت ممكن.`
+        },
+        {
+            question: `كم تكلفة الخدمات في ${subRegion.name_ar}؟`,
+            answer: `تختلف الأسعار حسب نوع الخدمة وحجم العمل. يمكنك مقارنة الأسعار بين الشركات المتاحة في ${subRegion.name_ar} عبر بروكر والحصول على عروض أسعار مجانية.`
+        },
+    ];
+
     return (
         <>
             {/* JSON-LD Schema - Subregion Services List */}
@@ -166,6 +187,19 @@ export default async function SubRegionPage({ params }: SubRegionPageProps) {
                 url={`https://prokr.co/regions/${city.slug}/${subRegion.slug}`}
                 speakableSelectors={['.citable-summary']}
                 speakableText={`خدمات منزلية في ${subRegion.name_ar}، ${city.name_ar} — يتوفر ${availableServices.length} خدمة منزلية من شركات معتمدة عبر دليل بروكر.`}
+            />
+            {/* FAQPage Schema — subregion */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "FAQPage",
+                    "mainEntity": regionFaqItems.map(faq => ({
+                        "@type": "Question",
+                        "name": faq.question,
+                        "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+                    }))
+                }) }}
             />
 
             <main className="min-h-screen bg-gray-50">
@@ -254,40 +288,11 @@ export default async function SubRegionPage({ params }: SubRegionPageProps) {
                                     </p>
 
                                     <h3 className="text-xl font-bold text-gray-900 mb-3">الأسئلة الشائعة عن خدمات {subRegion.name_ar}</h3>
-                                    <div className="space-y-4 not-prose" itemScope itemType="https://schema.org/FAQPage">
-                                        <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
-                                            <h4 className="font-bold text-gray-800 mb-2" itemProp="name">ما الخدمات المتوفرة في {subRegion.name_ar}؟</h4>
-                                            <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
-                                                <p className="text-gray-600 text-sm" itemProp="text">
-                                                    تتوفر في {subRegion.name_ar} {availableServices.length} خدمة تشمل {availableServices.slice(0, 5).map(s => s?.name_ar).filter(Boolean).join('، ')}. جميع الشركات معتمدة ومرخصة.
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
-                                            <h4 className="font-bold text-gray-800 mb-2" itemProp="name">كيف أختار شركة خدمات في {subRegion.name_ar}؟</h4>
-                                            <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
-                                                <p className="text-gray-600 text-sm" itemProp="text">
-                                                    قارن بين الشركات المتاحة في {subRegion.name_ar} من حيث التقييمات والأسعار والضمان. ننصح بطلب عرض سعر من 3 شركات على الأقل قبل الاختيار.
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
-                                            <h4 className="font-bold text-gray-800 mb-2" itemProp="name">هل تغطي الشركات جميع أحياء {subRegion.name_ar}؟</h4>
-                                            <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
-                                                <p className="text-gray-600 text-sm" itemProp="text">
-                                                    نعم، الشركات المسجلة لدينا تغطي كافة أحياء {subRegion.name_ar} و{city.name_ar}. فرق العمل موزعة لتغطية المنطقة بأسرع وقت ممكن.
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div className="bg-white border border-gray-200 rounded-xl p-4" itemScope itemType="https://schema.org/Question">
-                                            <h4 className="font-bold text-gray-800 mb-2" itemProp="name">كم تكلفة الخدمات في {subRegion.name_ar}؟</h4>
-                                            <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
-                                                <p className="text-gray-600 text-sm" itemProp="text">
-                                                    تختلف الأسعار حسب نوع الخدمة وحجم العمل. يمكنك مقارنة الأسعار بين الشركات المتاحة في {subRegion.name_ar} عبر بروكر والحصول على عروض أسعار مجانية.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <FaqAccordion
+                                        items={regionFaqItems}
+                                        cityName={`${subRegion.name_ar}، ${city.name_ar}`}
+                                        serviceName="خدمات منزلية"
+                                    />
                                 </article>
                             </section>
 
