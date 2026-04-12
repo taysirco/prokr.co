@@ -95,6 +95,39 @@ export default function Footer({ currentCity, currentService }: FooterProps) {
                 </div>
             </div>
 
+            {/* Specialized Services — Link equity for underlinked pages */}
+            <div className="border-b border-white/10">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+                    <h3 className="text-white font-bold text-sm mb-3 flex items-center gap-2">
+                        <span className="w-1 h-5 bg-amber-500 rounded-full"></span>
+                        خدمات متخصصة
+                    </h3>
+                    <div className="flex flex-wrap gap-x-4 gap-y-2">
+                        <Link href={`/${currentValidCity}/sanitization`} className="hover:text-amber-400 transition-colors text-xs" style={{ color: '#94a3b8' }}>
+                            تعقيم وتطهير
+                        </Link>
+                        <Link href={`/${currentValidCity}/air-conditioner-cleaning`} className="hover:text-amber-400 transition-colors text-xs" style={{ color: '#94a3b8' }}>
+                            تنظيف مكيفات
+                        </Link>
+                        <Link href={`/${currentValidCity}/mattress-cleaning`} className="hover:text-amber-400 transition-colors text-xs" style={{ color: '#94a3b8' }}>
+                            تنظيف مراتب
+                        </Link>
+                        <Link href={`/${currentValidCity}/swimming-pool-cleaning`} className="hover:text-amber-400 transition-colors text-xs" style={{ color: '#94a3b8' }}>
+                            تنظيف مسابح
+                        </Link>
+                        <Link href={`/${currentValidCity}/floor-cleaning`} className="hover:text-amber-400 transition-colors text-xs" style={{ color: '#94a3b8' }}>
+                            جلي رخام
+                        </Link>
+                        <Link href={`/${currentValidCity}/auto-cleaning`} className="hover:text-amber-400 transition-colors text-xs" style={{ color: '#94a3b8' }}>
+                            غسيل سيارات
+                        </Link>
+                        <Link href="/research/pricing-index" className="hover:text-amber-400 transition-colors text-xs" style={{ color: '#94a3b8' }}>
+                            📊 مؤشر الأسعار
+                        </Link>
+                    </div>
+                </div>
+            </div>
+
             {/* Main Footer */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

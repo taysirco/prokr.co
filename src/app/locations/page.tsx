@@ -11,8 +11,8 @@ import { EmergencyNightBanner } from '@/components/EmergencyNightBanner';
 import { LiveAvailabilityBanner } from '@/components/LiveAvailabilityBanner';
 
 export const metadata: Metadata = {
-    title: 'مناطق الخدمة في السعودية | 24 مدينة - بروكر',
-    description: 'تصفح جميع المدن والمناطق التي تغطيها خدمات بروكر في المملكة العربية السعودية. 24 مدينة في 5 مناطق تشمل الرياض، جدة، الدمام، مكة، المدينة وأكثر. شركات معتمدة في كل مدينة.',
+    title: 'مناطق الخدمة في السعودية | 30 مدينة - بروكر',
+    description: 'تصفح جميع المدن والمناطق التي تغطيها خدمات بروكر في المملكة العربية السعودية. 30 مدينة في 5 مناطق تشمل الرياض، جدة، الدمام، مكة، المدينة وأكثر. شركات معتمدة في كل مدينة.',
     keywords: [
         'مناطق الخدمة السعودية',
         'مدن بروكر',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'مناطق الخدمة في السعودية | بروكر',
-        description: 'تصفح جميع المدن والمناطق التي تغطيها خدمات بروكر - 24 مدينة في المملكة',
+        description: 'تصفح جميع المدن والمناطق التي تغطيها خدمات بروكر - 30 مدينة في المملكة',
         locale: 'ar_SA',
         type: 'website',
         siteName: 'بروكر',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     twitter: {
         card: 'summary_large_image',
         title: 'مناطق الخدمة في السعودية | بروكر',
-        description: '24 مدينة سعودية مع شركات خدمات معتمدة',
+        description: '30 مدينة سعودية مع شركات خدمات معتمدة',
     },
     alternates: {
         canonical: 'https://prokr.co/locations',
