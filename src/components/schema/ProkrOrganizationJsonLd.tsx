@@ -36,15 +36,15 @@ export function ProkrOrganizationJsonLd() {
             sameAs: 'https://en.wikipedia.org/wiki/Saudi_Arabia',
         },
         // §13.5 Entity Consolidation: Social + Domains + Knowledge Graph
-        // NOTE: Add Wikidata Q-ID here once entity is created on wikidata.org
+        // ✅ Wikidata Q-ID injected — Entity: Q139265070
         sameAs: [
+            'https://www.wikidata.org/wiki/Q139265070',
             'https://twitter.com/prokr_sa',
             'https://www.instagram.com/prokr_sa',
             'https://www.facebook.com/prokr.sa',
             'https://prokr.com',
             'https://prokr.net',
             'https://prokr.org',
-            // Wikidata will be added here after entity creation
         ],
         // Entity Acquisition Declaration — domain consolidation proof
         acquires: [
