@@ -37,7 +37,7 @@ function fetchPSI(pageUrl, strategy = 'mobile') {
             ...(API_KEY ? { key: API_KEY } : {}),
         });
         
-        const apiUrl = `https://www.googleapis.com/pagespeedonline/v5/runPagespeedTests?${params}`;
+        const apiUrl = `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?${params}`;
         
         https.get(apiUrl, (res) => {
             let data = '';

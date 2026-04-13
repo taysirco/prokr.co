@@ -57,8 +57,17 @@ function validatePage(path, schemas) {
         }
     }
     
-    // BreadcrumbList validation
-    const bc = schemas.find(s => s['@type'] === 'BreadcrumbList');
+    // BreadcrumbList validation (check top-level AND inside @graph)
+    let bc = schemas.find(s => s['@type'] === 'BreadcrumbList');
+    if (!bc) {
+        // Also check inside @graph arrays (UnifiedGraphCompiler uses @graph)
+        for (const s of schemas) {
+            if (s['@graph']) {
+                bc = s['@graph'].find(g => g['@type'] === 'BreadcrumbList');
+                if (bc) break;
+            }
+        }
+    }
     if (bc) {
         if (!bc.itemListElement || bc.itemListElement.length === 0)
             errors.push('BreadcrumbList has no items');
