@@ -305,6 +305,11 @@ export default {
       originResponse = await fetch(request.url, {
         method: 'GET',
         headers: originHeaders,
+        // CRITICAL: 'manual' prevents the Worker from auto-following 301/302
+        // redirects from Firebase middleware. Without this, the Worker silently
+        // follows redirects and caches the final 200 under the wrong URL,
+        // destroying SEO (duplicate content) and breaking UTM tracking.
+        redirect: 'manual',
         // Tell Cloudflare NOT to use its auto-cache for this subrequest
         cf: { cacheTtl: 0, cacheEverything: false },
       });
@@ -460,6 +465,11 @@ function findCacheRule(pathname) {
  * @param {URL} url - The parsed URL object
  * @returns {string} Normalized URL string for cache key
  */
+// Cache namespace version — bump this to instantly invalidate ALL cached entries
+// without needing Cloudflare API tokens. Old cache keys become orphaned and
+// expire naturally via their TTL.
+const CACHE_VERSION = 'v2';
+
 function normalizeCacheUrl(url) {
   const cleaned = new URL(url.toString());
 
@@ -475,6 +485,9 @@ function normalizeCacheUrl(url) {
 
   // Sort remaining params for consistent cache keys
   cleaned.searchParams.sort();
+
+  // Append cache version to invalidate old entries on version bump
+  cleaned.searchParams.set('_cv', CACHE_VERSION);
 
   return cleaned.toString();
 }
