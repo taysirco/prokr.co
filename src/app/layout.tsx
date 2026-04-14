@@ -133,9 +133,11 @@ export default function RootLayout({
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="بروكر" />
-        {/* Preconnect for Core Web Vitals */}
-        <link rel="preconnect" href="https://firebasestorage.googleapis.com" />
-        <link rel="preconnect" href="https://prokr-84ca8.firebasestorage.app" />
+        {/* DNS Prefetch for resources used on subpages (not homepage) */}
+        {/* IMPORTANT: These were preconnect but PageSpeed flagged them as unused on homepage.
+            dns-prefetch is lighter — prepares DNS resolution without opening TCP/TLS connections */}
+        <link rel="dns-prefetch" href="https://firebasestorage.googleapis.com" />
+        <link rel="dns-prefetch" href="https://prokr-84ca8.firebasestorage.app" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         {/* Speculation Rules API — prerender navigation */}
         <script

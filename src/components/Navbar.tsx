@@ -89,7 +89,7 @@ export default function Navbar() {
                         {/* Logo */}
                         <Link href="/" className="flex items-center group">
                             <Image
-                                src="/logo.png"
+                                src="/logo.webp"
                                 alt="PROKR - بروكر"
                                 width={140}
                                 height={44}
@@ -307,6 +307,7 @@ export default function Navbar() {
                             <button
                                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                                 className="p-2.5 text-gray-300 hover:text-white hover:bg-white/10 rounded-xl transition-all"
+                                aria-label={isMenuOpen ? 'إغلاق القائمة' : 'فتح القائمة'}
                             >
                                 {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
                             </button>

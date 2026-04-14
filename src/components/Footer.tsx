@@ -135,7 +135,7 @@ export default function Footer({ currentCity, currentService }: FooterProps) {
                     <div className="lg:col-span-3 flex flex-col sm:flex-row items-start sm:items-center gap-6 mb-4 pb-6 border-b border-white/10">
                         <Link href="/" className="shrink-0">
                             <Image
-                                src="/logo.png"
+                                src="/logo.webp"
                                 alt="PROKR - بروكر"
                                 width={140}
                                 height={44}
