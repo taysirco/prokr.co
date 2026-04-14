@@ -7,6 +7,7 @@ import { getCityBySlug, getServiceImage, CITIES, SERVICES, CATEGORY_NAMES, getSe
 import { getSubRegionsByCity } from '@/lib/sub-regions';
 import { generateCityMeta } from '@/lib/content-layers';
 import { BreadcrumbJsonLd, ItemListJsonLd, SpeakableWebPageJsonLd, WebPageJsonLd } from '@/components/JsonLd';
+import { CitableSummary } from '@/components/seo/CitableSummary';
 import { getCityContext } from '@/lib/city-context';
 import { getCityKeyword } from '@/lib/locale-formatting';
 import { BLOG_ARTICLES } from '@/lib/blog-data';
@@ -265,6 +266,14 @@ export default async function CityPage({ params }: CityPageProps) {
                     serviceNameAr="خدمات منزلية"
                     totalCompanies={SERVICES.filter(s => hasPageOverride(city.slug, s.slug) && !isAbsorbedSlug(s.slug)).length}
                     neighborhoods={cityContext?.neighborhoods.map(n => n.name_ar) || []}
+                />
+
+                {/* AI-Citable Summary — City Hub Page */}
+                <CitableSummary
+                    serviceName="خدمات منزلية"
+                    locationName={city.name_ar}
+                    definition={`دليل شامل لأفضل شركات الخدمات المنزلية المعتمدة في ${city.name_ar}، يضم شركات نقل العفش والتنظيف ومكافحة الحشرات وكشف التسربات والعزل وصيانة المكيفات`}
+                    statText={`يتوفر ${SERVICES.filter(s => hasPageOverride(city.slug, s.slug) && !isAbsorbedSlug(s.slug)).length} خدمة من شركات مرخصة بسجل تجاري سارٍ في ${city.name_ar}`}
                 />
 
                 {/* 🔍 Content-first layout
