@@ -129,12 +129,25 @@ const CITY_ALIASES: Record<string, string> = {
 // Service alias map: old suffix → new slug
 const SERVICE_ALIASES: Record<string, string> = {
     'movers': 'furniture-moving',
+    'moving': 'furniture-moving',
+    'furniture': 'furniture-moving',
     'cleaning': 'cleaning',
     'cleaning-companies': 'cleaning',
+    'pest-control': 'pest-control',           // Direct match (was missing!)
     'anti-insect': 'pest-control',
+    'insect': 'pest-control',
     'water-leaks': 'water-leak-detection',
     'water-leaks-detection': 'water-leak-detection',
+    'leak-detection': 'water-leak-detection',  // Alias for water-leak-detection
     'water-leaks-detection-isolate-companies': 'water-leak-detection', // /ksa/al-riydah-water-leaks-detection-isolate-companies
+    'insulation': 'insulation',                // Direct match
+    'sewage': 'sewage-vacuum',                 // Short alias
+    'sewage-vacuum': 'sewage-vacuum',          // Direct match
+    'ac-maintenance': 'ac-maintenance',        // Direct match
+    'storage': 'furniture-storage',            // Short alias
+    'furniture-storage': 'furniture-storage',  // Direct match
+    'pool-cleaning': 'pool-cleaning',          // Direct match
+    'tank-cleaning': 'tank-cleaning',          // Direct match
 };
 
 // Pre-sorted service keys (longest first) to avoid partial matches
