@@ -12,7 +12,7 @@ const ibmPlexArabic = IBM_Plex_Sans_Arabic({
   variable: "--font-ibm-plex-arabic",
   subsets: ["arabic"],
   weight: ["400", "600", "700"],
-  display: "swap",
+  display: "optional",
 });
 
 export const metadata: Metadata = {
