@@ -8,7 +8,7 @@ export default function robots(): MetadataRoute.Robots {
             // Default: Allow everything except internal paths
             {
                 userAgent: '*',
-                allow: '/',
+                allow: ['/', '/api/sitemap-index', '/api/sitemap/'],
                 disallow: ['/admin', '/api/', '/search', '/_next/', '/test-buttons'],
             },
             // ── Search Engines (Full Access) ──
