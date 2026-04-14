@@ -468,7 +468,7 @@ function findCacheRule(pathname) {
 // Cache namespace version — bump this to instantly invalidate ALL cached entries
 // without needing Cloudflare API tokens. Old cache keys become orphaned and
 // expire naturally via their TTL.
-const CACHE_VERSION = 'v3';
+const CACHE_VERSION = 'v4';
 
 function normalizeCacheUrl(url) {
   const cleaned = new URL(url.toString());
