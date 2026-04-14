@@ -1,4 +1,5 @@
 #!/usr/bin/env npx tsx
+export {};
 // 🕷️ LOCAL VERIFICATION CRAWL — crawl localhost:3000 to verify all fixes
 const BASE_URL = 'http://localhost:3000';
 const MAX_PAGES = 2000;

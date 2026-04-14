@@ -144,6 +144,9 @@ interface WarmResult {
     status: number;
     ttfb: number;       // Time to First Byte (ms)
     totalTime: number;  // Total response time (ms)
+    edgeCacheStatus?: string;  // X-Cache-Status from Edge Worker
+    edgePop?: string;          // X-Edge-Pop (Cloudflare PoP location)
+    edgeTtl?: string;          // X-Edge-TTL (seconds)
     error?: string;
 }
 
@@ -161,6 +164,8 @@ async function warmUrl(url: string): Promise<WarmResult> {
                 'User-Agent': 'ProkrCacheWarmer/1.0 (+https://prokr.co)',
                 'Accept': 'text/html',
                 'Accept-Encoding': 'gzip',
+                // Tell Edge Worker this is a warm request → apply extended bot TTL (24h)
+                'X-Prokr-Warm': 'true',
             },
         });
 
@@ -177,6 +182,9 @@ async function warmUrl(url: string): Promise<WarmResult> {
             status: res.status,
             ttfb: Math.round(ttfb),
             totalTime: Math.round(totalTime),
+            edgeCacheStatus: res.headers.get('x-cache-status') || undefined,
+            edgePop: res.headers.get('x-edge-pop') || undefined,
+            edgeTtl: res.headers.get('x-edge-ttl') || undefined,
         };
     } catch (err: any) {
         const totalTime = performance.now() - start;
@@ -208,11 +216,13 @@ async function warmBatch(urls: string[], concurrency: number): Promise<WarmResul
             const statusIcon = result.status === 200 ? '✅' : result.status === 301 || result.status === 308 ? '↩️' : '❌';
             const progress = `[${completed}/${total}]`;
             const ttfbColor = result.ttfb < 200 ? '🟢' : result.ttfb < 500 ? '🟡' : '🔴';
+            const edgeInfo = result.edgeCacheStatus ? ` [${result.edgeCacheStatus}]` : '';
+            const popInfo = result.edgePop ? ` @${result.edgePop}` : '';
 
             if (result.error) {
                 console.log(`${progress} ${statusIcon} ${url} — ERROR: ${result.error}`);
             } else {
-                console.log(`${progress} ${statusIcon} ${url} — ${result.status} — ${ttfbColor} TTFB: ${result.ttfb}ms — Total: ${result.totalTime}ms`);
+                console.log(`${progress} ${statusIcon} ${url} — ${result.status} — ${ttfbColor} TTFB: ${result.ttfb}ms${edgeInfo}${popInfo}`);
             }
         }
     }
@@ -243,8 +253,15 @@ function generateReport(results: WarmResult[], totalDuration: number) {
         ? Math.min(...successful.map(r => r.ttfb))
         : 0;
     const p95Ttfb = successful.length > 0
-        ? successful.sort((a, b) => a.ttfb - b.ttfb)[Math.floor(successful.length * 0.95)]?.ttfb || 0
+        ? [...successful].sort((a, b) => a.ttfb - b.ttfb)[Math.floor(successful.length * 0.95)]?.ttfb || 0
         : 0;
+
+    // Edge Cache Statistics
+    const edgeHits = results.filter(r => r.edgeCacheStatus === 'HIT');
+    const edgeMisses = results.filter(r => r.edgeCacheStatus === 'MISS');
+    const edgeBypasses = results.filter(r => r.edgeCacheStatus === 'BYPASS');
+    const workerActive = results.some(r => r.edgeCacheStatus && r.edgeCacheStatus !== undefined);
+    const uniquePops = [...new Set(results.filter(r => r.edgePop).map(r => r.edgePop))];
 
     console.log('\n');
     console.log('═══════════════════════════════════════════════');
@@ -263,6 +280,15 @@ function generateReport(results: WarmResult[], totalDuration: number) {
     console.log(`  TTFB Min:      ${minTtfb}ms`);
     console.log(`  TTFB Max:      ${maxTtfb}ms`);
     console.log(`  TTFB P95:      ${p95Ttfb}ms`);
+    console.log('───────────────────────────────────────────────');
+    console.log('  ☁️  EDGE CACHE STATUS');
+    console.log(`  Worker Active: ${workerActive ? '✅ YES' : '❌ NO (deploy Worker first)'}`);
+    console.log(`  Edge HITs:     ${edgeHits.length}`);
+    console.log(`  Edge MISSes:   ${edgeMisses.length}`);
+    console.log(`  Edge BYPASSes: ${edgeBypasses.length}`);
+    if (uniquePops.length > 0) {
+        console.log(`  Edge PoPs:     ${uniquePops.join(', ')}`);
+    }
     console.log('═══════════════════════════════════════════════');
 
     if (failed.length > 0) {
@@ -273,11 +299,12 @@ function generateReport(results: WarmResult[], totalDuration: number) {
     }
 
     // Find slowest pages
-    const slowest = successful.sort((a, b) => b.ttfb - a.ttfb).slice(0, 10);
+    const slowest = [...successful].sort((a, b) => b.ttfb - a.ttfb).slice(0, 10);
     if (slowest.length > 0) {
         console.log('\n🐌 SLOWEST PAGES (Top 10):');
         for (const s of slowest) {
-            console.log(`   ${s.ttfb}ms — ${s.url}`);
+            const edge = s.edgeCacheStatus ? ` [${s.edgeCacheStatus}]` : '';
+            console.log(`   ${s.ttfb}ms — ${s.url}${edge}`);
         }
     }
 
@@ -288,9 +315,48 @@ function generateReport(results: WarmResult[], totalDuration: number) {
 // MAIN
 // ============================================
 
+async function verifyEdgeCache(urls: string[]): Promise<WarmResult[]> {
+    console.log('\n── Phase 3: Verifying Edge Cache HITs ──\n');
+    console.log('   Re-fetching sample URLs to confirm HIT status...\n');
+
+    // Sample: take every Nth URL + all static pages
+    const sampleSize = Math.min(30, urls.length);
+    const step = Math.max(1, Math.floor(urls.length / sampleSize));
+    const sampleUrls = urls.filter((_, i) => i % step === 0).slice(0, sampleSize);
+
+    const results: WarmResult[] = [];
+    let hits = 0;
+    let misses = 0;
+
+    for (const url of sampleUrls) {
+        const result = await warmUrl(url);
+        results.push(result);
+
+        if (result.edgeCacheStatus === 'HIT') {
+            hits++;
+            console.log(`   ⚡ HIT  ${result.ttfb}ms — ${url}`);
+        } else {
+            misses++;
+            console.log(`   ❄️  ${result.edgeCacheStatus || 'NO-EDGE'}  ${result.ttfb}ms — ${url}`);
+        }
+    }
+
+    const hitRate = sampleUrls.length > 0 ? Math.round((hits / sampleUrls.length) * 100) : 0;
+    console.log(`\n   Edge HIT Rate: ${hitRate}% (${hits}/${sampleUrls.length})`);
+
+    if (hitRate < 80) {
+        console.log('   ⚠️  HIT rate below 80% — Edge Worker may not be active or deployed.');
+        console.log('   → Check: cd cloudflare/edge-cache && npx wrangler deploy');
+    } else {
+        console.log('   ✅ Edge cache is working correctly!');
+    }
+
+    return results;
+}
+
 async function main() {
     console.log('');
-    console.log('🔥 Prokr.co Cache Pre-warming Script');
+    console.log('🔥 Prokr.co Cache Pre-warming Script (Edge-Aware)');
     console.log(`   Target: ${baseUrl}`);
     console.log(`   Concurrency: ${CONCURRENCY}`);
     console.log('');
@@ -331,6 +397,9 @@ async function main() {
     // Phase 2: Warm all service pages (the bulk)
     console.log('\n── Phase 2: Warming Service Pages ──\n');
     const phase2Results = await warmBatch(overrideUrls, CONCURRENCY);
+
+    // Phase 3: Verify edge cache is working
+    const verifyResults = await verifyEdgeCache(allUrls);
 
     const totalDuration = performance.now() - phase1Start;
     const allResults = [...phase1Results, ...phase2Results];

@@ -1,0 +1,57 @@
+# ═══════════════════════════════════════════════════════════════
+# Prokr.co — Cloudflare Edge Cache Worker Configuration
+# ═══════════════════════════════════════════════════════════════
+# Deploy: cd cloudflare/edge-cache && npx wrangler deploy
+# Dev:    cd cloudflare/edge-cache && npx wrangler dev
+# Tail:   cd cloudflare/edge-cache && npx wrangler tail
+# ═══════════════════════════════════════════════════════════════
+
+name = "prokr-edge-cache"
+main = "src/worker.js"
+compatibility_date = "2026-04-13"
+
+# ── Account Settings ──
+# Uncomment and set your Cloudflare Account ID:
+# account_id = "YOUR_ACCOUNT_ID_HERE"
+
+# ── Route Configuration ──
+# The Worker will intercept ALL requests to prokr.co
+# This requires prokr.co to be added as a Zone in Cloudflare
+routes = [
+  { pattern = "prokr.co/*", zone_name = "prokr.co" },
+  { pattern = "www.prokr.co/*", zone_name = "prokr.co" },
+]
+
+# ── Worker CPU Limits ──
+# Free plan: 10ms CPU per request (FIXED, cannot be changed via config).
+# Paid plan ($5/mo): configurable up to 300,000ms via [limits] cpu_ms.
+#
+# Our Worker uses ~0.5ms CPU on cache HIT, ~3-5ms on cache MISS.
+# Network I/O (fetch, cache.put) does NOT count as CPU time.
+# The free plan 10ms limit is MORE than sufficient.
+#
+# If you upgrade to paid plan and need more CPU:
+# [limits]
+# cpu_ms = 50
+
+# ── Environment Variables ──
+[vars]
+ENVIRONMENT = "production"
+ORIGIN_HOST = "prokr.co"
+WORKER_VERSION = "1.0.0"
+
+# ── Development ──
+[dev]
+port = 8787
+local_protocol = "https"
+
+# ── Staging Environment ──
+[env.staging]
+name = "prokr-edge-cache-staging"
+routes = []
+[env.staging.vars]
+ENVIRONMENT = "staging"
+
+# ── Observability ──
+# View real-time logs: npx wrangler tail
+# Dashboard: https://dash.cloudflare.com → Workers → prokr-edge-cache

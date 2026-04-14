@@ -16,7 +16,9 @@
     "seo:links": "node scripts/internal-links-audit.js",
     "seo:cwv": "node scripts/cwv-check.js",
     "seo:monitor": "node scripts/phase2-monitor.js",
-    "seo:index": "node scripts/indexing-api.js"
+    "seo:index": "node scripts/indexing-api.js",
+    "seo:edge": "npx tsx scripts/verify-edge.ts",
+    "seo:edge:verbose": "npx tsx scripts/verify-edge.ts --verbose"
   },
   "dependencies": {
     "@next/third-parties": "^16.1.6",

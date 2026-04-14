@@ -77,6 +77,22 @@ const CITY_ALIASES: Record<string, string> = {
     'khobar': 'al-khobar',
     'khamis': 'khamis-mushait',
     'hafar-albatin': 'hafr-albatin',
+    'al-riyadh': 'riyadh',          // /ksa/al-riyadh-movers
+    'al-riydah': 'riyadh',          // /ksa/al-riydah-water-leaks... (typo in old URL)
+    'al-qassim': 'qassim',          // /ksa/al-qassim-movers
+    'onaizah': 'onizah',            // /ksa/onaizah-movers (old spelling)
+    'al-jubail': 'jubail',          // /ksa/al-jubail-movers
+    'al-hasa': 'al-ahsa',           // /ksa/al-hasa-movers
+    'hasa': 'al-ahsa',              // /ksa/hasa-cleaning
+    'hafar-al-batin': 'hafr-albatin', // /ksa/hafar-al-batin-movers
+    'buraydah': 'buraidah',          // /ksa/buraydah-water-leaks (old spelling)
+    'al-jeddah': 'jeddah',           // Preventive: al- prefix variant
+    'al-makkah': 'makkah',           // Preventive: al- prefix variant
+    'al-madinah': 'madinah',         // Preventive: al- prefix variant
+    'al-abha': 'abha',               // Preventive: al- prefix variant
+    'al-hail': 'hail',               // Preventive: al- prefix variant
+    'al-yanbu': 'yanbu',             // Preventive: al- prefix variant
+    'el-riyadh': 'riyadh',           // Preventive: el- prefix variant
     // Direct matches (all 30 cities from seed.ts)
     'riyadh': 'riyadh',
     'al-kharj': 'al-kharj',
@@ -118,6 +134,7 @@ const SERVICE_ALIASES: Record<string, string> = {
     'anti-insect': 'pest-control',
     'water-leaks': 'water-leak-detection',
     'water-leaks-detection': 'water-leak-detection',
+    'water-leaks-detection-isolate-companies': 'water-leak-detection', // /ksa/al-riydah-water-leaks-detection-isolate-companies
 };
 
 // Pre-sorted service keys (longest first) to avoid partial matches
@@ -223,22 +240,27 @@ export function middleware(request: NextRequest) {
                     .replace(/^\/ksa\/?/, '')
                     .replace(/\/.*$/, '') // Strip any subpaths (e.g., /contact.html)
                     .replace(/\?.*$/, '') // Strip query strings
-            );
+            ).toLowerCase(); // Normalize case: /ksa/Al-Riyadh-Movers → al-riyadh-movers
         } catch {
             rawSlug = pathname
                 .replace(/^\/ksa\/?/, '')
                 .replace(/\/.*$/, '')
-                .replace(/\?.*$/, '');
+                .replace(/\?.*$/, '')
+                .toLowerCase();
         }
 
         // If /ksa with no slug, redirect to homepage
         if (!rawSlug) {
-            return NextResponse.redirect(new URL('/', request.url), 301);
+            const url = request.nextUrl.clone();
+            url.pathname = '/';
+            return NextResponse.redirect(url, 301);
         }
 
         // ── Strategy A: Static Map (exact match) ──
         if (STATIC_LEGACY_MAP[rawSlug]) {
-            return NextResponse.redirect(new URL(STATIC_LEGACY_MAP[rawSlug], request.url), 301);
+            const url = request.nextUrl.clone();
+            url.pathname = STATIC_LEGACY_MAP[rawSlug];
+            return NextResponse.redirect(url, 301);
         }
 
         // ── Strategy B: Pattern Parser {city-alias}-{service-alias} ──
@@ -247,13 +269,17 @@ export function middleware(request: NextRequest) {
                 const cityPart = rawSlug.slice(0, -(serviceKey.length + 1));
                 const newCity = CITY_ALIASES[cityPart];
                 if (newCity) {
-                    return NextResponse.redirect(new URL(`/${newCity}/${SERVICE_ALIASES[serviceKey]}`, request.url), 301);
+                    const url = request.nextUrl.clone();
+                    url.pathname = `/${newCity}/${SERVICE_ALIASES[serviceKey]}`;
+                    return NextResponse.redirect(url, 301);
                 }
             }
         }
 
         // No match found — redirect to homepage
-        return NextResponse.redirect(new URL('/', request.url), 301);
+        const url = request.nextUrl.clone();
+        url.pathname = '/';
+        return NextResponse.redirect(url, 301);
     }
 
     // ════════════════════════════════════════════════════════════════
@@ -261,7 +287,9 @@ export function middleware(request: NextRequest) {
     // /sitemap_index.xml → /api/sitemap-index
     // ════════════════════════════════════════════════════════════════
     if (pathname === '/sitemap_index.xml') {
-        return NextResponse.redirect(new URL('/api/sitemap-index', request.url), 301);
+        const url = request.nextUrl.clone();
+        url.pathname = '/api/sitemap-index';
+        return NextResponse.redirect(url, 301);
     }
 
     // ════════════════════════════════════════════════════════════════
@@ -277,9 +305,13 @@ export function middleware(request: NextRequest) {
     ) {
         // /nakl-madina was a legitimate old link for Madinah furniture moving
         if (pathname === '/nakl-madina') {
-            return NextResponse.redirect(new URL('/madinah/furniture-moving', request.url), 301);
+            const url = request.nextUrl.clone();
+            url.pathname = '/madinah/furniture-moving';
+            return NextResponse.redirect(url, 301);
         }
-        return NextResponse.redirect(new URL('/', request.url), 301);
+        const fallbackUrl = request.nextUrl.clone();
+        fallbackUrl.pathname = '/';
+        return NextResponse.redirect(fallbackUrl, 301);
     }
 
 
@@ -367,7 +399,9 @@ export function middleware(request: NextRequest) {
         if (isAbsorbedSlug(firstSegment)) {
             const canonicalSlug = getCanonicalSlug(firstSegment);
             if (canonicalSlug) {
-                return NextResponse.redirect(new URL(`/${canonicalSlug}`, request.url), 301);
+                const url = request.nextUrl.clone();
+                url.pathname = `/${canonicalSlug}`;
+                return NextResponse.redirect(url, 301);
             }
         }
         const url = request.nextUrl.clone();
@@ -382,7 +416,9 @@ export function middleware(request: NextRequest) {
     // rendering, no round-trip to Next.js, fastest possible response.
     // 302 (temporary) so Google doesn't cache dead URL → homepage.
     // ════════════════════════════════════════════════════════════════
-    return NextResponse.redirect(new URL('/', request.url), 302);
+    const finalFallback = request.nextUrl.clone();
+    finalFallback.pathname = '/';
+    return NextResponse.redirect(finalFallback, 302);
 }
 
 export const config = {
