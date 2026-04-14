@@ -231,29 +231,47 @@ export function middleware(request: NextRequest) {
     // Uses 301 Permanent to transfer full backlink equity (link juice)
     // ════════════════════════════════════════════════════════════════
     if (pathname.startsWith('/ksa/') || pathname === '/ksa') {
-        // Strip /ksa prefix and trailing slash for processing
-        // decodeURIComponent handles percent-encoded Arabic slugs
-        let rawSlug: string;
-        try {
-            rawSlug = decodeURIComponent(
-                pathname
-                    .replace(/^\/ksa\/?/, '')
-                    .replace(/\/.*$/, '') // Strip any subpaths (e.g., /contact.html)
-                    .replace(/\?.*$/, '') // Strip query strings
-            ).toLowerCase(); // Normalize case: /ksa/Al-Riyadh-Movers → al-riyadh-movers
-        } catch {
-            rawSlug = pathname
-                .replace(/^\/ksa\/?/, '')
-                .replace(/\/.*$/, '')
-                .replace(/\?.*$/, '')
-                .toLowerCase();
-        }
+        // Strip /ksa prefix for processing
+        const afterKsa = pathname.replace(/^\/ksa\/?/, '').replace(/\/$/, '');
+        const ksaSegments = afterKsa.split('/').filter(Boolean);
 
         // If /ksa with no slug, redirect to homepage
-        if (!rawSlug) {
+        if (ksaSegments.length === 0) {
             const url = request.nextUrl.clone();
             url.pathname = '/';
             return NextResponse.redirect(url, 301);
+        }
+
+        // ── NEW: /ksa/{city}/{service} → /{city}/{service} ──
+        // Handles: /ksa/riyadh/furniture-moving → /riyadh/furniture-moving
+        if (ksaSegments.length >= 2) {
+            const maybeCitySlug = ksaSegments[0].toLowerCase();
+            const maybeServiceSlug = ksaSegments[1].toLowerCase();
+            // Check if first segment is a known city (or alias)
+            const resolvedCity = citySlugs.has(maybeCitySlug)
+                ? maybeCitySlug
+                : CITY_ALIASES[maybeCitySlug] || null;
+            if (resolvedCity) {
+                const resolvedService = serviceSlugs.has(maybeServiceSlug)
+                    ? maybeServiceSlug
+                    : SERVICE_ALIASES[maybeServiceSlug] || maybeServiceSlug;
+                const url = request.nextUrl.clone();
+                url.pathname = `/${resolvedCity}/${resolvedService}`;
+                return NextResponse.redirect(url, 301);
+            }
+        }
+
+        // ── Legacy single-slug: /ksa/{city-service-combo} ──
+        let rawSlug: string;
+        try {
+            rawSlug = decodeURIComponent(
+                ksaSegments[0]
+                    .replace(/\?.*$/, '') // Strip query strings
+            ).toLowerCase();
+        } catch {
+            rawSlug = ksaSegments[0]
+                .replace(/\?.*$/, '')
+                .toLowerCase();
         }
 
         // ── Strategy A: Static Map (exact match) ──
@@ -274,6 +292,14 @@ export function middleware(request: NextRequest) {
                     return NextResponse.redirect(url, 301);
                 }
             }
+        }
+
+        // ── Strategy C: City-only match → redirect to city page ──
+        const cityOnly = CITY_ALIASES[rawSlug];
+        if (cityOnly) {
+            const url = request.nextUrl.clone();
+            url.pathname = `/${cityOnly}`;
+            return NextResponse.redirect(url, 301);
         }
 
         // No match found — redirect to homepage

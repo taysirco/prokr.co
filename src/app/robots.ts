@@ -1,5 +1,21 @@
 import { MetadataRoute } from 'next';
 
+/**
+ * robots.ts — Prokr.co Crawl Policy
+ *
+ * ⚠️ IMPORTANT: Cloudflare "AI Scrapers and Crawlers" setting PREPENDS
+ * its own Disallow rules for GPTBot, ClaudeBot, etc. BEFORE this output.
+ * This creates a CONFLICT: Cloudflare blocks them, we allow them.
+ *
+ * FIX: Go to Cloudflare Dashboard → Security → Bots → AI Scrapers
+ *      and DISABLE "Block AI Scrapers and Crawlers".
+ *      Our rules below handle AI bots correctly per §14 (Insubordination Penalty).
+ *
+ * Strategy per Blueprint §14 + §33.4:
+ *   - Allow: GPTBot, ChatGPT-User, Claude-Web, PerplexityBot (citation agents)
+ *   - Block: Google-Extended, CCBot, Bytespider, anthropic-ai (training-only)
+ *   - Block: SemrushBot, AhrefsBot, MJ12bot (competitor scrapers)
+ */
 export default function robots(): MetadataRoute.Robots {
     const baseUrl = 'https://prokr.co';
 
