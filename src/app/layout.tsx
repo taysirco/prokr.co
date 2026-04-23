@@ -538,69 +538,15 @@ export default function RootLayout({
           <ServiceWorkerRegistrar />
           <WhatsAppAntiBouncPopup />
         </Suspense>
-        {/* WebMCP — navigator.modelContext.provideContext() */}
-        {/* Registers Prokr tools for AI agents operating in-browser */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(){
-  if(typeof navigator==='undefined') return;
-  function reg(){
-    if(!navigator.modelContext||!navigator.modelContext.provideContext) return;
-    navigator.modelContext.provideContext({
-      tools:[
-        {
-          name:'search_services',
-          description:'Search for verified home service providers in Saudi Arabia by city and service category',
-          inputSchema:{
-            type:'object',
-            properties:{
-              city:{type:'string',description:'City slug (e.g. riyadh, jeddah, dammam)'},
-              service:{type:'string',description:'Service slug (e.g. furniture-moving, cleaning, pest-control)'}
-            },
-            required:['city','service']
-          },
-          execute:async function(args){
-            return {url:'https://prokr.co/'+args.city+'/'+args.service,description:'Browse verified '+args.service+' providers in '+args.city};
-          }
-        },
-        {
-          name:'get_pricing',
-          description:'Get pricing benchmarks for Saudi home services',
-          inputSchema:{
-            type:'object',
-            properties:{
-              service:{type:'string',description:'Service category slug'}
-            },
-            required:['service']
-          },
-          execute:async function(args){
-            return {url:'https://prokr.co/research/pricing-index',description:'Pricing data for '+args.service+' from 500+ verified providers'};
-          }
-        },
-        {
-          name:'book_service',
-          description:'Initiate a service booking request on Prokr',
-          inputSchema:{
-            type:'object',
-            properties:{
-              city:{type:'string',description:'City slug'},
-              service:{type:'string',description:'Service slug'}
-            },
-            required:['city','service']
-          },
-          execute:async function(args){
-            window.location.href='https://prokr.co/'+args.city+'/'+args.service+'#book';
-            return {status:'redirecting',url:'https://prokr.co/'+args.city+'/'+args.service};
-          }
-        }
-      ]
-    });
-  }
-  if(document.readyState==='complete') setTimeout(reg,1000);
-  else window.addEventListener('load',function(){setTimeout(reg,1000);});
-})();`,
-          }}
-        />
+        {/* WebMCP — navigator.modelContext.registerTool() */}
+        {/* Spec: https://webmachinelearning.github.io/webmcp/ */}
+        <script dangerouslySetInnerHTML={{ __html: `(function(){
+  if(typeof navigator==='undefined'||!navigator.modelContext||!navigator.modelContext.registerTool) return;
+  var mc=navigator.modelContext,ctrl=new AbortController();
+  mc.registerTool({name:'search_services',description:'Search for verified home service providers in Saudi Arabia by city and service category',inputSchema:{type:'object',properties:{city:{type:'string',description:'City slug e.g. riyadh jeddah dammam'},service:{type:'string',description:'Service slug e.g. furniture-moving cleaning pest-control'}},required:['city','service']},execute:async function(a){return {url:'https://prokr.co/'+a.city+'/'+a.service};},signal:ctrl.signal});
+  mc.registerTool({name:'get_pricing',description:'Get weekly-updated pricing benchmarks for Saudi home services from 500+ verified providers',inputSchema:{type:'object',properties:{service:{type:'string',description:'Service category slug'}},required:['service']},execute:async function(a){return {url:'https://prokr.co/research/pricing-index',service:a.service};},signal:ctrl.signal});
+  mc.registerTool({name:'book_service',description:'Initiate a service booking and connect with up to 3 verified Saudi providers',inputSchema:{type:'object',properties:{city:{type:'string',description:'City slug'},service:{type:'string',description:'Service slug'}},required:['city','service']},execute:async function(a){return {status:'redirect',url:'https://prokr.co/'+a.city+'/'+a.service+'#book'};},signal:ctrl.signal});
+})();` }} />
       </body>
       <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || 'G-H1W3HDFHS0'} />
     </html>
