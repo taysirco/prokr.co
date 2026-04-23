@@ -92,6 +92,17 @@ const nextConfig: NextConfig = {
         ],
       },
       {
+        // Homepage — prevent CDN from caching HTML so agents/scanners always
+        // get the latest version with WebMCP script and Link headers.
+        // Browsers can still cache (max-age=60), but Cloudflare/CDN must not.
+        source: '/',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=60, s-maxage=0, must-revalidate' },
+          { key: 'CDN-Cache-Control', value: 'no-store' },
+          { key: 'Cloudflare-CDN-Cache-Control', value: 'no-store' },
+        ],
+      },
+      {
         // .well-known routes — agent discovery, MCP, skills, etc.
         // Each route handler sets its own Content-Type
         source: '/.well-known/:path*',
