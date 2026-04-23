@@ -217,7 +217,8 @@ export function middleware(request: NextRequest) {
         !pathname.startsWith('/api') && 
         !pathname.startsWith('/company/') &&
         !pathname.startsWith('/ksa/') &&
-        !pathname.startsWith('/images/')
+        !pathname.startsWith('/images/') &&
+        !pathname.startsWith('/.well-known')
     ) {
         // Only lowercase unencoded ASCII uppercase letters
         // Preserve %XX sequences exactly as-is
