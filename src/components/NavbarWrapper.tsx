@@ -4,7 +4,7 @@ import Navbar from './Navbar';
 import { usePathname } from 'next/navigation';
 
 /** Pages that should render without the site-wide navbar */
-const STANDALONE_ROUTES = ['/advertise'];
+const STANDALONE_ROUTES = ['/advertise', '/corporate'];
 
 export default function NavbarWrapper() {
     const pathname = usePathname();

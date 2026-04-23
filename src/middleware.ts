@@ -167,14 +167,41 @@ export function middleware(request: NextRequest) {
     }
 
     // ════════════════════════════════════════════════════════════════
-    // PHASE 3: Legacy Domain Consolidation (§1.2)
-    // ACTIVATE on Day 15+ (April 20, 2026) — after quarantine ends
-    // PREREQUISITE: Upload scripts/disavow.txt to GSC 5-7 days before
+    // 📄 Markdown Content Negotiation (Cloudflare "Markdown for Agents")
+    // When Accept: text/markdown is present, rewrite to markdown handler.
+    // Must fire before Phoenix Protocol so agents get clean markdown.
     // ════════════════════════════════════════════════════════════════
-    const LEGACY_DOMAINS = ['prokr.com', 'prokr.net', 'prokr.org', 'www.prokr.com', 'www.prokr.net', 'www.prokr.org'];
-    if (LEGACY_DOMAINS.includes(hostname)) {
-        const canonicalUrl = new URL(pathname + url.search, 'https://prokr.co');
-        return NextResponse.redirect(canonicalUrl, 301);
+    const accept = request.headers.get('accept') || '';
+    if (
+        accept.includes('text/markdown') &&
+        !pathname.startsWith('/api/') &&
+        !pathname.startsWith('/_next') &&
+        !pathname.startsWith('/.well-known')
+    ) {
+        const mdUrl = request.nextUrl.clone();
+        mdUrl.pathname = `/api/markdown-negotiate${pathname === '/' ? '/index' : pathname}`;
+        return NextResponse.rewrite(mdUrl);
+    }
+
+    // ════════════════════════════════════════════════════════════════
+    // 🪓 PHOENIX PROTOCOL §1: Internal 410 Guillotine
+    // Kill WordPress/CMS junk paths on prokr.co ITSELF.
+    // These legacy paths must return 410 Gone (not redirect)
+    // to purge toxic anchor text from Google's index.
+    // ════════════════════════════════════════════════════════════════
+    const INTERNAL_JUNK = ['/category/', '/tag/', '/author/', '/page/', '/wp-content/', '/wp-admin/', '/wp-includes/', '/wp-json/'];
+    if (
+        INTERNAL_JUNK.some(p => pathname.includes(p)) ||
+        pathname.match(/\.(php|htm)$/i) ||
+        (pathname.endsWith('.html') && !pathname.startsWith('/_next'))
+    ) {
+        return new NextResponse('410 Gone — Asset Purged', {
+            status: 410,
+            headers: {
+                'X-Robots-Tag': 'noindex, nofollow',
+                'Cache-Control': 'public, max-age=31536000, immutable',
+            },
+        });
     }
 
     // ════════════════════════════════════════════════════════════════
@@ -248,10 +275,10 @@ export function middleware(request: NextRequest) {
         const afterKsa = pathname.replace(/^\/ksa\/?/, '').replace(/\/$/, '');
         const ksaSegments = afterKsa.split('/').filter(Boolean);
 
-        // If /ksa with no slug, redirect to homepage
+        // If /ksa with no slug, redirect to services hub (not homepage — Phoenix Protocol)
         if (ksaSegments.length === 0) {
             const url = request.nextUrl.clone();
-            url.pathname = '/';
+            url.pathname = '/services-page';
             return NextResponse.redirect(url, 301);
         }
 
@@ -315,9 +342,9 @@ export function middleware(request: NextRequest) {
             return NextResponse.redirect(url, 301);
         }
 
-        // No match found — redirect to homepage
+        // No match found — redirect to services hub (Phoenix Protocol: protect homepage)
         const url = request.nextUrl.clone();
-        url.pathname = '/';
+        url.pathname = '/services-page';
         return NextResponse.redirect(url, 301);
     }
 
@@ -332,25 +359,31 @@ export function middleware(request: NextRequest) {
     }
 
     // ════════════════════════════════════════════════════════════════
-    // Legacy non-/ksa/ paths → homepage
-    // Old WordPress blog (/2016/), hacked spam (/how-to/), and
-    // legacy short URLs — all redirect to homepage
+    // Legacy non-/ksa/ paths — Phoenix Protocol Hardening
+    // WordPress blog + hacked spam → 410 Gone (purge from index)
+    // Legitimate legacy shortlinks → contextual redirect
     // ════════════════════════════════════════════════════════════════
-    if (
-        pathname.startsWith('/al-safrat-movers') ||
-        pathname.startsWith('/2016/') ||            // Old WordPress blog
-        pathname.startsWith('/how-to/') ||           // Hacked/spam paths
-        pathname === '/nakl-madina'                  // Old shortlink
-    ) {
-        // /nakl-madina was a legitimate old link for Madinah furniture moving
-        if (pathname === '/nakl-madina') {
-            const url = request.nextUrl.clone();
-            url.pathname = '/madinah/furniture-moving';
-            return NextResponse.redirect(url, 301);
-        }
-        const fallbackUrl = request.nextUrl.clone();
-        fallbackUrl.pathname = '/';
-        return NextResponse.redirect(fallbackUrl, 301);
+    if (pathname.startsWith('/2016/') || pathname.startsWith('/how-to/')) {
+        // Old WordPress blog + hacked spam → 410 Gone (not redirect!)
+        return new NextResponse('410 Gone — Legacy Content Purged', {
+            status: 410,
+            headers: {
+                'X-Robots-Tag': 'noindex, nofollow',
+                'Cache-Control': 'public, max-age=31536000, immutable',
+            },
+        });
+    }
+    if (pathname === '/nakl-madina') {
+        // Legitimate old shortlink for Madinah furniture moving
+        const url = request.nextUrl.clone();
+        url.pathname = '/madinah/furniture-moving';
+        return NextResponse.redirect(url, 301);
+    }
+    if (pathname.startsWith('/al-safrat-movers')) {
+        // Al-Safrat was a Riyadh-based moving company brand
+        const url = request.nextUrl.clone();
+        url.pathname = '/riyadh/furniture-moving';
+        return NextResponse.redirect(url, 301);
     }
 
 
@@ -449,15 +482,42 @@ export function middleware(request: NextRequest) {
     }
 
     // ════════════════════════════════════════════════════════════════
-    // 404 CATCH-ALL — Edge-Level Redirect (Layer 1)
-    // If we reach here, the path doesn't match ANY known route.
-    // Redirect to homepage immediately at the Edge — no server
-    // rendering, no round-trip to Next.js, fastest possible response.
-    // 302 (temporary) so Google doesn't cache dead URL → homepage.
+    // 🌪️ PHOENIX PROTOCOL §2: Contextual Dilution (301)
+    // Root-level legacy paths containing a city name → city hub.
+    // This creates a "Contextual Mismatch" that passes PageRank
+    // but drops the toxic anchor text (per engineer's protocol).
+    // e.g., /cleaning-riyadh → /riyadh (NOT /riyadh/cleaning)
+    // ════════════════════════════════════════════════════════════════
+    if (segments.length === 1 && firstSegment) {
+        // Check direct city slugs embedded in the path
+        for (const city of citySlugs) {
+            if (firstSegment.includes(city) && firstSegment !== city && city.length >= 4) {
+                const dilutionUrl = request.nextUrl.clone();
+                dilutionUrl.pathname = `/${city}`;
+                return NextResponse.redirect(dilutionUrl, 301);
+            }
+        }
+        // Check city aliases (old spellings like al-taif, mecca, etc.)
+        for (const [alias, canonical] of Object.entries(CITY_ALIASES)) {
+            if (alias.length >= 4 && firstSegment.includes(alias) && firstSegment !== alias) {
+                const dilutionUrl = request.nextUrl.clone();
+                dilutionUrl.pathname = `/${canonical}`;
+                return NextResponse.redirect(dilutionUrl, 301);
+            }
+        }
+    }
+
+    // ════════════════════════════════════════════════════════════════
+    // 🛡️ PHOENIX PROTOCOL §3: Last Shield (Catch-All)
+    // Any unmatched path → /services-page (NOT homepage!)
+    // The engineer says: "Redirecting to the services directory is
+    // more contextually logical than the homepage, and protects
+    // the homepage from toxic contamination."
+    // 301 permanent — tells Google this path is DEAD.
     // ════════════════════════════════════════════════════════════════
     const finalFallback = request.nextUrl.clone();
-    finalFallback.pathname = '/';
-    return NextResponse.redirect(finalFallback, 302);
+    finalFallback.pathname = '/services-page';
+    return NextResponse.redirect(finalFallback, 301);
 }
 
 export const config = {

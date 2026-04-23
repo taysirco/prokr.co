@@ -37,11 +37,6 @@ export function DatasetJsonLd({ totalSamples, cities, services, lastUpdated }: D
       alternateName: 'Prokr Research Center',
       url: 'https://prokr.co',
       logo: 'https://prokr.co/icon.svg',
-      sameAs: [
-        'https://prokr.com',
-        'https://prokr.net',
-        'https://prokr.org',
-      ],
     },
     publisher: {
       '@type': 'Organization',

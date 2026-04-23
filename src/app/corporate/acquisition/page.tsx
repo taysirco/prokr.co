@@ -20,9 +20,12 @@ export const metadata: Metadata = {
         title: 'إعلان استحواذ ودمج الأصول | بروكر',
         description: 'البيان الرسمي لاستحواذ منصة prokr.co على النطاقات والأصول التابعة لشبكة بروكر القديمة',
         locale: 'ar_SA',
-        type: 'website',
+        type: 'article',
         siteName: 'بروكر',
         url: 'https://prokr.co/corporate/acquisition',
+        publishedTime: '2026-03-13T00:00:00+03:00',
+        modifiedTime: '2026-04-22T00:00:00+03:00',
+        authors: ['بروكر لتقنية المعلومات'],
     },
 };
 
@@ -74,12 +77,31 @@ export default function AcquisitionPage() {
         actionStatus: 'https://schema.org/CompletedActionStatus',
     };
 
+    // Article schema for datePublished/dateModified signals
+    const articleSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: 'بيان إداري: دمج واستحواذ — بروكر لتقنية المعلومات',
+        datePublished: '2026-03-13T00:00:00+03:00',
+        dateModified: '2026-04-22T00:00:00+03:00',
+        author: { '@id': 'https://prokr.co/#organization' },
+        publisher: { '@id': 'https://prokr.co/#organization' },
+        mainEntityOfPage: 'https://prokr.co/corporate/acquisition',
+        articleSection: 'Corporate',
+        inLanguage: 'ar',
+    };
+
     return (
         <>
             {/* AcquireAction Schema */}
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(acquisitionSchema) }}
+            />
+            {/* Article Schema — datePublished/dateModified for E-E-A-T */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
             />
 
             <main className="min-h-screen bg-gray-50">
@@ -149,6 +171,32 @@ export default function AcquisitionPage() {
                                 </p>
                             </div>
 
+                            {/* ═══ Acquisition Timeline ═══ */}
+                            <div className="mt-8">
+                                <h3 className="text-sm font-bold text-gray-500 uppercase tracking-wider mb-5">
+                                    الجدول الزمني للاستحواذ
+                                </h3>
+                                <div className="space-y-4">
+                                    {[
+                                        { date: 'يناير 2024', title: 'بدء عملية الاستحواذ', desc: 'بدء التفاوض على الأصول الفكرية والنطاقات', bg: '#0ea5e9', ring: '#e0f2fe' },
+                                        { date: 'أغسطس 2025', title: 'نقل ملكية النطاقات', desc: 'اكتمال نقل prokr.com و prokr.net و prokr.org', bg: '#f59e0b', ring: '#fef3c7' },
+                                        { date: 'مارس 2026', title: 'اكتمال الدمج', desc: 'إيقاف الأنظمة القديمة وتأسيس البنية التحتية الجديدة', bg: '#10b981', ring: '#d1fae5' },
+                                    ].map((step, i) => (
+                                        <div key={i} className="flex items-start gap-4">
+                                            <div className="flex flex-col items-center">
+                                                <div className="w-3 h-3 rounded-full" style={{ backgroundColor: step.bg, boxShadow: `0 0 0 4px ${step.ring}` }}></div>
+                                                {i < 2 && <div className="w-0.5 h-10 bg-gray-200 mt-1"></div>}
+                                            </div>
+                                            <div className="pb-2">
+                                                <span className="text-xs font-bold text-gray-400 uppercase" dir="ltr">{step.date}</span>
+                                                <h4 className="font-bold text-gray-800 text-sm">{step.title}</h4>
+                                                <p className="text-xs text-gray-500">{step.desc}</p>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+
                             {/* Deprecated domains */}
                             <div className="mt-6">
                                 <h3 className="text-sm font-bold text-gray-500 uppercase tracking-wider mb-3">
@@ -171,7 +219,7 @@ export default function AcquisitionPage() {
                                 </div>
                             </div>
 
-                            {/* Quality assurance notice */}
+                            {/* Quality assurance + CRN sovereign trust */}
                             <div className="flex items-start gap-4 p-4 bg-sky-50 border border-sky-200 rounded-xl mt-6">
                                 <div className="flex-shrink-0 w-10 h-10 bg-sky-100 rounded-full flex items-center justify-center">
                                     <svg className="w-5 h-5 text-sky-600" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
@@ -179,27 +227,56 @@ export default function AcquisitionPage() {
                                     </svg>
                                 </div>
                                 <div>
-                                    <h3 className="font-bold text-sky-800 mb-1">ضمان الجودة والثقة</h3>
+                                    <h3 className="font-bold text-sky-800 mb-1">ضمان الجودة والثقة — التوثيق السيادي</h3>
                                     <p className="text-sky-700 text-sm leading-relaxed">
-                                        تلتزم منصة بروكر الجديدة بأعلى معايير الخبرة والثقة والمصداقية.
+                                        تلتزم منصة بروكر الجديدة بأعلى معايير الخبرة والثقة والمصداقية (E-E-A-T).
                                         تم تأسيس بنية تحتية جديدة بالكامل تعتمد على توثيق السجلات التجارية (CRN)
                                         بمعايير وزارة التجارة السعودية، مع فصل كامل عن أي بيانات أو أنظمة سابقة.
+                                    </p>
+                                    <p className="text-sky-600 text-xs mt-2 font-medium">
+                                        جميع مقدمي الخدمات موثقون عبر رقم السجل التجاري (CRN) — معيار وزارة التجارة للشفافية وحماية المستهلك.
                                     </p>
                                 </div>
                             </div>
 
-                            {/* CTA — external link to prokr.co only */}
-                            <div className="text-center pt-6">
-                                <a
-                                    href="https://prokr.co"
-                                    className="inline-flex items-center gap-3 px-8 py-4 bg-sky-600 text-white font-bold text-lg rounded-xl hover:bg-sky-700 shadow-lg shadow-sky-200 transition-all duration-300 hover:shadow-xl hover:shadow-sky-200 hover:-translate-y-0.5"
-                                    rel="noopener"
-                                >
-                                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 9.75c0 .746-.092 1.472-.264 2.165m-15.472-.038A9.004 9.004 0 003 9.75c0 .746.092 1.472.264 2.165m0 0a11.96 11.96 0 005.879 5.838m0 0A11.953 11.953 0 0112 18.75c1.09 0 2.144-.146 3.143-.42" />
-                                    </svg>
-                                    انتقل إلى prokr.co
-                                </a>
+                            {/* ═══ Phase 4: PageRank Drip-Feed Arteries ═══ */}
+                            {/* CRITICAL (§4): Only 3 dofollow internal links allowed here.
+                                PageRank flows: acquisition → hubs → cities → services
+                                DO NOT add direct links to cities/services here! */}
+                            <div className="pt-6">
+                                <h3 className="text-sm font-bold text-gray-500 uppercase tracking-wider mb-4 text-center">
+                                    الخدمات المتاحة عبر المنصة الجديدة
+                                </h3>
+                                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                                    <a
+                                        href="/locations"
+                                        className="flex items-center justify-center gap-3 px-6 py-4 bg-sky-50 border border-sky-200 text-sky-800 font-bold rounded-xl hover:bg-sky-100 transition-all duration-300"
+                                    >
+                                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                                        </svg>
+                                        دليل المدن
+                                    </a>
+                                    <a
+                                        href="/services-page"
+                                        className="flex items-center justify-center gap-3 px-6 py-4 bg-emerald-50 border border-emerald-200 text-emerald-800 font-bold rounded-xl hover:bg-emerald-100 transition-all duration-300"
+                                    >
+                                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17l-5.17-3.03A1.73 1.73 0 015 10.59V6.41a1.73 1.73 0 011.25-1.55l5.17-3.03a1.73 1.73 0 011.16 0l5.17 3.03A1.73 1.73 0 0119 6.41v4.18a1.73 1.73 0 01-1.25 1.55l-5.17 3.03a1.73 1.73 0 01-1.16 0z" />
+                                        </svg>
+                                        دليل الخدمات
+                                    </a>
+                                    <a
+                                        href="/research/pricing-index"
+                                        className="flex items-center justify-center gap-3 px-6 py-4 bg-amber-50 border border-amber-200 text-amber-800 font-bold rounded-xl hover:bg-amber-100 transition-all duration-300"
+                                    >
+                                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+                                        </svg>
+                                        مؤشر الأسعار
+                                    </a>
+                                </div>
                             </div>
                         </div>
 

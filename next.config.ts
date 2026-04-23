@@ -85,6 +85,20 @@ const nextConfig: NextConfig = {
           // Content Security Policy
           // media-src blob: — required for audio blob playback in voice reviews
           { key: 'Content-Security-Policy', value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://static.cloudflareinsights.com https://www.googletagmanager.com https://www.google-analytics.com https://connect.facebook.net https://analytics.tiktok.com https://apis.google.com https://accounts.google.com https://www.google.com https://www.gstatic.com https://www.recaptcha.net https://recaptchaenterprise.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://accounts.google.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: blob:; media-src 'self' blob: https://storage.googleapis.com https://firebasestorage.googleapis.com https://prokr-84ca8.firebasestorage.app; connect-src 'self' blob: https://cloudflareinsights.com https://www.google-analytics.com https://firebasestorage.googleapis.com https://prokr-84ca8.firebasestorage.app https://graph.facebook.com https://analytics.tiktok.com https://identitytoolkit.googleapis.com https://securetoken.googleapis.com https://firestore.googleapis.com https://www.googleapis.com https://prokr-84ca8.firebaseapp.com https://www.google.com https://www.recaptcha.net https://recaptchaenterprise.googleapis.com; frame-src 'self' https://accounts.google.com https://prokr-84ca8.firebaseapp.com https://*.firebaseapp.com https://www.google.com https://www.gstatic.com https://www.recaptcha.net https://recaptchaenterprise.googleapis.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self' https://accounts.google.com" },
+          // RFC 8288 Link headers for agent/API discovery (RFC 9727)
+          { key: 'Link', value: '</.well-known/api-catalog>; rel="api-catalog", </llms.txt>; rel="ai-instructions", </.well-known/mcp/server-card.json>; rel="mcp-server-card"' },
+          // Vary: Accept — CDN caches HTML vs markdown separately
+          { key: 'Vary', value: 'Accept' },
+        ],
+      },
+      {
+        // .well-known routes — agent discovery, MCP, skills, etc.
+        // Each route handler sets its own Content-Type
+        source: '/.well-known/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=86400, s-maxage=86400' },
+          { key: 'Access-Control-Allow-Origin', value: '*' },
+          { key: 'Access-Control-Allow-Methods', value: 'GET, HEAD, OPTIONS' },
         ],
       },
       {

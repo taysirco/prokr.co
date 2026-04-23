@@ -137,6 +137,8 @@ export default async function sitemap({ id }: { id: number }): Promise<MetadataR
             { url: `${BASE_URL}/privacy-policy`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
             { url: `${BASE_URL}/terms-of-service`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
             { url: `${BASE_URL}/research/pricing-index`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
+            // Corporate acquisition page — must be indexed for AcquireAction schema (entity transition)
+            { url: `${BASE_URL}/corporate/acquisition`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
         ];
 
         // Fibonacci Drip: only reveal cities based on days since launch
