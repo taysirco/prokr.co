@@ -547,6 +547,17 @@ export default function RootLayout({
   mc.registerTool({name:'get_pricing',description:'Get weekly-updated pricing benchmarks for Saudi home services from 500+ verified providers',inputSchema:{type:'object',properties:{service:{type:'string',description:'Service category slug'}},required:['service']},execute:async function(a){return {url:'https://prokr.co/research/pricing-index',service:a.service};},signal:ctrl.signal});
   mc.registerTool({name:'book_service',description:'Initiate a service booking and connect with up to 3 verified Saudi providers',inputSchema:{type:'object',properties:{city:{type:'string',description:'City slug'},service:{type:'string',description:'Service slug'}},required:['city','service']},execute:async function(a){return {status:'redirect',url:'https://prokr.co/'+a.city+'/'+a.service+'#book'};},signal:ctrl.signal});
 })();` }} />
+        {/* Statcounter — prokr.co */}
+        <script dangerouslySetInnerHTML={{ __html: `var sc_project=13062468;var sc_invisible=1;var sc_security="cb7e9c27";` }} />
+        <script async src="https://www.statcounter.com/counter/counter.js" />
+        <noscript>
+          <div className="statcounter">
+            <a title="Web Analytics" href="https://statcounter.com/" target="_blank" rel="noopener noreferrer">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img className="statcounter" src="https://c.statcounter.com/13062468/0/cb7e9c27/1/" alt="Web Analytics" referrerPolicy="no-referrer-when-downgrade" />
+            </a>
+          </div>
+        </noscript>
       </body>
       <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || 'G-H1W3HDFHS0'} />
     </html>
