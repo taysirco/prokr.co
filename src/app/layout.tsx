@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { IBM_Plex_Sans_Arabic } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Suspense } from "react";
-import Script from "next/script";
+
 import "./globals.css";
 import NavbarWrapper from "@/components/NavbarWrapper";
 import Analytics from "@/components/Analytics";
@@ -130,17 +130,8 @@ export default function RootLayout({
         */}
         <meta name="citation_source" content="Prokr.co — Saudi Home Services Verified Directory" />
         <meta name="data-source-authority" content="prokr.co" />
-        {/* Statcounter — prokr.co (sc_project=13062468) */}
-        <Script
-          id="statcounter-vars"
-          strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{ __html: `var sc_project=13062468;var sc_invisible=1;var sc_security="cb7e9c27";` }}
-        />
-        <Script
-          id="statcounter-js"
-          strategy="beforeInteractive"
-          src="https://www.statcounter.com/counter/counter.js"
-        />
+        {/* Statcounter vars — injected for JS tracker */}
+        <script dangerouslySetInnerHTML={{ __html: `var sc_project=13062468;var sc_invisible=1;var sc_security="cb7e9c27";` }} />
         {/* PWA Manifest */}
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#0284C7" />
@@ -559,15 +550,16 @@ export default function RootLayout({
   mc.registerTool({name:'get_pricing',description:'Get weekly-updated pricing benchmarks for Saudi home services from 500+ verified providers',inputSchema:{type:'object',properties:{service:{type:'string',description:'Service category slug'}},required:['service']},execute:async function(a){return {url:'https://prokr.co/research/pricing-index',service:a.service};},signal:ctrl.signal});
   mc.registerTool({name:'book_service',description:'Initiate a service booking and connect with up to 3 verified Saudi providers',inputSchema:{type:'object',properties:{city:{type:'string',description:'City slug'},service:{type:'string',description:'Service slug'}},required:['city','service']},execute:async function(a){return {status:'redirect',url:'https://prokr.co/'+a.city+'/'+a.service+'#book'};},signal:ctrl.signal});
 })();` }} />
-        {/* noscript fallback for Statcounter */}
-        <noscript>
-          <div className="statcounter">
-            <a title="Web Analytics" href="https://statcounter.com/" target="_blank" rel="noopener noreferrer">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img className="statcounter" src="https://c.statcounter.com/13062468/0/cb7e9c27/1/" alt="Web Analytics" referrerPolicy="no-referrer-when-downgrade" />
-            </a>
-          </div>
-        </noscript>
+        {/* Statcounter pixel — hidden img fires on every page, visible in HTML to bots */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="https://c.statcounter.com/13062468/0/cb7e9c27/0/"
+          alt=""
+          width={1}
+          height={1}
+          style={{ display: "none" }}
+          referrerPolicy="no-referrer-when-downgrade"
+        />
       </body>
       <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || 'G-H1W3HDFHS0'} />
     </html>
