@@ -18,7 +18,7 @@ export const FEATURED_COMPANY: Advertiser = {
     business_name: 'الاسطورة',
     phone_number: '+966564612017',
     whatsapp_number: '+966564612017',
-    logo_url: '/images/logos/al-ostora.png',
+    logo_url: '/images/logos/al-ostora.webp',
     is_premium: true,
     priority_score: 100, // أعلى أولوية — دائماً الأول
     subscription_expiry: null,
