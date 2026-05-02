@@ -37,6 +37,7 @@ import SourceOrderLayout from '@/components/SourceOrderLayout';
 import FaqAccordion from '@/components/FaqAccordion';
 import { resolvePageContent } from '@/lib/overrides';
 import type { Advertiser } from '@/types';
+import { injectFeaturedCompany } from '@/lib/featured-company';
 
 // Disable static generation, use ISR instead
 // Pages will be generated on first request and cached for 60 seconds
@@ -123,7 +124,8 @@ export default async function SiloPage({ params }: SiloPageProps) {
         standard = result.standard;
     } catch (error) {
         console.error('Error fetching advertisers:', error);
-        // Continue with empty arrays if index is not ready
+        // Fallback: inject featured company even if Firestore is down
+        premium = injectFeaturedCompany([], resolvedParams.city, resolvedParams.service);
     }
 
     const allAdvertisers = [...premium, ...standard];

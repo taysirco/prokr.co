@@ -11,6 +11,7 @@ import {
 } from 'firebase/firestore';
 import { db } from '../firebase';
 import type { Advertiser, AdvertiserFormData } from '@/types';
+import { injectFeaturedCompany } from '../featured-company';
 
 // Collection references
 const ADVERTISERS_COLLECTION = 'advertisers';
@@ -58,7 +59,10 @@ export async function getAdvertisersBySilo(
         .map(doc => ({ id: doc.id, ...doc.data() } as Advertiser))
         .filter(ad => ad.targeted_services.includes(serviceSlug));
 
-    return { premium, standard };
+    // حقن الشركة المميزة (الاسطورة) في المقدمة دائماً
+    const premiumWithFeatured = injectFeaturedCompany(premium, citySlug, serviceSlug);
+
+    return { premium: premiumWithFeatured, standard };
 }
 
 /**
