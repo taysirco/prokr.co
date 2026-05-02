@@ -11,7 +11,7 @@ import {
 } from 'firebase/firestore';
 import { db } from '../firebase';
 import type { Advertiser, AdvertiserFormData } from '@/types';
-import { injectFeaturedCompany } from '../featured-company';
+import { injectFeaturedCompany, isFeaturedCompanyCode, getFeaturedCompanyProfile } from '../featured-company';
 
 // Collection references
 const ADVERTISERS_COLLECTION = 'advertisers';
@@ -69,6 +69,11 @@ export async function getAdvertisersBySilo(
  * Get a single advertiser by short_code
  */
 export async function getAdvertiserByCode(shortCode: string): Promise<Advertiser | null> {
+    // الشركة المميزة (الاسطورة) — مخزنة محلياً وليست في Firestore
+    if (isFeaturedCompanyCode(shortCode)) {
+        return getFeaturedCompanyProfile();
+    }
+
     const advertisersRef = collection(db, ADVERTISERS_COLLECTION);
     const q = query(advertisersRef, where('short_code', '==', shortCode), limit(1));
     const querySnap = await getDocs(q);
