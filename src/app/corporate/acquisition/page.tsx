@@ -1,4 +1,7 @@
 import { Metadata } from 'next';
+import { CITIES, REGION_NAMES, CATEGORY_NAMES } from '@/lib/seed';
+import { SERVICES } from '@/lib/services';
+import Link from 'next/link';
 
 // ════════════════════════════════════════════════════════════════
 // 🔒 Corporate Acquisition Page — M&A Schema
@@ -276,6 +279,98 @@ export default function AcquisitionPage() {
                                         </svg>
                                         مؤشر الأسعار
                                     </a>
+                                </div>
+                            </div>
+
+                            {/* ═══ Full City Directory ═══ */}
+                            <div className="pt-8 border-t border-gray-100">
+                                <h3 className="text-sm font-bold text-gray-500 uppercase tracking-wider mb-2 text-center">
+                                    📍 دليل المدن — جميع مناطق المملكة
+                                </h3>
+                                <p className="text-xs text-gray-400 text-center mb-6">
+                                    جميع المدن المتاحة للخدمات عبر منصة بروكر الجديدة
+                                </p>
+                                <div className="space-y-5">
+                                    {(['central', 'western', 'eastern', 'northern', 'southern'] as const).map(region => {
+                                        const regionCities = CITIES.filter(c => c.region === region);
+                                        if (regionCities.length === 0) return null;
+                                        const regionColors: Record<string, { bg: string; border: string; text: string; badge: string }> = {
+                                            central: { bg: 'bg-sky-50/60', border: 'border-sky-100', text: 'text-sky-700', badge: 'bg-sky-100 text-sky-800' },
+                                            western: { bg: 'bg-emerald-50/60', border: 'border-emerald-100', text: 'text-emerald-700', badge: 'bg-emerald-100 text-emerald-800' },
+                                            eastern: { bg: 'bg-amber-50/60', border: 'border-amber-100', text: 'text-amber-700', badge: 'bg-amber-100 text-amber-800' },
+                                            northern: { bg: 'bg-purple-50/60', border: 'border-purple-100', text: 'text-purple-700', badge: 'bg-purple-100 text-purple-800' },
+                                            southern: { bg: 'bg-rose-50/60', border: 'border-rose-100', text: 'text-rose-700', badge: 'bg-rose-100 text-rose-800' },
+                                        };
+                                        const colors = regionColors[region];
+                                        return (
+                                            <div key={region} className={`${colors.bg} border ${colors.border} rounded-xl p-4`}>
+                                                <div className="flex items-center gap-2 mb-3">
+                                                    <span className={`text-xs font-bold px-2.5 py-1 rounded-full ${colors.badge}`}>
+                                                        {REGION_NAMES[region]}
+                                                    </span>
+                                                    <span className="text-[10px] text-gray-400">{regionCities.length} مدينة</span>
+                                                </div>
+                                                <div className="flex flex-wrap gap-2">
+                                                    {regionCities.map(city => (
+                                                        <Link
+                                                            key={city.slug}
+                                                            href={`/${city.slug}`}
+                                                            className={`text-xs px-3 py-1.5 rounded-lg bg-white border border-gray-200 ${colors.text} hover:shadow-sm hover:border-current transition-all duration-200 font-medium`}
+                                                        >
+                                                            {city.name_ar}
+                                                        </Link>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                        );
+                                    })}
+                                </div>
+                            </div>
+
+                            {/* ═══ Full Services Directory ═══ */}
+                            <div className="pt-8 border-t border-gray-100">
+                                <h3 className="text-sm font-bold text-gray-500 uppercase tracking-wider mb-2 text-center">
+                                    🔧 دليل الخدمات — جميع التخصصات
+                                </h3>
+                                <p className="text-xs text-gray-400 text-center mb-6">
+                                    جميع الخدمات المتاحة عبر شبكة بروكر في كافة المدن
+                                </p>
+                                <div className="space-y-5">
+                                    {(['moving', 'cleaning', 'pest-control', 'sewage', 'leak-detection', 'insulation'] as const).map(category => {
+                                        const catServices = SERVICES.filter(s => s.category === category);
+                                        if (catServices.length === 0) return null;
+                                        const catColors: Record<string, { bg: string; border: string; text: string; badge: string; icon: string }> = {
+                                            'moving': { bg: 'bg-blue-50/60', border: 'border-blue-100', text: 'text-blue-700', badge: 'bg-blue-100 text-blue-800', icon: '🚚' },
+                                            'cleaning': { bg: 'bg-cyan-50/60', border: 'border-cyan-100', text: 'text-cyan-700', badge: 'bg-cyan-100 text-cyan-800', icon: '🧹' },
+                                            'pest-control': { bg: 'bg-red-50/60', border: 'border-red-100', text: 'text-red-700', badge: 'bg-red-100 text-red-800', icon: '🛡️' },
+                                            'sewage': { bg: 'bg-orange-50/60', border: 'border-orange-100', text: 'text-orange-700', badge: 'bg-orange-100 text-orange-800', icon: '🔧' },
+                                            'leak-detection': { bg: 'bg-teal-50/60', border: 'border-teal-100', text: 'text-teal-700', badge: 'bg-teal-100 text-teal-800', icon: '💧' },
+                                            'insulation': { bg: 'bg-indigo-50/60', border: 'border-indigo-100', text: 'text-indigo-700', badge: 'bg-indigo-100 text-indigo-800', icon: '🏗️' },
+                                        };
+                                        const colors = catColors[category];
+                                        return (
+                                            <div key={category} className={`${colors.bg} border ${colors.border} rounded-xl p-4`}>
+                                                <div className="flex items-center gap-2 mb-3">
+                                                    <span className="text-sm">{colors.icon}</span>
+                                                    <span className={`text-xs font-bold px-2.5 py-1 rounded-full ${colors.badge}`}>
+                                                        {CATEGORY_NAMES[category]}
+                                                    </span>
+                                                    <span className="text-[10px] text-gray-400">{catServices.length} خدمة</span>
+                                                </div>
+                                                <div className="flex flex-wrap gap-2">
+                                                    {catServices.map(service => (
+                                                        <Link
+                                                            key={service.slug}
+                                                            href={`/riyadh/${service.slug}`}
+                                                            className={`text-xs px-3 py-1.5 rounded-lg bg-white border border-gray-200 ${colors.text} hover:shadow-sm hover:border-current transition-all duration-200 font-medium`}
+                                                        >
+                                                            {service.name_ar}
+                                                        </Link>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                        );
+                                    })}
                                 </div>
                             </div>
                         </div>
