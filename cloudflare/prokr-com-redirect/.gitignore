@@ -1,2 +1,21 @@
+# Dependencies
 node_modules/
+
+# Wrangler build artifacts & local state
 .wrangler/
+.dev.vars
+
+# Logs
+*.log
+wrangler-*.log
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor configs
+.vscode/
+.idea/
+
+# Lock file (regenerated from package.json)
+package-lock.json
