@@ -1,0 +1,87 @@
+# ═══════════════════════════════════════════════════════════════
+# Prokr.com → Prokr.co Legacy Domain Redirect Worker
+# ═══════════════════════════════════════════════════════════════
+# Intercepts ALL traffic to prokr.com, prokr.net, prokr.org
+# and performs intelligent 301 redirects to prokr.co
+#
+# Deploy: cd cloudflare/prokr-com-redirect && npx wrangler deploy
+# Dev:    cd cloudflare/prokr-com-redirect && npx wrangler dev
+# Tail:   cd cloudflare/prokr-com-redirect && npx wrangler tail
+# ═══════════════════════════════════════════════════════════════
+
+name = "prokr-legacy-redirect"
+main = "src/worker.js"
+compatibility_date = "2026-04-13"
+
+# ── Account Settings ──
+# Uncomment and set your Cloudflare Account ID:
+account_id = "d5289de5c348012abcdc825fadc75a7e"
+
+# ── Route Configuration ──
+# prokr.com NS points to Cloudflare but zone may be on a different account.
+# Worker is deployed and verified on workers.dev.
+# Once prokr.com zone is on THIS account, set workers_dev = false.
+workers_dev = true
+
+# routes = [
+#   # prokr.com (active — NS verified via dig)
+#   { pattern = "prokr.com/*", zone_name = "prokr.com" },
+#   { pattern = "www.prokr.com/*", zone_name = "prokr.com" },
+#   # prokr.net — uncomment after adding as Cloudflare zone
+#   # { pattern = "prokr.net/*", zone_name = "prokr.net" },
+#   # { pattern = "www.prokr.net/*", zone_name = "prokr.net" },
+#   # prokr.org — uncomment after adding as Cloudflare zone
+#   # { pattern = "prokr.org/*", zone_name = "prokr.org" },
+#   # { pattern = "www.prokr.org/*", zone_name = "prokr.org" },
+# ]
+
+# ── Environment Variables ──
+[vars]
+ENVIRONMENT = "production"
+TARGET_DOMAIN = "prokr.co"
+WORKER_VERSION = "1.0.0"
+
+# ── Development ──
+[dev]
+port = 8788
+local_protocol = "https"
+
+# ── Staging Environment ──
+[env.staging]
+name = "prokr-legacy-redirect-staging"
+routes = []
+[env.staging.vars]
+ENVIRONMENT = "staging"
+
+# ═══════════════════════════════════════════════════════════════
+# DEPLOYMENT INSTRUCTIONS
+# ═══════════════════════════════════════════════════════════════
+#
+# STEP 1: Add legacy domains to Cloudflare
+#   - Go to dash.cloudflare.com → Add Site → prokr.com
+#   - Repeat for prokr.net and prokr.org
+#   - Update nameservers at your registrar
+#
+# STEP 2: Add DNS records (placeholder)
+#   For each domain, add:
+#   - A record: @ → 192.0.2.1 (Proxied ☁️)
+#   - CNAME: www → @ (Proxied ☁️)
+#
+# STEP 3: Set your Account ID
+#   - Uncomment account_id above
+#   - Set it to your Cloudflare Account ID
+#
+# STEP 4: Deploy
+#   cd cloudflare/prokr-com-redirect
+#   npx wrangler deploy
+#
+# STEP 5: Verify
+#   curl -sI https://prokr.com/ | grep location
+#   → location: https://prokr.co/corporate/acquisition
+#
+#   curl -sI https://prokr.com/saudi/riyadh | grep location
+#   → location: https://prokr.co/riyadh
+#
+#   curl -sI https://prokr.com/saudi/jeddah/pest-control/termites | grep location
+#   → location: https://prokr.co/jeddah/termite-control
+# ═══════════════════════════════════════════════════════════════

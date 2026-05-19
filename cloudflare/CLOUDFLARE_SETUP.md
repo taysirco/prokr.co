@@ -403,3 +403,115 @@ dig prokr.co A +short
 
 # If different, update Cloudflare DNS → A record → new IP
 ```
+
+---
+
+## Phase 7: Legacy Domain Redirect — prokr.com/net/org → prokr.co
+
+### 7.1 Architecture Overview
+
+```
+┌─────────────────┐     ┌───────────────────────────┐     ┌──────────────┐
+│ prokr.com       │────▶│ Cloudflare Edge Worker     │────▶│ prokr.co     │
+│ prokr.net       │     │ (prokr-legacy-redirect)    │     │ (canonical)  │
+│ prokr.org       │     │                            │     │              │
+│ + www variants  │     │ Intelligent 301 mapping:   │     │ /{city}      │
+│                 │     │ /saudi/riyadh/pest-control  │     │ /{city}/{svc}│
+│                 │     │ /pricing/ac/jeddah          │     │ /blog        │
+│                 │     │ /blog/article-slug          │     │ /about-us    │
+│                 │     │ /about                      │     │ /corporate/  │
+│                 │     │ fallback → /corporate/      │     │  acquisition │
+│                 │     │            acquisition      │     │              │
+└─────────────────┘     └───────────────────────────┘     └──────────────┘
+```
+
+**Two-layer defense:**
+1. **Cloudflare Worker** (edge, ~0.3ms) — intercepts at DNS level
+2. **Next.js Middleware** (origin, fallback) — in case DNS isn't proxied yet
+
+### 7.2 Add Legacy Domains to Cloudflare
+
+For **each** domain (prokr.com, prokr.net, prokr.org):
+
+1. **Add Site** → Enter domain → Select **Free** plan
+2. **DNS Records** — add placeholder:
+
+| Type | Name | Content | Proxy | TTL |
+|------|------|---------|-------|-----|
+| A | @ | 192.0.2.1 | ☁️ Proxied | Auto |
+| CNAME | www | @ | ☁️ Proxied | Auto |
+
+> ⚠️ `192.0.2.1` is a dummy IP (RFC 5737). The Worker intercepts before it reaches this address.
+
+3. **Update Nameservers** at your registrar to Cloudflare's
+4. **SSL/TLS** → Set to **Full**
+5. **Edge Certificates** → Enable **Always Use HTTPS**
+
+### 7.3 Deploy the Redirect Worker
+
+```bash
+cd cloudflare/prokr-com-redirect
+
+# Set your Account ID in wrangler.toml
+# account_id = "YOUR_ACCOUNT_ID_HERE"
+
+# Install dependencies
+npm install
+
+# Test locally
+npm run dev
+
+# Deploy to production
+npm run deploy
+```
+
+### 7.4 Test Coverage (65 tests)
+
+```bash
+# Run the test suite
+node test-redirects.js
+
+# Expected: 65 passed, 0 failed
+```
+
+### 7.5 Live Verification
+
+```bash
+# Static pages
+curl -sI https://prokr.com/about | grep -i location
+# → location: https://prokr.co/about-us
+
+# City + Service
+curl -sI https://prokr.com/saudi/riyadh/pest-control/termites | grep -i location
+# → location: https://prokr.co/riyadh/termite-control
+
+# City rename
+curl -sI https://prokr.com/saudi/khobar | grep -i location
+# → location: https://prokr.co/al-khobar
+
+# Pricing context
+curl -sI https://prokr.com/pricing/ac/jeddah | grep -i location
+# → location: https://prokr.co/jeddah/air-conditioner-cleaning
+
+# Fallback (no equivalent)
+curl -sI https://prokr.com/ | grep -i location
+# → location: https://prokr.co/corporate/acquisition
+```
+
+### 7.6 Google Search Console — Change of Address
+
+1. Go to [search.google.com/search-console](https://search.google.com/search-console)
+2. Add property: `prokr.com` (if not exists)
+3. **Settings** → **Change of Address** → Select `prokr.co`
+4. Repeat for prokr.net and prokr.org
+
+### 7.7 Files Reference
+
+| File | Purpose |
+|------|---------|
+| `cloudflare/prokr-com-redirect/src/worker.js` | Edge Worker (production) |
+| `cloudflare/prokr-com-redirect/wrangler.toml` | Worker config & routes |
+| `cloudflare/prokr-com-redirect/test-redirects.js` | 65-test suite |
+| `cloudflare/redirects/bulk-redirects.csv` | CSV backup (2,015 entries) |
+| `cloudflare/redirects/generate-redirects.js` | CSV generator script |
+| `src/middleware.ts` | Next.js fallback (same logic) |

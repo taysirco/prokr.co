@@ -1,0 +1,15 @@
+{
+  "name": "prokr-legacy-redirect",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cloudflare Worker — prokr.com/net/org → prokr.co intelligent redirect engine",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "tail": "wrangler tail",
+    "test": "node test-redirects.js"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}

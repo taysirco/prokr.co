@@ -153,6 +153,179 @@ const SERVICE_ALIASES: Record<string, string> = {
 // Pre-sorted service keys (longest first) to avoid partial matches
 const SORTED_SERVICE_KEYS = Object.keys(SERVICE_ALIASES).sort((a, b) => b.length - a.length);
 
+// ════════════════════════════════════════════════════════════════
+// 🔄 LEGACY DOMAIN REDIRECT RESOLUTION ENGINE
+// Maps prokr.com/net/org paths → prokr.co equivalents
+// Covers: static pages, blog, services, /saudi/{city}/{service},
+//         /pricing|deals|faq|emergency/{service}/{city}
+// ════════════════════════════════════════════════════════════════
+
+const ACQUISITION_PAGE = '/corporate/acquisition';
+
+// prokr.com city slug → prokr.co city slug
+const LEGACY_CITY_MAP: Record<string, string | null> = {
+    'riyadh': 'riyadh', 'jeddah': 'jeddah', 'makkah': 'makkah',
+    'madinah': 'madinah', 'dammam': 'dammam', 'khobar': 'al-khobar',
+    'dhahran': 'dhahran', 'tabuk': 'tabuk', 'taif': 'taif',
+    'hail': 'hail', 'jubail': 'jubail', 'abha': 'abha',
+    'khamis-mushait': 'khamis-mushait', 'najran': 'najran',
+    'jazan': 'jazan', 'yanbu': 'yanbu', 'al-ahsa': 'al-ahsa',
+    'qatif': 'qatif', 'buraydah': 'buraidah', 'hafr-al-batin': 'hafr-albatin',
+    'al-bahah': 'al-baha', 'onaizah': 'onizah', 'al-majmah': 'majmaah',
+    'ras-tanura': 'ras-tanura', 'rabigh': 'rabigh',
+    // No equivalent on prokr.co
+    'sakaka': null, 'arar': null, 'wadi-ad-dawasir': null,
+    'az-zulfi': null, 'safwa': null, 'sayhat': null,
+    'muhayil': null, 'bisha': null, 'umluj': null,
+    'duba': null, 'tayma': null, 'al-lith': null, 'alqunfudhah': null,
+};
+
+// prokr.com service slug → prokr.co service slug
+const LEGACY_SERVICE_MAP: Record<string, string | null> = {
+    'moving': 'furniture-moving', 'cleaning': 'cleaning',
+    'pest-control': 'pest-control', 'leaks-plumbing': 'water-leak-detection',
+    'ac': 'air-conditioner-cleaning', 'landscaping': 'landscaping',
+    'insulation-roofs': 'roof-insulation',
+    // No equivalent
+    'electricity': null, 'painting-gypsum': null, 'carpentry': null,
+    'aluminum-glass': null, 'flooring': null, 'appliances': null,
+    'car-towing': null,
+};
+
+// prokr.com sub-service slug → prokr.co service slug
+const LEGACY_SUB_SERVICE_MAP: Record<string, string | null> = {
+    // Moving
+    'city-to-city': 'intercity-moving', 'apartment-moving': 'furniture-moving',
+    'villa-moving': 'furniture-moving', 'office-moving': 'furniture-moving',
+    'storage': 'furniture-storage', 'crane-lifting': 'heavy-equipment-moving',
+    'furniture-packing': 'furniture-packaging', 'moving-boxes': 'furniture-packaging',
+    'disassembly-assembly': 'furniture-moving', 'insurance-warranty': 'furniture-moving',
+    // Cleaning
+    'deep-cleaning': 'deep-cleaning', 'sanitization': 'sanitization',
+    'sofa-curtains': 'sofa-cleaning', 'carpet-rug': 'carpet-cleaning',
+    'marble-polishing': 'marble-polishing', 'facade-cleaning': 'glass-facades-cleaning',
+    'hourly-cleaning': 'hourly-cleaning', 'tank-cleaning': 'tanks-cleaning',
+    'post-construction': 'post-construction-cleaning',
+    // Pest control
+    'termites': 'termite-control', 'cockroaches': 'cockroach-control',
+    'bed-bugs': 'bedbugs-control', 'rodents': 'rodent-control',
+    'ants': 'ants-control', 'general-spray': 'pesticide-spraying',
+    'annual-contracts': 'pest-control', 'municipality-certificate': 'pest-control',
+    // Leaks/plumbing
+    'acoustic-leak-detection': 'water-leak-detection',
+    'thermal-leak-detection': 'water-leak-detection',
+    'tank-leaks': 'tank-leak-detection', 'drain-unclogging': 'sewage-unblocking',
+    'pipe-repair': 'plumbing', 'pumps-valves': 'plumbing',
+    'bathroom-kitchen-waterproofing': 'bathroom-leak-detection',
+    // AC
+    'split-ac-cleaning': 'air-conditioner-cleaning',
+    'maintenance-repair': 'ac-maintenance', 'ac-installation': 'ac-installation',
+    'duct-cleaning': 'air-conditioner-cleaning',
+    'freon-refill': 'ac-maintenance', 'unit-relocation': 'ac-maintenance',
+    // Insulation
+    'thermal-insulation': 'thermal-insulation', 'water-proofing': 'water-insulation',
+    'foam-bitumen': 'foam-insulation', 'cracks-treatment': 'roof-insulation',
+    // No equivalent (electricity, painting, carpentry, aluminum, flooring, appliances, car-towing)
+    'wiring-lighting': null, 'panels-distribution': null, 'electrical-faults': null,
+    'cctv-systems': null, 'interior-painting': null, 'exterior-painting': null,
+    'wallpaper': null, 'gypsum-board': null, 'decor': null,
+    'doors-windows': null, 'furniture-repair': null, 'kitchen-cabinets': null,
+    'bedrooms': null, 'aluminum-windows-doors': null, 'glass-facades': null,
+    'shades-curtains': null, 'parquet-vinyl': null, 'marble-granite': null,
+    'ceramic-porcelain': null, 'grinding-polishing': null,
+    'garden-design': 'landscaping', 'palm-trees': 'landscaping',
+    'lawn-mowing': 'landscaping', 'irrigation-systems': 'landscaping',
+    'refrigerators': null, 'washing-machines': null, 'ovens-stoves': null,
+    'dryers': null, 'city-towing': null, 'intercity-towing': null,
+    'luxury-car-transport': null,
+};
+
+// Static page mapping: prokr.com path → prokr.co path
+const LEGACY_STATIC_MAP: Record<string, string> = {
+    '/': ACQUISITION_PAGE,
+    '/about': '/about-us',
+    '/contact': '/contact-us',
+    '/privacy': '/privacy-policy',
+    '/terms': '/terms-of-service',
+    '/providers': ACQUISITION_PAGE,
+    '/coverage': '/locations',
+    '/service-area': '/locations',
+    '/faqs': ACQUISITION_PAGE,
+    '/deals': ACQUISITION_PAGE,
+    '/pricing': ACQUISITION_PAGE,
+    '/emergency': ACQUISITION_PAGE,
+    '/saudi': '/locations',
+    '/services': '/services-page',
+};
+
+/**
+ * Resolve a legacy prokr.com pathname to its prokr.co equivalent.
+ * Priority: static → blog → services → /saudi/{city}/{service}/{sub}
+ *           → /pricing|deals|faq|emergency/{service}/{city}
+ * Fallback: /corporate/acquisition
+ */
+function resolveLegacyDomainPath(pathname: string): string {
+    const path = pathname.replace(/\/+$/, '') || '/'; // normalize trailing slashes
+
+    // 1. Static pages
+    if (LEGACY_STATIC_MAP[path] !== undefined) return LEGACY_STATIC_MAP[path];
+
+    // 2. Blog
+    if (path === '/blog') return '/blog';
+    if (path.startsWith('/blog/')) return '/blog';
+
+    // 3. Services pages
+    if (path.startsWith('/services')) return '/services-page';
+
+    // 4. /saudi/{city}/{service}/{sub-service}
+    const saudiSubMatch = path.match(/^\/saudi\/([^/]+)\/([^/]+)\/([^/]+)$/);
+    if (saudiSubMatch) {
+        const [, city, service, subService] = saudiSubMatch;
+        const mappedCity = LEGACY_CITY_MAP[city];
+        const mappedSub = LEGACY_SUB_SERVICE_MAP[subService];
+        const mappedService = LEGACY_SERVICE_MAP[service];
+        if (mappedCity && mappedSub) return `/${mappedCity}/${mappedSub}`;
+        if (mappedCity && mappedService) return `/${mappedCity}/${mappedService}`;
+        if (mappedCity) return `/${mappedCity}`;
+        return ACQUISITION_PAGE;
+    }
+
+    // 5. /saudi/{city}/{service}
+    const saudiServiceMatch = path.match(/^\/saudi\/([^/]+)\/([^/]+)$/);
+    if (saudiServiceMatch) {
+        const [, city, service] = saudiServiceMatch;
+        const mappedCity = LEGACY_CITY_MAP[city];
+        const mappedService = LEGACY_SERVICE_MAP[service];
+        if (mappedCity && mappedService) return `/${mappedCity}/${mappedService}`;
+        if (mappedCity) return `/${mappedCity}`;
+        return ACQUISITION_PAGE;
+    }
+
+    // 6. /saudi/{city}
+    const saudiCityMatch = path.match(/^\/saudi\/([^/]+)$/);
+    if (saudiCityMatch) {
+        const mappedCity = LEGACY_CITY_MAP[saudiCityMatch[1]];
+        return mappedCity ? `/${mappedCity}` : ACQUISITION_PAGE;
+    }
+
+    // 7. /pricing|deals|faq|emergency/{service}/{city}
+    const contextMatch = path.match(/^\/(pricing|deals|faq|emergency)\/([^/]+)\/([^/]+)$/);
+    if (contextMatch) {
+        const [, , service, city] = contextMatch;
+        const mappedCity = LEGACY_CITY_MAP[city];
+        const mappedService = LEGACY_SERVICE_MAP[service];
+        if (mappedCity && mappedService) return `/${mappedCity}/${mappedService}`;
+        if (mappedCity) return `/${mappedCity}`;
+        return ACQUISITION_PAGE;
+    }
+
+    // 8. /pricing|deals|faq|emergency/{service}
+    if (path.match(/^\/(pricing|deals|faq|emergency)\/[^/]+$/)) return ACQUISITION_PAGE;
+
+    // 9. Catch-all → acquisition page
+    return ACQUISITION_PAGE;
+}
+
 export function middleware(request: NextRequest) {
     const url = request.nextUrl.clone();
     const pathname = url.pathname;
@@ -236,8 +409,11 @@ export function middleware(request: NextRequest) {
     }
 
     // ════════════════════════════════════════════════════════════════
-    // Legacy Domain Redirect Handler
-    // Redirects legacy domains (.com/.net/.org) to canonical .co
+    // 🔄 LEGACY DOMAIN REDIRECT ENGINE — prokr.com/net/org → prokr.co
+    // Intelligent per-URL 301 redirect that maps each legacy path to
+    // its exact equivalent on prokr.co for maximum SEO equity transfer.
+    // Architecture: Service Map + City Map + Sub-service Map → smart resolve
+    // Fallback: /corporate/acquisition (AcquireAction schema page)
     // ════════════════════════════════════════════════════════════════
     const legacyDomains = [
         'prokr.com', 'prokr.net', 'prokr.org',
@@ -245,7 +421,7 @@ export function middleware(request: NextRequest) {
     ];
 
     if (legacyDomains.some(domain => hostname.includes(domain))) {
-        // Return 410 for legacy static files
+        // Return 410 for legacy static files (sitemaps, robots, PHP junk)
         if (pathname.match(/\.(xml|txt|php|html)$/i)) {
             return new NextResponse('Gone', {
                 status: 410,
@@ -256,13 +432,10 @@ export function middleware(request: NextRequest) {
             });
         }
 
-        // Redirect all legacy domain traffic to corporate page
-        // 301 is safe here: context shift from "service" to "corporate statement"
-        // ensures all traffic uses canonical domain
-        if (pathname !== '/corporate/acquisition') {
-            const cleanUrl = new URL('/corporate/acquisition', 'https://prokr.co');
-            return NextResponse.redirect(cleanUrl, 301);
-        }
+        // ── Resolve legacy path → prokr.co path ──
+        const resolvedPath = resolveLegacyDomainPath(pathname);
+        const redirectUrl = new URL(resolvedPath, 'https://prokr.co');
+        return NextResponse.redirect(redirectUrl, 301);
     }
 
     // ════════════════════════════════════════════════════════════════

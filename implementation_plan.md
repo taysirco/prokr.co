@@ -89,7 +89,7 @@
 |---|---------|:-----:|---------|
 | 3 | **301 لـ prokr.org** (الأضعف) | 30 دقيقة | DNS A record → prokr.co |
 | 4 | **301 لـ prokr.net** | 30 دقيقة | بعد أسبوعين من prokr.org |
-| 5 | **301 لـ prokr.com + Change of Address** | ساعة | أقوى دومين — يحتاج GSC CoA |
+| 5 | **~~301 لـ prokr.com + Change of Address~~** | ~~ساعة~~ | ✅ تم — Worker + Middleware ذكي (65 اختبار ناجح) |
 
 ### 🟢 خلال 90 يوم
 
