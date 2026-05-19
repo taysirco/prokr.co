@@ -21,19 +21,19 @@ account_id = "d5289de5c348012abcdc825fadc75a7e"
 # prokr.com NS points to Cloudflare but zone may be on a different account.
 # Worker is deployed and verified on workers.dev.
 # Once prokr.com zone is on THIS account, set workers_dev = false.
-workers_dev = true
+workers_dev = false
 
-# routes = [
-#   # prokr.com (active — NS verified via dig)
-#   { pattern = "prokr.com/*", zone_name = "prokr.com" },
-#   { pattern = "www.prokr.com/*", zone_name = "prokr.com" },
-#   # prokr.net — uncomment after adding as Cloudflare zone
-#   # { pattern = "prokr.net/*", zone_name = "prokr.net" },
-#   # { pattern = "www.prokr.net/*", zone_name = "prokr.net" },
-#   # prokr.org — uncomment after adding as Cloudflare zone
-#   # { pattern = "prokr.org/*", zone_name = "prokr.org" },
-#   # { pattern = "www.prokr.org/*", zone_name = "prokr.org" },
-# ]
+routes = [
+  # prokr.com (active — NS verified via dig)
+  { pattern = "prokr.com/*", zone_name = "prokr.com" },
+  { pattern = "www.prokr.com/*", zone_name = "prokr.com" },
+  # prokr.net — uncomment after adding as Cloudflare zone
+  # { pattern = "prokr.net/*", zone_name = "prokr.net" },
+  # { pattern = "www.prokr.net/*", zone_name = "prokr.net" },
+  # prokr.org — uncomment after adding as Cloudflare zone
+  # { pattern = "prokr.org/*", zone_name = "prokr.org" },
+  # { pattern = "www.prokr.org/*", zone_name = "prokr.org" },
+]
 
 # ── Environment Variables ──
 [vars]
