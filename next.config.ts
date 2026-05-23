@@ -61,6 +61,12 @@ const nextConfig: NextConfig = {
         destination: '/api/sitemap/:id',
         permanent: true,
       },
+      {
+        // Canonical service URL redirect: /services-page/{slug} → /{slug}
+        source: '/services-page/:slug',
+        destination: '/:slug',
+        permanent: true,
+      },
     ];
   },
   async headers() {
