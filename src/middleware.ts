@@ -561,6 +561,20 @@ export function middleware(request: NextRequest) {
     }
 
 
+    // ════════════════════════════════════════════════════════════════
+    // 🔗 Canonical Service URL Redirect
+    // /services-page/{slug} → /{slug} (301 permanent)
+    // The canonical URL for services is /{slug}, not /services-page/{slug}
+    // ════════════════════════════════════════════════════════════════
+    if (pathname.startsWith('/services-page/')) {
+        const serviceSlug = pathname.replace('/services-page/', '').replace(/\/+$/, '');
+        if (serviceSlug) {
+            const url = request.nextUrl.clone();
+            url.pathname = `/${serviceSlug}`;
+            return NextResponse.redirect(url, 301);
+        }
+    }
+
     // Known Valid Routes — Skip List
     // All filesystem routes that should pass through to Next.js.
     // IMPORTANT: When adding new routes to /src/app/, add them here.
@@ -580,7 +594,7 @@ export function middleware(request: NextRequest) {
         pathname.startsWith('/regions') ||
         pathname.startsWith('/search') ||
         pathname.startsWith('/blog') ||
-        pathname.startsWith('/services-page') ||
+        pathname === '/services-page' ||
         pathname.startsWith('/verify') ||
         pathname.startsWith('/research') ||
         pathname.startsWith('/maintenance') ||
