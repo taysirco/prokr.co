@@ -361,7 +361,7 @@ export default function AcquisitionPage() {
                                                     {catServices.map(service => (
                                                         <Link
                                                             key={service.slug}
-                                                            href={`/riyadh/${service.slug}`}
+                                                            href={`/services-page/${service.slug}`}
                                                             className={`text-xs px-3 py-1.5 rounded-lg bg-white border border-gray-200 ${colors.text} hover:shadow-sm hover:border-current transition-all duration-200 font-medium`}
                                                         >
                                                             {service.name_ar}
