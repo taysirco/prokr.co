@@ -169,6 +169,27 @@ export default {
       });
     }
 
+    // ── 🔗 Canonical Service URL Redirect ──
+    // /services-page/{slug} → /{slug} (301 permanent)
+    // The canonical URL for services is /{slug}, not /services-page/{slug}.
+    // Must be at Worker level because the Worker caches /services-page/ paths
+    // for 24h, preventing the Next.js middleware redirect from ever firing.
+    if (pathname.startsWith('/services-page/')) {
+      const serviceSlug = pathname.replace('/services-page/', '').replace(/\/+$/, '');
+      if (serviceSlug && serviceSlug !== 'opengraph-image') {
+        const canonicalUrl = new URL(url.toString());
+        canonicalUrl.pathname = `/${serviceSlug}`;
+        return new Response(null, {
+          status: 301,
+          headers: {
+            'Location': canonicalUrl.toString(),
+            'X-Edge-Worker': 'prokr-v1',
+            'Cache-Control': 'public, max-age=86400',
+          },
+        });
+      }
+    }
+
     const userAgent = request.headers.get('user-agent') || '';
     const isBot = BOT_PATTERNS.some(p => p.test(userAgent));
     const isWarmRequest = request.headers.get('x-prokr-warm') === 'true';
@@ -468,7 +489,7 @@ function findCacheRule(pathname) {
 // Cache namespace version — bump this to instantly invalidate ALL cached entries
 // without needing Cloudflare API tokens. Old cache keys become orphaned and
 // expire naturally via their TTL.
-const CACHE_VERSION = 'v9';
+const CACHE_VERSION = 'v10';
 
 function normalizeCacheUrl(url) {
   const cleaned = new URL(url.toString());
