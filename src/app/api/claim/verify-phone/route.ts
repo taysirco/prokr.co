@@ -5,7 +5,7 @@
 // ============================================
 
 import { NextRequest, NextResponse } from 'next/server';
-import { getAdminDb } from '@/lib/firebase-admin-init';
+import { getAdminDb, verifyAuthToken } from '@/lib/firebase-admin-init';
 import { FieldValue } from 'firebase-admin/firestore';
 import { getAdvertiserByCode } from '@/lib/db';
 
@@ -41,6 +41,14 @@ export async function POST(request: NextRequest) {
 
         const submittedPhone = normalizePhone(phone);
         const registeredPhone = normalizePhone(advertiser.phone_number);
+
+        // 🔐 Require a phone-OTP-authenticated session proving the CALLER controls
+        // the submitted phone. The registered number is PUBLIC, so matching it
+        // alone was not proof of ownership (previously enabled claim takeover).
+        const tokenData = await verifyAuthToken(request.headers.get('Authorization'));
+        if (!tokenData || !tokenData.phone_number || normalizePhone(tokenData.phone_number) !== submittedPhone) {
+            return NextResponse.json({ error: 'يجب تأكيد رقم هاتفك عبر رمز التحقق (OTP) أولاً' }, { status: 401 });
+        }
 
         if (submittedPhone !== registeredPhone) {
             return NextResponse.json(

@@ -16,8 +16,22 @@
 /* Font configuration */
 body {
   font-family: var(--font-ibm-plex-arabic), "Segoe UI", Tahoma, sans-serif;
+  font-size: 1rem;     /* explicit 16px base (mobile legibility, WCAG) */
+  line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Accessibility: honour the OS "reduce motion" preference (WCAG 2.3.3).
+   Neutralises the 100+ animations + the layout-injected universal transition
+   for users with vestibular sensitivity. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 /* RTL-aware text alignment */

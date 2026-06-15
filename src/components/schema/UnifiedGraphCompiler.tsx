@@ -12,6 +12,7 @@ import { resolvePageContent } from '@/lib/overrides';
 import { getServiceKeywordProfile, getCityKeyword } from '@/lib/locale-formatting';
 import { getCanonicalSlug } from '@/lib/services/super-page-groups';
 import { getHourlyMode } from '@/lib/market-timing';
+import { safeJsonLd } from '@/lib/json-ld';
 
 // ── WARRANTY DATA (mirrored from ServiceOfferJsonLd) ──
 const WARRANTY_BY_CATEGORY: Record<string, {
@@ -61,7 +62,11 @@ export function UnifiedGraphCompiler({
     const warranty = WARRANTY_BY_CATEGORY[service.category] || WARRANTY_BY_CATEGORY['cleaning'];
 
     // ── AggregateRating calculation ──
-    const allReviews = advertisers.flatMap(ad => ad.reviews || []);
+    // Exclude the injected "featured" company so its 5 hardcoded reviews don't
+    // power an identical, fabricated Service AggregateRating on every ~945 pages.
+    const allReviews = advertisers
+        .filter(ad => ad.id !== 'featured-al-ostora')
+        .flatMap(ad => ad.reviews || []);
     const avgRating = allReviews.length > 0
         ? Math.round((allReviews.reduce((sum, r) => sum + r.rating, 0) / allReviews.length) * 10) / 10
         : undefined;
@@ -78,6 +83,39 @@ export function UnifiedGraphCompiler({
     // ============================================
     const graph: Record<string, unknown>[] = [];
 
+    // ── 0. Organization (#organization) — brand entity anchor, shared across ALL
+    //    pages by @id (same id+name as the homepage ProkrOrganizationJsonLd) so the
+    //    money pages connect to the Knowledge Graph (Wikidata Q139265070) instead of
+    //    floating with anonymous providers. ──
+    const ORG_ID = 'https://prokr.co/#organization';
+    graph.push({
+        '@type': 'Organization',
+        '@id': ORG_ID,
+        name: 'دليل بروكر للخدمات المنزلية',
+        url: 'https://prokr.co',
+        logo: { '@type': 'ImageObject', url: 'https://prokr.co/logo.png', width: 512, height: 512 },
+        sameAs: [
+            'https://www.wikidata.org/wiki/Q139265070',
+            'https://www.instagram.com/prokr_sa',
+            'https://www.facebook.com/prokr.sa',
+        ],
+        knowsAbout: [
+            { '@type': 'GovernmentOrganization', name: 'هيئة الزكاة والضريبة والجمارك (ZATCA)', url: 'https://zatca.gov.sa' },
+            { '@type': 'GovernmentOrganization', name: 'منصة قوى — أجير (Qiwa)', url: 'https://qiwa.sa' },
+            { '@type': 'GovernmentOrganization', name: 'برنامج نطاقات — وزارة الموارد البشرية', url: 'https://hrsd.gov.sa' },
+        ],
+        hasCredential: {
+            '@type': 'EducationalOccupationalCredential',
+            credentialCategory: 'Government Identity Verification Platform',
+            name: 'التحقق عبر منصة نفاذ الوطنية — مركز المعلومات الوطني',
+            recognizedBy: {
+                '@type': 'GovernmentOrganization',
+                name: 'مركز المعلومات الوطني — منصة نفاذ (Nafath)',
+                url: 'https://www.iam.gov.sa/',
+            },
+        },
+    });
+
     // ── 1. WebPage (#webpage) — القلب الذي يربط كل شيء ──
     graph.push({
         '@type': 'WebPage',
@@ -86,11 +124,13 @@ export function UnifiedGraphCompiler({
         name: aiContent.metaTitle,
         description: aiContent.shortAnswer,
         inLanguage: 'ar',
+        publisher: { '@id': ORG_ID },
         isPartOf: {
             '@type': 'WebSite',
             '@id': 'https://prokr.co#website',
             name: 'بروكر',
             url: 'https://prokr.co',
+            publisher: { '@id': ORG_ID },
         },
         // 🔗 ربط الصفحة بالخدمة
         about: { '@id': `${baseUrl}#service` },
@@ -133,29 +173,9 @@ export function UnifiedGraphCompiler({
                 name: 'المملكة العربية السعودية',
             },
         },
-        // ── Providers (top 10 advertisers) ──
+        // ── Providers: brand Organization (by @id) + top 10 advertisers ──
         provider: [
-            {
-                '@type': 'Organization',
-                name: 'بروكر',
-                url: 'https://prokr.co',
-                knowsAbout: [
-                    { '@type': 'GovernmentOrganization', name: 'هيئة الزكاة والضريبة والجمارك (ZATCA)', url: 'https://zatca.gov.sa' },
-                    { '@type': 'GovernmentOrganization', name: 'منصة قوى — أجير (Qiwa)', url: 'https://qiwa.sa' },
-                    { '@type': 'GovernmentOrganization', name: 'برنامج نطاقات — وزارة الموارد البشرية', url: 'https://hrsd.gov.sa' },
-                ],
-                // 🛡️ درع نفاذ — التحقق الحكومي على مستوى المنصة
-                hasCredential: {
-                    '@type': 'EducationalOccupationalCredential',
-                    credentialCategory: 'Government Identity Verification Platform',
-                    name: 'التحقق عبر منصة نفاذ الوطنية — مركز المعلومات الوطني',
-                    recognizedBy: {
-                        '@type': 'GovernmentOrganization',
-                        name: 'مركز المعلومات الوطني — منصة نفاذ (Nafath)',
-                        url: 'https://www.iam.gov.sa/',
-                    },
-                },
-            },
+            { '@id': ORG_ID },
             ...advertisers.slice(0, 10).map(ad => ({
                 '@type': 'Organization' as const,
                 name: ad.business_name,
@@ -181,8 +201,11 @@ export function UnifiedGraphCompiler({
             offerCount: prices.length,
             warranty: {
                 '@type': 'WarrantyPromise',
-                durationOfWarranty: { '@type': 'QuantitativeValue', value: warranty.duration, unitCode: 'DAY' },
-                warrantyScope: 'https://schema.org/Labor-PartsWarrantyScope',
+                // value must be a NUMBER of days; warranty.duration is an ISO 8601
+                // string like 'P30D' which is invalid alongside unitCode 'DAY'.
+                durationOfWarranty: { '@type': 'QuantitativeValue', value: parseInt(warranty.duration.replace(/\D/g, ''), 10) || 0, unitCode: 'DAY' },
+                // warrantyScope omitted: schema.org WarrantyScope has no valid
+                // enumeration members ('Labor-PartsWarrantyScope' / 'LaborWarranty' are not real).
                 description: warranty.description,
             },
         },
@@ -350,7 +373,7 @@ export function UnifiedGraphCompiler({
         width: 1200,
         height: 800,
         contentLocation: { '@type': 'Place', name: `${city.name_ar}، المملكة العربية السعودية` },
-        creator: { '@type': 'Organization', name: 'بروكر', url: 'https://prokr.co' },
+        creator: { '@id': ORG_ID },
     });
 
     // ── 8. EmergencyService (#emergency) — Night Mode Schema (12AM-6AM) ──
@@ -413,7 +436,7 @@ export function UnifiedGraphCompiler({
     return (
         <script
             type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(unifiedSchema) }}
+            dangerouslySetInnerHTML={{ __html: safeJsonLd(unifiedSchema) }}
         />
     );
 }

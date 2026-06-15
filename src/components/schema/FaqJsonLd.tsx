@@ -1,3 +1,4 @@
+import { safeJsonLd } from '@/lib/json-ld';
 import type { City, Service } from '@/types';
 import { resolvePageContent } from '@/lib/overrides';
 
@@ -25,7 +26,7 @@ export function FaqJsonLd({ city, service }: FaqJsonLdProps) {
     return (
         <script
             type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+            dangerouslySetInnerHTML={{ __html: safeJsonLd(schema) }}
         />
     );
 }

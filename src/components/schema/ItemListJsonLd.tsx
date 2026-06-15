@@ -1,3 +1,4 @@
+import { safeJsonLd } from '@/lib/json-ld';
 import type { Advertiser, ItemListSchema } from '@/types';
 
 // ============================================
@@ -80,7 +81,7 @@ export function ItemListJsonLd(props: ItemListJsonLdProps) {
         return (
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+                dangerouslySetInnerHTML={{ __html: safeJsonLd(schema) }}
             />
         );
     }
@@ -105,7 +106,7 @@ export function ItemListJsonLd(props: ItemListJsonLdProps) {
     return (
         <script
             type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+            dangerouslySetInnerHTML={{ __html: safeJsonLd(schema) }}
         />
     );
 }

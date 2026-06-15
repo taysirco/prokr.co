@@ -1,3 +1,4 @@
+import { safeJsonLd } from '@/lib/json-ld';
 /**
  * SpeakableJsonLd — §14 Voice Search & AI Assistant Optimization
  *
@@ -49,7 +50,7 @@ export function SpeakableJsonLd({ url, cssSelector, xpath }: SpeakableJsonLdProp
     return (
         <script
             type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+            dangerouslySetInnerHTML={{ __html: safeJsonLd(schema) }}
         />
     );
 }

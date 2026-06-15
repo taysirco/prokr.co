@@ -1,3 +1,4 @@
+import { safeJsonLd } from '@/lib/json-ld';
 import type { Advertiser, City, Service, OrganizationSchema } from '@/types';
 
 
@@ -45,7 +46,7 @@ export function OrganizationJsonLd({ advertiser, services, cities }: Organizatio
     return (
         <script
             type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+            dangerouslySetInnerHTML={{ __html: safeJsonLd(schema) }}
         />
     );
 }

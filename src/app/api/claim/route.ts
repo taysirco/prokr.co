@@ -11,14 +11,39 @@ import { FieldValue } from 'firebase-admin/firestore';
 
 const CLAIMS_COLLECTION = 'business_claims';
 
+// ── Abuse controls for the unauthenticated claim-create endpoint ──
+// (This endpoint cannot require a token: email ownership is proven LATER via the
+//  passwordless magic link. So we validate input shape + rate-limit instead.)
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const CODE_RE = /^[A-Za-z0-9_-]{2,40}$/;
+const claimHits = new Map<string, { count: number; ts: number }>();
+function claimRateLimited(ip: string, limit = 5, windowMs = 60_000): boolean {
+    const now = Date.now();
+    const rec = claimHits.get(ip);
+    if (!rec || now - rec.ts > windowMs) { claimHits.set(ip, { count: 1, ts: now }); return false; }
+    rec.count++;
+    return rec.count > limit;
+}
+
 // POST — Submit a new business claim
 export async function POST(request: NextRequest) {
     try {
+        // Best-effort per-IP rate limit (Cloudflare client IP). In-memory state is
+        // per-instance only — back with Firestore/KV for hard guarantees.
+        const ip = request.headers.get('cf-connecting-ip') || request.headers.get('x-real-ip') || 'unknown';
+        if (claimRateLimited(ip)) {
+            return NextResponse.json({ error: 'محاولات كثيرة، يرجى المحاولة لاحقاً.' }, { status: 429 });
+        }
+
         const { email, companyCode, businessName } = await request.json();
 
         if (!email || !companyCode) {
             return NextResponse.json({ error: 'البريد الإلكتروني ورمز الشركة مطلوبان' }, { status: 400 });
         }
+        if (!EMAIL_RE.test(email) || !CODE_RE.test(companyCode)) {
+            return NextResponse.json({ error: 'بيانات غير صحيحة' }, { status: 400 });
+        }
+        const safeBusinessName = typeof businessName === 'string' ? businessName.slice(0, 120) : '';
 
         const db = getAdminDb();
         const claimsRef = db.collection(CLAIMS_COLLECTION);
@@ -48,7 +73,7 @@ export async function POST(request: NextRequest) {
         await claimsRef.add({
             company_code: companyCode,
             claimant_email: email,
-            business_name: businessName || '',
+            business_name: safeBusinessName,
             status: 'pending',
             claimed_at: FieldValue.serverTimestamp(),
             verified_at: null,

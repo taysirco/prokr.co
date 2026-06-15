@@ -17,7 +17,6 @@ import { getServiceEntities, getServiceSectorCategory } from './entities';
 import { getClimateChallenges, getEntityIntersection } from './city-climate';
 import { CONTENT_STRUCTURE_TEMPLATE } from './content-templates';
 import { getConsumerMythCorrection } from './consumer-myths';
-import { trackInteraction } from '../interaction-tracking';
 
 // ============================================
 // SCIENTIFIC SYMBOL CLEANER
@@ -83,6 +82,30 @@ function deepClean<T>(obj: T): T {
 }
 
 // ============================================
+// PLACEHOLDER GUARD
+// ~64% of override files shipped unfilled [bracket] template scaffolding (e.g.
+// "خدمة [تنظيف الخزانات] بمدينة [خميس مشيط]"). Such fields must NOT reach the
+// visible page or the JSON-LD — fall back to auto-generated content for any field
+// that still contains a [placeholder]. (Pair with a CI check that fails the build
+// if any override file matches /\[[^\]]{2,}\]/ in a content/meta/faq field.)
+// ============================================
+function hasPlaceholder(s: unknown): boolean {
+    return typeof s === 'string' && /\[[^\]]{2,}\]/.test(s);
+}
+function preferFilled<T>(overrideVal: T | undefined, autoVal: T): T {
+    return (overrideVal === undefined || hasPlaceholder(overrideVal)) ? autoVal : overrideVal;
+}
+
+// Clamp meta descriptions to ~160 chars on a word boundary (prevents SERP
+// truncation — some override descriptions ran ~266 chars).
+function clampDescription(s: string, max = 160): string {
+    if (!s || s.length <= max) return s;
+    const cut = s.slice(0, max);
+    const lastSpace = cut.lastIndexOf(' ');
+    return (lastSpace > 100 ? cut.slice(0, lastSpace) : cut).trimEnd() + '…';
+}
+
+// ============================================
 // CONTENT LAYERS RESOLVER
 // ============================================
 
@@ -116,15 +139,15 @@ export function resolveContentLayers(city: City, service: Service): ContentLayer
 
     const c = override.content;
     return deepClean({
-        introduction: c.introduction ?? auto.introduction,
-        shortAnswer: c.shortAnswer ?? auto.shortAnswer,
-        whyUs: c.whyUs ?? auto.whyUs,
+        introduction: preferFilled(c.introduction, auto.introduction),
+        shortAnswer: preferFilled(c.shortAnswer, auto.shortAnswer),
+        whyUs: preferFilled(c.whyUs, auto.whyUs),
         localChallenges: c.localChallenges ?? (autoChallenges.length > 0 ? autoChallenges : auto.localChallenges),
         customSolutions: c.customSolutions ?? auto.customSolutions,
         successStories: c.successStories ?? auto.successStories,
-        metaTitle: override.meta?.title ?? auto.metaTitle,
-        h1: override.meta?.h1 ?? auto.h1,
-        heroSubtitle: c.heroSubtitle,
+        metaTitle: preferFilled(override.meta?.title, auto.metaTitle),
+        h1: preferFilled(override.meta?.h1, auto.h1),
+        heroSubtitle: hasPlaceholder(c.heroSubtitle) ? undefined : c.heroSubtitle,
         localizedContent: override.entityContext?.intersectionParagraph ?? autoEntityIntersection,
     });
 }
@@ -184,16 +207,19 @@ export function resolveMetadata(city: City, service: Service): ResolvedMetadata 
 
     const m = override?.meta;
 
-    // Title enhancement: apply formatting to ALL titles (override + auto)
-    const resolvedTitle = m?.title ?? auto.metaTitle;
-    const enhancedTitle = trackInteraction(resolvedTitle, service.slug);
+    // Title: use the hand-written override title AS-IS — do NOT re-run the title
+    // "enhancer", which strips the unique per-city tail after the em-dash and
+    // appends one hardcoded per-category bracket (making every city identical).
+    // auto.metaTitle is already enhanced upstream in content-layers. Placeholder
+    // titles fall back to the auto title.
+    const enhancedTitle = hasPlaceholder(m?.title) ? auto.metaTitle : (m?.title ?? auto.metaTitle);
 
     return deepClean({
         title: enhancedTitle,
-        description: m?.description ?? autoDescription,
+        description: clampDescription(m?.description ?? autoDescription),
         keywords: m?.keywords ?? autoKeywords,
         ogTitle: m?.ogTitle ?? enhancedTitle,
-        ogDescription: m?.ogDescription ?? m?.description ?? autoDescription,
+        ogDescription: clampDescription(m?.ogDescription ?? m?.description ?? autoDescription),
         ogImage: m?.ogImage,
     });
 }
@@ -295,15 +321,16 @@ export function resolvePageContent(city: City, service: Service) {
                     seen.add(effectiveSlug);
                     return { ...rel, slug: effectiveSlug };
                 })
-                .filter(Boolean)
-                .sort((a: any, b: any) => a.priority - b.priority);
+                .filter((r): r is RelatedService => Boolean(r))
+                .sort((a: RelatedService, b: RelatedService) => a.priority - b.priority);
         })()
         : auto.relatedServices;
 
     // Build complementaryLinks from override relatedServices (fragment-aware)
+    // eslint-disable-next-line @typescript-eslint/no-require-imports -- lazy require avoids a circular import with ../seed
     const { getServiceBySlug } = require('../seed');
     const resolvedComplementaryLinks = override.relatedServices
-        ? resolvedRelated.map((rel: any) => {
+        ? resolvedRelated.map((rel: RelatedService) => {
             const relService = getServiceBySlug(rel.slug);
             return relService ? {
                 name_ar: relService.name_ar,
@@ -331,9 +358,9 @@ export function resolvePageContent(city: City, service: Service) {
         // Content layer overrides + entity enrichment
         aiContent: {
             ...auto.aiContent,
-            introduction: override.content?.introduction ?? auto.aiContent.introduction,
-            shortAnswer: override.content?.shortAnswer ?? auto.aiContent.shortAnswer,
-            whyUs: override.content?.whyUs ?? auto.aiContent.whyUs,
+            introduction: preferFilled(override.content?.introduction, auto.aiContent.introduction),
+            shortAnswer: preferFilled(override.content?.shortAnswer, auto.aiContent.shortAnswer),
+            whyUs: preferFilled(override.content?.whyUs, auto.aiContent.whyUs),
             localChallenges: override.content?.localChallenges ?? (autoChallenges.length > 0 ? autoChallenges : auto.aiContent.localChallenges),
             customSolutions: override.content?.customSolutions ?? auto.aiContent.customSolutions,
             successStories: override.content?.successStories ?? auto.aiContent.successStories,

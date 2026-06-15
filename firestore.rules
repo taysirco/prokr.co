@@ -1,52 +1,62 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
-    
-    // Static data (cities, services) - public read
+
+    // ════════════════════════════════════════════════════════════════
+    // ⚠️ DEPLOY PREREQUISITE — READ BEFORE `firebase deploy --only firestore:rules`
+    // ────────────────────────────────────────────────────────────────
+    // Privileged operations below now require a custom admin claim
+    // (request.auth.token.admin == true) instead of "any signed-in user".
+    // BEFORE deploying, grant that claim to your admin UID(s) with the Admin SDK
+    // or the admin dashboard's client-SDK writes will stop working:
+    //
+    //   const admin = require('firebase-admin');
+    //   admin.initializeApp({ credential: admin.credential.cert(require('./serviceAccountKey.json')) });
+    //   await admin.auth().setCustomUserClaims('<ADMIN_UID>', { admin: true });
+    //   // the admin must then sign out/in (or refresh the ID token).
+    //
+    // NOTE: every /api/* route uses the Firebase ADMIN SDK, which BYPASSES these
+    // rules — so server-side booking/claim/review writes are unaffected by this.
+    // Previously these rules treated ANY authenticated user as an admin (IDOR):
+    // any signed-up user could delete advertisers and read all lead PII.
+    // ════════════════════════════════════════════════════════════════
+    function isSignedIn() { return request.auth != null; }
+    function isAdmin() { return isSignedIn() && request.auth.token.admin == true; }
+
+    // Static data (cities, services) — public read, admin write
     match /static_data/{document=**} {
       allow read: if true;
-      allow write: if request.auth != null;
+      allow write: if isAdmin();
     }
-    
-    // Advertisers - public read, authenticated write
+
+    // Advertisers — public read, admin-only write (was: any signed-in user)
     match /advertisers/{advertiserId} {
-      // Anyone can read advertiser data
       allow read: if true;
-      
-      // Authenticated users can create (for admin dashboard)
-      // In production, add more restrictions based on custom claims
-      allow create: if request.auth != null;
-      
-      // Only document owner or admin can update/delete
-      allow update, delete: if request.auth != null;
+      allow create, update, delete: if isAdmin();
     }
-    
-    // Reviews - public read, authenticated write
+
+    // Reviews subcollection — public read; owner or admin can modify
     match /advertisers/{advertiserId}/reviews/{reviewId} {
       allow read: if true;
-      allow create: if request.auth != null;
-      allow update, delete: if request.auth != null && request.auth.uid == resource.data.user_id;
+      allow create: if isSignedIn();
+      allow update, delete: if isAdmin() || (isSignedIn() && request.auth.uid == resource.data.user_id);
     }
-    
-    // Contact form submissions - anyone can create, only authenticated reads
+
+    // Contact form submissions — anyone creates, ADMIN-only reads (contains lead PII)
     match /contact_submissions/{submissionId} {
       allow create: if true;
-      allow read, update, delete: if request.auth != null;
+      allow read, update, delete: if isAdmin();
     }
-    
-    // Advertiser registration requests - anyone can create, authenticated manage
+
+    // Advertiser registration requests — anyone creates, admin manages
     match /advertiser_requests/{requestId} {
-      // Anyone can create a registration request
       allow create: if true;
-      
-      // Only authenticated admin can read/update/delete
-      allow read, update, delete: if request.auth != null;
+      allow read, update, delete: if isAdmin();
     }
-    
-    // AI Booking API — service bookings from /api/book
-    // Anyone (including AI agents) can create, admin manages
+
+    // AI Booking API — public create (AI agents / booking flow), admin manages.
+    // Create validation kept intact; reads/mutations restricted to admin.
     match /service_bookings/{bookingId} {
-      // API creates bookings (no auth required for AI agent access)
       allow create: if true
         && request.resource.data.keys().hasAll([
           'reservation_id', 'service_slug', 'city_slug',
@@ -55,36 +65,26 @@ service cloud.firestore {
         && request.resource.data.status == 'pending'
         && request.resource.data.customer_name is string
         && request.resource.data.customer_phone is string;
-      
-      // Only authenticated admin can read/update/delete
-      allow read, update, delete: if request.auth != null;
+      allow read, update, delete: if isAdmin();
     }
-    
+
     // Admin-only data
     match /admin/{document=**} {
-      allow read, write: if request.auth != null;
+      allow read, write: if isAdmin();
     }
-    
-    // Business Claims — claim verification for company ownership
-    // API routes use Admin SDK (bypass rules), so these only apply to client SDK
+
+    // Business Claims — written ONLY via the Admin SDK (API routes, which bypass
+    // these rules). Block ALL direct client-SDK writes so the API's validation /
+    // token checks can't be bypassed by writing the doc directly from a browser.
     match /business_claims/{claimId} {
-      // Anyone can read claim status (CTA checks if claimed)
       allow read: if true;
-      // Only Admin SDK (API routes) handles create/update — block direct client writes
-      allow create, update: if request.auth != null;
-      // Only authenticated admin can delete
-      allow delete: if request.auth != null;
+      allow create, update, delete: if false;
     }
-    
-    // Verified Reviews — authenticated reviews for companies
-    // API routes use Admin SDK (bypass rules), so these only apply to client SDK
+
+    // Verified Reviews — same policy: server-only writes via Admin SDK.
     match /verified_reviews/{reviewId} {
-      // Anyone can read reviews (public display)
       allow read: if true;
-      // Only Admin SDK (API routes) handles create/update — block direct client writes
-      allow create, update: if request.auth != null;
-      // Only authenticated admin can delete
-      allow delete: if request.auth != null;
+      allow create, update, delete: if false;
     }
   }
 }

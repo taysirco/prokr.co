@@ -1,3 +1,4 @@
+import { safeJsonLd } from '@/lib/json-ld';
 import type { City, Service } from '@/types';
 import { getServiceKeywordProfile, getCityKeyword } from '@/lib/locale-formatting';
 
@@ -55,7 +56,7 @@ export function HowToJsonLd({ service, city }: HowToJsonLdProps) {
     return (
         <script
             type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+            dangerouslySetInnerHTML={{ __html: safeJsonLd(schema) }}
         />
     );
 }

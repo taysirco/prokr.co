@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef, useMemo, useCallback } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import { useModalA11y } from '@/lib/use-modal-a11y';
 import {
   Search, X, MapPin, Briefcase, BookOpen, Zap,
   TrendingUp, ArrowLeft, Sparkles, CornerDownLeft,
@@ -189,13 +190,15 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
     return groups;
   }, [results]);
 
+  const searchModalRef = useModalA11y<HTMLDivElement>(isOpen, onClose);
+
   if (!isOpen) return null;
 
   const showTrending = !query.trim();
   const showNoResults = query.trim() && debouncedQuery.trim() && results.length === 0;
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-start justify-center sm:pt-[12vh] px-0 sm:px-4" role="dialog" aria-modal="true" aria-label="بحث في الموقع">
+    <div ref={searchModalRef} className="fixed inset-0 z-[100] flex items-start justify-center sm:pt-[12vh] px-0 sm:px-4" role="dialog" aria-modal="true" aria-label="بحث في الموقع">
       {/* Backdrop */}
       <div
         className="absolute inset-0 bg-black/60 backdrop-blur-md"

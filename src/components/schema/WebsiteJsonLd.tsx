@@ -1,3 +1,4 @@
+import { safeJsonLd } from '@/lib/json-ld';
 // ============================================
 // WEBSITE SCHEMA
 // ============================================
@@ -55,7 +56,7 @@ export function WebsiteJsonLd({ url, name, description }: WebsiteJsonLdProps) {
     return (
         <script
             type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+            dangerouslySetInnerHTML={{ __html: safeJsonLd(schema) }}
         />
     );
 }

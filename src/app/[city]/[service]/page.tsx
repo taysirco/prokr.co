@@ -8,7 +8,6 @@ import { getAdvertisersBySilo } from '@/lib/db-actions';
 import { UnifiedGraphCompiler, VoiceSearchSchema } from '@/components/JsonLd';
 import { DirectAnswer } from '@/components/seo/DirectAnswer';
 import { PageContentSection } from '@/lib/seo-content';
-import { LiveBlogPostingJsonLd } from '@/components/schema';
 import { pricingData } from '@/lib/pricing-data';
 import { getCityContext } from '@/lib/city-context';
 import { getServiceKeywordProfile, getCityKeyword } from '@/lib/locale-formatting';
@@ -38,11 +37,17 @@ import FaqAccordion from '@/components/FaqAccordion';
 import { resolvePageContent } from '@/lib/overrides';
 import type { Advertiser } from '@/types';
 import { injectFeaturedCompany } from '@/lib/featured-company';
+import { toWaNumber } from '@/lib/phone';
 
-// Disable static generation, use ISR instead
-// Pages will be generated on first request and cached for 60 seconds
-export const dynamic = 'force-dynamic';
-export const revalidate = 60;
+// ISR (Incremental Static Regeneration): each page is generated on first request,
+// cached at the origin, and revalidated in the background every 5 minutes.
+// `force-dynamic` was REMOVED — it disabled ISR and forced a full per-request SSR
+// (incl. a Firestore round-trip) on every edge cache miss (origin TTFB ~500ms).
+// generateStaticParams is intentionally NOT added yet: getAdvertisersBySilo() uses
+// the CLIENT Firebase SDK, so prebuilding ~945 pages would fire ~1,900 Firestore
+// reads at build time. Migrate that reader to the Admin SDK first, then prebuild.
+export const revalidate = 300;
+export const dynamicParams = true;
 
 interface SiloPageProps {
     params: Promise<{
@@ -185,14 +190,10 @@ export default async function SiloPage({ params }: SiloPageProps) {
                 pricingEntry={aiPricingEntry}
                 pageUrl={canonicalPageUrl}
             />
-            {/* LiveBlogPosting — content updates */}
-            <LiveBlogPostingJsonLd
-                cityNameAr={cityKw}
-                serviceNameAr={service.name_ar}
-                citySlug={city.slug}
-                serviceSlug={service.slug}
-                availableTeams={Math.max(2, Math.min(premium.length + standard.length, Math.ceil((premium.length + standard.length) * 0.7)))}
-            />
+            {/* LiveBlogPosting schema REMOVED — it fabricated "team availability"
+                live-blog updates on every page; LiveBlogPosting is for genuine
+                real-time editorial coverage and is a spam signal when misused.
+                Freshness is expressed via WebPage.dateModified (UnifiedGraphCompiler). */}
 
             {/* §14.2 LLM Authority Injection — Per-Page Dynamic Declaration */}
             <div
@@ -279,7 +280,11 @@ export default async function SiloPage({ params }: SiloPageProps) {
                                 </div>
                             </div>
 
-                            {/* Hero Image */}
+                            {/* Hero Image — desktop-only (hidden below lg). It is NOT the mobile
+                                LCP, so it must not be preloaded: removed `priority` +
+                                `fetchPriority="high"` (which made mobile download a hero it never
+                                paints, contending with the real mobile LCP) and scoped `sizes`
+                                to the lg breakpoint so no mobile candidate is fetched. */}
                             <div className="hidden lg:block relative">
                                 <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl" suppressHydrationWarning>
                                     <Image
@@ -287,9 +292,8 @@ export default async function SiloPage({ params }: SiloPageProps) {
                                         alt={`أفضل شركة ${service.name_ar} ${cityKw} - تم التحقق عبر نفاذ SBC - خدمات معتمدة 2026`}
                                         fill
                                         className="object-cover"
-                                        priority
-                                        fetchPriority="high"
-                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                                        loading="lazy"
+                                        sizes="(min-width: 1024px) 600px, 0px"
                                         quality={90}
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-sky-900/50 to-transparent"></div>
@@ -485,7 +489,7 @@ function PremiumCard({ advertiser }: { advertiser: Advertiser }) {
         ? reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.length
         : 0;
 
-    const whatsappLink = `https://wa.me/${advertiser.whatsapp_number.replace(/\D/g, '')}`;
+    const whatsappLink = `https://wa.me/${toWaNumber(advertiser.whatsapp_number)}`;
     const phoneLink = `tel:${advertiser.phone_number}`;
 
     return (
@@ -594,7 +598,7 @@ function PremiumCard({ advertiser }: { advertiser: Advertiser }) {
 
 // Standard Row Component
 function StandardRow({ advertiser }: { advertiser: Advertiser }) {
-    const whatsappLink = `https://wa.me/${advertiser.whatsapp_number.replace(/\D/g, '')}`;
+    const whatsappLink = `https://wa.me/${toWaNumber(advertiser.whatsapp_number)}`;
     const phoneLink = `tel:${advertiser.phone_number}`;
 
     return (

@@ -74,7 +74,13 @@ Disallow: /admin
 Disallow: /api/
 Disallow: /search
 
-User-Agent: Claude-Web
+User-Agent: ClaudeBot
+Allow: /
+Disallow: /admin
+Disallow: /api/
+Disallow: /search
+
+User-Agent: Claude-User
 Allow: /
 Disallow: /admin
 Disallow: /api/
@@ -92,10 +98,17 @@ Disallow: /admin
 Disallow: /api/
 Disallow: /search
 
-# ── Training-Only Crawlers: BLOCKED (§33.4 Anti-AI Vampire Shield) ──
+# ── Google-Extended: ALLOW — preserves Gemini Apps / Vertex AI grounding &
+# citation eligibility (AI Overviews use the Googlebot index, unaffected either
+# way). Training preference is declared via the Content-Signal header above
+# (ai-train=no), so there is no need to hard-block this UA. ──
 User-Agent: Google-Extended
-Disallow: /
+Allow: /
+Disallow: /admin
+Disallow: /api/
+Disallow: /search
 
+# ── Training-Only Crawlers: BLOCKED (§33.4 Anti-AI Vampire Shield) ──
 User-Agent: CCBot
 Disallow: /
 
@@ -109,24 +122,11 @@ Disallow: /
 User-Agent: SemrushBot
 Disallow: /
 
-User-Agent: AhrefsBot
-Disallow: /
-
 User-Agent: MJ12bot
 Disallow: /
 
-# ── Sitemaps ──
+# ── Sitemaps (the index enumerates active child sitemaps dynamically) ──
 Sitemap: ${baseUrl}/api/sitemap-index
-Sitemap: ${baseUrl}/api/sitemap/0
-Sitemap: ${baseUrl}/api/sitemap/1
-Sitemap: ${baseUrl}/api/sitemap/2
-Sitemap: ${baseUrl}/api/sitemap/3
-Sitemap: ${baseUrl}/api/sitemap/4
-Sitemap: ${baseUrl}/api/sitemap/5
-Sitemap: ${baseUrl}/api/sitemap/6
-Sitemap: ${baseUrl}/api/sitemap/7
-
-Host: ${baseUrl}
 `;
 
     return new NextResponse(robotsTxt, {

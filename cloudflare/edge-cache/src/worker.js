@@ -24,7 +24,11 @@
  */
 const CACHE_RULES = [
   // ── BYPASS: Never cache these paths ──
-  { pattern: /^\/(api|admin|_next\/data|_next\/image|__\/auth|\.well-known)\//,  ttl: 0, bypass: true },
+  // NOTE: trailing (\/|$) — pathname is query-stripped, so /_next/image (the
+  // optimizer is called as /_next/image?url=...) MUST match here, otherwise it
+  // falls through, gets mishandled, and returns 404 — disabling AVIF/WebP/srcset
+  // site-wide. Was: ...|\.well-known)\/  (the trailing slash broke /_next/image).
+  { pattern: /^\/(api|admin|_next\/data|_next\/image|__\/auth|\.well-known)(\/|$)/,  ttl: 0, bypass: true },
   { pattern: /^\/(api|admin)$/,                                     ttl: 0, bypass: true },
   { pattern: /^\/search/,                                           ttl: 0, bypass: true },
   { pattern: /^\/verify\//,                                         ttl: 0, bypass: true },
@@ -226,6 +230,25 @@ export default {
       const headers = new Headers(response.headers);
       headers.set('X-Cache-Status', 'BYPASS-RSC');
       headers.set('X-Edge-Worker', 'prokr-v1');
+      return new Response(response.body, {
+        status: response.status,
+        statusText: response.statusText,
+        headers,
+      });
+    }
+
+    // ── Bypass cache for markdown content negotiation (AI agents) ──
+    // `Accept: text/markdown` is rewritten by middleware to /api/markdown-negotiate.
+    // The default cache key does NOT vary on Accept, so without this an agent would
+    // receive cached HTML (the flagship "clean markdown for agents" feature was dead
+    // at the edge). Pass straight to origin and advertise Vary: Accept.
+    const acceptHeader = request.headers.get('accept') || '';
+    if (acceptHeader.includes('text/markdown')) {
+      const response = await fetch(request);
+      const headers = new Headers(response.headers);
+      headers.set('X-Cache-Status', 'BYPASS-MARKDOWN');
+      headers.set('X-Edge-Worker', 'prokr-v1');
+      headers.set('Vary', 'Accept, Accept-Encoding');
       return new Response(response.body, {
         status: response.status,
         statusText: response.statusText,

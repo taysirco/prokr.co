@@ -6,11 +6,15 @@
 const SW_VERSION = '1.3.0';
 
 // ─── Cache Names ───
-const CACHE_STATIC  = 'prokr-static-v1';
-const CACHE_IMAGES  = 'prokr-images-v1';
-const CACHE_CITIES  = 'prokr-cities-v1';
-const CACHE_PAGES   = 'prokr-pages-v1';
-const CACHE_API     = 'prokr-api-v1';
+// Derived from SW_VERSION so every version bump orphans the old caches, which
+// the activate handler then deletes. Previously frozen at '-v1', so returning
+// users were served permanently-stale HTML/assets across deploys.
+const V = SW_VERSION.replace(/\./g, '_');
+const CACHE_STATIC  = `prokr-static-${V}`;
+const CACHE_IMAGES  = `prokr-images-${V}`;
+const CACHE_CITIES  = `prokr-cities-${V}`;
+const CACHE_PAGES   = `prokr-pages-${V}`;
+const CACHE_API     = `prokr-api-${V}`;
 
 const ALL_CACHES = [CACHE_STATIC, CACHE_IMAGES, CACHE_CITIES, CACHE_PAGES, CACHE_API];
 
@@ -241,7 +245,9 @@ async function staleWhileRevalidate(request, cacheName) {
   // Always start the revalidation fetch (fire-and-forget)
   const revalidate = fetch(request)
     .then(networkResponse => {
-      if (networkResponse.ok) {
+      // Don't cache redirects (e.g. middleware 301s) or non-200s as if they were
+      // the page — only cache real, non-redirected 200 responses.
+      if (networkResponse.ok && !networkResponse.redirected && networkResponse.type !== 'opaqueredirect') {
         cache.put(request, networkResponse.clone());
       }
       return networkResponse;

@@ -1,3 +1,4 @@
+import { safeJsonLd } from '@/lib/json-ld';
 import type { WebPageSchema } from '@/types';
 
 // ============================================
@@ -46,7 +47,7 @@ export function WebPageJsonLd({ title, description, url, breadcrumbs, datePublis
     return (
         <script
             type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+            dangerouslySetInnerHTML={{ __html: safeJsonLd(schema) }}
         />
     );
 }

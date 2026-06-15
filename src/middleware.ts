@@ -366,7 +366,7 @@ export function middleware(request: NextRequest) {
     if (
         INTERNAL_JUNK.some(p => pathname.includes(p)) ||
         pathname.match(/\.(php|htm)$/i) ||
-        (pathname.endsWith('.html') && !pathname.startsWith('/_next'))
+        (pathname.endsWith('.html') && pathname !== '/offline.html' && !pathname.startsWith('/_next'))
     ) {
         return new NextResponse('410 Gone — Asset Purged', {
             status: 410,
@@ -696,16 +696,14 @@ export function middleware(request: NextRequest) {
     }
 
     // ════════════════════════════════════════════════════════════════
-    // 🛡️ PHOENIX PROTOCOL §3: Last Shield (Catch-All)
-    // Any unmatched path → /services-page (NOT homepage!)
-    // The engineer says: "Redirecting to the services directory is
-    // more contextually logical than the homepage, and protects
-    // the homepage from toxic contamination."
-    // 301 permanent — tells Google this path is DEAD.
+    // 🛡️ PHOENIX PROTOCOL §3: Last Shield — REAL 404 (was: mass 301 → /services-page)
+    // Previously EVERY unmatched path was 301-redirected to /services-page, which
+    // Google treats as a soft-404 (mass redirect of unrelated URLs to one page) and
+    // meant not-found.tsx never rendered. We now fall through to Next.js routing so
+    // genuinely dead URLs return a real HTTP 404. Known legacy/toxic paths are still
+    // handled explicitly above (410 guillotine, /ksa engine, legacy domains, §1/§2).
     // ════════════════════════════════════════════════════════════════
-    const finalFallback = request.nextUrl.clone();
-    finalFallback.pathname = '/services-page';
-    return NextResponse.redirect(finalFallback, 301);
+    return NextResponse.next();
 }
 
 export const config = {

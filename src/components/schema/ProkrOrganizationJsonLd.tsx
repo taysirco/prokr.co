@@ -1,3 +1,4 @@
+import { safeJsonLd } from '@/lib/json-ld';
 // ============================================
 // PROKR ORGANIZATION SCHEMA (Homepage)
 // Brand-level schema for the website owner
@@ -39,7 +40,9 @@ export function ProkrOrganizationJsonLd() {
         // ✅ Wikidata Q-ID injected — Entity: Q139265070
         sameAs: [
             'https://www.wikidata.org/wiki/Q139265070',
-            'https://twitter.com/prokr_sa',
+            // twitter.com/prokr_sa removed — it 404s, and a broken sameAs is a
+            // negative entity-reconciliation signal. Re-add the real X handle
+            // (https://x.com/<handle>) once verified to return HTTP 200.
             'https://www.instagram.com/prokr_sa',
             'https://www.facebook.com/prokr.sa',
             'https://prokr.com',
@@ -126,14 +129,10 @@ export function ProkrOrganizationJsonLd() {
                 { '@type': 'OfferCatalog', name: 'الصرف الصحي', url: 'https://prokr.co/sewage-vacuum', description: 'شفط بيارات، تسليك مجاري، صيانة صرف صحي' },
             ],
         },
-        // §4.1 — Aggregate Quality Signal
-        aggregateRating: {
-            '@type': 'AggregateRating',
-            ratingValue: '4.7',
-            bestRating: '5',
-            ratingCount: '2847',
-            reviewCount: '1523',
-        },
+        // NOTE: self-serving Organization aggregateRating REMOVED — it was a
+        // hardcoded 4.7 / 2847 / 1523 with no real review backend (Google
+        // structured-data review-spam policy). Only emit AggregateRating that is
+        // data-driven and rendered on-page (see AggregateRatingJsonLd / company pages).
         // Transparency Policies — E-E-A-T trust signals
         ethicsPolicy: 'https://prokr.co/terms-of-service',
         publishingPrinciples: 'https://prokr.co/about-us',
@@ -145,7 +144,7 @@ export function ProkrOrganizationJsonLd() {
     return (
         <script
             type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+            dangerouslySetInnerHTML={{ __html: safeJsonLd(schema) }}
         />
     );
 }

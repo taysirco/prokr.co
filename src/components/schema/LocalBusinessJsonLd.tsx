@@ -3,6 +3,7 @@ import type {
     City,
     LocalBusinessSchema,
 } from '@/types';
+import { safeJsonLd } from '@/lib/json-ld';
 
 // ============================================
 // ENHANCED LOCAL BUSINESS SCHEMA
@@ -212,7 +213,7 @@ export function LocalBusinessJsonLd({ advertiser, city }: LocalBusinessJsonLdPro
     return (
         <script
             type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+            dangerouslySetInnerHTML={{ __html: safeJsonLd(schema) }}
         />
     );
 }

@@ -13,6 +13,7 @@ import {
     type WizardTimingConfig,
 } from '@/lib/wizard-funnel-data';
 import { getCityContext } from '@/lib/city-context';
+import { useModalA11y } from '@/lib/use-modal-a11y';
 
 // GA4 Measurement ID — single source of truth
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID || 'G-H1W3HDFHS0';
@@ -533,6 +534,8 @@ export default function WizardFunnelModal({
         setTimeout(() => onClose(), 150);
     }, [data, onClose, compareWithCompany]);
 
+    const wizardPanelRef = useModalA11y<HTMLDivElement>(isOpen, handleCloseAttempt);
+
     if (!isOpen) return null;
 
     const budgetOptions = WIZARD_BUDGET_RANGES[data.service] || WIZARD_BUDGET_RANGES['cleaning'];
@@ -553,6 +556,11 @@ export default function WizardFunnelModal({
             onClick={(e) => { if (e.target === e.currentTarget) handleCloseAttempt(); }}
         >
             <div
+                ref={wizardPanelRef}
+                role="dialog"
+                aria-modal="true"
+                aria-label="احصل على عروض أسعار من شركات معتمدة"
+                tabIndex={-1}
                 className="relative w-full max-w-md bg-white rounded-3xl shadow-2xl overflow-hidden animate-popup-enter"
                 dir="rtl"
             >

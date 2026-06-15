@@ -159,12 +159,13 @@ export default function ClaimBusinessCTA({ companyCode, businessName, variant = 
         setErrorMsg('');
 
         try {
-            await verifyPhoneOTP(otpCode);
+            const user = await verifyPhoneOTP(otpCode);
+            const idToken = await user.getIdToken();
 
-            // SERVER-SIDE phone matching — API validates phone against registered number
+            // SERVER-SIDE phone matching + token proves the caller controls the phone
             const res = await fetch('/api/claim/verify-phone', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+                headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${idToken}` },
                 body: JSON.stringify({ email, companyCode, phone: phoneInput }),
             });
 

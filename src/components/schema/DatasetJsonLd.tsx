@@ -1,3 +1,4 @@
+import { safeJsonLd } from '@/lib/json-ld';
 // ============================================
 // DATASET SCHEMA — مؤشر أسعار الخدمات المنزلية
 // ============================================
@@ -116,7 +117,7 @@ export function DatasetJsonLd({ totalSamples, cities, services, lastUpdated }: D
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      dangerouslySetInnerHTML={{ __html: safeJsonLd(schema) }}
     />
   );
 }

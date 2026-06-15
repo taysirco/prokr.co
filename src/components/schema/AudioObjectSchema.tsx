@@ -3,6 +3,8 @@
 // JSON-LD Review + AudioObject for voice reviews
 // ============================================
 
+import { safeJsonLd } from '@/lib/json-ld';
+
 interface AudioReviewSchemaProps {
     reviews: {
         userName: string;
@@ -56,7 +58,7 @@ export function AudioReviewSchema({ reviews, businessName, pageUrl }: AudioRevie
     return (
         <script
             type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+            dangerouslySetInnerHTML={{ __html: safeJsonLd(schema) }}
         />
     );
 }

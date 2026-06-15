@@ -445,18 +445,22 @@ export default function VerifiedReviewForm({ companyCode, businessName }: Verifi
                 <form onSubmit={handleSubmitReview} className="space-y-4">
                     {/* Star Rating */}
                     <div>
-                        <label className="block text-gray-700 text-xs font-bold mb-2">التقييم</label>
-                        <div className="flex gap-1" dir="ltr">
+                        <label id="vr-rating-label" className="block text-gray-700 text-xs font-bold mb-2">التقييم</label>
+                        <div className="flex gap-1" dir="ltr" role="radiogroup" aria-labelledby="vr-rating-label">
                             {[1, 2, 3, 4, 5].map((star) => (
                                 <button
                                     key={star}
                                     type="button"
+                                    role="radio"
+                                    aria-checked={star === rating}
+                                    aria-label={`${star} من 5 نجوم`}
                                     onClick={() => setRating(star)}
                                     onMouseEnter={() => setHoverRating(star)}
                                     onMouseLeave={() => setHoverRating(0)}
                                     className="transition-transform hover:scale-110"
                                 >
                                     <Star
+                                        aria-hidden="true"
                                         className={`w-8 h-8 ${
                                             star <= (hoverRating || rating)
                                                 ? 'text-amber-400 fill-amber-400'

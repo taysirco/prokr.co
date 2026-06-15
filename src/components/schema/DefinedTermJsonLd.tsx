@@ -1,3 +1,4 @@
+import { safeJsonLd } from '@/lib/json-ld';
 // ============================================
 // DEFINED TERM SCHEMA — Service Glossary
 // Declares Prokr as the authority that *defines*
@@ -52,7 +53,7 @@ export function DefinedTermJsonLd({
     return (
         <script
             type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+            dangerouslySetInnerHTML={{ __html: safeJsonLd(schema) }}
         />
     );
 }

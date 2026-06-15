@@ -149,46 +149,11 @@ export default function HomePage() {
         }}
       />
 
-      {/* Homepage Reviews JSON-LD */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Organization',
-            name: 'بروكر',
-            url: 'https://prokr.co',
-            aggregateRating: {
-              '@type': 'AggregateRating',
-              ratingValue: '4.9',
-              bestRating: '5',
-              worstRating: '1',
-              ratingCount: '3',
-              reviewCount: '3',
-            },
-            review: [
-              {
-                '@type': 'Review',
-                author: { '@type': 'Person', name: 'أحمد محمد' },
-                reviewRating: { '@type': 'Rating', ratingValue: 5, bestRating: 5 },
-                reviewBody: 'وجدت شركة نقل عفش ممتازة في الرياض خلال دقائق. الخدمة كانت احترافية والأسعار معقولة جداً.',
-              },
-              {
-                '@type': 'Review',
-                author: { '@type': 'Person', name: 'سارة عبدالله' },
-                reviewRating: { '@type': 'Rating', ratingValue: 5, bestRating: 5 },
-                reviewBody: 'كنت أبحث عن شركة مكافحة حشرات موثوقة. بروكر سهّل عليّ المهمة بتوفير قائمة الشركات مع التقييمات.',
-              },
-              {
-                '@type': 'Review',
-                author: { '@type': 'Person', name: 'محمد العتيبي' },
-                reviewRating: { '@type': 'Rating', ratingValue: 5, bestRating: 5 },
-                reviewBody: 'منصة رائعة وسهلة الاستخدام. تواصلت مع 3 شركات تنظيف وحصلت على أفضل عرض. أنصح الجميع باستخدامها.',
-              },
-            ],
-          }),
-        }}
-      />
+      {/* Homepage Organization reviews JSON-LD REMOVED — it shipped a fabricated,
+          self-serving AggregateRating (4.9 from 3 invented reviews) on the entity
+          itself, violating Google's review-snippet policy (don't aggregate ratings
+          about your own entity). Re-add ONLY when backed by a real, on-page,
+          first-party review corpus for the Prokr entity. */}
       {/* SiteNavigationElement JSON-LD */}
       <script
         type="application/ld+json"

@@ -5,6 +5,7 @@
 // 🤖 Dataset Schema: Gemini ingests Dataset with pricing
 // ============================================
 
+import { safeJsonLd } from '@/lib/json-ld';
 import type { City, Service } from '@/types';
 import type { PageOverride } from '@/lib/overrides/types';
 import type { PricingEntry } from '@/lib/pricing-data';
@@ -78,7 +79,7 @@ export function VoiceSearchSchema({ city, service, aiContent, entityContext, pri
         <>
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+                dangerouslySetInnerHTML={{ __html: safeJsonLd(schema) }}
             />
             {/* يجب أن يكون العنصر موجوداً في الـ DOM ليقرأه المتصفح (يُخفى بصرياً بـ inline styles) */}
             <div

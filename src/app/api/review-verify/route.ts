@@ -139,6 +139,13 @@ export async function PUT(request: NextRequest) {
             return NextResponse.json({ error: 'البريد ورمز الشركة مطلوبان' }, { status: 400 });
         }
 
+        // 🔐 Require an authenticated session whose email matches the review email.
+        // Without this, ANYONE could flip a pending review to verified:true (forgery).
+        const tokenData = await verifyAuthToken(request.headers.get('Authorization'));
+        if (!tokenData || tokenData.email !== email) {
+            return NextResponse.json({ error: 'يجب تسجيل الدخول بنفس البريد لتأكيد التقييم' }, { status: 401 });
+        }
+
         const db = getAdminDb();
         const snap = await db.collection(REVIEWS_COLLECTION)
             .where('company_code', '==', companyCode)

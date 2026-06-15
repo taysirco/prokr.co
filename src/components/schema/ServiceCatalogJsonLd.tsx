@@ -1,3 +1,4 @@
+import { safeJsonLd } from '@/lib/json-ld';
 import type { ServiceCatalogSchema, Service } from '@/types';
 
 
@@ -29,7 +30,7 @@ export function ServiceCatalogJsonLd({ services, baseUrl = 'https://prokr.co' }:
     return (
         <script
             type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+            dangerouslySetInnerHTML={{ __html: safeJsonLd(schema) }}
         />
     );
 }

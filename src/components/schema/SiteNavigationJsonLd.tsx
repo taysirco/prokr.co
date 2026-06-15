@@ -1,3 +1,4 @@
+import { safeJsonLd } from '@/lib/json-ld';
 // ============================================
 // SITE NAVIGATION ELEMENT SCHEMA
 // Controls Google Sitelinks + SERP navigation display
@@ -32,7 +33,7 @@ export function SiteNavigationJsonLd() {
     return (
         <script
             type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+            dangerouslySetInnerHTML={{ __html: safeJsonLd(schema) }}
         />
     );
 }

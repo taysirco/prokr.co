@@ -1,9 +1,15 @@
 // ============================================
-// SPEAKABLE WEB PAGE SCHEMA
-// For voice search and AI engine optimization
-// Structured Data: speakableText must match
-//    variable rendered in .direct-answer div
+// SPEAKABLE WEB PAGE SCHEMA (additive)
+// For voice search and AI engine optimization.
+// IMPORTANT: this emits an ADDITIVE node sharing the SAME @id as the page's
+// WebPageJsonLd (#webpage), carrying only the speakable / abstract / freshness /
+// topic properties. Previously it emitted a SECOND full WebPage with the same
+// @id (and re-declared #website), which is a duplicate-@id collision parsers
+// resolve unpredictably. JSON-LD merges nodes by @id, so this just enriches the
+// canonical WebPage. speakableText must match the .direct-answer div text.
 // ============================================
+import { safeJsonLd } from '@/lib/json-ld';
+
 interface SpeakableWebPageJsonLdProps {
     title: string;
     description: string;
@@ -15,28 +21,15 @@ interface SpeakableWebPageJsonLdProps {
     mentions?: { name: string; type: string }[];
 }
 
-export function SpeakableWebPageJsonLd({ title, description, url, speakableSelectors, speakableText, dateModified, about, mentions }: SpeakableWebPageJsonLdProps) {
+export function SpeakableWebPageJsonLd({ url, speakableSelectors, speakableText, dateModified, about, mentions }: SpeakableWebPageJsonLdProps) {
     const schema = {
         '@context': 'https://schema.org',
-        '@type': 'WebPage',
         '@id': `${url}#webpage`,
-        name: title,
-        description,
-        url,
-        inLanguage: 'ar',
-        isPartOf: {
-            '@type': 'WebSite',
-            '@id': 'https://prokr.co#website',
-            name: 'بروكر',
-            url: 'https://prokr.co',
-        },
         speakable: {
             '@type': 'SpeakableSpecification',
             cssSelector: speakableSelectors,
         },
-        // Structured Data: sync DirectAnswer text
-        // into the schema as abstract — byte-for-byte match with
-        // what the user sees in .direct-answer div
+        // Byte-for-byte match with the visible .direct-answer text.
         ...(speakableText && { abstract: speakableText }),
         ...(dateModified && { dateModified }),
         ...(about && {
@@ -56,8 +49,7 @@ export function SpeakableWebPageJsonLd({ title, description, url, speakableSelec
     return (
         <script
             type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+            dangerouslySetInnerHTML={{ __html: safeJsonLd(schema) }}
         />
     );
 }
-

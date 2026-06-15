@@ -28,10 +28,15 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: '**.google.com',
       },
+      // Firebase Storage app-domain bucket (advertiser logos / uploads).
+      // (*.googleapis.com — incl. firebasestorage.googleapis.com — is covered above.)
       {
         protocol: 'https',
-        hostname: '**',
+        hostname: 'prokr-84ca8.firebasestorage.app',
       },
+      // SECURITY: the previous { hostname: '**' } wildcard was removed — it made
+      // /_next/image an open image-optimizer proxy (SSRF/DoS surface, Next.js
+      // GHSA-9g9p-9gw9-jx7f). Add specific remote hosts here when needed.
     ],
   },
   async rewrites() {
@@ -61,12 +66,9 @@ const nextConfig: NextConfig = {
         destination: '/api/sitemap/:id',
         permanent: true,
       },
-      {
-        // Canonical service URL redirect: /services-page/{slug} → /{slug}
-        source: '/services-page/:slug',
-        destination: '/:slug',
-        permanent: true,
-      },
+      // NOTE: the /services-page/:slug → /:slug redirect is handled in
+      // middleware.ts (301) and the Cloudflare worker; removed from next.config
+      // to avoid a triple-defined redirect and the 308-vs-301 drift.
     ];
   },
   async headers() {
@@ -79,12 +81,18 @@ const nextConfig: NextConfig = {
           { key: 'Strict-Transport-Security', value: 'max-age=31536000; includeSubDomains; preload' },
           // Prevent clickjacking — allow same-origin iframes only
           { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
-          // XSS filter (legacy browsers)
-          { key: 'X-XSS-Protection', value: '1; mode=block' },
+          // X-XSS-Protection disabled per modern guidance — the legacy browser
+          // auditor can itself introduce info-leak/XSS bugs; rely on CSP instead.
+          { key: 'X-XSS-Protection', value: '0' },
           // Prevent MIME-type sniffing
           { key: 'X-Content-Type-Options', value: 'nosniff' },
           // Control referrer information leakage
           { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+          // Cross-origin isolation hardening
+          { key: 'Cross-Origin-Opener-Policy', value: 'same-origin' },
+          // CORP is intentionally 'cross-origin' (not same-origin): the public
+          // verified-badge SVG is designed to be embedded on advertiser sites.
+          { key: 'Cross-Origin-Resource-Policy', value: 'cross-origin' },
           // Restrict browser feature access
           // 🎤 microphone=(self) — required for voice reviews
           { key: 'Permissions-Policy', value: 'camera=(), microphone=(self), geolocation=(self)' },

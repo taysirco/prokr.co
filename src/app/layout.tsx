@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { IBM_Plex_Sans_Arabic } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Suspense } from "react";
@@ -109,6 +109,18 @@ export const metadata: Metadata = {
   },
 };
 
+// Next 16 deprecates viewport/themeColor inside `metadata`. This typed export
+// adds viewport-fit=cover (notch safe-area) and theme-color per color scheme.
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  viewportFit: 'cover',
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#0284C7' },
+    { media: '(prefers-color-scheme: dark)', color: '#0f172a' },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -134,10 +146,10 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: `var sc_project=13062468;var sc_invisible=1;var sc_security="cb7e9c27";` }} />
         {/* PWA Manifest */}
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#0284C7" />
+        {/* theme-color + viewport-fit are set via `export const viewport`.
+            apple status-bar/title come from metadata.appleWebApp — the manual
+            duplicates (incl. the conflicting status-bar "default") were removed. */}
         <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="بروكر" />
         {/* DNS Prefetch for resources used on subpages (not homepage) */}
         {/* IMPORTANT: These were preconnect but PageSpeed flagged them as unused on homepage.
             dns-prefetch is lighter — prepares DNS resolution without opening TCP/TLS connections */}
@@ -534,8 +546,15 @@ export default function RootLayout({
         />
       </head>
       <body className="font-sans antialiased bg-gray-50 text-gray-900" suppressHydrationWarning>
+        {/* Skip-to-content link (WCAG 2.4.1 Bypass Blocks) — first focusable element */}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:right-2 focus:z-[10000] focus:px-4 focus:py-2 focus:bg-sky-600 focus:text-white focus:rounded-lg"
+        >
+          تخطّ إلى المحتوى
+        </a>
         <NavbarWrapper />
-        {children}
+        <div id="main-content">{children}</div>
         <Suspense fallback={null}>
           <Analytics />
           <ServiceWorkerRegistrar />
@@ -560,8 +579,9 @@ export default function RootLayout({
           style={{ display: "none" }}
           referrerPolicy="no-referrer-when-downgrade"
         />
+        {/* GA must be a child of <body>, not a sibling after </body> (valid DOM) */}
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || 'G-H1W3HDFHS0'} />
       </body>
-      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || 'G-H1W3HDFHS0'} />
     </html>
   );
 }
