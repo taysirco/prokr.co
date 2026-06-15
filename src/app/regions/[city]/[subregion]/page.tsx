@@ -86,6 +86,11 @@ export async function generateMetadata({ params }: SubRegionPageProps): Promise<
         alternates: {
             canonical: `https://prokr.co/regions/${resolvedParams.city}/${resolvedParams.subregion}`,
         },
+        // Near-duplicate subregion pages (content varies only by place name):
+        // keep crawlable for link flow but OUT of the index to avoid duplicate
+        // content / index bloat. Also excluded from the XML sitemap. Re-enable
+        // index once each page has genuinely unique per-neighborhood content.
+        robots: { index: false, follow: true },
     };
 }
 

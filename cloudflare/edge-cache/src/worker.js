@@ -282,8 +282,14 @@ export default {
     // 1. Strip tracking query params (?fbclid=, ?utm_source=, etc.)
     // 2. Keep meaningful params (search, filter, page, etc.)
     // 3. Remove hash fragments
+    // EDGE_CACHE_VERSION is appended to the key so bumping it busts the ENTIRE
+    // edge cache on deploy (one-time full miss → repopulate from origin). Bump
+    // this whenever an origin deploy must propagate immediately (e.g. after the
+    // SEO-audit rollout, to drop stale HTML containing removed/old schema).
+    const EDGE_CACHE_VERSION = '2026-06-15-seo-audit';
     const normalizedUrl = normalizeCacheUrl(url);
-    const cacheKey = new Request(normalizedUrl, {
+    const keyUrl = normalizedUrl + (normalizedUrl.includes('?') ? '&' : '?') + '__ev=' + EDGE_CACHE_VERSION;
+    const cacheKey = new Request(keyUrl, {
       method: 'GET',
       headers: {},
     });

@@ -1,6 +1,5 @@
 import { NextResponse } from 'next/server';
 import { CITIES, SERVICES } from '@/lib/seed';
-import { SUB_REGIONS } from '@/lib/sub-regions';
 import { BLOG_ARTICLES } from '@/lib/blog-data';
 import { hasPageOverride } from '@/lib/overrides/registry';
 import { isAbsorbedSlug } from '@/lib/services/super-page-groups';
@@ -145,15 +144,10 @@ function generateSiloSitemap(categoryIndex: number): SitemapEntry[] {
 }
 
 function generateSubRegionSitemap(): SitemapEntry[] {
-    if (getDaysSinceLaunch() < 10) return [];
-    const now = new Date().toISOString();
-    const entries: SitemapEntry[] = [];
-    for (const [citySlug, subRegions] of Object.entries(SUB_REGIONS)) {
-        for (const subRegion of subRegions) {
-            entries.push({ url: `${BASE_URL}/regions/${citySlug}/${subRegion.slug}`, lastmod: now, changefreq: 'weekly', priority: 0.8 });
-        }
-    }
-    return entries;
+    // /regions/[city]/[subregion] pages are noindex (near-duplicate content),
+    // so they are intentionally EXCLUDED from the sitemap — the sitemap must
+    // list only indexable URLs. Re-add once pages have unique content.
+    return [];
 }
 
 function generateBlogSitemap(): SitemapEntry[] {

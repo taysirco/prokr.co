@@ -105,6 +105,16 @@ function clampDescription(s: string, max = 160): string {
     return (lastSpace > 100 ? cut.slice(0, lastSpace) : cut).trimEnd() + '…';
 }
 
+// Clamp <title> length on a word boundary. The layout template appends
+// " | بروكر" (~8 chars), so cap the base title at ~52 to keep the rendered
+// <title> under ~60 chars (avoids SERP truncation). No ellipsis on titles.
+function clampTitle(s: string, max = 52): string {
+    if (!s || s.length <= max) return s;
+    const cut = s.slice(0, max);
+    const sp = cut.lastIndexOf(' ');
+    return (sp > 28 ? cut.slice(0, sp) : cut).trim();
+}
+
 // ============================================
 // CONTENT LAYERS RESOLVER
 // ============================================
@@ -212,7 +222,7 @@ export function resolveMetadata(city: City, service: Service): ResolvedMetadata 
     // appends one hardcoded per-category bracket (making every city identical).
     // auto.metaTitle is already enhanced upstream in content-layers. Placeholder
     // titles fall back to the auto title.
-    const enhancedTitle = hasPlaceholder(m?.title) ? auto.metaTitle : (m?.title ?? auto.metaTitle);
+    const enhancedTitle = clampTitle(hasPlaceholder(m?.title) ? auto.metaTitle : (m?.title ?? auto.metaTitle));
 
     return deepClean({
         title: enhancedTitle,
