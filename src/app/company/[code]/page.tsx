@@ -16,7 +16,7 @@ import {
     CheckCircle
 } from 'lucide-react';
 import { getCityBySlug, getServiceBySlug } from '@/lib/seed';
-import { getCityKeyword } from '@/lib/locale-formatting';
+import { getCityKeyword, formatCompanyDisplayName } from '@/lib/locale-formatting';
 import { getAdvertiserByCode } from '@/lib/db-actions';
 import { getCanonicalSlug } from '@/lib/services/super-page-groups';
 import { hasPageOverride } from '@/lib/overrides/registry';
@@ -63,7 +63,7 @@ export async function generateMetadata({ params }: CompanyPageProps): Promise<Me
 
     const mainCity = getCityBySlug(advertiser.targeted_cities[0]);
     const cityKw = mainCity ? getCityKeyword(mainCity.name_ar, 'ba') : '';
-    const title = `${advertiser.business_name} - ${service?.name_ar || 'خدمات'}${cityKw ? ` ${cityKw}` : ''} | بروكر`;
+    const title = `${formatCompanyDisplayName(advertiser.business_name, service?.category)}${cityKw ? ` ${cityKw}` : ''} | بروكر`;
     // Smart truncation: cut at word boundary to avoid mid-word breaks in OG/meta
     const descText = advertiser.description.length > 120
         ? advertiser.description.slice(0, advertiser.description.lastIndexOf(' ', 120)) || advertiser.description.slice(0, 120)
@@ -268,7 +268,7 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                                 <div className="flex items-start justify-between gap-2 sm:gap-4">
                                     <div className="flex-1 min-w-0">
                                         <h1 className="text-lg sm:text-2xl md:text-3xl font-bold mb-1 sm:mb-2 leading-tight line-clamp-3">
-                                            {advertiser.business_name}
+                                            {formatCompanyDisplayName(advertiser.business_name, mainService?.category)}
                                         </h1>
                                         {advertiser.is_premium && (
                                             <span className="inline-flex items-center gap-1 sm:gap-1.5 px-2 sm:px-3 py-0.5 sm:py-1 text-amber-900 text-xs sm:text-sm font-bold rounded-full" style={{ background: 'linear-gradient(to left, #fbbf24, #eab308)' }}>

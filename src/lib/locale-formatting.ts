@@ -125,3 +125,32 @@ export function resolveKeywordTemplate(
     if (opts.nearCity) result = result.replace(/\{nearCity\}/g, opts.nearCity);
     return result;
 }
+
+// ============================================
+// Company display name — "شركة {name} {service phrase}"
+// e.g. "شركة الأسطورة لنقل العفش" / "شركة النجوم للتنظيف"
+// ============================================
+const COMPANY_SERVICE_PHRASE: Record<string, string> = {
+    'moving': 'لنقل العفش',
+    'cleaning': 'للتنظيف',
+    'sewage': 'للصرف الصحي',
+    'pest-control': 'لمكافحة الحشرات',
+    'leak-detection': 'لكشف التسربات',
+    'insulation': 'للعزل',
+};
+
+/** Arabic "لـ..." service phrase for a service category. */
+export function getServicePhrase(category?: string): string {
+    return (category && COMPANY_SERVICE_PHRASE[category]) || 'للخدمات المنزلية';
+}
+
+/**
+ * Build a company display name like "شركة {name} {service phrase}".
+ * Avoids doubling the "شركة"/"مؤسسة"/… prefix when the name already has one.
+ */
+export function formatCompanyDisplayName(businessName: string, category?: string): string {
+    const name = (businessName || 'الخدمات').trim();
+    const prefixes = ['شركة', 'مؤسسة', 'مكتب', 'مجموعة'];
+    const base = prefixes.some(p => name.startsWith(p)) ? name : `شركة ${name}`;
+    return `${base} ${getServicePhrase(category)}`;
+}
