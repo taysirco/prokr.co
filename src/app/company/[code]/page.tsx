@@ -63,7 +63,9 @@ export async function generateMetadata({ params }: CompanyPageProps): Promise<Me
 
     const mainCity = getCityBySlug(advertiser.targeted_cities[0]);
     const cityKw = mainCity ? getCityKeyword(mainCity.name_ar, 'ba') : '';
-    const title = `${formatCompanyDisplayName(advertiser.business_name, service?.category)}${cityKw ? ` ${cityKw}` : ''} | بروكر`;
+    // No " | بروكر" suffix here — the root layout title template ("%s | بروكر")
+    // appends the brand once. Including it caused a doubled "| بروكر | بروكر".
+    const title = `${formatCompanyDisplayName(advertiser.business_name, service?.category)}${cityKw ? ` ${cityKw}` : ''}`;
     // Smart truncation: cut at word boundary to avoid mid-word breaks in OG/meta
     const descText = advertiser.description.length > 120
         ? advertiser.description.slice(0, advertiser.description.lastIndexOf(' ', 120)) || advertiser.description.slice(0, 120)
