@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Phone, Mail, MapPin, Facebook, Twitter, Instagram } from 'lucide-react';
+import { Phone, Mail, MapPin, Facebook, Instagram } from 'lucide-react';
 import { CITIES, SERVICES, getCityBySlug, getServiceBySlug } from '@/lib/seed';
 import { NAP } from '@/lib/nap';
 import { getCityKeyword } from '@/lib/locale-formatting';
@@ -229,15 +229,8 @@ export default function Footer({ currentCity, currentService }: FooterProps) {
                             >
                                 <Facebook className="w-5 h-5" />
                             </a>
-                            <a
-                                href={NAP.social.twitter}
-                                className="w-10 h-10 bg-white/10 hover:bg-sky-600 rounded-lg flex items-center justify-center transition-colors"
-                                aria-label="Twitter"
-                                rel="noopener noreferrer"
-                                target="_blank"
-                            >
-                                <Twitter className="w-5 h-5" />
-                            </a>
+                            {/* Twitter/X link removed — handle prokr_sa returns 404.
+                                Re-add a live X account here when one exists. */}
                             <a
                                 href={NAP.social.instagram}
                                 className="w-10 h-10 bg-white/10 hover:bg-sky-600 rounded-lg flex items-center justify-center transition-colors"

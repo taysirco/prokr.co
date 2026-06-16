@@ -233,7 +233,7 @@ export default async function SiloPage({ params }: SiloPageProps) {
                             {/* Text Content */}
                             <div>
                                 {/* Breadcrumbs */}
-                                <nav className="flex items-center gap-2 text-sky-100 text-sm mb-6">
+                                <nav aria-label="مسار التنقل" className="flex items-center gap-2 text-sky-100 text-sm mb-6">
                                     <Link href="/" className="hover:text-white transition-colors flex items-center gap-1">
                                         <Home className="w-4 h-4" />
                                         الرئيسية
