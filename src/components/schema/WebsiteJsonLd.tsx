@@ -22,27 +22,10 @@ export function WebsiteJsonLd({ url, name, description }: WebsiteJsonLdProps) {
             name: 'دليل الخدمات المنزلية',
             description: 'دليل شامل لخدمات النقل والتنظيف ومكافحة الحشرات وكشف التسربات والعزل في المملكة العربية السعودية',
         },
-        publisher: {
-            '@type': 'Organization',
-            name: 'بروكر',
-            url: 'https://prokr.co',
-            logo: {
-                '@type': 'ImageObject',
-                url: 'https://prokr.co/logo.png',
-            },
-            sameAs: [
-                'https://twitter.com/prokr_sa',
-                'https://www.instagram.com/prokr_sa',
-                'https://www.facebook.com/prokr.sa',
-            ],
-            contactPoint: {
-                '@type': 'ContactPoint',
-                telephone: '+966542317431',
-                contactType: 'customer service',
-                areaServed: 'SA',
-                availableLanguage: 'Arabic',
-            },
-        },
+        // Reference the canonical #organization entity (defined by ProkrOrganizationJsonLd
+        // on the homepage) instead of a duplicate anonymous publisher — connects the
+        // WebSite into the brand graph and drops the old broken twitter sameAs.
+        publisher: { '@id': 'https://prokr.co/#organization' },
         potentialAction: {
             '@type': 'SearchAction',
             target: {

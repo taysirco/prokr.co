@@ -22,7 +22,7 @@ import { getCanonicalSlug } from '@/lib/services/super-page-groups';
 import { hasPageOverride } from '@/lib/overrides/registry';
 import { toWaNumber } from '@/lib/phone';
 import { sanitizeForHtmlComment } from '@/lib/json-ld';
-import { LocalBusinessJsonLd, BreadcrumbJsonLd, OrganizationJsonLd, WebPageJsonLd } from '@/components/JsonLd';
+import { LocalBusinessJsonLd, BreadcrumbJsonLd, WebPageJsonLd } from '@/components/JsonLd';
 import Footer from '@/components/Footer';
 import FraudAlertBanner from '@/components/FraudAlertBanner';
 import LocalPresence from '@/components/LocalPresence';
@@ -148,12 +148,10 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
     return (
         <>
             {/* JSON-LD Schema - Company Full Data */}
-            <LocalBusinessJsonLd advertiser={advertiser} city={mainCity || undefined} />
-            <OrganizationJsonLd
-                advertiser={advertiser}
-                services={targetedServices}
-                cities={targetedCities}
-            />
+            <LocalBusinessJsonLd advertiser={advertiser} city={mainCity || undefined} services={targetedServices} areaCities={targetedCities} />
+            {/* OrganizationJsonLd removed (D3-7): its services + areaServed are merged
+                into LocalBusinessJsonLd (#business), which links to the platform via
+                parentOrganization #organization — one entity per business, no dupes. */}
             <BreadcrumbJsonLd items={breadcrumbs} />
             <WebPageJsonLd
                 title={advertiser.business_name}

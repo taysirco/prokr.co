@@ -1,6 +1,7 @@
 import type {
     Advertiser,
     City,
+    Service,
     LocalBusinessSchema,
 } from '@/types';
 import { safeJsonLd } from '@/lib/json-ld';
@@ -12,9 +13,11 @@ import { safeJsonLd } from '@/lib/json-ld';
 interface LocalBusinessJsonLdProps {
     advertiser: Advertiser;
     city?: City;
+    services?: Service[];
+    areaCities?: City[];
 }
 
-export function LocalBusinessJsonLd({ advertiser, city }: LocalBusinessJsonLdProps) {
+export function LocalBusinessJsonLd({ advertiser, city, services, areaCities }: LocalBusinessJsonLdProps) {
     const reviews = advertiser.reviews || [];
     const avgRating = reviews.length > 0
         ? reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.length
@@ -132,6 +135,21 @@ export function LocalBusinessJsonLd({ advertiser, city }: LocalBusinessJsonLdPro
             ...(advertiser.street_address && { streetAddress: advertiser.street_address }),
             ...(advertiser.postal_code && { postalCode: advertiser.postal_code }),
         },
+        // Link the company to the platform brand entity (Knowledge Graph)
+        parentOrganization: { '@id': 'https://prokr.co/#organization' },
+        // Cities served + service catalog — merged here from the former
+        // OrganizationJsonLd so the business is ONE entity (#business), not two
+        // unlinked nodes (#business + #organization) for the same company.
+        ...(areaCities && areaCities.length > 0 && {
+            areaServed: areaCities.map(c => ({ '@type': 'City' as const, name: c.name_ar })),
+        }),
+        ...(services && services.length > 0 && {
+            hasOfferCatalog: {
+                '@type': 'OfferCatalog',
+                name: `خدمات ${advertiser.business_name}`,
+                itemListElement: services.map(s => ({ '@type': 'OfferCatalog' as const, name: s.name_ar })),
+            },
+        }),
         // Sovereign identifiers (CRN + SBC)
         ...(identifiers.length > 0 && { identifier: identifiers }),
         // Google Maps location
