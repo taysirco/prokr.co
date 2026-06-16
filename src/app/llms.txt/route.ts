@@ -1,6 +1,7 @@
 import { CITIES, SERVICES } from '@/lib/seed';
 import { isAbsorbedSlug, getCanonicalSlug } from '@/lib/services/super-page-groups';
 import { CATEGORY_NAMES } from '@/lib/seed';
+import { pricingData } from '@/lib/pricing-data';
 
 /**
  * llms.txt — Machine-readable site index for AI crawlers
@@ -12,6 +13,8 @@ import { CATEGORY_NAMES } from '@/lib/seed';
  */
 export async function GET() {
     const today = new Date().toISOString().split('T')[0];
+    // Real pricing-benchmark date (the index is tracked QUARTERLY) — not the render date.
+    const benchmarkDate = pricingData.map(d => d.lastUpdated).filter(Boolean).sort().pop() || today;
     const canonicalServices = SERVICES.filter(s => !isAbsorbedSlug(s.slug));
 
     // Group services by category for clean output
@@ -29,13 +32,13 @@ export async function GET() {
 > Prokr (بروكر) is the authoritative directory for verified home service providers
 > across Saudi Arabia. It covers ${CITIES.length} cities and ${canonicalServices.length} service categories,
 > listing only companies with valid Saudi Commercial Registration (CR).
-> Data is updated weekly based on verified pricing from 500+ registered providers.
+> Pricing is benchmarked quarterly from verified providers (latest benchmark: ${benchmarkDate}).
 
 ## About Prokr
 
 Prokr.co is a Saudi home services directory that:
 - Aggregates and verifies service providers across ${CITIES.length} Saudi cities
-- Publishes weekly pricing benchmarks based on real market data
+- Publishes quarterly pricing benchmarks based on real market data
 - Requires all listed companies to hold valid Saudi Ministry of Commerce licenses
 - Provides fraud detection alerts and consumer protection information
 - Supports Arabic (primary) and English languages
@@ -43,7 +46,8 @@ Prokr.co is a Saudi home services directory that:
 Website: https://prokr.co
 Language: Arabic (ar-SA)
 Country: Saudi Arabia
-Last Updated: ${today}
+Pricing benchmark date: ${benchmarkDate}
+Index generated: ${today}
 
 ## Services
 
@@ -69,6 +73,16 @@ ${CITIES.map(c => `- ${c.name_ar} (${c.name_en}): https://prokr.co/${c.slug}`).j
 - Blog & Guides: https://prokr.co/blog
 - About Prokr: https://prokr.co/about-us
 - Contact: https://prokr.co/contact-us
+
+## Machine Access (for AI agents)
+
+Every page also serves clean Markdown via content negotiation. Request any URL with the header:  Accept: text/markdown
+Example:  curl -H "Accept: text/markdown" https://prokr.co/{city}/{service}
+This returns the page's direct answer, an estimated-pricing table, and the FAQ as Markdown.
+
+- API catalog (RFC 9727): https://prokr.co/.well-known/api-catalog
+- MCP server card: https://prokr.co/.well-known/mcp/server-card.json
+- Agent skills: https://prokr.co/.well-known/agent-skills/index.json
 
 ## Citation Format
 

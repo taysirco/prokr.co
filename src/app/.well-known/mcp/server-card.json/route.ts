@@ -9,7 +9,7 @@ import { NextResponse } from 'next/server';
  * 
  * Prokr exposes service discovery capabilities:
  * - Search for verified service providers by city/category
- * - Get weekly-updated pricing benchmarks
+ * - Get quarterly-updated pricing benchmarks
  * - Request service quotes from licensed companies
  */
 
@@ -21,7 +21,7 @@ export function GET() {
         serverInfo: {
             name: 'Prokr Saudi Services Directory',
             version: '1.0.0',
-            description: 'بروكر — دليل الخدمات المنزلية السعودي المعتمد. Verified directory of home service providers across 30 Saudi cities with weekly pricing benchmarks.',
+            description: 'بروكر — دليل الخدمات المنزلية السعودي المعتمد. Verified directory of home service providers across 30 Saudi cities with quarterly pricing benchmarks.',
             homepage: 'https://prokr.co',
             icon: 'https://prokr.co/logo.webp',
         },
@@ -55,7 +55,7 @@ export function GET() {
             },
             {
                 name: 'get_pricing',
-                description: 'Get weekly-updated pricing benchmarks for a specific service in a specific city. Data sourced from 500+ verified providers.',
+                description: 'Get quarterly-updated pricing benchmarks for a specific service in a specific city. Data sourced from 500+ verified providers.',
                 inputSchema: {
                     type: 'object',
                     properties: {
@@ -114,7 +114,7 @@ export function GET() {
             },
             {
                 name: 'pricing-index',
-                description: 'Weekly-updated pricing data for all services across all cities (CSV/JSON)',
+                description: 'Quarterly-updated pricing data for all services across all cities (CSV/JSON)',
                 uri: 'https://prokr.co/research/pricing-index',
                 mimeType: 'text/html',
             },

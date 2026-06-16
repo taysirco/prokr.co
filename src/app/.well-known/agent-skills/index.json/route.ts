@@ -107,7 +107,7 @@ output_format: json
 
 # Prokr Price Estimator
 
-Get weekly-updated pricing benchmarks for home services across Saudi Arabia.
+Get quarterly-updated pricing benchmarks for home services across Saudi Arabia.
 
 ## How to Use
 
@@ -117,7 +117,7 @@ Get weekly-updated pricing benchmarks for home services across Saudi Arabia.
 
 ## Data Coverage
 - **Sources**: 500+ verified service providers
-- **Update Frequency**: Weekly
+- **Update Frequency**: Quarterly
 - **Cities**: All 30 supported Saudi cities
 - **Services**: All 24 service categories
 - **Metrics**: Min price, max price, average, median
@@ -155,7 +155,7 @@ export function GET() {
         {
             name: 'prokr-price-estimator',
             type: 'skill',
-            description: 'Get weekly-updated pricing benchmarks for Saudi home services from 500+ verified providers',
+            description: 'Get quarterly-updated pricing benchmarks for Saudi home services from 500+ verified providers',
             url: 'https://prokr.co/.well-known/agent-skills/prokr-price-estimator/skill.md',
             sha256: createHash('sha256').update(priceEstimatorSkill).digest('hex'),
         },
