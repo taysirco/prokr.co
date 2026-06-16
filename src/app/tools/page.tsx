@@ -25,6 +25,12 @@ const TOOLS = [
         title: 'حاسبة تكلفة نقل العفش',
         desc: 'احسب سعر نقل عفشك التقديري حسب المدينة وحجم المنزل والدور والتغليف والمسافة.',
     },
+    {
+        href: '/tools/insulation-cost-calculator',
+        emoji: '🧱',
+        title: 'حاسبة تكلفة العزل',
+        desc: 'احسب تكلفة عزل سطحك التقديري حسب المساحة ونوع العزل (مائي/حراري/فوم) ومدينتك.',
+    },
 ];
 
 export default function ToolsIndexPage() {

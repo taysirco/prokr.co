@@ -95,6 +95,7 @@ function generateSitemap0(): SitemapEntry[] {
         { url: `${BASE_URL}/research/pricing-index`, lastmod: now, changefreq: 'weekly', priority: 0.9 },
         { url: `${BASE_URL}/tools`, lastmod: now, changefreq: 'monthly', priority: 0.7 },
         { url: `${BASE_URL}/tools/moving-cost-calculator`, lastmod: now, changefreq: 'monthly', priority: 0.8 },
+        { url: `${BASE_URL}/tools/insulation-cost-calculator`, lastmod: now, changefreq: 'monthly', priority: 0.8 },
     ];
 
     // Fibonacci Drip: cities
