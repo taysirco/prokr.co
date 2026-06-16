@@ -21,4 +21,9 @@ export const NAP = {
     },
     logo: 'https://prokr.co/logo.png',
     description: 'دليل شامل لأفضل شركات الخدمات في المملكة العربية السعودية',
+    // Legal entity identifiers — E-E-A-T / entity verification
+    legal: {
+        crn: '4030253566',          // السجل التجاري — وزارة التجارة
+        vatId: '311280328300003',   // الرقم الضريبي (VAT) — هيئة الزكاة والضريبة والجمارك
+    },
 } as const;

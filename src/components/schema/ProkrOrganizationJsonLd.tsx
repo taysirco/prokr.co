@@ -1,4 +1,5 @@
 import { safeJsonLd } from '@/lib/json-ld';
+import { NAP } from '@/lib/nap';
 // ============================================
 // PROKR ORGANIZATION SCHEMA (Homepage)
 // Brand-level schema for the website owner
@@ -22,6 +23,13 @@ export function ProkrOrganizationJsonLd() {
         description: 'أكبر دليل شامل لخدمات النقل والتنظيف ومكافحة الحشرات وكشف التسربات في المملكة العربية السعودية. يغطي 30 مدينة مع أكثر من 500 شركة معتمدة.',
         slogan: 'دليلك الموثوق لأفضل شركات الخدمات المنزلية في السعودية',
         foundingDate: '2024',
+        // Legal entity identifiers (E-E-A-T verification — Saudi MoC + ZATCA)
+        identifier: [
+            { '@type': 'PropertyValue', propertyID: 'CR', name: 'السجل التجاري', value: NAP.legal.crn },
+            { '@type': 'PropertyValue', propertyID: 'VAT', name: 'الرقم الضريبي', value: NAP.legal.vatId },
+        ],
+        vatID: NAP.legal.vatId,
+        taxID: NAP.legal.vatId,
         foundingLocation: {
             '@type': 'Place',
             name: 'المملكة العربية السعودية',

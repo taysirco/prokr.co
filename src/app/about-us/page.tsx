@@ -4,6 +4,7 @@ import { Home, ChevronLeft, Shield, Users, Target, Award, CheckCircle } from 'lu
 import { BreadcrumbJsonLd, WebPageJsonLd, SpeakableJsonLd } from '@/components/JsonLd';
 import FaqAccordion from '@/components/FaqAccordion';
 import Footer from '@/components/Footer';
+import { NAP } from '@/lib/nap';
 
 export const metadata: Metadata = {
     title: 'من نحن | بروكر - أكبر دليل خدمات في السعودية',
@@ -129,6 +130,28 @@ export default function AboutPage() {
                                 أن نكون المنصة الأولى والأكثر موثوقية في المملكة للربط بين
                                 مقدمي الخدمات والعملاء، مع ضمان أعلى معايير الجودة والشفافية.
                             </p>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Official Verification Details (E-E-A-T) */}
+                <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-4">
+                    <div className="bg-sky-50 border border-sky-200 rounded-2xl p-6 sm:p-8">
+                        <div className="flex items-center gap-3 mb-5">
+                            <Shield className="w-7 h-7 text-sky-600" />
+                            <h2 className="text-xl sm:text-2xl font-bold text-gray-900">بيانات التوثيق الرسمية</h2>
+                        </div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div className="bg-white rounded-xl p-4 border border-sky-100">
+                                <p className="text-sm text-gray-500 mb-1">السجل التجاري</p>
+                                <p className="text-lg font-bold text-gray-900" dir="ltr">{NAP.legal.crn}</p>
+                                <p className="text-xs text-gray-400 mt-1">وزارة التجارة — المملكة العربية السعودية</p>
+                            </div>
+                            <div className="bg-white rounded-xl p-4 border border-sky-100">
+                                <p className="text-sm text-gray-500 mb-1">الرقم الضريبي (VAT)</p>
+                                <p className="text-lg font-bold text-gray-900" dir="ltr">{NAP.legal.vatId}</p>
+                                <p className="text-xs text-gray-400 mt-1">هيئة الزكاة والضريبة والجمارك (ZATCA)</p>
+                            </div>
                         </div>
                     </div>
                 </section>
