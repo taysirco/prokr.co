@@ -156,6 +156,11 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://firebasestorage.googleapis.com" />
         <link rel="dns-prefetch" href="https://prokr-84ca8.firebasestorage.app" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        {/* Statcounter pixel + GA collection fire on every page — warm their
+            connections. preconnect (no crossorigin) matches the plain image fetch. */}
+        <link rel="preconnect" href="https://c.statcounter.com" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        <link rel="dns-prefetch" href="https://region1.google-analytics.com" />
         {/* Speculation Rules API — prerender navigation */}
         <script
           type="speculationrules"
