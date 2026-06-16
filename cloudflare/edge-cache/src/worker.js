@@ -51,6 +51,7 @@ const CACHE_RULES = [
   { pattern: /^\/privacy-policy$/,   ttl: 86400,  swr: 3600  },
   { pattern: /^\/terms-of-service$/, ttl: 86400,  swr: 3600  },
   { pattern: /^\/llms\.txt$/,        ttl: 86400,  swr: 3600  },
+  { pattern: /^\/llms-full\.txt$/,   ttl: 86400,  swr: 3600  },
   { pattern: /^\/services/,          ttl: 86400,  swr: 3600  },
   { pattern: /^\/locations$/,        ttl: 86400,  swr: 3600  },
   { pattern: /^\/advertise$/,        ttl: 86400,  swr: 3600  },
@@ -286,7 +287,7 @@ export default {
     // edge cache on deploy (one-time full miss → repopulate from origin). Bump
     // this whenever an origin deploy must propagate immediately (e.g. after the
     // SEO-audit rollout, to drop stale HTML containing removed/old schema).
-    const EDGE_CACHE_VERSION = '2026-06-16-polish';
+    const EDGE_CACHE_VERSION = '2026-06-16-llms-full';
     const normalizedUrl = normalizeCacheUrl(url);
     const keyUrl = normalizedUrl + (normalizedUrl.includes('?') ? '&' : '?') + '__ev=' + EDGE_CACHE_VERSION;
     const cacheKey = new Request(keyUrl, {

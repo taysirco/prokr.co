@@ -2,6 +2,7 @@ import { CITIES, SERVICES } from '@/lib/seed';
 import { isAbsorbedSlug, getCanonicalSlug } from '@/lib/services/super-page-groups';
 import { CATEGORY_NAMES } from '@/lib/seed';
 import { pricingData } from '@/lib/pricing-data';
+import { NAP } from '@/lib/nap';
 
 /**
  * llms.txt — Machine-readable site index for AI crawlers
@@ -46,6 +47,9 @@ Prokr.co is a Saudi home services directory that:
 Website: https://prokr.co
 Language: Arabic (ar-SA)
 Country: Saudi Arabia
+Knowledge Graph: https://www.wikidata.org/wiki/Q139265070
+Commercial Registration (السجل التجاري): ${NAP.legal.crn} — Saudi Ministry of Commerce
+VAT / Tax ID (الرقم الضريبي): ${NAP.legal.vatId} — ZATCA
 Pricing benchmark date: ${benchmarkDate}
 Index generated: ${today}
 
@@ -80,6 +84,7 @@ Every page also serves clean Markdown via content negotiation. Request any URL w
 Example:  curl -H "Accept: text/markdown" https://prokr.co/{city}/{service}
 This returns the page's direct answer, an estimated-pricing table, and the FAQ as Markdown.
 
+- Full knowledge base (complete pricing index + catalog, self-contained): https://prokr.co/llms-full.txt
 - API catalog (RFC 9727): https://prokr.co/.well-known/api-catalog
 - MCP server card: https://prokr.co/.well-known/mcp/server-card.json
 - Agent skills: https://prokr.co/.well-known/agent-skills/index.json
