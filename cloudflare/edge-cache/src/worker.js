@@ -286,7 +286,7 @@ export default {
     // edge cache on deploy (one-time full miss → repopulate from origin). Bump
     // this whenever an origin deploy must propagate immediately (e.g. after the
     // SEO-audit rollout, to drop stale HTML containing removed/old schema).
-    const EDGE_CACHE_VERSION = '2026-06-16-hints';
+    const EDGE_CACHE_VERSION = '2026-06-16-da';
     const normalizedUrl = normalizeCacheUrl(url);
     const keyUrl = normalizedUrl + (normalizedUrl.includes('?') ? '&' : '?') + '__ev=' + EDGE_CACHE_VERSION;
     const cacheKey = new Request(keyUrl, {

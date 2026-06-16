@@ -76,16 +76,20 @@ interface ParsedAnswer {
 function parseAnswer(answer: string): ParsedAnswer {
     // Pattern 1: Content template — "على عكس... يعتمد... ففي ظل... لذا... مما يضمن"
     if (answer.includes('يعتمد') && answer.includes('ففي ظل')) {
-        return parseContentTemplatePattern(answer);
+        const r = parseContentTemplatePattern(answer);
+        if (r.bullets.length > 0) return r;
     }
 
     // Pattern 2: PRICING style — "service: price1, price2. includes: x + y + z"
     if (answer.includes('ريال') && (answer.includes('يشمل') || answer.includes('من'))) {
-        return parsePricingPattern(answer);
+        const r = parsePricingPattern(answer);
+        if (r.bullets.length > 0) return r;
     }
 
-    // Fallback: split on sentence boundaries (period + space)
-    return parseFallbackPattern(answer);
+    // Robust fallback — always yields a scannable structure (intro + bullets) for
+    // featured snippets / Speakable, even when the discourse markers above don't
+    // match. (The previous fallback collapsed marker-less Arabic into one blob.)
+    return robustSplit(answer);
 }
 
 /**
@@ -164,16 +168,34 @@ function parsePricingPattern(text: string): ParsedAnswer {
 }
 
 /**
- * Fallback: split on sentence boundaries
+ * Robust fallback: produce intro + bullets (+ optional guarantee) from arbitrary
+ * Arabic prose. Splits on strong boundaries (. ! ؟ ؛ ← newline); if still one
+ * long chunk, splits on Arabic/Latin commas; extracts a generic closing guarantee.
  */
-function parseFallbackPattern(text: string): ParsedAnswer {
-    const sentences = text.split(/\.\s+/).filter(s => s.trim().length > 5);
-    if (sentences.length <= 1) {
-        return { intro: text, bullets: [], guarantee: '' };
+function robustSplit(text: string): ParsedAnswer {
+    const cleaned = (text || '').trim();
+    if (!cleaned) return { intro: '', bullets: [], guarantee: '' };
+
+    const clean = (s: string) => s.trim().replace(/^[،,؛]\s*/, '').replace(/[.؛،]+$/, '').trim();
+
+    let body = cleaned;
+    let guarantee = '';
+    const gMatch = body.match(/(?:[،,؛]\s*)?(?:مما\s+يضمن|نضمن\b|ننصح\s+به).*$/);
+    if (gMatch && typeof gMatch.index === 'number' && gMatch.index > 40) {
+        guarantee = '✅ ' + clean(gMatch[0]);
+        body = body.slice(0, gMatch.index).trim();
     }
-    const intro = sentences[0].trim().replace(/\.$/, '');
-    const bullets = sentences.slice(1).map(s => s.trim().replace(/\.$/, '')).filter(s => s.length > 5);
-    return { intro, bullets, guarantee: '' };
+
+    // Strong sentence boundaries first
+    let chunks = body.split(/(?:[.!؟؛]\s+|\s*←\s*|\n+)/).map(clean).filter(s => s.length > 5);
+
+    // Still one long sentence → break on commas into scannable points
+    if (chunks.length <= 1 && body.length > 140) {
+        chunks = body.split(/[،,]\s+/).map(clean).filter(s => s.length > 8);
+    }
+
+    if (chunks.length <= 1) return { intro: clean(body), bullets: [], guarantee };
+    return { intro: chunks[0], bullets: chunks.slice(1), guarantee };
 }
 
 // ═══════════════════════════════════════════════════
