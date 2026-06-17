@@ -77,7 +77,10 @@ export async function generateMetadata({ params }: CompanyPageProps): Promise<Me
     const description = `${advertiser.business_name} - ${descText}. شركة معتمدة ومرخصة${cityKw ? ` ${cityKw}` : ''}.`;
 
     return {
-        title,
+        // `absolute` bypasses the root layout title template ("%s | بروكر") so the
+        // company <title> is exactly "شركة {name} {service}" (brand-query focused),
+        // with no city head term and no brand suffix. og/twitter keep the same text.
+        title: { absolute: title },
         description,
         keywords: [
             advertiser.business_name,
