@@ -63,9 +63,13 @@ export async function generateMetadata({ params }: CompanyPageProps): Promise<Me
 
     const mainCity = getCityBySlug(advertiser.targeted_cities[0]);
     const cityKw = mainCity ? getCityKeyword(mainCity.name_ar, 'ba') : '';
-    // No " | بروكر" suffix here — the root layout title template ("%s | بروكر")
-    // appends the brand once. Including it caused a doubled "| بروكر | بروكر".
-    const title = `${formatCompanyDisplayName(advertiser.business_name, service?.category)}${cityKw ? ` ${cityKw}` : ''}`;
+    // Title = "شركة {name} {service}" ONLY — deliberately WITHOUT the city keyword.
+    // Appending the city (e.g. "بالرياض") made every company page compete for the
+    // head term "نقل عفش بالرياض" and cannibalize the /{city}/{service} directory
+    // page. Company profile pages should target BRANDED queries (the company's own
+    // name + service); local relevance is preserved in the description, body, and
+    // areaServed schema. The root layout title template ("%s | بروكر") adds brand once.
+    const title = formatCompanyDisplayName(advertiser.business_name, service?.category);
     // Smart truncation: cut at word boundary to avoid mid-word breaks in OG/meta
     const descText = advertiser.description.length > 120
         ? advertiser.description.slice(0, advertiser.description.lastIndexOf(' ', 120)) || advertiser.description.slice(0, 120)
