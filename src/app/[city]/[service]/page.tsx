@@ -1,4 +1,4 @@
-import { notFound } from 'next/navigation';
+import { notFound, permanentRedirect } from 'next/navigation';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -113,10 +113,15 @@ export default async function SiloPage({ params }: SiloPageProps) {
         notFound();
     }
 
-    // ENFORCE STRICT URL PERMUTATIONS (Return 404 if no content override exists)
+    // No curated content override for this valid city×service combo. Instead of a 404,
+    // PERMANENTLY redirect to the canonical global service hub
+    // (e.g. /taif/floor-cleaning → /floor-cleaning) so every valid /{city}/{service}
+    // URL resolves and link equity consolidates to a real page. Absorbed slugs are
+    // already redirected to /{city}/{canonical} by middleware before reaching here,
+    // so service.slug is canonical/standalone and /{service.slug} is a 200 hub page.
     const override = getOverrideForPage(city.slug, service.slug);
     if (!override) {
-        notFound();
+        permanentRedirect(`/${getCanonicalSlug(service.slug) || service.slug}`);
     }
 
     // Get advertisers from Firestore (real data) with error handling
