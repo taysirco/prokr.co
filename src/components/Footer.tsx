@@ -103,24 +103,27 @@ export default function Footer({ currentCity, currentService }: FooterProps) {
                         خدمات متخصصة
                     </h3>
                     <div className="flex flex-wrap gap-x-4 gap-y-2">
-                        <Link href={`/${currentValidCity}/sanitization`} className="hover:text-amber-400 transition-colors text-xs" style={{ color: '#94a3b8' }}>
-                            تعقيم وتطهير
-                        </Link>
-                        <Link href={`/${currentValidCity}/air-conditioner-cleaning`} className="hover:text-amber-400 transition-colors text-xs" style={{ color: '#94a3b8' }}>
-                            تنظيف مكيفات
-                        </Link>
-                        <Link href={`/${currentValidCity}/mattress-cleaning`} className="hover:text-amber-400 transition-colors text-xs" style={{ color: '#94a3b8' }}>
-                            تنظيف مراتب
-                        </Link>
-                        <Link href={`/${currentValidCity}/swimming-pool-cleaning`} className="hover:text-amber-400 transition-colors text-xs" style={{ color: '#94a3b8' }}>
-                            تنظيف مسابح
-                        </Link>
-                        <Link href={`/${currentValidCity}/floor-cleaning`} className="hover:text-amber-400 transition-colors text-xs" style={{ color: '#94a3b8' }}>
-                            جلي رخام
-                        </Link>
-                        <Link href={`/${currentValidCity}/auto-cleaning`} className="hover:text-amber-400 transition-colors text-xs" style={{ color: '#94a3b8' }}>
-                            غسيل سيارات
-                        </Link>
+                        {/* Specialized services: link to /{city}/{service} ONLY when that
+                            override page exists, else fall back to the always-valid global
+                            /{service} hub. Hardcoding /{city}/{service} previously produced
+                            site-wide 404s for cities without an override for these slugs. */}
+                        {[
+                            { slug: 'sanitization', label: 'تعقيم وتطهير' },
+                            { slug: 'air-conditioner-cleaning', label: 'تنظيف مكيفات' },
+                            { slug: 'mattress-cleaning', label: 'تنظيف مراتب' },
+                            { slug: 'swimming-pool-cleaning', label: 'تنظيف مسابح' },
+                            { slug: 'floor-cleaning', label: 'جلي رخام' },
+                            { slug: 'auto-cleaning', label: 'غسيل سيارات' },
+                        ].map(({ slug, label }) => (
+                            <Link
+                                key={slug}
+                                href={hasPageOverride(currentValidCity, slug) ? `/${currentValidCity}/${slug}` : `/${slug}`}
+                                className="hover:text-amber-400 transition-colors text-xs"
+                                style={{ color: '#94a3b8' }}
+                            >
+                                {label}
+                            </Link>
+                        ))}
                         <Link href="/research/pricing-index" className="hover:text-amber-400 transition-colors text-xs" style={{ color: '#94a3b8' }}>
                             📊 مؤشر الأسعار
                         </Link>
