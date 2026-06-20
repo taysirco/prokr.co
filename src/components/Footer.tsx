@@ -127,6 +127,12 @@ export default function Footer({ currentCity, currentService }: FooterProps) {
                         <Link href="/research/pricing-index" className="hover:text-amber-400 transition-colors text-xs" style={{ color: '#94a3b8' }}>
                             📊 مؤشر الأسعار
                         </Link>
+                        <Link href="/tools/moving-cost-calculator" className="hover:text-amber-400 transition-colors text-xs" style={{ color: '#94a3b8' }}>
+                            🚚 حاسبة نقل العفش
+                        </Link>
+                        <Link href="/tools/insulation-cost-calculator" className="hover:text-amber-400 transition-colors text-xs" style={{ color: '#94a3b8' }}>
+                            🧱 حاسبة تكلفة العزل
+                        </Link>
                     </div>
                 </div>
             </div>

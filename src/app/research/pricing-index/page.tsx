@@ -4,6 +4,7 @@ import { DatasetJsonLd } from '@/components/schema/DatasetJsonLd';
 import { BreadcrumbJsonLd } from '@/components/schema/BreadcrumbJsonLd';
 import FaqAccordion from '@/components/FaqAccordion';
 import Link from 'next/link';
+import { getCanonicalSlug } from '@/lib/services/super-page-groups';
 
 export const metadata: Metadata = {
   title: 'مؤشر بروكر لأسعار الخدمات المنزلية السعودية 2026 | بيانات مفتوحة',
@@ -171,7 +172,7 @@ export default function PricingIndexPage() {
                       >
                         <td className="p-3 pr-6 font-semibold text-gray-900">
                           <Link
-                            href={`/${entries[0].citySlug || 'riyadh'}/${row.serviceSlug}`}
+                            href={`/${entries[0].citySlug || 'riyadh'}/${getCanonicalSlug(row.serviceSlug) || row.serviceSlug}`}
                             className="hover:text-blue-600 transition-colors"
                           >
                             {row.service}
