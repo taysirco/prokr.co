@@ -148,14 +148,15 @@ function generateSiloSitemap(categoryIndex: number): SitemapEntry[] {
 }
 
 function generateSubRegionSitemap(): SitemapEntry[] {
-    // Sub-region pages are now indexable (real local search demand). The short
-    // /{city}/{subregion} URLs 301-redirect to these canonical /regions URLs.
+    // Sub-region pages are indexable (real local search demand) and served NATIVELY
+    // at the short URL /{city}/{subregion} (no /regions prefix). The legacy
+    // /regions/{city}/{subregion} URLs 308-redirect to these canonical short URLs.
     const now = new Date().toISOString();
     const entries: SitemapEntry[] = [];
     for (const [citySlug, subRegions] of Object.entries(SUB_REGIONS)) {
         for (const sub of subRegions) {
             entries.push({
-                url: `${BASE_URL}/regions/${citySlug}/${sub.slug}`,
+                url: `${BASE_URL}/${citySlug}/${sub.slug}`,
                 lastmod: now,
                 changefreq: 'monthly',
                 priority: 0.6,

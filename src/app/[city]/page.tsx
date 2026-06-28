@@ -463,7 +463,7 @@ export default async function CityPage({ params }: CityPageProps) {
                                 {subRegions.map(subRegion => (
                                     <Link
                                         key={subRegion.slug}
-                                        href={`/regions/${city.slug}/${subRegion.slug}`}
+                                        href={`/${city.slug}/${subRegion.slug}`}
                                         className="group bg-white rounded-xl border border-gray-200 p-4 hover:border-blue-300 hover:shadow-lg transition-all"
                                     >
                                         <div className="flex items-center gap-3">

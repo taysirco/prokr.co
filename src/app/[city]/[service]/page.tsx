@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { Home, ChevronLeft, Star, Phone, MessageCircle, BadgeCheck, MapPin, Shield } from 'lucide-react';
 import { getCityBySlug, getServiceBySlug, getUniquePageImages } from '@/lib/seed';
 import { getSubRegion } from '@/lib/sub-regions';
+import { SubRegionView, buildSubRegionMetadata } from '@/components/SubRegionView';
 import { getAdvertisersBySilo } from '@/lib/db-actions';
 import { UnifiedGraphCompiler, VoiceSearchSchema } from '@/components/JsonLd';
 import { DirectAnswer } from '@/components/seo/DirectAnswer';
@@ -63,7 +64,14 @@ export async function generateMetadata({ params }: SiloPageProps): Promise<Metad
     const city = getCityBySlug(resolvedParams.city);
     const service = getServiceBySlug(resolvedParams.service);
 
-    if (!city || !service) {
+    if (!city) {
+        return { title: 'صفحة غير موجودة' };
+    }
+    // segment-2 may be a city SUB-REGION (e.g. /riyadh/north). Served natively at
+    // this short URL (no /regions prefix) — return its metadata.
+    if (!service) {
+        const subRegion = getSubRegion(city.slug, resolvedParams.service);
+        if (subRegion) return buildSubRegionMetadata(city, subRegion);
         return { title: 'صفحة غير موجودة' };
     }
 
@@ -114,11 +122,13 @@ export default async function SiloPage({ params }: SiloPageProps) {
         notFound();
     }
     // segment-2 isn't a known service — but it may be a city SUB-REGION
-    // (e.g. /riyadh/north → شمال الرياض). These short URLs have search demand +
-    // inbound links, so 301-redirect to the canonical sub-region page instead of 404.
+    // (e.g. /riyadh/north → شمال الرياض). Render the sub-region page NATIVELY at
+    // this short URL (no /regions prefix); the legacy /regions/... URL 308-redirects
+    // here. Only genuine non-service, non-subregion segments 404.
     if (!service) {
-        if (getSubRegion(city.slug, resolvedParams.service)) {
-            permanentRedirect(`/regions/${city.slug}/${resolvedParams.service}`);
+        const subRegion = getSubRegion(city.slug, resolvedParams.service);
+        if (subRegion) {
+            return <SubRegionView city={city} subRegion={subRegion} />;
         }
         notFound();
     }

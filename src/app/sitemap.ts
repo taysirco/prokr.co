@@ -216,7 +216,7 @@ export default async function sitemap({ id }: { id: number }): Promise<MetadataR
         for (const [citySlug, subRegions] of Object.entries(SUB_REGIONS)) {
             for (const subRegion of subRegions) {
                 subRegionPages.push({
-                    url: `${BASE_URL}/regions/${citySlug}/${subRegion.slug}`,
+                    url: `${BASE_URL}/${citySlug}/${subRegion.slug}`,
                     lastModified: now,
                     changeFrequency: 'weekly',
                     priority: 0.8,
