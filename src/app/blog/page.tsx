@@ -7,7 +7,7 @@ import FaqAccordion from '@/components/FaqAccordion';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-    title: 'مدونة بروكر — أدلة ونصائح الخدمات المنزلية في السعودية',
+    title: { absolute: 'مدونة بروكر — أدلة ونصائح الخدمات المنزلية في السعودية' },
     description: 'مقالات وأدلة شاملة عن نقل العفش، التنظيف، مكافحة الحشرات، كشف التسربات، العزل والصرف الصحي. نصائح من خبراء بروكر لمساعدتك في اختيار الخدمة المناسبة.',
     keywords: [
         'مدونة خدمات منزلية',

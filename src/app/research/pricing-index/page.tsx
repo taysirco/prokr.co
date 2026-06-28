@@ -8,7 +8,7 @@ import { getCanonicalSlug } from '@/lib/services/super-page-groups';
 import { hasPageOverride } from '@/lib/overrides/registry';
 
 export const metadata: Metadata = {
-  title: 'مؤشر بروكر لأسعار الخدمات المنزلية السعودية 2026 | بيانات مفتوحة',
+  title: { absolute: 'مؤشر بروكر لأسعار الخدمات المنزلية السعودية 2026 | بيانات مفتوحة' },
   description:
     'قاعدة بيانات إحصائية محدثة أسبوعياً لمتوسط أسعار 10 خدمات منزلية في 10 مدن سعودية. مبنية على تحليل أكثر من 4,800 عرض سعر حقيقي من شركات معتمدة.',
   openGraph: {
