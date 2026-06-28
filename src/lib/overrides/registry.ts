@@ -304,7 +304,6 @@ import { override as jeddahSewageSuction } from './pages/jeddah/sewage-suction';
 import { override as makkahFurnitureMoving } from './pages/makkah/furniture-moving';
 import { override as makkahFurnitureStorage } from './pages/makkah/furniture-storage';
 import { override as makkahDyna } from './pages/makkah/dyna';
-import { override as makkahSharaiaMovers } from './pages/makkah/sharaia/movers';
 import { override as makkahDabab } from './pages/makkah/dabab';
 import { override as makkahCleaning } from './pages/makkah/cleaning';
 import { override as makkahTanksCleaning } from './pages/makkah/tanks-cleaning';
@@ -1311,11 +1310,10 @@ const PAGE_OVERRIDES: Record<OverrideKey, PageOverride> = {
     [makeOverrideKey('jeddah', 'sewage-unblocking')]: jeddahSewageUnblocking,
     [makeOverrideKey('jeddah', 'sewage-suction')]: jeddahSewageSuction,
 
-    // ─── makkah (42) ───
+    // ─── makkah (40) ───
     [makeOverrideKey('makkah', 'furniture-moving')]: makkahFurnitureMoving,
     [makeOverrideKey('makkah', 'furniture-storage')]: makkahFurnitureStorage,
     [makeOverrideKey('makkah', 'dyna')]: makkahDyna,
-    [makeOverrideKey('makkah/sharaia', 'movers')]: makkahSharaiaMovers,
     [makeOverrideKey('makkah', 'dabab')]: makkahDabab,
     [makeOverrideKey('makkah', 'cleaning')]: makkahCleaning,
     [makeOverrideKey('makkah', 'tanks-cleaning')]: makkahTanksCleaning,
