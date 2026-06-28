@@ -129,7 +129,7 @@ export interface LocalBusinessSchema {
   telephone: string;
   url?: string;
   description?: string;
-  image: string;
+  image?: string;
   priceRange?: string;
   address: {
     '@type': 'PostalAddress';

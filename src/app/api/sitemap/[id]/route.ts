@@ -93,6 +93,9 @@ function generateSitemap0(): SitemapEntry[] {
         { url: `${BASE_URL}/advertise`, lastmod: now, changefreq: 'monthly', priority: 0.8 },
         { url: `${BASE_URL}/privacy-policy`, lastmod: now, changefreq: 'yearly', priority: 0.3 },
         { url: `${BASE_URL}/terms-of-service`, lastmod: now, changefreq: 'yearly', priority: 0.3 },
+        // Indexable AcquireAction page, intentionally isolated from the internal-link
+        // graph (corporate/layout strips nav) — so the sitemap is its only crawl path.
+        { url: `${BASE_URL}/corporate/acquisition`, lastmod: now, changefreq: 'monthly', priority: 0.5 },
         { url: `${BASE_URL}/research/pricing-index`, lastmod: now, changefreq: 'weekly', priority: 0.9 },
         { url: `${BASE_URL}/tools`, lastmod: now, changefreq: 'monthly', priority: 0.7 },
         { url: `${BASE_URL}/tools/moving-cost-calculator`, lastmod: now, changefreq: 'monthly', priority: 0.8 },

@@ -12,7 +12,7 @@ import { resolvePageContent } from '@/lib/overrides';
 import { getServiceKeywordProfile, getCityKeyword } from '@/lib/locale-formatting';
 import { getCanonicalSlug } from '@/lib/services/super-page-groups';
 import { getHourlyMode } from '@/lib/market-timing';
-import { safeJsonLd } from '@/lib/json-ld';
+import { safeJsonLd, absolutizeUrl } from '@/lib/json-ld';
 
 // ── WARRANTY DATA (mirrored from ServiceOfferJsonLd) ──
 const WARRANTY_BY_CATEGORY: Record<string, {
@@ -95,8 +95,9 @@ export function UnifiedGraphCompiler({
         alternateName: ['دليل بروكر للخدمات المنزلية', 'بروكر', 'Prokr'],
         url: 'https://prokr.co',
         logo: { '@type': 'ImageObject', url: 'https://prokr.co/logo.png', width: 512, height: 512 },
+        // Wikidata sameAs removed — entity Q139265070 does not exist (broken sameAs
+        // = negative entity signal). Re-add a real Q-ID once the item is created.
         sameAs: [
-            'https://www.wikidata.org/wiki/Q139265070',
             'https://www.instagram.com/prokr_sa',
             'https://www.facebook.com/prokr.sa',
         ],
@@ -317,8 +318,11 @@ export function UnifiedGraphCompiler({
                         name: ad.business_name,
                         url: `https://prokr.co/company/${ad.short_code}`,
                         ...(ad.phone_number && { telephone: ad.phone_number }),
-                        ...(ad.logo_url && { image: ad.logo_url }),
-                        ...(adAvgRating && reviews.length > 0 && {
+                        ...(absolutizeUrl(ad.logo_url) && { image: absolutizeUrl(ad.logo_url) }),
+                        // Exclude the injected featured company (5 hardcoded marketing
+                        // reviews) from aggregateRating — mirrors the Service-level
+                        // exclusion; only genuine, data-driven advertiser reviews power stars.
+                        ...(ad.id !== 'featured-al-ostora' && adAvgRating && reviews.length > 0 && {
                             aggregateRating: {
                                 '@type': 'AggregateRating',
                                 ratingValue: adAvgRating,
@@ -368,7 +372,7 @@ export function UnifiedGraphCompiler({
     graph.push({
         '@type': 'ImageObject',
         '@id': `${baseUrl}#primaryImage`,
-        url: heroImageUrl,
+        url: absolutizeUrl(heroImageUrl) || heroImageUrl,
         name: `${service.name_ar} ${cityKw}`,
         description: `صورة توضيحية لخدمة ${service.name_ar} ${cityKw} - أفضل الشركات المعتمدة عبر بروكر`,
         width: 1200,

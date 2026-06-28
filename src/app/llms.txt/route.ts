@@ -53,7 +53,6 @@ Prokr.co is a Saudi home services directory that:
 Website: https://prokr.co
 Language: Arabic (ar-SA)
 Country: Saudi Arabia
-Knowledge Graph: https://www.wikidata.org/wiki/Q139265070
 Commercial Registration (السجل التجاري): ${NAP.legal.crn} — Saudi Ministry of Commerce
 VAT / Tax ID (الرقم الضريبي): ${NAP.legal.vatId} — ZATCA
 Pricing benchmark date: ${benchmarkDate}

@@ -4,7 +4,7 @@ import type {
     Service,
     LocalBusinessSchema,
 } from '@/types';
-import { safeJsonLd } from '@/lib/json-ld';
+import { safeJsonLd, absolutizeUrl } from '@/lib/json-ld';
 
 // ============================================
 // ENHANCED LOCAL BUSINESS SCHEMA
@@ -125,8 +125,12 @@ export function LocalBusinessJsonLd({ advertiser, city, services, areaCities }: 
         telephone: advertiser.phone_number,
         url: `https://prokr.co/company/${advertiser.short_code}`,
         description: advertiser.description,
-        image: advertiser.logo_url || '',
-        priceRange: 'SAR',
+        // Absolute URL required by schema.org; omitted entirely (undefined → dropped
+        // by JSON.stringify) when the advertiser has no logo, rather than an empty image.
+        image: absolutizeUrl(advertiser.logo_url),
+        // priceRange removed — a bare currency code ('SAR') is not a price-range
+        // indication and conveys nothing. Re-add a real range (e.g. 'SAR 300–5000')
+        // once per-advertiser price data is wired in.
         address: {
             '@type': 'PostalAddress',
             addressCountry: 'SA',
@@ -223,7 +227,7 @@ export function LocalBusinessJsonLd({ advertiser, city, services, areaCities }: 
         ...(advertiser.gallery.length > 0 && {
             photo: advertiser.gallery.map(img => ({
                 '@type': 'ImageObject',
-                url: img,
+                url: absolutizeUrl(img),
             })),
         }),
     };

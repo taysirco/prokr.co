@@ -65,36 +65,48 @@ Disallow: /_next/
 User-Agent: GPTBot
 Allow: /
 Disallow: /admin
+Allow: /api/sitemap-index
+Allow: /api/sitemap/
 Disallow: /api/
 Disallow: /search
 
 User-Agent: ChatGPT-User
 Allow: /
 Disallow: /admin
+Allow: /api/sitemap-index
+Allow: /api/sitemap/
 Disallow: /api/
 Disallow: /search
 
 User-Agent: ClaudeBot
 Allow: /
 Disallow: /admin
+Allow: /api/sitemap-index
+Allow: /api/sitemap/
 Disallow: /api/
 Disallow: /search
 
 User-Agent: Claude-User
 Allow: /
 Disallow: /admin
+Allow: /api/sitemap-index
+Allow: /api/sitemap/
 Disallow: /api/
 Disallow: /search
 
 User-Agent: PerplexityBot
 Allow: /
 Disallow: /admin
+Allow: /api/sitemap-index
+Allow: /api/sitemap/
 Disallow: /api/
 Disallow: /search
 
 User-Agent: Applebot-Extended
 Allow: /
 Disallow: /admin
+Allow: /api/sitemap-index
+Allow: /api/sitemap/
 Disallow: /api/
 Disallow: /search
 
@@ -105,6 +117,8 @@ Disallow: /search
 User-Agent: Google-Extended
 Allow: /
 Disallow: /admin
+Allow: /api/sitemap-index
+Allow: /api/sitemap/
 Disallow: /api/
 Disallow: /search
 

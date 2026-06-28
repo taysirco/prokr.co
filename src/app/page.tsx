@@ -27,7 +27,7 @@ import { hasPageOverride } from '@/lib/overrides/registry';
 import Footer from '@/components/Footer';
 import SourceOrderLayout from '@/components/SourceOrderLayout';
 import FaqAccordion from '@/components/FaqAccordion';
-import { WebsiteJsonLd, ProkrOrganizationJsonLd, BreadcrumbJsonLd, SpeakableWebPageJsonLd, SiteNavigationJsonLd } from '@/components/JsonLd';
+import { WebsiteJsonLd, WebPageJsonLd, ProkrOrganizationJsonLd, BreadcrumbJsonLd, SpeakableWebPageJsonLd, SiteNavigationJsonLd } from '@/components/JsonLd';
 import { EmergencyNightBanner } from '@/components/EmergencyNightBanner';
 import { LiveAvailabilityBanner } from '@/components/LiveAvailabilityBanner';
 import WizardFunnelButton from '@/components/WizardFunnelButton';
@@ -78,6 +78,15 @@ export default function HomePage() {
         description="دليل شامل لأفضل شركات الخدمات في المملكة العربية السعودية"
       />
       <ProkrOrganizationJsonLd />
+      {/* Base WebPage node (@id https://prokr.co#webpage) so the additive
+          SpeakableWebPageJsonLd below merges into a real typed node instead of
+          emitting an orphan node with no @type. url has NO trailing slash so the
+          @id is byte-identical to the speakable node's @id. */}
+      <WebPageJsonLd
+        title="بروكر الخدمي - دليل الخدمات السعودي الشامل"
+        description="دليل شامل لأفضل شركات الخدمات في المملكة العربية السعودية"
+        url="https://prokr.co"
+      />
       <BreadcrumbJsonLd items={[{ name: 'الرئيسية', url: 'https://prokr.co' }]} />
       <SpeakableWebPageJsonLd
         title="بروكر الخدمي - دليل الخدمات السعودي الشامل"

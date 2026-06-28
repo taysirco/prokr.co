@@ -5,6 +5,7 @@ import { BreadcrumbJsonLd } from '@/components/schema/BreadcrumbJsonLd';
 import FaqAccordion from '@/components/FaqAccordion';
 import Link from 'next/link';
 import { getCanonicalSlug } from '@/lib/services/super-page-groups';
+import { hasPageOverride } from '@/lib/overrides/registry';
 
 export const metadata: Metadata = {
   title: 'مؤشر بروكر لأسعار الخدمات المنزلية السعودية 2026 | بيانات مفتوحة',
@@ -16,7 +17,12 @@ export const metadata: Metadata = {
       'قاعدة بيانات مفتوحة المصدر | 10 مدن | 10 خدمات | تحديث أسبوعي',
     type: 'website',
     url: 'https://prokr.co/research/pricing-index',
-    siteName: 'دليل بروكر',
+    siteName: 'بروكر الخدمي',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: '📊 مؤشر بروكر — أسعار الخدمات المنزلية السعودية 2026',
+    description: 'قاعدة بيانات مفتوحة المصدر | 10 مدن | 10 خدمات | تحديث أسبوعي',
   },
   alternates: {
     canonical: 'https://prokr.co/research/pricing-index',
@@ -172,7 +178,12 @@ export default function PricingIndexPage() {
                       >
                         <td className="p-3 pr-6 font-semibold text-gray-900">
                           <Link
-                            href={`/${entries[0].citySlug || 'riyadh'}/${getCanonicalSlug(row.serviceSlug) || row.serviceSlug}`}
+                            href={(() => {
+                              const citySlug = entries[0].citySlug || 'riyadh';
+                              const canonical = getCanonicalSlug(row.serviceSlug) || row.serviceSlug;
+                              // City page only when curated; else the national hub (avoids a 308 hop).
+                              return hasPageOverride(citySlug, canonical) ? `/${citySlug}/${canonical}` : `/${canonical}`;
+                            })()}
                             className="hover:text-blue-600 transition-colors"
                           >
                             {row.service}

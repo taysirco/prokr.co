@@ -15,7 +15,7 @@ export const metadata: Metadata = {
         description: 'احسب سعر عزل سطحك التقديري حسب المساحة والنوع والمدينة — مبنية على أسعار حقيقية.',
         type: 'website',
         url: 'https://prokr.co/tools/insulation-cost-calculator',
-        siteName: 'دليل بروكر',
+        siteName: 'بروكر الخدمي',
         locale: 'ar_SA',
     },
     alternates: { canonical: 'https://prokr.co/tools/insulation-cost-calculator' },

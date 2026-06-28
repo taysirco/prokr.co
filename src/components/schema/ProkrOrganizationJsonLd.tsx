@@ -45,9 +45,11 @@ export function ProkrOrganizationJsonLd() {
             sameAs: 'https://en.wikipedia.org/wiki/Saudi_Arabia',
         },
         // §13.5 Entity Consolidation: Social + Domains + Knowledge Graph
-        // ✅ Wikidata Q-ID injected — Entity: Q139265070
+        // NOTE: the Wikidata sameAs (Q139265070) was REMOVED — that entity does not
+        // exist (the API returns "missing", the page 404s), so it was a broken sameAs
+        // = a negative entity-reconciliation signal. Re-add a real Q-ID once the
+        // Wikidata item for بروكر الخدمي is actually created/claimed.
         sameAs: [
-            'https://www.wikidata.org/wiki/Q139265070',
             // twitter.com/prokr_sa removed — it 404s, and a broken sameAs is a
             // negative entity-reconciliation signal. Re-add the real X handle
             // (https://x.com/<handle>) once verified to return HTTP 200.

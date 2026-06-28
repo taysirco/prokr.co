@@ -15,7 +15,7 @@ import { EmergencyNightBanner } from '@/components/EmergencyNightBanner';
 import { LiveAvailabilityBanner } from '@/components/LiveAvailabilityBanner';
 
 export const metadata: Metadata = {
-    title: 'جميع الخدمات المنزلية في السعودية - بروكر',
+    title: 'جميع الخدمات المنزلية في السعودية',
     description: 'تصفح جميع خدمات بروكر: نقل عفش، تنظيف منازل، مكافحة حشرات، كشف تسربات، عزل خزانات، صرف صحي وأكثر. خدمات متخصصة في 30 مدينة سعودية مع شركات معتمدة.',
     keywords: [
         'خدمات منزلية السعودية',

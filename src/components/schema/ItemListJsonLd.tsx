@@ -1,4 +1,4 @@
-import { safeJsonLd } from '@/lib/json-ld';
+import { safeJsonLd, absolutizeUrl } from '@/lib/json-ld';
 import type { Advertiser, ItemListSchema } from '@/types';
 
 // ============================================
@@ -63,7 +63,7 @@ export function ItemListJsonLd(props: ItemListJsonLdProps) {
                         name: ad.business_name,
                         url: `https://prokr.co/company/${ad.short_code}`,
                         ...(ad.phone_number && { telephone: ad.phone_number }),
-                        ...(ad.logo_url && { image: ad.logo_url }),
+                        ...(absolutizeUrl(ad.logo_url) && { image: absolutizeUrl(ad.logo_url) }),
                         ...(avgRating && reviews.length > 0 && {
                             aggregateRating: {
                                 '@type': 'AggregateRating' as const,

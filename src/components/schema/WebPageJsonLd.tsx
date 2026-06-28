@@ -12,10 +12,16 @@ interface WebPageJsonLdProps {
     breadcrumbs?: { name: string; url: string }[];
     datePublished?: string;
     dateModified?: string;
+    // Optional @graph cross-references — e.g. a company page declares its
+    // HomeAndConstructionBusiness as the page's mainEntity/about, and the
+    // publishing Organization. Only spread when provided so other page types
+    // (about-us, blog, locations, …) keep their current output unchanged.
+    mainEntityId?: string;
+    publisherId?: string;
 }
 
-export function WebPageJsonLd({ title, description, url, breadcrumbs, datePublished, dateModified }: WebPageJsonLdProps) {
-    const schema: WebPageSchema = {
+export function WebPageJsonLd({ title, description, url, breadcrumbs, datePublished, dateModified, mainEntityId, publisherId }: WebPageJsonLdProps) {
+    const schema: WebPageSchema & Record<string, unknown> = {
         '@context': 'https://schema.org',
         '@type': 'WebPage',
         '@id': `${url}#webpage`,
@@ -31,6 +37,11 @@ export function WebPageJsonLd({ title, description, url, breadcrumbs, datePublis
             name: 'بروكر الخدمي',
             url: 'https://prokr.co',
         },
+        ...(mainEntityId && {
+            mainEntity: { '@id': mainEntityId },
+            about: { '@id': mainEntityId },
+        }),
+        ...(publisherId && { publisher: { '@id': publisherId } }),
         ...(breadcrumbs && {
             breadcrumb: {
                 '@type': 'BreadcrumbList',

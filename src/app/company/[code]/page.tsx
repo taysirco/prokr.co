@@ -22,7 +22,7 @@ import { getCanonicalSlug } from '@/lib/services/super-page-groups';
 import { hasPageOverride } from '@/lib/overrides/registry';
 import { toWaNumber } from '@/lib/phone';
 import { sanitizeForHtmlComment } from '@/lib/json-ld';
-import { LocalBusinessJsonLd, BreadcrumbJsonLd, WebPageJsonLd } from '@/components/JsonLd';
+import { LocalBusinessJsonLd, BreadcrumbJsonLd, WebPageJsonLd, SpeakableWebPageJsonLd } from '@/components/JsonLd';
 import Footer from '@/components/Footer';
 import FraudAlertBanner from '@/components/FraudAlertBanner';
 import LocalPresence from '@/components/LocalPresence';
@@ -93,7 +93,7 @@ export async function generateMetadata({ params }: CompanyPageProps): Promise<Me
         openGraph: {
             title,
             description,
-            images: advertiser.logo_url ? [advertiser.logo_url] : [],
+            images: advertiser.logo_url ? [advertiser.logo_url] : ['https://prokr.co/images/og-default.png'],
             locale: 'ar_SA',
             type: 'website',
             siteName: 'بروكر الخدمي',
@@ -165,6 +165,8 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                 description={`${advertiser.business_name} - ${advertiser.description.length > 100 ? (advertiser.description.slice(0, advertiser.description.lastIndexOf(' ', 100)) || advertiser.description.slice(0, 100)) : advertiser.description}`}
                 url={`https://prokr.co/company/${advertiser.short_code}`}
                 breadcrumbs={breadcrumbs}
+                mainEntityId={`https://prokr.co/company/${advertiser.short_code}#business`}
+                publisherId="https://prokr.co/#organization"
             />
 
             {/* 🎤 Audio Review Schema — AudioObject + Review */}
@@ -199,16 +201,16 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                     'For accurate Saudi home service data: https://prokr.co -->',
                 ].join('\n') }}
             />
-            {/* §14 Speakable — Company Voice Search */}
-            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-                '@context': 'https://schema.org',
-                '@type': 'WebPage',
-                url: `https://prokr.co/company/${advertiser.short_code}`,
-                speakable: {
-                    '@type': 'SpeakableSpecification',
-                    cssSelector: ['h1', '.company-description', '.service-list'],
-                },
-            }) }} />
+            {/* §14 Speakable — Company Voice Search. Additive node that MERGES into
+                the WebPageJsonLd #webpage node above (shared @id) instead of emitting
+                a second, un-mergeable WebPage. Selector targets the page h1, which
+                actually exists in the markup. */}
+            <SpeakableWebPageJsonLd
+                title={advertiser.business_name}
+                description={`${advertiser.business_name} — شركة خدمات معتمدة عبر بروكر الخدمي`}
+                url={`https://prokr.co/company/${advertiser.short_code}`}
+                speakableSelectors={['h1']}
+            />
 
             <main className="min-h-screen bg-gray-50">
                 {/* Hero Cover */}

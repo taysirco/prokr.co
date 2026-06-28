@@ -98,21 +98,33 @@ function preferFilled<T>(overrideVal: T | undefined, autoVal: T): T {
 
 // Clamp meta descriptions to ~160 chars on a word boundary (prevents SERP
 // truncation — some override descriptions ran ~266 chars).
-function clampDescription(s: string, max = 160): string {
+export function clampDescription(s: string, max = 160): string {
     if (!s || s.length <= max) return s;
     const cut = s.slice(0, max);
     const lastSpace = cut.lastIndexOf(' ');
     return (lastSpace > 100 ? cut.slice(0, lastSpace) : cut).trimEnd() + '…';
 }
 
-// Clamp <title> length on a word boundary. The layout template appends
-// " | بروكر" (~8 chars), so cap the base title at ~52 to keep the rendered
-// <title> under ~60 chars (avoids SERP truncation). No ellipsis on titles.
-function clampTitle(s: string, max = 52): string {
-    if (!s || s.length <= max) return s;
+// Clamp <title> length. The layout template appends " | بروكر الخدمي" (15 chars),
+// so cap the base title at ~44 to keep the rendered <title> ≤ ~60 (avoids SERP
+// truncation). Override titles have the shape "<core keyword phrase> — <tail…>",
+// so when too long we first cut at the em-dash boundary (keeps the short,
+// keyword-rich core that never dangles); only if the core itself is too long do
+// we fall back to a word-boundary cut, then strip any trailing dangling
+// particle/symbol so the title can't end on مع/ضد/من/+/… No ellipsis on titles.
+function clampTitle(s: string, max = 44): string {
+    if (!s) return s;
+    const stripDangling = (t: string) => t
+        .replace(/\s+(?:مع|ضد|من|في|على|إلى|عن|و|أو|أن|بين|عند|منذ|خلال|بـ)$/u, '')
+        .replace(/\s*[+\-×&|/]\s*$/u, '')
+        .trim();
+    if (s.length <= max) return stripDangling(s);
+    // Prefer the core phrase before the em-dash, if it fits.
+    const dash = s.indexOf('—');
+    if (dash > 0 && dash <= max) return s.slice(0, dash).trim();
     const cut = s.slice(0, max);
     const sp = cut.lastIndexOf(' ');
-    return (sp > 28 ? cut.slice(0, sp) : cut).trim();
+    return stripDangling(sp > 28 ? cut.slice(0, sp) : cut);
 }
 
 // ============================================

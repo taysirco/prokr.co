@@ -5,7 +5,7 @@ import { BreadcrumbJsonLd, WebPageJsonLd } from '@/components/JsonLd';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-    title: 'الشروط والأحكام | بروكر الخدمي',
+    title: 'الشروط والأحكام',
     description: 'الشروط والأحكام الخاصة باستخدام موقع بروكر. تعرف على حقوقك والتزاماتك عند استخدام منصة بروكر لخدمات النقل والتنظيف والصيانة.',
     openGraph: {
         title: 'الشروط والأحكام | بروكر',

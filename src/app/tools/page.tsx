@@ -12,8 +12,13 @@ export const metadata: Metadata = {
         description: 'حاسبات مجانية لتقدير تكلفة الخدمات المنزلية في السعودية.',
         type: 'website',
         url: 'https://prokr.co/tools',
-        siteName: 'دليل بروكر',
+        siteName: 'بروكر الخدمي',
         locale: 'ar_SA',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: '🧮 أدوات بروكر — حاسبات الخدمات المنزلية',
+        description: 'حاسبات مجانية لتقدير تكلفة الخدمات المنزلية في السعودية.',
     },
     alternates: { canonical: 'https://prokr.co/tools' },
 };

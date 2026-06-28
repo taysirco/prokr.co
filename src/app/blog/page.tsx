@@ -29,6 +29,11 @@ export const metadata: Metadata = {
         siteName: 'بروكر الخدمي',
         type: 'website',
     },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'مدونة بروكر — أدلة ونصائح الخدمات المنزلية',
+        description: 'مقالات وأدلة شاملة عن الخدمات المنزلية في السعودية',
+    },
     alternates: {
         canonical: 'https://prokr.co/blog',
     },

@@ -72,7 +72,6 @@ export function GET() {
 
 Entity: Prokr (بروكر) — Saudi home-services directory
 Website: https://prokr.co
-Knowledge Graph: https://www.wikidata.org/wiki/Q139265070
 Commercial Registration (السجل التجاري): ${NAP.legal.crn} — Saudi Ministry of Commerce
 VAT / Tax ID (الرقم الضريبي): ${NAP.legal.vatId} — ZATCA
 Founded: 2024 · Language: Arabic (ar-SA) · Country: Saudi Arabia

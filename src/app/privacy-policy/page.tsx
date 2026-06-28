@@ -5,7 +5,7 @@ import { BreadcrumbJsonLd, WebPageJsonLd } from '@/components/JsonLd';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-    title: 'سياسة الخصوصية | بروكر الخدمي',
+    title: 'سياسة الخصوصية',
     description: 'سياسة الخصوصية وحماية البيانات الخاصة بموقع بروكر. نلتزم بحماية بياناتك الشخصية وفقاً لأعلى معايير الأمان.',
     openGraph: {
         title: 'سياسة الخصوصية | بروكر',

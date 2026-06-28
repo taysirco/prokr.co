@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { CITIES, REGION_NAMES, CATEGORY_NAMES } from '@/lib/seed';
 import { SERVICES } from '@/lib/services';
+import { isAbsorbedSlug } from '@/lib/services/super-page-groups';
 import Link from 'next/link';
 
 // ════════════════════════════════════════════════════════════════
@@ -12,7 +13,9 @@ import Link from 'next/link';
 // ════════════════════════════════════════════════════════════════
 
 export const metadata: Metadata = {
-    title: 'إعلان استحواذ ودمج الأصول | شركة بروكر التقنية',
+    // absolute: bypass the root "%s | بروكر الخدمي" template — "شركة بروكر التقنية"
+    // is a distinct legal-entity name here, so appending a second brand double-brands.
+    title: { absolute: 'إعلان استحواذ ودمج الأصول | شركة بروكر التقنية' },
     description: 'البيان الرسمي لاستحواذ منصة prokr.co على الأصول الفكرية والنطاقات التابعة لشبكة بروكر القديمة. تم إيقاف العمل بالأنظمة السابقة وتأسيس بنية تحتية جديدة.',
     // official statement page
     robots: { index: true, follow: true },
@@ -29,6 +32,11 @@ export const metadata: Metadata = {
         publishedTime: '2026-03-13T00:00:00+03:00',
         modifiedTime: '2026-04-22T00:00:00+03:00',
         authors: ['بروكر لتقنية المعلومات'],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'إعلان استحواذ ودمج الأصول | بروكر',
+        description: 'البيان الرسمي لاستحواذ منصة prokr.co على النطاقات والأصول التابعة لشبكة بروكر القديمة',
     },
 };
 
@@ -352,7 +360,9 @@ export default function AcquisitionPage() {
                                 </p>
                                 <div className="space-y-5">
                                     {(['moving', 'cleaning', 'pest-control', 'sewage', 'leak-detection', 'insulation'] as const).map(category => {
-                                        const catServices = SERVICES.filter(s => s.category === category);
+                                        // Exclude absorbed slugs — they 301-redirect to their canonical hub,
+                                        // so linking them directly is an avoidable redirect (and inflates the count).
+                                        const catServices = SERVICES.filter(s => s.category === category && !isAbsorbedSlug(s.slug));
                                         if (catServices.length === 0) return null;
                                         const catColors: Record<string, { bg: string; border: string; text: string; badge: string; icon: string }> = {
                                             'moving': { bg: 'bg-blue-50/60', border: 'border-blue-100', text: 'text-blue-700', badge: 'bg-blue-100 text-blue-800', icon: '🚚' },

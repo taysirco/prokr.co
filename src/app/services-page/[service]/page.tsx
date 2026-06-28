@@ -10,6 +10,7 @@ import { getCityContext, getAdjustedPriceRange } from '@/lib/city-context';
 import { getServiceKeywordProfile } from '@/lib/locale-formatting';
 import { CitableSummary } from '@/components/seo/CitableSummary';
 import { hasPageOverride } from '@/lib/overrides/registry';
+import { clampDescription } from '@/lib/overrides/resolver';
 import { isAbsorbedSlug, getCanonicalSlug } from '@/lib/services/super-page-groups';
 import Footer from '@/components/Footer';
 import FraudAlertBanner from '@/components/FraudAlertBanner';
@@ -73,7 +74,8 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
     const profile = getServiceKeywordProfile(service.slug);
     const aiContent = generateServiceCategoryMeta(service);
     const title = aiContent.title;
-    const description = `أفضل شركات ${service.name_ar} في السعودية ✔ الرياض ✔ جدة ✔ الدمام ✔ مكة ✔ المدينة. ${profile.usp}. قارن أسعار الشركات المعتمدة في كل مدن المملكة 2026.`;
+    // Clamp to ≤160 chars (Google truncates ~155-160) — used for meta, OG + twitter.
+    const description = clampDescription(`أفضل شركات ${service.name_ar} في السعودية ✔ الرياض ✔ جدة ✔ الدمام ✔ مكة ✔ المدينة. ${profile.usp}. قارن أسعار الشركات المعتمدة في كل مدن المملكة 2026.`);
 
     return {
         title,

@@ -15,7 +15,7 @@ export const metadata: Metadata = {
         description: 'احسب سعر نقل العفش التقديري فوراً حسب مدينتك وحجم منزلك — مبنية على أسعار حقيقية.',
         type: 'website',
         url: 'https://prokr.co/tools/moving-cost-calculator',
-        siteName: 'دليل بروكر',
+        siteName: 'بروكر الخدمي',
         locale: 'ar_SA',
     },
     alternates: { canonical: 'https://prokr.co/tools/moving-cost-calculator' },

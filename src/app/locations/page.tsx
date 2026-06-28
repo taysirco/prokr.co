@@ -12,7 +12,7 @@ import { EmergencyNightBanner } from '@/components/EmergencyNightBanner';
 import { LiveAvailabilityBanner } from '@/components/LiveAvailabilityBanner';
 
 export const metadata: Metadata = {
-    title: 'مناطق الخدمة في السعودية | 30 مدينة - بروكر',
+    title: 'مناطق الخدمة في السعودية | 30 مدينة',
     description: 'تصفح جميع المدن والمناطق التي تغطيها خدمات بروكر في المملكة العربية السعودية. 30 مدينة في 5 مناطق تشمل الرياض، جدة، الدمام، مكة، المدينة وأكثر. شركات معتمدة في كل مدينة.',
     keywords: [
         'مناطق الخدمة السعودية',

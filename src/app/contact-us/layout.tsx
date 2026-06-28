@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { BreadcrumbJsonLd, WebPageJsonLd } from '@/components/JsonLd';
 
 export const metadata: Metadata = {
-    title: 'تواصل معنا | بروكر الخدمي',
+    title: 'تواصل معنا',
     description: 'تواصل مع فريق بروكر لأي استفسار أو اقتراح. نحن هنا لمساعدتك في إيجاد أفضل شركات الخدمات في السعودية.',
     keywords: ['تواصل معنا', 'بروكر', 'دعم العملاء', 'اتصل بنا', 'خدمة العملاء'],
     openGraph: {

@@ -6,6 +6,7 @@
 
 import { CITIES, SERVICES } from '@/lib/seed';
 import { isAbsorbedSlug, getCanonicalSlug, SUPER_PAGE_GROUPS } from '@/lib/services/super-page-groups';
+import { hasPageOverride } from '@/lib/overrides/registry';
 import { BLOG_ARTICLES } from '@/lib/blog-data';
 import type { City, Service } from '@/types';
 
@@ -479,15 +480,31 @@ function detectComposites(normalizedQuery: string, queryWords: string[]): Search
   }
 
   if (matchedService) {
-    results.push({
-      type: 'composite',
-      score: 110, // Highest priority
-      href: `/${matchedCity.slug}/${matchedService.slug}`,
-      title: `${matchedService.name_ar} في ${matchedCity.name_ar}`,
-      subtitle: `${matchedService.name_en} in ${matchedCity.name_en}`,
-      icon: 'composite',
-      matchedQuery: normalizedQuery,
-    });
+    // Only emit a CITY-scoped result when that combo actually has a curated page.
+    // Otherwise /{city}/{service} 308-redirects to the national hub, so link the
+    // hub directly (and show the hub title) — no misleading city result, no redirect.
+    const canonical = getCanonicalSlug(matchedService.slug) || matchedService.slug;
+    if (hasPageOverride(matchedCity.slug, canonical)) {
+      results.push({
+        type: 'composite',
+        score: 110, // Highest priority
+        href: `/${matchedCity.slug}/${canonical}`,
+        title: `${matchedService.name_ar} في ${matchedCity.name_ar}`,
+        subtitle: `${matchedService.name_en} in ${matchedCity.name_en}`,
+        icon: 'composite',
+        matchedQuery: normalizedQuery,
+      });
+    } else {
+      results.push({
+        type: 'composite',
+        score: 110,
+        href: `/${canonical}`,
+        title: `${matchedService.name_ar}`,
+        subtitle: `${matchedService.name_en}`,
+        icon: 'composite',
+        matchedQuery: normalizedQuery,
+      });
+    }
   }
 
   return results;
