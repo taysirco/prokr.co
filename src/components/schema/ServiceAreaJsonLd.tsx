@@ -37,7 +37,7 @@ export function ServiceAreaJsonLd({ service, city, coordinates, neighborhoods }:
         },
         provider: {
             '@type': 'Organization',
-            name: 'بروكر',
+            name: 'بروكر الخدمي',
             url: 'https://prokr.co',
         },
         ...(neighborhoods && neighborhoods.length > 0 && {

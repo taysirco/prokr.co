@@ -242,6 +242,21 @@ export default function AcquisitionPage() {
                                 </div>
                             </div>
 
+                            {/* Primary funnel to the canonical homepage — this page is the
+                                301 target for all old domains, so it MUST pass equity to the
+                                home page (previously it had no link to "/"). */}
+                            <div className="pt-6 text-center">
+                                <Link
+                                    href="/"
+                                    className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-sky-600 text-white font-extrabold rounded-xl hover:bg-sky-700 transition-all duration-300 shadow-lg"
+                                >
+                                    الانتقال إلى منصة بروكر الخدمي — الصفحة الرئيسية
+                                    <svg className="w-5 h-5 rtl:rotate-180" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                                    </svg>
+                                </Link>
+                            </div>
+
                             {/* ═══ Phase 4: PageRank Drip-Feed Arteries ═══ */}
                             {/* CRITICAL (§4): Only 3 dofollow internal links allowed here.
                                 PageRank flows: acquisition → hubs → cities → services
@@ -251,7 +266,7 @@ export default function AcquisitionPage() {
                                     الخدمات المتاحة عبر المنصة الجديدة
                                 </h3>
                                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                                    <a
+                                    <Link
                                         href="/locations"
                                         className="flex items-center justify-center gap-3 px-6 py-4 bg-sky-50 border border-sky-200 text-sky-800 font-bold rounded-xl hover:bg-sky-100 transition-all duration-300"
                                     >
@@ -260,8 +275,8 @@ export default function AcquisitionPage() {
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
                                         </svg>
                                         دليل المدن
-                                    </a>
-                                    <a
+                                    </Link>
+                                    <Link
                                         href="/services-page"
                                         className="flex items-center justify-center gap-3 px-6 py-4 bg-emerald-50 border border-emerald-200 text-emerald-800 font-bold rounded-xl hover:bg-emerald-100 transition-all duration-300"
                                     >
@@ -269,8 +284,8 @@ export default function AcquisitionPage() {
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17l-5.17-3.03A1.73 1.73 0 015 10.59V6.41a1.73 1.73 0 011.25-1.55l5.17-3.03a1.73 1.73 0 011.16 0l5.17 3.03A1.73 1.73 0 0119 6.41v4.18a1.73 1.73 0 01-1.25 1.55l-5.17 3.03a1.73 1.73 0 01-1.16 0z" />
                                         </svg>
                                         دليل الخدمات
-                                    </a>
-                                    <a
+                                    </Link>
+                                    <Link
                                         href="/research/pricing-index"
                                         className="flex items-center justify-center gap-3 px-6 py-4 bg-amber-50 border border-amber-200 text-amber-800 font-bold rounded-xl hover:bg-amber-100 transition-all duration-300"
                                     >
@@ -278,7 +293,7 @@ export default function AcquisitionPage() {
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
                                         </svg>
                                         مؤشر الأسعار
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
 

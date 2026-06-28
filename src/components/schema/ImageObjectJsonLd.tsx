@@ -31,7 +31,7 @@ export function ImageObjectJsonLd({ imageUrl, service, city }: ImageObjectJsonLd
         },
         creator: {
             '@type': 'Organization',
-            name: 'بروكر',
+            name: 'بروكر الخدمي',
             url: 'https://prokr.co',
         },
     };

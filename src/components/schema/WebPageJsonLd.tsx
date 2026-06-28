@@ -28,7 +28,7 @@ export function WebPageJsonLd({ title, description, url, breadcrumbs, datePublis
         isPartOf: {
             '@type': 'WebSite',
             '@id': 'https://prokr.co#website',
-            name: 'بروكر',
+            name: 'بروكر الخدمي',
             url: 'https://prokr.co',
         },
         ...(breadcrumbs && {

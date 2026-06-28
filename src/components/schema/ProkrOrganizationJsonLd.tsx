@@ -10,8 +10,8 @@ export function ProkrOrganizationJsonLd() {
         '@context': 'https://schema.org',
         '@type': 'Organization',
         '@id': 'https://prokr.co/#organization',
-        name: 'دليل بروكر للخدمات المنزلية',
-        alternateName: ['Prokr', 'بروكر', 'Prokr.co', 'شبكة بروكر للخدمات'],
+        name: 'بروكر الخدمي',
+        alternateName: ['دليل بروكر للخدمات المنزلية', 'Prokr', 'بروكر', 'Prokr.co', 'شبكة بروكر للخدمات'],
         url: 'https://prokr.co',
         logo: {
             '@type': 'ImageObject',

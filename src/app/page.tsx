@@ -20,11 +20,10 @@ import {
   BadgeCheck,
   MessageCircle,
   ThumbsUp,
-  BookOpen,
 } from 'lucide-react';
 import { CITIES, SERVICES, getCitiesByRegion, REGION_NAMES } from '@/lib/seed';
 import { isAbsorbedSlug } from '@/lib/services/super-page-groups';
-import { BLOG_ARTICLES } from '@/lib/blog-data';
+import { hasPageOverride } from '@/lib/overrides/registry';
 import Footer from '@/components/Footer';
 import SourceOrderLayout from '@/components/SourceOrderLayout';
 import FaqAccordion from '@/components/FaqAccordion';
@@ -166,7 +165,7 @@ export default function HomePage() {
               { '@type': 'SiteNavigationElement', position: 1, name: 'الرئيسية', url: 'https://prokr.co' },
               { '@type': 'SiteNavigationElement', position: 2, name: 'جميع الخدمات', url: 'https://prokr.co/services' },
               { '@type': 'SiteNavigationElement', position: 3, name: 'المدن', url: 'https://prokr.co/locations' },
-              { '@type': 'SiteNavigationElement', position: 4, name: 'المدونة', url: 'https://prokr.co/blog' },
+              { '@type': 'SiteNavigationElement', position: 4, name: 'نقل العفش', url: 'https://prokr.co/furniture-moving' },
               { '@type': 'SiteNavigationElement', position: 5, name: 'أضف إعلانك', url: 'https://prokr.co/advertise' },
               { '@type': 'SiteNavigationElement', position: 6, name: 'من نحن', url: 'https://prokr.co/about-us' },
               { '@type': 'SiteNavigationElement', position: 7, name: 'تواصل معنا', url: 'https://prokr.co/contact-us' },
@@ -404,52 +403,46 @@ export default function HomePage() {
               <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
                 <div className="text-center mb-10">
                   <span className="inline-block px-4 py-1.5 bg-amber-100 text-amber-700 font-medium rounded-full text-sm mb-4">
-                    أدلة ونصائح
+                    خدمات شائعة
                   </span>
                   <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-                    مدونة بروكر
+                    أبرز الخدمات حسب المدينة
                   </h2>
                   <p className="text-gray-500 max-w-2xl mx-auto">
-                    مقالات وأدلة شاملة لمساعدتك في اختيار الخدمة المناسبة وتوفير الوقت والمال
+                    روابط مباشرة لأكثر الخدمات طلباً في المدن الرئيسية — شركات معتمدة وأسعار محدّثة
                   </p>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {BLOG_ARTICLES.slice(0, 6).map(article => (
-                    <Link
-                      key={article.slug}
-                      href={`/blog/${article.slug}`}
-                      className="group bg-white rounded-2xl border border-gray-200 overflow-hidden hover:border-sky-300 hover:shadow-xl transition-all"
-                    >
-                      <div className="p-6">
-                        <span className="inline-block px-3 py-1 bg-sky-50 text-sky-700 rounded-full text-xs font-medium mb-3">
-                          {article.categoryLabel}
-                        </span>
-                        <h3 className="font-bold text-gray-900 mb-2 group-hover:text-sky-700 transition-colors line-clamp-2">
-                          {article.title}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                  {[
+                    { service: 'furniture-moving', title: 'نقل العفش', label: 'عفش', icon: Truck },
+                    { service: 'cleaning', title: 'التنظيف', label: 'تنظيف', icon: Sparkles },
+                    { service: 'pest-control', title: 'مكافحة الحشرات', label: 'مكافحة حشرات', icon: Bug },
+                    { service: 'water-leak-detection', title: 'كشف التسربات', label: 'كشف تسربات', icon: Droplet },
+                  ].map(group => {
+                    const cityLinks = CITIES.filter(c => hasPageOverride(c.slug, group.service)).slice(0, 8);
+                    if (cityLinks.length === 0) return null;
+                    return (
+                      <div key={group.service} className="bg-white rounded-2xl border border-gray-200 p-6 hover:border-sky-300 hover:shadow-lg transition-all">
+                        <h3 className="font-bold text-gray-900 mb-4 flex items-center gap-2">
+                          <group.icon className="w-5 h-5 text-sky-600" />
+                          {group.title}
                         </h3>
-                        <p className="text-gray-500 text-sm line-clamp-2 mb-4">{article.excerpt}</p>
-                        <div className="flex items-center justify-between text-xs text-gray-400">
-                          <span className="flex items-center gap-1">
-                            <Clock className="w-3.5 h-3.5" />
-                            {article.readTime} دقائق
-                          </span>
-                          <span className="text-sky-600 font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
-                            اقرأ المقال
-                            <ArrowLeft className="w-3.5 h-3.5" />
-                          </span>
-                        </div>
+                        <ul className="space-y-2.5">
+                          {cityLinks.map(c => (
+                            <li key={c.slug}>
+                              <Link
+                                href={`/${c.slug}/${group.service}`}
+                                className="text-gray-600 hover:text-sky-700 text-sm flex items-center gap-1 group transition-colors"
+                              >
+                                <ChevronLeft className="w-3.5 h-3.5 text-gray-300 group-hover:text-sky-500 transition-colors" />
+                                {group.label} {c.name_ar}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
                       </div>
-                    </Link>
-                  ))}
-                </div>
-                <div className="text-center mt-8">
-                  <Link
-                    href="/blog"
-                    className="inline-flex items-center gap-2 px-8 py-3 bg-gray-900 text-white font-bold rounded-2xl hover:bg-gray-800 transition-colors shadow-lg"
-                  >
-                    <BookOpen className="w-5 h-5" />
-                    تصفح جميع المقالات
-                  </Link>
+                    );
+                  })}
                 </div>
               </section>
 

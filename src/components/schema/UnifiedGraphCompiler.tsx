@@ -91,7 +91,8 @@ export function UnifiedGraphCompiler({
     graph.push({
         '@type': 'Organization',
         '@id': ORG_ID,
-        name: 'دليل بروكر للخدمات المنزلية',
+        name: 'بروكر الخدمي',
+        alternateName: ['دليل بروكر للخدمات المنزلية', 'بروكر', 'Prokr'],
         url: 'https://prokr.co',
         logo: { '@type': 'ImageObject', url: 'https://prokr.co/logo.png', width: 512, height: 512 },
         sameAs: [
@@ -128,7 +129,7 @@ export function UnifiedGraphCompiler({
         isPartOf: {
             '@type': 'WebSite',
             '@id': 'https://prokr.co#website',
-            name: 'بروكر',
+            name: 'بروكر الخدمي',
             url: 'https://prokr.co',
             publisher: { '@id': ORG_ID },
         },
@@ -235,7 +236,7 @@ export function UnifiedGraphCompiler({
                 ],
             },
             result: { '@type': 'Reservation', name: `حجز خدمة ${service.name_ar} ${cityKw}` },
-            object: { '@type': 'Service', name: service.name_ar, provider: { '@type': 'Organization', name: 'بروكر' } },
+            object: { '@type': 'Service', name: service.name_ar, provider: { '@type': 'Organization', name: 'بروكر الخدمي' } },
             description: `احجز خدمة ${service.name_ar} من شركات معتمدة بسجل تجاري سعودي ساري. مقارنة فورية بين الأسعار والتقييمات.`,
         },
     };
@@ -399,7 +400,7 @@ export function UnifiedGraphCompiler({
             },
             provider: {
                 '@type': 'Organization',
-                name: 'بروكر',
+                name: 'بروكر الخدمي',
                 url: 'https://prokr.co',
                 telephone: '+966553165555',
             },

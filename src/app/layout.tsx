@@ -18,8 +18,8 @@ const ibmPlexArabic = IBM_Plex_Sans_Arabic({
 
 export const metadata: Metadata = {
   title: {
-    default: "بروكر - دليل الخدمات السعودي الشامل",
-    template: "%s | بروكر",
+    default: "بروكر الخدمي - دليل الخدمات السعودي الشامل",
+    template: "%s | بروكر الخدمي",
   },
   description: "دليل شامل لأفضل شركات الخدمات في المملكة العربية السعودية. نقل عفش، تنظيف، مكافحة حشرات، صيانة وأكثر.",
   keywords: [
@@ -57,10 +57,10 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "بروكر - دليل الخدمات السعودي الشامل",
+    title: "بروكر الخدمي - دليل الخدمات السعودي الشامل",
     description: "دليل شامل لأفضل شركات الخدمات في المملكة العربية السعودية",
     url: "https://prokr.co",
-    siteName: "بروكر",
+    siteName: "بروكر الخدمي",
     locale: "ar_SA",
     type: "website",
     images: [
@@ -68,13 +68,13 @@ export const metadata: Metadata = {
         url: 'https://prokr.co/images/og-default.png',
         width: 1200,
         height: 630,
-        alt: 'بروكر - دليل الخدمات السعودي الشامل',
+        alt: 'بروكر الخدمي - دليل الخدمات السعودي الشامل',
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "بروكر - دليل الخدمات السعودي الشامل",
+    title: "بروكر الخدمي - دليل الخدمات السعودي الشامل",
     description: "دليل شامل لأفضل شركات الخدمات في المملكة العربية السعودية",
     images: ['https://prokr.co/images/og-default.png'],
   },
