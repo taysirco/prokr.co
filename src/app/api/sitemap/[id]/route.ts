@@ -3,6 +3,7 @@ import { CITIES, SERVICES } from '@/lib/seed';
 import { BLOG_ARTICLES } from '@/lib/blog-data';
 import { hasPageOverride } from '@/lib/overrides/registry';
 import { isAbsorbedSlug } from '@/lib/services/super-page-groups';
+import { SUB_REGIONS } from '@/lib/sub-regions';
 
 // ═══════════════════════════════════════════════════════════════
 // DYNAMIC SITEMAP API ROUTE — replaces static sitemap.ts
@@ -147,10 +148,21 @@ function generateSiloSitemap(categoryIndex: number): SitemapEntry[] {
 }
 
 function generateSubRegionSitemap(): SitemapEntry[] {
-    // /regions/[city]/[subregion] pages are noindex (near-duplicate content),
-    // so they are intentionally EXCLUDED from the sitemap — the sitemap must
-    // list only indexable URLs. Re-add once pages have unique content.
-    return [];
+    // Sub-region pages are now indexable (real local search demand). The short
+    // /{city}/{subregion} URLs 301-redirect to these canonical /regions URLs.
+    const now = new Date().toISOString();
+    const entries: SitemapEntry[] = [];
+    for (const [citySlug, subRegions] of Object.entries(SUB_REGIONS)) {
+        for (const sub of subRegions) {
+            entries.push({
+                url: `${BASE_URL}/regions/${citySlug}/${sub.slug}`,
+                lastmod: now,
+                changefreq: 'monthly',
+                priority: 0.6,
+            });
+        }
+    }
+    return entries;
 }
 
 function generateBlogSitemap(): SitemapEntry[] {

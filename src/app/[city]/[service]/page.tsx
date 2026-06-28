@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Home, ChevronLeft, Star, Phone, MessageCircle, BadgeCheck, MapPin, Shield } from 'lucide-react';
 import { getCityBySlug, getServiceBySlug, getUniquePageImages } from '@/lib/seed';
+import { getSubRegion } from '@/lib/sub-regions';
 import { getAdvertisersBySilo } from '@/lib/db-actions';
 import { UnifiedGraphCompiler, VoiceSearchSchema } from '@/components/JsonLd';
 import { DirectAnswer } from '@/components/seo/DirectAnswer';
@@ -108,8 +109,17 @@ export default async function SiloPage({ params }: SiloPageProps) {
     const city = getCityBySlug(resolvedParams.city);
     const service = getServiceBySlug(resolvedParams.service);
 
-    // Validate city and service exist
-    if (!city || !service) {
+    // Invalid city → genuine 404 (no such place).
+    if (!city) {
+        notFound();
+    }
+    // segment-2 isn't a known service — but it may be a city SUB-REGION
+    // (e.g. /riyadh/north → شمال الرياض). These short URLs have search demand +
+    // inbound links, so 301-redirect to the canonical sub-region page instead of 404.
+    if (!service) {
+        if (getSubRegion(city.slug, resolvedParams.service)) {
+            permanentRedirect(`/regions/${city.slug}/${resolvedParams.service}`);
+        }
         notFound();
     }
 

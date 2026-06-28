@@ -75,7 +75,7 @@ export async function generateMetadata({ params }: SubRegionPageProps): Promise<
             description,
             locale: 'ar_SA',
             type: 'website',
-            siteName: 'بروكر',
+            siteName: 'بروكر الخدمي',
             url: `https://prokr.co/regions/${resolvedParams.city}/${resolvedParams.subregion}`,
         },
         twitter: {
@@ -86,11 +86,12 @@ export async function generateMetadata({ params }: SubRegionPageProps): Promise<
         alternates: {
             canonical: `https://prokr.co/regions/${resolvedParams.city}/${resolvedParams.subregion}`,
         },
-        // Near-duplicate subregion pages (content varies only by place name):
-        // keep crawlable for link flow but OUT of the index to avoid duplicate
-        // content / index bloat. Also excluded from the XML sitemap. Re-enable
-        // index once each page has genuinely unique per-neighborhood content.
-        robots: { index: false, follow: true },
+        // Sub-region pages serve real local search demand (e.g. "خدمات شمال الرياض")
+        // and receive inbound links, so they are indexable + listed in the XML
+        // sitemap. The short /{city}/{subregion} URLs 301-redirect here (canonical).
+        // NOTE: content is still relatively thin (place name + per-area service mix);
+        // enrich each page with unique neighborhood content to strengthen ranking.
+        robots: { index: true, follow: true },
     };
 }
 
