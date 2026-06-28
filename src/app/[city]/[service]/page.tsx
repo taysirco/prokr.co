@@ -85,12 +85,12 @@ export async function generateMetadata({ params }: SiloPageProps): Promise<Metad
             locale: 'ar_SA',
             type: 'website',
             url: canonicalUrl,
-            siteName: 'بروكر',
+            siteName: 'بروكر الخدمي',
             images: [{
                 url: meta.ogImage || `https://prokr.co/${resolvedParams.city}/${resolvedParams.service}/opengraph-image`,
                 width: 1200,
                 height: 630,
-                alt: `أفضل شركات ${service.name_ar} ${city.name_ar} - بروكر`,
+                alt: `أفضل شركات ${service.name_ar} ${city.name_ar} - بروكر الخدمي`,
             }],
         },
         twitter: {

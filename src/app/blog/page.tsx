@@ -26,7 +26,7 @@ export const metadata: Metadata = {
         description: 'مقالات وأدلة شاملة عن الخدمات المنزلية في السعودية',
         url: 'https://prokr.co/blog',
         locale: 'ar_SA',
-        siteName: 'بروكر',
+        siteName: 'بروكر الخدمي',
         type: 'website',
     },
     alternates: {
@@ -94,7 +94,7 @@ export default function BlogPage() {
                         name: 'مدونة بروكر',
                         description: 'مقالات وأدلة شاملة عن الخدمات المنزلية في السعودية',
                         url: 'https://prokr.co/blog',
-                        publisher: { '@type': 'Organization', name: 'بروكر', url: 'https://prokr.co' },
+                        publisher: { '@type': 'Organization', name: 'بروكر الخدمي', url: 'https://prokr.co' },
                         mainEntity: {
                             '@type': 'ItemList',
                             itemListElement: BLOG_ARTICLES.map((a, i) => ({

@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { BreadcrumbJsonLd, WebPageJsonLd } from '@/components/JsonLd';
 
 export const metadata: Metadata = {
-    title: 'تواصل معنا | بروكر - دليل الخدمات السعودي',
+    title: 'تواصل معنا | بروكر الخدمي',
     description: 'تواصل مع فريق بروكر لأي استفسار أو اقتراح. نحن هنا لمساعدتك في إيجاد أفضل شركات الخدمات في السعودية.',
     keywords: ['تواصل معنا', 'بروكر', 'دعم العملاء', 'اتصل بنا', 'خدمة العملاء'],
     openGraph: {
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
         description: 'تواصل مع فريق بروكر لأي استفسار أو اقتراح',
         locale: 'ar_SA',
         type: 'website',
-        siteName: 'بروكر',
+        siteName: 'بروكر الخدمي',
         url: 'https://prokr.co/contact-us',
     },
     twitter: {
@@ -48,7 +48,7 @@ export default function ContactLayout({ children }: { children: React.ReactNode 
                     "url": "https://prokr.co/contact-us",
                     "mainEntity": {
                         "@type": "Organization",
-                        "name": "بروكر",
+                        "name": "بروكر الخدمي",
                         "url": "https://prokr.co",
                         "telephone": "+966542317431",
                         "email": "info@prokr.co",

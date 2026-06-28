@@ -24,7 +24,7 @@ export const metadata: Metadata = {
         description: 'البيان الرسمي لاستحواذ منصة prokr.co على النطاقات والأصول التابعة لشبكة بروكر القديمة',
         locale: 'ar_SA',
         type: 'article',
-        siteName: 'بروكر',
+        siteName: 'بروكر الخدمي',
         url: 'https://prokr.co/corporate/acquisition',
         publishedTime: '2026-03-13T00:00:00+03:00',
         modifiedTime: '2026-04-22T00:00:00+03:00',

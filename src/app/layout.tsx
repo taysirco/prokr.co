@@ -102,7 +102,7 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: 'black-translucent',
-    title: 'بروكر',
+    title: 'بروكر الخدمي',
   },
   verification: {
     google: 'Ed3SDlm2dwURmwiI8W3KF167qVrunVCBy4_02QBKKMA',

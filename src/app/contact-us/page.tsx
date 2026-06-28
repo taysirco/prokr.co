@@ -50,7 +50,7 @@ export default function ContactPage() {
                 mainEntity: {
                     '@type': 'Organization',
                     '@id': 'https://prokr.co/#organization',
-                    name: 'بروكر',
+                    name: 'بروكر الخدمي',
                     telephone: '+966542317431',
                     email: 'info@prokr.co',
                 },

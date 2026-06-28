@@ -72,7 +72,7 @@ export function ServiceOfferJsonLd({ city, service }: ServiceOfferJsonLdProps) {
         },
         "provider": {
             "@type": "Organization",
-            "name": "بروكر",
+            "name": "بروكر الخدمي",
             "url": "https://prokr.co",
             "knowsAbout": [
                 {
@@ -155,7 +155,7 @@ export function ServiceOfferJsonLd({ city, service }: ServiceOfferJsonLdProps) {
                 "name": service.name_ar,
                 "provider": {
                     "@type": "Organization",
-                    "name": "بروكر",
+                    "name": "بروكر الخدمي",
                 },
             },
             "description": `احجز خدمة ${service.name_ar} من شركات معتمدة بسجل تجاري سعودي ساري. مقارنة فورية بين الأسعار والتقييمات.`,

@@ -155,7 +155,7 @@ export default function FraudAlertBanner({ serviceName, serviceSlug, cityName }:
                         },
                         publisher: {
                             '@type': 'Organization',
-                            name: 'بروكر',
+                            name: 'بروكر الخدمي',
                             url: 'https://prokr.co',
                             logo: { '@type': 'ImageObject', url: 'https://prokr.co/logo.png' },
                         },

@@ -78,13 +78,13 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
             description,
             locale: 'ar_SA',
             type: 'website',
-            siteName: 'بروكر',
+            siteName: 'بروكر الخدمي',
             url: `https://prokr.co/${resolvedParams.city}`,
             images: [{
                 url: `https://prokr.co/${resolvedParams.city}/opengraph-image`,
                 width: 1200,
                 height: 630,
-                alt: `دليل الخدمات المنزلية ${cityKw} - بروكر`,
+                alt: `دليل الخدمات المنزلية ${cityKw} - بروكر الخدمي`,
             }],
         },
         twitter: {

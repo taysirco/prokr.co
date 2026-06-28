@@ -97,13 +97,13 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
             description,
             locale: 'ar_SA',
             type: 'website',
-            siteName: 'بروكر',
+            siteName: 'بروكر الخدمي',
             url: `https://prokr.co/${getCanonicalSlug(resolvedParams.service) || resolvedParams.service}`,
             images: [{
                 url: `https://prokr.co/${getCanonicalSlug(resolvedParams.service) || resolvedParams.service}/opengraph-image`,
                 width: 1200,
                 height: 630,
-                alt: `شركات ${service.name_ar} في السعودية - بروكر`,
+                alt: `شركات ${service.name_ar} في السعودية - بروكر الخدمي`,
             }],
         },
         twitter: {

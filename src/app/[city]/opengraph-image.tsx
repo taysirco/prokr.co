@@ -3,7 +3,7 @@ import { getCityBySlug, SERVICES } from '@/lib/seed';
 import { getCityContext } from '@/lib/city-context';
 
 export const runtime = 'edge';
-export const alt = 'بروكر - دليل الخدمات السعودي';
+export const alt = 'بروكر الخدمي';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 

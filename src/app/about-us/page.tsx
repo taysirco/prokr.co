@@ -15,7 +15,7 @@ export const metadata: Metadata = {
         description: 'تعرف على بروكر - أكبر دليل للخدمات المنزلية في السعودية',
         locale: 'ar_SA',
         type: 'website',
-        siteName: 'بروكر',
+        siteName: 'بروكر الخدمي',
         url: 'https://prokr.co/about-us',
     },
     twitter: {

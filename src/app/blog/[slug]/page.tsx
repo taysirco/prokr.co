@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: BlogArticlePageProps): Promis
             modifiedTime: article.updateDate,
             authors: [article.author],
             locale: 'ar_SA',
-            siteName: 'بروكر',
+            siteName: 'بروكر الخدمي',
             url: `https://prokr.co/blog/${slug}`,
             images: [{
                 url: 'https://prokr.co/logo.png',
@@ -90,7 +90,7 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
                         author: { '@type': 'Organization', name: article.author, url: 'https://prokr.co' },
                         publisher: {
                             '@type': 'Organization',
-                            name: 'بروكر',
+                            name: 'بروكر الخدمي',
                             url: 'https://prokr.co',
                             logo: { '@type': 'ImageObject', url: 'https://prokr.co/logo.png' },
                         },

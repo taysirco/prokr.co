@@ -33,7 +33,7 @@ export const metadata: Metadata = {
         description: 'تصفح جميع المدن والمناطق التي تغطيها خدمات بروكر - 30 مدينة في المملكة',
         locale: 'ar_SA',
         type: 'website',
-        siteName: 'بروكر',
+        siteName: 'بروكر الخدمي',
         url: 'https://prokr.co/locations',
     },
     twitter: {

@@ -5,14 +5,14 @@ import { BreadcrumbJsonLd, WebPageJsonLd } from '@/components/JsonLd';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-    title: 'سياسة الخصوصية | بروكر - دليل الخدمات السعودي',
+    title: 'سياسة الخصوصية | بروكر الخدمي',
     description: 'سياسة الخصوصية وحماية البيانات الخاصة بموقع بروكر. نلتزم بحماية بياناتك الشخصية وفقاً لأعلى معايير الأمان.',
     openGraph: {
         title: 'سياسة الخصوصية | بروكر',
         description: 'سياسة الخصوصية وحماية البيانات الخاصة بموقع بروكر',
         locale: 'ar_SA',
         type: 'website',
-        siteName: 'بروكر',
+        siteName: 'بروكر الخدمي',
         url: 'https://prokr.co/privacy-policy',
     },
     twitter: {

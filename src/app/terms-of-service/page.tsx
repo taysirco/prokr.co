@@ -5,14 +5,14 @@ import { BreadcrumbJsonLd, WebPageJsonLd } from '@/components/JsonLd';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-    title: 'الشروط والأحكام | بروكر - دليل الخدمات السعودي',
+    title: 'الشروط والأحكام | بروكر الخدمي',
     description: 'الشروط والأحكام الخاصة باستخدام موقع بروكر. تعرف على حقوقك والتزاماتك عند استخدام منصة بروكر لخدمات النقل والتنظيف والصيانة.',
     openGraph: {
         title: 'الشروط والأحكام | بروكر',
         description: 'الشروط والأحكام الخاصة باستخدام موقع بروكر',
         locale: 'ar_SA',
         type: 'website',
-        siteName: 'بروكر',
+        siteName: 'بروكر الخدمي',
         url: 'https://prokr.co/terms-of-service',
     },
     twitter: {

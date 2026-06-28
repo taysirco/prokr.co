@@ -56,7 +56,7 @@ export async function generateMetadata({ params }: SubRegionPageProps): Promise<
         return { title: 'صفحة غير موجودة' };
     }
 
-    const title = `خدمات ${subRegion.name_ar}، ${city.name_ar} | شركات معتمدة - بروكر`;
+    const title = `خدمات ${subRegion.name_ar}، ${city.name_ar} | شركات معتمدة - بروكر الخدمي`;
     const description = `اكتشف أفضل شركات الخدمات في ${subRegion.name_ar}، ${city.name_ar}. نقل عفش، تنظيف منازل، مكافحة حشرات، كشف تسربات وأكثر. شركات معتمدة بأسعار تنافسية.`;
 
     return {

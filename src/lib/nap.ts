@@ -4,7 +4,7 @@
 // ============================================
 
 export const NAP = {
-    name: 'بروكر',
+    name: 'بروكر الخدمي',
     nameEn: 'Prokr',
     url: 'https://prokr.co',
     phone: '+966542317431',

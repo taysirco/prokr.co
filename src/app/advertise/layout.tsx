@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { BreadcrumbJsonLd, WebPageJsonLd, SpeakableJsonLd } from '@/components/JsonLd';
 
 export const metadata: Metadata = {
-    title: 'سجّل شركتك مجاناً | أعلن في بروكر - دليل الخدمات السعودي',
+    title: 'سجّل شركتك مجاناً | أعلن في بروكر الخدمي',
     description: 'انضم إلى أكثر من 500 شركة خدمات في بروكر. سجّل شركتك مجاناً واحصل على عملاء جدد كل يوم في 30 مدينة سعودية. باقات إعلانية مميزة.',
     keywords: ['أعلن في بروكر', 'تسجيل شركة خدمات', 'إعلان شركة نقل عفش', 'إعلان شركة تنظيف', 'تسويق شركات خدمات'],
     openGraph: {
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
         description: 'انضم لأكبر دليل خدمات في السعودية واحصل على عملاء جدد كل يوم',
         locale: 'ar_SA',
         type: 'website',
-        siteName: 'بروكر',
+        siteName: 'بروكر الخدمي',
         url: 'https://prokr.co/advertise',
     },
     twitter: {

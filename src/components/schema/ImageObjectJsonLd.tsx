@@ -21,7 +21,7 @@ export function ImageObjectJsonLd({ imageUrl, service, city }: ImageObjectJsonLd
         '@id': `https://prokr.co/${city.slug}/${service.slug}#primaryImage`,
         url: imageUrl,
         name: `${service.name_ar} ${cityKw}`,
-        description: `صورة توضيحية لخدمة ${service.name_ar} ${cityKw} - شركات تم التحقق منها عبر منصة نفاذ (SBC) - بروكر`,
+        description: `صورة توضيحية لخدمة ${service.name_ar} ${cityKw} - شركات تم التحقق منها عبر منصة نفاذ (SBC) - بروكر الخدمي`,
         caption: `تم التحقق — نفاذ / SBC | ${service.name_ar} ${cityKw}`,
         width: 1200,
         height: 800,

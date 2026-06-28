@@ -96,7 +96,7 @@ export async function generateMetadata({ params }: CompanyPageProps): Promise<Me
             images: advertiser.logo_url ? [advertiser.logo_url] : [],
             locale: 'ar_SA',
             type: 'website',
-            siteName: 'بروكر',
+            siteName: 'بروكر الخدمي',
             url: `https://prokr.co/company/${resolvedParams.code}`,
         },
         twitter: {

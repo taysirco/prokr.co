@@ -38,7 +38,7 @@ export const metadata: Metadata = {
         description: '54 خدمة منزلية في 30 مدينة سعودية - شركات معتمدة وأسعار تنافسية',
         locale: 'ar_SA',
         type: 'website',
-        siteName: 'بروكر',
+        siteName: 'بروكر الخدمي',
         url: 'https://prokr.co/services',
     },
     twitter: {

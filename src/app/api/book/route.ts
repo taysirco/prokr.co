@@ -468,7 +468,7 @@ export async function POST(request: NextRequest) {
             actionStatus: 'ConfirmedActionStatus',
             agent: {
                 '@type': 'Organization',
-                name: 'بروكر',
+                name: 'بروكر الخدمي',
                 url: 'https://prokr.co',
             },
             result: {
@@ -497,7 +497,7 @@ export async function POST(request: NextRequest) {
                 }),
                 provider: {
                     '@type': 'Organization',
-                    name: 'بروكر',
+                    name: 'بروكر الخدمي',
                     url: 'https://prokr.co',
                 },
                 priceCurrency: 'SAR',

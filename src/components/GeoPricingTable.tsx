@@ -275,7 +275,7 @@ export default function GeoPricingTable({ citySlug, cityName, serviceSlug, servi
                             '@type': 'Service',
                             name: serviceName,
                             areaServed: { '@type': 'City', name: cityName },
-                            provider: { '@type': 'Organization', name: 'بروكر', url: 'https://prokr.co' },
+                            provider: { '@type': 'Organization', name: 'بروكر الخدمي', url: 'https://prokr.co' },
                         },
                     }),
                 }}
