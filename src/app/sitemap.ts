@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { CITIES, SERVICES } from '@/lib/seed';
 import { SUB_REGIONS } from '@/lib/sub-regions';
 import { BLOG_ARTICLES } from '@/lib/blog-data';
-import { hasPageOverride } from '@/lib/overrides/registry';
+import { hasPageOverride, getOverriddenPages } from '@/lib/overrides/registry';
 import { isAbsorbedSlug } from '@/lib/services/super-page-groups';
 
 // ═══════════════════════════════════════════════════════════════
@@ -222,6 +222,20 @@ export default async function sitemap({ id }: { id: number }): Promise<MetadataR
                     priority: 0.8,
                 });
             }
+        }
+        // Neighborhood × service pages — /{city}/{subregion}/{service}
+        // (e.g. /makkah/sharaia/movers). Auto-discovered from override registry
+        // keys whose city part contains a slash.
+        for (const key of getOverriddenPages()) {
+            if (!key.includes('/') || !key.includes('::')) continue;
+            const [cityPath, serviceSlug] = key.split('::');
+            const [citySlug, subRegionSlug] = cityPath.split('/');
+            subRegionPages.push({
+                url: `${BASE_URL}/${citySlug}/${subRegionSlug}/${serviceSlug}`,
+                lastModified: now,
+                changeFrequency: 'monthly',
+                priority: 0.7,
+            });
         }
         return subRegionPages;
     }

@@ -2,6 +2,7 @@
 export { override as furnitureMoving } from './furniture-moving';
 export { override as furnitureStorage } from './furniture-storage';
 export { override as dyna } from './dyna';
+export { override as makkahSharaiaMovers } from './sharaia/movers';
 export { override as dabab } from './dabab';
 export { override as cleaning } from './cleaning';
 export { override as tanksCleaning } from './tanks-cleaning';

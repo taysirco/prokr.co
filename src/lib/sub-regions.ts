@@ -4,45 +4,12 @@
 // Sub-regions/Neighborhoods for Major Cities
 // ============================================
 
-// Optional hyper-local enrichment for a sub-region page. When present, the
-// /regions/{city}/{subregion} page renders unique neighborhood content (intro,
-// a focused service spotlight, pricing snapshot, tips, local FAQs) instead of the
-// thin templated copy. This is how curated neighborhood content lives on its
-// canonical, indexable URL — see the "enrich each page" note in the route's
-// generateMetadata. Keep it optional so all other sub-regions render unchanged.
-export interface SubRegionPricingRow {
-    type: string;
-    minPrice: number;
-    maxPrice: number;
-    unit?: string;
-    time?: string;
-}
-
-export interface SubRegionLocalContent {
-    /** Unique neighborhood intro paragraph (replaces the templated intro). */
-    intro_ar: string;
-    /** The lead service this neighborhood is best known for, e.g. 'furniture-moving'. */
-    primaryServiceSlug?: string;
-    /** Arabic label for the lead service, used as the spotlight heading, e.g. 'نقل عفش'. */
-    primaryServiceLabel?: string;
-    /** One-line, AI-citable direct answer for the spotlight service. */
-    shortAnswer?: string;
-    /** Estimated local pricing rows for the spotlight service. */
-    pricing?: SubRegionPricingRow[];
-    /** Practical local tips shown as a bullet list. */
-    tips?: string[];
-    /** Neighborhood-specific FAQs, prepended before the generic region FAQs. */
-    faqs?: { question: string; answer: string }[];
-}
-
 export interface SubRegion {
     slug: string;
     name_ar: string;
     name_en: string;
     citySlug: string;
     services: string[];
-    /** Optional curated, neighborhood-specific content (see SubRegionLocalContent). */
-    localContent?: SubRegionLocalContent;
 }
 
 // Per-city sub-region imports

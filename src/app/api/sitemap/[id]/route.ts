@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { CITIES, SERVICES } from '@/lib/seed';
 import { BLOG_ARTICLES } from '@/lib/blog-data';
-import { hasPageOverride } from '@/lib/overrides/registry';
+import { hasPageOverride, getOverriddenPages } from '@/lib/overrides/registry';
 import { isAbsorbedSlug } from '@/lib/services/super-page-groups';
 import { SUB_REGIONS } from '@/lib/sub-regions';
 
@@ -165,6 +165,25 @@ function generateSubRegionSitemap(): SitemapEntry[] {
     return entries;
 }
 
+// Neighborhood × service pages — /{city}/{subregion}/{service} (e.g.
+// /makkah/sharaia/movers). Auto-discovered from override registry keys whose
+// city part contains a slash, matching the route's generateStaticParams.
+function generateNeighborhoodSitemap(): SitemapEntry[] {
+    const now = new Date().toISOString();
+    return getOverriddenPages()
+        .filter(key => key.includes('/') && key.includes('::'))
+        .map(key => {
+            const [cityPath, serviceSlug] = key.split('::');
+            const [citySlug, subRegionSlug] = cityPath.split('/');
+            return {
+                url: `${BASE_URL}/${citySlug}/${subRegionSlug}/${serviceSlug}`,
+                lastmod: now,
+                changefreq: 'monthly' as const,
+                priority: 0.7,
+            };
+        });
+}
+
 function generateBlogSitemap(): SitemapEntry[] {
     if (getDaysSinceLaunch() < 3) return [];
     const now = new Date().toISOString();
@@ -194,7 +213,7 @@ export async function GET(
             entries = generateSiloSitemap(id - 1);
             break;
         case 6:
-            entries = generateSubRegionSitemap();
+            entries = [...generateSubRegionSitemap(), ...generateNeighborhoodSitemap()];
             break;
         case 7:
             entries = generateBlogSitemap();

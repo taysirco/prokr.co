@@ -113,10 +113,6 @@ export default async function SubRegionPage({ params }: SubRegionPageProps) {
         notFound();
     }
 
-    // Optional curated neighborhood content (e.g. الشرائع). Undefined for most
-    // sub-regions, in which case the page renders the templated copy unchanged.
-    const local = subRegion.localContent;
-
     const availableServices = subRegion.services
         .map(slug => getServiceBySlug(slug))
         .filter(Boolean)
@@ -162,10 +158,6 @@ export default async function SubRegionPage({ params }: SubRegionPageProps) {
         },
     ];
 
-    // Curated neighborhood FAQs (when present) lead, ahead of the generic region
-    // FAQs — used for both the FAQPage schema and the visible accordion.
-    const faqItems = [...(local?.faqs ?? []), ...regionFaqItems];
-
     return (
         <>
             {/* JSON-LD Schema - Subregion Services List */}
@@ -208,7 +200,7 @@ export default async function SubRegionPage({ params }: SubRegionPageProps) {
                 dangerouslySetInnerHTML={{ __html: JSON.stringify({
                     "@context": "https://schema.org",
                     "@type": "FAQPage",
-                    "mainEntity": faqItems.map(faq => ({
+                    "mainEntity": regionFaqItems.map(faq => ({
                         "@type": "Question",
                         "name": faq.question,
                         "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
@@ -310,65 +302,14 @@ export default async function SubRegionPage({ params }: SubRegionPageProps) {
                                     <h2 className="text-2xl font-bold text-gray-900 mb-4">
                                         دليل الخدمات في {subRegion.name_ar}، {city.name_ar}
                                     </h2>
-                                    {local?.intro_ar ? (
-                                        <p className="text-gray-700 leading-relaxed mb-6">{local.intro_ar}</p>
-                                    ) : (
-                                        <p className="text-gray-700 leading-relaxed mb-6">
-                                            يوفر بروكر في منطقة {subRegion.name_ar} بـ{city.name_ar} مجموعة شاملة من الخدمات المنزلية والتجارية تشمل {availableServices.slice(0, 4).map(s => s?.name_ar).filter(Boolean).join('، ')} والمزيد.
-                                            جميع الشركات المدرجة لدينا معتمدة ومرخصة، وتقدم ضماناً على خدماتها مع أسعار تنافسية تناسب سكان {subRegion.name_ar}.
-                                        </p>
-                                    )}
-
-                                    {/* Curated neighborhood spotlight (lead service) — only when localContent exists */}
-                                    {local && (
-                                        <div className="not-prose mb-8">
-                                            {local.primaryServiceLabel && (
-                                                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                                                    {local.primaryServiceLabel} في {subRegion.name_ar}
-                                                </h3>
-                                            )}
-                                            {local.shortAnswer && (
-                                                <p className="text-gray-800 leading-relaxed mb-4 bg-sky-50 border-r-4 border-sky-400 rounded-lg p-4">
-                                                    {local.shortAnswer}
-                                                </p>
-                                            )}
-                                            {local.pricing && local.pricing.length > 0 && (
-                                                <div className="overflow-x-auto mb-4">
-                                                    <table className="w-full text-sm text-right border border-gray-200 rounded-lg overflow-hidden">
-                                                        <thead className="bg-gray-100 text-gray-700">
-                                                            <tr>
-                                                                <th className="px-3 py-2 font-semibold">الخدمة</th>
-                                                                <th className="px-3 py-2 font-semibold whitespace-nowrap">السعر التقديري</th>
-                                                                <th className="px-3 py-2 font-semibold whitespace-nowrap">المدة</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            {local.pricing.map((row, i) => (
-                                                                <tr key={i} className="border-t border-gray-100">
-                                                                    <td className="px-3 py-2 text-gray-800">{row.type}</td>
-                                                                    <td className="px-3 py-2 text-gray-800 whitespace-nowrap">{row.minPrice} - {row.maxPrice} ريال</td>
-                                                                    <td className="px-3 py-2 text-gray-600 whitespace-nowrap">{row.time ?? '—'}</td>
-                                                                </tr>
-                                                            ))}
-                                                        </tbody>
-                                                    </table>
-                                                    <p className="text-xs text-gray-500 mt-1">* أسعار تقديرية قابلة للتغيّر حسب الكمية والمسافة داخل {subRegion.name_ar}.</p>
-                                                </div>
-                                            )}
-                                            {local.tips && local.tips.length > 0 && (
-                                                <div className="mb-2">
-                                                    <h4 className="font-bold text-gray-900 mb-2">نصائح قبل {local.primaryServiceLabel ?? 'طلب الخدمة'} في {subRegion.name_ar}</h4>
-                                                    <ul className="list-disc pr-5 space-y-1 text-gray-700">
-                                                        {local.tips.map((tip, i) => <li key={i}>{tip}</li>)}
-                                                    </ul>
-                                                </div>
-                                            )}
-                                        </div>
-                                    )}
+                                    <p className="text-gray-700 leading-relaxed mb-6">
+                                        يوفر بروكر في منطقة {subRegion.name_ar} بـ{city.name_ar} مجموعة شاملة من الخدمات المنزلية والتجارية تشمل {availableServices.slice(0, 4).map(s => s?.name_ar).filter(Boolean).join('، ')} والمزيد.
+                                        جميع الشركات المدرجة لدينا معتمدة ومرخصة، وتقدم ضماناً على خدماتها مع أسعار تنافسية تناسب سكان {subRegion.name_ar}.
+                                    </p>
 
                                     <h3 className="text-xl font-bold text-gray-900 mb-3">الأسئلة الشائعة عن خدمات {subRegion.name_ar}</h3>
                                     <FaqAccordion
-                                        items={faqItems}
+                                        items={regionFaqItems}
                                         cityName={`${subRegion.name_ar}، ${city.name_ar}`}
                                         serviceName="خدمات منزلية"
                                     />
