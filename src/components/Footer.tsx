@@ -6,10 +6,17 @@ import { NAP } from '@/lib/nap';
 import { getCityKeyword } from '@/lib/locale-formatting';
 import { hasPageOverride } from '@/lib/overrides/registry';
 import { isAbsorbedSlug, getCanonicalSlug } from '@/lib/services/super-page-groups';
+import type { SubRegion } from '@/lib/sub-regions';
 
 interface FooterProps {
     currentCity?: string;
     currentService?: string;
+    // When set, the footer is rendered on a sub-region page (e.g. /riyadh/north).
+    // The "suggested services" section is then scoped to the sub-region's OWN
+    // services (subRegion.services) instead of the full city service catalog,
+    // and the city-wide specialized-services block is hidden — both prevent
+    // parent-city services from leaking into neighborhood pages.
+    currentSubRegion?: SubRegion;
 }
 
 // Footer internal links — deterministic category rotation
@@ -23,7 +30,7 @@ const getDeterministicLinks = <T,>(items: T[], seedString: string, limit: number
     return rotated.slice(startIndex, startIndex + limit);
 };
 
-export default function Footer({ currentCity, currentService }: FooterProps) {
+export default function Footer({ currentCity, currentService, currentSubRegion }: FooterProps) {
     // Get current city and service objects
     const city = currentCity ? getCityBySlug(currentCity) : null;
     const service = currentService ? getServiceBySlug(currentService) : null;
@@ -34,8 +41,15 @@ export default function Footer({ currentCity, currentService }: FooterProps) {
     // Resolve absorbed slug to canonical for city link generation
     const canonicalService = getCanonicalSlug(currentValidService) || currentValidService;
 
-    // 1. فلترة الخدمات والمدن المتاحة (كما كانت)
-    const allServices = SERVICES.filter(s =>
+    // 1. Suggested services: on a sub-region page, scope to ONLY that sub-region's
+    // defined services (so we don't leak the parent-city catalogue); otherwise use
+    // the full city catalogue as before.
+    const baseServicesPool = currentSubRegion
+        ? currentSubRegion.services
+            .map(slug => getServiceBySlug(slug))
+            .filter((s): s is NonNullable<typeof s> => Boolean(s))
+        : SERVICES;
+    const allServices = baseServicesPool.filter(s =>
         s.slug !== currentService &&
         hasPageOverride(currentValidCity, s.slug) &&
         !isAbsorbedSlug(s.slug)
@@ -46,7 +60,12 @@ export default function Footer({ currentCity, currentService }: FooterProps) {
     );
 
     // 2. عرض 6 روابط مختارة فقط — بدل 24+ رابط
-    const targetedServices = getDeterministicLinks(allServices, currentCity || 'root', 6);
+    // On sub-region pages, render ALL the sub-region's services (typically 2-5,
+    // already a small set) instead of trimming to 6 — every defined neighborhood
+    // service should appear.
+    const targetedServices = currentSubRegion
+        ? allServices
+        : getDeterministicLinks(allServices, currentCity || 'root', 6);
     const targetedCities = getDeterministicLinks(allCities, canonicalService || 'root', 6);
 
     return (
@@ -56,7 +75,9 @@ export default function Footer({ currentCity, currentService }: FooterProps) {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
                     <h3 className="text-white font-bold text-lg mb-4 flex items-center gap-2">
                         <span className="w-1 h-6 bg-sky-500 rounded-full"></span>
-                        {city ? `خدمات مقترحة ${getCityKeyword(city.name_ar, 'ba')}` : 'خدمات مقترحة'}
+                        {currentSubRegion
+                            ? `خدمات في ${currentSubRegion.name_ar}`
+                            : city ? `خدمات مقترحة ${getCityKeyword(city.name_ar, 'ba')}` : 'خدمات مقترحة'}
                     </h3>
                     <div className="flex flex-wrap gap-x-4 gap-y-2">
                         {targetedServices.map(s => (
@@ -95,7 +116,12 @@ export default function Footer({ currentCity, currentService }: FooterProps) {
                 </div>
             </div>
 
-            {/* Specialized Services — Link equity for underlinked pages */}
+            {/* Specialized Services — Link equity for underlinked pages
+                Hidden on sub-region pages: these are city-wide specialized services
+                (sanitization, A/C cleaning, etc.) that would leak the parent city's
+                catalogue into a neighborhood page; the suggested-services block
+                above is already scoped to subRegion.services there. */}
+            {!currentSubRegion && (
             <div className="border-b border-white/10">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
                     <h3 className="text-white font-bold text-sm mb-3 flex items-center gap-2">
@@ -136,6 +162,7 @@ export default function Footer({ currentCity, currentService }: FooterProps) {
                     </div>
                 </div>
             </div>
+            )}
 
             {/* Main Footer */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

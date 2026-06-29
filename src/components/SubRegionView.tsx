@@ -385,7 +385,7 @@ export function SubRegionView({ city, subRegion }: { city: City; subRegion: SubR
                     />
                 </SourceOrderLayout>
 
-                <Footer currentCity={city.slug} />
+                <Footer currentCity={city.slug} currentSubRegion={subRegion} />
             </main>
         </>
     );
