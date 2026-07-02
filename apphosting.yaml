@@ -2,7 +2,11 @@
 # https://firebase.google.com/docs/app-hosting
 
 runConfig:
-  cpu: 2
+  # 💰 cpu: 1 (كان 2) — الـ HTML يُمتَص من Cloudflare Worker على الحافة؛ عمل الـ origin
+  #    الفعلي هو إعادة توليد ISR وترميز الصور فقط، وفيهما الـ vCPU الثاني كان يشتري
+  #    زمن استجابة لا قدرة. الذاكرة تبقى 1024 (هامش sharp/ISR). بعد النشر شغّل
+  #    warm-cache.ts مرة لإعادة تدفئة ISR (سيستغرق أطول قليلاً — طبيعي).
+  cpu: 1
   memoryMiB: 1024
   concurrency: 100
 
