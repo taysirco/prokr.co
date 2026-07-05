@@ -18,6 +18,41 @@
 
 // ── Configuration ──────────────────────────────────────────────────────
 
+// ── Origin host ────────────────────────────────────────────────────────
+// All origin subrequests go to the Firebase App Hosting hostname directly,
+// NOT to prokr.co. The Google-managed cert for prokr.co at the origin cannot
+// auto-renew while the domain is proxied through Cloudflare (renewal checks
+// see Cloudflare's IPs, not Google's) — it expired on 2026-07-05 and took the
+// whole site to 526 under SSL Full-Strict. The .hosted.app hostname always
+// serves a valid Google cert, so fetching it keeps strict validation working
+// permanently. Verified empirically: the app returns identical content on
+// this Host, and middleware/route redirects emit RELATIVE Location headers.
+const ORIGIN_HOST = 'prokr--prokr-84ca8.us-east4.hosted.app';
+const PUBLIC_HOST = 'prokr.co';
+
+function toOriginUrl(urlString) {
+  const u = new URL(urlString);
+  u.hostname = ORIGIN_HOST;
+  return u.toString();
+}
+
+// Drop-in replacement for fetch(request) aimed at the origin. Preserves
+// method/headers/body; adds X-Forwarded-Host so the app can still recover the
+// public hostname. Defensively rewrites any absolute Location header that
+// would leak the origin hostname back to the public domain.
+async function originFetch(request) {
+  const req = new Request(toOriginUrl(request.url), request);
+  req.headers.set('X-Forwarded-Host', PUBLIC_HOST);
+  const res = await fetch(req);
+  const loc = res.headers.get('location');
+  if (loc && loc.includes(ORIGIN_HOST)) {
+    const headers = new Headers(res.headers);
+    headers.set('location', loc.split(ORIGIN_HOST).join(PUBLIC_HOST));
+    return new Response(res.body, { status: res.status, statusText: res.statusText, headers });
+  }
+  return res;
+}
+
 /**
  * Path-based TTL strategy (in seconds).
  * Each rule is checked in order — first match wins.
@@ -151,7 +186,7 @@ export default {
 
     // Only cache GET and HEAD requests
     if (request.method !== 'GET' && request.method !== 'HEAD') {
-      return fetch(request);
+      return originFetch(request);
     }
 
     const url = new URL(request.url);
@@ -205,7 +240,7 @@ export default {
     const cookie = request.headers.get('cookie') || '';
     const hasAuthCookie = cookie.includes('__session') || cookie.includes('firebase');
     if (hasAuthCookie && !isBot && !isWarmRequest) {
-      const response = await fetch(request);
+      const response = await originFetch(request);
       const headers = new Headers(response.headers);
       headers.set('X-Cache-Status', 'BYPASS-AUTH');
       headers.set('X-Edge-Worker', 'prokr-v1');
@@ -227,7 +262,7 @@ export default {
       || request.headers.has('next-router-prefetch')
       || request.headers.has('next-router-segment-prefetch');
     if (isRscRequest) {
-      const response = await fetch(request);
+      const response = await originFetch(request);
       const headers = new Headers(response.headers);
       headers.set('X-Cache-Status', 'BYPASS-RSC');
       headers.set('X-Edge-Worker', 'prokr-v1');
@@ -245,7 +280,7 @@ export default {
     // at the edge). Pass straight to origin and advertise Vary: Accept.
     const acceptHeader = request.headers.get('accept') || '';
     if (acceptHeader.includes('text/markdown')) {
-      const response = await fetch(request);
+      const response = await originFetch(request);
       const headers = new Headers(response.headers);
       headers.set('X-Cache-Status', 'BYPASS-MARKDOWN');
       headers.set('X-Edge-Worker', 'prokr-v1');
@@ -262,7 +297,7 @@ export default {
 
     // ── BYPASS: Pass through directly to origin ──
     if (rule.bypass) {
-      const response = await fetch(request);
+      const response = await originFetch(request);
       const headers = new Headers(response.headers);
       headers.set('X-Cache-Status', 'BYPASS');
       headers.set('X-Edge-Worker', 'prokr-v1');
@@ -287,7 +322,7 @@ export default {
     // edge cache on deploy (one-time full miss → repopulate from origin). Bump
     // this whenever an origin deploy must propagate immediately (e.g. after the
     // SEO-audit rollout, to drop stale HTML containing removed/old schema).
-    const EDGE_CACHE_VERSION = '2026-06-20-homepage-brand';
+    const EDGE_CACHE_VERSION = '2026-07-05-origin-host';
     const normalizedUrl = normalizeCacheUrl(url);
     const keyUrl = normalizedUrl + (normalizedUrl.includes('?') ? '&' : '?') + '__ev=' + EDGE_CACHE_VERSION;
     const cacheKey = new Request(keyUrl, {
@@ -353,7 +388,8 @@ export default {
       originHeaders.set('X-Forwarded-For', request.headers.get('cf-connecting-ip') || '');
       originHeaders.set('X-Real-IP', request.headers.get('cf-connecting-ip') || '');
 
-      originResponse = await fetch(request.url, {
+      originHeaders.set('X-Forwarded-Host', PUBLIC_HOST);
+      originResponse = await fetch(toOriginUrl(request.url), {
         method: 'GET',
         headers: originHeaders,
         // CRITICAL: 'manual' prevents the Worker from auto-following 301/302
@@ -386,6 +422,11 @@ export default {
     // ── Don't cache redirects (let origin handle them) ──
     if (originResponse.status >= 300 && originResponse.status < 400) {
       const headers = new Headers(originResponse.headers);
+      // Defensive: never leak the .hosted.app origin hostname in Location
+      const loc = headers.get('location');
+      if (loc && loc.includes(ORIGIN_HOST)) {
+        headers.set('location', loc.split(ORIGIN_HOST).join(PUBLIC_HOST));
+      }
       headers.set('X-Cache-Status', 'REDIRECT');
       headers.set('X-Edge-Worker', 'prokr-v1');
       return new Response(originResponse.body, {
