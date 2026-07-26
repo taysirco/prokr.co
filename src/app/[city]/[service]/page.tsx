@@ -426,6 +426,33 @@ export default async function SiloPage({ params }: SiloPageProps) {
                                 <NafathVerifyBanner serviceNameAr={service.name_ar} cityNameAr={cityKw} />
                             </section>
 
+                            {/* 🔗 Hub → spoke: the same service in this city's
+                                neighbourhoods. These curated pages were otherwise
+                                reachable only via the sub-region hub (3 clicks from
+                                home) and received no link equity from this page,
+                                which is the strongest page in the city's silo. */}
+                            {neighborhoodPages.length > 0 && (
+                                <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                                    <h2 className="text-xl font-bold text-gray-900 mb-2">
+                                        {service.name_ar} حسب الحي في {city.name_ar}
+                                    </h2>
+                                    <p className="text-gray-500 text-sm mb-5">
+                                        صفحات متخصصة لكل حي — أسعار وتفاصيل تخص المنطقة نفسها
+                                    </p>
+                                    <div className="flex flex-wrap gap-3">
+                                        {neighborhoodPages.map(n => (
+                                            <Link
+                                                key={n.subRegionSlug}
+                                                href={n.href}
+                                                className="px-4 py-2.5 bg-white border border-gray-200 rounded-xl hover:border-sky-300 hover:shadow-md transition-all text-sm text-gray-700 hover:text-sky-700"
+                                            >
+                                                {service.name_ar} {n.name_ar}
+                                            </Link>
+                                        ))}
+                                    </div>
+                                </section>
+                            )}
+
                             {/* Local Service Area — Unique Per City+Service Slug */}
                             <LocalPresence citySlug={resolvedParams.city} serviceSlug={resolvedParams.service} serviceName={service.name_ar} serviceCategory={service.category} />
                         </>

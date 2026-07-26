@@ -73,7 +73,7 @@ export const override: PageOverride = {
     ],
 
     trustAnchors: [
-        { ...GOV.TGA, role: 'ترخيص شركات النقل البري وسيارات نقل العفش' },
+        { ...GOV.TGA, role: 'ترخيص نشاط نقل العفش واشتراطات تأمين الحمولة' },
         { ...GOV.HRSD, role: 'نظامية العمالة لدى مقدم الخدمة وحقوقها' },
     ],
 

@@ -93,7 +93,7 @@ export const override: PageOverride = {
     saudiRegulations: [REGULATIONS.SBC_601, REGULATIONS.SBC_602],
 
     verificationBadges: [
-        { badge: '✔️ مواد عزل معتمدة لملامسة مياه الشرب', authority: 'الهيئة العامة للغذاء والدواء', icon: 'certificate' },
+        { badge: '✔️ شهادة صلاحية المادة لملامسة مياه الشرب', authority: 'مستند يُطلب من المورّد قبل بدء التنفيذ', icon: 'certificate' },
         { badge: '✔️ اختبار ثبات منسوب قبل التسليم', authority: 'معيار فني داخلي', icon: 'file-check' },
     ],
 
