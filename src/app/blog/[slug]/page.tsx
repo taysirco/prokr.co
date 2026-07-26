@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { Home, ChevronLeft, Clock, User, Calendar, Tag, ArrowLeft, Shield, BookOpen, CheckCircle } from 'lucide-react';
-import { getBlogArticle, getPublishedArticles, isArticlePublished } from '@/lib/blog-data';
+import { getBlogArticle, getPublishedArticles, isArticlePublished, unlinkUnpublished } from '@/lib/blog-data';
 import { getServiceBySlug } from '@/lib/seed';
 import { BreadcrumbJsonLd } from '@/components/JsonLd';
 import { isAbsorbedSlug } from '@/lib/services/super-page-groups';
@@ -350,7 +350,7 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
                         <section key={idx} id={`section-${idx}`} className="mb-10">
                             <h2 className="text-2xl font-bold text-gray-900 mb-4">{section.heading}</h2>
                             <div className="prose prose-lg prose-sky max-w-none">
-                                <BlogContent content={section.content} />
+                                <BlogContent content={unlinkUnpublished(section.content)} />
                             </div>
                         </section>
                     ))}
@@ -363,7 +363,7 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
                                 {article.faq.map((faq, idx) => (
                                     <div key={idx} className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
                                         <h3 className="font-bold text-gray-900 mb-2">{faq.question}</h3>
-                                        <div className="text-gray-600"><BlogContent content={faq.answer} /></div>
+                                        <div className="text-gray-600"><BlogContent content={unlinkUnpublished(faq.answer)} /></div>
                                     </div>
                                 ))}
                             </div>
