@@ -82,6 +82,22 @@ export function getPublishedArticlesByCity(citySlug: string, now: number = Date.
 }
 
 /**
+ * Strip markdown links that point at an article whose slot has not arrived.
+ * Without this, a post published today links to one scheduled weeks out and
+ * the reader (and crawler) hits a 404 until that date. The anchor text stays,
+ * so the sentence still reads correctly — only the link is dropped.
+ */
+export function unlinkUnpublished(content: string, now: number = Date.now()): string {
+    return content.replace(/\[([^\]]+)\]\((\/blog\/[^)\s]+)\)/g, (whole, label: string, href: string) => {
+        const slug = href.replace('/blog/', '').replace(/[#?].*$/, '');
+        const target = BLOG_ARTICLES.find(a => a.slug === slug);
+        // Unknown slug or not yet live → render as plain text.
+        if (!target || !isArticlePublished(target, now)) return label;
+        return whole;
+    });
+}
+
+/**
  * Articles to surface on a city+service silo page — the reverse of the
  * in-article links, so the topical cluster is connected both ways.
  * Priority: same city + same service → same city + same category →
