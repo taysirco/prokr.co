@@ -4,7 +4,10 @@ import { Phone, Mail, MapPin, Facebook, Instagram } from 'lucide-react';
 import { CITIES, SERVICES, getCityBySlug, getServiceBySlug } from '@/lib/seed';
 import { NAP } from '@/lib/nap';
 import { getCityKeyword } from '@/lib/locale-formatting';
-import { hasPageOverride } from '@/lib/overrides/registry';
+// Existence check ONLY — see the note in search-engine.ts. Footer renders inside
+// 'use client' pages (e.g. /contact-us), so the registry must not be reachable
+// from here either. Regenerate with: npx tsx scripts/gen-override-index.ts
+import { pageOverrideExists as hasPageOverride } from '@/lib/overrides/override-index.generated';
 import { isAbsorbedSlug, getCanonicalSlug } from '@/lib/services/super-page-groups';
 import type { SubRegion } from '@/lib/sub-regions';
 

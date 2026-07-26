@@ -145,12 +145,51 @@ export function getServicePhrase(category?: string): string {
 }
 
 /**
+ * Head word of each category's service phrase. Used to detect that a business
+ * name ALREADY states its trade — e.g. "الهدي لنقل الاثاث والعفش" — so we don't
+ * emit "شركة الهدي لنقل الاثاث والعفش لنقل العفش".
+ */
+const COMPANY_SERVICE_HEAD_WORD: Record<string, string> = {
+    'moving': 'نقل',
+    'cleaning': 'تنظيف',
+    'sewage': 'صرف',
+    'pest-control': 'مكافحة',
+    'leak-detection': 'كشف',
+    'insulation': 'عزل',
+};
+
+/**
  * Build a company display name like "شركة {name} {service phrase}".
- * Avoids doubling the "شركة"/"مؤسسة"/… prefix when the name already has one.
+ * - Avoids doubling the "شركة"/"مؤسسة"/… prefix when the name already has one.
+ * - Avoids doubling the trade when the name already states it.
  */
 export function formatCompanyDisplayName(businessName: string, category?: string): string {
     const name = (businessName || 'الخدمات').trim();
     const prefixes = ['شركة', 'مؤسسة', 'مكتب', 'مجموعة'];
     const base = prefixes.some(p => name.startsWith(p)) ? name : `شركة ${name}`;
+
+    const headWord = category ? COMPANY_SERVICE_HEAD_WORD[category] : undefined;
+    if (headWord && name.includes(headWord)) return base;
+
     return `${base} ${getServicePhrase(category)}`;
+}
+
+/** Brand as it must appear in every <title>. */
+export const BRAND_AR = 'بروكر الخدمي';
+
+/**
+ * The one and only <title> shape for /company/{code}:
+ *
+ *     شركة الهدي لنقل الاثاث والعفش - بروكر الخدمي
+ *
+ * The city keyword stays out on purpose: appending it made every company page
+ * compete for the head term ("نقل عفش بالرياض") and cannibalize the
+ * /{city}/{service} directory page. Company profiles target BRANDED queries;
+ * local relevance lives in the description, body copy and areaServed schema.
+ *
+ * Must be passed through Next's `title: { absolute }` so the root layout
+ * template ("%s | بروكر الخدمي") does not append the brand a second time.
+ */
+export function buildCompanyTitle(businessName: string, category?: string): string {
+    return `${formatCompanyDisplayName(businessName, category)} - ${BRAND_AR}`;
 }

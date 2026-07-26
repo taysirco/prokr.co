@@ -4,6 +4,9 @@
 // ============================================
 
 import type { PageOverride } from './types';
+// Neighbourhood (3-segment) pages, generated from the pages/{city}/{subregion}/
+// directory layout. See scripts/gen-neighborhood-registry.ts.
+import { NEIGHBORHOOD_OVERRIDES } from './neighborhood-registry.generated';
 
 type OverrideKey = `${string}::${string}`;
 
@@ -304,7 +307,6 @@ import { override as jeddahSewageSuction } from './pages/jeddah/sewage-suction';
 import { override as makkahFurnitureMoving } from './pages/makkah/furniture-moving';
 import { override as makkahFurnitureStorage } from './pages/makkah/furniture-storage';
 import { override as makkahDyna } from './pages/makkah/dyna';
-import { override as makkahSharaiaMovers } from './pages/makkah/sharaia/movers';
 import { override as makkahDabab } from './pages/makkah/dabab';
 import { override as makkahCleaning } from './pages/makkah/cleaning';
 import { override as makkahTanksCleaning } from './pages/makkah/tanks-cleaning';
@@ -1021,6 +1023,12 @@ import { override as alBahaSewageSuction } from './pages/al-baha/sewage-suction'
 // ═══════════════════════════════════════
 
 const PAGE_OVERRIDES: Record<OverrideKey, PageOverride> = {
+    // Neighbourhood pages — keys '{city}/{subregion}::{service}', served by the
+    // 3-segment route /{city}/{subregion}/{service}. Wired from the directory
+    // layout instead of by hand: there are 100+ of them and a single typo here
+    // silently 404s a page (that route sets dynamicParams = false).
+    // Regenerate with: npx tsx scripts/gen-neighborhood-registry.ts
+    ...NEIGHBORHOOD_OVERRIDES,
 
     // ═══ CENTRAL REGION ═══
 
@@ -1315,7 +1323,6 @@ const PAGE_OVERRIDES: Record<OverrideKey, PageOverride> = {
     [makeOverrideKey('makkah', 'furniture-moving')]: makkahFurnitureMoving,
     [makeOverrideKey('makkah', 'furniture-storage')]: makkahFurnitureStorage,
     [makeOverrideKey('makkah', 'dyna')]: makkahDyna,
-    [makeOverrideKey('makkah/sharaia', 'movers')]: makkahSharaiaMovers,
     [makeOverrideKey('makkah', 'dabab')]: makkahDabab,
     [makeOverrideKey('makkah', 'cleaning')]: makkahCleaning,
     [makeOverrideKey('makkah', 'tanks-cleaning')]: makkahTanksCleaning,

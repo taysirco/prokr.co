@@ -2,6 +2,17 @@ import { CITIES, SERVICES, SERVICE_IMAGES, getServiceImage } from '@/lib/seed';
 import { getServiceKeywordProfile, getCityKeyword } from '@/lib/locale-formatting';
 import { hasPageOverride } from '@/lib/overrides/registry';
 import { isAbsorbedSlug } from '@/lib/services/super-page-groups';
+import { BLOG_ARTICLES, isArticlePublished } from '@/lib/blog-data';
+
+/** Escape the five XML entities so titles never break the feed. */
+function escapeXml(s: string): string {
+    return s
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&apos;');
+}
 
 const BASE_URL = 'https://prokr.co';
 
@@ -126,6 +137,23 @@ export async function GET() {
 `;
         }
         xml += `  </url>
+`;
+    }
+
+    // Blog articles that carry their own hero image — published ones only
+    for (const article of BLOG_ARTICLES) {
+        if (!article.image || !isArticlePublished(article)) continue;
+        const imgUrl = article.image.startsWith('http') ? article.image : `${BASE_URL}${article.image}`;
+        xml += `  <url>
+    <loc>${BASE_URL}/blog/${article.slug}</loc>
+    <lastmod>${new Date(article.updateDate).toISOString().split('T')[0]}</lastmod>
+    <image:image>
+      <image:loc>${imgUrl}</image:loc>
+      <image:title>${escapeXml(article.title)}</image:title>
+      <image:caption>${escapeXml(article.imageAlt ?? article.metaDescription)}</image:caption>${article.cityName ? `
+      <image:geo_location>${article.cityName}، المملكة العربية السعودية</image:geo_location>` : ''}
+    </image:image>
+  </url>
 `;
     }
 

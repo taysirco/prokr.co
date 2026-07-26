@@ -1,6 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { CITIES, SERVICES } from '@/lib/seed';
 import { isAbsorbedSlug, buildRedirectUrl, getCanonicalSlug } from '@/lib/services/super-page-groups';
+// Generated flat key list — NOT the override registry, which statically imports
+// ~1,200 content modules and must never reach the edge runtime.
+// Regenerate with: npx tsx scripts/gen-override-index.ts
+import { pageOverrideExists } from '@/lib/overrides/override-index.generated';
 
 // Create sets for O(1) lookup
 const citySlugs = new Set(CITIES.map(c => c.slug));
@@ -629,6 +633,17 @@ export function middleware(request: NextRequest) {
     if (segments.length === 2 && citySlugs.has(firstSegment)) {
         const serviceSlug = segments[1];
         if (isAbsorbedSlug(serviceSlug)) {
+            const canonicalSlug = getCanonicalSlug(serviceSlug);
+            // Only hop to /{city}/{canonical} when that page actually exists.
+            // Otherwise /[city]/[service] would immediately 301 again to the
+            // global hub — a two-hop chain that leaks link equity and burns
+            // crawl budget. Send it to the hub directly instead.
+            if (canonicalSlug && !pageOverrideExists(firstSegment, canonicalSlug)) {
+                const url = request.nextUrl.clone();
+                url.pathname = `/${canonicalSlug}`;
+                url.hash = '';
+                return NextResponse.redirect(url, 301);
+            }
             const redirectPath = buildRedirectUrl(firstSegment, serviceSlug);
             if (redirectPath) {
                 const url = request.nextUrl.clone();

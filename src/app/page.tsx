@@ -23,7 +23,7 @@ import {
 } from 'lucide-react';
 import { CITIES, SERVICES, getCitiesByRegion, REGION_NAMES } from '@/lib/seed';
 import { isAbsorbedSlug } from '@/lib/services/super-page-groups';
-import { hasPageOverride } from '@/lib/overrides/registry';
+import { CITY_SERVICE_LINK_GROUPS } from '@/lib/city-service-links';
 import Footer from '@/components/Footer';
 import SourceOrderLayout from '@/components/SourceOrderLayout';
 import FaqAccordion from '@/components/FaqAccordion';
@@ -45,6 +45,14 @@ const serviceIcons: Record<string, React.ReactNode> = {
   'water-leak-detection': <Droplet className="w-7 h-7" />,
   'tank-insulation': <Shield className="w-7 h-7" />,
   'sofa-cleaning': <Sparkles className="w-7 h-7" />,
+};
+
+// Icons for the city × service link grid (component refs, sized at the call site)
+const cityServiceIcons: Record<string, React.ComponentType<{ className?: string }>> = {
+  'furniture-moving': Truck,
+  'cleaning': Sparkles,
+  'pest-control': Bug,
+  'water-leak-detection': Droplet,
 };
 
 
@@ -357,6 +365,51 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* 🔗 Top commercial links — city × service.
+            Deliberately placed OUTSIDE SourceOrderLayout and directly under the
+            hero: these are the highest-value internal links on the site, so they
+            must be first in BOTH source order (crawl priority / link equity) and
+            visual order (users land on the money pages in one click). */}
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14" aria-labelledby="city-services-heading">
+          <div className="text-center mb-10">
+            <span className="inline-block px-4 py-1.5 bg-amber-100 text-amber-700 font-medium rounded-full text-sm mb-4">
+              خدمات شائعة
+            </span>
+            <h2 id="city-services-heading" className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              أبرز الخدمات حسب المدينة
+            </h2>
+            <p className="text-gray-500 max-w-2xl mx-auto">
+              روابط مباشرة لأكثر الخدمات طلباً في المدن الرئيسية — شركات معتمدة وأسعار محدّثة
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {CITY_SERVICE_LINK_GROUPS.map(group => {
+              const Icon = cityServiceIcons[group.serviceSlug] || Wrench;
+              return (
+                <div key={group.serviceSlug} className="bg-white rounded-2xl border border-gray-200 p-6 hover:border-sky-300 hover:shadow-lg transition-all">
+                  <h3 className="font-bold text-gray-900 mb-4 flex items-center gap-2">
+                    <Icon className="w-5 h-5 text-sky-600" />
+                    {group.heading}
+                  </h3>
+                  <ul className="space-y-2.5">
+                    {group.links.map(link => (
+                      <li key={link.citySlug}>
+                        <Link
+                          href={link.href}
+                          className="text-gray-600 hover:text-sky-700 text-sm flex items-center gap-1 group transition-colors"
+                        >
+                          <ChevronLeft className="w-3.5 h-3.5 shrink-0 text-gray-300 group-hover:text-sky-500 transition-colors" />
+                          {link.anchor}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+
         {/* 🔍 Content-first layout
             Source order: SEO content FIRST (Google reads this first)
             Visual order: Services/Cities/CTA FIRST (user sees this first via column-reverse) */}
@@ -405,53 +458,6 @@ export default function HomePage() {
                       <p className="text-gray-500">اتصل أو راسل الشركة عبر الواتساب واحصل على الخدمة</p>
                     </div>
                   </div>
-                </div>
-              </section>
-
-              {/* Featured Blog Articles — SEO Content (source-first) */}
-              <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-                <div className="text-center mb-10">
-                  <span className="inline-block px-4 py-1.5 bg-amber-100 text-amber-700 font-medium rounded-full text-sm mb-4">
-                    خدمات شائعة
-                  </span>
-                  <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-                    أبرز الخدمات حسب المدينة
-                  </h2>
-                  <p className="text-gray-500 max-w-2xl mx-auto">
-                    روابط مباشرة لأكثر الخدمات طلباً في المدن الرئيسية — شركات معتمدة وأسعار محدّثة
-                  </p>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                  {[
-                    { service: 'furniture-moving', title: 'نقل العفش', label: 'عفش', icon: Truck },
-                    { service: 'cleaning', title: 'التنظيف', label: 'تنظيف', icon: Sparkles },
-                    { service: 'pest-control', title: 'مكافحة الحشرات', label: 'مكافحة حشرات', icon: Bug },
-                    { service: 'water-leak-detection', title: 'كشف التسربات', label: 'كشف تسربات', icon: Droplet },
-                  ].map(group => {
-                    const cityLinks = CITIES.filter(c => hasPageOverride(c.slug, group.service)).slice(0, 8);
-                    if (cityLinks.length === 0) return null;
-                    return (
-                      <div key={group.service} className="bg-white rounded-2xl border border-gray-200 p-6 hover:border-sky-300 hover:shadow-lg transition-all">
-                        <h3 className="font-bold text-gray-900 mb-4 flex items-center gap-2">
-                          <group.icon className="w-5 h-5 text-sky-600" />
-                          {group.title}
-                        </h3>
-                        <ul className="space-y-2.5">
-                          {cityLinks.map(c => (
-                            <li key={c.slug}>
-                              <Link
-                                href={`/${c.slug}/${group.service}`}
-                                className="text-gray-600 hover:text-sky-700 text-sm flex items-center gap-1 group transition-colors"
-                              >
-                                <ChevronLeft className="w-3.5 h-3.5 text-gray-300 group-hover:text-sky-500 transition-colors" />
-                                {group.label} {c.name_ar}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    );
-                  })}
                 </div>
               </section>
 

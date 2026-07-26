@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { Home, ChevronLeft, Clock, User, Calendar, Tag, ArrowLeft, Shield, BookOpen, CheckCircle } from 'lucide-react';
-import { BLOG_ARTICLES, getBlogArticle } from '@/lib/blog-data';
+import { BLOG_ARTICLES, getBlogArticle, getPublishedArticles } from '@/lib/blog-data';
 import { getServiceBySlug } from '@/lib/seed';
 import { BreadcrumbJsonLd } from '@/components/JsonLd';
 import { isAbsorbedSlug } from '@/lib/services/super-page-groups';
@@ -22,10 +22,14 @@ export async function generateMetadata({ params }: BlogArticlePageProps): Promis
     const article = getBlogArticle(slug);
     if (!article) return { title: 'مقال غير موجود' };
 
+    const shareImage = article.image
+        ? `https://prokr.co${article.image}`
+        : 'https://prokr.co/logo.png';
+
     return {
         title: article.metaTitle,
         description: article.metaDescription,
-        keywords: article.tags,
+        keywords: [...article.tags, ...(article.longTailKeywords ?? [])],
         openGraph: {
             title: article.metaTitle,
             description: article.metaDescription,
@@ -37,17 +41,17 @@ export async function generateMetadata({ params }: BlogArticlePageProps): Promis
             siteName: 'بروكر الخدمي',
             url: `https://prokr.co/blog/${slug}`,
             images: [{
-                url: 'https://prokr.co/logo.png',
-                width: 512,
-                height: 512,
-                alt: `${article.title} - مدونة بروكر`,
+                url: shareImage,
+                width: article.image ? 1200 : 512,
+                height: article.image ? 675 : 512,
+                alt: article.imageAlt ?? `${article.title} - مدونة بروكر`,
             }],
         },
         twitter: {
             card: 'summary_large_image',
             title: article.metaTitle,
             description: article.metaDescription,
-            images: ['https://prokr.co/logo.png'],
+            images: [shareImage],
         },
         alternates: {
             canonical: `https://prokr.co/blog/${slug}`,
@@ -69,8 +73,14 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
         { name: article.title, url: `https://prokr.co/blog/${slug}` },
     ];
 
-    const relatedArticles = BLOG_ARTICLES
-        .filter(a => a.slug !== slug && a.category === article.category)
+    // Prefer same-city articles, then same-category — and never surface a post
+    // whose scheduled slot has not arrived yet.
+    const published = getPublishedArticles().filter(a => a.slug !== slug);
+    const relatedArticles = [
+        ...published.filter(a => a.citySlug && a.citySlug === article.citySlug && a.category === article.category),
+        ...published.filter(a => a.category === article.category),
+    ]
+        .filter((a, i, arr) => arr.findIndex(x => x.slug === a.slug) === i)
         .slice(0, 3);
 
     const isProtection = article.category === 'consumer-protection';
@@ -98,7 +108,25 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
                         dateModified: article.updateDate,
                         mainEntityOfPage: `https://prokr.co/blog/${slug}`,
                         inLanguage: 'ar',
-                        keywords: article.tags.join(', '),
+                        keywords: [...article.tags, ...(article.longTailKeywords ?? [])].join(', '),
+                        ...(article.image && {
+                            image: {
+                                '@type': 'ImageObject',
+                                url: `https://prokr.co${article.image}`,
+                                caption: article.imageAlt ?? article.title,
+                            },
+                        }),
+                        ...(article.citySlug && {
+                            contentLocation: {
+                                '@type': 'Place',
+                                name: article.cityName ?? article.citySlug,
+                                address: {
+                                    '@type': 'PostalAddress',
+                                    addressLocality: article.cityName ?? article.citySlug,
+                                    addressCountry: 'SA',
+                                },
+                            },
+                        }),
                         ...(article.reviewedBy && {
                             reviewedBy: { '@type': 'Person', name: article.reviewedBy },
                         }),
@@ -219,10 +247,36 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
 
                 {/* Article Body */}
                 <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                    {/* Hero image */}
+                    {article.image && (
+                        <figure className="mb-10">
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img
+                                src={article.image}
+                                alt={article.imageAlt ?? article.title}
+                                width={1200}
+                                height={675}
+                                loading="eager"
+                                className="w-full h-auto rounded-xl border border-gray-200 shadow-sm"
+                            />
+                            {article.imageAlt && (
+                                <figcaption className="text-gray-500 text-xs mt-2 text-center">{article.imageAlt}</figcaption>
+                            )}
+                        </figure>
+                    )}
+
                     {/* Intro */}
-                    <div className={`border-r-4 rounded-xl p-6 mb-10 ${isProtection ? 'bg-red-50 border-red-500' : 'bg-sky-50 border-sky-500'}`}>
+                    <div className={`blog-intro border-r-4 rounded-xl p-6 mb-10 ${isProtection ? 'bg-red-50 border-red-500' : 'bg-sky-50 border-sky-500'}`}>
                         <p className="text-gray-700 text-lg leading-relaxed">{article.excerpt}</p>
                     </div>
+
+                    {/* Direct answer — AEO / AI Overviews / voice search */}
+                    {article.directAnswer && (
+                        <div className="direct-answer bg-white border-2 border-emerald-200 rounded-xl p-6 mb-10">
+                            <h2 className="text-sm font-bold text-emerald-800 mb-2">الإجابة المختصرة</h2>
+                            <p className="text-gray-800 leading-relaxed">{article.directAnswer}</p>
+                        </div>
+                    )}
 
                     {/* Author Bio & Trust Signals */}
                     {article.authorBio && (

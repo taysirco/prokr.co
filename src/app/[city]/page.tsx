@@ -10,7 +10,7 @@ import { BreadcrumbJsonLd, ItemListJsonLd, SpeakableWebPageJsonLd, WebPageJsonLd
 import { CitableSummary } from '@/components/seo/CitableSummary';
 import { getCityContext } from '@/lib/city-context';
 import { getCityKeyword } from '@/lib/locale-formatting';
-import { BLOG_ARTICLES } from '@/lib/blog-data';
+import { getPublishedArticles, getPublishedArticlesByCity } from '@/lib/blog-data';
 import { hasPageOverride } from '@/lib/overrides/registry';
 import { isAbsorbedSlug } from '@/lib/services/super-page-groups';
 import Footer from '@/components/Footer';
@@ -121,6 +121,13 @@ export default async function CityPage({ params }: CityPageProps) {
     const aiContent = generateCityMeta(city);
     const cityContext = getCityContext(city.slug);
     const cityKw = getCityKeyword(city.name_ar, 'ba');
+    // Prefer guides written for this city; fall back to the newest live articles.
+    const cityGuides = [
+        ...getPublishedArticlesByCity(resolvedParams.city),
+        ...getPublishedArticles(),
+    ]
+        .filter((a, i, arr) => arr.findIndex(x => x.slug === a.slug) === i)
+        .slice(0, 3);
 
     // City-level FAQ items (general questions about services in this city)
     const availableServices = SERVICES.filter(s => hasPageOverride(city.slug, s.slug) && !isAbsorbedSlug(s.slug));
@@ -349,7 +356,7 @@ export default async function CityPage({ params }: CityPageProps) {
                             <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                                 <h2 className="text-xl font-bold text-gray-900 mb-6">مقالات وأدلة مفيدة</h2>
                                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                                    {BLOG_ARTICLES.slice(0, 3).map(article => (
+                                    {cityGuides.map(article => (
                                         <Link key={article.slug} href={`/blog/${article.slug}`} className="group bg-white border border-gray-200 rounded-xl p-4 hover:border-sky-300 hover:shadow-md transition-all">
                                             <span className="text-xs text-sky-600 font-medium">{article.categoryLabel}</span>
                                             <h3 className="font-bold text-gray-900 text-sm mt-1 group-hover:text-sky-700 transition-colors line-clamp-2">{article.title}</h3>

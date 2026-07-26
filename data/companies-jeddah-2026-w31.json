@@ -1,0 +1,49 @@
+[
+  {
+    "business_name": "مؤسسة دلة جدة للصيانة والنظافة",
+    "phone_number": "+966553702666",
+    "whatsapp_number": "+966553702666",
+    "description": "مؤسسة دلة جدة للصيانة والنظافة — مكافحة حشرات ورش مبيدات بجدة. تشمل الخدمات مكافحة الصراصير والبعوض والنمل الأبيض وبق الفراش والعتة والفئران والعناكب والنحل، إضافة إلى تنظيف الخزانات وتنظيف المنازل. مقر المؤسسة في حي البوادي بجدة.",
+    "targeted_cities": ["jeddah"],
+    "targeted_services": ["pest-control", "pesticide-spraying", "cockroach-control", "termite-control", "bedbugs-control", "rodent-control", "tanks-cleaning"],
+    "targeted_neighborhoods": [],
+    "is_premium": false,
+    "priority_score": 55,
+    "crn": "4030323493",
+    "street_address": "حي البوادي، جدة",
+    "postal_code": "23443"
+  },
+  {
+    "business_name": "اكسترا كلين",
+    "phone_number": "+966539191300",
+    "whatsapp_number": "+966550782021",
+    "description": "اكسترا كلين (Extra Clean) — شركة تنظيف مقرها جدة تقدم التنظيف العميق للوحدات السكنية والتجارية، وتنظيف مداخن ومراوح شفط المطاعم، وتنظيف الواجهات الزجاجية للمعارض والمحلات، وتنظيف الخزانات العلوية والأرضية، وتنظيف المفروشات من كنب وسجاد ومراتب، إضافة إلى خدمات الضيافة والإشراف على النظافة وتنسيق الحدائق.",
+    "targeted_cities": ["jeddah"],
+    "targeted_services": ["cleaning", "deep-cleaning", "glass-facades-cleaning", "restaurant-chimney-cleaning", "tanks-cleaning", "sofa-cleaning", "carpet-cleaning", "mattress-cleaning"],
+    "targeted_neighborhoods": [],
+    "is_premium": false,
+    "priority_score": 50
+  },
+  {
+    "business_name": "الجواد لخدمات النقل واللوجستيات",
+    "phone_number": "+966920008910",
+    "description": "الجواد لخدمات النقل واللوجستيات (Al Jawad) — نقل وتغليف الأثاث داخل المملكة وخارجها، ونقل المكاتب والمنقولات التجارية، وخدمات التغليف والتصنيد، والتخزين وإدارة المستودعات في جدة والرياض. المقر على طريق الملك عبدالعزيز، حي البساتين، جدة.",
+    "targeted_cities": ["jeddah"],
+    "targeted_services": ["furniture-moving", "furniture-storage", "moving-out"],
+    "targeted_neighborhoods": [],
+    "is_premium": false,
+    "priority_score": 55,
+    "street_address": "طريق الملك عبدالعزيز، حي البساتين، جدة"
+  },
+  {
+    "business_name": "المعمار لكشف تسربات المياه والعزل",
+    "phone_number": "+966509509545",
+    "whatsapp_number": "+966509509545",
+    "description": "المعمار لكشف تسربات المياه والعزل — كشف تسربات المياه للأسطح والخزانات والمسابح بأجهزة متخصصة، وعزل الأسطح والخزانات والحمامات والمطابخ والمسابح، وترميم وفحص المنازل، وتنظيف وتعقيم الخزانات. تغطي جدة ومكة والطائف والمدينة المنورة وينبع.",
+    "targeted_cities": ["jeddah"],
+    "targeted_services": ["water-leak-detection", "tank-leak-detection", "bathroom-leak-detection", "roof-insulation", "tank-insulation", "water-insulation", "tanks-cleaning"],
+    "targeted_neighborhoods": [],
+    "is_premium": false,
+    "priority_score": 50
+  }
+]

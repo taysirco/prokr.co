@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Home, ChevronLeft, MapPin, Truck, Sparkles, Bug, Droplet, Wrench, Building2 } from 'lucide-react';
 import { getServiceBySlug, getServiceImage, CATEGORY_NAMES } from '@/lib/seed';
-import { getSubRegionsByCity } from '@/lib/sub-regions';
+import { getSubRegionsByCity, getSubRegionServiceHref } from '@/lib/sub-regions';
 import type { SubRegion } from '@/lib/sub-regions';
 import type { City } from '@/types';
 import { BreadcrumbJsonLd, ItemListJsonLd, WebPageJsonLd, ServiceAreaJsonLd, SpeakableWebPageJsonLd } from '@/components/JsonLd';
@@ -89,14 +89,30 @@ export function SubRegionView({ city, subRegion }: { city: City; subRegion: SubR
         .filter(Boolean)
         .filter(service => service && hasPageOverride(city.slug, service.slug) && !isAbsorbedSlug(service.slug));
 
-    const servicesByCategory = availableServices.reduce((acc, service) => {
-        if (!service) return acc;
-        if (!acc[service.category]) {
-            acc[service.category] = [];
-        }
-        acc[service.category].push(service);
+    // Resolve each service to its real destination ONCE, and derive the label
+    // from the destination — not the other way round.
+    //
+    // These cards used to be labelled "{service} {subRegion}" while always
+    // linking to /{city}/{service}: on /riyadh/north, "نقل عفش شمال الرياض"
+    // dropped the user on the city-wide Riyadh page. A neighborhood page exists
+    // only where a curated override was written, so ask first, and when there
+    // isn't one, say "{service} {city}" — which is what the link actually is.
+    const serviceLinks = availableServices.filter(Boolean).map(service => {
+        const subRegionHref = getSubRegionServiceHref(city.slug, subRegion.slug, service!.slug);
+        return {
+            service: service!,
+            href: subRegionHref ?? `/${city.slug}/${service!.slug}`,
+            isSubRegionPage: subRegionHref !== null,
+            label: subRegionHref
+                ? `${service!.name_ar} ${subRegion.name_ar}`
+                : `${service!.name_ar} ${city.name_ar}`,
+        };
+    });
+
+    const servicesByCategory = serviceLinks.reduce((acc, link) => {
+        (acc[link.service.category] ||= []).push(link);
         return acc;
-    }, {} as Record<string, typeof availableServices>);
+    }, {} as Record<string, typeof serviceLinks>);
 
     const otherSubRegions = getSubRegionsByCity(city.slug)
         .filter(sr => sr.slug !== subRegion.slug);
@@ -145,9 +161,11 @@ export function SubRegionView({ city, subRegion }: { city: City; subRegion: SubR
                 type="services"
                 listName={`خدمات ${subRegion.name_ar}`}
                 description={`قائمة الخدمات المتوفرة في ${subRegion.name_ar} - ${city.name_ar}`}
-                items={availableServices.filter(Boolean).map(service => ({
-                    name: service!.name_ar,
-                    url: `https://prokr.co/${city.slug}/${service!.slug}`
+                // Schema URLs must match the rendered links exactly, otherwise the
+                // ItemList advertises destinations the page does not actually offer.
+                items={serviceLinks.map(({ label, href }) => ({
+                    name: label,
+                    url: `https://prokr.co${href}`
                 }))}
             />
             {/* ServiceArea Schema with GeoCoordinates for Local SEO */}
@@ -345,10 +363,10 @@ export function SubRegionView({ city, subRegion }: { city: City; subRegion: SubR
                                 </div>
 
                                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-                                    {services.map(service => service && (
+                                    {services.map(({ service, href, label, isSubRegionPage }) => (
                                         <Link
                                             key={service.slug}
-                                            href={`/${city.slug}/${service.slug}`}
+                                            href={href}
                                             className="group relative bg-white rounded-xl border border-gray-200 hover:border-sky-300 hover:shadow-lg transition-all overflow-hidden"
                                         >
                                             <div className="relative aspect-[4/3] bg-gray-100 overflow-hidden">
@@ -364,8 +382,15 @@ export function SubRegionView({ city, subRegion }: { city: City; subRegion: SubR
                                             </div>
                                             <div className="absolute bottom-0 left-0 right-0 p-3">
                                                 <h3 className="font-semibold text-white text-sm">
-                                                    {service.name_ar} {subRegion.name_ar}
+                                                    {label}
                                                 </h3>
+                                                {!isSubRegionPage && (
+                                                    // The destination is the city-wide directory, which covers this
+                                                    // neighborhood — say so instead of implying a dedicated page.
+                                                    <p className="text-white/70 text-[11px] mt-0.5">
+                                                        يشمل {subRegion.name_ar}
+                                                    </p>
+                                                )}
                                             </div>
                                         </Link>
                                     ))}

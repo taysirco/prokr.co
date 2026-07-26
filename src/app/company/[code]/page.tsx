@@ -16,7 +16,7 @@ import {
     CheckCircle
 } from 'lucide-react';
 import { getCityBySlug, getServiceBySlug } from '@/lib/seed';
-import { getCityKeyword, formatCompanyDisplayName } from '@/lib/locale-formatting';
+import { getCityKeyword, formatCompanyDisplayName, buildCompanyTitle } from '@/lib/locale-formatting';
 import { getAdvertiserByCode } from '@/lib/db-actions';
 import { getCanonicalSlug } from '@/lib/services/super-page-groups';
 import { hasPageOverride } from '@/lib/overrides/registry';
@@ -63,13 +63,11 @@ export async function generateMetadata({ params }: CompanyPageProps): Promise<Me
 
     const mainCity = getCityBySlug(advertiser.targeted_cities[0]);
     const cityKw = mainCity ? getCityKeyword(mainCity.name_ar, 'ba') : '';
-    // Title = "شركة {name} {service}" ONLY — deliberately WITHOUT the city keyword.
-    // Appending the city (e.g. "بالرياض") made every company page compete for the
-    // head term "نقل عفش بالرياض" and cannibalize the /{city}/{service} directory
-    // page. Company profile pages should target BRANDED queries (the company's own
-    // name + service); local relevance is preserved in the description, body, and
-    // areaServed schema. The root layout title template ("%s | بروكر") adds brand once.
-    const title = formatCompanyDisplayName(advertiser.business_name, service?.category);
+    // "شركة {name} {service} - بروكر الخدمي" — see buildCompanyTitle for why the
+    // city keyword is deliberately absent.
+    const title = buildCompanyTitle(advertiser.business_name, service?.category);
+    // Social cards drop the brand suffix: og:site_name already carries it.
+    const socialTitle = formatCompanyDisplayName(advertiser.business_name, service?.category);
     // Smart truncation: cut at word boundary to avoid mid-word breaks in OG/meta
     const descText = advertiser.description.length > 120
         ? advertiser.description.slice(0, advertiser.description.lastIndexOf(' ', 120)) || advertiser.description.slice(0, 120)
@@ -77,9 +75,9 @@ export async function generateMetadata({ params }: CompanyPageProps): Promise<Me
     const description = `${advertiser.business_name} - ${descText}. شركة معتمدة ومرخصة${cityKw ? ` ${cityKw}` : ''}.`;
 
     return {
-        // `absolute` bypasses the root layout title template ("%s | بروكر") so the
-        // company <title> is exactly "شركة {name} {service}" (brand-query focused),
-        // with no city head term and no brand suffix. og/twitter keep the same text.
+        // `absolute` bypasses the root layout title template ("%s | بروكر الخدمي")
+        // — `title` already ends with " - بروكر الخدمي", so without this the brand
+        // would be printed twice.
         title: { absolute: title },
         description,
         keywords: [
@@ -91,7 +89,7 @@ export async function generateMetadata({ params }: CompanyPageProps): Promise<Me
             ...(service ? [`شركة ${service.name_ar}`] : []),
         ],
         openGraph: {
-            title,
+            title: socialTitle,
             description,
             images: advertiser.logo_url ? [advertiser.logo_url] : ['https://prokr.co/images/og-default.png'],
             locale: 'ar_SA',
@@ -101,7 +99,7 @@ export async function generateMetadata({ params }: CompanyPageProps): Promise<Me
         },
         twitter: {
             card: 'summary_large_image',
-            title,
+            title: socialTitle,
             description,
         },
         alternates: {

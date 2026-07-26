@@ -19,6 +19,22 @@ export interface BlogArticle {
     sections: { heading: string; content: string }[];
     faq: { question: string; answer: string }[];
     howToSteps?: { name: string; text: string }[];
+    /** Hero image path under /public (e.g. /images/blog/jeddah/....jpg) */
+    image?: string;
+    /** Descriptive Arabic alt text for the hero image */
+    imageAlt?: string;
+    /** City slug this article is geo-targeted to (GEO / local SEO) */
+    citySlug?: string;
+    /** Arabic city name used in on-page geo signals */
+    cityName?: string;
+    /** The single head keyword the article targets */
+    primaryKeyword?: string;
+    /** Long-tail variants targeted inside the body (semantic SEO) */
+    longTailKeywords?: string[];
+    /** 40–60 word extractable answer for AEO / AI Overviews / voice search */
+    directAnswer?: string;
+    /** Scheduled publish time in Asia/Riyadh, "HH:MM" — combined with publishDate */
+    publishTime?: string;
 }
 
 export function getBlogArticle(slug: string): BlogArticle | undefined {
@@ -27,6 +43,82 @@ export function getBlogArticle(slug: string): BlogArticle | undefined {
 
 export function getBlogArticlesByCategory(category: string): BlogArticle[] {
     return BLOG_ARTICLES.filter(a => a.category === category);
+}
+
+// ────────────────────────────────────────────────
+// Scheduled publishing (Asia/Riyadh, UTC+3)
+// Articles carry a date + a randomised time of day; anything whose
+// timestamp is still in the future is hidden from the index, the
+// sitemap and the related-article rails until it is due.
+// ────────────────────────────────────────────────
+
+/** Absolute publish timestamp (ms) for an article, in Asia/Riyadh time. */
+export function getPublishTimestamp(article: BlogArticle): number {
+    const time = article.publishTime ?? '09:00';
+    // Riyadh is UTC+3 year-round (no DST) → append the fixed offset.
+    return new Date(`${article.publishDate}T${time}:00+03:00`).getTime();
+}
+
+/** Has this article's scheduled slot already passed? */
+export function isArticlePublished(article: BlogArticle, now: number = Date.now()): boolean {
+    return getPublishTimestamp(article) <= now;
+}
+
+/** Every article that is live right now, newest first. */
+export function getPublishedArticles(now: number = Date.now()): BlogArticle[] {
+    return BLOG_ARTICLES
+        .filter(a => isArticlePublished(a, now))
+        .sort((a, b) => getPublishTimestamp(b) - getPublishTimestamp(a));
+}
+
+/** Live articles in a category, newest first. */
+export function getPublishedArticlesByCategory(category: string, now: number = Date.now()): BlogArticle[] {
+    return getPublishedArticles(now).filter(a => a.category === category);
+}
+
+/** Live articles geo-targeted to a city (e.g. 'jeddah'), newest first. */
+export function getPublishedArticlesByCity(citySlug: string, now: number = Date.now()): BlogArticle[] {
+    return getPublishedArticles(now).filter(a => a.citySlug === citySlug);
+}
+
+/**
+ * Articles to surface on a city+service silo page — the reverse of the
+ * in-article links, so the topical cluster is connected both ways.
+ * Priority: same city + same service → same city + same category →
+ * same service anywhere → same category anywhere.
+ */
+export function getArticlesForCityService(
+    citySlug: string,
+    serviceSlug: string,
+    limit = 3,
+    now: number = Date.now(),
+): BlogArticle[] {
+    const live = getPublishedArticles(now);
+    const servesThis = (a: BlogArticle) => a.relatedServices.includes(serviceSlug);
+    // Map a service slug to the blog category it belongs to, when possible.
+    const category = live.find(servesThis)?.category;
+
+    // Earlier position in relatedServices means the article is more about
+    // that service, so it outranks a merely adjacent guide.
+    const byRelevance = (a: BlogArticle, b: BlogArticle) =>
+        a.relatedServices.indexOf(serviceSlug) - b.relatedServices.indexOf(serviceSlug);
+
+    const inCity = live.filter(a => a.citySlug === citySlug);
+    // For other cities, generic (city-less) guides read better than a guide
+    // whose title names a different city.
+    const generic = live.filter(a => !a.citySlug);
+
+    const ranked = [
+        ...inCity.filter(servesThis).sort(byRelevance),
+        ...inCity.filter(a => category && a.category === category),
+        ...generic.filter(servesThis).sort(byRelevance),
+        ...(category ? generic.filter(a => a.category === category) : []),
+        ...live.filter(servesThis).sort(byRelevance),
+        ...(category ? live.filter(a => a.category === category) : []),
+    ];
+
+    const seen = new Set<string>();
+    return ranked.filter(a => !seen.has(a.slug) && seen.add(a.slug)).slice(0, limit);
 }
 
 export const BLOG_CATEGORIES = [
@@ -58,6 +150,7 @@ import { BLOG_ARTICLES_CLEANING_MISTAKES } from './blog/cleaning-mistakes';
 import { BLOG_ARTICLES_DIY_VS_PRO } from './blog/diy-vs-pro';
 import { BLOG_ARTICLES_AC_MAINTENANCE } from './blog/ac-maintenance-guide';
 import { BLOG_ARTICLES_SUMMER_ENERGY } from './blog/summer-energy-savings';
+import { BLOG_ARTICLES_JEDDAH } from './blog/jeddah';
 
 // Aggregated blog articles
 export const BLOG_ARTICLES: BlogArticle[] = [
@@ -76,4 +169,5 @@ export const BLOG_ARTICLES: BlogArticle[] = [
     ...BLOG_ARTICLES_DIY_VS_PRO,
     ...BLOG_ARTICLES_AC_MAINTENANCE,
     ...BLOG_ARTICLES_SUMMER_ENERGY,
+    ...BLOG_ARTICLES_JEDDAH,
 ];

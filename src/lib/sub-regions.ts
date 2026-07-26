@@ -105,3 +105,51 @@ export const SUB_REGION_SERVICE_ALIASES: Record<string, string> = {
 export function resolveServiceSlug(slug: string): string {
     return SUB_REGION_SERVICE_ALIASES[slug] || slug;
 }
+
+// ════════════════════════════════════════════════════════════════════════
+// Neighborhood × service link resolution
+//
+// A /{city}/{subregion}/{service} page only exists when a curated override is
+// registered under the composite key '<city>/<subregion>::<service>' — the
+// 3-segment route sets `dynamicParams = false`, so every other combination is
+// a hard 404. Sub-region pages must therefore ask before linking, instead of
+// assuming the neighborhood page exists.
+//
+// Uses the GENERATED key index, not the override registry: this module is
+// imported by Footer.tsx, which renders inside 'use client' pages — pulling the
+// registry here would ship ~1,200 content modules (≈8.2 MB) to the browser.
+// Regenerate with: npx tsx scripts/gen-override-index.ts
+// ════════════════════════════════════════════════════════════════════════
+
+import { pageOverrideExists } from './overrides/override-index.generated';
+
+/** Reverse of SUB_REGION_SERVICE_ALIASES: 'furniture-moving' → ['movers', 'mover'] */
+const SERVICE_SLUG_ALIASES: Record<string, string[]> = Object.entries(SUB_REGION_SERVICE_ALIASES)
+    .reduce((acc, [alias, canonical]) => {
+        (acc[canonical] ||= []).push(alias);
+        return acc;
+    }, {} as Record<string, string[]>);
+
+/**
+ * URL of the neighborhood-specific page for this service, or `null` when no
+ * curated page exists (the caller should then link the city service page and
+ * label it as such, rather than promising neighborhood content it can't serve).
+ *
+ * Checks the canonical slug first, then its neighborhood aliases — the curated
+ * Makkah/Sharaia page is registered as 'movers', not 'furniture-moving'.
+ */
+export function getSubRegionServiceHref(
+    citySlug: string,
+    subRegionSlug: string,
+    serviceSlug: string
+): string | null {
+    const cityPath = `${citySlug}/${subRegionSlug}`;
+    const candidates = [serviceSlug, ...(SERVICE_SLUG_ALIASES[serviceSlug] || [])];
+
+    for (const slug of candidates) {
+        if (pageOverrideExists(cityPath, slug)) {
+            return `/${citySlug}/${subRegionSlug}/${slug}`;
+        }
+    }
+    return null;
+}
