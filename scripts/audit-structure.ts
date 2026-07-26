@@ -24,6 +24,7 @@ import { isAbsorbedSlug, getCanonicalSlug } from '../src/lib/services/super-page
 import { buildCompanyTitle } from '../src/lib/locale-formatting';
 import { OVERRIDE_KEYS, pageOverrideExists } from '../src/lib/overrides/override-index.generated';
 import { NEIGHBORHOOD_OVERRIDES } from '../src/lib/overrides/neighborhood-registry.generated';
+import { generateCityMeta, generateServiceCategoryMeta } from '../src/lib/content-layers';
 import * as fs from 'fs';
 import * as path from 'path';
 
