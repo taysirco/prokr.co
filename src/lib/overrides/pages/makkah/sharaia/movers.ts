@@ -9,7 +9,10 @@ import { GOV, EXPERTS, REGULATIONS } from '../../../gov-references';
 
 export const override: PageOverride = {
     meta: {
-        title: 'شركة نقل عفش الشرائع بمكة المكرمة — فك وتركيب وتغليف (2026)',
+        // Kept short so the rendered "<title> - بروكر الخدمي" stays under ~60
+        // chars and doesn't truncate in the SERP. The old title ("… — فك وتركيب
+        // وتغليف (2026)") rendered at 74.
+        title: 'شركات نقل عفش الشرائع بمكة - بروكر الخدمي',
         description: 'شركة نقل عفش بحي الشرائع بمكة المكرمة. نقل وتغليف وفك وتركيب أثاث مع الضمان. سيارات دينا مغلقة للحماية من الغبار والحرارة.',
         h1: 'نقل عفش الشرائع بمكة — خدمة متخصصة لأهالي الحي',
         keywords: [

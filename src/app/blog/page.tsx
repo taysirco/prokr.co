@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { Home, ChevronLeft, Clock, ArrowLeft, BookOpen, Shield } from 'lucide-react';
-import { BLOG_ARTICLES, BLOG_CATEGORIES } from '@/lib/blog-data';
+import { BLOG_CATEGORIES, getPublishedArticles } from '@/lib/blog-data';
 import { BreadcrumbJsonLd, WebPageJsonLd, SpeakableJsonLd } from '@/components/JsonLd';
 import FaqAccordion from '@/components/FaqAccordion';
 import Footer from '@/components/Footer';
@@ -39,11 +39,17 @@ export const metadata: Metadata = {
     },
 };
 
+// Re-render hourly so scheduled posts appear on their slot without a redeploy.
+export const revalidate = 3600;
+
 export default function BlogPage() {
     const breadcrumbs = [
         { name: 'الرئيسية', url: 'https://prokr.co' },
         { name: 'المدونة', url: 'https://prokr.co/blog' },
     ];
+
+    // Only articles whose scheduled publish slot has already passed.
+    const BLOG_ARTICLES = getPublishedArticles();
 
     // Group articles by category
     const articlesByCategory: Record<string, typeof BLOG_ARTICLES> = {};
@@ -216,6 +222,17 @@ export default function BlogPage() {
                                         href={`/blog/${article.slug}`}
                                         className="group bg-white rounded-2xl border border-gray-200 overflow-hidden hover:border-sky-300 hover:shadow-xl transition-all"
                                     >
+                                        {article.image && (
+                                            // eslint-disable-next-line @next/next/no-img-element
+                                            <img
+                                                src={article.image}
+                                                alt={article.imageAlt ?? article.title}
+                                                width={600}
+                                                height={338}
+                                                loading="lazy"
+                                                className="w-full h-44 object-cover"
+                                            />
+                                        )}
                                         <div className="p-6">
                                             <span className={`inline-block px-3 py-1 ${badgeClass} rounded-full text-xs font-medium mb-3`}>
                                                 {article.categoryLabel}

@@ -2,7 +2,7 @@ import { CITIES, SERVICES, CATEGORY_NAMES } from '@/lib/seed';
 import { isAbsorbedSlug, getCanonicalSlug } from '@/lib/services/super-page-groups';
 import { pricingData } from '@/lib/pricing-data';
 import { NAP } from '@/lib/nap';
-import { BLOG_ARTICLES } from '@/lib/blog-data';
+import { BLOG_ARTICLES, getPublishedArticles, type BlogArticle } from '@/lib/blog-data';
 
 /**
  * llms-full.txt — FULL machine-readable knowledge base for AI engines.
@@ -53,12 +53,13 @@ export function GET() {
 
     // ── Expert guides: full index grouped + consumer-protection guides featured
     //    (with their thesis excerpt) as the most citable authority references. ──
-    const articlesByCat: Record<string, typeof BLOG_ARTICLES> = {};
-    for (const a of BLOG_ARTICLES) (articlesByCat[a.categoryLabel] ||= []).push(a);
+    const articlesByCat: Record<string, BlogArticle[]> = {};
+    const liveArticles = getPublishedArticles();
+    for (const a of liveArticles) (articlesByCat[a.categoryLabel] ||= []).push(a);
     const guidesIndex = Object.entries(articlesByCat).map(([cat, arts]) =>
         `### ${cat}\n${arts.map(a => `- ${a.title}: https://prokr.co/blog/${a.slug}`).join('\n')}`
     ).join('\n\n');
-    const trustSection = BLOG_ARTICLES.filter(a => a.category === 'consumer-protection')
+    const trustSection = liveArticles.filter(a => a.category === 'consumer-protection')
         .map(a => `### ${a.title}\n${a.excerpt}\nReviewed by: ${a.reviewedBy || a.author} · Source: https://prokr.co/blog/${a.slug}`)
         .join('\n\n');
 
@@ -148,7 +149,7 @@ Saudi "how to verify / consumer rights" questions and are safe to quote directly
 
 ${trustSection}
 
-### Full guide index (${BLOG_ARTICLES.length} guides)
+### Full guide index (${liveArticles.length} guides)
 
 ${guidesIndex}
 

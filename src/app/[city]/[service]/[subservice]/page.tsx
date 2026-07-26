@@ -7,7 +7,7 @@ import {
 } from 'lucide-react';
 import { getCityBySlug, getServiceBySlug } from '@/lib/seed';
 import { getSubRegion } from '@/lib/sub-regions';
-import { getOverrideForPage, getOverriddenPages } from '@/lib/overrides';
+import { getOverrideForPage, getOverriddenPages, withBrandSuffix, BRAND_AR } from '@/lib/overrides';
 import type { PageOverride } from '@/lib/overrides/types';
 import { BreadcrumbJsonLd } from '@/components/JsonLd';
 import { DirectAnswer } from '@/components/seo/DirectAnswer';
@@ -72,18 +72,28 @@ export async function generateMetadata({ params }: NeighborhoodPageProps): Promi
     }
 
     const canonicalUrl = `https://prokr.co/${p.city}/${p.service}/${p.subservice}`;
-    const title = override.meta?.title || `${override.meta?.h1 || subRegion.name_ar} — ${city.name_ar}`;
+    // withBrandSuffix normalises to exactly one " - بروكر الخدمي": some
+    // neighbourhood overrides are hand-written with the brand already appended
+    // and older ones without it. Paired with `absolute` below, this is the final
+    // <title> — without it the layout template would print the brand twice.
+    const title = withBrandSuffix(
+        override.meta?.title || `${override.meta?.h1 || subRegion.name_ar} — ${city.name_ar}`
+    );
+    // Social cards drop the brand suffix — og:site_name already carries it.
+    const socialTitle = (override.meta?.ogTitle || override.meta?.title
+        || `${override.meta?.h1 || subRegion.name_ar} — ${city.name_ar}`)
+        .replace(new RegExp(`\\s*[-|—]\\s*${BRAND_AR}\\s*$`), '').trim();
     const description = override.meta?.description
         || override.content?.shortAnswer
         || `خدمة متخصصة في ${subRegion.name_ar}، ${city.name_ar}.`;
 
     return {
-        title,
+        title: { absolute: title },
         description,
         keywords: override.meta?.keywords,
         alternates: { canonical: canonicalUrl },
         openGraph: {
-            title: override.meta?.ogTitle || title,
+            title: socialTitle,
             description: override.meta?.ogDescription || description,
             locale: 'ar_SA',
             type: 'website',
@@ -92,7 +102,7 @@ export async function generateMetadata({ params }: NeighborhoodPageProps): Promi
         },
         twitter: {
             card: 'summary_large_image',
-            title: override.meta?.ogTitle || title,
+            title: socialTitle,
             description: override.meta?.ogDescription || description,
         },
         robots: { index: true, follow: true },

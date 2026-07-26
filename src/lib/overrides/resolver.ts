@@ -105,27 +105,11 @@ export function clampDescription(s: string, max = 160): string {
     return (lastSpace > 100 ? cut.slice(0, lastSpace) : cut).trimEnd() + '…';
 }
 
-// Clamp <title> length. The layout template appends " | بروكر الخدمي" (15 chars),
-// so cap the base title at ~44 to keep the rendered <title> ≤ ~60 (avoids SERP
-// truncation). Override titles have the shape "<core keyword phrase> — <tail…>",
-// so when too long we first cut at the em-dash boundary (keeps the short,
-// keyword-rich core that never dangles); only if the core itself is too long do
-// we fall back to a word-boundary cut, then strip any trailing dangling
-// particle/symbol so the title can't end on مع/ضد/من/+/… No ellipsis on titles.
-function clampTitle(s: string, max = 44): string {
-    if (!s) return s;
-    const stripDangling = (t: string) => t
-        .replace(/\s+(?:مع|ضد|من|في|على|إلى|عن|و|أو|أن|بين|عند|منذ|خلال|بـ)$/u, '')
-        .replace(/\s*[+\-×&|/]\s*$/u, '')
-        .trim();
-    if (s.length <= max) return stripDangling(s);
-    // Prefer the core phrase before the em-dash, if it fits.
-    const dash = s.indexOf('—');
-    if (dash > 0 && dash <= max) return s.slice(0, dash).trim();
-    const cut = s.slice(0, max);
-    const sp = cut.lastIndexOf(' ');
-    return stripDangling(sp > 28 ? cut.slice(0, sp) : cut);
-}
+// NOTE: the old clampTitle() lived here. It existed to trim hand-written
+// override titles down to ~44 chars before the layout template appended the
+// brand. buildServiceTitle() now emits a fixed, short shape (worst case
+// "شركات تنظيف مداخن مطاعم بالمدينة المنورة - بروكر الخدمي" ≈ 56 chars), so
+// there is nothing left to clamp and the helper was dead code.
 
 // ============================================
 // CONTENT LAYERS RESOLVER
@@ -187,6 +171,51 @@ interface ResolvedMetadata {
     ogImage?: string;
 }
 
+// ============================================
+// CANONICAL SERVICE-PAGE TITLE
+// ============================================
+
+/** Brand as it must appear in every <title>. */
+export const BRAND_AR = 'بروكر الخدمي';
+
+/**
+ * The one and only <title> shape for /{city}/{service}:
+ *
+ *     شركات نقل عفش بجدة - بروكر الخدمي
+ *
+ * Deliberately formulaic. The previous hand-written titles each carried their
+ * own differentiator ("— تغليف ضد الرطوبة الساحلية (2026)"), which pushed the
+ * head term away from the front of the tag and made the set inconsistent
+ * across cities. The exact-match head term now leads, the brand closes, and
+ * nothing sits between them.
+ *
+ * Callers MUST pass this through Next's `title: { absolute }` so the root
+ * layout template ("%s | بروكر الخدمي") does not append the brand a second time.
+ */
+/**
+ * Guarantee a title carries the brand suffix EXACTLY once.
+ *
+ * Neighbourhood overrides are hand-written, so some already end with
+ * " - بروكر الخدمي" and older ones (e.g. makkah/sharaia) don't. Routes pass the
+ * result through `title: { absolute }`, which bypasses the layout template —
+ * so whatever this returns is the final <title>.
+ */
+export function withBrandSuffix(title: string): string {
+    const t = title.trim();
+    if (!t) return BRAND_AR;
+    // Strip any trailing brand (with either separator) then re-append once.
+    const stripped = t.replace(new RegExp(`\\s*[-|—]\\s*${BRAND_AR}\\s*$`), '').trim();
+    return `${stripped} - ${BRAND_AR}`;
+}
+
+export function buildServiceTitle(city: City, service: Service): string {
+    // Always the 'ba' form ("بجدة"), never the profile's own cityPrefixPattern —
+    // three keyword profiles use 'fi' ("في جدة"), and letting them through would
+    // make the title set inconsistent across services for the same city.
+    const cityKw = getCityKeyword(city.name_ar, 'ba');
+    return `شركات ${service.name_ar} ${cityKw} - ${BRAND_AR}`;
+}
+
 /**
  * Resolves metadata: override fields take priority over auto-generated.
  */
@@ -199,8 +228,10 @@ export function resolveMetadata(city: City, service: Service): ResolvedMetadata 
     const neighborhoodNames = neighborhoods.slice(0, 3).map(n => n.name_ar).join(' و');
     const companiesCount = Math.floor(30 * (cityContext?.priceModifier || 1));
 
-    // Auto-generated content layers for title
-    const auto = generateContentLayers(city, service);
+    // (generateContentLayers() used to be called here purely for auto.metaTitle;
+    //  buildServiceTitle() replaced that, and the rest of resolveMetadata never
+    //  used the layers — so the call was dropped. resolveContentLayers() below
+    //  still builds them for the page body.)
 
     // Auto-generated description
     const resolvedDesc = resolveKeywordTemplate(profile.metaDescription, {
@@ -229,18 +260,19 @@ export function resolveMetadata(city: City, service: Service): ResolvedMetadata 
 
     const m = override?.meta;
 
-    // Title: use the hand-written override title AS-IS — do NOT re-run the title
-    // "enhancer", which strips the unique per-city tail after the em-dash and
-    // appends one hardcoded per-category bracket (making every city identical).
-    // auto.metaTitle is already enhanced upstream in content-layers. Placeholder
-    // titles fall back to the auto title.
-    const enhancedTitle = clampTitle(hasPlaceholder(m?.title) ? auto.metaTitle : (m?.title ?? auto.metaTitle));
+    // Title: one canonical shape for every city × service — the per-page
+    // override title is intentionally IGNORED here. Overrides used to each
+    // carry their own tail ("— تغليف ضد الرطوبة الساحلية (2026)"), which made
+    // the title set inconsistent and buried the head term. See buildServiceTitle.
+    const title = buildServiceTitle(city, service);
 
     return deepClean({
-        title: enhancedTitle,
+        title,
         description: clampDescription(m?.description ?? autoDescription),
         keywords: m?.keywords ?? autoKeywords,
-        ogTitle: m?.ogTitle ?? enhancedTitle,
+        // og/twitter mirror the <title> so a share card can never disagree with
+        // the SERP result, and so the brand is never printed twice.
+        ogTitle: title,
         ogDescription: clampDescription(m?.ogDescription ?? m?.description ?? autoDescription),
         ogImage: m?.ogImage,
     });

@@ -6,7 +6,12 @@
 
 import { CITIES, SERVICES } from '@/lib/seed';
 import { isAbsorbedSlug, getCanonicalSlug, SUPER_PAGE_GROUPS } from '@/lib/services/super-page-groups';
-import { hasPageOverride } from '@/lib/overrides/registry';
+// Existence check ONLY — must come from the generated flat key list, never from
+// overrides/registry. search-engine.ts is reachable from SearchModal ('use
+// client'), which the navbar mounts on every page: importing the registry drags
+// ~1,200 content modules (8.2 MB of JS) into the browser bundle sitewide.
+// Regenerate with: npx tsx scripts/gen-override-index.ts
+import { pageOverrideExists as hasPageOverride } from '@/lib/overrides/override-index.generated';
 import { BLOG_ARTICLES } from '@/lib/blog-data';
 import type { City, Service } from '@/types';
 

@@ -18,6 +18,7 @@ import { AbsorbedServiceSections } from '@/components/seo/AbsorbedServiceSection
 import { getSuperPageGroup, isCanonicalSlug, getCanonicalSlug } from '@/lib/services/super-page-groups';
 import { SERVICES as ALL_SERVICES_LIST } from '@/lib/services';
 import Footer from '@/components/Footer';
+import { getArticlesForCityService } from '@/lib/blog-data';
 import LeadCaptureCTA from '@/components/LeadCaptureCTA';
 import WizardFunnelButton from '@/components/WizardFunnelButton';
 import WizardFunnelFAB from '@/components/WizardFunnelFAB';
@@ -84,7 +85,10 @@ export async function generateMetadata({ params }: SiloPageProps): Promise<Metad
     const canonicalUrl = `https://prokr.co/${resolvedParams.city}/${canonicalServiceSlug}`;
 
     return {
-        title: meta.title,
+        // `absolute` bypasses the root layout template ("%s | بروكر الخدمي") —
+        // meta.title already ends with " - بروكر الخدمي" (see buildServiceTitle),
+        // and without this the brand would be printed twice.
+        title: { absolute: meta.title },
         description: meta.description,
         keywords: meta.keywords,
         openGraph: {
@@ -159,6 +163,9 @@ export default async function SiloPage({ params }: SiloPageProps) {
     }
 
     const allAdvertisers = [...premium, ...standard];
+
+    // Editorial guides for this silo — completes the internal-link loop
+    const relatedGuides = getArticlesForCityService(resolvedParams.city, resolvedParams.service, 3);
 
     // Generate Content — override-aware
     const aiContent = resolveContentLayers(city, service);
@@ -499,6 +506,43 @@ export default async function SiloPage({ params }: SiloPageProps) {
                         }, 0) / Math.max(allAdvertisers.filter(a => (a.reviews?.length || 0) > 0).length, 1)).toFixed(1)}
                     />
                 </SourceOrderLayout>
+
+                {/* Related guides — reverse link into the topical cluster */}
+                {relatedGuides.length > 0 && (
+                    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                        <h2 className="text-xl font-bold text-gray-900 mb-6">
+                            أدلة ونصائح عن {service.name_ar} {getCityKeyword(city.name_ar, 'fi')}
+                        </h2>
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                            {relatedGuides.map(article => (
+                                <Link
+                                    key={article.slug}
+                                    href={`/blog/${article.slug}`}
+                                    className="group bg-white border border-gray-200 rounded-xl overflow-hidden hover:border-sky-300 hover:shadow-md transition-all"
+                                >
+                                    {article.image && (
+                                        // eslint-disable-next-line @next/next/no-img-element
+                                        <img
+                                            src={article.image}
+                                            alt={article.imageAlt ?? article.title}
+                                            width={400}
+                                            height={225}
+                                            loading="lazy"
+                                            className="w-full h-32 object-cover"
+                                        />
+                                    )}
+                                    <div className="p-4">
+                                        <span className="text-xs text-sky-600 font-medium">{article.categoryLabel}</span>
+                                        <h3 className="font-bold text-gray-900 text-sm mt-1 group-hover:text-sky-700 transition-colors line-clamp-2">
+                                            {article.title}
+                                        </h3>
+                                        <p className="text-xs text-gray-500 mt-2 line-clamp-2">{article.directAnswer ?? article.excerpt}</p>
+                                    </div>
+                                </Link>
+                            ))}
+                        </div>
+                    </section>
+                )}
 
                 {/* Footer */}
                 <Footer currentCity={resolvedParams.city} currentService={resolvedParams.service} />

@@ -3,7 +3,7 @@ import { isAbsorbedSlug, getCanonicalSlug } from '@/lib/services/super-page-grou
 import { CATEGORY_NAMES } from '@/lib/seed';
 import { pricingData } from '@/lib/pricing-data';
 import { NAP } from '@/lib/nap';
-import { BLOG_ARTICLES } from '@/lib/blog-data';
+import { BLOG_ARTICLES, getPublishedArticles, type BlogArticle } from '@/lib/blog-data';
 
 /**
  * llms.txt — Machine-readable site index for AI crawlers
@@ -30,8 +30,9 @@ export async function GET() {
 
     // Group blog guides by category label so AI engines can discover every
     // citable expert article (trust/consumer-protection guides rank highest for citation).
-    const articlesByCat: Record<string, typeof BLOG_ARTICLES> = {};
-    for (const a of BLOG_ARTICLES) (articlesByCat[a.categoryLabel] ||= []).push(a);
+    const articlesByCat: Record<string, BlogArticle[]> = {};
+    const liveArticles = getPublishedArticles();
+    for (const a of liveArticles) (articlesByCat[a.categoryLabel] ||= []).push(a);
 
     const content = `# Prokr.co — دليل الخدمات المنزلية السعودي المعتمد
 # The Official Saudi Home Services Directory

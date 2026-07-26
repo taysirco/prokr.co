@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown, MapPin, Search, Phone, Sparkles, Truck, Bug, Droplet, Wrench, Building2, Shield, Home, Info, Mail, BookOpen } from 'lucide-react';
 import { SERVICES, getServicesByCategory, CATEGORY_NAMES, getCitiesByRegion, REGION_NAMES } from '@/lib/seed';
 import { isAbsorbedSlug } from '@/lib/services/super-page-groups';
+import { CITY_SERVICE_LINK_GROUPS_NAV } from '@/lib/city-service-links';
 import SearchModal from './SearchModal';
 
 // Category icons
@@ -17,11 +18,20 @@ const categoryIcons: Record<string, React.ReactNode> = {
     insulation: <Shield className="w-5 h-5" />,
 };
 
+// Icons for the city × service mega-menu (same 4 money services as the homepage grid)
+const cityServiceIcons: Record<string, React.ReactNode> = {
+    'furniture-moving': <Truck className="w-4 h-4" />,
+    'cleaning': <Sparkles className="w-4 h-4" />,
+    'pest-control': <Bug className="w-4 h-4" />,
+    'water-leak-detection': <Droplet className="w-4 h-4" />,
+};
+
 
 
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isServicesOpen, setIsServicesOpen] = useState(false);
+    const [isCityServicesOpen, setIsCityServicesOpen] = useState(false);
     const [isCitiesOpen, setIsCitiesOpen] = useState(false);
     const [isSearchOpen, setIsSearchOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
@@ -171,6 +181,75 @@ export default function Navbar() {
                                                     className="px-5 py-2.5 bg-sky-600 text-white font-medium rounded-xl hover:bg-sky-700 transition-colors shadow-lg shadow-sky-500/30"
                                                 >
                                                     عرض الكل ←
+                                                </Link>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Mega Menu - Companies by city × service.
+                                Same link set as the homepage grid (shared source of
+                                truth) so the site-wide anchor text stays identical. */}
+                            <div
+                                className="relative"
+                                onMouseEnter={() => setIsCityServicesOpen(true)}
+                                onMouseLeave={() => setIsCityServicesOpen(false)}
+                            >
+                                <button
+                                    className={`flex items-center gap-2 px-4 py-2.5 font-medium transition-all rounded-xl ${isCityServicesOpen
+                                        ? 'text-cyan-400 bg-white/10'
+                                        : 'text-gray-200 hover:text-white hover:bg-white/10'
+                                        }`}
+                                >
+                                    <Building2 className="w-4 h-4" />
+                                    <span>شركات حسب المدينة</span>
+                                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isCityServicesOpen ? 'rotate-180' : ''}`} />
+                                </button>
+
+                                <div
+                                    className={`absolute right-0 pt-2 w-[820px] transition-all duration-200 origin-top ${isCityServicesOpen ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
+                                        }`}
+                                >
+                                    <div className="bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden">
+                                        <div className="p-6">
+                                            <div className="grid grid-cols-4 gap-5">
+                                                {CITY_SERVICE_LINK_GROUPS_NAV.map(group => (
+                                                    <div key={group.serviceSlug}>
+                                                        <div className="flex items-center gap-2 mb-4 pb-2 border-b border-gray-100">
+                                                            <div className="w-8 h-8 bg-sky-100 rounded-lg flex items-center justify-center text-sky-600 shrink-0">
+                                                                {cityServiceIcons[group.serviceSlug] || <Wrench className="w-4 h-4" />}
+                                                            </div>
+                                                            <h4 className="font-bold text-gray-900 text-sm">
+                                                                {group.heading}
+                                                            </h4>
+                                                        </div>
+                                                        <div className="space-y-1">
+                                                            {group.links.map(link => (
+                                                                <Link
+                                                                    key={link.citySlug}
+                                                                    href={link.href}
+                                                                    className="block px-3 py-2 text-gray-600 hover:bg-sky-50 hover:text-sky-700 rounded-lg transition-all text-sm"
+                                                                >
+                                                                    {link.anchor}
+                                                                </Link>
+                                                            ))}
+                                                        </div>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </div>
+                                        <div className="bg-gradient-to-l from-amber-50 to-white px-6 py-4 border-t border-gray-100">
+                                            <div className="flex items-center justify-between">
+                                                <div>
+                                                    <p className="font-bold text-gray-900">شركات معتمدة بأسعار محدّثة</p>
+                                                    <p className="text-sm text-gray-500">أكثر الخدمات طلباً في المدن الرئيسية</p>
+                                                </div>
+                                                <Link
+                                                    href="/locations"
+                                                    className="px-5 py-2.5 bg-amber-600 text-white font-medium rounded-xl hover:bg-amber-700 transition-colors shadow-lg shadow-amber-500/30"
+                                                >
+                                                    كل المدن ←
                                                 </Link>
                                             </div>
                                         </div>
@@ -376,6 +455,36 @@ export default function Navbar() {
                                     >
                                         {service.name_ar}
                                     </Link>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Companies by city × service — same links as the desktop
+                            mega-menu and the homepage grid (shared source of truth) */}
+                        <div className="pt-4 border-t border-white/10">
+                            <h4 className="text-sm font-bold text-gray-400 mb-3 px-1">شركات حسب المدينة</h4>
+                            <div className="space-y-4">
+                                {CITY_SERVICE_LINK_GROUPS_NAV.map(group => (
+                                    <div key={group.serviceSlug}>
+                                        <div className="flex items-center gap-2 mb-2 px-1">
+                                            <span className="text-sky-400">
+                                                {cityServiceIcons[group.serviceSlug] || <Wrench className="w-4 h-4" />}
+                                            </span>
+                                            <span className="text-sm font-semibold text-gray-300">{group.heading}</span>
+                                        </div>
+                                        <div className="grid grid-cols-2 gap-2">
+                                            {group.links.map(link => (
+                                                <Link
+                                                    key={link.citySlug}
+                                                    href={link.href}
+                                                    onClick={() => setIsMenuOpen(false)}
+                                                    className="px-3 py-2.5 text-xs text-gray-300 hover:bg-white/10 hover:text-white rounded-xl transition-all"
+                                                >
+                                                    {link.anchor}
+                                                </Link>
+                                            ))}
+                                        </div>
+                                    </div>
                                 ))}
                             </div>
                         </div>

@@ -1,5 +1,7 @@
 'use client';
 
+import Link from 'next/link';
+
 /**
  * BlogContent — renders blog section content with proper formatting.
  * Handles: markdown tables, bullet/numbered lists, paragraphs, bold text,
@@ -25,19 +27,48 @@ function parseTableRow(line: string): string[] {
         .map(cell => cell.trim());
 }
 
-/** Render inline formatting: bold **text**, links, etc. */
+/** Render inline formatting: bold **text**, internal links [نص](/path), external links. */
 function renderInlineText(text: string): React.ReactNode {
-    // Handle **bold** patterns
     const parts: React.ReactNode[] = [];
-    const boldRegex = /\*\*(.+?)\*\*/g;
+    // Matches markdown links [label](href) and **bold** in a single pass so the two can coexist.
+    const inlineRegex = /\[([^\]]+)\]\(([^)\s]+)\)|\*\*(.+?)\*\*/g;
     let lastIndex = 0;
     let match;
 
-    while ((match = boldRegex.exec(text)) !== null) {
+    while ((match = inlineRegex.exec(text)) !== null) {
         if (match.index > lastIndex) {
             parts.push(text.slice(lastIndex, match.index));
         }
-        parts.push(<strong key={match.index}>{match[1]}</strong>);
+
+        if (match[1] && match[2]) {
+            const label = match[1];
+            const href = match[2];
+            const isInternal = href.startsWith('/');
+            parts.push(
+                isInternal ? (
+                    <Link
+                        key={`lnk-${match.index}`}
+                        href={href}
+                        className="text-sky-700 font-medium underline decoration-sky-300 underline-offset-4 hover:text-sky-900 hover:decoration-sky-600 transition-colors"
+                    >
+                        {label}
+                    </Link>
+                ) : (
+                    <a
+                        key={`lnk-${match.index}`}
+                        href={href}
+                        target="_blank"
+                        rel="noopener nofollow"
+                        className="text-sky-700 font-medium underline decoration-sky-300 underline-offset-4 hover:text-sky-900"
+                    >
+                        {label}
+                    </a>
+                )
+            );
+        } else {
+            parts.push(<strong key={`b-${match.index}`}>{match[3]}</strong>);
+        }
+
         lastIndex = match.index + match[0].length;
     }
 

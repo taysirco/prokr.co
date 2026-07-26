@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 import { CITIES, SERVICES } from '@/lib/seed';
 import { SUB_REGIONS } from '@/lib/sub-regions';
-import { BLOG_ARTICLES } from '@/lib/blog-data';
+import { BLOG_ARTICLES, isArticlePublished } from '@/lib/blog-data';
 import { hasPageOverride, getOverriddenPages } from '@/lib/overrides/registry';
 import { isAbsorbedSlug } from '@/lib/services/super-page-groups';
 
@@ -249,12 +249,15 @@ export default async function sitemap({ id }: { id: number }): Promise<MetadataR
         const blogIndex: MetadataRoute.Sitemap = [
             { url: `${BASE_URL}/blog`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
         ];
-        const blogPages: MetadataRoute.Sitemap = BLOG_ARTICLES.map(article => ({
-            url: `${BASE_URL}/blog/${article.slug}`,
-            lastModified: new Date(article.updateDate),
-            changeFrequency: 'monthly' as const,
-            priority: 0.7,
-        }));
+        // Scheduled posts stay out of the sitemap until their slot arrives.
+        const blogPages: MetadataRoute.Sitemap = BLOG_ARTICLES
+            .filter(article => isArticlePublished(article))
+            .map(article => ({
+                url: `${BASE_URL}/blog/${article.slug}`,
+                lastModified: new Date(article.updateDate),
+                changeFrequency: 'monthly' as const,
+                priority: 0.7,
+            }));
         return [...blogIndex, ...blogPages];
     }
 

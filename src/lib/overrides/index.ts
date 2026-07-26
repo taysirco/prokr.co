@@ -17,6 +17,9 @@ export {
     resolveRelatedServices,
     isSchemaDisabled,
     getOverrideForPage,
+    buildServiceTitle,
+    withBrandSuffix,
+    BRAND_AR,
 } from './resolver';
 
 // Entity Database

@@ -1,0 +1,32 @@
+[
+  {
+    "_comment_1": "TEMPLATE — one object per company. Delete the _comment_* keys.",
+    "_comment_2": "EVERY VALUE MUST BE REAL AND VERIFIED. Omit any field you have not confirmed — an absent field is honest, a guessed one is a false claim about a real business.",
+    "_comment_3": "crn: verify at https://mc.gov.sa before entering. Trust flags (zatca/qiwa/nitaqat/sbc/verified_employees) are REJECTED without a crn.",
+
+    "business_name": "",
+    "phone_number": "+9665XXXXXXXX",
+    "whatsapp_number": "+9665XXXXXXXX",
+    "description": "80+ chars. What they actually do, coverage area, guarantee terms. No keyword stuffing.",
+
+    "targeted_cities": ["jeddah"],
+    "targeted_services": ["cleaning"],
+    "targeted_neighborhoods": [],
+
+    "is_premium": false,
+    "priority_score": 50,
+
+    "crn": "",
+    "sbc_number": "",
+    "street_address": "",
+    "postal_code": "",
+    "google_maps_url": "",
+    "google_maps_place_id": "",
+    "payment_methods": ["Cash", "Mada", "BankTransfer"],
+    "has_verified_employees": false,
+    "zatca_registered": false,
+    "qiwa_registered": false,
+    "logo_url": "",
+    "gallery": []
+  }
+]
