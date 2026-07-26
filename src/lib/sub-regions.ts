@@ -153,3 +153,29 @@ export function getSubRegionServiceHref(
     }
     return null;
 }
+
+export interface NeighborhoodServiceLink {
+    subRegionSlug: string;
+    name_ar: string;
+    href: string;
+}
+
+/**
+ * Every neighbourhood page for THIS service in THIS city.
+ *
+ * Powers the hub→spoke block on /{city}/{service}. Without it the
+ * neighbourhood pages are only reachable via the sub-region hub — three clicks
+ * from the homepage, and receiving no link equity from the city service pages,
+ * which are the strongest pages on the site.
+ */
+export function getNeighborhoodPagesForCityService(
+    citySlug: string,
+    serviceSlug: string
+): NeighborhoodServiceLink[] {
+    return (SUB_REGIONS[citySlug] || [])
+        .map(sr => {
+            const href = getSubRegionServiceHref(citySlug, sr.slug, serviceSlug);
+            return href ? { subRegionSlug: sr.slug, name_ar: sr.name_ar, href } : null;
+        })
+        .filter((x): x is NeighborhoodServiceLink => x !== null);
+}

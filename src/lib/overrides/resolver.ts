@@ -398,7 +398,12 @@ export function resolvePageContent(city: City, service: Service) {
     // Resolve equipment: override > auto-entities > auto-generated
     const resolvedEquipment = override.equipment ?? (autoEquipment.length > 0 ? autoEquipment : undefined);
 
-    return {
+    // deepClean — the same symbol cleaner the other three resolvers already use.
+    // Without it, hand-written override prose reached the page verbatim, so the
+    // shorthand some older city overrides use ("ΔT 54°م", "SiO₂", "Anti-Static",
+    // "Micro-Cracks") rendered raw in Arabic body copy AND inside the FAQPage
+    // JSON-LD that Google reads. cleanText maps each to its Arabic equivalent.
+    return deepClean({
         ...auto,
         pricing: resolvedPricing,
         faqItems: override.faq ?? auto.faqItems,
@@ -438,7 +443,7 @@ export function resolvePageContent(city: City, service: Service) {
             ...baseEntityContext,
             ...override.entityContext,
         } : baseEntityContext,
-    };
+    });
 }
 
 // ============================================

@@ -6,7 +6,7 @@
 // looks up. Derived from the directory layout under pages/{city}/{subregion}/,
 // so adding a file in the right place is all that is needed to register it.
 //
-// 152 page(s) across 25 cities.
+// 159 page(s) across 25 cities.
 
 import type { PageOverride } from './types';
 
@@ -26,6 +26,9 @@ import { override as ovalAhsa_mubarraz_furnitureMoving } from './pages/al-ahsa/m
 import { override as ovalAhsa_mubarraz_pestControl } from './pages/al-ahsa/mubarraz/pest-control';
 import { override as ovalBaha_center_cleaning } from './pages/al-baha/center/cleaning';
 import { override as ovalBaha_center_furnitureMoving } from './pages/al-baha/center/furniture-moving';
+import { override as ovalBaha_center_pestControl } from './pages/al-baha/center/pest-control';
+import { override as ovalBaha_mikhwah_furnitureMoving } from './pages/al-baha/mikhwah/furniture-moving';
+import { override as ovalBaha_mikhwah_pestControl } from './pages/al-baha/mikhwah/pest-control';
 import { override as ovalKharj_cityCenter_cleaning } from './pages/al-kharj/city-center/cleaning';
 import { override as ovalKharj_cityCenter_furnitureMoving } from './pages/al-kharj/city-center/furniture-moving';
 import { override as ovalKharj_cityCenter_pestControl } from './pages/al-kharj/city-center/pest-control';
@@ -74,6 +77,10 @@ import { override as ovhail_center_pestControl } from './pages/hail/center/pest-
 import { override as ovhail_center_tankInsulation } from './pages/hail/center/tank-insulation';
 import { override as ovjazan_center_cleaning } from './pages/jazan/center/cleaning';
 import { override as ovjazan_center_furnitureMoving } from './pages/jazan/center/furniture-moving';
+import { override as ovjazan_center_pestControl } from './pages/jazan/center/pest-control';
+import { override as ovjazan_port_cleaning } from './pages/jazan/port/cleaning';
+import { override as ovjazan_port_pestControl } from './pages/jazan/port/pest-control';
+import { override as ovjazan_port_sewageUnblocking } from './pages/jazan/port/sewage-unblocking';
 import { override as ovjeddah_alHamdania_cleaning } from './pages/jeddah/al-hamdania/cleaning';
 import { override as ovjeddah_alHamdania_pestControl } from './pages/jeddah/al-hamdania/pest-control';
 import { override as ovjeddah_alHamdania_tanksCleaning } from './pages/jeddah/al-hamdania/tanks-cleaning';
@@ -180,6 +187,9 @@ export const NEIGHBORHOOD_OVERRIDES: Record<string, PageOverride> = {
     'al-ahsa/mubarraz::pest-control': ovalAhsa_mubarraz_pestControl,
     'al-baha/center::cleaning': ovalBaha_center_cleaning,
     'al-baha/center::furniture-moving': ovalBaha_center_furnitureMoving,
+    'al-baha/center::pest-control': ovalBaha_center_pestControl,
+    'al-baha/mikhwah::furniture-moving': ovalBaha_mikhwah_furnitureMoving,
+    'al-baha/mikhwah::pest-control': ovalBaha_mikhwah_pestControl,
     'al-kharj/city-center::cleaning': ovalKharj_cityCenter_cleaning,
     'al-kharj/city-center::furniture-moving': ovalKharj_cityCenter_furnitureMoving,
     'al-kharj/city-center::pest-control': ovalKharj_cityCenter_pestControl,
@@ -228,6 +238,10 @@ export const NEIGHBORHOOD_OVERRIDES: Record<string, PageOverride> = {
     'hail/center::tank-insulation': ovhail_center_tankInsulation,
     'jazan/center::cleaning': ovjazan_center_cleaning,
     'jazan/center::furniture-moving': ovjazan_center_furnitureMoving,
+    'jazan/center::pest-control': ovjazan_center_pestControl,
+    'jazan/port::cleaning': ovjazan_port_cleaning,
+    'jazan/port::pest-control': ovjazan_port_pestControl,
+    'jazan/port::sewage-unblocking': ovjazan_port_sewageUnblocking,
     'jeddah/al-hamdania::cleaning': ovjeddah_alHamdania_cleaning,
     'jeddah/al-hamdania::pest-control': ovjeddah_alHamdania_pestControl,
     'jeddah/al-hamdania::tanks-cleaning': ovjeddah_alHamdania_tanksCleaning,
