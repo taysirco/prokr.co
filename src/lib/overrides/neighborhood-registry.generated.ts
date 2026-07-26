@@ -6,10 +6,17 @@
 // looks up. Derived from the directory layout under pages/{city}/{subregion}/,
 // so adding a file in the right place is all that is needed to register it.
 //
-// 126 page(s) across 22 cities.
+// 152 page(s) across 25 cities.
 
 import type { PageOverride } from './types';
 
+import { override as ovabha_alSoudah_cleaning } from './pages/abha/al-soudah/cleaning';
+import { override as ovabha_alSoudah_pestControl } from './pages/abha/al-soudah/pest-control';
+import { override as ovabha_alSoudah_tankInsulation } from './pages/abha/al-soudah/tank-insulation';
+import { override as ovabha_center_cleaning } from './pages/abha/center/cleaning';
+import { override as ovabha_center_furnitureMoving } from './pages/abha/center/furniture-moving';
+import { override as ovabha_center_pestControl } from './pages/abha/center/pest-control';
+import { override as ovabha_center_waterLeakDetection } from './pages/abha/center/water-leak-detection';
 import { override as ovalAhsa_hofuf_cleaning } from './pages/al-ahsa/hofuf/cleaning';
 import { override as ovalAhsa_hofuf_furnitureMoving } from './pages/al-ahsa/hofuf/furniture-moving';
 import { override as ovalAhsa_hofuf_pestControl } from './pages/al-ahsa/hofuf/pest-control';
@@ -17,6 +24,8 @@ import { override as ovalAhsa_hofuf_waterLeakDetection } from './pages/al-ahsa/h
 import { override as ovalAhsa_mubarraz_cleaning } from './pages/al-ahsa/mubarraz/cleaning';
 import { override as ovalAhsa_mubarraz_furnitureMoving } from './pages/al-ahsa/mubarraz/furniture-moving';
 import { override as ovalAhsa_mubarraz_pestControl } from './pages/al-ahsa/mubarraz/pest-control';
+import { override as ovalBaha_center_cleaning } from './pages/al-baha/center/cleaning';
+import { override as ovalBaha_center_furnitureMoving } from './pages/al-baha/center/furniture-moving';
 import { override as ovalKharj_cityCenter_cleaning } from './pages/al-kharj/city-center/cleaning';
 import { override as ovalKharj_cityCenter_furnitureMoving } from './pages/al-kharj/city-center/furniture-moving';
 import { override as ovalKharj_cityCenter_pestControl } from './pages/al-kharj/city-center/pest-control';
@@ -30,8 +39,11 @@ import { override as ovalKhobar_southKhobar_tankInsulation } from './pages/al-kh
 import { override as ovalKhobar_southKhobar_waterLeakDetection } from './pages/al-khobar/south-khobar/water-leak-detection';
 import { override as ovarRass_alHazm_waterLeakDetection } from './pages/ar-rass/al-hazm/water-leak-detection';
 import { override as ovarRass_alJawazat_waterLeakDetection } from './pages/ar-rass/al-jawazat/water-leak-detection';
+import { override as ovarRass_alQadisiyah_waterLeakDetection } from './pages/ar-rass/al-qadisiyah/water-leak-detection';
 import { override as ovarRass_alRawdhah_waterLeakDetection } from './pages/ar-rass/al-rawdhah/water-leak-detection';
 import { override as ovarRass_alShifa_waterLeakDetection } from './pages/ar-rass/al-shifa/water-leak-detection';
+import { override as ovarRass_alYarmouk_waterLeakDetection } from './pages/ar-rass/al-yarmouk/water-leak-detection';
+import { override as ovarRass_kingKhalid_waterLeakDetection } from './pages/ar-rass/king-khalid/water-leak-detection';
 import { override as ovburaidah_center_cleaning } from './pages/buraidah/center/cleaning';
 import { override as ovburaidah_center_furnitureMoving } from './pages/buraidah/center/furniture-moving';
 import { override as ovburaidah_center_pestControl } from './pages/buraidah/center/pest-control';
@@ -54,8 +66,14 @@ import { override as ovdhahran_doha_pestControl } from './pages/dhahran/doha/pes
 import { override as ovhafrAlbatin_center_cleaning } from './pages/hafr-albatin/center/cleaning';
 import { override as ovhafrAlbatin_center_furnitureMoving } from './pages/hafr-albatin/center/furniture-moving';
 import { override as ovhafrAlbatin_center_pestControl } from './pages/hafr-albatin/center/pest-control';
+import { override as ovhail_barzan_cleaning } from './pages/hail/barzan/cleaning';
+import { override as ovhail_barzan_furnitureMoving } from './pages/hail/barzan/furniture-moving';
 import { override as ovhail_center_cleaning } from './pages/hail/center/cleaning';
 import { override as ovhail_center_furnitureMoving } from './pages/hail/center/furniture-moving';
+import { override as ovhail_center_pestControl } from './pages/hail/center/pest-control';
+import { override as ovhail_center_tankInsulation } from './pages/hail/center/tank-insulation';
+import { override as ovjazan_center_cleaning } from './pages/jazan/center/cleaning';
+import { override as ovjazan_center_furnitureMoving } from './pages/jazan/center/furniture-moving';
 import { override as ovjeddah_alHamdania_cleaning } from './pages/jeddah/al-hamdania/cleaning';
 import { override as ovjeddah_alHamdania_pestControl } from './pages/jeddah/al-hamdania/pest-control';
 import { override as ovjeddah_alHamdania_tanksCleaning } from './pages/jeddah/al-hamdania/tanks-cleaning';
@@ -75,7 +93,11 @@ import { override as ovjubail_industrialJubail_tankInsulation } from './pages/ju
 import { override as ovjubail_residentialJubail_cleaning } from './pages/jubail/residential-jubail/cleaning';
 import { override as ovjubail_residentialJubail_furnitureMoving } from './pages/jubail/residential-jubail/furniture-moving';
 import { override as ovjubail_residentialJubail_waterLeakDetection } from './pages/jubail/residential-jubail/water-leak-detection';
+import { override as ovkhamisMushait_center_cleaning } from './pages/khamis-mushait/center/cleaning';
 import { override as ovkhamisMushait_center_furnitureMoving } from './pages/khamis-mushait/center/furniture-moving';
+import { override as ovkhamisMushait_center_pestControl } from './pages/khamis-mushait/center/pest-control';
+import { override as ovkhamisMushait_northKhamis_furnitureMoving } from './pages/khamis-mushait/north-khamis/furniture-moving';
+import { override as ovkhamisMushait_northKhamis_tankInsulation } from './pages/khamis-mushait/north-khamis/tank-insulation';
 import { override as ovmadinah_alharam_cleaning } from './pages/madinah/alharam/cleaning';
 import { override as ovmadinah_alharam_pestControl } from './pages/madinah/alharam/pest-control';
 import { override as ovmadinah_quba_cleaning } from './pages/madinah/quba/cleaning';
@@ -90,7 +112,9 @@ import { override as ovmakkah_aziziya_sewageUnblocking } from './pages/makkah/az
 import { override as ovmakkah_sharaia_cleaning } from './pages/makkah/sharaia/cleaning';
 import { override as ovmakkah_sharaia_movers } from './pages/makkah/sharaia/movers';
 import { override as ovmakkah_sharaia_pestControl } from './pages/makkah/sharaia/pest-control';
+import { override as ovnajran_center_cleaning } from './pages/najran/center/cleaning';
 import { override as ovnajran_center_furnitureMoving } from './pages/najran/center/furniture-moving';
+import { override as ovnajran_center_pestControl } from './pages/najran/center/pest-control';
 import { override as ovonizah_center_cleaning } from './pages/onizah/center/cleaning';
 import { override as ovonizah_center_furnitureMoving } from './pages/onizah/center/furniture-moving';
 import { override as ovonizah_center_pestControl } from './pages/onizah/center/pest-control';
@@ -124,6 +148,8 @@ import { override as ovtabuk_center_cleaning } from './pages/tabuk/center/cleani
 import { override as ovtabuk_center_furnitureMoving } from './pages/tabuk/center/furniture-moving';
 import { override as ovtabuk_center_pestControl } from './pages/tabuk/center/pest-control';
 import { override as ovtabuk_center_tankInsulation } from './pages/tabuk/center/tank-insulation';
+import { override as ovtabuk_northTabuk_furnitureMoving } from './pages/tabuk/north-tabuk/furniture-moving';
+import { override as ovtabuk_northTabuk_waterLeakDetection } from './pages/tabuk/north-tabuk/water-leak-detection';
 import { override as ovtaif_alHada_cleaning } from './pages/taif/al-hada/cleaning';
 import { override as ovtaif_alHada_pestControl } from './pages/taif/al-hada/pest-control';
 import { override as ovtaif_alHada_tankInsulation } from './pages/taif/al-hada/tank-insulation';
@@ -138,6 +164,13 @@ import { override as ovyanbu_industrial_pestControl } from './pages/yanbu/indust
 import { override as ovyanbu_industrial_tankInsulation } from './pages/yanbu/industrial/tank-insulation';
 
 export const NEIGHBORHOOD_OVERRIDES: Record<string, PageOverride> = {
+    'abha/al-soudah::cleaning': ovabha_alSoudah_cleaning,
+    'abha/al-soudah::pest-control': ovabha_alSoudah_pestControl,
+    'abha/al-soudah::tank-insulation': ovabha_alSoudah_tankInsulation,
+    'abha/center::cleaning': ovabha_center_cleaning,
+    'abha/center::furniture-moving': ovabha_center_furnitureMoving,
+    'abha/center::pest-control': ovabha_center_pestControl,
+    'abha/center::water-leak-detection': ovabha_center_waterLeakDetection,
     'al-ahsa/hofuf::cleaning': ovalAhsa_hofuf_cleaning,
     'al-ahsa/hofuf::furniture-moving': ovalAhsa_hofuf_furnitureMoving,
     'al-ahsa/hofuf::pest-control': ovalAhsa_hofuf_pestControl,
@@ -145,6 +178,8 @@ export const NEIGHBORHOOD_OVERRIDES: Record<string, PageOverride> = {
     'al-ahsa/mubarraz::cleaning': ovalAhsa_mubarraz_cleaning,
     'al-ahsa/mubarraz::furniture-moving': ovalAhsa_mubarraz_furnitureMoving,
     'al-ahsa/mubarraz::pest-control': ovalAhsa_mubarraz_pestControl,
+    'al-baha/center::cleaning': ovalBaha_center_cleaning,
+    'al-baha/center::furniture-moving': ovalBaha_center_furnitureMoving,
     'al-kharj/city-center::cleaning': ovalKharj_cityCenter_cleaning,
     'al-kharj/city-center::furniture-moving': ovalKharj_cityCenter_furnitureMoving,
     'al-kharj/city-center::pest-control': ovalKharj_cityCenter_pestControl,
@@ -158,8 +193,11 @@ export const NEIGHBORHOOD_OVERRIDES: Record<string, PageOverride> = {
     'al-khobar/south-khobar::water-leak-detection': ovalKhobar_southKhobar_waterLeakDetection,
     'ar-rass/al-hazm::water-leak-detection': ovarRass_alHazm_waterLeakDetection,
     'ar-rass/al-jawazat::water-leak-detection': ovarRass_alJawazat_waterLeakDetection,
+    'ar-rass/al-qadisiyah::water-leak-detection': ovarRass_alQadisiyah_waterLeakDetection,
     'ar-rass/al-rawdhah::water-leak-detection': ovarRass_alRawdhah_waterLeakDetection,
     'ar-rass/al-shifa::water-leak-detection': ovarRass_alShifa_waterLeakDetection,
+    'ar-rass/al-yarmouk::water-leak-detection': ovarRass_alYarmouk_waterLeakDetection,
+    'ar-rass/king-khalid::water-leak-detection': ovarRass_kingKhalid_waterLeakDetection,
     'buraidah/center::cleaning': ovburaidah_center_cleaning,
     'buraidah/center::furniture-moving': ovburaidah_center_furnitureMoving,
     'buraidah/center::pest-control': ovburaidah_center_pestControl,
@@ -182,8 +220,14 @@ export const NEIGHBORHOOD_OVERRIDES: Record<string, PageOverride> = {
     'hafr-albatin/center::cleaning': ovhafrAlbatin_center_cleaning,
     'hafr-albatin/center::furniture-moving': ovhafrAlbatin_center_furnitureMoving,
     'hafr-albatin/center::pest-control': ovhafrAlbatin_center_pestControl,
+    'hail/barzan::cleaning': ovhail_barzan_cleaning,
+    'hail/barzan::furniture-moving': ovhail_barzan_furnitureMoving,
     'hail/center::cleaning': ovhail_center_cleaning,
     'hail/center::furniture-moving': ovhail_center_furnitureMoving,
+    'hail/center::pest-control': ovhail_center_pestControl,
+    'hail/center::tank-insulation': ovhail_center_tankInsulation,
+    'jazan/center::cleaning': ovjazan_center_cleaning,
+    'jazan/center::furniture-moving': ovjazan_center_furnitureMoving,
     'jeddah/al-hamdania::cleaning': ovjeddah_alHamdania_cleaning,
     'jeddah/al-hamdania::pest-control': ovjeddah_alHamdania_pestControl,
     'jeddah/al-hamdania::tanks-cleaning': ovjeddah_alHamdania_tanksCleaning,
@@ -203,7 +247,11 @@ export const NEIGHBORHOOD_OVERRIDES: Record<string, PageOverride> = {
     'jubail/residential-jubail::cleaning': ovjubail_residentialJubail_cleaning,
     'jubail/residential-jubail::furniture-moving': ovjubail_residentialJubail_furnitureMoving,
     'jubail/residential-jubail::water-leak-detection': ovjubail_residentialJubail_waterLeakDetection,
+    'khamis-mushait/center::cleaning': ovkhamisMushait_center_cleaning,
     'khamis-mushait/center::furniture-moving': ovkhamisMushait_center_furnitureMoving,
+    'khamis-mushait/center::pest-control': ovkhamisMushait_center_pestControl,
+    'khamis-mushait/north-khamis::furniture-moving': ovkhamisMushait_northKhamis_furnitureMoving,
+    'khamis-mushait/north-khamis::tank-insulation': ovkhamisMushait_northKhamis_tankInsulation,
     'madinah/alharam::cleaning': ovmadinah_alharam_cleaning,
     'madinah/alharam::pest-control': ovmadinah_alharam_pestControl,
     'madinah/quba::cleaning': ovmadinah_quba_cleaning,
@@ -218,7 +266,9 @@ export const NEIGHBORHOOD_OVERRIDES: Record<string, PageOverride> = {
     'makkah/sharaia::cleaning': ovmakkah_sharaia_cleaning,
     'makkah/sharaia::movers': ovmakkah_sharaia_movers,
     'makkah/sharaia::pest-control': ovmakkah_sharaia_pestControl,
+    'najran/center::cleaning': ovnajran_center_cleaning,
     'najran/center::furniture-moving': ovnajran_center_furnitureMoving,
+    'najran/center::pest-control': ovnajran_center_pestControl,
     'onizah/center::cleaning': ovonizah_center_cleaning,
     'onizah/center::furniture-moving': ovonizah_center_furnitureMoving,
     'onizah/center::pest-control': ovonizah_center_pestControl,
@@ -252,6 +302,8 @@ export const NEIGHBORHOOD_OVERRIDES: Record<string, PageOverride> = {
     'tabuk/center::furniture-moving': ovtabuk_center_furnitureMoving,
     'tabuk/center::pest-control': ovtabuk_center_pestControl,
     'tabuk/center::tank-insulation': ovtabuk_center_tankInsulation,
+    'tabuk/north-tabuk::furniture-moving': ovtabuk_northTabuk_furnitureMoving,
+    'tabuk/north-tabuk::water-leak-detection': ovtabuk_northTabuk_waterLeakDetection,
     'taif/al-hada::cleaning': ovtaif_alHada_cleaning,
     'taif/al-hada::pest-control': ovtaif_alHada_pestControl,
     'taif/al-hada::tank-insulation': ovtaif_alHada_tankInsulation,
