@@ -352,6 +352,17 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
                         </section>
                     )}
 
+                    {/* Pricing disclaimer — shown only when the body quotes figures */}
+                    {article.sections.some(s => s.content.includes('ريال')) && (
+                        <div className="bg-amber-50 border-r-4 border-amber-400 rounded-lg p-4 mb-10">
+                            <p className="text-amber-900 text-sm leading-relaxed">
+                                <strong>عن الأسعار:</strong> الأرقام الواردة نطاقات تقديرية إرشادية تعكس متوسطات السوق
+                                وقت آخر تحديث، وتختلف حسب حالة الموقع وحجم العمل وموسم الطلب. اطلب عرض سعر مكتوباً
+                                قبل التعاقد، ولا تعتمد على هذه النطاقات كسعر نهائي.
+                            </p>
+                        </div>
+                    )}
+
                     {/* Sources */}
                     {article.sources && article.sources.length > 0 && (
                         <div className="bg-gray-50 border border-gray-200 rounded-xl p-5 mb-10">
