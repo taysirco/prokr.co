@@ -339,6 +339,38 @@ section('4. Page titles');
         pass(`all ${n} neighbourhood-page titles carry the brand exactly once`);
     }
 
+    // City hubs (/{city}), national service hubs (/{service}) and sub-region hubs
+    // (/{city}/{subregion}). These were the last page types still on the old
+    // mixed "— … | … | brand" format; hold them to the same rule.
+    const hubBad: string[] = [];
+    const hubLong: string[] = [];
+    const checkHub = (label: string, t: string) => {
+        if ((t.match(new RegExp(BRAND, 'g')) || []).length !== 1 || !t.endsWith(` - ${BRAND}`)) {
+            hubBad.push(`${label} → "${t}"`);
+        }
+        if (t.length > TITLE_MAX) hubLong.push(`${label} → ${t.length} chars: "${t}"`);
+    };
+    for (const city of CITIES) {
+        checkHub(`/${city.slug}`, generateCityMeta(city).title);
+        for (const sr of SUB_REGIONS[city.slug] || []) {
+            checkHub(`/${city.slug}/${sr.slug}`, `خدمات ${sr.name_ar} - ${BRAND}`);
+        }
+    }
+    for (const service of SERVICES) {
+        if (isAbsorbedSlug(service.slug)) continue;
+        checkHub(`/${service.slug}`, generateServiceCategoryMeta(service).title);
+    }
+    if (hubBad.length) {
+        fail(`${hubBad.length} hub title(s) not in "… - ${BRAND}" form`, hubBad);
+    } else {
+        pass(`city, service and sub-region hub titles all match "… - ${BRAND}"`);
+    }
+    if (hubLong.length) {
+        warn(`${hubLong.length} hub title(s) exceed ${TITLE_MAX} chars`, hubLong);
+    } else {
+        pass(`no hub title exceeds ${TITLE_MAX} chars`);
+    }
+
     // Company titles: same brand rule.
     const companySamples = [
         ['الهدي لنقل الاثاث والعفش', 'moving'],

@@ -8,7 +8,7 @@ import type { SubRegion } from '@/lib/sub-regions';
 import type { City } from '@/types';
 import { BreadcrumbJsonLd, ItemListJsonLd, WebPageJsonLd, ServiceAreaJsonLd, SpeakableWebPageJsonLd } from '@/components/JsonLd';
 import { getCityContext } from '@/lib/city-context';
-import { getCityKeyword } from '@/lib/locale-formatting';
+import { getCityKeyword, BRAND_AR } from '@/lib/locale-formatting';
 import { CitableSummary } from '@/components/seo/CitableSummary';
 import { hasPageOverride } from '@/lib/overrides/registry';
 import { isAbsorbedSlug } from '@/lib/services/super-page-groups';
@@ -34,13 +34,17 @@ import FaqAccordion from '@/components/FaqAccordion';
 
 export function buildSubRegionMetadata(city: City, subRegion: SubRegion): Metadata {
     const canonical = `https://prokr.co/${city.slug}/${subRegion.slug}`;
-    // Title carries NO brand suffix — the root layout template appends " | بروكر الخدمي".
-    const title = `خدمات ${subRegion.name_ar}، ${city.name_ar} | شركات معتمدة`;
-    const ogTitle = `خدمات ${subRegion.name_ar}، ${city.name_ar} | شركات معتمدة - بروكر الخدمي`;
+    // "خدمات شمال الرياض - بروكر الخدمي" — one convention with every other page.
+    // The old form printed the separator twice and repeated the city name
+    // ("خدمات شمال الرياض، الرياض | شركات معتمدة | بروكر الخدمي"): the sub-region
+    // name already contains the city, so the repeat bought nothing.
+    // `absolute` below stops the layout template appending the brand again.
+    const title = `خدمات ${subRegion.name_ar} - ${BRAND_AR}`;
+    const ogTitle = `خدمات ${subRegion.name_ar}، ${city.name_ar}`;
     const description = `اكتشف أفضل شركات الخدمات في ${subRegion.name_ar}، ${city.name_ar}. نقل عفش، تنظيف منازل، مكافحة حشرات، كشف تسربات وأكثر. شركات معتمدة بأسعار تنافسية.`;
 
     return {
-        title,
+        title: { absolute: title },
         description,
         keywords: [
             `خدمات ${subRegion.name_ar}`,

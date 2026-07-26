@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Home, ChevronLeft, Star, Phone, MessageCircle, BadgeCheck, MapPin, Shield } from 'lucide-react';
 import { getCityBySlug, getServiceBySlug, getUniquePageImages } from '@/lib/seed';
-import { getSubRegion } from '@/lib/sub-regions';
+import { getSubRegion, getNeighborhoodPagesForCityService } from '@/lib/sub-regions';
 import { SubRegionView, buildSubRegionMetadata } from '@/components/SubRegionView';
 import { getAdvertisersBySilo } from '@/lib/db-actions';
 import { UnifiedGraphCompiler, VoiceSearchSchema } from '@/components/JsonLd';
@@ -147,6 +147,9 @@ export default async function SiloPage({ params }: SiloPageProps) {
     if (!override) {
         permanentRedirect(`/${getCanonicalSlug(service.slug) || service.slug}`);
     }
+
+    // Neighbourhood pages for this exact city+service (hub → spoke links below).
+    const neighborhoodPages = getNeighborhoodPagesForCityService(city.slug, service.slug);
 
     // Get advertisers from Firestore (real data) with error handling
     let premium: Advertiser[] = [];
