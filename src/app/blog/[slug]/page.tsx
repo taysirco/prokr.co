@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { Home, ChevronLeft, Clock, User, Calendar, Tag, ArrowLeft, Shield, BookOpen, CheckCircle } from 'lucide-react';
-import { BLOG_ARTICLES, getBlogArticle, getPublishedArticles } from '@/lib/blog-data';
+import { getBlogArticle, getPublishedArticles, isArticlePublished } from '@/lib/blog-data';
 import { getServiceBySlug } from '@/lib/seed';
 import { BreadcrumbJsonLd } from '@/components/JsonLd';
 import { isAbsorbedSlug } from '@/lib/services/super-page-groups';
@@ -13,14 +13,26 @@ interface BlogArticlePageProps {
     params: Promise<{ slug: string }>;
 }
 
+// Re-render hourly so an article flips from 404 to live on its scheduled
+// slot without a redeploy — mirrors the blog index.
+export const revalidate = 3600;
+
 export async function generateStaticParams() {
-    return BLOG_ARTICLES.map(article => ({ slug: article.slug }));
+    // Only pre-render what is already live. A scheduled article is rendered
+    // on demand once its slot arrives, so the drip cannot be short-circuited.
+    return getPublishedArticles().map(article => ({ slug: article.slug }));
 }
 
 export async function generateMetadata({ params }: BlogArticlePageProps): Promise<Metadata> {
     const { slug } = await params;
     const article = getBlogArticle(slug);
     if (!article) return { title: 'مقال غير موجود' };
+
+    // Belt and braces: even if a scheduled page is reached before its slot,
+    // it must never invite indexing.
+    if (!isArticlePublished(article)) {
+        return { title: 'مقال غير موجود', robots: { index: false, follow: false } };
+    }
 
     const shareImage = article.image
         ? `https://prokr.co${article.image}`
@@ -62,6 +74,12 @@ export async function generateMetadata({ params }: BlogArticlePageProps): Promis
 export default async function BlogArticlePage({ params }: BlogArticlePageProps) {
     const { slug } = await params;
     const article = getBlogArticle(slug);
+
+    // A scheduled article does not exist publicly until its slot arrives —
+    // otherwise the whole editorial calendar is readable (and indexable) today.
+    if (article && !isArticlePublished(article)) {
+        notFound();
+    }
 
     if (!article) {
         notFound();
