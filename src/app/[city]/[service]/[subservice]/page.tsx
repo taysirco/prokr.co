@@ -6,7 +6,7 @@ import {
     Wrench, ExternalLink, Award, CheckCircle2,
 } from 'lucide-react';
 import { getCityBySlug, getServiceBySlug } from '@/lib/seed';
-import { getSubRegion } from '@/lib/sub-regions';
+import { getSubRegion, getSubRegionServiceHref } from '@/lib/sub-regions';
 import { getOverrideForPage, getOverriddenPages, withBrandSuffix, BRAND_AR } from '@/lib/overrides';
 import type { PageOverride } from '@/lib/overrides/types';
 import { BreadcrumbJsonLd } from '@/components/JsonLd';
@@ -129,9 +129,14 @@ export default async function NeighborhoodServicePage({ params }: NeighborhoodPa
     const h1 = override.meta?.h1 || `${baseServiceName} ${subRegion.name_ar}`;
     const canonicalUrl = `https://prokr.co/${p.city}/${p.service}/${p.subservice}`;
 
+    // Four levels, not three. The sub-region hub sits between the city and this
+    // page in the real URL hierarchy (/{city}/{subregion}/{service}), and omitting
+    // it told Google a hierarchy the URLs contradict — while denying the hub the
+    // one internal signal its own child pages should be giving it.
     const breadcrumbs = [
         { name: 'الرئيسية', url: 'https://prokr.co' },
         { name: city.name_ar, url: `https://prokr.co/${city.slug}` },
+        { name: subRegion.name_ar, url: `https://prokr.co/${city.slug}/${subRegion.slug}` },
         { name: h1, url: canonicalUrl },
     ];
 
@@ -175,7 +180,14 @@ export default async function NeighborhoodServicePage({ params }: NeighborhoodPa
                                 {city.name_ar}
                             </Link>
                             <ChevronLeft className="w-4 h-4" />
-                            <span className="text-white font-medium">{subRegion.name_ar}</span>
+                            {/* The sub-region is a PARENT here, not the current page —
+                                it was rendered as the plain-text current item, which
+                                both mislabelled this page and left no way up to the hub. */}
+                            <Link href={`/${city.slug}/${subRegion.slug}`} className="hover:text-white transition-colors">
+                                {subRegion.name_ar}
+                            </Link>
+                            <ChevronLeft className="w-4 h-4" />
+                            <span className="text-white font-medium">{h1}</span>
                         </nav>
 
                         <div className="flex items-center gap-4 mb-3">
@@ -400,7 +412,7 @@ export default async function NeighborhoodServicePage({ params }: NeighborhoodPa
                     {/* Related services (internal links to real city service pages) */}
                     {override.relatedServices && override.relatedServices.length > 0 && (
                         <section>
-                            <h2 className="text-xl font-bold text-gray-900 mb-3">خدمات ذات صلة في {city.name_ar}</h2>
+                            <h2 className="text-xl font-bold text-gray-900 mb-3">خدمات ذات صلة في {subRegion.name_ar}</h2>
                             <div className="flex flex-wrap gap-3">
                                 {override.relatedServices
                                     .slice()
@@ -408,13 +420,26 @@ export default async function NeighborhoodServicePage({ params }: NeighborhoodPa
                                     .map(rs => {
                                         const svc = getServiceBySlug(rs.slug);
                                         if (!svc) return null;
+                                        // Prefer the sibling page in THIS neighbourhood when one
+                                        // exists — it is the more relevant destination for someone
+                                        // already reading about this neighbourhood, and it keeps the
+                                        // cluster interlinked. Fall back to the city page, and label
+                                        // each link with wherever it actually goes.
+                                        const siblingHref = getSubRegionServiceHref(city.slug, subRegion.slug, svc.slug);
+                                        const href = siblingHref ?? `/${city.slug}/${svc.slug}`;
+                                        // Overrides list their own service among relatedServices
+                                        // (it used to resolve to the city page, a legitimate "up"
+                                        // link). Now that it resolves to the neighbourhood sibling
+                                        // it would point at THIS page — drop the self-link.
+                                        if (href === `/${p.city}/${p.service}/${p.subservice}`) return null;
+                                        const place = siblingHref ? subRegion.name_ar : city.name_ar;
                                         return (
                                             <Link
                                                 key={rs.slug}
-                                                href={`/${city.slug}/${svc.slug}`}
+                                                href={href}
                                                 className="px-4 py-2 bg-white border border-gray-200 rounded-lg hover:border-sky-300 hover:shadow-md transition-all text-gray-800"
                                             >
-                                                {svc.name_ar} {city.name_ar}
+                                                {svc.name_ar} {place}
                                             </Link>
                                         );
                                     })}
