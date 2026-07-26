@@ -1,6 +1,6 @@
 import { City, Service } from '@/types';
 import { CITY_CONTEXT } from './city-context';
-import { getServiceKeywordProfile, getCityKeyword, resolveKeywordTemplate } from './locale-formatting';
+import { getServiceKeywordProfile, getCityKeyword, resolveKeywordTemplate, BRAND_AR } from './locale-formatting';
 import { trackInteraction } from './interaction-tracking';
 
 // Types for the Content Layers
@@ -177,7 +177,12 @@ export function generateCityMeta(city: City): { title: string; h1: string } {
     const cityKw = getCityKeyword(city.name_ar, 'ba');
 
     return {
-        title: `خدمات منزلية ${cityKw} — نقل عفش، تنظيف، مكافحة حشرات، كشف تسربات 2026`,
+        // Same shape as every other <title> on the site: head term, then the
+        // brand, once, after a hyphen. The old title listed four services and a
+        // year after an em-dash and still got " | بروكر الخدمي" appended by the
+        // layout — 80+ chars, truncated in the SERP, and a third separator style.
+        // Callers pass this through `title: { absolute }`.
+        title: `خدمات منزلية ${cityKw} - ${BRAND_AR}`,
         h1: `دليل الخدمات المنزلية ${cityKw} — أفضل الشركات المعتمدة 2026`,
     };
 }
@@ -185,7 +190,9 @@ export function generateCityMeta(city: City): { title: string; h1: string } {
 // For Page: /services-page/[service]
 export function generateServiceCategoryMeta(service: Service): { title: string; h1: string } {
     return {
-        title: `أفضل شركات ${service.name_ar} في السعودية — الرياض، جدة، الدمام وكل المدن 2026`,
+        // "شركات {service} في السعودية - بروكر الخدمي" — the national hub's head
+        // term. Callers pass this through `title: { absolute }`.
+        title: `شركات ${service.name_ar} في السعودية - ${BRAND_AR}`,
         h1: `دليل شركات ${service.name_ar} في السعودية — مقارنة أسعار كل المدن 2026`,
     };
 }

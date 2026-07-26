@@ -78,7 +78,9 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
     const description = clampDescription(`أفضل شركات ${service.name_ar} في السعودية ✔ الرياض ✔ جدة ✔ الدمام ✔ مكة ✔ المدينة. ${profile.usp}. قارن أسعار الشركات المعتمدة في كل مدن المملكة 2026.`);
 
     return {
-        title,
+        // `absolute` — the title already ends with " - بروكر الخدمي";
+        // without this the root layout template appends the brand twice.
+        title: { absolute: title },
         description,
         keywords: [
             `شركة ${service.name_ar} في السعودية`,

@@ -59,7 +59,9 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
     const description = `أفضل شركات الخدمات المنزلية ${cityKw} ✔ نقل عفش ✔ تنظيف ✔ مكافحة حشرات ✔ كشف تسربات ✔ عزل. قارن أسعار الشركات المعتمدة ${cityKw} عبر بروكر.`;
 
     return {
-        title,
+        // `absolute` — the title already ends with " - بروكر الخدمي";
+        // without this the root layout template appends the brand twice.
+        title: { absolute: title },
         description,
         keywords: [
             `خدمات منزلية ${cityKw}`,

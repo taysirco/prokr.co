@@ -128,7 +128,11 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
                             },
                         }),
                         ...(article.reviewedBy && {
-                            reviewedBy: { '@type': 'Person', name: article.reviewedBy },
+                            // Only an individual is marked up as a Person; an
+                            // editorial team is an Organization, never a person.
+                            reviewedBy: article.reviewedBy.startsWith('فريق')
+                                ? { '@type': 'Organization', name: article.reviewedBy, url: 'https://prokr.co' }
+                                : { '@type': 'Person', name: article.reviewedBy },
                         }),
                         ...(article.sources && article.sources.length > 0 && {
                             citation: article.sources.map(s => ({ '@type': 'CreativeWork', name: s })),
