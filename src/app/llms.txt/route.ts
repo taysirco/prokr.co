@@ -4,6 +4,7 @@ import { CATEGORY_NAMES } from '@/lib/seed';
 import { pricingData } from '@/lib/pricing-data';
 import { NAP } from '@/lib/nap';
 import { BLOG_ARTICLES, getPublishedArticles, type BlogArticle } from '@/lib/blog-data';
+import { SUB_REGIONS } from '@/lib/sub-regions';
 
 /**
  * llms.txt — Machine-readable site index for AI crawlers
@@ -70,6 +71,14 @@ ${svcs.map(s => `- ${s.name_ar} (${s.name_en}): https://prokr.co/${getCanonicalS
 ## Cities
 
 ${CITIES.map(c => `- ${c.name_ar} (${c.name_en}): https://prokr.co/${c.slug}`).join('\n')}
+
+## City Districts (neighborhood-level service pages)
+
+Hyper-local pages answering "services in {district}" queries (e.g. خدمات شمال الرياض).
+
+${Object.entries(SUB_REGIONS).flatMap(([citySlug, subs]) =>
+    subs.map(sr => `- ${sr.name_ar} (${sr.name_en}): https://prokr.co/${citySlug}/${sr.slug}`)
+).join('\n')}
 
 ## Guides & Knowledge Base (${BLOG_ARTICLES.length} expert guides — written for citation)
 
