@@ -5,6 +5,7 @@ import { pricingData } from '@/lib/pricing-data';
 import { NAP } from '@/lib/nap';
 import { BLOG_ARTICLES, getPublishedArticles, type BlogArticle } from '@/lib/blog-data';
 import { SUB_REGIONS } from '@/lib/sub-regions';
+import { hasPageOverride } from '@/lib/overrides/registry';
 
 /**
  * llms.txt — Machine-readable site index for AI crawlers
@@ -71,6 +72,28 @@ ${svcs.map(s => `- ${s.name_ar} (${s.name_en}): https://prokr.co/${getCanonicalS
 ## Cities
 
 ${CITIES.map(c => `- ${c.name_ar} (${c.name_en}): https://prokr.co/${c.slug}`).join('\n')}
+
+## Top Local Pages (city × service — the most-demanded pages)
+
+Direct answers with pricing tables + FAQ for the highest-volume local queries.
+Every one also serves clean Markdown via \`Accept: text/markdown\`.
+
+${(() => {
+    const topCities = ['riyadh', 'jeddah', 'dammam', 'makkah', 'madinah', 'taif', 'al-khobar', 'al-ahsa'];
+    const topServices = ['furniture-moving', 'cleaning', 'pest-control', 'water-leak-detection', 'tank-insulation'];
+    const lines: string[] = [];
+    for (const citySlug of topCities) {
+        const city = CITIES.find(c => c.slug === citySlug);
+        if (!city) continue;
+        for (const svcSlug of topServices) {
+            if (!hasPageOverride(citySlug, svcSlug)) continue;
+            const svc = SERVICES.find(s => s.slug === svcSlug);
+            if (!svc) continue;
+            lines.push(`- ${svc.name_ar} ${city.name_ar}: https://prokr.co/${citySlug}/${svcSlug}`);
+        }
+    }
+    return lines.join('\n');
+})()}
 
 ## City Districts (neighborhood-level service pages)
 
