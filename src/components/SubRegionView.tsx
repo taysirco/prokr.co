@@ -23,6 +23,7 @@ import SocialShareWidget from '@/components/SocialShareWidget';
 import { VisionAiWatermark } from '@/components/VisionAiWatermark';
 import SourceOrderLayout from '@/components/SourceOrderLayout';
 import FaqAccordion from '@/components/FaqAccordion';
+import { getCityPriceAnswer } from '@/lib/pricing-data';
 
 // ────────────────────────────────────────────────────────────────────────────
 // Sub-region page. Served NATIVELY at the short URL /{city}/{subregion}
@@ -130,6 +131,8 @@ export function SubRegionView({ city, subRegion }: { city: City; subRegion: SubR
     ];
 
     // SubRegion FAQ items
+    const subRegionPriceAnswer = getCityPriceAnswer(city.slug, city.name_ar, 3);
+
     const regionFaqItems = [
         {
             question: `ما الخدمات المتوفرة في ${subRegion.name_ar}؟`,
@@ -145,7 +148,12 @@ export function SubRegionView({ city, subRegion }: { city: City; subRegion: SubR
         },
         {
             question: `كم تكلفة الخدمات في ${subRegion.name_ar}؟`,
-            answer: `تختلف الأسعار حسب نوع الخدمة وحجم العمل. يمكنك مقارنة الأسعار بين الشركات المتاحة في ${subRegion.name_ar} عبر بروكر والحصول على عروض أسعار مجانية.`
+            // Neighborhood pricing tracks the parent city's surveyed ranges.
+            // Falls back to the generic answer only when the dataset has no
+            // rows for that city — never an invented figure.
+            answer: subRegionPriceAnswer
+                ? `أسعار ${subRegion.name_ar} تتبع نطاقات ${city.name_ar} عموماً. ${subRegionPriceAnswer}`
+                : `تختلف الأسعار حسب نوع الخدمة وحجم العمل. يمكنك مقارنة الأسعار بين الشركات المتاحة في ${subRegion.name_ar} عبر بروكر والحصول على عروض أسعار مجانية.`
         },
     ];
 

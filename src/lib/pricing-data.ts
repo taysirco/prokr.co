@@ -343,3 +343,36 @@ export function pricingToCSV(data: PricingEntry[]): string {
   ).join('\n');
   return header + rows;
 }
+
+/**
+ * A citable, digit-bearing answer to "how much do services cost in {city}?".
+ *
+ * The city and sub-region FAQ answers used to say only "prices vary by service
+ * and scope" — and those answers ship inside FAQPage JSON-LD, i.e. they are
+ * exactly what an answer engine lifts for a cost question. An answer with no
+ * number cannot win that query.
+ *
+ * Returns null when the dataset has no rows for the city (it covers 24 of 30),
+ * so callers can fall back rather than emit an invented figure.
+ */
+export function getCityPriceAnswer(
+  citySlug: string,
+  cityLabel: string,
+  maxServices = 4,
+): string | null {
+  const rows = pricingData.filter(r => r.citySlug === citySlug);
+  if (rows.length === 0) return null;
+
+  const surveyDate = rows.map(r => r.lastUpdated).filter(Boolean).sort().pop();
+  const top = [...rows]
+    .sort((a, b) => b.sampleCount - a.sampleCount)
+    .slice(0, maxServices);
+
+  const parts = top.map(
+    r => `${r.service} من ${r.minPrice.toLocaleString('en-US')} إلى ${r.maxPrice.toLocaleString('en-US')} ${r.unit} (الوسيط ${r.medianPrice.toLocaleString('en-US')})`,
+  );
+
+  return `بحسب مسح بروكر لعروض أسعار حقيقية في ${cityLabel} (تاريخ المسح ${surveyDate}): ${parts.join('، ')}. `
+    + `هذه نطاقات استرشادية للمقارنة وليست عروضاً ملزمة، وتتأثر بحجم العمل والمسافة ووقت التنفيذ. `
+    + `البيانات الكاملة ومنهجية الحساب في مؤشر أسعار بروكر.`;
+}
