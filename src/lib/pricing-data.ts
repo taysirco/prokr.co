@@ -1,8 +1,10 @@
 // =============================================================
 // PROKR PRICING INDEX — بيانات مؤشر أسعار الخدمات المنزلية
 // =============================================================
-// يتم تحديث هذه البيانات أسبوعياً بناءً على عروض أسعار حقيقية
-// من الشركات المسجلة في دليل بروكر.
+// مسح دوري لعروض أسعار حقيقية من الشركات المسجلة في دليل بروكر.
+// ⚠️ لا تصف هذه البيانات بأنها "تُحدَّث أسبوعياً": تاريخ آخر مسح مُخزَّن في
+// حقل lastUpdated لكل صف، وأي وصف لوتيرة التحديث يجب أن يطابقه — الادعاء
+// الذي تكذّبه بيانات الصفحة نفسها يُسقط ثقة محركات الإجابة بالمصدر كله.
 // =============================================================
 
 export interface PricingEntry {
@@ -314,7 +316,14 @@ export function getPricingStats(data: PricingEntry[]) {
   const uniqueCities = [...new Set(data.map(d => d.city))];
   const uniqueServices = [...new Set(data.map(d => d.service))];
   const totalSamples = data.reduce((sum, d) => sum + d.sampleCount, 0);
-  const lastUpdated = data[0]?.lastUpdated || new Date().toISOString().split('T')[0];
+  // MAX, not row 0 — taking the first row under-reported the index's own
+  // recency by 5 days and disagreed with llms.txt, which computes it correctly.
+  // ISO dates sort lexicographically, so a plain sort is safe here.
+  const lastUpdated = data
+    .map(d => d.lastUpdated)
+    .filter(Boolean)
+    .sort()
+    .pop() || new Date().toISOString().split('T')[0];
 
   return {
     cities: uniqueCities.length,
@@ -333,4 +342,37 @@ export function pricingToCSV(data: PricingEntry[]): string {
     `${d.city},${d.cityEn},${d.service},${d.serviceEn},${d.minPrice},${d.maxPrice},${d.avgPrice},${d.medianPrice},${d.sampleCount},${d.unit},${d.lastUpdated},${d.quarterlyChange}`
   ).join('\n');
   return header + rows;
+}
+
+/**
+ * A citable, digit-bearing answer to "how much do services cost in {city}?".
+ *
+ * The city and sub-region FAQ answers used to say only "prices vary by service
+ * and scope" — and those answers ship inside FAQPage JSON-LD, i.e. they are
+ * exactly what an answer engine lifts for a cost question. An answer with no
+ * number cannot win that query.
+ *
+ * Returns null when the dataset has no rows for the city (it covers 24 of 30),
+ * so callers can fall back rather than emit an invented figure.
+ */
+export function getCityPriceAnswer(
+  citySlug: string,
+  cityLabel: string,
+  maxServices = 4,
+): string | null {
+  const rows = pricingData.filter(r => r.citySlug === citySlug);
+  if (rows.length === 0) return null;
+
+  const surveyDate = rows.map(r => r.lastUpdated).filter(Boolean).sort().pop();
+  const top = [...rows]
+    .sort((a, b) => b.sampleCount - a.sampleCount)
+    .slice(0, maxServices);
+
+  const parts = top.map(
+    r => `${r.service} من ${r.minPrice.toLocaleString('en-US')} إلى ${r.maxPrice.toLocaleString('en-US')} ${r.unit} (الوسيط ${r.medianPrice.toLocaleString('en-US')})`,
+  );
+
+  return `بحسب مسح بروكر لعروض أسعار حقيقية في ${cityLabel} (تاريخ المسح ${surveyDate}): ${parts.join('، ')}. `
+    + `هذه نطاقات استرشادية للمقارنة وليست عروضاً ملزمة، وتتأثر بحجم العمل والمسافة ووقت التنفيذ. `
+    + `البيانات الكاملة ومنهجية الحساب في مؤشر أسعار بروكر.`;
 }

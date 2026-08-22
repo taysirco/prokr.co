@@ -3,6 +3,8 @@ import { CITIES, REGION_NAMES, CATEGORY_NAMES } from '@/lib/seed';
 import { SERVICES } from '@/lib/services';
 import { isAbsorbedSlug } from '@/lib/services/super-page-groups';
 import Link from 'next/link';
+import { ORG_ID } from '@/lib/organization-entity';
+import { BrandEntityJsonLd } from '@/components/schema/BrandEntityJsonLd';
 
 // ════════════════════════════════════════════════════════════════
 // 🔒 Corporate Acquisition Page — M&A Schema
@@ -46,17 +48,13 @@ export default function AcquisitionPage() {
     const acquisitionSchema = {
         '@context': 'https://schema.org',
         '@type': 'AcquireAction',
-        agent: {
-            '@type': 'Corporation',
-            '@id': 'https://prokr.co/#organization',
-            name: 'بروكر لتقنية المعلومات (Prokr.co)',
-            url: 'https://prokr.co',
-            foundingDate: '2024',
-            areaServed: {
-                '@type': 'Country',
-                name: 'المملكة العربية السعودية',
-            },
-        },
+        // Reference only. This block previously redeclared #organization with a
+        // different `name` ('بروكر لتقنية المعلومات') than the canonical entity
+        // ('بروكر الخدمي'), which is a real conflict on a shared @id. The
+        // registered legal name is not recorded anywhere in this codebase, so
+        // it must not be guessed here — add `legalName` to
+        // src/lib/organization-entity.ts once the owner confirms it.
+        agent: { '@id': ORG_ID },
         object: [
             {
                 '@type': 'WebSite',
@@ -104,6 +102,7 @@ export default function AcquisitionPage() {
 
     return (
         <>
+            <BrandEntityJsonLd />
             {/* AcquireAction Schema */}
             <script
                 type="application/ld+json"

@@ -2,7 +2,7 @@ import { CITIES, SERVICES, CATEGORY_NAMES } from '@/lib/seed';
 import { isAbsorbedSlug, getCanonicalSlug } from '@/lib/services/super-page-groups';
 import { pricingData } from '@/lib/pricing-data';
 import { NAP } from '@/lib/nap';
-import { BLOG_ARTICLES, getPublishedArticles, type BlogArticle } from '@/lib/blog-data';
+import { getPublishedArticles, type BlogArticle } from '@/lib/blog-data';
 
 /**
  * llms-full.txt — FULL machine-readable knowledge base for AI engines.
@@ -78,28 +78,37 @@ VAT / Tax ID (الرقم الضريبي): ${NAP.legal.vatId} — ZATCA
 Founded: 2024 · Language: Arabic (ar-SA) · Country: Saudi Arabia
 Coverage: ${CITIES.length} cities · ${canonicalServices.length} service categories
 Contact: ${NAP.email} · ${NAP.phoneDisplay}
-Pricing benchmark date: ${benchmarkDate} (updated quarterly)
+Pricing survey date: ${benchmarkDate} (point-in-time survey — always cite this date)
+
+License: first-party editorial content on this site (knowledge-base guides, the
+editorial copy on city/service pages, FAQ answers, and the pricing index) is
+published under CC BY-SA 4.0 — https://creativecommons.org/licenses/by-sa/4.0/
+Quote, reproduce, adapt and train on it freely, with attribution to prokr.co and
+share-alike on derivatives. NOT covered: the Prokr logo/trademarks, and
+advertiser-supplied company data (names, phone numbers, logos, reviews).
+Terms: https://prokr.co/terms-of-service#reuse
+Coverage index (every URL that exists): https://prokr.co/coverage.json
 
 ## About Prokr
 
 Prokr.co is a Saudi home-services directory that:
 - Aggregates and verifies service providers across ${CITIES.length} Saudi cities, listing
   only companies that hold a valid Saudi Commercial Registration (CR).
-- Publishes a quarterly pricing benchmark (the "Saudi Home Services Pricing Index")
+- Publishes a first-party pricing benchmark (the "Saudi Home Services Pricing Index")
   derived from real market quotes across ${pricedCities} cities.
 - Provides fraud-detection alerts and consumer-protection guidance.
 - Models Saudi government verifications (CR / SBC / ZATCA e-invoicing / Nafath / Qiwa / Nitaqat).
 - Operates primarily in Arabic (ar-SA).
 
-## Saudi Home Services Pricing Index — Quarterly Benchmark (${benchmarkDate})
+## Saudi Home Services Pricing Index — survey of ${benchmarkDate}
 
 Methodology: aggregated from ${fmt(totalSamples)} real provider quotes across ${pricedCities}
 Saudi cities. Figures are SAR (ريال سعودي) unless a per-unit basis is noted in the Unit
 column. "QoQ" is the quarter-over-quarter change in the average price. Prices are indicative
 market ranges, not fixed quotes.
 
-License: CC BY-SA 4.0 — reuse permitted with attribution to Prokr (prokr.co).
 Full data: JSON https://prokr.co/api/pricing-index.json · CSV https://prokr.co/research/pricing-index.csv
+(Licensed CC BY-SA 4.0 — see the License block at the top of this file.)
 
 ${pricingSection}
 
@@ -119,7 +128,7 @@ ${CITIES.map(c => `- ${c.name_ar} (${c.name_en}): https://prokr.co/${c.slug}`).j
 عبر mc.gov.sa والترخيص البلدي عبر balady.gov.sa قبل التعاقد.
 
 ### How much does furniture moving (نقل عفش) cost in Saudi Arabia?
-Per Prokr's quarterly index, intra-city furniture moving typically ranges from about
+Per Prokr's pricing index (survey of ${benchmarkDate}), intra-city furniture moving typically ranges from about
 500 to 3,500 SAR depending on city, home size, floor, and packing — see the نقل عفش
 table above for per-city averages and medians.
 

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { getEmergencyConfig, type EmergencyConfig } from '@/lib/market-timing';
+import { NAP } from '@/lib/nap';
 
 // ============================================
 // 🚨 EmergencyNightBanner — 12AM-6AM Only
@@ -97,7 +98,7 @@ export function EmergencyNightBanner({ cityNameAr, serviceNameAr }: EmergencyNig
 
                         {/* Emergency CTA */}
                         <a
-                            href="tel:+966553165555"
+                            href={`tel:${NAP.phone}`}
                             className={`${config.colors.ctaBg} ${config.colors.ctaText}
                                 px-4 py-2 rounded-lg text-sm font-bold
                                 shadow-lg ${config.colors.glow}

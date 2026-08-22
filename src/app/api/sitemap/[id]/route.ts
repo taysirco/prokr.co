@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { CITIES, SERVICES } from '@/lib/seed';
-import { BLOG_ARTICLES } from '@/lib/blog-data';
+import { getPublishedArticles } from '@/lib/blog-data';
 import { hasPageOverride, getOverriddenPages } from '@/lib/overrides/registry';
 import { isAbsorbedSlug } from '@/lib/services/super-page-groups';
 import { SUB_REGIONS } from '@/lib/sub-regions';
@@ -97,6 +97,7 @@ function generateSitemap0(): SitemapEntry[] {
         // graph (corporate/layout strips nav) — so the sitemap is its only crawl path.
         { url: `${BASE_URL}/corporate/acquisition`, lastmod: now, changefreq: 'monthly', priority: 0.5 },
         { url: `${BASE_URL}/research/pricing-index`, lastmod: now, changefreq: 'weekly', priority: 0.9 },
+        { url: `${BASE_URL}/methodology`, lastmod: now, changefreq: 'monthly', priority: 0.6 },
         { url: `${BASE_URL}/tools`, lastmod: now, changefreq: 'monthly', priority: 0.7 },
         { url: `${BASE_URL}/tools/moving-cost-calculator`, lastmod: now, changefreq: 'monthly', priority: 0.8 },
         { url: `${BASE_URL}/tools/insulation-cost-calculator`, lastmod: now, changefreq: 'monthly', priority: 0.8 },
@@ -194,8 +195,13 @@ function generateBlogSitemap(): SitemapEntry[] {
     const entries: SitemapEntry[] = [
         { url: `${BASE_URL}/blog`, lastmod: now, changefreq: 'weekly', priority: 0.8 },
     ];
-    for (const article of BLOG_ARTICLES) {
-        entries.push({ url: `${BASE_URL}/blog/${article.slug}`, lastmod: new Date(article.updateDate).toISOString(), changefreq: 'monthly', priority: 0.7 });
+    // Only articles whose scheduled slot has passed. /blog/[slug] calls
+    // notFound() for the rest, so emitting them submits guaranteed 404s.
+    for (const article of getPublishedArticles()) {
+        // Clamp to now: a future updateDate is an invalid <lastmod> and makes
+        // every other lastmod on the site less trustworthy to a crawler.
+        const updated = Math.min(Date.parse(article.updateDate), Date.now());
+        entries.push({ url: `${BASE_URL}/blog/${article.slug}`, lastmod: new Date(updated).toISOString(), changefreq: 'monthly', priority: 0.7 });
     }
     return entries;
 }

@@ -27,9 +27,13 @@ export const DirectAnswer: React.FC<DirectAnswerProps> = ({ city, service, answe
             id="quick-summary"
             className="direct-answer bg-blue-50/80 border-r-4 border-blue-600 p-5 my-6 rounded-lg shadow-sm"
         >
-            <h3 className="font-bold text-lg mb-3 text-blue-900">
-                ملخص سريع عن {service} في {city}
-            </h3>
+            {/* h2, not h3: this is the first section under the page h1, and the
+                outline previously ran h1 → h3 → h2. It is also the block an
+                answer engine lifts, so it should read as a question rather than
+                a label. */}
+            <h2 className="font-bold text-lg mb-3 text-blue-900">
+                كم تكلفة {service} في {city}؟ وما الذي يجب معرفته قبل الحجز
+            </h2>
 
             {/* Intro sentence — summary */}
             {intro && (

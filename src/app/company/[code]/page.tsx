@@ -39,6 +39,7 @@ import { AudioReviewSchema } from '@/components/schema/AudioObjectSchema';
 import SourceOrderLayout from '@/components/SourceOrderLayout';
 
 import type { Review, City, Service } from '@/types';
+import { BrandEntityJsonLd } from '@/components/schema/BrandEntityJsonLd';
 
 // ISR: revalidate every hour for fresh data + fast TTFB
 export const revalidate = 3600;
@@ -152,6 +153,7 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
 
     return (
         <>
+            <BrandEntityJsonLd />
             {/* JSON-LD Schema - Company Full Data */}
             <LocalBusinessJsonLd advertiser={advertiser} city={mainCity || undefined} services={targetedServices} areaCities={targetedCities} />
             {/* OrganizationJsonLd removed (D3-7): its services + areaServed are merged

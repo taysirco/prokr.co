@@ -23,6 +23,7 @@ import SocialShareWidget from '@/components/SocialShareWidget';
 import { VisionAiWatermark } from '@/components/VisionAiWatermark';
 import SourceOrderLayout from '@/components/SourceOrderLayout';
 import FaqAccordion from '@/components/FaqAccordion';
+import { BrandEntityJsonLd } from '@/components/schema/BrandEntityJsonLd';
 
 // Service definitions for DefinedTerm schema + CitableSummary
 const SERVICE_DEFINITIONS: Record<string, string> = {
@@ -163,6 +164,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
 
     return (
         <>
+            <BrandEntityJsonLd />
             {/* JSON-LD Schema - National Service with Cities List */}
             <BreadcrumbJsonLd items={breadcrumbs} />
             <WebPageJsonLd

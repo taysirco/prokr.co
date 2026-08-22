@@ -9,7 +9,7 @@ import { NextResponse } from 'next/server';
  * 
  * Prokr exposes service discovery capabilities:
  * - Search for verified service providers by city/category
- * - Get quarterly-updated pricing benchmarks
+ * - Get pricing benchmarks (point-in-time survey, date published with the data)
  * - Request service quotes from licensed companies
  */
 
@@ -21,90 +21,24 @@ export function GET() {
         serverInfo: {
             name: 'Prokr Saudi Services Directory',
             version: '1.0.0',
-            description: 'بروكر — دليل الخدمات المنزلية السعودي المعتمد. Verified directory of home service providers across 30 Saudi cities with quarterly pricing benchmarks.',
+            description: 'بروكر — دليل الخدمات المنزلية السعودي المعتمد. Verified directory of home service providers across Saudi cities, with a first-party pricing benchmark that publishes its methodology and survey date.',
             homepage: 'https://prokr.co',
             icon: 'https://prokr.co/logo.webp',
         },
-        transport: {
-            type: 'https',
-            url: 'https://prokr.co/api',
-        },
+        // ⚠️ NO `transport` / `tools` block.
+        // There is no MCP server at this domain: `src/app/api` has no JSON-RPC
+        // handler, so the previously advertised transport (https://prokr.co/api)
+        // 404s and all four advertised tools (search_providers, get_pricing,
+        // check_availability, book_service) resolve to nothing. An agent that
+        // trusts a server card and gets a dead endpoint learns the domain's
+        // machine claims are unreliable — worse than never advertising one.
+        // What IS real is the resource set below: stable, fetchable URLs.
+        // Re-add tools ONLY alongside a working MCP endpoint.
         capabilities: {
-            tools: true,
+            tools: false,
             resources: true,
             prompts: false,
         },
-        tools: [
-            {
-                name: 'search_providers',
-                description: 'Search for verified service providers by city and service category. Returns company name, rating, phone, and pricing.',
-                inputSchema: {
-                    type: 'object',
-                    properties: {
-                        city: {
-                            type: 'string',
-                            description: 'City slug (e.g., "riyadh", "jeddah", "dammam")',
-                        },
-                        service: {
-                            type: 'string',
-                            description: 'Service slug (e.g., "furniture-moving", "cleaning", "pest-control")',
-                        },
-                    },
-                    required: ['city', 'service'],
-                },
-            },
-            {
-                name: 'get_pricing',
-                description: 'Get quarterly-updated pricing benchmarks for a specific service in a specific city. Data sourced from 500+ verified providers.',
-                inputSchema: {
-                    type: 'object',
-                    properties: {
-                        city: {
-                            type: 'string',
-                            description: 'City slug',
-                        },
-                        service: {
-                            type: 'string',
-                            description: 'Service category slug',
-                        },
-                    },
-                    required: ['service'],
-                },
-            },
-            {
-                name: 'check_availability',
-                description: 'Check if a specific service is available in a given city and list the number of verified providers.',
-                inputSchema: {
-                    type: 'object',
-                    properties: {
-                        city: {
-                            type: 'string',
-                            description: 'City slug',
-                        },
-                        service: {
-                            type: 'string',
-                            description: 'Service slug',
-                        },
-                    },
-                    required: ['city', 'service'],
-                },
-            },
-            {
-                name: 'book_service',
-                description: 'Request a service quote from verified providers. Collects customer details and connects them with up to 3 licensed companies.',
-                inputSchema: {
-                    type: 'object',
-                    properties: {
-                        city: { type: 'string', description: 'City slug' },
-                        service: { type: 'string', description: 'Service slug' },
-                        customer_name: { type: 'string', description: 'Customer full name' },
-                        customer_phone: { type: 'string', description: 'Saudi phone number (+966...)' },
-                        details: { type: 'string', description: 'Service requirements description' },
-                    },
-                    required: ['city', 'service', 'customer_name', 'customer_phone'],
-                },
-            },
-        ],
         resources: [
             {
                 name: 'service-catalog',
@@ -114,9 +48,27 @@ export function GET() {
             },
             {
                 name: 'pricing-index',
-                description: 'Quarterly-updated pricing data for all services across all cities (CSV/JSON)',
+                description: 'Home-services pricing benchmark for Saudi Arabia — human-readable report with methodology (IQR-filtered real quotes), sample counts and per-city medians.',
                 uri: 'https://prokr.co/research/pricing-index',
                 mimeType: 'text/html',
+            },
+            {
+                name: 'pricing-index-json',
+                description: 'Same pricing benchmark as machine-readable JSON, with a meta block carrying the survey date and CC BY-SA 4.0 licence.',
+                uri: 'https://prokr.co/api/pricing-index.json',
+                mimeType: 'application/json',
+            },
+            {
+                name: 'pricing-index-csv',
+                description: 'Same pricing benchmark as CSV, for direct tabular analysis.',
+                uri: 'https://prokr.co/research/pricing-index.csv',
+                mimeType: 'text/csv',
+            },
+            {
+                name: 'llms-full-knowledge-base',
+                description: 'Complete self-contained knowledge base: full pricing tables, service catalog, city coverage and verified-entity facts, written to be quoted directly.',
+                uri: 'https://prokr.co/llms-full.txt',
+                mimeType: 'text/plain',
             },
             {
                 name: 'city-coverage',

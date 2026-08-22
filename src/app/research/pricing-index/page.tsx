@@ -6,28 +6,37 @@ import FaqAccordion from '@/components/FaqAccordion';
 import Link from 'next/link';
 import { getCanonicalSlug } from '@/lib/services/super-page-groups';
 import { hasPageOverride } from '@/lib/overrides/registry';
+import { BrandEntityJsonLd } from '@/components/schema/BrandEntityJsonLd';
 
-export const metadata: Metadata = {
-  title: { absolute: 'مؤشر بروكر لأسعار الخدمات المنزلية السعودية 2026 | بيانات مفتوحة' },
-  description:
-    'قاعدة بيانات إحصائية محدثة أسبوعياً لمتوسط أسعار 10 خدمات منزلية في 10 مدن سعودية. مبنية على تحليل أكثر من 4,800 عرض سعر حقيقي من شركات معتمدة.',
-  openGraph: {
-    title: '📊 مؤشر بروكر — أسعار الخدمات المنزلية السعودية 2026',
+// Metadata is COMPUTED from the dataset, never hand-written: the previous
+// static copy claimed "10 مدن" and "4,800 عينة" against real values of 24 and
+// 6,042, and advertised a weekly cadence the data's own timestamps contradict.
+// A figure an answer engine can check against the same page must be derived.
+export function generateMetadata(): Metadata {
+  const s = getPricingStats(pricingData);
+  const samples = s.totalSamples.toLocaleString('en-US');
+  const summary = `قاعدة بيانات مفتوحة | ${s.cities} مدينة | ${s.services} خدمات | آخر مسح ${s.lastUpdated}`;
+  return {
+    title: { absolute: 'مؤشر بروكر لأسعار الخدمات المنزلية السعودية 2026 | بيانات مفتوحة' },
     description:
-      'قاعدة بيانات مفتوحة المصدر | 10 مدن | 10 خدمات | تحديث أسبوعي',
-    type: 'website',
-    url: 'https://prokr.co/research/pricing-index',
-    siteName: 'بروكر الخدمي',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: '📊 مؤشر بروكر — أسعار الخدمات المنزلية السعودية 2026',
-    description: 'قاعدة بيانات مفتوحة المصدر | 10 مدن | 10 خدمات | تحديث أسبوعي',
-  },
-  alternates: {
-    canonical: 'https://prokr.co/research/pricing-index',
-  },
-};
+      `قاعدة بيانات إحصائية لمتوسط أسعار ${s.services} خدمات منزلية في ${s.cities} مدينة سعودية. مبنية على تحليل ${samples} عرض سعر حقيقي من شركات معتمدة. تاريخ آخر مسح: ${s.lastUpdated}.`,
+    openGraph: {
+      title: '📊 مؤشر بروكر — أسعار الخدمات المنزلية السعودية 2026',
+      description: summary,
+      type: 'website',
+      url: 'https://prokr.co/research/pricing-index',
+      siteName: 'بروكر الخدمي',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: '📊 مؤشر بروكر — أسعار الخدمات المنزلية السعودية 2026',
+      description: summary,
+    },
+    alternates: {
+      canonical: 'https://prokr.co/research/pricing-index',
+    },
+  };
+}
 
 export default function PricingIndexPage() {
   const stats = getPricingStats(pricingData);
@@ -45,13 +54,14 @@ export default function PricingIndexPage() {
   // FAQ items for pricing
   const pricingFaqItems = [
     { question: 'كيف يتم حساب متوسط الأسعار في مؤشر بروكر؟', answer: 'يتم جمع عروض الأسعار من أكثر من 500 شركة مسجلة في بروكر، ثم استبعاد أعلى وأدنى 10% (IQR Method) لتجنب القيم الشاذة، وحساب المتوسط الحسابي والوسيط لكل مدينة وخدمة.' },
-    { question: 'هل الأسعار في مؤشر بروكر دقيقة؟', answer: 'نعم، الأسعار مبنية على تحليل أكثر من 4,800 عرض سعر حقيقي من شركات مرخصة بسجل تجاري سعودي. يتم التحديث أسبوعياً كل يوم أحد لضمان دقة البيانات.' },
+    { question: 'هل الأسعار في مؤشر بروكر دقيقة؟', answer: `الأسعار مبنية على تحليل ${stats.totalSamples.toLocaleString('en-US')} عرض سعر حقيقي من شركات مرخصة بسجل تجاري سعودي، بعد استبعاد أعلى وأدنى 10% (طريقة IQR). تاريخ آخر مسح مُنفَّذ: ${stats.lastUpdated} — وهو التاريخ المُعتمد لكل الأرقام المنشورة هنا.` },
     { question: 'لماذا تختلف الأسعار بين المدن؟', answer: 'تختلف الأسعار حسب تكلفة المعيشة، حجم الطلب، المنافسة، والظروف المناخية. مثلاً: خدمات التنظيف في الرياض أعلى 10-15% من المدن الأصغر بسبب ارتفاع تكلفة العمالة.' },
     { question: 'هل يمكنني تحميل بيانات مؤشر الأسعار؟', answer: 'نعم، البيانات متاحة للتحميل مجاناً بصيغتي CSV و JSON بموجب ترخيص Creative Commons BY-SA 4.0. يمكنك استخدامها في الأبحاث والتقارير بشرط ذكر المصدر.' },
   ];
 
   return (
     <>
+            <BrandEntityJsonLd />
       {/* Dataset JSON-LD */}
       <DatasetJsonLd
         totalSamples={stats.totalSamples}
@@ -62,7 +72,6 @@ export default function PricingIndexPage() {
       {/* Breadcrumb for navigation schema */}
       <BreadcrumbJsonLd items={[
         { name: 'الرئيسية', url: 'https://prokr.co' },
-        { name: 'مركز الأبحاث', url: 'https://prokr.co/research' },
         { name: 'مؤشر الأسعار', url: 'https://prokr.co/research/pricing-index' },
       ]} />
       {/* FAQPage JSON-LD for pricing queries */}
@@ -267,7 +276,8 @@ export default function PricingIndexPage() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-green-600 mt-0.5">✅</span>
-                  يتم التحديث أسبوعياً كل يوم أحد
+                  تاريخ آخر مسح مُنفَّذ:{' '}
+                  <time dateTime={stats.lastUpdated}>{stats.lastUpdated}</time>
                 </li>
               </ul>
             </div>

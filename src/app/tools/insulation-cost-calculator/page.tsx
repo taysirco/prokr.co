@@ -4,6 +4,7 @@ import { pricingData } from '@/lib/pricing-data';
 import { BreadcrumbJsonLd } from '@/components/schema/BreadcrumbJsonLd';
 import InsulationCostCalculator, { type CityFactor } from '@/components/tools/InsulationCostCalculator';
 import Footer from '@/components/Footer';
+import { BrandEntityJsonLd } from '@/components/schema/BrandEntityJsonLd';
 
 export const metadata: Metadata = {
     title: 'حاسبة تكلفة العزل في السعودية 2026 — احسب سعر عزل السطح بالمتر',
@@ -42,6 +43,7 @@ export default function InsulationCostCalculatorPage() {
 
     return (
         <>
+            <BrandEntityJsonLd />
             <BreadcrumbJsonLd items={[
                 { name: 'الرئيسية', url: 'https://prokr.co' },
                 { name: 'أدوات', url: 'https://prokr.co/tools' },

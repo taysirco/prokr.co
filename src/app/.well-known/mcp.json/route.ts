@@ -15,10 +15,8 @@ export function GET() {
         name: 'Prokr Saudi Services Directory',
         version: '1.0.0',
         server_card: 'https://prokr.co/.well-known/mcp/server-card.json',
-        transport: {
-            type: 'https',
-            url: 'https://prokr.co/api',
-        },
+        // No `transport`: there is no MCP endpoint at this domain. See the
+        // server card for the resource set that IS fetchable.
     };
 
     return NextResponse.json(mcpDiscovery, {

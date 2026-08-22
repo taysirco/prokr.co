@@ -24,6 +24,13 @@ export interface Review {
   rating: number; // 1-5
   comment: string;
   date: string; // ISO string from Firestore
+  /**
+   * SERVER-determined at /api/review-verify (never client-supplied). Only
+   * reviews with `verified === true` may contribute to AggregateRating or be
+   * emitted as Review schema — star markup from unverified or seeded reviews
+   * is the textbook review-spam pattern and the penalty is site-wide.
+   */
+  verified?: boolean;
   // Voice review fields (التقييم الصوتي)
   review_type?: 'text' | 'audio';
   audio_url?: string;

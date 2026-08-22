@@ -5,6 +5,7 @@ import { BreadcrumbJsonLd, WebPageJsonLd, SpeakableJsonLd } from '@/components/J
 import FaqAccordion from '@/components/FaqAccordion';
 import Footer from '@/components/Footer';
 import { NAP } from '@/lib/nap';
+import { BrandEntityJsonLd } from '@/components/schema/BrandEntityJsonLd';
 
 export const metadata: Metadata = {
     title: 'من نحن - أكبر دليل خدمات في السعودية',
@@ -55,6 +56,7 @@ export default function AboutPage() {
 
     return (
         <>
+            <BrandEntityJsonLd />
             <BreadcrumbJsonLd items={breadcrumbs} />
             <WebPageJsonLd
                 title="من نحن - بروكر"

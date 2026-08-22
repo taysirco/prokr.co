@@ -100,7 +100,7 @@ export default function HomePage() {
         title="بروكر الخدمي - دليل الخدمات السعودي الشامل"
         description="دليل شامل لأفضل شركات الخدمات في المملكة العربية السعودية"
         url="https://prokr.co"
-        speakableSelectors={['h1', '.trust-indicators', '[data-hero-gradient] p']}
+        speakableSelectors={['h1', '.direct-answer', '[data-hero-gradient] p']}
         speakableText="بروكر الخدمي هو أكبر دليل إلكتروني للخدمات المنزلية في المملكة العربية السعودية. يغطي 30 مدينة ويضم أكثر من 500 شركة معتمدة في خدمات نقل العفش والتنظيف ومكافحة الحشرات وكشف التسربات."
         about={{ name: 'دليل الخدمات المنزلية', type: 'Thing' }}
       />
@@ -244,8 +244,11 @@ export default function HomePage() {
                   <span className="block text-sky-100">في المملكة العربية السعودية</span>
                 </h1>
 
-                <p className="text-xl text-sky-100/90 mb-8 max-w-xl mx-auto lg:mx-0 lg:mr-0">
-                  منصة موثوقة تجمع أفضل مقدمي خدمات نقل العفش، التنظيف، مكافحة الحشرات، والصيانة في المملكة العربية السعودية
+                <p className="direct-answer text-xl text-sky-100/90 mb-8 max-w-xl mx-auto lg:mx-0 lg:mr-0">
+                  بروكر دليل للخدمات المنزلية في السعودية يغطي {CITIES.length} مدينة و{canonicalServices.length} خدمة،
+                  من نقل العفش والتنظيف إلى مكافحة الحشرات وكشف التسربات والعزل. كل شركة مُدرجة
+                  مطالَبة بسجل تجاري سعودي، ولكل مدينة وخدمة صفحة فيها نطاقات أسعار استرشادية
+                  مبنية على مسح لعروض حقيقية.
                 </p>
 
                 {/* Search Bar */}

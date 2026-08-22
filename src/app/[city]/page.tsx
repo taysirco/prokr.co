@@ -27,6 +27,8 @@ import SocialShareWidget from '@/components/SocialShareWidget';
 import { VisionAiWatermark } from '@/components/VisionAiWatermark';
 import SourceOrderLayout from '@/components/SourceOrderLayout';
 import FaqAccordion from '@/components/FaqAccordion';
+import { BrandEntityJsonLd } from '@/components/schema/BrandEntityJsonLd';
+import { getCityPriceAnswer } from '@/lib/pricing-data';
 
 interface CityPageProps {
     params: Promise<{
@@ -133,6 +135,8 @@ export default async function CityPage({ params }: CityPageProps) {
 
     // City-level FAQ items (general questions about services in this city)
     const availableServices = SERVICES.filter(s => hasPageOverride(city.slug, s.slug) && !isAbsorbedSlug(s.slug));
+    const cityPriceAnswer = getCityPriceAnswer(city.slug, city.name_ar);
+
     const cityFaqItems = [
         {
             question: `ما هي الخدمات المتوفرة ${cityKw} عبر بروكر؟`,
@@ -142,6 +146,14 @@ export default async function CityPage({ params }: CityPageProps) {
             question: `كيف أختار أفضل شركة خدمات ${cityKw}؟`,
             answer: `ننصح بمقارنة 3 شركات على الأقل من خلال بروكر. تحقق من: 1) السجل التجاري الساري، 2) تقييمات العملاء الحقيقية، 3) ضمان الخدمة المكتوب، 4) الشفافية في الأسعار. بروكر يعرض فقط الشركات المعتمدة التي تستوفي جميع المعايير.`
         },
+        // Cost question with real digits + survey date. This ships inside
+        // FAQPage JSON-LD, so a digit-free answer forfeits the cost query.
+        // Omitted entirely when the dataset has no rows for this city rather
+        // than emitting an invented range.
+        ...(cityPriceAnswer ? [{
+            question: `كم تكلفة الخدمات المنزلية ${cityKw}؟`,
+            answer: cityPriceAnswer,
+        }] : []),
         {
             question: `هل الأسعار ${cityKw} تختلف عن باقي مدن المملكة؟`,
             answer: `نعم، تتأثر الأسعار بعوامل محلية مثل ${cityContext?.challenges?.[0] || 'تكاليف التشغيل'} و${cityContext?.urbanTraits?.[0] || 'حجم المدينة'}. ${cityContext?.priceModifier && cityContext.priceModifier > 1.0 ? `الأسعار ${cityKw} أعلى قليلاً من المتوسط الوطني.` : `الأسعار ${cityKw} تنافسية مقارنة بالمدن الكبرى.`}`
@@ -165,6 +177,7 @@ export default async function CityPage({ params }: CityPageProps) {
 
     return (
         <>
+            <BrandEntityJsonLd />
             {/* JSON-LD Schema - City Services List */}
             <BreadcrumbJsonLd items={breadcrumbs} />
             <SpeakableWebPageJsonLd

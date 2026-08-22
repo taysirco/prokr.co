@@ -20,7 +20,7 @@ export function DatasetJsonLd({ totalSamples, cities, services, lastUpdated }: D
       'Saudi Arabia Home Services Pricing Index 2026',
       'Prokr Pricing Benchmark KSA',
     ],
-    description: `قاعدة بيانات إحصائية شاملة لمتوسط أسعار ${services} خدمة منزلية في ${cities} مدينة سعودية. مبنية على تحليل ${totalSamples.toLocaleString()} عرض سعر حقيقي من أكثر من 500 شركة معتمدة بسجل تجاري سعودي ساري. يتم تحديث البيانات أسبوعياً.`,
+    description: `قاعدة بيانات إحصائية شاملة لمتوسط أسعار ${services} خدمة منزلية في ${cities} مدينة سعودية. مبنية على تحليل ${totalSamples.toLocaleString()} عرض سعر حقيقي من أكثر من 500 شركة معتمدة بسجل تجاري سعودي ساري. تاريخ آخر مسح: ${lastUpdated}.`,
     url: 'https://prokr.co/research/pricing-index',
     identifier: 'prokr-ksa-pricing-2026-v3',
     keywords: [
@@ -52,7 +52,9 @@ export function DatasetJsonLd({ totalSamples, cities, services, lastUpdated }: D
     license: 'https://creativecommons.org/licenses/by-sa/4.0/',
     isAccessibleForFree: true,
     inLanguage: ['ar', 'en'],
-    temporalCoverage: '2026-01-01/2026-12-31',
+    // Open-ended-to-last-survey, never a future end date: claiming coverage
+    // through 2026-12-31 asserts data that does not exist yet.
+    temporalCoverage: `2026-01-01/${lastUpdated}`,
     spatialCoverage: {
       '@type': 'Place',
       name: 'المملكة العربية السعودية',

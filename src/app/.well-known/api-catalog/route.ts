@@ -45,7 +45,7 @@ export function GET() {
                         type: 'text/html',
                     },
                 ],
-                title: 'Prokr Pricing Index — Quarterly updated pricing benchmarks for Saudi home services',
+                title: 'Prokr Pricing Index — first-party pricing benchmark for Saudi home services (survey date published with the data)',
             },
             {
                 anchor: 'https://prokr.co/api/book',

@@ -10,6 +10,7 @@ import FraudAlertBanner from '@/components/FraudAlertBanner';
 import LocalPresence from '@/components/LocalPresence';
 import { EmergencyNightBanner } from '@/components/EmergencyNightBanner';
 import { LiveAvailabilityBanner } from '@/components/LiveAvailabilityBanner';
+import { BrandEntityJsonLd } from '@/components/schema/BrandEntityJsonLd';
 
 export const metadata: Metadata = {
     title: 'مناطق الخدمة في السعودية | 30 مدينة',
@@ -56,6 +57,7 @@ export default function LocationsPage() {
 
     return (
         <>
+            <BrandEntityJsonLd />
             {/* JSON-LD Schema - Cities/Locations List */}
             <BreadcrumbJsonLd items={breadcrumbs} />
             <WebPageJsonLd

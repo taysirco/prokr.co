@@ -13,6 +13,8 @@ import { getServiceKeywordProfile, getCityKeyword } from '@/lib/locale-formattin
 import { getCanonicalSlug } from '@/lib/services/super-page-groups';
 import { getHourlyMode } from '@/lib/market-timing';
 import { safeJsonLd, absolutizeUrl } from '@/lib/json-ld';
+import { NAP } from '@/lib/nap';
+import { buildOrganizationNode, ORG_ID } from '@/lib/organization-entity';
 
 // ── WARRANTY DATA (mirrored from ServiceOfferJsonLd) ──
 const WARRANTY_BY_CATEGORY: Record<string, {
@@ -62,11 +64,14 @@ export function UnifiedGraphCompiler({
     const warranty = WARRANTY_BY_CATEGORY[service.category] || WARRANTY_BY_CATEGORY['cleaning'];
 
     // ── AggregateRating calculation ──
-    // Exclude the injected "featured" company so its 5 hardcoded reviews don't
-    // power an identical, fabricated Service AggregateRating on every ~945 pages.
+    // Only VERIFIED reviews (server-set at /api/review-verify) may power stars.
+    // This replaces the previous hardcoded `featured-al-ostora` exclusion: the
+    // rule is now principled rather than one-off, so any future seeded partner
+    // is covered automatically and cannot mint an identical fabricated rating
+    // across ~945 pages.
     const allReviews = advertisers
-        .filter(ad => ad.id !== 'featured-al-ostora')
-        .flatMap(ad => ad.reviews || []);
+        .flatMap(ad => ad.reviews || [])
+        .filter(r => r.verified === true);
     const avgRating = allReviews.length > 0
         ? Math.round((allReviews.reduce((sum, r) => sum + r.rating, 0) / allReviews.length) * 10) / 10
         : undefined;
@@ -83,40 +88,13 @@ export function UnifiedGraphCompiler({
     // ============================================
     const graph: Record<string, unknown>[] = [];
 
-    // ── 0. Organization (#organization) — brand entity anchor, shared across ALL
-    //    pages by @id (same id+name as the homepage ProkrOrganizationJsonLd) so the
-    //    money pages connect to the Knowledge Graph (Wikidata Q139265070) instead of
-    //    floating with anonymous providers. ──
-    const ORG_ID = 'https://prokr.co/#organization';
-    graph.push({
-        '@type': 'Organization',
-        '@id': ORG_ID,
-        name: 'بروكر الخدمي',
-        alternateName: ['دليل بروكر للخدمات المنزلية', 'بروكر', 'Prokr'],
-        url: 'https://prokr.co',
-        logo: { '@type': 'ImageObject', url: 'https://prokr.co/logo.png', width: 512, height: 512 },
-        // Wikidata sameAs removed — entity Q139265070 does not exist (broken sameAs
-        // = negative entity signal). Re-add a real Q-ID once the item is created.
-        sameAs: [
-            'https://www.instagram.com/prokr_sa',
-            'https://www.facebook.com/prokr.sa',
-        ],
-        knowsAbout: [
-            { '@type': 'GovernmentOrganization', name: 'هيئة الزكاة والضريبة والجمارك (ZATCA)', url: 'https://zatca.gov.sa' },
-            { '@type': 'GovernmentOrganization', name: 'منصة قوى — أجير (Qiwa)', url: 'https://qiwa.sa' },
-            { '@type': 'GovernmentOrganization', name: 'برنامج نطاقات — وزارة الموارد البشرية', url: 'https://hrsd.gov.sa' },
-        ],
-        hasCredential: {
-            '@type': 'EducationalOccupationalCredential',
-            credentialCategory: 'Government Identity Verification Platform',
-            name: 'التحقق عبر منصة نفاذ الوطنية — مركز المعلومات الوطني',
-            recognizedBy: {
-                '@type': 'GovernmentOrganization',
-                name: 'مركز المعلومات الوطني — منصة نفاذ (Nafath)',
-                url: 'https://www.iam.gov.sa/',
-            },
-        },
-    });
+    // ── 0. Organization (#organization) — the brand entity.
+    //    Uses the SAME definition as the homepage (CR number, VAT ID,
+    //    contactPoint, hasOfferCatalog, sameAs, trust policies). This block
+    //    previously carried a reduced copy with none of that, which meant the
+    //    ~944 crawled money pages showed a brand with no legal identity —
+    //    exactly the pages an answer engine reads and cites.
+    graph.push(buildOrganizationNode());
 
     // ── 1. WebPage (#webpage) — القلب الذي يربط كل شيء ──
     graph.push({
@@ -306,7 +284,7 @@ export function UnifiedGraphCompiler({
             numberOfItems: top5.length,
             about: { '@id': `${baseUrl}#service` },
             itemListElement: top5.map((ad, index) => {
-                const reviews = ad.reviews || [];
+                const reviews = (ad.reviews || []).filter(r => r.verified === true);
                 const adAvgRating = reviews.length > 0
                     ? Math.round((reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.length) * 10) / 10
                     : undefined;
@@ -319,10 +297,9 @@ export function UnifiedGraphCompiler({
                         url: `https://prokr.co/company/${ad.short_code}`,
                         ...(ad.phone_number && { telephone: ad.phone_number }),
                         ...(absolutizeUrl(ad.logo_url) && { image: absolutizeUrl(ad.logo_url) }),
-                        // Exclude the injected featured company (5 hardcoded marketing
-                        // reviews) from aggregateRating — mirrors the Service-level
-                        // exclusion; only genuine, data-driven advertiser reviews power stars.
-                        ...(ad.id !== 'featured-al-ostora' && adAvgRating && reviews.length > 0 && {
+                        // `reviews` is already filtered to verified-only above, so
+                        // seeded marketing reviews cannot produce stars here.
+                        ...(adAvgRating && reviews.length > 0 && {
                             aggregateRating: {
                                 '@type': 'AggregateRating',
                                 ratingValue: adAvgRating,
@@ -331,20 +308,12 @@ export function UnifiedGraphCompiler({
                                 worstRating: 1,
                             },
                         }),
-                        // 🛡️ درع نفاذ — تحقق أمني على العمالة
+                        // Company-declared employee verification. `has_verified_employees`
+                        // is a declaration recorded against the advertiser — it is NOT a
+                        // criminal-record result and must never be worded as one, and it
+                        // is not recognised by a government body, so no `recognizedBy`.
                         ...(ad.has_verified_employees && {
-                            employee: {
-                                '@type': 'Person',
-                                hasCredential: {
-                                    '@type': 'EducationalOccupationalCredential',
-                                    credentialCategory: 'تحقق أمني وسجل جنائي نظيف',
-                                    recognizedBy: {
-                                        '@type': 'GovernmentOrganization',
-                                        name: 'منصة نفاذ (Nafath)',
-                                        url: 'https://www.iam.gov.sa/',
-                                    },
-                                },
-                            },
+                            knowsAbout: 'توثيق بيانات العمالة لدى الجهات النظامية (إقرار من الشركة)',
                         }),
                     },
                 };
@@ -402,12 +371,11 @@ export function UnifiedGraphCompiler({
                     },
                 }),
             },
-            provider: {
-                '@type': 'Organization',
-                name: 'بروكر الخدمي',
-                url: 'https://prokr.co',
-                telephone: '+966553165555',
-            },
+            // Reference the canonical entity rather than minting an unlinked
+            // duplicate. The old inline node also published a second phone
+            // number that exists nowhere in NAP — a conflicting NAP phone is
+            // the fastest way to make an assistant state the wrong number.
+            provider: { '@id': ORG_ID },
             hoursAvailable: {
                 '@type': 'OpeningHoursSpecification',
                 dayOfWeek: [
@@ -421,7 +389,7 @@ export function UnifiedGraphCompiler({
                 '@type': 'CommunicateAction',
                 target: {
                     '@type': 'EntryPoint',
-                    urlTemplate: 'tel:+966553165555',
+                    urlTemplate: `tel:${NAP.phone}`,
                     actionPlatform: 'http://schema.org/TelephoneActionPlatform',
                 },
                 name: `اتصل لطلب طوارئ ${service.name_ar} ${cityKw}`,

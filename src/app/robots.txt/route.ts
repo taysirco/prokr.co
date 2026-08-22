@@ -45,10 +45,32 @@ export function GET() {
         // Common Crawl (feeds most open-model training sets) + ByteDance
         'CCBot', 'Bytespider',
     ];
+    // Public machine-readable endpoints under /api/. These MUST be listed as
+    // Allow before the blanket `Disallow: /api/` — under RFC 9309 the longest
+    // matching rule wins, so without them the pricing dataset that llms.txt,
+    // llms-full.txt, the api-catalog, the MCP card, the agent skills and the
+    // Dataset JSON-LD all point agents at is robots-blocked for exactly the
+    // agents it was built for.
+    const PUBLIC_API_PATHS = [
+        '/api/sitemap-index',
+        '/api/sitemap/',
+        '/api/pricing-index.json',
+        // GET returns a schema.org EntryPoint/ReserveAction descriptor with the
+        // bookable service and city taxonomy — a genuine agent-discovery
+        // document, and advertised in /.well-known/api-catalog.
+        '/api/book',
+    ];
+    const publicApiAllows = PUBLIC_API_PATHS.map(p => `Allow: ${p}`).join('\n');
+
+    // Content signals are per-group: RFC 9309 §2.2 discards any line that
+    // appears before the first User-Agent line, so a file-scope declaration is
+    // invisible to a strict parser. Repeat it inside every group.
+    const CONTENT_SIGNAL = 'Content-Signal: search=yes, ai-train=yes, ai-input=yes';
+
     const aiGroups = AI_AGENTS.map(ua => `User-Agent: ${ua}
+${CONTENT_SIGNAL}
 Allow: /
-Allow: /api/sitemap-index
-Allow: /api/sitemap/
+${publicApiAllows}
 Disallow: /admin
 Disallow: /api/
 Disallow: /search`).join('\n\n');
@@ -66,9 +88,9 @@ Content-Signal: search=yes, ai-train=yes, ai-input=yes
 
 # ── Default: Allow crawling except internal paths ──
 User-Agent: *
+${CONTENT_SIGNAL}
 Allow: /
-Allow: /api/sitemap-index
-Allow: /api/sitemap/
+${publicApiAllows}
 Disallow: /admin
 Disallow: /api/
 Disallow: /search
@@ -77,17 +99,17 @@ Disallow: /test-buttons
 
 # ── Search Engines (Full Access) ──
 User-Agent: Googlebot
+${CONTENT_SIGNAL}
 Allow: /
-Allow: /api/sitemap-index
-Allow: /api/sitemap/
+${publicApiAllows}
 Disallow: /admin
 Disallow: /search
 Disallow: /_next/
 
 User-Agent: Bingbot
+${CONTENT_SIGNAL}
 Allow: /
-Allow: /api/sitemap-index
-Allow: /api/sitemap/
+${publicApiAllows}
 Disallow: /admin
 Disallow: /search
 Disallow: /_next/

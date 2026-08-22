@@ -344,23 +344,6 @@ export function middleware(request: NextRequest) {
     }
 
     // ════════════════════════════════════════════════════════════════
-    // 📄 Markdown Content Negotiation (Cloudflare "Markdown for Agents")
-    // When Accept: text/markdown is present, rewrite to markdown handler.
-    // Must fire before Phoenix Protocol so agents get clean markdown.
-    // ════════════════════════════════════════════════════════════════
-    const accept = request.headers.get('accept') || '';
-    if (
-        accept.includes('text/markdown') &&
-        !pathname.startsWith('/api/') &&
-        !pathname.startsWith('/_next') &&
-        !pathname.startsWith('/.well-known')
-    ) {
-        const mdUrl = request.nextUrl.clone();
-        mdUrl.pathname = `/api/markdown-negotiate${pathname === '/' ? '/index' : pathname}`;
-        return NextResponse.rewrite(mdUrl);
-    }
-
-    // ════════════════════════════════════════════════════════════════
     // 🪓 PHOENIX PROTOCOL §1: Internal 410 Guillotine
     // Kill WordPress/CMS junk paths on prokr.co ITSELF.
     // These legacy paths must return 410 Gone (not redirect)
@@ -379,6 +362,42 @@ export function middleware(request: NextRequest) {
                 'Cache-Control': 'public, max-age=31536000, immutable',
             },
         });
+    }
+
+    // ════════════════════════════════════════════════════════════════
+    // 📄 Markdown Content Negotiation (Cloudflare "Markdown for Agents")
+    // Two entry points: a `.md` path suffix and `Accept: text/markdown`.
+    // Runs AFTER the 410 guillotine so a junk path is still purged even when a
+    // crawler asks for markdown — otherwise the Accept header became a way to
+    // resurrect URLs the Phoenix Protocol deliberately kills.
+    // ════════════════════════════════════════════════════════════════
+    const accept = request.headers.get('accept') || '';
+    const mdEligible = (p: string) =>
+        !p.startsWith('/api/') &&
+        !p.startsWith('/_next') &&
+        !p.startsWith('/.well-known') &&
+        // Already-machine-readable endpoints must serve themselves. Agents
+        // routinely send `Accept: text/markdown, */*`, which previously made
+        // llms.txt, robots.txt, the sitemaps and coverage.json all return the
+        // markdown stub instead of their real content.
+        !/\.(txt|xml|json|csv)$/i.test(p);
+
+    // (a) Suffix form: /riyadh/cleaning.md — what drive-by agent fetchers try
+    // first, and unlike Accept-negotiation it is a distinct, edge-cacheable URL.
+    if (pathname.endsWith('.md')) {
+        const base = pathname.slice(0, -3);
+        if (mdEligible(base)) {
+            const mdUrl = request.nextUrl.clone();
+            mdUrl.pathname = `/api/markdown-negotiate${base === '' || base === '/' ? '/index' : base}`;
+            return NextResponse.rewrite(mdUrl);
+        }
+    }
+
+    // (b) Content negotiation: Accept: text/markdown on the canonical URL.
+    if (accept.includes('text/markdown') && mdEligible(pathname)) {
+        const mdUrl = request.nextUrl.clone();
+        mdUrl.pathname = `/api/markdown-negotiate${pathname === '/' ? '/index' : pathname}`;
+        return NextResponse.rewrite(mdUrl);
     }
 
     // ════════════════════════════════════════════════════════════════

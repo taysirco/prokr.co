@@ -13,6 +13,7 @@ import FraudAlertBanner from '@/components/FraudAlertBanner';
 import LocalPresence from '@/components/LocalPresence';
 import { EmergencyNightBanner } from '@/components/EmergencyNightBanner';
 import { LiveAvailabilityBanner } from '@/components/LiveAvailabilityBanner';
+import { BrandEntityJsonLd } from '@/components/schema/BrandEntityJsonLd';
 
 export const metadata: Metadata = {
     title: 'جميع الخدمات المنزلية في السعودية',
@@ -71,6 +72,7 @@ export default function ServicesPage() {
 
     return (
         <>
+            <BrandEntityJsonLd />
             {/* JSON-LD Schema - All Services Catalog */}
             <BreadcrumbJsonLd items={breadcrumbs} />
             <WebPageJsonLd
