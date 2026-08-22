@@ -130,6 +130,7 @@ ${arts.map(a => `- ${a.title}: https://prokr.co/blog/${a.slug}`).join('\n')}`).j
 - All Services: https://prokr.co/services-page
 - Blog & Guides: https://prokr.co/blog
 - About Prokr: https://prokr.co/about-us
+- Methodology — what is verified, how pricing is built, how to request a correction: https://prokr.co/methodology
 - Contact: https://prokr.co/contact-us
 
 ## Machine Access (for AI agents)
@@ -149,6 +150,7 @@ curated pairs; anything else returns 404 by design. Fetch the complete list firs
 
 - Coverage index (every URL that exists, as JSON): https://prokr.co/coverage.json
 
+- Coverage index — every URL that exists, as JSON: https://prokr.co/coverage.json
 - Full knowledge base (complete pricing index + catalog, self-contained): https://prokr.co/llms-full.txt
 - API catalog (RFC 9727): https://prokr.co/.well-known/api-catalog
 - MCP server card: https://prokr.co/.well-known/mcp/server-card.json

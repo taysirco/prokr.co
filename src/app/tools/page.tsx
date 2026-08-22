@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { BreadcrumbJsonLd } from '@/components/schema/BreadcrumbJsonLd';
 import Footer from '@/components/Footer';
+import { BrandEntityJsonLd } from '@/components/schema/BrandEntityJsonLd';
 
 export const metadata: Metadata = {
     title: 'أدوات وحاسبات تكلفة الخدمات المنزلية في السعودية',
@@ -41,6 +42,7 @@ const TOOLS = [
 export default function ToolsIndexPage() {
     return (
         <>
+            <BrandEntityJsonLd />
             <BreadcrumbJsonLd items={[
                 { name: 'الرئيسية', url: 'https://prokr.co' },
                 { name: 'أدوات', url: 'https://prokr.co/tools' },

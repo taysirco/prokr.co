@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Home, ChevronLeft, Phone, Mail, MapPin, MessageCircle, Send, CheckCircle } from 'lucide-react';
 import Footer from '@/components/Footer';
 import FaqAccordion from '@/components/FaqAccordion';
+import { BrandEntityJsonLd } from '@/components/schema/BrandEntityJsonLd';
 
 export default function ContactPage() {
     const [formData, setFormData] = useState({
@@ -31,6 +32,7 @@ export default function ContactPage() {
 
     return (
         <>
+            <BrandEntityJsonLd />
             {/* BreadcrumbList JSON-LD */}
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
                 '@context': 'https://schema.org',

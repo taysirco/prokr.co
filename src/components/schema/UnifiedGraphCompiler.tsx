@@ -14,6 +14,7 @@ import { getCanonicalSlug } from '@/lib/services/super-page-groups';
 import { getHourlyMode } from '@/lib/market-timing';
 import { safeJsonLd, absolutizeUrl } from '@/lib/json-ld';
 import { NAP } from '@/lib/nap';
+import { buildOrganizationNode, ORG_ID } from '@/lib/organization-entity';
 
 // ── WARRANTY DATA (mirrored from ServiceOfferJsonLd) ──
 const WARRANTY_BY_CATEGORY: Record<string, {
@@ -87,35 +88,13 @@ export function UnifiedGraphCompiler({
     // ============================================
     const graph: Record<string, unknown>[] = [];
 
-    // ── 0. Organization (#organization) — brand entity anchor, shared across ALL
-    //    pages by @id (same id+name as the homepage ProkrOrganizationJsonLd) so the
-    //    money pages connect to the Knowledge Graph (Wikidata Q139265070) instead of
-    //    floating with anonymous providers. ──
-    const ORG_ID = 'https://prokr.co/#organization';
-    graph.push({
-        '@type': 'Organization',
-        '@id': ORG_ID,
-        name: 'بروكر الخدمي',
-        alternateName: ['دليل بروكر للخدمات المنزلية', 'بروكر', 'Prokr'],
-        url: 'https://prokr.co',
-        logo: { '@type': 'ImageObject', url: 'https://prokr.co/logo.png', width: 512, height: 512 },
-        // Wikidata sameAs removed — entity Q139265070 does not exist (broken sameAs
-        // = negative entity signal). Re-add a real Q-ID once the item is created.
-        sameAs: [
-            'https://www.instagram.com/prokr_sa',
-            'https://www.facebook.com/prokr.sa',
-        ],
-        knowsAbout: [
-            { '@type': 'GovernmentOrganization', name: 'هيئة الزكاة والضريبة والجمارك (ZATCA)', url: 'https://zatca.gov.sa' },
-            { '@type': 'GovernmentOrganization', name: 'منصة قوى — أجير (Qiwa)', url: 'https://qiwa.sa' },
-            { '@type': 'GovernmentOrganization', name: 'برنامج نطاقات — وزارة الموارد البشرية', url: 'https://hrsd.gov.sa' },
-        ],
-        // NOTE: no organization-level `hasCredential` for Nafath/Absher.
-        // Prokr is a directory — it does not perform national-identity or
-        // criminal-record verification, and no field records such a result.
-        // Per-company credentials that ARE recorded are emitted by
-        // LocalBusinessJsonLd, gated on `advertiser.has_verified_employees`.
-    });
+    // ── 0. Organization (#organization) — the brand entity.
+    //    Uses the SAME definition as the homepage (CR number, VAT ID,
+    //    contactPoint, hasOfferCatalog, sameAs, trust policies). This block
+    //    previously carried a reduced copy with none of that, which meant the
+    //    ~944 crawled money pages showed a brand with no legal identity —
+    //    exactly the pages an answer engine reads and cites.
+    graph.push(buildOrganizationNode());
 
     // ── 1. WebPage (#webpage) — القلب الذي يربط كل شيء ──
     graph.push({
@@ -396,7 +375,7 @@ export function UnifiedGraphCompiler({
             // duplicate. The old inline node also published a second phone
             // number that exists nowhere in NAP — a conflicting NAP phone is
             // the fastest way to make an assistant state the wrong number.
-            provider: { '@id': `${baseUrl}#organization` },
+            provider: { '@id': ORG_ID },
             hoursAvailable: {
                 '@type': 'OpeningHoursSpecification',
                 dayOfWeek: [

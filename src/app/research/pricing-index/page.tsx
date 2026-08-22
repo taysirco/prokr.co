@@ -6,6 +6,7 @@ import FaqAccordion from '@/components/FaqAccordion';
 import Link from 'next/link';
 import { getCanonicalSlug } from '@/lib/services/super-page-groups';
 import { hasPageOverride } from '@/lib/overrides/registry';
+import { BrandEntityJsonLd } from '@/components/schema/BrandEntityJsonLd';
 
 // Metadata is COMPUTED from the dataset, never hand-written: the previous
 // static copy claimed "10 مدن" and "4,800 عينة" against real values of 24 and
@@ -60,6 +61,7 @@ export default function PricingIndexPage() {
 
   return (
     <>
+            <BrandEntityJsonLd />
       {/* Dataset JSON-LD */}
       <DatasetJsonLd
         totalSamples={stats.totalSamples}

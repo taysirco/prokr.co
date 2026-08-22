@@ -5,6 +5,7 @@ import { BLOG_CATEGORIES, getPublishedArticles } from '@/lib/blog-data';
 import { BreadcrumbJsonLd, WebPageJsonLd, SpeakableJsonLd } from '@/components/JsonLd';
 import FaqAccordion from '@/components/FaqAccordion';
 import Footer from '@/components/Footer';
+import { BrandEntityJsonLd } from '@/components/schema/BrandEntityJsonLd';
 
 export const metadata: Metadata = {
     title: { absolute: 'مدونة بروكر — أدلة ونصائح الخدمات المنزلية في السعودية' },
@@ -88,6 +89,7 @@ export default function BlogPage() {
 
     return (
         <>
+            <BrandEntityJsonLd />
             <BreadcrumbJsonLd items={breadcrumbs} />
             <WebPageJsonLd
                 title="مدونة بروكر"

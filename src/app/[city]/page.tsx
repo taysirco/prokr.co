@@ -27,6 +27,7 @@ import SocialShareWidget from '@/components/SocialShareWidget';
 import { VisionAiWatermark } from '@/components/VisionAiWatermark';
 import SourceOrderLayout from '@/components/SourceOrderLayout';
 import FaqAccordion from '@/components/FaqAccordion';
+import { BrandEntityJsonLd } from '@/components/schema/BrandEntityJsonLd';
 
 interface CityPageProps {
     params: Promise<{
@@ -165,6 +166,7 @@ export default async function CityPage({ params }: CityPageProps) {
 
     return (
         <>
+            <BrandEntityJsonLd />
             {/* JSON-LD Schema - City Services List */}
             <BreadcrumbJsonLd items={breadcrumbs} />
             <SpeakableWebPageJsonLd

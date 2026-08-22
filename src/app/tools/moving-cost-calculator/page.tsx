@@ -4,6 +4,7 @@ import { pricingData } from '@/lib/pricing-data';
 import { BreadcrumbJsonLd } from '@/components/schema/BreadcrumbJsonLd';
 import MovingCostCalculator, { type CityBase } from '@/components/tools/MovingCostCalculator';
 import Footer from '@/components/Footer';
+import { BrandEntityJsonLd } from '@/components/schema/BrandEntityJsonLd';
 
 export const metadata: Metadata = {
     title: 'حاسبة تكلفة نقل العفش في السعودية 2026 — احسب السعر التقديري فوراً',
@@ -42,6 +43,7 @@ export default function MovingCostCalculatorPage() {
 
     return (
         <>
+            <BrandEntityJsonLd />
             <BreadcrumbJsonLd items={[
                 { name: 'الرئيسية', url: 'https://prokr.co' },
                 { name: 'أدوات', url: 'https://prokr.co/tools' },
