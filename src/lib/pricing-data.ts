@@ -1,8 +1,10 @@
 // =============================================================
 // PROKR PRICING INDEX — بيانات مؤشر أسعار الخدمات المنزلية
 // =============================================================
-// يتم تحديث هذه البيانات أسبوعياً بناءً على عروض أسعار حقيقية
-// من الشركات المسجلة في دليل بروكر.
+// مسح دوري لعروض أسعار حقيقية من الشركات المسجلة في دليل بروكر.
+// ⚠️ لا تصف هذه البيانات بأنها "تُحدَّث أسبوعياً": تاريخ آخر مسح مُخزَّن في
+// حقل lastUpdated لكل صف، وأي وصف لوتيرة التحديث يجب أن يطابقه — الادعاء
+// الذي تكذّبه بيانات الصفحة نفسها يُسقط ثقة محركات الإجابة بالمصدر كله.
 // =============================================================
 
 export interface PricingEntry {
@@ -314,7 +316,14 @@ export function getPricingStats(data: PricingEntry[]) {
   const uniqueCities = [...new Set(data.map(d => d.city))];
   const uniqueServices = [...new Set(data.map(d => d.service))];
   const totalSamples = data.reduce((sum, d) => sum + d.sampleCount, 0);
-  const lastUpdated = data[0]?.lastUpdated || new Date().toISOString().split('T')[0];
+  // MAX, not row 0 — taking the first row under-reported the index's own
+  // recency by 5 days and disagreed with llms.txt, which computes it correctly.
+  // ISO dates sort lexicographically, so a plain sort is safe here.
+  const lastUpdated = data
+    .map(d => d.lastUpdated)
+    .filter(Boolean)
+    .sort()
+    .pop() || new Date().toISOString().split('T')[0];
 
   return {
     cities: uniqueCities.length,

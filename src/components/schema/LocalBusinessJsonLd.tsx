@@ -18,7 +18,13 @@ interface LocalBusinessJsonLdProps {
 }
 
 export function LocalBusinessJsonLd({ advertiser, city, services, areaCities }: LocalBusinessJsonLdProps) {
-    const reviews = advertiser.reviews || [];
+    // ⚠️ Only VERIFIED reviews may drive rating markup. `verified` is set
+    // server-side by /api/review-verify and cannot be client-supplied. Seeded
+    // or marketing reviews (e.g. the hardcoded featured-company set) carry no
+    // `verified` flag, so they render on-page but can never mint stars —
+    // AggregateRating built from first-party invented reviews is the textbook
+    // review-spam manual action, and the action applies site-wide.
+    const reviews = (advertiser.reviews || []).filter(r => r.verified === true);
     const avgRating = reviews.length > 0
         ? reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.length
         : undefined;
@@ -87,17 +93,16 @@ export function LocalBusinessJsonLd({ advertiser, city, services, areaCities }: 
         });
     }
 
-    // 4. فريق بتحقق أمني — نفاذ (Nafath)
+    // 4. إقرار الشركة بتوثيق بيانات العمالة.
+    // ⚠️ This flag is a company declaration recorded in the admin panel. It is
+    // NOT a Nafath identity result and NOT a criminal-record check — neither of
+    // which a directory can perform. Do not re-add `recognizedBy` here: naming a
+    // government body turns a self-declaration into a falsifiable state claim.
     if (advertiser.has_verified_employees) {
         sovereignCredentials.push({
             '@type': 'EducationalOccupationalCredential',
-            credentialCategory: 'Security Clearance — National Information Center',
-            name: 'تحقق أمني وسجل جنائي نظيف',
-            recognizedBy: {
-                '@type': 'GovernmentOrganization',
-                name: 'مركز المعلومات الوطني — منصة نفاذ (Nafath)',
-                url: 'https://www.iam.gov.sa/',
-            },
+            credentialCategory: 'Company-declared workforce documentation',
+            name: 'إقرار الشركة بتوثيق بيانات العمالة لدى الجهات النظامية',
         });
     }
 
