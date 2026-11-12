@@ -8,6 +8,7 @@ import NavbarWrapper from "@/components/NavbarWrapper";
 import Analytics from "@/components/Analytics";
 import ServiceWorkerRegistrar from "@/components/ServiceWorkerRegistrar";
 import WhatsAppAntiBouncPopup from "@/components/WhatsAppAntiBouncPopup";
+import FloatingWhatsAppButton from "@/components/FloatingWhatsAppButton";
 
 const ibmPlexArabic = IBM_Plex_Sans_Arabic({
   variable: "--font-ibm-plex-arabic",
@@ -559,6 +560,7 @@ export default function RootLayout({
         </a>
         <NavbarWrapper />
         <div id="main-content">{children}</div>
+        <FloatingWhatsAppButton />
         <Suspense fallback={null}>
           <Analytics />
           <ServiceWorkerRegistrar />
