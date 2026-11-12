@@ -53,7 +53,7 @@ export default function ContactPage() {
                     '@type': 'Organization',
                     '@id': 'https://prokr.co/#organization',
                     name: 'بروكر الخدمي',
-                    telephone: '+966542317431',
+                    telephone: '+966564612017',
                     email: 'info@prokr.co',
                 },
                 speakable: {
@@ -66,7 +66,7 @@ export default function ContactPage() {
                 '@context': 'https://schema.org',
                 '@type': 'FAQPage',
                 mainEntity: [
-                    { '@type': 'Question', name: 'كيف أتواصل مع بروكر؟', acceptedAnswer: { '@type': 'Answer', text: 'يمكنك التواصل معنا عبر واتساب على الرقم +966542317431، أو البريد الإلكتروني info@prokr.co، أو ملء نموذج الاتصال. متوسط وقت الاستجابة 15 دقيقة.' } },
+                    { '@type': 'Question', name: 'كيف أتواصل مع بروكر؟', acceptedAnswer: { '@type': 'Answer', text: 'يمكنك التواصل معنا عبر واتساب على الرقم +966564612017، أو البريد الإلكتروني info@prokr.co، أو ملء نموذج الاتصال. متوسط وقت الاستجابة 15 دقيقة.' } },
                     { '@type': 'Question', name: 'كيف أسجل شركتي في بروكر؟', acceptedAnswer: { '@type': 'Answer', text: 'التسجيل مجاني — تواصل معنا عبر نموذج الاتصال أو واتساب مع بيانات شركتك (الاسم التجاري، السجل التجاري، الخدمات، المدن المغطاة) وسيتم تفعيل حسابك خلال 24 ساعة.' } },
                     { '@type': 'Question', name: 'هل خدمة بروكر مجانية للعملاء؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم، خدمة التصفح والمقارنة والاتصال بالشركات مجانية تماماً للعملاء. بروكر لا يأخذ أي عمولة من العملاء.' } },
                 ],
@@ -111,8 +111,8 @@ export default function ContactPage() {
                                 </div>
                                 <div>
                                     <h3 className="font-bold text-gray-900">الهاتف</h3>
-                                    <a href="tel:+966542317431" className="text-sky-600 hover:underline" dir="ltr">
-                                        +966 54 231 7431
+                                    <a href="tel:+966564612017" className="text-sky-600 hover:underline" dir="ltr">
+                                        +966 56 461 2017
                                     </a>
                                 </div>
                             </div>
@@ -126,13 +126,13 @@ export default function ContactPage() {
                                 <div>
                                     <h3 className="font-bold text-gray-900">واتساب</h3>
                                     <a
-                                        href="https://wa.me/966542317431"
+                                        href="https://wa.me/966564612017"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="text-green-600 hover:underline"
                                         dir="ltr"
                                     >
-                                        +966 54 231 7431
+                                        +966 56 461 2017
                                     </a>
                                 </div>
                             </div>
@@ -340,7 +340,7 @@ export default function ContactPage() {
             <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
                 <FaqAccordion
                     items={[
-                        { question: 'كيف أتواصل مع بروكر؟', answer: 'يمكنك التواصل معنا عبر واتساب على الرقم +966542317431، أو البريد الإلكتروني info@prokr.co، أو ملء نموذج الاتصال. متوسط وقت الاستجابة 15 دقيقة.' },
+                        { question: 'كيف أتواصل مع بروكر؟', answer: 'يمكنك التواصل معنا عبر واتساب على الرقم +966564612017، أو البريد الإلكتروني info@prokr.co، أو ملء نموذج الاتصال. متوسط وقت الاستجابة 15 دقيقة.' },
                         { question: 'كيف أسجل شركتي في بروكر؟', answer: 'التسجيل مجاني — تواصل معنا عبر نموذج الاتصال أو واتساب مع بيانات شركتك (الاسم التجاري، السجل التجاري، الخدمات، المدن المغطاة) وسيتم تفعيل حسابك خلال 24 ساعة.' },
                         { question: 'هل خدمة بروكر مجانية للعملاء؟', answer: 'نعم، خدمة التصفح والمقارنة والاتصال بالشركات مجانية تماماً للعملاء. بروكر لا يأخذ أي عمولة من العملاء.' },
                     ]}

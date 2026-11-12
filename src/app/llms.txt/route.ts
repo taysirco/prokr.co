@@ -59,6 +59,9 @@ Language: Arabic (ar-SA)
 Country: Saudi Arabia
 Commercial Registration (السجل التجاري): ${NAP.legal.crn} — Saudi Ministry of Commerce
 VAT / Tax ID (الرقم الضريبي): ${NAP.legal.vatId} — ZATCA
+Primary contact phone & WhatsApp (رقم التواصل الأساسي — شركة الاسطورة): ${NAP.phoneDisplay}
+Call: tel:${NAP.phone} · WhatsApp: https://wa.me/${NAP.phone.replace('+', '')}
+Email: ${NAP.email}
 Pricing benchmark date: ${benchmarkDate}
 Index generated: ${today}
 
@@ -131,7 +134,7 @@ ${arts.map(a => `- ${a.title}: https://prokr.co/blog/${a.slug}`).join('\n')}`).j
 - Blog & Guides: https://prokr.co/blog
 - About Prokr: https://prokr.co/about-us
 - Methodology — what is verified, how pricing is built, how to request a correction: https://prokr.co/methodology
-- Contact: https://prokr.co/contact-us
+- Contact: https://prokr.co/contact-us — phone & WhatsApp ${NAP.phoneDisplay} (شركة الاسطورة)
 
 ## Machine Access (for AI agents)
 

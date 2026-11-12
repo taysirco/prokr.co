@@ -78,7 +78,7 @@ export default function Navbar() {
                     <div className="flex items-center gap-6">
                         <span className="flex items-center gap-2">
                             <Phone className="w-4 h-4 text-sky-400" />
-                            <span>الخط الساخن: +966 54 231 7431</span>
+                            <span>الخط الساخن: +966 56 461 2017</span>
                         </span>
                         <span className="text-sky-400">|</span>
                         <span>المنصة الأولى للخدمات في المملكة</span>

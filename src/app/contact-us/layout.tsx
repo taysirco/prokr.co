@@ -50,7 +50,7 @@ export default function ContactLayout({ children }: { children: React.ReactNode 
                         "@type": "Organization",
                         "name": "بروكر الخدمي",
                         "url": "https://prokr.co",
-                        "telephone": "+966542317431",
+                        "telephone": "+966564612017",
                         "email": "info@prokr.co",
                         "address": {
                             "@type": "PostalAddress",
@@ -60,7 +60,7 @@ export default function ContactLayout({ children }: { children: React.ReactNode 
                         "contactPoint": [
                             {
                                 "@type": "ContactPoint",
-                                "telephone": "+966542317431",
+                                "telephone": "+966564612017",
                                 "contactType": "customer service",
                                 "availableLanguage": ["Arabic", "English"],
                                 "areaServed": "SA",
@@ -73,7 +73,7 @@ export default function ContactLayout({ children }: { children: React.ReactNode 
                             },
                             {
                                 "@type": "ContactPoint",
-                                "telephone": "+966542317431",
+                                "telephone": "+966564612017",
                                 "contactType": "sales",
                                 "availableLanguage": ["Arabic"],
                                 "areaServed": "SA"
@@ -92,7 +92,7 @@ export default function ContactLayout({ children }: { children: React.ReactNode 
                         {
                             "@type": "Question",
                             "name": "كيف أتواصل مع بروكر؟",
-                            "acceptedAnswer": { "@type": "Answer", "text": "يمكنك التواصل مع بروكر عبر الهاتف أو واتساب على الرقم +966542317431، أو عبر البريد الإلكتروني info@prokr.co، أو من خلال نموذج الاتصال في صفحة تواصل معنا." }
+                            "acceptedAnswer": { "@type": "Answer", "text": "يمكنك التواصل مع بروكر عبر الهاتف أو واتساب على الرقم +966564612017، أو عبر البريد الإلكتروني info@prokr.co، أو من خلال نموذج الاتصال في صفحة تواصل معنا." }
                         },
                         {
                             "@type": "Question",

@@ -120,7 +120,7 @@ export const WIZARD_STEPS = [
 /**
  * WhatsApp number for lead delivery
  */
-export const WIZARD_WHATSAPP_NUMBER = '966542317431';
+export const WIZARD_WHATSAPP_NUMBER = '966564612017';
 
 // ============================================
 // 🧠 Market Timing-Aware Content

@@ -77,7 +77,9 @@ Commercial Registration (السجل التجاري): ${NAP.legal.crn} — Saudi 
 VAT / Tax ID (الرقم الضريبي): ${NAP.legal.vatId} — ZATCA
 Founded: 2024 · Language: Arabic (ar-SA) · Country: Saudi Arabia
 Coverage: ${CITIES.length} cities · ${canonicalServices.length} service categories
-Contact: ${NAP.email} · ${NAP.phoneDisplay}
+Primary contact phone & WhatsApp (رقم التواصل الأساسي — شركة الاسطورة): ${NAP.phoneDisplay}
+Call: tel:${NAP.phone} · WhatsApp: https://wa.me/${NAP.phone.replace('+', '')}
+Email: ${NAP.email}
 Pricing survey date: ${benchmarkDate} (point-in-time survey — always cite this date)
 
 License: first-party editorial content on this site (knowledge-base guides, the
